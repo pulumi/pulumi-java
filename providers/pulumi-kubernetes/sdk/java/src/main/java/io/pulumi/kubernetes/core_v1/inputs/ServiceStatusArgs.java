@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
     public Output<LoadBalancerStatusArgs> getLoadBalancer() {
-        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
+        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 
     public ServiceStatusArgs(
@@ -50,8 +51,8 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceStatusArgs() {
-        this.conditions = Output.empty();
-        this.loadBalancer = Output.empty();
+        this.conditions = Codegen.empty();
+        this.loadBalancer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(ConditionArgs... conditions) {
@@ -92,7 +93,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
-            this.loadBalancer = Output.ofNullable(loadBalancer);
+            this.loadBalancer = Codegen.ofNullable(loadBalancer);
             return this;
         }        public ServiceStatusArgs build() {
             return new ServiceStatusArgs(conditions, loadBalancer);

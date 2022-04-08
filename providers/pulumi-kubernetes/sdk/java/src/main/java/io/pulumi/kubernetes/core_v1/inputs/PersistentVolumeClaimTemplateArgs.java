@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
     }
 
     private PersistentVolumeClaimTemplateArgs() {
-        this.metadata = Output.empty();
-        this.spec = Output.empty();
+        this.metadata = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder spec(Output<PersistentVolumeClaimSpecArgs> spec) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyEgressRuleArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyIngressRuleArgs;
@@ -30,7 +31,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<NetworkPolicyEgressRuleArgs>> egress;
 
     public Output<List<NetworkPolicyEgressRuleArgs>> getEgress() {
-        return this.egress == null ? Output.empty() : this.egress;
+        return this.egress == null ? Codegen.empty() : this.egress;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress;
 
     public Output<List<NetworkPolicyIngressRuleArgs>> getIngress() {
-        return this.ingress == null ? Output.empty() : this.ingress;
+        return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> policyTypes;
 
     public Output<List<String>> getPolicyTypes() {
-        return this.policyTypes == null ? Output.empty() : this.policyTypes;
+        return this.policyTypes == null ? Codegen.empty() : this.policyTypes;
     }
 
     public NetworkPolicySpecArgs(
@@ -78,10 +79,10 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NetworkPolicySpecArgs() {
-        this.egress = Output.empty();
-        this.ingress = Output.empty();
-        this.podSelector = Output.empty();
-        this.policyTypes = Output.empty();
+        this.egress = Codegen.empty();
+        this.ingress = Codegen.empty();
+        this.podSelector = Codegen.empty();
+        this.policyTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder egress(@Nullable List<NetworkPolicyEgressRuleArgs> egress) {
-            this.egress = Output.ofNullable(egress);
+            this.egress = Codegen.ofNullable(egress);
             return this;
         }
         public Builder egress(NetworkPolicyEgressRuleArgs... egress) {
@@ -126,7 +127,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ingress(@Nullable List<NetworkPolicyIngressRuleArgs> ingress) {
-            this.ingress = Output.ofNullable(ingress);
+            this.ingress = Codegen.ofNullable(ingress);
             return this;
         }
         public Builder ingress(NetworkPolicyIngressRuleArgs... ingress) {
@@ -145,7 +146,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyTypes(@Nullable List<String> policyTypes) {
-            this.policyTypes = Output.ofNullable(policyTypes);
+            this.policyTypes = Codegen.ofNullable(policyTypes);
             return this;
         }
         public Builder policyTypes(String... policyTypes) {

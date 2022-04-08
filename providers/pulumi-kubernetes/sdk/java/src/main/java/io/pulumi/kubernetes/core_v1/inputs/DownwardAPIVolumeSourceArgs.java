@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.DownwardAPIVolumeFileArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> defaultMode;
 
     public Output<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Output.empty() : this.defaultMode;
+        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
     public Output<List<DownwardAPIVolumeFileArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public DownwardAPIVolumeSourceArgs(
@@ -50,8 +51,8 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
     }
 
     private DownwardAPIVolumeSourceArgs() {
-        this.defaultMode = Output.empty();
-        this.items = Output.empty();
+        this.defaultMode = Codegen.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Output.ofNullable(defaultMode);
+            this.defaultMode = Codegen.ofNullable(defaultMode);
             return this;
         }
         public Builder items(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
@@ -89,7 +90,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder items(@Nullable List<DownwardAPIVolumeFileArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(DownwardAPIVolumeFileArgs... items) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> currentAverageValue;
 
     public Output<String> getCurrentAverageValue() {
-        return this.currentAverageValue == null ? Output.empty() : this.currentAverageValue;
+        return this.currentAverageValue == null ? Codegen.empty() : this.currentAverageValue;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<LabelSelectorArgs> metricSelector;
 
     public Output<LabelSelectorArgs> getMetricSelector() {
-        return this.metricSelector == null ? Output.empty() : this.metricSelector;
+        return this.metricSelector == null ? Codegen.empty() : this.metricSelector;
     }
 
     public ExternalMetricStatusArgs(
@@ -75,10 +76,10 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     }
 
     private ExternalMetricStatusArgs() {
-        this.currentAverageValue = Output.empty();
-        this.currentValue = Output.empty();
-        this.metricName = Output.empty();
-        this.metricSelector = Output.empty();
+        this.currentAverageValue = Codegen.empty();
+        this.currentValue = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.metricSelector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder currentAverageValue(@Nullable String currentAverageValue) {
-            this.currentAverageValue = Output.ofNullable(currentAverageValue);
+            this.currentAverageValue = Codegen.ofNullable(currentAverageValue);
             return this;
         }
         public Builder currentValue(Output<String> currentValue) {
@@ -136,7 +137,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
-            this.metricSelector = Output.ofNullable(metricSelector);
+            this.metricSelector = Codegen.ofNullable(metricSelector);
             return this;
         }        public ExternalMetricStatusArgs build() {
             return new ExternalMetricStatusArgs(currentAverageValue, currentValue, metricName, metricSelector);

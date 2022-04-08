@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.RollingUpdateDaemonSetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate;
 
     public Output<RollingUpdateDaemonSetArgs> getRollingUpdate() {
-        return this.rollingUpdate == null ? Output.empty() : this.rollingUpdate;
+        return this.rollingUpdate == null ? Codegen.empty() : this.rollingUpdate;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DaemonSetUpdateStrategyArgs(
@@ -49,8 +50,8 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
     }
 
     private DaemonSetUpdateStrategyArgs() {
-        this.rollingUpdate = Output.empty();
-        this.type = Output.empty();
+        this.rollingUpdate = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder rollingUpdate(@Nullable RollingUpdateDaemonSetArgs rollingUpdate) {
-            this.rollingUpdate = Output.ofNullable(rollingUpdate);
+            this.rollingUpdate = Codegen.ofNullable(rollingUpdate);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -88,7 +89,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DaemonSetUpdateStrategyArgs build() {
             return new DaemonSetUpdateStrategyArgs(rollingUpdate, type);

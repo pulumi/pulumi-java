@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.VolumeProjectionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> defaultMode;
 
     public Output<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Output.empty() : this.defaultMode;
+        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private ProjectedVolumeSourceArgs() {
-        this.defaultMode = Output.empty();
-        this.sources = Output.empty();
+        this.defaultMode = Codegen.empty();
+        this.sources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Output.ofNullable(defaultMode);
+            this.defaultMode = Codegen.ofNullable(defaultMode);
             return this;
         }
         public Builder sources(Output<List<VolumeProjectionArgs>> sources) {

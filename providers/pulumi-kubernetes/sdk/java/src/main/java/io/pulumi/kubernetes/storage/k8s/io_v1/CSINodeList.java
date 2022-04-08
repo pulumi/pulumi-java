@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import io.pulumi.kubernetes.storage.k8s.io_v1.CSINodeListArgs;
@@ -99,7 +100,7 @@ public class CSINodeList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CSINodeList(String name, CSINodeListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:storage.k8s.io/v1:CSINodeList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:storage.k8s.io/v1:CSINodeList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CSINodeList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

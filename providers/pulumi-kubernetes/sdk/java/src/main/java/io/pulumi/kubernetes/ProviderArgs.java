@@ -5,6 +5,7 @@ package io.pulumi.kubernetes;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.inputs.HelmReleaseSettingsArgs;
 import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
@@ -26,7 +27,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
-        return this.cluster == null ? Output.empty() : this.cluster;
+        return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDryRun;
 
     public Output<Boolean> getEnableDryRun() {
-        return this.enableDryRun == null ? Output.empty() : this.enableDryRun;
+        return this.enableDryRun == null ? Codegen.empty() : this.enableDryRun;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableReplaceCRD;
 
     public Output<Boolean> getEnableReplaceCRD() {
-        return this.enableReplaceCRD == null ? Output.empty() : this.enableReplaceCRD;
+        return this.enableReplaceCRD == null ? Codegen.empty() : this.enableReplaceCRD;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
 
     public Output<HelmReleaseSettingsArgs> getHelmReleaseSettings() {
-        return this.helmReleaseSettings == null ? Output.empty() : this.helmReleaseSettings;
+        return this.helmReleaseSettings == null ? Codegen.empty() : this.helmReleaseSettings;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
     public Output<KubeClientSettingsArgs> getKubeClientSettings() {
-        return this.kubeClientSettings == null ? Output.empty() : this.kubeClientSettings;
+        return this.kubeClientSettings == null ? Codegen.empty() : this.kubeClientSettings;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kubeconfig;
 
     public Output<String> getKubeconfig() {
-        return this.kubeconfig == null ? Output.empty() : this.kubeconfig;
+        return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> renderYamlToDirectory;
 
     public Output<String> getRenderYamlToDirectory() {
-        return this.renderYamlToDirectory == null ? Output.empty() : this.renderYamlToDirectory;
+        return this.renderYamlToDirectory == null ? Codegen.empty() : this.renderYamlToDirectory;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> suppressDeprecationWarnings;
 
     public Output<Boolean> getSuppressDeprecationWarnings() {
-        return this.suppressDeprecationWarnings == null ? Output.empty() : this.suppressDeprecationWarnings;
+        return this.suppressDeprecationWarnings == null ? Codegen.empty() : this.suppressDeprecationWarnings;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> suppressHelmHookWarnings;
 
     public Output<Boolean> getSuppressHelmHookWarnings() {
-        return this.suppressHelmHookWarnings == null ? Output.empty() : this.suppressHelmHookWarnings;
+        return this.suppressHelmHookWarnings == null ? Codegen.empty() : this.suppressHelmHookWarnings;
     }
 
     public ProviderArgs(
@@ -167,29 +168,29 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> suppressHelmHookWarnings) {
         this.cluster = cluster;
         this.context = context;
-        this.enableDryRun = enableDryRun == null ? Output.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_ENABLE_DRY_RUN").orElse(null)) : enableDryRun;
-        this.enableReplaceCRD = enableReplaceCRD == null ? Output.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_ENABLE_REPLACE_CRD").orElse(null)) : enableReplaceCRD;
+        this.enableDryRun = enableDryRun == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_ENABLE_DRY_RUN").orElse(null)) : enableDryRun;
+        this.enableReplaceCRD = enableReplaceCRD == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_ENABLE_REPLACE_CRD").orElse(null)) : enableReplaceCRD;
         this.helmReleaseSettings = helmReleaseSettings;
         this.kubeClientSettings = kubeClientSettings;
-        this.kubeconfig = kubeconfig == null ? Output.ofNullable(Utilities.getEnv("KUBECONFIG").orElse(null)) : kubeconfig;
+        this.kubeconfig = kubeconfig == null ? Codegen.ofNullable(Utilities.getEnv("KUBECONFIG").orElse(null)) : kubeconfig;
         this.namespace = namespace;
         this.renderYamlToDirectory = renderYamlToDirectory;
-        this.suppressDeprecationWarnings = suppressDeprecationWarnings == null ? Output.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS").orElse(null)) : suppressDeprecationWarnings;
-        this.suppressHelmHookWarnings = suppressHelmHookWarnings == null ? Output.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS").orElse(null)) : suppressHelmHookWarnings;
+        this.suppressDeprecationWarnings = suppressDeprecationWarnings == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS").orElse(null)) : suppressDeprecationWarnings;
+        this.suppressHelmHookWarnings = suppressHelmHookWarnings == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS").orElse(null)) : suppressHelmHookWarnings;
     }
 
     private ProviderArgs() {
-        this.cluster = Output.empty();
-        this.context = Output.empty();
-        this.enableDryRun = Output.empty();
-        this.enableReplaceCRD = Output.empty();
-        this.helmReleaseSettings = Output.empty();
-        this.kubeClientSettings = Output.empty();
-        this.kubeconfig = Output.empty();
-        this.namespace = Output.empty();
-        this.renderYamlToDirectory = Output.empty();
-        this.suppressDeprecationWarnings = Output.empty();
-        this.suppressHelmHookWarnings = Output.empty();
+        this.cluster = Codegen.empty();
+        this.context = Codegen.empty();
+        this.enableDryRun = Codegen.empty();
+        this.enableReplaceCRD = Codegen.empty();
+        this.helmReleaseSettings = Codegen.empty();
+        this.kubeClientSettings = Codegen.empty();
+        this.kubeconfig = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.renderYamlToDirectory = Codegen.empty();
+        this.suppressDeprecationWarnings = Codegen.empty();
+        this.suppressHelmHookWarnings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -237,7 +238,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Output.ofNullable(cluster);
+            this.cluster = Codegen.ofNullable(cluster);
             return this;
         }
         public Builder context(@Nullable Output<String> context) {
@@ -245,7 +246,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder context(@Nullable String context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder enableDryRun(@Nullable Output<Boolean> enableDryRun) {
@@ -253,7 +254,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDryRun(@Nullable Boolean enableDryRun) {
-            this.enableDryRun = Output.ofNullable(enableDryRun);
+            this.enableDryRun = Codegen.ofNullable(enableDryRun);
             return this;
         }
         public Builder enableReplaceCRD(@Nullable Output<Boolean> enableReplaceCRD) {
@@ -261,7 +262,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableReplaceCRD(@Nullable Boolean enableReplaceCRD) {
-            this.enableReplaceCRD = Output.ofNullable(enableReplaceCRD);
+            this.enableReplaceCRD = Codegen.ofNullable(enableReplaceCRD);
             return this;
         }
         public Builder helmReleaseSettings(@Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings) {
@@ -269,7 +270,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder helmReleaseSettings(@Nullable HelmReleaseSettingsArgs helmReleaseSettings) {
-            this.helmReleaseSettings = Output.ofNullable(helmReleaseSettings);
+            this.helmReleaseSettings = Codegen.ofNullable(helmReleaseSettings);
             return this;
         }
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
@@ -277,7 +278,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
-            this.kubeClientSettings = Output.ofNullable(kubeClientSettings);
+            this.kubeClientSettings = Codegen.ofNullable(kubeClientSettings);
             return this;
         }
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
@@ -285,7 +286,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubeconfig(@Nullable String kubeconfig) {
-            this.kubeconfig = Output.ofNullable(kubeconfig);
+            this.kubeconfig = Codegen.ofNullable(kubeconfig);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -293,7 +294,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder renderYamlToDirectory(@Nullable Output<String> renderYamlToDirectory) {
@@ -301,7 +302,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder renderYamlToDirectory(@Nullable String renderYamlToDirectory) {
-            this.renderYamlToDirectory = Output.ofNullable(renderYamlToDirectory);
+            this.renderYamlToDirectory = Codegen.ofNullable(renderYamlToDirectory);
             return this;
         }
         public Builder suppressDeprecationWarnings(@Nullable Output<Boolean> suppressDeprecationWarnings) {
@@ -309,7 +310,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suppressDeprecationWarnings(@Nullable Boolean suppressDeprecationWarnings) {
-            this.suppressDeprecationWarnings = Output.ofNullable(suppressDeprecationWarnings);
+            this.suppressDeprecationWarnings = Codegen.ofNullable(suppressDeprecationWarnings);
             return this;
         }
         public Builder suppressHelmHookWarnings(@Nullable Output<Boolean> suppressHelmHookWarnings) {
@@ -317,7 +318,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suppressHelmHookWarnings(@Nullable Boolean suppressHelmHookWarnings) {
-            this.suppressHelmHookWarnings = Output.ofNullable(suppressHelmHookWarnings);
+            this.suppressHelmHookWarnings = Codegen.ofNullable(suppressHelmHookWarnings);
             return this;
         }        public ProviderArgs build() {
             return new ProviderArgs(cluster, context, enableDryRun, enableReplaceCRD, helmReleaseSettings, kubeClientSettings, kubeconfig, namespace, renderYamlToDirectory, suppressDeprecationWarnings, suppressHelmHookWarnings);

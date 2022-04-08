@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> capacity;
 
     public Output<String> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> maximumVolumeSize;
 
     public Output<String> getMaximumVolumeSize() {
-        return this.maximumVolumeSize == null ? Output.empty() : this.maximumVolumeSize;
+        return this.maximumVolumeSize == null ? Codegen.empty() : this.maximumVolumeSize;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<LabelSelectorArgs> nodeTopology;
 
     public Output<LabelSelectorArgs> getNodeTopology() {
-        return this.nodeTopology == null ? Output.empty() : this.nodeTopology;
+        return this.nodeTopology == null ? Codegen.empty() : this.nodeTopology;
     }
 
     /**
@@ -119,13 +120,13 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CSIStorageCapacityArgs() {
-        this.apiVersion = Output.empty();
-        this.capacity = Output.empty();
-        this.kind = Output.empty();
-        this.maximumVolumeSize = Output.empty();
-        this.metadata = Output.empty();
-        this.nodeTopology = Output.empty();
-        this.storageClassName = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.capacity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.maximumVolumeSize = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.nodeTopology = Codegen.empty();
+        this.storageClassName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder capacity(@Nullable Output<String> capacity) {
@@ -173,7 +174,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder capacity(@Nullable String capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -181,7 +182,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder maximumVolumeSize(@Nullable Output<String> maximumVolumeSize) {
@@ -189,7 +190,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maximumVolumeSize(@Nullable String maximumVolumeSize) {
-            this.maximumVolumeSize = Output.ofNullable(maximumVolumeSize);
+            this.maximumVolumeSize = Codegen.ofNullable(maximumVolumeSize);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -197,7 +198,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder nodeTopology(@Nullable Output<LabelSelectorArgs> nodeTopology) {
@@ -205,7 +206,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder nodeTopology(@Nullable LabelSelectorArgs nodeTopology) {
-            this.nodeTopology = Output.ofNullable(nodeTopology);
+            this.nodeTopology = Codegen.ofNullable(nodeTopology);
             return this;
         }
         public Builder storageClassName(Output<String> storageClassName) {

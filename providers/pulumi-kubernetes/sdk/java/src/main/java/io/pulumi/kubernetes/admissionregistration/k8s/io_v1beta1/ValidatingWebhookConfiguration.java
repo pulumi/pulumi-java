@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.ValidatingWebhookConfigurationArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.ValidatingWebhook;
@@ -100,7 +101,7 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public ValidatingWebhookConfiguration(String name, @Nullable ValidatingWebhookConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:admissionregistration.k8s.io/v1beta1:ValidatingWebhookConfiguration", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:admissionregistration.k8s.io/v1beta1:ValidatingWebhookConfiguration", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ValidatingWebhookConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

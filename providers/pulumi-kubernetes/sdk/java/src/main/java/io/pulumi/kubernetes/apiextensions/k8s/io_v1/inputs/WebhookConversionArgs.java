@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<WebhookClientConfigArgs> clientConfig;
 
     public Output<WebhookClientConfigArgs> getClientConfig() {
-        return this.clientConfig == null ? Output.empty() : this.clientConfig;
+        return this.clientConfig == null ? Codegen.empty() : this.clientConfig;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WebhookConversionArgs() {
-        this.clientConfig = Output.empty();
-        this.conversionReviewVersions = Output.empty();
+        this.clientConfig = Codegen.empty();
+        this.conversionReviewVersions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder clientConfig(@Nullable WebhookClientConfigArgs clientConfig) {
-            this.clientConfig = Output.ofNullable(clientConfig);
+            this.clientConfig = Codegen.ofNullable(clientConfig);
             return this;
         }
         public Builder conversionReviewVersions(Output<List<String>> conversionReviewVersions) {

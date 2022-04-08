@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import io.pulumi.kubernetes.networking.k8s.io_v1.NetworkPolicyListArgs;
@@ -99,7 +100,7 @@ public class NetworkPolicyList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkPolicyList(String name, NetworkPolicyListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:networking.k8s.io/v1:NetworkPolicyList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:networking.k8s.io/v1:NetworkPolicyList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkPolicyList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

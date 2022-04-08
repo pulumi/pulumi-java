@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.events.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public EventSeriesArgs(
@@ -62,9 +63,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventSeriesArgs() {
-        this.count = Output.empty();
-        this.lastObservedTime = Output.empty();
-        this.state = Output.empty();
+        this.count = Codegen.empty();
+        this.lastObservedTime = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public EventSeriesArgs build() {
             return new EventSeriesArgs(count, lastObservedTime, state);

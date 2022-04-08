@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class TopologySelectorLabelRequirementArgs extends io.pulumi.resour
     }
 
     private TopologySelectorLabelRequirementArgs() {
-        this.key = Output.empty();
-        this.values = Output.empty();
+        this.key = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

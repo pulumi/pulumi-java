@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ScopedResourceSelectorRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 
     public Output<List<ScopedResourceSelectorRequirementArgs>> getMatchExpressions() {
-        return this.matchExpressions == null ? Output.empty() : this.matchExpressions;
+        return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
     }
 
     public ScopeSelectorArgs(@Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
@@ -35,7 +36,7 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeSelectorArgs() {
-        this.matchExpressions = Output.empty();
+        this.matchExpressions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder matchExpressions(@Nullable List<ScopedResourceSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Output.ofNullable(matchExpressions);
+            this.matchExpressions = Codegen.ofNullable(matchExpressions);
             return this;
         }
         public Builder matchExpressions(ScopedResourceSelectorRequirementArgs... matchExpressions) {

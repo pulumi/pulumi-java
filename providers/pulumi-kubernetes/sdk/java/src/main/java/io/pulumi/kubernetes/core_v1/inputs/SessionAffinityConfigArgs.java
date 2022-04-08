@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ClientIPConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ClientIPConfigArgs> clientIP;
 
     public Output<ClientIPConfigArgs> getClientIP() {
-        return this.clientIP == null ? Output.empty() : this.clientIP;
+        return this.clientIP == null ? Codegen.empty() : this.clientIP;
     }
 
     public SessionAffinityConfigArgs(@Nullable Output<ClientIPConfigArgs> clientIP) {
@@ -34,7 +35,7 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private SessionAffinityConfigArgs() {
-        this.clientIP = Output.empty();
+        this.clientIP = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clientIP(@Nullable ClientIPConfigArgs clientIP) {
-            this.clientIP = Output.ofNullable(clientIP);
+            this.clientIP = Codegen.ofNullable(clientIP);
             return this;
         }        public SessionAffinityConfigArgs build() {
             return new SessionAffinityConfigArgs(clientIP);

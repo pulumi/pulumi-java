@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 import com.google.gson.JsonElement;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceSubresourceScaleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
 
     public Output<CustomResourceSubresourceScaleArgs> getScale() {
-        return this.scale == null ? Output.empty() : this.scale;
+        return this.scale == null ? Codegen.empty() : this.scale;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<JsonElement> status;
 
     public Output<JsonElement> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public CustomResourceSubresourcesArgs(
@@ -49,8 +50,8 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
     }
 
     private CustomResourceSubresourcesArgs() {
-        this.scale = Output.empty();
-        this.status = Output.empty();
+        this.scale = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder scale(@Nullable CustomResourceSubresourceScaleArgs scale) {
-            this.scale = Output.ofNullable(scale);
+            this.scale = Codegen.ofNullable(scale);
             return this;
         }
         public Builder status(@Nullable Output<JsonElement> status) {
@@ -88,7 +89,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder status(@Nullable JsonElement status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public CustomResourceSubresourcesArgs build() {
             return new CustomResourceSubresourcesArgs(scale, status);

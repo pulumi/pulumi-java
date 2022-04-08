@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
       private final @Nullable Output<String> labelSelectorPath;
 
     public Output<String> getLabelSelectorPath() {
-        return this.labelSelectorPath == null ? Output.empty() : this.labelSelectorPath;
+        return this.labelSelectorPath == null ? Codegen.empty() : this.labelSelectorPath;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
     }
 
     private CustomResourceSubresourceScaleArgs() {
-        this.labelSelectorPath = Output.empty();
-        this.specReplicasPath = Output.empty();
-        this.statusReplicasPath = Output.empty();
+        this.labelSelectorPath = Codegen.empty();
+        this.specReplicasPath = Codegen.empty();
+        this.statusReplicasPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
             return this;
         }
         public Builder labelSelectorPath(@Nullable String labelSelectorPath) {
-            this.labelSelectorPath = Output.ofNullable(labelSelectorPath);
+            this.labelSelectorPath = Codegen.ofNullable(labelSelectorPath);
             return this;
         }
         public Builder specReplicasPath(Output<String> specReplicasPath) {

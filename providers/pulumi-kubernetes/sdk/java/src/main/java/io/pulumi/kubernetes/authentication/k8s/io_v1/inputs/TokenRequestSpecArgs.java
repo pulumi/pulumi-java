@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.inputs.BoundObjectReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<BoundObjectReferenceArgs> boundObjectRef;
 
     public Output<BoundObjectReferenceArgs> getBoundObjectRef() {
-        return this.boundObjectRef == null ? Output.empty() : this.boundObjectRef;
+        return this.boundObjectRef == null ? Codegen.empty() : this.boundObjectRef;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> expirationSeconds;
 
     public Output<Integer> getExpirationSeconds() {
-        return this.expirationSeconds == null ? Output.empty() : this.expirationSeconds;
+        return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
     }
 
     public TokenRequestSpecArgs(
@@ -64,9 +65,9 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TokenRequestSpecArgs() {
-        this.audiences = Output.empty();
-        this.boundObjectRef = Output.empty();
-        this.expirationSeconds = Output.empty();
+        this.audiences = Codegen.empty();
+        this.boundObjectRef = Codegen.empty();
+        this.expirationSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder boundObjectRef(@Nullable BoundObjectReferenceArgs boundObjectRef) {
-            this.boundObjectRef = Output.ofNullable(boundObjectRef);
+            this.boundObjectRef = Codegen.ofNullable(boundObjectRef);
             return this;
         }
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
@@ -117,7 +118,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Output.ofNullable(expirationSeconds);
+            this.expirationSeconds = Codegen.ofNullable(expirationSeconds);
             return this;
         }        public TokenRequestSpecArgs build() {
             return new TokenRequestSpecArgs(audiences, boundObjectRef, expirationSeconds);

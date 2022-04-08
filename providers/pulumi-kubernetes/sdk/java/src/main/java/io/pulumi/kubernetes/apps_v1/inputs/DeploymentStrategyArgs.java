@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apps_v1.inputs.RollingUpdateDeploymentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate;
 
     public Output<RollingUpdateDeploymentArgs> getRollingUpdate() {
-        return this.rollingUpdate == null ? Output.empty() : this.rollingUpdate;
+        return this.rollingUpdate == null ? Codegen.empty() : this.rollingUpdate;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DeploymentStrategyArgs(
@@ -53,8 +54,8 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DeploymentStrategyArgs() {
-        this.rollingUpdate = Output.empty();
-        this.type = Output.empty();
+        this.rollingUpdate = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder rollingUpdate(@Nullable RollingUpdateDeploymentArgs rollingUpdate) {
-            this.rollingUpdate = Output.ofNullable(rollingUpdate);
+            this.rollingUpdate = Codegen.ofNullable(rollingUpdate);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -92,7 +93,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DeploymentStrategyArgs build() {
             return new DeploymentStrategyArgs(rollingUpdate, type);

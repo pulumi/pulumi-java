@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appProtocol;
 
     public Output<String> getAppProtocol() {
-        return this.appProtocol == null ? Output.empty() : this.appProtocol;
+        return this.appProtocol == null ? Codegen.empty() : this.appProtocol;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> nodePort;
 
     public Output<Integer> getNodePort() {
-        return this.nodePort == null ? Output.empty() : this.nodePort;
+        return this.nodePort == null ? Codegen.empty() : this.nodePort;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<Integer,String>> targetPort;
 
     public Output<Either<Integer,String>> getTargetPort() {
-        return this.targetPort == null ? Output.empty() : this.targetPort;
+        return this.targetPort == null ? Codegen.empty() : this.targetPort;
     }
 
     public ServicePortArgs(
@@ -107,12 +108,12 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServicePortArgs() {
-        this.appProtocol = Output.empty();
-        this.name = Output.empty();
-        this.nodePort = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.targetPort = Output.empty();
+        this.appProtocol = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodePort = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.targetPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appProtocol(@Nullable String appProtocol) {
-            this.appProtocol = Output.ofNullable(appProtocol);
+            this.appProtocol = Codegen.ofNullable(appProtocol);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -158,7 +159,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nodePort(@Nullable Output<Integer> nodePort) {
@@ -166,7 +167,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodePort(@Nullable Integer nodePort) {
-            this.nodePort = Output.ofNullable(nodePort);
+            this.nodePort = Codegen.ofNullable(nodePort);
             return this;
         }
         public Builder port(Output<Integer> port) {
@@ -182,7 +183,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder targetPort(@Nullable Output<Either<Integer,String>> targetPort) {
@@ -190,7 +191,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetPort(@Nullable Either<Integer,String> targetPort) {
-            this.targetPort = Output.ofNullable(targetPort);
+            this.targetPort = Codegen.ofNullable(targetPort);
             return this;
         }        public ServicePortArgs build() {
             return new ServicePortArgs(appProtocol, name, nodePort, port, protocol, targetPort);
