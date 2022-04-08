@@ -26,7 +26,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
-     * 
      */
     @Import(name="amiType")
       private final @Nullable Output<String> amiType;
@@ -37,7 +36,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
-     * 
      */
     @Import(name="capacityType")
       private final @Nullable Output<String> capacityType;
@@ -48,7 +46,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The target EKS cluster.
-     * 
      */
     @Import(name="cluster", required=true)
       private final Output<CoreDataArgs> cluster;
@@ -59,7 +56,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the EKS Cluster.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -70,7 +66,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-     * 
      */
     @Import(name="diskSize")
       private final @Nullable Output<Integer> diskSize;
@@ -81,7 +76,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
-     * 
      */
     @Import(name="forceUpdateVersion")
       private final @Nullable Output<Boolean> forceUpdateVersion;
@@ -92,7 +86,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-     * 
      */
     @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
@@ -103,7 +96,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -114,7 +106,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Launch Template settings.
-     * 
      */
     @Import(name="launchTemplate")
       private final @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
@@ -125,7 +116,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `nodeGroupNamePrefix`.
-     * 
      */
     @Import(name="nodeGroupName")
       private final @Nullable Output<String> nodeGroupName;
@@ -136,7 +126,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Creates a unique name beginning with the specified prefix. Conflicts with `nodeGroupName`.
-     * 
      */
     @Import(name="nodeGroupNamePrefix")
       private final @Nullable Output<String> nodeGroupNamePrefix;
@@ -149,7 +138,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
      * The IAM Role that provides permissions for the EKS Node Group.
      * 
      * Note, `nodeRole` and `nodeRoleArn` are mutually exclusive, and a single option must be used.
-     * 
      */
     @Import(name="nodeRole")
       private final @Nullable Output<Role> nodeRole;
@@ -162,7 +150,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
      * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
      * 
      * Note, `nodeRoleArn` and `nodeRole` are mutually exclusive, and a single option must be used.
-     * 
      */
     @Import(name="nodeRoleArn")
       private final @Nullable Output<String> nodeRoleArn;
@@ -173,7 +160,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-     * 
      */
     @Import(name="releaseVersion")
       private final @Nullable Output<String> releaseVersion;
@@ -184,7 +170,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Remote access settings.
-     * 
      */
     @Import(name="remoteAccess")
       private final @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
@@ -200,7 +185,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
      *   - desiredSize: 2
      *   - minSize: 1
      *   - maxSize: 2
-     * 
      */
     @Import(name="scalingConfig")
       private final @Nullable Output<NodeGroupScalingConfigArgs> scalingConfig;
@@ -218,7 +202,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
      *   - core.publicSubnetIds
      * 
      * This default logic is based on the existing subnet IDs logic of this package: https://git.io/JeM11
-     * 
      */
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
@@ -229,7 +212,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Key-value mapping of resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -240,7 +222,6 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group.
-     * 
      */
     @Import(name="taints")
       private final @Nullable Output<List<NodeGroupTaintArgs>> taints;

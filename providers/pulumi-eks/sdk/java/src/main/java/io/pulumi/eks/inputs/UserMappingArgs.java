@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Describes a mapping from an AWS IAM user to a Kubernetes user and groups.
- * 
  */
 public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of groups within Kubernetes to which the user is mapped to.
-     * 
      */
     @Import(name="groups", required=true)
       private final Output<List<String>> groups;
@@ -31,7 +29,6 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the IAM user to add.
-     * 
      */
     @Import(name="userArn", required=true)
       private final Output<String> userArn;
@@ -42,7 +39,6 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ClusterCreationRoleProvider is a component that wraps creating a role provider that can be passed to the `Cluster`'s `creationRoleProvider`. This can be used to provide a specific role to use for the creation of the EKS cluster different from the role being used to run the Pulumi deployment.
- * 
  */
 @ResourceType(type="eks:index:ClusterCreationRoleProvider")
 public class ClusterCreationRoleProvider extends io.pulumi.resources.ComponentResource {

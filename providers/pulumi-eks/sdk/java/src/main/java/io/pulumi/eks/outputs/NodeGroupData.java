@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class NodeGroupData {
     /**
      * The AutoScalingGroup name for the node group.
-     * 
      */
     private final String autoScalingGroupName;
     /**
      * The CloudFormation Stack which defines the Node AutoScalingGroup.
-     * 
      */
     private final Stack cfnStack;
     /**
      * The additional security groups for the node group that captures user-specific rules.
-     * 
      */
     private final List<SecurityGroup> extraNodeSecurityGroups;
     /**
      * The security group for the node group to communicate with the cluster.
-     * 
      */
     private final SecurityGroup nodeSecurityGroup;
 
@@ -47,28 +43,24 @@ public final class NodeGroupData {
 
     /**
      * The AutoScalingGroup name for the node group.
-     * 
     */
     public String getAutoScalingGroupName() {
         return this.autoScalingGroupName;
     }
     /**
      * The CloudFormation Stack which defines the Node AutoScalingGroup.
-     * 
     */
     public Stack getCfnStack() {
         return this.cfnStack;
     }
     /**
      * The additional security groups for the node group that captures user-specific rules.
-     * 
     */
     public List<SecurityGroup> getExtraNodeSecurityGroups() {
         return this.extraNodeSecurityGroups;
     }
     /**
      * The security group for the node group to communicate with the cluster.
-     * 
     */
     public SecurityGroup getNodeSecurityGroup() {
         return this.nodeSecurityGroup;

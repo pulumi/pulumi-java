@@ -14,34 +14,29 @@ import javax.annotation.Nullable;
 
 /**
  * NodeGroupSecurityGroup is a component that wraps creating a security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.
- * 
  */
 @ResourceType(type="eks:index:NodeGroupSecurityGroup")
 public class NodeGroupSecurityGroup extends io.pulumi.resources.ComponentResource {
     /**
      * The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.
-     * 
      */
     @Export(name="securityGroup", type=SecurityGroup.class, parameters={})
     private Output<SecurityGroup> securityGroup;
 
     /**
      * @return The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.
-     * 
      */
     public Output<SecurityGroup> getSecurityGroup() {
         return this.securityGroup;
     }
     /**
      * The EKS cluster ingress rule.
-     * 
      */
     @Export(name="securityGroupRule", type=SecurityGroupRule.class, parameters={})
     private Output<SecurityGroupRule> securityGroupRule;
 
     /**
      * @return The EKS cluster ingress rule.
-     * 
      */
     public Output<SecurityGroupRule> getSecurityGroupRule() {
         return this.securityGroupRule;

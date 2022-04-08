@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines how Kubernetes pods are executed in Fargate. See aws.eks.FargateProfileArgs for reference.
- * 
  */
 public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.
-     * 
      */
     @Import(name="podExecutionRoleArn")
       private final @Nullable Output<String> podExecutionRoleArn;
@@ -33,7 +31,6 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify the namespace and label selectors to use for launching pods into Fargate.
-     * 
      */
     @Import(name="selectors")
       private final @Nullable Output<List<FargateProfileSelectorArgs>> selectors;
@@ -44,7 +41,6 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.
-     * 
      */
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;

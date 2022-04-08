@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a Kubernetes `taint` to apply to all Nodes in a NodeGroup. See https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/.
- * 
  */
 public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The effect of the taint.
-     * 
      */
     @Import(name="effect", required=true)
       private final Output<String> effect;
@@ -30,7 +28,6 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the taint.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

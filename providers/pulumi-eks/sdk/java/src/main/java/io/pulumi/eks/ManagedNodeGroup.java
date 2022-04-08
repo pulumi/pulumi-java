@@ -16,20 +16,17 @@ import javax.annotation.Nullable;
  * 
  * See for more details:
  * https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
- * 
  */
 @ResourceType(type="eks:index:ManagedNodeGroup")
 public class ManagedNodeGroup extends io.pulumi.resources.ComponentResource {
     /**
      * The AWS managed node group.
-     * 
      */
     @Export(name="nodeGroup", type=NodeGroup.class, parameters={})
     private Output<NodeGroup> nodeGroup;
 
     /**
      * @return The AWS managed node group.
-     * 
      */
     public Output<NodeGroup> getNodeGroup() {
         return this.nodeGroup;

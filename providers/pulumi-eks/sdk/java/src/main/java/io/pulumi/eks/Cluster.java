@@ -20,146 +20,125 @@ import javax.annotation.Nullable;
 
 /**
  * Cluster is a component that wraps the AWS and Kubernetes resources necessary to run an EKS cluster, its worker nodes, its optional StorageClasses, and an optional deployment of the Kubernetes Dashboard.
- * 
  */
 @ResourceType(type="eks:index:Cluster")
 public class Cluster extends io.pulumi.resources.ComponentResource {
     /**
      * The AWS resource provider.
-     * 
      */
     @Export(name="awsProvider", type=Provider.class, parameters={})
     private Output<Provider> awsProvider;
 
     /**
      * @return The AWS resource provider.
-     * 
      */
     public Output<Provider> getAwsProvider() {
         return this.awsProvider;
     }
     /**
      * The security group for the EKS cluster.
-     * 
      */
     @Export(name="clusterSecurityGroup", type=SecurityGroup.class, parameters={})
     private Output<SecurityGroup> clusterSecurityGroup;
 
     /**
      * @return The security group for the EKS cluster.
-     * 
      */
     public Output<SecurityGroup> getClusterSecurityGroup() {
         return this.clusterSecurityGroup;
     }
     /**
      * The EKS cluster and its dependencies.
-     * 
      */
     @Export(name="core", type=CoreData.class, parameters={})
     private Output<CoreData> core;
 
     /**
      * @return The EKS cluster and its dependencies.
-     * 
      */
     public Output<CoreData> getCore() {
         return this.core;
     }
     /**
      * The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.
-     * 
      */
     @Export(name="defaultNodeGroup", type=NodeGroupData.class, parameters={})
     private Output</* @Nullable */ NodeGroupData> defaultNodeGroup;
 
     /**
      * @return The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.
-     * 
      */
     public Output</* @Nullable */ NodeGroupData> getDefaultNodeGroup() {
         return this.defaultNodeGroup;
     }
     /**
      * The EKS cluster.
-     * 
      */
     @Export(name="eksCluster", type=io.pulumi.aws.eks.Cluster.class, parameters={})
     private Output<io.pulumi.aws.eks.Cluster> eksCluster;
 
     /**
      * @return The EKS cluster.
-     * 
      */
     public Output<io.pulumi.aws.eks.Cluster> getEksCluster() {
         return this.eksCluster;
     }
     /**
      * The ingress rule that gives node group access to cluster API server.
-     * 
      */
     @Export(name="eksClusterIngressRule", type=SecurityGroupRule.class, parameters={})
     private Output<SecurityGroupRule> eksClusterIngressRule;
 
     /**
      * @return The ingress rule that gives node group access to cluster API server.
-     * 
      */
     public Output<SecurityGroupRule> getEksClusterIngressRule() {
         return this.eksClusterIngressRule;
     }
     /**
      * The service roles used by the EKS cluster.
-     * 
      */
     @Export(name="instanceRoles", type=List.class, parameters={Role.class})
     private Output<List<Role>> instanceRoles;
 
     /**
      * @return The service roles used by the EKS cluster.
-     * 
      */
     public Output<List<Role>> getInstanceRoles() {
         return this.instanceRoles;
     }
     /**
      * A kubeconfig that can be used to connect to the EKS cluster.
-     * 
      */
     @Export(name="kubeconfig", type=Object.class, parameters={})
     private Output<Object> kubeconfig;
 
     /**
      * @return A kubeconfig that can be used to connect to the EKS cluster.
-     * 
      */
     public Output<Object> getKubeconfig() {
         return this.kubeconfig;
     }
     /**
      * The security group for the cluster's nodes.
-     * 
      */
     @Export(name="nodeSecurityGroup", type=SecurityGroup.class, parameters={})
     private Output<SecurityGroup> nodeSecurityGroup;
 
     /**
      * @return The security group for the cluster's nodes.
-     * 
      */
     public Output<SecurityGroup> getNodeSecurityGroup() {
         return this.nodeSecurityGroup;
     }
     /**
      * A Kubernetes resource provider that can be used to deploy into this cluster.
-     * 
      */
     @Export(name="provider", type=io.pulumi.kubernetes.Provider.class, parameters={})
     private Output<io.pulumi.kubernetes.Provider> provider;
 
     /**
      * @return A Kubernetes resource provider that can be used to deploy into this cluster.
-     * 
      */
     public Output<io.pulumi.kubernetes.Provider> getProvider() {
         return this.provider;

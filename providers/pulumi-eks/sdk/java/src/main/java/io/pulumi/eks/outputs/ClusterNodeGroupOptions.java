@@ -28,7 +28,6 @@ public final class ClusterNodeGroupOptions {
      * 
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
-     * 
      */
     private final @Nullable String amiId;
     /**
@@ -37,41 +36,34 @@ public final class ClusterNodeGroupOptions {
      * Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
      * 
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
-     * 
      */
     private final @Nullable Map<String,String> autoScalingGroupTags;
     /**
      * Additional args to pass directly to `/etc/eks/bootstrap.sh`. For details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.
-     * 
      */
     private final @Nullable String bootstrapExtraArgs;
     /**
      * The tags to apply to the CloudFormation Stack of the Worker NodeGroup.
      * 
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
-     * 
      */
     private final @Nullable Map<String,String> cloudFormationTags;
     /**
      * The ingress rule that gives node group access.
-     * 
      */
     private final @Nullable SecurityGroupRule clusterIngressRule;
     /**
      * The number of worker nodes that should be running in the cluster. Defaults to 2.
-     * 
      */
     private final @Nullable Integer desiredCapacity;
     /**
      * Encrypt the root block device of the nodes in the node group.
-     * 
      */
     private final @Nullable Boolean encryptRootBlockDevice;
     /**
      * Extra security groups to attach on all nodes in this worker node group.
      * 
      * This additional set of security groups captures any user application rules that will be needed for the nodes.
-     * 
      */
     private final @Nullable List<SecurityGroup> extraNodeSecurityGroups;
     /**
@@ -84,59 +76,48 @@ public final class ClusterNodeGroupOptions {
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
      * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
-     * 
      */
     private final @Nullable Boolean gpu;
     /**
      * The ingress rule that gives node group access.
-     * 
      */
     private final @Nullable InstanceProfile instanceProfile;
     /**
      * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
-     * 
      */
     private final @Nullable String instanceType;
     /**
      * Name of the key pair to use for SSH access to worker nodes.
-     * 
      */
     private final @Nullable String keyName;
     /**
      * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
-     * 
      */
     private final @Nullable String kubeletExtraArgs;
     /**
      * Custom k8s node labels to be attached to each worker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.
-     * 
      */
     private final @Nullable Map<String,String> labels;
     /**
      * The maximum number of worker nodes running in the cluster. Defaults to 2.
-     * 
      */
     private final @Nullable Integer maxSize;
     /**
      * The minimum number of worker nodes running in the cluster. Defaults to 1.
-     * 
      */
     private final @Nullable Integer minSize;
     /**
      * Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
-     * 
      */
     private final @Nullable Boolean nodeAssociatePublicIpAddress;
     /**
      * Public key material for SSH access to worker nodes. See allowed formats at:
      * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
      * If not provided, no SSH access is enabled on VMs.
-     * 
      */
     private final @Nullable String nodePublicKey;
     /**
      * The size in GiB of a cluster node's root volume. Defaults to 20.
-     * 
      */
     private final @Nullable Integer nodeRootVolumeSize;
     /**
@@ -148,41 +129,34 @@ public final class ClusterNodeGroupOptions {
      * https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html
      * 
      * Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.
-     * 
      */
     private final @Nullable SecurityGroup nodeSecurityGroup;
     /**
      * The set of subnets to override and use for the worker node group.
      * 
      * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
-     * 
      */
     private final @Nullable List<String> nodeSubnetIds;
     /**
      * Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
-     * 
      */
     private final @Nullable String nodeUserData;
     /**
      * User specified code to run on node startup. This code is expected to handle the full AWS EKS bootstrapping code and signal node readiness to the managing CloudFormation stack. This code must be a complete and executable user data script in bash (Linux) or powershell (Windows).
      * 
      * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html
-     * 
      */
     private final @Nullable String nodeUserDataOverride;
     /**
      * Bidding price for spot instance. If set, only spot instances will be added as worker node.
-     * 
      */
     private final @Nullable String spotPrice;
     /**
      * Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument
-     * 
      */
     private final @Nullable Map<String,Taint> taints;
     /**
      * Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
-     * 
      */
     private final @Nullable String version;
 
@@ -251,7 +225,6 @@ public final class ClusterNodeGroupOptions {
      * 
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
-     * 
     */
     public Optional<String> getAmiId() {
         return Optional.ofNullable(this.amiId);
@@ -262,14 +235,12 @@ public final class ClusterNodeGroupOptions {
      * Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
      * 
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
-     * 
     */
     public Map<String,String> getAutoScalingGroupTags() {
         return this.autoScalingGroupTags == null ? Map.of() : this.autoScalingGroupTags;
     }
     /**
      * Additional args to pass directly to `/etc/eks/bootstrap.sh`. For details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.
-     * 
     */
     public Optional<String> getBootstrapExtraArgs() {
         return Optional.ofNullable(this.bootstrapExtraArgs);
@@ -278,28 +249,24 @@ public final class ClusterNodeGroupOptions {
      * The tags to apply to the CloudFormation Stack of the Worker NodeGroup.
      * 
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
-     * 
     */
     public Map<String,String> getCloudFormationTags() {
         return this.cloudFormationTags == null ? Map.of() : this.cloudFormationTags;
     }
     /**
      * The ingress rule that gives node group access.
-     * 
     */
     public Optional<SecurityGroupRule> getClusterIngressRule() {
         return Optional.ofNullable(this.clusterIngressRule);
     }
     /**
      * The number of worker nodes that should be running in the cluster. Defaults to 2.
-     * 
     */
     public Optional<Integer> getDesiredCapacity() {
         return Optional.ofNullable(this.desiredCapacity);
     }
     /**
      * Encrypt the root block device of the nodes in the node group.
-     * 
     */
     public Optional<Boolean> getEncryptRootBlockDevice() {
         return Optional.ofNullable(this.encryptRootBlockDevice);
@@ -308,7 +275,6 @@ public final class ClusterNodeGroupOptions {
      * Extra security groups to attach on all nodes in this worker node group.
      * 
      * This additional set of security groups captures any user application rules that will be needed for the nodes.
-     * 
     */
     public List<SecurityGroup> getExtraNodeSecurityGroups() {
         return this.extraNodeSecurityGroups == null ? List.of() : this.extraNodeSecurityGroups;
@@ -323,63 +289,54 @@ public final class ClusterNodeGroupOptions {
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
      * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
-     * 
     */
     public Optional<Boolean> getGpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
      * The ingress rule that gives node group access.
-     * 
     */
     public Optional<InstanceProfile> getInstanceProfile() {
         return Optional.ofNullable(this.instanceProfile);
     }
     /**
      * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
-     * 
     */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Name of the key pair to use for SSH access to worker nodes.
-     * 
     */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
-     * 
     */
     public Optional<String> getKubeletExtraArgs() {
         return Optional.ofNullable(this.kubeletExtraArgs);
     }
     /**
      * Custom k8s node labels to be attached to each worker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * The maximum number of worker nodes running in the cluster. Defaults to 2.
-     * 
     */
     public Optional<Integer> getMaxSize() {
         return Optional.ofNullable(this.maxSize);
     }
     /**
      * The minimum number of worker nodes running in the cluster. Defaults to 1.
-     * 
     */
     public Optional<Integer> getMinSize() {
         return Optional.ofNullable(this.minSize);
     }
     /**
      * Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
-     * 
     */
     public Optional<Boolean> getNodeAssociatePublicIpAddress() {
         return Optional.ofNullable(this.nodeAssociatePublicIpAddress);
@@ -388,14 +345,12 @@ public final class ClusterNodeGroupOptions {
      * Public key material for SSH access to worker nodes. See allowed formats at:
      * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
      * If not provided, no SSH access is enabled on VMs.
-     * 
     */
     public Optional<String> getNodePublicKey() {
         return Optional.ofNullable(this.nodePublicKey);
     }
     /**
      * The size in GiB of a cluster node's root volume. Defaults to 20.
-     * 
     */
     public Optional<Integer> getNodeRootVolumeSize() {
         return Optional.ofNullable(this.nodeRootVolumeSize);
@@ -409,7 +364,6 @@ public final class ClusterNodeGroupOptions {
      * https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html
      * 
      * Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.
-     * 
     */
     public Optional<SecurityGroup> getNodeSecurityGroup() {
         return Optional.ofNullable(this.nodeSecurityGroup);
@@ -418,14 +372,12 @@ public final class ClusterNodeGroupOptions {
      * The set of subnets to override and use for the worker node group.
      * 
      * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
-     * 
     */
     public List<String> getNodeSubnetIds() {
         return this.nodeSubnetIds == null ? List.of() : this.nodeSubnetIds;
     }
     /**
      * Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
-     * 
     */
     public Optional<String> getNodeUserData() {
         return Optional.ofNullable(this.nodeUserData);
@@ -434,28 +386,24 @@ public final class ClusterNodeGroupOptions {
      * User specified code to run on node startup. This code is expected to handle the full AWS EKS bootstrapping code and signal node readiness to the managing CloudFormation stack. This code must be a complete and executable user data script in bash (Linux) or powershell (Windows).
      * 
      * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html
-     * 
     */
     public Optional<String> getNodeUserDataOverride() {
         return Optional.ofNullable(this.nodeUserDataOverride);
     }
     /**
      * Bidding price for spot instance. If set, only spot instances will be added as worker node.
-     * 
     */
     public Optional<String> getSpotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
     /**
      * Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument
-     * 
     */
     public Map<String,Taint> getTaints() {
         return this.taints == null ? Map.of() : this.taints;
     }
     /**
      * Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

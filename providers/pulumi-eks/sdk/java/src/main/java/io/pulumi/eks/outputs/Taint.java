@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class Taint {
     /**
      * The effect of the taint.
-     * 
      */
     private final String effect;
     /**
      * The value of the taint.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class Taint {
 
     /**
      * The effect of the taint.
-     * 
     */
     public String getEffect() {
         return this.effect;
     }
     /**
      * The value of the taint.
-     * 
     */
     public String getValue() {
         return this.value;
