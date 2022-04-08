@@ -32,10 +32,10 @@ import (
 func main() {
 	var tracing string
 	var root string
-	var jar string
+	var binary string
 	flag.StringVar(&tracing, "tracing", "", "Emit tracing to a Zipkin-compatible tracing endpoint")
 	flag.StringVar(&root, "root", "", "Project root path to use")
-	flag.StringVar(&jar, "jar", "", "A relative or an absolute path to a JAR to execute")
+	flag.StringVar(&binary, "binary", "", "A relative or an absolute path to a JAR to execute")
 
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
@@ -57,13 +57,13 @@ func main() {
 		if err != nil {
 			cmdutil.Exit(err)
 		}
-	case jar != "":
-		logging.V(3).Infof("language host asked to use specific JAR: `%s`", jar)
+	case binary != "":
+		logging.V(3).Infof("language host asked to use specific JAR: `%s`", binary)
 		cmd, err := lookupPath("java")
 		if err != nil {
 			cmdutil.Exit(err)
 		}
-		jvmExec, err = newJarExecutor(cmd, jar)
+		jvmExec, err = newJarExecutor(cmd, binary)
 		if err != nil {
 			cmdutil.Exit(err)
 		}
