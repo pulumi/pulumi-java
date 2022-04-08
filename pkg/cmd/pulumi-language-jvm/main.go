@@ -435,6 +435,12 @@ func (host *jvmLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Emp
 	}, nil
 }
 
+func (host *jvmLanguageHost) InstallDependencies(
+	req *pulumirpc.InstallDependenciesRequest,
+	srv pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
+	return nil
+}
+
 func probeExecutor() (string, error) {
 	pwd, err := os.Getwd()
 	if err != nil {
