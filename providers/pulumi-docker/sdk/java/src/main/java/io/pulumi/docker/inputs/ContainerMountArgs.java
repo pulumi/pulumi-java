@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ContainerMountBindOptionsArgs;
 import io.pulumi.docker.inputs.ContainerMountTmpfsOptionsArgs;
 import io.pulumi.docker.inputs.ContainerMountVolumeOptionsArgs;
@@ -22,21 +23,21 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerMountBindOptionsArgs> bindOptions;
 
     public Output<ContainerMountBindOptionsArgs> getBindOptions() {
-        return this.bindOptions == null ? Output.empty() : this.bindOptions;
+        return this.bindOptions == null ? Codegen.empty() : this.bindOptions;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     @Import(name="target", required=true)
@@ -50,7 +51,7 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerMountTmpfsOptionsArgs> tmpfsOptions;
 
     public Output<ContainerMountTmpfsOptionsArgs> getTmpfsOptions() {
-        return this.tmpfsOptions == null ? Output.empty() : this.tmpfsOptions;
+        return this.tmpfsOptions == null ? Codegen.empty() : this.tmpfsOptions;
     }
 
     @Import(name="type", required=true)
@@ -64,7 +65,7 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerMountVolumeOptionsArgs> volumeOptions;
 
     public Output<ContainerMountVolumeOptionsArgs> getVolumeOptions() {
-        return this.volumeOptions == null ? Output.empty() : this.volumeOptions;
+        return this.volumeOptions == null ? Codegen.empty() : this.volumeOptions;
     }
 
     public ContainerMountArgs(
@@ -85,13 +86,13 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerMountArgs() {
-        this.bindOptions = Output.empty();
-        this.readOnly = Output.empty();
-        this.source = Output.empty();
-        this.target = Output.empty();
-        this.tmpfsOptions = Output.empty();
-        this.type = Output.empty();
-        this.volumeOptions = Output.empty();
+        this.bindOptions = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.source = Codegen.empty();
+        this.target = Codegen.empty();
+        this.tmpfsOptions = Codegen.empty();
+        this.type = Codegen.empty();
+        this.volumeOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bindOptions(@Nullable ContainerMountBindOptionsArgs bindOptions) {
-            this.bindOptions = Output.ofNullable(bindOptions);
+            this.bindOptions = Codegen.ofNullable(bindOptions);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -139,7 +140,7 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -147,7 +148,7 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder target(Output<String> target) {
@@ -163,7 +164,7 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tmpfsOptions(@Nullable ContainerMountTmpfsOptionsArgs tmpfsOptions) {
-            this.tmpfsOptions = Output.ofNullable(tmpfsOptions);
+            this.tmpfsOptions = Codegen.ofNullable(tmpfsOptions);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -179,7 +180,7 @@ public final class ContainerMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeOptions(@Nullable ContainerMountVolumeOptionsArgs volumeOptions) {
-            this.volumeOptions = Output.ofNullable(volumeOptions);
+            this.volumeOptions = Codegen.ofNullable(volumeOptions);
             return this;
         }        public ContainerMountArgs build() {
             return new ContainerMountArgs(bindOptions, readOnly, source, target, tmpfsOptions, type, volumeOptions);

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class NetworkLabelGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NetworkLabelGetArgs() {
-        this.label = Output.empty();
-        this.value = Output.empty();
+        this.label = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,42 +20,42 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> delay;
 
     public Output<String> getDelay() {
-        return this.delay == null ? Output.empty() : this.delay;
+        return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     @Import(name="failureAction")
       private final @Nullable Output<String> failureAction;
 
     public Output<String> getFailureAction() {
-        return this.failureAction == null ? Output.empty() : this.failureAction;
+        return this.failureAction == null ? Codegen.empty() : this.failureAction;
     }
 
     @Import(name="maxFailureRatio")
       private final @Nullable Output<String> maxFailureRatio;
 
     public Output<String> getMaxFailureRatio() {
-        return this.maxFailureRatio == null ? Output.empty() : this.maxFailureRatio;
+        return this.maxFailureRatio == null ? Codegen.empty() : this.maxFailureRatio;
     }
 
     @Import(name="monitor")
       private final @Nullable Output<String> monitor;
 
     public Output<String> getMonitor() {
-        return this.monitor == null ? Output.empty() : this.monitor;
+        return this.monitor == null ? Codegen.empty() : this.monitor;
     }
 
     @Import(name="order")
       private final @Nullable Output<String> order;
 
     public Output<String> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
     public Output<Integer> getParallelism() {
-        return this.parallelism == null ? Output.empty() : this.parallelism;
+        return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
     public ServiceRollbackConfigArgs(
@@ -73,12 +74,12 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceRollbackConfigArgs() {
-        this.delay = Output.empty();
-        this.failureAction = Output.empty();
-        this.maxFailureRatio = Output.empty();
-        this.monitor = Output.empty();
-        this.order = Output.empty();
-        this.parallelism = Output.empty();
+        this.delay = Codegen.empty();
+        this.failureAction = Codegen.empty();
+        this.maxFailureRatio = Codegen.empty();
+        this.monitor = Codegen.empty();
+        this.order = Codegen.empty();
+        this.parallelism = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder delay(@Nullable String delay) {
-            this.delay = Output.ofNullable(delay);
+            this.delay = Codegen.ofNullable(delay);
             return this;
         }
         public Builder failureAction(@Nullable Output<String> failureAction) {
@@ -124,7 +125,7 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder failureAction(@Nullable String failureAction) {
-            this.failureAction = Output.ofNullable(failureAction);
+            this.failureAction = Codegen.ofNullable(failureAction);
             return this;
         }
         public Builder maxFailureRatio(@Nullable Output<String> maxFailureRatio) {
@@ -132,7 +133,7 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder maxFailureRatio(@Nullable String maxFailureRatio) {
-            this.maxFailureRatio = Output.ofNullable(maxFailureRatio);
+            this.maxFailureRatio = Codegen.ofNullable(maxFailureRatio);
             return this;
         }
         public Builder monitor(@Nullable Output<String> monitor) {
@@ -140,7 +141,7 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder monitor(@Nullable String monitor) {
-            this.monitor = Output.ofNullable(monitor);
+            this.monitor = Codegen.ofNullable(monitor);
             return this;
         }
         public Builder order(@Nullable Output<String> order) {
@@ -148,7 +149,7 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder order(@Nullable String order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
@@ -156,7 +157,7 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Output.ofNullable(parallelism);
+            this.parallelism = Codegen.ofNullable(parallelism);
             return this;
         }        public ServiceRollbackConfigArgs build() {
             return new ServiceRollbackConfigArgs(delay, failureAction, maxFailureRatio, monitor, order, parallelism);

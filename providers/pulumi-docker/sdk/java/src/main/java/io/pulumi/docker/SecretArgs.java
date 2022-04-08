@@ -5,6 +5,7 @@ package io.pulumi.docker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.SecretLabelArgs;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SecretLabelArgs>> labels;
 
     public Output<List<SecretLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SecretArgs(
@@ -59,9 +60,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.data = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
+        this.data = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<SecretLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(SecretLabelArgs... labels) {
@@ -112,7 +113,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SecretArgs build() {
             return new SecretArgs(data, labels, name);

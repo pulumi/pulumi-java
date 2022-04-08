@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
       private final @Nullable Output<String> fileGid;
 
     public Output<String> getFileGid() {
-        return this.fileGid == null ? Output.empty() : this.fileGid;
+        return this.fileGid == null ? Codegen.empty() : this.fileGid;
     }
 
     @Import(name="fileMode")
       private final @Nullable Output<Integer> fileMode;
 
     public Output<Integer> getFileMode() {
-        return this.fileMode == null ? Output.empty() : this.fileMode;
+        return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
     @Import(name="fileName", required=true)
@@ -40,7 +41,7 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
       private final @Nullable Output<String> fileUid;
 
     public Output<String> getFileUid() {
-        return this.fileUid == null ? Output.empty() : this.fileUid;
+        return this.fileUid == null ? Codegen.empty() : this.fileUid;
     }
 
     @Import(name="secretId", required=true)
@@ -54,7 +55,7 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
       private final @Nullable Output<String> secretName;
 
     public Output<String> getSecretName() {
-        return this.secretName == null ? Output.empty() : this.secretName;
+        return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 
     public ServiceTaskSpecContainerSpecSecretGetArgs(
@@ -73,12 +74,12 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
     }
 
     private ServiceTaskSpecContainerSpecSecretGetArgs() {
-        this.fileGid = Output.empty();
-        this.fileMode = Output.empty();
-        this.fileName = Output.empty();
-        this.fileUid = Output.empty();
-        this.secretId = Output.empty();
-        this.secretName = Output.empty();
+        this.fileGid = Codegen.empty();
+        this.fileMode = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.fileUid = Codegen.empty();
+        this.secretId = Codegen.empty();
+        this.secretName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
             return this;
         }
         public Builder fileGid(@Nullable String fileGid) {
-            this.fileGid = Output.ofNullable(fileGid);
+            this.fileGid = Codegen.ofNullable(fileGid);
             return this;
         }
         public Builder fileMode(@Nullable Output<Integer> fileMode) {
@@ -124,7 +125,7 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
             return this;
         }
         public Builder fileMode(@Nullable Integer fileMode) {
-            this.fileMode = Output.ofNullable(fileMode);
+            this.fileMode = Codegen.ofNullable(fileMode);
             return this;
         }
         public Builder fileName(Output<String> fileName) {
@@ -140,7 +141,7 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
             return this;
         }
         public Builder fileUid(@Nullable String fileUid) {
-            this.fileUid = Output.ofNullable(fileUid);
+            this.fileUid = Codegen.ofNullable(fileUid);
             return this;
         }
         public Builder secretId(Output<String> secretId) {
@@ -156,7 +157,7 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
             return this;
         }
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Output.ofNullable(secretName);
+            this.secretName = Codegen.ofNullable(secretName);
             return this;
         }        public ServiceTaskSpecContainerSpecSecretGetArgs build() {
             return new ServiceTaskSpecContainerSpecSecretGetArgs(fileGid, fileMode, fileName, fileUid, secretId, secretName);

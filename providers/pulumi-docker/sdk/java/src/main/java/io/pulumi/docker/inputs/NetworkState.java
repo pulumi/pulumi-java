@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.NetworkIpamConfigGetArgs;
 import io.pulumi.docker.inputs.NetworkLabelGetArgs;
 import java.lang.Boolean;
@@ -28,7 +29,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> attachable;
 
     public Output<Boolean> getAttachable() {
-        return this.attachable == null ? Output.empty() : this.attachable;
+        return this.attachable == null ? Codegen.empty() : this.attachable;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> checkDuplicate;
 
     public Output<Boolean> getCheckDuplicate() {
-        return this.checkDuplicate == null ? Output.empty() : this.checkDuplicate;
+        return this.checkDuplicate == null ? Codegen.empty() : this.checkDuplicate;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
-        return this.driver == null ? Output.empty() : this.driver;
+        return this.driver == null ? Codegen.empty() : this.driver;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ingress;
 
     public Output<Boolean> getIngress() {
-        return this.ingress == null ? Output.empty() : this.ingress;
+        return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> internal;
 
     public Output<Boolean> getInternal() {
-        return this.internal == null ? Output.empty() : this.internal;
+        return this.internal == null ? Codegen.empty() : this.internal;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs;
 
     public Output<List<NetworkIpamConfigGetArgs>> getIpamConfigs() {
-        return this.ipamConfigs == null ? Output.empty() : this.ipamConfigs;
+        return this.ipamConfigs == null ? Codegen.empty() : this.ipamConfigs;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipamDriver;
 
     public Output<String> getIpamDriver() {
-        return this.ipamDriver == null ? Output.empty() : this.ipamDriver;
+        return this.ipamDriver == null ? Codegen.empty() : this.ipamDriver;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ipv6;
 
     public Output<Boolean> getIpv6() {
-        return this.ipv6 == null ? Output.empty() : this.ipv6;
+        return this.ipv6 == null ? Codegen.empty() : this.ipv6;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkLabelGetArgs>> labels;
 
     public Output<List<NetworkLabelGetArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> options;
 
     public Output<Map<String,Object>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public NetworkState(
@@ -182,18 +183,18 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkState() {
-        this.attachable = Output.empty();
-        this.checkDuplicate = Output.empty();
-        this.driver = Output.empty();
-        this.ingress = Output.empty();
-        this.internal = Output.empty();
-        this.ipamConfigs = Output.empty();
-        this.ipamDriver = Output.empty();
-        this.ipv6 = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.options = Output.empty();
-        this.scope = Output.empty();
+        this.attachable = Codegen.empty();
+        this.checkDuplicate = Codegen.empty();
+        this.driver = Codegen.empty();
+        this.ingress = Codegen.empty();
+        this.internal = Codegen.empty();
+        this.ipamConfigs = Codegen.empty();
+        this.ipamDriver = Codegen.empty();
+        this.ipv6 = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.options = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attachable(@Nullable Boolean attachable) {
-            this.attachable = Output.ofNullable(attachable);
+            this.attachable = Codegen.ofNullable(attachable);
             return this;
         }
         public Builder checkDuplicate(@Nullable Output<Boolean> checkDuplicate) {
@@ -251,7 +252,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checkDuplicate(@Nullable Boolean checkDuplicate) {
-            this.checkDuplicate = Output.ofNullable(checkDuplicate);
+            this.checkDuplicate = Codegen.ofNullable(checkDuplicate);
             return this;
         }
         public Builder driver(@Nullable Output<String> driver) {
@@ -259,7 +260,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driver(@Nullable String driver) {
-            this.driver = Output.ofNullable(driver);
+            this.driver = Codegen.ofNullable(driver);
             return this;
         }
         public Builder ingress(@Nullable Output<Boolean> ingress) {
@@ -267,7 +268,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingress(@Nullable Boolean ingress) {
-            this.ingress = Output.ofNullable(ingress);
+            this.ingress = Codegen.ofNullable(ingress);
             return this;
         }
         public Builder internal(@Nullable Output<Boolean> internal) {
@@ -275,7 +276,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder internal(@Nullable Boolean internal) {
-            this.internal = Output.ofNullable(internal);
+            this.internal = Codegen.ofNullable(internal);
             return this;
         }
         public Builder ipamConfigs(@Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs) {
@@ -283,7 +284,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipamConfigs(@Nullable List<NetworkIpamConfigGetArgs> ipamConfigs) {
-            this.ipamConfigs = Output.ofNullable(ipamConfigs);
+            this.ipamConfigs = Codegen.ofNullable(ipamConfigs);
             return this;
         }
         public Builder ipamConfigs(NetworkIpamConfigGetArgs... ipamConfigs) {
@@ -294,7 +295,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipamDriver(@Nullable String ipamDriver) {
-            this.ipamDriver = Output.ofNullable(ipamDriver);
+            this.ipamDriver = Codegen.ofNullable(ipamDriver);
             return this;
         }
         public Builder ipv6(@Nullable Output<Boolean> ipv6) {
@@ -302,7 +303,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6(@Nullable Boolean ipv6) {
-            this.ipv6 = Output.ofNullable(ipv6);
+            this.ipv6 = Codegen.ofNullable(ipv6);
             return this;
         }
         public Builder labels(@Nullable Output<List<NetworkLabelGetArgs>> labels) {
@@ -310,7 +311,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<NetworkLabelGetArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(NetworkLabelGetArgs... labels) {
@@ -321,7 +322,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder options(@Nullable Output<Map<String,Object>> options) {
@@ -329,7 +330,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable Map<String,Object> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -337,7 +338,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public NetworkState build() {
             return new NetworkState(attachable, checkDuplicate, driver, ingress, internal, ipamConfigs, ipamDriver, ipv6, labels, name, options, scope);
