@@ -136,11 +136,6 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         return OutputData.ofNullable(ImmutableSet.of(), value, true, isSecret);
     }
 
-    public static <T> CompletableFuture<OutputData<T>> ofAsync(CompletableFuture<T> value, boolean isSecret) {
-        Objects.requireNonNull(value);
-        return value.thenApply(v -> ofNullable(ImmutableSet.of(), v, true, isSecret));
-    }
-
     public static <T> OutputData<T> unknown() {
         //noinspection unchecked
         return (OutputData<T>) Unknown;
