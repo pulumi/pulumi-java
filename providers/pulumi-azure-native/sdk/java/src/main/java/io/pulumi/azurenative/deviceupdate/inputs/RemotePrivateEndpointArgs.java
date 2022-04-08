@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Remote private endpoint details.
- * 
  */
 public final class RemotePrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * Remote endpoint resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -34,7 +32,6 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of private link service connections that need manual approval.
-     * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
@@ -45,7 +42,6 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of automatically approved private link service connections.
-     * 
      */
     @Import(name="privateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
@@ -56,7 +52,6 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of private link service proxies.
-     * 
      */
     @Import(name="privateLinkServiceProxies")
       private final @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;

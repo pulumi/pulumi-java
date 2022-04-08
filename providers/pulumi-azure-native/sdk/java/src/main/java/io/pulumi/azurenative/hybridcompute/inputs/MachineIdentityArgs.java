@@ -16,7 +16,6 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information for connecting to MySQL server
- * 
  */
 public final class MySqlConnectionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
 
     /**
      * Password credential.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -32,7 +30,6 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
 
     /**
      * Port for Server
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -43,7 +40,6 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
 
     /**
      * Name of the server
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;
@@ -55,7 +51,6 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
     /**
      * Type of connection info
      * Expected value is 'MySqlConnectionInfo'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -66,7 +61,6 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
 
     /**
      * User name
-     * 
      */
     @Import(name="userName")
       private final @Nullable String userName;

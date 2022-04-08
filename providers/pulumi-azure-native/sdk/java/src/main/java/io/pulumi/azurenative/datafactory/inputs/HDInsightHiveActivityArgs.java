@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * HDInsight Hive activity type.
- * 
  */
 public final class HDInsightHiveActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * User specified arguments to HDInsightActivity.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable Output<List<Object>> arguments;
@@ -41,7 +39,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Allows user to specify defines for Hive job request.
-     * 
      */
     @Import(name="defines")
       private final @Nullable Output<Map<String,Object>> defines;
@@ -52,7 +49,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -63,7 +59,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -74,7 +69,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Debug info option.
-     * 
      */
     @Import(name="getDebugInfo")
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
@@ -85,7 +79,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -96,7 +89,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -107,7 +99,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -118,7 +109,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Output<Integer> queryTimeout;
@@ -129,7 +119,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Script linked service reference.
-     * 
      */
     @Import(name="scriptLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> scriptLinkedService;
@@ -140,7 +129,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Script path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="scriptPath")
       private final @Nullable Output<Object> scriptPath;
@@ -151,7 +139,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Storage linked service references.
-     * 
      */
     @Import(name="storageLinkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
@@ -163,7 +150,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
     /**
      * Type of activity.
      * Expected value is 'HDInsightHive'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -174,7 +160,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
@@ -185,7 +170,6 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
 
     /**
      * User specified arguments under hivevar namespace.
-     * 
      */
     @Import(name="variables")
       private final @Nullable Output<List<Object>> variables;

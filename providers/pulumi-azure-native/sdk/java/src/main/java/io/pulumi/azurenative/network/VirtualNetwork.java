@@ -26,7 +26,859 @@ import javax.annotation.Nullable;
  * Virtual Network resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create virtual network
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.Network.VirtualNetwork("virtualNetwork", new AzureNative.Network.VirtualNetworkArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "rg1",
+ *             VirtualNetworkName = "test-vnet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			Location:           pulumi.String("eastus"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			VirtualNetworkName: pulumi.String("test-vnet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.network.VirtualNetwork("virtualNetwork", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     location: "eastus",
+ *     resourceGroupName: "rg1",
+ *     virtualNetworkName: "test-vnet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.network.VirtualNetwork("virtualNetwork",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     location="eastus",
+ *     resource_group_name="rg1",
+ *     virtual_network_name="test-vnet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create virtual network with Bgp Communities
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.Network.VirtualNetwork("virtualNetwork", new AzureNative.Network.VirtualNetworkArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             BgpCommunities = new AzureNative.Network.Inputs.VirtualNetworkBgpCommunitiesArgs
+ *             {
+ *                 VirtualNetworkCommunity = "12076:20000",
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "rg1",
+ *             Subnets = 
+ *             {
+ *                 new AzureNative.Network.Inputs.SubnetArgs
+ *                 {
+ *                     AddressPrefix = "10.0.0.0/24",
+ *                     Name = "test-1",
+ *                 },
+ *             },
+ *             VirtualNetworkName = "test-vnet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			BgpCommunities: &network.VirtualNetworkBgpCommunitiesArgs{
+ * 				VirtualNetworkCommunity: pulumi.String("12076:20000"),
+ * 			},
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Subnets: []network.SubnetArgs{
+ * 				&network.SubnetArgs{
+ * 					AddressPrefix: pulumi.String("10.0.0.0/24"),
+ * 					Name:          pulumi.String("test-1"),
+ * 				},
+ * 			},
+ * 			VirtualNetworkName: pulumi.String("test-vnet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.network.VirtualNetwork("virtualNetwork", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     bgpCommunities: {
+ *         virtualNetworkCommunity: "12076:20000",
+ *     },
+ *     location: "eastus",
+ *     resourceGroupName: "rg1",
+ *     subnets: [{
+ *         addressPrefix: "10.0.0.0/24",
+ *         name: "test-1",
+ *     }],
+ *     virtualNetworkName: "test-vnet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.network.VirtualNetwork("virtualNetwork",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     bgp_communities=azure_native.network.VirtualNetworkBgpCommunitiesArgs(
+ *         virtual_network_community="12076:20000",
+ *     ),
+ *     location="eastus",
+ *     resource_group_name="rg1",
+ *     subnets=[azure_native.network.SubnetArgs(
+ *         address_prefix="10.0.0.0/24",
+ *         name="test-1",
+ *     )],
+ *     virtual_network_name="test-vnet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create virtual network with delegated subnets
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.Network.VirtualNetwork("virtualNetwork", new AzureNative.Network.VirtualNetworkArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             Location = "westcentralus",
+ *             ResourceGroupName = "rg1",
+ *             Subnets = 
+ *             {
+ *                 new AzureNative.Network.Inputs.SubnetArgs
+ *                 {
+ *                     AddressPrefix = "10.0.0.0/24",
+ *                     Delegations = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.DelegationArgs
+ *                         {
+ *                             Name = "myDelegation",
+ *                             ServiceName = "Microsoft.Sql/managedInstances",
+ *                         },
+ *                     },
+ *                     Name = "test-1",
+ *                 },
+ *             },
+ *             VirtualNetworkName = "test-vnet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("westcentralus"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Subnets: []network.SubnetArgs{
+ * 				&network.SubnetArgs{
+ * 					AddressPrefix: pulumi.String("10.0.0.0/24"),
+ * 					Delegations: network.DelegationArray{
+ * 						&network.DelegationArgs{
+ * 							Name:        pulumi.String("myDelegation"),
+ * 							ServiceName: pulumi.String("Microsoft.Sql/managedInstances"),
+ * 						},
+ * 					},
+ * 					Name: pulumi.String("test-1"),
+ * 				},
+ * 			},
+ * 			VirtualNetworkName: pulumi.String("test-vnet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.network.VirtualNetwork("virtualNetwork", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     location: "westcentralus",
+ *     resourceGroupName: "rg1",
+ *     subnets: [{
+ *         addressPrefix: "10.0.0.0/24",
+ *         delegations: [{
+ *             name: "myDelegation",
+ *             serviceName: "Microsoft.Sql/managedInstances",
+ *         }],
+ *         name: "test-1",
+ *     }],
+ *     virtualNetworkName: "test-vnet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.network.VirtualNetwork("virtualNetwork",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     location="westcentralus",
+ *     resource_group_name="rg1",
+ *     subnets=[azure_native.network.SubnetArgs(
+ *         address_prefix="10.0.0.0/24",
+ *         delegations=[azure_native.network.DelegationArgs(
+ *             name="myDelegation",
+ *             service_name="Microsoft.Sql/managedInstances",
+ *         )],
+ *         name="test-1",
+ *     )],
+ *     virtual_network_name="test-vnet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create virtual network with service endpoints
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.Network.VirtualNetwork("virtualNetwork", new AzureNative.Network.VirtualNetworkArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "vnetTest",
+ *             Subnets = 
+ *             {
+ *                 new AzureNative.Network.Inputs.SubnetArgs
+ *                 {
+ *                     AddressPrefix = "10.0.0.0/16",
+ *                     Name = "test-1",
+ *                     ServiceEndpoints = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.ServiceEndpointPropertiesFormatArgs
+ *                         {
+ *                             Service = "Microsoft.Storage",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VirtualNetworkName = "vnet1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("vnetTest"),
+ * 			Subnets: []network.SubnetArgs{
+ * 				&network.SubnetArgs{
+ * 					AddressPrefix: pulumi.String("10.0.0.0/16"),
+ * 					Name:          pulumi.String("test-1"),
+ * 					ServiceEndpoints: network.ServiceEndpointPropertiesFormatArray{
+ * 						&network.ServiceEndpointPropertiesFormatArgs{
+ * 							Service: pulumi.String("Microsoft.Storage"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VirtualNetworkName: pulumi.String("vnet1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.network.VirtualNetwork("virtualNetwork", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     location: "eastus",
+ *     resourceGroupName: "vnetTest",
+ *     subnets: [{
+ *         addressPrefix: "10.0.0.0/16",
+ *         name: "test-1",
+ *         serviceEndpoints: [{
+ *             service: "Microsoft.Storage",
+ *         }],
+ *     }],
+ *     virtualNetworkName: "vnet1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.network.VirtualNetwork("virtualNetwork",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     location="eastus",
+ *     resource_group_name="vnetTest",
+ *     subnets=[azure_native.network.SubnetArgs(
+ *         address_prefix="10.0.0.0/16",
+ *         name="test-1",
+ *         service_endpoints=[azure_native.network.ServiceEndpointPropertiesFormatArgs(
+ *             service="Microsoft.Storage",
+ *         )],
+ *     )],
+ *     virtual_network_name="vnet1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create virtual network with service endpoints and service endpoint policy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.Network.VirtualNetwork("virtualNetwork", new AzureNative.Network.VirtualNetworkArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             Location = "eastus2euap",
+ *             ResourceGroupName = "vnetTest",
+ *             Subnets = 
+ *             {
+ *                 new AzureNative.Network.Inputs.SubnetArgs
+ *                 {
+ *                     AddressPrefix = "10.0.0.0/16",
+ *                     Name = "test-1",
+ *                     ServiceEndpointPolicies = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.ServiceEndpointPolicyArgs
+ *                         {
+ *                             Id = "/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
+ *                         },
+ *                     },
+ *                     ServiceEndpoints = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.ServiceEndpointPropertiesFormatArgs
+ *                         {
+ *                             Service = "Microsoft.Storage",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VirtualNetworkName = "vnet1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus2euap"),
+ * 			ResourceGroupName: pulumi.String("vnetTest"),
+ * 			Subnets: []network.SubnetArgs{
+ * 				&network.SubnetArgs{
+ * 					AddressPrefix: pulumi.String("10.0.0.0/16"),
+ * 					Name:          pulumi.String("test-1"),
+ * 					ServiceEndpointPolicies: network.ServiceEndpointPolicyArray{
+ * 						&network.ServiceEndpointPolicyArgs{
+ * 							Id: pulumi.String("/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1"),
+ * 						},
+ * 					},
+ * 					ServiceEndpoints: network.ServiceEndpointPropertiesFormatArray{
+ * 						&network.ServiceEndpointPropertiesFormatArgs{
+ * 							Service: pulumi.String("Microsoft.Storage"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VirtualNetworkName: pulumi.String("vnet1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.network.VirtualNetwork("virtualNetwork", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     location: "eastus2euap",
+ *     resourceGroupName: "vnetTest",
+ *     subnets: [{
+ *         addressPrefix: "10.0.0.0/16",
+ *         name: "test-1",
+ *         serviceEndpointPolicies: [{
+ *             id: "/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
+ *         }],
+ *         serviceEndpoints: [{
+ *             service: "Microsoft.Storage",
+ *         }],
+ *     }],
+ *     virtualNetworkName: "vnet1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.network.VirtualNetwork("virtualNetwork",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     location="eastus2euap",
+ *     resource_group_name="vnetTest",
+ *     subnets=[azure_native.network.SubnetArgs(
+ *         address_prefix="10.0.0.0/16",
+ *         name="test-1",
+ *         service_endpoint_policies=[azure_native.network.ServiceEndpointPolicyArgs(
+ *             id="/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
+ *         )],
+ *         service_endpoints=[azure_native.network.ServiceEndpointPropertiesFormatArgs(
+ *             service="Microsoft.Storage",
+ *         )],
+ *     )],
+ *     virtual_network_name="vnet1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create virtual network with subnet
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.Network.VirtualNetwork("virtualNetwork", new AzureNative.Network.VirtualNetworkArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "rg1",
+ *             Subnets = 
+ *             {
+ *                 new AzureNative.Network.Inputs.SubnetArgs
+ *                 {
+ *                     AddressPrefix = "10.0.0.0/24",
+ *                     Name = "test-1",
+ *                 },
+ *             },
+ *             VirtualNetworkName = "test-vnet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Subnets: []network.SubnetArgs{
+ * 				&network.SubnetArgs{
+ * 					AddressPrefix: pulumi.String("10.0.0.0/24"),
+ * 					Name:          pulumi.String("test-1"),
+ * 				},
+ * 			},
+ * 			VirtualNetworkName: pulumi.String("test-vnet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.network.VirtualNetwork("virtualNetwork", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     location: "eastus",
+ *     resourceGroupName: "rg1",
+ *     subnets: [{
+ *         addressPrefix: "10.0.0.0/24",
+ *         name: "test-1",
+ *     }],
+ *     virtualNetworkName: "test-vnet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.network.VirtualNetwork("virtualNetwork",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     location="eastus",
+ *     resource_group_name="rg1",
+ *     subnets=[azure_native.network.SubnetArgs(
+ *         address_prefix="10.0.0.0/24",
+ *         name="test-1",
+ *     )],
+ *     virtual_network_name="test-vnet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create virtual network with subnet containing address prefixes
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.Network.VirtualNetwork("virtualNetwork", new AzureNative.Network.VirtualNetworkArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "rg1",
+ *             Subnets = 
+ *             {
+ *                 new AzureNative.Network.Inputs.SubnetArgs
+ *                 {
+ *                     AddressPrefixes = 
+ *                     {
+ *                         "10.0.0.0/28",
+ *                         "10.0.1.0/28",
+ *                     },
+ *                     Name = "test-2",
+ *                 },
+ *             },
+ *             VirtualNetworkName = "test-vnet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Subnets: []network.SubnetArgs{
+ * 				&network.SubnetArgs{
+ * 					AddressPrefixes: pulumi.StringArray{
+ * 						pulumi.String("10.0.0.0/28"),
+ * 						pulumi.String("10.0.1.0/28"),
+ * 					},
+ * 					Name: pulumi.String("test-2"),
+ * 				},
+ * 			},
+ * 			VirtualNetworkName: pulumi.String("test-vnet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.network.VirtualNetwork("virtualNetwork", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     location: "eastus",
+ *     resourceGroupName: "rg1",
+ *     subnets: [{
+ *         addressPrefixes: [
+ *             "10.0.0.0/28",
+ *             "10.0.1.0/28",
+ *         ],
+ *         name: "test-2",
+ *     }],
+ *     virtualNetworkName: "test-vnet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.network.VirtualNetwork("virtualNetwork",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     location="eastus",
+ *     resource_group_name="rg1",
+ *     subnets=[azure_native.network.SubnetArgs(
+ *         address_prefixes=[
+ *             "10.0.0.0/28",
+ *             "10.0.1.0/28",
+ *         ],
+ *         name="test-2",
+ *     )],
+ *     virtual_network_name="test-vnet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,238 +893,204 @@ import javax.annotation.Nullable;
 public class VirtualNetwork extends io.pulumi.resources.CustomResource {
     /**
      * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
-     * 
      */
     @Export(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> addressSpace;
 
     /**
      * @return The AddressSpace that contains an array of IP address ranges that can be used by subnets.
-     * 
      */
     public Output</* @Nullable */ AddressSpaceResponse> getAddressSpace() {
         return this.addressSpace;
     }
     /**
      * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
-     * 
      */
     @Export(name="bgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> bgpCommunities;
 
     /**
      * @return Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
-     * 
      */
     public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> getBgpCommunities() {
         return this.bgpCommunities;
     }
     /**
      * The DDoS protection plan associated with the virtual network.
-     * 
      */
     @Export(name="ddosProtectionPlan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> ddosProtectionPlan;
 
     /**
      * @return The DDoS protection plan associated with the virtual network.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getDdosProtectionPlan() {
         return this.ddosProtectionPlan;
     }
     /**
      * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
-     * 
      */
     @Export(name="dhcpOptions", type=DhcpOptionsResponse.class, parameters={})
     private Output</* @Nullable */ DhcpOptionsResponse> dhcpOptions;
 
     /**
      * @return The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
-     * 
      */
     public Output</* @Nullable */ DhcpOptionsResponse> getDhcpOptions() {
         return this.dhcpOptions;
     }
     /**
      * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
-     * 
      */
     @Export(name="enableDdosProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDdosProtection;
 
     /**
      * @return Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableDdosProtection() {
         return this.enableDdosProtection;
     }
     /**
      * Indicates if VM protection is enabled for all the subnets in the virtual network.
-     * 
      */
     @Export(name="enableVmProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableVmProtection;
 
     /**
      * @return Indicates if VM protection is enabled for all the subnets in the virtual network.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableVmProtection() {
         return this.enableVmProtection;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the virtual network.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extended location of the virtual network.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Array of IpAllocation which reference this VNET.
-     * 
      */
     @Export(name="ipAllocations", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> ipAllocations;
 
     /**
      * @return Array of IpAllocation which reference this VNET.
-     * 
      */
     public Output</* @Nullable */ List<SubResourceResponse>> getIpAllocations() {
         return this.ipAllocations;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the virtual network resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the virtual network resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resourceGuid property of the Virtual Network resource.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resourceGuid property of the Virtual Network resource.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * A list of subnets in a Virtual Network.
-     * 
      */
     @Export(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output</* @Nullable */ List<SubnetResponse>> subnets;
 
     /**
      * @return A list of subnets in a Virtual Network.
-     * 
      */
     public Output</* @Nullable */ List<SubnetResponse>> getSubnets() {
         return this.subnets;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A list of peerings in a Virtual Network.
-     * 
      */
     @Export(name="virtualNetworkPeerings", type=List.class, parameters={VirtualNetworkPeeringResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> virtualNetworkPeerings;
 
     /**
      * @return A list of peerings in a Virtual Network.
-     * 
      */
     public Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> getVirtualNetworkPeerings() {
         return this.virtualNetworkPeerings;

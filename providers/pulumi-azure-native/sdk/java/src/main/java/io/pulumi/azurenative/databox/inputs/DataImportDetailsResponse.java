@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Details of the data to be used for importing data to azure.
- * 
  */
 public final class DataImportDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DataImportDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Account details of the data to be transferred
-     * 
      */
     @Import(name="accountDetails", required=true)
       private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;

@@ -16,7 +16,6 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Personal access token to install from a private repo
-     * 
      */
     @Import(name="authToken")
       private final @Nullable Output<String> authToken;
@@ -27,7 +26,6 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Repository address in the format username/repo[/subdir][@ref|#pull].
-     * 
      */
     @Import(name="repository")
       private final @Nullable Output<String> repository;

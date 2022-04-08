@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The multi cloud resource's cloud name.
-     * 
      */
     @EnumType
     public enum CloudName {

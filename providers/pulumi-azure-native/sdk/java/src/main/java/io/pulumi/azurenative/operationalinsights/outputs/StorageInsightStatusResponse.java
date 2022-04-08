@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class StorageInsightStatusResponse {
     /**
      * Description of the state of the storage insight.
-     * 
      */
     private final @Nullable String description;
     /**
      * The state of the storage insight connection to the workspace
-     * 
      */
     private final String state;
 
@@ -32,14 +30,12 @@ public final class StorageInsightStatusResponse {
 
     /**
      * Description of the state of the storage insight.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The state of the storage insight connection to the workspace
-     * 
     */
     public String getState() {
         return this.state;

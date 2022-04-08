@@ -14,7 +14,6 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -25,7 +24,6 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
 
     /**
      * Managed private endpoint name
-     * 
      */
     @Import(name="managedPrivateEndpointName", required=true)
       private final String managedPrivateEndpointName;
@@ -36,7 +34,6 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
 
     /**
      * Managed virtual network name
-     * 
      */
     @Import(name="managedVirtualNetworkName", required=true)
       private final String managedVirtualNetworkName;
@@ -47,7 +44,6 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

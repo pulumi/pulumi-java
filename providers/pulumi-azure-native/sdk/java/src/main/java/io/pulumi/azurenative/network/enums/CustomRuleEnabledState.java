@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
      */
     @EnumType
     public enum CustomRuleEnabledState {

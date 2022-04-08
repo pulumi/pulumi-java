@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the artifacts of a service unit.
- * 
  */
 public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
 
     /**
      * The path to the ARM parameters file relative to the artifact source.
-     * 
      */
     @Import(name="parametersArtifactSourceRelativePath")
       private final @Nullable Output<String> parametersArtifactSourceRelativePath;
@@ -31,7 +29,6 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
 
     /**
      * The full URI of the ARM parameters file with the SAS token.
-     * 
      */
     @Import(name="parametersUri")
       private final @Nullable Output<String> parametersUri;
@@ -42,7 +39,6 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
 
     /**
      * The path to the ARM template file relative to the artifact source.
-     * 
      */
     @Import(name="templateArtifactSourceRelativePath")
       private final @Nullable Output<String> templateArtifactSourceRelativePath;
@@ -53,7 +49,6 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
 
     /**
      * The full URI of the ARM template file with the SAS token.
-     * 
      */
     @Import(name="templateUri")
       private final @Nullable Output<String> templateUri;

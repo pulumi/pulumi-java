@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the guest configuration assignment.
- * 
  */
 public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Information about the configuration.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable ConfigurationInfoResponse configuration;
@@ -32,7 +30,6 @@ public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the guest configuration assignment.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

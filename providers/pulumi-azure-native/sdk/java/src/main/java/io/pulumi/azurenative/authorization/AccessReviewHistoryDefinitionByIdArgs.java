@@ -23,7 +23,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
-     * 
      */
     @Import(name="decisions")
       private final @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
@@ -34,7 +33,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * The display name for the history definition.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -45,7 +43,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * The DateTime when the review is scheduled to end. Required if type is endDate
-     * 
      */
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
@@ -56,7 +53,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * The id of the access review history definition.
-     * 
      */
     @Import(name="historyDefinitionId")
       private final @Nullable Output<String> historyDefinitionId;
@@ -67,7 +63,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * Set of access review history instances for this history definition.
-     * 
      */
     @Import(name="instances")
       private final @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
@@ -78,7 +73,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
@@ -89,7 +83,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * The number of times to repeat the access review. Required and must be positive if type is numbered.
-     * 
      */
     @Import(name="numberOfOccurrences")
       private final @Nullable Output<Integer> numberOfOccurrences;
@@ -100,7 +93,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * A collection of scopes used when selecting review history data
-     * 
      */
     @Import(name="scopes")
       private final @Nullable Output<List<AccessReviewScopeArgs>> scopes;
@@ -111,7 +103,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     * 
      */
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
@@ -122,7 +113,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
 
     /**
      * The recurrence range type. The possible values are: endDate, noEnd, numbered.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;

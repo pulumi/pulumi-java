@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Live event preview settings.
- * 
  */
 public final class LiveEventPreviewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class LiveEventPreviewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The access control for live event preview.
-     * 
      */
     @Import(name="accessControl")
       private final @Nullable LiveEventPreviewAccessControlResponse accessControl;
@@ -34,7 +32,6 @@ public final class LiveEventPreviewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
-     * 
      */
     @Import(name="alternativeMediaId")
       private final @Nullable String alternativeMediaId;
@@ -45,7 +42,6 @@ public final class LiveEventPreviewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The endpoints for preview. Do not share the preview URL with the live event audience.
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable List<LiveEventEndpointResponse> endpoints;
@@ -56,7 +52,6 @@ public final class LiveEventPreviewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
-     * 
      */
     @Import(name="previewLocator")
       private final @Nullable String previewLocator;
@@ -67,7 +62,6 @@ public final class LiveEventPreviewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
-     * 
      */
     @Import(name="streamingPolicyName")
       private final @Nullable String streamingPolicyName;

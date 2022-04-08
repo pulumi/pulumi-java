@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine scale set network profile.
- * 
  */
 public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
 
     /**
      * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
-     * 
      */
     @Import(name="healthProbe")
       private final @Nullable Output<ApiEntityReferenceArgs> healthProbe;
@@ -36,7 +34,6 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
 
     /**
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'
-     * 
      */
     @Import(name="networkApiVersion")
       private final @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
@@ -47,7 +44,6 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
 
     /**
      * The list of network configurations.
-     * 
      */
     @Import(name="networkInterfaceConfigurations")
       private final @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;

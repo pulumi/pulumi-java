@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ColumnResponse {
     /**
      * Name of the Cosmos DB Cassandra table column
-     * 
      */
     private final @Nullable String name;
     /**
      * Type of the Cosmos DB Cassandra table column
-     * 
      */
     private final @Nullable String type;
 
@@ -32,14 +30,12 @@ public final class ColumnResponse {
 
     /**
      * Name of the Cosmos DB Cassandra table column
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Type of the Cosmos DB Cassandra table column
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

@@ -20,7 +20,116 @@ import javax.annotation.Nullable;
  * Dedicated cloud node model
  * API Version: 2019-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateDedicatedCloudNode
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dedicatedCloudNode = new AzureNative.VMwareCloudSimple.DedicatedCloudNode("dedicatedCloudNode", new AzureNative.VMwareCloudSimple.DedicatedCloudNodeArgs
+ *         {
+ *             AvailabilityZoneId = "az1",
+ *             DedicatedCloudNodeName = "myNode",
+ *             Id = "general",
+ *             Location = "westus",
+ *             Name = "CS28-Node",
+ *             NodesCount = 1,
+ *             PlacementGroupId = "n1",
+ *             PurchaseId = "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.VMwareCloudSimple.Inputs.SkuArgs
+ *             {
+ *                 Name = "VMware_CloudSimple_CS28",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	vmwarecloudsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/vmwarecloudsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := vmwarecloudsimple.NewDedicatedCloudNode(ctx, "dedicatedCloudNode", &vmwarecloudsimple.DedicatedCloudNodeArgs{
+ * 			AvailabilityZoneId:     pulumi.String("az1"),
+ * 			DedicatedCloudNodeName: pulumi.String("myNode"),
+ * 			Id:                     pulumi.String("general"),
+ * 			Location:               pulumi.String("westus"),
+ * 			Name:                   pulumi.String("CS28-Node"),
+ * 			NodesCount:             pulumi.Int(1),
+ * 			PlacementGroupId:       pulumi.String("n1"),
+ * 			PurchaseId:             pulumi.String("56acbd46-3d36-4bbf-9b08-57c30fdf6932"),
+ * 			ResourceGroupName:      pulumi.String("myResourceGroup"),
+ * 			Sku: &vmwarecloudsimple.SkuArgs{
+ * 				Name: pulumi.String("VMware_CloudSimple_CS28"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dedicatedCloudNode = new azure_native.vmwarecloudsimple.DedicatedCloudNode("dedicatedCloudNode", {
+ *     availabilityZoneId: "az1",
+ *     dedicatedCloudNodeName: "myNode",
+ *     id: "general",
+ *     location: "westus",
+ *     name: "CS28-Node",
+ *     nodesCount: 1,
+ *     placementGroupId: "n1",
+ *     purchaseId: "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         name: "VMware_CloudSimple_CS28",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dedicated_cloud_node = azure_native.vmwarecloudsimple.DedicatedCloudNode("dedicatedCloudNode",
+ *     availability_zone_id="az1",
+ *     dedicated_cloud_node_name="myNode",
+ *     id="general",
+ *     location="westus",
+ *     name="CS28-Node",
+ *     nodes_count=1,
+ *     placement_group_id="n1",
+ *     purchase_id="56acbd46-3d36-4bbf-9b08-57c30fdf6932",
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.vmwarecloudsimple.SkuArgs(
+ *         name="VMware_CloudSimple_CS28",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,252 +144,216 @@ import javax.annotation.Nullable;
 public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
     /**
      * Availability Zone id, e.g. "az1"
-     * 
      */
     @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
     /**
      * @return Availability Zone id, e.g. "az1"
-     * 
      */
     public Output<String> getAvailabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * Availability Zone name, e.g. "Availability Zone 1"
-     * 
      */
     @Export(name="availabilityZoneName", type=String.class, parameters={})
     private Output<String> availabilityZoneName;
 
     /**
      * @return Availability Zone name, e.g. "Availability Zone 1"
-     * 
      */
     public Output<String> getAvailabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
      * VMWare Cloud Rack Name
-     * 
      */
     @Export(name="cloudRackName", type=String.class, parameters={})
     private Output<String> cloudRackName;
 
     /**
      * @return VMWare Cloud Rack Name
-     * 
      */
     public Output<String> getCloudRackName() {
         return this.cloudRackName;
     }
     /**
      * date time the resource was created
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return date time the resource was created
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * Azure region
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Azure region
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * SKU's name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return SKU's name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * count of nodes to create
-     * 
      */
     @Export(name="nodesCount", type=Integer.class, parameters={})
     private Output<Integer> nodesCount;
 
     /**
      * @return count of nodes to create
-     * 
      */
     public Output<Integer> getNodesCount() {
         return this.nodesCount;
     }
     /**
      * Placement Group id, e.g. "n1"
-     * 
      */
     @Export(name="placementGroupId", type=String.class, parameters={})
     private Output<String> placementGroupId;
 
     /**
      * @return Placement Group id, e.g. "n1"
-     * 
      */
     public Output<String> getPlacementGroupId() {
         return this.placementGroupId;
     }
     /**
      * Placement Name, e.g. "Placement Group 1"
-     * 
      */
     @Export(name="placementGroupName", type=String.class, parameters={})
     private Output<String> placementGroupName;
 
     /**
      * @return Placement Name, e.g. "Placement Group 1"
-     * 
      */
     public Output<String> getPlacementGroupName() {
         return this.placementGroupName;
     }
     /**
      * Private Cloud Id
-     * 
      */
     @Export(name="privateCloudId", type=String.class, parameters={})
     private Output<String> privateCloudId;
 
     /**
      * @return Private Cloud Id
-     * 
      */
     public Output<String> getPrivateCloudId() {
         return this.privateCloudId;
     }
     /**
      * Resource Pool Name
-     * 
      */
     @Export(name="privateCloudName", type=String.class, parameters={})
     private Output<String> privateCloudName;
 
     /**
      * @return Resource Pool Name
-     * 
      */
     public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
     /**
      * The provisioning status of the resource
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * purchase id
-     * 
      */
     @Export(name="purchaseId", type=String.class, parameters={})
     private Output<String> purchaseId;
 
     /**
      * @return purchase id
-     * 
      */
     public Output<String> getPurchaseId() {
         return this.purchaseId;
     }
     /**
      * Dedicated Cloud Nodes SKU
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Dedicated Cloud Nodes SKU
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Node status, indicates is private cloud set up on this node or not
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Node status, indicates is private cloud set up on this node or not
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Dedicated Cloud Nodes tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Dedicated Cloud Nodes tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return {resourceProviderNamespace}/{resourceType}
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * VMWare Cluster Name
-     * 
      */
     @Export(name="vmwareClusterName", type=String.class, parameters={})
     private Output<String> vmwareClusterName;
 
     /**
      * @return VMWare Cluster Name
-     * 
      */
     public Output<String> getVmwareClusterName() {
         return this.vmwareClusterName;

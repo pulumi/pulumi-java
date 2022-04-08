@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service network profile payload
- * 
  */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group containing network resources of Azure Spring Cloud Apps
-     * 
      */
     @Import(name="appNetworkResourceGroup")
       private final @Nullable Output<String> appNetworkResourceGroup;
@@ -31,7 +29,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
-     * 
      */
     @Import(name="appSubnetId")
       private final @Nullable Output<String> appSubnetId;
@@ -42,7 +39,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure Spring Cloud service reserved CIDR
-     * 
      */
     @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
@@ -53,7 +49,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
-     * 
      */
     @Import(name="serviceRuntimeNetworkResourceGroup")
       private final @Nullable Output<String> serviceRuntimeNetworkResourceGroup;
@@ -64,7 +59,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
-     * 
      */
     @Import(name="serviceRuntimeSubnetId")
       private final @Nullable Output<String> serviceRuntimeSubnetId;

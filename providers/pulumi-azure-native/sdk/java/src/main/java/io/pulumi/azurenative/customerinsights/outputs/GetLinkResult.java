@@ -18,82 +18,66 @@ import javax.annotation.Nullable;
 public final class GetLinkResult {
     /**
      * Localized descriptions for the Link.
-     * 
      */
     private final @Nullable Map<String,String> description;
     /**
      * Localized display name for the Link.
-     * 
      */
     private final @Nullable Map<String,String> displayName;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * The link name.
-     * 
      */
     private final String linkName;
     /**
      * The set of properties mappings between the source and target Types.
-     * 
      */
     private final @Nullable List<TypePropertiesMappingResponse> mappings;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
-     * 
      */
     private final @Nullable String operationType;
     /**
      * The properties that represent the participating profile.
-     * 
      */
     private final List<ParticipantPropertyReferenceResponse> participantPropertyReferences;
     /**
      * Provisioning state.
-     * 
      */
     private final String provisioningState;
     /**
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
-     * 
      */
     private final @Nullable Boolean referenceOnly;
     /**
      * Type of source entity.
-     * 
      */
     private final String sourceEntityType;
     /**
      * Name of the source Entity Type.
-     * 
      */
     private final String sourceEntityTypeName;
     /**
      * Type of target entity.
-     * 
      */
     private final String targetEntityType;
     /**
      * Name of the target Entity Type.
-     * 
      */
     private final String targetEntityTypeName;
     /**
      * The hub name.
-     * 
      */
     private final String tenantId;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -135,112 +119,96 @@ public final class GetLinkResult {
 
     /**
      * Localized descriptions for the Link.
-     * 
     */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name for the Link.
-     * 
     */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The link name.
-     * 
     */
     public String getLinkName() {
         return this.linkName;
     }
     /**
      * The set of properties mappings between the source and target Types.
-     * 
     */
     public List<TypePropertiesMappingResponse> getMappings() {
         return this.mappings == null ? List.of() : this.mappings;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
-     * 
     */
     public Optional<String> getOperationType() {
         return Optional.ofNullable(this.operationType);
     }
     /**
      * The properties that represent the participating profile.
-     * 
     */
     public List<ParticipantPropertyReferenceResponse> getParticipantPropertyReferences() {
         return this.participantPropertyReferences;
     }
     /**
      * Provisioning state.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
-     * 
     */
     public Optional<Boolean> getReferenceOnly() {
         return Optional.ofNullable(this.referenceOnly);
     }
     /**
      * Type of source entity.
-     * 
     */
     public String getSourceEntityType() {
         return this.sourceEntityType;
     }
     /**
      * Name of the source Entity Type.
-     * 
     */
     public String getSourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
     /**
      * Type of target entity.
-     * 
     */
     public String getTargetEntityType() {
         return this.targetEntityType;
     }
     /**
      * Name of the target Entity Type.
-     * 
     */
     public String getTargetEntityTypeName() {
         return this.targetEntityTypeName;
     }
     /**
      * The hub name.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

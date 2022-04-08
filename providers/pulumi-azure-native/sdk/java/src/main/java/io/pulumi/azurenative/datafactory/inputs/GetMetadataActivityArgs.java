@@ -36,7 +36,6 @@ import javax.annotation.Nullable;
 
 /**
  * Activity to get metadata of dataset
- * 
  */
 public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -44,7 +43,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * GetMetadata activity dataset reference.
-     * 
      */
     @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
@@ -55,7 +53,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -66,7 +63,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -77,7 +73,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Fields of metadata to get from dataset.
-     * 
      */
     @Import(name="fieldList")
       private final @Nullable Output<List<Object>> fieldList;
@@ -88,7 +83,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * GetMetadata activity format settings.
-     * 
      */
     @Import(name="formatSettings")
       private final @Nullable Output<Object> formatSettings;
@@ -99,7 +93,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -110,7 +103,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -121,7 +113,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -132,7 +123,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * GetMetadata activity store settings.
-     * 
      */
     @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
@@ -144,7 +134,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     /**
      * Type of activity.
      * Expected value is 'GetMetadata'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -155,7 +144,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

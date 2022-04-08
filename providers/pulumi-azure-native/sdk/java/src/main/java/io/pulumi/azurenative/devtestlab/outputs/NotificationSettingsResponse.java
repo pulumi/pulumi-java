@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class NotificationSettingsResponse {
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     * 
      */
     private final @Nullable String emailRecipient;
     /**
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     * 
      */
     private final @Nullable String notificationLocale;
     /**
      * If notifications are enabled for this schedule (i.e. Enabled, Disabled).
-     * 
      */
     private final @Nullable String status;
     /**
      * Time in minutes before event at which notification will be sent.
-     * 
      */
     private final @Nullable Integer timeInMinutes;
     /**
      * The webhook URL to which the notification will be sent.
-     * 
      */
     private final @Nullable String webhookUrl;
 
@@ -54,35 +49,30 @@ public final class NotificationSettingsResponse {
 
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     * 
     */
     public Optional<String> getEmailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
     /**
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     * 
     */
     public Optional<String> getNotificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
     /**
      * If notifications are enabled for this schedule (i.e. Enabled, Disabled).
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Time in minutes before event at which notification will be sent.
-     * 
     */
     public Optional<Integer> getTimeInMinutes() {
         return Optional.ofNullable(this.timeInMinutes);
     }
     /**
      * The webhook URL to which the notification will be sent.
-     * 
     */
     public Optional<String> getWebhookUrl() {
         return Optional.ofNullable(this.webhookUrl);

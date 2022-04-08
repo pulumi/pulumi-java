@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetSolutionResult {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource location
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Plan for solution object supported by the OperationsManagement resource provider.
-     * 
      */
     private final @Nullable SolutionPlanResponse plan;
     /**
      * Properties for solution object supported by the OperationsManagement resource provider.
-     * 
      */
     private final SolutionPropertiesResponse properties;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -70,49 +63,42 @@ public final class GetSolutionResult {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Plan for solution object supported by the OperationsManagement resource provider.
-     * 
     */
     public Optional<SolutionPlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Properties for solution object supported by the OperationsManagement resource provider.
-     * 
     */
     public SolutionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Publisher or creator of the content item.
- * 
  */
 public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email of author contact
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;
@@ -31,7 +29,6 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Link for author/vendor page
-     * 
      */
     @Import(name="link")
       private final @Nullable Output<String> link;
@@ -42,7 +39,6 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the author. Company or person.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

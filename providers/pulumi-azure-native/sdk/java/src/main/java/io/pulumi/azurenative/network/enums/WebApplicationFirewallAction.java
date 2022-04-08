@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of Actions.
-     * 
      */
     @EnumType
     public enum WebApplicationFirewallAction {

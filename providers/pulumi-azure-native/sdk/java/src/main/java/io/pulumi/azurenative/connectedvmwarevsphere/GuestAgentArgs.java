@@ -20,7 +20,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username / Password Credentials to provision guest agent.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<GuestCredentialArgs> credentials;
@@ -31,7 +30,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HTTP Proxy configuration for the VM.
-     * 
      */
     @Import(name="httpProxyConfig")
       private final @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
@@ -42,7 +40,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the guestAgents.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +50,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the guest agent provisioning action.
-     * 
      */
     @Import(name="provisioningAction")
       private final @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
@@ -64,7 +60,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the vm.
-     * 
      */
     @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;

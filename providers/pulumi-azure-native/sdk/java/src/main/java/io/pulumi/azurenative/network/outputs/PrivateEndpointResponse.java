@@ -20,67 +20,54 @@ import javax.annotation.Nullable;
 public final class PrivateEndpointResponse {
     /**
      * An array of custom dns configurations.
-     * 
      */
     private final @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * The extended location of the load balancer.
-     * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
-     * 
      */
     private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * An array of references to the network interfaces created for this private endpoint.
-     * 
      */
     private final List<NetworkInterfaceResponse> networkInterfaces;
     /**
      * A grouping of information about the connection to the remote resource.
-     * 
      */
     private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
     /**
      * The provisioning state of the private endpoint resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The ID of the subnet from which the private IP will be allocated.
-     * 
      */
     private final @Nullable SubnetResponse subnet;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -116,91 +103,78 @@ public final class PrivateEndpointResponse {
 
     /**
      * An array of custom dns configurations.
-     * 
     */
     public List<CustomDnsConfigPropertiesFormatResponse> getCustomDnsConfigs() {
         return this.customDnsConfigs == null ? List.of() : this.customDnsConfigs;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the load balancer.
-     * 
     */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
-     * 
     */
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * An array of references to the network interfaces created for this private endpoint.
-     * 
     */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * A grouping of information about the connection to the remote resource.
-     * 
     */
     public List<PrivateLinkServiceConnectionResponse> getPrivateLinkServiceConnections() {
         return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
     }
     /**
      * The provisioning state of the private endpoint resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The ID of the subnet from which the private IP will be allocated.
-     * 
     */
     public Optional<SubnetResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

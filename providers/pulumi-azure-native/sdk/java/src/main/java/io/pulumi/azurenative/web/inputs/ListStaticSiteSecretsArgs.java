@@ -14,7 +14,6 @@ public final class ListStaticSiteSecretsArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the static site.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class ListStaticSiteSecretsArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

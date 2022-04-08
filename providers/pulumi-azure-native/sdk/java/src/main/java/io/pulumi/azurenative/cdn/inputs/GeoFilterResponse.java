@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Rules defining user's geo access within a CDN endpoint.
- * 
  */
 public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Action of the geo filter, i.e. allow or block access.
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -30,7 +28,6 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
-     * 
      */
     @Import(name="countryCodes", required=true)
       private final List<String> countryCodes;
@@ -41,7 +38,6 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
-     * 
      */
     @Import(name="relativePath", required=true)
       private final String relativePath;

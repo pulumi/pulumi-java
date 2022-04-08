@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Recommendation status. When the recommendation status is disabled recommendations are not generated.
-     * 
      */
     @EnumType
     public enum RecommendationConfigStatus {

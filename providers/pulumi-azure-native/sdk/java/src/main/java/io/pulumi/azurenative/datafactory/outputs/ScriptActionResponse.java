@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ScriptActionResponse {
     /**
      * The user provided name of the script action.
-     * 
      */
     private final String name;
     /**
      * The parameters for the script action.
-     * 
      */
     private final @Nullable String parameters;
     /**
      * The node types on which the script action should be executed.
-     * 
      */
     private final Object roles;
     /**
      * The URI for the script action.
-     * 
      */
     private final String uri;
 
@@ -47,28 +43,24 @@ public final class ScriptActionResponse {
 
     /**
      * The user provided name of the script action.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The parameters for the script action.
-     * 
     */
     public Optional<String> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * The node types on which the script action should be executed.
-     * 
     */
     public Object getRoles() {
         return this.roles;
     }
     /**
      * The URI for the script action.
-     * 
     */
     public String getUri() {
         return this.uri;

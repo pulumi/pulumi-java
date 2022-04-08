@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * An object that represents a machine learning team account workspace.
  * API Version: 2017-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkspaceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.MachineLearningExperimentation.Workspace("workspace", new AzureNative.MachineLearningExperimentation.WorkspaceArgs
+ *         {
+ *             AccountName = "testaccount",
+ *             FriendlyName = "testName",
+ *             Location = "East US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "tagKey1", "TagValue1" },
+ *             },
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningexperimentation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningexperimentation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningexperimentation.NewWorkspace(ctx, "workspace", &machinelearningexperimentation.WorkspaceArgs{
+ * 			AccountName:       pulumi.String("testaccount"),
+ * 			FriendlyName:      pulumi.String("testName"),
+ * 			Location:          pulumi.String("East US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagKey1": pulumi.String("TagValue1"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("testworkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.machinelearningexperimentation.Workspace("workspace", {
+ *     accountName: "testaccount",
+ *     friendlyName: "testName",
+ *     location: "East US",
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         tagKey1: "TagValue1",
+ *     },
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.machinelearningexperimentation.Workspace("workspace",
+ *     account_name="testaccount",
+ *     friendly_name="testName",
+ *     location="East US",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "tagKey1": "TagValue1",
+ *     },
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,140 +126,120 @@ import javax.annotation.Nullable;
 public class Workspace extends io.pulumi.resources.CustomResource {
     /**
      * The immutable id of the team account which contains this workspace.
-     * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
      * @return The immutable id of the team account which contains this workspace.
-     * 
      */
     public Output<String> getAccountId() {
         return this.accountId;
     }
     /**
      * The creation date of the machine learning workspace in ISO8601 format.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The creation date of the machine learning workspace in ISO8601 format.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * The description of this workspace.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of this workspace.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
      * @return The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
-     * 
      */
     public Output<String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The immutable id of this workspace.
-     * 
      */
     @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**
      * @return The immutable id of this workspace.
-     * 
      */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;

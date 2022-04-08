@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the size information
- * 
  */
 public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Whether or not this size category is available
-     * 
      */
     @Import(name="isAvailable")
       private final @Nullable Boolean isAvailable;
@@ -32,7 +30,6 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The category of the size (Basic, Standard, Performance).
-     * 
      */
     @Import(name="sizeCategory")
       private final @Nullable String sizeCategory;

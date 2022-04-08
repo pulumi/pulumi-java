@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Private endpoint resource.
- * 
  */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * An array of custom dns configurations.
-     * 
      */
     @Import(name="customDnsConfigs")
       private final @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
@@ -38,7 +36,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -49,7 +46,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The extended location of the load balancer.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable ExtendedLocationResponse extendedLocation;
@@ -60,7 +56,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -71,7 +66,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -82,7 +76,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
-     * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
@@ -93,7 +86,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -104,7 +96,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * An array of references to the network interfaces created for this private endpoint.
-     * 
      */
     @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
@@ -115,7 +106,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A grouping of information about the connection to the remote resource.
-     * 
      */
     @Import(name="privateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
@@ -126,7 +116,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The provisioning state of the private endpoint resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -137,7 +126,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The ID of the subnet from which the private IP will be allocated.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
@@ -148,7 +136,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -159,7 +146,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

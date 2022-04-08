@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Identity that will be used to access key vault for encryption at rest
- * 
  */
 public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ArmId of the user assigned identity that will be used to access the customer managed key vault
-     * 
      */
     @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;

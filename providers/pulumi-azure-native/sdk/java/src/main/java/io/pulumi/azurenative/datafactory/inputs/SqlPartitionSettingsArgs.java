@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings that will be leveraged for Sql source partitioning.
- * 
  */
 public final class SqlPartitionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SqlPartitionSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
@@ -31,7 +29,6 @@ public final class SqlPartitionSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionLowerBound")
       private final @Nullable Output<Object> partitionLowerBound;
@@ -42,7 +39,6 @@ public final class SqlPartitionSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionUpperBound")
       private final @Nullable Output<Object> partitionUpperBound;

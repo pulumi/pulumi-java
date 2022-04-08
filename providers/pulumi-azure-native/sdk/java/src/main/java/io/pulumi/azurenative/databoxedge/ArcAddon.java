@@ -18,7 +18,99 @@ import javax.annotation.Nullable;
  * Arc Addon.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutAddOns
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var arcAddon = new AzureNative.DataBoxEdge.ArcAddon("arcAddon", new AzureNative.DataBoxEdge.ArcAddonArgs
+ *         {
+ *             AddonName = "arcName",
+ *             DeviceName = "testedgedevice",
+ *             Kind = "ArcForKubernetes",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *             ResourceLocation = "EastUS",
+ *             ResourceName = "testedgedevice",
+ *             RoleName = "KubernetesRole",
+ *             SubscriptionId = "4385cf00-2d3a-425a-832f-f4285b1c9dce",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewArcAddon(ctx, "arcAddon", &databoxedge.ArcAddonArgs{
+ * 			AddonName:         pulumi.String("arcName"),
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Kind:              pulumi.String("ArcForKubernetes"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 			ResourceLocation:  pulumi.String("EastUS"),
+ * 			ResourceName:      pulumi.String("testedgedevice"),
+ * 			RoleName:          pulumi.String("KubernetesRole"),
+ * 			SubscriptionId:    pulumi.String("4385cf00-2d3a-425a-832f-f4285b1c9dce"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const arcAddon = new azure_native.databoxedge.ArcAddon("arcAddon", {
+ *     addonName: "arcName",
+ *     deviceName: "testedgedevice",
+ *     kind: "ArcForKubernetes",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ *     resourceLocation: "EastUS",
+ *     resourceName: "testedgedevice",
+ *     roleName: "KubernetesRole",
+ *     subscriptionId: "4385cf00-2d3a-425a-832f-f4285b1c9dce",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * arc_addon = azure_native.databoxedge.ArcAddon("arcAddon",
+ *     addon_name="arcName",
+ *     device_name="testedgedevice",
+ *     kind="ArcForKubernetes",
+ *     resource_group_name="GroupForEdgeAutomation",
+ *     resource_location="EastUS",
+ *     resource_name="testedgedevice",
+ *     role_name="KubernetesRole",
+ *     subscription_id="4385cf00-2d3a-425a-832f-f4285b1c9dce")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,28 +125,24 @@ import javax.annotation.Nullable;
 public class ArcAddon extends io.pulumi.resources.CustomResource {
     /**
      * Host OS supported by the Arc addon.
-     * 
      */
     @Export(name="hostPlatform", type=String.class, parameters={})
     private Output<String> hostPlatform;
 
     /**
      * @return Host OS supported by the Arc addon.
-     * 
      */
     public Output<String> getHostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the runtime is hosted.
-     * 
      */
     @Export(name="hostPlatformType", type=String.class, parameters={})
     private Output<String> hostPlatformType;
 
     /**
      * @return Platform where the runtime is hosted.
-     * 
      */
     public Output<String> getHostPlatformType() {
         return this.hostPlatformType;
@@ -62,7 +150,6 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
     /**
      * Addon type.
      * Expected value is 'ArcForKubernetes'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -70,133 +157,114 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
     /**
      * @return Addon type.
      * Expected value is 'ArcForKubernetes'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Addon Provisioning State
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Addon Provisioning State
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Arc resource group name
-     * 
      */
     @Export(name="resourceGroupName", type=String.class, parameters={})
     private Output<String> resourceGroupName;
 
     /**
      * @return Arc resource group name
-     * 
      */
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * Arc resource location
-     * 
      */
     @Export(name="resourceLocation", type=String.class, parameters={})
     private Output<String> resourceLocation;
 
     /**
      * @return Arc resource location
-     * 
      */
     public Output<String> getResourceLocation() {
         return this.resourceLocation;
     }
     /**
      * Arc resource Name
-     * 
      */
     @Export(name="resourceName", type=String.class, parameters={})
     private Output<String> resourceName;
 
     /**
      * @return Arc resource Name
-     * 
      */
     public Output<String> getPropResourceName() {
         return this.resourceName;
     }
     /**
      * Arc resource subscription Id
-     * 
      */
     @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
      * @return Arc resource subscription Id
-     * 
      */
     public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Addon type
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Addon type
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Arc resource version
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Arc resource version
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

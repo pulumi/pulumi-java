@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure VM workload-specific protected item representing SAP ASE Database.
- * 
  */
 public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -42,7 +40,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
@@ -53,7 +50,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -64,7 +60,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
@@ -75,7 +70,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
@@ -86,7 +80,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
@@ -97,7 +90,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Additional information for this backup item.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable Output<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo;
@@ -108,7 +100,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Friendly name of the DB represented by this backup item.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -119,7 +110,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
@@ -130,7 +120,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
@@ -141,7 +130,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
@@ -152,7 +140,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Health details of different KPIs
-     * 
      */
     @Import(name="kpisHealths")
       private final @Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
@@ -163,7 +150,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Last backup operation status. Possible values: Healthy, Unhealthy.
-     * 
      */
     @Import(name="lastBackupStatus")
       private final @Nullable Output<Either<String,LastBackupStatus>> lastBackupStatus;
@@ -174,7 +160,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Timestamp of the last backup operation on this backup item.
-     * 
      */
     @Import(name="lastBackupTime")
       private final @Nullable Output<String> lastBackupTime;
@@ -185,7 +170,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
@@ -196,7 +180,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Parent name of the DB such as Instance or Availability Group.
-     * 
      */
     @Import(name="parentName")
       private final @Nullable Output<String> parentName;
@@ -207,7 +190,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Parent type of protected item, example: for a DB, standalone server or distributed
-     * 
      */
     @Import(name="parentType")
       private final @Nullable Output<String> parentType;
@@ -218,7 +200,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -229,7 +210,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Data ID of the protected item.
-     * 
      */
     @Import(name="protectedItemDataSourceId")
       private final @Nullable Output<String> protectedItemDataSourceId;
@@ -240,7 +220,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Health status of the backup item, evaluated based on last heartbeat received
-     * 
      */
     @Import(name="protectedItemHealthStatus")
       private final @Nullable Output<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus;
@@ -252,7 +231,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
     /**
      * backup item type.
      * Expected value is 'AzureVmWorkloadSAPAseDatabase'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
@@ -263,7 +241,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
@@ -274,7 +251,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Backup status of this backup item.
-     * 
      */
     @Import(name="protectionStatus")
       private final @Nullable Output<String> protectionStatus;
@@ -285,7 +261,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Host/Cluster Name for instance or AG
-     * 
      */
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
@@ -296,7 +271,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -307,7 +281,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends io.pul
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;

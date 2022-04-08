@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for SAP ERP Central Component(SAP ECC).
- * 
  */
 public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -50,7 +47,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -61,7 +57,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<String> encryptedCredential;
@@ -72,7 +67,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -83,7 +77,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The password for Basic authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -95,7 +88,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
     /**
      * Type of linked service.
      * Expected value is 'SapEcc'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -106,7 +98,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Output<String> url;
@@ -117,7 +108,6 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The username for Basic authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

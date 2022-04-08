@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backend address pool settings of an application gateway.
- * 
  */
 public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Cookie name to use for the affinity cookie.
-     * 
      */
     @Import(name="affinityCookieName")
       private final @Nullable Output<String> affinityCookieName;
@@ -39,7 +37,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Array of references to application gateway authentication certificates.
-     * 
      */
     @Import(name="authenticationCertificates")
       private final @Nullable Output<List<SubResourceArgs>> authenticationCertificates;
@@ -50,7 +47,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Connection draining of the backend http settings resource.
-     * 
      */
     @Import(name="connectionDraining")
       private final @Nullable Output<ApplicationGatewayConnectionDrainingArgs> connectionDraining;
@@ -61,7 +57,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Cookie based affinity.
-     * 
      */
     @Import(name="cookieBasedAffinity")
       private final @Nullable Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity;
@@ -72,7 +67,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Host header to be sent to the backend servers.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -83,7 +77,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -94,7 +87,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Name of the backend http settings that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -105,7 +97,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Path which should be used as a prefix for all HTTP requests. Null means no path will be prefixed. Default value is null.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -116,7 +107,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Whether to pick host header should be picked from the host name of the backend server. Default value is false.
-     * 
      */
     @Import(name="pickHostNameFromBackendAddress")
       private final @Nullable Output<Boolean> pickHostNameFromBackendAddress;
@@ -127,7 +117,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * The destination port on the backend.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -138,7 +127,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Probe resource of an application gateway.
-     * 
      */
     @Import(name="probe")
       private final @Nullable Output<SubResourceArgs> probe;
@@ -149,7 +137,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Whether the probe is enabled. Default value is false.
-     * 
      */
     @Import(name="probeEnabled")
       private final @Nullable Output<Boolean> probeEnabled;
@@ -160,7 +147,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * The protocol used to communicate with the backend.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
@@ -171,7 +157,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
-     * 
      */
     @Import(name="requestTimeout")
       private final @Nullable Output<Integer> requestTimeout;
@@ -182,7 +167,6 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
 
     /**
      * Array of references to application gateway trusted root certificates.
-     * 
      */
     @Import(name="trustedRootCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedRootCertificates;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration of an Bastion Host.
- * 
  */
 public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -34,7 +32,6 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -45,7 +42,6 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Private IP allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -56,7 +52,6 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Reference of the PublicIP resource.
-     * 
      */
     @Import(name="publicIPAddress", required=true)
       private final Output<SubResourceArgs> publicIPAddress;
@@ -67,7 +62,6 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Reference of the subnet resource.
-     * 
      */
     @Import(name="subnet", required=true)
       private final Output<SubResourceArgs> subnet;

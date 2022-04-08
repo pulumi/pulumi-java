@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EndpointRefResponse {
     /**
      * Name of the endpoint.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class EndpointRefResponse {
 
     /**
      * Name of the endpoint.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

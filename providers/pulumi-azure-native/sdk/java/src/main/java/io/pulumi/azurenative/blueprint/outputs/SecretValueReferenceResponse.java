@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class SecretValueReferenceResponse {
     /**
      * Specifies the reference to a given Azure Key Vault.
-     * 
      */
     private final KeyVaultReferenceResponse keyVault;
     /**
      * Name of the secret.
-     * 
      */
     private final String secretName;
     /**
      * The version of the secret to use. If left blank, the latest version of the secret is used.
-     * 
      */
     private final @Nullable String secretVersion;
 
@@ -40,21 +37,18 @@ public final class SecretValueReferenceResponse {
 
     /**
      * Specifies the reference to a given Azure Key Vault.
-     * 
     */
     public KeyVaultReferenceResponse getKeyVault() {
         return this.keyVault;
     }
     /**
      * Name of the secret.
-     * 
     */
     public String getSecretName() {
         return this.secretName;
     }
     /**
      * The version of the secret to use. If left blank, the latest version of the secret is used.
-     * 
     */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);

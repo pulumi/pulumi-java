@@ -14,7 +14,6 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -25,7 +24,6 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

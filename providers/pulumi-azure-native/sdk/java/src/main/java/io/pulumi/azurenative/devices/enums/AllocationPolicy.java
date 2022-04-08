@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Allocation policy to be used by this provisioning service.
-     * 
      */
     @EnumType
     public enum AllocationPolicy {

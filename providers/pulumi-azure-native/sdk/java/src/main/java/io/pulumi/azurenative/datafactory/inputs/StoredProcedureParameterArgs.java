@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * SQL stored procedure parameter.
- * 
  */
 public final class StoredProcedureParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * Stored procedure parameter type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,StoredProcedureParameterType>> type;
@@ -34,7 +32,6 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * Stored procedure parameter value. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<Object> value;

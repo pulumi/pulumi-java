@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The action to be executed by a job step.
- * 
  */
 public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source of the action to execute.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<Either<String,JobStepActionSource>> source;
@@ -34,7 +32,6 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of action being executed by the job step.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,JobStepActionType>> type;
@@ -45,7 +42,6 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action value, for example the text of the T-SQL script to execute.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

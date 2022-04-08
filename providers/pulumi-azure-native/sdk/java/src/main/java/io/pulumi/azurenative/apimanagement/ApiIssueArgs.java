@@ -18,7 +18,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A resource identifier for the API the issue was created for.
-     * 
      */
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
@@ -29,7 +28,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Date and time when the issue was created.
-     * 
      */
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
@@ -40,7 +38,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Text describing the issue.
-     * 
      */
     @Import(name="description", required=true)
       private final Output<String> description;
@@ -51,7 +48,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Issue identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="issueId")
       private final @Nullable Output<String> issueId;
@@ -62,7 +58,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -84,7 +78,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the issue.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
@@ -95,7 +88,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The issue title.
-     * 
      */
     @Import(name="title", required=true)
       private final Output<String> title;
@@ -106,7 +98,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A resource identifier for the user created the issue.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;

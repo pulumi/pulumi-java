@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for SAP HANA source.
- * 
  */
 public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -33,7 +31,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -44,7 +41,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The packet size of data read from SAP HANA. Type: integer(or Expression with resultType integer).
-     * 
      */
     @Import(name="packetSize")
       private final @Nullable Object packetSize;
@@ -65,8 +60,7 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange".
-     * 
+     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange". 
      */
     @Import(name="partitionOption")
       private final @Nullable Object partitionOption;
@@ -77,7 +71,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The settings that will be leveraged for SAP HANA source partitioning.
-     * 
      */
     @Import(name="partitionSettings")
       private final @Nullable SapHanaPartitionSettingsResponse partitionSettings;
@@ -88,7 +81,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * SAP HANA Sql query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Object query;
@@ -99,7 +91,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -110,7 +101,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -121,7 +111,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -133,7 +122,6 @@ public final class SapHanaSourceResponse extends io.pulumi.resources.InvokeArgs 
     /**
      * Copy source type.
      * Expected value is 'SapHanaSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

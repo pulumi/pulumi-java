@@ -14,7 +14,6 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
 
     /**
      * The name of the scoped resource object.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
 
     /**
      * The name of the Azure Arc PrivateLinkScope resource.
-     * 
      */
     @Import(name="scopeName", required=true)
       private final String scopeName;

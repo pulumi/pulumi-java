@@ -14,7 +14,6 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
 
     /**
      * The custom domain name.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -25,7 +24,6 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of the static site resource to search in.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

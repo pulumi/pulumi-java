@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class NfsAccessPolicyResponse {
     /**
      * The set of rules describing client accesses allowed under this policy.
-     * 
      */
     private final List<NfsAccessRuleResponse> accessRules;
     /**
      * Name identifying this policy. Access Policy names are not case sensitive.
-     * 
      */
     private final String name;
 
@@ -32,14 +30,12 @@ public final class NfsAccessPolicyResponse {
 
     /**
      * The set of rules describing client accesses allowed under this policy.
-     * 
     */
     public List<NfsAccessRuleResponse> getAccessRules() {
         return this.accessRules;
     }
     /**
      * Name identifying this policy. Access Policy names are not case sensitive.
-     * 
     */
     public String getName() {
         return this.name;

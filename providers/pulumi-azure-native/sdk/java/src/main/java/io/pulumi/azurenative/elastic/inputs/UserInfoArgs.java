@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * User Information to be passed to partners.
- * 
  */
 public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Company information of the user to be passed to partners.
-     * 
      */
     @Import(name="companyInfo")
       private final @Nullable Output<CompanyInfoArgs> companyInfo;
@@ -32,7 +30,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Company name of the user
-     * 
      */
     @Import(name="companyName")
       private final @Nullable Output<String> companyName;
@@ -43,7 +40,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email of the user used by Elastic for contacting them if needed
-     * 
      */
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
@@ -54,7 +50,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * First name of the user
-     * 
      */
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
@@ -65,7 +60,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last name of the user
-     * 
      */
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;

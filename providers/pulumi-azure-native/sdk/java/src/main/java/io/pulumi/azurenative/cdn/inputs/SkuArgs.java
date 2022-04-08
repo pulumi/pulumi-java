@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the pricing tier.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,SkuName>> name;

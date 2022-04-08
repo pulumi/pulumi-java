@@ -18,7 +18,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -29,7 +28,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity Info on the Account
-     * 
      */
     @Import(name="identity", required=true)
       private final Output<IdentityArgs> identity;
@@ -40,7 +38,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the azure resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags on the azure resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

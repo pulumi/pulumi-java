@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ManagedRuleExclusionResponse {
     /**
      * The variable type to be excluded.
-     * 
      */
     private final String matchVariable;
     /**
      * Selector value for which elements in the collection this exclusion applies to.
-     * 
      */
     private final String selector;
     /**
      * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
-     * 
      */
     private final String selectorMatchOperator;
 
@@ -37,21 +34,18 @@ public final class ManagedRuleExclusionResponse {
 
     /**
      * The variable type to be excluded.
-     * 
     */
     public String getMatchVariable() {
         return this.matchVariable;
     }
     /**
      * Selector value for which elements in the collection this exclusion applies to.
-     * 
     */
     public String getSelector() {
         return this.selector;
     }
     /**
      * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
-     * 
     */
     public String getSelectorMatchOperator() {
         return this.selectorMatchOperator;

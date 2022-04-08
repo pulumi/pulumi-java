@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Confluent offer detail
- * 
  */
 public final class OrganizationResourcePropertiesResponseOfferDetail extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
 
     /**
      * Offer Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
 
     /**
      * Offer Plan Id
-     * 
      */
     @Import(name="planId")
       private final @Nullable String planId;
@@ -42,7 +39,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
 
     /**
      * Offer Plan Name
-     * 
      */
     @Import(name="planName")
       private final @Nullable String planName;
@@ -53,7 +49,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
 
     /**
      * Publisher Id
-     * 
      */
     @Import(name="publisherId")
       private final @Nullable String publisherId;
@@ -64,7 +59,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
 
     /**
      * SaaS Offer Status
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -75,7 +69,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
 
     /**
      * Offer Plan Term unit
-     * 
      */
     @Import(name="termUnit")
       private final @Nullable String termUnit;

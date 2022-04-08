@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VnetRouteResponse {
     /**
      * List of all Static Routes.
-     * 
      */
     private final @Nullable List<StaticRouteResponse> staticRoutes;
 
@@ -24,7 +23,6 @@ public final class VnetRouteResponse {
 
     /**
      * List of all Static Routes.
-     * 
     */
     public List<StaticRouteResponse> getStaticRoutes() {
         return this.staticRoutes == null ? List.of() : this.staticRoutes;

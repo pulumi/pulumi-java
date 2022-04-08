@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Amazon S3.
- * 
  */
 public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The access key identifier of the Amazon S3 Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="accessKeyId")
       private final @Nullable Output<Object> accessKeyId;
@@ -39,7 +37,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -50,7 +47,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Object> authenticationType;
@@ -61,7 +57,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -72,7 +67,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -83,7 +77,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -94,7 +87,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -105,7 +97,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The secret access key of the Amazon S3 Identity and Access Management (IAM) user.
-     * 
      */
     @Import(name="secretAccessKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
@@ -116,7 +107,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="serviceUrl")
       private final @Nullable Output<Object> serviceUrl;
@@ -127,7 +117,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The session token for the S3 temporary security credential.
-     * 
      */
     @Import(name="sessionToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken;
@@ -139,7 +128,6 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
     /**
      * Type of linked service.
      * Expected value is 'AmazonS3'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

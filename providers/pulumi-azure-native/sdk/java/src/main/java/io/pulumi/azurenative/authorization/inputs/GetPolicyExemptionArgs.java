@@ -14,7 +14,6 @@ public final class GetPolicyExemptionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the policy exemption to delete.
-     * 
      */
     @Import(name="policyExemptionName", required=true)
       private final String policyExemptionName;
@@ -25,7 +24,6 @@ public final class GetPolicyExemptionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

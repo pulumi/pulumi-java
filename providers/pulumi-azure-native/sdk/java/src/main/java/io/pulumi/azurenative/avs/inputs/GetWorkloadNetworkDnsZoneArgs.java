@@ -14,7 +14,6 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
 
     /**
      * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
-     * 
      */
     @Import(name="dnsZoneId", required=true)
       private final String dnsZoneId;
@@ -25,7 +24,6 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
@@ -36,7 +34,6 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -18,7 +18,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the secret
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<SecretPropertiesArgs> properties;
@@ -29,7 +28,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Resource Group to which the vault belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -40,7 +38,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the secret
-     * 
      */
     @Import(name="secretName")
       private final @Nullable Output<String> secretName;
@@ -50,8 +47,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The tags that will be assigned to the secret.
-     * 
+     * The tags that will be assigned to the secret. 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -62,7 +58,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the vault
-     * 
      */
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;

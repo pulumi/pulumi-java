@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of validation to run against a matching request.
-     * 
      */
     @EnumType
     public enum ValidationType {

@@ -17,7 +17,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * View definition.
-     * 
      */
     @Import(name="definition", required=true)
       private final Output<String> definition;
@@ -28,7 +27,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized display name for the view.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
@@ -39,7 +37,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -50,7 +47,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the user ID.
-     * 
      */
     @Import(name="userId")
       private final @Nullable Output<String> userId;
@@ -72,7 +67,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the view.
-     * 
      */
     @Import(name="viewName")
       private final @Nullable Output<String> viewName;

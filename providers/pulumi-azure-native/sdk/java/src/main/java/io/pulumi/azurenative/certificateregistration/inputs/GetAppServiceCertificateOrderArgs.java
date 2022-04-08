@@ -14,7 +14,6 @@ public final class GetAppServiceCertificateOrderArgs extends io.pulumi.resources
 
     /**
      * Name of the certificate order..
-     * 
      */
     @Import(name="certificateOrderName", required=true)
       private final String certificateOrderName;
@@ -25,7 +24,6 @@ public final class GetAppServiceCertificateOrderArgs extends io.pulumi.resources
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -19,7 +19,143 @@ import javax.annotation.Nullable;
  * Buildpack Binding Resource object
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BuildpackBinding_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var buildpackBinding = new AzureNative.AppPlatform.BuildpackBinding("buildpackBinding", new AzureNative.AppPlatform.BuildpackBindingArgs
+ *         {
+ *             BuildServiceName = "default",
+ *             BuilderName = "default",
+ *             BuildpackBindingName = "myBuildpackBinding",
+ *             Properties = new AzureNative.AppPlatform.Inputs.BuildpackBindingPropertiesArgs
+ *             {
+ *                 BindingType = "ApplicationInsights",
+ *                 LaunchProperties = new AzureNative.AppPlatform.Inputs.BuildpackBindingLaunchPropertiesArgs
+ *                 {
+ *                     Properties = 
+ *                     {
+ *                         { "abc", "def" },
+ *                         { "any-string", "any-string" },
+ *                         { "sampling-rate", "12.0" },
+ *                     },
+ *                     Secrets = 
+ *                     {
+ *                         { "connection-string", "XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX" },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewBuildpackBinding(ctx, "buildpackBinding", &appplatform.BuildpackBindingArgs{
+ * 			BuildServiceName:     pulumi.String("default"),
+ * 			BuilderName:          pulumi.String("default"),
+ * 			BuildpackBindingName: pulumi.String("myBuildpackBinding"),
+ * 			Properties: &appplatform.BuildpackBindingPropertiesArgs{
+ * 				BindingType: pulumi.String("ApplicationInsights"),
+ * 				LaunchProperties: &appplatform.BuildpackBindingLaunchPropertiesArgs{
+ * 					Properties: pulumi.StringMap{
+ * 						"abc":           pulumi.String("def"),
+ * 						"any-string":    pulumi.String("any-string"),
+ * 						"sampling-rate": pulumi.String("12.0"),
+ * 					},
+ * 					Secrets: pulumi.StringMap{
+ * 						"connection-string": pulumi.String("XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const buildpackBinding = new azure_native.appplatform.BuildpackBinding("buildpackBinding", {
+ *     buildServiceName: "default",
+ *     builderName: "default",
+ *     buildpackBindingName: "myBuildpackBinding",
+ *     properties: {
+ *         bindingType: "ApplicationInsights",
+ *         launchProperties: {
+ *             properties: {
+ *                 abc: "def",
+ *                 "any-string": "any-string",
+ *                 "sampling-rate": "12.0",
+ *             },
+ *             secrets: {
+ *                 "connection-string": "XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX",
+ *             },
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * buildpack_binding = azure_native.appplatform.BuildpackBinding("buildpackBinding",
+ *     build_service_name="default",
+ *     builder_name="default",
+ *     buildpack_binding_name="myBuildpackBinding",
+ *     properties=azure_native.appplatform.BuildpackBindingPropertiesArgs(
+ *         binding_type="ApplicationInsights",
+ *         launch_properties=azure_native.appplatform.BuildpackBindingLaunchPropertiesArgs(
+ *             properties={
+ *                 "abc": "def",
+ *                 "any-string": "any-string",
+ *                 "sampling-rate": "12.0",
+ *             },
+ *             secrets={
+ *                 "connection-string": "XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX",
+ *             },
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +170,48 @@ import javax.annotation.Nullable;
 public class BuildpackBinding extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of a buildpack binding
-     * 
      */
     @Export(name="properties", type=BuildpackBindingPropertiesResponse.class, parameters={})
     private Output<BuildpackBindingPropertiesResponse> properties;
 
     /**
      * @return Properties of a buildpack binding
-     * 
      */
     public Output<BuildpackBindingPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

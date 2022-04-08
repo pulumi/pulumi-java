@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The secret management attributes.
- * 
  */
 public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Determines whether the object is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="expires")
       private final @Nullable Output<Integer> expires;
@@ -43,7 +40,6 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Not before date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="notBefore")
       private final @Nullable Output<Integer> notBefore;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the properties for a TagRules resource.
- * 
  */
 public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
 
     /**
      * Rules for sending logs.
-     * 
      */
     @Import(name="logRules")
       private final @Nullable LogRulesResponse logRules;
@@ -32,7 +30,6 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
 
     /**
      * Provisioning state of the monitoring tag rules.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;

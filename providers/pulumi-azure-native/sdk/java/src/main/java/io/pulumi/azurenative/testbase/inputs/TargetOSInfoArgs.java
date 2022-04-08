@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The information of the target OS to be tested.
- * 
  */
 public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
-     * 
      */
     @Import(name="osUpdateType", required=true)
       private final Output<String> osUpdateType;
@@ -31,7 +29,6 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the target OSs to be tested.
-     * 
      */
     @Import(name="targetOSs", required=true)
       private final Output<List<String>> targetOSs;

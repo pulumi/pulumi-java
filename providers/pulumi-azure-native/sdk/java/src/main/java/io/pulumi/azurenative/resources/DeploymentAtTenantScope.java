@@ -19,7 +19,122 @@ import javax.annotation.Nullable;
  * Deployment information.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create deployment at tenant scope.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deploymentAtTenantScope = new AzureNative.Resources.DeploymentAtTenantScope("deploymentAtTenantScope", new AzureNative.Resources.DeploymentAtTenantScopeArgs
+ *         {
+ *             DeploymentName = "tenant-dep01",
+ *             Location = "eastus",
+ *             Properties = new AzureNative.Resources.Inputs.DeploymentPropertiesArgs
+ *             {
+ *                 Mode = "Incremental",
+ *                 Parameters = ,
+ *                 TemplateLink = new AzureNative.Resources.Inputs.TemplateLinkArgs
+ *                 {
+ *                     Uri = "https://example.com/exampleTemplate.json",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tagKey1", "tag-value-1" },
+ *                 { "tagKey2", "tag-value-2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeploymentAtTenantScope(ctx, "deploymentAtTenantScope", &resources.DeploymentAtTenantScopeArgs{
+ * 			DeploymentName: pulumi.String("tenant-dep01"),
+ * 			Location:       pulumi.String("eastus"),
+ * 			Properties: &resources.DeploymentPropertiesArgs{
+ * 				Mode:       "Incremental",
+ * 				Parameters: nil,
+ * 				TemplateLink: &resources.TemplateLinkArgs{
+ * 					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tagKey1": pulumi.String("tag-value-1"),
+ * 				"tagKey2": pulumi.String("tag-value-2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deploymentAtTenantScope = new azure_native.resources.DeploymentAtTenantScope("deploymentAtTenantScope", {
+ *     deploymentName: "tenant-dep01",
+ *     location: "eastus",
+ *     properties: {
+ *         mode: "Incremental",
+ *         parameters: {},
+ *         templateLink: {
+ *             uri: "https://example.com/exampleTemplate.json",
+ *         },
+ *     },
+ *     tags: {
+ *         tagKey1: "tag-value-1",
+ *         tagKey2: "tag-value-2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment_at_tenant_scope = azure_native.resources.DeploymentAtTenantScope("deploymentAtTenantScope",
+ *     deployment_name="tenant-dep01",
+ *     location="eastus",
+ *     properties=azure_native.resources.DeploymentPropertiesArgs(
+ *         mode="Incremental",
+ *         parameters={},
+ *         template_link=azure_native.resources.TemplateLinkArgs(
+ *             uri="https://example.com/exampleTemplate.json",
+ *         ),
+ *     ),
+ *     tags={
+ *         "tagKey1": "tag-value-1",
+ *         "tagKey2": "tag-value-2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +149,60 @@ import javax.annotation.Nullable;
 public class DeploymentAtTenantScope extends io.pulumi.resources.CustomResource {
     /**
      * the location of the deployment.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return the location of the deployment.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the deployment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the deployment.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Deployment properties.
-     * 
      */
     @Export(name="properties", type=DeploymentPropertiesExtendedResponse.class, parameters={})
     private Output<DeploymentPropertiesExtendedResponse> properties;
 
     /**
      * @return Deployment properties.
-     * 
      */
     public Output<DeploymentPropertiesExtendedResponse> getProperties() {
         return this.properties;
     }
     /**
      * Deployment tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Deployment tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the deployment.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the deployment.
-     * 
      */
     public Output<String> getType() {
         return this.type;

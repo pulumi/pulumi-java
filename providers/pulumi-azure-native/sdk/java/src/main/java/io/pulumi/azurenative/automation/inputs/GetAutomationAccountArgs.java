@@ -14,7 +14,6 @@ public final class GetAutomationAccountArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class GetAutomationAccountArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

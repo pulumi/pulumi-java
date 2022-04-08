@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * StringNotBeginsWith Advanced Filter.
- * 
  */
 public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.r
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -33,7 +31,6 @@ public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.r
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'StringNotBeginsWith'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final String operatorType;
@@ -44,7 +41,6 @@ public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.r
 
     /**
      * The set of filter values.
-     * 
      */
     @Import(name="values")
       private final @Nullable List<String> values;

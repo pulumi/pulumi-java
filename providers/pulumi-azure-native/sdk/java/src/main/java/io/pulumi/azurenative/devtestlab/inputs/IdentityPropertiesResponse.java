@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a managed identity
- * 
  */
 public final class IdentityPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The client secret URL of the identity.
-     * 
      */
     @Import(name="clientSecretUrl")
       private final @Nullable String clientSecretUrl;
@@ -31,7 +29,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The principal id of resource identity.
-     * 
      */
     @Import(name="principalId")
       private final @Nullable String principalId;
@@ -42,7 +39,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The tenant identifier of resource.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;
@@ -53,7 +49,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Managed identity.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

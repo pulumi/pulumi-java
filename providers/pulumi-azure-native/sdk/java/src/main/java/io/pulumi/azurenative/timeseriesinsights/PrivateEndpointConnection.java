@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * The Private Endpoint Connection resource.
  * API Version: 2021-03-31-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnectionUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.TimeSeriesInsights.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.TimeSeriesInsights.PrivateEndpointConnectionArgs
+ *         {
+ *             EnvironmentName = "myEnvironment",
+ *             PrivateEndpointConnectionName = "myPrivateEndpointConnectionName",
+ *             PrivateLinkServiceConnectionState = new AzureNative.TimeSeriesInsights.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "Rejected for some reason",
+ *                 Status = "Rejected",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timeseriesinsights.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &timeseriesinsights.PrivateEndpointConnectionArgs{
+ * 			EnvironmentName:               pulumi.String("myEnvironment"),
+ * 			PrivateEndpointConnectionName: pulumi.String("myPrivateEndpointConnectionName"),
+ * 			PrivateLinkServiceConnectionState: &timeseriesinsights.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("Rejected for some reason"),
+ * 				Status:      pulumi.String("Rejected"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.timeseriesinsights.PrivateEndpointConnection("privateEndpointConnection", {
+ *     environmentName: "myEnvironment",
+ *     privateEndpointConnectionName: "myPrivateEndpointConnectionName",
+ *     privateLinkServiceConnectionState: {
+ *         description: "Rejected for some reason",
+ *         status: "Rejected",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.timeseriesinsights.PrivateEndpointConnection("privateEndpointConnection",
+ *     environment_name="myEnvironment",
+ *     private_endpoint_connection_name="myPrivateEndpointConnectionName",
+ *     private_link_service_connection_state=azure_native.timeseriesinsights.PrivateLinkServiceConnectionStateArgs(
+ *         description="Rejected for some reason",
+ *         status="Rejected",
+ *     ),
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +123,72 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Export(name="groupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> groupIds;
 
     /**
      * @return The provisioning state of the private endpoint connection resource.
-     * 
      */
     public Output</* @Nullable */ List<String>> getGroupIds() {
         return this.groupIds;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The resource of private end point.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the private endpoint connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the private endpoint connection.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

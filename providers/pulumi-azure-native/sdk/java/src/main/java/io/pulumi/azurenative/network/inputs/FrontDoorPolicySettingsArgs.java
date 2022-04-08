@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines top-level WebApplicationFirewallPolicy configuration settings.
- * 
  */
 public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-     * 
      */
     @Import(name="customBlockResponseBody")
       private final @Nullable Output<String> customBlockResponseBody;
@@ -36,7 +34,6 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * If the action type is block, customer can override the response status code.
-     * 
      */
     @Import(name="customBlockResponseStatusCode")
       private final @Nullable Output<Integer> customBlockResponseStatusCode;
@@ -47,7 +44,6 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
@@ -58,7 +54,6 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,PolicyMode>> mode;
@@ -69,7 +64,6 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * If action type is redirect, this field represents redirect URL for the client.
-     * 
      */
     @Import(name="redirectUrl")
       private final @Nullable Output<String> redirectUrl;
@@ -80,7 +74,6 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * Describes if policy managed rules will inspect the request body content.
-     * 
      */
     @Import(name="requestBodyCheck")
       private final @Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;

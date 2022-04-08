@@ -14,7 +14,6 @@ public final class GetPrivateLinkHubArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the privateLinkHub
-     * 
      */
     @Import(name="privateLinkHubName", required=true)
       private final String privateLinkHubName;
@@ -25,7 +24,6 @@ public final class GetPrivateLinkHubArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

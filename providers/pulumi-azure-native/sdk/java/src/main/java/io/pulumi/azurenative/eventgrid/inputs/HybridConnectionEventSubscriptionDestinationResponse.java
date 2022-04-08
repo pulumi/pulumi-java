@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the HybridConnection destination for an event subscription.
- * 
  */
 public final class HybridConnectionEventSubscriptionDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
     /**
      * Type of the endpoint for the event subscription destination.
      * Expected value is 'HybridConnection'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final String endpointType;
@@ -32,7 +30,6 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
 
     /**
      * The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

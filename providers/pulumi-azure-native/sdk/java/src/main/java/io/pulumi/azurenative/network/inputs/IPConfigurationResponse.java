@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration.
- * 
  */
 public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -33,7 +31,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -44,7 +41,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -55,7 +51,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -66,7 +61,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
@@ -77,7 +71,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The provisioning state of the IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -88,7 +81,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The reference to the public IP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable PublicIPAddressResponse publicIPAddress;
@@ -99,7 +91,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;

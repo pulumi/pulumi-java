@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Localized template data and gallery information.
- * 
  */
 public final class WorkbookTemplateLocalizedGalleryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends io.pulumi.re
 
     /**
      * Workbook galleries supported by the template.
-     * 
      */
     @Import(name="galleries")
       private final @Nullable List<WorkbookTemplateGalleryResponse> galleries;
@@ -33,7 +31,6 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends io.pulumi.re
 
     /**
      * Valid JSON object containing workbook template payload.
-     * 
      */
     @Import(name="templateData")
       private final @Nullable Object templateData;

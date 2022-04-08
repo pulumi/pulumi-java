@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dataset reference type.
- * 
  */
 public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Arguments for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
@@ -33,7 +31,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Reference dataset name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final String referenceName;
@@ -44,7 +41,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Dataset reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

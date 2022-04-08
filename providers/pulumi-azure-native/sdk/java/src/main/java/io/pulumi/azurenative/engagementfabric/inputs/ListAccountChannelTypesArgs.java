@@ -14,7 +14,6 @@ public final class ListAccountChannelTypesArgs extends io.pulumi.resources.Invok
 
     /**
      * Account Name
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class ListAccountChannelTypesArgs extends io.pulumi.resources.Invok
 
     /**
      * Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

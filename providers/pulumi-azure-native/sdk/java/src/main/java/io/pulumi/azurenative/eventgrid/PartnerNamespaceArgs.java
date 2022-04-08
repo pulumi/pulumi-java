@@ -22,7 +22,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
-     * 
      */
     @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
@@ -33,7 +32,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-     * 
      */
     @Import(name="inboundIpRules")
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
@@ -44,7 +42,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +52,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the partner namespace.
-     * 
      */
     @Import(name="partnerNamespaceName")
       private final @Nullable Output<String> partnerNamespaceName;
@@ -67,7 +63,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
     /**
      * The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
-     * 
      */
     @Import(name="partnerRegistrationFullyQualifiedId")
       private final @Nullable Output<String> partnerRegistrationFullyQualifiedId;
@@ -79,7 +74,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -90,7 +84,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -101,7 +94,6 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

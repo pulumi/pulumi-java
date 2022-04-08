@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Spark Server linked service.
- * 
  */
 public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-     * 
      */
     @Import(name="allowHostNameCNMismatch")
       private final @Nullable Output<Object> allowHostNameCNMismatch;
@@ -42,7 +40,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
-     * 
      */
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Output<Object> allowSelfSignedServerCert;
@@ -53,7 +50,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -64,7 +60,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The authentication method used to access the Spark server.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,SparkAuthenticationType>> authenticationType;
@@ -75,7 +70,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -86,7 +80,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -97,7 +90,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-     * 
      */
     @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
@@ -108,7 +100,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -119,7 +110,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * IP address or host name of the Spark server
-     * 
      */
     @Import(name="host", required=true)
       private final Output<Object> host;
@@ -130,7 +120,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The partial URL corresponding to the Spark server.
-     * 
      */
     @Import(name="httpPath")
       private final @Nullable Output<Object> httpPath;
@@ -141,7 +130,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -152,7 +140,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The password corresponding to the user name that you provided in the Username field
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -163,7 +150,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The TCP port that the Spark server uses to listen for client connections.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Object> port;
@@ -174,7 +160,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The type of Spark server.
-     * 
      */
     @Import(name="serverType")
       private final @Nullable Output<Either<String,SparkServerType>> serverType;
@@ -185,7 +170,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The transport protocol to use in the Thrift layer.
-     * 
      */
     @Import(name="thriftTransportProtocol")
       private final @Nullable Output<Either<String,SparkThriftTransportProtocol>> thriftTransportProtocol;
@@ -196,7 +180,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-     * 
      */
     @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
@@ -208,7 +191,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     /**
      * Type of linked service.
      * Expected value is 'Spark'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -219,7 +201,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
-     * 
      */
     @Import(name="useSystemTrustStore")
       private final @Nullable Output<Object> useSystemTrustStore;
@@ -230,7 +211,6 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The user name that you use to access Spark Server.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<Object> username;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Managed Network Peering Policy resource
- * 
  */
 public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
 
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -32,7 +30,6 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -43,7 +40,6 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
 
     /**
      * The name of the resource
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -54,7 +50,6 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
 
     /**
      * Gets or sets the properties of a Managed Network Policy
-     * 
      */
     @Import(name="properties")
       private final @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
@@ -65,7 +60,6 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
 
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Failover policy of the read-only endpoint for the failover group.
-     * 
      */
     @EnumType
     public enum ReadOnlyEndpointFailoverPolicy {

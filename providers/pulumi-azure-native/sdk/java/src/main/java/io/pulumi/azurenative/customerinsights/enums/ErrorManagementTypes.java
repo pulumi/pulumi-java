@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of error management to use for the mapping.
-     * 
      */
     @EnumType
     public enum ErrorManagementTypes {

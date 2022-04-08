@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The storage account blob inventory policy rules.
- * 
  */
 public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
 
     /**
      * Container name where blob inventory files are stored. Must be pre-created.
-     * 
      */
     @Import(name="destination", required=true)
       private final String destination;
@@ -32,7 +30,6 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
 
     /**
      * Policy is enabled if set to true.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;
@@ -43,7 +40,6 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
 
     /**
      * The storage account blob inventory policy rules. The rule is applied when it is enabled.
-     * 
      */
     @Import(name="rules", required=true)
       private final List<BlobInventoryPolicyRuleResponse> rules;
@@ -54,7 +50,6 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
 
     /**
      * The valid value is Inventory
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

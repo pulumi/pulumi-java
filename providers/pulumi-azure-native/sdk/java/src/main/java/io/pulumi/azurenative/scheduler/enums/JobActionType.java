@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the job action type.
-     * 
      */
     @EnumType
     public enum JobActionType {

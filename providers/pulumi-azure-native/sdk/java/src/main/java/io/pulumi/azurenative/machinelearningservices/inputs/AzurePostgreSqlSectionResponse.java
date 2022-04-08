@@ -17,7 +17,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The authority URL used for authentication.
-     * 
      */
     @Import(name="authorityUrl")
       private final @Nullable String authorityUrl;
@@ -28,7 +27,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The content of the certificate used for authentication.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable String certificate;
@@ -39,7 +37,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The Client ID/Application ID
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -50,7 +47,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The client secret.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
@@ -61,7 +57,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * Sql Authentication type.
-     * 
      */
     @Import(name="credentialType")
       private final @Nullable String credentialType;
@@ -72,7 +67,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The Azure SQL database name.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable String databaseName;
@@ -83,7 +77,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * Indicates SSL requirement of Azure Postgresql server.
-     * 
      */
     @Import(name="enableSsl")
       private final @Nullable Boolean enableSsl;
@@ -94,7 +87,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The server host endpoint.
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable String endpoint;
@@ -105,7 +97,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      *  Is it using certificate to authenticate. If false then use client secret.
-     * 
      */
     @Import(name="isCertAuth")
       private final @Nullable Boolean isCertAuth;
@@ -116,7 +107,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * / The Azure SQL port number.
-     * 
      */
     @Import(name="portNumber")
       private final @Nullable String portNumber;
@@ -127,7 +117,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * Resource Group.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
@@ -138,7 +127,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The resource the service principal/app has access to.
-     * 
      */
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;
@@ -149,7 +137,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The Azure SQL server name.
-     * 
      */
     @Import(name="serverName")
       private final @Nullable String serverName;
@@ -160,7 +147,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * Indicates which identity to use to authenticate service data access to customer's storage.
-     * 
      */
     @Import(name="serviceDataAccessAuthIdentity")
       private final @Nullable String serviceDataAccessAuthIdentity;
@@ -171,7 +157,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * Subscription ID.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
@@ -182,7 +167,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The ID of the tenant the service principal/app belongs to.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;
@@ -193,7 +177,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The thumbprint of the certificate above.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
@@ -204,7 +187,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The Azure SQL user id.
-     * 
      */
     @Import(name="userId")
       private final @Nullable String userId;
@@ -215,7 +197,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
 
     /**
      * The Azure SQL user password.
-     * 
      */
     @Import(name="userPassword")
       private final @Nullable String userPassword;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Private Endpoint network resource that is linked to the Private Endpoint connection.
- * 
  */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

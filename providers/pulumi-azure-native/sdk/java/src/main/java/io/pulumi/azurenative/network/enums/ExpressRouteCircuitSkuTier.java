@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The tier of the SKU.
-     * 
      */
     @EnumType
     public enum ExpressRouteCircuitSkuTier {

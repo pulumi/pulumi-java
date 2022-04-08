@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class SsisEnvironmentReferenceResponse {
     /**
      * Environment folder name.
-     * 
      */
     private final @Nullable String environmentFolderName;
     /**
      * Environment name.
-     * 
      */
     private final @Nullable String environmentName;
     /**
      * Environment reference id.
-     * 
      */
     private final @Nullable Double id;
     /**
      * Reference type
-     * 
      */
     private final @Nullable String referenceType;
 
@@ -47,28 +43,24 @@ public final class SsisEnvironmentReferenceResponse {
 
     /**
      * Environment folder name.
-     * 
     */
     public Optional<String> getEnvironmentFolderName() {
         return Optional.ofNullable(this.environmentFolderName);
     }
     /**
      * Environment name.
-     * 
     */
     public Optional<String> getEnvironmentName() {
         return Optional.ofNullable(this.environmentName);
     }
     /**
      * Environment reference id.
-     * 
     */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reference type
-     * 
     */
     public Optional<String> getReferenceType() {
         return Optional.ofNullable(this.referenceType);

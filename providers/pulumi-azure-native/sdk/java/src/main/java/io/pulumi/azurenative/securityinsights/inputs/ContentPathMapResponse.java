@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The mapping of content type to a repo path.
- * 
  */
 public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Content type.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable String contentType;
@@ -31,7 +29,6 @@ public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The path to the content.
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;

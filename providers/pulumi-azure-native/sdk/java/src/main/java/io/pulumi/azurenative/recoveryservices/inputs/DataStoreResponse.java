@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data store details of the MT.
- * 
  */
 public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The capacity of data store in GBs.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable String capacity;
@@ -31,7 +29,6 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The free space of data store in GBs.
-     * 
      */
     @Import(name="freeSpace")
       private final @Nullable String freeSpace;
@@ -42,7 +39,6 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The symbolic name of data store.
-     * 
      */
     @Import(name="symbolicName")
       private final @Nullable String symbolicName;
@@ -53,7 +49,6 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of data store.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -64,7 +59,6 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The uuid of data store.
-     * 
      */
     @Import(name="uuid")
       private final @Nullable String uuid;

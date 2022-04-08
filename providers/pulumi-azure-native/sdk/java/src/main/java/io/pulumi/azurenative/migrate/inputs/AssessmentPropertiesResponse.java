@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Properties of an assessment.
- * 
  */
 public final class AssessmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Storage type selected for this disk.
-     * 
      */
     @Import(name="azureDiskType", required=true)
       private final String azureDiskType;
@@ -33,7 +31,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * AHUB discount on windows virtual machines.
-     * 
      */
     @Import(name="azureHybridUseBenefit", required=true)
       private final String azureHybridUseBenefit;
@@ -44,7 +41,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
-     * 
      */
     @Import(name="azureLocation", required=true)
       private final String azureLocation;
@@ -55,7 +51,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Offer code according to which cost estimation is done.
-     * 
      */
     @Import(name="azureOfferCode", required=true)
       private final String azureOfferCode;
@@ -66,7 +61,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Pricing tier for Size evaluation.
-     * 
      */
     @Import(name="azurePricingTier", required=true)
       private final String azurePricingTier;
@@ -77,7 +71,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Storage Redundancy type offered by Azure.
-     * 
      */
     @Import(name="azureStorageRedundancy", required=true)
       private final String azureStorageRedundancy;
@@ -88,7 +81,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * List of azure VM families.
-     * 
      */
     @Import(name="azureVmFamilies", required=true)
       private final List<String> azureVmFamilies;
@@ -99,7 +91,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Confidence rating percentage for assessment. Can be in the range [0, 100].
-     * 
      */
     @Import(name="confidenceRatingInPercentage", required=true)
       private final Double confidenceRatingInPercentage;
@@ -110,7 +101,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Time when this project was created. Date-Time represented in ISO-8601 format.
-     * 
      */
     @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
@@ -121,7 +111,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Currency to report prices in.
-     * 
      */
     @Import(name="currency", required=true)
       private final String currency;
@@ -132,7 +121,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
-     * 
      */
     @Import(name="discountPercentage", required=true)
       private final Double discountPercentage;
@@ -143,7 +131,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Enterprise agreement subscription arm id.
-     * 
      */
     @Import(name="eaSubscriptionId", required=true)
       private final String eaSubscriptionId;
@@ -154,7 +141,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     @Import(name="monthlyBandwidthCost", required=true)
       private final Double monthlyBandwidthCost;
@@ -165,7 +151,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     @Import(name="monthlyComputeCost", required=true)
       private final Double monthlyComputeCost;
@@ -176,7 +161,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     @Import(name="monthlyPremiumStorageCost", required=true)
       private final Double monthlyPremiumStorageCost;
@@ -187,7 +171,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     @Import(name="monthlyStandardSSDStorageCost", required=true)
       private final Double monthlyStandardSSDStorageCost;
@@ -198,7 +181,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     @Import(name="monthlyStorageCost", required=true)
       private final Double monthlyStorageCost;
@@ -209,7 +191,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Number of assessed machines part of this assessment.
-     * 
      */
     @Import(name="numberOfMachines", required=true)
       private final Integer numberOfMachines;
@@ -220,7 +201,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Percentile of performance data used to recommend Azure size.
-     * 
      */
     @Import(name="percentile", required=true)
       private final String percentile;
@@ -231,7 +211,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * End time to consider performance data for assessment
-     * 
      */
     @Import(name="perfDataEndTime", required=true)
       private final String perfDataEndTime;
@@ -242,7 +221,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Start time to consider performance data for assessment
-     * 
      */
     @Import(name="perfDataStartTime", required=true)
       private final String perfDataStartTime;
@@ -253,7 +231,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.
-     * 
      */
     @Import(name="pricesTimestamp", required=true)
       private final String pricesTimestamp;
@@ -264,7 +241,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Azure reserved instance.
-     * 
      */
     @Import(name="reservedInstance", required=true)
       private final String reservedInstance;
@@ -275,7 +251,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
-     * 
      */
     @Import(name="scalingFactor", required=true)
       private final Double scalingFactor;
@@ -286,7 +261,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Assessment sizing criterion.
-     * 
      */
     @Import(name="sizingCriterion", required=true)
       private final String sizingCriterion;
@@ -297,7 +271,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * User configurable setting that describes the status of the assessment.
-     * 
      */
     @Import(name="stage", required=true)
       private final String stage;
@@ -308,7 +281,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Whether the assessment has been created and is valid.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -319,7 +291,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Time range of performance data used to recommend a size.
-     * 
      */
     @Import(name="timeRange", required=true)
       private final String timeRange;
@@ -330,7 +301,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Time when this project was last updated. Date-Time represented in ISO-8601 format.
-     * 
      */
     @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
@@ -341,7 +311,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Specify the duration for which the VMs are up in the on-premises environment.
-     * 
      */
     @Import(name="vmUptime", required=true)
       private final VmUptimeResponse vmUptime;

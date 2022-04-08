@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ssis folder.
- * 
  */
 public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Double id;
@@ -43,7 +40,6 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -55,7 +51,6 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The type of SSIS object metadata.
      * Expected value is 'Folder'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

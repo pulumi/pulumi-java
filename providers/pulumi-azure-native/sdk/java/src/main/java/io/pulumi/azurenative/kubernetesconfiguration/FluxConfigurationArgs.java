@@ -23,7 +23,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the kubernetes cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -34,7 +33,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
-     * 
      */
     @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
@@ -45,7 +43,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
-     * 
      */
     @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
@@ -56,7 +53,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Key-value pairs of protected configuration settings for the configuration
-     * 
      */
     @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
@@ -67,7 +63,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the Flux Configuration.
-     * 
      */
     @Import(name="fluxConfigurationName")
       private final @Nullable Output<String> fluxConfigurationName;
@@ -78,7 +73,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Parameters to reconcile to the GitRepository source kind type.
-     * 
      */
     @Import(name="gitRepository")
       private final @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
@@ -89,7 +83,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
-     * 
      */
     @Import(name="kustomizations")
       private final @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
@@ -100,7 +93,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -111,7 +103,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -122,7 +113,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Scope at which the operator will be installed.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<Either<String,ScopeType>> scope;
@@ -133,7 +123,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Source Kind to pull the configuration data from.
-     * 
      */
     @Import(name="sourceKind")
       private final @Nullable Output<Either<String,SourceKindType>> sourceKind;
@@ -144,7 +133,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
-     * 
      */
     @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;

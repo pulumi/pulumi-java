@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class SignalRNetworkACLsResponse {
     /**
      * Default action when no other rule matches
-     * 
      */
     private final @Nullable String defaultAction;
     /**
      * ACLs for requests from private endpoints
-     * 
      */
     private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
     /**
      * ACL for requests from public network
-     * 
      */
     private final @Nullable NetworkACLResponse publicNetwork;
 
@@ -42,21 +39,18 @@ public final class SignalRNetworkACLsResponse {
 
     /**
      * Default action when no other rule matches
-     * 
     */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * ACLs for requests from private endpoints
-     * 
     */
     public List<PrivateEndpointACLResponse> getPrivateEndpoints() {
         return this.privateEndpoints == null ? List.of() : this.privateEndpoints;
     }
     /**
      * ACL for requests from public network
-     * 
     */
     public Optional<NetworkACLResponse> getPublicNetwork() {
         return Optional.ofNullable(this.publicNetwork);

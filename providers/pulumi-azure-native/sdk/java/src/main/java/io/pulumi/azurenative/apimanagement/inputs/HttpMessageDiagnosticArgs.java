@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Http message diagnostic settings.
- * 
  */
 public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
 
     /**
      * Body logging settings.
-     * 
      */
     @Import(name="body")
       private final @Nullable Output<BodyDiagnosticSettingsArgs> body;
@@ -34,7 +32,6 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
 
     /**
      * Data masking settings.
-     * 
      */
     @Import(name="dataMasking")
       private final @Nullable Output<DataMaskingArgs> dataMasking;
@@ -45,7 +42,6 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
 
     /**
      * Array of HTTP Headers to log.
-     * 
      */
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;

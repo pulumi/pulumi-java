@@ -21,7 +21,108 @@ import javax.annotation.Nullable;
  * Peerings in a virtual network resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create peering
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetworkPeering = new AzureNative.Network.VirtualNetworkPeering("virtualNetworkPeering", new AzureNative.Network.VirtualNetworkPeeringArgs
+ *         {
+ *             AllowForwardedTraffic = true,
+ *             AllowGatewayTransit = false,
+ *             AllowVirtualNetworkAccess = true,
+ *             RemoteVirtualNetwork = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
+ *             },
+ *             ResourceGroupName = "peerTest",
+ *             UseRemoteGateways = false,
+ *             VirtualNetworkName = "vnet1",
+ *             VirtualNetworkPeeringName = "peer",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetworkPeering(ctx, "virtualNetworkPeering", &network.VirtualNetworkPeeringArgs{
+ * 			AllowForwardedTraffic:     pulumi.Bool(true),
+ * 			AllowGatewayTransit:       pulumi.Bool(false),
+ * 			AllowVirtualNetworkAccess: pulumi.Bool(true),
+ * 			RemoteVirtualNetwork: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2"),
+ * 			},
+ * 			ResourceGroupName:         pulumi.String("peerTest"),
+ * 			UseRemoteGateways:         pulumi.Bool(false),
+ * 			VirtualNetworkName:        pulumi.String("vnet1"),
+ * 			VirtualNetworkPeeringName: pulumi.String("peer"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("virtualNetworkPeering", {
+ *     allowForwardedTraffic: true,
+ *     allowGatewayTransit: false,
+ *     allowVirtualNetworkAccess: true,
+ *     remoteVirtualNetwork: {
+ *         id: "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
+ *     },
+ *     resourceGroupName: "peerTest",
+ *     useRemoteGateways: false,
+ *     virtualNetworkName: "vnet1",
+ *     virtualNetworkPeeringName: "peer",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network_peering = azure_native.network.VirtualNetworkPeering("virtualNetworkPeering",
+ *     allow_forwarded_traffic=True,
+ *     allow_gateway_transit=False,
+ *     allow_virtual_network_access=True,
+ *     remote_virtual_network=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
+ *     ),
+ *     resource_group_name="peerTest",
+ *     use_remote_gateways=False,
+ *     virtual_network_name="vnet1",
+ *     virtual_network_peering_name="peer")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,196 +137,168 @@ import javax.annotation.Nullable;
 public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
     /**
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
-     * 
      */
     @Export(name="allowForwardedTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowForwardedTraffic;
 
     /**
      * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowForwardedTraffic() {
         return this.allowForwardedTraffic;
     }
     /**
      * If gateway links can be used in remote virtual networking to link to this virtual network.
-     * 
      */
     @Export(name="allowGatewayTransit", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowGatewayTransit;
 
     /**
      * @return If gateway links can be used in remote virtual networking to link to this virtual network.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowGatewayTransit() {
         return this.allowGatewayTransit;
     }
     /**
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
-     * 
      */
     @Export(name="allowVirtualNetworkAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVirtualNetworkAccess;
 
     /**
      * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowVirtualNetworkAccess() {
         return this.allowVirtualNetworkAccess;
     }
     /**
      * If we need to verify the provisioning state of the remote gateway.
-     * 
      */
     @Export(name="doNotVerifyRemoteGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> doNotVerifyRemoteGateways;
 
     /**
      * @return If we need to verify the provisioning state of the remote gateway.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDoNotVerifyRemoteGateways() {
         return this.doNotVerifyRemoteGateways;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The status of the virtual network peering.
-     * 
      */
     @Export(name="peeringState", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringState;
 
     /**
      * @return The status of the virtual network peering.
-     * 
      */
     public Output</* @Nullable */ String> getPeeringState() {
         return this.peeringState;
     }
     /**
      * The provisioning state of the virtual network peering resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the virtual network peering resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The reference to the remote virtual network address space.
-     * 
      */
     @Export(name="remoteAddressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> remoteAddressSpace;
 
     /**
      * @return The reference to the remote virtual network address space.
-     * 
      */
     public Output</* @Nullable */ AddressSpaceResponse> getRemoteAddressSpace() {
         return this.remoteAddressSpace;
     }
     /**
      * The reference to the remote virtual network's Bgp Communities.
-     * 
      */
     @Export(name="remoteBgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities;
 
     /**
      * @return The reference to the remote virtual network's Bgp Communities.
-     * 
      */
     public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> getRemoteBgpCommunities() {
         return this.remoteBgpCommunities;
     }
     /**
      * The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
-     * 
      */
     @Export(name="remoteVirtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> remoteVirtualNetwork;
 
     /**
      * @return The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getRemoteVirtualNetwork() {
         return this.remoteVirtualNetwork;
     }
     /**
      * The resourceGuid property of the Virtual Network peering resource.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resourceGuid property of the Virtual Network peering resource.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
     /**
      * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
-     * 
      */
     @Export(name="useRemoteGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useRemoteGateways;
 
     /**
      * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
-     * 
      */
     public Output</* @Nullable */ Boolean> getUseRemoteGateways() {
         return this.useRemoteGateways;

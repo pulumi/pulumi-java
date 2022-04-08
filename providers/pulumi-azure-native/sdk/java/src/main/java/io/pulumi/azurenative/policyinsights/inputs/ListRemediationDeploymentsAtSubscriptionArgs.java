@@ -17,7 +17,6 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;
@@ -28,7 +27,6 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
 
     /**
      * Maximum number of records to return.
-     * 
      */
     @Import(name="top")
       private final @Nullable Integer top;

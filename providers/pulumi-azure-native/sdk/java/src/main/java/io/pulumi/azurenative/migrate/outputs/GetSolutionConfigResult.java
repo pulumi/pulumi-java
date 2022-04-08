@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetSolutionConfigResult {
     /**
      * Gets or sets the publisher sas uri for the solution.
-     * 
      */
     private final @Nullable String publisherSasUri;
 
@@ -24,7 +23,6 @@ public final class GetSolutionConfigResult {
 
     /**
      * Gets or sets the publisher sas uri for the solution.
-     * 
     */
     public Optional<String> getPublisherSasUri() {
         return Optional.ofNullable(this.publisherSasUri);

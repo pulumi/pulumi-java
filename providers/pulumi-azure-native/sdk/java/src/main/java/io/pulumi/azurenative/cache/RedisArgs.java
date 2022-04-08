@@ -25,7 +25,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether the non-ssl Redis server port (6379) is enabled.
-     * 
      */
     @Import(name="enableNonSslPort")
       private final @Nullable Output<Boolean> enableNonSslPort;
@@ -36,7 +35,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -47,7 +45,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')
-     * 
      */
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
@@ -58,7 +55,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Redis cache.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -69,7 +65,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -80,7 +75,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
-     * 
      */
     @Import(name="redisConfiguration")
       private final @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
@@ -91,7 +85,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of replicas to be created per master.
-     * 
      */
     @Import(name="replicasPerMaster")
       private final @Nullable Output<Integer> replicasPerMaster;
@@ -102,7 +95,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -113,7 +105,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of shards to be created on a Premium Cluster Cache.
-     * 
      */
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
@@ -124,7 +115,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the Redis cache to deploy.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -135,7 +125,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
-     * 
      */
     @Import(name="staticIP")
       private final @Nullable Output<String> staticIP;
@@ -146,7 +135,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
@@ -157,7 +145,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -168,7 +155,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A dictionary of tenant settings
-     * 
      */
     @Import(name="tenantSettings")
       private final @Nullable Output<Map<String,String>> tenantSettings;
@@ -179,7 +165,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of availability zones denoting where the resource needs to come from.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

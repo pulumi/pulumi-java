@@ -14,7 +14,6 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the virtual network.
-     * 
      */
     @Import(name="virtualNetworkName", required=true)
       private final String virtualNetworkName;
@@ -36,7 +34,6 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the virtual network peering.
-     * 
      */
     @Import(name="virtualNetworkPeeringName", required=true)
       private final String virtualNetworkPeeringName;

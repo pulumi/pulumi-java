@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * NAT rule collection resource.
- * 
  */
 public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
 
     /**
      * The action type of a NAT rule collection.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<AzureFirewallNatRCActionArgs> action;
@@ -35,7 +33,6 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -46,7 +43,6 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
 
     /**
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -57,7 +53,6 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
 
     /**
      * Priority of the NAT rule collection resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -68,7 +63,6 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
 
     /**
      * Collection of rules used by a NAT rule collection.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<AzureFirewallNatRuleArgs>> rules;

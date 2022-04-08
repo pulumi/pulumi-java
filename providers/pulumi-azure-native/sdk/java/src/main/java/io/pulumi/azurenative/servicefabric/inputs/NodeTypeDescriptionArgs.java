@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
- * 
  */
 public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The range of ports from which cluster assigned port to Service Fabric applications.
-     * 
      */
     @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
@@ -35,7 +33,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-     * 
      */
     @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
@@ -46,7 +43,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The TCP cluster management endpoint port.
-     * 
      */
     @Import(name="clientConnectionEndpointPort", required=true)
       private final Output<Integer> clientConnectionEndpointPort;
@@ -72,7 +68,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The range of ephemeral ports that nodes in this node type should be configured with.
-     * 
      */
     @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
@@ -83,7 +78,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The HTTP cluster management endpoint port.
-     * 
      */
     @Import(name="httpGatewayEndpointPort", required=true)
       private final Output<Integer> httpGatewayEndpointPort;
@@ -94,7 +88,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
-     * 
      */
     @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
@@ -105,7 +98,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the node type.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -116,7 +108,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-     * 
      */
     @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
@@ -127,7 +118,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The endpoint used by reverse proxy.
-     * 
      */
     @Import(name="reverseProxyEndpointPort")
       private final @Nullable Output<Integer> reverseProxyEndpointPort;
@@ -138,7 +128,6 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
-     * 
      */
     @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;

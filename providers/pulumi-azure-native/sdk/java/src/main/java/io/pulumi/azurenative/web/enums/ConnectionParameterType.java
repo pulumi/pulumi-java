@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the parameter
-     * 
      */
     @EnumType
     public enum ConnectionParameterType {

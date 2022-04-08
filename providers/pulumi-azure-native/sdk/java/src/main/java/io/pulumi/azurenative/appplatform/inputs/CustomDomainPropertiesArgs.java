@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom domain of app resource payload.
- * 
  */
 public final class CustomDomainPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The bound certificate name of domain.
-     * 
      */
     @Import(name="certName")
       private final @Nullable Output<String> certName;
@@ -31,7 +29,6 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The thumbprint of bound certificate.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the ephemeral disk settings for operating system disk.
-     * 
      */
     @EnumType
     public enum DiffDiskOptions {

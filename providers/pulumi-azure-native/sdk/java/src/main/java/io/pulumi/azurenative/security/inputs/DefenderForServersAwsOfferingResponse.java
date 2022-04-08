@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Defender for Servers AWS offering configurations
- * 
  */
 public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
 
     /**
      * The ARC autoprovisioning configuration
-     * 
      */
     @Import(name="arcAutoProvisioning")
       private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
@@ -33,7 +31,6 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
 
     /**
      * The Defender for servers connection configuration
-     * 
      */
     @Import(name="defenderForServers")
       private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
@@ -44,7 +41,6 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
 
     /**
      * The offering description.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -56,7 +52,6 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
     /**
      * The type of the security offering.
      * Expected value is 'DefenderForServersAWS'.
-     * 
      */
     @Import(name="offeringType", required=true)
       private final String offeringType;

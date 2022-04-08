@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * A database geo backup policy.
  * API Version: 2014-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update geo backup policy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var geoBackupPolicy = new AzureNative.Sql.GeoBackupPolicy("geoBackupPolicy", new AzureNative.Sql.GeoBackupPolicyArgs
+ *         {
+ *             DatabaseName = "testdw",
+ *             GeoBackupPolicyName = "Default",
+ *             ResourceGroupName = "sqlcrudtest-4799",
+ *             ServerName = "sqlcrudtest-5961",
+ *             State = "Enabled",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewGeoBackupPolicy(ctx, "geoBackupPolicy", &sql.GeoBackupPolicyArgs{
+ * 			DatabaseName:        pulumi.String("testdw"),
+ * 			GeoBackupPolicyName: pulumi.String("Default"),
+ * 			ResourceGroupName:   pulumi.String("sqlcrudtest-4799"),
+ * 			ServerName:          pulumi.String("sqlcrudtest-5961"),
+ * 			State:               "Enabled",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const geoBackupPolicy = new azure_native.sql.GeoBackupPolicy("geoBackupPolicy", {
+ *     databaseName: "testdw",
+ *     geoBackupPolicyName: "Default",
+ *     resourceGroupName: "sqlcrudtest-4799",
+ *     serverName: "sqlcrudtest-5961",
+ *     state: "Enabled",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * geo_backup_policy = azure_native.sql.GeoBackupPolicy("geoBackupPolicy",
+ *     database_name="testdw",
+ *     geo_backup_policy_name="Default",
+ *     resource_group_name="sqlcrudtest-4799",
+ *     server_name="sqlcrudtest-5961",
+ *     state="Enabled")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +112,72 @@ import javax.annotation.Nullable;
 public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Kind of geo backup policy.  This is metadata used for the Azure portal experience.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Kind of geo backup policy.  This is metadata used for the Azure portal experience.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Backup policy location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Backup policy location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the geo backup policy.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the geo backup policy.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The storage type of the geo backup policy.
-     * 
      */
     @Export(name="storageType", type=String.class, parameters={})
     private Output<String> storageType;
 
     /**
      * @return The storage type of the geo backup policy.
-     * 
      */
     public Output<String> getStorageType() {
         return this.storageType;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

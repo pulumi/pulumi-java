@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a policy option.
- * 
  */
 public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
 
     /**
      * The key delivery configuration.
-     * 
      */
     @Import(name="configuration", required=true)
       private final Object configuration;
@@ -40,7 +38,6 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
 
     /**
      * The Policy Option description.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -51,7 +48,6 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
 
     /**
      * The legacy Policy Option ID.
-     * 
      */
     @Import(name="policyOptionId", required=true)
       private final String policyOptionId;
@@ -62,7 +58,6 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
 
     /**
      * The requirements that must be met to deliver keys with this configuration
-     * 
      */
     @Import(name="restriction", required=true)
       private final Object restriction;

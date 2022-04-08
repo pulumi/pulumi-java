@@ -16,12 +16,10 @@ import java.util.Objects;
 public final class BranchResponse {
     /**
      * List of actions.
-     * 
      */
     private final List<Object> actions;
     /**
      * String of the branch name.
-     * 
      */
     private final String name;
 
@@ -35,14 +33,12 @@ public final class BranchResponse {
 
     /**
      * List of actions.
-     * 
     */
     public List<Object> getActions() {
         return this.actions;
     }
     /**
      * String of the branch name.
-     * 
     */
     public String getName() {
         return this.name;

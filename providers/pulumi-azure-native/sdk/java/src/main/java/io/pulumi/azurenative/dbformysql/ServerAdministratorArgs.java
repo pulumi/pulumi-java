@@ -17,7 +17,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The type of administrator.
-     * 
      */
     @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
@@ -28,7 +27,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The server administrator login account name.
-     * 
      */
     @Import(name="login", required=true)
       private final Output<String> login;
@@ -39,7 +37,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -61,7 +57,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The server administrator Sid (Secure ID).
-     * 
      */
     @Import(name="sid", required=true)
       private final Output<String> sid;
@@ -72,7 +67,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The server Active Directory Administrator tenant id.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;

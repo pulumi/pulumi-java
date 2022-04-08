@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ListAssetStreamingLocatorsResult {
     /**
      * The list of Streaming Locators.
-     * 
      */
     private final List<AssetStreamingLocatorResponse> streamingLocators;
 
@@ -23,7 +22,6 @@ public final class ListAssetStreamingLocatorsResult {
 
     /**
      * The list of Streaming Locators.
-     * 
     */
     public List<AssetStreamingLocatorResponse> getStreamingLocators() {
         return this.streamingLocators;

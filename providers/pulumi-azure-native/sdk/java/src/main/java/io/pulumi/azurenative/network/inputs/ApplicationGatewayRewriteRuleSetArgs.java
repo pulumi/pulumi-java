@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rewrite rule set of an application gateway.
- * 
  */
 public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
 
     /**
      * Name of the rewrite rule set that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
 
     /**
      * Rewrite rules in the rewrite rule set.
-     * 
      */
     @Import(name="rewriteRules")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;

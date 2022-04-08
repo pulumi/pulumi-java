@@ -12,13 +12,11 @@ import java.util.Objects;
 public final class HealthCheckStepPropertiesResponse {
     /**
      * The health check step attributes
-     * 
      */
     private final RestHealthCheckStepAttributesResponse attributes;
     /**
      * The type of step.
      * Expected value is 'HealthCheck'.
-     * 
      */
     private final String stepType;
 
@@ -32,7 +30,6 @@ public final class HealthCheckStepPropertiesResponse {
 
     /**
      * The health check step attributes
-     * 
     */
     public RestHealthCheckStepAttributesResponse getAttributes() {
         return this.attributes;
@@ -40,7 +37,6 @@ public final class HealthCheckStepPropertiesResponse {
     /**
      * The type of step.
      * Expected value is 'HealthCheck'.
-     * 
     */
     public String getStepType() {
         return this.stepType;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * TLS endpoint describes an endpoint that the pipeline can connect to over TLS transport (data is encrypted in transit).
- * 
  */
 public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Credentials to be presented to the endpoint.
-     * 
      */
     @Import(name="credentials", required=true)
       private final UsernamePasswordCredentialsResponse credentials;
@@ -35,7 +33,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
-     * 
      */
     @Import(name="trustedCertificates")
       private final @Nullable PemCertificateListResponse trustedCertificates;
@@ -46,7 +43,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
-     * 
      */
     @Import(name="tunnel")
       private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
@@ -58,7 +54,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -69,7 +64,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The endpoint URL for Video Analyzer to connect to.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;
@@ -80,7 +74,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
-     * 
      */
     @Import(name="validationOptions")
       private final @Nullable TlsValidationOptionsResponse validationOptions;

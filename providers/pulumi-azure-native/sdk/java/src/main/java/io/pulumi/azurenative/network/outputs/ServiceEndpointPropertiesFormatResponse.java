@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ServiceEndpointPropertiesFormatResponse {
     /**
      * A list of locations.
-     * 
      */
     private final @Nullable List<String> locations;
     /**
      * The provisioning state of the service endpoint resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The type of the endpoint service.
-     * 
      */
     private final @Nullable String service;
 
@@ -40,21 +37,18 @@ public final class ServiceEndpointPropertiesFormatResponse {
 
     /**
      * A list of locations.
-     * 
     */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * The provisioning state of the service endpoint resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the endpoint service.
-     * 
     */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);

@@ -14,7 +14,6 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The container Name
-     * 
      */
     @Import(name="containerName", required=true)
       private final String containerName;
@@ -25,7 +24,6 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -36,7 +34,6 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Storage Account Name
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final String storageAccountName;

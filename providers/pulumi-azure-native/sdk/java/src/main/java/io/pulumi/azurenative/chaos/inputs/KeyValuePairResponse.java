@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A map to describe the settings of an action.
- * 
  */
 public final class KeyValuePairResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KeyValuePairResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the setting for the action.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class KeyValuePairResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value of the setting for the action.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * App resource properties payload
- * 
  */
 public final class AppResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the active deployment of the App
-     * 
      */
     @Import(name="activeDeploymentName")
       private final @Nullable Output<String> activeDeploymentName;
@@ -34,7 +32,6 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Fully qualified dns Name.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
@@ -45,7 +42,6 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Indicate if only https is allowed.
-     * 
      */
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
@@ -56,7 +52,6 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Persistent disk settings
-     * 
      */
     @Import(name="persistentDisk")
       private final @Nullable Output<PersistentDiskArgs> persistentDisk;
@@ -67,7 +62,6 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Indicates whether the App exposes public endpoint
-     * 
      */
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
@@ -78,7 +72,6 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Temporary disk settings
-     * 
      */
     @Import(name="temporaryDisk")
       private final @Nullable Output<TemporaryDiskArgs> temporaryDisk;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the settings for producing output into a log analytics workspace.
- * 
  */
 public final class ConnectionMonitorWorkspaceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectionMonitorWorkspaceSettingsResponse extends io.pulumi.
 
     /**
      * Log analytics workspace resource ID.
-     * 
      */
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;

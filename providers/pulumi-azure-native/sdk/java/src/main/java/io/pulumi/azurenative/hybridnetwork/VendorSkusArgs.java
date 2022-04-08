@@ -22,7 +22,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku deployment mode.
-     * 
      */
     @Import(name="deploymentMode")
       private final @Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode;
@@ -33,7 +32,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parameters for the managed application to be supplied by the vendor.
-     * 
      */
     @Import(name="managedApplicationParameters")
       private final @Nullable Output<Object> managedApplicationParameters;
@@ -44,7 +42,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The template for the managed application deployment.
-     * 
      */
     @Import(name="managedApplicationTemplate")
       private final @Nullable Output<Object> managedApplicationTemplate;
@@ -55,7 +52,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The template definition of the network function.
-     * 
      */
     @Import(name="networkFunctionTemplate")
       private final @Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate;
@@ -66,7 +62,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if the vendor sku is in preview mode.
-     * 
      */
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
@@ -77,7 +72,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the sku.
-     * 
      */
     @Import(name="skuName")
       private final @Nullable Output<String> skuName;
@@ -88,7 +82,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku type.
-     * 
      */
     @Import(name="skuType")
       private final @Nullable Output<Either<String,SkuType>> skuType;
@@ -99,7 +92,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the vendor.
-     * 
      */
     @Import(name="vendorName", required=true)
       private final Output<String> vendorName;

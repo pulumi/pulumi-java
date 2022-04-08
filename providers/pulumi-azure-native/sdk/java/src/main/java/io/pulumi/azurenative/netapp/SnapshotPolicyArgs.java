@@ -22,7 +22,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the NetApp account
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -33,7 +32,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule for daily snapshots
-     * 
      */
     @Import(name="dailySchedule")
       private final @Nullable Output<DailyScheduleArgs> dailySchedule;
@@ -44,7 +42,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The property to decide policy is enabled or not
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -55,7 +52,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule for hourly snapshots
-     * 
      */
     @Import(name="hourlySchedule")
       private final @Nullable Output<HourlyScheduleArgs> hourlySchedule;
@@ -66,7 +62,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -77,7 +72,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule for monthly snapshots
-     * 
      */
     @Import(name="monthlySchedule")
       private final @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
@@ -88,7 +82,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the snapshot policy
-     * 
      */
     @Import(name="snapshotPolicyName")
       private final @Nullable Output<String> snapshotPolicyName;
@@ -110,7 +102,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -121,7 +112,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule for weekly snapshots
-     * 
      */
     @Import(name="weeklySchedule")
       private final @Nullable Output<WeeklyScheduleArgs> weeklySchedule;

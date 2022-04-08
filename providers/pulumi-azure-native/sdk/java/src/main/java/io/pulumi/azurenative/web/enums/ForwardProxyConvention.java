@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The convention used to determine the url of the request made.
-     * 
      */
     @EnumType
     public enum ForwardProxyConvention {

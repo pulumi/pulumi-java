@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * DataProtection type volumes include an object containing details of the replication
- * 
  */
 public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
 
     /**
      * Backup Properties
-     * 
      */
     @Import(name="backup")
       private final @Nullable Output<VolumeBackupPropertiesArgs> backup;
@@ -33,7 +31,6 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
 
     /**
      * Replication properties
-     * 
      */
     @Import(name="replication")
       private final @Nullable Output<ReplicationObjectArgs> replication;
@@ -44,7 +41,6 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
 
     /**
      * Snapshot properties.
-     * 
      */
     @Import(name="snapshot")
       private final @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;

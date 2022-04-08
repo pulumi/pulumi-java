@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of a load balancer SKU.
-     * 
      */
     @EnumType
     public enum LoadBalancerSkuName {

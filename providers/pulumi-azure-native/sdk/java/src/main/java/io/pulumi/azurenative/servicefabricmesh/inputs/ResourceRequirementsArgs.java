@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * This type describes the resource requirements for a container or a service.
- * 
  */
 public final class ResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
 
     /**
      * Describes the maximum limits on the resources for a given container.
-     * 
      */
     @Import(name="limits")
       private final @Nullable Output<ResourceLimitsArgs> limits;
@@ -32,7 +30,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
 
     /**
      * Describes the requested resources for a given container.
-     * 
      */
     @Import(name="requests", required=true)
       private final Output<ResourceRequestsArgs> requests;

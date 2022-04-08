@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a weekly schedule.
- * 
  */
 public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time of the day the schedule will occur.
-     * 
      */
     @Import(name="time")
       private final @Nullable Output<String> time;
@@ -32,7 +30,6 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
-     * 
      */
     @Import(name="weekdays")
       private final @Nullable Output<List<String>> weekdays;

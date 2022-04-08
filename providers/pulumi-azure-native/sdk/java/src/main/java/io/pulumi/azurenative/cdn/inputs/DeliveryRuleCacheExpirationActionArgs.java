@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the cache expiration action for the delivery rule.
- * 
  */
 public final class DeliveryRuleCacheExpirationActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeliveryRuleCacheExpirationActionArgs extends io.pulumi.resou
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'CacheExpiration'.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class DeliveryRuleCacheExpirationActionArgs extends io.pulumi.resou
 
     /**
      * Defines the parameters for the action.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<CacheExpirationActionParametersArgs> parameters;

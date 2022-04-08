@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Access keys for the web service calls.
- * 
  */
 public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The primary access key.
-     * 
      */
     @Import(name="primary")
       private final @Nullable String primary;
@@ -31,7 +29,6 @@ public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The secondary access key.
-     * 
      */
     @Import(name="secondary")
       private final @Nullable String secondary;

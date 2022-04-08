@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for MongoDb data source.
- * 
  */
 public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Object allowSelfSignedServerCert;
@@ -39,7 +37,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -50,7 +47,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Database to verify the username and password. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="authSource")
       private final @Nullable Object authSource;
@@ -61,7 +57,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The authentication type to be used to connect to the MongoDB database.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
@@ -72,7 +67,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -83,7 +77,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Object databaseName;
@@ -94,7 +87,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -105,7 +97,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableSsl")
       private final @Nullable Object enableSsl;
@@ -116,7 +107,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -127,7 +117,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -138,7 +127,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Password for authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -149,7 +137,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="port")
       private final @Nullable Object port;
@@ -160,7 +147,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="server", required=true)
       private final Object server;
@@ -172,7 +158,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     /**
      * Type of linked service.
      * Expected value is 'MongoDb'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -183,7 +168,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

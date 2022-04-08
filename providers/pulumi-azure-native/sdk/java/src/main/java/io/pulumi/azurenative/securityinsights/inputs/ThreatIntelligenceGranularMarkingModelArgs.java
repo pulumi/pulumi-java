@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes threat granular marking model entity
- * 
  */
 public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
 
     /**
      * Language granular marking model
-     * 
      */
     @Import(name="language")
       private final @Nullable Output<String> language;
@@ -33,7 +31,6 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
 
     /**
      * marking reference granular marking model
-     * 
      */
     @Import(name="markingRef")
       private final @Nullable Output<Integer> markingRef;
@@ -44,7 +41,6 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
 
     /**
      * granular marking model selectors
-     * 
      */
     @Import(name="selectors")
       private final @Nullable Output<List<String>> selectors;

@@ -28,19 +28,16 @@ public final class GetAndroidMAMPolicyByNameResult {
     private final String groupStatus;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     private final String lastModifiedTime;
     /**
      * Resource Location
-     * 
      */
     private final @Nullable String location;
     private final @Nullable String managedBrowser;
     /**
      * Resource name
-     * 
      */
     private final String name;
     private final Integer numOfApps;
@@ -50,12 +47,10 @@ public final class GetAndroidMAMPolicyByNameResult {
     private final @Nullable String screenCapture;
     /**
      * Resource Tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -154,7 +149,6 @@ public final class GetAndroidMAMPolicyByNameResult {
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
@@ -164,7 +158,6 @@ public final class GetAndroidMAMPolicyByNameResult {
     }
     /**
      * Resource Location
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
@@ -174,7 +167,6 @@ public final class GetAndroidMAMPolicyByNameResult {
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
@@ -196,14 +188,12 @@ public final class GetAndroidMAMPolicyByNameResult {
     }
     /**
      * Resource Tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

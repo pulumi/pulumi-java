@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Self-hosted integration runtime status.
- * 
  */
 public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * Whether Self-hosted integration runtime auto update has been turned on.
-     * 
      */
     @Import(name="autoUpdate", required=true)
       private final String autoUpdate;
@@ -35,7 +33,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The estimated time when the self-hosted integration runtime will be updated.
-     * 
      */
     @Import(name="autoUpdateETA", required=true)
       private final String autoUpdateETA;
@@ -46,7 +43,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * Object with additional information about integration runtime capabilities.
-     * 
      */
     @Import(name="capabilities", required=true)
       private final Map<String,String> capabilities;
@@ -57,7 +53,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The time at which the integration runtime was created, in ISO8601 format.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -68,7 +63,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The workspace name which the integration runtime belong to.
-     * 
      */
     @Import(name="dataFactoryName", required=true)
       private final String dataFactoryName;
@@ -79,7 +73,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
-     * 
      */
     @Import(name="internalChannelEncryption", required=true)
       private final String internalChannelEncryption;
@@ -90,7 +83,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The latest version on download center.
-     * 
      */
     @Import(name="latestVersion", required=true)
       private final String latestVersion;
@@ -101,7 +93,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The list of linked integration runtimes that are created to share with this integration runtime.
-     * 
      */
     @Import(name="links")
       private final @Nullable List<LinkedIntegrationRuntimeResponse> links;
@@ -112,7 +103,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The local time zone offset in hours.
-     * 
      */
     @Import(name="localTimeZoneOffset", required=true)
       private final String localTimeZoneOffset;
@@ -123,7 +113,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The node communication Channel encryption mode
-     * 
      */
     @Import(name="nodeCommunicationChannelEncryptionMode", required=true)
       private final String nodeCommunicationChannelEncryptionMode;
@@ -134,7 +123,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The list of nodes for this integration runtime.
-     * 
      */
     @Import(name="nodes")
       private final @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes;
@@ -145,7 +133,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The version that the integration runtime is going to update to.
-     * 
      */
     @Import(name="pushedVersion", required=true)
       private final String pushedVersion;
@@ -156,7 +143,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The date at which the integration runtime will be scheduled to update, in ISO8601 format.
-     * 
      */
     @Import(name="scheduledUpdateDate", required=true)
       private final String scheduledUpdateDate;
@@ -167,7 +153,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The URLs for the services used in integration runtime backend service.
-     * 
      */
     @Import(name="serviceUrls", required=true)
       private final List<String> serviceUrls;
@@ -178,7 +163,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The state of integration runtime.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -189,7 +173,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The task queue id of the integration runtime.
-     * 
      */
     @Import(name="taskQueueId", required=true)
       private final String taskQueueId;
@@ -201,7 +184,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
     /**
      * The type of integration runtime.
      * Expected value is 'SelfHosted'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -212,7 +194,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
-     * 
      */
     @Import(name="updateDelayOffset", required=true)
       private final String updateDelayOffset;
@@ -223,7 +204,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * Version of the integration runtime.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;
@@ -234,7 +214,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
 
     /**
      * Status of the integration runtime version.
-     * 
      */
     @Import(name="versionStatus", required=true)
       private final String versionStatus;

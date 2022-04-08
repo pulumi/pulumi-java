@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Message Count Details.
- * 
  */
 public final class MessageCountDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Number of active messages in the queue, topic, or subscription.
-     * 
      */
     @Import(name="activeMessageCount", required=true)
       private final Double activeMessageCount;
@@ -29,7 +27,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Number of messages that are dead lettered.
-     * 
      */
     @Import(name="deadLetterMessageCount", required=true)
       private final Double deadLetterMessageCount;
@@ -40,7 +37,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Number of scheduled messages.
-     * 
      */
     @Import(name="scheduledMessageCount", required=true)
       private final Double scheduledMessageCount;
@@ -51,7 +47,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Number of messages transferred into dead letters.
-     * 
      */
     @Import(name="transferDeadLetterMessageCount", required=true)
       private final Double transferDeadLetterMessageCount;
@@ -62,7 +57,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Number of messages transferred to another queue, topic, or subscription.
-     * 
      */
     @Import(name="transferMessageCount", required=true)
       private final Double transferMessageCount;

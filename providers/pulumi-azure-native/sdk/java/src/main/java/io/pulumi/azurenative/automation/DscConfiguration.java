@@ -22,7 +22,146 @@ import javax.annotation.Nullable;
  * Definition of the configuration type.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update Configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dscConfiguration = new AzureNative.Automation.DscConfiguration("dscConfiguration", new AzureNative.Automation.DscConfigurationArgs
+ *         {
+ *             AutomationAccountName = "myAutomationAccount18",
+ *             ConfigurationName = "SetupServer",
+ *             Description = "sample configuration",
+ *             Location = "East US 2",
+ *             Name = "SetupServer",
+ *             ResourceGroupName = "rg",
+ *             Source = new AzureNative.Automation.Inputs.ContentSourceArgs
+ *             {
+ *                 Hash = new AzureNative.Automation.Inputs.ContentHashArgs
+ *                 {
+ *                     Algorithm = "sha256",
+ *                     Value = "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
+ *                 },
+ *                 Type = "embeddedContent",
+ *                 Value = @"Configuration SetupServer {
+ *     Node localhost {
+ *                                WindowsFeature IIS {
+ *                                Name = ""Web-Server"";
+ *             Ensure = ""Present""
+ *         }
+ *     }
+ * }",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewDscConfiguration(ctx, "dscConfiguration", &automation.DscConfigurationArgs{
+ * 			AutomationAccountName: pulumi.String("myAutomationAccount18"),
+ * 			ConfigurationName:     pulumi.String("SetupServer"),
+ * 			Description:           pulumi.String("sample configuration"),
+ * 			Location:              pulumi.String("East US 2"),
+ * 			Name:                  pulumi.String("SetupServer"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 			Source: &automation.ContentSourceArgs{
+ * 				Hash: &automation.ContentHashArgs{
+ * 					Algorithm: pulumi.String("sha256"),
+ * 					Value:     pulumi.String("A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F"),
+ * 				},
+ * 				Type: pulumi.String("embeddedContent"),
+ * 				Value: pulumi.String("Configuration SetupServer {\n    Node localhost {\n                               WindowsFeature IIS {\n                               Name = \"Web-Server\";\n            Ensure = \"Present\"\n        }\n    }\n}"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dscConfiguration = new azure_native.automation.DscConfiguration("dscConfiguration", {
+ *     automationAccountName: "myAutomationAccount18",
+ *     configurationName: "SetupServer",
+ *     description: "sample configuration",
+ *     location: "East US 2",
+ *     name: "SetupServer",
+ *     resourceGroupName: "rg",
+ *     source: {
+ *         hash: {
+ *             algorithm: "sha256",
+ *             value: "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
+ *         },
+ *         type: "embeddedContent",
+ *         value: `Configuration SetupServer {
+ *     Node localhost {
+ *                                WindowsFeature IIS {
+ *                                Name = "Web-Server";
+ *             Ensure = "Present"
+ *         }
+ *     }
+ * }`,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dsc_configuration = azure_native.automation.DscConfiguration("dscConfiguration",
+ *     automation_account_name="myAutomationAccount18",
+ *     configuration_name="SetupServer",
+ *     description="sample configuration",
+ *     location="East US 2",
+ *     name="SetupServer",
+ *     resource_group_name="rg",
+ *     source=azure_native.automation.ContentSourceArgs(
+ *         hash=azure_native.automation.ContentHashArgs(
+ *             algorithm="sha256",
+ *             value="A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
+ *         ),
+ *         type="embeddedContent",
+ *         value="""Configuration SetupServer {
+ *     Node localhost {
+ *                                WindowsFeature IIS {
+ *                                Name = "Web-Server";
+ *             Ensure = "Present"
+ *         }
+ *     }
+ * }""",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,210 +176,180 @@ import javax.annotation.Nullable;
 public class DscConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
      * @return Gets or sets the creation time.
-     * 
      */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets or sets the etag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Gets or sets the etag of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Gets or sets the job count of the configuration.
-     * 
      */
     @Export(name="jobCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> jobCount;
 
     /**
      * @return Gets or sets the job count of the configuration.
-     * 
      */
     public Output</* @Nullable */ Integer> getJobCount() {
         return this.jobCount;
     }
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
      * @return Gets or sets the last modified time.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The Azure Region where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets or sets verbose log option.
-     * 
      */
     @Export(name="logVerbose", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logVerbose;
 
     /**
      * @return Gets or sets verbose log option.
-     * 
      */
     public Output</* @Nullable */ Boolean> getLogVerbose() {
         return this.logVerbose;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets the number of compiled node configurations.
-     * 
      */
     @Export(name="nodeConfigurationCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> nodeConfigurationCount;
 
     /**
      * @return Gets the number of compiled node configurations.
-     * 
      */
     public Output</* @Nullable */ Integer> getNodeConfigurationCount() {
         return this.nodeConfigurationCount;
     }
     /**
      * Gets or sets the configuration parameters.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, DscConfigurationParameterResponse.class})
     private Output</* @Nullable */ Map<String,DscConfigurationParameterResponse>> parameters;
 
     /**
      * @return Gets or sets the configuration parameters.
-     * 
      */
     public Output</* @Nullable */ Map<String,DscConfigurationParameterResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * Gets or sets the provisioning state of the configuration.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state of the configuration.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the source.
-     * 
      */
     @Export(name="source", type=ContentSourceResponse.class, parameters={})
     private Output</* @Nullable */ ContentSourceResponse> source;
 
     /**
      * @return Gets or sets the source.
-     * 
      */
     public Output</* @Nullable */ ContentSourceResponse> getSource() {
         return this.source;
     }
     /**
      * Gets or sets the state of the configuration.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return Gets or sets the state of the configuration.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

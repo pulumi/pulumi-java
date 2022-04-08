@@ -14,7 +14,6 @@ public final class GetTableServicePropertiesArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetTableServicePropertiesArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetTableServicePropertiesArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the Table Service within the specified storage account. Table Service Name must be 'default'
-     * 
      */
     @Import(name="tableServiceName", required=true)
       private final String tableServiceName;

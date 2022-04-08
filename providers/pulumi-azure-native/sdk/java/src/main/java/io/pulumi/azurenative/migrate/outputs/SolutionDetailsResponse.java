@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class SolutionDetailsResponse {
     /**
      * Gets or sets the count of assessments reported by the solution.
-     * 
      */
     private final @Nullable Integer assessmentCount;
     /**
      * Gets or sets the extended details reported by the solution.
-     * 
      */
     private final @Nullable Map<String,String> extendedDetails;
     /**
      * Gets or sets the count of groups reported by the solution.
-     * 
      */
     private final @Nullable Integer groupCount;
 
@@ -41,21 +38,18 @@ public final class SolutionDetailsResponse {
 
     /**
      * Gets or sets the count of assessments reported by the solution.
-     * 
     */
     public Optional<Integer> getAssessmentCount() {
         return Optional.ofNullable(this.assessmentCount);
     }
     /**
      * Gets or sets the extended details reported by the solution.
-     * 
     */
     public Map<String,String> getExtendedDetails() {
         return this.extendedDetails == null ? Map.of() : this.extendedDetails;
     }
     /**
      * Gets or sets the count of groups reported by the solution.
-     * 
     */
     public Optional<Integer> getGroupCount() {
         return Optional.ofNullable(this.groupCount);

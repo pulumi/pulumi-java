@@ -14,7 +14,6 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Bookmark ID
-     * 
      */
     @Import(name="bookmarkId", required=true)
       private final String bookmarkId;
@@ -25,7 +24,6 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

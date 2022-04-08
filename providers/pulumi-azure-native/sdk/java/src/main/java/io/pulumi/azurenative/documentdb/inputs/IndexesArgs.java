@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The indexes for the path.
- * 
  */
 public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The datatype for which the indexing behavior is applied to.
-     * 
      */
     @Import(name="dataType")
       private final @Nullable Output<Either<String,DataType>> dataType;
@@ -35,7 +33,6 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the type of index.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,IndexKind>> kind;
@@ -46,7 +43,6 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The precision of the index. -1 is maximum precision.
-     * 
      */
     @Import(name="precision")
       private final @Nullable Output<Integer> precision;

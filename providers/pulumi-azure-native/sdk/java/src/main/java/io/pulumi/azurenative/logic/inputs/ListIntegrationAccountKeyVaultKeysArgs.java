@@ -17,7 +17,6 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -28,7 +27,6 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
 
     /**
      * The key vault reference.
-     * 
      */
     @Import(name="keyVault", required=true)
       private final KeyVaultReference keyVault;
@@ -39,7 +37,6 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -50,7 +47,6 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
 
     /**
      * The skip token.
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Plan for solution object supported by the OperationsManagement resource provider.
- * 
  */
 public final class SolutionPlanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SolutionPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class SolutionPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
-     * 
      */
     @Import(name="product")
       private final @Nullable String product;
@@ -42,7 +39,6 @@ public final class SolutionPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * promotionCode, Not really used now, can you left as empty
-     * 
      */
     @Import(name="promotionCode")
       private final @Nullable String promotionCode;
@@ -53,7 +49,6 @@ public final class SolutionPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Publisher name. For gallery solution, it is Microsoft.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;

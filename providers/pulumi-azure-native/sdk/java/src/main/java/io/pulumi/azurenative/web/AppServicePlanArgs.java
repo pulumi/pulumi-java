@@ -22,7 +22,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when the server farm free offer expires.
-     * 
      */
     @Import(name="freeOfferExpirationTime")
       private final @Nullable Output<String> freeOfferExpirationTime;
@@ -33,7 +32,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specification for the App Service Environment to use for the App Service plan.
-     * 
      */
     @Import(name="hostingEnvironmentProfile")
       private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
@@ -44,7 +42,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     @Import(name="hyperV")
       private final @Nullable Output<Boolean> hyperV;
@@ -55,7 +52,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If <code>true</code>, this App Service Plan owns spot instances.
-     * 
      */
     @Import(name="isSpot")
       private final @Nullable Output<Boolean> isSpot;
@@ -66,7 +62,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     @Import(name="isXenon")
       private final @Nullable Output<Boolean> isXenon;
@@ -77,7 +72,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -88,7 +82,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specification for the Kubernetes Environment to use for the App Service plan.
-     * 
      */
     @Import(name="kubeEnvironmentProfile")
       private final @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
@@ -99,7 +92,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -110,7 +102,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
-     * 
      */
     @Import(name="maximumElasticWorkerCount")
       private final @Nullable Output<Integer> maximumElasticWorkerCount;
@@ -121,7 +112,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the App Service plan.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -133,7 +123,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
      * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
-     * 
      */
     @Import(name="perSiteScaling")
       private final @Nullable Output<Boolean> perSiteScaling;
@@ -144,7 +133,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
@@ -155,7 +143,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -166,7 +153,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of a SKU for a scalable resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuDescriptionArgs> sku;
@@ -177,7 +163,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when the server farm expires. Valid only if it is a spot server farm.
-     * 
      */
     @Import(name="spotExpirationTime")
       private final @Nullable Output<String> spotExpirationTime;
@@ -188,7 +173,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -199,7 +183,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scaling worker count.
-     * 
      */
     @Import(name="targetWorkerCount")
       private final @Nullable Output<Integer> targetWorkerCount;
@@ -210,7 +193,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scaling worker size ID.
-     * 
      */
     @Import(name="targetWorkerSizeId")
       private final @Nullable Output<Integer> targetWorkerSizeId;
@@ -221,7 +203,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Target worker tier assigned to the App Service plan.
-     * 
      */
     @Import(name="workerTierName")
       private final @Nullable Output<String> workerTierName;

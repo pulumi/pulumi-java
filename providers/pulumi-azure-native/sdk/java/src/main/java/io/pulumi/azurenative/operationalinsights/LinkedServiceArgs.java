@@ -19,7 +19,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the linkedServices resource
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
@@ -30,7 +29,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The provisioning state of the linked service.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,LinkedServiceEntityStatus>> provisioningState;
@@ -41,7 +39,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -63,7 +59,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -74,7 +69,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
@@ -85,7 +79,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
-     * 
      */
     @Import(name="writeAccessResourceId")
       private final @Nullable Output<String> writeAccessResourceId;

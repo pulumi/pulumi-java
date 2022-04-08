@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Media type of data asset.
-     * 
      */
     @EnumType
     public enum MediaType {

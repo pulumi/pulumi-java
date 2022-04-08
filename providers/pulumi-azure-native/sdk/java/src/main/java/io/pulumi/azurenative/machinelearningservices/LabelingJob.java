@@ -19,7 +19,233 @@ import javax.annotation.Nullable;
  * Machine Learning labeling job object wrapped into ARM resource envelope.
  * API Version: 2020-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update LabelingJob
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var labelingJob = new AzureNative.MachineLearningServices.LabelingJob("labelingJob", new AzureNative.MachineLearningServices.LabelingJobArgs
+ *         {
+ *             LabelingJobId = "testLabelingJob",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.LabelingJobPropertiesArgs
+ *             {
+ *                 DatasetConfiguration = new AzureNative.MachineLearningServices.Inputs.LabelingDatasetConfigurationArgs
+ *                 {
+ *                     AssetName = "testdataasset",
+ *                     DatasetVersion = "1",
+ *                     EnableIncrementalDatasetRefresh = true,
+ *                 },
+ *                 JobInstructions = new AzureNative.MachineLearningServices.Inputs.LabelingJobInstructionsArgs
+ *                 {
+ *                     Uri = "https://www.testjobInstructions.com/labeling1.txt",
+ *                 },
+ *                 LabelCategories = 
+ *                 {
+ *                     { "testCategory", new AzureNative.MachineLearningServices.Inputs.LabelCategoryArgs
+ *                     {
+ *                         AllowMultiSelect = false,
+ *                         Classes = 
+ *                         {
+ *                             { "testClass1", new AzureNative.MachineLearningServices.Inputs.LabelClassArgs
+ *                             {
+ *                                 DisplayName = "testClass1",
+ *                                 Subclasses = 
+ *                                 {
+ *                                     { "testclass1-1", new AzureNative.MachineLearningServices.Inputs.LabelClassArgs
+ *                                     {
+ *                                         DisplayName = "testClass1-1",
+ *                                     } },
+ *                                 },
+ *                             } },
+ *                             { "testClass2", new AzureNative.MachineLearningServices.Inputs.LabelClassArgs
+ *                             {
+ *                                 DisplayName = "testClass2",
+ *                             } },
+ *                         },
+ *                         DisplayName = "testCategory",
+ *                     } },
+ *                 },
+ *                 LabelingJobMediaProperties = new AzureNative.MachineLearningServices.Inputs.LabelingJobImagePropertiesArgs
+ *                 {
+ *                     AnnotationType = "BoundingBox",
+ *                     MediaType = "Image",
+ *                 },
+ *                 MlAssistConfiguration = new AzureNative.MachineLearningServices.Inputs.MLAssistConfigurationArgs
+ *                 {
+ *                     InferencingComputeBinding = new AzureNative.MachineLearningServices.Inputs.ComputeBindingArgs
+ *                     {
+ *                         ComputeId = "inferencingcompute",
+ *                     },
+ *                     MlAssistEnabled = true,
+ *                     ModelNamePrefix = "testmodel_1",
+ *                     PrelabelAccuracyThreshold = 0.8,
+ *                     TrainingComputeBinding = new AzureNative.MachineLearningServices.Inputs.ComputeBindingArgs
+ *                     {
+ *                         ComputeId = "trainingcompute",
+ *                     },
+ *                 },
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *             },
+ *             ResourceGroupName = "workspace-1234",
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const labelingJob = new azure_native.machinelearningservices.LabelingJob("labelingJob", {
+ *     labelingJobId: "testLabelingJob",
+ *     properties: {
+ *         datasetConfiguration: {
+ *             assetName: "testdataasset",
+ *             datasetVersion: "1",
+ *             enableIncrementalDatasetRefresh: true,
+ *         },
+ *         jobInstructions: {
+ *             uri: "https://www.testjobInstructions.com/labeling1.txt",
+ *         },
+ *         labelCategories: {
+ *             testCategory: {
+ *                 allowMultiSelect: false,
+ *                 classes: {
+ *                     testClass1: {
+ *                         displayName: "testClass1",
+ *                         subclasses: {
+ *                             "testclass1-1": {
+ *                                 displayName: "testClass1-1",
+ *                             },
+ *                         },
+ *                     },
+ *                     testClass2: {
+ *                         displayName: "testClass2",
+ *                     },
+ *                 },
+ *                 displayName: "testCategory",
+ *             },
+ *         },
+ *         labelingJobMediaProperties: {
+ *             annotationType: "BoundingBox",
+ *             mediaType: "Image",
+ *         },
+ *         mlAssistConfiguration: {
+ *             inferencingComputeBinding: {
+ *                 computeId: "inferencingcompute",
+ *             },
+ *             mlAssistEnabled: true,
+ *             modelNamePrefix: "testmodel_1",
+ *             prelabelAccuracyThreshold: 0.8,
+ *             trainingComputeBinding: {
+ *                 computeId: "trainingcompute",
+ *             },
+ *         },
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         tags: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *     },
+ *     resourceGroupName: "workspace-1234",
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
+ *     labeling_job_id="testLabelingJob",
+ *     properties=azure_native.machinelearningservices.LabelingJobPropertiesArgs(
+ *         dataset_configuration=azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
+ *             asset_name="testdataasset",
+ *             dataset_version="1",
+ *             enable_incremental_dataset_refresh=True,
+ *         ),
+ *         job_instructions=azure_native.machinelearningservices.LabelingJobInstructionsArgs(
+ *             uri="https://www.testjobInstructions.com/labeling1.txt",
+ *         ),
+ *         label_categories={
+ *             "testCategory": azure_native.machinelearningservices.LabelCategoryArgs(
+ *                 allow_multi_select=False,
+ *                 classes={
+ *                     "testClass1": azure_native.machinelearningservices.LabelClassArgs(
+ *                         display_name="testClass1",
+ *                         subclasses={
+ *                             "testclass1-1": azure_native.machinelearningservices.LabelClassArgs(
+ *                                 display_name="testClass1-1",
+ *                             ),
+ *                         },
+ *                     ),
+ *                     "testClass2": azure_native.machinelearningservices.LabelClassArgs(
+ *                         display_name="testClass2",
+ *                     ),
+ *                 },
+ *                 display_name="testCategory",
+ *             ),
+ *         },
+ *         labeling_job_media_properties=azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
+ *             annotation_type="BoundingBox",
+ *             media_type="Image",
+ *         ),
+ *         ml_assist_configuration=azure_native.machinelearningservices.MLAssistConfigurationArgs(
+ *             inferencing_compute_binding=azure_native.machinelearningservices.ComputeBindingArgs(
+ *                 compute_id="inferencingcompute",
+ *             ),
+ *             ml_assist_enabled=True,
+ *             model_name_prefix="testmodel_1",
+ *             prelabel_accuracy_threshold=0.8,
+ *             training_compute_binding=azure_native.machinelearningservices.ComputeBindingArgs(
+ *                 compute_id="trainingcompute",
+ *             ),
+ *         ),
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         tags={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *     ),
+ *     resource_group_name="workspace-1234",
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +260,48 @@ import javax.annotation.Nullable;
 public class LabelingJob extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource entity.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource entity.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Definition of a labeling job.
-     * 
      */
     @Export(name="properties", type=LabelingJobPropertiesResponse.class, parameters={})
     private Output<LabelingJobPropertiesResponse> properties;
 
     /**
      * @return Definition of a labeling job.
-     * 
      */
     public Output<LabelingJobPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The resource provider and type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource provider and type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

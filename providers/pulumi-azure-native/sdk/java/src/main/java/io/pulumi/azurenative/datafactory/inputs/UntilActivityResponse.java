@@ -54,7 +54,6 @@ import javax.annotation.Nullable;
 
 /**
  * This activity executes inner activities until the specified boolean expression results to true or timeout is reached, whichever is earlier.
- * 
  */
 public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -62,7 +61,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * List of activities to execute.
-     * 
      */
     @Import(name="activities", required=true)
       private final List<Object> activities;
@@ -73,7 +71,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -84,7 +81,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -95,7 +91,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
-     * 
      */
     @Import(name="expression", required=true)
       private final ExpressionResponse expression;
@@ -106,7 +101,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -117,7 +111,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Object timeout;
@@ -129,7 +122,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
     /**
      * Type of activity.
      * Expected value is 'Until'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -140,7 +132,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

@@ -18,7 +18,6 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of this Shared Image Gallery resource. This property is updatable.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.
-     * 
      */
     @Import(name="galleryName")
       private final @Nullable Output<String> galleryName;
@@ -40,7 +38,6 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Profile for gallery sharing to subscription or tenant
-     * 
      */
     @Import(name="sharingProfile")
       private final @Nullable Output<SharingProfileArgs> sharingProfile;
@@ -73,7 +68,6 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

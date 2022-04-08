@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetServerTrustGroupResult {
     /**
      * Group members information for the server trust group.
-     * 
      */
     private final List<ServerInfoResponse> groupMembers;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Trust scope of the server trust group.
-     * 
      */
     private final List<String> trustScopes;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetServerTrustGroupResult {
 
     /**
      * Group members information for the server trust group.
-     * 
     */
     public List<ServerInfoResponse> getGroupMembers() {
         return this.groupMembers;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Trust scope of the server trust group.
-     * 
     */
     public List<String> getTrustScopes() {
         return this.trustScopes;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -19,7 +19,6 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
-     * 
      */
     @Import(name="containerImageNames")
       private final @Nullable Output<List<String>> containerImageNames;
@@ -30,7 +29,6 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
-     * 
      */
     @Import(name="containerRegistries")
       private final @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;

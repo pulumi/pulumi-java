@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
-     * 
      */
     @EnumType
     public enum SessionAffinityEnabledState {

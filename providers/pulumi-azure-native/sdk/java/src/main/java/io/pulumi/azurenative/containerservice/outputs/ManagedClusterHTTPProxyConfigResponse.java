@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ManagedClusterHTTPProxyConfigResponse {
     /**
      * HTTP proxy server endpoint to use.
-     * 
      */
     private final @Nullable String httpProxy;
     /**
      * HTTPS proxy server endpoint to use.
-     * 
      */
     private final @Nullable String httpsProxy;
     /**
      * Endpoints that should not go through proxy.
-     * 
      */
     private final @Nullable List<String> noProxy;
     /**
      * Alternative CA cert to use for connecting to proxy servers.
-     * 
      */
     private final @Nullable String trustedCa;
 
@@ -47,28 +43,24 @@ public final class ManagedClusterHTTPProxyConfigResponse {
 
     /**
      * HTTP proxy server endpoint to use.
-     * 
     */
     public Optional<String> getHttpProxy() {
         return Optional.ofNullable(this.httpProxy);
     }
     /**
      * HTTPS proxy server endpoint to use.
-     * 
     */
     public Optional<String> getHttpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
     /**
      * Endpoints that should not go through proxy.
-     * 
     */
     public List<String> getNoProxy() {
         return this.noProxy == null ? List.of() : this.noProxy;
     }
     /**
      * Alternative CA cert to use for connecting to proxy servers.
-     * 
     */
     public Optional<String> getTrustedCa() {
         return Optional.ofNullable(this.trustedCa);

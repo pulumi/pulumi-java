@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The mode to create a new server.
-     * 
      */
     @EnumType
     public enum CreateMode {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the extended location.
-     * 
      */
     @EnumType
     public enum ExtendedLocationTypes {

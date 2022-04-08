@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * The extended info of the manager.
  * API Version: 2017-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ManagersCreateExtendedInfo
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managerExtendedInfo = new AzureNative.StorSimple.ManagerExtendedInfo("managerExtendedInfo", new AzureNative.StorSimple.ManagerExtendedInfoArgs
+ *         {
+ *             Algorithm = "None",
+ *             IntegrityKey = "BIl+RHqO8PZ6DRvuXTTK7g==",
+ *             ManagerName = "ManagerForSDKTest2",
+ *             ResourceGroupName = "ResourceGroupForSDKTest",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storsimple.NewManagerExtendedInfo(ctx, "managerExtendedInfo", &storsimple.ManagerExtendedInfoArgs{
+ * 			Algorithm:         pulumi.String("None"),
+ * 			IntegrityKey:      pulumi.String("BIl+RHqO8PZ6DRvuXTTK7g=="),
+ * 			ManagerName:       pulumi.String("ManagerForSDKTest2"),
+ * 			ResourceGroupName: pulumi.String("ResourceGroupForSDKTest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managerExtendedInfo = new azure_native.storsimple.ManagerExtendedInfo("managerExtendedInfo", {
+ *     algorithm: "None",
+ *     integrityKey: "BIl+RHqO8PZ6DRvuXTTK7g==",
+ *     managerName: "ManagerForSDKTest2",
+ *     resourceGroupName: "ResourceGroupForSDKTest",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * manager_extended_info = azure_native.storsimple.ManagerExtendedInfo("managerExtendedInfo",
+ *     algorithm="None",
+ *     integrity_key="BIl+RHqO8PZ6DRvuXTTK7g==",
+ *     manager_name="ManagerForSDKTest2",
+ *     resource_group_name="ResourceGroupForSDKTest")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,140 +108,120 @@ import javax.annotation.Nullable;
 public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
     /**
      * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
-     * 
      */
     @Export(name="algorithm", type=String.class, parameters={})
     private Output<String> algorithm;
 
     /**
      * @return Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
-     * 
      */
     public Output<String> getAlgorithm() {
         return this.algorithm;
     }
     /**
      * Represents the CEK of the resource.
-     * 
      */
     @Export(name="encryptionKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKey;
 
     /**
      * @return Represents the CEK of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEncryptionKey() {
         return this.encryptionKey;
     }
     /**
      * Represents the Cert thumbprint that was used to encrypt the CEK.
-     * 
      */
     @Export(name="encryptionKeyThumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyThumbprint;
 
     /**
      * @return Represents the Cert thumbprint that was used to encrypt the CEK.
-     * 
      */
     public Output</* @Nullable */ String> getEncryptionKeyThumbprint() {
         return this.encryptionKeyThumbprint;
     }
     /**
      * The etag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The etag of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Represents the CIK of the resource.
-     * 
      */
     @Export(name="integrityKey", type=String.class, parameters={})
     private Output<String> integrityKey;
 
     /**
      * @return Represents the CIK of the resource.
-     * 
      */
     public Output<String> getIntegrityKey() {
         return this.integrityKey;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The name of the object.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the object.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
-     * 
      */
     @Export(name="portalCertificateThumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> portalCertificateThumbprint;
 
     /**
      * @return Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
-     * 
      */
     public Output</* @Nullable */ String> getPortalCertificateThumbprint() {
         return this.portalCertificateThumbprint;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The version of the extended info being persisted.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
      * @return The version of the extended info being persisted.
-     * 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the service principal.
- * 
  */
 public final class ServicePrincipalPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
 
     /**
      * Application ID of service principal.
-     * 
      */
     @Import(name="applicationId")
       private final @Nullable String applicationId;
@@ -31,7 +29,6 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
 
     /**
      * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
-     * 
      */
     @Import(name="secret")
       private final @Nullable String secret;

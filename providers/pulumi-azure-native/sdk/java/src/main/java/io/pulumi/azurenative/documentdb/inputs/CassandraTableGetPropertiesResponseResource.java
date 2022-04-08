@@ -19,7 +19,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     /**
      * Analytical TTL.
-     * 
      */
     @Import(name="analyticalStorageTtl")
       private final @Nullable Integer analyticalStorageTtl;
@@ -30,7 +29,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     /**
      * Time to live of the Cosmos DB Cassandra table
-     * 
      */
     @Import(name="defaultTtl")
       private final @Nullable Integer defaultTtl;
@@ -41,7 +39,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -52,7 +49,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     /**
      * Name of the Cosmos DB Cassandra table
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -63,7 +59,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     /**
      * A system generated property. A unique identifier.
-     * 
      */
     @Import(name="rid", required=true)
       private final String rid;
@@ -74,7 +69,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     /**
      * Schema of the Cosmos DB Cassandra table
-     * 
      */
     @Import(name="schema")
       private final @Nullable CassandraSchemaResponse schema;
@@ -85,7 +79,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
-     * 
      */
     @Import(name="ts", required=true)
       private final Double ts;

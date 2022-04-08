@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubernetes cluster specific properties
- * 
  */
 public final class KubernetesClusterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KubernetesClusterPropertiesResponse extends io.pulumi.resourc
 
     /**
      * The Azure Service Principal used by Kubernetes
-     * 
      */
     @Import(name="servicePrincipal")
       private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;

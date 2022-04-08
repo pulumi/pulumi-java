@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An API key used for authenticating with a configuration store endpoint.
- * 
  */
 public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A connection string that can be used by supporting clients for authentication.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final String connectionString;
@@ -30,7 +28,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -41,7 +38,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The last time any of the key's properties were modified.
-     * 
      */
     @Import(name="lastModified", required=true)
       private final String lastModified;
@@ -52,7 +48,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A name for the key describing its usage.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -63,7 +58,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether this key can only be used for read operations.
-     * 
      */
     @Import(name="readOnly", required=true)
       private final Boolean readOnly;
@@ -74,7 +68,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value of the key that is used for authentication purposes.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

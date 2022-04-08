@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Activity query definitions
- * 
  */
 public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
 
     /**
      * The Activity query to run on a given entity
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cache Directory Services settings.
- * 
  */
 public final class CacheDirectorySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CacheDirectorySettingsResponse extends io.pulumi.resources.In
 
     /**
      * Specifies settings for joining the HPC Cache to an Active Directory domain.
-     * 
      */
     @Import(name="activeDirectory")
       private final @Nullable CacheActiveDirectorySettingsResponse activeDirectory;
@@ -32,7 +30,6 @@ public final class CacheDirectorySettingsResponse extends io.pulumi.resources.In
 
     /**
      * Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
-     * 
      */
     @Import(name="usernameDownload")
       private final @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;

@@ -15,23 +15,19 @@ import java.util.Objects;
 public final class DataBoxHeavyJobSecretsResponse {
     /**
      * Contains the list of secret objects for a databox heavy job.
-     * 
      */
     private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
     /**
      * Dc Access Security Code for Customer Managed Shipping
-     * 
      */
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
     /**
      * Error while fetching the secrets.
-     * 
      */
     private final CloudErrorResponse error;
     /**
      * Used to indicate what type of job secrets object.
      * Expected value is 'DataBoxHeavy'.
-     * 
      */
     private final String jobSecretsType;
 
@@ -49,21 +45,18 @@ public final class DataBoxHeavyJobSecretsResponse {
 
     /**
      * Contains the list of secret objects for a databox heavy job.
-     * 
     */
     public List<DataBoxHeavySecretResponse> getCabinetPodSecrets() {
         return this.cabinetPodSecrets;
     }
     /**
      * Dc Access Security Code for Customer Managed Shipping
-     * 
     */
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
      * Error while fetching the secrets.
-     * 
     */
     public CloudErrorResponse getError() {
         return this.error;
@@ -71,7 +64,6 @@ public final class DataBoxHeavyJobSecretsResponse {
     /**
      * Used to indicate what type of job secrets object.
      * Expected value is 'DataBoxHeavy'.
-     * 
     */
     public String getJobSecretsType() {
         return this.jobSecretsType;

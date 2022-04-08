@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an artifact deployment.
- * 
  */
 public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
 
     /**
      * The total count of the artifacts that were successfully applied.
-     * 
      */
     @Import(name="artifactsApplied")
       private final @Nullable Integer artifactsApplied;
@@ -32,7 +30,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
 
     /**
      * The deployment status of the artifact.
-     * 
      */
     @Import(name="deploymentStatus")
       private final @Nullable String deploymentStatus;
@@ -43,7 +40,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
 
     /**
      * The total count of the artifacts that were tentatively applied.
-     * 
      */
     @Import(name="totalArtifacts")
       private final @Nullable Integer totalArtifacts;

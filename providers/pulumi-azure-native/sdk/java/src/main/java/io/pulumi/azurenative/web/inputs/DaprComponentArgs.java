@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dapr component configuration
- * 
  */
 public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Component metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<List<DaprMetadataArgs>> metadata;
@@ -33,7 +31,6 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Component name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -44,7 +41,6 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Component type
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -55,7 +51,6 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Component version
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

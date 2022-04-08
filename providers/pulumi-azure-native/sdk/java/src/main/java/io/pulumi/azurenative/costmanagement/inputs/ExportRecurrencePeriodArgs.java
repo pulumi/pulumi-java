@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The start and end date for recurrence schedule.
- * 
  */
 public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
 
     /**
      * The start date of recurrence.
-     * 
      */
     @Import(name="from", required=true)
       private final Output<String> from;
@@ -31,7 +29,6 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
 
     /**
      * The end date of recurrence.
-     * 
      */
     @Import(name="to")
       private final @Nullable Output<String> to;

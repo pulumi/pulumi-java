@@ -19,7 +19,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
 
     /**
      * The supported Azure location where the managed HSM Pool should be created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
 
     /**
      * Name of the managed HSM Pool
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -41,7 +39,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
 
     /**
      * Name of the private endpoint connection associated with the managed hsm pool.
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -52,7 +49,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
 
     /**
      * Approval state of the private link connection.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -63,7 +59,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
 
     /**
      * Name of the resource group that contains the managed HSM pool.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
 
     /**
      * SKU details
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ManagedHsmSkuArgs> sku;
@@ -85,7 +79,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

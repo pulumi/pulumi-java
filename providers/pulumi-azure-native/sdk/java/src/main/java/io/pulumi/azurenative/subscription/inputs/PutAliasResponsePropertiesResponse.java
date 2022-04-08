@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Put subscription creation result properties.
- * 
  */
 public final class PutAliasResponsePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PutAliasResponsePropertiesResponse extends io.pulumi.resource
 
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -31,7 +29,6 @@ public final class PutAliasResponsePropertiesResponse extends io.pulumi.resource
 
     /**
      * Newly created subscription Id.
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;

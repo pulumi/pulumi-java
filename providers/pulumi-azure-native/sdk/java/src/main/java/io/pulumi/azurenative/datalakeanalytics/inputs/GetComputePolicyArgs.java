@@ -14,7 +14,6 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Data Lake Analytics account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the compute policy to retrieve.
-     * 
      */
     @Import(name="computePolicyName", required=true)
       private final String computePolicyName;
@@ -36,7 +34,6 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

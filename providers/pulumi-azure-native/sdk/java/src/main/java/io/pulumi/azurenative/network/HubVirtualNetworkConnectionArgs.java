@@ -19,7 +19,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
-     * 
      */
     @Import(name="allowHubToRemoteVnetTransit")
       private final @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
@@ -30,7 +29,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
-     * 
      */
     @Import(name="allowRemoteVnetToUseHubVnetGateways")
       private final @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
@@ -41,7 +39,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * The name of the HubVirtualNetworkConnection.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -52,7 +49,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * Enable internet security.
-     * 
      */
     @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
@@ -63,7 +59,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -74,7 +69,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +79,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * Reference to the remote virtual network.
-     * 
      */
     @Import(name="remoteVirtualNetwork")
       private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
@@ -96,7 +89,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * The resource group name of the HubVirtualNetworkConnection.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -107,7 +99,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
@@ -118,7 +109,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;

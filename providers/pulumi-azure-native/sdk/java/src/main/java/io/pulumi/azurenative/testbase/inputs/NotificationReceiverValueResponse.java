@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A notification event receiver value.
- * 
  */
 public final class NotificationReceiverValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
 
     /**
      * The user object receiver value.
-     * 
      */
     @Import(name="distributionGroupListReceiverValue")
       private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
@@ -33,7 +31,6 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
 
     /**
      * The user object receiver value.
-     * 
      */
     @Import(name="subscriptionReceiverValue")
       private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
@@ -44,7 +41,6 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
 
     /**
      * The user object receiver value.
-     * 
      */
     @Import(name="userObjectReceiverValue")
       private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;

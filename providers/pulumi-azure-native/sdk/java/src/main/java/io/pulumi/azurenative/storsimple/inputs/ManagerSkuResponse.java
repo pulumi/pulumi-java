@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Sku.
- * 
  */
 public final class ManagerSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ManagerSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Refers to the sku name which should be "Standard"
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

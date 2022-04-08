@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies the operating system settings for the hybrid machine.
- * 
  */
 public final class MachinePropertiesResponseOsProfile extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MachinePropertiesResponseOsProfile extends io.pulumi.resource
 
     /**
      * Specifies the host OS name of the hybrid machine.
-     * 
      */
     @Import(name="computerName", required=true)
       private final String computerName;

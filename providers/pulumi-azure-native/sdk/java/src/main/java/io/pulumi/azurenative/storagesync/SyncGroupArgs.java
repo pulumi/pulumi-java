@@ -16,7 +16,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -27,7 +26,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Storage Sync Service resource.
-     * 
      */
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
@@ -38,7 +36,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Sync Group resource.
-     * 
      */
     @Import(name="syncGroupName")
       private final @Nullable Output<String> syncGroupName;

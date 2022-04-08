@@ -17,13 +17,11 @@ import javax.annotation.Nullable;
 public final class JsonReadSettingsResponse {
     /**
      * Compression settings.
-     * 
      */
     private final @Nullable Object compressionProperties;
     /**
      * The read setting type.
      * Expected value is 'JsonReadSettings'.
-     * 
      */
     private final String type;
 
@@ -37,7 +35,6 @@ public final class JsonReadSettingsResponse {
 
     /**
      * Compression settings.
-     * 
     */
     public Optional<Object> getCompressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
@@ -45,7 +42,6 @@ public final class JsonReadSettingsResponse {
     /**
      * The read setting type.
      * Expected value is 'JsonReadSettings'.
-     * 
     */
     public String getType() {
         return this.type;

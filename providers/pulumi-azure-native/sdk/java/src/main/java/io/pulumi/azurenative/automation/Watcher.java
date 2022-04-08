@@ -19,7 +19,99 @@ import javax.annotation.Nullable;
  * Definition of the watcher type.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update watcher
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var watcher = new AzureNative.Automation.Watcher("watcher", new AzureNative.Automation.WatcherArgs
+ *         {
+ *             AutomationAccountName = "MyTestAutomationAccount",
+ *             Description = "This is a test watcher.",
+ *             ExecutionFrequencyInSeconds = 60,
+ *             ResourceGroupName = "rg",
+ *             ScriptName = "MyTestWatcherRunbook",
+ *             ScriptRunOn = "MyTestHybridWorkerGroup",
+ *             Tags = ,
+ *             WatcherName = "MyTestWatcher",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewWatcher(ctx, "watcher", &automation.WatcherArgs{
+ * 			AutomationAccountName:       pulumi.String("MyTestAutomationAccount"),
+ * 			Description:                 pulumi.String("This is a test watcher."),
+ * 			ExecutionFrequencyInSeconds: pulumi.Float64(60),
+ * 			ResourceGroupName:           pulumi.String("rg"),
+ * 			ScriptName:                  pulumi.String("MyTestWatcherRunbook"),
+ * 			ScriptRunOn:                 pulumi.String("MyTestHybridWorkerGroup"),
+ * 			Tags:                        nil,
+ * 			WatcherName:                 pulumi.String("MyTestWatcher"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const watcher = new azure_native.automation.Watcher("watcher", {
+ *     automationAccountName: "MyTestAutomationAccount",
+ *     description: "This is a test watcher.",
+ *     executionFrequencyInSeconds: 60,
+ *     resourceGroupName: "rg",
+ *     scriptName: "MyTestWatcherRunbook",
+ *     scriptRunOn: "MyTestHybridWorkerGroup",
+ *     tags: {},
+ *     watcherName: "MyTestWatcher",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * watcher = azure_native.automation.Watcher("watcher",
+ *     automation_account_name="MyTestAutomationAccount",
+ *     description="This is a test watcher.",
+ *     execution_frequency_in_seconds=60,
+ *     resource_group_name="rg",
+ *     script_name="MyTestWatcherRunbook",
+ *     script_run_on="MyTestHybridWorkerGroup",
+ *     tags={},
+ *     watcher_name="MyTestWatcher")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,196 +126,168 @@ import javax.annotation.Nullable;
 public class Watcher extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Gets or sets the creation time.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets or sets the etag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Gets or sets the etag of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Gets or sets the frequency at which the watcher is invoked.
-     * 
      */
     @Export(name="executionFrequencyInSeconds", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> executionFrequencyInSeconds;
 
     /**
      * @return Gets or sets the frequency at which the watcher is invoked.
-     * 
      */
     public Output</* @Nullable */ Double> getExecutionFrequencyInSeconds() {
         return this.executionFrequencyInSeconds;
     }
     /**
      * Details of the user who last modified the watcher.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
     /**
      * @return Details of the user who last modified the watcher.
-     * 
      */
     public Output<String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return Gets or sets the last modified time.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
-     * 
      */
     @Export(name="scriptName", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptName;
 
     /**
      * @return Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
-     * 
      */
     public Output</* @Nullable */ String> getScriptName() {
         return this.scriptName;
     }
     /**
      * Gets or sets the parameters of the script.
-     * 
      */
     @Export(name="scriptParameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> scriptParameters;
 
     /**
      * @return Gets or sets the parameters of the script.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getScriptParameters() {
         return this.scriptParameters;
     }
     /**
      * Gets or sets the name of the hybrid worker group the watcher will run on.
-     * 
      */
     @Export(name="scriptRunOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptRunOn;
 
     /**
      * @return Gets or sets the name of the hybrid worker group the watcher will run on.
-     * 
      */
     public Output</* @Nullable */ String> getScriptRunOn() {
         return this.scriptRunOn;
     }
     /**
      * Gets the current status of the watcher.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Gets the current status of the watcher.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

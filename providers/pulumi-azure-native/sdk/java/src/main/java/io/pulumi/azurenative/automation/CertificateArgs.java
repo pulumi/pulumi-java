@@ -17,7 +17,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -28,7 +27,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the base64 encoded value of the certificate.
-     * 
      */
     @Import(name="base64Value", required=true)
       private final Output<String> base64Value;
@@ -39,7 +37,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parameters supplied to the create or update certificate operation.
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -50,7 +47,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the description of the certificate.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -61,7 +57,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the is exportable flag of the certificate.
-     * 
      */
     @Import(name="isExportable")
       private final @Nullable Output<Boolean> isExportable;
@@ -72,7 +67,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the certificate.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -83,7 +77,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +87,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the thumbprint of the certificate.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;

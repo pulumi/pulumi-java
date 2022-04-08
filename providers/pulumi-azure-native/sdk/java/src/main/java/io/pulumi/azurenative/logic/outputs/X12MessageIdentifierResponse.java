@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class X12MessageIdentifierResponse {
     /**
      * The message id.
-     * 
      */
     private final String messageId;
 
@@ -22,7 +21,6 @@ public final class X12MessageIdentifierResponse {
 
     /**
      * The message id.
-     * 
     */
     public String getMessageId() {
         return this.messageId;

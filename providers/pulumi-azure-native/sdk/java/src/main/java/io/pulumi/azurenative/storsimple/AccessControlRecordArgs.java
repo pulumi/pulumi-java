@@ -17,7 +17,6 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the access control record.
-     * 
      */
     @Import(name="accessControlRecordName")
       private final @Nullable Output<String> accessControlRecordName;
@@ -28,7 +27,6 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The iSCSI initiator name (IQN).
-     * 
      */
     @Import(name="initiatorName", required=true)
       private final Output<String> initiatorName;
@@ -39,7 +37,6 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
@@ -50,7 +47,6 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
@@ -61,7 +57,6 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

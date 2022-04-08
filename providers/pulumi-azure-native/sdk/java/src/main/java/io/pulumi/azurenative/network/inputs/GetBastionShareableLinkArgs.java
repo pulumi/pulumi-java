@@ -18,7 +18,6 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the Bastion Host.
-     * 
      */
     @Import(name="bastionHostName", required=true)
       private final String bastionHostName;
@@ -29,7 +28,6 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -40,7 +38,6 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
 
     /**
      * List of VM references.
-     * 
      */
     @Import(name="vms")
       private final @Nullable List<BastionShareableLink> vms;

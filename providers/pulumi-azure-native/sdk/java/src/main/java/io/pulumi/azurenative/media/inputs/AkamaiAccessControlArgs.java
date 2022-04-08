@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Akamai access control
- * 
  */
 public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * authentication key list
-     * 
      */
     @Import(name="akamaiSignatureHeaderAuthenticationKeyList")
       private final @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;

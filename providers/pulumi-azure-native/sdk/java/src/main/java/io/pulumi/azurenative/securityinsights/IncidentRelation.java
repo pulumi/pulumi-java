@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * Represents a relation between two resources
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an incident relation.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var incidentRelation = new AzureNative.SecurityInsights.IncidentRelation("incidentRelation", new AzureNative.SecurityInsights.IncidentRelationArgs
+ *         {
+ *             IncidentId = "afbd324f-6c48-459c-8710-8d1e1cd03812",
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+ *             RelatedResourceId = "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096",
+ *             RelationName = "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewIncidentRelation(ctx, "incidentRelation", &securityinsights.IncidentRelationArgs{
+ * 			IncidentId:                          pulumi.String("afbd324f-6c48-459c-8710-8d1e1cd03812"),
+ * 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+ * 			RelatedResourceId:                   pulumi.String("/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096"),
+ * 			RelationName:                        pulumi.String("4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014"),
+ * 			ResourceGroupName:                   pulumi.String("myRg"),
+ * 			WorkspaceName:                       pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const incidentRelation = new azure_native.securityinsights.IncidentRelation("incidentRelation", {
+ *     incidentId: "afbd324f-6c48-459c-8710-8d1e1cd03812",
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+ *     relatedResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096",
+ *     relationName: "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * incident_relation = azure_native.securityinsights.IncidentRelation("incidentRelation",
+ *     incident_id="afbd324f-6c48-459c-8710-8d1e1cd03812",
+ *     operational_insights_resource_provider="Microsoft.OperationalInsights",
+ *     related_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096",
+ *     relation_name="4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +117,96 @@ import javax.annotation.Nullable;
 public class IncidentRelation extends io.pulumi.resources.CustomResource {
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource ID of the related resource
-     * 
      */
     @Export(name="relatedResourceId", type=String.class, parameters={})
     private Output<String> relatedResourceId;
 
     /**
      * @return The resource ID of the related resource
-     * 
      */
     public Output<String> getRelatedResourceId() {
         return this.relatedResourceId;
     }
     /**
      * The resource kind of the related resource
-     * 
      */
     @Export(name="relatedResourceKind", type=String.class, parameters={})
     private Output<String> relatedResourceKind;
 
     /**
      * @return The resource kind of the related resource
-     * 
      */
     public Output<String> getRelatedResourceKind() {
         return this.relatedResourceKind;
     }
     /**
      * The name of the related resource
-     * 
      */
     @Export(name="relatedResourceName", type=String.class, parameters={})
     private Output<String> relatedResourceName;
 
     /**
      * @return The name of the related resource
-     * 
      */
     public Output<String> getRelatedResourceName() {
         return this.relatedResourceName;
     }
     /**
      * The resource type of the related resource
-     * 
      */
     @Export(name="relatedResourceType", type=String.class, parameters={})
     private Output<String> relatedResourceType;
 
     /**
      * @return The resource type of the related resource
-     * 
      */
     public Output<String> getRelatedResourceType() {
         return this.relatedResourceType;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

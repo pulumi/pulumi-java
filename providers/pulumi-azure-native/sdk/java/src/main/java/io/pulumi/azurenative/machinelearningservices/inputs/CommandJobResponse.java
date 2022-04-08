@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * Command job definition.
- * 
  */
 public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -34,7 +33,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ARM resource ID of the code asset.
-     * 
      */
     @Import(name="codeId")
       private final @Nullable String codeId;
@@ -45,7 +43,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The command to execute on startup of the job. eg. "python train.py"
-     * 
      */
     @Import(name="command", required=true)
       private final String command;
@@ -56,7 +53,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Compute binding for the job.
-     * 
      */
     @Import(name="compute", required=true)
       private final ComputeConfigurationResponse compute;
@@ -67,7 +63,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -78,7 +73,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-     * 
      */
     @Import(name="distribution")
       private final @Nullable Object distribution;
@@ -89,7 +83,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARM resource ID of the Environment specification for the job.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable String environmentId;
@@ -100,7 +93,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Environment variables included in the job.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
@@ -111,7 +103,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-     * 
      */
     @Import(name="experimentName")
       private final @Nullable String experimentName;
@@ -123,7 +114,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
      * Defaults to AmlToken if null.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
@@ -134,7 +124,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Mapping of input data bindings used in the job.
-     * 
      */
     @Import(name="inputDataBindings")
       private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
@@ -146,7 +135,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * List of JobEndpoints.
      * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
-     * 
      */
     @Import(name="interactionEndpoints", required=true)
       private final Map<String,JobEndpointResponse> interactionEndpoints;
@@ -158,7 +146,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Enum to determine the type of job.
      * Expected value is 'Command'.
-     * 
      */
     @Import(name="jobType", required=true)
       private final String jobType;
@@ -169,7 +156,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Location of the job output logs and artifacts.
-     * 
      */
     @Import(name="output", required=true)
       private final JobOutputResponse output;
@@ -180,7 +166,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Mapping of output data bindings used in the job.
-     * 
      */
     @Import(name="outputDataBindings")
       private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
@@ -191,7 +176,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Input parameters.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Object parameters;
@@ -203,7 +187,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Job priority for scheduling policy. Only applies to AMLCompute.
      * Private preview feature and only available to users on the allow list.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -214,7 +197,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -225,7 +207,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the job provisioning state.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -236,7 +217,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status of the job.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -247,7 +227,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -258,7 +237,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable String timeout;

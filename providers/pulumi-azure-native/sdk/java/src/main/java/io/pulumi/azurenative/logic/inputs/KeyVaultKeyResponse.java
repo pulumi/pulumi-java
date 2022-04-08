@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The key vault key.
- * 
  */
 public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key attributes.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable KeyVaultKeyResponseAttributes attributes;
@@ -32,7 +30,6 @@ public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key id.
-     * 
      */
     @Import(name="kid")
       private final @Nullable String kid;

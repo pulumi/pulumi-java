@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The detector information. By default this is not populated, unless it's specified in expandDetector
- * 
  */
 public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -34,7 +32,6 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The detector id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -45,7 +42,6 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="imagePaths")
       private final @Nullable List<String> imagePaths;
@@ -56,7 +52,6 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -67,7 +62,6 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The detector's parameters.'
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
@@ -78,7 +72,6 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="supportedResourceTypes")
       private final @Nullable List<String> supportedResourceTypes;

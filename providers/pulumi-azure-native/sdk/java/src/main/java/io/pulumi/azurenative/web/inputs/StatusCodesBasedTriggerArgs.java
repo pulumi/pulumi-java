@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger based on status code.
- * 
  */
 public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
 
     /**
      * Request Count.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -32,7 +30,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
 
     /**
      * Request Path
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -43,7 +40,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
 
     /**
      * HTTP status code.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Integer> status;
@@ -54,7 +50,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
 
     /**
      * Request Sub Status.
-     * 
      */
     @Import(name="subStatus")
       private final @Nullable Output<Integer> subStatus;
@@ -65,7 +60,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
 
     /**
      * Time interval.
-     * 
      */
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
@@ -76,7 +70,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
 
     /**
      * Win32 error code.
-     * 
      */
     @Import(name="win32Status")
       private final @Nullable Output<Integer> win32Status;

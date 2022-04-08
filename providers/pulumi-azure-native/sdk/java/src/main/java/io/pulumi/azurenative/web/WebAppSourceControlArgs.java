@@ -18,7 +18,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of branch to use for deployment.
-     * 
      */
     @Import(name="branch")
       private final @Nullable Output<String> branch;
@@ -29,7 +28,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="deploymentRollbackEnabled")
       private final @Nullable Output<Boolean> deploymentRollbackEnabled;
@@ -40,7 +38,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * If GitHub Action is selected, than the associated configuration.
-     * 
      */
     @Import(name="gitHubActionConfiguration")
       private final @Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration;
@@ -51,7 +48,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <code>true</code> if this is deployed via GitHub action.
-     * 
      */
     @Import(name="isGitHubAction")
       private final @Nullable Output<Boolean> isGitHubAction;
@@ -62,7 +58,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
-     * 
      */
     @Import(name="isManualIntegration")
       private final @Nullable Output<Boolean> isManualIntegration;
@@ -73,7 +68,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
-     * 
      */
     @Import(name="isMercurial")
       private final @Nullable Output<Boolean> isMercurial;
@@ -84,7 +78,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -95,7 +88,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -106,7 +98,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Repository or source control URL.
-     * 
      */
     @Import(name="repoUrl")
       private final @Nullable Output<String> repoUrl;
@@ -117,7 +108,6 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

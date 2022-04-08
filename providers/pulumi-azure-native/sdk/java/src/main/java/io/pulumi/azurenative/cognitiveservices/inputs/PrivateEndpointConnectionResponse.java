@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Private Endpoint Connection resource.
- * 
  */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Entity Tag
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -43,7 +40,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The location of the private endpoint connection
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -54,7 +50,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The name of the resource
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -65,7 +60,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Resource properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable PrivateEndpointConnectionPropertiesResponse properties;
@@ -76,7 +70,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

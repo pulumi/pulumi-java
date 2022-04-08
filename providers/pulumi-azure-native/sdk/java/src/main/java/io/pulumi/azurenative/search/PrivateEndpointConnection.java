@@ -18,7 +18,105 @@ import javax.annotation.Nullable;
  * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnectionUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.Search.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Search.PrivateEndpointConnectionArgs
+ *         {
+ *             PrivateEndpointConnectionName = "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+ *             Properties = new AzureNative.Search.Inputs.PrivateEndpointConnectionPropertiesArgs
+ *             {
+ *                 PrivateLinkServiceConnectionState = new AzureNative.Search.Inputs.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs
+ *                 {
+ *                     Description = "Rejected for some reason",
+ *                     Status = "Rejected",
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             SearchServiceName = "mysearchservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := search.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &search.PrivateEndpointConnectionArgs{
+ * 			PrivateEndpointConnectionName: pulumi.String("testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546"),
+ * 			Properties: &search.PrivateEndpointConnectionPropertiesArgs{
+ * 				PrivateLinkServiceConnectionState: &search.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs{
+ * 					Description: pulumi.String("Rejected for some reason"),
+ * 					Status:      "Rejected",
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			SearchServiceName: pulumi.String("mysearchservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.search.PrivateEndpointConnection("privateEndpointConnection", {
+ *     privateEndpointConnectionName: "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+ *     properties: {
+ *         privateLinkServiceConnectionState: {
+ *             description: "Rejected for some reason",
+ *             status: "Rejected",
+ *         },
+ *     },
+ *     resourceGroupName: "rg1",
+ *     searchServiceName: "mysearchservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.search.PrivateEndpointConnection("privateEndpointConnection",
+ *     private_endpoint_connection_name="testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+ *     properties=azure_native.search.PrivateEndpointConnectionPropertiesArgs(
+ *         private_link_service_connection_state=azure_native.search.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
+ *             description="Rejected for some reason",
+ *             status="Rejected",
+ *         ),
+ *     ),
+ *     resource_group_name="rg1",
+ *     search_service_name="mysearchservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +131,36 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
-     * 
      */
     @Export(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
     /**
      * @return Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
-     * 
      */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

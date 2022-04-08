@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for task that validates migration input for SQL to Azure SQL Database Managed Instance sync scenario
- * 
  */
 public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable Output<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> input;
@@ -33,7 +31,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
     /**
      * Task type.
      * Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final Output<String> taskType;

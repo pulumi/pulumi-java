@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The persistent confidentiality encryption scope.
-     * 
      */
     @EnumType
     public enum RosettaNetPipConfidentialityScope {

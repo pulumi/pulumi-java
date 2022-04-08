@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorTestGroupResponse {
     /**
      * List of destination endpoint names.
-     * 
      */
     private final List<String> destinations;
     /**
      * Value indicating whether test group is disabled.
-     * 
      */
     private final @Nullable Boolean disable;
     /**
      * The name of the connection monitor test group.
-     * 
      */
     private final String name;
     /**
      * List of source endpoint names.
-     * 
      */
     private final List<String> sources;
     /**
      * List of test configuration names.
-     * 
      */
     private final List<String> testConfigurations;
 
@@ -55,35 +50,30 @@ public final class ConnectionMonitorTestGroupResponse {
 
     /**
      * List of destination endpoint names.
-     * 
     */
     public List<String> getDestinations() {
         return this.destinations;
     }
     /**
      * Value indicating whether test group is disabled.
-     * 
     */
     public Optional<Boolean> getDisable() {
         return Optional.ofNullable(this.disable);
     }
     /**
      * The name of the connection monitor test group.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * List of source endpoint names.
-     * 
     */
     public List<String> getSources() {
         return this.sources;
     }
     /**
      * List of test configuration names.
-     * 
     */
     public List<String> getTestConfigurations() {
         return this.testConfigurations;

@@ -20,7 +20,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * The end timeline date, so the results returned are before this date.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -31,7 +30,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * entity ID
-     * 
      */
     @Import(name="entityId", required=true)
       private final String entityId;
@@ -42,7 +40,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * Array of timeline Item kinds.
-     * 
      */
     @Import(name="kinds")
       private final @Nullable List<Either<String,EntityTimelineKind>> kinds;
@@ -53,7 +50,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * The number of bucket for timeline queries aggregation.
-     * 
      */
     @Import(name="numberOfBucket")
       private final @Nullable Integer numberOfBucket;
@@ -64,7 +60,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
@@ -75,7 +70,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -86,7 +80,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * The start timeline date, so the results returned are after this date.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -97,7 +90,6 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

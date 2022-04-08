@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the virtual network resource settings.
- * 
  */
 public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets the address prefixes for the virtual network.
-     * 
      */
     @Import(name="addressSpace")
       private final @Nullable Output<List<String>> addressSpace;
@@ -35,7 +33,6 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
     /**
      * Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
      * deployed in the virtual network.
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
@@ -47,7 +44,6 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
     /**
      * Gets or sets a value indicating whether gets or sets whether the
      * DDOS protection should be switched on.
-     * 
      */
     @Import(name="enableDdosProtection")
       private final @Nullable Output<Boolean> enableDdosProtection;
@@ -59,7 +55,6 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Network/virtualNetworks'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -70,7 +65,6 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets List of subnets in a VirtualNetwork.
-     * 
      */
     @Import(name="subnets")
       private final @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
@@ -81,7 +75,6 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;

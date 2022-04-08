@@ -17,7 +17,6 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
 
     /**
      * Fabric name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
@@ -28,7 +27,6 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
 
     /**
      * Protection container mapping name.
-     * 
      */
     @Import(name="mappingName")
       private final @Nullable Output<String> mappingName;
@@ -39,7 +37,6 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
 
     /**
      * Configure protection input properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
 
     /**
      * Protection container name.
-     * 
      */
     @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
@@ -61,7 +57,6 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

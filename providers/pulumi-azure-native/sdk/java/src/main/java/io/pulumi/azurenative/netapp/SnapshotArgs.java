@@ -16,7 +16,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the NetApp account
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -38,7 +36,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the capacity pool
-     * 
      */
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
@@ -49,7 +46,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the snapshot
-     * 
      */
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
@@ -71,7 +66,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the volume
-     * 
      */
     @Import(name="volumeName", required=true)
       private final Output<String> volumeName;

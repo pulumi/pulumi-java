@@ -17,7 +17,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
-     * 
      */
     @Import(name="dynamicTagsJson")
       private final @Nullable Output<String> dynamicTagsJson;
@@ -28,7 +27,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
-     * 
      */
     @Import(name="isPushEnabled", required=true)
       private final Output<Boolean> isPushEnabled;
@@ -39,7 +37,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -50,7 +47,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     /**
      * Name of web app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -61,7 +57,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     /**
      * Name of web app slot. If not specified then will default to production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;
@@ -83,7 +77,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
 
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
-     * 
      */
     @Import(name="tagWhitelistJson")
       private final @Nullable Output<String> tagWhitelistJson;
@@ -95,9 +88,8 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * '_', '@', '#', '.', ':', '-'. 
      * Validation should be performed at the PushRequestHandler.
-     * 
      */
     @Import(name="tagsRequiringAuth")
       private final @Nullable Output<String> tagsRequiringAuth;

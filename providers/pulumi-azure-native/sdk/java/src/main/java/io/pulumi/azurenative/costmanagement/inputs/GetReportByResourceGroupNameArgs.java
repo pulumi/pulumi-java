@@ -14,7 +14,6 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
 
     /**
      * Report Name.
-     * 
      */
     @Import(name="reportName", required=true)
       private final String reportName;
@@ -25,7 +24,6 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
 
     /**
      * Azure Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

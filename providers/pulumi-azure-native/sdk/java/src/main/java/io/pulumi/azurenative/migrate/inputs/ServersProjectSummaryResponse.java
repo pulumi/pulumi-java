@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class representing the servers project summary.
- * 
  */
 public final class ServersProjectSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the count of entities assessed.
-     * 
      */
     @Import(name="assessedCount")
       private final @Nullable Integer assessedCount;
@@ -33,7 +31,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the count of entities discovered.
-     * 
      */
     @Import(name="discoveredCount")
       private final @Nullable Integer discoveredCount;
@@ -44,7 +41,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the extended summary.
-     * 
      */
     @Import(name="extendedSummary")
       private final @Nullable Map<String,String> extendedSummary;
@@ -56,7 +52,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     /**
      * Gets the Instance type.
      * Expected value is 'Servers'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -67,7 +62,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the time when summary was last refreshed.
-     * 
      */
     @Import(name="lastSummaryRefreshedTime")
       private final @Nullable String lastSummaryRefreshedTime;
@@ -78,7 +72,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the count of entities migrated.
-     * 
      */
     @Import(name="migratedCount")
       private final @Nullable Integer migratedCount;
@@ -89,7 +82,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the state of refresh summary.
-     * 
      */
     @Import(name="refreshSummaryState")
       private final @Nullable String refreshSummaryState;
@@ -100,7 +92,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the count of entities being replicated.
-     * 
      */
     @Import(name="replicatingCount")
       private final @Nullable Integer replicatingCount;
@@ -111,7 +102,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the count of entities test migrated.
-     * 
      */
     @Import(name="testMigratedCount")
       private final @Nullable Integer testMigratedCount;

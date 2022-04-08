@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class ImageTemplateVmProfileResponse {
     /**
      * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
-     * 
      */
     private final @Nullable Integer osDiskSizeGB;
     /**
      * Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
-     * 
      */
     private final @Nullable String vmSize;
     /**
      * Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.
-     * 
      */
     private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 
@@ -41,21 +38,18 @@ public final class ImageTemplateVmProfileResponse {
 
     /**
      * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
-     * 
     */
     public Optional<Integer> getOsDiskSizeGB() {
         return Optional.ofNullable(this.osDiskSizeGB);
     }
     /**
      * Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
-     * 
     */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }
     /**
      * Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.
-     * 
     */
     public Optional<VirtualNetworkConfigResponse> getVnetConfig() {
         return Optional.ofNullable(this.vnetConfig);

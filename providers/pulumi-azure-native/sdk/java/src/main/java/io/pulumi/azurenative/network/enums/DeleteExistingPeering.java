@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Flag if need to remove current existing peerings.
-     * 
      */
     @EnumType
     public enum DeleteExistingPeering {

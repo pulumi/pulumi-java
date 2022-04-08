@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
-     * 
      */
     @EnumType
     public enum JsonWebKeyCurveName {

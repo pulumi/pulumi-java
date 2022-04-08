@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Diagnostics settings for an Azure ML web service.
- * 
  */
 public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
-     * 
      */
     @Import(name="expiry")
       private final @Nullable Output<String> expiry;
@@ -33,7 +31,6 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
-     * 
      */
     @Import(name="level", required=true)
       private final Output<Either<String,DiagnosticsLevel>> level;

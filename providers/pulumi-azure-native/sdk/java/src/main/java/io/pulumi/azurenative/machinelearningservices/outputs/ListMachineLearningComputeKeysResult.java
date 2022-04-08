@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ListMachineLearningComputeKeysResult {
     /**
      * The type of compute
-     * 
      */
     private final String computeType;
 
@@ -22,7 +21,6 @@ public final class ListMachineLearningComputeKeysResult {
 
     /**
      * The type of compute
-     * 
     */
     public String getComputeType() {
         return this.computeType;

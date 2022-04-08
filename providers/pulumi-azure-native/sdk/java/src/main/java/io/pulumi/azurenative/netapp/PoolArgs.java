@@ -21,7 +21,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the NetApp account
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -32,7 +31,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +41,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the capacity pool
-     * 
      */
     @Import(name="poolName")
       private final @Nullable Output<String> poolName;
@@ -54,7 +51,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The qos type of the pool
-     * 
      */
     @Import(name="qosType")
       private final @Nullable Output<Either<String,QosType>> qosType;
@@ -65,7 +61,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service level of the file system
-     * 
      */
     @Import(name="serviceLevel", required=true)
       private final Output<Either<String,ServiceLevel>> serviceLevel;
@@ -87,7 +81,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
-     * 
      */
     @Import(name="size", required=true)
       private final Output<Double> size;
@@ -98,7 +91,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

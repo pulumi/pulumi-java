@@ -14,7 +14,6 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
 
     /**
      * Guid of the registration definition.
-     * 
      */
     @Import(name="registrationDefinitionId", required=true)
       private final String registrationDefinitionId;
@@ -25,7 +24,6 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
 
     /**
      * Scope of the resource.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

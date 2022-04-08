@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Firewall Policy NAT Rule.
- * 
  */
 public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The action type of a Nat rule.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<FirewallPolicyNatRuleActionArgs> action;
@@ -37,7 +35,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -48,7 +45,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Priority of the Firewall Policy Rule resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -59,7 +55,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The match conditions for incoming traffic.
-     * 
      */
     @Import(name="ruleCondition")
       private final @Nullable Output<Object> ruleCondition;
@@ -71,7 +66,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     /**
      * The type of the rule.
      * Expected value is 'FirewallPolicyNatRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
@@ -82,7 +76,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The translated address for this NAT rule.
-     * 
      */
     @Import(name="translatedAddress")
       private final @Nullable Output<String> translatedAddress;
@@ -93,7 +86,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The translated port for this NAT rule.
-     * 
      */
     @Import(name="translatedPort")
       private final @Nullable Output<String> translatedPort;

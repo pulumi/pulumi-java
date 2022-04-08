@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class EnabledProtocolsResponse {
     /**
      * Enable DASH protocol or not
-     * 
      */
     private final Boolean dash;
     /**
      * Enable Download protocol or not
-     * 
      */
     private final Boolean download;
     /**
      * Enable HLS protocol or not
-     * 
      */
     private final Boolean hls;
     /**
      * Enable SmoothStreaming protocol or not
-     * 
      */
     private final Boolean smoothStreaming;
 
@@ -44,28 +40,24 @@ public final class EnabledProtocolsResponse {
 
     /**
      * Enable DASH protocol or not
-     * 
     */
     public Boolean getDash() {
         return this.dash;
     }
     /**
      * Enable Download protocol or not
-     * 
     */
     public Boolean getDownload() {
         return this.download;
     }
     /**
      * Enable HLS protocol or not
-     * 
     */
     public Boolean getHls() {
         return this.hls;
     }
     /**
      * Enable SmoothStreaming protocol or not
-     * 
     */
     public Boolean getSmoothStreaming() {
         return this.smoothStreaming;

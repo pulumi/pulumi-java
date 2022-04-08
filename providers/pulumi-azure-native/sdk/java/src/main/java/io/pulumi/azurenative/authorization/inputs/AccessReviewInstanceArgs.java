@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Access Review Instance.
- * 
  */
 public final class AccessReviewInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
 
     /**
      * The DateTime when the review instance is scheduled to end.
-     * 
      */
     @Import(name="endDateTime")
       private final @Nullable Output<String> endDateTime;
@@ -31,7 +29,6 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
 
     /**
      * The DateTime when the review instance is scheduled to be start.
-     * 
      */
     @Import(name="startDateTime")
       private final @Nullable Output<String> startDateTime;

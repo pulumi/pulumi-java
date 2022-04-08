@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for the Upstream when the Azure SignalR is in server-less mode.
- * 
  */
 public final class ServerlessUpstreamSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServerlessUpstreamSettingsResponse extends io.pulumi.resource
 
     /**
      * Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
-     * 
      */
     @Import(name="templates")
       private final @Nullable List<UpstreamTemplateResponse> templates;

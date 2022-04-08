@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Files or Blob Storage access information value for dictionary storage.
- * 
  */
 public final class AzureStorageInfoValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
 
     /**
      * Access key for the storage account.
-     * 
      */
     @Import(name="accessKey")
       private final @Nullable String accessKey;
@@ -31,7 +29,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the storage account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable String accountName;
@@ -42,7 +39,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
 
     /**
      * Path to mount the storage within the site's runtime environment.
-     * 
      */
     @Import(name="mountPath")
       private final @Nullable String mountPath;
@@ -53,7 +49,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the file share (container name, for Blob storage).
-     * 
      */
     @Import(name="shareName")
       private final @Nullable String shareName;
@@ -64,7 +59,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
 
     /**
      * State of the storage account.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -75,7 +69,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
 
     /**
      * Type of storage.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

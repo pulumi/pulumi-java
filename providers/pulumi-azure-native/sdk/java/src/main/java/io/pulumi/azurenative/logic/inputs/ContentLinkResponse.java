@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content link.
- * 
  */
 public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The content hash.
-     * 
      */
     @Import(name="contentHash", required=true)
       private final ContentHashResponse contentHash;
@@ -34,7 +32,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The content size.
-     * 
      */
     @Import(name="contentSize", required=true)
       private final Double contentSize;
@@ -45,7 +42,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The content version.
-     * 
      */
     @Import(name="contentVersion", required=true)
       private final String contentVersion;
@@ -56,7 +52,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata", required=true)
       private final Object metadata;
@@ -67,7 +62,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The content link URI.
-     * 
      */
     @Import(name="uri")
       private final @Nullable String uri;

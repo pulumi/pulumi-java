@@ -14,7 +14,6 @@ public final class GetProfileSupportedOptimizationTypesArgs extends io.pulumi.re
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -25,7 +24,6 @@ public final class GetProfileSupportedOptimizationTypesArgs extends io.pulumi.re
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

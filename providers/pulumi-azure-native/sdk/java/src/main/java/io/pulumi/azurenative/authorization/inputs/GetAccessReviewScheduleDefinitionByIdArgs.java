@@ -14,7 +14,6 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends io.pulumi.r
 
     /**
      * The id of the access review schedule definition.
-     * 
      */
     @Import(name="scheduleDefinitionId", required=true)
       private final String scheduleDefinitionId;

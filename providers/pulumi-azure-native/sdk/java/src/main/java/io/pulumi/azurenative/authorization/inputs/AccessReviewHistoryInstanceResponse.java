@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Access Review History Definition Instance.
- * 
  */
 public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * The display name for the parent history definition.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the 'se' parameter in the generated uri.
-     * 
      */
     @Import(name="downloadUri", required=true)
       private final String downloadUri;
@@ -42,7 +39,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * Date time when history data report expires and the associated data is deleted.
-     * 
      */
     @Import(name="expiration")
       private final @Nullable String expiration;
@@ -53,7 +49,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * Date time when the history data report is scheduled to be generated.
-     * 
      */
     @Import(name="fulfilledDateTime")
       private final @Nullable String fulfilledDateTime;
@@ -64,7 +59,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * The access review history definition instance id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -75,7 +69,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * The access review history definition instance unique id.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -86,7 +79,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
-     * 
      */
     @Import(name="reviewHistoryPeriodEndDateTime")
       private final @Nullable String reviewHistoryPeriodEndDateTime;
@@ -97,7 +89,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
-     * 
      */
     @Import(name="reviewHistoryPeriodStartDateTime")
       private final @Nullable String reviewHistoryPeriodStartDateTime;
@@ -108,7 +99,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * Date time when the history data report is scheduled to be generated.
-     * 
      */
     @Import(name="runDateTime")
       private final @Nullable String runDateTime;
@@ -119,7 +109,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -> InProgress -> Done -> Expired
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -130,7 +119,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

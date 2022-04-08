@@ -14,7 +14,6 @@ public final class GetvNetPeeringArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the workspace vNet peering.
-     * 
      */
     @Import(name="peeringName", required=true)
       private final String peeringName;
@@ -25,7 +24,6 @@ public final class GetvNetPeeringArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetvNetPeeringArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

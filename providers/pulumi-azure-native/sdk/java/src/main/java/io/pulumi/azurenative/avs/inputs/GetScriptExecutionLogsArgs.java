@@ -14,7 +14,6 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
@@ -25,7 +24,6 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of the user-invoked script execution resource
-     * 
      */
     @Import(name="scriptExecutionName", required=true)
       private final String scriptExecutionName;

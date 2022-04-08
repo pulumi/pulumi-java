@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a labeling job.
- * 
  */
 public final class LabelingJobPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Created time of the job in UTC timezone.
-     * 
      */
     @Import(name="createdTimeUtc", required=true)
       private final String createdTimeUtc;
@@ -40,7 +38,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Dataset configuration for the job.
-     * 
      */
     @Import(name="datasetConfiguration", required=true)
       private final LabelingDatasetConfigurationResponse datasetConfiguration;
@@ -51,7 +48,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Instructions for the job.
-     * 
      */
     @Import(name="jobInstructions", required=true)
       private final LabelingJobInstructionsResponse jobInstructions;
@@ -62,7 +58,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Label categories of the job.
-     * 
      */
     @Import(name="labelCategories", required=true)
       private final Map<String,LabelCategoryResponse> labelCategories;
@@ -73,7 +68,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Media specific properties in a labeling job.
-     * 
      */
     @Import(name="labelingJobMediaProperties", required=true)
       private final LabelingJobImagePropertiesResponse labelingJobMediaProperties;
@@ -84,7 +78,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Machine learning assisted configuration for the job.
-     * 
      */
     @Import(name="mlAssistConfiguration")
       private final @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
@@ -95,7 +88,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Progress metrics of the job.
-     * 
      */
     @Import(name="progressMetrics", required=true)
       private final ProgressMetricsResponse progressMetrics;
@@ -106,7 +98,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Internal id of the job(Previously called project).
-     * 
      */
     @Import(name="projectId", required=true)
       private final String projectId;
@@ -117,7 +108,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The job property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -128,7 +118,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Status of the job.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -139,7 +128,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Status messages of the job.
-     * 
      */
     @Import(name="statusMessages", required=true)
       private final List<StatusMessageResponse> statusMessages;
@@ -150,7 +138,6 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The job tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;

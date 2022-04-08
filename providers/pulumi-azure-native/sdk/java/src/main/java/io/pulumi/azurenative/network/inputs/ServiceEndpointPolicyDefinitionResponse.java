@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service Endpoint policy definitions.
- * 
  */
 public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
 
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -43,7 +40,6 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -54,7 +50,6 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -65,7 +60,6 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
 
     /**
      * The provisioning state of the service endpoint policy definition resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -76,7 +70,6 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
 
     /**
      * Service endpoint name.
-     * 
      */
     @Import(name="service")
       private final @Nullable String service;
@@ -87,7 +80,6 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
 
     /**
      * A list of service resources.
-     * 
      */
     @Import(name="serviceResources")
       private final @Nullable List<String> serviceResources;

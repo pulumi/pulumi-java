@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the Web Application Firewall policy for each routing rule (if applicable)
- * 
  */
 public final class RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RoutingRuleUpdateParametersResponseWebApplicationFirewallPoli
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

@@ -21,7 +21,149 @@ import javax.annotation.Nullable;
  * Represents a published blueprint.
  * API Version: 2018-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PublishedManagementGroupBlueprint_Publish
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var publishedBlueprint = new AzureNative.Blueprint.PublishedBlueprint("publishedBlueprint", new AzureNative.Blueprint.PublishedBlueprintArgs
+ *         {
+ *             BlueprintName = "simpleBlueprint",
+ *             ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+ *             VersionId = "v2",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := blueprint.NewPublishedBlueprint(ctx, "publishedBlueprint", &blueprint.PublishedBlueprintArgs{
+ * 			BlueprintName: pulumi.String("simpleBlueprint"),
+ * 			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
+ * 			VersionId:     pulumi.String("v2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publishedBlueprint", {
+ *     blueprintName: "simpleBlueprint",
+ *     resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+ *     versionId: "v2",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * published_blueprint = azure_native.blueprint.PublishedBlueprint("publishedBlueprint",
+ *     blueprint_name="simpleBlueprint",
+ *     resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+ *     version_id="v2")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PublishedSubscriptionBlueprint_Publish
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var publishedBlueprint = new AzureNative.Blueprint.PublishedBlueprint("publishedBlueprint", new AzureNative.Blueprint.PublishedBlueprintArgs
+ *         {
+ *             BlueprintName = "simpleBlueprint",
+ *             ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+ *             VersionId = "v2",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := blueprint.NewPublishedBlueprint(ctx, "publishedBlueprint", &blueprint.PublishedBlueprintArgs{
+ * 			BlueprintName: pulumi.String("simpleBlueprint"),
+ * 			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+ * 			VersionId:     pulumi.String("v2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publishedBlueprint", {
+ *     blueprintName: "simpleBlueprint",
+ *     resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+ *     versionId: "v2",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * published_blueprint = azure_native.blueprint.PublishedBlueprint("publishedBlueprint",
+ *     blueprint_name="simpleBlueprint",
+ *     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
+ *     version_id="v2")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,140 +178,120 @@ import javax.annotation.Nullable;
 public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
     /**
      * Name of the published blueprint definition.
-     * 
      */
     @Export(name="blueprintName", type=String.class, parameters={})
     private Output</* @Nullable */ String> blueprintName;
 
     /**
      * @return Name of the published blueprint definition.
-     * 
      */
     public Output</* @Nullable */ String> getBlueprintName() {
         return this.blueprintName;
     }
     /**
      * Version-specific change notes.
-     * 
      */
     @Export(name="changeNotes", type=String.class, parameters={})
     private Output</* @Nullable */ String> changeNotes;
 
     /**
      * @return Version-specific change notes.
-     * 
      */
     public Output</* @Nullable */ String> getChangeNotes() {
         return this.changeNotes;
     }
     /**
      * Multi-line explain this resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Multi-line explain this resource.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * One-liner string explain this resource.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return One-liner string explain this resource.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Name of this resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of this resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Parameters required by this blueprint definition.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> parameters;
 
     /**
      * @return Parameters required by this blueprint definition.
-     * 
      */
     public Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * Resource group placeholders defined by this blueprint definition.
-     * 
      */
     @Export(name="resourceGroups", type=Map.class, parameters={String.class, ResourceGroupDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> resourceGroups;
 
     /**
      * @return Resource group placeholders defined by this blueprint definition.
-     * 
      */
     public Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> getResourceGroups() {
         return this.resourceGroups;
     }
     /**
      * Status of the blueprint. This field is readonly.
-     * 
      */
     @Export(name="status", type=BlueprintStatusResponse.class, parameters={})
     private Output<BlueprintStatusResponse> status;
 
     /**
      * @return Status of the blueprint. This field is readonly.
-     * 
      */
     public Output<BlueprintStatusResponse> getStatus() {
         return this.status;
     }
     /**
      * The scope where this blueprint definition can be assigned.
-     * 
      */
     @Export(name="targetScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetScope;
 
     /**
      * @return The scope where this blueprint definition can be assigned.
-     * 
      */
     public Output</* @Nullable */ String> getTargetScope() {
         return this.targetScope;
     }
     /**
      * Type of this resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of this resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

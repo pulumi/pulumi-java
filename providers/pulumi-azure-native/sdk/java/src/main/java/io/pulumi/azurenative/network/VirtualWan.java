@@ -20,7 +20,100 @@ import javax.annotation.Nullable;
  * VirtualWAN Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VirtualWANCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualWan = new AzureNative.Network.VirtualWan("virtualWan", new AzureNative.Network.VirtualWanArgs
+ *         {
+ *             DisableVpnEncryption = false,
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             Type = "Basic",
+ *             VirtualWANName = "wan1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualWan(ctx, "virtualWan", &network.VirtualWanArgs{
+ * 			DisableVpnEncryption: pulumi.Bool(false),
+ * 			Location:             pulumi.String("West US"),
+ * 			ResourceGroupName:    pulumi.String("rg1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			Type:           pulumi.String("Basic"),
+ * 			VirtualWANName: pulumi.String("wan1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualWan = new azure_native.network.VirtualWan("virtualWan", {
+ *     disableVpnEncryption: false,
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     type: "Basic",
+ *     virtualWANName: "wan1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_wan = azure_native.network.VirtualWan("virtualWan",
+ *     disable_vpn_encryption=False,
+ *     location="West US",
+ *     resource_group_name="rg1",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     type="Basic",
+ *     virtual_wan_name="wan1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +128,144 @@ import javax.annotation.Nullable;
 public class VirtualWan extends io.pulumi.resources.CustomResource {
     /**
      * True if branch to branch traffic is allowed.
-     * 
      */
     @Export(name="allowBranchToBranchTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowBranchToBranchTraffic;
 
     /**
      * @return True if branch to branch traffic is allowed.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowBranchToBranchTraffic() {
         return this.allowBranchToBranchTraffic;
     }
     /**
      * True if Vnet to Vnet traffic is allowed.
-     * 
      */
     @Export(name="allowVnetToVnetTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVnetToVnetTraffic;
 
     /**
      * @return True if Vnet to Vnet traffic is allowed.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowVnetToVnetTraffic() {
         return this.allowVnetToVnetTraffic;
     }
     /**
      * Vpn encryption to be disabled or not.
-     * 
      */
     @Export(name="disableVpnEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableVpnEncryption;
 
     /**
      * @return Vpn encryption to be disabled or not.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDisableVpnEncryption() {
         return this.disableVpnEncryption;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The office local breakout category.
-     * 
      */
     @Export(name="office365LocalBreakoutCategory", type=String.class, parameters={})
     private Output<String> office365LocalBreakoutCategory;
 
     /**
      * @return The office local breakout category.
-     * 
      */
     public Output<String> getOffice365LocalBreakoutCategory() {
         return this.office365LocalBreakoutCategory;
     }
     /**
      * The provisioning state of the virtual WAN resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the virtual WAN resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * List of VirtualHubs in the VirtualWAN.
-     * 
      */
     @Export(name="virtualHubs", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualHubs;
 
     /**
      * @return List of VirtualHubs in the VirtualWAN.
-     * 
      */
     public Output<List<SubResourceResponse>> getVirtualHubs() {
         return this.virtualHubs;
     }
     /**
      * List of VpnSites in the VirtualWAN.
-     * 
      */
     @Export(name="vpnSites", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> vpnSites;
 
     /**
      * @return List of VpnSites in the VirtualWAN.
-     * 
      */
     public Output<List<SubResourceResponse>> getVpnSites() {
         return this.vpnSites;

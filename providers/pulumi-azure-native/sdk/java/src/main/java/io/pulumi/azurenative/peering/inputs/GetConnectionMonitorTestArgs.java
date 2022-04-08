@@ -14,7 +14,6 @@ public final class GetConnectionMonitorTestArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the connection monitor test
-     * 
      */
     @Import(name="connectionMonitorTestName", required=true)
       private final String connectionMonitorTestName;
@@ -25,7 +24,6 @@ public final class GetConnectionMonitorTestArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the peering service.
-     * 
      */
     @Import(name="peeringServiceName", required=true)
       private final String peeringServiceName;
@@ -36,7 +34,6 @@ public final class GetConnectionMonitorTestArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Permissions the identity has for keys, secrets, certificates and storage.
- * 
  */
 public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Permissions to certificates
-     * 
      */
     @Import(name="certificates")
       private final @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
@@ -37,7 +35,6 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Permissions to keys
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<List<Either<String,KeyPermissions>>> keys;
@@ -48,7 +45,6 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Permissions to secrets
-     * 
      */
     @Import(name="secrets")
       private final @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
@@ -59,7 +55,6 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Permissions to storage accounts
-     * 
      */
     @Import(name="storage")
       private final @Nullable Output<List<Either<String,StoragePermissions>>> storage;

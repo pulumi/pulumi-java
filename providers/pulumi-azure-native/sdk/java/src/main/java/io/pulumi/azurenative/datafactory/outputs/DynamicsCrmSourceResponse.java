@@ -14,38 +14,31 @@ import javax.annotation.Nullable;
 public final class DynamicsCrmSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     private final @Nullable Object additionalColumns;
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
      * FetchXML is a proprietary query language that is used in Microsoft Dynamics CRM (online & on-premises). Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object query;
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object sourceRetryCount;
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
      * Expected value is 'DynamicsCrmSource'.
-     * 
      */
     private final String type;
 
@@ -69,42 +62,36 @@ public final class DynamicsCrmSourceResponse {
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
     */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * FetchXML is a proprietary query language that is used in Microsoft Dynamics CRM (online & on-premises). Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
     */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
@@ -112,7 +99,6 @@ public final class DynamicsCrmSourceResponse {
     /**
      * Copy source type.
      * Expected value is 'DynamicsCrmSource'.
-     * 
     */
     public String getType() {
         return this.type;

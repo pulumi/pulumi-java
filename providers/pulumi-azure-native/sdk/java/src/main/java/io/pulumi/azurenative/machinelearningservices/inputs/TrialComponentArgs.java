@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trial component definition.
- * 
  */
 public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM resource ID of the code asset.
-     * 
      */
     @Import(name="codeId")
       private final @Nullable Output<String> codeId;
@@ -38,7 +36,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The command to execute on startup of the job. eg. "python train.py"
-     * 
      */
     @Import(name="command", required=true)
       private final Output<String> command;
@@ -49,7 +46,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-     * 
      */
     @Import(name="distribution")
       private final @Nullable Output<Object> distribution;
@@ -60,7 +56,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARM resource ID of the Environment specification for the job.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
@@ -71,7 +66,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Environment variables included in the job.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
@@ -82,7 +76,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mapping of input data bindings used in the job.
-     * 
      */
     @Import(name="inputDataBindings")
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
@@ -93,7 +86,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mapping of output data bindings used in the job.
-     * 
      */
     @Import(name="outputDataBindings")
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
@@ -105,7 +97,6 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The max run duration in ISO 8601 format, after which the trial component will be cancelled.
      * Only supports duration with precision as low as Seconds.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;

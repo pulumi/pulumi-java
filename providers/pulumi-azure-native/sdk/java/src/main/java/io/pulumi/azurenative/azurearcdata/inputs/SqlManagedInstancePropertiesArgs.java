@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of sqlManagedInstance.
- * 
  */
 public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
 
     /**
      * The instance admin user
-     * 
      */
     @Import(name="admin")
       private final @Nullable Output<String> admin;
@@ -33,7 +31,6 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
 
     /**
      * Username and password for basic authentication.
-     * 
      */
     @Import(name="basicLoginInformation")
       private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
@@ -44,7 +41,6 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
 
     /**
      * null
-     * 
      */
     @Import(name="dataControllerId")
       private final @Nullable Output<String> dataControllerId;
@@ -55,7 +51,6 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
 
     /**
      * The instance end time
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -66,7 +61,6 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
 
     /**
      * The raw kubernetes information
-     * 
      */
     @Import(name="k8sRaw")
       private final @Nullable Output<Object> k8sRaw;
@@ -77,7 +71,6 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
 
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
      */
     @Import(name="lastUploadedDate")
       private final @Nullable Output<String> lastUploadedDate;
@@ -88,7 +81,6 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
 
     /**
      * The instance start time
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

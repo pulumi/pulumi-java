@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The trailing separator policy.
-     * 
      */
     @EnumType
     public enum TrailingSeparatorPolicy {

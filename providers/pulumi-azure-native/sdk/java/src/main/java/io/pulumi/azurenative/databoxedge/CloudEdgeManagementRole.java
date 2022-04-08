@@ -19,7 +19,79 @@ import javax.annotation.Nullable;
  * CloudEdgeManagementRole role.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RolePut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudEdgeManagementRole = new AzureNative.DataBoxEdge.CloudEdgeManagementRole("cloudEdgeManagementRole", new AzureNative.DataBoxEdge.CloudEdgeManagementRoleArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             Name = "IoTRole1",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewCloudEdgeManagementRole(ctx, "cloudEdgeManagementRole", &databoxedge.CloudEdgeManagementRoleArgs{
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Name:              pulumi.String("IoTRole1"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cloudEdgeManagementRole = new azure_native.databoxedge.CloudEdgeManagementRole("cloudEdgeManagementRole", {
+ *     deviceName: "testedgedevice",
+ *     name: "IoTRole1",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cloud_edge_management_role = azure_native.databoxedge.CloudEdgeManagementRole("cloudEdgeManagementRole",
+ *     device_name="testedgedevice",
+ *     name="IoTRole1",
+ *     resource_group_name="GroupForEdgeAutomation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +106,12 @@ import javax.annotation.Nullable;
 public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource {
     /**
      * Edge Profile of the resource
-     * 
      */
     @Export(name="edgeProfile", type=EdgeProfileResponse.class, parameters={})
     private Output<EdgeProfileResponse> edgeProfile;
 
     /**
      * @return Edge Profile of the resource
-     * 
      */
     public Output<EdgeProfileResponse> getEdgeProfile() {
         return this.edgeProfile;
@@ -49,7 +119,6 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
     /**
      * Role type.
      * Expected value is 'CloudEdgeManagement'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -57,77 +126,66 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
     /**
      * @return Role type.
      * Expected value is 'CloudEdgeManagement'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Local Edge Management Status
-     * 
      */
     @Export(name="localManagementStatus", type=String.class, parameters={})
     private Output<String> localManagementStatus;
 
     /**
      * @return Local Edge Management Status
-     * 
      */
     public Output<String> getLocalManagementStatus() {
         return this.localManagementStatus;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Role status.
-     * 
      */
     @Export(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
     /**
      * @return Role status.
-     * 
      */
     public Output<String> getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Role configured on ASE resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
 
     /**
      * API identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="apiId", required=true)
       private final String apiId;
@@ -25,7 +24,6 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Attachment identifier within an Issue. Must be unique in the current Issue.
-     * 
      */
     @Import(name="attachmentId", required=true)
       private final String attachmentId;
@@ -36,7 +34,6 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Issue identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="issueId", required=true)
       private final String issueId;
@@ -47,7 +44,6 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

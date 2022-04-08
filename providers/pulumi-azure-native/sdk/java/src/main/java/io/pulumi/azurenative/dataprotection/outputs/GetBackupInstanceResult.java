@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetBackupInstanceResult {
     /**
      * Resource Id represents the complete path to the resource.
-     * 
      */
     private final String id;
     /**
      * Resource name associated with the resource.
-     * 
      */
     private final String name;
     /**
      * BackupInstanceResource properties
-     * 
      */
     private final BackupInstanceResponse properties;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetBackupInstanceResult {
 
     /**
      * Resource Id represents the complete path to the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name associated with the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * BackupInstanceResource properties
-     * 
     */
     public BackupInstanceResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
     */
     public String getType() {
         return this.type;

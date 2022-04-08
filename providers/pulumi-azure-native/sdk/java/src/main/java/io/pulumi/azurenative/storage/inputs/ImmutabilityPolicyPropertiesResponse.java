@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of an ImmutabilityPolicy of a blob container.
- * 
  */
 public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
 
     /**
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
-     * 
      */
     @Import(name="allowProtectedAppendWrites")
       private final @Nullable Boolean allowProtectedAppendWrites;
@@ -35,7 +33,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
 
     /**
      * ImmutabilityPolicy Etag.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -46,7 +43,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
 
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
-     * 
      */
     @Import(name="immutabilityPeriodSinceCreationInDays")
       private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
@@ -57,7 +53,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
 
     /**
      * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -68,7 +63,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
 
     /**
      * The ImmutabilityPolicy update history of the blob container.
-     * 
      */
     @Import(name="updateHistory", required=true)
       private final List<UpdateHistoryPropertyResponse> updateHistory;

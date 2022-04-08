@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed identity properties retrieved from ARM request headers.
- * 
  */
 public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Principal Id
-     * 
      */
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
@@ -33,7 +31,6 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Tenant Id
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -44,7 +41,6 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Type of the managed identity
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;

@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration
- * 
  */
 public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * Specify what happens to the public IP when the VM is deleted
-     * 
      */
     @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
@@ -40,7 +38,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * The dns settings to be applied on the publicIP addresses .
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings;
@@ -51,7 +48,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * The idle timeout of the public IP address.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
@@ -62,7 +58,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * The list of IP tags associated with the public IP address.
-     * 
      */
     @Import(name="ipTags")
       private final @Nullable Output<List<VirtualMachineScaleSetIpTagArgs>> ipTags;
@@ -73,7 +68,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * The publicIP address configuration name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -84,7 +78,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
-     * 
      */
     @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
@@ -95,7 +88,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * The PublicIPPrefix from which to allocate publicIP addresses.
-     * 
      */
     @Import(name="publicIPPrefix")
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
@@ -106,7 +98,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
     /**
      * Describes the public IP Sku
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<PublicIPAddressSkuArgs> sku;

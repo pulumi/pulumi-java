@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Qos Traffic Profiler IP Range properties.
- * 
  */
 public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * End IP Address.
-     * 
      */
     @Import(name="endIP")
       private final @Nullable Output<String> endIP;
@@ -31,7 +29,6 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Start IP Address.
-     * 
      */
     @Import(name="startIP")
       private final @Nullable Output<String> startIP;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Public Certificate Location
-     * 
      */
     @EnumType
     public enum PublicCertificateLocation {

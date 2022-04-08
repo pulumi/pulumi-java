@@ -19,7 +19,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -30,7 +29,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the expiry time.
-     * 
      */
     @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
@@ -41,7 +39,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the value of the enabled flag of webhook.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
@@ -52,7 +49,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the webhook.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -63,7 +59,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the parameters of the job.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
@@ -74,7 +69,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the hybrid worker group the webhook job will run on.
-     * 
      */
     @Import(name="runOn")
       private final @Nullable Output<String> runOn;
@@ -96,7 +89,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the runbook.
-     * 
      */
     @Import(name="runbook")
       private final @Nullable Output<RunbookAssociationPropertyArgs> runbook;
@@ -107,7 +99,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the uri.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;
@@ -118,7 +109,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The webhook name.
-     * 
      */
     @Import(name="webhookName")
       private final @Nullable Output<String> webhookName;

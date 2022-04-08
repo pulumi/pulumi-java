@@ -13,42 +13,34 @@ import javax.annotation.Nullable;
 public final class ApnsCredentialResponse {
     /**
      * The APNS certificate. Specify if using Certificate Authentication Mode.
-     * 
      */
     private final @Nullable String apnsCertificate;
     /**
      * The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
      */
     private final @Nullable String appId;
     /**
      * The name of the application or BundleId. Specify if using Token Authentication Mode.
-     * 
      */
     private final @Nullable String appName;
     /**
      * The APNS certificate password if it exists.
-     * 
      */
     private final @Nullable String certificateKey;
     /**
      * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.
-     * 
      */
     private final @Nullable String endpoint;
     /**
      * A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
      */
     private final @Nullable String keyId;
     /**
      * The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
-     * 
      */
     private final @Nullable String thumbprint;
     /**
      * Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
-     * 
      */
     private final @Nullable String token;
 
@@ -74,56 +66,48 @@ public final class ApnsCredentialResponse {
 
     /**
      * The APNS certificate. Specify if using Certificate Authentication Mode.
-     * 
     */
     public Optional<String> getApnsCertificate() {
         return Optional.ofNullable(this.apnsCertificate);
     }
     /**
      * The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
     */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * The name of the application or BundleId. Specify if using Token Authentication Mode.
-     * 
     */
     public Optional<String> getAppName() {
         return Optional.ofNullable(this.appName);
     }
     /**
      * The APNS certificate password if it exists.
-     * 
     */
     public Optional<String> getCertificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
     /**
      * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.
-     * 
     */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
     */
     public Optional<String> getKeyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
      * The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
-     * 
     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
-     * 
     */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);

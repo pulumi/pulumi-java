@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ConnStringInfoResponse {
     /**
      * Connection string value.
-     * 
      */
     private final @Nullable String connectionString;
     /**
      * Name of connection string.
-     * 
      */
     private final @Nullable String name;
     /**
      * Type of database.
-     * 
      */
     private final @Nullable String type;
 
@@ -39,21 +36,18 @@ public final class ConnStringInfoResponse {
 
     /**
      * Connection string value.
-     * 
     */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Name of connection string.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Type of database.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

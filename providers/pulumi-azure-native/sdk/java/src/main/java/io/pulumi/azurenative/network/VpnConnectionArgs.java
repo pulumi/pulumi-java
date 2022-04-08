@@ -26,7 +26,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expected bandwidth in MBPS.
-     * 
      */
     @Import(name="connectionBandwidth")
       private final @Nullable Output<Integer> connectionBandwidth;
@@ -37,7 +36,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the connection.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -48,7 +46,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * DPD timeout in seconds for vpn connection.
-     * 
      */
     @Import(name="dpdTimeoutSeconds")
       private final @Nullable Output<Integer> dpdTimeoutSeconds;
@@ -59,7 +56,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EnableBgp flag.
-     * 
      */
     @Import(name="enableBgp")
       private final @Nullable Output<Boolean> enableBgp;
@@ -70,7 +66,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable internet security.
-     * 
      */
     @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
@@ -81,7 +76,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EnableBgp flag.
-     * 
      */
     @Import(name="enableRateLimiting")
       private final @Nullable Output<Boolean> enableRateLimiting;
@@ -92,7 +86,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the gateway.
-     * 
      */
     @Import(name="gatewayName", required=true)
       private final Output<String> gatewayName;
@@ -103,7 +96,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -114,7 +106,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IPSec Policies to be considered by this connection.
-     * 
      */
     @Import(name="ipsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
@@ -125,7 +116,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -136,7 +126,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Id of the connected vpn site.
-     * 
      */
     @Import(name="remoteVpnSite")
       private final @Nullable Output<SubResourceArgs> remoteVpnSite;
@@ -147,7 +136,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name of the VpnGateway.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -158,7 +146,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
@@ -169,7 +156,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Routing weight for vpn connection.
-     * 
      */
     @Import(name="routingWeight")
       private final @Nullable Output<Integer> routingWeight;
@@ -180,7 +166,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SharedKey for the vpn connection.
-     * 
      */
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
@@ -191,7 +176,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Traffic Selector Policies to be considered by this connection.
-     * 
      */
     @Import(name="trafficSelectorPolicies")
       private final @Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
@@ -202,7 +186,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use local azure ip to initiate connection.
-     * 
      */
     @Import(name="useLocalAzureIpAddress")
       private final @Nullable Output<Boolean> useLocalAzureIpAddress;
@@ -213,7 +196,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable policy-based traffic selectors.
-     * 
      */
     @Import(name="usePolicyBasedTrafficSelectors")
       private final @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
@@ -224,7 +206,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connection protocol used for this connection.
-     * 
      */
     @Import(name="vpnConnectionProtocolType")
       private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
@@ -235,7 +216,6 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of all vpn site link connections to the gateway.
-     * 
      */
     @Import(name="vpnLinkConnections")
       private final @Nullable Output<List<VpnSiteLinkConnectionArgs>> vpnLinkConnections;

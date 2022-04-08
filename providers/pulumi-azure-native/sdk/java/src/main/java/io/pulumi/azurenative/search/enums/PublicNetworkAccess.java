@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
-     * 
      */
     @EnumType
     public enum PublicNetworkAccess {

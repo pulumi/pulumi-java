@@ -14,7 +14,6 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities extends 
 
     /**
      * Client Id of user assigned identity
-     * 
      */
     @Import(name="clientId", required=true)
       private final String clientId;
@@ -25,7 +24,6 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities extends 
 
     /**
      * Principal Id of user assigned identity
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;

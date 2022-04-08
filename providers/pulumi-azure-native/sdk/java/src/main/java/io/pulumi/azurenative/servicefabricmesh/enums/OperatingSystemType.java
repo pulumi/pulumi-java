@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The operation system required by the code in service.
-     * 
      */
     @EnumType
     public enum OperatingSystemType {
         /**
          * The required operating system is Linux.
-         * 
          */
         Linux("Linux"),
         /**
          * The required operating system is Windows.
-         * 
          */
         Windows("Windows");
 

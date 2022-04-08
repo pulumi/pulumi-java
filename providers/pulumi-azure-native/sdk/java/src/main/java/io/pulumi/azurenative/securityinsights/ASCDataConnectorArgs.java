@@ -17,7 +17,6 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Connector ID
-     * 
      */
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
@@ -28,7 +27,6 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The available data types for the connector.
-     * 
      */
     @Import(name="dataTypes")
       private final @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes;
@@ -40,7 +38,6 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     /**
      * The kind of the data connector
      * Expected value is 'AzureSecurityCenter'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -51,7 +48,6 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The subscription id to connect to, and get the data from.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -73,7 +68,6 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

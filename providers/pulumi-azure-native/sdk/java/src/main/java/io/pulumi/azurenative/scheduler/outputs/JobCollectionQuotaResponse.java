@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class JobCollectionQuotaResponse {
     /**
      * Gets or set the maximum job count.
-     * 
      */
     private final @Nullable Integer maxJobCount;
     /**
      * Gets or sets the maximum job occurrence.
-     * 
      */
     private final @Nullable Integer maxJobOccurrence;
     /**
      * Gets or set the maximum recurrence.
-     * 
      */
     private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
 
@@ -40,21 +37,18 @@ public final class JobCollectionQuotaResponse {
 
     /**
      * Gets or set the maximum job count.
-     * 
     */
     public Optional<Integer> getMaxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
     /**
      * Gets or sets the maximum job occurrence.
-     * 
     */
     public Optional<Integer> getMaxJobOccurrence() {
         return Optional.ofNullable(this.maxJobOccurrence);
     }
     /**
      * Gets or set the maximum recurrence.
-     * 
     */
     public Optional<JobMaxRecurrenceResponse> getMaxRecurrence() {
         return Optional.ofNullable(this.maxRecurrence);

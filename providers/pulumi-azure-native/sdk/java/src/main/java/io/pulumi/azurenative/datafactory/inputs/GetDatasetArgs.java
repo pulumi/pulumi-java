@@ -14,7 +14,6 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The dataset name.
-     * 
      */
     @Import(name="datasetName", required=true)
       private final String datasetName;
@@ -25,7 +24,6 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -36,7 +34,6 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

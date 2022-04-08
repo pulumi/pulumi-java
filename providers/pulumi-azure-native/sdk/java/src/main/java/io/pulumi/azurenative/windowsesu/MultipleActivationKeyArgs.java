@@ -22,7 +22,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Agreement number under which the key is requested.
-     * 
      */
     @Import(name="agreementNumber")
       private final @Nullable Output<String> agreementNumber;
@@ -33,7 +32,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Number of activations/servers using the MAK key.
-     * 
      */
     @Import(name="installedServerNumber")
       private final @Nullable Output<Integer> installedServerNumber;
@@ -44,7 +42,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
-     * 
      */
     @Import(name="isEligible")
       private final @Nullable Output<Boolean> isEligible;
@@ -55,7 +52,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -66,7 +62,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the MAK key.
-     * 
      */
     @Import(name="multipleActivationKeyName")
       private final @Nullable Output<String> multipleActivationKeyName;
@@ -77,7 +72,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Type of OS for which the key is requested.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
@@ -88,7 +82,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Type of support
-     * 
      */
     @Import(name="supportType")
       private final @Nullable Output<Either<String,SupportType>> supportType;
@@ -110,7 +102,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

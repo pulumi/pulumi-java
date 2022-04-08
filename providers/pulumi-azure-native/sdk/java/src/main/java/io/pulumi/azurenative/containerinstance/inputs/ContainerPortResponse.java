@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The port exposed on the container instance.
- * 
  */
 public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The port number exposed within the container group.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -32,7 +30,6 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The protocol associated with the port.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;

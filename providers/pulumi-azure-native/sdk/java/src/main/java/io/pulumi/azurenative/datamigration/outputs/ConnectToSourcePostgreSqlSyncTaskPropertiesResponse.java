@@ -20,33 +20,27 @@ import javax.annotation.Nullable;
 public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse {
     /**
      * Array of command properties.
-     * 
      */
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     private final List<ODataErrorResponse> errors;
     /**
      * Task input
-     * 
      */
     private final @Nullable ConnectToSourcePostgreSqlSyncTaskInputResponse input;
     /**
      * Task output. This is ignored if submitted.
-     * 
      */
     private final List<ConnectToSourcePostgreSqlSyncTaskOutputResponse> output;
     /**
      * The state of the task. This is ignored if submitted.
-     * 
      */
     private final String state;
     /**
      * Task type.
      * Expected value is 'ConnectToSource.PostgreSql.Sync'.
-     * 
      */
     private final String taskType;
 
@@ -68,35 +62,30 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse {
 
     /**
      * Array of command properties.
-     * 
     */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
-     * 
     */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
-     * 
     */
     public Optional<ConnectToSourcePostgreSqlSyncTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
-     * 
     */
     public List<ConnectToSourcePostgreSqlSyncTaskOutputResponse> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
-     * 
     */
     public String getState() {
         return this.state;
@@ -104,7 +93,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse {
     /**
      * Task type.
      * Expected value is 'ConnectToSource.PostgreSql.Sync'.
-     * 
     */
     public String getTaskType() {
         return this.taskType;

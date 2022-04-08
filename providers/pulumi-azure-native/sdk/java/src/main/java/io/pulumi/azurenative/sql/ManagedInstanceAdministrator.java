@@ -17,7 +17,181 @@ import javax.annotation.Nullable;
  * An Azure SQL managed instance administrator.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create administrator of managed instance
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedInstanceAdministrator = new AzureNative.Sql.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNative.Sql.ManagedInstanceAdministratorArgs
+ *         {
+ *             AdministratorName = "ActiveDirectory",
+ *             AdministratorType = "ActiveDirectory",
+ *             Login = "bob@contoso.com",
+ *             ManagedInstanceName = "managedInstance",
+ *             ResourceGroupName = "Default-SQL-SouthEastAsia",
+ *             Sid = "44444444-3333-2222-1111-000000000000",
+ *             TenantId = "55555555-4444-3333-2222-111111111111",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewManagedInstanceAdministrator(ctx, "managedInstanceAdministrator", &sql.ManagedInstanceAdministratorArgs{
+ * 			AdministratorName:   pulumi.String("ActiveDirectory"),
+ * 			AdministratorType:   pulumi.String("ActiveDirectory"),
+ * 			Login:               pulumi.String("bob@contoso.com"),
+ * 			ManagedInstanceName: pulumi.String("managedInstance"),
+ * 			ResourceGroupName:   pulumi.String("Default-SQL-SouthEastAsia"),
+ * 			Sid:                 pulumi.String("44444444-3333-2222-1111-000000000000"),
+ * 			TenantId:            pulumi.String("55555555-4444-3333-2222-111111111111"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+ *     administratorName: "ActiveDirectory",
+ *     administratorType: "ActiveDirectory",
+ *     login: "bob@contoso.com",
+ *     managedInstanceName: "managedInstance",
+ *     resourceGroupName: "Default-SQL-SouthEastAsia",
+ *     sid: "44444444-3333-2222-1111-000000000000",
+ *     tenantId: "55555555-4444-3333-2222-111111111111",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_instance_administrator = azure_native.sql.ManagedInstanceAdministrator("managedInstanceAdministrator",
+ *     administrator_name="ActiveDirectory",
+ *     administrator_type="ActiveDirectory",
+ *     login="bob@contoso.com",
+ *     managed_instance_name="managedInstance",
+ *     resource_group_name="Default-SQL-SouthEastAsia",
+ *     sid="44444444-3333-2222-1111-000000000000",
+ *     tenant_id="55555555-4444-3333-2222-111111111111")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Update administrator of managed instance
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedInstanceAdministrator = new AzureNative.Sql.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNative.Sql.ManagedInstanceAdministratorArgs
+ *         {
+ *             AdministratorName = "ActiveDirectory",
+ *             AdministratorType = "ActiveDirectory",
+ *             Login = "bob@contoso.com",
+ *             ManagedInstanceName = "managedInstance",
+ *             ResourceGroupName = "Default-SQL-SouthEastAsia",
+ *             Sid = "44444444-3333-2222-1111-000000000000",
+ *             TenantId = "55555555-4444-3333-2222-111111111111",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewManagedInstanceAdministrator(ctx, "managedInstanceAdministrator", &sql.ManagedInstanceAdministratorArgs{
+ * 			AdministratorName:   pulumi.String("ActiveDirectory"),
+ * 			AdministratorType:   pulumi.String("ActiveDirectory"),
+ * 			Login:               pulumi.String("bob@contoso.com"),
+ * 			ManagedInstanceName: pulumi.String("managedInstance"),
+ * 			ResourceGroupName:   pulumi.String("Default-SQL-SouthEastAsia"),
+ * 			Sid:                 pulumi.String("44444444-3333-2222-1111-000000000000"),
+ * 			TenantId:            pulumi.String("55555555-4444-3333-2222-111111111111"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+ *     administratorName: "ActiveDirectory",
+ *     administratorType: "ActiveDirectory",
+ *     login: "bob@contoso.com",
+ *     managedInstanceName: "managedInstance",
+ *     resourceGroupName: "Default-SQL-SouthEastAsia",
+ *     sid: "44444444-3333-2222-1111-000000000000",
+ *     tenantId: "55555555-4444-3333-2222-111111111111",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_instance_administrator = azure_native.sql.ManagedInstanceAdministrator("managedInstanceAdministrator",
+ *     administrator_name="ActiveDirectory",
+ *     administrator_type="ActiveDirectory",
+ *     login="bob@contoso.com",
+ *     managed_instance_name="managedInstance",
+ *     resource_group_name="Default-SQL-SouthEastAsia",
+ *     sid="44444444-3333-2222-1111-000000000000",
+ *     tenant_id="55555555-4444-3333-2222-111111111111")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +206,72 @@ import javax.annotation.Nullable;
 public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomResource {
     /**
      * Type of the managed instance administrator.
-     * 
      */
     @Export(name="administratorType", type=String.class, parameters={})
     private Output<String> administratorType;
 
     /**
      * @return Type of the managed instance administrator.
-     * 
      */
     public Output<String> getAdministratorType() {
         return this.administratorType;
     }
     /**
      * Login name of the managed instance administrator.
-     * 
      */
     @Export(name="login", type=String.class, parameters={})
     private Output<String> login;
 
     /**
      * @return Login name of the managed instance administrator.
-     * 
      */
     public Output<String> getLogin() {
         return this.login;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * SID (object ID) of the managed instance administrator.
-     * 
      */
     @Export(name="sid", type=String.class, parameters={})
     private Output<String> sid;
 
     /**
      * @return SID (object ID) of the managed instance administrator.
-     * 
      */
     public Output<String> getSid() {
         return this.sid;
     }
     /**
      * Tenant ID of the managed instance administrator.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return Tenant ID of the managed instance administrator.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

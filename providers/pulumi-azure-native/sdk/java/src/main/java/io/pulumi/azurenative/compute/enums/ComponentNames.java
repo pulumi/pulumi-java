@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
-     * 
      */
     @EnumType
     public enum ComponentNames {

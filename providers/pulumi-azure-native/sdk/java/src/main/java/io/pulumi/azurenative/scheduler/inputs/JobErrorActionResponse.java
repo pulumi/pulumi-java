@@ -21,7 +21,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the storage queue message.
-     * 
      */
     @Import(name="queueMessage")
       private final @Nullable StorageQueueMessageResponse queueMessage;
@@ -32,7 +31,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the http requests.
-     * 
      */
     @Import(name="request")
       private final @Nullable HttpRequestResponse request;
@@ -43,7 +41,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the retry policy.
-     * 
      */
     @Import(name="retryPolicy")
       private final @Nullable RetryPolicyResponse retryPolicy;
@@ -54,7 +51,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the service bus queue message.
-     * 
      */
     @Import(name="serviceBusQueueMessage")
       private final @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage;
@@ -65,7 +61,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the service bus topic message.
-     * 
      */
     @Import(name="serviceBusTopicMessage")
       private final @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage;
@@ -76,7 +71,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the job error action type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

@@ -16,7 +16,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -27,7 +26,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Machine Group resource name.
-     * 
      */
     @Import(name="machineGroupName", required=true)
       private final String machineGroupName;
@@ -38,7 +36,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource group name within the specified subscriptionId.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -49,7 +46,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -60,7 +56,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * OMS workspace containing the resources of interest.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

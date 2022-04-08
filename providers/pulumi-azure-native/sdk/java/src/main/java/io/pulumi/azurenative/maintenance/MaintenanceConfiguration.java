@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Maintenance configuration record type
  * API Version: 2020-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### MaintenanceConfigurations_CreateOrUpdateForResource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var maintenanceConfiguration = new AzureNative.Maintenance.MaintenanceConfiguration("maintenanceConfiguration", new AzureNative.Maintenance.MaintenanceConfigurationArgs
+ *         {
+ *             Location = "westus2",
+ *             Namespace = "Microsoft.Maintenance",
+ *             ResourceGroupName = "examplerg",
+ *             ResourceName = "configuration1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	maintenance "github.com/pulumi/pulumi-azure-native/sdk/go/azure/maintenance"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := maintenance.NewMaintenanceConfiguration(ctx, "maintenanceConfiguration", &maintenance.MaintenanceConfigurationArgs{
+ * 			Location:          pulumi.String("westus2"),
+ * 			Namespace:         pulumi.String("Microsoft.Maintenance"),
+ * 			ResourceGroupName: pulumi.String("examplerg"),
+ * 			ResourceName:      pulumi.String("configuration1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const maintenanceConfiguration = new azure_native.maintenance.MaintenanceConfiguration("maintenanceConfiguration", {
+ *     location: "westus2",
+ *     namespace: "Microsoft.Maintenance",
+ *     resourceGroupName: "examplerg",
+ *     resourceName: "configuration1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * maintenance_configuration = azure_native.maintenance.MaintenanceConfiguration("maintenanceConfiguration",
+ *     location="westus2",
+ *     namespace="Microsoft.Maintenance",
+ *     resource_group_name="examplerg",
+ *     resource_name="configuration1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +109,84 @@ import javax.annotation.Nullable;
 public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
-     * 
      */
     @Export(name="extensionProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> extensionProperties;
 
     /**
      * @return Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getExtensionProperties() {
         return this.extensionProperties;
     }
     /**
      * Gets or sets location of the resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Gets or sets location of the resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
-     * 
      */
     @Export(name="maintenanceScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceScope;
 
     /**
      * @return Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
-     * 
      */
     public Output</* @Nullable */ String> getMaintenanceScope() {
         return this.maintenanceScope;
     }
     /**
      * Name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
-     * 
      */
     @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
      * @return Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
-     * 
      */
     public Output</* @Nullable */ String> getNamespace() {
         return this.namespace;
     }
     /**
      * Gets or sets tags of the resource
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Gets or sets tags of the resource
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Type of the resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class UserAssignedIdentityResponse {
     /**
      * Client App Id associated with this identity.
-     * 
      */
     private final String clientId;
     /**
      * Azure Active Directory principal ID associated with this identity.
-     * 
      */
     private final String principalId;
 
@@ -30,14 +28,12 @@ public final class UserAssignedIdentityResponse {
 
     /**
      * Client App Id associated with this identity.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Azure Active Directory principal ID associated with this identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;

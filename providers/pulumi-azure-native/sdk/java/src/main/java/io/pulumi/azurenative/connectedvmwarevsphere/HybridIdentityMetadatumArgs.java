@@ -16,7 +16,6 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the hybridIdentityMetadata.
-     * 
      */
     @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
@@ -27,7 +26,6 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
 
     /**
      * Gets or sets the Public Key.
-     * 
      */
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
@@ -38,7 +36,6 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the vm.
-     * 
      */
     @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;
@@ -60,7 +56,6 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
 
     /**
      * Gets or sets the Vm Id.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;

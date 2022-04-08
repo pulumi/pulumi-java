@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gets the application HTTP endpoints.
- * 
  */
 public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
 
     /**
      * The list of access modes for the application.
-     * 
      */
     @Import(name="accessModes")
       private final @Nullable List<String> accessModes;
@@ -34,7 +32,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
 
     /**
      * The destination port to connect to.
-     * 
      */
     @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
@@ -45,7 +42,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
 
     /**
      * The value indicates whether to disable GatewayAuth.
-     * 
      */
     @Import(name="disableGatewayAuth")
       private final @Nullable Boolean disableGatewayAuth;
@@ -56,7 +52,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
 
     /**
      * The location of the endpoint.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -67,7 +62,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
 
     /**
      * The private ip address of the endpoint.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -78,7 +72,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
 
     /**
      * The public port to connect to.
-     * 
      */
     @Import(name="publicPort", required=true)
       private final Integer publicPort;
@@ -89,7 +82,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
 
     /**
      * The subdomain suffix of the application.
-     * 
      */
     @Import(name="subDomainSuffix")
       private final @Nullable String subDomainSuffix;

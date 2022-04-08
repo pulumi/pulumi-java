@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The assembly properties definition.
- * 
  */
 public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The assembly culture.
-     * 
      */
     @Import(name="assemblyCulture")
       private final @Nullable Output<String> assemblyCulture;
@@ -33,7 +31,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The assembly name.
-     * 
      */
     @Import(name="assemblyName", required=true)
       private final Output<String> assemblyName;
@@ -44,7 +41,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The assembly public key token.
-     * 
      */
     @Import(name="assemblyPublicKeyToken")
       private final @Nullable Output<String> assemblyPublicKeyToken;
@@ -55,7 +51,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The assembly version.
-     * 
      */
     @Import(name="assemblyVersion")
       private final @Nullable Output<String> assemblyVersion;
@@ -66,7 +61,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The artifact changed time.
-     * 
      */
     @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
@@ -84,7 +78,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The content link.
-     * 
      */
     @Import(name="contentLink")
       private final @Nullable Output<ContentLinkArgs> contentLink;
@@ -95,7 +88,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The content type.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -106,7 +98,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The artifact creation time.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;

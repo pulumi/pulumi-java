@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gets the application SSH endpoint
- * 
  */
 public final class ApplicationGetEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The destination port to connect to.
-     * 
      */
     @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
@@ -32,7 +30,6 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The location of the endpoint.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -43,7 +40,6 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The private ip address of the endpoint.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -54,7 +50,6 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The public port to connect to.
-     * 
      */
     @Import(name="publicPort")
       private final @Nullable Integer publicPort;

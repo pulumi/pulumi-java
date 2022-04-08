@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Action rule with action group configuration
- * 
  */
 public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Action group to trigger if action rule matches
-     * 
      */
     @Import(name="actionGroupId", required=true)
       private final Output<String> actionGroupId;
@@ -35,7 +33,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * conditions on which alerts will be filtered
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<ConditionsArgs> conditions;
@@ -46,7 +43,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of action rule
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +53,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * scope on which action rule will apply
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
@@ -68,7 +63,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if the given action rule is enabled or disabled
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,ActionRuleStatus>> status;
@@ -80,7 +74,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Indicates type of action rule
      * Expected value is 'ActionGroup'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

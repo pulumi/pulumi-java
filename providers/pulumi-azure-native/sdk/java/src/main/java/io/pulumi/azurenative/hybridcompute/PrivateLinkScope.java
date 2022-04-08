@@ -20,7 +20,162 @@ import javax.annotation.Nullable;
  * An Azure Arc PrivateLinkScope definition.
  * API Version: 2021-03-25-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateLinkScopeCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkScope = new AzureNative.HybridCompute.PrivateLinkScope("privateLinkScope", new AzureNative.HybridCompute.PrivateLinkScopeArgs
+ *         {
+ *             Location = "westus",
+ *             ResourceGroupName = "my-resource-group",
+ *             ScopeName = "my-privatelinkscope",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridcompute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridcompute.NewPrivateLinkScope(ctx, "privateLinkScope", &hybridcompute.PrivateLinkScopeArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ScopeName:         pulumi.String("my-privatelinkscope"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkScope = new azure_native.hybridcompute.PrivateLinkScope("privateLinkScope", {
+ *     location: "westus",
+ *     resourceGroupName: "my-resource-group",
+ *     scopeName: "my-privatelinkscope",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_scope = azure_native.hybridcompute.PrivateLinkScope("privateLinkScope",
+ *     location="westus",
+ *     resource_group_name="my-resource-group",
+ *     scope_name="my-privatelinkscope")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PrivateLinkScopeUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkScope = new AzureNative.HybridCompute.PrivateLinkScope("privateLinkScope", new AzureNative.HybridCompute.PrivateLinkScopeArgs
+ *         {
+ *             Location = "westus",
+ *             ResourceGroupName = "my-resource-group",
+ *             ScopeName = "my-privatelinkscope",
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridcompute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridcompute.NewPrivateLinkScope(ctx, "privateLinkScope", &hybridcompute.PrivateLinkScopeArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ScopeName:         pulumi.String("my-privatelinkscope"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkScope = new azure_native.hybridcompute.PrivateLinkScope("privateLinkScope", {
+ *     location: "westus",
+ *     resourceGroupName: "my-resource-group",
+ *     scopeName: "my-privatelinkscope",
+ *     tags: {
+ *         Tag1: "Value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_scope = azure_native.hybridcompute.PrivateLinkScope("privateLinkScope",
+ *     location="westus",
+ *     resource_group_name="my-resource-group",
+ *     scope_name="my-privatelinkscope",
+ *     tags={
+ *         "Tag1": "Value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +190,72 @@ import javax.annotation.Nullable;
 public class PrivateLinkScope extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties that define a Azure Arc PrivateLinkScope resource.
-     * 
      */
     @Export(name="properties", type=HybridComputePrivateLinkScopePropertiesResponse.class, parameters={})
     private Output<HybridComputePrivateLinkScopePropertiesResponse> properties;
 
     /**
      * @return Properties that define a Azure Arc PrivateLinkScope resource.
-     * 
      */
     public Output<HybridComputePrivateLinkScopePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The system meta data relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system meta data relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

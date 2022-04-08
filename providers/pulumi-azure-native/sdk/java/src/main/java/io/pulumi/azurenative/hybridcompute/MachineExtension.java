@@ -21,7 +21,110 @@ import javax.annotation.Nullable;
  * Describes a Machine Extension.
  * API Version: 2020-08-02.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update a Machine Extension (PUT)
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var machineExtension = new AzureNative.HybridCompute.MachineExtension("machineExtension", new AzureNative.HybridCompute.MachineExtensionArgs
+ *         {
+ *             ExtensionName = "CustomScriptExtension",
+ *             Location = "eastus2euap",
+ *             Name = "myMachine",
+ *             Publisher = "Microsoft.Compute",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Settings = 
+ *             {
+ *                 { "commandToExecute", "powershell.exe -c \"Get-Process | Where-Object { $_.CPU -gt 10000 }\"" },
+ *             },
+ *             Type = "CustomScriptExtension",
+ *             TypeHandlerVersion = "1.10",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	hybridcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridcompute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridcompute.NewMachineExtension(ctx, "machineExtension", &hybridcompute.MachineExtensionArgs{
+ * 			ExtensionName:     pulumi.String("CustomScriptExtension"),
+ * 			Location:          pulumi.String("eastus2euap"),
+ * 			Name:              pulumi.String("myMachine"),
+ * 			Publisher:         pulumi.String("Microsoft.Compute"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Settings: pulumi.Any{
+ * 				CommandToExecute: fmt.Sprintf("%v%v%v", "powershell.exe -c \"Get-Process | Where-Object { ", "$", "_.CPU -gt 10000 }\""),
+ * 			},
+ * 			Type:               pulumi.String("CustomScriptExtension"),
+ * 			TypeHandlerVersion: pulumi.String("1.10"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const machineExtension = new azure_native.hybridcompute.MachineExtension("machineExtension", {
+ *     extensionName: "CustomScriptExtension",
+ *     location: "eastus2euap",
+ *     name: "myMachine",
+ *     publisher: "Microsoft.Compute",
+ *     resourceGroupName: "myResourceGroup",
+ *     settings: {
+ *         commandToExecute: `powershell.exe -c "Get-Process | Where-Object { $_.CPU -gt 10000 }"`,
+ *     },
+ *     type: "CustomScriptExtension",
+ *     typeHandlerVersion: "1.10",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * machine_extension = azure_native.hybridcompute.MachineExtension("machineExtension",
+ *     extension_name="CustomScriptExtension",
+ *     location="eastus2euap",
+ *     name="myMachine",
+ *     publisher="Microsoft.Compute",
+ *     resource_group_name="myResourceGroup",
+ *     settings={
+ *         "commandToExecute": "powershell.exe -c \"Get-Process | Where-Object { $_.CPU -gt 10000 }\"",
+ *     },
+ *     type="CustomScriptExtension",
+ *     type_handler_version="1.10")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,168 +139,144 @@ import javax.annotation.Nullable;
 public class MachineExtension extends io.pulumi.resources.CustomResource {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
      * The machine extension instance view.
-     * 
      */
     @Export(name="instanceView", type=MachineExtensionPropertiesResponseInstanceView.class, parameters={})
     private Output</* @Nullable */ MachineExtensionPropertiesResponseInstanceView> instanceView;
 
     /**
      * @return The machine extension instance view.
-     * 
      */
     public Output</* @Nullable */ MachineExtensionPropertiesResponseInstanceView> getInstanceView() {
         return this.instanceView;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Export(name="protectedSettings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> protectedSettings;
 
     /**
      * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     public Output</* @Nullable */ Object> getProtectedSettings() {
         return this.protectedSettings;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Export(name="publisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisher;
 
     /**
      * @return The name of the extension handler publisher.
-     * 
      */
     public Output</* @Nullable */ String> getPublisher() {
         return this.publisher;
     }
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Export(name="settings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> settings;
 
     /**
      * @return Json formatted public settings for the extension.
-     * 
      */
     public Output</* @Nullable */ Object> getSettings() {
         return this.settings;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Export(name="typeHandlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeHandlerVersion;
 
     /**
      * @return Specifies the version of the script handler.
-     * 
      */
     public Output</* @Nullable */ String> getTypeHandlerVersion() {
         return this.typeHandlerVersion;

@@ -14,7 +14,6 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the private dns zone group.
-     * 
      */
     @Import(name="privateDnsZoneGroupName", required=true)
       private final String privateDnsZoneGroupName;
@@ -25,7 +24,6 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the private endpoint.
-     * 
      */
     @Import(name="privateEndpointName", required=true)
       private final String privateEndpointName;
@@ -36,7 +34,6 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

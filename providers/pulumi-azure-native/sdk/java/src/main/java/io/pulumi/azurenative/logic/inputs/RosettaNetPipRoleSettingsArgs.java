@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The integration account RosettaNet ProcessConfiguration role settings.
- * 
  */
 public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The action name.
-     * 
      */
     @Import(name="action", required=true)
       private final Output<String> action;
@@ -33,7 +31,6 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The RosettaNet ProcessConfiguration business document.
-     * 
      */
     @Import(name="businessDocument", required=true)
       private final Output<RosettaNetPipBusinessDocumentArgs> businessDocument;
@@ -44,7 +41,6 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +51,6 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The role name.
-     * 
      */
     @Import(name="role", required=true)
       private final Output<String> role;
@@ -66,7 +61,6 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The RosettaNet ProcessConfiguration role type.
-     * 
      */
     @Import(name="roleType", required=true)
       private final Output<RosettaNetPipRoleType> roleType;
@@ -77,7 +71,6 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The service name.
-     * 
      */
     @Import(name="service", required=true)
       private final Output<String> service;
@@ -88,7 +81,6 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The service classification name.
-     * 
      */
     @Import(name="serviceClassification", required=true)
       private final Output<String> serviceClassification;

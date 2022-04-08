@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the latest status of running an image template
- * 
  */
 public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
 
     /**
      * End time of the last run (UTC)
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -31,7 +29,6 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
 
     /**
      * Verbose information about the last run state
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -42,7 +39,6 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
 
     /**
      * State of the last run
-     * 
      */
     @Import(name="runState")
       private final @Nullable String runState;
@@ -53,7 +49,6 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
 
     /**
      * Sub-state of the last run
-     * 
      */
     @Import(name="runSubState")
       private final @Nullable String runSubState;
@@ -64,7 +59,6 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
 
     /**
      * Start time of the last run (UTC)
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;

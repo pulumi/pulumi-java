@@ -16,7 +16,6 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Site name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -27,7 +26,6 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Site extension name.
-     * 
      */
     @Import(name="siteExtensionId")
       private final @Nullable Output<String> siteExtensionId;

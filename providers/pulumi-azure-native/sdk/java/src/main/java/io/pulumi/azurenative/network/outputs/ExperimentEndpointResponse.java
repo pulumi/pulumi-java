@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ExperimentEndpointResponse {
     /**
      * The endpoint URL
-     * 
      */
     private final @Nullable String endpoint;
     /**
      * The name of the endpoint
-     * 
      */
     private final @Nullable String name;
 
@@ -32,14 +30,12 @@ public final class ExperimentEndpointResponse {
 
     /**
      * The endpoint URL
-     * 
     */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The name of the endpoint
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

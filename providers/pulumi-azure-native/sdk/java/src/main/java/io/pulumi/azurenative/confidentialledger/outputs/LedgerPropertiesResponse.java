@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class LedgerPropertiesResponse {
     /**
      * Array of all AAD based Security Principals.
-     * 
      */
     private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
     /**
      * Array of all cert based Security Principals.
-     * 
      */
     private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
     /**
      * Endpoint for accessing network identity.
-     * 
      */
     private final String identityServiceUri;
     /**
      * Internal namespace for the Ledger
-     * 
      */
     private final String ledgerInternalNamespace;
     /**
      * Unique name for the Confidential Ledger.
-     * 
      */
     private final String ledgerName;
     /**
      * Name of the Blob Storage Account for saving ledger files
-     * 
      */
     private final @Nullable String ledgerStorageAccount;
     /**
      * Type of Confidential Ledger
-     * 
      */
     private final @Nullable String ledgerType;
     /**
      * Endpoint for calling Ledger Service.
-     * 
      */
     private final String ledgerUri;
     /**
      * Provisioning state of Ledger Resource
-     * 
      */
     private final String provisioningState;
 
@@ -84,63 +75,54 @@ public final class LedgerPropertiesResponse {
 
     /**
      * Array of all AAD based Security Principals.
-     * 
     */
     public List<AADBasedSecurityPrincipalResponse> getAadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? List.of() : this.aadBasedSecurityPrincipals;
     }
     /**
      * Array of all cert based Security Principals.
-     * 
     */
     public List<CertBasedSecurityPrincipalResponse> getCertBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? List.of() : this.certBasedSecurityPrincipals;
     }
     /**
      * Endpoint for accessing network identity.
-     * 
     */
     public String getIdentityServiceUri() {
         return this.identityServiceUri;
     }
     /**
      * Internal namespace for the Ledger
-     * 
     */
     public String getLedgerInternalNamespace() {
         return this.ledgerInternalNamespace;
     }
     /**
      * Unique name for the Confidential Ledger.
-     * 
     */
     public String getLedgerName() {
         return this.ledgerName;
     }
     /**
      * Name of the Blob Storage Account for saving ledger files
-     * 
     */
     public Optional<String> getLedgerStorageAccount() {
         return Optional.ofNullable(this.ledgerStorageAccount);
     }
     /**
      * Type of Confidential Ledger
-     * 
     */
     public Optional<String> getLedgerType() {
         return Optional.ofNullable(this.ledgerType);
     }
     /**
      * Endpoint for calling Ledger Service.
-     * 
     */
     public String getLedgerUri() {
         return this.ledgerUri;
     }
     /**
      * Provisioning state of Ledger Resource
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

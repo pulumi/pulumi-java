@@ -16,7 +16,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * Integration runtime name
-     * 
      */
     @Import(name="integrationRuntimeName", required=true)
       private final String integrationRuntimeName;
@@ -27,7 +26,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * Metadata path.
-     * 
      */
     @Import(name="metadataPath")
       private final @Nullable String metadataPath;
@@ -38,7 +36,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -49,7 +46,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

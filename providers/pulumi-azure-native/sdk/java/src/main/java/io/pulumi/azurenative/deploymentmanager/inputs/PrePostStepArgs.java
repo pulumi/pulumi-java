@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The properties that define a step.
- * 
  */
 public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource Id of the step to be run.
-     * 
      */
     @Import(name="stepId", required=true)
       private final Output<String> stepId;

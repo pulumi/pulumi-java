@@ -13,12 +13,10 @@ public final class AdhocBasedTriggerContextResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AdhocBasedTriggerContext'.
-     * 
      */
     private final String objectType;
     /**
      * Tagging Criteria containing retention tag for adhoc backup.
-     * 
      */
     private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
 
@@ -33,14 +31,12 @@ public final class AdhocBasedTriggerContextResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AdhocBasedTriggerContext'.
-     * 
     */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Tagging Criteria containing retention tag for adhoc backup.
-     * 
     */
     public AdhocBasedTaggingCriteriaResponse getTaggingCriteria() {
         return this.taggingCriteria;

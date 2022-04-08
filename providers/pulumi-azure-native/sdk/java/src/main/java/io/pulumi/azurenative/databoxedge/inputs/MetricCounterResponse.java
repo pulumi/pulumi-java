@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The metric counter
- * 
  */
 public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The additional dimensions to be added to metric.
-     * 
      */
     @Import(name="additionalDimensions")
       private final @Nullable List<MetricDimensionResponse> additionalDimensions;
@@ -33,7 +31,6 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The dimension filter.
-     * 
      */
     @Import(name="dimensionFilter")
       private final @Nullable List<MetricDimensionResponse> dimensionFilter;
@@ -44,7 +41,6 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The instance from which counter should be collected.
-     * 
      */
     @Import(name="instance")
       private final @Nullable String instance;
@@ -55,7 +51,6 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The counter name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

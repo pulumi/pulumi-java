@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a active directory administrator.
- * 
  */
 public final class ManagedInstanceExternalAdministratorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
 
     /**
      * Type of the sever administrator.
-     * 
      */
     @Import(name="administratorType")
       private final @Nullable String administratorType;
@@ -32,7 +30,6 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
 
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
      */
     @Import(name="azureADOnlyAuthentication")
       private final @Nullable Boolean azureADOnlyAuthentication;
@@ -43,7 +40,6 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
 
     /**
      * Login name of the server administrator.
-     * 
      */
     @Import(name="login")
       private final @Nullable String login;
@@ -54,7 +50,6 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
 
     /**
      * Principal Type of the sever administrator.
-     * 
      */
     @Import(name="principalType")
       private final @Nullable String principalType;
@@ -65,7 +60,6 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
 
     /**
      * SID (object ID) of the server administrator.
-     * 
      */
     @Import(name="sid")
       private final @Nullable String sid;
@@ -76,7 +70,6 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
 
     /**
      * Tenant ID of the administrator.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

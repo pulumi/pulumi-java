@@ -14,7 +14,6 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
 
     /**
      * The Disaster Recovery configuration name
-     * 
      */
     @Import(name="alias", required=true)
       private final String alias;
@@ -25,7 +24,6 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

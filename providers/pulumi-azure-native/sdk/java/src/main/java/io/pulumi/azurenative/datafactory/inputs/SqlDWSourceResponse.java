@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity SQL Data Warehouse source.
- * 
  */
 public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -33,7 +31,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -44,7 +41,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
-     * 
      */
     @Import(name="partitionOption")
       private final @Nullable Object partitionOption;
@@ -66,7 +61,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The settings that will be leveraged for Sql source partitioning.
-     * 
      */
     @Import(name="partitionSettings")
       private final @Nullable SqlPartitionSettingsResponse partitionSettings;
@@ -77,7 +71,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -88,7 +81,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -99,7 +91,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -110,7 +101,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SQL Data Warehouse reader query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="sqlReaderQuery")
       private final @Nullable Object sqlReaderQuery;
@@ -121,7 +111,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the stored procedure for a SQL Data Warehouse source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="sqlReaderStoredProcedureName")
       private final @Nullable Object sqlReaderStoredProcedureName;
@@ -132,7 +121,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
-     * 
      */
     @Import(name="storedProcedureParameters")
       private final @Nullable Object storedProcedureParameters;
@@ -144,7 +132,6 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Copy source type.
      * Expected value is 'SqlDWSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

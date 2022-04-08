@@ -15,33 +15,27 @@ import javax.annotation.Nullable;
 public final class TaskRunRequestResponse {
     /**
      * The dedicated agent pool for the run.
-     * 
      */
     private final @Nullable String agentPoolName;
     /**
      * The value that indicates whether archiving is enabled for the run or not.
-     * 
      */
     private final @Nullable Boolean isArchiveEnabled;
     /**
      * The template that describes the repository and tag information for run log artifact.
-     * 
      */
     private final @Nullable String logTemplate;
     /**
      * Set of overridable parameters that can be passed when running a Task.
-     * 
      */
     private final @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties;
     /**
      * The resource ID of task against which run has to be queued.
-     * 
      */
     private final String taskId;
     /**
      * The type of the run request.
      * Expected value is 'TaskRunRequest'.
-     * 
      */
     private final String type;
 
@@ -63,35 +57,30 @@ public final class TaskRunRequestResponse {
 
     /**
      * The dedicated agent pool for the run.
-     * 
     */
     public Optional<String> getAgentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The value that indicates whether archiving is enabled for the run or not.
-     * 
     */
     public Optional<Boolean> getIsArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
-     * 
     */
     public Optional<String> getLogTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
      * Set of overridable parameters that can be passed when running a Task.
-     * 
     */
     public Optional<OverrideTaskStepPropertiesResponse> getOverrideTaskStepProperties() {
         return Optional.ofNullable(this.overrideTaskStepProperties);
     }
     /**
      * The resource ID of task against which run has to be queued.
-     * 
     */
     public String getTaskId() {
         return this.taskId;
@@ -99,7 +88,6 @@ public final class TaskRunRequestResponse {
     /**
      * The type of the run request.
      * Expected value is 'TaskRunRequest'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class TableSpecificationResponse {
     /**
      * Swagger schema description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The format, if 'type' is not 'object'
-     * 
      */
     private final @Nullable String format;
     /**
      * The set of columns within the data table.
-     * 
      */
     private final @Nullable Map<String,ColumnSpecificationResponse> properties;
     /**
      * Swagger schema title.
-     * 
      */
     private final @Nullable String title;
     /**
      * The type of the entity described in swagger.
-     * 
      */
     private final String type;
 
@@ -55,35 +50,30 @@ public final class TableSpecificationResponse {
 
     /**
      * Swagger schema description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The format, if 'type' is not 'object'
-     * 
     */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * The set of columns within the data table.
-     * 
     */
     public Map<String,ColumnSpecificationResponse> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Swagger schema title.
-     * 
     */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The type of the entity described in swagger.
-     * 
     */
     public String getType() {
         return this.type;

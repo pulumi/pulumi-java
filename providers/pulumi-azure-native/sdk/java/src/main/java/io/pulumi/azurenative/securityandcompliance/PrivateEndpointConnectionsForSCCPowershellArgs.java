@@ -17,7 +17,6 @@ public final class PrivateEndpointConnectionsForSCCPowershellArgs extends io.pul
 
     /**
      * The name of the private endpoint connection associated with the Azure resource
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -28,7 +27,6 @@ public final class PrivateEndpointConnectionsForSCCPowershellArgs extends io.pul
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -39,7 +37,6 @@ public final class PrivateEndpointConnectionsForSCCPowershellArgs extends io.pul
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class PrivateEndpointConnectionsForSCCPowershellArgs extends io.pul
 
     /**
      * The name of the service instance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

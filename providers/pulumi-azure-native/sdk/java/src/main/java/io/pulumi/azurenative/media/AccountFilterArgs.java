@@ -20,7 +20,6 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -31,7 +30,6 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Account Filter name
-     * 
      */
     @Import(name="filterName")
       private final @Nullable Output<String> filterName;
@@ -42,7 +40,6 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The first quality.
-     * 
      */
     @Import(name="firstQuality")
       private final @Nullable Output<FirstQualityArgs> firstQuality;
@@ -53,7 +50,6 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The presentation time range.
-     * 
      */
     @Import(name="presentationTimeRange")
       private final @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
@@ -64,7 +60,6 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tracks selection conditions.
-     * 
      */
     @Import(name="tracks")
       private final @Nullable Output<List<FilterTrackSelectionArgs>> tracks;

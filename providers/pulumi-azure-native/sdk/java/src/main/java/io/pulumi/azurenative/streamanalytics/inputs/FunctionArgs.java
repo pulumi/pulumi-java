@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
- * 
  */
 public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties that are associated with a function.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ScalarFunctionPropertiesArgs> properties;

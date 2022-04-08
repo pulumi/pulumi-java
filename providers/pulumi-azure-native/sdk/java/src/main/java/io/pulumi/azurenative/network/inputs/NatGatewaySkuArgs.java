@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of nat gateway.
- * 
  */
 public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Nat Gateway SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,NatGatewaySkuName>> name;

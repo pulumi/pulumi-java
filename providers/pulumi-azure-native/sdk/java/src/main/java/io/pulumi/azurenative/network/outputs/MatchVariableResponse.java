@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class MatchVariableResponse {
     /**
      * The selector of match variable.
-     * 
      */
     private final @Nullable String selector;
     /**
      * Match Variable.
-     * 
      */
     private final String variableName;
 
@@ -32,14 +30,12 @@ public final class MatchVariableResponse {
 
     /**
      * The selector of match variable.
-     * 
     */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * Match Variable.
-     * 
     */
     public String getVariableName() {
         return this.variableName;

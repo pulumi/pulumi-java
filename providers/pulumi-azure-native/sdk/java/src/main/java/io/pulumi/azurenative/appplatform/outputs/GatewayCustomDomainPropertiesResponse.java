@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GatewayCustomDomainPropertiesResponse {
     /**
      * The thumbprint of bound certificate.
-     * 
      */
     private final @Nullable String thumbprint;
 
@@ -24,7 +23,6 @@ public final class GatewayCustomDomainPropertiesResponse {
 
     /**
      * The thumbprint of bound certificate.
-     * 
     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);

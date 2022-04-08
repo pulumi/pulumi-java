@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
-     * 
      */
     @EnumType
     public enum StorageAccountType {

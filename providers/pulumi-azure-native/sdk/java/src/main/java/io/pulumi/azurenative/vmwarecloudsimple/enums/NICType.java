@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * NIC type
-     * 
      */
     @EnumType
     public enum NICType {

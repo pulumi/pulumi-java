@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about a Provider. A Provider is an entity that offers Targets to run Azure Quantum Jobs.
- * 
  */
 public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provider's marketplace application display name.
-     * 
      */
     @Import(name="applicationName")
       private final @Nullable String applicationName;
@@ -31,7 +29,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A Uri identifying the specific instance of this provider.
-     * 
      */
     @Import(name="instanceUri")
       private final @Nullable String instanceUri;
@@ -42,7 +39,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique id of this provider.
-     * 
      */
     @Import(name="providerId")
       private final @Nullable String providerId;
@@ -53,7 +49,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku associated with pricing information for this provider.
-     * 
      */
     @Import(name="providerSku")
       private final @Nullable String providerSku;
@@ -64,7 +59,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Provisioning status field
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -75,7 +69,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id to track resource usage for the provider.
-     * 
      */
     @Import(name="resourceUsageId")
       private final @Nullable String resourceUsageId;

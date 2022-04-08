@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the Facebook provider.
- * 
  */
 public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -34,7 +32,6 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the Facebook api to be used while logging in.
-     * 
      */
     @Import(name="graphApiVersion")
       private final @Nullable Output<String> graphApiVersion;
@@ -45,7 +42,6 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the login flow.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
@@ -56,7 +52,6 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the app registration for the Facebook provider.
-     * 
      */
     @Import(name="registration")
       private final @Nullable Output<AppRegistrationArgs> registration;

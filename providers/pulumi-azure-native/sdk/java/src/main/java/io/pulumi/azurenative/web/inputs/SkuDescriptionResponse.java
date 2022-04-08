@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a SKU for a scalable resource.
- * 
  */
 public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Capabilities of the SKU, e.g., is traffic manager enabled?
-     * 
      */
     @Import(name="capabilities")
       private final @Nullable List<CapabilityResponse> capabilities;
@@ -35,7 +33,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Current number of instances assigned to the resource.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -46,7 +43,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Family code of the resource SKU.
-     * 
      */
     @Import(name="family")
       private final @Nullable String family;
@@ -57,7 +53,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Locations of the SKU.
-     * 
      */
     @Import(name="locations")
       private final @Nullable List<String> locations;
@@ -68,7 +63,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the resource SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -79,7 +73,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Size specifier of the resource SKU.
-     * 
      */
     @Import(name="size")
       private final @Nullable String size;
@@ -90,7 +83,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Min, max, and default scale values of the SKU.
-     * 
      */
     @Import(name="skuCapacity")
       private final @Nullable SkuCapacityResponse skuCapacity;
@@ -101,7 +93,6 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Service tier of the resource SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

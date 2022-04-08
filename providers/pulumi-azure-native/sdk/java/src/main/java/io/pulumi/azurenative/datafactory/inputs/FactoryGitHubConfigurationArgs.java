@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Factory's GitHub repo information.
- * 
  */
 public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -32,7 +30,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * GitHub bring your own app client id.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -43,7 +40,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * GitHub bring your own app client secret information.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Output<GitHubClientSecretArgs> clientSecret;
@@ -54,7 +50,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Collaboration branch.
-     * 
      */
     @Import(name="collaborationBranch", required=true)
       private final Output<String> collaborationBranch;
@@ -65,7 +60,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -76,7 +70,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Last commit id.
-     * 
      */
     @Import(name="lastCommitId")
       private final @Nullable Output<String> lastCommitId;
@@ -87,7 +80,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Repository name.
-     * 
      */
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
@@ -98,7 +90,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Root folder.
-     * 
      */
     @Import(name="rootFolder", required=true)
       private final Output<String> rootFolder;
@@ -110,7 +101,6 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     /**
      * Type of repo configuration.
      * Expected value is 'FactoryGitHubConfiguration'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

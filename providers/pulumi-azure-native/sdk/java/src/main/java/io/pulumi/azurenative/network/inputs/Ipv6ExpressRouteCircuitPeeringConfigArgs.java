@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains IPv6 peering config.
- * 
  */
 public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
 
     /**
      * The Microsoft peering configuration.
-     * 
      */
     @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
@@ -35,7 +33,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
 
     /**
      * The primary address prefix.
-     * 
      */
     @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
@@ -46,7 +43,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
 
     /**
      * The reference to the RouteFilter resource.
-     * 
      */
     @Import(name="routeFilter")
       private final @Nullable Output<SubResourceArgs> routeFilter;
@@ -57,7 +53,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
 
     /**
      * The secondary address prefix.
-     * 
      */
     @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
@@ -68,7 +63,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
 
     /**
      * The state of peering.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state;

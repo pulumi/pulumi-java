@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The action to be executed by a job step.
- * 
  */
 public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The source of the action to execute.
-     * 
      */
     @Import(name="source")
       private final @Nullable String source;
@@ -31,7 +29,6 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Type of action being executed by the job step.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -42,7 +39,6 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The action value, for example the text of the T-SQL script to execute.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

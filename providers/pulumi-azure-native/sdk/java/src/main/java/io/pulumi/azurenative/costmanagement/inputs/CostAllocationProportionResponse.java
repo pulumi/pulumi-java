@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Target resources and allocation
- * 
  */
 public final class CostAllocationProportionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
 
     /**
      * Target resource for cost allocation
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
 
     /**
      * Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
-     * 
      */
     @Import(name="percentage", required=true)
       private final Double percentage;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Defender for Containers AWS offering configurations
- * 
  */
 public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
 
     /**
      * The cloudwatch to kinesis connection configuration
-     * 
      */
     @Import(name="cloudWatchToKinesis")
       private final @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
@@ -35,7 +33,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
 
     /**
      * The offering description.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -46,7 +43,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
 
     /**
      * The kinesis to s3 connection configuration
-     * 
      */
     @Import(name="kinesisToS3")
       private final @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
@@ -57,7 +53,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
 
     /**
      * The kubernetes to scuba connection configuration
-     * 
      */
     @Import(name="kubernetesScubaReader")
       private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
@@ -68,7 +63,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
 
     /**
      * The kubernetes service connection configuration
-     * 
      */
     @Import(name="kubernetesService")
       private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
@@ -80,7 +74,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
     /**
      * The type of the security offering.
      * Expected value is 'DefenderForContainersAws'.
-     * 
      */
     @Import(name="offeringType", required=true)
       private final String offeringType;

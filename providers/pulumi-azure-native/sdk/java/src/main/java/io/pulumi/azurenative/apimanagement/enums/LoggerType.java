@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Logger type.
-     * 
      */
     @EnumType
     public enum LoggerType {
         /**
          * Azure Event Hub as log destination.
-         * 
          */
         AzureEventHub("azureEventHub"),
         /**
          * Azure Application Insights as log destination.
-         * 
          */
         ApplicationInsights("applicationInsights"),
         /**
          * Azure Monitor
-         * 
          */
         AzureMonitor("azureMonitor");
 

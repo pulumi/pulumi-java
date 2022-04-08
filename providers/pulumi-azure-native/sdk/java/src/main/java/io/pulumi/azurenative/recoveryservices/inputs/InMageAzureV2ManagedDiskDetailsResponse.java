@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * InMageAzureV2 Managed disk details.
- * 
  */
 public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
 
     /**
      * The disk id.
-     * 
      */
     @Import(name="diskId")
       private final @Nullable String diskId;
@@ -31,7 +29,6 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
 
     /**
      * The replica disk type.
-     * 
      */
     @Import(name="replicaDiskType")
       private final @Nullable String replicaDiskType;
@@ -42,7 +39,6 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
 
     /**
      * Seed managed disk Id.
-     * 
      */
     @Import(name="seedManagedDiskId")
       private final @Nullable String seedManagedDiskId;

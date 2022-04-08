@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The mode of the connected registry resource that indicates the permissions of the registry.
-     * 
      */
     @EnumType
     public enum ConnectedRegistryMode {

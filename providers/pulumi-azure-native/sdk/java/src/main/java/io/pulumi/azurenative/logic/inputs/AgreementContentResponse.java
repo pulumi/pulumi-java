@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The integration account agreement content.
- * 
  */
 public final class AgreementContentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The AS2 agreement content.
-     * 
      */
     @Import(name="aS2")
       private final @Nullable AS2AgreementContentResponse aS2;
@@ -33,7 +31,6 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The EDIFACT agreement content.
-     * 
      */
     @Import(name="edifact")
       private final @Nullable EdifactAgreementContentResponse edifact;
@@ -44,7 +41,6 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The X12 agreement content.
-     * 
      */
     @Import(name="x12")
       private final @Nullable X12AgreementContentResponse x12;

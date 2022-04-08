@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The object representing periodic mode backup policy.
- * 
  */
 public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
 
     /**
      * Configuration values for periodic mode backup
-     * 
      */
     @Import(name="periodicModeProperties")
       private final @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
@@ -33,7 +31,6 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
     /**
      * Describes the mode of backups.
      * Expected value is 'Periodic'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

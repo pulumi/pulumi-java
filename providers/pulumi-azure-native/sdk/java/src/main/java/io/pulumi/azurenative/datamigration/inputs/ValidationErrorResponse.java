@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Description about the errors happen while performing migration validation
- * 
  */
 public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Severity of the error
-     * 
      */
     @Import(name="severity", required=true)
       private final String severity;
@@ -29,7 +27,6 @@ public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Error Text
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

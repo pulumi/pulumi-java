@@ -22,7 +22,6 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How the run should be forced to rerun even if the run request configuration has not changed
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -33,7 +32,6 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity for the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
@@ -44,7 +42,6 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +52,6 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -66,7 +62,6 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -77,7 +72,6 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The request (parameters) for the run
-     * 
      */
     @Import(name="runRequest")
       private final @Nullable Output<Object> runRequest;
@@ -88,7 +82,6 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the task run.
-     * 
      */
     @Import(name="taskRunName")
       private final @Nullable Output<String> taskRunName;

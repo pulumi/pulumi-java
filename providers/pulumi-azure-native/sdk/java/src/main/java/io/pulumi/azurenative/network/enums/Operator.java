@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Comparison type to use for matching with the variable value.
-     * 
      */
     @EnumType
     public enum Operator {

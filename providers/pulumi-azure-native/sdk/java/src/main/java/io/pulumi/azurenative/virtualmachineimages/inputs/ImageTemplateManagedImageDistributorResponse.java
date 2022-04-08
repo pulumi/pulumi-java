@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Distribute as a Managed Disk Image.
- * 
  */
 public final class ImageTemplateManagedImageDistributorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
 
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
-     * 
      */
     @Import(name="artifactTags")
       private final @Nullable Map<String,String> artifactTags;
@@ -32,7 +30,6 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
 
     /**
      * Resource Id of the Managed Disk Image
-     * 
      */
     @Import(name="imageId", required=true)
       private final String imageId;
@@ -43,7 +40,6 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
 
     /**
      * Azure location for the image, should match if image already exists
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -54,7 +50,6 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
 
     /**
      * The name to be used for the associated RunOutput.
-     * 
      */
     @Import(name="runOutputName", required=true)
       private final String runOutputName;
@@ -66,7 +61,6 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
     /**
      * Type of distribution.
      * Expected value is 'ManagedImage'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

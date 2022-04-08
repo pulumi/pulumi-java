@@ -17,7 +17,6 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Managed Cassandra cluster name.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -28,7 +27,6 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Data center name in a managed Cassandra cluster.
-     * 
      */
     @Import(name="dataCenterName")
       private final @Nullable Output<String> dataCenterName;
@@ -39,7 +37,6 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Properties of a managed Cassandra data center.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<DataCenterResourcePropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

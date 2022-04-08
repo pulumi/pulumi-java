@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * User-assigned managed identity.
- * 
  */
 public final class UserAssignedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * Client App Id associated with this identity.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -31,7 +29,6 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * Azure Active Directory principal ID associated with this Identity.
-     * 
      */
     @Import(name="principalId")
       private final @Nullable String principalId;

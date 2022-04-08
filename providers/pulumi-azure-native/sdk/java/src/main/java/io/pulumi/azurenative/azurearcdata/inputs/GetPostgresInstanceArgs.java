@@ -14,7 +14,6 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of Postgres Instance
-     * 
      */
     @Import(name="postgresInstanceName", required=true)
       private final String postgresInstanceName;
@@ -25,7 +24,6 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Cni configuration
- * 
  */
 public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Pod Subnet
-     * 
      */
     @Import(name="podSubnet", required=true)
       private final String podSubnet;
@@ -29,7 +27,6 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Service subnet
-     * 
      */
     @Import(name="serviceSubnet", required=true)
       private final String serviceSubnet;
@@ -40,7 +37,6 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cni type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -51,7 +47,6 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cni version
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

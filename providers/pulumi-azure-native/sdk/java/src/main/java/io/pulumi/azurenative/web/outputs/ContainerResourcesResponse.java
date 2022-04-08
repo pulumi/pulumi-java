@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ContainerResourcesResponse {
     /**
      * Required CPU in cores, e.g. 0.5
-     * 
      */
     private final @Nullable Double cpu;
     /**
      * Required memory, e.g. "250Mb"
-     * 
      */
     private final @Nullable String memory;
 
@@ -33,14 +31,12 @@ public final class ContainerResourcesResponse {
 
     /**
      * Required CPU in cores, e.g. 0.5
-     * 
     */
     public Optional<Double> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Required memory, e.g. "250Mb"
-     * 
     */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);

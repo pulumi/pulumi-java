@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that creates pipeline runs periodically, on schedule.
- * 
  */
 public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -35,7 +33,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -46,7 +43,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Pipelines that need to be started.
-     * 
      */
     @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
@@ -57,7 +53,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Recurrence schedule configuration.
-     * 
      */
     @Import(name="recurrence", required=true)
       private final ScheduleTriggerRecurrenceResponse recurrence;
@@ -68,7 +63,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     * 
      */
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
@@ -80,7 +74,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
     /**
      * Trigger type.
      * Expected value is 'ScheduleTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Settings properties for Active Directory (AD).
- * 
  */
 public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the security identifier (SID) for Azure Storage.
-     * 
      */
     @Import(name="azureStorageSid", required=true)
       private final Output<String> azureStorageSid;
@@ -30,7 +28,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the domain GUID.
-     * 
      */
     @Import(name="domainGuid", required=true)
       private final Output<String> domainGuid;
@@ -41,7 +38,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the primary domain that the AD DNS server is authoritative for.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -52,7 +48,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the security identifier (SID).
-     * 
      */
     @Import(name="domainSid", required=true)
       private final Output<String> domainSid;
@@ -63,7 +58,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the Active Directory forest to get.
-     * 
      */
     @Import(name="forestName", required=true)
       private final Output<String> forestName;
@@ -74,7 +68,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the NetBIOS domain name.
-     * 
      */
     @Import(name="netBiosDomainName", required=true)
       private final Output<String> netBiosDomainName;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for the task that migrates on-prem SQL Server databases to Azure SQL Database
- * 
  */
 public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
 
     /**
      * Databases to migrate
-     * 
      */
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
@@ -34,7 +32,6 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
 
     /**
      * Information for connecting to source
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
@@ -45,7 +42,6 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
 
     /**
      * Information for connecting to target
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
@@ -55,10 +51,9 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     }
 
     /**
-     * Options for enabling various post migration validations. Available options,
-     *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data.
+     * Options for enabling various post migration validations. Available options, 
+     *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
      *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
-     * 
      */
     @Import(name="validationOptions")
       private final @Nullable Output<MigrationValidationOptionsArgs> validationOptions;

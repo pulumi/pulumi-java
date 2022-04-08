@@ -19,7 +19,6 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
 
     /**
      * NSX DHCP identifier. Generally the same as the DHCP display name
-     * 
      */
     @Import(name="dhcpId")
       private final @Nullable Output<String> dhcpId;
@@ -30,7 +29,6 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Type of DHCP: SERVER or RELAY.
-     * 
      */
     @Import(name="dhcpType", required=true)
       private final Output<Either<String,DhcpTypeEnum>> dhcpType;
@@ -41,7 +39,6 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Display name of the DHCP entity.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -52,7 +49,6 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -63,7 +59,6 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
 
     /**
      * NSX revision number.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Double> revision;

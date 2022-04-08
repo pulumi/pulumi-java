@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the task that validates connection to Azure SQL Database Managed Instance
- * 
  */
 public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.reso
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable Output<ConnectToTargetSqlMITaskInputArgs> input;
@@ -33,7 +31,6 @@ public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.reso
     /**
      * Task type.
      * Expected value is 'ConnectToTarget.AzureSqlDbMI'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final Output<String> taskType;

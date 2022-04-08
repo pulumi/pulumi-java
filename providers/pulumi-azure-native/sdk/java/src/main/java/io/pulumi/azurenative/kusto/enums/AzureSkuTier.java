@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SKU tier.
-     * 
      */
     @EnumType
     public enum AzureSkuTier {

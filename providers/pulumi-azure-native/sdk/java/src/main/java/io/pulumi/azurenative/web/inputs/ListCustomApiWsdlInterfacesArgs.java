@@ -19,7 +19,6 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
 
     /**
      * The WSDL content
-     * 
      */
     @Import(name="content")
       private final @Nullable String content;
@@ -30,7 +29,6 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
 
     /**
      * The WSDL import method
-     * 
      */
     @Import(name="importMethod")
       private final @Nullable Either<String,WsdlImportMethod> importMethod;
@@ -41,7 +39,6 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
 
     /**
      * The location
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -52,7 +49,6 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
 
     /**
      * The service with name and endpoint names
-     * 
      */
     @Import(name="service")
       private final @Nullable WsdlService service;
@@ -63,7 +59,6 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
 
     /**
      * Subscription Id
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
@@ -74,7 +69,6 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
 
     /**
      * The WSDL URL
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

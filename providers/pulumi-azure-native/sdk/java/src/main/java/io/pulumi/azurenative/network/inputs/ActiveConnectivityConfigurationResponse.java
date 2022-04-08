@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Active connectivity configuration.
- * 
  */
 public final class ActiveConnectivityConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Groups for configuration
-     * 
      */
     @Import(name="appliesToGroups")
       private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
@@ -35,7 +33,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Deployment time string.
-     * 
      */
     @Import(name="commitTime")
       private final @Nullable String commitTime;
@@ -46,7 +43,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Effective configuration groups.
-     * 
      */
     @Import(name="configurationGroups")
       private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
@@ -57,7 +53,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Connectivity topology type.
-     * 
      */
     @Import(name="connectivityTopology", required=true)
       private final String connectivityTopology;
@@ -68,7 +63,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Flag if need to remove current existing peerings.
-     * 
      */
     @Import(name="deleteExistingPeering")
       private final @Nullable String deleteExistingPeering;
@@ -79,7 +73,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * A description of the connectivity configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -90,7 +83,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * A friendly name for the resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -101,7 +93,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * List of hubItems
-     * 
      */
     @Import(name="hubs")
       private final @Nullable List<HubResponse> hubs;
@@ -112,7 +103,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -123,7 +113,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Flag if global mesh is supported.
-     * 
      */
     @Import(name="isGlobal")
       private final @Nullable String isGlobal;
@@ -134,7 +123,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * The provisioning state of the connectivity configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -145,7 +133,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
 
     /**
      * Deployment region.
-     * 
      */
     @Import(name="region")
       private final @Nullable String region;

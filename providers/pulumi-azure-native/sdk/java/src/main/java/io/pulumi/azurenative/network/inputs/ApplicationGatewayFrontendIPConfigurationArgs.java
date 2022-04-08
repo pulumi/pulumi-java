@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Frontend IP configuration of an application gateway.
- * 
  */
 public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -34,7 +32,6 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
 
     /**
      * Name of the frontend IP configuration that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -45,7 +42,6 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
 
     /**
      * PrivateIPAddress of the network interface IP Configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
@@ -56,7 +52,6 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -67,7 +62,6 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
 
     /**
      * Reference to the application gateway private link configuration.
-     * 
      */
     @Import(name="privateLinkConfiguration")
       private final @Nullable Output<SubResourceArgs> privateLinkConfiguration;
@@ -78,7 +72,6 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
 
     /**
      * Reference to the PublicIP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
@@ -89,7 +82,6 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
 
     /**
      * Reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;

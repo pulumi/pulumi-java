@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GetJobResult {
     /**
      * Gets the job resource identifier.
-     * 
      */
     private final String id;
     /**
      * Gets the job resource name.
-     * 
      */
     private final String name;
     /**
      * Gets or sets the job properties.
-     * 
      */
     private final JobPropertiesResponse properties;
     /**
      * Gets the job resource type.
-     * 
      */
     private final String type;
 
@@ -45,28 +41,24 @@ public final class GetJobResult {
 
     /**
      * Gets the job resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the job resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the job properties.
-     * 
     */
     public JobPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets the job resource type.
-     * 
     */
     public String getType() {
         return this.type;

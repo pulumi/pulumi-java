@@ -14,7 +14,6 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -25,7 +24,6 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
 
     /**
      * The name of the virtual machine.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

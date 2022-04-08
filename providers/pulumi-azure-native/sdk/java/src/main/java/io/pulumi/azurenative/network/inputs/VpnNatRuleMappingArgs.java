@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Vpn NatRule mapping.
- * 
  */
 public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Address space for Vpn NatRule mapping.
-     * 
      */
     @Import(name="addressSpace")
       private final @Nullable Output<String> addressSpace;

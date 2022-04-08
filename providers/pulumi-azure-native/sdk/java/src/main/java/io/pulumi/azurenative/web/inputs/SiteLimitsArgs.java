@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metric limits set on an app.
- * 
  */
 public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum allowed disk size usage in MB.
-     * 
      */
     @Import(name="maxDiskSizeInMb")
       private final @Nullable Output<Double> maxDiskSizeInMb;
@@ -31,7 +29,6 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum allowed memory usage in MB.
-     * 
      */
     @Import(name="maxMemoryInMb")
       private final @Nullable Output<Double> maxMemoryInMb;
@@ -42,7 +39,6 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum allowed CPU usage percentage.
-     * 
      */
     @Import(name="maxPercentageCpu")
       private final @Nullable Output<Double> maxPercentageCpu;

@@ -16,7 +16,6 @@ public final class PipelineTriggerPropertiesResponse extends io.pulumi.resources
 
     /**
      * The source trigger properties of the pipeline.
-     * 
      */
     @Import(name="sourceTrigger")
       private final @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;

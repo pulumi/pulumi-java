@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GalleryIdentifierResponse {
     /**
      * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
-     * 
      */
     private final String uniqueName;
 
@@ -22,7 +21,6 @@ public final class GalleryIdentifierResponse {
 
     /**
      * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
-     * 
     */
     public String getUniqueName() {
         return this.uniqueName;

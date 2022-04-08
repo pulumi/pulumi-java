@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class AccessReviewReviewerResponse {
     /**
      * The id of the reviewer(user/servicePrincipal)
-     * 
      */
     private final @Nullable String principalId;
     /**
      * The identity type : user/servicePrincipal
-     * 
      */
     private final String principalType;
 
@@ -32,14 +30,12 @@ public final class AccessReviewReviewerResponse {
 
     /**
      * The id of the reviewer(user/servicePrincipal)
-     * 
     */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The identity type : user/servicePrincipal
-     * 
     */
     public String getPrincipalType() {
         return this.principalType;

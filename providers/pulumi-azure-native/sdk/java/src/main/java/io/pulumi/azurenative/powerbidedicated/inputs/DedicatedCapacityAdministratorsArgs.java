@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An array of administrator user identities
- * 
  */
 public final class DedicatedCapacityAdministratorsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DedicatedCapacityAdministratorsArgs extends io.pulumi.resourc
 
     /**
      * An array of administrator user identities.
-     * 
      */
     @Import(name="members")
       private final @Nullable Output<List<String>> members;

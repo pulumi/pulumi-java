@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Debug info option.
-     * 
      */
     @EnumType
     public enum HDInsightActivityDebugInfoOption {

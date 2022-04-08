@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class KeyPropertiesResponse {
     /**
      * The identifier of the key vault key used to encrypt data.
-     * 
      */
     private final @Nullable String name;
     /**
      * The version of the identity which will be used to access key vault.
-     * 
      */
     private final @Nullable String version;
 
@@ -32,14 +30,12 @@ public final class KeyPropertiesResponse {
 
     /**
      * The identifier of the key vault key used to encrypt data.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The version of the identity which will be used to access key vault.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

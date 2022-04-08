@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The RosettaNet ProcessConfiguration activity type.
-     * 
      */
     @EnumType
     public enum RosettaNetPipActivityType {

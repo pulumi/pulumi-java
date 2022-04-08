@@ -22,7 +22,92 @@ import javax.annotation.Nullable;
  * ObjectAnchorsAccount Response.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create object anchors account
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var objectAnchorsAccount = new AzureNative.MixedReality.ObjectAnchorsAccount("objectAnchorsAccount", new AzureNative.MixedReality.ObjectAnchorsAccountArgs
+ *         {
+ *             AccountName = "MyAccount",
+ *             Identity = new AzureNative.MixedReality.Inputs.ObjectAnchorsAccountIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "eastus2euap",
+ *             ResourceGroupName = "MyResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	mixedreality "github.com/pulumi/pulumi-azure-native/sdk/go/azure/mixedreality"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := mixedreality.NewObjectAnchorsAccount(ctx, "objectAnchorsAccount", &mixedreality.ObjectAnchorsAccountArgs{
+ * 			AccountName: pulumi.String("MyAccount"),
+ * 			Identity: &mixedreality.ObjectAnchorsAccountIdentityArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			Location:          pulumi.String("eastus2euap"),
+ * 			ResourceGroupName: pulumi.String("MyResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const objectAnchorsAccount = new azure_native.mixedreality.ObjectAnchorsAccount("objectAnchorsAccount", {
+ *     accountName: "MyAccount",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "eastus2euap",
+ *     resourceGroupName: "MyResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * object_anchors_account = azure_native.mixedreality.ObjectAnchorsAccount("objectAnchorsAccount",
+ *     account_name="MyAccount",
+ *     identity=azure_native.mixedreality.ObjectAnchorsAccountIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="eastus2euap",
+ *     resource_group_name="MyResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,28 +122,24 @@ import javax.annotation.Nullable;
 public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
     /**
      * Correspond domain name of certain Spatial Anchors Account
-     * 
      */
     @Export(name="accountDomain", type=String.class, parameters={})
     private Output<String> accountDomain;
 
     /**
      * @return Correspond domain name of certain Spatial Anchors Account
-     * 
      */
     public Output<String> getAccountDomain() {
         return this.accountDomain;
     }
     /**
      * unique id of certain account.
-     * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
      * @return unique id of certain account.
-     * 
      */
     public Output<String> getAccountId() {
         return this.accountId;
@@ -71,126 +152,108 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
     }
     /**
      * The kind of account, if supported
-     * 
      */
     @Export(name="kind", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> kind;
 
     /**
      * @return The kind of account, if supported
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getKind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The plan associated with this account
-     * 
      */
     @Export(name="plan", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> plan;
 
     /**
      * @return The plan associated with this account
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getPlan() {
         return this.plan;
     }
     /**
      * The sku associated with this account
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku associated with this account
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The name of the storage account associated with this accountId
-     * 
      */
     @Export(name="storageAccountName", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountName;
 
     /**
      * @return The name of the storage account associated with this accountId
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * The system metadata related to an object anchors account.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to an object anchors account.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

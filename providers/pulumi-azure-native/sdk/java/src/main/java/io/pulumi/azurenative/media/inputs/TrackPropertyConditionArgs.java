@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to specify one track property condition
- * 
  */
 public final class TrackPropertyConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
 
     /**
      * Track property condition operation
-     * 
      */
     @Import(name="operation", required=true)
       private final Output<Either<String,TrackPropertyCompareOperation>> operation;
@@ -34,7 +32,6 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
 
     /**
      * Track property type
-     * 
      */
     @Import(name="property", required=true)
       private final Output<Either<String,TrackPropertyType>> property;
@@ -45,7 +42,6 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
 
     /**
      * Track property value
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

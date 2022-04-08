@@ -14,7 +14,6 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -36,7 +34,6 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Email Template Name Identifier.
-     * 
      */
     @Import(name="templateName", required=true)
       private final String templateName;

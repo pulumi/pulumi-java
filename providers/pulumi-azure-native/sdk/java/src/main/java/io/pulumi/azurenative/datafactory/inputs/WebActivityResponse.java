@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Web activity.
- * 
  */
 public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Authentication method used for calling the endpoint.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable WebActivityAuthenticationResponse authentication;
@@ -40,7 +38,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="body")
       private final @Nullable Object body;
@@ -51,7 +48,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -62,7 +58,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of datasets passed to web endpoint.
-     * 
      */
     @Import(name="datasets")
       private final @Nullable List<DatasetReferenceResponse> datasets;
@@ -73,7 +68,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -84,7 +78,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -95,7 +88,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="headers")
       private final @Nullable Object headers;
@@ -106,7 +98,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -117,7 +108,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of linked services passed to web endpoint.
-     * 
      */
     @Import(name="linkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
@@ -128,7 +118,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Rest API method for target endpoint.
-     * 
      */
     @Import(name="method", required=true)
       private final String method;
@@ -139,7 +128,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -150,7 +138,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -162,7 +149,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of activity.
      * Expected value is 'WebActivity'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -173,7 +159,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Web activity target endpoint and path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Object url;
@@ -184,7 +169,6 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

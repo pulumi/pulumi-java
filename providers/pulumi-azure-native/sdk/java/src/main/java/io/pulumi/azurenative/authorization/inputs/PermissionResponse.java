@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Role definition permissions.
- * 
  */
 public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Allowed actions.
-     * 
      */
     @Import(name="actions")
       private final @Nullable List<String> actions;
@@ -32,7 +30,6 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Allowed Data actions.
-     * 
      */
     @Import(name="dataActions")
       private final @Nullable List<String> dataActions;
@@ -43,7 +40,6 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Denied actions.
-     * 
      */
     @Import(name="notActions")
       private final @Nullable List<String> notActions;
@@ -54,7 +50,6 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Denied Data actions.
-     * 
      */
     @Import(name="notDataActions")
       private final @Nullable List<String> notDataActions;

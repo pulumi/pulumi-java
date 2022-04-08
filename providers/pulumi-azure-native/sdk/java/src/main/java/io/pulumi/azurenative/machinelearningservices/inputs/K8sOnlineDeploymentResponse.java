@@ -29,7 +29,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * If true, enables Application Insights logging.
-     * 
      */
     @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
@@ -40,7 +39,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Code configuration for the endpoint deployment.
-     * 
      */
     @Import(name="codeConfiguration")
       private final @Nullable CodeConfigurationResponse codeConfiguration;
@@ -51,7 +49,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Resource requirements for each container instance within an online deployment.
-     * 
      */
     @Import(name="containerResourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
@@ -62,7 +59,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Description of the endpoint deployment.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -74,7 +70,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     /**
      * Enum to determine endpoint compute type.
      * Expected value is 'K8S'.
-     * 
      */
     @Import(name="endpointComputeType", required=true)
       private final String endpointComputeType;
@@ -85,7 +80,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable String environmentId;
@@ -96,7 +90,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Environment variables configuration for the deployment.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
@@ -107,7 +100,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Deployment container liveness/readiness probe configuration.
-     * 
      */
     @Import(name="livenessProbe")
       private final @Nullable ProbeSettingsResponse livenessProbe;
@@ -118,7 +110,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Reference to the model asset for the endpoint deployment.
-     * 
      */
     @Import(name="model")
       private final @Nullable Object model;
@@ -129,7 +120,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -140,7 +130,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Provisioning state for the endpoint deployment.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -151,7 +140,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Online deployment scoring requests configuration.
-     * 
      */
     @Import(name="requestSettings")
       private final @Nullable OnlineRequestSettingsResponse requestSettings;
@@ -162,7 +150,6 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
 
     /**
      * Online deployment scaling configuration.
-     * 
      */
     @Import(name="scaleSettings")
       private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;

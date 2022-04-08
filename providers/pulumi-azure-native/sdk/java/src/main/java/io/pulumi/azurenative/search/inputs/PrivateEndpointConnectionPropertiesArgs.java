@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
- * 
  */
 public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
 
     /**
      * The private endpoint resource from Microsoft.Network provider.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointConnectionPropertiesPrivateEndpointArgs> privateEndpoint;
@@ -32,7 +30,6 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
 
     /**
      * Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;

@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class MigrateSyncCompleteCommandOutputResponse {
     /**
      * List of errors that happened during the command execution
-     * 
      */
     private final List<ReportableExceptionResponse> errors;
     /**
      * Result identifier
-     * 
      */
     private final String id;
 
@@ -32,14 +30,12 @@ public final class MigrateSyncCompleteCommandOutputResponse {
 
     /**
      * List of errors that happened during the command execution
-     * 
     */
     public List<ReportableExceptionResponse> getErrors() {
         return this.errors;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;

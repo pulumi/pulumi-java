@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Retention tag
- * 
  */
 public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Retention Tag Name to relate it to retention rule.
-     * 
      */
     @Import(name="tagName", required=true)
       private final Output<String> tagName;

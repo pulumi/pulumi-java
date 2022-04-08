@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service Provider Definition
- * 
  */
 public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The Properties of a Service Provider Object
-     * 
      */
     @Import(name="properties")
       private final @Nullable ServiceProviderPropertiesResponse properties;

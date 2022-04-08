@@ -14,7 +14,6 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends io.pulumi.r
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends io.pulumi.r
 
     /**
      * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

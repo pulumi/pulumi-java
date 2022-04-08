@@ -14,7 +14,6 @@ public final class GetIntegrationAccountArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -25,7 +24,6 @@ public final class GetIntegrationAccountArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

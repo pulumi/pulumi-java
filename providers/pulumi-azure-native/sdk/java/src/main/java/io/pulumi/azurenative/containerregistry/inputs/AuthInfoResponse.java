@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The authorization properties for accessing the source code repository.
- * 
  */
 public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time in seconds that the token remains valid
-     * 
      */
     @Import(name="expiresIn")
       private final @Nullable Integer expiresIn;
@@ -32,7 +30,6 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The refresh token used to refresh the access token.
-     * 
      */
     @Import(name="refreshToken")
       private final @Nullable String refreshToken;
@@ -43,7 +40,6 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The scope of the access token.
-     * 
      */
     @Import(name="scope")
       private final @Nullable String scope;
@@ -54,7 +50,6 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The access token used to access the source control provider.
-     * 
      */
     @Import(name="token", required=true)
       private final String token;
@@ -65,7 +60,6 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of Auth token.
-     * 
      */
     @Import(name="tokenType", required=true)
       private final String tokenType;

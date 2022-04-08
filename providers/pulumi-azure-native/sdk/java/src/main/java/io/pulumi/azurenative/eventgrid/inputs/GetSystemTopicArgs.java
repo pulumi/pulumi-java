@@ -14,7 +14,6 @@ public final class GetSystemTopicArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSystemTopicArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the system topic.
-     * 
      */
     @Import(name="systemTopicName", required=true)
       private final String systemTopicName;

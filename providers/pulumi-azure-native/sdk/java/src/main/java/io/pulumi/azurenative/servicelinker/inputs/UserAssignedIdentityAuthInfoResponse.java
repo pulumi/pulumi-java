@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The authentication info when authType is userAssignedIdentity
- * 
  */
 public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
     /**
      * The authentication type.
      * Expected value is 'userAssignedIdentity'.
-     * 
      */
     @Import(name="authType", required=true)
       private final String authType;
@@ -30,7 +28,6 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
 
     /**
      * Client Id for userAssignedIdentity.
-     * 
      */
     @Import(name="clientId", required=true)
       private final String clientId;
@@ -41,7 +38,6 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
 
     /**
      * Subscription id for userAssignedIdentity.
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;

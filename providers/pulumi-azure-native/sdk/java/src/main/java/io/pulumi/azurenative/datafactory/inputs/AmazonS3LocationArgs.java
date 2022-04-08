@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The location of amazon S3 dataset.
- * 
  */
 public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specify the bucketName of amazon S3. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="bucketName")
       private final @Nullable Output<Object> bucketName;
@@ -32,7 +30,6 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
@@ -43,7 +40,6 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
@@ -55,7 +51,6 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Type of dataset storage location.
      * Expected value is 'AmazonS3Location'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -66,7 +61,6 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specify the version of amazon S3. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Object> version;

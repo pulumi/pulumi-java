@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The user assigned managed identity to use when accessing a resource.
- * 
  */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The user assigned managed identity's resource identifier to use when accessing a resource.
-     * 
      */
     @Import(name="userAssignedIdentity", required=true)
       private final String userAssignedIdentity;

@@ -19,65 +19,53 @@ import javax.annotation.Nullable;
 public final class GetPartnerNamespaceResult {
     /**
      * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
-     * 
      */
     private final @Nullable Boolean disableLocalAuth;
     /**
      * Endpoint for the partner namespace.
-     * 
      */
     private final String endpoint;
     /**
      * Fully qualified identifier of the resource.
-     * 
      */
     private final String id;
     /**
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-     * 
      */
     private final @Nullable List<InboundIpRuleResponse> inboundIpRules;
     /**
      * Location of the resource.
-     * 
      */
     private final String location;
     /**
      * Name of the resource.
-     * 
      */
     private final String name;
     /**
      * The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
-     * 
      */
     private final @Nullable String partnerRegistrationFullyQualifiedId;
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
      * Provisioning state of the partner namespace.
-     * 
      */
     private final String provisioningState;
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
-     * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
      * The system metadata relating to Partner Namespace resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Type of the resource.
-     * 
      */
     private final String type;
 
@@ -113,42 +101,36 @@ public final class GetPartnerNamespaceResult {
 
     /**
      * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
-     * 
     */
     public Optional<Boolean> getDisableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
      * Endpoint for the partner namespace.
-     * 
     */
     public String getEndpoint() {
         return this.endpoint;
     }
     /**
      * Fully qualified identifier of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-     * 
     */
     public List<InboundIpRuleResponse> getInboundIpRules() {
         return this.inboundIpRules == null ? List.of() : this.inboundIpRules;
     }
     /**
      * Location of the resource.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
@@ -156,7 +138,6 @@ public final class GetPartnerNamespaceResult {
     /**
      * The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
-     * 
     */
     public Optional<String> getPartnerRegistrationFullyQualifiedId() {
         return Optional.ofNullable(this.partnerRegistrationFullyQualifiedId);
@@ -166,7 +147,6 @@ public final class GetPartnerNamespaceResult {
     }
     /**
      * Provisioning state of the partner namespace.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
@@ -174,28 +154,24 @@ public final class GetPartnerNamespaceResult {
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
-     * 
     */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The system metadata relating to Partner Namespace resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

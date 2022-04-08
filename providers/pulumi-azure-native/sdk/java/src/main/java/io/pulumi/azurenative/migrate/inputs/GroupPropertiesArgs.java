@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of group resource.
- * 
  */
 public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of group.
-     * 
      */
     @Import(name="groupType")
       private final @Nullable Output<String> groupType;

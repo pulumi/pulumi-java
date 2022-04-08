@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The integration account partner's business identity.
- * 
  */
 public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
-     * 
      */
     @Import(name="qualifier", required=true)
       private final String qualifier;
@@ -29,7 +27,6 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The user defined business identity value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

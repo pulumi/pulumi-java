@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Relevant cloud for the custom assessment automation.
-     * 
      */
     @EnumType
     public enum SupportedCloudEnum {

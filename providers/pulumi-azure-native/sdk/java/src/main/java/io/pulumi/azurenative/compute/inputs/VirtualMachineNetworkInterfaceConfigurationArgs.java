@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine network interface configurations.
- * 
  */
 public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * Specify what happens to the network interface when the VM is deleted
-     * 
      */
     @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
@@ -38,7 +36,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * The dns settings to be applied on the network interfaces.
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
@@ -56,7 +53,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * Specifies whether the network interface is accelerated networking-enabled.
-     * 
      */
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Output<Boolean> enableAcceleratedNetworking;
@@ -67,7 +63,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * Specifies whether the network interface is FPGA networking-enabled.
-     * 
      */
     @Import(name="enableFpga")
       private final @Nullable Output<Boolean> enableFpga;
@@ -78,7 +73,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * Whether IP forwarding enabled on this NIC.
-     * 
      */
     @Import(name="enableIPForwarding")
       private final @Nullable Output<Boolean> enableIPForwarding;
@@ -89,7 +83,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * Specifies the IP configurations of the network interface.
-     * 
      */
     @Import(name="ipConfigurations", required=true)
       private final Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
@@ -100,7 +93,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * The network interface configuration name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -111,7 +103,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * The network security group.
-     * 
      */
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<SubResourceArgs> networkSecurityGroup;
@@ -122,7 +113,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
 
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;

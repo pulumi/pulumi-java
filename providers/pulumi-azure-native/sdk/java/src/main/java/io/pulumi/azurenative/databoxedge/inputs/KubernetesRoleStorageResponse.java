@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubernetes role storage resource
- * 
  */
 public final class KubernetesRoleStorageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
 
     /**
      * Mount points of shares in role(s).
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable List<MountPointMapResponse> endpoints;
@@ -33,7 +31,6 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
 
     /**
      * Kubernetes storage class info.
-     * 
      */
     @Import(name="storageClasses", required=true)
       private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A namespace junction.
- * 
  */
 public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Namespace path on a Cache for a Storage Target.
-     * 
      */
     @Import(name="namespacePath")
       private final @Nullable String namespacePath;
@@ -31,7 +29,6 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the access policy applied to this junction.
-     * 
      */
     @Import(name="nfsAccessPolicy")
       private final @Nullable String nfsAccessPolicy;
@@ -42,7 +39,6 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * NFS export where targetPath exists.
-     * 
      */
     @Import(name="nfsExport")
       private final @Nullable String nfsExport;
@@ -53,7 +49,6 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Path in Storage Target to which namespacePath points.
-     * 
      */
     @Import(name="targetPath")
       private final @Nullable String targetPath;

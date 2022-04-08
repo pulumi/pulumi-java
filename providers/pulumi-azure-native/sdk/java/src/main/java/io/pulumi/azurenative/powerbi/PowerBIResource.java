@@ -17,9 +17,103 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2020-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates private link service resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var powerBIResource = new AzureNative.PowerBI.PowerBIResource("powerBIResource", new AzureNative.PowerBI.PowerBIResourceArgs
+ *         {
+ *             AzureResourceName = "azureResourceName",
+ *             Location = "global",
+ *             ResourceGroupName = "resourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *             TenantId = "ac2bc297-8a3e-46f3-972d-87c2b4ae6e2f",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	powerbi "github.com/pulumi/pulumi-azure-native/sdk/go/azure/powerbi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := powerbi.NewPowerBIResource(ctx, "powerBIResource", &powerbi.PowerBIResourceArgs{
+ * 			AzureResourceName: pulumi.String("azureResourceName"),
+ * 			Location:          pulumi.String("global"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 			TenantId: pulumi.String("ac2bc297-8a3e-46f3-972d-87c2b4ae6e2f"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const powerBIResource = new azure_native.powerbi.PowerBIResource("powerBIResource", {
+ *     azureResourceName: "azureResourceName",
+ *     location: "global",
+ *     resourceGroupName: "resourceGroup",
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ *     tenantId: "ac2bc297-8a3e-46f3-972d-87c2b4ae6e2f",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * power_bi_resource = azure_native.powerbi.PowerBIResource("powerBIResource",
+ *     azure_resource_name="azureResourceName",
+ *     location="global",
+ *     resource_group_name="resourceGroup",
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     },
+ *     tenant_id="ac2bc297-8a3e-46f3-972d-87c2b4ae6e2f")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +128,84 @@ import javax.annotation.Nullable;
 public class PowerBIResource extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Specifies the location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies the name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the private endpoint connections of the resource.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return Specifies the private endpoint connections of the resource.
-     * 
      */
     public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Specifies the tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Specifies the tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the tenant id of the resource.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return Specifies the tenant id of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

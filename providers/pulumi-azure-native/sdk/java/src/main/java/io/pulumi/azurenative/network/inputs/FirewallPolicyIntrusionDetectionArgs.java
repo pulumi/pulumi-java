@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for intrusion detection mode and rules.
- * 
  */
 public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
 
     /**
      * Intrusion detection configuration properties.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
@@ -34,7 +32,6 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
 
     /**
      * Intrusion detection general state.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Address prefix type.
-     * 
      */
     @EnumType
     public enum AddressPrefixType {

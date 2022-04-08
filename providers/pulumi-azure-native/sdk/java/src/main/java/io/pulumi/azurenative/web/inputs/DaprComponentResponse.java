@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dapr component configuration
- * 
  */
 public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Component metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable List<DaprMetadataResponse> metadata;
@@ -33,7 +31,6 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Component name
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -44,7 +41,6 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Component type
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -55,7 +51,6 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Component version
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

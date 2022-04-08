@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The data connector kind
-     * 
      */
     @EnumType
     public enum DataConnectorKind {

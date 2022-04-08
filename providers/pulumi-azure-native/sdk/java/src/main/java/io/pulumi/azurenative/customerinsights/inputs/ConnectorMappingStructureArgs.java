@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connector mapping property structure.
- * 
  */
 public final class ConnectorMappingStructureArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
 
     /**
      * The column name of the import file.
-     * 
      */
     @Import(name="columnName", required=true)
       private final Output<String> columnName;
@@ -32,7 +30,6 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
 
     /**
      * Custom format specifier for input parsing.
-     * 
      */
     @Import(name="customFormatSpecifier")
       private final @Nullable Output<String> customFormatSpecifier;
@@ -43,7 +40,6 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
 
     /**
      * Indicates if the column is encrypted.
-     * 
      */
     @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
@@ -54,7 +50,6 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
 
     /**
      * The property name of the mapping entity.
-     * 
      */
     @Import(name="propertyName", required=true)
       private final Output<String> propertyName;

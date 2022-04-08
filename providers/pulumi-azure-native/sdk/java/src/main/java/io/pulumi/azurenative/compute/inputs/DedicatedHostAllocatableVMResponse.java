@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the dedicated host unutilized capacity in terms of a specific VM size.
- * 
  */
 public final class DedicatedHostAllocatableVMResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DedicatedHostAllocatableVMResponse extends io.pulumi.resource
 
     /**
      * Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.
-     * 
      */
     @Import(name="count")
       private final @Nullable Double count;
@@ -32,7 +30,6 @@ public final class DedicatedHostAllocatableVMResponse extends io.pulumi.resource
 
     /**
      * VM size in terms of which the unutilized capacity is represented.
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable String vmSize;

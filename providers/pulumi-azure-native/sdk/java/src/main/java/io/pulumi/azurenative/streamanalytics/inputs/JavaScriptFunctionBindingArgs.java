@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The binding to a JavaScript function.
- * 
  */
 public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
 
     /**
      * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
-     * 
      */
     @Import(name="script")
       private final @Nullable Output<String> script;
@@ -32,7 +30,6 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
     /**
      * Indicates the function binding type.
      * Expected value is 'Microsoft.StreamAnalytics/JavascriptUdf'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

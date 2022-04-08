@@ -14,7 +14,6 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends 
 
     /**
      * The virtual network gateway name.
-     * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;

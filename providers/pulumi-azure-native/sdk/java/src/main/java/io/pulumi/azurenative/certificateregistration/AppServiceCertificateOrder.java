@@ -35,350 +35,300 @@ import javax.annotation.Nullable;
 public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResource {
     /**
      * Reasons why App Service Certificate is not renewable at the current moment.
-     * 
      */
     @Export(name="appServiceCertificateNotRenewableReasons", type=List.class, parameters={String.class})
     private Output<List<String>> appServiceCertificateNotRenewableReasons;
 
     /**
      * @return Reasons why App Service Certificate is not renewable at the current moment.
-     * 
      */
     public Output<List<String>> getAppServiceCertificateNotRenewableReasons() {
         return this.appServiceCertificateNotRenewableReasons;
     }
     /**
      * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
-     * 
      */
     @Export(name="autoRenew", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRenew;
 
     /**
      * @return <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoRenew() {
         return this.autoRenew;
     }
     /**
      * State of the Key Vault secret.
-     * 
      */
     @Export(name="certificates", type=Map.class, parameters={String.class, AppServiceCertificateResponse.class})
     private Output</* @Nullable */ Map<String,AppServiceCertificateResponse>> certificates;
 
     /**
      * @return State of the Key Vault secret.
-     * 
      */
     public Output</* @Nullable */ Map<String,AppServiceCertificateResponse>> getCertificates() {
         return this.certificates;
     }
     /**
      * Last CSR that was created for this order.
-     * 
      */
     @Export(name="csr", type=String.class, parameters={})
     private Output</* @Nullable */ String> csr;
 
     /**
      * @return Last CSR that was created for this order.
-     * 
      */
     public Output</* @Nullable */ String> getCsr() {
         return this.csr;
     }
     /**
      * Certificate distinguished name.
-     * 
      */
     @Export(name="distinguishedName", type=String.class, parameters={})
     private Output</* @Nullable */ String> distinguishedName;
 
     /**
      * @return Certificate distinguished name.
-     * 
      */
     public Output</* @Nullable */ String> getDistinguishedName() {
         return this.distinguishedName;
     }
     /**
      * Domain verification token.
-     * 
      */
     @Export(name="domainVerificationToken", type=String.class, parameters={})
     private Output<String> domainVerificationToken;
 
     /**
      * @return Domain verification token.
-     * 
      */
     public Output<String> getDomainVerificationToken() {
         return this.domainVerificationToken;
     }
     /**
      * Certificate expiration time.
-     * 
      */
     @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
      * @return Certificate expiration time.
-     * 
      */
     public Output<String> getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * Intermediate certificate.
-     * 
      */
     @Export(name="intermediate", type=CertificateDetailsResponse.class, parameters={})
     private Output<CertificateDetailsResponse> intermediate;
 
     /**
      * @return Intermediate certificate.
-     * 
      */
     public Output<CertificateDetailsResponse> getIntermediate() {
         return this.intermediate;
     }
     /**
      * <code>true</code> if private key is external; otherwise, <code>false</code>.
-     * 
      */
     @Export(name="isPrivateKeyExternal", type=Boolean.class, parameters={})
     private Output<Boolean> isPrivateKeyExternal;
 
     /**
      * @return <code>true</code> if private key is external; otherwise, <code>false</code>.
-     * 
      */
     public Output<Boolean> getIsPrivateKeyExternal() {
         return this.isPrivateKeyExternal;
     }
     /**
      * Certificate key size.
-     * 
      */
     @Export(name="keySize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> keySize;
 
     /**
      * @return Certificate key size.
-     * 
      */
     public Output</* @Nullable */ Integer> getKeySize() {
         return this.keySize;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Certificate last issuance time.
-     * 
      */
     @Export(name="lastCertificateIssuanceTime", type=String.class, parameters={})
     private Output<String> lastCertificateIssuanceTime;
 
     /**
      * @return Certificate last issuance time.
-     * 
      */
     public Output<String> getLastCertificateIssuanceTime() {
         return this.lastCertificateIssuanceTime;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Time stamp when the certificate would be auto renewed next
-     * 
      */
     @Export(name="nextAutoRenewalTimeStamp", type=String.class, parameters={})
     private Output<String> nextAutoRenewalTimeStamp;
 
     /**
      * @return Time stamp when the certificate would be auto renewed next
-     * 
      */
     public Output<String> getNextAutoRenewalTimeStamp() {
         return this.nextAutoRenewalTimeStamp;
     }
     /**
      * Certificate product type.
-     * 
      */
     @Export(name="productType", type=String.class, parameters={})
     private Output<String> productType;
 
     /**
      * @return Certificate product type.
-     * 
      */
     public Output<String> getProductType() {
         return this.productType;
     }
     /**
      * Status of certificate order.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Status of certificate order.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Root certificate.
-     * 
      */
     @Export(name="root", type=CertificateDetailsResponse.class, parameters={})
     private Output<CertificateDetailsResponse> root;
 
     /**
      * @return Root certificate.
-     * 
      */
     public Output<CertificateDetailsResponse> getRoot() {
         return this.root;
     }
     /**
      * Current serial number of the certificate.
-     * 
      */
     @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
     /**
      * @return Current serial number of the certificate.
-     * 
      */
     public Output<String> getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * Signed certificate.
-     * 
      */
     @Export(name="signedCertificate", type=CertificateDetailsResponse.class, parameters={})
     private Output<CertificateDetailsResponse> signedCertificate;
 
     /**
      * @return Signed certificate.
-     * 
      */
     public Output<CertificateDetailsResponse> getSignedCertificate() {
         return this.signedCertificate;
     }
     /**
      * Current order status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Current order status.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Duration in years (must be between 1 and 3).
-     * 
      */
     @Export(name="validityInYears", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> validityInYears;
 
     /**
      * @return Duration in years (must be between 1 and 3).
-     * 
      */
     public Output</* @Nullable */ Integer> getValidityInYears() {
         return this.validityInYears;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The policy definition group.
- * 
  */
 public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * A resource ID of a resource that contains additional metadata about the group.
-     * 
      */
     @Import(name="additionalMetadataId")
       private final @Nullable Output<String> additionalMetadataId;
@@ -31,7 +29,6 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * The group's category.
-     * 
      */
     @Import(name="category")
       private final @Nullable Output<String> category;
@@ -42,7 +39,6 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * The group's description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +49,6 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * The group's display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -64,7 +59,6 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

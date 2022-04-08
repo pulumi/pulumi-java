@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A site for the Direct Line channel
- * 
  */
 public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this site is enabled for block user upload.
-     * 
      */
     @Import(name="isBlockUserUploadEnabled")
       private final @Nullable Output<Boolean> isBlockUserUploadEnabled;
@@ -33,7 +31,6 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this site is enabled for DirectLine channel.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -44,7 +41,6 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this site is enabled for authentication with Bot Framework.
-     * 
      */
     @Import(name="isSecureSiteEnabled")
       private final @Nullable Output<Boolean> isSecureSiteEnabled;
@@ -55,7 +51,6 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this site is enabled for Bot Framework V1 protocol.
-     * 
      */
     @Import(name="isV1Enabled", required=true)
       private final Output<Boolean> isV1Enabled;
@@ -66,7 +61,6 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this site is enabled for Bot Framework V1 protocol.
-     * 
      */
     @Import(name="isV3Enabled", required=true)
       private final Output<Boolean> isV3Enabled;
@@ -77,7 +71,6 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Site name
-     * 
      */
     @Import(name="siteName", required=true)
       private final Output<String> siteName;
@@ -88,7 +81,6 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
-     * 
      */
     @Import(name="trustedOrigins")
       private final @Nullable Output<List<String>> trustedOrigins;

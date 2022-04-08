@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class LabelingJobImagePropertiesResponse {
     /**
      * Annotation type of image labeling tasks.
-     * 
      */
     private final @Nullable String annotationType;
     /**
      * Media type of data asset.
-     * 
      */
     private final String mediaType;
 
@@ -32,14 +30,12 @@ public final class LabelingJobImagePropertiesResponse {
 
     /**
      * Annotation type of image labeling tasks.
-     * 
     */
     public Optional<String> getAnnotationType() {
         return Optional.ofNullable(this.annotationType);
     }
     /**
      * Media type of data asset.
-     * 
     */
     public String getMediaType() {
         return this.mediaType;

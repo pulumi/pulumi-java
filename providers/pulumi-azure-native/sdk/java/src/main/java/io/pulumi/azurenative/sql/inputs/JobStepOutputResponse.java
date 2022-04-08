@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The output configuration of a job step.
- * 
  */
 public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The resource ID of the credential to use to connect to the output destination.
-     * 
      */
     @Import(name="credential", required=true)
       private final String credential;
@@ -31,7 +29,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The output destination database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -42,7 +39,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The output destination resource group.
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
@@ -53,7 +49,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The output destination schema.
-     * 
      */
     @Import(name="schemaName")
       private final @Nullable String schemaName;
@@ -64,7 +59,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The output destination server name.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;
@@ -75,7 +69,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The output destination subscription id.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
@@ -86,7 +79,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The output destination table.
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;
@@ -97,7 +89,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The output destination type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

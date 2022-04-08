@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class SharedPrivateLinkResourcePropertiesResponse {
     /**
      * The group id from the provider of resource the shared private link resource is for.
-     * 
      */
     private final @Nullable String groupId;
     /**
      * The resource id of the resource the shared private link resource is for.
-     * 
      */
     private final @Nullable ResourceReferenceResponse privateLink;
     /**
      * The location of the shared private link resource
-     * 
      */
     private final @Nullable String privateLinkLocation;
     /**
      * The request message for requesting approval of the shared private link resource.
-     * 
      */
     private final @Nullable String requestMessage;
     /**
      * Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
-     * 
      */
     private final @Nullable String status;
 
@@ -54,35 +49,30 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
 
     /**
      * The group id from the provider of resource the shared private link resource is for.
-     * 
     */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The resource id of the resource the shared private link resource is for.
-     * 
     */
     public Optional<ResourceReferenceResponse> getPrivateLink() {
         return Optional.ofNullable(this.privateLink);
     }
     /**
      * The location of the shared private link resource
-     * 
     */
     public Optional<String> getPrivateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
      * The request message for requesting approval of the shared private link resource.
-     * 
     */
     public Optional<String> getRequestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);

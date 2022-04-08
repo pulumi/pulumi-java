@@ -15,28 +15,23 @@ import javax.annotation.Nullable;
 public final class ImageTemplateWindowsUpdateCustomizerResponse {
     /**
      * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
-     * 
      */
     private final @Nullable List<String> filters;
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
      */
     private final @Nullable String name;
     /**
      * Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
-     * 
      */
     private final @Nullable String searchCriteria;
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'WindowsUpdate'.
-     * 
      */
     private final String type;
     /**
      * Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
-     * 
      */
     private final @Nullable Integer updateLimit;
 
@@ -56,21 +51,18 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
 
     /**
      * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
-     * 
     */
     public List<String> getFilters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
-     * 
     */
     public Optional<String> getSearchCriteria() {
         return Optional.ofNullable(this.searchCriteria);
@@ -78,14 +70,12 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'WindowsUpdate'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
-     * 
     */
     public Optional<Integer> getUpdateLimit() {
         return Optional.ofNullable(this.updateLimit);

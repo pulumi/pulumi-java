@@ -19,7 +19,129 @@ import javax.annotation.Nullable;
  * SaaS REST API resource definition.
  * API Version: 2018-03-01-beta.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create subscription level SaaS resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var saasSubscriptionLevel = new AzureNative.SaaS.SaasSubscriptionLevel("saasSubscriptionLevel", new AzureNative.SaaS.SaasSubscriptionLevelArgs
+ *         {
+ *             Location = "global",
+ *             Name = "MyContosoSubscription",
+ *             Properties = new AzureNative.SaaS.Inputs.SaasCreationPropertiesArgs
+ *             {
+ *                 OfferId = "contosoOffer",
+ *                 PaymentChannelMetadata = 
+ *                 {
+ *                     { "AzureSubscriptionId", "155af98a-3205-47e7-883b-a2ab9db9f88d" },
+ *                 },
+ *                 PaymentChannelType = "SubscriptionDelegated",
+ *                 PublisherId = "microsoft-contoso",
+ *                 SaasResourceName = "MyContosoSubscription",
+ *                 SkuId = "free",
+ *                 TermId = "hjdtn7tfnxcy",
+ *             },
+ *             ResourceGroupName = "my-saas-rg",
+ *             ResourceName = "MyContosoSubscription",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	saas "github.com/pulumi/pulumi-azure-native/sdk/go/azure/saas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := saas.NewSaasSubscriptionLevel(ctx, "saasSubscriptionLevel", &saas.SaasSubscriptionLevelArgs{
+ * 			Location: pulumi.String("global"),
+ * 			Name:     pulumi.String("MyContosoSubscription"),
+ * 			Properties: &saas.SaasCreationPropertiesArgs{
+ * 				OfferId: pulumi.String("contosoOffer"),
+ * 				PaymentChannelMetadata: pulumi.StringMap{
+ * 					"AzureSubscriptionId": pulumi.String("155af98a-3205-47e7-883b-a2ab9db9f88d"),
+ * 				},
+ * 				PaymentChannelType: pulumi.String("SubscriptionDelegated"),
+ * 				PublisherId:        pulumi.String("microsoft-contoso"),
+ * 				SaasResourceName:   pulumi.String("MyContosoSubscription"),
+ * 				SkuId:              pulumi.String("free"),
+ * 				TermId:             pulumi.String("hjdtn7tfnxcy"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("my-saas-rg"),
+ * 			ResourceName:      pulumi.String("MyContosoSubscription"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasSubscriptionLevel", {
+ *     location: "global",
+ *     name: "MyContosoSubscription",
+ *     properties: {
+ *         offerId: "contosoOffer",
+ *         paymentChannelMetadata: {
+ *             AzureSubscriptionId: "155af98a-3205-47e7-883b-a2ab9db9f88d",
+ *         },
+ *         paymentChannelType: "SubscriptionDelegated",
+ *         publisherId: "microsoft-contoso",
+ *         saasResourceName: "MyContosoSubscription",
+ *         skuId: "free",
+ *         termId: "hjdtn7tfnxcy",
+ *     },
+ *     resourceGroupName: "my-saas-rg",
+ *     resourceName: "MyContosoSubscription",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * saas_subscription_level = azure_native.saas.SaasSubscriptionLevel("saasSubscriptionLevel",
+ *     location="global",
+ *     name="MyContosoSubscription",
+ *     properties=azure_native.saas.SaasCreationPropertiesArgs(
+ *         offer_id="contosoOffer",
+ *         payment_channel_metadata={
+ *             "AzureSubscriptionId": "155af98a-3205-47e7-883b-a2ab9db9f88d",
+ *         },
+ *         payment_channel_type="SubscriptionDelegated",
+ *         publisher_id="microsoft-contoso",
+ *         saas_resource_name="MyContosoSubscription",
+ *         sku_id="free",
+ *         term_id="hjdtn7tfnxcy",
+ *     ),
+ *     resource_group_name="my-saas-rg",
+ *     resource_name="MyContosoSubscription")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +156,48 @@ import javax.annotation.Nullable;
 public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * saas properties
-     * 
      */
     @Export(name="properties", type=SaasResourceResponseProperties.class, parameters={})
     private Output<SaasResourceResponseProperties> properties;
 
     /**
      * @return saas properties
-     * 
      */
     public Output<SaasResourceResponseProperties> getProperties() {
         return this.properties;
     }
     /**
      * the resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return the resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

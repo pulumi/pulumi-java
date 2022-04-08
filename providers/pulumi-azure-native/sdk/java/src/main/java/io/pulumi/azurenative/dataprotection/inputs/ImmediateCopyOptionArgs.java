@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Immediate copy Option
- * 
  */
 public final class ImmediateCopyOptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ImmediateCopyOptionArgs extends io.pulumi.resources.ResourceA
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'ImmediateCopyOption'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<String> objectType;

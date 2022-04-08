@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about a VM from which a formula is to be created.
- * 
  */
 public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
 
     /**
      * The identifier of the VM from which a formula is to be created.
-     * 
      */
     @Import(name="labVmId")
       private final @Nullable Output<String> labVmId;

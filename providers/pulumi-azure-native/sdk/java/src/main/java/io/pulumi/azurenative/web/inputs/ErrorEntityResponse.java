@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Body of the error response returned from the API.
- * 
  */
 public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Basic error code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -32,7 +30,6 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of error.
-     * 
      */
     @Import(name="extendedCode")
       private final @Nullable String extendedCode;
@@ -43,7 +40,6 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Inner errors.
-     * 
      */
     @Import(name="innerErrors")
       private final @Nullable List<ErrorEntityResponse> innerErrors;
@@ -54,7 +50,6 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Any details of the error.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -65,7 +60,6 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Message template.
-     * 
      */
     @Import(name="messageTemplate")
       private final @Nullable String messageTemplate;
@@ -76,7 +70,6 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters for the template.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<String> parameters;

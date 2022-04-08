@@ -17,47 +17,38 @@ import javax.annotation.Nullable;
 public final class GetBatchEndpointResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * Service identity associated with a resource.
-     * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     private final @Nullable String kind;
     /**
      * The geo-location where the resource lives
-     * 
      */
     private final String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Additional attributes of the entity.
-     * 
      */
     private final BatchEndpointResponse properties;
     /**
      * System data associated with resource provider
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -85,63 +76,54 @@ public final class GetBatchEndpointResult {
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Service identity associated with a resource.
-     * 
     */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
     */
     public BatchEndpointResponse getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

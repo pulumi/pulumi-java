@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a routing rule that your IoT hub uses to route messages to endpoints.
- * 
  */
 public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
-     * 
      */
     @Import(name="condition")
       private final @Nullable Output<String> condition;
@@ -35,7 +33,6 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
-     * 
      */
     @Import(name="endpointNames", required=true)
       private final Output<List<String>> endpointNames;
@@ -46,7 +43,6 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Used to specify whether a route is enabled.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -57,7 +53,6 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -68,7 +63,6 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The source that the routing rule is to be applied to, such as DeviceMessages.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<Either<String,RoutingSource>> source;

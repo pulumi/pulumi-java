@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The event request message sent to the service URI.
- * 
  */
 public final class EventRequestMessageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * The content of the event request message.
-     * 
      */
     @Import(name="content")
       private final @Nullable EventContentResponse content;
@@ -33,7 +31,6 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * The headers of the event request message.
-     * 
      */
     @Import(name="headers")
       private final @Nullable Map<String,String> headers;
@@ -44,7 +41,6 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * The HTTP method used to send the event request message.
-     * 
      */
     @Import(name="method")
       private final @Nullable String method;
@@ -55,7 +51,6 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * The URI used to send the event request message.
-     * 
      */
     @Import(name="requestUri")
       private final @Nullable String requestUri;
@@ -66,7 +61,6 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * The HTTP message version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

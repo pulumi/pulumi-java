@@ -18,7 +18,6 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Data masking mode.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,DataMaskingMode>> mode;
@@ -29,7 +28,6 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of an entity to mask (e.g. a name of a header or a query parameter).
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

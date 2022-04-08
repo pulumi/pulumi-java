@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class GetScopeConnectionResult {
     /**
      * A description of the scope connection.
-     * 
      */
     private final @Nullable String description;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String resourceId;
     /**
      * The system metadata related to this resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Tenant ID.
-     * 
      */
     private final @Nullable String tenantId;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -75,56 +67,48 @@ public final class GetScopeConnectionResult {
 
     /**
      * A description of the scope connection.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The system metadata related to this resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Tenant ID.
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

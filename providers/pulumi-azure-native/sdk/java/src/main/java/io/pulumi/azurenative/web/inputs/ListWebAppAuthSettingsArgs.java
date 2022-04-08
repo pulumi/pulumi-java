@@ -14,7 +14,6 @@ public final class ListWebAppAuthSettingsArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class ListWebAppAuthSettingsArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -14,7 +14,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The addon name.
-     * 
      */
     @Import(name="addonName", required=true)
       private final String addonName;
@@ -25,7 +24,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -36,7 +34,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="roleName", required=true)
       private final String roleName;

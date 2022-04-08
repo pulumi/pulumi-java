@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the move collection properties.
- * 
  */
 public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Defines the move collection errors.
-     * 
      */
     @Import(name="errors", required=true)
       private final MoveCollectionPropertiesResponseErrors errors;
@@ -30,7 +28,6 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Defines the provisioning states.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -41,7 +38,6 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the source region.
-     * 
      */
     @Import(name="sourceRegion", required=true)
       private final String sourceRegion;
@@ -52,7 +48,6 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the target region.
-     * 
      */
     @Import(name="targetRegion", required=true)
       private final String targetRegion;

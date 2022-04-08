@@ -21,7 +21,6 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
 
     /**
      * Has definition for the report.
-     * 
      */
     @Import(name="definition", required=true)
       private final Output<ReportDefinitionArgs> definition;
@@ -32,7 +31,6 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
 
     /**
      * Has delivery information for the report.
-     * 
      */
     @Import(name="deliveryInfo", required=true)
       private final Output<ReportDeliveryInfoArgs> deliveryInfo;
@@ -43,7 +41,6 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
 
     /**
      * The format of the report being delivered.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
@@ -54,7 +51,6 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
 
     /**
      * Report Name.
-     * 
      */
     @Import(name="reportName")
       private final @Nullable Output<String> reportName;
@@ -65,7 +61,6 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
 
     /**
      * Azure Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
 
     /**
      * Has schedule information for the report.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<ReportScheduleArgs> schedule;

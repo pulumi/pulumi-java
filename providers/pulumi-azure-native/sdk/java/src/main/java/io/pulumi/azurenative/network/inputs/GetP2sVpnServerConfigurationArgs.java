@@ -14,7 +14,6 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The name of the P2SVpnServerConfiguration.
-     * 
      */
     @Import(name="p2SVpnServerConfigurationName", required=true)
       private final String p2SVpnServerConfigurationName;
@@ -25,7 +24,6 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The resource group name of the P2SVpnServerConfiguration.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The name of the VirtualWan.
-     * 
      */
     @Import(name="virtualWanName", required=true)
       private final String virtualWanName;

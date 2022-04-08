@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Private link service connection details.
- * 
  */
 public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * List of group IDs.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
@@ -32,7 +30,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * Private link service connection name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * Request message.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;

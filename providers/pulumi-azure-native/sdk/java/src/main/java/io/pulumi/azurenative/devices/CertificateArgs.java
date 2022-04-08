@@ -17,7 +17,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the certificate
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -28,7 +27,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of an X509 CA Certificate.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CertificatePropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the IoT hub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the IoT hub.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

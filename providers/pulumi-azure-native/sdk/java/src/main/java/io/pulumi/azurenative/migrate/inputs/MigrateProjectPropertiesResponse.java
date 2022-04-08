@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for migrate project properties.
- * 
  */
 public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Gets the last time the project summary was refreshed.
-     * 
      */
     @Import(name="lastSummaryRefreshedTime", required=true)
       private final String lastSummaryRefreshedTime;
@@ -36,7 +34,6 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Provisioning state of the migrate project.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -47,7 +44,6 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Gets the refresh summary state.
-     * 
      */
     @Import(name="refreshSummaryState", required=true)
       private final String refreshSummaryState;
@@ -58,7 +54,6 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the list of tools registered with the migrate project.
-     * 
      */
     @Import(name="registeredTools")
       private final @Nullable List<String> registeredTools;
@@ -69,7 +64,6 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Gets the summary of the migrate project.
-     * 
      */
     @Import(name="summary", required=true)
       private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;

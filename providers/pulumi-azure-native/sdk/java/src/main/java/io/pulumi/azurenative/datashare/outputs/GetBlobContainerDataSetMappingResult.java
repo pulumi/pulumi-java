@@ -12,63 +12,51 @@ import java.util.Objects;
 public final class GetBlobContainerDataSetMappingResult {
     /**
      * BLOB Container name.
-     * 
      */
     private final String containerName;
     /**
      * The id of the source data set.
-     * 
      */
     private final String dataSetId;
     /**
      * Gets the status of the data set mapping.
-     * 
      */
     private final String dataSetMappingStatus;
     /**
      * The resource id of the azure resource
-     * 
      */
     private final String id;
     /**
      * Kind of data set mapping.
      * Expected value is 'Container'.
-     * 
      */
     private final String kind;
     /**
      * Name of the azure resource
-     * 
      */
     private final String name;
     /**
      * Provisioning state of the data set mapping.
-     * 
      */
     private final String provisioningState;
     /**
      * Resource group of storage account.
-     * 
      */
     private final String resourceGroup;
     /**
      * Storage account name of the source data set.
-     * 
      */
     private final String storageAccountName;
     /**
      * Subscription id of storage account.
-     * 
      */
     private final String subscriptionId;
     /**
      * System Data of the Azure resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Type of the azure resource
-     * 
      */
     private final String type;
 
@@ -102,28 +90,24 @@ public final class GetBlobContainerDataSetMappingResult {
 
     /**
      * BLOB Container name.
-     * 
     */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * The id of the source data set.
-     * 
     */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
-     * 
     */
     public String getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * The resource id of the azure resource
-     * 
     */
     public String getId() {
         return this.id;
@@ -131,56 +115,48 @@ public final class GetBlobContainerDataSetMappingResult {
     /**
      * Kind of data set mapping.
      * Expected value is 'Container'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the data set mapping.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource group of storage account.
-     * 
     */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Storage account name of the source data set.
-     * 
     */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Subscription id of storage account.
-     * 
     */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
     */
     public String getType() {
         return this.type;

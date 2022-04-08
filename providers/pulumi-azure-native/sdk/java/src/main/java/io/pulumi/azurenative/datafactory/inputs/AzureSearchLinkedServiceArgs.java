@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Windows Azure Search Service.
- * 
  */
 public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -50,7 +47,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -61,7 +57,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -72,7 +67,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
 
     /**
      * Admin Key for Azure Search service
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key;
@@ -83,7 +77,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -95,7 +88,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
     /**
      * Type of linked service.
      * Expected value is 'AzureSearch'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -106,7 +98,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
 
     /**
      * URL for Azure Search service. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Output<Object> url;

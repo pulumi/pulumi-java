@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Role of the linked server.
-     * 
      */
     @EnumType
     public enum ReplicationRole {

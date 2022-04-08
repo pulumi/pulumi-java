@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Resource pool model
- * 
  */
 public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Hierarchical resource pool name
-     * 
      */
     @Import(name="fullName", required=true)
       private final String fullName;
@@ -29,7 +27,6 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * resource pool id (privateCloudId:vsphereId)
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -40,7 +37,6 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure region
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -51,7 +47,6 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * {ResourcePoolName}
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -62,7 +57,6 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Private Cloud Id
-     * 
      */
     @Import(name="privateCloudId", required=true)
       private final String privateCloudId;
@@ -73,7 +67,6 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

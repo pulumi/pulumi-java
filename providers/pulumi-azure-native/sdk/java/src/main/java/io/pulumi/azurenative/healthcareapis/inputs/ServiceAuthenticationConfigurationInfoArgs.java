@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authentication configuration information
- * 
  */
 public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
 
     /**
      * The audience url for the service
-     * 
      */
     @Import(name="audience")
       private final @Nullable Output<String> audience;
@@ -32,7 +30,6 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
 
     /**
      * The authority url for the service
-     * 
      */
     @Import(name="authority")
       private final @Nullable Output<String> authority;
@@ -43,7 +40,6 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
 
     /**
      * If the SMART on FHIR proxy is enabled
-     * 
      */
     @Import(name="smartProxyEnabled")
       private final @Nullable Output<Boolean> smartProxyEnabled;

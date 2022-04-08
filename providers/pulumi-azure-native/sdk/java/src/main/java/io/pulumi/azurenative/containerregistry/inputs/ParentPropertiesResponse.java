@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of the connected registry parent.
- * 
  */
 public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource ID of the parent to which the connected registry will be associated.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The sync properties of the connected registry with its parent.
-     * 
      */
     @Import(name="syncProperties", required=true)
       private final SyncPropertiesResponse syncProperties;

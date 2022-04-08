@@ -15,47 +15,38 @@ import javax.annotation.Nullable;
 public final class GetWebhookResult {
     /**
      * The list of actions that trigger the webhook to post notifications.
-     * 
      */
     private final List<String> actions;
     /**
      * The resource ID.
-     * 
      */
     private final String id;
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     private final String location;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The provisioning state of the webhook at the time the operation was called.
-     * 
      */
     private final String provisioningState;
     /**
      * The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
-     * 
      */
     private final @Nullable String scope;
     /**
      * The status of the webhook at the time the operation was called.
-     * 
      */
     private final @Nullable String status;
     /**
      * The tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -83,63 +74,54 @@ public final class GetWebhookResult {
 
     /**
      * The list of actions that trigger the webhook to post notifications.
-     * 
     */
     public List<String> getActions() {
         return this.actions;
     }
     /**
      * The resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the webhook at the time the operation was called.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
-     * 
     */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The status of the webhook at the time the operation was called.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

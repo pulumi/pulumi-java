@@ -30,143 +30,123 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:web:WebAppVnetConnection")
 public class WebAppVnetConnection extends io.pulumi.resources.CustomResource {
     /**
-     * A certificate file (.cer) blob containing the public key of the private key used to authenticate a
+     * A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
      * Point-To-Site VPN connection.
-     * 
      */
     @Export(name="certBlob", type=String.class, parameters={})
     private Output</* @Nullable */ String> certBlob;
 
     /**
-     * @return A certificate file (.cer) blob containing the public key of the private key used to authenticate a
+     * @return A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
      * Point-To-Site VPN connection.
-     * 
      */
     public Output</* @Nullable */ String> getCertBlob() {
         return this.certBlob;
     }
     /**
      * The client certificate thumbprint.
-     * 
      */
     @Export(name="certThumbprint", type=String.class, parameters={})
     private Output<String> certThumbprint;
 
     /**
      * @return The client certificate thumbprint.
-     * 
      */
     public Output<String> getCertThumbprint() {
         return this.certThumbprint;
     }
     /**
      * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
-     * 
      */
     @Export(name="dnsServers", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsServers;
 
     /**
      * @return DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
-     * 
      */
     public Output</* @Nullable */ String> getDnsServers() {
         return this.dnsServers;
     }
     /**
      * Flag that is used to denote if this is VNET injection
-     * 
      */
     @Export(name="isSwift", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSwift;
 
     /**
      * @return Flag that is used to denote if this is VNET injection
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsSwift() {
         return this.isSwift;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * <code>true</code> if a resync is required; otherwise, <code>false</code>.
-     * 
      */
     @Export(name="resyncRequired", type=Boolean.class, parameters={})
     private Output<Boolean> resyncRequired;
 
     /**
      * @return <code>true</code> if a resync is required; otherwise, <code>false</code>.
-     * 
      */
     public Output<Boolean> getResyncRequired() {
         return this.resyncRequired;
     }
     /**
      * The routes that this Virtual Network connection uses.
-     * 
      */
     @Export(name="routes", type=List.class, parameters={VnetRouteResponse.class})
     private Output<List<VnetRouteResponse>> routes;
 
     /**
      * @return The routes that this Virtual Network connection uses.
-     * 
      */
     public Output<List<VnetRouteResponse>> getRoutes() {
         return this.routes;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The Virtual Network's resource ID.
-     * 
      */
     @Export(name="vnetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vnetResourceId;
 
     /**
      * @return The Virtual Network's resource ID.
-     * 
      */
     public Output</* @Nullable */ String> getVnetResourceId() {
         return this.vnetResourceId;

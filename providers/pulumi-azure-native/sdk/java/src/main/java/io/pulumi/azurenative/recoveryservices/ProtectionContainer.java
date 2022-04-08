@@ -31,7 +31,108 @@ import javax.annotation.Nullable;
  * Base class for container with backup items. Containers with specific workloads are derived from this class.
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RegisterAzure Storage ProtectionContainers
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var protectionContainer = new AzureNative.RecoveryServices.ProtectionContainer("protectionContainer", new AzureNative.RecoveryServices.ProtectionContainerArgs
+ *         {
+ *             ContainerName = "VMAppContainer;Compute;testRG;testSQL",
+ *             FabricName = "Azure",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.AzureVMAppContainerProtectionContainerArgs
+ *             {
+ *                 BackupManagementType = "AzureWorkload",
+ *                 ContainerType = "VMAppContainer",
+ *                 FriendlyName = "testSQL",
+ *                 SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+ *             },
+ *             ResourceGroupName = "test-rg",
+ *             VaultName = "testvault",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recoveryservices.NewProtectionContainer(ctx, "protectionContainer", &recoveryservices.ProtectionContainerArgs{
+ * 			ContainerName: pulumi.String("VMAppContainer;Compute;testRG;testSQL"),
+ * 			FabricName:    pulumi.String("Azure"),
+ * 			Properties: recoveryservices.AzureVMAppContainerProtectionContainer{
+ * 				BackupManagementType: "AzureWorkload",
+ * 				ContainerType:        "VMAppContainer",
+ * 				FriendlyName:         "testSQL",
+ * 				SourceResourceId:     "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("test-rg"),
+ * 			VaultName:         pulumi.String("testvault"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const protectionContainer = new azure_native.recoveryservices.ProtectionContainer("protectionContainer", {
+ *     containerName: "VMAppContainer;Compute;testRG;testSQL",
+ *     fabricName: "Azure",
+ *     properties: {
+ *         backupManagementType: "AzureWorkload",
+ *         containerType: "VMAppContainer",
+ *         friendlyName: "testSQL",
+ *         sourceResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+ *     },
+ *     resourceGroupName: "test-rg",
+ *     vaultName: "testvault",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * protection_container = azure_native.recoveryservices.ProtectionContainer("protectionContainer",
+ *     container_name="VMAppContainer;Compute;testRG;testSQL",
+ *     fabric_name="Azure",
+ *     properties=azure_native.recoveryservices.AzureVMAppContainerProtectionContainerArgs(
+ *         backup_management_type="AzureWorkload",
+ *         container_type="VMAppContainer",
+ *         friendly_name="testSQL",
+ *         source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+ *     ),
+ *     resource_group_name="test-rg",
+ *     vault_name="testvault")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -46,84 +147,72 @@ import javax.annotation.Nullable;
 public class ProtectionContainer extends io.pulumi.resources.CustomResource {
     /**
      * Optional ETag.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return Optional ETag.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name associated with the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name associated with the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * ProtectionContainerResource properties
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return ProtectionContainerResource properties
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -16,7 +16,6 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
 
     /**
      * The name of Network Virtual Appliance.
-     * 
      */
     @Import(name="networkVirtualApplianceName", required=true)
       private final String networkVirtualApplianceName;
@@ -38,7 +36,6 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

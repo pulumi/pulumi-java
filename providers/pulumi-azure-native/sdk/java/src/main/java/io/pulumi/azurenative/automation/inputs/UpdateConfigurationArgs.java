@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Update specific properties of the software update configuration.
- * 
  */
 public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-     * 
      */
     @Import(name="azureVirtualMachines")
       private final @Nullable Output<List<String>> azureVirtualMachines;
@@ -36,7 +34,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-     * 
      */
     @Import(name="duration")
       private final @Nullable Output<String> duration;
@@ -47,7 +44,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Linux specific update configuration.
-     * 
      */
     @Import(name="linux")
       private final @Nullable Output<LinuxPropertiesArgs> linux;
@@ -58,7 +54,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of names of non-azure machines targeted by the software update configuration.
-     * 
      */
     @Import(name="nonAzureComputerNames")
       private final @Nullable Output<List<String>> nonAzureComputerNames;
@@ -69,7 +64,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * operating system of target machines
-     * 
      */
     @Import(name="operatingSystem", required=true)
       private final Output<OperatingSystemType> operatingSystem;
@@ -80,7 +74,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Group targets for the software update configuration.
-     * 
      */
     @Import(name="targets")
       private final @Nullable Output<TargetPropertiesArgs> targets;
@@ -91,7 +84,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Windows specific update configuration.
-     * 
      */
     @Import(name="windows")
       private final @Nullable Output<WindowsPropertiesArgs> windows;

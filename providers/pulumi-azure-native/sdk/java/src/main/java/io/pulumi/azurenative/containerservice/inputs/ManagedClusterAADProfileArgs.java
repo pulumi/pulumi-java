@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * AADProfile specifies attributes for Azure Active Directory integration.
- * 
  */
 public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * AAD group object IDs that will have admin role of the cluster.
-     * 
      */
     @Import(name="adminGroupObjectIDs")
       private final @Nullable Output<List<String>> adminGroupObjectIDs;
@@ -33,7 +31,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * The client AAD application ID.
-     * 
      */
     @Import(name="clientAppID")
       private final @Nullable Output<String> clientAppID;
@@ -44,7 +41,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * Whether to enable Azure RBAC for Kubernetes authorization.
-     * 
      */
     @Import(name="enableAzureRBAC")
       private final @Nullable Output<Boolean> enableAzureRBAC;
@@ -55,7 +51,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * Whether to enable managed AAD.
-     * 
      */
     @Import(name="managed")
       private final @Nullable Output<Boolean> managed;
@@ -66,7 +61,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * The server AAD application ID.
-     * 
      */
     @Import(name="serverAppID")
       private final @Nullable Output<String> serverAppID;
@@ -77,7 +71,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * The server AAD application secret.
-     * 
      */
     @Import(name="serverAppSecret")
       private final @Nullable Output<String> serverAppSecret;
@@ -88,7 +81,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
-     * 
      */
     @Import(name="tenantID")
       private final @Nullable Output<String> tenantID;

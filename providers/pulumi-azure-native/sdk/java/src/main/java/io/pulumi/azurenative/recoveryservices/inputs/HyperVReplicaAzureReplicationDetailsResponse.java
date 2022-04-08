@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hyper V Replica Azure provider specific settings.
- * 
  */
 public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * Azure VM Disk details.
-     * 
      */
     @Import(name="azureVmDiskDetails")
       private final @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
@@ -38,7 +36,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
-     * 
      */
     @Import(name="enableRdpOnTargetOption")
       private final @Nullable String enableRdpOnTargetOption;
@@ -49,7 +46,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The encryption info.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable String encryption;
@@ -60,7 +56,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * Initial replication details.
-     * 
      */
     @Import(name="initialReplicationDetails")
       private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
@@ -72,7 +67,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
     /**
      * Gets the Instance type.
      * Expected value is 'HyperVReplicaAzure'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -83,7 +77,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The Last replication time.
-     * 
      */
     @Import(name="lastReplicatedTime")
       private final @Nullable String lastReplicatedTime;
@@ -94,7 +87,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The last RPO calculated time.
-     * 
      */
     @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
@@ -105,7 +97,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * License Type of the VM to be used.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable String licenseType;
@@ -116,7 +107,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The operating system info.
-     * 
      */
     @Import(name="oSDetails")
       private final @Nullable OSDetailsResponse oSDetails;
@@ -127,7 +117,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The recovery availability set Id.
-     * 
      */
     @Import(name="recoveryAvailabilitySetId")
       private final @Nullable String recoveryAvailabilitySetId;
@@ -138,7 +127,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
-     * 
      */
     @Import(name="recoveryAzureLogStorageAccountId")
       private final @Nullable String recoveryAzureLogStorageAccountId;
@@ -149,7 +137,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The target resource group Id.
-     * 
      */
     @Import(name="recoveryAzureResourceGroupId")
       private final @Nullable String recoveryAzureResourceGroupId;
@@ -160,7 +147,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The recovery Azure storage account.
-     * 
      */
     @Import(name="recoveryAzureStorageAccount")
       private final @Nullable String recoveryAzureStorageAccount;
@@ -171,7 +157,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The Recovery Azure VM size.
-     * 
      */
     @Import(name="recoveryAzureVMSize")
       private final @Nullable String recoveryAzureVMSize;
@@ -182,7 +167,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * Recovery Azure given name.
-     * 
      */
     @Import(name="recoveryAzureVmName")
       private final @Nullable String recoveryAzureVmName;
@@ -193,7 +177,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * Last RPO value.
-     * 
      */
     @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
@@ -204,7 +187,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The selected recovery azure network Id.
-     * 
      */
     @Import(name="selectedRecoveryAzureNetworkId")
       private final @Nullable String selectedRecoveryAzureNetworkId;
@@ -215,7 +197,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The selected source nic Id which will be used as the primary nic during failover.
-     * 
      */
     @Import(name="selectedSourceNicId")
       private final @Nullable String selectedSourceNicId;
@@ -226,7 +207,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The CPU count of the VM on the primary side.
-     * 
      */
     @Import(name="sourceVmCpuCount")
       private final @Nullable Integer sourceVmCpuCount;
@@ -237,7 +217,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The RAM size of the VM on the primary side.
-     * 
      */
     @Import(name="sourceVmRamSizeInMB")
       private final @Nullable Integer sourceVmRamSizeInMB;
@@ -248,7 +227,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The target availability zone.
-     * 
      */
     @Import(name="targetAvailabilityZone")
       private final @Nullable String targetAvailabilityZone;
@@ -259,7 +237,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The target proximity placement group Id.
-     * 
      */
     @Import(name="targetProximityPlacementGroupId")
       private final @Nullable String targetProximityPlacementGroupId;
@@ -270,7 +247,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * A value indicating whether managed disks should be used during failover.
-     * 
      */
     @Import(name="useManagedDisks")
       private final @Nullable String useManagedDisks;
@@ -281,7 +257,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The virtual machine Id.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable String vmId;
@@ -292,7 +267,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The PE Network details.
-     * 
      */
     @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
@@ -303,7 +277,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The protection state for the vm.
-     * 
      */
     @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
@@ -314,7 +287,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
 
     /**
      * The protection state description for the vm.
-     * 
      */
     @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;

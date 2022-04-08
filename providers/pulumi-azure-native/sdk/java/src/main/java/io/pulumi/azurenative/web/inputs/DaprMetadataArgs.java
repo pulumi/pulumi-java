@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App Dapr component metadata.
- * 
  */
 public final class DaprMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DaprMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata property name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class DaprMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Container App secret from which to pull the metadata property value.
-     * 
      */
     @Import(name="secretRef")
       private final @Nullable Output<String> secretRef;
@@ -42,7 +39,6 @@ public final class DaprMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata property value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

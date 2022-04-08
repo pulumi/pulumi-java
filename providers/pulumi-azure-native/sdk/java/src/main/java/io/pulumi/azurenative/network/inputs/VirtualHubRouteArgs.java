@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VirtualHub route.
- * 
  */
 public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of all addressPrefixes.
-     * 
      */
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;
@@ -32,7 +30,6 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * NextHop ip address.
-     * 
      */
     @Import(name="nextHopIpAddress")
       private final @Nullable Output<String> nextHopIpAddress;

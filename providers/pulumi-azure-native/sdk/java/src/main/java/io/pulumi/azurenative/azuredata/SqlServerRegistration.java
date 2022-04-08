@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * A SQL server registration.
  * API Version: 2019-07-24-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a SQL Server registration.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlServerRegistration = new AzureNative.AzureData.SqlServerRegistration("sqlServerRegistration", new AzureNative.AzureData.SqlServerRegistrationArgs
+ *         {
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             SqlServerRegistrationName = "testsqlregistration",
+ *             Tags = 
+ *             {
+ *                 { "mytag", "myval" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azuredata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azuredata"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azuredata.NewSqlServerRegistration(ctx, "sqlServerRegistration", &azuredata.SqlServerRegistrationArgs{
+ * 			Location:                  pulumi.String("northeurope"),
+ * 			ResourceGroupName:         pulumi.String("testrg"),
+ * 			SqlServerRegistrationName: pulumi.String("testsqlregistration"),
+ * 			Tags: pulumi.StringMap{
+ * 				"mytag": pulumi.String("myval"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlServerRegistration = new azure_native.azuredata.SqlServerRegistration("sqlServerRegistration", {
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     sqlServerRegistrationName: "testsqlregistration",
+ *     tags: {
+ *         mytag: "myval",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_server_registration = azure_native.azuredata.SqlServerRegistration("sqlServerRegistration",
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     sql_server_registration_name="testsqlregistration",
+ *     tags={
+ *         "mytag": "myval",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +119,96 @@ import javax.annotation.Nullable;
 public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional Properties as JSON string
-     * 
      */
     @Export(name="propertyBag", type=String.class, parameters={})
     private Output</* @Nullable */ String> propertyBag;
 
     /**
      * @return Optional Properties as JSON string
-     * 
      */
     public Output</* @Nullable */ String> getPropertyBag() {
         return this.propertyBag;
     }
     /**
      * Resource Group Name
-     * 
      */
     @Export(name="resourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroup;
 
     /**
      * @return Resource Group Name
-     * 
      */
     public Output</* @Nullable */ String> getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Subscription Id
-     * 
      */
     @Export(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
     /**
      * @return Subscription Id
-     * 
      */
     public Output</* @Nullable */ String> getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

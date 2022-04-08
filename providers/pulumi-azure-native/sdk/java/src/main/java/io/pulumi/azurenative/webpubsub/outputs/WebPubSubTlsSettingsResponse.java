@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class WebPubSubTlsSettingsResponse {
     /**
      * Request client certificate during TLS handshake if enabled
-     * 
      */
     private final @Nullable Boolean clientCertEnabled;
 
@@ -24,7 +23,6 @@ public final class WebPubSubTlsSettingsResponse {
 
     /**
      * Request client certificate during TLS handshake if enabled
-     * 
     */
     public Optional<Boolean> getClientCertEnabled() {
         return Optional.ofNullable(this.clientCertEnabled);

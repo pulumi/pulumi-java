@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of Auth token.
-     * 
      */
     @EnumType
     public enum TokenType {

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ReportGroupingResponse {
     /**
      * The name of the column to group.
-     * 
      */
     private final String name;
     /**
      * Has type of the column to group.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class ReportGroupingResponse {
 
     /**
      * The name of the column to group.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Has type of the column to group.
-     * 
     */
     public String getType() {
         return this.type;

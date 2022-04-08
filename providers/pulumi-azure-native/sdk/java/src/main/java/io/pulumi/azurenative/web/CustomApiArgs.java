@@ -18,7 +18,6 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API name
-     * 
      */
     @Import(name="apiName")
       private final @Nullable Output<String> apiName;
@@ -29,7 +28,6 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom API properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CustomApiPropertiesDefinitionArgs> properties;
@@ -51,7 +48,6 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Subscription Id
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -73,7 +68,6 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

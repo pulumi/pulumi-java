@@ -24,7 +24,122 @@ import javax.annotation.Nullable;
  * The security connector resource.
  * API Version: 2021-07-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a security connector
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var securityConnector = new AzureNative.Security.SecurityConnector("securityConnector", new AzureNative.Security.SecurityConnectorArgs
+ *         {
+ *             CloudName = "AWS",
+ *             HierarchyIdentifier = "exampleHierarchyId",
+ *             Location = "Central US",
+ *             Offerings = 
+ *             {
+ *                 new AzureNative.Security.Inputs.CspmMonitorAwsOfferingArgs
+ *                 {
+ *                     NativeCloudConnection = new AzureNative.Security.Inputs.CspmMonitorAwsOfferingNativeCloudConnectionArgs
+ *                     {
+ *                         CloudRoleArn = "arn:aws:iam::00000000:role/ASCMonitor",
+ *                     },
+ *                     OfferingType = "CspmMonitorAws",
+ *                 },
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *             SecurityConnectorName = "exampleSecurityConnectorName",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewSecurityConnector(ctx, "securityConnector", &security.SecurityConnectorArgs{
+ * 			CloudName:           pulumi.String("AWS"),
+ * 			HierarchyIdentifier: pulumi.String("exampleHierarchyId"),
+ * 			Location:            pulumi.String("Central US"),
+ * 			Offerings: pulumi.AnyArray{
+ * 				security.CspmMonitorAwsOffering{
+ * 					NativeCloudConnection: security.CspmMonitorAwsOfferingNativeCloudConnection{
+ * 						CloudRoleArn: "arn:aws:iam::00000000:role/ASCMonitor",
+ * 					},
+ * 					OfferingType: "CspmMonitorAws",
+ * 				},
+ * 			},
+ * 			ResourceGroupName:     pulumi.String("exampleResourceGroup"),
+ * 			SecurityConnectorName: pulumi.String("exampleSecurityConnectorName"),
+ * 			Tags:                  nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const securityConnector = new azure_native.security.SecurityConnector("securityConnector", {
+ *     cloudName: "AWS",
+ *     hierarchyIdentifier: "exampleHierarchyId",
+ *     location: "Central US",
+ *     offerings: [{
+ *         nativeCloudConnection: {
+ *             cloudRoleArn: "arn:aws:iam::00000000:role/ASCMonitor",
+ *         },
+ *         offeringType: "CspmMonitorAws",
+ *     }],
+ *     resourceGroupName: "exampleResourceGroup",
+ *     securityConnectorName: "exampleSecurityConnectorName",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * security_connector = azure_native.security.SecurityConnector("securityConnector",
+ *     cloud_name="AWS",
+ *     hierarchy_identifier="exampleHierarchyId",
+ *     location="Central US",
+ *     offerings=[azure_native.security.CspmMonitorAwsOfferingArgs(
+ *         native_cloud_connection=azure_native.security.CspmMonitorAwsOfferingNativeCloudConnectionArgs(
+ *             cloud_role_arn="arn:aws:iam::00000000:role/ASCMonitor",
+ *         ),
+ *         offering_type="CspmMonitorAws",
+ *     )],
+ *     resource_group_name="exampleResourceGroup",
+ *     security_connector_name="exampleSecurityConnectorName",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,154 +154,132 @@ import javax.annotation.Nullable;
 public class SecurityConnector extends io.pulumi.resources.CustomResource {
     /**
      * The multi cloud resource's cloud name.
-     * 
      */
     @Export(name="cloudName", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudName;
 
     /**
      * @return The multi cloud resource's cloud name.
-     * 
      */
     public Output</* @Nullable */ String> getCloudName() {
         return this.cloudName;
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The multi cloud resource identifier (account id in case of AWS connector).
-     * 
      */
     @Export(name="hierarchyIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> hierarchyIdentifier;
 
     /**
      * @return The multi cloud resource identifier (account id in case of AWS connector).
-     * 
      */
     public Output</* @Nullable */ String> getHierarchyIdentifier() {
         return this.hierarchyIdentifier;
     }
     /**
      * Kind of the resource
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of the resource
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Location where the resource is stored
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location where the resource is stored
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A collection of offerings for the security connector.
-     * 
      */
     @Export(name="offerings", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> offerings;
 
     /**
      * @return A collection of offerings for the security connector.
-     * 
      */
     public Output</* @Nullable */ List<Object>> getOfferings() {
         return this.offerings;
     }
     /**
      * The multi cloud account's organizational data
-     * 
      */
     @Export(name="organizationalData", type=SecurityConnectorPropertiesResponseOrganizationalData.class, parameters={})
     private Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> organizationalData;
 
     /**
      * @return The multi cloud account's organizational data
-     * 
      */
     public Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> getOrganizationalData() {
         return this.organizationalData;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * A list of key value pairs that describe the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A list of key value pairs that describe the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

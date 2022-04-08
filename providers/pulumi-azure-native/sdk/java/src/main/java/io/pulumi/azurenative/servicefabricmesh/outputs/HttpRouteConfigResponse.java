@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class HttpRouteConfigResponse {
     /**
      * Describes destination endpoint for routing traffic.
-     * 
      */
     private final GatewayDestinationResponse destination;
     /**
      * Describes a rule for http route matching.
-     * 
      */
     private final HttpRouteMatchRuleResponse match;
     /**
      * http route name.
-     * 
      */
     private final String name;
 
@@ -39,21 +36,18 @@ public final class HttpRouteConfigResponse {
 
     /**
      * Describes destination endpoint for routing traffic.
-     * 
     */
     public GatewayDestinationResponse getDestination() {
         return this.destination;
     }
     /**
      * Describes a rule for http route matching.
-     * 
     */
     public HttpRouteMatchRuleResponse getMatch() {
         return this.match;
     }
     /**
      * http route name.
-     * 
     */
     public String getName() {
         return this.name;

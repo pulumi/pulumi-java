@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A2A Policy creation input.
- * 
  */
 public final class A2APolicyCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
 
     /**
      * The app consistent snapshot frequency (in minutes).
-     * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
@@ -34,7 +32,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
 
     /**
      * The crash consistent snapshot frequency (in minutes).
-     * 
      */
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
@@ -46,7 +43,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
     /**
      * The class type.
      * Expected value is 'A2A'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -57,7 +53,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
 
     /**
      * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
-     * 
      */
     @Import(name="multiVmSyncStatus", required=true)
       private final Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
@@ -68,7 +63,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
 
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
      */
     @Import(name="recoveryPointHistory")
       private final @Nullable Output<Integer> recoveryPointHistory;

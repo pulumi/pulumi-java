@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that define an exchange connection.
- * 
  */
 public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The BGP session associated with the connection.
-     * 
      */
     @Import(name="bgpSession")
       private final @Nullable Output<BgpSessionArgs> bgpSession;
@@ -33,7 +31,6 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The unique identifier (GUID) for the connection.
-     * 
      */
     @Import(name="connectionIdentifier")
       private final @Nullable Output<String> connectionIdentifier;
@@ -44,7 +41,6 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
-     * 
      */
     @Import(name="peeringDBFacilityId")
       private final @Nullable Output<Integer> peeringDBFacilityId;

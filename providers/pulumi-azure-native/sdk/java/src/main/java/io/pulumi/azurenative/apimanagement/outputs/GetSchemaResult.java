@@ -13,32 +13,26 @@ import javax.annotation.Nullable;
 public final class GetSchemaResult {
     /**
      * Free-form schema entity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Schema Type. Immutable.
-     * 
      */
     private final String schemaType;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
     /**
      * Json-encoded string for non json-based schema.
-     * 
      */
     private final @Nullable String value;
 
@@ -60,42 +54,36 @@ public final class GetSchemaResult {
 
     /**
      * Free-form schema entity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Schema Type. Immutable.
-     * 
     */
     public String getSchemaType() {
         return this.schemaType;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Json-encoded string for non json-based schema.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

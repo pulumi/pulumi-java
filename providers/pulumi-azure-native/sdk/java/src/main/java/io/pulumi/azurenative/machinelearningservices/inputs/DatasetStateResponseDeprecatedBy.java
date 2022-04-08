@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Reference to better Dataset or a Definition
- * 
  */
 public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
 
     /**
      * Unique Dataset identifier.
-     * 
      */
     @Import(name="datasetId", required=true)
       private final String datasetId;
@@ -31,7 +29,6 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
 
     /**
      * Definition Version
-     * 
      */
     @Import(name="definitionVersion")
       private final @Nullable String definitionVersion;

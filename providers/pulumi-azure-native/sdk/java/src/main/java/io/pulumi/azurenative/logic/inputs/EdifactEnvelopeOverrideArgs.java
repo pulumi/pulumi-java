@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Edifact envelope override settings.
- * 
  */
 public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The application password.
-     * 
      */
     @Import(name="applicationPassword")
       private final @Nullable Output<String> applicationPassword;
@@ -31,7 +29,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The association assigned code.
-     * 
      */
     @Import(name="associationAssignedCode")
       private final @Nullable Output<String> associationAssignedCode;
@@ -42,7 +39,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The controlling agency code.
-     * 
      */
     @Import(name="controllingAgencyCode")
       private final @Nullable Output<String> controllingAgencyCode;
@@ -53,7 +49,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The functional group id.
-     * 
      */
     @Import(name="functionalGroupId")
       private final @Nullable Output<String> functionalGroupId;
@@ -64,7 +59,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The group header message release.
-     * 
      */
     @Import(name="groupHeaderMessageRelease")
       private final @Nullable Output<String> groupHeaderMessageRelease;
@@ -75,7 +69,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The group header message version.
-     * 
      */
     @Import(name="groupHeaderMessageVersion")
       private final @Nullable Output<String> groupHeaderMessageVersion;
@@ -86,7 +79,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The message association assigned code.
-     * 
      */
     @Import(name="messageAssociationAssignedCode")
       private final @Nullable Output<String> messageAssociationAssignedCode;
@@ -97,7 +89,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The message id on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
@@ -108,7 +99,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The message release version on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="messageRelease")
       private final @Nullable Output<String> messageRelease;
@@ -119,7 +109,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The message version on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="messageVersion")
       private final @Nullable Output<String> messageVersion;
@@ -130,7 +119,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The receiver application id.
-     * 
      */
     @Import(name="receiverApplicationId")
       private final @Nullable Output<String> receiverApplicationId;
@@ -141,7 +129,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The receiver application qualifier.
-     * 
      */
     @Import(name="receiverApplicationQualifier")
       private final @Nullable Output<String> receiverApplicationQualifier;
@@ -152,7 +139,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The sender application id.
-     * 
      */
     @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;
@@ -163,7 +149,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The sender application qualifier.
-     * 
      */
     @Import(name="senderApplicationQualifier")
       private final @Nullable Output<String> senderApplicationQualifier;
@@ -174,7 +159,6 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
 
     /**
      * The target namespace on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;

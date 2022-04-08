@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The minimum number of violations required within the selected lookback time window required to raise an alert.
- * 
  */
 public final class DynamicThresholdFailingPeriodsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DynamicThresholdFailingPeriodsResponse extends io.pulumi.reso
 
     /**
      * The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
-     * 
      */
     @Import(name="minFailingPeriodsToAlert", required=true)
       private final Double minFailingPeriodsToAlert;
@@ -29,7 +27,6 @@ public final class DynamicThresholdFailingPeriodsResponse extends io.pulumi.reso
 
     /**
      * The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
-     * 
      */
     @Import(name="numberOfEvaluationPeriods", required=true)
       private final Double numberOfEvaluationPeriods;

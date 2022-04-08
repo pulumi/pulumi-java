@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * API OAuth2 Authentication settings details.
- * 
  */
 public final class OpenIdAuthenticationSettingsContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class OpenIdAuthenticationSettingsContractResponse extends io.pulum
 
     /**
      * How to send token to the server.
-     * 
      */
     @Import(name="bearerTokenSendingMethods")
       private final @Nullable List<String> bearerTokenSendingMethods;
@@ -32,7 +30,6 @@ public final class OpenIdAuthenticationSettingsContractResponse extends io.pulum
 
     /**
      * OAuth authorization server identifier.
-     * 
      */
     @Import(name="openidProviderId")
       private final @Nullable String openidProviderId;

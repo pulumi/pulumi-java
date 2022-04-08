@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The private endpoint connection of a Digital Twin.
- * 
  */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 

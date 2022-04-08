@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class GetVirtualHubBgpConnectionResult {
     /**
      * The current state of the VirtualHub to Peer.
-     * 
      */
     private final String connectionState;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Name of the connection.
-     * 
      */
     private final @Nullable String name;
     /**
      * Peer ASN.
-     * 
      */
     private final @Nullable Double peerAsn;
     /**
      * Peer IP.
-     * 
      */
     private final @Nullable String peerIp;
     /**
      * The provisioning state of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Connection type.
-     * 
      */
     private final String type;
 
@@ -75,56 +67,48 @@ public final class GetVirtualHubBgpConnectionResult {
 
     /**
      * The current state of the VirtualHub to Peer.
-     * 
     */
     public String getConnectionState() {
         return this.connectionState;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the connection.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Peer ASN.
-     * 
     */
     public Optional<Double> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
     /**
      * Peer IP.
-     * 
     */
     public Optional<String> getPeerIp() {
         return Optional.ofNullable(this.peerIp);
     }
     /**
      * The provisioning state of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Connection type.
-     * 
     */
     public String getType() {
         return this.type;

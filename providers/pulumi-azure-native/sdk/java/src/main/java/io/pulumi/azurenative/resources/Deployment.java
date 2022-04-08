@@ -19,7 +19,429 @@ import javax.annotation.Nullable;
  * Deployment information.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a deployment that will deploy a template with a uri and queryString
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deployment = new AzureNative.Resources.Deployment("deployment", new AzureNative.Resources.DeploymentArgs
+ *         {
+ *             DeploymentName = "my-deployment",
+ *             Properties = new AzureNative.Resources.Inputs.DeploymentPropertiesArgs
+ *             {
+ *                 Mode = "Incremental",
+ *                 Parameters = ,
+ *                 TemplateLink = new AzureNative.Resources.Inputs.TemplateLinkArgs
+ *                 {
+ *                     QueryString = "sv=2019-02-02&st=2019-04-29T22%3A18%3A26Z&se=2019-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=xxxxxxxx0xxxxxxxxxxxxx%2bxxxxxxxxxxxxxxxxxxxx%3d",
+ *                     Uri = "https://example.com/exampleTemplate.json",
+ *                 },
+ *             },
+ *             ResourceGroupName = "my-resource-group",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
+ * 			DeploymentName: pulumi.String("my-deployment"),
+ * 			Properties: &resources.DeploymentPropertiesArgs{
+ * 				Mode:       "Incremental",
+ * 				Parameters: nil,
+ * 				TemplateLink: &resources.TemplateLinkArgs{
+ * 					QueryString: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "sv=2019-02-02&st=2019-04-29T22", "%", "3A18", "%", "3A26Z&se=2019-04-30T02", "%", "3A23", "%", "3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=xxxxxxxx0xxxxxxxxxxxxx", "%", "2bxxxxxxxxxxxxxxxxxxxx", "%", "3d")),
+ * 					Uri:         pulumi.String("https://example.com/exampleTemplate.json"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deployment = new azure_native.resources.Deployment("deployment", {
+ *     deploymentName: "my-deployment",
+ *     properties: {
+ *         mode: "Incremental",
+ *         parameters: {},
+ *         templateLink: {
+ *             queryString: `sv=2019-02-02&st=2019-04-29T22%3A18%3A26Z&se=2019-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=xxxxxxxx0xxxxxxxxxxxxx%2bxxxxxxxxxxxxxxxxxxxx%3d`,
+ *             uri: "https://example.com/exampleTemplate.json",
+ *         },
+ *     },
+ *     resourceGroupName: "my-resource-group",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment = azure_native.resources.Deployment("deployment",
+ *     deployment_name="my-deployment",
+ *     properties=azure_native.resources.DeploymentPropertiesArgs(
+ *         mode="Incremental",
+ *         parameters={},
+ *         template_link=azure_native.resources.TemplateLinkArgs(
+ *             query_string="sv=2019-02-02&st=2019-04-29T22%3A18%3A26Z&se=2019-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=xxxxxxxx0xxxxxxxxxxxxx%2bxxxxxxxxxxxxxxxxxxxx%3d",
+ *             uri="https://example.com/exampleTemplate.json",
+ *         ),
+ *     ),
+ *     resource_group_name="my-resource-group")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a deployment that will deploy a templateSpec with the given resourceId
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deployment = new AzureNative.Resources.Deployment("deployment", new AzureNative.Resources.DeploymentArgs
+ *         {
+ *             DeploymentName = "my-deployment",
+ *             Properties = new AzureNative.Resources.Inputs.DeploymentPropertiesArgs
+ *             {
+ *                 Mode = "Incremental",
+ *                 Parameters = ,
+ *                 TemplateLink = new AzureNative.Resources.Inputs.TemplateLinkArgs
+ *                 {
+ *                     Id = "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
+ *                 },
+ *             },
+ *             ResourceGroupName = "my-resource-group",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
+ * 			DeploymentName: pulumi.String("my-deployment"),
+ * 			Properties: &resources.DeploymentPropertiesArgs{
+ * 				Mode:       "Incremental",
+ * 				Parameters: nil,
+ * 				TemplateLink: &resources.TemplateLinkArgs{
+ * 					Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deployment = new azure_native.resources.Deployment("deployment", {
+ *     deploymentName: "my-deployment",
+ *     properties: {
+ *         mode: "Incremental",
+ *         parameters: {},
+ *         templateLink: {
+ *             id: "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
+ *         },
+ *     },
+ *     resourceGroupName: "my-resource-group",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment = azure_native.resources.Deployment("deployment",
+ *     deployment_name="my-deployment",
+ *     properties=azure_native.resources.DeploymentPropertiesArgs(
+ *         mode="Incremental",
+ *         parameters={},
+ *         template_link=azure_native.resources.TemplateLinkArgs(
+ *             id="/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
+ *         ),
+ *     ),
+ *     resource_group_name="my-resource-group")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a deployment that will redeploy another deployment on failure
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deployment = new AzureNative.Resources.Deployment("deployment", new AzureNative.Resources.DeploymentArgs
+ *         {
+ *             DeploymentName = "my-deployment",
+ *             Properties = new AzureNative.Resources.Inputs.DeploymentPropertiesArgs
+ *             {
+ *                 Mode = "Complete",
+ *                 OnErrorDeployment = new AzureNative.Resources.Inputs.OnErrorDeploymentArgs
+ *                 {
+ *                     DeploymentName = "name-of-deployment-to-use",
+ *                     Type = "SpecificDeployment",
+ *                 },
+ *                 Parameters = ,
+ *                 TemplateLink = new AzureNative.Resources.Inputs.TemplateLinkArgs
+ *                 {
+ *                     Uri = "https://example.com/exampleTemplate.json",
+ *                 },
+ *             },
+ *             ResourceGroupName = "my-resource-group",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
+ * 			DeploymentName: pulumi.String("my-deployment"),
+ * 			Properties: &resources.DeploymentPropertiesArgs{
+ * 				Mode: "Complete",
+ * 				OnErrorDeployment: &resources.OnErrorDeploymentArgs{
+ * 					DeploymentName: pulumi.String("name-of-deployment-to-use"),
+ * 					Type:           "SpecificDeployment",
+ * 				},
+ * 				Parameters: nil,
+ * 				TemplateLink: &resources.TemplateLinkArgs{
+ * 					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deployment = new azure_native.resources.Deployment("deployment", {
+ *     deploymentName: "my-deployment",
+ *     properties: {
+ *         mode: "Complete",
+ *         onErrorDeployment: {
+ *             deploymentName: "name-of-deployment-to-use",
+ *             type: "SpecificDeployment",
+ *         },
+ *         parameters: {},
+ *         templateLink: {
+ *             uri: "https://example.com/exampleTemplate.json",
+ *         },
+ *     },
+ *     resourceGroupName: "my-resource-group",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment = azure_native.resources.Deployment("deployment",
+ *     deployment_name="my-deployment",
+ *     properties=azure_native.resources.DeploymentPropertiesArgs(
+ *         mode="Complete",
+ *         on_error_deployment=azure_native.resources.OnErrorDeploymentArgs(
+ *             deployment_name="name-of-deployment-to-use",
+ *             type="SpecificDeployment",
+ *         ),
+ *         parameters={},
+ *         template_link=azure_native.resources.TemplateLinkArgs(
+ *             uri="https://example.com/exampleTemplate.json",
+ *         ),
+ *     ),
+ *     resource_group_name="my-resource-group")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a deployment that will redeploy the last successful deployment on failure
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deployment = new AzureNative.Resources.Deployment("deployment", new AzureNative.Resources.DeploymentArgs
+ *         {
+ *             DeploymentName = "my-deployment",
+ *             Properties = new AzureNative.Resources.Inputs.DeploymentPropertiesArgs
+ *             {
+ *                 Mode = "Complete",
+ *                 OnErrorDeployment = new AzureNative.Resources.Inputs.OnErrorDeploymentArgs
+ *                 {
+ *                     Type = "LastSuccessful",
+ *                 },
+ *                 Parameters = ,
+ *                 TemplateLink = new AzureNative.Resources.Inputs.TemplateLinkArgs
+ *                 {
+ *                     Uri = "https://example.com/exampleTemplate.json",
+ *                 },
+ *             },
+ *             ResourceGroupName = "my-resource-group",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeployment(ctx, "deployment", &resources.DeploymentArgs{
+ * 			DeploymentName: pulumi.String("my-deployment"),
+ * 			Properties: &resources.DeploymentPropertiesArgs{
+ * 				Mode: "Complete",
+ * 				OnErrorDeployment: &resources.OnErrorDeploymentArgs{
+ * 					Type: "LastSuccessful",
+ * 				},
+ * 				Parameters: nil,
+ * 				TemplateLink: &resources.TemplateLinkArgs{
+ * 					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deployment = new azure_native.resources.Deployment("deployment", {
+ *     deploymentName: "my-deployment",
+ *     properties: {
+ *         mode: "Complete",
+ *         onErrorDeployment: {
+ *             type: "LastSuccessful",
+ *         },
+ *         parameters: {},
+ *         templateLink: {
+ *             uri: "https://example.com/exampleTemplate.json",
+ *         },
+ *     },
+ *     resourceGroupName: "my-resource-group",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment = azure_native.resources.Deployment("deployment",
+ *     deployment_name="my-deployment",
+ *     properties=azure_native.resources.DeploymentPropertiesArgs(
+ *         mode="Complete",
+ *         on_error_deployment=azure_native.resources.OnErrorDeploymentArgs(
+ *             type="LastSuccessful",
+ *         ),
+ *         parameters={},
+ *         template_link=azure_native.resources.TemplateLinkArgs(
+ *             uri="https://example.com/exampleTemplate.json",
+ *         ),
+ *     ),
+ *     resource_group_name="my-resource-group")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +456,60 @@ import javax.annotation.Nullable;
 public class Deployment extends io.pulumi.resources.CustomResource {
     /**
      * the location of the deployment.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return the location of the deployment.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the deployment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the deployment.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Deployment properties.
-     * 
      */
     @Export(name="properties", type=DeploymentPropertiesExtendedResponse.class, parameters={})
     private Output<DeploymentPropertiesExtendedResponse> properties;
 
     /**
      * @return Deployment properties.
-     * 
      */
     public Output<DeploymentPropertiesExtendedResponse> getProperties() {
         return this.properties;
     }
     /**
      * Deployment tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Deployment tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the deployment.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the deployment.
-     * 
      */
     public Output<String> getType() {
         return this.type;

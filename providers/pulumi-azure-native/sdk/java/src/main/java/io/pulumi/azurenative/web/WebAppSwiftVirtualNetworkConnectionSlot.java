@@ -31,84 +31,72 @@ import javax.annotation.Nullable;
 public class WebAppSwiftVirtualNetworkConnectionSlot extends io.pulumi.resources.CustomResource {
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
-     * 
      */
     @Export(name="subnetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetResourceId;
 
     /**
      * @return The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
-     * 
      */
     public Output</* @Nullable */ String> getSubnetResourceId() {
         return this.subnetResourceId;
     }
     /**
      * A flag that specifies if the scale unit this Web App is on supports Swift integration.
-     * 
      */
     @Export(name="swiftSupported", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> swiftSupported;
 
     /**
      * @return A flag that specifies if the scale unit this Web App is on supports Swift integration.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSwiftSupported() {
         return this.swiftSupported;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

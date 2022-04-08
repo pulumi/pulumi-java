@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings concerning network injection.
- * 
  */
 public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
 
     /**
      * Network injection configuration
-     * 
      */
     @Import(name="virtualNetworks")
       private final @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;

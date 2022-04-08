@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VolumeSnapshotPropertiesResponse {
     /**
      * Snapshot Policy ResourceId
-     * 
      */
     private final @Nullable String snapshotPolicyId;
 
@@ -24,7 +23,6 @@ public final class VolumeSnapshotPropertiesResponse {
 
     /**
      * Snapshot Policy ResourceId
-     * 
     */
     public Optional<String> getSnapshotPolicyId() {
         return Optional.ofNullable(this.snapshotPolicyId);

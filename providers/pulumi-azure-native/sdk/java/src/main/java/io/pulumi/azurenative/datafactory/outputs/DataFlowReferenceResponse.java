@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class DataFlowReferenceResponse {
     /**
      * Reference data flow parameters from dataset.
-     * 
      */
     private final @Nullable Object datasetParameters;
     /**
      * Data flow parameters
-     * 
      */
     private final @Nullable Map<String,Object> parameters;
     /**
      * Reference data flow name.
-     * 
      */
     private final String referenceName;
     /**
      * Data flow reference type.
-     * 
      */
     private final String type;
 
@@ -48,28 +44,24 @@ public final class DataFlowReferenceResponse {
 
     /**
      * Reference data flow parameters from dataset.
-     * 
     */
     public Optional<Object> getDatasetParameters() {
         return Optional.ofNullable(this.datasetParameters);
     }
     /**
      * Data flow parameters
-     * 
     */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference data flow name.
-     * 
     */
     public String getReferenceName() {
         return this.referenceName;
     }
     /**
      * Data flow reference type.
-     * 
     */
     public String getType() {
         return this.type;

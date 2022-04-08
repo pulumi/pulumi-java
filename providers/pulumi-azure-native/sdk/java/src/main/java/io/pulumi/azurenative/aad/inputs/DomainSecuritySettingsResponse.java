@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Domain Security Settings
- * 
  */
 public final class DomainSecuritySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
 
     /**
      * A flag to determine whether or not KerberosArmoring is enabled or disabled.
-     * 
      */
     @Import(name="kerberosArmoring")
       private final @Nullable String kerberosArmoring;
@@ -31,7 +29,6 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
 
     /**
      * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
-     * 
      */
     @Import(name="kerberosRc4Encryption")
       private final @Nullable String kerberosRc4Encryption;
@@ -42,7 +39,6 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
 
     /**
      * A flag to determine whether or not NtlmV1 is enabled or disabled.
-     * 
      */
     @Import(name="ntlmV1")
       private final @Nullable String ntlmV1;
@@ -53,7 +49,6 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
 
     /**
      * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
-     * 
      */
     @Import(name="syncKerberosPasswords")
       private final @Nullable String syncKerberosPasswords;
@@ -64,7 +59,6 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
 
     /**
      * A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
-     * 
      */
     @Import(name="syncNtlmPasswords")
       private final @Nullable String syncNtlmPasswords;
@@ -75,7 +69,6 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
 
     /**
      * A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
-     * 
      */
     @Import(name="syncOnPremPasswords")
       private final @Nullable String syncOnPremPasswords;
@@ -86,7 +79,6 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
 
     /**
      * A flag to determine whether or not TlsV1 is enabled or disabled.
-     * 
      */
     @Import(name="tlsV1")
       private final @Nullable String tlsV1;

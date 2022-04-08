@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ArmRoleReceiverResponse {
     /**
      * The name of the arm role receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     private final String name;
     /**
      * The arm role id.
-     * 
      */
     private final String roleId;
     /**
      * Indicates whether to use common alert schema.
-     * 
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
@@ -40,21 +37,18 @@ public final class ArmRoleReceiverResponse {
 
     /**
      * The name of the arm role receiver. Names must be unique across all receivers within an action group.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The arm role id.
-     * 
     */
     public String getRoleId() {
         return this.roleId;
     }
     /**
      * Indicates whether to use common alert schema.
-     * 
     */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);

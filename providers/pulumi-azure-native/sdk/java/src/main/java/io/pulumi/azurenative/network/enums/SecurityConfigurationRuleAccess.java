@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the access allowed for this particular rule
-     * 
      */
     @EnumType
     public enum SecurityConfigurationRuleAccess {

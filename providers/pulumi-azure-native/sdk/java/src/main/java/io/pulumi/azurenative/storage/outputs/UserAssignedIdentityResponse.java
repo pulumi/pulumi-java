@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class UserAssignedIdentityResponse {
     /**
      * The client ID of the identity.
-     * 
      */
     private final String clientId;
     /**
      * The principal ID of the identity.
-     * 
      */
     private final String principalId;
 
@@ -30,14 +28,12 @@ public final class UserAssignedIdentityResponse {
 
     /**
      * The client ID of the identity.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The principal ID of the identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;

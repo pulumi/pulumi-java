@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pool of backend IP addresses.
- * 
  */
 public final class BackendAddressPoolResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of references to IP addresses defined in network interfaces.
-     * 
      */
     @Import(name="backendIPConfigurations", required=true)
       private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
@@ -35,7 +33,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -46,7 +43,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -57,7 +53,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of backend addresses.
-     * 
      */
     @Import(name="loadBalancerBackendAddresses")
       private final @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
@@ -68,7 +63,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of references to load balancing rules that use this backend address pool.
-     * 
      */
     @Import(name="loadBalancingRules", required=true)
       private final List<SubResourceResponse> loadBalancingRules;
@@ -79,7 +73,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * The location of the backend address pool.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -90,7 +83,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -101,7 +93,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * A reference to an outbound rule that uses this backend address pool.
-     * 
      */
     @Import(name="outboundRule", required=true)
       private final SubResourceResponse outboundRule;
@@ -112,7 +103,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of references to outbound rules that use this backend address pool.
-     * 
      */
     @Import(name="outboundRules", required=true)
       private final List<SubResourceResponse> outboundRules;
@@ -123,7 +113,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * The provisioning state of the backend address pool resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -134,7 +123,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

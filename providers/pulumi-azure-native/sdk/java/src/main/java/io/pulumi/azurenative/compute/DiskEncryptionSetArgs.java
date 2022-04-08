@@ -22,7 +22,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The key vault key which is currently used by this disk encryption set.
-     * 
      */
     @Import(name="activeKey")
       private final @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey;
@@ -33,7 +32,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
-     * 
      */
     @Import(name="diskEncryptionSetName")
       private final @Nullable Output<String> diskEncryptionSetName;
@@ -44,7 +42,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The type of key used to encrypt the data of the disk.
-     * 
      */
     @Import(name="encryptionType")
       private final @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType;
@@ -55,7 +52,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<EncryptionSetIdentityArgs> identity;
@@ -66,7 +62,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -77,7 +72,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
-     * 
      */
     @Import(name="rotationToLatestKeyVersionEnabled")
       private final @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled;
@@ -99,7 +92,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

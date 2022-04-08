@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of the App Service plan scale options.
- * 
  */
 public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Default number of workers for this App Service plan SKU.
-     * 
      */
     @Import(name="default")
       private final @Nullable Output<Integer> default_;
@@ -32,7 +30,6 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of Elastic workers for this App Service plan SKU.
-     * 
      */
     @Import(name="elasticMaximum")
       private final @Nullable Output<Integer> elasticMaximum;
@@ -43,7 +40,6 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of workers for this App Service plan SKU.
-     * 
      */
     @Import(name="maximum")
       private final @Nullable Output<Integer> maximum;
@@ -54,7 +50,6 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum number of workers for this App Service plan SKU.
-     * 
      */
     @Import(name="minimum")
       private final @Nullable Output<Integer> minimum;
@@ -65,7 +60,6 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Available scale configurations for an App Service plan.
-     * 
      */
     @Import(name="scaleType")
       private final @Nullable Output<String> scaleType;

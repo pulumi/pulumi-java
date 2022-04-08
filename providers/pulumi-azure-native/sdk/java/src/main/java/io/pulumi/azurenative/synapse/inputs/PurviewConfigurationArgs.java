@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Purview Configuration
- * 
  */
 public final class PurviewConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * Purview Resource ID
-     * 
      */
     @Import(name="purviewResourceId")
       private final @Nullable Output<String> purviewResourceId;

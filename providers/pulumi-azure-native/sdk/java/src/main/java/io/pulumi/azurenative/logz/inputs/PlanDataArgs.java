@@ -16,7 +16,6 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * different billing cycles like MONTHLY/WEEKLY. this could be enum
-     * 
      */
     @Import(name="billingCycle")
       private final @Nullable Output<String> billingCycle;
@@ -27,7 +26,6 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * date when plan was applied
-     * 
      */
     @Import(name="effectiveDate")
       private final @Nullable Output<String> effectiveDate;
@@ -38,7 +36,6 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * plan id as published by Logz
-     * 
      */
     @Import(name="planDetails")
       private final @Nullable Output<String> planDetails;
@@ -49,7 +46,6 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * different usage type like PAYG/COMMITTED. this could be enum
-     * 
      */
     @Import(name="usageType")
       private final @Nullable Output<String> usageType;

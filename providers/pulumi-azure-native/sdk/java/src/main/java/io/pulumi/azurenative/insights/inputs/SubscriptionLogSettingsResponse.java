@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Part of Subscription diagnostic setting. Specifies the settings for a particular log.
- * 
  */
 public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
 
     /**
      * Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
-     * 
      */
     @Import(name="category")
       private final @Nullable String category;
@@ -32,7 +30,6 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
 
     /**
      * a value indicating whether this log is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

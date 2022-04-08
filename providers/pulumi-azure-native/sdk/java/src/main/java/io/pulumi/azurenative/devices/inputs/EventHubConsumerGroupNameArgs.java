@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The EventHub consumer group name.
- * 
  */
 public final class EventHubConsumerGroupNameArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EventHubConsumerGroupNameArgs extends io.pulumi.resources.Res
 
     /**
      * EventHub consumer group name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

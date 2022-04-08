@@ -18,7 +18,101 @@ import javax.annotation.Nullable;
  * Protection profile details.
  * API Version: 2018-07-10.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates the policy.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replicationPolicy = new AzureNative.RecoveryServices.ReplicationPolicy("replicationPolicy", new AzureNative.RecoveryServices.ReplicationPolicyArgs
+ *         {
+ *             PolicyName = "protectionprofile1",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.CreatePolicyInputPropertiesArgs
+ *             {
+ *                 ProviderSpecificInput = new AzureNative.RecoveryServices.Inputs.HyperVReplicaAzurePolicyInputArgs
+ *                 {
+ *                     InstanceType = "HyperVReplicaAzure",
+ *                 },
+ *             },
+ *             ResourceGroupName = "resourceGroupPS1",
+ *             ResourceName = "vault1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recoveryservices.NewReplicationPolicy(ctx, "replicationPolicy", &recoveryservices.ReplicationPolicyArgs{
+ * 			PolicyName: pulumi.String("protectionprofile1"),
+ * 			Properties: &recoveryservices.CreatePolicyInputPropertiesArgs{
+ * 				ProviderSpecificInput: recoveryservices.HyperVReplicaAzurePolicyInput{
+ * 					InstanceType: "HyperVReplicaAzure",
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroupPS1"),
+ * 			ResourceName:      pulumi.String("vault1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("replicationPolicy", {
+ *     policyName: "protectionprofile1",
+ *     properties: {
+ *         providerSpecificInput: {
+ *             instanceType: "HyperVReplicaAzure",
+ *         },
+ *     },
+ *     resourceGroupName: "resourceGroupPS1",
+ *     resourceName: "vault1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication_policy = azure_native.recoveryservices.ReplicationPolicy("replicationPolicy",
+ *     policy_name="protectionprofile1",
+ *     properties=azure_native.recoveryservices.CreatePolicyInputPropertiesArgs(
+ *         provider_specific_input=azure_native.recoveryservices.HyperVReplicaAzurePolicyInputArgs(
+ *             instance_type="HyperVReplicaAzure",
+ *         ),
+ *     ),
+ *     resource_group_name="resourceGroupPS1",
+ *     resource_name="vault1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +127,48 @@ import javax.annotation.Nullable;
 public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The custom data.
-     * 
      */
     @Export(name="properties", type=PolicyPropertiesResponse.class, parameters={})
     private Output<PolicyPropertiesResponse> properties;
 
     /**
      * @return The custom data.
-     * 
      */
     public Output<PolicyPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource Type
-     * 
      */
     public Output<String> getType() {
         return this.type;

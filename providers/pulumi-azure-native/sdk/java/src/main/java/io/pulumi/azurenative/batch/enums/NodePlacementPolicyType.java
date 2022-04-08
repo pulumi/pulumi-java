@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
-     * 
      */
     @EnumType
     public enum NodePlacementPolicyType {
         /**
          * All nodes in the pool will be allocated in the same region.
-         * 
          */
         Regional("Regional"),
         /**
          * Nodes in the pool will be spread across different zones with best effort balancing.
-         * 
          */
         Zonal("Zonal");
 

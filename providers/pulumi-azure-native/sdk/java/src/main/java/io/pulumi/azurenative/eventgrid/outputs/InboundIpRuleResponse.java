@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class InboundIpRuleResponse {
     /**
      * Action to perform based on the match or no match of the IpMask.
-     * 
      */
     private final @Nullable String action;
     /**
      * IP Address in CIDR notation e.g., 10.0.0.0/8.
-     * 
      */
     private final @Nullable String ipMask;
 
@@ -32,14 +30,12 @@ public final class InboundIpRuleResponse {
 
     /**
      * Action to perform based on the match or no match of the IpMask.
-     * 
     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Address in CIDR notation e.g., 10.0.0.0/8.
-     * 
     */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);

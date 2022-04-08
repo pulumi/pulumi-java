@@ -20,7 +20,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time the namespace was created.
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
@@ -31,7 +30,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not the namespace is set as Critical.
-     * 
      */
     @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
@@ -42,7 +40,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data center for the namespace
-     * 
      */
     @Import(name="dataCenter")
       private final @Nullable Output<String> dataCenter;
@@ -53,7 +50,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not the namespace is currently enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -64,7 +60,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the namespace.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -86,7 +80,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace name.
-     * 
      */
     @Import(name="namespaceName")
       private final @Nullable Output<String> namespaceName;
@@ -97,7 +90,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace type.
-     * 
      */
     @Import(name="namespaceType")
       private final @Nullable Output<NamespaceType> namespaceType;
@@ -108,7 +100,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provisioning state of the Namespace.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -119,7 +110,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
-     * 
      */
     @Import(name="region")
       private final @Nullable Output<String> region;
@@ -130,7 +120,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -141,7 +130,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ScaleUnit where the namespace gets created
-     * 
      */
     @Import(name="scaleUnit")
       private final @Nullable Output<String> scaleUnit;
@@ -152,7 +140,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Endpoint you can use to perform NotificationHub operations.
-     * 
      */
     @Import(name="serviceBusEndpoint")
       private final @Nullable Output<String> serviceBusEndpoint;
@@ -163,7 +150,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku of the created namespace
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -174,7 +160,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;
@@ -185,7 +170,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Id of the Azure subscription associated with the namespace.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -196,7 +180,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -207,7 +190,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time the namespace was updated.
-     * 
      */
     @Import(name="updatedAt")
       private final @Nullable Output<String> updatedAt;

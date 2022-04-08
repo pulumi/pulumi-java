@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Last created Dataset definition.
- * 
  */
 public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * User who created.
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable UserInfoResponse createdBy;
@@ -37,7 +35,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The dataset creation time (UTC).
-     * 
      */
     @Import(name="createdTime", required=true)
       private final String createdTime;
@@ -48,7 +45,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
-     * 
      */
     @Import(name="dataPath")
       private final @Nullable DatasetResponseDataPath dataPath;
@@ -59,7 +55,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Dataflow Json
-     * 
      */
     @Import(name="dataflow", required=true)
       private final String dataflow;
@@ -70,7 +65,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Dataset state
-     * 
      */
     @Import(name="datasetDefinitionState")
       private final @Nullable DatasetStateResponse datasetDefinitionState;
@@ -81,7 +75,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Unique Dataset identifier.
-     * 
      */
     @Import(name="datasetId", required=true)
       private final String datasetId;
@@ -92,7 +85,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Description about the dataset.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -103,7 +95,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * eTag description
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -114,7 +105,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Dataset FileType, specified by user.
-     * 
      */
     @Import(name="fileType", required=true)
       private final String fileType;
@@ -125,7 +115,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The dataset last modified time (UTC).
-     * 
      */
     @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
@@ -136,7 +125,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Summary of Definition changes.
-     * 
      */
     @Import(name="notes", required=true)
       private final String notes;
@@ -147,7 +135,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
-     * 
      */
     @Import(name="partitionFormatInPath", required=true)
       private final Boolean partitionFormatInPath;
@@ -158,7 +145,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Properties stores information like name of time series column for time series dataset.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,Object> properties;
@@ -169,7 +155,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates the saved dataset this definition is mapping to, populated on Get.
-     * 
      */
     @Import(name="savedDatasetId", required=true)
       private final String savedDatasetId;
@@ -180,7 +165,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Tags associated with the dataset.
-     * 
      */
     @Import(name="tags", required=true)
       private final Map<String,String> tags;
@@ -191,7 +175,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      *  Telemetry information about the dataset including information like which service the dataset was created from.
-     * 
      */
     @Import(name="telemetryInfo", required=true)
       private final Map<String,String> telemetryInfo;
@@ -202,7 +185,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
-     * 
      */
     @Import(name="useDescriptionTagsFromDefinition", required=true)
       private final Boolean useDescriptionTagsFromDefinition;
@@ -213,7 +195,6 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An identifier uniquely identifies a definition change.
-     * 
      */
     @Import(name="versionId", required=true)
       private final String versionId;

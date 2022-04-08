@@ -18,7 +18,6 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Groups for configuration
-     * 
      */
     @Import(name="appliesToGroups")
       private final @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
@@ -29,7 +28,6 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the network manager security Configuration.
-     * 
      */
     @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
@@ -40,7 +38,6 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A description of the rule collection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -51,7 +48,6 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A display name of the rule collection.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -62,7 +58,6 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
@@ -73,7 +68,6 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the network manager security Configuration rule collection.
-     * 
      */
     @Import(name="ruleCollectionName")
       private final @Nullable Output<String> ruleCollectionName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The plan object in Azure Resource Manager, represents a marketplace plan.
- * 
  */
 public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The product.
-     * 
      */
     @Import(name="product")
       private final @Nullable String product;
@@ -42,7 +39,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The promotion code.
-     * 
      */
     @Import(name="promotionCode")
       private final @Nullable String promotionCode;
@@ -53,7 +49,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;
@@ -64,7 +59,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Version of product.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

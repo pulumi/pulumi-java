@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Capacity Reservation properties.
- * 
  */
 public final class CapacityReservationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
 
     /**
      * The last time Sku was updated.
-     * 
      */
     @Import(name="lastSkuUpdate", required=true)
       private final String lastSkuUpdate;
@@ -30,7 +28,6 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
 
     /**
      * Minimum CapacityReservation value in GB.
-     * 
      */
     @Import(name="minCapacity", required=true)
       private final Double minCapacity;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters of the search job that initiated this table.
- * 
  */
 public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Search results table's Description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The timestamp to end the search by (UTC)
-     * 
      */
     @Import(name="endSearchTime")
       private final @Nullable String endSearchTime;
@@ -43,7 +40,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Limit the search job to return up to specified number of rows.
-     * 
      */
     @Import(name="limit")
       private final @Nullable Integer limit;
@@ -54,7 +50,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Search job query.
-     * 
      */
     @Import(name="query")
       private final @Nullable String query;
@@ -65,7 +60,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The table to search data from.
-     * 
      */
     @Import(name="sourceTable", required=true)
       private final String sourceTable;
@@ -76,7 +70,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The timestamp to start the search from (UTC)
-     * 
      */
     @Import(name="startSearchTime")
       private final @Nullable String startSearchTime;

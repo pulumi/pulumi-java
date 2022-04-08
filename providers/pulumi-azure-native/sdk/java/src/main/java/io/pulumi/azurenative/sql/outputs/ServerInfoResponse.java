@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ServerInfoResponse {
     /**
      * Server Id.
-     * 
      */
     private final String serverId;
 
@@ -22,7 +21,6 @@ public final class ServerInfoResponse {
 
     /**
      * Server Id.
-     * 
     */
     public String getServerId() {
         return this.serverId;

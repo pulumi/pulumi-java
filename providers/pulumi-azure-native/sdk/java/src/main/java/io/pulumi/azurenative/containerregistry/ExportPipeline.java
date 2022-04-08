@@ -20,7 +20,126 @@ import javax.annotation.Nullable;
  * An object that represents an export pipeline for a container registry.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ExportPipelineCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exportPipeline = new AzureNative.ContainerRegistry.ExportPipeline("exportPipeline", new AzureNative.ContainerRegistry.ExportPipelineArgs
+ *         {
+ *             ExportPipelineName = "myExportPipeline",
+ *             Identity = new AzureNative.ContainerRegistry.Inputs.IdentityPropertiesArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "westus",
+ *             Options = 
+ *             {
+ *                 "OverwriteBlobs",
+ *             },
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Target = new AzureNative.ContainerRegistry.Inputs.ExportPipelineTargetPropertiesArgs
+ *             {
+ *                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrexportsas",
+ *                 Type = "AzureStorageBlobContainer",
+ *                 Uri = "https://accountname.blob.core.windows.net/containername",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewExportPipeline(ctx, "exportPipeline", &containerregistry.ExportPipelineArgs{
+ * 			ExportPipelineName: pulumi.String("myExportPipeline"),
+ * 			Identity: &containerregistry.IdentityPropertiesArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			Location: pulumi.String("westus"),
+ * 			Options: pulumi.StringArray{
+ * 				pulumi.String("OverwriteBlobs"),
+ * 			},
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Target: &containerregistry.ExportPipelineTargetPropertiesArgs{
+ * 				KeyVaultUri: pulumi.String("https://myvault.vault.azure.net/secrets/acrexportsas"),
+ * 				Type:        pulumi.String("AzureStorageBlobContainer"),
+ * 				Uri:         pulumi.String("https://accountname.blob.core.windows.net/containername"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const exportPipeline = new azure_native.containerregistry.ExportPipeline("exportPipeline", {
+ *     exportPipelineName: "myExportPipeline",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "westus",
+ *     options: ["OverwriteBlobs"],
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     target: {
+ *         keyVaultUri: "https://myvault.vault.azure.net/secrets/acrexportsas",
+ *         type: "AzureStorageBlobContainer",
+ *         uri: "https://accountname.blob.core.windows.net/containername",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * export_pipeline = azure_native.containerregistry.ExportPipeline("exportPipeline",
+ *     export_pipeline_name="myExportPipeline",
+ *     identity=azure_native.containerregistry.IdentityPropertiesArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="westus",
+ *     options=["OverwriteBlobs"],
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     target=azure_native.containerregistry.ExportPipelineTargetPropertiesArgs(
+ *         key_vault_uri="https://myvault.vault.azure.net/secrets/acrexportsas",
+ *         type="AzureStorageBlobContainer",
+ *         uri="https://accountname.blob.core.windows.net/containername",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +154,96 @@ import javax.annotation.Nullable;
 public class ExportPipeline extends io.pulumi.resources.CustomResource {
     /**
      * The identity of the export pipeline.
-     * 
      */
     @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
      * @return The identity of the export pipeline.
-     * 
      */
     public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The location of the export pipeline.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the export pipeline.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The list of all options configured for the pipeline.
-     * 
      */
     @Export(name="options", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> options;
 
     /**
      * @return The list of all options configured for the pipeline.
-     * 
      */
     public Output</* @Nullable */ List<String>> getOptions() {
         return this.options;
     }
     /**
      * The provisioning state of the pipeline at the time the operation was called.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the pipeline at the time the operation was called.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The target properties of the export pipeline.
-     * 
      */
     @Export(name="target", type=ExportPipelineTargetPropertiesResponse.class, parameters={})
     private Output<ExportPipelineTargetPropertiesResponse> target;
 
     /**
      * @return The target properties of the export pipeline.
-     * 
      */
     public Output<ExportPipelineTargetPropertiesResponse> getTarget() {
         return this.target;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

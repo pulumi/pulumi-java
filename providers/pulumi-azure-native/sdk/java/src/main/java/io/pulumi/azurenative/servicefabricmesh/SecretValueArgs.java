@@ -17,7 +17,6 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the secret resource.
-     * 
      */
     @Import(name="secretResourceName", required=true)
       private final Output<String> secretResourceName;
@@ -50,7 +47,6 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the secret resource value which is typically the version identifier for the value.
-     * 
      */
     @Import(name="secretValueResourceName")
       private final @Nullable Output<String> secretValueResourceName;
@@ -61,7 +57,6 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -72,7 +67,6 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The actual value of the secret.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

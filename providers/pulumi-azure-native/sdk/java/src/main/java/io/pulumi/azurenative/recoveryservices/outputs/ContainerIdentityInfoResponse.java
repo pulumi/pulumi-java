@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class ContainerIdentityInfoResponse {
     /**
      * Protection container identity - AAD Tenant
-     * 
      */
     private final @Nullable String aadTenantId;
     /**
      * Protection container identity - Audience
-     * 
      */
     private final @Nullable String audience;
     /**
      * Protection container identity - AAD Service Principal
-     * 
      */
     private final @Nullable String servicePrincipalClientId;
     /**
      * Unique name of the container
-     * 
      */
     private final @Nullable String uniqueName;
 
@@ -46,28 +42,24 @@ public final class ContainerIdentityInfoResponse {
 
     /**
      * Protection container identity - AAD Tenant
-     * 
     */
     public Optional<String> getAadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
     /**
      * Protection container identity - Audience
-     * 
     */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * Protection container identity - AAD Service Principal
-     * 
     */
     public Optional<String> getServicePrincipalClientId() {
         return Optional.ofNullable(this.servicePrincipalClientId);
     }
     /**
      * Unique name of the container
-     * 
     */
     public Optional<String> getUniqueName() {
         return Optional.ofNullable(this.uniqueName);

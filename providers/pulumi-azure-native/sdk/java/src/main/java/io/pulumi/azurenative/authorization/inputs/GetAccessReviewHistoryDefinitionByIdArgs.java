@@ -14,7 +14,6 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends io.pulumi.re
 
     /**
      * The id of the access review history definition.
-     * 
      */
     @Import(name="historyDefinitionId", required=true)
       private final String historyDefinitionId;

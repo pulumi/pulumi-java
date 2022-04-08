@@ -17,7 +17,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * User ManagementAssociation Name.
-     * 
      */
     @Import(name="managementAssociationName")
       private final @Nullable Output<String> managementAssociationName;
@@ -39,7 +37,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ManagementAssociationPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Provider name for the parent resource.
-     * 
      */
     @Import(name="providerName", required=true)
       private final Output<String> providerName;
@@ -61,7 +57,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group to get. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Parent resource name.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -83,7 +77,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource type for the parent resource
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;

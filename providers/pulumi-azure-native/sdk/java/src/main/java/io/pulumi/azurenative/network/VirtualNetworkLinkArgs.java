@@ -19,7 +19,6 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the Private DNS zone (without a terminating dot).
-     * 
      */
     @Import(name="privateZoneName", required=true)
       private final Output<String> privateZoneName;
@@ -41,7 +39,6 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
-     * 
      */
     @Import(name="registrationEnabled")
       private final @Nullable Output<Boolean> registrationEnabled;
@@ -52,7 +49,6 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -74,7 +69,6 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The reference of the virtual network.
-     * 
      */
     @Import(name="virtualNetwork")
       private final @Nullable Output<SubResourceArgs> virtualNetwork;
@@ -85,7 +79,6 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the virtual network link.
-     * 
      */
     @Import(name="virtualNetworkLinkName")
       private final @Nullable Output<String> virtualNetworkLinkName;

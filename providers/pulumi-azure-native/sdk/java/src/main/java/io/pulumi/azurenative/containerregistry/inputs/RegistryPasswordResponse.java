@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The login password for the container registry.
- * 
  */
 public final class RegistryPasswordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RegistryPasswordResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The password name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class RegistryPasswordResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The password value.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

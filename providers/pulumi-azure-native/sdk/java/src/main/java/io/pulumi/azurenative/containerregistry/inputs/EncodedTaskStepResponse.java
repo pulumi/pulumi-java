@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a encoded task step.
- * 
  */
 public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of base image dependencies for a step.
-     * 
      */
     @Import(name="baseImageDependencies", required=true)
       private final List<BaseImageDependencyResponse> baseImageDependencies;
@@ -34,7 +32,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     * 
      */
     @Import(name="contextAccessToken")
       private final @Nullable String contextAccessToken;
@@ -45,7 +42,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The URL(absolute or relative) of the source context for the task step.
-     * 
      */
     @Import(name="contextPath")
       private final @Nullable String contextPath;
@@ -56,7 +52,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Base64 encoded value of the template/definition file content.
-     * 
      */
     @Import(name="encodedTaskContent", required=true)
       private final String encodedTaskContent;
@@ -67,7 +62,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Base64 encoded value of the parameters/values file content.
-     * 
      */
     @Import(name="encodedValuesContent")
       private final @Nullable String encodedValuesContent;
@@ -79,7 +73,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
     /**
      * The type of the step.
      * Expected value is 'EncodedTask'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -90,7 +83,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The collection of overridable values that can be passed when running a task.
-     * 
      */
     @Import(name="values")
       private final @Nullable List<SetValueResponse> values;

@@ -16,7 +16,6 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The SQL/PostgreSQL/MySQL datastore name.
-     * 
      */
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
@@ -27,7 +26,6 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
 
     /**
      * SQL Quey.
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;

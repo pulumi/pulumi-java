@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for terminal appearance.
- * 
  */
 public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Size of terminal font.
-     * 
      */
     @Import(name="fontSize")
       private final @Nullable String fontSize;
@@ -31,7 +29,6 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Style of terminal font.
-     * 
      */
     @Import(name="fontStyle")
       private final @Nullable String fontStyle;

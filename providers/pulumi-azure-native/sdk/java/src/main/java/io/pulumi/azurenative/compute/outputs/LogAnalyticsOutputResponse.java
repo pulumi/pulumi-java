@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class LogAnalyticsOutputResponse {
     /**
      * Output file Uri path to blob container.
-     * 
      */
     private final String output;
 
@@ -22,7 +21,6 @@ public final class LogAnalyticsOutputResponse {
 
     /**
      * Output file Uri path to blob container.
-     * 
     */
     public String getOutput() {
         return this.output;

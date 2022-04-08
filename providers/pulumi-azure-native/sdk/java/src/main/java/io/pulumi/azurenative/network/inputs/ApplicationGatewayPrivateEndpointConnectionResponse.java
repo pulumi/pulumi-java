@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Private Endpoint connection on an application gateway.
- * 
  */
 public final class ApplicationGatewayPrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * The consumer link id.
-     * 
      */
     @Import(name="linkIdentifier", required=true)
       private final String linkIdentifier;
@@ -55,7 +51,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * Name of the private endpoint connection on an application gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -66,7 +61,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * The resource of private end point.
-     * 
      */
     @Import(name="privateEndpoint", required=true)
       private final PrivateEndpointResponse privateEndpoint;
@@ -77,7 +71,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -88,7 +81,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * The provisioning state of the application gateway private endpoint connection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -99,7 +91,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

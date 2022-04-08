@@ -18,7 +18,6 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
 
     /**
      * The batch configuration name.
-     * 
      */
     @Import(name="batchConfigurationName")
       private final @Nullable Output<String> batchConfigurationName;
@@ -29,7 +28,6 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -40,7 +38,6 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
 
     /**
      * The batch configuration properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<BatchConfigurationPropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

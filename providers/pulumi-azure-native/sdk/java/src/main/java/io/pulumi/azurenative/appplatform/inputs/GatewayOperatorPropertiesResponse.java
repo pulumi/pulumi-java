@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Properties of the Spring Cloud Gateway Operator.
- * 
  */
 public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
 
     /**
      * Collection of instances belong to Spring Cloud Gateway operator.
-     * 
      */
     @Import(name="instances", required=true)
       private final List<GatewayInstanceResponse> instances;
@@ -31,7 +29,6 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
 
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
      */
     @Import(name="resourceRequests", required=true)
       private final GatewayOperatorResourceRequestsResponse resourceRequests;

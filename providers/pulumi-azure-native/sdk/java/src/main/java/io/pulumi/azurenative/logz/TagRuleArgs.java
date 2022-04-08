@@ -17,7 +17,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
@@ -28,7 +27,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Definition of the properties for a TagRules resource.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

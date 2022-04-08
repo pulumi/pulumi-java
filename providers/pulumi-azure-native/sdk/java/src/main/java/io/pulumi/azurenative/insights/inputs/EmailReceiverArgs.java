@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An email receiver.
- * 
  */
 public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email address of this receiver.
-     * 
      */
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
@@ -32,7 +30,6 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the email receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -43,7 +40,6 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether to use common alert schema.
-     * 
      */
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;

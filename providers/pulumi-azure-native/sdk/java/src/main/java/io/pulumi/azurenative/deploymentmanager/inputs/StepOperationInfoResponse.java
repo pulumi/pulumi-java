@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Detailed information of a specific step run.
- * 
  */
 public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Unique identifier to track the request for ARM-based resources.
-     * 
      */
     @Import(name="correlationId", required=true)
       private final String correlationId;
@@ -32,7 +30,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the ARM deployment initiated as part of the step.
-     * 
      */
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
@@ -43,7 +40,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * End time of the action in UTC.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -54,7 +50,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The errors, if any, for the action.
-     * 
      */
     @Import(name="error")
       private final @Nullable CloudErrorBodyResponse error;
@@ -65,7 +60,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Last time in UTC this operation was updated.
-     * 
      */
     @Import(name="lastUpdatedTime", required=true)
       private final String lastUpdatedTime;
@@ -76,7 +70,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Start time of the action in UTC.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

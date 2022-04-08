@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the task that validates connection to SQL Server and also validates source server requirements
- * 
  */
 public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -31,7 +30,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
 
     /**
      * Array of command properties.
-     * 
      */
     @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
@@ -42,7 +40,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
 
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
@@ -53,7 +50,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable ConnectToSourceSqlServerTaskInputResponse input;
@@ -64,7 +60,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
 
     /**
      * Task output. This is ignored if submitted.
-     * 
      */
     @Import(name="output", required=true)
       private final List<Object> output;
@@ -75,7 +70,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
 
     /**
      * The state of the task. This is ignored if submitted.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -87,7 +81,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
     /**
      * Task type.
      * Expected value is 'ConnectToSource.SqlServer'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final String taskType;

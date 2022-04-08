@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class ProviderResponse {
     /**
      * The provider ID.
-     * 
      */
     private final String id;
     /**
      * The namespace of the resource provider.
-     * 
      */
     private final @Nullable String namespace;
     /**
      * The registration policy of the resource provider.
-     * 
      */
     private final String registrationPolicy;
     /**
      * The registration state of the resource provider.
-     * 
      */
     private final String registrationState;
     /**
      * The collection of provider resource types.
-     * 
      */
     private final List<ProviderResourceTypeResponse> resourceTypes;
 
@@ -55,35 +50,30 @@ public final class ProviderResponse {
 
     /**
      * The provider ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The namespace of the resource provider.
-     * 
     */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * The registration policy of the resource provider.
-     * 
     */
     public String getRegistrationPolicy() {
         return this.registrationPolicy;
     }
     /**
      * The registration state of the resource provider.
-     * 
     */
     public String getRegistrationState() {
         return this.registrationState;
     }
     /**
      * The collection of provider resource types.
-     * 
     */
     public List<ProviderResourceTypeResponse> getResourceTypes() {
         return this.resourceTypes;

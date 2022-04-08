@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Rights that this key has.
-     * 
      */
     @EnumType
     public enum AccessRightsDescription {

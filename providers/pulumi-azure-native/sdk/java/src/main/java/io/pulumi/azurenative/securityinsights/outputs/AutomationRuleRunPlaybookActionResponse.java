@@ -13,18 +13,15 @@ import java.util.Objects;
 public final class AutomationRuleRunPlaybookActionResponse {
     /**
      * The configuration of the run playbook automation rule action
-     * 
      */
     private final AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration;
     /**
      * The type of the automation rule action
      * Expected value is 'RunPlaybook'.
-     * 
      */
     private final String actionType;
     /**
      * The order of execution of the automation rule action
-     * 
      */
     private final Integer order;
 
@@ -40,7 +37,6 @@ public final class AutomationRuleRunPlaybookActionResponse {
 
     /**
      * The configuration of the run playbook automation rule action
-     * 
     */
     public AutomationRuleRunPlaybookActionResponseActionConfiguration getActionConfiguration() {
         return this.actionConfiguration;
@@ -48,14 +44,12 @@ public final class AutomationRuleRunPlaybookActionResponse {
     /**
      * The type of the automation rule action
      * Expected value is 'RunPlaybook'.
-     * 
     */
     public String getActionType() {
         return this.actionType;
     }
     /**
      * The order of execution of the automation rule action
-     * 
     */
     public Integer getOrder() {
         return this.order;

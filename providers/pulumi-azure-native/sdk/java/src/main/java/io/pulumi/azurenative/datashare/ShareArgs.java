@@ -18,7 +18,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Share description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Share kind.
-     * 
      */
     @Import(name="shareKind")
       private final @Nullable Output<Either<String,ShareKind>> shareKind;
@@ -62,7 +58,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share.
-     * 
      */
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
@@ -73,7 +68,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Share terms.
-     * 
      */
     @Import(name="terms")
       private final @Nullable Output<String> terms;

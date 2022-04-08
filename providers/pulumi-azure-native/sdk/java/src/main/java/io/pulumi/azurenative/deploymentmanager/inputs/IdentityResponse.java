@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Identity for the resource.
- * 
  */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of identities.
-     * 
      */
     @Import(name="identityIds", required=true)
       private final List<String> identityIds;
@@ -30,7 +28,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

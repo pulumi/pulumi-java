@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The managed identity of a resource.
- * 
  */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * GUID that represents the principal ID of this resource identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -29,7 +27,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * GUID that represents the tenant ID of this resource identity.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -40,7 +37,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * String of the resource identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

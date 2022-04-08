@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Identity type
-     * 
      */
     @EnumType
     public enum MsiIdentityType {

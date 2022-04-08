@@ -14,7 +14,6 @@ public final class GetApiManagementServiceArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetApiManagementServiceArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

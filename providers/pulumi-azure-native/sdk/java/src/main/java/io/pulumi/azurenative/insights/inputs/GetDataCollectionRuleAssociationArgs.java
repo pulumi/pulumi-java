@@ -14,7 +14,6 @@ public final class GetDataCollectionRuleAssociationArgs extends io.pulumi.resour
 
     /**
      * The name of the association. The name is case insensitive.
-     * 
      */
     @Import(name="associationName", required=true)
       private final String associationName;
@@ -25,7 +24,6 @@ public final class GetDataCollectionRuleAssociationArgs extends io.pulumi.resour
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

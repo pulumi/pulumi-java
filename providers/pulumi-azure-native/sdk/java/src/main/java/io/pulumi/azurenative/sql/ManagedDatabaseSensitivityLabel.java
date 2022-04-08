@@ -18,7 +18,115 @@ import javax.annotation.Nullable;
  * A sensitivity label.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Updates or creates a sensitivity label of a given column with all parameters in a managed database
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedDatabaseSensitivityLabel = new AzureNative.Sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureNative.Sql.ManagedDatabaseSensitivityLabelArgs
+ *         {
+ *             ColumnName = "myColumn",
+ *             DatabaseName = "myDatabase",
+ *             InformationType = "PhoneNumber",
+ *             InformationTypeId = "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+ *             LabelId = "bf91e08c-f4f0-478a-b016-25164b2a65ff",
+ *             LabelName = "PII",
+ *             ManagedInstanceName = "myManagedInstanceName",
+ *             Rank = "High",
+ *             ResourceGroupName = "myRG",
+ *             SchemaName = "dbo",
+ *             SensitivityLabelSource = "current",
+ *             TableName = "myTable",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewManagedDatabaseSensitivityLabel(ctx, "managedDatabaseSensitivityLabel", &sql.ManagedDatabaseSensitivityLabelArgs{
+ * 			ColumnName:             pulumi.String("myColumn"),
+ * 			DatabaseName:           pulumi.String("myDatabase"),
+ * 			InformationType:        pulumi.String("PhoneNumber"),
+ * 			InformationTypeId:      pulumi.String("d22fa6e9-5ee4-3bde-4c2b-a409604c4646"),
+ * 			LabelId:                pulumi.String("bf91e08c-f4f0-478a-b016-25164b2a65ff"),
+ * 			LabelName:              pulumi.String("PII"),
+ * 			ManagedInstanceName:    pulumi.String("myManagedInstanceName"),
+ * 			Rank:                   "High",
+ * 			ResourceGroupName:      pulumi.String("myRG"),
+ * 			SchemaName:             pulumi.String("dbo"),
+ * 			SensitivityLabelSource: pulumi.String("current"),
+ * 			TableName:              pulumi.String("myTable"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedDatabaseSensitivityLabel = new azure_native.sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
+ *     columnName: "myColumn",
+ *     databaseName: "myDatabase",
+ *     informationType: "PhoneNumber",
+ *     informationTypeId: "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+ *     labelId: "bf91e08c-f4f0-478a-b016-25164b2a65ff",
+ *     labelName: "PII",
+ *     managedInstanceName: "myManagedInstanceName",
+ *     rank: "High",
+ *     resourceGroupName: "myRG",
+ *     schemaName: "dbo",
+ *     sensitivityLabelSource: "current",
+ *     tableName: "myTable",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_database_sensitivity_label = azure_native.sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
+ *     column_name="myColumn",
+ *     database_name="myDatabase",
+ *     information_type="PhoneNumber",
+ *     information_type_id="d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+ *     label_id="bf91e08c-f4f0-478a-b016-25164b2a65ff",
+ *     label_name="PII",
+ *     managed_instance_name="myManagedInstanceName",
+ *     rank="High",
+ *     resource_group_name="myRG",
+ *     schema_name="dbo",
+ *     sensitivity_label_source="current",
+ *     table_name="myTable")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +141,96 @@ import javax.annotation.Nullable;
 public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomResource {
     /**
      * The column name.
-     * 
      */
     @Export(name="columnName", type=String.class, parameters={})
     private Output<String> columnName;
 
     /**
      * @return The column name.
-     * 
      */
     public Output<String> getColumnName() {
         return this.columnName;
     }
     /**
      * The information type.
-     * 
      */
     @Export(name="informationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> informationType;
 
     /**
      * @return The information type.
-     * 
      */
     public Output</* @Nullable */ String> getInformationType() {
         return this.informationType;
     }
     /**
      * The information type ID.
-     * 
      */
     @Export(name="informationTypeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> informationTypeId;
 
     /**
      * @return The information type ID.
-     * 
      */
     public Output</* @Nullable */ String> getInformationTypeId() {
         return this.informationTypeId;
     }
     /**
      * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
-     * 
      */
     @Export(name="isDisabled", type=Boolean.class, parameters={})
     private Output<Boolean> isDisabled;
 
     /**
      * @return Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
-     * 
      */
     public Output<Boolean> getIsDisabled() {
         return this.isDisabled;
     }
     /**
      * The label ID.
-     * 
      */
     @Export(name="labelId", type=String.class, parameters={})
     private Output</* @Nullable */ String> labelId;
 
     /**
      * @return The label ID.
-     * 
      */
     public Output</* @Nullable */ String> getLabelId() {
         return this.labelId;
     }
     /**
      * The label name.
-     * 
      */
     @Export(name="labelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> labelName;
 
     /**
      * @return The label name.
-     * 
      */
     public Output</* @Nullable */ String> getLabelName() {
         return this.labelName;
     }
     /**
      * Resource that manages the sensitivity label.
-     * 
      */
     @Export(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
     /**
      * @return Resource that manages the sensitivity label.
-     * 
      */
     public Output<String> getManagedBy() {
         return this.managedBy;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -151,42 +243,36 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
     }
     /**
      * The schema name.
-     * 
      */
     @Export(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
     /**
      * @return The schema name.
-     * 
      */
     public Output<String> getSchemaName() {
         return this.schemaName;
     }
     /**
      * The table name.
-     * 
      */
     @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**
      * @return The table name.
-     * 
      */
     public Output<String> getTableName() {
         return this.tableName;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

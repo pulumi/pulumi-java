@@ -17,7 +17,6 @@ import java.util.Objects;
 
 /**
  * The AS2 agreement protocol settings.
- * 
  */
 public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The acknowledgement connection settings.
-     * 
      */
     @Import(name="acknowledgementConnectionSettings", required=true)
       private final Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
@@ -36,7 +34,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The envelope settings.
-     * 
      */
     @Import(name="envelopeSettings", required=true)
       private final Output<AS2EnvelopeSettingsArgs> envelopeSettings;
@@ -47,7 +44,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The error settings.
-     * 
      */
     @Import(name="errorSettings", required=true)
       private final Output<AS2ErrorSettingsArgs> errorSettings;
@@ -58,7 +54,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The MDN settings.
-     * 
      */
     @Import(name="mdnSettings", required=true)
       private final Output<AS2MdnSettingsArgs> mdnSettings;
@@ -69,7 +64,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The message connection settings.
-     * 
      */
     @Import(name="messageConnectionSettings", required=true)
       private final Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
@@ -80,7 +74,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The security settings.
-     * 
      */
     @Import(name="securitySettings", required=true)
       private final Output<AS2SecuritySettingsArgs> securitySettings;
@@ -91,7 +84,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The validation settings.
-     * 
      */
     @Import(name="validationSettings", required=true)
       private final Output<AS2ValidationSettingsArgs> validationSettings;

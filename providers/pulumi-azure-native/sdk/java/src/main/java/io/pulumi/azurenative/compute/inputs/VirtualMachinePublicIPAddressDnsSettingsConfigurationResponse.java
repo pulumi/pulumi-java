@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a virtual machines network configuration's DNS settings.
- * 
  */
 public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse
 
     /**
      * The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
-     * 
      */
     @Import(name="domainNameLabel", required=true)
       private final String domainNameLabel;

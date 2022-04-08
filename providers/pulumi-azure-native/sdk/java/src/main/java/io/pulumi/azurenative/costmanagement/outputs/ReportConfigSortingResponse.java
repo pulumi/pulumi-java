@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ReportConfigSortingResponse {
     /**
      * Direction of sort.
-     * 
      */
     private final @Nullable String direction;
     /**
      * The name of the column to sort.
-     * 
      */
     private final String name;
 
@@ -32,14 +30,12 @@ public final class ReportConfigSortingResponse {
 
     /**
      * Direction of sort.
-     * 
     */
     public Optional<String> getDirection() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * The name of the column to sort.
-     * 
     */
     public String getName() {
         return this.name;

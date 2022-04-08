@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class TriggerReferenceResponse {
     /**
      * Reference trigger name.
-     * 
      */
     private final String referenceName;
     /**
      * Trigger reference type.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class TriggerReferenceResponse {
 
     /**
      * Reference trigger name.
-     * 
     */
     public String getReferenceName() {
         return this.referenceName;
     }
     /**
      * Trigger reference type.
-     * 
     */
     public String getType() {
         return this.type;

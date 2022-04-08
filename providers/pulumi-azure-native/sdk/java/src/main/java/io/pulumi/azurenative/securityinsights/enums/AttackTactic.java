@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The severity for alerts created by this alert rule.
-     * 
      */
     @EnumType
     public enum AttackTactic {

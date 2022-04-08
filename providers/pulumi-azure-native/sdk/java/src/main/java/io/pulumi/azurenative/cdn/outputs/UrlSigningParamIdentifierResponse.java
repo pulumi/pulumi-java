@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class UrlSigningParamIdentifierResponse {
     /**
      * Indicates the purpose of the parameter
-     * 
      */
     private final String paramIndicator;
     /**
      * Parameter name
-     * 
      */
     private final String paramName;
 
@@ -30,14 +28,12 @@ public final class UrlSigningParamIdentifierResponse {
 
     /**
      * Indicates the purpose of the parameter
-     * 
     */
     public String getParamIndicator() {
         return this.paramIndicator;
     }
     /**
      * Parameter name
-     * 
     */
     public String getParamName() {
         return this.paramName;

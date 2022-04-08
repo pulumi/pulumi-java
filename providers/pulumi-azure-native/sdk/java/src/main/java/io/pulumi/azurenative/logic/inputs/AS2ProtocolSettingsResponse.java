@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * The AS2 agreement protocol settings.
- * 
  */
 public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The acknowledgement connection settings.
-     * 
      */
     @Import(name="acknowledgementConnectionSettings", required=true)
       private final AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings;
@@ -35,7 +33,6 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The envelope settings.
-     * 
      */
     @Import(name="envelopeSettings", required=true)
       private final AS2EnvelopeSettingsResponse envelopeSettings;
@@ -46,7 +43,6 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The error settings.
-     * 
      */
     @Import(name="errorSettings", required=true)
       private final AS2ErrorSettingsResponse errorSettings;
@@ -57,7 +53,6 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The MDN settings.
-     * 
      */
     @Import(name="mdnSettings", required=true)
       private final AS2MdnSettingsResponse mdnSettings;
@@ -68,7 +63,6 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The message connection settings.
-     * 
      */
     @Import(name="messageConnectionSettings", required=true)
       private final AS2MessageConnectionSettingsResponse messageConnectionSettings;
@@ -79,7 +73,6 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The security settings.
-     * 
      */
     @Import(name="securitySettings", required=true)
       private final AS2SecuritySettingsResponse securitySettings;
@@ -90,7 +83,6 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The validation settings.
-     * 
      */
     @Import(name="validationSettings", required=true)
       private final AS2ValidationSettingsResponse validationSettings;

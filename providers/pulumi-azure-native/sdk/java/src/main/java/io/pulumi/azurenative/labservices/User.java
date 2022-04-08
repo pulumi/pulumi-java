@@ -31,168 +31,144 @@ import javax.annotation.Nullable;
 public class User extends io.pulumi.resources.CustomResource {
     /**
      * The user email address, as it was specified during registration.
-     * 
      */
     @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
      * @return The user email address, as it was specified during registration.
-     * 
      */
     public Output<String> getEmail() {
         return this.email;
     }
     /**
      * The user family name, as it was specified during registration.
-     * 
      */
     @Export(name="familyName", type=String.class, parameters={})
     private Output<String> familyName;
 
     /**
      * @return The user family name, as it was specified during registration.
-     * 
      */
     public Output<String> getFamilyName() {
         return this.familyName;
     }
     /**
      * The user given name, as it was specified during registration.
-     * 
      */
     @Export(name="givenName", type=String.class, parameters={})
     private Output<String> givenName;
 
     /**
      * @return The user given name, as it was specified during registration.
-     * 
      */
     public Output<String> getGivenName() {
         return this.givenName;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
      * @return The details of the latest operation. ex: status, error
-     * 
      */
     public Output<LatestOperationResultResponse> getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The user tenant ID, as it was specified during registration.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The user tenant ID, as it was specified during registration.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * How long the user has used his VMs in this lab
-     * 
      */
     @Export(name="totalUsage", type=String.class, parameters={})
     private Output<String> totalUsage;
 
     /**
      * @return How long the user has used his VMs in this lab
-     * 
      */
     public Output<String> getTotalUsage() {
         return this.totalUsage;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output</* @Nullable */ String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

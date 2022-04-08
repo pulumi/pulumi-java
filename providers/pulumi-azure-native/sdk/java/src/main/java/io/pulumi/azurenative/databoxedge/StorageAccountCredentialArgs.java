@@ -20,7 +20,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Encrypted storage key.
-     * 
      */
     @Import(name="accountKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> accountKey;
@@ -31,7 +30,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Type of storage accessed on the storage account.
-     * 
      */
     @Import(name="accountType", required=true)
       private final Output<Either<String,AccountType>> accountType;
@@ -42,7 +40,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Alias for the storage account.
-     * 
      */
     @Import(name="alias", required=true)
       private final Output<String> alias;
@@ -53,7 +50,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Blob end point for private clouds.
-     * 
      */
     @Import(name="blobDomainName")
       private final @Nullable Output<String> blobDomainName;
@@ -64,7 +60,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Connection string for the storage account. Use this string if username and account key are not specified.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -75,7 +70,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -86,7 +80,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The storage account credential name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -97,7 +90,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Signifies whether SSL needs to be enabled or not.
-     * 
      */
     @Import(name="sslStatus", required=true)
       private final Output<Either<String,SSLStatus>> sslStatus;
@@ -119,7 +110,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Id of the storage account.
-     * 
      */
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
@@ -130,7 +120,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Username for the storage account.
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

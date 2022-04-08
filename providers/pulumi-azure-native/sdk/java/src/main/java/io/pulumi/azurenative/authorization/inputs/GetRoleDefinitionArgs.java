@@ -14,7 +14,6 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The ID of the role definition.
-     * 
      */
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
@@ -25,7 +24,6 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The scope of the role definition.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

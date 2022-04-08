@@ -21,7 +21,279 @@ import javax.annotation.Nullable;
  * An Asset Filter.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an Asset Filter
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var assetFilter = new AzureNative.Media.AssetFilter("assetFilter", new AzureNative.Media.AssetFilterArgs
+ *         {
+ *             AccountName = "contosomedia",
+ *             AssetName = "ClimbingMountRainer",
+ *             FilterName = "newAssetFilter",
+ *             FirstQuality = new AzureNative.Media.Inputs.FirstQualityArgs
+ *             {
+ *                 Bitrate = 128000,
+ *             },
+ *             PresentationTimeRange = new AzureNative.Media.Inputs.PresentationTimeRangeArgs
+ *             {
+ *                 EndTimestamp = 170000000,
+ *                 ForceEndTimestamp = false,
+ *                 LiveBackoffDuration = 0,
+ *                 PresentationWindowDuration = 9223372036854774784,
+ *                 StartTimestamp = 0,
+ *                 Timescale = 10000000,
+ *             },
+ *             ResourceGroupName = "contoso",
+ *             Tracks = 
+ *             {
+ *                 new AzureNative.Media.Inputs.FilterTrackSelectionArgs
+ *                 {
+ *                     TrackSelections = 
+ *                     {
+ *                         new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+ *                         {
+ *                             Operation = "Equal",
+ *                             Property = "Type",
+ *                             Value = "Audio",
+ *                         },
+ *                         new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+ *                         {
+ *                             Operation = "NotEqual",
+ *                             Property = "Language",
+ *                             Value = "en",
+ *                         },
+ *                         new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+ *                         {
+ *                             Operation = "NotEqual",
+ *                             Property = "FourCC",
+ *                             Value = "EC-3",
+ *                         },
+ *                     },
+ *                 },
+ *                 new AzureNative.Media.Inputs.FilterTrackSelectionArgs
+ *                 {
+ *                     TrackSelections = 
+ *                     {
+ *                         new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+ *                         {
+ *                             Operation = "Equal",
+ *                             Property = "Type",
+ *                             Value = "Video",
+ *                         },
+ *                         new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+ *                         {
+ *                             Operation = "Equal",
+ *                             Property = "Bitrate",
+ *                             Value = "3000000-5000000",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := media.NewAssetFilter(ctx, "assetFilter", &media.AssetFilterArgs{
+ * 			AccountName: pulumi.String("contosomedia"),
+ * 			AssetName:   pulumi.String("ClimbingMountRainer"),
+ * 			FilterName:  pulumi.String("newAssetFilter"),
+ * 			FirstQuality: &media.FirstQualityArgs{
+ * 				Bitrate: pulumi.Int(128000),
+ * 			},
+ * 			PresentationTimeRange: &media.PresentationTimeRangeArgs{
+ * 				EndTimestamp:               pulumi.Float64(170000000),
+ * 				ForceEndTimestamp:          pulumi.Bool(false),
+ * 				LiveBackoffDuration:        pulumi.Float64(0),
+ * 				PresentationWindowDuration: pulumi.Float64(9223372036854774784),
+ * 				StartTimestamp:             pulumi.Float64(0),
+ * 				Timescale:                  pulumi.Float64(10000000),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("contoso"),
+ * 			Tracks: []media.FilterTrackSelectionArgs{
+ * 				&media.FilterTrackSelectionArgs{
+ * 					TrackSelections: []media.FilterTrackPropertyConditionArgs{
+ * 						&media.FilterTrackPropertyConditionArgs{
+ * 							Operation: pulumi.String("Equal"),
+ * 							Property:  pulumi.String("Type"),
+ * 							Value:     pulumi.String("Audio"),
+ * 						},
+ * 						&media.FilterTrackPropertyConditionArgs{
+ * 							Operation: pulumi.String("NotEqual"),
+ * 							Property:  pulumi.String("Language"),
+ * 							Value:     pulumi.String("en"),
+ * 						},
+ * 						&media.FilterTrackPropertyConditionArgs{
+ * 							Operation: pulumi.String("NotEqual"),
+ * 							Property:  pulumi.String("FourCC"),
+ * 							Value:     pulumi.String("EC-3"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&media.FilterTrackSelectionArgs{
+ * 					TrackSelections: []media.FilterTrackPropertyConditionArgs{
+ * 						&media.FilterTrackPropertyConditionArgs{
+ * 							Operation: pulumi.String("Equal"),
+ * 							Property:  pulumi.String("Type"),
+ * 							Value:     pulumi.String("Video"),
+ * 						},
+ * 						&media.FilterTrackPropertyConditionArgs{
+ * 							Operation: pulumi.String("Equal"),
+ * 							Property:  pulumi.String("Bitrate"),
+ * 							Value:     pulumi.String("3000000-5000000"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const assetFilter = new azure_native.media.AssetFilter("assetFilter", {
+ *     accountName: "contosomedia",
+ *     assetName: "ClimbingMountRainer",
+ *     filterName: "newAssetFilter",
+ *     firstQuality: {
+ *         bitrate: 128000,
+ *     },
+ *     presentationTimeRange: {
+ *         endTimestamp: 170000000,
+ *         forceEndTimestamp: false,
+ *         liveBackoffDuration: 0,
+ *         presentationWindowDuration: 9223372036854774784,
+ *         startTimestamp: 0,
+ *         timescale: 10000000,
+ *     },
+ *     resourceGroupName: "contoso",
+ *     tracks: [
+ *         {
+ *             trackSelections: [
+ *                 {
+ *                     operation: "Equal",
+ *                     property: "Type",
+ *                     value: "Audio",
+ *                 },
+ *                 {
+ *                     operation: "NotEqual",
+ *                     property: "Language",
+ *                     value: "en",
+ *                 },
+ *                 {
+ *                     operation: "NotEqual",
+ *                     property: "FourCC",
+ *                     value: "EC-3",
+ *                 },
+ *             ],
+ *         },
+ *         {
+ *             trackSelections: [
+ *                 {
+ *                     operation: "Equal",
+ *                     property: "Type",
+ *                     value: "Video",
+ *                 },
+ *                 {
+ *                     operation: "Equal",
+ *                     property: "Bitrate",
+ *                     value: "3000000-5000000",
+ *                 },
+ *             ],
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * asset_filter = azure_native.media.AssetFilter("assetFilter",
+ *     account_name="contosomedia",
+ *     asset_name="ClimbingMountRainer",
+ *     filter_name="newAssetFilter",
+ *     first_quality=azure_native.media.FirstQualityArgs(
+ *         bitrate=128000,
+ *     ),
+ *     presentation_time_range=azure_native.media.PresentationTimeRangeArgs(
+ *         end_timestamp=170000000,
+ *         force_end_timestamp=False,
+ *         live_backoff_duration=0,
+ *         presentation_window_duration=9223372036854774784,
+ *         start_timestamp=0,
+ *         timescale=10000000,
+ *     ),
+ *     resource_group_name="contoso",
+ *     tracks=[
+ *         azure_native.media.FilterTrackSelectionArgs(
+ *             track_selections=[
+ *                 azure_native.media.FilterTrackPropertyConditionArgs(
+ *                     operation="Equal",
+ *                     property="Type",
+ *                     value="Audio",
+ *                 ),
+ *                 azure_native.media.FilterTrackPropertyConditionArgs(
+ *                     operation="NotEqual",
+ *                     property="Language",
+ *                     value="en",
+ *                 ),
+ *                 azure_native.media.FilterTrackPropertyConditionArgs(
+ *                     operation="NotEqual",
+ *                     property="FourCC",
+ *                     value="EC-3",
+ *                 ),
+ *             ],
+ *         ),
+ *         azure_native.media.FilterTrackSelectionArgs(
+ *             track_selections=[
+ *                 azure_native.media.FilterTrackPropertyConditionArgs(
+ *                     operation="Equal",
+ *                     property="Type",
+ *                     value="Video",
+ *                 ),
+ *                 azure_native.media.FilterTrackPropertyConditionArgs(
+ *                     operation="Equal",
+ *                     property="Bitrate",
+ *                     value="3000000-5000000",
+ *                 ),
+ *             ],
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,84 +308,72 @@ import javax.annotation.Nullable;
 public class AssetFilter extends io.pulumi.resources.CustomResource {
     /**
      * The first quality.
-     * 
      */
     @Export(name="firstQuality", type=FirstQualityResponse.class, parameters={})
     private Output</* @Nullable */ FirstQualityResponse> firstQuality;
 
     /**
      * @return The first quality.
-     * 
      */
     public Output</* @Nullable */ FirstQualityResponse> getFirstQuality() {
         return this.firstQuality;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The presentation time range.
-     * 
      */
     @Export(name="presentationTimeRange", type=PresentationTimeRangeResponse.class, parameters={})
     private Output</* @Nullable */ PresentationTimeRangeResponse> presentationTimeRange;
 
     /**
      * @return The presentation time range.
-     * 
      */
     public Output</* @Nullable */ PresentationTimeRangeResponse> getPresentationTimeRange() {
         return this.presentationTimeRange;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The tracks selection conditions.
-     * 
      */
     @Export(name="tracks", type=List.class, parameters={FilterTrackSelectionResponse.class})
     private Output</* @Nullable */ List<FilterTrackSelectionResponse>> tracks;
 
     /**
      * @return The tracks selection conditions.
-     * 
      */
     public Output</* @Nullable */ List<FilterTrackSelectionResponse>> getTracks() {
         return this.tracks;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

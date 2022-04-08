@@ -18,7 +18,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -29,7 +28,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the frequency at which the watcher is invoked.
-     * 
      */
     @Import(name="executionFrequencyInSeconds")
       private final @Nullable Output<Double> executionFrequencyInSeconds;
@@ -51,7 +48,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -62,7 +58,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
-     * 
      */
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
@@ -84,7 +78,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the parameters of the script.
-     * 
      */
     @Import(name="scriptParameters")
       private final @Nullable Output<Map<String,String>> scriptParameters;
@@ -95,7 +88,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the hybrid worker group the watcher will run on.
-     * 
      */
     @Import(name="scriptRunOn")
       private final @Nullable Output<String> scriptRunOn;
@@ -106,7 +98,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -117,7 +108,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The watcher name.
-     * 
      */
     @Import(name="watcherName")
       private final @Nullable Output<String> watcherName;

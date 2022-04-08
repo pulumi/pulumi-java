@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The storage configuration provides the non-secret connection details about the customer storage account that is used to store the environment's data.
- * 
  */
 public final class Gen2StorageConfigurationOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class Gen2StorageConfigurationOutputResponse extends io.pulumi.reso
 
     /**
      * The name of the storage account that will hold the environment's Gen2 data.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;

@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class IotEventHubIngestionEndpointConfigurationResponse {
     /**
      * Consumer group of the event hub to connected to.
-     * 
      */
     private final @Nullable String consumerGroup;
     /**
      * Event Hub name to connect to.
-     * 
      */
     private final @Nullable String eventHubName;
     /**
      * Fully qualified namespace of the Event Hub to connect to.
-     * 
      */
     private final @Nullable String fullyQualifiedEventHubNamespace;
 
@@ -39,21 +36,18 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
 
     /**
      * Consumer group of the event hub to connected to.
-     * 
     */
     public Optional<String> getConsumerGroup() {
         return Optional.ofNullable(this.consumerGroup);
     }
     /**
      * Event Hub name to connect to.
-     * 
     */
     public Optional<String> getEventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
      * Fully qualified namespace of the Event Hub to connect to.
-     * 
     */
     public Optional<String> getFullyQualifiedEventHubNamespace() {
         return Optional.ofNullable(this.fullyQualifiedEventHubNamespace);

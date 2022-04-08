@@ -14,7 +14,6 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The auth provider for the users.
-     * 
      */
     @Import(name="authprovider", required=true)
       private final String authprovider;
@@ -25,7 +24,6 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the static site.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

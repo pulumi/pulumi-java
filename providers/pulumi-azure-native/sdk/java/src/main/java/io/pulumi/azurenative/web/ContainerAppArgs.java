@@ -19,7 +19,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Non versioned Container App configuration properties.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<ConfigurationArgs> configuration;
@@ -30,7 +29,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -41,7 +39,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the Container App's KubeEnvironment.
-     * 
      */
     @Import(name="kubeEnvironmentId")
       private final @Nullable Output<String> kubeEnvironmentId;
@@ -52,7 +49,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Container App.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -74,7 +69,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -96,7 +89,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Container App versioned application definition.
-     * 
      */
     @Import(name="template")
       private final @Nullable Output<TemplateArgs> template;

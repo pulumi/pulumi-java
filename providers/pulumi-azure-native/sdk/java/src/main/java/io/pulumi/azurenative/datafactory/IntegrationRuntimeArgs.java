@@ -19,7 +19,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
@@ -30,7 +29,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The integration runtime name.
-     * 
      */
     @Import(name="integrationRuntimeName")
       private final @Nullable Output<String> integrationRuntimeName;
@@ -41,7 +39,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Integration runtime properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
@@ -52,7 +49,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

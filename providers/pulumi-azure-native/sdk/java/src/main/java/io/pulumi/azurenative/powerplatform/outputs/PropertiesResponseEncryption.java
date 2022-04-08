@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class PropertiesResponseEncryption {
     /**
      * Key vault properties.
-     * 
      */
     private final @Nullable KeyVaultPropertiesResponse keyVault;
     /**
      * The state of onboarding, which only appears in the response.
-     * 
      */
     private final @Nullable String state;
 
@@ -33,14 +31,12 @@ public final class PropertiesResponseEncryption {
 
     /**
      * Key vault properties.
-     * 
     */
     public Optional<KeyVaultPropertiesResponse> getKeyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * The state of onboarding, which only appears in the response.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

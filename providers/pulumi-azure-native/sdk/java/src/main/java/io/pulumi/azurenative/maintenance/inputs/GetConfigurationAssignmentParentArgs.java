@@ -14,7 +14,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
 
     /**
      * Configuration assignment name
-     * 
      */
     @Import(name="configurationAssignmentName", required=true)
       private final String configurationAssignmentName;
@@ -25,7 +24,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
 
     /**
      * Resource provider name
-     * 
      */
     @Import(name="providerName", required=true)
       private final String providerName;
@@ -36,7 +34,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
 
     /**
      * Resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
 
     /**
      * Resource identifier
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -58,7 +54,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
 
     /**
      * Resource parent identifier
-     * 
      */
     @Import(name="resourceParentName", required=true)
       private final String resourceParentName;
@@ -69,7 +64,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
 
     /**
      * Resource parent type
-     * 
      */
     @Import(name="resourceParentType", required=true)
       private final String resourceParentType;
@@ -80,7 +74,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
 
     /**
      * Resource type
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class TargetEligibilityResultResponse {
     /**
      * The eligibility status of device, as a failover target device.
-     * 
      */
     private final @Nullable String eligibilityStatus;
     /**
      * The list of error messages, if a device does not qualify as a failover target device.
-     * 
      */
     private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
@@ -34,14 +32,12 @@ public final class TargetEligibilityResultResponse {
 
     /**
      * The eligibility status of device, as a failover target device.
-     * 
     */
     public Optional<String> getEligibilityStatus() {
         return Optional.ofNullable(this.eligibilityStatus);
     }
     /**
      * The list of error messages, if a device does not qualify as a failover target device.
-     * 
     */
     public List<TargetEligibilityErrorMessageResponse> getMessages() {
         return this.messages == null ? List.of() : this.messages;

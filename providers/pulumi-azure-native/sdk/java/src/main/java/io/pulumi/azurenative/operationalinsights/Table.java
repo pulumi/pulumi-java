@@ -23,7 +23,122 @@ import javax.annotation.Nullable;
  * Workspace data table definition.
  * API Version: 2021-12-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TablesUpsert
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var table = new AzureNative.OperationalInsights.Table("table", new AzureNative.OperationalInsights.TableArgs
+ *         {
+ *             ResourceGroupName = "oiautorest6685",
+ *             RetentionInDays = 45,
+ *             Schema = new AzureNative.OperationalInsights.Inputs.SchemaArgs
+ *             {
+ *                 Columns = 
+ *                 {
+ *                     new AzureNative.OperationalInsights.Inputs.ColumnArgs
+ *                     {
+ *                         Name = "MyNewColumn",
+ *                         Type = "guid",
+ *                     },
+ *                 },
+ *                 Name = "AzureNetworkFlow",
+ *             },
+ *             TableName = "AzureNetworkFlow",
+ *             TotalRetentionInDays = 70,
+ *             WorkspaceName = "oiautorest6685",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewTable(ctx, "table", &operationalinsights.TableArgs{
+ * 			ResourceGroupName: pulumi.String("oiautorest6685"),
+ * 			RetentionInDays:   pulumi.Int(45),
+ * 			Schema: &operationalinsights.SchemaArgs{
+ * 				Columns: operationalinsights.ColumnArray{
+ * 					&operationalinsights.ColumnArgs{
+ * 						Name: pulumi.String("MyNewColumn"),
+ * 						Type: pulumi.String("guid"),
+ * 					},
+ * 				},
+ * 				Name: pulumi.String("AzureNetworkFlow"),
+ * 			},
+ * 			TableName:            pulumi.String("AzureNetworkFlow"),
+ * 			TotalRetentionInDays: pulumi.Int(70),
+ * 			WorkspaceName:        pulumi.String("oiautorest6685"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const table = new azure_native.operationalinsights.Table("table", {
+ *     resourceGroupName: "oiautorest6685",
+ *     retentionInDays: 45,
+ *     schema: {
+ *         columns: [{
+ *             name: "MyNewColumn",
+ *             type: "guid",
+ *         }],
+ *         name: "AzureNetworkFlow",
+ *     },
+ *     tableName: "AzureNetworkFlow",
+ *     totalRetentionInDays: 70,
+ *     workspaceName: "oiautorest6685",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * table = azure_native.operationalinsights.Table("table",
+ *     resource_group_name="oiautorest6685",
+ *     retention_in_days=45,
+ *     schema=azure_native.operationalinsights.SchemaArgs(
+ *         columns=[azure_native.operationalinsights.ColumnArgs(
+ *             name="MyNewColumn",
+ *             type="guid",
+ *         )],
+ *         name="AzureNetworkFlow",
+ *     ),
+ *     table_name="AzureNetworkFlow",
+ *     total_retention_in_days=70,
+ *     workspace_name="oiautorest6685")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,182 +153,156 @@ import javax.annotation.Nullable;
 public class Table extends io.pulumi.resources.CustomResource {
     /**
      * The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
-     * 
      */
     @Export(name="archiveRetentionInDays", type=Integer.class, parameters={})
     private Output<Integer> archiveRetentionInDays;
 
     /**
      * @return The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
-     * 
      */
     public Output<Integer> getArchiveRetentionInDays() {
         return this.archiveRetentionInDays;
     }
     /**
      * The timestamp that table plan was last modified (UTC).
-     * 
      */
     @Export(name="lastPlanModifiedDate", type=String.class, parameters={})
     private Output<String> lastPlanModifiedDate;
 
     /**
      * @return The timestamp that table plan was last modified (UTC).
-     * 
      */
     public Output<String> getLastPlanModifiedDate() {
         return this.lastPlanModifiedDate;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The table plan.
-     * 
      */
     @Export(name="plan", type=String.class, parameters={})
     private Output</* @Nullable */ String> plan;
 
     /**
      * @return The table plan.
-     * 
      */
     public Output</* @Nullable */ String> getPlan() {
         return this.plan;
     }
     /**
      * Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Parameters of the restore operation that initiated this table.
-     * 
      */
     @Export(name="restoredLogs", type=RestoredLogsResponse.class, parameters={})
     private Output</* @Nullable */ RestoredLogsResponse> restoredLogs;
 
     /**
      * @return Parameters of the restore operation that initiated this table.
-     * 
      */
     public Output</* @Nullable */ RestoredLogsResponse> getRestoredLogs() {
         return this.restoredLogs;
     }
     /**
      * Search job execution statistics.
-     * 
      */
     @Export(name="resultStatistics", type=ResultStatisticsResponse.class, parameters={})
     private Output</* @Nullable */ ResultStatisticsResponse> resultStatistics;
 
     /**
      * @return Search job execution statistics.
-     * 
      */
     public Output</* @Nullable */ ResultStatisticsResponse> getResultStatistics() {
         return this.resultStatistics;
     }
     /**
      * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
-     * 
      */
     @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
      * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
-     * 
      */
     public Output</* @Nullable */ Integer> getRetentionInDays() {
         return this.retentionInDays;
     }
     /**
      * Table schema.
-     * 
      */
     @Export(name="schema", type=SchemaResponse.class, parameters={})
     private Output</* @Nullable */ SchemaResponse> schema;
 
     /**
      * @return Table schema.
-     * 
      */
     public Output</* @Nullable */ SchemaResponse> getSchema() {
         return this.schema;
     }
     /**
      * Parameters of the search job that initiated this table.
-     * 
      */
     @Export(name="searchResults", type=SearchResultsResponse.class, parameters={})
     private Output</* @Nullable */ SearchResultsResponse> searchResults;
 
     /**
      * @return Parameters of the search job that initiated this table.
-     * 
      */
     public Output</* @Nullable */ SearchResultsResponse> getSearchResults() {
         return this.searchResults;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
-     * 
      */
     @Export(name="totalRetentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> totalRetentionInDays;
 
     /**
      * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
-     * 
      */
     public Output</* @Nullable */ Integer> getTotalRetentionInDays() {
         return this.totalRetentionInDays;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Workspaces resource specific properties.
- * 
  */
 public final class WorkspaceResponseProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class WorkspaceResponseProperties extends io.pulumi.resources.Invok
 
     /**
      * The provisioning state.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

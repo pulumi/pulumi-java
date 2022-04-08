@@ -19,7 +19,6 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of a managed cluster SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,ManagedClusterSKUName>> name;
@@ -30,7 +29,6 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Tier of a managed cluster SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;

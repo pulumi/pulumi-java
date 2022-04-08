@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the configuration of the identity providers to be used in the OpenShift cluster.
- * 
  */
 public final class OpenShiftManagedClusterIdentityProviderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends io.pu
 
     /**
      * Name of the provider.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -32,7 +30,6 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends io.pu
 
     /**
      * Configuration of the provider.
-     * 
      */
     @Import(name="provider")
       private final @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;

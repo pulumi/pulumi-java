@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayRewriteRuleConditionResponse {
     /**
      * Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
-     * 
      */
     private final @Nullable Boolean ignoreCase;
     /**
      * Setting this value as truth will force to check the negation of the condition given by the user.
-     * 
      */
     private final @Nullable Boolean negate;
     /**
      * The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
-     * 
      */
     private final @Nullable String pattern;
     /**
      * The condition parameter of the RewriteRuleCondition.
-     * 
      */
     private final @Nullable String variable;
 
@@ -47,28 +43,24 @@ public final class ApplicationGatewayRewriteRuleConditionResponse {
 
     /**
      * Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
-     * 
     */
     public Optional<Boolean> getIgnoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
     /**
      * Setting this value as truth will force to check the negation of the condition given by the user.
-     * 
     */
     public Optional<Boolean> getNegate() {
         return Optional.ofNullable(this.negate);
     }
     /**
      * The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
-     * 
     */
     public Optional<String> getPattern() {
         return Optional.ofNullable(this.pattern);
     }
     /**
      * The condition parameter of the RewriteRuleCondition.
-     * 
     */
     public Optional<String> getVariable() {
         return Optional.ofNullable(this.variable);

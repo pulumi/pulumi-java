@@ -17,7 +17,6 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * dedicated cloud Service name
-     * 
      */
     @Import(name="dedicatedCloudServiceName")
       private final @Nullable Output<String> dedicatedCloudServiceName;
@@ -28,7 +27,6 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
-     * 
      */
     @Import(name="gatewaySubnet", required=true)
       private final Output<String> gatewaySubnet;
@@ -39,7 +37,6 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Azure region
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -50,7 +47,6 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

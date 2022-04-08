@@ -14,7 +14,6 @@ public final class GetDscNodeConfigurationArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class GetDscNodeConfigurationArgs extends io.pulumi.resources.Invok
 
     /**
      * The Dsc node configuration name.
-     * 
      */
     @Import(name="nodeConfigurationName", required=true)
       private final String nodeConfigurationName;
@@ -36,7 +34,6 @@ public final class GetDscNodeConfigurationArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

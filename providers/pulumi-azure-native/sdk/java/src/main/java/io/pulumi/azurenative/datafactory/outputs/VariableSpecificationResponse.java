@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class VariableSpecificationResponse {
     /**
      * Default value of variable.
-     * 
      */
     private final @Nullable Object defaultValue;
     /**
      * Variable type.
-     * 
      */
     private final String type;
 
@@ -33,14 +31,12 @@ public final class VariableSpecificationResponse {
 
     /**
      * Default value of variable.
-     * 
     */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Variable type.
-     * 
     */
     public String getType() {
         return this.type;

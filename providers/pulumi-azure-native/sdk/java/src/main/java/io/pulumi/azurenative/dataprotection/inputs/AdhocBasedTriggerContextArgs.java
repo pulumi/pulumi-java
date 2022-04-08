@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Adhoc trigger context
- * 
  */
 public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AdhocBasedTriggerContext'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
@@ -32,7 +30,6 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
 
     /**
      * Tagging Criteria containing retention tag for adhoc backup.
-     * 
      */
     @Import(name="taggingCriteria", required=true)
       private final Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;

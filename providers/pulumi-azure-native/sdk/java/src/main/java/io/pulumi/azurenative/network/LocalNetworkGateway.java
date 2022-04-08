@@ -20,7 +20,105 @@ import javax.annotation.Nullable;
  * A common class for general resource information.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateLocalNetworkGateway
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var localNetworkGateway = new AzureNative.Network.LocalNetworkGateway("localNetworkGateway", new AzureNative.Network.LocalNetworkGatewayArgs
+ *         {
+ *             Fqdn = "site1.contoso.com",
+ *             GatewayIpAddress = "11.12.13.14",
+ *             LocalNetworkAddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.1.0.0/16",
+ *                 },
+ *             },
+ *             LocalNetworkGatewayName = "localgw",
+ *             Location = "Central US",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewLocalNetworkGateway(ctx, "localNetworkGateway", &network.LocalNetworkGatewayArgs{
+ * 			Fqdn:             pulumi.String("site1.contoso.com"),
+ * 			GatewayIpAddress: pulumi.String("11.12.13.14"),
+ * 			LocalNetworkAddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.1.0.0/16"),
+ * 				},
+ * 			},
+ * 			LocalNetworkGatewayName: pulumi.String("localgw"),
+ * 			Location:                pulumi.String("Central US"),
+ * 			ResourceGroupName:       pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const localNetworkGateway = new azure_native.network.LocalNetworkGateway("localNetworkGateway", {
+ *     fqdn: "site1.contoso.com",
+ *     gatewayIpAddress: "11.12.13.14",
+ *     localNetworkAddressSpace: {
+ *         addressPrefixes: ["10.1.0.0/16"],
+ *     },
+ *     localNetworkGatewayName: "localgw",
+ *     location: "Central US",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * local_network_gateway = azure_native.network.LocalNetworkGateway("localNetworkGateway",
+ *     fqdn="site1.contoso.com",
+ *     gateway_ip_address="11.12.13.14",
+ *     local_network_address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.1.0.0/16"],
+ *     ),
+ *     local_network_gateway_name="localgw",
+ *     location="Central US",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,154 +133,132 @@ import javax.annotation.Nullable;
 public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
     /**
      * Local network gateway's BGP speaker settings.
-     * 
      */
     @Export(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
     /**
      * @return Local network gateway's BGP speaker settings.
-     * 
      */
     public Output</* @Nullable */ BgpSettingsResponse> getBgpSettings() {
         return this.bgpSettings;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * FQDN of local network gateway.
-     * 
      */
     @Export(name="fqdn", type=String.class, parameters={})
     private Output</* @Nullable */ String> fqdn;
 
     /**
      * @return FQDN of local network gateway.
-     * 
      */
     public Output</* @Nullable */ String> getFqdn() {
         return this.fqdn;
     }
     /**
      * IP address of local network gateway.
-     * 
      */
     @Export(name="gatewayIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayIpAddress;
 
     /**
      * @return IP address of local network gateway.
-     * 
      */
     public Output</* @Nullable */ String> getGatewayIpAddress() {
         return this.gatewayIpAddress;
     }
     /**
      * Local network site address space.
-     * 
      */
     @Export(name="localNetworkAddressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> localNetworkAddressSpace;
 
     /**
      * @return Local network site address space.
-     * 
      */
     public Output</* @Nullable */ AddressSpaceResponse> getLocalNetworkAddressSpace() {
         return this.localNetworkAddressSpace;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the local network gateway resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the local network gateway resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the local network gateway resource.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resource GUID property of the local network gateway resource.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

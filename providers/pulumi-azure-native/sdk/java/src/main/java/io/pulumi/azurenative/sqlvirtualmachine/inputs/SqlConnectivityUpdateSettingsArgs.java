@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set the access level and network port settings for SQL Server.
- * 
  */
 public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
 
     /**
      * SQL Server connectivity option.
-     * 
      */
     @Import(name="connectivityType")
       private final @Nullable Output<Either<String,ConnectivityType>> connectivityType;
@@ -34,7 +32,6 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
 
     /**
      * SQL Server port.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -45,7 +42,6 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
 
     /**
      * SQL Server sysadmin login password.
-     * 
      */
     @Import(name="sqlAuthUpdatePassword")
       private final @Nullable Output<String> sqlAuthUpdatePassword;
@@ -56,7 +52,6 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
 
     /**
      * SQL Server sysadmin login to create.
-     * 
      */
     @Import(name="sqlAuthUpdateUserName")
       private final @Nullable Output<String> sqlAuthUpdateUserName;

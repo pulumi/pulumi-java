@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class SlowRequestsBasedTriggerResponse {
     /**
      * Request Count.
-     * 
      */
     private final @Nullable Integer count;
     /**
      * Request Path.
-     * 
      */
     private final @Nullable String path;
     /**
      * Time interval.
-     * 
      */
     private final @Nullable String timeInterval;
     /**
      * Time taken.
-     * 
      */
     private final @Nullable String timeTaken;
 
@@ -47,28 +43,24 @@ public final class SlowRequestsBasedTriggerResponse {
 
     /**
      * Request Count.
-     * 
     */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Request Path.
-     * 
     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Time interval.
-     * 
     */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
     /**
      * Time taken.
-     * 
     */
     public Optional<String> getTimeTaken() {
         return Optional.ofNullable(this.timeTaken);

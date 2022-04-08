@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for hybrid compute management
- * 
  */
 public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
-     * 
      */
     @Import(name="autoProvision", required=true)
       private final Output<Either<String,AutoProvision>> autoProvision;
@@ -35,7 +33,6 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
-     * 
      */
     @Import(name="proxyServer")
       private final @Nullable Output<ProxyServerPropertiesArgs> proxyServer;
@@ -46,7 +43,6 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * The location where the metadata of machines will be stored
-     * 
      */
     @Import(name="region")
       private final @Nullable Output<String> region;
@@ -57,7 +53,6 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
@@ -68,7 +63,6 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * An object to access resources that are secured by an Azure AD tenant.
-     * 
      */
     @Import(name="servicePrincipal")
       private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;

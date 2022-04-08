@@ -14,7 +14,6 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends io.pulumi.resourc
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The GUID for the Role Assignment.
-     * 
      */
     @Import(name="roleAssignmentId", required=true)
       private final String roleAssignmentId;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a lab's support banner
- * 
  */
 public final class LabSupportPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Is the lab support banner active/enabled at this time?
-     * 
      */
     @Import(name="enabled")
       private final @Nullable String enabled;
@@ -31,7 +29,6 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
-     * 
      */
     @Import(name="markdown")
       private final @Nullable String markdown;

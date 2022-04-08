@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol for which the DDoS protection policy is being customized.
-     * 
      */
     @EnumType
     public enum DdosCustomPolicyProtocol {

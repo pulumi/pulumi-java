@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
- * 
  */
 public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -34,7 +32,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -45,7 +42,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
@@ -56,7 +52,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

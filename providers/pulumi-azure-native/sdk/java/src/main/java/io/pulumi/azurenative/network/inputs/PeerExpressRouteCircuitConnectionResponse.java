@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Peer Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
- * 
  */
 public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * /29 IP address space to carve out Customer addresses for tunnels.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
@@ -32,7 +30,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * The resource guid of the authorization used for the express route circuit connection.
-     * 
      */
     @Import(name="authResourceGuid")
       private final @Nullable String authResourceGuid;
@@ -43,7 +40,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * Express Route Circuit connection state.
-     * 
      */
     @Import(name="circuitConnectionStatus", required=true)
       private final String circuitConnectionStatus;
@@ -54,7 +50,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * The name of the express route circuit connection resource.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable String connectionName;
@@ -65,7 +60,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -76,7 +70,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * Reference to Express Route Circuit Private Peering Resource of the circuit.
-     * 
      */
     @Import(name="expressRouteCircuitPeering")
       private final @Nullable SubResourceResponse expressRouteCircuitPeering;
@@ -87,7 +80,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -98,7 +90,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -109,7 +100,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
-     * 
      */
     @Import(name="peerExpressRouteCircuitPeering")
       private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
@@ -120,7 +110,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * The provisioning state of the peer express route circuit connection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -131,7 +120,6 @@ public final class PeerExpressRouteCircuitConnectionResponse extends io.pulumi.r
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

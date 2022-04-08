@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the network interface ip settings.
- * 
  */
 public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the nic allocation method.
-     * 
      */
     @Import(name="allocationMethod")
       private final @Nullable String allocationMethod;
@@ -33,7 +31,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the dns servers.
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
@@ -44,7 +41,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the gateway.
-     * 
      */
     @Import(name="gateway")
       private final @Nullable List<String> gateway;
@@ -55,7 +51,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the ip address for the nic.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -66,7 +61,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
-     * 
      */
     @Import(name="ipAddressInfo", required=true)
       private final List<NicIPAddressSettingsResponse> ipAddressInfo;
@@ -77,7 +71,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the primary server.
-     * 
      */
     @Import(name="primaryWinsServer", required=true)
       private final String primaryWinsServer;
@@ -88,7 +81,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the secondary server.
-     * 
      */
     @Import(name="secondaryWinsServer", required=true)
       private final String secondaryWinsServer;
@@ -99,7 +91,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the mask.
-     * 
      */
     @Import(name="subnetMask")
       private final @Nullable String subnetMask;

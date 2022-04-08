@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for an Office 365 service.
- * 
  */
 public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
-     * 
      */
     @Import(name="allowedGroups")
       private final @Nullable Output<Object> allowedGroups;
@@ -32,7 +30,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="dateFilterColumn")
       private final @Nullable Output<Object> dateFilterColumn;
@@ -43,7 +40,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -54,7 +50,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * End time of the requested range for this dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<Object> endTime;
@@ -65,7 +60,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -76,7 +70,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
-     * 
      */
     @Import(name="outputColumns")
       private final @Nullable Output<Object> outputColumns;
@@ -87,7 +80,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -98,7 +90,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -109,7 +100,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<Object> startTime;
@@ -121,7 +111,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Copy source type.
      * Expected value is 'Office365Source'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -132,7 +121,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The user scope uri. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userScopeFilterUri")
       private final @Nullable Output<Object> userScopeFilterUri;

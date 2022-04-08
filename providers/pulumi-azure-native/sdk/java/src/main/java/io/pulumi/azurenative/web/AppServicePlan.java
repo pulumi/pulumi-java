@@ -23,7 +23,112 @@ import javax.annotation.Nullable;
  * App Service plan.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Or Update App Service plan
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var appServicePlan = new AzureNative.Web.AppServicePlan("appServicePlan", new AzureNative.Web.AppServicePlanArgs
+ *         {
+ *             Kind = "app",
+ *             Location = "East US",
+ *             Name = "testsf6141",
+ *             ResourceGroupName = "testrg123",
+ *             Sku = new AzureNative.Web.Inputs.SkuDescriptionArgs
+ *             {
+ *                 Capacity = 1,
+ *                 Family = "P",
+ *                 Name = "P1",
+ *                 Size = "P1",
+ *                 Tier = "Premium",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewAppServicePlan(ctx, "appServicePlan", &web.AppServicePlanArgs{
+ * 			Kind:              pulumi.String("app"),
+ * 			Location:          pulumi.String("East US"),
+ * 			Name:              pulumi.String("testsf6141"),
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			Sku: &web.SkuDescriptionArgs{
+ * 				Capacity: pulumi.Int(1),
+ * 				Family:   pulumi.String("P"),
+ * 				Name:     pulumi.String("P1"),
+ * 				Size:     pulumi.String("P1"),
+ * 				Tier:     pulumi.String("Premium"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const appServicePlan = new azure_native.web.AppServicePlan("appServicePlan", {
+ *     kind: "app",
+ *     location: "East US",
+ *     name: "testsf6141",
+ *     resourceGroupName: "testrg123",
+ *     sku: {
+ *         capacity: 1,
+ *         family: "P",
+ *         name: "P1",
+ *         size: "P1",
+ *         tier: "Premium",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * app_service_plan = azure_native.web.AppServicePlan("appServicePlan",
+ *     kind="app",
+ *     location="East US",
+ *     name="testsf6141",
+ *     resource_group_name="testrg123",
+ *     sku=azure_native.web.SkuDescriptionArgs(
+ *         capacity=1,
+ *         family="P",
+ *         name="P1",
+ *         size="P1",
+ *         tier="Premium",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,182 +143,156 @@ import javax.annotation.Nullable;
 public class AppServicePlan extends io.pulumi.resources.CustomResource {
     /**
      * The time when the server farm free offer expires.
-     * 
      */
     @Export(name="freeOfferExpirationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> freeOfferExpirationTime;
 
     /**
      * @return The time when the server farm free offer expires.
-     * 
      */
     public Output</* @Nullable */ String> getFreeOfferExpirationTime() {
         return this.freeOfferExpirationTime;
     }
     /**
      * Geographical location for the App Service plan.
-     * 
      */
     @Export(name="geoRegion", type=String.class, parameters={})
     private Output<String> geoRegion;
 
     /**
      * @return Geographical location for the App Service plan.
-     * 
      */
     public Output<String> getGeoRegion() {
         return this.geoRegion;
     }
     /**
      * Specification for the App Service Environment to use for the App Service plan.
-     * 
      */
     @Export(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
     private Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile;
 
     /**
      * @return Specification for the App Service Environment to use for the App Service plan.
-     * 
      */
     public Output</* @Nullable */ HostingEnvironmentProfileResponse> getHostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile;
     }
     /**
      * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     @Export(name="hyperV", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hyperV;
 
     /**
      * @return If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     public Output</* @Nullable */ Boolean> getHyperV() {
         return this.hyperV;
     }
     /**
      * If <code>true</code>, this App Service Plan owns spot instances.
-     * 
      */
     @Export(name="isSpot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSpot;
 
     /**
      * @return If <code>true</code>, this App Service Plan owns spot instances.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsSpot() {
         return this.isSpot;
     }
     /**
      * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     @Export(name="isXenon", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isXenon;
 
     /**
      * @return Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsXenon() {
         return this.isXenon;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Specification for the Kubernetes Environment to use for the App Service plan.
-     * 
      */
     @Export(name="kubeEnvironmentProfile", type=KubeEnvironmentProfileResponse.class, parameters={})
     private Output</* @Nullable */ KubeEnvironmentProfileResponse> kubeEnvironmentProfile;
 
     /**
      * @return Specification for the Kubernetes Environment to use for the App Service plan.
-     * 
      */
     public Output</* @Nullable */ KubeEnvironmentProfileResponse> getKubeEnvironmentProfile() {
         return this.kubeEnvironmentProfile;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
-     * 
      */
     @Export(name="maximumElasticWorkerCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumElasticWorkerCount;
 
     /**
      * @return Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
-     * 
      */
     public Output</* @Nullable */ Integer> getMaximumElasticWorkerCount() {
         return this.maximumElasticWorkerCount;
     }
     /**
      * Maximum number of instances that can be assigned to this App Service plan.
-     * 
      */
     @Export(name="maximumNumberOfWorkers", type=Integer.class, parameters={})
     private Output<Integer> maximumNumberOfWorkers;
 
     /**
      * @return Maximum number of instances that can be assigned to this App Service plan.
-     * 
      */
     public Output<Integer> getMaximumNumberOfWorkers() {
         return this.maximumNumberOfWorkers;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Number of apps assigned to this App Service plan.
-     * 
      */
     @Export(name="numberOfSites", type=Integer.class, parameters={})
     private Output<Integer> numberOfSites;
 
     /**
      * @return Number of apps assigned to this App Service plan.
-     * 
      */
     public Output<Integer> getNumberOfSites() {
         return this.numberOfSites;
@@ -221,7 +300,6 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
     /**
      * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
      * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
-     * 
      */
     @Export(name="perSiteScaling", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> perSiteScaling;
@@ -229,175 +307,150 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
     /**
      * @return If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
      * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
-     * 
      */
     public Output</* @Nullable */ Boolean> getPerSiteScaling() {
         return this.perSiteScaling;
     }
     /**
      * Provisioning state of the App Service Plan.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the App Service Plan.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     @Export(name="reserved", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reserved;
 
     /**
      * @return If Linux app service plan <code>true</code>, <code>false</code> otherwise.
-     * 
      */
     public Output</* @Nullable */ Boolean> getReserved() {
         return this.reserved;
     }
     /**
      * Resource group of the App Service plan.
-     * 
      */
     @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
      * @return Resource group of the App Service plan.
-     * 
      */
     public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Description of a SKU for a scalable resource.
-     * 
      */
     @Export(name="sku", type=SkuDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ SkuDescriptionResponse> sku;
 
     /**
      * @return Description of a SKU for a scalable resource.
-     * 
      */
     public Output</* @Nullable */ SkuDescriptionResponse> getSku() {
         return this.sku;
     }
     /**
      * The time when the server farm expires. Valid only if it is a spot server farm.
-     * 
      */
     @Export(name="spotExpirationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> spotExpirationTime;
 
     /**
      * @return The time when the server farm expires. Valid only if it is a spot server farm.
-     * 
      */
     public Output</* @Nullable */ String> getSpotExpirationTime() {
         return this.spotExpirationTime;
     }
     /**
      * App Service plan status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return App Service plan status.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * App Service plan subscription.
-     * 
      */
     @Export(name="subscription", type=String.class, parameters={})
     private Output<String> subscription;
 
     /**
      * @return App Service plan subscription.
-     * 
      */
     public Output<String> getSubscription() {
         return this.subscription;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Scaling worker count.
-     * 
      */
     @Export(name="targetWorkerCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> targetWorkerCount;
 
     /**
      * @return Scaling worker count.
-     * 
      */
     public Output</* @Nullable */ Integer> getTargetWorkerCount() {
         return this.targetWorkerCount;
     }
     /**
      * Scaling worker size ID.
-     * 
      */
     @Export(name="targetWorkerSizeId", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> targetWorkerSizeId;
 
     /**
      * @return Scaling worker size ID.
-     * 
      */
     public Output</* @Nullable */ Integer> getTargetWorkerSizeId() {
         return this.targetWorkerSizeId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Target worker tier assigned to the App Service plan.
-     * 
      */
     @Export(name="workerTierName", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerTierName;
 
     /**
      * @return Target worker tier assigned to the App Service plan.
-     * 
      */
     public Output</* @Nullable */ String> getWorkerTierName() {
         return this.workerTierName;

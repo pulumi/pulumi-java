@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Log location settings.
- * 
  */
 public final class LogLocationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LogLocationSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * Log storage linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -32,7 +30,6 @@ public final class LogLocationSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="path")
       private final @Nullable Object path;

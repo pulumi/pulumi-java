@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ObjectReplicationPolicyFilterResponse {
     /**
      * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
-     * 
      */
     private final @Nullable String minCreationTime;
     /**
      * Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
-     * 
      */
     private final @Nullable List<String> prefixMatch;
 
@@ -33,14 +31,12 @@ public final class ObjectReplicationPolicyFilterResponse {
 
     /**
      * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
-     * 
     */
     public Optional<String> getMinCreationTime() {
         return Optional.ofNullable(this.minCreationTime);
     }
     /**
      * Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
-     * 
     */
     public List<String> getPrefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;

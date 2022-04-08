@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
- * 
  */
 public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * Additional Properties.
-     * 
      */
     @Import(name="additionalProperties")
       private final @Nullable Map<String,Object> additionalProperties;
@@ -36,7 +34,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * Azure path for Azure Blob or File
-     * 
      */
     @Import(name="azureFilePath", required=true)
       private final String azureFilePath;
@@ -47,7 +44,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * Data store Name
-     * 
      */
     @Import(name="datastoreName", required=true)
       private final String datastoreName;
@@ -58,7 +54,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * HTTP URL.
-     * 
      */
     @Import(name="httpUrl", required=true)
       private final String httpUrl;
@@ -69,7 +64,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * Specify the partition format of path. Defaults to None.
-     * 
      */
     @Import(name="partitionFormat", required=true)
       private final String partitionFormat;
@@ -80,7 +74,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * Whether or not to ignore unmatched path.
-     * 
      */
     @Import(name="partitionFormatIgnoreError", required=true)
       private final Boolean partitionFormatIgnoreError;
@@ -91,7 +84,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * List of files expanded from a file GLOB specified
-     * 
      */
     @Import(name="paths", required=true)
       private final List<String> paths;
@@ -102,7 +94,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * Relative path in the data store
-     * 
      */
     @Import(name="relativePath", required=true)
       private final String relativePath;
@@ -113,7 +104,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
 
     /**
      * Sql Query/Table/Stored Procedure details.
-     * 
      */
     @Import(name="sqlDataPath")
       private final @Nullable DatasetResponseSqlDataPath sqlDataPath;

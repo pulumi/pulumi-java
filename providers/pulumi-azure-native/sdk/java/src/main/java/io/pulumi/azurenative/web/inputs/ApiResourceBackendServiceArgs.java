@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The API backend service
- * 
  */
 public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
 
     /**
      * The service URL
-     * 
      */
     @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;

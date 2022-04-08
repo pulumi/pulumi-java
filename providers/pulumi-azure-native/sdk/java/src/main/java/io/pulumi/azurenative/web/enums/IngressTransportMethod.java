@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Ingress transport protocol
-     * 
      */
     @EnumType
     public enum IngressTransportMethod {

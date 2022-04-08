@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
-     * 
      */
     @EnumType
     public enum Bypass {

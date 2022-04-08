@@ -19,7 +19,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes what is the signature enforces
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -30,7 +29,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes the list of destination ports related to this signature
-     * 
      */
     @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
@@ -41,7 +39,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
-     * 
      */
     @Import(name="direction")
       private final @Nullable Integer direction;
@@ -52,7 +49,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes the groups the signature belongs to
-     * 
      */
     @Import(name="group")
       private final @Nullable String group;
@@ -63,7 +59,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes if this override is inherited from base policy or not
-     * 
      */
     @Import(name="inheritedFromParentPolicy")
       private final @Nullable Boolean inheritedFromParentPolicy;
@@ -74,7 +69,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes the last updated time of the signature (provided from 3rd party vendor)
-     * 
      */
     @Import(name="lastUpdated")
       private final @Nullable String lastUpdated;
@@ -85,7 +79,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
-     * 
      */
     @Import(name="mode")
       private final @Nullable Integer mode;
@@ -96,7 +89,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes the protocol the signatures is being enforced in
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;
@@ -107,7 +99,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
-     * 
      */
     @Import(name="severity")
       private final @Nullable Integer severity;
@@ -118,7 +109,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ID of the signature
-     * 
      */
     @Import(name="signatureId")
       private final @Nullable Integer signatureId;
@@ -129,7 +119,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Describes the list of source ports related to this signature
-     * 
      */
     @Import(name="sourcePorts")
       private final @Nullable List<String> sourcePorts;

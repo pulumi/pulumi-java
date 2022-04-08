@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a cloud service extension profile.
- * 
  */
 public final class CloudServiceExtensionProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CloudServiceExtensionProfileResponse extends io.pulumi.resour
 
     /**
      * List of extensions for the cloud service.
-     * 
      */
     @Import(name="extensions")
       private final @Nullable List<ExtensionResponse> extensions;

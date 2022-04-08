@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for the CORS configuration of the service instance.
- * 
  */
 public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
 
     /**
      * If credentials are allowed via CORS.
-     * 
      */
     @Import(name="allowCredentials")
       private final @Nullable Boolean allowCredentials;
@@ -34,7 +32,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
 
     /**
      * The headers to be allowed via CORS.
-     * 
      */
     @Import(name="headers")
       private final @Nullable List<String> headers;
@@ -45,7 +42,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
 
     /**
      * The max age to be allowed via CORS.
-     * 
      */
     @Import(name="maxAge")
       private final @Nullable Double maxAge;
@@ -56,7 +52,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
 
     /**
      * The methods to be allowed via CORS.
-     * 
      */
     @Import(name="methods")
       private final @Nullable List<String> methods;
@@ -67,7 +62,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
 
     /**
      * The origins to be allowed via CORS.
-     * 
      */
     @Import(name="origins")
       private final @Nullable List<String> origins;

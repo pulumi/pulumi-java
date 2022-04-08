@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class EncryptionResponse {
     /**
      * The name of KeyVault key.
-     * 
      */
     private final @Nullable String keyName;
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
-     * 
      */
     private final @Nullable String keySource;
     /**
      * The Uri of KeyVault.
-     * 
      */
     private final @Nullable String keyVaultUri;
     /**
      * The version of KeyVault key.
-     * 
      */
     private final @Nullable String keyVersion;
 
@@ -46,28 +42,24 @@ public final class EncryptionResponse {
 
     /**
      * The name of KeyVault key.
-     * 
     */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
-     * 
     */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * The Uri of KeyVault.
-     * 
     */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * The version of KeyVault key.
-     * 
     */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);

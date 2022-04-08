@@ -20,7 +20,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Authorization key to establish the connection.
-     * 
      */
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
@@ -31,7 +30,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the connection subresource.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -42,7 +40,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable internet security.
-     * 
      */
     @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
@@ -53,7 +50,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The ExpressRoute circuit peering.
-     * 
      */
     @Import(name="expressRouteCircuitPeering", required=true)
       private final Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
@@ -64,7 +60,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable FastPath to vWan Firewall hub.
-     * 
      */
     @Import(name="expressRouteGatewayBypass")
       private final @Nullable Output<Boolean> expressRouteGatewayBypass;
@@ -75,7 +70,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the ExpressRoute gateway.
-     * 
      */
     @Import(name="expressRouteGatewayName", required=true)
       private final Output<String> expressRouteGatewayName;
@@ -86,7 +80,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -97,7 +90,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -108,7 +100,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -119,7 +110,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
@@ -130,7 +120,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The routing weight associated to the connection.
-     * 
      */
     @Import(name="routingWeight")
       private final @Nullable Output<Integer> routingWeight;

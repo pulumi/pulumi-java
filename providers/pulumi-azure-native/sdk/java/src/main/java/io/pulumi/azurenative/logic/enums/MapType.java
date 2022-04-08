@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The map type.
-     * 
      */
     @EnumType
     public enum MapType {

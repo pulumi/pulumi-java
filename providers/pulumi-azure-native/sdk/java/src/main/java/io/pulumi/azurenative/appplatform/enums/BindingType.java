@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Buildpack Binding Type
-     * 
      */
     @EnumType
     public enum BindingType {

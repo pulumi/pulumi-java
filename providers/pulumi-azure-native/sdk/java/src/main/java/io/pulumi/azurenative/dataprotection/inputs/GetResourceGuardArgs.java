@@ -14,7 +14,6 @@ public final class GetResourceGuardArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group where the backup vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetResourceGuardArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of ResourceGuard
-     * 
      */
     @Import(name="resourceGuardsName", required=true)
       private final String resourceGuardsName;

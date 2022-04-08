@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The network function user configuration.
- * 
  */
 public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
 
     /**
      * The network interface configuration.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
@@ -35,7 +33,6 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
 
     /**
      * Specifies the operating system settings for the role instance.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
@@ -46,7 +43,6 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the network function role.
-     * 
      */
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
@@ -57,7 +53,6 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
 
     /**
      * The user data parameters from the customer.
-     * 
      */
     @Import(name="userDataParameters")
       private final @Nullable Output<Object> userDataParameters;

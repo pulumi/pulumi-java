@@ -18,7 +18,131 @@ import javax.annotation.Nullable;
  * Properties that define an Analytics item that is associated to an Application Insights component.
  * API Version: 2015-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AnalyticsItemPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var analyticsItem = new AzureNative.Insights.AnalyticsItem("analyticsItem", new AzureNative.Insights.AnalyticsItemArgs
+ *         {
+ *             Content = @"let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp < ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp >= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ * ",
+ *             Name = "Exceptions - New in the last 24 hours",
+ *             ResourceGroupName = "my-resource-group",
+ *             ResourceName = "my-component",
+ *             Scope = "shared",
+ *             ScopePath = "analyticsItems",
+ *             Type = "query",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewAnalyticsItem(ctx, "analyticsItem", &insights.AnalyticsItemArgs{
+ * 			Content:           pulumi.String("let newExceptionsTimeRange = 1d;\nlet timeRangeToCheckBefore = 7d;\nexceptions\n| where timestamp < ago(timeRangeToCheckBefore)\n| summarize count() by problemId\n| join kind= rightanti (\nexceptions\n| where timestamp >= ago(newExceptionsTimeRange)\n| extend stack = tostring(details[0].rawStack)\n| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  \n) on problemId \n| order by  count_ desc\n"),
+ * 			Name:              pulumi.String("Exceptions - New in the last 24 hours"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ResourceName:      pulumi.String("my-component"),
+ * 			Scope:             pulumi.String("shared"),
+ * 			ScopePath:         pulumi.String("analyticsItems"),
+ * 			Type:              pulumi.String("query"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const analyticsItem = new azure_native.insights.AnalyticsItem("analyticsItem", {
+ *     content: `let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp < ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp >= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ * `,
+ *     name: "Exceptions - New in the last 24 hours",
+ *     resourceGroupName: "my-resource-group",
+ *     resourceName: "my-component",
+ *     scope: "shared",
+ *     scopePath: "analyticsItems",
+ *     type: "query",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * analytics_item = azure_native.insights.AnalyticsItem("analyticsItem",
+ *     content="""let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp < ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp >= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ * """,
+ *     name="Exceptions - New in the last 24 hours",
+ *     resource_group_name="my-resource-group",
+ *     resource_name="my-component",
+ *     scope="shared",
+ *     scope_path="analyticsItems",
+ *     type="query")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +157,96 @@ import javax.annotation.Nullable;
 public class AnalyticsItem extends io.pulumi.resources.CustomResource {
     /**
      * The content of this item
-     * 
      */
     @Export(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
     /**
      * @return The content of this item
-     * 
      */
     public Output</* @Nullable */ String> getContent() {
         return this.content;
     }
     /**
      * The user-defined name of the item.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The user-defined name of the item.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
-     * 
      */
     @Export(name="properties", type=ApplicationInsightsComponentAnalyticsItemPropertiesResponse.class, parameters={})
     private Output<ApplicationInsightsComponentAnalyticsItemPropertiesResponse> properties;
 
     /**
      * @return A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
-     * 
      */
     public Output<ApplicationInsightsComponentAnalyticsItemPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
      * @return Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     * 
      */
     public Output</* @Nullable */ String> getScope() {
         return this.scope;
     }
     /**
      * Date and time in UTC when this item was created.
-     * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
      * @return Date and time in UTC when this item was created.
-     * 
      */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Date and time in UTC of the last modification that was made to this item.
-     * 
      */
     @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
      * @return Date and time in UTC of the last modification that was made to this item.
-     * 
      */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
     /**
      * Enum indicating the type of the Analytics item.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return Enum indicating the type of the Analytics item.
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
     /**
      * This instance's version of the data model. This can change as new features are added.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return This instance's version of the data model. This can change as new features are added.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

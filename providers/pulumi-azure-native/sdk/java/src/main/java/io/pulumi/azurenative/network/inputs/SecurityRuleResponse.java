@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network security rule.
- * 
  */
 public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The network traffic is allowed or denied.
-     * 
      */
     @Import(name="access", required=true)
       private final String access;
@@ -34,7 +32,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -45,7 +42,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
-     * 
      */
     @Import(name="destinationAddressPrefix")
       private final @Nullable String destinationAddressPrefix;
@@ -56,7 +52,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     @Import(name="destinationAddressPrefixes")
       private final @Nullable List<String> destinationAddressPrefixes;
@@ -67,7 +62,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The application security group specified as destination.
-     * 
      */
     @Import(name="destinationApplicationSecurityGroups")
       private final @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
@@ -78,7 +72,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     @Import(name="destinationPortRange")
       private final @Nullable String destinationPortRange;
@@ -89,7 +82,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The destination port ranges.
-     * 
      */
     @Import(name="destinationPortRanges")
       private final @Nullable List<String> destinationPortRanges;
@@ -100,7 +92,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
-     * 
      */
     @Import(name="direction", required=true)
       private final String direction;
@@ -111,7 +102,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -122,7 +112,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -133,7 +122,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -144,7 +132,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -155,7 +142,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Network protocol this rule applies to.
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;
@@ -166,7 +152,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the security rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -177,7 +162,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
-     * 
      */
     @Import(name="sourceAddressPrefix")
       private final @Nullable String sourceAddressPrefix;
@@ -188,7 +172,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The CIDR or source IP ranges.
-     * 
      */
     @Import(name="sourceAddressPrefixes")
       private final @Nullable List<String> sourceAddressPrefixes;
@@ -199,7 +182,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The application security group specified as source.
-     * 
      */
     @Import(name="sourceApplicationSecurityGroups")
       private final @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
@@ -210,7 +192,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     @Import(name="sourcePortRange")
       private final @Nullable String sourcePortRange;
@@ -221,7 +202,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source port ranges.
-     * 
      */
     @Import(name="sourcePortRanges")
       private final @Nullable List<String> sourcePortRanges;
@@ -232,7 +212,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

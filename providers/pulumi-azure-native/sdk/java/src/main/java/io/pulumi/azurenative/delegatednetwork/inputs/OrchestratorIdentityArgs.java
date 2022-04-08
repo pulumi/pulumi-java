@@ -16,7 +16,6 @@ public final class OrchestratorIdentityArgs extends io.pulumi.resources.Resource
 
     /**
      * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;

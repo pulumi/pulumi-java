@@ -14,7 +14,6 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringName", required=true)
       private final String peeringName;
@@ -25,7 +24,6 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the registered prefix.
-     * 
      */
     @Import(name="registeredPrefixName", required=true)
       private final String registeredPrefixName;
@@ -36,7 +34,6 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

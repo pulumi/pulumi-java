@@ -19,43 +19,35 @@ import javax.annotation.Nullable;
 public final class GalleryApplicationVersionPublishingProfileResponse {
     /**
      * Optional. Whether or not this application reports health.
-     * 
      */
     private final @Nullable Boolean enableHealthCheck;
     /**
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
-     * 
      */
     private final @Nullable String endOfLifeDate;
     /**
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
-     * 
      */
     private final @Nullable Boolean excludeFromLatest;
     private final @Nullable UserArtifactManageResponse manageActions;
     /**
      * The timestamp for when the gallery image version is published.
-     * 
      */
     private final String publishedDate;
     /**
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
-     * 
      */
     private final @Nullable Integer replicaCount;
     /**
      * The source image from which the Image Version is going to be created.
-     * 
      */
     private final UserArtifactSourceResponse source;
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
-     * 
      */
     private final @Nullable String storageAccountType;
     /**
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
-     * 
      */
     private final @Nullable List<TargetRegionResponse> targetRegions;
 
@@ -83,21 +75,18 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
 
     /**
      * Optional. Whether or not this application reports health.
-     * 
     */
     public Optional<Boolean> getEnableHealthCheck() {
         return Optional.ofNullable(this.enableHealthCheck);
     }
     /**
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
-     * 
     */
     public Optional<String> getEndOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
-     * 
     */
     public Optional<Boolean> getExcludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
@@ -107,35 +96,30 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
     }
     /**
      * The timestamp for when the gallery image version is published.
-     * 
     */
     public String getPublishedDate() {
         return this.publishedDate;
     }
     /**
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
-     * 
     */
     public Optional<Integer> getReplicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
     /**
      * The source image from which the Image Version is going to be created.
-     * 
     */
     public UserArtifactSourceResponse getSource() {
         return this.source;
     }
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
-     * 
     */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
-     * 
     */
     public List<TargetRegionResponse> getTargetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;

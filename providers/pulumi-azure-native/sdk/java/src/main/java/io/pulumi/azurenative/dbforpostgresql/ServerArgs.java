@@ -24,7 +24,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -35,7 +34,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location the resource resides in.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -46,7 +44,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the server.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -57,7 +54,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -68,7 +64,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
@@ -79,7 +74,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU (pricing tier) of the server.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -90,7 +84,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application-specific metadata in the form of key-value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class RoleSinkInfoResponse {
     /**
      * Compute role ID.
-     * 
      */
     private final String roleId;
 
@@ -22,7 +21,6 @@ public final class RoleSinkInfoResponse {
 
     /**
      * Compute role ID.
-     * 
     */
     public String getRoleId() {
         return this.roleId;

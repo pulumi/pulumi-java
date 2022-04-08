@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The directory type.
-     * 
      */
     @EnumType
     public enum DirectoryType {

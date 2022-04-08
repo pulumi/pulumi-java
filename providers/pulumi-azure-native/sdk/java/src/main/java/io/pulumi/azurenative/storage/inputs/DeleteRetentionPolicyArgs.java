@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The service properties for soft delete.
- * 
  */
 public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
-     * 
      */
     @Import(name="days")
       private final @Nullable Output<Integer> days;
@@ -32,7 +30,6 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Indicates whether DeleteRetentionPolicy is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

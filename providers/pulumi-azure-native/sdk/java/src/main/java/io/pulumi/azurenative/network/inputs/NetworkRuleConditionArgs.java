@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule condition of type network.
- * 
  */
 public final class NetworkRuleConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * Description of the rule condition.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * List of destination IP addresses or Service Tags.
-     * 
      */
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
@@ -45,7 +42,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * List of destination IpGroups for this rule.
-     * 
      */
     @Import(name="destinationIpGroups")
       private final @Nullable Output<List<String>> destinationIpGroups;
@@ -56,7 +52,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * List of destination ports.
-     * 
      */
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
@@ -67,7 +62,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * Array of FirewallPolicyRuleConditionNetworkProtocols.
-     * 
      */
     @Import(name="ipProtocols")
       private final @Nullable Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
@@ -78,7 +72,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the rule condition.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -90,7 +83,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
     /**
      * Rule Condition Type.
      * Expected value is 'NetworkRuleCondition'.
-     * 
      */
     @Import(name="ruleConditionType", required=true)
       private final Output<String> ruleConditionType;
@@ -101,7 +93,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
@@ -112,7 +103,6 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;

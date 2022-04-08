@@ -16,77 +16,62 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayProbeResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Host name to send the probe to.
-     * 
      */
     private final @Nullable String host;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
-     * 
      */
     private final @Nullable Integer interval;
     /**
      * Criterion for classifying a healthy probe response.
-     * 
      */
     private final @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match;
     /**
      * Minimum number of servers that are always marked healthy. Default value is 0.
-     * 
      */
     private final @Nullable Integer minServers;
     /**
      * Name of the probe that is unique within an Application Gateway.
-     * 
      */
     private final @Nullable String name;
     /**
      * Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
-     * 
      */
     private final @Nullable String path;
     /**
      * Whether the host header should be picked from the backend http settings. Default value is false.
-     * 
      */
     private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
     /**
      * Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
-     * 
      */
     private final @Nullable Integer port;
     /**
      * The protocol used for the probe.
-     * 
      */
     private final @Nullable String protocol;
     /**
      * The provisioning state of the probe resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
-     * 
      */
     private final @Nullable Integer timeout;
     /**
      * Type of the resource.
-     * 
      */
     private final String type;
     /**
      * The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
-     * 
      */
     private final @Nullable Integer unhealthyThreshold;
 
@@ -126,105 +111,90 @@ public final class ApplicationGatewayProbeResponse {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Host name to send the probe to.
-     * 
     */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
-     * 
     */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Criterion for classifying a healthy probe response.
-     * 
     */
     public Optional<ApplicationGatewayProbeHealthResponseMatchResponse> getMatch() {
         return Optional.ofNullable(this.match);
     }
     /**
      * Minimum number of servers that are always marked healthy. Default value is 0.
-     * 
     */
     public Optional<Integer> getMinServers() {
         return Optional.ofNullable(this.minServers);
     }
     /**
      * Name of the probe that is unique within an Application Gateway.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
-     * 
     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Whether the host header should be picked from the backend http settings. Default value is false.
-     * 
     */
     public Optional<Boolean> getPickHostNameFromBackendHttpSettings() {
         return Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
     }
     /**
      * Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
-     * 
     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The protocol used for the probe.
-     * 
     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The provisioning state of the probe resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
-     * 
     */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
-     * 
     */
     public Optional<Integer> getUnhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The flow endpoints configuration.
- * 
  */
 public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The access endpoint ip address.
-     * 
      */
     @Import(name="accessEndpointIpAddresses")
       private final @Nullable Output<List<IpAddressArgs>> accessEndpointIpAddresses;
@@ -32,7 +30,6 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The outgoing ip address.
-     * 
      */
     @Import(name="outgoingIpAddresses")
       private final @Nullable Output<List<IpAddressArgs>> outgoingIpAddresses;

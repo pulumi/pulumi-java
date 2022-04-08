@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a specific step on a target service unit.
- * 
  */
 public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Supplementary informative messages during rollout.
-     * 
      */
     @Import(name="messages", required=true)
       private final List<MessageResponse> messages;
@@ -35,7 +33,6 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the step.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -46,7 +43,6 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Detailed information of specific action execution.
-     * 
      */
     @Import(name="operationInfo", required=true)
       private final StepOperationInfoResponse operationInfo;
@@ -57,7 +53,6 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set of resource operations that were performed, if any, on an Azure resource.
-     * 
      */
     @Import(name="resourceOperations", required=true)
       private final List<ResourceOperationResponse> resourceOperations;
@@ -68,7 +63,6 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Current state of the step.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -79,7 +73,6 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The step group the current step is part of.
-     * 
      */
     @Import(name="stepGroup")
       private final @Nullable String stepGroup;

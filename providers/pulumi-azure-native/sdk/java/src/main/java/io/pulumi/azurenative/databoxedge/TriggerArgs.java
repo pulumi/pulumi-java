@@ -18,7 +18,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Creates or updates a trigger
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -29,7 +28,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trigger Kind.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,TriggerEventType>> kind;
@@ -40,7 +38,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The trigger name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -51,7 +48,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the type.
-     * 
      */
     @EnumType
     public enum StorageSettingTypes {

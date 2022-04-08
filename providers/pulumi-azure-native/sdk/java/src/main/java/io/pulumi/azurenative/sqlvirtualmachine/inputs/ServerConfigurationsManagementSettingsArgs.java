@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set the connectivity, storage and workload settings.
- * 
  */
 public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
 
     /**
      * Additional SQL feature settings.
-     * 
      */
     @Import(name="additionalFeaturesServerConfigurations")
       private final @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
@@ -34,7 +32,6 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
 
     /**
      * SQL connectivity type settings.
-     * 
      */
     @Import(name="sqlConnectivityUpdateSettings")
       private final @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
@@ -45,7 +42,6 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
 
     /**
      * SQL storage update settings.
-     * 
      */
     @Import(name="sqlStorageUpdateSettings")
       private final @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
@@ -56,7 +52,6 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
 
     /**
      * SQL workload type settings.
-     * 
      */
     @Import(name="sqlWorkloadTypeUpdateSettings")
       private final @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;

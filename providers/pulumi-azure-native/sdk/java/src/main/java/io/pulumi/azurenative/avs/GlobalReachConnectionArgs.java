@@ -16,7 +16,6 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
 
     /**
      * Authorization key from the peer express route used for the global reach connection
-     * 
      */
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
@@ -27,7 +26,6 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the global reach connection in the private cloud
-     * 
      */
     @Import(name="globalReachConnectionName")
       private final @Nullable Output<String> globalReachConnectionName;
@@ -38,7 +36,6 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
 
     /**
      * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
-     * 
      */
     @Import(name="peerExpressRouteCircuit")
       private final @Nullable Output<String> peerExpressRouteCircuit;
@@ -49,7 +46,6 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the private cloud.
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -60,7 +56,6 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Event Hub ingestion endpoint configuration
- * 
  */
 public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
 
     /**
      * Consumer group of the event hub to connected to.
-     * 
      */
     @Import(name="consumerGroup")
       private final @Nullable Output<String> consumerGroup;
@@ -31,7 +29,6 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
 
     /**
      * Event Hub name to connect to.
-     * 
      */
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
@@ -42,7 +39,6 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
 
     /**
      * Fully qualified namespace of the Event Hub to connect to.
-     * 
      */
     @Import(name="fullyQualifiedEventHubNamespace")
       private final @Nullable Output<String> fullyQualifiedEventHubNamespace;

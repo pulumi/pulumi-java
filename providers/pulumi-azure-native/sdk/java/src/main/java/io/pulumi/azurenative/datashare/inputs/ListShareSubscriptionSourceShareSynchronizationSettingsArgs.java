@@ -16,7 +16,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -27,7 +26,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
 
     /**
      * The name of the shareSubscription.
-     * 
      */
     @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
@@ -49,7 +46,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
 
     /**
      * Continuation token
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;

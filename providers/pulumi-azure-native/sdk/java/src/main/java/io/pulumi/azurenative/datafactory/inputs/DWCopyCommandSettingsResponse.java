@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * DW Copy Command settings.
- * 
  */
 public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalOptions": { "MAXERRORS": "1000", "DATEFORMAT": "'ymd'" }
-     * 
      */
     @Import(name="additionalOptions")
       private final @Nullable Map<String,String> additionalOptions;
@@ -34,7 +32,6 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="defaultValues")
       private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;

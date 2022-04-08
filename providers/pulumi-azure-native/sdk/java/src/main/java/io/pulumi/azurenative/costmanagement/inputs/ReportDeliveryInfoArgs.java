@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The delivery information associated with a report.
- * 
  */
 public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Has destination for the report being delivered.
-     * 
      */
     @Import(name="destination", required=true)
       private final Output<ReportDeliveryDestinationArgs> destination;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines how to identify a parameter for a specific purpose e.g. expires
- * 
  */
 public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
 
     /**
      * Indicates the purpose of the parameter
-     * 
      */
     @Import(name="paramIndicator", required=true)
       private final String paramIndicator;
@@ -29,7 +27,6 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
 
     /**
      * Parameter name
-     * 
      */
     @Import(name="paramName", required=true)
       private final String paramName;

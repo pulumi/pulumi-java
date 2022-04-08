@@ -14,7 +14,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the IoT Central application.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARM resource name of the IoT Central application.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

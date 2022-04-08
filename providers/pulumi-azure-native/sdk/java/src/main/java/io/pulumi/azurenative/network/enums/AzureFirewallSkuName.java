@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of an Azure Firewall SKU.
-     * 
      */
     @EnumType
     public enum AzureFirewallSkuName {

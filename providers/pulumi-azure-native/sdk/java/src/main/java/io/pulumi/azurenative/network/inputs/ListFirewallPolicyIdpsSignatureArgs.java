@@ -20,7 +20,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     /**
      * Contain all filters names and values
-     * 
      */
     @Import(name="filters")
       private final @Nullable List<FilterItems> filters;
@@ -31,7 +30,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     /**
      * The name of the Firewall Policy.
-     * 
      */
     @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
@@ -42,7 +40,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     /**
      * Column to sort response by
-     * 
      */
     @Import(name="orderBy")
       private final @Nullable OrderBy orderBy;
@@ -53,7 +50,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -64,7 +60,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     /**
      * The number of the results to return in each page
-     * 
      */
     @Import(name="resultsPerPage")
       private final @Nullable Integer resultsPerPage;
@@ -75,7 +70,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     /**
      * Search term in all columns
-     * 
      */
     @Import(name="search")
       private final @Nullable String search;
@@ -86,7 +80,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     /**
      * The number of records matching the filter to skip
-     * 
      */
     @Import(name="skip")
       private final @Nullable Integer skip;

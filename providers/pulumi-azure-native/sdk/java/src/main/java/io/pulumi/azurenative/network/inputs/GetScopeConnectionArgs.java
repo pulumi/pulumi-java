@@ -14,7 +14,6 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -25,7 +24,6 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name for the cross-tenant connection.
-     * 
      */
     @Import(name="scopeConnectionName", required=true)
       private final String scopeConnectionName;

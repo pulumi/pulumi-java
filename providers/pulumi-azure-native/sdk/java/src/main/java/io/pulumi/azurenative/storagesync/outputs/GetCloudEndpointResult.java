@@ -13,62 +13,50 @@ import javax.annotation.Nullable;
 public final class GetCloudEndpointResult {
     /**
      * Azure file share name
-     * 
      */
     private final @Nullable String azureFileShareName;
     /**
      * Backup Enabled
-     * 
      */
     private final String backupEnabled;
     /**
      * Friendly Name
-     * 
      */
     private final @Nullable String friendlyName;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * Resource Last Operation Name
-     * 
      */
     private final @Nullable String lastOperationName;
     /**
      * CloudEndpoint lastWorkflowId
-     * 
      */
     private final @Nullable String lastWorkflowId;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Partnership Id
-     * 
      */
     private final @Nullable String partnershipId;
     /**
      * CloudEndpoint Provisioning State
-     * 
      */
     private final @Nullable String provisioningState;
     /**
      * Storage Account Resource Id
-     * 
      */
     private final @Nullable String storageAccountResourceId;
     /**
      * Storage Account Tenant Id
-     * 
      */
     private final @Nullable String storageAccountTenantId;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -102,84 +90,72 @@ public final class GetCloudEndpointResult {
 
     /**
      * Azure file share name
-     * 
     */
     public Optional<String> getAzureFileShareName() {
         return Optional.ofNullable(this.azureFileShareName);
     }
     /**
      * Backup Enabled
-     * 
     */
     public String getBackupEnabled() {
         return this.backupEnabled;
     }
     /**
      * Friendly Name
-     * 
     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource Last Operation Name
-     * 
     */
     public Optional<String> getLastOperationName() {
         return Optional.ofNullable(this.lastOperationName);
     }
     /**
      * CloudEndpoint lastWorkflowId
-     * 
     */
     public Optional<String> getLastWorkflowId() {
         return Optional.ofNullable(this.lastWorkflowId);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Partnership Id
-     * 
     */
     public Optional<String> getPartnershipId() {
         return Optional.ofNullable(this.partnershipId);
     }
     /**
      * CloudEndpoint Provisioning State
-     * 
     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Storage Account Resource Id
-     * 
     */
     public Optional<String> getStorageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
     /**
      * Storage Account Tenant Id
-     * 
     */
     public Optional<String> getStorageAccountTenantId() {
         return Optional.ofNullable(this.storageAccountTenantId);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

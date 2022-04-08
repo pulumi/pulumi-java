@@ -16,7 +16,6 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the vendor.
-     * 
      */
     @Import(name="vendorName")
       private final @Nullable Output<String> vendorName;

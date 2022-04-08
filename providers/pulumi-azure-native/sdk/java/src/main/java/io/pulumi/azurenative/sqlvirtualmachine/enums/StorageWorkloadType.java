@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Storage workload type.
-     * 
      */
     @EnumType
     public enum StorageWorkloadType {

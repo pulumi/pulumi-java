@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication mechanism used to connect to the Phoenix server.
-     * 
      */
     @EnumType
     public enum PhoenixAuthenticationType {

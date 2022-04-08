@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity details
- * 
  */
 public final class DppIdentityDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DppIdentityDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class DppIdentityDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * A Globally Unique Identifier (GUID) that represents the Azure AD tenant where the resource is now a member.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class DppIdentityDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The identityType which can be either SystemAssigned or None
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

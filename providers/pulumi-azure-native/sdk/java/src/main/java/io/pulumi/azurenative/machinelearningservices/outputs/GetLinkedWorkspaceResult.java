@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GetLinkedWorkspaceResult {
     /**
      * ResourceId of the link of the linked workspace.
-     * 
      */
     private final String id;
     /**
      * Friendly name of the linked workspace.
-     * 
      */
     private final String name;
     /**
      * LinkedWorkspace specific properties.
-     * 
      */
     private final LinkedWorkspacePropsResponse properties;
     /**
      * Resource type of linked workspace.
-     * 
      */
     private final String type;
 
@@ -45,28 +41,24 @@ public final class GetLinkedWorkspaceResult {
 
     /**
      * ResourceId of the link of the linked workspace.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Friendly name of the linked workspace.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * LinkedWorkspace specific properties.
-     * 
     */
     public LinkedWorkspacePropsResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource type of linked workspace.
-     * 
     */
     public String getType() {
         return this.type;

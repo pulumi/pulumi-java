@@ -14,7 +14,6 @@ public final class GetWebAppHybridConnectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the web app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetWebAppHybridConnectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The namespace for this hybrid connection.
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetWebAppHybridConnectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The relay name for this hybrid connection.
-     * 
      */
     @Import(name="relayName", required=true)
       private final String relayName;
@@ -47,7 +44,6 @@ public final class GetWebAppHybridConnectionArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

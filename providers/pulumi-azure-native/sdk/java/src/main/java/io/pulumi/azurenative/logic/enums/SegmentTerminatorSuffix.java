@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The segment terminator suffix.
-     * 
      */
     @EnumType
     public enum SegmentTerminatorSuffix {

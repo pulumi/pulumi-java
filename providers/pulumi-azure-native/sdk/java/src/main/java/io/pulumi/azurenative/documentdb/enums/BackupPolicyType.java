@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes the mode of backups.
-     * 
      */
     @EnumType
     public enum BackupPolicyType {

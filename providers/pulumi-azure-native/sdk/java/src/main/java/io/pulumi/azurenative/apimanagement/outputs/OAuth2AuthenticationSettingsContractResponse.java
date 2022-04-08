@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class OAuth2AuthenticationSettingsContractResponse {
     /**
      * OAuth authorization server identifier.
-     * 
      */
     private final @Nullable String authorizationServerId;
     /**
      * operations scope.
-     * 
      */
     private final @Nullable String scope;
 
@@ -32,14 +30,12 @@ public final class OAuth2AuthenticationSettingsContractResponse {
 
     /**
      * OAuth authorization server identifier.
-     * 
     */
     public Optional<String> getAuthorizationServerId() {
         return Optional.ofNullable(this.authorizationServerId);
     }
     /**
      * operations scope.
-     * 
     */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);

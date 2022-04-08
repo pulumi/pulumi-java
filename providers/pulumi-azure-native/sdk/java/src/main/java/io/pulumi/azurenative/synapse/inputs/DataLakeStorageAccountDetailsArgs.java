@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the data lake storage account associated with the workspace
- * 
  */
 public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
 
     /**
      * Account URL
-     * 
      */
     @Import(name="accountUrl")
       private final @Nullable Output<String> accountUrl;
@@ -31,7 +29,6 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
 
     /**
      * Filesystem name
-     * 
      */
     @Import(name="filesystem")
       private final @Nullable Output<String> filesystem;

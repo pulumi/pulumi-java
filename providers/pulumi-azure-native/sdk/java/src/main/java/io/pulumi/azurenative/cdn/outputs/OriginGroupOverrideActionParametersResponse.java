@@ -13,7 +13,6 @@ public final class OriginGroupOverrideActionParametersResponse {
     private final String odataType;
     /**
      * defines the OriginGroup that would override the DefaultOriginGroup.
-     * 
      */
     private final ResourceReferenceResponse originGroup;
 
@@ -30,7 +29,6 @@ public final class OriginGroupOverrideActionParametersResponse {
     }
     /**
      * defines the OriginGroup that would override the DefaultOriginGroup.
-     * 
     */
     public ResourceReferenceResponse getOriginGroup() {
         return this.originGroup;

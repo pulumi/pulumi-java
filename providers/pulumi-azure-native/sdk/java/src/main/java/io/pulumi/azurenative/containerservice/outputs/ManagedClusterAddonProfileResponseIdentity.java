@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ManagedClusterAddonProfileResponseIdentity {
     /**
      * The client id of the user assigned identity.
-     * 
      */
     private final @Nullable String clientId;
     /**
      * The object id of the user assigned identity.
-     * 
      */
     private final @Nullable String objectId;
     /**
      * The resource id of the user assigned identity.
-     * 
      */
     private final @Nullable String resourceId;
 
@@ -39,21 +36,18 @@ public final class ManagedClusterAddonProfileResponseIdentity {
 
     /**
      * The client id of the user assigned identity.
-     * 
     */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The object id of the user assigned identity.
-     * 
     */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The resource id of the user assigned identity.
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);

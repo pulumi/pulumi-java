@@ -19,7 +19,225 @@ import javax.annotation.Nullable;
  * Represents the response of a service unit resource.
  * API Version: 2019-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create service unit using SAS URIs
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceUnit = new AzureNative.DeploymentManager.ServiceUnit("serviceUnit", new AzureNative.DeploymentManager.ServiceUnitArgs
+ *         {
+ *             Artifacts = new AzureNative.DeploymentManager.Inputs.ServiceUnitArtifactsArgs
+ *             {
+ *                 ParametersUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+ *                 TemplateUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+ *             },
+ *             DeploymentMode = "Incremental",
+ *             Location = "centralus",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myService",
+ *             ServiceTopologyName = "myTopology",
+ *             ServiceUnitName = "myServiceUnit",
+ *             Tags = ,
+ *             TargetResourceGroup = "myDeploymentResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := deploymentmanager.NewServiceUnit(ctx, "serviceUnit", &deploymentmanager.ServiceUnitArgs{
+ * 			Artifacts: &deploymentmanager.ServiceUnitArtifactsArgs{
+ * 				ParametersUri: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
+ * 				TemplateUri:   pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
+ * 			},
+ * 			DeploymentMode:      "Incremental",
+ * 			Location:            pulumi.String("centralus"),
+ * 			ResourceGroupName:   pulumi.String("myResourceGroup"),
+ * 			ServiceName:         pulumi.String("myService"),
+ * 			ServiceTopologyName: pulumi.String("myTopology"),
+ * 			ServiceUnitName:     pulumi.String("myServiceUnit"),
+ * 			Tags:                nil,
+ * 			TargetResourceGroup: pulumi.String("myDeploymentResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceUnit = new azure_native.deploymentmanager.ServiceUnit("serviceUnit", {
+ *     artifacts: {
+ *         parametersUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
+ *         templateUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
+ *     },
+ *     deploymentMode: "Incremental",
+ *     location: "centralus",
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myService",
+ *     serviceTopologyName: "myTopology",
+ *     serviceUnitName: "myServiceUnit",
+ *     tags: {},
+ *     targetResourceGroup: "myDeploymentResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_unit = azure_native.deploymentmanager.ServiceUnit("serviceUnit",
+ *     artifacts=azure_native.deploymentmanager.ServiceUnitArtifactsArgs(
+ *         parameters_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+ *         template_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+ *     ),
+ *     deployment_mode="Incremental",
+ *     location="centralus",
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myService",
+ *     service_topology_name="myTopology",
+ *     service_unit_name="myServiceUnit",
+ *     tags={},
+ *     target_resource_group="myDeploymentResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create service unit using relative paths into the artifact source
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceUnit = new AzureNative.DeploymentManager.ServiceUnit("serviceUnit", new AzureNative.DeploymentManager.ServiceUnitArgs
+ *         {
+ *             Artifacts = new AzureNative.DeploymentManager.Inputs.ServiceUnitArtifactsArgs
+ *             {
+ *                 ParametersArtifactSourceRelativePath = "parameter/myTopologyUnit.parameters.json",
+ *                 TemplateArtifactSourceRelativePath = "templates/myTopologyUnit.template.json",
+ *             },
+ *             DeploymentMode = "Incremental",
+ *             Location = "centralus",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myService",
+ *             ServiceTopologyName = "myTopology",
+ *             ServiceUnitName = "myServiceUnit",
+ *             Tags = ,
+ *             TargetResourceGroup = "myDeploymentResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := deploymentmanager.NewServiceUnit(ctx, "serviceUnit", &deploymentmanager.ServiceUnitArgs{
+ * 			Artifacts: &deploymentmanager.ServiceUnitArtifactsArgs{
+ * 				ParametersArtifactSourceRelativePath: pulumi.String("parameter/myTopologyUnit.parameters.json"),
+ * 				TemplateArtifactSourceRelativePath:   pulumi.String("templates/myTopologyUnit.template.json"),
+ * 			},
+ * 			DeploymentMode:      "Incremental",
+ * 			Location:            pulumi.String("centralus"),
+ * 			ResourceGroupName:   pulumi.String("myResourceGroup"),
+ * 			ServiceName:         pulumi.String("myService"),
+ * 			ServiceTopologyName: pulumi.String("myTopology"),
+ * 			ServiceUnitName:     pulumi.String("myServiceUnit"),
+ * 			Tags:                nil,
+ * 			TargetResourceGroup: pulumi.String("myDeploymentResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceUnit = new azure_native.deploymentmanager.ServiceUnit("serviceUnit", {
+ *     artifacts: {
+ *         parametersArtifactSourceRelativePath: "parameter/myTopologyUnit.parameters.json",
+ *         templateArtifactSourceRelativePath: "templates/myTopologyUnit.template.json",
+ *     },
+ *     deploymentMode: "Incremental",
+ *     location: "centralus",
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myService",
+ *     serviceTopologyName: "myTopology",
+ *     serviceUnitName: "myServiceUnit",
+ *     tags: {},
+ *     targetResourceGroup: "myDeploymentResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_unit = azure_native.deploymentmanager.ServiceUnit("serviceUnit",
+ *     artifacts=azure_native.deploymentmanager.ServiceUnitArtifactsArgs(
+ *         parameters_artifact_source_relative_path="parameter/myTopologyUnit.parameters.json",
+ *         template_artifact_source_relative_path="templates/myTopologyUnit.template.json",
+ *     ),
+ *     deployment_mode="Incremental",
+ *     location="centralus",
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myService",
+ *     service_topology_name="myTopology",
+ *     service_unit_name="myServiceUnit",
+ *     tags={},
+ *     target_resource_group="myDeploymentResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +252,84 @@ import javax.annotation.Nullable;
 public class ServiceUnit extends io.pulumi.resources.CustomResource {
     /**
      * The artifacts for the service unit.
-     * 
      */
     @Export(name="artifacts", type=ServiceUnitArtifactsResponse.class, parameters={})
     private Output</* @Nullable */ ServiceUnitArtifactsResponse> artifacts;
 
     /**
      * @return The artifacts for the service unit.
-     * 
      */
     public Output</* @Nullable */ ServiceUnitArtifactsResponse> getArtifacts() {
         return this.artifacts;
     }
     /**
      * Describes the type of ARM deployment to be performed on the resource.
-     * 
      */
     @Export(name="deploymentMode", type=String.class, parameters={})
     private Output<String> deploymentMode;
 
     /**
      * @return Describes the type of ARM deployment to be performed on the resource.
-     * 
      */
     public Output<String> getDeploymentMode() {
         return this.deploymentMode;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
-     * 
      */
     @Export(name="targetResourceGroup", type=String.class, parameters={})
     private Output<String> targetResourceGroup;
 
     /**
      * @return The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
-     * 
      */
     public Output<String> getTargetResourceGroup() {
         return this.targetResourceGroup;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

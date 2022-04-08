@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Results for checksum based Data Integrity validation results
- * 
  */
 public final class DataIntegrityValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
 
     /**
      * List of failed table names of source and target pair
-     * 
      */
     @Import(name="failedObjects", required=true)
       private final Map<String,String> failedObjects;
@@ -31,7 +29,6 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
 
     /**
      * List of errors that happened while performing data integrity validation
-     * 
      */
     @Import(name="validationErrors", required=true)
       private final ValidationErrorResponse validationErrors;

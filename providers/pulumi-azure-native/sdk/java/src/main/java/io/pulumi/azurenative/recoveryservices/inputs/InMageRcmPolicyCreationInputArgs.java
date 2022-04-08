@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * InMageRcm policy creation input.
- * 
  */
 public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
 
     /**
      * The app consistent snapshot frequency (in minutes).
-     * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
@@ -32,7 +30,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
 
     /**
      * The crash consistent snapshot frequency (in minutes).
-     * 
      */
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
@@ -43,7 +40,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
 
     /**
      * A value indicating whether multi-VM sync has to be enabled.
-     * 
      */
     @Import(name="enableMultiVmSync")
       private final @Nullable Output<String> enableMultiVmSync;
@@ -55,7 +51,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     /**
      * The class type.
      * Expected value is 'InMageRcm'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -66,7 +61,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
 
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
      */
     @Import(name="recoveryPointHistoryInMinutes")
       private final @Nullable Output<Integer> recoveryPointHistoryInMinutes;

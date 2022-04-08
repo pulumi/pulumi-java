@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An endpoint to connect to with no encryption in transit.
- * 
  */
 public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
 
     /**
      * Polymorphic credentials to present to the endpoint.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
@@ -33,7 +31,6 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -44,7 +41,6 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
 
     /**
      * Url for the endpoint.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies a metric to load balance a service during runtime.
- * 
  */
 public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
 
     /**
      * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
-     * 
      */
     @Import(name="defaultLoad")
       private final @Nullable Integer defaultLoad;
@@ -32,7 +30,6 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
 
     /**
      * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
 
     /**
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
-     * 
      */
     @Import(name="primaryDefaultLoad")
       private final @Nullable Integer primaryDefaultLoad;
@@ -54,7 +50,6 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
 
     /**
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-     * 
      */
     @Import(name="secondaryDefaultLoad")
       private final @Nullable Integer secondaryDefaultLoad;
@@ -65,7 +60,6 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
 
     /**
      * The service load metric relative weight, compared to other metrics configured for this service, as a number.
-     * 
      */
     @Import(name="weight")
       private final @Nullable String weight;

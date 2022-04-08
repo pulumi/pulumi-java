@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The integration account RosettaNet ProcessConfiguration activity settings.
- * 
  */
 public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
 
     /**
      * The RosettaNet ProcessConfiguration acknowledgement settings.
-     * 
      */
     @Import(name="acknowledgmentOfReceiptSettings", required=true)
       private final Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings;
@@ -32,7 +30,6 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
 
     /**
      * The RosettaNet ProcessConfiguration activity behavior.
-     * 
      */
     @Import(name="activityBehavior", required=true)
       private final Output<RosettaNetPipActivityBehaviorArgs> activityBehavior;
@@ -43,7 +40,6 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
 
     /**
      * The RosettaNet ProcessConfiguration activity type.
-     * 
      */
     @Import(name="activityType", required=true)
       private final Output<RosettaNetPipActivityType> activityType;

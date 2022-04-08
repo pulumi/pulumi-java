@@ -16,7 +16,6 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     * 
      */
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
@@ -27,7 +26,6 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Product identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="productId", required=true)
       private final Output<String> productId;
@@ -38,7 +36,6 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

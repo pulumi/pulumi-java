@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class GetDscNodeConfigurationResult {
     /**
      * Gets or sets the configuration of the node.
-     * 
      */
     private final @Nullable DscConfigurationAssociationPropertyResponse configuration;
     /**
      * Gets or sets creation time.
-     * 
      */
     private final @Nullable String creationTime;
     /**
      * Fully qualified resource Id for the resource
-     * 
      */
     private final String id;
     /**
      * If a new build version of NodeConfiguration is required.
-     * 
      */
     private final @Nullable Boolean incrementNodeConfigurationBuild;
     /**
      * Gets or sets the last modified time.
-     * 
      */
     private final @Nullable String lastModifiedTime;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Number of nodes with this node configuration assigned
-     * 
      */
     private final @Nullable Double nodeCount;
     /**
      * Source of node configuration.
-     * 
      */
     private final @Nullable String source;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -84,63 +75,54 @@ public final class GetDscNodeConfigurationResult {
 
     /**
      * Gets or sets the configuration of the node.
-     * 
     */
     public Optional<DscConfigurationAssociationPropertyResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Gets or sets creation time.
-     * 
     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Fully qualified resource Id for the resource
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * If a new build version of NodeConfiguration is required.
-     * 
     */
     public Optional<Boolean> getIncrementNodeConfigurationBuild() {
         return Optional.ofNullable(this.incrementNodeConfigurationBuild);
     }
     /**
      * Gets or sets the last modified time.
-     * 
     */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Number of nodes with this node configuration assigned
-     * 
     */
     public Optional<Double> getNodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
      * Source of node configuration.
-     * 
     */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

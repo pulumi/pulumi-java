@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Direct Line channel.
- * 
  */
 public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * Direct Line embed code of the resource
-     * 
      */
     @Import(name="directLineEmbedCode")
       private final @Nullable Output<String> directLineEmbedCode;
@@ -33,7 +31,6 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The list of Direct Line sites
-     * 
      */
     @Import(name="sites")
       private final @Nullable Output<List<DirectLineSiteArgs>> sites;

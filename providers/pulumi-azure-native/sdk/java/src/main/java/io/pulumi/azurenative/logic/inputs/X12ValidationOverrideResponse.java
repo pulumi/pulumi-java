@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The X12 validation override settings.
- * 
  */
 public final class X12ValidationOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
-     * 
      */
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
@@ -30,7 +28,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
 
     /**
      * The message id on which the validation settings has to be applied.
-     * 
      */
     @Import(name="messageId", required=true)
       private final String messageId;
@@ -41,7 +38,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
 
     /**
      * The trailing separator policy.
-     * 
      */
     @Import(name="trailingSeparatorPolicy", required=true)
       private final String trailingSeparatorPolicy;
@@ -52,7 +48,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to trim leading and trailing spaces and zeroes.
-     * 
      */
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
@@ -63,7 +58,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to validate character Set.
-     * 
      */
     @Import(name="validateCharacterSet", required=true)
       private final Boolean validateCharacterSet;
@@ -74,7 +68,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to validate EDI types.
-     * 
      */
     @Import(name="validateEDITypes", required=true)
       private final Boolean validateEDITypes;
@@ -85,7 +78,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to validate XSD types.
-     * 
      */
     @Import(name="validateXSDTypes", required=true)
       private final Boolean validateXSDTypes;

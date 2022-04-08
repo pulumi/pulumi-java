@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
-     * 
      */
     @EnumType
     public enum State {
         /**
          * Send notification on new alerts to the subscription's admins
-         * 
          */
         On("On"),
         /**
          * Don't send notification on new alerts to the subscription's admins
-         * 
          */
         Off("Off");
 

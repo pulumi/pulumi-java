@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configurations for provisioning the cluster with HTTP proxy servers.
- * 
  */
 public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
 
     /**
      * HTTP proxy server endpoint to use.
-     * 
      */
     @Import(name="httpProxy")
       private final @Nullable Output<String> httpProxy;
@@ -32,7 +30,6 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
 
     /**
      * HTTPS proxy server endpoint to use.
-     * 
      */
     @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
@@ -43,7 +40,6 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
 
     /**
      * Endpoints that should not go through proxy.
-     * 
      */
     @Import(name="noProxy")
       private final @Nullable Output<List<String>> noProxy;
@@ -54,7 +50,6 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
 
     /**
      * Alternative CA cert to use for connecting to proxy servers.
-     * 
      */
     @Import(name="trustedCa")
       private final @Nullable Output<String> trustedCa;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The OS type the Environment.
-     * 
      */
     @EnumType
     public enum OperatingSystemType {

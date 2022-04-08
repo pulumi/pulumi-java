@@ -14,38 +14,31 @@ import java.util.Objects;
 public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     /**
      * SQL Server compatibility level of database
-     * 
      */
     private final String compatibilityLevel;
     /**
      * The list of database files
-     * 
      */
     private final List<DatabaseFileInfoResponse> databaseFiles;
     /**
      * State of the database
-     * 
      */
     private final String databaseState;
     /**
      * Result identifier
-     * 
      */
     private final String id;
     /**
      * Database name
-     * 
      */
     private final String name;
     /**
      * Type of result - database level or task level
      * Expected value is 'DatabaseLevelOutput'.
-     * 
      */
     private final String resultType;
     /**
      * Size of the file in megabytes
-     * 
      */
     private final Double sizeMB;
 
@@ -69,35 +62,30 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
 
     /**
      * SQL Server compatibility level of database
-     * 
     */
     public String getCompatibilityLevel() {
         return this.compatibilityLevel;
     }
     /**
      * The list of database files
-     * 
     */
     public List<DatabaseFileInfoResponse> getDatabaseFiles() {
         return this.databaseFiles;
     }
     /**
      * State of the database
-     * 
     */
     public String getDatabaseState() {
         return this.databaseState;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Database name
-     * 
     */
     public String getName() {
         return this.name;
@@ -105,14 +93,12 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     /**
      * Type of result - database level or task level
      * Expected value is 'DatabaseLevelOutput'.
-     * 
     */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Size of the file in megabytes
-     * 
     */
     public Double getSizeMB() {
         return this.sizeMB;

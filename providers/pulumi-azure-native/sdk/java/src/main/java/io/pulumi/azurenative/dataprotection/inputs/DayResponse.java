@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Day of the week
- * 
  */
 public final class DayResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Date of the month
-     * 
      */
     @Import(name="date")
       private final @Nullable Integer date;
@@ -32,7 +30,6 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether Date is last date of month
-     * 
      */
     @Import(name="isLast")
       private final @Nullable Boolean isLast;

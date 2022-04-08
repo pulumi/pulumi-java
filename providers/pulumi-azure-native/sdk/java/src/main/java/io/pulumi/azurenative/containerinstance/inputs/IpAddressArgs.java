@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP address for the container group.
- * 
  */
 public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Dns name label for the IP.
-     * 
      */
     @Import(name="dnsNameLabel")
       private final @Nullable Output<String> dnsNameLabel;
@@ -35,7 +33,6 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP exposed to the public internet.
-     * 
      */
     @Import(name="ip")
       private final @Nullable Output<String> ip;
@@ -46,7 +43,6 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of ports exposed on the container group.
-     * 
      */
     @Import(name="ports", required=true)
       private final Output<List<PortArgs>> ports;
@@ -57,7 +53,6 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies if the IP is exposed to the public internet or private VNET.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ContainerGroupIpAddressType>> type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Instance type for the service.
-     * 
      */
     @EnumType
     public enum ServiceSize {

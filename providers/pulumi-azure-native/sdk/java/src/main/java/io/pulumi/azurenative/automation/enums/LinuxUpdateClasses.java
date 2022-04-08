@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Update classifications included in the software update configuration.
-     * 
      */
     @EnumType
     public enum LinuxUpdateClasses {

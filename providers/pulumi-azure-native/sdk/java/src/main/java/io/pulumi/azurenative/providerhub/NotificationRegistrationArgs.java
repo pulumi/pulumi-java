@@ -17,7 +17,6 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
 
     /**
      * The notification registration.
-     * 
      */
     @Import(name="notificationRegistrationName")
       private final @Nullable Output<String> notificationRegistrationName;
@@ -35,7 +34,6 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource provider hosted within ProviderHub.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;

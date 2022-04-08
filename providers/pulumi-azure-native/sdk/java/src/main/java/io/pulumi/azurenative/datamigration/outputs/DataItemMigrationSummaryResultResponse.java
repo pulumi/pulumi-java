@@ -12,47 +12,38 @@ import java.util.Objects;
 public final class DataItemMigrationSummaryResultResponse {
     /**
      * Migration end time
-     * 
      */
     private final String endedOn;
     /**
      * Wildcard string prefix to use for querying all errors of the item
-     * 
      */
     private final String errorPrefix;
     /**
      * Number of successfully completed items
-     * 
      */
     private final Double itemsCompletedCount;
     /**
      * Number of items
-     * 
      */
     private final Double itemsCount;
     /**
      * Name of the item
-     * 
      */
     private final String name;
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
-     * 
      */
     private final String resultPrefix;
     /**
      * Migration start time
-     * 
      */
     private final String startedOn;
     /**
      * Current state of migration
-     * 
      */
     private final String state;
     /**
      * Status message
-     * 
      */
     private final String statusMessage;
 
@@ -80,63 +71,54 @@ public final class DataItemMigrationSummaryResultResponse {
 
     /**
      * Migration end time
-     * 
     */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Wildcard string prefix to use for querying all errors of the item
-     * 
     */
     public String getErrorPrefix() {
         return this.errorPrefix;
     }
     /**
      * Number of successfully completed items
-     * 
     */
     public Double getItemsCompletedCount() {
         return this.itemsCompletedCount;
     }
     /**
      * Number of items
-     * 
     */
     public Double getItemsCount() {
         return this.itemsCount;
     }
     /**
      * Name of the item
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
-     * 
     */
     public String getResultPrefix() {
         return this.resultPrefix;
     }
     /**
      * Migration start time
-     * 
     */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Status message
-     * 
     */
     public String getStatusMessage() {
         return this.statusMessage;

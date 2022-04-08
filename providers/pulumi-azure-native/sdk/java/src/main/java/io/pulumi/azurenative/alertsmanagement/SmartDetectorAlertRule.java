@@ -21,7 +21,152 @@ import javax.annotation.Nullable;
  * The alert rule information
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Smart Detector alert rule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var smartDetectorAlertRule = new AzureNative.AlertsManagement.SmartDetectorAlertRule("smartDetectorAlertRule", new AzureNative.AlertsManagement.SmartDetectorAlertRuleArgs
+ *         {
+ *             ActionGroups = new AzureNative.AlertsManagement.Inputs.ActionGroupsInformationArgs
+ *             {
+ *                 CustomEmailSubject = "My custom email subject",
+ *                 CustomWebhookPayload = "{\"AlertRuleName\":\"#alertrulename\"}",
+ *                 GroupIds = 
+ *                 {
+ *                     "/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup",
+ *                 },
+ *             },
+ *             AlertRuleName = "MyAlertRule",
+ *             Description = "Sample smart detector alert rule description",
+ *             Detector = new AzureNative.AlertsManagement.Inputs.DetectorArgs
+ *             {
+ *                 Id = "VMMemoryLeak",
+ *             },
+ *             Frequency = "PT5M",
+ *             ResourceGroupName = "MyAlertRules",
+ *             Scope = 
+ *             {
+ *                 "/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1",
+ *             },
+ *             Severity = "Sev3",
+ *             State = "Enabled",
+ *             Throttling = new AzureNative.AlertsManagement.Inputs.ThrottlingInformationArgs
+ *             {
+ *                 Duration = "PT20M",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	alertsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/alertsmanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := alertsmanagement.NewSmartDetectorAlertRule(ctx, "smartDetectorAlertRule", &alertsmanagement.SmartDetectorAlertRuleArgs{
+ * 			ActionGroups: &alertsmanagement.ActionGroupsInformationArgs{
+ * 				CustomEmailSubject:   pulumi.String("My custom email subject"),
+ * 				CustomWebhookPayload: pulumi.String("{\"AlertRuleName\":\"#alertrulename\"}"),
+ * 				GroupIds: pulumi.StringArray{
+ * 					pulumi.String("/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"),
+ * 				},
+ * 			},
+ * 			AlertRuleName: pulumi.String("MyAlertRule"),
+ * 			Description:   pulumi.String("Sample smart detector alert rule description"),
+ * 			Detector: &alertsmanagement.DetectorArgs{
+ * 				Id: pulumi.String("VMMemoryLeak"),
+ * 			},
+ * 			Frequency:         pulumi.String("PT5M"),
+ * 			ResourceGroupName: pulumi.String("MyAlertRules"),
+ * 			Scope: pulumi.StringArray{
+ * 				pulumi.String("/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1"),
+ * 			},
+ * 			Severity: pulumi.String("Sev3"),
+ * 			State:    pulumi.String("Enabled"),
+ * 			Throttling: &alertsmanagement.ThrottlingInformationArgs{
+ * 				Duration: pulumi.String("PT20M"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAlertRule("smartDetectorAlertRule", {
+ *     actionGroups: {
+ *         customEmailSubject: "My custom email subject",
+ *         customWebhookPayload: "{\"AlertRuleName\":\"#alertrulename\"}",
+ *         groupIds: ["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"],
+ *     },
+ *     alertRuleName: "MyAlertRule",
+ *     description: "Sample smart detector alert rule description",
+ *     detector: {
+ *         id: "VMMemoryLeak",
+ *     },
+ *     frequency: "PT5M",
+ *     resourceGroupName: "MyAlertRules",
+ *     scope: ["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1"],
+ *     severity: "Sev3",
+ *     state: "Enabled",
+ *     throttling: {
+ *         duration: "PT20M",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * smart_detector_alert_rule = azure_native.alertsmanagement.SmartDetectorAlertRule("smartDetectorAlertRule",
+ *     action_groups=azure_native.alertsmanagement.ActionGroupsInformationArgs(
+ *         custom_email_subject="My custom email subject",
+ *         custom_webhook_payload="{\"AlertRuleName\":\"#alertrulename\"}",
+ *         group_ids=["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"],
+ *     ),
+ *     alert_rule_name="MyAlertRule",
+ *     description="Sample smart detector alert rule description",
+ *     detector=azure_native.alertsmanagement.DetectorArgs(
+ *         id="VMMemoryLeak",
+ *     ),
+ *     frequency="PT5M",
+ *     resource_group_name="MyAlertRules",
+ *     scope=["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1"],
+ *     severity="Sev3",
+ *     state="Enabled",
+ *     throttling=azure_native.alertsmanagement.ThrottlingInformationArgs(
+ *         duration="PT20M",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,168 +181,144 @@ import javax.annotation.Nullable;
 public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
     /**
      * The alert rule actions.
-     * 
      */
     @Export(name="actionGroups", type=ActionGroupsInformationResponse.class, parameters={})
     private Output<ActionGroupsInformationResponse> actionGroups;
 
     /**
      * @return The alert rule actions.
-     * 
      */
     public Output<ActionGroupsInformationResponse> getActionGroups() {
         return this.actionGroups;
     }
     /**
      * The alert rule description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The alert rule description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The alert rule's detector.
-     * 
      */
     @Export(name="detector", type=DetectorResponse.class, parameters={})
     private Output<DetectorResponse> detector;
 
     /**
      * @return The alert rule's detector.
-     * 
      */
     public Output<DetectorResponse> getDetector() {
         return this.detector;
     }
     /**
      * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
-     * 
      */
     @Export(name="frequency", type=String.class, parameters={})
     private Output<String> frequency;
 
     /**
      * @return The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
-     * 
      */
     public Output<String> getFrequency() {
         return this.frequency;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The alert rule resources scope.
-     * 
      */
     @Export(name="scope", type=List.class, parameters={String.class})
     private Output<List<String>> scope;
 
     /**
      * @return The alert rule resources scope.
-     * 
      */
     public Output<List<String>> getScope() {
         return this.scope;
     }
     /**
      * The alert rule severity.
-     * 
      */
     @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
      * @return The alert rule severity.
-     * 
      */
     public Output<String> getSeverity() {
         return this.severity;
     }
     /**
      * The alert rule state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The alert rule state.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The alert rule throttling information.
-     * 
      */
     @Export(name="throttling", type=ThrottlingInformationResponse.class, parameters={})
     private Output</* @Nullable */ ThrottlingInformationResponse> throttling;
 
     /**
      * @return The alert rule throttling information.
-     * 
      */
     public Output</* @Nullable */ ThrottlingInformationResponse> getThrottling() {
         return this.throttling;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

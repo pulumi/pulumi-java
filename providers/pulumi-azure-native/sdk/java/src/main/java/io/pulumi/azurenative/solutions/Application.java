@@ -29,7 +29,91 @@ import javax.annotation.Nullable;
  * Information about managed application.
  * API Version: 2019-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update managed application
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var application = new AzureNative.Solutions.Application("application", new AzureNative.Solutions.ApplicationArgs
+ *         {
+ *             ApplicationDefinitionId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
+ *             ApplicationName = "myManagedApplication",
+ *             Kind = "ServiceCatalog",
+ *             Location = "East US 2",
+ *             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+ *             ResourceGroupName = "rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	solutions "github.com/pulumi/pulumi-azure-native/sdk/go/azure/solutions"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := solutions.NewApplication(ctx, "application", &solutions.ApplicationArgs{
+ * 			ApplicationDefinitionId: pulumi.String("/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef"),
+ * 			ApplicationName:         pulumi.String("myManagedApplication"),
+ * 			Kind:                    pulumi.String("ServiceCatalog"),
+ * 			Location:                pulumi.String("East US 2"),
+ * 			ManagedResourceGroupId:  pulumi.String("/subscriptions/subid/resourceGroups/myManagedRG"),
+ * 			ResourceGroupName:       pulumi.String("rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const application = new azure_native.solutions.Application("application", {
+ *     applicationDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
+ *     applicationName: "myManagedApplication",
+ *     kind: "ServiceCatalog",
+ *     location: "East US 2",
+ *     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+ *     resourceGroupName: "rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application = azure_native.solutions.Application("application",
+ *     application_definition_id="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
+ *     application_name="myManagedApplication",
+ *     kind="ServiceCatalog",
+ *     location="East US 2",
+ *     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+ *     resource_group_name="rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -44,336 +128,288 @@ import javax.annotation.Nullable;
 public class Application extends io.pulumi.resources.CustomResource {
     /**
      * The fully qualified path of managed application definition Id.
-     * 
      */
     @Export(name="applicationDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationDefinitionId;
 
     /**
      * @return The fully qualified path of managed application definition Id.
-     * 
      */
     public Output</* @Nullable */ String> getApplicationDefinitionId() {
         return this.applicationDefinitionId;
     }
     /**
      * The collection of managed application artifacts.
-     * 
      */
     @Export(name="artifacts", type=List.class, parameters={ApplicationArtifactResponse.class})
     private Output<List<ApplicationArtifactResponse>> artifacts;
 
     /**
      * @return The collection of managed application artifacts.
-     * 
      */
     public Output<List<ApplicationArtifactResponse>> getArtifacts() {
         return this.artifacts;
     }
     /**
      * The  read-only authorizations property that is retrieved from the application package.
-     * 
      */
     @Export(name="authorizations", type=List.class, parameters={ApplicationAuthorizationResponse.class})
     private Output<List<ApplicationAuthorizationResponse>> authorizations;
 
     /**
      * @return The  read-only authorizations property that is retrieved from the application package.
-     * 
      */
     public Output<List<ApplicationAuthorizationResponse>> getAuthorizations() {
         return this.authorizations;
     }
     /**
      * The managed application billing details.
-     * 
      */
     @Export(name="billingDetails", type=ApplicationBillingDetailsDefinitionResponse.class, parameters={})
     private Output<ApplicationBillingDetailsDefinitionResponse> billingDetails;
 
     /**
      * @return The managed application billing details.
-     * 
      */
     public Output<ApplicationBillingDetailsDefinitionResponse> getBillingDetails() {
         return this.billingDetails;
     }
     /**
      * The client entity that created the JIT request.
-     * 
      */
     @Export(name="createdBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> createdBy;
 
     /**
      * @return The client entity that created the JIT request.
-     * 
      */
     public Output<ApplicationClientDetailsResponse> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The read-only customer support property that is retrieved from the application package.
-     * 
      */
     @Export(name="customerSupport", type=ApplicationPackageContactResponse.class, parameters={})
     private Output<ApplicationPackageContactResponse> customerSupport;
 
     /**
      * @return The read-only customer support property that is retrieved from the application package.
-     * 
      */
     public Output<ApplicationPackageContactResponse> getCustomerSupport() {
         return this.customerSupport;
     }
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The managed application Jit access policy.
-     * 
      */
     @Export(name="jitAccessPolicy", type=ApplicationJitAccessPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationJitAccessPolicyResponse> jitAccessPolicy;
 
     /**
      * @return The managed application Jit access policy.
-     * 
      */
     public Output</* @Nullable */ ApplicationJitAccessPolicyResponse> getJitAccessPolicy() {
         return this.jitAccessPolicy;
     }
     /**
      * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * ID of the resource that manages this resource.
-     * 
      */
     @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
      * @return ID of the resource that manages this resource.
-     * 
      */
     public Output</* @Nullable */ String> getManagedBy() {
         return this.managedBy;
     }
     /**
      * The managed resource group Id.
-     * 
      */
     @Export(name="managedResourceGroupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupId;
 
     /**
      * @return The managed resource group Id.
-     * 
      */
     public Output</* @Nullable */ String> getManagedResourceGroupId() {
         return this.managedResourceGroupId;
     }
     /**
      * The managed application management mode.
-     * 
      */
     @Export(name="managementMode", type=String.class, parameters={})
     private Output<String> managementMode;
 
     /**
      * @return The managed application management mode.
-     * 
      */
     public Output<String> getManagementMode() {
         return this.managementMode;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Name and value pairs that define the managed application outputs.
-     * 
      */
     @Export(name="outputs", type=Object.class, parameters={})
     private Output<Object> outputs;
 
     /**
      * @return Name and value pairs that define the managed application outputs.
-     * 
      */
     public Output<Object> getOutputs() {
         return this.outputs;
     }
     /**
      * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
-     * 
      */
     @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
      * @return Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
-     * 
      */
     public Output</* @Nullable */ Object> getParameters() {
         return this.parameters;
     }
     /**
      * The plan information.
-     * 
      */
     @Export(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
     /**
      * @return The plan information.
-     * 
      */
     public Output</* @Nullable */ PlanResponse> getPlan() {
         return this.plan;
     }
     /**
      * The managed application provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The managed application provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publisher tenant Id.
-     * 
      */
     @Export(name="publisherTenantId", type=String.class, parameters={})
     private Output<String> publisherTenantId;
 
     /**
      * @return The publisher tenant Id.
-     * 
      */
     public Output<String> getPublisherTenantId() {
         return this.publisherTenantId;
     }
     /**
      * The SKU of the resource.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The SKU of the resource.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The read-only support URLs property that is retrieved from the application package.
-     * 
      */
     @Export(name="supportUrls", type=ApplicationPackageSupportUrlsResponse.class, parameters={})
     private Output<ApplicationPackageSupportUrlsResponse> supportUrls;
 
     /**
      * @return The read-only support URLs property that is retrieved from the application package.
-     * 
      */
     public Output<ApplicationPackageSupportUrlsResponse> getSupportUrls() {
         return this.supportUrls;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The client entity that last updated the JIT request.
-     * 
      */
     @Export(name="updatedBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> updatedBy;
 
     /**
      * @return The client entity that last updated the JIT request.
-     * 
      */
     public Output<ApplicationClientDetailsResponse> getUpdatedBy() {
         return this.updatedBy;

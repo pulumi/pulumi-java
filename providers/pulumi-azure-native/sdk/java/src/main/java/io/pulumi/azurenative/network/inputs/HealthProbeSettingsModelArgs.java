@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Load balancing settings for a backend pool
- * 
  */
 public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
 
     /**
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
@@ -36,7 +34,6 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
 
     /**
      * Configures which HTTP method to use to probe the backends defined under backendPools.
-     * 
      */
     @Import(name="healthProbeMethod")
       private final @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
@@ -47,7 +44,6 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -58,7 +54,6 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
 
     /**
      * The number of seconds between health probes.
-     * 
      */
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
@@ -69,7 +64,6 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -80,7 +74,6 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
 
     /**
      * The path to use for the health probe. Default is /
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -91,7 +84,6 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
 
     /**
      * Protocol scheme to use for this probe
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<Either<String,FrontDoorProtocol>> protocol;

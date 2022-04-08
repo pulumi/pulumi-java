@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ListWebAppHostKeysResult {
     /**
      * Host level function keys.
-     * 
      */
     private final @Nullable Map<String,String> functionKeys;
     /**
      * Secret key.
-     * 
      */
     private final @Nullable String masterKey;
     /**
      * System keys.
-     * 
      */
     private final @Nullable Map<String,String> systemKeys;
 
@@ -40,21 +37,18 @@ public final class ListWebAppHostKeysResult {
 
     /**
      * Host level function keys.
-     * 
     */
     public Map<String,String> getFunctionKeys() {
         return this.functionKeys == null ? Map.of() : this.functionKeys;
     }
     /**
      * Secret key.
-     * 
     */
     public Optional<String> getMasterKey() {
         return Optional.ofNullable(this.masterKey);
     }
     /**
      * System keys.
-     * 
     */
     public Map<String,String> getSystemKeys() {
         return this.systemKeys == null ? Map.of() : this.systemKeys;

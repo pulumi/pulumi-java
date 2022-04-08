@@ -21,7 +21,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the published blueprint definition.
-     * 
      */
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
@@ -32,7 +31,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Version-specific change notes.
-     * 
      */
     @Import(name="changeNotes")
       private final @Nullable Output<String> changeNotes;
@@ -43,7 +41,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Multi-line explain this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -54,7 +51,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * One-liner string explain this resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -65,7 +61,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Parameters required by this blueprint definition.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
@@ -76,7 +71,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource group placeholders defined by this blueprint definition.
-     * 
      */
     @Import(name="resourceGroups")
       private final @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
@@ -87,7 +81,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
@@ -98,7 +91,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The scope where this blueprint definition can be assigned.
-     * 
      */
     @Import(name="targetScope")
       private final @Nullable Output<Either<String,BlueprintTargetScope>> targetScope;
@@ -109,7 +101,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Version of the published blueprint definition.
-     * 
      */
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;

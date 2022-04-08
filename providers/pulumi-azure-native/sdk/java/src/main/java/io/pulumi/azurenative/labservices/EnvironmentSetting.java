@@ -32,196 +32,168 @@ import javax.annotation.Nullable;
 public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
     /**
      * Describes the user's progress in configuring their environment setting
-     * 
      */
     @Export(name="configurationState", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationState;
 
     /**
      * @return Describes the user's progress in configuring their environment setting
-     * 
      */
     public Output</* @Nullable */ String> getConfigurationState() {
         return this.configurationState;
     }
     /**
      * Describes the environment and its resource settings
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Describes the environment and its resource settings
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Time when the template VM was last changed.
-     * 
      */
     @Export(name="lastChanged", type=String.class, parameters={})
     private Output<String> lastChanged;
 
     /**
      * @return Time when the template VM was last changed.
-     * 
      */
     public Output<String> getLastChanged() {
         return this.lastChanged;
     }
     /**
      * Time when the template VM was last sent for publishing.
-     * 
      */
     @Export(name="lastPublished", type=String.class, parameters={})
     private Output<String> lastPublished;
 
     /**
      * @return Time when the template VM was last sent for publishing.
-     * 
      */
     public Output<String> getLastPublished() {
         return this.lastPublished;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
      * @return The details of the latest operation. ex: status, error
-     * 
      */
     public Output<LatestOperationResultResponse> getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the readiness of this environment setting
-     * 
      */
     @Export(name="publishingState", type=String.class, parameters={})
     private Output<String> publishingState;
 
     /**
      * @return Describes the readiness of this environment setting
-     * 
      */
     public Output<String> getPublishingState() {
         return this.publishingState;
     }
     /**
      * The resource specific settings
-     * 
      */
     @Export(name="resourceSettings", type=ResourceSettingsResponse.class, parameters={})
     private Output<ResourceSettingsResponse> resourceSettings;
 
     /**
      * @return The resource specific settings
-     * 
      */
     public Output<ResourceSettingsResponse> getResourceSettings() {
         return this.resourceSettings;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Brief title describing the environment and its resource settings
-     * 
      */
     @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
      * @return Brief title describing the environment and its resource settings
-     * 
      */
     public Output</* @Nullable */ String> getTitle() {
         return this.title;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output</* @Nullable */ String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

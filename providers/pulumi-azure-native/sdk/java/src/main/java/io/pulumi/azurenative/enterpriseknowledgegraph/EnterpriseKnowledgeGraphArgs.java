@@ -19,7 +19,6 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
 
     /**
      * The set of properties specific to EnterpriseKnowledgeGraph resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<EnterpriseKnowledgeGraphPropertiesArgs> properties;
@@ -41,7 +39,6 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the EnterpriseKnowledgeGraph resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -63,7 +59,6 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets the SKU of the resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -74,7 +69,6 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

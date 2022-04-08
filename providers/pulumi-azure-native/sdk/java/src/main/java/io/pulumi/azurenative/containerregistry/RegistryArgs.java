@@ -22,7 +22,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value that indicates whether the admin user is enabled.
-     * 
      */
     @Import(name="adminUserEnabled")
       private final @Nullable Output<Boolean> adminUserEnabled;
@@ -33,7 +32,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -44,7 +42,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The network rule set for a container registry.
-     * 
      */
     @Import(name="networkRuleSet")
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
@@ -55,7 +52,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The policies for a container registry.
-     * 
      */
     @Import(name="policies")
       private final @Nullable Output<PoliciesArgs> policies;
@@ -66,7 +62,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName")
       private final @Nullable Output<String> registryName;
@@ -77,7 +72,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the container registry.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -99,7 +92,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of the storage account for the container registry. Only applicable to Classic SKU.
-     * 
      */
     @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
@@ -110,7 +102,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

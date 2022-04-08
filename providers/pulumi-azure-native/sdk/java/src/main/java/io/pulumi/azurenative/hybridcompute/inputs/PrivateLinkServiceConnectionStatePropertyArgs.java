@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * State of the private endpoint connection.
- * 
  */
 public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
 
     /**
      * The private link service connection description.
-     * 
      */
     @Import(name="description", required=true)
       private final Output<String> description;
@@ -30,7 +28,6 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
 
     /**
      * The private link service connection status.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The partner type.
-     * 
      */
     @EnumType
     public enum PartnerType {

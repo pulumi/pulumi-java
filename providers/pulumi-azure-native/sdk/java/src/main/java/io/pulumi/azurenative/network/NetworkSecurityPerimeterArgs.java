@@ -17,7 +17,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * A description of the network security perimeter.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * A friendly name for the network security perimeter.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -39,7 +37,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -50,7 +47,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -61,7 +57,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -72,7 +67,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the network security perimeter.
-     * 
      */
     @Import(name="networkSecurityPerimeterName")
       private final @Nullable Output<String> networkSecurityPerimeterName;
@@ -83,7 +77,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +87,6 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

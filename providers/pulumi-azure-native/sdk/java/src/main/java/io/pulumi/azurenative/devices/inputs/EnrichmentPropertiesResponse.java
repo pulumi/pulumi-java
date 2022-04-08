@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The properties of an enrichment that your IoT hub applies to messages delivered to endpoints.
- * 
  */
 public final class EnrichmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The list of endpoints for which the enrichment is applied to the message.
-     * 
      */
     @Import(name="endpointNames", required=true)
       private final List<String> endpointNames;
@@ -30,7 +28,6 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The key or name for the enrichment property.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -41,7 +38,6 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The value for the enrichment property.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

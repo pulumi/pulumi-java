@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sftp read settings.
- * 
  */
 public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="additionalHeaders")
       private final @Nullable Output<Object> additionalHeaders;
@@ -33,7 +31,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -44,7 +41,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Indicates whether to enable partition discovery.
-     * 
      */
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Output<Boolean> enablePartitionDiscovery;
@@ -55,7 +51,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -66,7 +61,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionRootPath")
       private final @Nullable Output<Object> partitionRootPath;
@@ -77,7 +71,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestBody")
       private final @Nullable Output<Object> requestBody;
@@ -88,7 +81,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestMethod")
       private final @Nullable Output<Object> requestMethod;
@@ -99,7 +91,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
-     * 
      */
     @Import(name="requestTimeout")
       private final @Nullable Output<Object> requestTimeout;
@@ -111,7 +102,6 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
     /**
      * The read setting type.
      * Expected value is 'HttpReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

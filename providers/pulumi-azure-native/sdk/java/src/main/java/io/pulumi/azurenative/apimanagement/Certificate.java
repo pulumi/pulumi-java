@@ -18,7 +18,174 @@ import javax.annotation.Nullable;
  * Certificate details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateCertificate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var certificate = new AzureNative.ApiManagement.Certificate("certificate", new AzureNative.ApiManagement.CertificateArgs
+ *         {
+ *             CertificateId = "tempcert",
+ *             Data = "****************Base 64 Encoded Certificate *******************************",
+ *             Password = "****Certificate Password******",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewCertificate(ctx, "certificate", &apimanagement.CertificateArgs{
+ * 			CertificateId:     pulumi.String("tempcert"),
+ * 			Data:              pulumi.String("****************Base 64 Encoded Certificate *******************************"),
+ * 			Password:          pulumi.String("****Certificate Password******"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const certificate = new azure_native.apimanagement.Certificate("certificate", {
+ *     certificateId: "tempcert",
+ *     data: "****************Base 64 Encoded Certificate *******************************",
+ *     password: "****Certificate Password******",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * certificate = azure_native.apimanagement.Certificate("certificate",
+ *     certificate_id="tempcert",
+ *     data="****************Base 64 Encoded Certificate *******************************",
+ *     password="****Certificate Password******",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateCertificateWithKeyVault
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var certificate = new AzureNative.ApiManagement.Certificate("certificate", new AzureNative.ApiManagement.CertificateArgs
+ *         {
+ *             CertificateId = "templateCertkv",
+ *             KeyVault = new AzureNative.ApiManagement.Inputs.KeyVaultContractCreatePropertiesArgs
+ *             {
+ *                 IdentityClientId = "ceaa6b06-c00f-43ef-99ac-f53d1fe876a0",
+ *                 SecretIdentifier = "https://rpbvtkeyvaultintegration.vault-int.azure-int.net/secrets/msitestingCert",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewCertificate(ctx, "certificate", &apimanagement.CertificateArgs{
+ * 			CertificateId: pulumi.String("templateCertkv"),
+ * 			KeyVault: &apimanagement.KeyVaultContractCreatePropertiesArgs{
+ * 				IdentityClientId: pulumi.String("ceaa6b06-c00f-43ef-99ac-f53d1fe876a0"),
+ * 				SecretIdentifier: pulumi.String("https://rpbvtkeyvaultintegration.vault-int.azure-int.net/secrets/msitestingCert"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const certificate = new azure_native.apimanagement.Certificate("certificate", {
+ *     certificateId: "templateCertkv",
+ *     keyVault: {
+ *         identityClientId: "ceaa6b06-c00f-43ef-99ac-f53d1fe876a0",
+ *         secretIdentifier: "https://rpbvtkeyvaultintegration.vault-int.azure-int.net/secrets/msitestingCert",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * certificate = azure_native.apimanagement.Certificate("certificate",
+ *     certificate_id="templateCertkv",
+ *     key_vault=azure_native.apimanagement.KeyVaultContractCreatePropertiesArgs(
+ *         identity_client_id="ceaa6b06-c00f-43ef-99ac-f53d1fe876a0",
+ *         secret_identifier="https://rpbvtkeyvaultintegration.vault-int.azure-int.net/secrets/msitestingCert",
+ *     ),
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,70 +214,60 @@ public class Certificate extends io.pulumi.resources.CustomResource {
     }
     /**
      * KeyVault location details of the certificate.
-     * 
      */
     @Export(name="keyVault", type=KeyVaultContractPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault;
 
     /**
      * @return KeyVault location details of the certificate.
-     * 
      */
     public Output</* @Nullable */ KeyVaultContractPropertiesResponse> getKeyVault() {
         return this.keyVault;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Subject attribute of the certificate.
-     * 
      */
     @Export(name="subject", type=String.class, parameters={})
     private Output<String> subject;
 
     /**
      * @return Subject attribute of the certificate.
-     * 
      */
     public Output<String> getSubject() {
         return this.subject;
     }
     /**
      * Thumbprint of the certificate.
-     * 
      */
     @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
      * @return Thumbprint of the certificate.
-     * 
      */
     public Output<String> getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

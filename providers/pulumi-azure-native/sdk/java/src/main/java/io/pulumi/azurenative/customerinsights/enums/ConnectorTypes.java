@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of connector.
-     * 
      */
     @EnumType
     public enum ConnectorTypes {

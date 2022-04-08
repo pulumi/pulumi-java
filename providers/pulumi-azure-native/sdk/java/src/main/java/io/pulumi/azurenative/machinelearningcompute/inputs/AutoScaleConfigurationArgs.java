@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * AutoScale configuration properties.
- * 
  */
 public final class AutoScaleConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The maximum number of replicas for each service.
-     * 
      */
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
@@ -35,7 +33,6 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The minimum number of replicas for each service.
-     * 
      */
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
@@ -46,7 +43,6 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Refresh period in seconds.
-     * 
      */
     @Import(name="refreshPeriodInSeconds")
       private final @Nullable Output<Integer> refreshPeriodInSeconds;
@@ -57,7 +53,6 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * If auto-scale is enabled for all services. Each service can turn it off individually.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,Status>> status;
@@ -68,7 +63,6 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The target utilization.
-     * 
      */
     @Import(name="targetUtilization")
       private final @Nullable Output<Double> targetUtilization;

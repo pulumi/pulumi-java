@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that validates connection to Azure SQL Database Managed Instance.
- * 
  */
 public final class ConnectToTargetSqlMITaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ConnectToTargetSqlMITaskInputArgs extends io.pulumi.resources
 
     /**
      * Connection information for target SQL Server
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;

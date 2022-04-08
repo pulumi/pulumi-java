@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class FilterTrackSelectionResponse {
     /**
      * The track selections.
-     * 
      */
     private final List<FilterTrackPropertyConditionResponse> trackSelections;
 
@@ -23,7 +22,6 @@ public final class FilterTrackSelectionResponse {
 
     /**
      * The track selections.
-     * 
     */
     public List<FilterTrackPropertyConditionResponse> getTrackSelections() {
         return this.trackSelections;

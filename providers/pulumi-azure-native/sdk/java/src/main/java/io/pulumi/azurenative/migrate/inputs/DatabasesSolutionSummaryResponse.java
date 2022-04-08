@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class representing the databases solution summary.
- * 
  */
 public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the count of database instances assessed.
-     * 
      */
     @Import(name="databaseInstancesAssessedCount")
       private final @Nullable Integer databaseInstancesAssessedCount;
@@ -32,7 +30,6 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the count of databases assessed.
-     * 
      */
     @Import(name="databasesAssessedCount")
       private final @Nullable Integer databasesAssessedCount;
@@ -44,7 +41,6 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
     /**
      * Gets the Instance type.
      * Expected value is 'Databases'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -55,7 +51,6 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the count of databases ready for migration.
-     * 
      */
     @Import(name="migrationReadyCount")
       private final @Nullable Integer migrationReadyCount;

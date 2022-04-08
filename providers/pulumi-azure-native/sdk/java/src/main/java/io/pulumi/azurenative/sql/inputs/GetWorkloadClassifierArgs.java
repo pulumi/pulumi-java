@@ -14,7 +14,6 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -25,7 +24,6 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;
@@ -47,7 +44,6 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the workload classifier.
-     * 
      */
     @Import(name="workloadClassifierName", required=true)
       private final String workloadClassifierName;
@@ -58,7 +54,6 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the workload group from which to receive the classifier from.
-     * 
      */
     @Import(name="workloadGroupName", required=true)
       private final String workloadGroupName;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Traffic weight assigned to a revision
- * 
  */
 public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates that the traffic weight belongs to a latest stable revision
-     * 
      */
     @Import(name="latestRevision")
       private final @Nullable Boolean latestRevision;
@@ -33,7 +31,6 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of a revision
-     * 
      */
     @Import(name="revisionName")
       private final @Nullable String revisionName;
@@ -44,7 +41,6 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Traffic weight assigned to a revision
-     * 
      */
     @Import(name="weight")
       private final @Nullable Integer weight;

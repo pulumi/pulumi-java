@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class ExpressionResponse {
     /**
      * The azure resource error info.
-     * 
      */
     private final @Nullable AzureResourceErrorInfoResponse error;
     /**
      * The sub expressions.
-     * 
      */
     private final @Nullable List<ExpressionResponse> subexpressions;
     /**
      * The text.
-     * 
      */
     private final @Nullable String text;
     private final @Nullable Object value;
@@ -45,21 +42,18 @@ public final class ExpressionResponse {
 
     /**
      * The azure resource error info.
-     * 
     */
     public Optional<AzureResourceErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The sub expressions.
-     * 
     */
     public List<ExpressionResponse> getSubexpressions() {
         return this.subexpressions == null ? List.of() : this.subexpressions;
     }
     /**
      * The text.
-     * 
     */
     public Optional<String> getText() {
         return Optional.ofNullable(this.text);

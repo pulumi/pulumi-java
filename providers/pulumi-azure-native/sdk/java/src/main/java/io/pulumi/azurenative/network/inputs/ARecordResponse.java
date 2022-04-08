@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An A record.
- * 
  */
 public final class ARecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ARecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IPv4 address of this A record.
-     * 
      */
     @Import(name="ipv4Address")
       private final @Nullable String ipv4Address;

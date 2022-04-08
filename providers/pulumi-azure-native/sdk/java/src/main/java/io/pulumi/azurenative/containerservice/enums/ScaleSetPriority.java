@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
-     * 
      */
     @EnumType
     public enum ScaleSetPriority {

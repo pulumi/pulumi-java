@@ -14,7 +14,6 @@ public final class GetMetricsSourceTagRuleArgs extends io.pulumi.resources.Invok
 
     /**
      * Metrics Account resource name
-     * 
      */
     @Import(name="metricsSourceName", required=true)
       private final String metricsSourceName;
@@ -25,7 +24,6 @@ public final class GetMetricsSourceTagRuleArgs extends io.pulumi.resources.Invok
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -36,7 +34,6 @@ public final class GetMetricsSourceTagRuleArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

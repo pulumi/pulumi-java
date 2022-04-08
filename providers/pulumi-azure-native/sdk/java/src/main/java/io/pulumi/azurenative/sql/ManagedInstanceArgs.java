@@ -27,7 +27,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-     * 
      */
     @Import(name="administratorLogin")
       private final @Nullable Output<String> administratorLogin;
@@ -38,7 +37,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The administrator login password (required for managed instance creation).
-     * 
      */
     @Import(name="administratorLoginPassword")
       private final @Nullable Output<String> administratorLoginPassword;
@@ -49,7 +47,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Azure Active Directory administrator of the server.
-     * 
      */
     @Import(name="administrators")
       private final @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
@@ -60,7 +57,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Collation of the managed instance.
-     * 
      */
     @Import(name="collation")
       private final @Nullable Output<String> collation;
@@ -71,7 +67,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource id of another managed instance whose DNS zone this managed instance will share after creation.
-     * 
      */
     @Import(name="dnsZonePartner")
       private final @Nullable Output<String> dnsZonePartner;
@@ -82,7 +77,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Azure Active Directory identity of the managed instance.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -93,7 +87,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Id of the instance pool this managed server belongs to.
-     * 
      */
     @Import(name="instancePoolId")
       private final @Nullable Output<String> instancePoolId;
@@ -104,7 +97,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A CMK URI of the key to use for encryption.
-     * 
      */
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
@@ -115,7 +107,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
@@ -126,7 +117,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -137,7 +127,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies maintenance configuration id to apply to this managed instance.
-     * 
      */
     @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
@@ -152,7 +141,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Default: Regular instance creation.
      * 
      * Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
-     * 
      */
     @Import(name="managedInstanceCreateMode")
       private final @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
@@ -163,7 +151,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName")
       private final @Nullable Output<String> managedInstanceName;
@@ -174,7 +161,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
-     * 
      */
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<String> minimalTlsVersion;
@@ -185,7 +171,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource id of a user assigned identity to be used by default.
-     * 
      */
     @Import(name="primaryUserAssignedIdentityId")
       private final @Nullable Output<String> primaryUserAssignedIdentityId;
@@ -196,7 +181,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Connection type used for connecting to the instance.
-     * 
      */
     @Import(name="proxyOverride")
       private final @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
@@ -207,7 +191,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Whether or not the public data endpoint is enabled.
-     * 
      */
     @Import(name="publicDataEndpointEnabled")
       private final @Nullable Output<Boolean> publicDataEndpointEnabled;
@@ -218,7 +201,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -229,7 +211,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-     * 
      */
     @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
@@ -240,7 +221,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -251,7 +231,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource identifier of the source managed instance associated with create operation of this instance.
-     * 
      */
     @Import(name="sourceManagedInstanceId")
       private final @Nullable Output<String> sourceManagedInstanceId;
@@ -262,7 +241,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
@@ -273,7 +251,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
-     * 
      */
     @Import(name="storageSizeInGB")
       private final @Nullable Output<Integer> storageSizeInGB;
@@ -284,7 +261,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Subnet resource ID for the managed instance.
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
@@ -295,7 +271,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -311,7 +286,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
      * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
      * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
-     * 
      */
     @Import(name="timezoneId")
       private final @Nullable Output<String> timezoneId;
@@ -322,7 +296,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
-     * 
      */
     @Import(name="vCores")
       private final @Nullable Output<Integer> vCores;
@@ -333,7 +306,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Whether or not the multi-az is enabled.
-     * 
      */
     @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;

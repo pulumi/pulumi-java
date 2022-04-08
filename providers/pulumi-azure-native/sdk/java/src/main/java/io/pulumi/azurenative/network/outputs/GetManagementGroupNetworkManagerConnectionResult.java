@@ -14,37 +14,30 @@ import javax.annotation.Nullable;
 public final class GetManagementGroupNetworkManagerConnectionResult {
     /**
      * A description of the scope connection.
-     * 
      */
     private final @Nullable String description;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Network Manager Id.
-     * 
      */
     private final @Nullable String networkManagerId;
     /**
      * The system metadata related to this resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -68,49 +61,42 @@ public final class GetManagementGroupNetworkManagerConnectionResult {
 
     /**
      * A description of the scope connection.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Network Manager Id.
-     * 
     */
     public Optional<String> getNetworkManagerId() {
         return Optional.ofNullable(this.networkManagerId);
     }
     /**
      * The system metadata related to this resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

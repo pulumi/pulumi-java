@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The source image from which the Image Version is going to be created.
- * 
  */
 public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
-     * 
      */
     @Import(name="defaultConfigurationLink")
       private final @Nullable Output<String> defaultConfigurationLink;
@@ -31,7 +29,6 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required. The mediaLink of the artifact, must be a readable storage page blob.
-     * 
      */
     @Import(name="mediaLink", required=true)
       private final Output<String> mediaLink;

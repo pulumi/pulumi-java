@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Fields for tracking resource move
- * 
  */
 public final class ResourceMoveDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Denotes whether move operation is in progress
-     * 
      */
     @Import(name="operationInProgress")
       private final @Nullable String operationInProgress;
@@ -31,7 +29,6 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Denotes the timeout of the operation to finish
-     * 
      */
     @Import(name="operationInProgressLockTimeoutInUTC")
       private final @Nullable String operationInProgressLockTimeoutInUTC;

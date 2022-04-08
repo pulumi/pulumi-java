@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * This type describes a service resource.
- * 
  */
 public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Auto scaling policies
-     * 
      */
     @Import(name="autoScalingPolicies")
       private final @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
@@ -39,7 +37,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
-     * 
      */
     @Import(name="codePackages", required=true)
       private final Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
@@ -50,7 +47,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * User readable description of the service.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -61,7 +57,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Reference to sinks in DiagnosticsDescription.
-     * 
      */
     @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
@@ -72,7 +67,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the resource
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -83,7 +77,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The names of the private networks that this service needs to be part of.
-     * 
      */
     @Import(name="networkRefs")
       private final @Nullable Output<List<NetworkRefArgs>> networkRefs;
@@ -94,7 +87,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The operation system required by the code in service.
-     * 
      */
     @Import(name="osType", required=true)
       private final Output<Either<String,OperatingSystemType>> osType;
@@ -105,7 +97,6 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The number of replicas of the service to create. Defaults to 1 if not specified.
-     * 
      */
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;

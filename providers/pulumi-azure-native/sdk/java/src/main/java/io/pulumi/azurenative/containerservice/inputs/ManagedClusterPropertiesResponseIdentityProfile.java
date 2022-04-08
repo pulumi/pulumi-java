@@ -16,7 +16,6 @@ public final class ManagedClusterPropertiesResponseIdentityProfile extends io.pu
 
     /**
      * The client id of the user assigned identity.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -27,7 +26,6 @@ public final class ManagedClusterPropertiesResponseIdentityProfile extends io.pu
 
     /**
      * The object id of the user assigned identity.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -38,7 +36,6 @@ public final class ManagedClusterPropertiesResponseIdentityProfile extends io.pu
 
     /**
      * The resource id of the user assigned identity.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

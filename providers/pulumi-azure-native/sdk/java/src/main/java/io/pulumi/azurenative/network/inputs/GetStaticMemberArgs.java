@@ -14,7 +14,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network group.
-     * 
      */
     @Import(name="networkGroupName", required=true)
       private final String networkGroupName;
@@ -25,7 +24,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -36,7 +34,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the static member.
-     * 
      */
     @Import(name="staticMemberName", required=true)
       private final String staticMemberName;

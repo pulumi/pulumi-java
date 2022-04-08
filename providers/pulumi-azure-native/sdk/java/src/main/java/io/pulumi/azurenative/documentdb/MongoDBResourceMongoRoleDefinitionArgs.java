@@ -20,7 +20,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -31,7 +30,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * The database name for which access is being granted for this Role Definition.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -42,7 +40,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * The ID for the Role Definition {dbName.roleName}.
-     * 
      */
     @Import(name="mongoRoleDefinitionId")
       private final @Nullable Output<String> mongoRoleDefinitionId;
@@ -53,7 +50,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
-     * 
      */
     @Import(name="privileges")
       private final @Nullable Output<List<PrivilegeArgs>> privileges;
@@ -64,7 +60,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
-     * 
      */
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
@@ -86,7 +80,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * The set of roles inherited by this Role Definition.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
@@ -97,7 +90,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
 
     /**
      * Indicates whether the Role Definition was built-in or user created.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<MongoRoleDefinitionType> type;

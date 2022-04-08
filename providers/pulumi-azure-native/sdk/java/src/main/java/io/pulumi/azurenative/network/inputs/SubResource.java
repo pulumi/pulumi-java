@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A reference to a another resource
- * 
  */
 public final class SubResource extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SubResource extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

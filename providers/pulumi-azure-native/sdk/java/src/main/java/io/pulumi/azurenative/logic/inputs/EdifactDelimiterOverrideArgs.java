@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Edifact delimiter override settings.
- * 
  */
 public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The component separator.
-     * 
      */
     @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
@@ -34,7 +32,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The data element separator.
-     * 
      */
     @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
@@ -45,7 +42,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The decimal point indicator.
-     * 
      */
     @Import(name="decimalPointIndicator", required=true)
       private final Output<EdifactDecimalIndicator> decimalPointIndicator;
@@ -56,7 +52,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The message association assigned code.
-     * 
      */
     @Import(name="messageAssociationAssignedCode")
       private final @Nullable Output<String> messageAssociationAssignedCode;
@@ -67,7 +62,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The message id.
-     * 
      */
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
@@ -78,7 +72,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The message release.
-     * 
      */
     @Import(name="messageRelease")
       private final @Nullable Output<String> messageRelease;
@@ -89,7 +82,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The message version.
-     * 
      */
     @Import(name="messageVersion")
       private final @Nullable Output<String> messageVersion;
@@ -100,7 +92,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The release indicator.
-     * 
      */
     @Import(name="releaseIndicator", required=true)
       private final Output<Integer> releaseIndicator;
@@ -111,7 +102,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The repetition separator.
-     * 
      */
     @Import(name="repetitionSeparator", required=true)
       private final Output<Integer> repetitionSeparator;
@@ -122,7 +112,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The segment terminator.
-     * 
      */
     @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
@@ -133,7 +122,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The segment terminator suffix.
-     * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
@@ -144,7 +132,6 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
 
     /**
      * The target namespace on which this delimiter settings has to be applied.
-     * 
      */
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;

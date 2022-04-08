@@ -20,7 +20,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<ActionArgs> action;
@@ -31,7 +30,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of correlationFilter
-     * 
      */
     @Import(name="correlationFilter")
       private final @Nullable Output<CorrelationFilterArgs> correlationFilter;
@@ -42,7 +40,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Filter type that is evaluated against a BrokeredMessage.
-     * 
      */
     @Import(name="filterType")
       private final @Nullable Output<FilterType> filterType;
@@ -53,7 +50,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -64,7 +60,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The rule name.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
@@ -86,7 +80,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of sqlFilter
-     * 
      */
     @Import(name="sqlFilter")
       private final @Nullable Output<SqlFilterArgs> sqlFilter;
@@ -97,7 +90,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subscription name.
-     * 
      */
     @Import(name="subscriptionName", required=true)
       private final Output<String> subscriptionName;
@@ -108,7 +100,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The topic name.
-     * 
      */
     @Import(name="topicName", required=true)
       private final Output<String> topicName;

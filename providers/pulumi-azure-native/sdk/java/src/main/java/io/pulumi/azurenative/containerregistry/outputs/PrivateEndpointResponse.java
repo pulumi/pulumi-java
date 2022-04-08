@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PrivateEndpointResponse {
     /**
      * This is private endpoint resource created with Microsoft.Network resource provider.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class PrivateEndpointResponse {
 
     /**
      * This is private endpoint resource created with Microsoft.Network resource provider.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

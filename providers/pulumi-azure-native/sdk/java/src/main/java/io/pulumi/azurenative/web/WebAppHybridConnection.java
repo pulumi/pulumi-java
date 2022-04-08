@@ -30,98 +30,84 @@ import javax.annotation.Nullable;
 public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
     /**
      * The hostname of the endpoint.
-     * 
      */
     @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
     /**
      * @return The hostname of the endpoint.
-     * 
      */
     public Output</* @Nullable */ String> getHostname() {
         return this.hostname;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The port of the endpoint.
-     * 
      */
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
      * @return The port of the endpoint.
-     * 
      */
     public Output</* @Nullable */ Integer> getPort() {
         return this.port;
     }
     /**
      * The ARM URI to the Service Bus relay.
-     * 
      */
     @Export(name="relayArmUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayArmUri;
 
     /**
      * @return The ARM URI to the Service Bus relay.
-     * 
      */
     public Output</* @Nullable */ String> getRelayArmUri() {
         return this.relayArmUri;
     }
     /**
      * The name of the Service Bus relay.
-     * 
      */
     @Export(name="relayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayName;
 
     /**
      * @return The name of the Service Bus relay.
-     * 
      */
     public Output</* @Nullable */ String> getRelayName() {
         return this.relayName;
     }
     /**
      * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
-     * 
      */
     @Export(name="sendKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> sendKeyName;
 
     /**
      * @return The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
-     * 
      */
     public Output</* @Nullable */ String> getSendKeyName() {
         return this.sendKeyName;
@@ -129,7 +115,6 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
     /**
      * The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
      * normally, use the POST /listKeys API instead.
-     * 
      */
     @Export(name="sendKeyValue", type=String.class, parameters={})
     private Output</* @Nullable */ String> sendKeyValue;
@@ -137,49 +122,42 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
     /**
      * @return The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
      * normally, use the POST /listKeys API instead.
-     * 
      */
     public Output</* @Nullable */ String> getSendKeyValue() {
         return this.sendKeyValue;
     }
     /**
      * The name of the Service Bus namespace.
-     * 
      */
     @Export(name="serviceBusNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusNamespace;
 
     /**
      * @return The name of the Service Bus namespace.
-     * 
      */
     public Output</* @Nullable */ String> getServiceBusNamespace() {
         return this.serviceBusNamespace;
     }
     /**
      * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
-     * 
      */
     @Export(name="serviceBusSuffix", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusSuffix;
 
     /**
      * @return The suffix for the service bus endpoint. By default this is .servicebus.windows.net
-     * 
      */
     public Output</* @Nullable */ String> getServiceBusSuffix() {
         return this.serviceBusSuffix;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

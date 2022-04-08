@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of a public IP address.
- * 
  */
 public final class PublicIPAddressSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PublicIPAddressSkuResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of a public IP address SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class PublicIPAddressSkuResponse extends io.pulumi.resources.Invoke
 
     /**
      * Tier of a public IP address SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

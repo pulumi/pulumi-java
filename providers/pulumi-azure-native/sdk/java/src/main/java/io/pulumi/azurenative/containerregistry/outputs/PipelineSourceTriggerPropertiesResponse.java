@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PipelineSourceTriggerPropertiesResponse {
     /**
      * The current status of the source trigger.
-     * 
      */
     private final String status;
 
@@ -22,7 +21,6 @@ public final class PipelineSourceTriggerPropertiesResponse {
 
     /**
      * The current status of the source trigger.
-     * 
     */
     public String getStatus() {
         return this.status;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a tenant ID that is trusted by the cluster.
- * 
  */
 public final class TrustedExternalTenantArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TrustedExternalTenantArgs extends io.pulumi.resources.Resourc
 
     /**
      * GUID representing an external tenant.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

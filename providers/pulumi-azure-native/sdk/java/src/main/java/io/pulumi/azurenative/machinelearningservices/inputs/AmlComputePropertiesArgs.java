@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * AML Compute properties
- * 
  */
 public final class AmlComputePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
-     * 
      */
     @Import(name="enableNodePublicIp")
       private final @Nullable Output<Boolean> enableNodePublicIp;
@@ -40,7 +38,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Network is isolated or not
-     * 
      */
     @Import(name="isolatedNetwork")
       private final @Nullable Output<Boolean> isolatedNetwork;
@@ -51,7 +48,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Compute OS Type
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
@@ -62,7 +58,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
-     * 
      */
     @Import(name="remoteLoginPortPublicAccess")
       private final @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
@@ -73,7 +68,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Scale settings for AML Compute
-     * 
      */
     @Import(name="scaleSettings")
       private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
@@ -84,7 +78,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Virtual network subnet resource ID the compute nodes belong to.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<ResourceIdArgs> subnet;
@@ -95,7 +88,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Credentials for an administrator user account that will be created on each compute node.
-     * 
      */
     @Import(name="userAccountCredentials")
       private final @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
@@ -106,7 +98,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Virtual Machine image for AML Compute - windows only
-     * 
      */
     @Import(name="virtualMachineImage")
       private final @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
@@ -117,7 +108,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Virtual Machine priority
-     * 
      */
     @Import(name="vmPriority")
       private final @Nullable Output<Either<String,VmPriority>> vmPriority;
@@ -128,7 +118,6 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Virtual Machine Size
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;

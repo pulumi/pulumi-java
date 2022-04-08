@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A container event.
- * 
  */
 public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The count of the event.
-     * 
      */
     @Import(name="count")
       private final @Nullable Integer count;
@@ -32,7 +30,6 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Date/time of the first event.
-     * 
      */
     @Import(name="firstTimestamp")
       private final @Nullable String firstTimestamp;
@@ -43,7 +40,6 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Date/time of the last event.
-     * 
      */
     @Import(name="lastTimestamp")
       private final @Nullable String lastTimestamp;
@@ -54,7 +50,6 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The event message
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -65,7 +60,6 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the container event.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -76,7 +70,6 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The event type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

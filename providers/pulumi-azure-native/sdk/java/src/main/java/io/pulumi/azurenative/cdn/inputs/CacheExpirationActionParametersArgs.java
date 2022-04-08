@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for the cache expiration action.
- * 
  */
 public final class CacheExpirationActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
 
     /**
      * Caching behavior for the requests
-     * 
      */
     @Import(name="cacheBehavior", required=true)
       private final Output<Either<String,CacheBehavior>> cacheBehavior;
@@ -34,7 +32,6 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
 
     /**
      * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-     * 
      */
     @Import(name="cacheDuration")
       private final @Nullable Output<String> cacheDuration;
@@ -45,7 +42,6 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
 
     /**
      * The level at which the content needs to be cached.
-     * 
      */
     @Import(name="cacheType", required=true)
       private final Output<Either<String,CacheType>> cacheType;

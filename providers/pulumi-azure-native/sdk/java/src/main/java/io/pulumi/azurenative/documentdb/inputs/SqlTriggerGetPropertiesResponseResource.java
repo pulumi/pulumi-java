@@ -17,7 +17,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     /**
      * Body of the Trigger
-     * 
      */
     @Import(name="body")
       private final @Nullable String body;
@@ -28,7 +27,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -39,7 +37,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     /**
      * Name of the Cosmos DB SQL trigger
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -50,7 +47,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     /**
      * A system generated property. A unique identifier.
-     * 
      */
     @Import(name="rid", required=true)
       private final String rid;
@@ -61,7 +57,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     /**
      * The operation the trigger is associated with
-     * 
      */
     @Import(name="triggerOperation")
       private final @Nullable String triggerOperation;
@@ -72,7 +67,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     /**
      * Type of the Trigger
-     * 
      */
     @Import(name="triggerType")
       private final @Nullable String triggerType;
@@ -83,7 +77,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
-     * 
      */
     @Import(name="ts", required=true)
       private final Double ts;

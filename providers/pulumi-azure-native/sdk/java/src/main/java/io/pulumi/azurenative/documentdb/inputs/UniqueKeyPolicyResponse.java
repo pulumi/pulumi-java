@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
- * 
  */
 public final class UniqueKeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class UniqueKeyPolicyResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
-     * 
      */
     @Import(name="uniqueKeys")
       private final @Nullable List<UniqueKeyResponse> uniqueKeys;

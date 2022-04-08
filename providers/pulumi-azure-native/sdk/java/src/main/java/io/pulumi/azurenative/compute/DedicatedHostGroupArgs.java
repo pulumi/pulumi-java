@@ -20,7 +20,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the dedicated host group.
-     * 
      */
     @Import(name="hostGroupName")
       private final @Nullable Output<String> hostGroupName;
@@ -31,7 +30,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Number of fault domains that the host group can span.
-     * 
      */
     @Import(name="platformFaultDomainCount", required=true)
       private final Output<Integer> platformFaultDomainCount;
@@ -53,7 +50,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
-     * 
      */
     @Import(name="supportAutomaticPlacement")
       private final @Nullable Output<Boolean> supportAutomaticPlacement;
@@ -75,7 +70,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -86,7 +80,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

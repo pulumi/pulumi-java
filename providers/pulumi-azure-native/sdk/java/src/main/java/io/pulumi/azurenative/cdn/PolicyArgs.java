@@ -22,7 +22,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes custom rules inside the policy.
-     * 
      */
     @Import(name="customRules")
       private final @Nullable Output<CustomRuleListArgs> customRules;
@@ -33,7 +32,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -44,7 +42,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes managed rules inside the policy.
-     * 
      */
     @Import(name="managedRules")
       private final @Nullable Output<ManagedRuleSetListArgs> managedRules;
@@ -55,7 +52,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the CdnWebApplicationFirewallPolicy.
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -66,7 +62,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes  policySettings for policy
-     * 
      */
     @Import(name="policySettings")
       private final @Nullable Output<PolicySettingsArgs> policySettings;
@@ -77,7 +72,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes rate limit rules inside the policy.
-     * 
      */
     @Import(name="rateLimitRules")
       private final @Nullable Output<RateLimitRuleListArgs> rateLimitRules;
@@ -88,7 +82,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -110,7 +102,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

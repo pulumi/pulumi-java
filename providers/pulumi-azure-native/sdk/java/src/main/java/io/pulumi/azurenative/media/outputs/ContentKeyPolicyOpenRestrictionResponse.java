@@ -12,7 +12,6 @@ public final class ContentKeyPolicyOpenRestrictionResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyOpenRestriction'.
-     * 
      */
     private final String odataType;
 
@@ -24,7 +23,6 @@ public final class ContentKeyPolicyOpenRestrictionResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyOpenRestriction'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

@@ -15,42 +15,34 @@ import javax.annotation.Nullable;
 public final class GetStorageAccountCredentialResult {
     /**
      * The details of the storage account password.
-     * 
      */
     private final @Nullable AsymmetricEncryptedSecretResponse accessKey;
     /**
      * The storage endpoint
-     * 
      */
     private final String endPoint;
     /**
      * The path ID that uniquely identifies the object.
-     * 
      */
     private final String id;
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     private final @Nullable String kind;
     /**
      * The name of the object.
-     * 
      */
     private final String name;
     /**
      * Signifies whether SSL needs to be enabled or not.
-     * 
      */
     private final String sslStatus;
     /**
      * The hierarchical type of the object.
-     * 
      */
     private final String type;
     /**
      * The count of volumes using this storage account credential.
-     * 
      */
     private final Integer volumesCount;
 
@@ -76,56 +68,48 @@ public final class GetStorageAccountCredentialResult {
 
     /**
      * The details of the storage account password.
-     * 
     */
     public Optional<AsymmetricEncryptedSecretResponse> getAccessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
      * The storage endpoint
-     * 
     */
     public String getEndPoint() {
         return this.endPoint;
     }
     /**
      * The path ID that uniquely identifies the object.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Signifies whether SSL needs to be enabled or not.
-     * 
     */
     public String getSslStatus() {
         return this.sslStatus;
     }
     /**
      * The hierarchical type of the object.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The count of volumes using this storage account credential.
-     * 
     */
     public Integer getVolumesCount() {
         return this.volumesCount;

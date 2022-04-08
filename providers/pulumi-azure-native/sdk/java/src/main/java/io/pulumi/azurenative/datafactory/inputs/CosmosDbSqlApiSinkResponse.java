@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure CosmosDB (SQL API) Collection sink.
- * 
  */
 public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -32,7 +30,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -43,7 +40,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
@@ -54,7 +50,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
@@ -66,7 +61,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
     /**
      * Copy sink type.
      * Expected value is 'CosmosDbSqlApiSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -77,7 +71,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
@@ -88,7 +81,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
@@ -99,7 +91,6 @@ public final class CosmosDbSqlApiSinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * Describes how to write data to Azure Cosmos DB. Type: string (or Expression with resultType string). Allowed values: insert and upsert.
-     * 
      */
     @Import(name="writeBehavior")
       private final @Nullable Object writeBehavior;

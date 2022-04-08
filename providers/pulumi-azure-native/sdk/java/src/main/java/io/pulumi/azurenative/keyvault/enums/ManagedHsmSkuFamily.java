@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SKU Family of the managed HSM Pool
-     * 
      */
     @EnumType
     public enum ManagedHsmSkuFamily {

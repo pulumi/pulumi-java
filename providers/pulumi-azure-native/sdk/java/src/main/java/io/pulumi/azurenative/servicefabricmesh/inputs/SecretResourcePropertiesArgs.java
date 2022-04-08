@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of a secret resource.
- * 
  */
 public final class SecretResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -31,7 +29,6 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * User readable description of the secret.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +40,6 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
     /**
      * Describes the kind of secret.
      * Expected value is 'SecretResourceProperties'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;

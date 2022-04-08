@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class VirtualSCSIControllerResponse {
     /**
      * Gets or sets the bus number of the controller.
-     * 
      */
     private final @Nullable Integer busNumber;
     /**
      * Gets or sets the key of the controller.
-     * 
      */
     private final @Nullable Integer controllerKey;
     /**
      * Gets or sets the SCSI controller unit number.
-     * 
      */
     private final @Nullable Integer scsiCtlrUnitNumber;
     /**
      * Gets or sets the sharing mode.
-     * 
      */
     private final @Nullable String sharing;
     /**
      * Gets or sets the controller type.
-     * 
      */
     private final @Nullable String type;
 
@@ -54,35 +49,30 @@ public final class VirtualSCSIControllerResponse {
 
     /**
      * Gets or sets the bus number of the controller.
-     * 
     */
     public Optional<Integer> getBusNumber() {
         return Optional.ofNullable(this.busNumber);
     }
     /**
      * Gets or sets the key of the controller.
-     * 
     */
     public Optional<Integer> getControllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
     /**
      * Gets or sets the SCSI controller unit number.
-     * 
     */
     public Optional<Integer> getScsiCtlrUnitNumber() {
         return Optional.ofNullable(this.scsiCtlrUnitNumber);
     }
     /**
      * Gets or sets the sharing mode.
-     * 
     */
     public Optional<String> getSharing() {
         return Optional.ofNullable(this.sharing);
     }
     /**
      * Gets or sets the controller type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

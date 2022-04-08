@@ -15,42 +15,34 @@ import javax.annotation.Nullable;
 public final class GetGalleryApplicationVersionResult {
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource location
-     * 
      */
     private final String location;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     private final String provisioningState;
     /**
      * The publishing profile of a gallery image version.
-     * 
      */
     private final GalleryApplicationVersionPublishingProfileResponse publishingProfile;
     /**
      * This is the replication status of the gallery image version.
-     * 
      */
     private final ReplicationStatusResponse replicationStatus;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -76,56 +68,48 @@ public final class GetGalleryApplicationVersionResult {
 
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publishing profile of a gallery image version.
-     * 
     */
     public GalleryApplicationVersionPublishingProfileResponse getPublishingProfile() {
         return this.publishingProfile;
     }
     /**
      * This is the replication status of the gallery image version.
-     * 
     */
     public ReplicationStatusResponse getReplicationStatus() {
         return this.replicationStatus;
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

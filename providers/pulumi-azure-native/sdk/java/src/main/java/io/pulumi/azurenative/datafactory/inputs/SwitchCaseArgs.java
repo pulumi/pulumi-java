@@ -52,7 +52,6 @@ import javax.annotation.Nullable;
 
 /**
  * Switch cases with have a value and corresponding activities.
- * 
  */
 public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -60,7 +59,6 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of activities to execute for satisfied case condition.
-     * 
      */
     @Import(name="activities")
       private final @Nullable Output<List<Object>> activities;
@@ -71,7 +69,6 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expected value that satisfies the expression result of the 'on' property.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

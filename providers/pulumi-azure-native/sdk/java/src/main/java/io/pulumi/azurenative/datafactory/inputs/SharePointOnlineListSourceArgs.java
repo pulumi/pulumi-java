@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for sharePoint online list source.
- * 
  */
 public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -32,7 +30,6 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="httpRequestTimeout")
       private final @Nullable Output<Object> httpRequestTimeout;
@@ -43,7 +40,6 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -54,7 +50,6 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The OData query to filter the data in SharePoint Online list. For example, "$top=1". Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<Object> query;
@@ -65,7 +60,6 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -76,7 +70,6 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -88,7 +81,6 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
     /**
      * Copy source type.
      * Expected value is 'SharePointOnlineListSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

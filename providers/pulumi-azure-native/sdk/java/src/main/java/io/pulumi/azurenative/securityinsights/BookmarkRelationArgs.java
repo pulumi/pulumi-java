@@ -16,7 +16,6 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Bookmark ID
-     * 
      */
     @Import(name="bookmarkId", required=true)
       private final Output<String> bookmarkId;
@@ -27,7 +26,6 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -38,7 +36,6 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The resource ID of the related resource
-     * 
      */
     @Import(name="relatedResourceId", required=true)
       private final Output<String> relatedResourceId;
@@ -49,7 +46,6 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Relation Name
-     * 
      */
     @Import(name="relationName")
       private final @Nullable Output<String> relationName;
@@ -60,7 +56,6 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

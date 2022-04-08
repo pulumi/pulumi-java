@@ -18,7 +18,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network group conditional filter.
-     * 
      */
     @Import(name="conditionalMembership")
       private final @Nullable Output<String> conditionalMembership;
@@ -29,7 +28,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the network group.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A friendly name for the network group.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -51,7 +48,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Group members of network group.
-     * 
      */
     @Import(name="groupMembers")
       private final @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
@@ -62,7 +58,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Group member type.
-     * 
      */
     @Import(name="memberType")
       private final @Nullable Output<String> memberType;
@@ -73,7 +68,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the network group to get.
-     * 
      */
     @Import(name="networkGroupName")
       private final @Nullable Output<String> networkGroupName;
@@ -84,7 +78,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
@@ -95,7 +88,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

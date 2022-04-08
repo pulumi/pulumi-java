@@ -18,7 +18,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The description of this gallery Application Definition resource. This property is updatable.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
-     * 
      */
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
@@ -40,7 +38,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Eula agreement for the gallery Application Definition.
-     * 
      */
     @Import(name="eula")
       private final @Nullable Output<String> eula;
@@ -51,7 +48,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the gallery Application Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.
-     * 
      */
     @Import(name="galleryApplicationName")
       private final @Nullable Output<String> galleryApplicationName;
@@ -62,7 +58,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the Shared Application Gallery in which the Application Definition is to be created.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
@@ -73,7 +68,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -84,7 +78,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The privacy statement uri.
-     * 
      */
     @Import(name="privacyStatementUri")
       private final @Nullable Output<String> privacyStatementUri;
@@ -95,7 +88,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The release note uri.
-     * 
      */
     @Import(name="releaseNoteUri")
       private final @Nullable Output<String> releaseNoteUri;
@@ -106,7 +98,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -117,7 +108,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     * 
      */
     @Import(name="supportedOSType", required=true)
       private final Output<OperatingSystemTypes> supportedOSType;
@@ -128,7 +118,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

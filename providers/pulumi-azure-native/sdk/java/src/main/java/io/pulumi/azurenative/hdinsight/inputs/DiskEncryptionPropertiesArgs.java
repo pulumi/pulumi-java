@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The disk encryption properties
- * 
  */
 public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Algorithm identifier for encryption, default RSA-OAEP.
-     * 
      */
     @Import(name="encryptionAlgorithm")
       private final @Nullable Output<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm;
@@ -34,7 +32,6 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Indicates whether or not resource disk encryption is enabled.
-     * 
      */
     @Import(name="encryptionAtHost")
       private final @Nullable Output<Boolean> encryptionAtHost;
@@ -45,7 +42,6 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Key name that is used for enabling disk encryption.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -56,7 +52,6 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Specific key version that is used for enabling disk encryption.
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
@@ -67,7 +62,6 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource ID of Managed Identity that is used to access the key vault.
-     * 
      */
     @Import(name="msiResourceId")
       private final @Nullable Output<String> msiResourceId;
@@ -78,7 +72,6 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
-     * 
      */
     @Import(name="vaultUri")
       private final @Nullable Output<String> vaultUri;

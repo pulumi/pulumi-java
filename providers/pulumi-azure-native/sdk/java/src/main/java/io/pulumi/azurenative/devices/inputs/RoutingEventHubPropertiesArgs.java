@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties related to an event hub endpoint.
- * 
  */
 public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Method used to authenticate against the event hub endpoint
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
@@ -32,8 +30,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     }
 
     /**
-     * The connection string of the event hub endpoint.
-     * 
+     * The connection string of the event hub endpoint. 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -44,7 +41,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The url of the event hub endpoint. It must include the protocol sb://
-     * 
      */
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
@@ -55,7 +51,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Event hub name on the event hub namespace
-     * 
      */
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
@@ -66,7 +61,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Id of the event hub endpoint
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -77,7 +71,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -88,7 +81,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group of the event hub endpoint.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -99,7 +91,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The subscription identifier of the event hub endpoint.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;

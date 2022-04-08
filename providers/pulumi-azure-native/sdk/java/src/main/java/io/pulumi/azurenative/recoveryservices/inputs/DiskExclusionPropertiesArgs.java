@@ -18,7 +18,6 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
-     * 
      */
     @Import(name="diskLunList")
       private final @Nullable Output<List<Integer>> diskLunList;
@@ -29,7 +28,6 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * Flag to indicate whether DiskLunList is to be included/ excluded from backup.
-     * 
      */
     @Import(name="isInclusionList")
       private final @Nullable Output<Boolean> isInclusionList;

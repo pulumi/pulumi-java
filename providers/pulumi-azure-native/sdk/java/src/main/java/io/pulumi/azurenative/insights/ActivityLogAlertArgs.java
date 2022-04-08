@@ -21,7 +21,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The actions that will activate when the condition is met.
-     * 
      */
     @Import(name="actions", required=true)
       private final Output<ActionListArgs> actions;
@@ -32,7 +31,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Activity Log Alert rule.
-     * 
      */
     @Import(name="activityLogAlertName")
       private final @Nullable Output<String> activityLogAlertName;
@@ -43,7 +41,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The condition that will cause this alert to activate.
-     * 
      */
     @Import(name="condition", required=true)
       private final Output<AlertRuleAllOfConditionArgs> condition;
@@ -54,7 +51,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A description of this Activity Log Alert rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -65,7 +61,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -76,7 +71,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
-     * 
      */
     @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
@@ -109,7 +101,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -14,7 +14,6 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
 
     /**
      * The configuration profile preference name.
-     * 
      */
     @Import(name="configurationProfilePreferenceName", required=true)
       private final String configurationProfilePreferenceName;
@@ -25,7 +24,6 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

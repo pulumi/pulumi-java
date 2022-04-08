@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enumerates the possible values for the status of the Event Hub.
-     * 
      */
     @EnumType
     public enum EntityStatus {

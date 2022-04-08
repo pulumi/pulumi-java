@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ServiceProviderResponse {
     /**
      * The Properties of a Service Provider Object
-     * 
      */
     private final @Nullable ServiceProviderPropertiesResponse properties;
 
@@ -24,7 +23,6 @@ public final class ServiceProviderResponse {
 
     /**
      * The Properties of a Service Provider Object
-     * 
     */
     public Optional<ServiceProviderPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The retention policy for a container registry.
- * 
  */
 public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of days to retain an untagged manifest after which it gets purged.
-     * 
      */
     @Import(name="days")
       private final @Nullable Output<Integer> days;
@@ -34,7 +32,6 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The value that indicates whether the policy is enabled or not.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;

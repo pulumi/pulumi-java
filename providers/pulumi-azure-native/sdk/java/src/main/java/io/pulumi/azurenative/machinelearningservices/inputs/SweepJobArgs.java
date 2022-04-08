@@ -25,7 +25,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sweep job definition.
- * 
  */
 public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -33,7 +32,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the hyperparameter sampling algorithms
-     * 
      */
     @Import(name="algorithm", required=true)
       private final Output<Either<String,SamplingAlgorithm>> algorithm;
@@ -44,7 +42,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Compute binding for the job.
-     * 
      */
     @Import(name="compute", required=true)
       private final Output<ComputeConfigurationArgs> compute;
@@ -55,7 +52,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -66,7 +62,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Early termination policies enable canceling poor-performing runs before they complete.
-     * 
      */
     @Import(name="earlyTermination")
       private final @Nullable Output<Object> earlyTermination;
@@ -77,7 +72,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-     * 
      */
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
@@ -89,7 +83,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
      * Defaults to AmlToken if null.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
@@ -101,7 +94,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Enum to determine the type of job.
      * Expected value is 'Sweep'.
-     * 
      */
     @Import(name="jobType", required=true)
       private final Output<String> jobType;
@@ -112,7 +104,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An upper bound on the number of trials performed in parallel.
-     * 
      */
     @Import(name="maxConcurrentTrials")
       private final @Nullable Output<Integer> maxConcurrentTrials;
@@ -123,7 +114,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An upper bound on the number of trials to perform.
-     * 
      */
     @Import(name="maxTotalTrials")
       private final @Nullable Output<Integer> maxTotalTrials;
@@ -134,7 +124,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optimization objective.
-     * 
      */
     @Import(name="objective", required=true)
       private final Output<ObjectiveArgs> objective;
@@ -146,7 +135,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Job priority for scheduling policy. Only applies to AMLCompute.
      * Private preview feature and only available to users on the allow list.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -157,7 +145,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -168,7 +155,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
-     * 
      */
     @Import(name="searchSpace", required=true)
       private final Output<Map<String,Object>> searchSpace;
@@ -179,7 +165,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -190,7 +175,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
@@ -201,7 +185,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trial component definition.
-     * 
      */
     @Import(name="trial")
       private final @Nullable Output<TrialComponentArgs> trial;

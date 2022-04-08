@@ -27,7 +27,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity DelimitedText source.
- * 
  */
 public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -35,7 +34,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
@@ -46,7 +44,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -57,7 +54,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * DelimitedText format settings.
-     * 
      */
     @Import(name="formatSettings")
       private final @Nullable Output<DelimitedTextReadSettingsArgs> formatSettings;
@@ -68,7 +64,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -79,7 +74,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -90,7 +84,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -101,7 +94,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * DelimitedText store settings.
-     * 
      */
     @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
@@ -113,7 +105,6 @@ public final class DelimitedTextSourceArgs extends io.pulumi.resources.ResourceA
     /**
      * Copy source type.
      * Expected value is 'DelimitedTextSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

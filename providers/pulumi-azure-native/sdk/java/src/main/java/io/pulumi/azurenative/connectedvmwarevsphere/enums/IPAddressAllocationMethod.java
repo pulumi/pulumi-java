@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the nic allocation method.
-     * 
      */
     @EnumType
     public enum IPAddressAllocationMethod {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of Digital Twins endpoint
-     * 
      */
     @EnumType
     public enum EndpointType {

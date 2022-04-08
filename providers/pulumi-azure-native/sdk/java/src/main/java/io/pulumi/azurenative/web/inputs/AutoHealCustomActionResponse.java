@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 /**
  * Custom action to be executed
  * when an auto heal rule is triggered.
- * 
  */
 public final class AutoHealCustomActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
 
     /**
      * Executable to be run.
-     * 
      */
     @Import(name="exe")
       private final @Nullable String exe;
@@ -32,7 +30,6 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
 
     /**
      * Parameters for the executable.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable String parameters;

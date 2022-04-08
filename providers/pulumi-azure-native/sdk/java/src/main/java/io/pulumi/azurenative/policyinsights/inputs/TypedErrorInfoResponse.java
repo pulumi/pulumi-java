@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Scenario specific error details.
- * 
  */
 public final class TypedErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TypedErrorInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The scenario specific error details.
-     * 
      */
     @Import(name="info", required=true)
       private final Object info;
@@ -30,7 +28,6 @@ public final class TypedErrorInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The type of included error details.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

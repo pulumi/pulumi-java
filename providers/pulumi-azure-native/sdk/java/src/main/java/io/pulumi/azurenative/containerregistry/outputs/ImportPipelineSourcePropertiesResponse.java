@@ -13,19 +13,16 @@ import javax.annotation.Nullable;
 public final class ImportPipelineSourcePropertiesResponse {
     /**
      * They key vault secret uri to obtain the source storage SAS token.
-     * 
      */
     private final String keyVaultUri;
     /**
      * The type of source for the import pipeline.
-     * 
      */
     private final @Nullable String type;
     /**
      * The source uri of the import pipeline.
      * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
      * When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
-     * 
      */
     private final @Nullable String uri;
 
@@ -41,14 +38,12 @@ public final class ImportPipelineSourcePropertiesResponse {
 
     /**
      * They key vault secret uri to obtain the source storage SAS token.
-     * 
     */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The type of source for the import pipeline.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
@@ -57,7 +52,6 @@ public final class ImportPipelineSourcePropertiesResponse {
      * The source uri of the import pipeline.
      * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
      * When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
-     * 
     */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);

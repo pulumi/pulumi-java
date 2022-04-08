@@ -21,58 +21,47 @@ import javax.annotation.Nullable;
 public final class SapHanaLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * The authentication type to be used to connect to the SAP HANA server.
-     * 
      */
     private final @Nullable String authenticationType;
     /**
      * The integration runtime reference.
-     * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
      * SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     private final @Nullable Object connectionString;
     /**
      * Linked service description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object encryptedCredential;
     /**
      * Parameters for linked service.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Password to access the SAP HANA server.
-     * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Host name of the SAP HANA server. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object server;
     /**
      * Type of linked service.
      * Expected value is 'SapHana'.
-     * 
      */
     private final String type;
     /**
      * Username to access the SAP HANA server. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object userName;
 
@@ -104,63 +93,54 @@ public final class SapHanaLinkedServiceResponse {
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The authentication type to be used to connect to the SAP HANA server.
-     * 
     */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The integration runtime reference.
-     * 
     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
     */
     public Optional<Object> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Linked service description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to access the SAP HANA server.
-     * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Host name of the SAP HANA server. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getServer() {
         return Optional.ofNullable(this.server);
@@ -168,14 +148,12 @@ public final class SapHanaLinkedServiceResponse {
     /**
      * Type of linked service.
      * Expected value is 'SapHana'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Username to access the SAP HANA server. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);

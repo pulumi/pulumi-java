@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of backup policy type
-     * 
      */
     @EnumType
     public enum PolicyType {

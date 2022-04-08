@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The health status of the VM.
- * 
  */
 public final class VirtualMachineHealthStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VirtualMachineHealthStatusResponse extends io.pulumi.resource
 
     /**
      * The health status information for the VM.
-     * 
      */
     @Import(name="status", required=true)
       private final InstanceViewStatusResponse status;

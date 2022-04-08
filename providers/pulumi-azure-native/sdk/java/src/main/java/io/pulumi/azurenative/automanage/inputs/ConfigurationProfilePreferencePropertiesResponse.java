@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Automanage configuration profile preference properties.
- * 
  */
 public final class ConfigurationProfilePreferencePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends io.p
 
     /**
      * The custom preferences for Azure Antimalware.
-     * 
      */
     @Import(name="antiMalware")
       private final @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
@@ -32,7 +30,6 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends io.p
 
     /**
      * The custom preferences for Azure VM Backup.
-     * 
      */
     @Import(name="vmBackup")
       private final @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;

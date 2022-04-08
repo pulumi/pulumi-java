@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class GetUserResult {
     /**
      * Email address.
-     * 
      */
     private final @Nullable String email;
     /**
      * First name.
-     * 
      */
     private final @Nullable String firstName;
     /**
      * Collection of groups user is part of.
-     * 
      */
     private final List<GroupContractPropertiesResponse> groups;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Collection of user identities.
-     * 
      */
     private final @Nullable List<UserIdentityContractResponse> identities;
     /**
      * Last name.
-     * 
      */
     private final @Nullable String lastName;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Optional note about a user set by the administrator.
-     * 
      */
     private final @Nullable String note;
     /**
@@ -61,12 +53,10 @@ public final class GetUserResult {
     private final @Nullable String registrationDate;
     /**
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-     * 
      */
     private final @Nullable String state;
     /**
      * Resource type for API Management resource.
-     * 
      */
     private final String type;
 
@@ -98,56 +88,48 @@ public final class GetUserResult {
 
     /**
      * Email address.
-     * 
     */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * First name.
-     * 
     */
     public Optional<String> getFirstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
      * Collection of groups user is part of.
-     * 
     */
     public List<GroupContractPropertiesResponse> getGroups() {
         return this.groups;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Collection of user identities.
-     * 
     */
     public List<UserIdentityContractResponse> getIdentities() {
         return this.identities == null ? List.of() : this.identities;
     }
     /**
      * Last name.
-     * 
     */
     public Optional<String> getLastName() {
         return Optional.ofNullable(this.lastName);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Optional note about a user set by the administrator.
-     * 
     */
     public Optional<String> getNote() {
         return Optional.ofNullable(this.note);
@@ -161,14 +143,12 @@ public final class GetUserResult {
     }
     /**
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Resource type for API Management resource.
-     * 
     */
     public String getType() {
         return this.type;

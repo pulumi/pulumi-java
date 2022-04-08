@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Disk configuration to apply to SQL Server.
-     * 
      */
     @EnumType
     public enum DiskConfigurationType {

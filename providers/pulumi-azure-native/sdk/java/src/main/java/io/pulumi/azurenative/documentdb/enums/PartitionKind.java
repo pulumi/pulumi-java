@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
-     * 
      */
     @EnumType
     public enum PartitionKind {

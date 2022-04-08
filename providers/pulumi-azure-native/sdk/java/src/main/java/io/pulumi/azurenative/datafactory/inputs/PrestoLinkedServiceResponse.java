@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Presto server linked service.
- * 
  */
 public final class PrestoLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-     * 
      */
     @Import(name="allowHostNameCNMismatch")
       private final @Nullable Object allowHostNameCNMismatch;
@@ -39,7 +37,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
-     * 
      */
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Object allowSelfSignedServerCert;
@@ -50,7 +47,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -61,7 +57,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The authentication mechanism used to connect to the Presto server.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -72,7 +67,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The catalog context for all request against the server.
-     * 
      */
     @Import(name="catalog", required=true)
       private final Object catalog;
@@ -83,7 +77,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -94,7 +87,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -105,7 +97,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-     * 
      */
     @Import(name="enableSsl")
       private final @Nullable Object enableSsl;
@@ -116,7 +107,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -127,7 +117,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The IP address or host name of the Presto server. (i.e. 192.168.222.160)
-     * 
      */
     @Import(name="host", required=true)
       private final Object host;
@@ -138,7 +127,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -149,7 +137,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The password corresponding to the user name.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -160,7 +147,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
-     * 
      */
     @Import(name="port")
       private final @Nullable Object port;
@@ -171,7 +157,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The version of the Presto server. (i.e. 0.148-t)
-     * 
      */
     @Import(name="serverVersion", required=true)
       private final Object serverVersion;
@@ -182,7 +167,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
-     * 
      */
     @Import(name="timeZoneID")
       private final @Nullable Object timeZoneID;
@@ -193,7 +177,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-     * 
      */
     @Import(name="trustedCertPath")
       private final @Nullable Object trustedCertPath;
@@ -205,7 +188,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
     /**
      * Type of linked service.
      * Expected value is 'Presto'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -216,7 +198,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
-     * 
      */
     @Import(name="useSystemTrustStore")
       private final @Nullable Object useSystemTrustStore;
@@ -227,7 +208,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
 
     /**
      * The user name used to connect to the Presto server.
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

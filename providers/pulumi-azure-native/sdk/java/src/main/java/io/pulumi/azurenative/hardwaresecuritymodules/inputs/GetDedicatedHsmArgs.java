@@ -14,7 +14,6 @@ public final class GetDedicatedHsmArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the dedicated HSM.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetDedicatedHsmArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Resource Group to which the dedicated hsm belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

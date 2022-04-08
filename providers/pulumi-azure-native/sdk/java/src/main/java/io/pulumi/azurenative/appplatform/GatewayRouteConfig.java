@@ -19,7 +19,144 @@ import javax.annotation.Nullable;
  * Spring Cloud Gateway route config resource
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### GatewayRouteConfigs_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var gatewayRouteConfig = new AzureNative.AppPlatform.GatewayRouteConfig("gatewayRouteConfig", new AzureNative.AppPlatform.GatewayRouteConfigArgs
+ *         {
+ *             GatewayName = "default",
+ *             Properties = new AzureNative.AppPlatform.Inputs.GatewayRouteConfigPropertiesArgs
+ *             {
+ *                 AppResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myApp",
+ *                 Routes = 
+ *                 {
+ *                     new AzureNative.AppPlatform.Inputs.GatewayApiRouteArgs
+ *                     {
+ *                         Filters = 
+ *                         {
+ *                             "StripPrefix=2",
+ *                             "RateLimit=1,1s",
+ *                         },
+ *                         Predicates = 
+ *                         {
+ *                             "Path=/api5/customer/**",
+ *                         },
+ *                         SsoEnabled = true,
+ *                         Title = "myApp route config",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             RouteConfigName = "myRouteConfig",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewGatewayRouteConfig(ctx, "gatewayRouteConfig", &appplatform.GatewayRouteConfigArgs{
+ * 			GatewayName: pulumi.String("default"),
+ * 			Properties: &appplatform.GatewayRouteConfigPropertiesArgs{
+ * 				AppResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myApp"),
+ * 				Routes: appplatform.GatewayApiRouteArray{
+ * 					&appplatform.GatewayApiRouteArgs{
+ * 						Filters: pulumi.StringArray{
+ * 							pulumi.String("StripPrefix=2"),
+ * 							pulumi.String("RateLimit=1,1s"),
+ * 						},
+ * 						Predicates: pulumi.StringArray{
+ * 							pulumi.String("Path=/api5/customer/**"),
+ * 						},
+ * 						SsoEnabled: pulumi.Bool(true),
+ * 						Title:      pulumi.String("myApp route config"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			RouteConfigName:   pulumi.String("myRouteConfig"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const gatewayRouteConfig = new azure_native.appplatform.GatewayRouteConfig("gatewayRouteConfig", {
+ *     gatewayName: "default",
+ *     properties: {
+ *         appResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myApp",
+ *         routes: [{
+ *             filters: [
+ *                 "StripPrefix=2",
+ *                 "RateLimit=1,1s",
+ *             ],
+ *             predicates: ["Path=/api5/customer/**"],
+ *             ssoEnabled: true,
+ *             title: "myApp route config",
+ *         }],
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     routeConfigName: "myRouteConfig",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * gateway_route_config = azure_native.appplatform.GatewayRouteConfig("gatewayRouteConfig",
+ *     gateway_name="default",
+ *     properties=azure_native.appplatform.GatewayRouteConfigPropertiesArgs(
+ *         app_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myApp",
+ *         routes=[azure_native.appplatform.GatewayApiRouteArgs(
+ *             filters=[
+ *                 "StripPrefix=2",
+ *                 "RateLimit=1,1s",
+ *             ],
+ *             predicates=["Path=/api5/customer/**"],
+ *             sso_enabled=True,
+ *             title="myApp route config",
+ *         )],
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     route_config_name="myRouteConfig",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +171,48 @@ import javax.annotation.Nullable;
 public class GatewayRouteConfig extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * API route config of the Spring Cloud Gateway
-     * 
      */
     @Export(name="properties", type=GatewayRouteConfigPropertiesResponse.class, parameters={})
     private Output<GatewayRouteConfigPropertiesResponse> properties;
 
     /**
      * @return API route config of the Spring Cloud Gateway
-     * 
      */
     public Output<GatewayRouteConfigPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

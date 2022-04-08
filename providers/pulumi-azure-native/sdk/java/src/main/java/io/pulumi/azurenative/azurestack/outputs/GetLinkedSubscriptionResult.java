@@ -15,77 +15,62 @@ import javax.annotation.Nullable;
 public final class GetLinkedSubscriptionResult {
     /**
      * The status of the remote management connection of the Azure Stack device.
-     * 
      */
     private final String deviceConnectionStatus;
     /**
      * The identifier of the Azure Stack device for remote management.
-     * 
      */
     private final String deviceId;
     /**
      * The connection state of the Azure Stack device.
-     * 
      */
     private final String deviceLinkState;
     /**
      * The object identifier associated with the Azure Stack device connecting to Azure.
-     * 
      */
     private final String deviceObjectId;
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
-     * 
      */
     private final @Nullable String etag;
     /**
      * ID of the resource.
-     * 
      */
     private final String id;
     /**
      * The kind of the resource.
-     * 
      */
     private final String kind;
     /**
      * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
-     * 
      */
     private final String lastConnectedTime;
     /**
      * The identifier associated with the device subscription.
-     * 
      */
     private final @Nullable String linkedSubscriptionId;
     /**
      * Location of the resource.
-     * 
      */
     private final String location;
     /**
      * Name of the resource.
-     * 
      */
     private final String name;
     /**
      * The identifier associated with the device registration.
-     * 
      */
     private final @Nullable String registrationResourceId;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Custom tags for the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Type of Resource.
-     * 
      */
     private final String type;
 
@@ -125,105 +110,90 @@ public final class GetLinkedSubscriptionResult {
 
     /**
      * The status of the remote management connection of the Azure Stack device.
-     * 
     */
     public String getDeviceConnectionStatus() {
         return this.deviceConnectionStatus;
     }
     /**
      * The identifier of the Azure Stack device for remote management.
-     * 
     */
     public String getDeviceId() {
         return this.deviceId;
     }
     /**
      * The connection state of the Azure Stack device.
-     * 
     */
     public String getDeviceLinkState() {
         return this.deviceLinkState;
     }
     /**
      * The object identifier associated with the Azure Stack device connecting to Azure.
-     * 
     */
     public String getDeviceObjectId() {
         return this.deviceObjectId;
     }
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * ID of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The kind of the resource.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
-     * 
     */
     public String getLastConnectedTime() {
         return this.lastConnectedTime;
     }
     /**
      * The identifier associated with the device subscription.
-     * 
     */
     public Optional<String> getLinkedSubscriptionId() {
         return Optional.ofNullable(this.linkedSubscriptionId);
     }
     /**
      * Location of the resource.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The identifier associated with the device registration.
-     * 
     */
     public Optional<String> getRegistrationResourceId() {
         return Optional.ofNullable(this.registrationResourceId);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Custom tags for the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of Resource.
-     * 
     */
     public String getType() {
         return this.type;

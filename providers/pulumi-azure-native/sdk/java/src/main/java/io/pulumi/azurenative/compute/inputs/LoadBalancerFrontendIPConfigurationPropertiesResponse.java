@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a cloud service IP Configuration
- * 
  */
 public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
 
     /**
      * The virtual network private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -32,7 +30,6 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
 
     /**
      * The reference to the public ip address resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable SubResourceResponse publicIPAddress;
@@ -43,7 +40,6 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
 
     /**
      * The reference to the virtual network subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;

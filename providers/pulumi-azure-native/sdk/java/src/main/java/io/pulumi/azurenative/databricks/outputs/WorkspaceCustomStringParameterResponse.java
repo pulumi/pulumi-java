@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class WorkspaceCustomStringParameterResponse {
     /**
      * The type of variable that this is
-     * 
      */
     private final String type;
     /**
      * The value which should be used for this field.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class WorkspaceCustomStringParameterResponse {
 
     /**
      * The type of variable that this is
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
-     * 
     */
     public String getValue() {
         return this.value;

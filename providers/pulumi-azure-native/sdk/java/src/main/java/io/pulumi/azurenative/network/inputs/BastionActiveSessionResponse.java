@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The session detail for a target.
- * 
  */
 public final class BastionActiveSessionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The protocol used to connect to the target.
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;
@@ -31,7 +29,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;
@@ -42,7 +39,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * Duration in mins the session has been active.
-     * 
      */
     @Import(name="sessionDurationInMins", required=true)
       private final Double sessionDurationInMins;
@@ -53,7 +49,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * A unique id for the session.
-     * 
      */
     @Import(name="sessionId", required=true)
       private final String sessionId;
@@ -64,7 +59,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The time when the session started.
-     * 
      */
     @Import(name="startTime", required=true)
       private final Object startTime;
@@ -75,7 +69,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The host name of the target.
-     * 
      */
     @Import(name="targetHostName", required=true)
       private final String targetHostName;
@@ -86,7 +79,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The IP Address of the target.
-     * 
      */
     @Import(name="targetIpAddress", required=true)
       private final String targetIpAddress;
@@ -97,7 +89,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The resource group of the target.
-     * 
      */
     @Import(name="targetResourceGroup", required=true)
       private final String targetResourceGroup;
@@ -108,7 +99,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The resource id of the target.
-     * 
      */
     @Import(name="targetResourceId", required=true)
       private final String targetResourceId;
@@ -119,7 +109,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The subscription id for the target virtual machine.
-     * 
      */
     @Import(name="targetSubscriptionId", required=true)
       private final String targetSubscriptionId;
@@ -130,7 +119,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
 
     /**
      * The user name who is active on this session.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

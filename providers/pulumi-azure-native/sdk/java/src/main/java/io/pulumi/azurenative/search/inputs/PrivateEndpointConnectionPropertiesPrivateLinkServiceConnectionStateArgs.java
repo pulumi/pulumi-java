@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
- * 
  */
 public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
 
     /**
      * A description of any extra actions that may be required.
-     * 
      */
     @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
@@ -32,7 +30,6 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
 
     /**
      * The description for the private link service connection state.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +40,6 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
 
     /**
      * Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<PrivateLinkServiceConnectionStatus> status;

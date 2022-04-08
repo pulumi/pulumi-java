@@ -17,7 +17,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job collection name.
-     * 
      */
     @Import(name="jobCollectionName", required=true)
       private final Output<String> jobCollectionName;
@@ -28,7 +27,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job name.
-     * 
      */
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
@@ -39,7 +37,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the job properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<JobPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

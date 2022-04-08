@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class NotificationPreferenceResponse {
     /**
      * Notification is required or not.
-     * 
      */
     private final Boolean sendNotification;
     /**
      * Name of the stage.
-     * 
      */
     private final String stageName;
 
@@ -31,14 +29,12 @@ public final class NotificationPreferenceResponse {
 
     /**
      * Notification is required or not.
-     * 
     */
     public Boolean getSendNotification() {
         return this.sendNotification;
     }
     /**
      * Name of the stage.
-     * 
     */
     public String getStageName() {
         return this.stageName;

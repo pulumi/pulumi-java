@@ -14,37 +14,30 @@ import javax.annotation.Nullable;
 public final class GetWebAppSlotConfigurationNamesResult {
     /**
      * List of application settings names.
-     * 
      */
     private final @Nullable List<String> appSettingNames;
     /**
      * List of external Azure storage account identifiers.
-     * 
      */
     private final @Nullable List<String> azureStorageConfigNames;
     /**
      * List of connection string names.
-     * 
      */
     private final @Nullable List<String> connectionStringNames;
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -68,49 +61,42 @@ public final class GetWebAppSlotConfigurationNamesResult {
 
     /**
      * List of application settings names.
-     * 
     */
     public List<String> getAppSettingNames() {
         return this.appSettingNames == null ? List.of() : this.appSettingNames;
     }
     /**
      * List of external Azure storage account identifiers.
-     * 
     */
     public List<String> getAzureStorageConfigNames() {
         return this.azureStorageConfigNames == null ? List.of() : this.azureStorageConfigNames;
     }
     /**
      * List of connection string names.
-     * 
     */
     public List<String> getConnectionStringNames() {
         return this.connectionStringNames == null ? List.of() : this.connectionStringNames;
     }
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class ContainerEventResponse {
     /**
      * The count of the event.
-     * 
      */
     private final @Nullable Integer count;
     /**
      * Date/time of the first event.
-     * 
      */
     private final @Nullable String firstTimestamp;
     /**
      * Date/time of the last event.
-     * 
      */
     private final @Nullable String lastTimestamp;
     /**
      * The event message
-     * 
      */
     private final @Nullable String message;
     /**
      * The name of the container event.
-     * 
      */
     private final @Nullable String name;
     /**
      * The event type.
-     * 
      */
     private final @Nullable String type;
 
@@ -61,42 +55,36 @@ public final class ContainerEventResponse {
 
     /**
      * The count of the event.
-     * 
     */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Date/time of the first event.
-     * 
     */
     public Optional<String> getFirstTimestamp() {
         return Optional.ofNullable(this.firstTimestamp);
     }
     /**
      * Date/time of the last event.
-     * 
     */
     public Optional<String> getLastTimestamp() {
         return Optional.ofNullable(this.lastTimestamp);
     }
     /**
      * The event message
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The name of the container event.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The event type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

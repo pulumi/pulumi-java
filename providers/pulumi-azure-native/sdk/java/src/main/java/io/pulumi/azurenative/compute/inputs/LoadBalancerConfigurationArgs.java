@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the load balancer configuration.
- * 
  */
 public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -32,7 +30,6 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the Load balancer
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -43,7 +40,6 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Properties of the load balancer configuration.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<LoadBalancerConfigurationPropertiesArgs> properties;

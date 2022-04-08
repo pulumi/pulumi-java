@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the task that migrates on-prem SQL Server databases to Azure SQL Database for online migrations
- * 
  */
 public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable Output<MigrateSqlServerSqlDbSyncTaskInputArgs> input;
@@ -33,7 +31,6 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi
     /**
      * Task type.
      * Expected value is 'Migrate.SqlServer.AzureSqlDb.Sync'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final Output<String> taskType;

@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * An HCX Enterprise Site resource
  * API Version: 2020-03-20.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### HcxEnterpriseSites_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hcxEnterpriseSite = new AzureNative.AVS.HcxEnterpriseSite("hcxEnterpriseSite", new AzureNative.AVS.HcxEnterpriseSiteArgs
+ *         {
+ *             HcxEnterpriseSiteName = "site1",
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewHcxEnterpriseSite(ctx, "hcxEnterpriseSite", &avs.HcxEnterpriseSiteArgs{
+ * 			HcxEnterpriseSiteName: pulumi.String("site1"),
+ * 			PrivateCloudName:      pulumi.String("cloud1"),
+ * 			ResourceGroupName:     pulumi.String("group1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hcxEnterpriseSite = new azure_native.avs.HcxEnterpriseSite("hcxEnterpriseSite", {
+ *     hcxEnterpriseSiteName: "site1",
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hcx_enterprise_site = azure_native.avs.HcxEnterpriseSite("hcxEnterpriseSite",
+ *     hcx_enterprise_site_name="site1",
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +104,48 @@ import javax.annotation.Nullable;
 public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
     /**
      * The activation key
-     * 
      */
     @Export(name="activationKey", type=String.class, parameters={})
     private Output<String> activationKey;
 
     /**
      * @return The activation key
-     * 
      */
     public Output<String> getActivationKey() {
         return this.activationKey;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The status of the HCX Enterprise Site
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of the HCX Enterprise Site
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

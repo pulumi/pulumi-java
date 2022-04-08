@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The target of the event.
- * 
  */
 public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The digest of the content, as defined by the Registry V2 HTTP API Specification.
-     * 
      */
     @Import(name="digest")
       private final @Nullable String digest;
@@ -32,7 +30,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of bytes of the content. Same as Size field.
-     * 
      */
     @Import(name="length")
       private final @Nullable Double length;
@@ -43,7 +40,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The MIME type of the referenced object.
-     * 
      */
     @Import(name="mediaType")
       private final @Nullable String mediaType;
@@ -54,7 +50,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the artifact.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -65,7 +60,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The repository name.
-     * 
      */
     @Import(name="repository")
       private final @Nullable String repository;
@@ -76,7 +70,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of bytes of the content. Same as Length field.
-     * 
      */
     @Import(name="size")
       private final @Nullable Double size;
@@ -87,7 +80,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tag name.
-     * 
      */
     @Import(name="tag")
       private final @Nullable String tag;
@@ -98,7 +90,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The direct URL to the content.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;
@@ -109,7 +100,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The version of the artifact.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

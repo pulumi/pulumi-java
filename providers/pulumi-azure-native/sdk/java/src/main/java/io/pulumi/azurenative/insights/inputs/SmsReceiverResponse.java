@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An SMS receiver.
- * 
  */
 public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The country code of the SMS receiver.
-     * 
      */
     @Import(name="countryCode", required=true)
       private final String countryCode;
@@ -29,7 +27,6 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the SMS receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The phone number of the SMS receiver.
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
@@ -51,7 +47,6 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The status of the receiver.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

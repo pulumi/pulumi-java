@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class AccessReviewScopeResponse {
     /**
      * The role assignment state eligible/active to review
-     * 
      */
     private final String assignmentState;
     /**
      * Flag to indicate whether to expand nested memberships or not.
-     * 
      */
     private final @Nullable Boolean expandNestedMemberships;
     /**
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     * 
      */
     private final @Nullable String inactiveDuration;
     /**
      * The identity type user/servicePrincipal to review
-     * 
      */
     private final String principalType;
     /**
      * ResourceId in which this review is getting created
-     * 
      */
     private final String resourceId;
     /**
      * This is used to indicate the role being reviewed
-     * 
      */
     private final String roleDefinitionId;
 
@@ -61,42 +55,36 @@ public final class AccessReviewScopeResponse {
 
     /**
      * The role assignment state eligible/active to review
-     * 
     */
     public String getAssignmentState() {
         return this.assignmentState;
     }
     /**
      * Flag to indicate whether to expand nested memberships or not.
-     * 
     */
     public Optional<Boolean> getExpandNestedMemberships() {
         return Optional.ofNullable(this.expandNestedMemberships);
     }
     /**
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     * 
     */
     public Optional<String> getInactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
     /**
      * The identity type user/servicePrincipal to review
-     * 
     */
     public String getPrincipalType() {
         return this.principalType;
     }
     /**
      * ResourceId in which this review is getting created
-     * 
     */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * This is used to indicate the role being reviewed
-     * 
     */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;

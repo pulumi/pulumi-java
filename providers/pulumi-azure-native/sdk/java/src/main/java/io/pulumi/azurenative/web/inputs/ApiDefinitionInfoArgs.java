@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the formal API definition for the app.
- * 
  */
 public final class ApiDefinitionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApiDefinitionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The URL of the API definition.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

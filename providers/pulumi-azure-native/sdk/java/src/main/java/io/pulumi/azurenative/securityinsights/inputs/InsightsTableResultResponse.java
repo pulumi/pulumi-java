@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Query results for table insights query.
- * 
  */
 public final class InsightsTableResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
 
     /**
      * Columns Metadata of the table
-     * 
      */
     @Import(name="columns")
       private final @Nullable List<InsightsTableResultResponseColumns> columns;
@@ -33,7 +31,6 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
 
     /**
      * Rows data of the table
-     * 
      */
     @Import(name="rows")
       private final @Nullable List<List<String>> rows;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Health state name
-     * 
      */
     @EnumType
     public enum HealthStateName {

@@ -13,47 +13,38 @@ import java.util.Objects;
 public final class EnvironmentDetailsResponse {
     /**
      * Description of the Environment
-     * 
      */
     private final String description;
     /**
      * Publishing state of the environment setting Possible values are Creating, Created, Failed
-     * 
      */
     private final String environmentState;
     /**
      * Resource Id of the environment
-     * 
      */
     private final String id;
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     private final LatestOperationResultResponse latestOperationResult;
     /**
      * Name of the Environment
-     * 
      */
     private final String name;
     /**
      * When the password was last reset on the environment.
-     * 
      */
     private final String passwordLastReset;
     /**
      * The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
-     * 
      */
     private final String provisioningState;
     /**
      * How long the environment has been used by a lab user
-     * 
      */
     private final String totalUsage;
     /**
      * Details of backing DTL virtual machine with compute and network details.
-     * 
      */
     private final VirtualMachineDetailsResponse virtualMachineDetails;
 
@@ -81,63 +72,54 @@ public final class EnvironmentDetailsResponse {
 
     /**
      * Description of the Environment
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Publishing state of the environment setting Possible values are Creating, Created, Failed
-     * 
     */
     public String getEnvironmentState() {
         return this.environmentState;
     }
     /**
      * Resource Id of the environment
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
     */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * Name of the Environment
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * When the password was last reset on the environment.
-     * 
     */
     public String getPasswordLastReset() {
         return this.passwordLastReset;
     }
     /**
      * The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * How long the environment has been used by a lab user
-     * 
     */
     public String getTotalUsage() {
         return this.totalUsage;
     }
     /**
      * Details of backing DTL virtual machine with compute and network details.
-     * 
     */
     public VirtualMachineDetailsResponse getVirtualMachineDetails() {
         return this.virtualMachineDetails;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Restore Point details.
- * 
  */
 public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-     * 
      */
     @Import(name="consistencyMode", required=true)
       private final String consistencyMode;
@@ -34,7 +32,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-     * 
      */
     @Import(name="excludeDisks")
       private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
@@ -45,7 +42,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -56,7 +52,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -67,7 +62,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets the provisioning state of the restore point.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -78,7 +72,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets the details of the VM captured at the time of the restore point creation.
-     * 
      */
     @Import(name="sourceMetadata", required=true)
       private final RestorePointSourceMetadataResponse sourceMetadata;
@@ -89,7 +82,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets the creation time of the restore point.
-     * 
      */
     @Import(name="timeCreated")
       private final @Nullable String timeCreated;
@@ -100,7 +92,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

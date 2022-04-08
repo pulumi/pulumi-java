@@ -17,7 +17,6 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * BillingAccount ID
-     * 
      */
     @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
@@ -28,7 +27,6 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Cost allocation rule properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CostAllocationRulePropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;

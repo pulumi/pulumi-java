@@ -16,7 +16,6 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
 
     /**
      * Name of the Logz organization.
-     * 
      */
     @Import(name="companyName")
       private final @Nullable String companyName;
@@ -27,7 +26,6 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
 
     /**
      * The Id of the Enterprise App used for Single sign on.
-     * 
      */
     @Import(name="enterpriseAppId")
       private final @Nullable String enterpriseAppId;
@@ -38,7 +36,6 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
 
     /**
      * Id of the Logz organization.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -49,7 +46,6 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
 
     /**
      * The login URL specific to this Logz Organization.
-     * 
      */
     @Import(name="singleSignOnUrl")
       private final @Nullable String singleSignOnUrl;

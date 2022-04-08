@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * Protection profile custom data details.
- * 
  */
 public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -32,7 +31,6 @@ public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The FriendlyName.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -43,7 +41,6 @@ public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The ReplicationChannelSetting.
-     * 
      */
     @Import(name="providerSpecificDetails")
       private final @Nullable Object providerSpecificDetails;

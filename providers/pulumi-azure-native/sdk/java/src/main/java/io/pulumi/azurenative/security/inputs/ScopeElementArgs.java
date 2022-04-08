@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A more specific scope used to identify the alerts to suppress.
- * 
  */
 public final class ScopeElementArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ScopeElementArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The alert entity type to suppress by.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<String> field;

@@ -18,7 +18,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location (state/province) of the customer.
-     * 
      */
     @Import(name="peeringServiceLocation")
       private final @Nullable Output<String> peeringServiceLocation;
@@ -40,7 +38,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the peering service.
-     * 
      */
     @Import(name="peeringServiceName")
       private final @Nullable Output<String> peeringServiceName;
@@ -51,7 +48,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service provider.
-     * 
      */
     @Import(name="peeringServiceProvider")
       private final @Nullable Output<String> peeringServiceProvider;
@@ -62,7 +58,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The backup peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
      */
     @Import(name="providerBackupPeeringLocation")
       private final @Nullable Output<String> providerBackupPeeringLocation;
@@ -73,7 +68,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The primary peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
      */
     @Import(name="providerPrimaryPeeringLocation")
       private final @Nullable Output<String> providerPrimaryPeeringLocation;
@@ -84,7 +78,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU that defines the type of the peering service.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<PeeringServiceSkuArgs> sku;
@@ -106,7 +98,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

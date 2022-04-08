@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * NetworkProfile represents a network profile.
- * 
  */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CIDR used for OpenShift/Kubernetes Pods (immutable).
-     * 
      */
     @Import(name="podCidr")
       private final @Nullable Output<String> podCidr;
@@ -31,7 +29,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CIDR used for OpenShift/Kubernetes Services (immutable).
-     * 
      */
     @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;

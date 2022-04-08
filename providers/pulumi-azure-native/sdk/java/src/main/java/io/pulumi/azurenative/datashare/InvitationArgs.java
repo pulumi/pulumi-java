@@ -16,7 +16,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The expiration date for the invitation and share subscription.
-     * 
      */
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
@@ -38,7 +36,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the invitation.
-     * 
      */
     @Import(name="invitationName")
       private final @Nullable Output<String> invitationName;
@@ -49,7 +46,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share to send the invitation for.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -71,7 +66,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target Azure AD Id. Can't be combined with email.
-     * 
      */
     @Import(name="targetActiveDirectoryId")
       private final @Nullable Output<String> targetActiveDirectoryId;
@@ -82,7 +76,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email the invitation is directed to.
-     * 
      */
     @Import(name="targetEmail")
       private final @Nullable Output<String> targetEmail;
@@ -95,7 +88,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The target user or application Id that invitation is being sent to.
      * Must be specified along TargetActiveDirectoryId. This enables sending
      * invitations to specific users or applications in an AD tenant.
-     * 
      */
     @Import(name="targetObjectId")
       private final @Nullable Output<String> targetObjectId;

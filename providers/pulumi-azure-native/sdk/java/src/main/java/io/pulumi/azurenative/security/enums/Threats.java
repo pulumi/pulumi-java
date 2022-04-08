@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Threats impact of the assessment
-     * 
      */
     @EnumType
     public enum Threats {

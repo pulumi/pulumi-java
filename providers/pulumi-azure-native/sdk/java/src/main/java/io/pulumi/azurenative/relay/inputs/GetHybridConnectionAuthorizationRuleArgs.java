@@ -14,7 +14,6 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
 
     /**
      * The authorization rule name.
-     * 
      */
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
@@ -25,7 +24,6 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
 
     /**
      * The hybrid connection name.
-     * 
      */
     @Import(name="hybridConnectionName", required=true)
       private final String hybridConnectionName;
@@ -36,7 +34,6 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -47,7 +44,6 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

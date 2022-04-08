@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class GetInstancePoolResult {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
-     * 
      */
     private final String licenseType;
     /**
      * Resource location.
-     * 
      */
     private final String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The name and tier of the SKU.
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Resource ID of the subnet to place this instance pool in.
-     * 
      */
     private final String subnetId;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
     /**
      * Count of vCores belonging to this instance pool.
-     * 
      */
     private final Integer vCores;
 
@@ -84,63 +75,54 @@ public final class GetInstancePoolResult {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
-     * 
     */
     public String getLicenseType() {
         return this.licenseType;
     }
     /**
      * Resource location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The name and tier of the SKU.
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource ID of the subnet to place this instance pool in.
-     * 
     */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Count of vCores belonging to this instance pool.
-     * 
     */
     public Integer getVCores() {
         return this.vCores;

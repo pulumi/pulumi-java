@@ -27,7 +27,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The additional properties used to further config this azure firewall.
-     * 
      */
     @Import(name="additionalProperties")
       private final @Nullable Output<Map<String,String>> additionalProperties;
@@ -38,7 +37,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of application rule collections used by Azure Firewall.
-     * 
      */
     @Import(name="applicationRuleCollections")
       private final @Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections;
@@ -49,7 +47,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure Firewall.
-     * 
      */
     @Import(name="azureFirewallName")
       private final @Nullable Output<String> azureFirewallName;
@@ -60,7 +57,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The firewallPolicy associated with this azure firewall.
-     * 
      */
     @Import(name="firewallPolicy")
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
@@ -71,7 +67,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP addresses associated with AzureFirewall.
-     * 
      */
     @Import(name="hubIPAddresses")
       private final @Nullable Output<HubIPAddressesArgs> hubIPAddresses;
@@ -82,7 +77,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -93,7 +87,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP configuration of the Azure Firewall resource.
-     * 
      */
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations;
@@ -104,7 +97,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -115,7 +107,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP configuration of the Azure Firewall used for management traffic.
-     * 
      */
     @Import(name="managementIpConfiguration")
       private final @Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration;
@@ -126,7 +117,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of NAT rule collections used by Azure Firewall.
-     * 
      */
     @Import(name="natRuleCollections")
       private final @Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections;
@@ -137,7 +127,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of network rule collections used by Azure Firewall.
-     * 
      */
     @Import(name="networkRuleCollections")
       private final @Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections;
@@ -148,7 +137,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -159,7 +147,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Firewall Resource SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<AzureFirewallSkuArgs> sku;
@@ -170,7 +157,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -181,7 +167,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The operation mode for Threat Intelligence.
-     * 
      */
     @Import(name="threatIntelMode")
       private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
@@ -192,7 +177,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The virtualHub to which the firewall belongs.
-     * 
      */
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
@@ -203,7 +187,6 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of availability zones denoting where the resource needs to come from.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

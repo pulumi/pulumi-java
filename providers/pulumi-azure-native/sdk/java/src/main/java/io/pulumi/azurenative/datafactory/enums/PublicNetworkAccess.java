@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether or not public network access is allowed for the data factory.
-     * 
      */
     @EnumType
     public enum PublicNetworkAccess {

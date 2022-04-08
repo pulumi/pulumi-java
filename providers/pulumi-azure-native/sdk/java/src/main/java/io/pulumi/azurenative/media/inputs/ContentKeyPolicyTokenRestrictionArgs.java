@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a token restriction. Provided token must match these requirements for successful license or key delivery.
- * 
  */
 public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
 
     /**
      * A list of alternative verification keys.
-     * 
      */
     @Import(name="alternateVerificationKeys")
       private final @Nullable Output<List<Object>> alternateVerificationKeys;
@@ -39,7 +37,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
 
     /**
      * The audience for the token.
-     * 
      */
     @Import(name="audience", required=true)
       private final Output<String> audience;
@@ -50,7 +47,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
 
     /**
      * The token issuer.
-     * 
      */
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
@@ -62,7 +58,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -73,7 +68,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
 
     /**
      * The OpenID connect discovery document.
-     * 
      */
     @Import(name="openIdConnectDiscoveryDocument")
       private final @Nullable Output<String> openIdConnectDiscoveryDocument;
@@ -84,7 +78,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
 
     /**
      * The primary verification key.
-     * 
      */
     @Import(name="primaryVerificationKey", required=true)
       private final Output<Object> primaryVerificationKey;
@@ -95,7 +88,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
 
     /**
      * A list of required token claims.
-     * 
      */
     @Import(name="requiredClaims")
       private final @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
@@ -106,7 +98,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
 
     /**
      * The type of token.
-     * 
      */
     @Import(name="restrictionTokenType", required=true)
       private final Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;

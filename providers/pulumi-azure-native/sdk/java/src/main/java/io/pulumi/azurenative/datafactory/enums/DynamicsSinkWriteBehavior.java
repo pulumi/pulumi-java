@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The write behavior for the operation.
-     * 
      */
     @EnumType
     public enum DynamicsSinkWriteBehavior {

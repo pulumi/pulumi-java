@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ManagedRuleSetResponse {
     /**
      * Defines the rule group overrides to apply to the rule set.
-     * 
      */
     private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
     /**
      * Defines the rule set type to use.
-     * 
      */
     private final String ruleSetType;
     /**
      * Defines the version of the rule set to use.
-     * 
      */
     private final String ruleSetVersion;
 
@@ -40,21 +37,18 @@ public final class ManagedRuleSetResponse {
 
     /**
      * Defines the rule group overrides to apply to the rule set.
-     * 
     */
     public List<ManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
     /**
      * Defines the rule set type to use.
-     * 
     */
     public String getRuleSetType() {
         return this.ruleSetType;
     }
     /**
      * Defines the version of the rule set to use.
-     * 
     */
     public String getRuleSetVersion() {
         return this.ruleSetVersion;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data flow reference type.
- * 
  */
 public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Reference data flow parameters from dataset.
-     * 
      */
     @Import(name="datasetParameters")
       private final @Nullable Output<Object> datasetParameters;
@@ -33,7 +31,6 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Data flow parameters
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
@@ -44,7 +41,6 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Reference data flow name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
@@ -55,7 +51,6 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Data flow reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

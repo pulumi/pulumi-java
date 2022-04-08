@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for site agent properties.
- * 
  */
 public final class SiteAgentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * ID of the agent.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -31,7 +29,6 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Key vault ARM Id.
-     * 
      */
     @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
@@ -42,7 +39,6 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Key vault URI.
-     * 
      */
     @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
@@ -53,7 +49,6 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Last heartbeat time of the agent in UTC.
-     * 
      */
     @Import(name="lastHeartBeatUtc", required=true)
       private final String lastHeartBeatUtc;
@@ -64,7 +59,6 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Version of the agent.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

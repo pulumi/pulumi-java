@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the SKU name of the account.
-     * 
      */
     @EnumType
     public enum SkuNameEnum {

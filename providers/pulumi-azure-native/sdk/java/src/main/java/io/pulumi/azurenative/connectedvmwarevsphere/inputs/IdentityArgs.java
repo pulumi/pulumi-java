@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Managed service identity.
- * 
  */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of managed service identity.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,IdentityType>> type;

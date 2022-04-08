@@ -16,7 +16,6 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the cloud link resource
-     * 
      */
     @Import(name="cloudLinkName")
       private final @Nullable Output<String> cloudLinkName;
@@ -27,7 +26,6 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the other private cloud participating in the link.
-     * 
      */
     @Import(name="linkedCloud")
       private final @Nullable Output<String> linkedCloud;
@@ -38,7 +36,6 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the private cloud.
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -49,7 +46,6 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
     /**
      * The encryption key reference.
-     * 
      */
     private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
@@ -24,7 +23,6 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
 
     /**
      * The encryption key reference.
-     * 
     */
     public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> getEncryptionKeyReference() {
         return Optional.ofNullable(this.encryptionKeyReference);

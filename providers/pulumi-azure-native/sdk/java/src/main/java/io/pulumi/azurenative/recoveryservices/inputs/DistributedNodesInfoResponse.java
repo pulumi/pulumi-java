@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is used to represent the various nodes of the distributed container.
- * 
  */
 public final class DistributedNodesInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DistributedNodesInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * Error Details if the Status is non-success.
-     * 
      */
     @Import(name="errorDetail")
       private final @Nullable ErrorDetailResponse errorDetail;
@@ -32,7 +30,6 @@ public final class DistributedNodesInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of the node under a distributed container.
-     * 
      */
     @Import(name="nodeName")
       private final @Nullable String nodeName;
@@ -44,7 +41,6 @@ public final class DistributedNodesInfoResponse extends io.pulumi.resources.Invo
     /**
      * Status of this Node.
      * Failed | Succeeded
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

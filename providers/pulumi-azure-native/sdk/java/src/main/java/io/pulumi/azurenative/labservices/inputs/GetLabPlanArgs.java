@@ -14,7 +14,6 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
-     * 
      */
     @Import(name="labPlanName", required=true)
       private final String labPlanName;
@@ -25,7 +24,6 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

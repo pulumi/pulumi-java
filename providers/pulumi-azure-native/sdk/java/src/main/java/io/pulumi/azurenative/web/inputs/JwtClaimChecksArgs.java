@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the checks that should be made while validating the JWT Claims.
- * 
  */
 public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of the allowed client applications.
-     * 
      */
     @Import(name="allowedClientApplications")
       private final @Nullable Output<List<String>> allowedClientApplications;
@@ -32,7 +30,6 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of the allowed groups.
-     * 
      */
     @Import(name="allowedGroups")
       private final @Nullable Output<List<String>> allowedGroups;

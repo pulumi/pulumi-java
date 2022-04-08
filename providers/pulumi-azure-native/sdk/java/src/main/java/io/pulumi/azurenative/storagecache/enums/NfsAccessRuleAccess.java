@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Access allowed by this rule.
-     * 
      */
     @EnumType
     public enum NfsAccessRuleAccess {

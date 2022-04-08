@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Username / Password Credentials to connect to guest.
- * 
  */
 public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets username to connect with the guest.
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

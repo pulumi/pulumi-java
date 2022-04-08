@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cache network settings.
- * 
  */
 public final class CacheNetworkSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * DNS search domain
-     * 
      */
     @Import(name="dnsSearchDomain")
       private final @Nullable Output<String> dnsSearchDomain;
@@ -33,7 +31,6 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
@@ -44,7 +41,6 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * The IPv4 maximum transmission unit configured for the subnet.
-     * 
      */
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
@@ -55,7 +51,6 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
-     * 
      */
     @Import(name="ntpServer")
       private final @Nullable Output<String> ntpServer;

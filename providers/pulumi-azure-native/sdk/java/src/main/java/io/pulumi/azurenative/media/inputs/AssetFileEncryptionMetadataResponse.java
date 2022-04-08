@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Asset File Storage encryption metadata.
- * 
  */
 public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
 
     /**
      * The Asset File Id.
-     * 
      */
     @Import(name="assetFileId", required=true)
       private final String assetFileId;
@@ -31,7 +29,6 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
 
     /**
      * The Asset File name.
-     * 
      */
     @Import(name="assetFileName")
       private final @Nullable String assetFileName;
@@ -42,7 +39,6 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
 
     /**
      * The Asset File initialization vector.
-     * 
      */
     @Import(name="initializationVector")
       private final @Nullable String initializationVector;

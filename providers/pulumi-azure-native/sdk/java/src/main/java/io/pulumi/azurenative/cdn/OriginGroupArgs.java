@@ -21,7 +21,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the endpoint under the profile which is unique globally.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
@@ -32,7 +31,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
-     * 
      */
     @Import(name="healthProbeSettings")
       private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
@@ -43,7 +41,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the origin group which is unique within the endpoint.
-     * 
      */
     @Import(name="originGroupName")
       private final @Nullable Output<String> originGroupName;
@@ -54,7 +51,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source of the content being delivered via CDN within given origin group.
-     * 
      */
     @Import(name="origins", required=true)
       private final Output<List<ResourceReferenceArgs>> origins;
@@ -65,7 +61,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -76,7 +71,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
-     * 
      */
     @Import(name="responseBasedOriginErrorDetectionSettings")
       private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
@@ -98,7 +91,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
-     * 
      */
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
       private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;

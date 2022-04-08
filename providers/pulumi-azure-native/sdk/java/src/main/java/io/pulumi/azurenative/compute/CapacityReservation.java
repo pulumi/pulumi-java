@@ -21,7 +21,122 @@ import javax.annotation.Nullable;
  * Specifies information about the capacity reservation.
  * API Version: 2021-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a capacity reservation .
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var capacityReservation = new AzureNative.Compute.CapacityReservation("capacityReservation", new AzureNative.Compute.CapacityReservationArgs
+ *         {
+ *             CapacityReservationGroupName = "myCapacityReservationGroup",
+ *             CapacityReservationName = "myCapacityReservation",
+ *             Location = "westus",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 4,
+ *                 Name = "Standard_DS1_v2",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "department", "HR" },
+ *             },
+ *             Zones = 
+ *             {
+ *                 "1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewCapacityReservation(ctx, "capacityReservation", &compute.CapacityReservationArgs{
+ * 			CapacityReservationGroupName: pulumi.String("myCapacityReservationGroup"),
+ * 			CapacityReservationName:      pulumi.String("myCapacityReservation"),
+ * 			Location:                     pulumi.String("westus"),
+ * 			ResourceGroupName:            pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(4),
+ * 				Name:     pulumi.String("Standard_DS1_v2"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"department": pulumi.String("HR"),
+ * 			},
+ * 			Zones: pulumi.StringArray{
+ * 				pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const capacityReservation = new azure_native.compute.CapacityReservation("capacityReservation", {
+ *     capacityReservationGroupName: "myCapacityReservationGroup",
+ *     capacityReservationName: "myCapacityReservation",
+ *     location: "westus",
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 4,
+ *         name: "Standard_DS1_v2",
+ *     },
+ *     tags: {
+ *         department: "HR",
+ *     },
+ *     zones: ["1"],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * capacity_reservation = azure_native.compute.CapacityReservation("capacityReservation",
+ *     capacity_reservation_group_name="myCapacityReservationGroup",
+ *     capacity_reservation_name="myCapacityReservation",
+ *     location="westus",
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=4,
+ *         name="Standard_DS1_v2",
+ *     ),
+ *     tags={
+ *         "department": "HR",
+ *     },
+ *     zones=["1"])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,154 +151,132 @@ import javax.annotation.Nullable;
 public class CapacityReservation extends io.pulumi.resources.CustomResource {
     /**
      * The Capacity reservation instance view.
-     * 
      */
     @Export(name="instanceView", type=CapacityReservationInstanceViewResponse.class, parameters={})
     private Output<CapacityReservationInstanceViewResponse> instanceView;
 
     /**
      * @return The Capacity reservation instance view.
-     * 
      */
     public Output<CapacityReservationInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The date time when the capacity reservation was last updated.
-     * 
      */
     @Export(name="provisioningTime", type=String.class, parameters={})
     private Output<String> provisioningTime;
 
     /**
      * @return The date time when the capacity reservation was last updated.
-     * 
      */
     public Output<String> getProvisioningTime() {
         return this.provisioningTime;
     }
     /**
      * A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
-     * 
      */
     @Export(name="reservationId", type=String.class, parameters={})
     private Output<String> reservationId;
 
     /**
      * @return A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
-     * 
      */
     public Output<String> getReservationId() {
         return this.reservationId;
     }
     /**
      * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A list of all virtual machine resource ids that are associated with the capacity reservation.
-     * 
      */
     @Export(name="virtualMachinesAssociated", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> virtualMachinesAssociated;
 
     /**
      * @return A list of all virtual machine resource ids that are associated with the capacity reservation.
-     * 
      */
     public Output<List<SubResourceReadOnlyResponse>> getVirtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
      * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
-     * 
      */
     @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**
      * @return Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
-     * 
      */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A remote private endpoint connection
- * 
  */
 public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -34,7 +32,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * Private IPAddresses mapped to the remote private endpoint
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
@@ -45,7 +42,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -56,7 +52,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * Resource Name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -67,7 +62,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * PrivateEndpoint of a remote private endpoint connection
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable ArmIdWrapperResponse privateEndpoint;
@@ -78,7 +72,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * The state of a private link connection
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
@@ -96,7 +89,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

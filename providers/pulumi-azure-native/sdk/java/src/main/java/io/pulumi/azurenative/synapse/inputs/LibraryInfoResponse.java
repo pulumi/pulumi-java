@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Library/package information of a Big Data pool powered by Apache Spark
- * 
  */
 public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Storage blob container name.
-     * 
      */
     @Import(name="containerName")
       private final @Nullable String containerName;
@@ -31,7 +29,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Creator Id of the library/package.
-     * 
      */
     @Import(name="creatorId", required=true)
       private final String creatorId;
@@ -42,7 +39,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the library.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -53,7 +49,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Storage blob path of library.
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;
@@ -64,7 +59,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Provisioning status of the library/package.
-     * 
      */
     @Import(name="provisioningStatus", required=true)
       private final String provisioningStatus;
@@ -75,7 +69,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the library.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -86,7 +79,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The last update time of the library.
-     * 
      */
     @Import(name="uploadedTimestamp", required=true)
       private final String uploadedTimestamp;

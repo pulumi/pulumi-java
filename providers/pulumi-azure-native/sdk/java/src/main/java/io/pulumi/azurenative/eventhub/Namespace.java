@@ -21,7 +21,113 @@ import javax.annotation.Nullable;
  * Single Namespace item in List or Get Operation
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NamespaceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @namespace = new AzureNative.EventHub.Namespace("namespace", new AzureNative.EventHub.NamespaceArgs
+ *         {
+ *             Location = "South Central US",
+ *             NamespaceName = "sdk-Namespace-5849",
+ *             ResourceGroupName = "ArunMonocle",
+ *             Sku = new AzureNative.EventHub.Inputs.SkuArgs
+ *             {
+ *                 Name = "Standard",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventhub.NewNamespace(ctx, "namespace", &eventhub.NamespaceArgs{
+ * 			Location:          pulumi.String("South Central US"),
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-5849"),
+ * 			ResourceGroupName: pulumi.String("ArunMonocle"),
+ * 			Sku: &eventhub.SkuArgs{
+ * 				Name: pulumi.String("Standard"),
+ * 				Tier: pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const namespace = new azure_native.eventhub.Namespace("namespace", {
+ *     location: "South Central US",
+ *     namespaceName: "sdk-Namespace-5849",
+ *     resourceGroupName: "ArunMonocle",
+ *     sku: {
+ *         name: "Standard",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * namespace = azure_native.eventhub.Namespace("namespace",
+ *     location="South Central US",
+ *     namespace_name="sdk-Namespace-5849",
+ *     resource_group_name="ArunMonocle",
+ *     sku=azure_native.eventhub.SkuArgs(
+ *         name="Standard",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,182 +142,156 @@ import javax.annotation.Nullable;
 public class Namespace extends io.pulumi.resources.CustomResource {
     /**
      * The time the Namespace was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time the Namespace was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Value that indicates whether AutoInflate is enabled for eventhub namespace.
-     * 
      */
     @Export(name="isAutoInflateEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAutoInflateEnabled;
 
     /**
      * @return Value that indicates whether AutoInflate is enabled for eventhub namespace.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsAutoInflateEnabled() {
         return this.isAutoInflateEnabled;
     }
     /**
      * Value that indicates whether Kafka is enabled for eventhub namespace.
-     * 
      */
     @Export(name="kafkaEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> kafkaEnabled;
 
     /**
      * @return Value that indicates whether Kafka is enabled for eventhub namespace.
-     * 
      */
     public Output</* @Nullable */ Boolean> getKafkaEnabled() {
         return this.kafkaEnabled;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
-     * 
      */
     @Export(name="maximumThroughputUnits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumThroughputUnits;
 
     /**
      * @return Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
-     * 
      */
     public Output</* @Nullable */ Integer> getMaximumThroughputUnits() {
         return this.maximumThroughputUnits;
     }
     /**
      * Identifier for Azure Insights metrics.
-     * 
      */
     @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
      * @return Identifier for Azure Insights metrics.
-     * 
      */
     public Output<String> getMetricId() {
         return this.metricId;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Namespace.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the Namespace.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Endpoint you can use to perform Service Bus operations.
-     * 
      */
     @Export(name="serviceBusEndpoint", type=String.class, parameters={})
     private Output<String> serviceBusEndpoint;
 
     /**
      * @return Endpoint you can use to perform Service Bus operations.
-     * 
      */
     public Output<String> getServiceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
      * Properties of sku resource
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Properties of sku resource
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The time the Namespace was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The time the Namespace was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;

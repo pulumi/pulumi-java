@@ -14,7 +14,6 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Load Test name.
-     * 
      */
     @Import(name="loadTestName", required=true)
       private final String loadTestName;
@@ -25,7 +24,6 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

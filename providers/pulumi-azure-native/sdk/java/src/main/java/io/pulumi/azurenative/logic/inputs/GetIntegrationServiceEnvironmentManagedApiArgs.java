@@ -14,7 +14,6 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
 
     /**
      * The api name.
-     * 
      */
     @Import(name="apiName", required=true)
       private final String apiName;
@@ -25,7 +24,6 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
 
     /**
      * The integration service environment name.
-     * 
      */
     @Import(name="integrationServiceEnvironmentName", required=true)
       private final String integrationServiceEnvironmentName;
@@ -36,7 +34,6 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;

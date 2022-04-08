@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Lock mode.
-     * 
      */
     @EnumType
     public enum AssignmentLockMode {

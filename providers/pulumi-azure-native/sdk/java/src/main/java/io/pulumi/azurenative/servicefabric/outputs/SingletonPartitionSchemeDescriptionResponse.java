@@ -12,7 +12,6 @@ public final class SingletonPartitionSchemeDescriptionResponse {
     /**
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'Singleton'.
-     * 
      */
     private final String partitionScheme;
 
@@ -24,7 +23,6 @@ public final class SingletonPartitionSchemeDescriptionResponse {
     /**
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'Singleton'.
-     * 
     */
     public String getPartitionScheme() {
         return this.partitionScheme;

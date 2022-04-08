@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class RunCommandInputParameterResponse {
     /**
      * The run command parameter name.
-     * 
      */
     private final String name;
     /**
      * The run command parameter value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class RunCommandInputParameterResponse {
 
     /**
      * The run command parameter name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The run command parameter value.
-     * 
     */
     public String getValue() {
         return this.value;

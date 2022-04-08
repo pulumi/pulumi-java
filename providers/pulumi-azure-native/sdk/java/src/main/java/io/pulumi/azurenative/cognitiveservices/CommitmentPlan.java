@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * Cognitive Services account commitment plan.
  * API Version: 2021-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutCommitmentPlan
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var commitmentPlan = new AzureNative.CognitiveServices.CommitmentPlan("commitmentPlan", new AzureNative.CognitiveServices.CommitmentPlanArgs
+ *         {
+ *             AccountName = "accountName",
+ *             CommitmentPlanName = "commitmentPlanName",
+ *             Properties = new AzureNative.CognitiveServices.Inputs.CommitmentPlanPropertiesArgs
+ *             {
+ *                 AutoRenew = true,
+ *                 Current = new AzureNative.CognitiveServices.Inputs.CommitmentPeriodArgs
+ *                 {
+ *                     Tier = "T1",
+ *                 },
+ *                 HostingModel = "Web",
+ *                 PlanType = "Speech2Text",
+ *             },
+ *             ResourceGroupName = "resourceGroupName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cognitiveservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cognitiveservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cognitiveservices.NewCommitmentPlan(ctx, "commitmentPlan", &cognitiveservices.CommitmentPlanArgs{
+ * 			AccountName:        pulumi.String("accountName"),
+ * 			CommitmentPlanName: pulumi.String("commitmentPlanName"),
+ * 			Properties: &cognitiveservices.CommitmentPlanPropertiesArgs{
+ * 				AutoRenew: pulumi.Bool(true),
+ * 				Current: &cognitiveservices.CommitmentPeriodArgs{
+ * 					Tier: pulumi.String("T1"),
+ * 				},
+ * 				HostingModel: pulumi.String("Web"),
+ * 				PlanType:     pulumi.String("Speech2Text"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const commitmentPlan = new azure_native.cognitiveservices.CommitmentPlan("commitmentPlan", {
+ *     accountName: "accountName",
+ *     commitmentPlanName: "commitmentPlanName",
+ *     properties: {
+ *         autoRenew: true,
+ *         current: {
+ *             tier: "T1",
+ *         },
+ *         hostingModel: "Web",
+ *         planType: "Speech2Text",
+ *     },
+ *     resourceGroupName: "resourceGroupName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * commitment_plan = azure_native.cognitiveservices.CommitmentPlan("commitmentPlan",
+ *     account_name="accountName",
+ *     commitment_plan_name="commitmentPlanName",
+ *     properties=azure_native.cognitiveservices.CommitmentPlanPropertiesArgs(
+ *         auto_renew=True,
+ *         current=azure_native.cognitiveservices.CommitmentPeriodArgs(
+ *             tier="T1",
+ *         ),
+ *         hosting_model="Web",
+ *         plan_type="Speech2Text",
+ *     ),
+ *     resource_group_name="resourceGroupName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +140,60 @@ import javax.annotation.Nullable;
 public class CommitmentPlan extends io.pulumi.resources.CustomResource {
     /**
      * Resource Etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource Etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of Cognitive Services account commitment plan.
-     * 
      */
     @Export(name="properties", type=CommitmentPlanPropertiesResponse.class, parameters={})
     private Output<CommitmentPlanPropertiesResponse> properties;
 
     /**
      * @return Properties of Cognitive Services account commitment plan.
-     * 
      */
     public Output<CommitmentPlanPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

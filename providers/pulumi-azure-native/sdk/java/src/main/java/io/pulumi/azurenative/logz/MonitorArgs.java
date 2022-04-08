@@ -33,7 +33,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName")
       private final @Nullable Output<String> monitorName;
@@ -44,7 +43,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties specific to the monitor resource.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MonitorPropertiesArgs> properties;
@@ -55,7 +53,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

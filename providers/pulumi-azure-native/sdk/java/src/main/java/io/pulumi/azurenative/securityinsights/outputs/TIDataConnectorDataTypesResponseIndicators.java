@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class TIDataConnectorDataTypesResponseIndicators {
     /**
      * Describe whether this data type connection is enabled or not.
-     * 
      */
     private final @Nullable String state;
 
@@ -24,7 +23,6 @@ public final class TIDataConnectorDataTypesResponseIndicators {
 
     /**
      * Describe whether this data type connection is enabled or not.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

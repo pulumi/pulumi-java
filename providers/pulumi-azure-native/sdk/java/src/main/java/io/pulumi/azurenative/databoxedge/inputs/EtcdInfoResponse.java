@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Etcd configuration
- * 
  */
 public final class EtcdInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EtcdInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Etcd type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -29,7 +27,6 @@ public final class EtcdInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Etcd version
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

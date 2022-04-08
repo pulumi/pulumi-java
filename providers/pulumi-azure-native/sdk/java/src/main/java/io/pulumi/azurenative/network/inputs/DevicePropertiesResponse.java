@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * List of properties of the device.
- * 
  */
 public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Model of the device.
-     * 
      */
     @Import(name="deviceModel")
       private final @Nullable String deviceModel;
@@ -32,7 +30,6 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the device Vendor.
-     * 
      */
     @Import(name="deviceVendor")
       private final @Nullable String deviceVendor;
@@ -43,7 +40,6 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Link speed.
-     * 
      */
     @Import(name="linkSpeedInMbps")
       private final @Nullable Integer linkSpeedInMbps;

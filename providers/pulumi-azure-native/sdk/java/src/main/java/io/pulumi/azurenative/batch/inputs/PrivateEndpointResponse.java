@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The private endpoint of the private endpoint connection.
- * 
  */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the module error info type.
- * 
  */
 public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets the error code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets the error message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

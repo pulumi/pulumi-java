@@ -17,7 +17,6 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ManagedIdentityType>> type;

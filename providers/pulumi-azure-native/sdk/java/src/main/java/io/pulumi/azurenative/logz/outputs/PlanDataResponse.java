@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class PlanDataResponse {
     /**
      * different billing cycles like MONTHLY/WEEKLY. this could be enum
-     * 
      */
     private final @Nullable String billingCycle;
     /**
      * date when plan was applied
-     * 
      */
     private final @Nullable String effectiveDate;
     /**
      * plan id as published by Logz
-     * 
      */
     private final @Nullable String planDetails;
     /**
      * different usage type like PAYG/COMMITTED. this could be enum
-     * 
      */
     private final @Nullable String usageType;
 
@@ -46,28 +42,24 @@ public final class PlanDataResponse {
 
     /**
      * different billing cycles like MONTHLY/WEEKLY. this could be enum
-     * 
     */
     public Optional<String> getBillingCycle() {
         return Optional.ofNullable(this.billingCycle);
     }
     /**
      * date when plan was applied
-     * 
     */
     public Optional<String> getEffectiveDate() {
         return Optional.ofNullable(this.effectiveDate);
     }
     /**
      * plan id as published by Logz
-     * 
     */
     public Optional<String> getPlanDetails() {
         return Optional.ofNullable(this.planDetails);
     }
     /**
      * different usage type like PAYG/COMMITTED. this could be enum
-     * 
     */
     public Optional<String> getUsageType() {
         return Optional.ofNullable(this.usageType);

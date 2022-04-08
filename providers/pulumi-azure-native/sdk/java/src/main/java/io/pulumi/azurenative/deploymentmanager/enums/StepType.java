@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of step.
-     * 
      */
     @EnumType
     public enum StepType {

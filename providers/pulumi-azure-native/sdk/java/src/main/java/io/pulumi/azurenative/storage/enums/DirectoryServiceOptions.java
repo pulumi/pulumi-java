@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the directory service used.
-     * 
      */
     @EnumType
     public enum DirectoryServiceOptions {

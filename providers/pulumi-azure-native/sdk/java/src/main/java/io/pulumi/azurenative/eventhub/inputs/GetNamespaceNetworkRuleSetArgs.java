@@ -14,7 +14,6 @@ public final class GetNamespaceNetworkRuleSetArgs extends io.pulumi.resources.In
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -25,7 +24,6 @@ public final class GetNamespaceNetworkRuleSetArgs extends io.pulumi.resources.In
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

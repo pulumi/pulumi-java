@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a rule for http route matching.
- * 
  */
 public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * headers and their values to match in request.
-     * 
      */
     @Import(name="headers")
       private final @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
@@ -33,7 +31,6 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Path to match for routing.
-     * 
      */
     @Import(name="path", required=true)
       private final Output<HttpRouteMatchPathArgs> path;

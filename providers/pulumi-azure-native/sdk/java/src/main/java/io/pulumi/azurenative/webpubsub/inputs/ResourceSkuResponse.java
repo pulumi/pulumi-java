@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The billing information of the resource.
- * 
  */
 public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * If present, following values are allowed:
      *     Free: 1
      *     Standard: 1,2,5,10,20,50,100
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -36,7 +34,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Not used. Retained for future use.
-     * 
      */
     @Import(name="family", required=true)
       private final String family;
@@ -49,7 +46,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the SKU. Required.
      * 
      * Allowed values: Standard_S1, Free_F1
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -60,7 +56,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Not used. Retained for future use.
-     * 
      */
     @Import(name="size", required=true)
       private final String size;
@@ -70,10 +65,9 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional tier of this particular SKU. 'Standard' or 'Free'.
+     * Optional tier of this particular SKU. 'Standard' or 'Free'. 
      * 
      * `Basic` is deprecated, use `Standard` instead.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

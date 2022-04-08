@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the security offering.
-     * 
      */
     @EnumType
     public enum OfferingType {

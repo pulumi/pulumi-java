@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Cookie based affinity.
-     * 
      */
     @EnumType
     public enum ApplicationGatewayCookieBasedAffinity {

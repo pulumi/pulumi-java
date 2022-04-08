@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * The Scope Connections resource
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update Network Manager Scope Connection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var scopeConnection = new AzureNative.Network.ScopeConnection("scopeConnection", new AzureNative.Network.ScopeConnectionArgs
+ *         {
+ *             Description = "This is a scope connection to a cross tenant subscription.",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "rg1",
+ *             ResourceId = "subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b",
+ *             ScopeConnectionName = "TestScopeConnection",
+ *             TenantId = "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewScopeConnection(ctx, "scopeConnection", &network.ScopeConnectionArgs{
+ * 			Description:         pulumi.String("This is a scope connection to a cross tenant subscription."),
+ * 			NetworkManagerName:  pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:   pulumi.String("rg1"),
+ * 			ResourceId:          pulumi.String("subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b"),
+ * 			ScopeConnectionName: pulumi.String("TestScopeConnection"),
+ * 			TenantId:            pulumi.String("6babcaad-604b-40ac-a9d7-9fd97c0b779f"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const scopeConnection = new azure_native.network.ScopeConnection("scopeConnection", {
+ *     description: "This is a scope connection to a cross tenant subscription.",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "rg1",
+ *     resourceId: "subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b",
+ *     scopeConnectionName: "TestScopeConnection",
+ *     tenantId: "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * scope_connection = azure_native.network.ScopeConnection("scopeConnection",
+ *     description="This is a scope connection to a cross tenant subscription.",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="rg1",
+ *     resource_id="subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b",
+ *     scope_connection_name="TestScopeConnection",
+ *     tenant_id="6babcaad-604b-40ac-a9d7-9fd97c0b779f")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +117,84 @@ import javax.annotation.Nullable;
 public class ScopeConnection extends io.pulumi.resources.CustomResource {
     /**
      * A description of the scope connection.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the scope connection.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource ID.
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return Resource ID.
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Tenant ID.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return Tenant ID.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

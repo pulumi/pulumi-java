@@ -14,7 +14,6 @@ public final class GetprivateLinkServicesForM365ComplianceCenterArgs extends io.
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetprivateLinkServicesForM365ComplianceCenterArgs extends io.
 
     /**
      * The name of the service instance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

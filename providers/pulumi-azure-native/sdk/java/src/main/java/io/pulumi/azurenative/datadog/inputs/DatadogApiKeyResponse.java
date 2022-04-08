@@ -16,7 +16,6 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The time of creation of the API key.
-     * 
      */
     @Import(name="created")
       private final @Nullable String created;
@@ -27,7 +26,6 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The user that created the API key.
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable String createdBy;
@@ -38,7 +36,6 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The value of the API key.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -49,7 +46,6 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the API key.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

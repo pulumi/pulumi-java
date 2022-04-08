@@ -14,7 +14,6 @@ public final class GetPrivateStoreOfferArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The offer ID to update or delete
-     * 
      */
     @Import(name="offerId", required=true)
       private final String offerId;
@@ -25,7 +24,6 @@ public final class GetPrivateStoreOfferArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The store ID - must use the tenant ID
-     * 
      */
     @Import(name="privateStoreId", required=true)
       private final String privateStoreId;

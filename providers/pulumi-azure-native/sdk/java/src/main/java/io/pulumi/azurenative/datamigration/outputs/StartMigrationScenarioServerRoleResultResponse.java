@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class StartMigrationScenarioServerRoleResultResponse {
     /**
      * Migration exceptions and warnings.
-     * 
      */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
     /**
      * Name of server role.
-     * 
      */
     private final String name;
     /**
      * Current state of migration
-     * 
      */
     private final String state;
 
@@ -39,21 +36,18 @@ public final class StartMigrationScenarioServerRoleResultResponse {
 
     /**
      * Migration exceptions and warnings.
-     * 
     */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Name of server role.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Current state of migration
-     * 
     */
     public String getState() {
         return this.state;

@@ -16,7 +16,6 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The package name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -27,7 +26,6 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The repository name.
-     * 
      */
     @Import(name="repository")
       private final @Nullable Output<String> repository;

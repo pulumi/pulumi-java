@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Disk Details.
- * 
  */
 public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The OS Major Version.
-     * 
      */
     @Import(name="oSMajorVersion")
       private final @Nullable String oSMajorVersion;
@@ -31,7 +29,6 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The OS Minor Version.
-     * 
      */
     @Import(name="oSMinorVersion")
       private final @Nullable String oSMinorVersion;
@@ -42,7 +39,6 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The OS Version.
-     * 
      */
     @Import(name="oSVersion")
       private final @Nullable String oSVersion;
@@ -53,7 +49,6 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The OSEdition.
-     * 
      */
     @Import(name="osEdition")
       private final @Nullable String osEdition;
@@ -64,7 +59,6 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * VM Disk details.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -75,7 +69,6 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Product type.
-     * 
      */
     @Import(name="productType")
       private final @Nullable String productType;

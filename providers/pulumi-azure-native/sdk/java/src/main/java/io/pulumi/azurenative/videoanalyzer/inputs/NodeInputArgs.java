@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes an input signal to be used on a pipeline node.
- * 
  */
 public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the upstream node in the pipeline which output is used as input of the current node.
-     * 
      */
     @Import(name="nodeName", required=true)
       private final Output<String> nodeName;

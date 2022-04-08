@@ -18,7 +18,104 @@ import javax.annotation.Nullable;
  * A managed Cassandra data center.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBManagedCassandraDataCenterCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cassandraDataCenter = new AzureNative.DocumentDB.CassandraDataCenter("cassandraDataCenter", new AzureNative.DocumentDB.CassandraDataCenterArgs
+ *         {
+ *             ClusterName = "cassandra-prod",
+ *             DataCenterName = "dc1",
+ *             Properties = new AzureNative.DocumentDB.Inputs.DataCenterResourcePropertiesArgs
+ *             {
+ *                 Base64EncodedCassandraYamlFragment = "Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA=",
+ *                 DataCenterLocation = "West US 2",
+ *                 DelegatedSubnetId = "/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet",
+ *                 NodeCount = 9,
+ *             },
+ *             ResourceGroupName = "cassandra-prod-rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewCassandraDataCenter(ctx, "cassandraDataCenter", &documentdb.CassandraDataCenterArgs{
+ * 			ClusterName:    pulumi.String("cassandra-prod"),
+ * 			DataCenterName: pulumi.String("dc1"),
+ * 			Properties: &documentdb.DataCenterResourcePropertiesArgs{
+ * 				Base64EncodedCassandraYamlFragment: pulumi.String("Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA="),
+ * 				DataCenterLocation:                 pulumi.String("West US 2"),
+ * 				DelegatedSubnetId:                  pulumi.String("/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet"),
+ * 				NodeCount:                          pulumi.Int(9),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("cassandra-prod-rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cassandraDataCenter", {
+ *     clusterName: "cassandra-prod",
+ *     dataCenterName: "dc1",
+ *     properties: {
+ *         base64EncodedCassandraYamlFragment: "Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA=",
+ *         dataCenterLocation: "West US 2",
+ *         delegatedSubnetId: "/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet",
+ *         nodeCount: 9,
+ *     },
+ *     resourceGroupName: "cassandra-prod-rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cassandra_data_center = azure_native.documentdb.CassandraDataCenter("cassandraDataCenter",
+ *     cluster_name="cassandra-prod",
+ *     data_center_name="dc1",
+ *     properties=azure_native.documentdb.DataCenterResourcePropertiesArgs(
+ *         base64_encoded_cassandra_yaml_fragment="Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA=",
+ *         data_center_location="West US 2",
+ *         delegated_subnet_id="/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet",
+ *         node_count=9,
+ *     ),
+ *     resource_group_name="cassandra-prod-rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +130,36 @@ import javax.annotation.Nullable;
 public class CassandraDataCenter extends io.pulumi.resources.CustomResource {
     /**
      * The name of the database account.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the database account.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of a managed Cassandra data center.
-     * 
      */
     @Export(name="properties", type=DataCenterResourceResponseProperties.class, parameters={})
     private Output<DataCenterResourceResponseProperties> properties;
 
     /**
      * @return Properties of a managed Cassandra data center.
-     * 
      */
     public Output<DataCenterResourceResponseProperties> getProperties() {
         return this.properties;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

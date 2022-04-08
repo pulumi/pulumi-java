@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Temporary disk payload
- * 
  */
 public final class TemporaryDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TemporaryDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Mount path of the temporary disk
-     * 
      */
     @Import(name="mountPath")
       private final @Nullable String mountPath;
@@ -32,7 +30,6 @@ public final class TemporaryDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Size of the temporary disk in GB
-     * 
      */
     @Import(name="sizeInGB")
       private final @Nullable Integer sizeInGB;

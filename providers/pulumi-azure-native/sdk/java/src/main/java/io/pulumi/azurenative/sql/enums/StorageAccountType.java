@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
-     * 
      */
     @EnumType
     public enum StorageAccountType {

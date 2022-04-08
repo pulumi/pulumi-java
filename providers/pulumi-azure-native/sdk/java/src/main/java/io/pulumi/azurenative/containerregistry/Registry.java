@@ -24,7 +24,109 @@ import javax.annotation.Nullable;
  * An object that represents a container registry.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RegistryCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registry = new AzureNative.ContainerRegistry.Registry("registry", new AzureNative.ContainerRegistry.RegistryArgs
+ *         {
+ *             AdminUserEnabled = true,
+ *             Location = "westus",
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.ContainerRegistry.Inputs.SkuArgs
+ *             {
+ *                 Name = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key", "value" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewRegistry(ctx, "registry", &containerregistry.RegistryArgs{
+ * 			AdminUserEnabled:  pulumi.Bool(true),
+ * 			Location:          pulumi.String("westus"),
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &containerregistry.SkuArgs{
+ * 				Name: pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key": pulumi.String("value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const registry = new azure_native.containerregistry.Registry("registry", {
+ *     adminUserEnabled: true,
+ *     location: "westus",
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         name: "Standard",
+ *     },
+ *     tags: {
+ *         key: "value",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * registry = azure_native.containerregistry.Registry("registry",
+ *     admin_user_enabled=True,
+ *     location="westus",
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.containerregistry.SkuArgs(
+ *         name="Standard",
+ *     ),
+ *     tags={
+ *         "key": "value",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,182 +141,156 @@ import javax.annotation.Nullable;
 public class Registry extends io.pulumi.resources.CustomResource {
     /**
      * The value that indicates whether the admin user is enabled.
-     * 
      */
     @Export(name="adminUserEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> adminUserEnabled;
 
     /**
      * @return The value that indicates whether the admin user is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAdminUserEnabled() {
         return this.adminUserEnabled;
     }
     /**
      * The creation date of the container registry in ISO8601 format.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The creation date of the container registry in ISO8601 format.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The URL that can be used to log into the container registry.
-     * 
      */
     @Export(name="loginServer", type=String.class, parameters={})
     private Output<String> loginServer;
 
     /**
      * @return The URL that can be used to log into the container registry.
-     * 
      */
     public Output<String> getLoginServer() {
         return this.loginServer;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The network rule set for a container registry.
-     * 
      */
     @Export(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
     private Output</* @Nullable */ NetworkRuleSetResponse> networkRuleSet;
 
     /**
      * @return The network rule set for a container registry.
-     * 
      */
     public Output</* @Nullable */ NetworkRuleSetResponse> getNetworkRuleSet() {
         return this.networkRuleSet;
     }
     /**
      * The policies for a container registry.
-     * 
      */
     @Export(name="policies", type=PoliciesResponse.class, parameters={})
     private Output</* @Nullable */ PoliciesResponse> policies;
 
     /**
      * @return The policies for a container registry.
-     * 
      */
     public Output</* @Nullable */ PoliciesResponse> getPolicies() {
         return this.policies;
     }
     /**
      * The provisioning state of the container registry at the time the operation was called.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the container registry at the time the operation was called.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the container registry.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return The SKU of the container registry.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The status of the container registry at the time the operation was called.
-     * 
      */
     @Export(name="status", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> status;
 
     /**
      * @return The status of the container registry at the time the operation was called.
-     * 
      */
     public Output<StatusResponse> getStatus() {
         return this.status;
     }
     /**
      * The properties of the storage account for the container registry. Only applicable to Classic SKU.
-     * 
      */
     @Export(name="storageAccount", type=StorageAccountPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount;
 
     /**
      * @return The properties of the storage account for the container registry. Only applicable to Classic SKU.
-     * 
      */
     public Output</* @Nullable */ StorageAccountPropertiesResponse> getStorageAccount() {
         return this.storageAccount;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

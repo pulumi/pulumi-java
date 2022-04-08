@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of OS for which the key is requested.
-     * 
      */
     @EnumType
     public enum OsType {

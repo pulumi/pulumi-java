@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Defines the source of the SSL certificate.
-     * 
      */
     @EnumType
     public enum AfdCertificateType {

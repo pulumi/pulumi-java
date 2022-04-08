@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Streaming endpoint access control definition.
- * 
  */
 public final class StreamingEndpointAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
 
     /**
      * The access control of Akamai
-     * 
      */
     @Import(name="akamai")
       private final @Nullable AkamaiAccessControlResponse akamai;
@@ -32,7 +30,6 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
 
     /**
      * The IP access control of the streaming endpoint.
-     * 
      */
     @Import(name="ip")
       private final @Nullable IPAccessControlResponse ip;

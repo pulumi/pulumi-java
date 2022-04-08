@@ -17,52 +17,42 @@ import javax.annotation.Nullable;
 public final class GetprivateLinkServicesForM365SecurityCenterResult {
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
-     * 
      */
     private final @Nullable String etag;
     /**
      * The resource identifier.
-     * 
      */
     private final String id;
     /**
      * Setting indicating whether the service has a managed identity associated with it.
-     * 
      */
     private final @Nullable ServicesResourceResponseIdentity identity;
     /**
      * The kind of the service.
-     * 
      */
     private final String kind;
     /**
      * The resource location.
-     * 
      */
     private final String location;
     /**
      * The resource name.
-     * 
      */
     private final String name;
     /**
      * The common properties of a service.
-     * 
      */
     private final ServicesPropertiesResponse properties;
     /**
      * Required property for system data
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -92,70 +82,60 @@ public final class GetprivateLinkServicesForM365SecurityCenterResult {
 
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
-     * 
     */
     public Optional<ServicesResourceResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the service.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * The resource location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The common properties of a service.
-     * 
     */
     public ServicesPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Required property for system data
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

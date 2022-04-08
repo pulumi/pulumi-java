@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether the target is included or excluded from the group.
-     * 
      */
     @EnumType
     public enum JobTargetGroupMembershipType {

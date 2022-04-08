@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class NetworkManagerSecurityGroupItemResponse {
     /**
      * Network manager group Id.
-     * 
      */
     private final @Nullable String networkGroupId;
 
@@ -24,7 +23,6 @@ public final class NetworkManagerSecurityGroupItemResponse {
 
     /**
      * Network manager group Id.
-     * 
     */
     public Optional<String> getNetworkGroupId() {
         return Optional.ofNullable(this.networkGroupId);

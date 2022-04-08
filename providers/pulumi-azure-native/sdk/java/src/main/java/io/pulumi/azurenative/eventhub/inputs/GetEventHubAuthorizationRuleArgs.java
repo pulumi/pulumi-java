@@ -14,7 +14,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * The authorization rule name.
-     * 
      */
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
@@ -25,7 +24,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * The Event Hub name
-     * 
      */
     @Import(name="eventHubName", required=true)
       private final String eventHubName;
@@ -36,7 +34,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -47,7 +44,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

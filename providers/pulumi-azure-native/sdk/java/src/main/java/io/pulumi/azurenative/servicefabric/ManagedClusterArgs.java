@@ -24,7 +24,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * client certificates for the cluster.
-     * 
      */
     @Import(name="addonFeatures")
       private final @Nullable Output<List<String>> addonFeatures;
@@ -35,7 +34,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * vm admin user password.
-     * 
      */
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
@@ -46,7 +44,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * vm admin user name.
-     * 
      */
     @Import(name="adminUserName", required=true)
       private final Output<String> adminUserName;
@@ -57,7 +54,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure active directory.
-     * 
      */
     @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
@@ -68,7 +64,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port used for client connections to the cluster.
-     * 
      */
     @Import(name="clientConnectionPort")
       private final @Nullable Output<Integer> clientConnectionPort;
@@ -79,7 +74,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * client certificates for the cluster.
-     * 
      */
     @Import(name="clients")
       private final @Nullable Output<List<ClientCertificateArgs>> clients;
@@ -90,7 +84,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
-     * 
      */
     @Import(name="clusterCodeVersion")
       private final @Nullable Output<String> clusterCodeVersion;
@@ -101,7 +94,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -112,7 +104,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cluster dns name.
-     * 
      */
     @Import(name="dnsName", required=true)
       private final Output<String> dnsName;
@@ -123,7 +114,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of custom fabric settings to configure the cluster.
-     * 
      */
     @Import(name="fabricSettings")
       private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
@@ -134,7 +124,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port used for http connections to the cluster.
-     * 
      */
     @Import(name="httpGatewayConnectionPort")
       private final @Nullable Output<Integer> httpGatewayConnectionPort;
@@ -145,7 +134,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes load balancing rules.
-     * 
      */
     @Import(name="loadBalancingRules")
       private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
@@ -156,7 +144,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -167,7 +154,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -178,7 +164,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku of the managed cluster
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -189,7 +174,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -17,7 +17,6 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the build service resource.
-     * 
      */
     @Import(name="buildServiceName", required=true)
       private final Output<String> buildServiceName;
@@ -28,7 +27,6 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the builder resource.
-     * 
      */
     @Import(name="builderName", required=true)
       private final Output<String> builderName;
@@ -39,7 +37,6 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Buildpack Binding Name
-     * 
      */
     @Import(name="buildpackBindingName")
       private final @Nullable Output<String> buildpackBindingName;
@@ -50,7 +47,6 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Properties of a buildpack binding
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<BuildpackBindingPropertiesArgs> properties;
@@ -61,7 +57,6 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

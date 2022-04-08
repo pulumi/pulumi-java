@@ -14,7 +14,6 @@ public final class ListBatchAccountKeysArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the Batch account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class ListBatchAccountKeysArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group that contains the Batch account.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

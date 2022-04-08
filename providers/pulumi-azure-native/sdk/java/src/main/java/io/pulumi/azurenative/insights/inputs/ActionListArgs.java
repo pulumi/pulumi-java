@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A list of Activity Log Alert rule actions.
- * 
  */
 public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of the Action Groups.
-     * 
      */
     @Import(name="actionGroups")
       private final @Nullable Output<List<ActionGroupArgs>> actionGroups;

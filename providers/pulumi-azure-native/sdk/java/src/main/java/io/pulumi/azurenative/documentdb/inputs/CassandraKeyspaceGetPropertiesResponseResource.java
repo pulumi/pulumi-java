@@ -15,7 +15,6 @@ public final class CassandraKeyspaceGetPropertiesResponseResource extends io.pul
 
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -26,7 +25,6 @@ public final class CassandraKeyspaceGetPropertiesResponseResource extends io.pul
 
     /**
      * Name of the Cosmos DB Cassandra keyspace
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -37,7 +35,6 @@ public final class CassandraKeyspaceGetPropertiesResponseResource extends io.pul
 
     /**
      * A system generated property. A unique identifier.
-     * 
      */
     @Import(name="rid", required=true)
       private final String rid;
@@ -48,7 +45,6 @@ public final class CassandraKeyspaceGetPropertiesResponseResource extends io.pul
 
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
-     * 
      */
     @Import(name="ts", required=true)
       private final Double ts;

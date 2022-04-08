@@ -18,7 +18,6 @@ public final class DeploymentAtSubscriptionScopeArgs extends io.pulumi.resources
 
     /**
      * The name of the deployment.
-     * 
      */
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
@@ -29,7 +28,6 @@ public final class DeploymentAtSubscriptionScopeArgs extends io.pulumi.resources
 
     /**
      * The location to store the deployment data.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class DeploymentAtSubscriptionScopeArgs extends io.pulumi.resources
 
     /**
      * The deployment properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<DeploymentPropertiesArgs> properties;
@@ -51,7 +48,6 @@ public final class DeploymentAtSubscriptionScopeArgs extends io.pulumi.resources
 
     /**
      * Deployment tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

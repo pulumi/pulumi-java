@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Data Explorer command activity.
- * 
  */
 public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="command", required=true)
       private final Output<Object> command;
@@ -37,7 +35,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
-     * 
      */
     @Import(name="commandTimeout")
       private final @Nullable Output<Object> commandTimeout;
@@ -48,7 +45,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -59,7 +55,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -70,7 +65,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -81,7 +75,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -92,7 +85,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -104,7 +96,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     /**
      * Type of activity.
      * Expected value is 'AzureDataExplorerCommand'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -115,7 +106,6 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

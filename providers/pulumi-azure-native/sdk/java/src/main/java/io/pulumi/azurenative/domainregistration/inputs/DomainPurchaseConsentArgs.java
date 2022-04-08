@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Domain purchase consent object, representing acceptance of applicable legal agreements.
- * 
  */
 public final class DomainPurchaseConsentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Timestamp when the agreements were accepted.
-     * 
      */
     @Import(name="agreedAt")
       private final @Nullable Output<String> agreedAt;
@@ -32,7 +30,6 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Client IP address.
-     * 
      */
     @Import(name="agreedBy")
       private final @Nullable Output<String> agreedBy;
@@ -43,7 +40,6 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.
-     * 
      */
     @Import(name="agreementKeys")
       private final @Nullable Output<List<String>> agreementKeys;

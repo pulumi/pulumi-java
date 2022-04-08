@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the task that migrates PostgreSQL databases to Azure Database for PostgreSQL for online migrations
- * 
  */
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
@@ -33,7 +31,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
     /**
      * Task type.
      * Expected value is 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final Output<String> taskType;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that runs every time a custom event is received.
- * 
  */
 public final class CustomEventsTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -34,7 +32,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -45,7 +42,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * The list of event types that cause this trigger to fire.
-     * 
      */
     @Import(name="events", required=true)
       private final List<Object> events;
@@ -56,7 +52,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * Pipelines that need to be started.
-     * 
      */
     @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
@@ -67,7 +62,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     * 
      */
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
@@ -78,7 +72,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * The ARM resource ID of the Azure Event Grid Topic.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;
@@ -89,7 +82,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
-     * 
      */
     @Import(name="subjectBeginsWith")
       private final @Nullable String subjectBeginsWith;
@@ -100,7 +92,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
 
     /**
      * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
-     * 
      */
     @Import(name="subjectEndsWith")
       private final @Nullable String subjectEndsWith;
@@ -112,7 +103,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
     /**
      * Trigger type.
      * Expected value is 'CustomEventsTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

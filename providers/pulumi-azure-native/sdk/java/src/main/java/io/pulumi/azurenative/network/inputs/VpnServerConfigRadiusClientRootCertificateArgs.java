@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the Radius client root certificate of VpnServerConfiguration.
- * 
  */
 public final class VpnServerConfigRadiusClientRootCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VpnServerConfigRadiusClientRootCertificateArgs extends io.pul
 
     /**
      * The certificate name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class VpnServerConfigRadiusClientRootCertificateArgs extends io.pul
 
     /**
      * The Radius client root certificate thumbprint.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;

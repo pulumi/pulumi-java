@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The key type.
-     * 
      */
     @EnumType
     public enum KeyType {

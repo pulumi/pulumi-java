@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that define a direct peering.
- * 
  */
 public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
 
     /**
      * The set of connections that constitute a direct peering.
-     * 
      */
     @Import(name="connections")
       private final @Nullable List<DirectConnectionResponse> connections;
@@ -35,7 +33,6 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
 
     /**
      * The type of direct peering.
-     * 
      */
     @Import(name="directPeeringType")
       private final @Nullable String directPeeringType;
@@ -46,7 +43,6 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
 
     /**
      * The reference of the peer ASN.
-     * 
      */
     @Import(name="peerAsn")
       private final @Nullable SubResourceResponse peerAsn;
@@ -57,7 +53,6 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
 
     /**
      * The flag that indicates whether or not the peering is used for peering service.
-     * 
      */
     @Import(name="useForPeeringService", required=true)
       private final Boolean useForPeeringService;

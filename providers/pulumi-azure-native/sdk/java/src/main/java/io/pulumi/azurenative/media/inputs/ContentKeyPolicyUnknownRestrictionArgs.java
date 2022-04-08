@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a ContentKeyPolicyRestriction that is unavailable in the current API version.
- * 
  */
 public final class ContentKeyPolicyUnknownRestrictionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContentKeyPolicyUnknownRestrictionArgs extends io.pulumi.reso
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyUnknownRestriction'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

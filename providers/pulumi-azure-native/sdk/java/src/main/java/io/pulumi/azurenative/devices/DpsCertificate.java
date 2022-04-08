@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * The X509 Certificate.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DPSCreateOrUpdateCertificate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dpsCertificate = new AzureNative.Devices.DpsCertificate("dpsCertificate", new AzureNative.Devices.DpsCertificateArgs
+ *         {
+ *             Certificate = "############################################",
+ *             CertificateName = "cert",
+ *             ProvisioningServiceName = "myFirstProvisioningService",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devices.NewDpsCertificate(ctx, "dpsCertificate", &devices.DpsCertificateArgs{
+ * 			Certificate:             pulumi.String("############################################"),
+ * 			CertificateName:         pulumi.String("cert"),
+ * 			ProvisioningServiceName: pulumi.String("myFirstProvisioningService"),
+ * 			ResourceGroupName:       pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dpsCertificate = new azure_native.devices.DpsCertificate("dpsCertificate", {
+ *     certificate: "############################################",
+ *     certificateName: "cert",
+ *     provisioningServiceName: "myFirstProvisioningService",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dps_certificate = azure_native.devices.DpsCertificate("dpsCertificate",
+ *     certificate="############################################",
+ *     certificate_name="cert",
+ *     provisioning_service_name="myFirstProvisioningService",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +109,48 @@ import javax.annotation.Nullable;
 public class DpsCertificate extends io.pulumi.resources.CustomResource {
     /**
      * The entity tag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return The entity tag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the certificate.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the certificate.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * properties of a certificate
-     * 
      */
     @Export(name="properties", type=CertificatePropertiesResponse.class, parameters={})
     private Output<CertificatePropertiesResponse> properties;
 
     /**
      * @return properties of a certificate
-     * 
      */
     public Output<CertificatePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

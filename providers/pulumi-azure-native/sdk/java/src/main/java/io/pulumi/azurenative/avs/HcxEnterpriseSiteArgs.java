@@ -16,7 +16,6 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the HCX Enterprise Site in the private cloud
-     * 
      */
     @Import(name="hcxEnterpriseSiteName")
       private final @Nullable Output<String> hcxEnterpriseSiteName;
@@ -27,7 +26,6 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the private cloud.
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -38,7 +36,6 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

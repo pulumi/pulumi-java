@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class FollowerDatabaseDefinitionResponse {
     /**
      * Resource name of the attached database configuration in the follower cluster.
-     * 
      */
     private final String attachedDatabaseConfigurationName;
     /**
      * Resource id of the cluster that follows a database owned by this cluster.
-     * 
      */
     private final String clusterResourceId;
     /**
      * The database name owned by this cluster that was followed. * in case following all databases.
-     * 
      */
     private final String databaseName;
 
@@ -37,21 +34,18 @@ public final class FollowerDatabaseDefinitionResponse {
 
     /**
      * Resource name of the attached database configuration in the follower cluster.
-     * 
     */
     public String getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
      * Resource id of the cluster that follows a database owned by this cluster.
-     * 
     */
     public String getClusterResourceId() {
         return this.clusterResourceId;
     }
     /**
      * The database name owned by this cluster that was followed. * in case following all databases.
-     * 
     */
     public String getDatabaseName() {
         return this.databaseName;

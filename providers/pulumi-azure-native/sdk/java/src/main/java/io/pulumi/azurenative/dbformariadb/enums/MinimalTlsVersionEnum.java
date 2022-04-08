@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enforce a minimal Tls version for the server.
-     * 
      */
     @EnumType
     public enum MinimalTlsVersionEnum {

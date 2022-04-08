@@ -20,7 +20,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * The collection ID
-     * 
      */
     @Import(name="collectionId", required=true)
       private final Output<String> collectionId;
@@ -31,7 +30,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * Identifier for purposes of race condition
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -42,7 +40,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * Icon File Uris
-     * 
      */
     @Import(name="iconFileUris")
       private final @Nullable Output<Map<String,String>> iconFileUris;
@@ -53,7 +50,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * The offer ID to update or delete
-     * 
      */
     @Import(name="offerId")
       private final @Nullable Output<String> offerId;
@@ -64,7 +60,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * Offer plans
-     * 
      */
     @Import(name="plans")
       private final @Nullable Output<List<PlanArgs>> plans;
@@ -75,7 +70,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * The store ID - must use the tenant ID
-     * 
      */
     @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
@@ -86,7 +80,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * Plan ids limitation for this offer
-     * 
      */
     @Import(name="specificPlanIdsLimitation")
       private final @Nullable Output<List<String>> specificPlanIdsLimitation;
@@ -97,7 +90,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     /**
      * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
-     * 
      */
     @Import(name="updateSuppressedDueIdempotence")
       private final @Nullable Output<Boolean> updateSuppressedDueIdempotence;

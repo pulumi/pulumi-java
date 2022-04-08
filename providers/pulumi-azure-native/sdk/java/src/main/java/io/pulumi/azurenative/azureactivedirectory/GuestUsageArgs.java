@@ -17,7 +17,6 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the Guest Usages resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The initial domain name of the AAD tenant.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -50,7 +47,6 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -61,7 +57,6 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An identifier for the tenant for which the resource is being created
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

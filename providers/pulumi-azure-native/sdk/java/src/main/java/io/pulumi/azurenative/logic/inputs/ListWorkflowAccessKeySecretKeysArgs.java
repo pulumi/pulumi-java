@@ -14,7 +14,6 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends io.pulumi.resourc
 
     /**
      * The workflow access key name.
-     * 
      */
     @Import(name="accessKeyName", required=true)
       private final String accessKeyName;
@@ -25,7 +24,6 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends io.pulumi.resourc
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends io.pulumi.resourc
 
     /**
      * The workflow name.
-     * 
      */
     @Import(name="workflowName", required=true)
       private final String workflowName;

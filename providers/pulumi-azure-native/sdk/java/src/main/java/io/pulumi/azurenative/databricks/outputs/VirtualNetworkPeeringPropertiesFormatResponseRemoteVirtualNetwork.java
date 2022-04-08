@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork {
     /**
      * The Id of the remote virtual network.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
 
     /**
      * The Id of the remote virtual network.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of the feedback queue for cloud-to-device messages.
- * 
  */
 public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
      */
     @Import(name="lockDurationAsIso8601")
       private final @Nullable Output<String> lockDurationAsIso8601;
@@ -32,7 +30,6 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
      */
     @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
@@ -43,7 +40,6 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
      */
     @Import(name="ttlAsIso8601")
       private final @Nullable Output<String> ttlAsIso8601;

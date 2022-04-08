@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ManagementEventAggregationConditionResponse {
     /**
      * the condition operator.
-     * 
      */
     private final @Nullable String operator;
     /**
      * The threshold value that activates the alert.
-     * 
      */
     private final @Nullable Double threshold;
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     * 
      */
     private final @Nullable String windowSize;
 
@@ -40,21 +37,18 @@ public final class ManagementEventAggregationConditionResponse {
 
     /**
      * the condition operator.
-     * 
     */
     public Optional<String> getOperator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * The threshold value that activates the alert.
-     * 
     */
     public Optional<Double> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     * 
     */
     public Optional<String> getWindowSize() {
         return Optional.ofNullable(this.windowSize);

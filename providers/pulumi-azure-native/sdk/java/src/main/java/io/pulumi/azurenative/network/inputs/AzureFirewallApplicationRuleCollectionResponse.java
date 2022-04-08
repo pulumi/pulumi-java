@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application rule collection resource.
- * 
  */
 public final class AzureFirewallApplicationRuleCollectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
 
     /**
      * The action type of a rule collection.
-     * 
      */
     @Import(name="action")
       private final @Nullable AzureFirewallRCActionResponse action;
@@ -35,7 +33,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -46,7 +43,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -57,7 +53,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
 
     /**
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -68,7 +63,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
 
     /**
      * Priority of the application rule collection resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -79,7 +73,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
 
     /**
      * The provisioning state of the application rule collection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -90,7 +83,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
 
     /**
      * Collection of rules used by a application rule collection.
-     * 
      */
     @Import(name="rules")
       private final @Nullable List<AzureFirewallApplicationRuleResponse> rules;

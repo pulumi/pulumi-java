@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Linked server Id
- * 
  */
 public final class RedisLinkedServerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RedisLinkedServerResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Linked server Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

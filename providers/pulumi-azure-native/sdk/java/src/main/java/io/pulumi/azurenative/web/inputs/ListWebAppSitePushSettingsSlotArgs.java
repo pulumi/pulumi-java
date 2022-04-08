@@ -14,7 +14,6 @@ public final class ListWebAppSitePushSettingsSlotArgs extends io.pulumi.resource
 
     /**
      * Name of web app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class ListWebAppSitePushSettingsSlotArgs extends io.pulumi.resource
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListWebAppSitePushSettingsSlotArgs extends io.pulumi.resource
 
     /**
      * Name of web app slot. If not specified then will default to production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final String slot;

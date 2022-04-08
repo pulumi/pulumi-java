@@ -18,7 +18,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
@@ -29,7 +28,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -40,7 +38,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service runner.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -62,7 +58,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

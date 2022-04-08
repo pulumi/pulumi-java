@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * type of datastore; Operational/Vault/Archive
-     * 
      */
     @EnumType
     public enum DataStoreTypes {

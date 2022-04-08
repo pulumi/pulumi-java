@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The assembly properties definition.
- * 
  */
 public final class AssemblyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The assembly culture.
-     * 
      */
     @Import(name="assemblyCulture")
       private final @Nullable String assemblyCulture;
@@ -33,7 +31,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The assembly name.
-     * 
      */
     @Import(name="assemblyName", required=true)
       private final String assemblyName;
@@ -44,7 +41,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The assembly public key token.
-     * 
      */
     @Import(name="assemblyPublicKeyToken")
       private final @Nullable String assemblyPublicKeyToken;
@@ -55,7 +51,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The assembly version.
-     * 
      */
     @Import(name="assemblyVersion")
       private final @Nullable String assemblyVersion;
@@ -66,7 +61,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The artifact changed time.
-     * 
      */
     @Import(name="changedTime")
       private final @Nullable String changedTime;
@@ -84,7 +78,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The content link.
-     * 
      */
     @Import(name="contentLink")
       private final @Nullable ContentLinkResponse contentLink;
@@ -95,7 +88,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The content type.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable String contentType;
@@ -106,7 +98,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The artifact creation time.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable String createdTime;

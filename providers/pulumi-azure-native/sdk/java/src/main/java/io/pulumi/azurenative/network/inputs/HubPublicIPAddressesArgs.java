@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Public IP addresses associated with azure firewall.
- * 
  */
 public final class HubPublicIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
 
     /**
      * The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
-     * 
      */
     @Import(name="addresses")
       private final @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
@@ -33,7 +31,6 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
 
     /**
      * The number of Public IP addresses associated with azure firewall.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;

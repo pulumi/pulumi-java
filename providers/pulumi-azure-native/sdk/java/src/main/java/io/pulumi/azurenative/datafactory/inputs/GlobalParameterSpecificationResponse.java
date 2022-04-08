@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Definition of a single parameter for an entity.
- * 
  */
 public final class GlobalParameterSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GlobalParameterSpecificationResponse extends io.pulumi.resour
 
     /**
      * Global Parameter type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -30,7 +28,6 @@ public final class GlobalParameterSpecificationResponse extends io.pulumi.resour
 
     /**
      * Value of parameter.
-     * 
      */
     @Import(name="value", required=true)
       private final Object value;

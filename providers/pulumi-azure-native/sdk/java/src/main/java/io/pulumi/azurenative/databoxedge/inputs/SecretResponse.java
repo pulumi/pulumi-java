@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Holds device secret either as a KeyVault reference or as an encrypted value.
- * 
  */
 public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Encrypted (using device public key) secret value.
-     * 
      */
     @Import(name="encryptedSecret")
       private final @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
@@ -32,7 +30,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
-     * 
      */
     @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;

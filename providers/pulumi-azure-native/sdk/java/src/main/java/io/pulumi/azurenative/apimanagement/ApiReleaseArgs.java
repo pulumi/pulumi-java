@@ -16,7 +16,6 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the API the release belongs to.
-     * 
      */
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
@@ -27,7 +26,6 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Release Notes
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -38,7 +36,6 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Release identifier within an API. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="releaseId")
       private final @Nullable Output<String> releaseId;
@@ -49,7 +46,6 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

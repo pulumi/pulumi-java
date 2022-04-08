@@ -18,7 +18,117 @@ import javax.annotation.Nullable;
  * Binding resource payload
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Bindings_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var binding = new AzureNative.AppPlatform.Binding("binding", new AzureNative.AppPlatform.BindingArgs
+ *         {
+ *             AppName = "myapp",
+ *             BindingName = "mybinding",
+ *             Properties = new AzureNative.AppPlatform.Inputs.BindingResourcePropertiesArgs
+ *             {
+ *                 BindingParameters = 
+ *                 {
+ *                     { "apiType", "SQL" },
+ *                     { "databaseName", "db1" },
+ *                 },
+ *                 Key = "xxxx",
+ *                 ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewBinding(ctx, "binding", &appplatform.BindingArgs{
+ * 			AppName:     pulumi.String("myapp"),
+ * 			BindingName: pulumi.String("mybinding"),
+ * 			Properties: &appplatform.BindingResourcePropertiesArgs{
+ * 				BindingParameters: pulumi.AnyMap{
+ * 					"apiType":      pulumi.Any("SQL"),
+ * 					"databaseName": pulumi.Any("db1"),
+ * 				},
+ * 				Key:        pulumi.String("xxxx"),
+ * 				ResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const binding = new azure_native.appplatform.Binding("binding", {
+ *     appName: "myapp",
+ *     bindingName: "mybinding",
+ *     properties: {
+ *         bindingParameters: {
+ *             apiType: "SQL",
+ *             databaseName: "db1",
+ *         },
+ *         key: "xxxx",
+ *         resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * binding = azure_native.appplatform.Binding("binding",
+ *     app_name="myapp",
+ *     binding_name="mybinding",
+ *     properties=azure_native.appplatform.BindingResourcePropertiesArgs(
+ *         binding_parameters={
+ *             "apiType": "SQL",
+ *             "databaseName": "db1",
+ *         },
+ *         key="xxxx",
+ *         resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +143,36 @@ import javax.annotation.Nullable;
 public class Binding extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the Binding resource
-     * 
      */
     @Export(name="properties", type=BindingResourcePropertiesResponse.class, parameters={})
     private Output<BindingResourcePropertiesResponse> properties;
 
     /**
      * @return Properties of the Binding resource
-     * 
      */
     public Output<BindingResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

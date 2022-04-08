@@ -16,7 +16,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
 
     /**
      * Specify the $expand query. Example: 'properties($select=status)'
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -38,7 +36,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the schedule.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -49,7 +46,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -60,7 +56,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the service fabric.
-     * 
      */
     @Import(name="serviceFabricName", required=true)
       private final String serviceFabricName;
@@ -71,7 +66,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the user profile.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

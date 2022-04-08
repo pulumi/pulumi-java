@@ -17,7 +17,194 @@ import javax.annotation.Nullable;
  * Policy Contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateApiPolicy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apiPolicy = new AzureNative.ApiManagement.ApiPolicy("apiPolicy", new AzureNative.ApiManagement.ApiPolicyArgs
+ *         {
+ *             ApiId = "5600b57e7e8880006a040001",
+ *             Format = "xml",
+ *             PolicyId = "policy",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Value = "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApiPolicy(ctx, "apiPolicy", &apimanagement.ApiPolicyArgs{
+ * 			ApiId:             pulumi.String("5600b57e7e8880006a040001"),
+ * 			Format:            pulumi.String("xml"),
+ * 			PolicyId:          pulumi.String("policy"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Value:             pulumi.String("<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
+ *     apiId: "5600b57e7e8880006a040001",
+ *     format: "xml",
+ *     policyId: "policy",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     value: "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api_policy = azure_native.apimanagement.ApiPolicy("apiPolicy",
+ *     api_id="5600b57e7e8880006a040001",
+ *     format="xml",
+ *     policy_id="policy",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     value="<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiPolicyNonXmlEncoded
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apiPolicy = new AzureNative.ApiManagement.ApiPolicy("apiPolicy", new AzureNative.ApiManagement.ApiPolicyArgs
+ *         {
+ *             ApiId = "5600b57e7e8880006a040001",
+ *             Format = "rawxml",
+ *             PolicyId = "policy",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Value = @"<policies>
+ *      <inbound>
+ *      <base />
+ *   <set-header name=""newvalue"" exists-action=""override"">
+ *    <value>""@(context.Request.Headers.FirstOrDefault(h => h.Ke==""Via""))"" </value>
+ *     </set-header>
+ *   </inbound>
+ *       </policies>",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApiPolicy(ctx, "apiPolicy", &apimanagement.ApiPolicyArgs{
+ * 			ApiId:             pulumi.String("5600b57e7e8880006a040001"),
+ * 			Format:            pulumi.String("rawxml"),
+ * 			PolicyId:          pulumi.String("policy"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Value: pulumi.String("<policies>\n     <inbound>\n     <base />\n  <set-header name=\"newvalue\" exists-action=\"override\">\n   <value>\"@(context.Request.Headers.FirstOrDefault(h => h.Ke==\"Via\"))\" </value>\n    </set-header>\n  </inbound>\n      </policies>"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
+ *     apiId: "5600b57e7e8880006a040001",
+ *     format: "rawxml",
+ *     policyId: "policy",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     value: `<policies>
+ *      <inbound>
+ *      <base />
+ *   <set-header name="newvalue" exists-action="override">
+ *    <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
+ *     </set-header>
+ *   </inbound>
+ *       </policies>`,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api_policy = azure_native.apimanagement.ApiPolicy("apiPolicy",
+ *     api_id="5600b57e7e8880006a040001",
+ *     format="rawxml",
+ *     policy_id="policy",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     value="""<policies>
+ *      <inbound>
+ *      <base />
+ *   <set-header name="newvalue" exists-action="override">
+ *    <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
+ *     </set-header>
+ *   </inbound>
+ *       </policies>""")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +219,48 @@ import javax.annotation.Nullable;
 public class ApiPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Format of the policyContent.
-     * 
      */
     @Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
      * @return Format of the policyContent.
-     * 
      */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Contents of the Policy as defined by the format.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**
      * @return Contents of the Policy as defined by the format.
-     * 
      */
     public Output<String> getValue() {
         return this.value;

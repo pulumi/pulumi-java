@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Value.
- * 
  */
 public final class WorkspaceCustomStringParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class WorkspaceCustomStringParameterResponse extends io.pulumi.reso
 
     /**
      * The type of variable that this is
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -29,7 +27,6 @@ public final class WorkspaceCustomStringParameterResponse extends io.pulumi.reso
 
     /**
      * The value which should be used for this field.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

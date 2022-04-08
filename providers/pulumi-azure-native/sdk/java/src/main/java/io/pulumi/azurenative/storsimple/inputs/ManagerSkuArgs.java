@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Sku.
- * 
  */
 public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Refers to the sku name which should be "Standard"
-     * 
      */
     @Import(name="name", required=true)
       private final Output<ManagerSkuType> name;

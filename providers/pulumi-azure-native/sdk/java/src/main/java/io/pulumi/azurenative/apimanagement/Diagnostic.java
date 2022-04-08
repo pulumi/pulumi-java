@@ -20,7 +20,246 @@ import javax.annotation.Nullable;
  * Diagnostic details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateDiagnostic
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var diagnostic = new AzureNative.ApiManagement.Diagnostic("diagnostic", new AzureNative.ApiManagement.DiagnosticArgs
+ *         {
+ *             AlwaysLog = "allErrors",
+ *             Backend = new AzureNative.ApiManagement.Inputs.PipelineDiagnosticSettingsArgs
+ *             {
+ *                 Request = new AzureNative.ApiManagement.Inputs.HttpMessageDiagnosticArgs
+ *                 {
+ *                     Body = new AzureNative.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
+ *                     {
+ *                         Bytes = 512,
+ *                     },
+ *                     Headers = 
+ *                     {
+ *                         "Content-type",
+ *                     },
+ *                 },
+ *                 Response = new AzureNative.ApiManagement.Inputs.HttpMessageDiagnosticArgs
+ *                 {
+ *                     Body = new AzureNative.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
+ *                     {
+ *                         Bytes = 512,
+ *                     },
+ *                     Headers = 
+ *                     {
+ *                         "Content-type",
+ *                     },
+ *                 },
+ *             },
+ *             DiagnosticId = "applicationinsights",
+ *             Frontend = new AzureNative.ApiManagement.Inputs.PipelineDiagnosticSettingsArgs
+ *             {
+ *                 Request = new AzureNative.ApiManagement.Inputs.HttpMessageDiagnosticArgs
+ *                 {
+ *                     Body = new AzureNative.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
+ *                     {
+ *                         Bytes = 512,
+ *                     },
+ *                     Headers = 
+ *                     {
+ *                         "Content-type",
+ *                     },
+ *                 },
+ *                 Response = new AzureNative.ApiManagement.Inputs.HttpMessageDiagnosticArgs
+ *                 {
+ *                     Body = new AzureNative.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
+ *                     {
+ *                         Bytes = 512,
+ *                     },
+ *                     Headers = 
+ *                     {
+ *                         "Content-type",
+ *                     },
+ *                 },
+ *             },
+ *             LoggerId = "/loggers/azuremonitor",
+ *             ResourceGroupName = "rg1",
+ *             Sampling = new AzureNative.ApiManagement.Inputs.SamplingSettingsArgs
+ *             {
+ *                 Percentage = 50,
+ *                 SamplingType = "fixed",
+ *             },
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewDiagnostic(ctx, "diagnostic", &apimanagement.DiagnosticArgs{
+ * 			AlwaysLog: pulumi.String("allErrors"),
+ * 			Backend: &apimanagement.PipelineDiagnosticSettingsArgs{
+ * 				Request: &apimanagement.HttpMessageDiagnosticArgs{
+ * 					Body: &apimanagement.BodyDiagnosticSettingsArgs{
+ * 						Bytes: pulumi.Int(512),
+ * 					},
+ * 					Headers: pulumi.StringArray{
+ * 						pulumi.String("Content-type"),
+ * 					},
+ * 				},
+ * 				Response: &apimanagement.HttpMessageDiagnosticArgs{
+ * 					Body: &apimanagement.BodyDiagnosticSettingsArgs{
+ * 						Bytes: pulumi.Int(512),
+ * 					},
+ * 					Headers: pulumi.StringArray{
+ * 						pulumi.String("Content-type"),
+ * 					},
+ * 				},
+ * 			},
+ * 			DiagnosticId: pulumi.String("applicationinsights"),
+ * 			Frontend: &apimanagement.PipelineDiagnosticSettingsArgs{
+ * 				Request: &apimanagement.HttpMessageDiagnosticArgs{
+ * 					Body: &apimanagement.BodyDiagnosticSettingsArgs{
+ * 						Bytes: pulumi.Int(512),
+ * 					},
+ * 					Headers: pulumi.StringArray{
+ * 						pulumi.String("Content-type"),
+ * 					},
+ * 				},
+ * 				Response: &apimanagement.HttpMessageDiagnosticArgs{
+ * 					Body: &apimanagement.BodyDiagnosticSettingsArgs{
+ * 						Bytes: pulumi.Int(512),
+ * 					},
+ * 					Headers: pulumi.StringArray{
+ * 						pulumi.String("Content-type"),
+ * 					},
+ * 				},
+ * 			},
+ * 			LoggerId:          pulumi.String("/loggers/azuremonitor"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Sampling: &apimanagement.SamplingSettingsArgs{
+ * 				Percentage:   pulumi.Float64(50),
+ * 				SamplingType: pulumi.String("fixed"),
+ * 			},
+ * 			ServiceName: pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const diagnostic = new azure_native.apimanagement.Diagnostic("diagnostic", {
+ *     alwaysLog: "allErrors",
+ *     backend: {
+ *         request: {
+ *             body: {
+ *                 bytes: 512,
+ *             },
+ *             headers: ["Content-type"],
+ *         },
+ *         response: {
+ *             body: {
+ *                 bytes: 512,
+ *             },
+ *             headers: ["Content-type"],
+ *         },
+ *     },
+ *     diagnosticId: "applicationinsights",
+ *     frontend: {
+ *         request: {
+ *             body: {
+ *                 bytes: 512,
+ *             },
+ *             headers: ["Content-type"],
+ *         },
+ *         response: {
+ *             body: {
+ *                 bytes: 512,
+ *             },
+ *             headers: ["Content-type"],
+ *         },
+ *     },
+ *     loggerId: "/loggers/azuremonitor",
+ *     resourceGroupName: "rg1",
+ *     sampling: {
+ *         percentage: 50,
+ *         samplingType: "fixed",
+ *     },
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * diagnostic = azure_native.apimanagement.Diagnostic("diagnostic",
+ *     always_log="allErrors",
+ *     backend=azure_native.apimanagement.PipelineDiagnosticSettingsArgs(
+ *         request=azure_native.apimanagement.HttpMessageDiagnosticArgs(
+ *             body=azure_native.apimanagement.BodyDiagnosticSettingsArgs(
+ *                 bytes=512,
+ *             ),
+ *             headers=["Content-type"],
+ *         ),
+ *         response=azure_native.apimanagement.HttpMessageDiagnosticArgs(
+ *             body=azure_native.apimanagement.BodyDiagnosticSettingsArgs(
+ *                 bytes=512,
+ *             ),
+ *             headers=["Content-type"],
+ *         ),
+ *     ),
+ *     diagnostic_id="applicationinsights",
+ *     frontend=azure_native.apimanagement.PipelineDiagnosticSettingsArgs(
+ *         request=azure_native.apimanagement.HttpMessageDiagnosticArgs(
+ *             body=azure_native.apimanagement.BodyDiagnosticSettingsArgs(
+ *                 bytes=512,
+ *             ),
+ *             headers=["Content-type"],
+ *         ),
+ *         response=azure_native.apimanagement.HttpMessageDiagnosticArgs(
+ *             body=azure_native.apimanagement.BodyDiagnosticSettingsArgs(
+ *                 bytes=512,
+ *             ),
+ *             headers=["Content-type"],
+ *         ),
+ *     ),
+ *     logger_id="/loggers/azuremonitor",
+ *     resource_group_name="rg1",
+ *     sampling=azure_native.apimanagement.SamplingSettingsArgs(
+ *         percentage=50,
+ *         sampling_type="fixed",
+ *     ),
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,154 +274,132 @@ import javax.annotation.Nullable;
 public class Diagnostic extends io.pulumi.resources.CustomResource {
     /**
      * Specifies for what type of messages sampling settings should not apply.
-     * 
      */
     @Export(name="alwaysLog", type=String.class, parameters={})
     private Output</* @Nullable */ String> alwaysLog;
 
     /**
      * @return Specifies for what type of messages sampling settings should not apply.
-     * 
      */
     public Output</* @Nullable */ String> getAlwaysLog() {
         return this.alwaysLog;
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
-     * 
      */
     @Export(name="backend", type=PipelineDiagnosticSettingsResponse.class, parameters={})
     private Output</* @Nullable */ PipelineDiagnosticSettingsResponse> backend;
 
     /**
      * @return Diagnostic settings for incoming/outgoing HTTP messages to the Backend
-     * 
      */
     public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> getBackend() {
         return this.backend;
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
-     * 
      */
     @Export(name="frontend", type=PipelineDiagnosticSettingsResponse.class, parameters={})
     private Output</* @Nullable */ PipelineDiagnosticSettingsResponse> frontend;
 
     /**
      * @return Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
-     * 
      */
     public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> getFrontend() {
         return this.frontend;
     }
     /**
      * Sets correlation protocol to use for Application Insights diagnostics.
-     * 
      */
     @Export(name="httpCorrelationProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> httpCorrelationProtocol;
 
     /**
      * @return Sets correlation protocol to use for Application Insights diagnostics.
-     * 
      */
     public Output</* @Nullable */ String> getHttpCorrelationProtocol() {
         return this.httpCorrelationProtocol;
     }
     /**
      * Log the ClientIP. Default is false.
-     * 
      */
     @Export(name="logClientIp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logClientIp;
 
     /**
      * @return Log the ClientIP. Default is false.
-     * 
      */
     public Output</* @Nullable */ Boolean> getLogClientIp() {
         return this.logClientIp;
     }
     /**
      * Resource Id of a target logger.
-     * 
      */
     @Export(name="loggerId", type=String.class, parameters={})
     private Output<String> loggerId;
 
     /**
      * @return Resource Id of a target logger.
-     * 
      */
     public Output<String> getLoggerId() {
         return this.loggerId;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The format of the Operation Name for Application Insights telemetries. Default is Name.
-     * 
      */
     @Export(name="operationNameFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> operationNameFormat;
 
     /**
      * @return The format of the Operation Name for Application Insights telemetries. Default is Name.
-     * 
      */
     public Output</* @Nullable */ String> getOperationNameFormat() {
         return this.operationNameFormat;
     }
     /**
      * Sampling settings for Diagnostic.
-     * 
      */
     @Export(name="sampling", type=SamplingSettingsResponse.class, parameters={})
     private Output</* @Nullable */ SamplingSettingsResponse> sampling;
 
     /**
      * @return Sampling settings for Diagnostic.
-     * 
      */
     public Output</* @Nullable */ SamplingSettingsResponse> getSampling() {
         return this.sampling;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The verbosity level applied to traces emitted by trace policies.
-     * 
      */
     @Export(name="verbosity", type=String.class, parameters={})
     private Output</* @Nullable */ String> verbosity;
 
     /**
      * @return The verbosity level applied to traces emitted by trace policies.
-     * 
      */
     public Output</* @Nullable */ String> getVerbosity() {
         return this.verbosity;

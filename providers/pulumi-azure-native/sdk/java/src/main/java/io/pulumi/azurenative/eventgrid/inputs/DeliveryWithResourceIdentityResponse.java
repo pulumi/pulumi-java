@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the delivery for an event subscription with resource identity.
- * 
  */
 public final class DeliveryWithResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class DeliveryWithResourceIdentityResponse extends io.pulumi.resour
     /**
      * Information about the destination where events have to be delivered for the event subscription.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Import(name="destination")
       private final @Nullable Object destination;
@@ -40,7 +38,6 @@ public final class DeliveryWithResourceIdentityResponse extends io.pulumi.resour
 
     /**
      * The identity to use when delivering events.
-     * 
      */
     @Import(name="identity")
       private final @Nullable EventSubscriptionIdentityResponse identity;

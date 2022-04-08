@@ -14,7 +14,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The parent resource identity.
-     * 
      */
     @Import(name="parentResourcePath", required=true)
       private final String parentResourcePath;
@@ -25,7 +24,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group containing the resource to get. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource to get.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -47,7 +44,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The namespace of the resource provider.
-     * 
      */
     @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
@@ -58,7 +54,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource type of the resource.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;

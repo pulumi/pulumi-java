@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * SAP Business Warehouse Linked Service.
- * 
  */
 public final class SapBWLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="clientId", required=true)
       private final Object clientId;
@@ -50,7 +47,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -61,7 +57,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -83,7 +77,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -94,7 +87,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Password to access the SAP BW server.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -105,7 +97,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Host name of the SAP BW instance. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="server", required=true)
       private final Object server;
@@ -116,7 +107,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="systemNumber", required=true)
       private final Object systemNumber;
@@ -128,7 +118,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
     /**
      * Type of linked service.
      * Expected value is 'SapBW'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -139,7 +128,6 @@ public final class SapBWLinkedServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Username to access the SAP BW server. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userName")
       private final @Nullable Object userName;

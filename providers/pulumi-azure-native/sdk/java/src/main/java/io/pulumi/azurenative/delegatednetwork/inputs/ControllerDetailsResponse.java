@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * controller details
- * 
  */
 public final class ControllerDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ControllerDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * controller arm resource id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

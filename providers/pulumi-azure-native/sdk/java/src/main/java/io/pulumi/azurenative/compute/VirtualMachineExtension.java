@@ -33,182 +33,156 @@ import javax.annotation.Nullable;
 public class VirtualMachineExtension extends io.pulumi.resources.CustomResource {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     @Export(name="enableAutomaticUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutomaticUpgrade;
 
     /**
      * @return Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade;
     }
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
      * The virtual machine extension instance view.
-     * 
      */
     @Export(name="instanceView", type=VirtualMachineExtensionInstanceViewResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> instanceView;
 
     /**
      * @return The virtual machine extension instance view.
-     * 
      */
     public Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Export(name="protectedSettings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> protectedSettings;
 
     /**
      * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     public Output</* @Nullable */ Object> getProtectedSettings() {
         return this.protectedSettings;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Export(name="publisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisher;
 
     /**
      * @return The name of the extension handler publisher.
-     * 
      */
     public Output</* @Nullable */ String> getPublisher() {
         return this.publisher;
     }
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Export(name="settings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> settings;
 
     /**
      * @return Json formatted public settings for the extension.
-     * 
      */
     public Output</* @Nullable */ Object> getSettings() {
         return this.settings;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Export(name="typeHandlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeHandlerVersion;
 
     /**
      * @return Specifies the version of the script handler.
-     * 
      */
     public Output</* @Nullable */ String> getTypeHandlerVersion() {
         return this.typeHandlerVersion;

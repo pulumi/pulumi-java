@@ -18,7 +18,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional ETag.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -29,7 +28,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input Managed Identity Details
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<DppIdentityDetailsArgs> identity;
@@ -40,7 +38,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * BackupVaultResource properties
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
@@ -62,7 +58,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group where the backup vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -84,7 +78,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the backup vault.
-     * 
      */
     @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;

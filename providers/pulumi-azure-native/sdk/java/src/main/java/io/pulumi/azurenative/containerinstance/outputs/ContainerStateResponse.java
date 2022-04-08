@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class ContainerStateResponse {
     /**
      * The human-readable status of the container instance state.
-     * 
      */
     private final String detailStatus;
     /**
      * The container instance exit codes correspond to those from the `docker run` command.
-     * 
      */
     private final Integer exitCode;
     /**
      * The date-time when the container instance state finished.
-     * 
      */
     private final String finishTime;
     /**
      * The date-time when the container instance state started.
-     * 
      */
     private final String startTime;
     /**
      * The state of the container instance.
-     * 
      */
     private final String state;
 
@@ -52,35 +47,30 @@ public final class ContainerStateResponse {
 
     /**
      * The human-readable status of the container instance state.
-     * 
     */
     public String getDetailStatus() {
         return this.detailStatus;
     }
     /**
      * The container instance exit codes correspond to those from the `docker run` command.
-     * 
     */
     public Integer getExitCode() {
         return this.exitCode;
     }
     /**
      * The date-time when the container instance state finished.
-     * 
     */
     public String getFinishTime() {
         return this.finishTime;
     }
     /**
      * The date-time when the container instance state started.
-     * 
     */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The state of the container instance.
-     * 
     */
     public String getState() {
         return this.state;

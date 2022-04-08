@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ContainerAppSecretResponse {
     /**
      * Secret Name.
-     * 
      */
     private final String name;
     /**
      * Secret Value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class ContainerAppSecretResponse {
 
     /**
      * Secret Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Secret Value.
-     * 
     */
     public String getValue() {
         return this.value;

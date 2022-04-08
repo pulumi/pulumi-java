@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @EnumType
     public enum DataSourceType {

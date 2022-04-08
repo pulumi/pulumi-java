@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Object used to describe a Service Provider supported by Bot Service
- * 
  */
 public final class ServiceProviderPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * Display Name of the Service Provider
-     * 
      */
     @Import(name="devPortalUrl", required=true)
       private final String devPortalUrl;
@@ -33,7 +31,6 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * Display Name of the Service Provider
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -44,7 +41,6 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * Display Name of the Service Provider
-     * 
      */
     @Import(name="iconUrl", required=true)
       private final String iconUrl;
@@ -55,7 +51,6 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * Id for Service Provider
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -66,7 +61,6 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * The list of parameters for the Service Provider
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ServiceProviderParameterResponse> parameters;
@@ -77,7 +71,6 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * Display Name of the Service Provider
-     * 
      */
     @Import(name="serviceProviderName", required=true)
       private final String serviceProviderName;

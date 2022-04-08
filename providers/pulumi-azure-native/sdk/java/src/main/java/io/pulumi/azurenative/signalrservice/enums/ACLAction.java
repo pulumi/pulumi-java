@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Default action when no other rule matches
-     * 
      */
     @EnumType
     public enum ACLAction {

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CustomRuleListResponse {
     /**
      * List of rules
-     * 
      */
     private final @Nullable List<CustomRuleResponse> rules;
 
@@ -24,7 +23,6 @@ public final class CustomRuleListResponse {
 
     /**
      * List of rules
-     * 
     */
     public List<CustomRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Git repository property payload for Application Configuration Service
- * 
  */
 public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Public sshKey of git repository.
-     * 
      */
     @Import(name="hostKey")
       private final @Nullable String hostKey;
@@ -33,7 +31,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * SshKey algorithm of git repository.
-     * 
      */
     @Import(name="hostKeyAlgorithm")
       private final @Nullable String hostKeyAlgorithm;
@@ -44,7 +41,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Label of the repository
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -55,7 +51,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Name of the repository
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -66,7 +61,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Password of git repository basic auth.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -77,7 +71,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Collection of patterns of the repository
-     * 
      */
     @Import(name="patterns", required=true)
       private final List<String> patterns;
@@ -88,7 +81,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Private sshKey algorithm of git repository.
-     * 
      */
     @Import(name="privateKey")
       private final @Nullable String privateKey;
@@ -99,7 +91,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Searching path of the repository
-     * 
      */
     @Import(name="searchPaths")
       private final @Nullable List<String> searchPaths;
@@ -110,7 +101,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Strict host key checking or not.
-     * 
      */
     @Import(name="strictHostKeyChecking")
       private final @Nullable Boolean strictHostKeyChecking;
@@ -121,7 +111,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * URI of the repository
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;
@@ -132,7 +121,6 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
 
     /**
      * Username of git repository basic auth.
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

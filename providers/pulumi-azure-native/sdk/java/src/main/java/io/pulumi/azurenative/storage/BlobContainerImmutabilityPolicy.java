@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdateImmutabilityPolicy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var blobContainerImmutabilityPolicy = new AzureNative.Storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", new AzureNative.Storage.BlobContainerImmutabilityPolicyArgs
+ *         {
+ *             AccountName = "sto7069",
+ *             AllowProtectedAppendWrites = true,
+ *             ContainerName = "container6397",
+ *             ImmutabilityPeriodSinceCreationInDays = 3,
+ *             ImmutabilityPolicyName = "default",
+ *             ResourceGroupName = "res1782",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBlobContainerImmutabilityPolicy(ctx, "blobContainerImmutabilityPolicy", &storage.BlobContainerImmutabilityPolicyArgs{
+ * 			AccountName:                           pulumi.String("sto7069"),
+ * 			AllowProtectedAppendWrites:            pulumi.Bool(true),
+ * 			ContainerName:                         pulumi.String("container6397"),
+ * 			ImmutabilityPeriodSinceCreationInDays: pulumi.Int(3),
+ * 			ImmutabilityPolicyName:                pulumi.String("default"),
+ * 			ResourceGroupName:                     pulumi.String("res1782"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const blobContainerImmutabilityPolicy = new azure_native.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
+ *     accountName: "sto7069",
+ *     allowProtectedAppendWrites: true,
+ *     containerName: "container6397",
+ *     immutabilityPeriodSinceCreationInDays: 3,
+ *     immutabilityPolicyName: "default",
+ *     resourceGroupName: "res1782",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * blob_container_immutability_policy = azure_native.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy",
+ *     account_name="sto7069",
+ *     allow_protected_append_writes=True,
+ *     container_name="container6397",
+ *     immutability_period_since_creation_in_days=3,
+ *     immutability_policy_name="default",
+ *     resource_group_name="res1782")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +118,72 @@ import javax.annotation.Nullable;
 public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomResource {
     /**
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
-     * 
      */
     @Export(name="allowProtectedAppendWrites", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowProtectedAppendWrites;
 
     /**
      * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowProtectedAppendWrites() {
         return this.allowProtectedAppendWrites;
     }
     /**
      * Resource Etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource Etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
-     * 
      */
     @Export(name="immutabilityPeriodSinceCreationInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> immutabilityPeriodSinceCreationInDays;
 
     /**
      * @return The immutability period for the blobs in the container since the policy creation, in days.
-     * 
      */
     public Output</* @Nullable */ Integer> getImmutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

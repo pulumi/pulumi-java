@@ -18,7 +18,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * True if deployment is currently active, false if completed and null if not started.
-     * 
      */
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
@@ -29,7 +28,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Who authored the deployment.
-     * 
      */
     @Import(name="author")
       private final @Nullable Output<String> author;
@@ -40,7 +38,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Author email.
-     * 
      */
     @Import(name="authorEmail")
       private final @Nullable Output<String> authorEmail;
@@ -51,7 +48,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Who performed the deployment.
-     * 
      */
     @Import(name="deployer")
       private final @Nullable Output<String> deployer;
@@ -62,7 +58,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Details on deployment.
-     * 
      */
     @Import(name="details")
       private final @Nullable Output<String> details;
@@ -73,7 +68,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * End time.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -84,7 +78,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * ID of an existing deployment.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -95,7 +88,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -106,7 +98,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Details about deployment status.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -117,7 +108,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -128,7 +118,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -139,7 +128,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API creates a deployment for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;
@@ -150,7 +138,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Start time.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -161,7 +148,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
 
     /**
      * Deployment status.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Integer> status;

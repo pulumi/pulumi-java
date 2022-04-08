@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies that the scope of the extensionInstance is Namespace
- * 
  */
 public final class ScopeNamespaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ScopeNamespaceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created
-     * 
      */
     @Import(name="targetNamespace")
       private final @Nullable String targetNamespace;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether the hostname is a standard or repository hostname.
-     * 
      */
     @EnumType
     public enum HostType {

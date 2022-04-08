@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Package store for the SSIS integration runtime.
- * 
  */
 public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the package store
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -31,7 +29,6 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The package store linked service reference.
-     * 
      */
     @Import(name="packageStoreLinkedService", required=true)
       private final Output<EntityReferenceArgs> packageStoreLinkedService;

@@ -19,7 +19,6 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -30,7 +29,6 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the IoT sensor
-     * 
      */
     @Import(name="sensorName")
       private final @Nullable Output<String> sensorName;
@@ -41,7 +39,6 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of sensor
-     * 
      */
     @Import(name="sensorType")
       private final @Nullable Output<Either<String,SensorType>> sensorType;
@@ -52,7 +49,6 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TI Automatic mode status of the IoT sensor
-     * 
      */
     @Import(name="tiAutomaticUpdates")
       private final @Nullable Output<Boolean> tiAutomaticUpdates;
@@ -63,7 +59,6 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Zone of the IoT sensor
-     * 
      */
     @Import(name="zone")
       private final @Nullable Output<String> zone;

@@ -22,7 +22,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The extended location of the Image.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -33,7 +32,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
-     * 
      */
     @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration;
@@ -44,7 +42,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the image.
-     * 
      */
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
@@ -55,7 +52,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -66,7 +62,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -77,7 +72,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source virtual machine from which Image is created.
-     * 
      */
     @Import(name="sourceVirtualMachine")
       private final @Nullable Output<SubResourceArgs> sourceVirtualMachine;
@@ -88,7 +82,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the storage settings for the virtual machine disks.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<ImageStorageProfileArgs> storageProfile;
@@ -99,7 +92,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

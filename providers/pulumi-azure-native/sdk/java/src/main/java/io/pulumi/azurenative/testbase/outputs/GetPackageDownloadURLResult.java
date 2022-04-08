@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GetPackageDownloadURLResult {
     /**
      * The download URL.
-     * 
      */
     private final String downloadUrl;
     /**
      * Expiry date of the download URL.
-     * 
      */
     private final String expirationTime;
 
@@ -30,14 +28,12 @@ public final class GetPackageDownloadURLResult {
 
     /**
      * The download URL.
-     * 
     */
     public String getDownloadUrl() {
         return this.downloadUrl;
     }
     /**
      * Expiry date of the download URL.
-     * 
     */
     public String getExpirationTime() {
         return this.expirationTime;

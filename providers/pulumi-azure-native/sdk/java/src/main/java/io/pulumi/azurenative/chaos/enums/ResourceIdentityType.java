@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * String of the resource identity type.
-     * 
      */
     @EnumType
     public enum ResourceIdentityType {

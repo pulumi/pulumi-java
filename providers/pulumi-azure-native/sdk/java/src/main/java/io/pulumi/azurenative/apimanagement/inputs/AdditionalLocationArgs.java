@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of an additional API Management resource location.
- * 
  */
 public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
-     * 
      */
     @Import(name="disableGateway")
       private final @Nullable Output<Boolean> disableGateway;
@@ -35,7 +33,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The location name of the additional region among Azure Data center regions.
-     * 
      */
     @Import(name="location", required=true)
       private final Output<String> location;
@@ -46,7 +43,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * SKU properties of the API Management service.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<ApiManagementServiceSkuPropertiesArgs> sku;
@@ -57,7 +53,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Virtual network configuration for the location.
-     * 
      */
     @Import(name="virtualNetworkConfiguration")
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
@@ -68,7 +63,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of availability zones denoting where the resource needs to come from.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

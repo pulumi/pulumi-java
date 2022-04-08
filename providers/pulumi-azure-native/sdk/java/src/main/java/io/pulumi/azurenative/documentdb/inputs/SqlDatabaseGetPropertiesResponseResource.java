@@ -17,7 +17,6 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
 
     /**
      * A system generated property that specified the addressable path of the collections resource.
-     * 
      */
     @Import(name="colls")
       private final @Nullable String colls;
@@ -28,7 +27,6 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
 
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -39,7 +37,6 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
 
     /**
      * Name of the Cosmos DB SQL database
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -50,7 +47,6 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
 
     /**
      * A system generated property. A unique identifier.
-     * 
      */
     @Import(name="rid", required=true)
       private final String rid;
@@ -61,7 +57,6 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
 
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
-     * 
      */
     @Import(name="ts", required=true)
       private final Double ts;
@@ -72,7 +67,6 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
 
     /**
      * A system generated property that specifies the addressable path of the users resource.
-     * 
      */
     @Import(name="users")
       private final @Nullable String users;

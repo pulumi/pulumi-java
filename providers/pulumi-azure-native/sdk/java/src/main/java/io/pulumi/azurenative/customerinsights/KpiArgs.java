@@ -24,7 +24,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The aliases.
-     * 
      */
     @Import(name="aliases")
       private final @Nullable Output<List<KpiAliasArgs>> aliases;
@@ -35,7 +34,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The calculation window.
-     * 
      */
     @Import(name="calculationWindow", required=true)
       private final Output<CalculationWindowTypes> calculationWindow;
@@ -46,7 +44,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of calculation window field.
-     * 
      */
     @Import(name="calculationWindowFieldName")
       private final @Nullable Output<String> calculationWindowFieldName;
@@ -57,7 +54,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized description for the KPI.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
@@ -68,7 +64,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized display name for the KPI.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
@@ -79,7 +74,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mapping entity type.
-     * 
      */
     @Import(name="entityType", required=true)
       private final Output<EntityTypes> entityType;
@@ -90,7 +84,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mapping entity name.
-     * 
      */
     @Import(name="entityTypeName", required=true)
       private final Output<String> entityTypeName;
@@ -101,7 +94,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The computation expression for the KPI.
-     * 
      */
     @Import(name="expression", required=true)
       private final Output<String> expression;
@@ -112,7 +104,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The KPI extracts.
-     * 
      */
     @Import(name="extracts")
       private final @Nullable Output<List<KpiExtractArgs>> extracts;
@@ -123,7 +114,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The filter expression for the KPI.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<String> filter;
@@ -134,7 +124,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The computation function for the KPI.
-     * 
      */
     @Import(name="function", required=true)
       private final Output<KpiFunctions> function;
@@ -145,7 +134,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the group by properties for the KPI.
-     * 
      */
     @Import(name="groupBy")
       private final @Nullable Output<List<String>> groupBy;
@@ -156,7 +144,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -167,7 +154,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the KPI.
-     * 
      */
     @Import(name="kpiName")
       private final @Nullable Output<String> kpiName;
@@ -178,7 +164,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -189,7 +174,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The KPI thresholds.
-     * 
      */
     @Import(name="thresHolds")
       private final @Nullable Output<KpiThresholdsArgs> thresHolds;
@@ -200,7 +184,6 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unit of measurement for the KPI.
-     * 
      */
     @Import(name="unit")
       private final @Nullable Output<String> unit;

@@ -14,7 +14,6 @@ public final class GetHostPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the host pool within the specified resource group
-     * 
      */
     @Import(name="hostPoolName", required=true)
       private final String hostPoolName;
@@ -25,7 +24,6 @@ public final class GetHostPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

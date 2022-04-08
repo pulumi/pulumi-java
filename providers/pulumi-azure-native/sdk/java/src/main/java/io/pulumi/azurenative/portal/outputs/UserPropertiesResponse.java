@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class UserPropertiesResponse {
     /**
      * The preferred location of the cloud shell.
-     * 
      */
     private final String preferredLocation;
     /**
      * The operating system type of the cloud shell. Deprecated, use preferredShellType.
-     * 
      */
     private final String preferredOsType;
     /**
      * The shell type of the cloud shell.
-     * 
      */
     private final String preferredShellType;
     /**
      * The storage profile of the user settings.
-     * 
      */
     private final StorageProfileResponse storageProfile;
     /**
      * Settings for terminal appearance.
-     * 
      */
     private final TerminalSettingsResponse terminalSettings;
 
@@ -53,35 +48,30 @@ public final class UserPropertiesResponse {
 
     /**
      * The preferred location of the cloud shell.
-     * 
     */
     public String getPreferredLocation() {
         return this.preferredLocation;
     }
     /**
      * The operating system type of the cloud shell. Deprecated, use preferredShellType.
-     * 
     */
     public String getPreferredOsType() {
         return this.preferredOsType;
     }
     /**
      * The shell type of the cloud shell.
-     * 
     */
     public String getPreferredShellType() {
         return this.preferredShellType;
     }
     /**
      * The storage profile of the user settings.
-     * 
     */
     public StorageProfileResponse getStorageProfile() {
         return this.storageProfile;
     }
     /**
      * Settings for terminal appearance.
-     * 
     */
     public TerminalSettingsResponse getTerminalSettings() {
         return this.terminalSettings;

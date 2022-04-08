@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Machine Learning datastore object.
- * 
  */
 public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -65,7 +64,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The User who created the datastore.
-     * 
      */
     @Import(name="createdBy", required=true)
       private final UserInfoResponse createdBy;
@@ -76,7 +74,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The date and time when the datastore was created.
-     * 
      */
     @Import(name="createdTime", required=true)
       private final String createdTime;
@@ -87,7 +84,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The datastore type.
-     * 
      */
     @Import(name="dataStoreType")
       private final @Nullable String dataStoreType;
@@ -98,7 +94,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Description of the datastore.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -109,7 +104,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Data specific to GlusterFS.
-     * 
      */
     @Import(name="glusterFsSection")
       private final @Nullable GlusterFsSectionResponse glusterFsSection;
@@ -120,7 +114,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A read only property that denotes whether the service datastore has been validated with credentials.
-     * 
      */
     @Import(name="hasBeenValidated")
       private final @Nullable Boolean hasBeenValidated;
@@ -131,7 +124,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Info about origin if it is linked.
-     * 
      */
     @Import(name="linkedInfo")
       private final @Nullable LinkedInfoResponse linkedInfo;
@@ -142,7 +134,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The User who modified the datastore.
-     * 
      */
     @Import(name="modifiedBy", required=true)
       private final UserInfoResponse modifiedBy;
@@ -153,7 +144,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The date and time when the datastore was last modified.
-     * 
      */
     @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
@@ -164,7 +154,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the datastore.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -175,7 +164,6 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tags for this datastore.
-     * 
      */
     @Import(name="tags", required=true)
       private final Map<String,String> tags;

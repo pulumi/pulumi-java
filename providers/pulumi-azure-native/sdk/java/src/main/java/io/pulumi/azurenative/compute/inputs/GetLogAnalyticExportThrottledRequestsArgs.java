@@ -17,7 +17,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
-     * 
      */
     @Import(name="blobContainerSasUri", required=true)
       private final String blobContainerSasUri;
@@ -28,7 +27,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * From time of the query
-     * 
      */
     @Import(name="fromTime", required=true)
       private final String fromTime;
@@ -39,7 +37,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * Group query result by Client Application ID.
-     * 
      */
     @Import(name="groupByClientApplicationId")
       private final @Nullable Boolean groupByClientApplicationId;
@@ -50,7 +47,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * Group query result by Operation Name.
-     * 
      */
     @Import(name="groupByOperationName")
       private final @Nullable Boolean groupByOperationName;
@@ -61,7 +57,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * Group query result by Resource Name.
-     * 
      */
     @Import(name="groupByResourceName")
       private final @Nullable Boolean groupByResourceName;
@@ -72,7 +67,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * Group query result by Throttle Policy applied.
-     * 
      */
     @Import(name="groupByThrottlePolicy")
       private final @Nullable Boolean groupByThrottlePolicy;
@@ -83,7 +77,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * Group query result by User Agent.
-     * 
      */
     @Import(name="groupByUserAgent")
       private final @Nullable Boolean groupByUserAgent;
@@ -94,7 +87,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * The location upon which virtual-machine-sizes is queried.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -105,7 +97,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
 
     /**
      * To time of the query
-     * 
      */
     @Import(name="toTime", required=true)
       private final String toTime;

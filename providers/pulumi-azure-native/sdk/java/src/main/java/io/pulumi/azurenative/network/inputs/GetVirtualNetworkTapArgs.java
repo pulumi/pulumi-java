@@ -14,7 +14,6 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of virtual network tap.
-     * 
      */
     @Import(name="tapName", required=true)
       private final String tapName;

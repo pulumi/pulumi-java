@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the destination of connection monitor.
- * 
  */
 public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
 
     /**
      * Address of the connection monitor destination (IP or domain name).
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -32,7 +30,6 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
 
     /**
      * The destination port used by connection monitor.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -43,7 +40,6 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
 
     /**
      * The ID of the resource used as the destination by connection monitor.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

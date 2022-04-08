@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Orc write settings.
- * 
  */
 public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileNamePrefix")
       private final @Nullable Output<Object> fileNamePrefix;
@@ -32,7 +30,6 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxRowsPerFile")
       private final @Nullable Output<Object> maxRowsPerFile;
@@ -44,7 +41,6 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
     /**
      * The write setting type.
      * Expected value is 'OrcWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

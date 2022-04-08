@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Kind of the guest configuration. For example:DSC
-     * 
      */
     @EnumType
     public enum Kind {

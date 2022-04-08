@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for Helm operator.
- * 
  */
 public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Values override for the operator Helm chart.
-     * 
      */
     @Import(name="chartValues")
       private final @Nullable String chartValues;
@@ -31,7 +29,6 @@ public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Version of the operator Helm chart.
-     * 
      */
     @Import(name="chartVersion")
       private final @Nullable String chartVersion;

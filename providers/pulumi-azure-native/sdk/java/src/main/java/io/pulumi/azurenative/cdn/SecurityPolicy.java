@@ -19,7 +19,125 @@ import javax.annotation.Nullable;
  * SecurityPolicy association for AzureFrontDoor profile
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SecurityPolicies_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var securityPolicy = new AzureNative.Cdn.SecurityPolicy("securityPolicy", new AzureNative.Cdn.SecurityPolicyArgs
+ *         {
+ *             Parameters = new AzureNative.Cdn.Inputs.SecurityPolicyWebApplicationFirewallParametersArgs
+ *             {
+ *                 Associations = 
+ *                 {
+ *                     new AzureNative.Cdn.Inputs.SecurityPolicyWebApplicationFirewallAssociationArgs
+ *                     {
+ *                         Domains = 
+ *                         {
+ *                             new AzureNative.Cdn.Inputs.ResourceReferenceArgs
+ *                             {
+ *                                 Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
+ *                             },
+ *                             new AzureNative.Cdn.Inputs.ResourceReferenceArgs
+ *                             {
+ *                                 Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2",
+ *                             },
+ *                         },
+ *                         PatternsToMatch = 
+ *                         {
+ *                             "/images",
+ *                             "/videos",
+ *                         },
+ *                     },
+ *                 },
+ *                 Type = "WebApplicationFirewall",
+ *                 WafPolicy = new AzureNative.Cdn.Inputs.ResourceReferenceArgs
+ *                 {
+ *                     Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
+ *                 },
+ *             },
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *             SecurityPolicyName = "securityPolicy1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const securityPolicy = new azure_native.cdn.SecurityPolicy("securityPolicy", {
+ *     parameters: {
+ *         associations: [{
+ *             domains: [
+ *                 {
+ *                     id: "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
+ *                 },
+ *                 {
+ *                     id: "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2",
+ *                 },
+ *             ],
+ *             patternsToMatch: [
+ *                 "/images",
+ *                 "/videos",
+ *             ],
+ *         }],
+ *         type: "WebApplicationFirewall",
+ *         wafPolicy: {
+ *             id: "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
+ *         },
+ *     },
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ *     securityPolicyName: "securityPolicy1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * security_policy = azure_native.cdn.SecurityPolicy("securityPolicy",
+ *     parameters={
+ *         "associations": [azure_native.cdn.SecurityPolicyWebApplicationFirewallAssociationArgs(
+ *             domains=[
+ *                 azure_native.cdn.ResourceReferenceArgs(
+ *                     id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
+ *                 ),
+ *                 azure_native.cdn.ResourceReferenceArgs(
+ *                     id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2",
+ *                 ),
+ *             ],
+ *             patterns_to_match=[
+ *                 "/images",
+ *                 "/videos",
+ *             ],
+ *         )],
+ *         "type": "WebApplicationFirewall",
+ *         "wafPolicy": azure_native.cdn.ResourceReferenceArgs(
+ *             id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
+ *         ),
+ *     },
+ *     profile_name="profile1",
+ *     resource_group_name="RG",
+ *     security_policy_name="securityPolicy1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,70 +158,60 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * object which contains security policy parameters
-     * 
      */
     @Export(name="parameters", type=SecurityPolicyWebApplicationFirewallParametersResponse.class, parameters={})
     private Output</* @Nullable */ SecurityPolicyWebApplicationFirewallParametersResponse> parameters;
 
     /**
      * @return object which contains security policy parameters
-     * 
      */
     public Output</* @Nullable */ SecurityPolicyWebApplicationFirewallParametersResponse> getParameters() {
         return this.parameters;
     }
     /**
      * Provisioning status
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

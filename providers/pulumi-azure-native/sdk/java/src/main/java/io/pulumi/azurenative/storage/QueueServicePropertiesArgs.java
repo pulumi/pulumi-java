@@ -17,7 +17,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -28,7 +27,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
-     * 
      */
     @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
@@ -39,7 +37,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the Queue Service within the specified storage account. Queue Service Name must be 'default'
-     * 
      */
     @Import(name="queueServiceName")
       private final @Nullable Output<String> queueServiceName;
@@ -50,7 +47,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The namespace type.
-     * 
      */
     @EnumType
     public enum NamespaceType {

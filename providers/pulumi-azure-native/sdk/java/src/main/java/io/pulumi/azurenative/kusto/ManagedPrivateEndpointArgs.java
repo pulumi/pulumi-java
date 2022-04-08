@@ -16,7 +16,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -27,7 +26,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The groupId in which the managed private endpoint is created.
-     * 
      */
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
@@ -38,7 +36,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the managed private endpoint.
-     * 
      */
     @Import(name="managedPrivateEndpointName")
       private final @Nullable Output<String> managedPrivateEndpointName;
@@ -49,7 +46,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The ARM resource ID of the resource for which the managed private endpoint is created.
-     * 
      */
     @Import(name="privateLinkResourceId", required=true)
       private final Output<String> privateLinkResourceId;
@@ -60,7 +56,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The region of the resource to which the managed private endpoint is created.
-     * 
      */
     @Import(name="privateLinkResourceRegion")
       private final @Nullable Output<String> privateLinkResourceRegion;
@@ -71,7 +66,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The user request message.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
@@ -82,7 +76,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

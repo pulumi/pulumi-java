@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Disk details for E2A provider.
- * 
  */
 public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The DiskEncryptionSet ARM ID.
-     * 
      */
     @Import(name="diskEncryptionSetId")
       private final @Nullable String diskEncryptionSetId;
@@ -31,7 +29,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The disk resource id.
-     * 
      */
     @Import(name="diskId")
       private final @Nullable String diskId;
@@ -42,7 +39,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Ordinal\LunId of the disk for the Azure VM.
-     * 
      */
     @Import(name="lunId")
       private final @Nullable String lunId;
@@ -53,7 +49,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Max side in MB.
-     * 
      */
     @Import(name="maxSizeMB")
       private final @Nullable String maxSizeMB;
@@ -64,7 +59,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Blob uri of the Azure disk.
-     * 
      */
     @Import(name="targetDiskLocation")
       private final @Nullable String targetDiskLocation;
@@ -75,7 +69,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The target Azure disk name.
-     * 
      */
     @Import(name="targetDiskName")
       private final @Nullable String targetDiskName;
@@ -86,7 +79,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The VHD id.
-     * 
      */
     @Import(name="vhdId")
       private final @Nullable String vhdId;
@@ -97,7 +89,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * VHD name.
-     * 
      */
     @Import(name="vhdName")
       private final @Nullable String vhdName;
@@ -108,7 +99,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * VHD type.
-     * 
      */
     @Import(name="vhdType")
       private final @Nullable String vhdType;

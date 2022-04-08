@@ -16,7 +16,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Redis cache.
-     * 
      */
     @Import(name="cacheName", required=true)
       private final Output<String> cacheName;
@@ -27,7 +26,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * highest IP address included in the range
-     * 
      */
     @Import(name="endIP", required=true)
       private final Output<String> endIP;
@@ -38,7 +36,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the firewall rule.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
@@ -60,7 +56,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * lowest IP address included in the range
-     * 
      */
     @Import(name="startIP", required=true)
       private final Output<String> startIP;

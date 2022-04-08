@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayRewriteRuleActionSetResponse {
     /**
      * Request Header Actions in the Action Set.
-     * 
      */
     private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
     /**
      * Response Header Actions in the Action Set.
-     * 
      */
     private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
     /**
      * Url Configuration Action in the Action Set.
-     * 
      */
     private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 
@@ -41,21 +38,18 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
 
     /**
      * Request Header Actions in the Action Set.
-     * 
     */
     public List<ApplicationGatewayHeaderConfigurationResponse> getRequestHeaderConfigurations() {
         return this.requestHeaderConfigurations == null ? List.of() : this.requestHeaderConfigurations;
     }
     /**
      * Response Header Actions in the Action Set.
-     * 
     */
     public List<ApplicationGatewayHeaderConfigurationResponse> getResponseHeaderConfigurations() {
         return this.responseHeaderConfigurations == null ? List.of() : this.responseHeaderConfigurations;
     }
     /**
      * Url Configuration Action in the Action Set.
-     * 
     */
     public Optional<ApplicationGatewayUrlConfigurationResponse> getUrlConfiguration() {
         return Optional.ofNullable(this.urlConfiguration);

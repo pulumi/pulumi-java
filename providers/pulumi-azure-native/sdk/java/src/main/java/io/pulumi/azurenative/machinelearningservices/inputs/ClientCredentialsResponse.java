@@ -17,7 +17,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The authority URL used for authentication.
-     * 
      */
     @Import(name="authorityUrl")
       private final @Nullable String authorityUrl;
@@ -28,7 +27,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The content of the certificate used for authentication.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable String certificate;
@@ -39,7 +37,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The Client ID/Application ID
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -50,7 +47,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The client secret.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
@@ -61,7 +57,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      *  Is it using certificate to authenticate. If false then use client secret.
-     * 
      */
     @Import(name="isCertAuth")
       private final @Nullable Boolean isCertAuth;
@@ -72,7 +67,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource Group.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
@@ -83,7 +77,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The resource the service principal/app has access to.
-     * 
      */
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;
@@ -94,7 +87,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Indicates which identity to use to authenticate service data access to customer's storage.
-     * 
      */
     @Import(name="serviceDataAccessAuthIdentity")
       private final @Nullable String serviceDataAccessAuthIdentity;
@@ -105,7 +97,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Subscription ID.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
@@ -116,7 +107,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ID of the tenant the service principal/app belongs to.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;
@@ -127,7 +117,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The thumbprint of the certificate above.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;

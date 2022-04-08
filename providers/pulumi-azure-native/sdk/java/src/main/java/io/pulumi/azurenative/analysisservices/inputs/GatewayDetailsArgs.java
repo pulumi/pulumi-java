@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The gateway details.
- * 
  */
 public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gateway resource to be associated with the server.
-     * 
      */
     @Import(name="gatewayResourceId")
       private final @Nullable Output<String> gatewayResourceId;

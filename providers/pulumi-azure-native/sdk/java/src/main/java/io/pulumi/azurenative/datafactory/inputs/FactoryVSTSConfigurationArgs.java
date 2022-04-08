@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Factory's VSTS repo information.
- * 
  */
 public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -31,7 +29,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Collaboration branch.
-     * 
      */
     @Import(name="collaborationBranch", required=true)
       private final Output<String> collaborationBranch;
@@ -42,7 +39,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Last commit id.
-     * 
      */
     @Import(name="lastCommitId")
       private final @Nullable Output<String> lastCommitId;
@@ -53,7 +49,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * VSTS project name.
-     * 
      */
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
@@ -64,7 +59,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Repository name.
-     * 
      */
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
@@ -75,7 +69,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Root folder.
-     * 
      */
     @Import(name="rootFolder", required=true)
       private final Output<String> rootFolder;
@@ -86,7 +79,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * VSTS tenant id.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -98,7 +90,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
     /**
      * Type of repo configuration.
      * Expected value is 'FactoryVSTSConfiguration'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

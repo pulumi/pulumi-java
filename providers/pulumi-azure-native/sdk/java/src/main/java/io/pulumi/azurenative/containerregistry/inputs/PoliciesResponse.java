@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The policies for a container registry.
- * 
  */
 public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The quarantine policy for a container registry.
-     * 
      */
     @Import(name="quarantinePolicy")
       private final @Nullable QuarantinePolicyResponse quarantinePolicy;
@@ -33,7 +31,6 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The retention policy for a container registry.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable RetentionPolicyResponse retentionPolicy;
@@ -44,7 +41,6 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The content trust policy for a container registry.
-     * 
      */
     @Import(name="trustPolicy")
       private final @Nullable TrustPolicyResponse trustPolicy;

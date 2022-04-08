@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The language extension object.
- * 
  */
 public final class LanguageExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LanguageExtensionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The language extension name.
-     * 
      */
     @Import(name="languageExtensionName")
       private final @Nullable String languageExtensionName;

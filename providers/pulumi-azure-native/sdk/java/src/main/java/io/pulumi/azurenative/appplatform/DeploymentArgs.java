@@ -18,7 +18,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the App resource.
-     * 
      */
     @Import(name="appName", required=true)
       private final Output<String> appName;
@@ -29,7 +28,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Deployment resource.
-     * 
      */
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
@@ -40,7 +38,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the Deployment resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<DeploymentResourcePropertiesArgs> properties;
@@ -51,7 +48,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -73,7 +68,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sku of the Deployment resource
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;

@@ -14,17 +14,14 @@ import java.util.Objects;
 public final class ServerEndpointRecallStatusResponse {
     /**
      * Last updated timestamp
-     * 
      */
     private final String lastUpdatedTimestamp;
     /**
      * Array of recall errors
-     * 
      */
     private final List<ServerEndpointRecallErrorResponse> recallErrors;
     /**
      * Total count of recall errors.
-     * 
      */
     private final Double totalRecallErrorsCount;
 
@@ -40,21 +37,18 @@ public final class ServerEndpointRecallStatusResponse {
 
     /**
      * Last updated timestamp
-     * 
     */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Array of recall errors
-     * 
     */
     public List<ServerEndpointRecallErrorResponse> getRecallErrors() {
         return this.recallErrors;
     }
     /**
      * Total count of recall errors.
-     * 
     */
     public Double getTotalRecallErrorsCount() {
         return this.totalRecallErrorsCount;

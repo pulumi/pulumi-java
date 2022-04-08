@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class SecretPropertiesResponse {
     /**
      * The attributes of the secret.
-     * 
      */
     private final @Nullable SecretAttributesResponse attributes;
     /**
      * The content type of the secret.
-     * 
      */
     private final @Nullable String contentType;
     /**
      * The URI to retrieve the current version of the secret.
-     * 
      */
     private final String secretUri;
     /**
      * The URI to retrieve the specific version of the secret.
-     * 
      */
     private final String secretUriWithVersion;
     /**
      * The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
-     * 
      */
     private final @Nullable String value;
 
@@ -54,35 +49,30 @@ public final class SecretPropertiesResponse {
 
     /**
      * The attributes of the secret.
-     * 
     */
     public Optional<SecretAttributesResponse> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The content type of the secret.
-     * 
     */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The URI to retrieve the current version of the secret.
-     * 
     */
     public String getSecretUri() {
         return this.secretUri;
     }
     /**
      * The URI to retrieve the specific version of the secret.
-     * 
     */
     public String getSecretUriWithVersion() {
         return this.secretUriWithVersion;
     }
     /**
      * The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Non versioned Container App configuration properties that define the mutable settings of a Container app
- * 
  */
 public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * ActiveRevisionsMode controls how active revisions are handled for the Container app:
      * <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
-     * 
      */
     @Import(name="activeRevisionsMode")
       private final @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
@@ -38,7 +36,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Ingress configurations.
-     * 
      */
     @Import(name="ingress")
       private final @Nullable Output<IngressArgs> ingress;
@@ -49,7 +46,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of private container registry credentials for containers used by the Container app
-     * 
      */
     @Import(name="registries")
       private final @Nullable Output<List<RegistryCredentialsArgs>> registries;
@@ -60,7 +56,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of secrets used by a Container app
-     * 
      */
     @Import(name="secrets")
       private final @Nullable Output<List<SecretArgs>> secrets;

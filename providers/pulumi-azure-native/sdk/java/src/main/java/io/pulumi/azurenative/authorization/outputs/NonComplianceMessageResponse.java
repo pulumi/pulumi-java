@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class NonComplianceMessageResponse {
     /**
      * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
-     * 
      */
     private final String message;
     /**
      * The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
-     * 
      */
     private final @Nullable String policyDefinitionReferenceId;
 
@@ -32,14 +30,12 @@ public final class NonComplianceMessageResponse {
 
     /**
      * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
-     * 
     */
     public String getMessage() {
         return this.message;
     }
     /**
      * The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
-     * 
     */
     public Optional<String> getPolicyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);

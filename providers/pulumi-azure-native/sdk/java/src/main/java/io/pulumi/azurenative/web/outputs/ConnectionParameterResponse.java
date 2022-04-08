@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ConnectionParameterResponse {
     /**
      * OAuth settings for the connection provider
-     * 
      */
     private final @Nullable ApiOAuthSettingsResponse oAuthSettings;
     /**
      * Type of the parameter
-     * 
      */
     private final @Nullable String type;
 
@@ -33,14 +31,12 @@ public final class ConnectionParameterResponse {
 
     /**
      * OAuth settings for the connection provider
-     * 
     */
     public Optional<ApiOAuthSettingsResponse> getOAuthSettings() {
         return Optional.ofNullable(this.oAuthSettings);
     }
     /**
      * Type of the parameter
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

@@ -14,7 +14,6 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group to which the machine learning workspace belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the machine learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

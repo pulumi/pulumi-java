@@ -20,7 +20,95 @@ import javax.annotation.Nullable;
  * Class representing a read write database.
  * API Version: 2021-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### KustoPoolDatabasesCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var readWriteDatabase = new AzureNative.Synapse.ReadWriteDatabase("readWriteDatabase", new AzureNative.Synapse.ReadWriteDatabaseArgs
+ *         {
+ *             DatabaseName = "KustoDatabase8",
+ *             Kind = "ReadWrite",
+ *             KustoPoolName = "kustoclusterrptest4",
+ *             Location = "westus",
+ *             ResourceGroupName = "kustorptest",
+ *             SoftDeletePeriod = "P1D",
+ *             WorkspaceName = "synapseWorkspaceName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewReadWriteDatabase(ctx, "readWriteDatabase", &synapse.ReadWriteDatabaseArgs{
+ * 			DatabaseName:      pulumi.String("KustoDatabase8"),
+ * 			Kind:              pulumi.String("ReadWrite"),
+ * 			KustoPoolName:     pulumi.String("kustoclusterrptest4"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("kustorptest"),
+ * 			SoftDeletePeriod:  pulumi.String("P1D"),
+ * 			WorkspaceName:     pulumi.String("synapseWorkspaceName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const readWriteDatabase = new azure_native.synapse.ReadWriteDatabase("readWriteDatabase", {
+ *     databaseName: "KustoDatabase8",
+ *     kind: "ReadWrite",
+ *     kustoPoolName: "kustoclusterrptest4",
+ *     location: "westus",
+ *     resourceGroupName: "kustorptest",
+ *     softDeletePeriod: "P1D",
+ *     workspaceName: "synapseWorkspaceName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * read_write_database = azure_native.synapse.ReadWriteDatabase("readWriteDatabase",
+ *     database_name="KustoDatabase8",
+ *     kind="ReadWrite",
+ *     kusto_pool_name="kustoclusterrptest4",
+ *     location="westus",
+ *     resource_group_name="kustorptest",
+ *     soft_delete_period="P1D",
+ *     workspace_name="synapseWorkspaceName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,28 +123,24 @@ import javax.annotation.Nullable;
 public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
     /**
      * The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
      */
     @Export(name="hotCachePeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> hotCachePeriod;
 
     /**
      * @return The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
      */
     public Output</* @Nullable */ String> getHotCachePeriod() {
         return this.hotCachePeriod;
     }
     /**
      * Indicates whether the database is followed.
-     * 
      */
     @Export(name="isFollowed", type=Boolean.class, parameters={})
     private Output<Boolean> isFollowed;
 
     /**
      * @return Indicates whether the database is followed.
-     * 
      */
     public Output<Boolean> getIsFollowed() {
         return this.isFollowed;
@@ -64,7 +148,6 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
     /**
      * Kind of the database
      * Expected value is 'ReadWrite'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -72,105 +155,90 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
     /**
      * @return Kind of the database
      * Expected value is 'ReadWrite'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioned state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
-     * 
      */
     @Export(name="softDeletePeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> softDeletePeriod;
 
     /**
      * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
-     * 
      */
     public Output</* @Nullable */ String> getSoftDeletePeriod() {
         return this.softDeletePeriod;
     }
     /**
      * The statistics of the database.
-     * 
      */
     @Export(name="statistics", type=DatabaseStatisticsResponse.class, parameters={})
     private Output<DatabaseStatisticsResponse> statistics;
 
     /**
      * @return The statistics of the database.
-     * 
      */
     public Output<DatabaseStatisticsResponse> getStatistics() {
         return this.statistics;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

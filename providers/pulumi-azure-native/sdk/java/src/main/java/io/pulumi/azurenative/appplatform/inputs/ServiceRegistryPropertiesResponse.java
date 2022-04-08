@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Service Registry properties payload
- * 
  */
 public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
 
     /**
      * Collection of instances belong to Service Registry.
-     * 
      */
     @Import(name="instances", required=true)
       private final List<ServiceRegistryInstanceResponse> instances;
@@ -32,7 +30,6 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
 
     /**
      * State of the Service Registry.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -43,7 +40,6 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
 
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
      */
     @Import(name="resourceRequests", required=true)
       private final ServiceRegistryResourceRequestsResponse resourceRequests;

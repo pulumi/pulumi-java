@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Setting for SMB protocol
- * 
  */
 public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
-     * 
      */
     @Import(name="authenticationMethods")
       private final @Nullable Output<String> authenticationMethods;
@@ -32,7 +30,6 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
-     * 
      */
     @Import(name="channelEncryption")
       private final @Nullable Output<String> channelEncryption;
@@ -43,7 +40,6 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
-     * 
      */
     @Import(name="kerberosTicketEncryption")
       private final @Nullable Output<String> kerberosTicketEncryption;
@@ -54,7 +50,6 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Multichannel setting. Applies to Premium FileStorage only.
-     * 
      */
     @Import(name="multichannel")
       private final @Nullable Output<MultichannelArgs> multichannel;
@@ -65,7 +60,6 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
-     * 
      */
     @Import(name="versions")
       private final @Nullable Output<String> versions;

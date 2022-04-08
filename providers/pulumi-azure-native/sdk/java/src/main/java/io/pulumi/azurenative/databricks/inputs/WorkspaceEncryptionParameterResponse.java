@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The object that contains details of encryption used on the workspace.
- * 
  */
 public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
 
     /**
      * The type of variable that this is
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -32,7 +30,6 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
 
     /**
      * The value which should be used for this field.
-     * 
      */
     @Import(name="value")
       private final @Nullable EncryptionResponse value;

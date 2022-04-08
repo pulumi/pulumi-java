@@ -16,7 +16,6 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * The expand expression to apply on the operation.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the gallery image definition in which the Image Version resides.
-     * 
      */
     @Import(name="galleryImageName", required=true)
       private final String galleryImageName;
@@ -38,7 +36,6 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the gallery image version to be retrieved.
-     * 
      */
     @Import(name="galleryImageVersionName", required=true)
       private final String galleryImageVersionName;
@@ -49,7 +46,6 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the Shared Image Gallery in which the Image Definition resides.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final String galleryName;
@@ -60,7 +56,6 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -19,7 +19,100 @@ import javax.annotation.Nullable;
  * A datastore resource
  * API Version: 2021-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Datastores_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var datastore = new AzureNative.AVS.Datastore("datastore", new AzureNative.AVS.DatastoreArgs
+ *         {
+ *             ClusterName = "cluster1",
+ *             DatastoreName = "datastore1",
+ *             NetAppVolume = new AzureNative.AVS.Inputs.NetAppVolumeArgs
+ *             {
+ *                 NfsFilePath = "ANFVol2",
+ *                 NfsProviderIp = "12.0.0.4",
+ *             },
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewDatastore(ctx, "datastore", &avs.DatastoreArgs{
+ * 			ClusterName:   pulumi.String("cluster1"),
+ * 			DatastoreName: pulumi.String("datastore1"),
+ * 			NetAppVolume: &avs.NetAppVolumeArgs{
+ * 				NfsFilePath:   pulumi.String("ANFVol2"),
+ * 				NfsProviderIp: pulumi.String("12.0.0.4"),
+ * 			},
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const datastore = new azure_native.avs.Datastore("datastore", {
+ *     clusterName: "cluster1",
+ *     datastoreName: "datastore1",
+ *     netAppVolume: {
+ *         nfsFilePath: "ANFVol2",
+ *         nfsProviderIp: "12.0.0.4",
+ *     },
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * datastore = azure_native.avs.Datastore("datastore",
+ *     cluster_name="cluster1",
+ *     datastore_name="datastore1",
+ *     net_app_volume=azure_native.avs.NetAppVolumeArgs(
+ *         nfs_file_path="ANFVol2",
+ *         nfs_provider_ip="12.0.0.4",
+ *     ),
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +127,60 @@ import javax.annotation.Nullable;
 public class Datastore extends io.pulumi.resources.CustomResource {
     /**
      * An iSCSI volume
-     * 
      */
     @Export(name="diskPoolVolume", type=DiskPoolVolumeResponse.class, parameters={})
     private Output</* @Nullable */ DiskPoolVolumeResponse> diskPoolVolume;
 
     /**
      * @return An iSCSI volume
-     * 
      */
     public Output</* @Nullable */ DiskPoolVolumeResponse> getDiskPoolVolume() {
         return this.diskPoolVolume;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * An Azure NetApp Files volume
-     * 
      */
     @Export(name="netAppVolume", type=NetAppVolumeResponse.class, parameters={})
     private Output</* @Nullable */ NetAppVolumeResponse> netAppVolume;
 
     /**
      * @return An Azure NetApp Files volume
-     * 
      */
     public Output</* @Nullable */ NetAppVolumeResponse> getNetAppVolume() {
         return this.netAppVolume;
     }
     /**
      * The state of the datastore provisioning
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The state of the datastore provisioning
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

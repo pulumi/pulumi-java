@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * AML Token identity configuration.
- * 
  */
 public final class AmlTokenResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AmlTokenResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Enum to determine identity framework.
      * Expected value is 'AMLToken'.
-     * 
      */
     @Import(name="identityType", required=true)
       private final String identityType;

@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class BlobRestoreParametersResponse {
     /**
      * Blob ranges to restore.
-     * 
      */
     private final List<BlobRestoreRangeResponse> blobRanges;
     /**
      * Restore blob to the specified time.
-     * 
      */
     private final String timeToRestore;
 
@@ -32,14 +30,12 @@ public final class BlobRestoreParametersResponse {
 
     /**
      * Blob ranges to restore.
-     * 
     */
     public List<BlobRestoreRangeResponse> getBlobRanges() {
         return this.blobRanges;
     }
     /**
      * Restore blob to the specified time.
-     * 
     */
     public String getTimeToRestore() {
         return this.timeToRestore;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The value of a parameter.
- * 
  */
 public final class ParameterValuesValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ParameterValuesValueResponse extends io.pulumi.resources.Invo
 
     /**
      * The value of the parameter.
-     * 
      */
     @Import(name="value")
       private final @Nullable Object value;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Properties of Self-hosted integration runtime node.
- * 
  */
 public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The integration runtime capabilities dictionary
-     * 
      */
     @Import(name="capabilities", required=true)
       private final Map<String,String> capabilities;
@@ -32,7 +30,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * Maximum concurrent jobs on the integration runtime node.
-     * 
      */
     @Import(name="concurrentJobsLimit", required=true)
       private final Integer concurrentJobsLimit;
@@ -43,7 +40,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The time at which the integration runtime will expire in ISO8601 format.
-     * 
      */
     @Import(name="expiryTime", required=true)
       private final String expiryTime;
@@ -54,7 +50,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * URI for the host machine of the integration runtime.
-     * 
      */
     @Import(name="hostServiceUri", required=true)
       private final String hostServiceUri;
@@ -65,7 +60,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * Indicates whether this node is the active dispatcher for integration runtime requests.
-     * 
      */
     @Import(name="isActiveDispatcher", required=true)
       private final Boolean isActiveDispatcher;
@@ -76,7 +70,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The most recent time at which the integration runtime was connected in ISO8601 format.
-     * 
      */
     @Import(name="lastConnectTime", required=true)
       private final String lastConnectTime;
@@ -87,7 +80,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The last time for the integration runtime node update end.
-     * 
      */
     @Import(name="lastEndUpdateTime", required=true)
       private final String lastEndUpdateTime;
@@ -98,7 +90,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The time the node last started up.
-     * 
      */
     @Import(name="lastStartTime", required=true)
       private final String lastStartTime;
@@ -109,7 +100,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The last time for the integration runtime node update start.
-     * 
      */
     @Import(name="lastStartUpdateTime", required=true)
       private final String lastStartUpdateTime;
@@ -120,7 +110,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The integration runtime node last stop time.
-     * 
      */
     @Import(name="lastStopTime", required=true)
       private final String lastStopTime;
@@ -131,7 +120,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The result of the last integration runtime node update.
-     * 
      */
     @Import(name="lastUpdateResult", required=true)
       private final String lastUpdateResult;
@@ -142,7 +130,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * Machine name of the integration runtime node.
-     * 
      */
     @Import(name="machineName", required=true)
       private final String machineName;
@@ -153,7 +140,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The maximum concurrent jobs in this integration runtime.
-     * 
      */
     @Import(name="maxConcurrentJobs", required=true)
       private final Integer maxConcurrentJobs;
@@ -164,7 +150,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * Name of the integration runtime node.
-     * 
      */
     @Import(name="nodeName", required=true)
       private final String nodeName;
@@ -175,7 +160,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * The time at which the integration runtime node was registered in ISO8601 format.
-     * 
      */
     @Import(name="registerTime", required=true)
       private final String registerTime;
@@ -186,7 +170,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * Status of the integration runtime node.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -197,7 +180,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * Version of the integration runtime node.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;
@@ -208,7 +190,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
 
     /**
      * Status of the integration runtime node version.
-     * 
      */
     @Import(name="versionStatus", required=true)
       private final String versionStatus;

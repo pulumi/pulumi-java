@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that validates connection to Azure SQL DB and target server requirements
- * 
  */
 public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends io.pulumi.re
 
     /**
      * Connection information for source SQL Server
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
@@ -30,7 +28,6 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends io.pulumi.re
 
     /**
      * Connection information for target SQL DB
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;

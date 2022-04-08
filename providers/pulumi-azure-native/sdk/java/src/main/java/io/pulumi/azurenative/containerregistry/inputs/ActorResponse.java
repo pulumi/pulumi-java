@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
- * 
  */
 public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The subject or username associated with the request context that generated the event.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

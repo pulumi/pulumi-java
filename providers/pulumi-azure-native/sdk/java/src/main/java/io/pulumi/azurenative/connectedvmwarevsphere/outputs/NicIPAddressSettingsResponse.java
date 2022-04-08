@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class NicIPAddressSettingsResponse {
     /**
      * Gets the ip address allocation method.
-     * 
      */
     private final String allocationMethod;
     /**
      * Gets the ip address for the nic.
-     * 
      */
     private final String ipAddress;
     /**
      * Gets the mask.
-     * 
      */
     private final String subnetMask;
 
@@ -37,21 +34,18 @@ public final class NicIPAddressSettingsResponse {
 
     /**
      * Gets the ip address allocation method.
-     * 
     */
     public String getAllocationMethod() {
         return this.allocationMethod;
     }
     /**
      * Gets the ip address for the nic.
-     * 
     */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * Gets the mask.
-     * 
     */
     public String getSubnetMask() {
         return this.subnetMask;

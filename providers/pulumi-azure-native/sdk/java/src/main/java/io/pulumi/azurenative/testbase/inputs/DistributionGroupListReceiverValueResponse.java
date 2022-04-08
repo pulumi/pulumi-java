@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The user object receiver value.
- * 
  */
 public final class DistributionGroupListReceiverValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DistributionGroupListReceiverValueResponse extends io.pulumi.
 
     /**
      * The list of distribution groups.
-     * 
      */
     @Import(name="distributionGroups")
       private final @Nullable List<String> distributionGroups;

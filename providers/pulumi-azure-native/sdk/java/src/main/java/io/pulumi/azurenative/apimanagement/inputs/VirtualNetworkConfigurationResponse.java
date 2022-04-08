@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of a virtual network to which API Management service is deployed.
- * 
  */
 public final class VirtualNetworkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
 
     /**
      * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
-     * 
      */
     @Import(name="subnetResourceId")
       private final @Nullable String subnetResourceId;
@@ -31,7 +29,6 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
 
     /**
      * The name of the subnet.
-     * 
      */
     @Import(name="subnetname", required=true)
       private final String subnetname;
@@ -42,7 +39,6 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
 
     /**
      * The virtual network ID. This is typically a GUID. Expect a null GUID by default.
-     * 
      */
     @Import(name="vnetid", required=true)
       private final String vnetid;

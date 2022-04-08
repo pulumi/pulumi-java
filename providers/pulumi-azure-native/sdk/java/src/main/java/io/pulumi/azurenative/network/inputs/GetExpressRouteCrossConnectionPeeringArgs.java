@@ -14,7 +14,6 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
 
     /**
      * The name of the ExpressRouteCrossConnection.
-     * 
      */
     @Import(name="crossConnectionName", required=true)
       private final String crossConnectionName;
@@ -25,7 +24,6 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringName", required=true)
       private final String peeringName;
@@ -36,7 +34,6 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

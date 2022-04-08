@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class ManagementClusterResponse {
     /**
      * The identity
-     * 
      */
     private final Integer clusterId;
     /**
      * The cluster size
-     * 
      */
     private final Integer clusterSize;
     /**
      * The hosts
-     * 
      */
     private final List<String> hosts;
     /**
      * The state of the cluster provisioning
-     * 
      */
     private final String provisioningState;
 
@@ -46,28 +42,24 @@ public final class ManagementClusterResponse {
 
     /**
      * The identity
-     * 
     */
     public Integer getClusterId() {
         return this.clusterId;
     }
     /**
      * The cluster size
-     * 
     */
     public Integer getClusterSize() {
         return this.clusterSize;
     }
     /**
      * The hosts
-     * 
     */
     public List<String> getHosts() {
         return this.hosts;
     }
     /**
      * The state of the cluster provisioning
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

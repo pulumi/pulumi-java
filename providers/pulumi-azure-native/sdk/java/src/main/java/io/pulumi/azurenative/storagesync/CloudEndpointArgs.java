@@ -16,7 +16,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure file share name
-     * 
      */
     @Import(name="azureFileShareName")
       private final @Nullable Output<String> azureFileShareName;
@@ -27,7 +26,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Cloud Endpoint object.
-     * 
      */
     @Import(name="cloudEndpointName")
       private final @Nullable Output<String> cloudEndpointName;
@@ -38,7 +36,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Friendly Name
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -49,7 +46,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage Account Resource Id
-     * 
      */
     @Import(name="storageAccountResourceId")
       private final @Nullable Output<String> storageAccountResourceId;
@@ -71,7 +66,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage Account Tenant Id
-     * 
      */
     @Import(name="storageAccountTenantId")
       private final @Nullable Output<String> storageAccountTenantId;
@@ -82,7 +76,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Storage Sync Service resource.
-     * 
      */
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
@@ -93,7 +86,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Sync Group resource.
-     * 
      */
     @Import(name="syncGroupName", required=true)
       private final Output<String> syncGroupName;

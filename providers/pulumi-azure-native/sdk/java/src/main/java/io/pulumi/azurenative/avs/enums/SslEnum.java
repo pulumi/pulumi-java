@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protect LDAP communication using SSL certificate (LDAPS)
-     * 
      */
     @EnumType
     public enum SslEnum {

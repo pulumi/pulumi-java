@@ -14,7 +14,6 @@ public final class GetFavoriteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Id of a specific favorite defined in the Application Insights component
-     * 
      */
     @Import(name="favoriteId", required=true)
       private final String favoriteId;
@@ -25,7 +24,6 @@ public final class GetFavoriteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetFavoriteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Runtime information of a container instance.
- * 
  */
 public final class ContainerInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
 
     /**
      * Current container instance state.
-     * 
      */
     @Import(name="currentState")
       private final @Nullable ContainerStateResponse currentState;
@@ -34,7 +32,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
 
     /**
      * The events of this container instance.
-     * 
      */
     @Import(name="events")
       private final @Nullable List<ContainerEventResponse> events;
@@ -45,7 +42,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
 
     /**
      * Previous container instance state.
-     * 
      */
     @Import(name="previousState")
       private final @Nullable ContainerStateResponse previousState;
@@ -56,7 +52,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
 
     /**
      * The number of times the container has been restarted.
-     * 
      */
     @Import(name="restartCount")
       private final @Nullable Integer restartCount;

@@ -25,7 +25,129 @@ import javax.annotation.Nullable;
  * Static Site ARM resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a static site
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var staticSite = new AzureNative.Web.StaticSite("staticSite", new AzureNative.Web.StaticSiteArgs
+ *         {
+ *             Branch = "master",
+ *             BuildProperties = new AzureNative.Web.Inputs.StaticSiteBuildPropertiesArgs
+ *             {
+ *                 ApiLocation = "api",
+ *                 AppArtifactLocation = "build",
+ *                 AppLocation = "app",
+ *             },
+ *             Location = "West US 2",
+ *             Name = "testStaticSite0",
+ *             RepositoryToken = "repoToken123",
+ *             RepositoryUrl = "https://github.com/username/RepoName",
+ *             ResourceGroupName = "rg",
+ *             Sku = new AzureNative.Web.Inputs.SkuDescriptionArgs
+ *             {
+ *                 Name = "Basic",
+ *                 Tier = "Basic",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewStaticSite(ctx, "staticSite", &web.StaticSiteArgs{
+ * 			Branch: pulumi.String("master"),
+ * 			BuildProperties: &web.StaticSiteBuildPropertiesArgs{
+ * 				ApiLocation:         pulumi.String("api"),
+ * 				AppArtifactLocation: pulumi.String("build"),
+ * 				AppLocation:         pulumi.String("app"),
+ * 			},
+ * 			Location:          pulumi.String("West US 2"),
+ * 			Name:              pulumi.String("testStaticSite0"),
+ * 			RepositoryToken:   pulumi.String("repoToken123"),
+ * 			RepositoryUrl:     pulumi.String("https://github.com/username/RepoName"),
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			Sku: &web.SkuDescriptionArgs{
+ * 				Name: pulumi.String("Basic"),
+ * 				Tier: pulumi.String("Basic"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const staticSite = new azure_native.web.StaticSite("staticSite", {
+ *     branch: "master",
+ *     buildProperties: {
+ *         apiLocation: "api",
+ *         appArtifactLocation: "build",
+ *         appLocation: "app",
+ *     },
+ *     location: "West US 2",
+ *     name: "testStaticSite0",
+ *     repositoryToken: "repoToken123",
+ *     repositoryUrl: "https://github.com/username/RepoName",
+ *     resourceGroupName: "rg",
+ *     sku: {
+ *         name: "Basic",
+ *         tier: "Basic",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * static_site = azure_native.web.StaticSite("staticSite",
+ *     branch="master",
+ *     build_properties=azure_native.web.StaticSiteBuildPropertiesArgs(
+ *         api_location="api",
+ *         app_artifact_location="build",
+ *         app_location="app",
+ *     ),
+ *     location="West US 2",
+ *     name="testStaticSite0",
+ *     repository_token="repoToken123",
+ *     repository_url="https://github.com/username/RepoName",
+ *     resource_group_name="rg",
+ *     sku=azure_native.web.SkuDescriptionArgs(
+ *         name="Basic",
+ *         tier="Basic",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,294 +162,252 @@ import javax.annotation.Nullable;
 public class StaticSite extends io.pulumi.resources.CustomResource {
     /**
      * <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
-     * 
      */
     @Export(name="allowConfigFileUpdates", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowConfigFileUpdates;
 
     /**
      * @return <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowConfigFileUpdates() {
         return this.allowConfigFileUpdates;
     }
     /**
      * The target branch in the repository.
-     * 
      */
     @Export(name="branch", type=String.class, parameters={})
     private Output</* @Nullable */ String> branch;
 
     /**
      * @return The target branch in the repository.
-     * 
      */
     public Output</* @Nullable */ String> getBranch() {
         return this.branch;
     }
     /**
      * Build properties to configure on the repository.
-     * 
      */
     @Export(name="buildProperties", type=StaticSiteBuildPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ StaticSiteBuildPropertiesResponse> buildProperties;
 
     /**
      * @return Build properties to configure on the repository.
-     * 
      */
     public Output</* @Nullable */ StaticSiteBuildPropertiesResponse> getBuildProperties() {
         return this.buildProperties;
     }
     /**
      * The content distribution endpoint for the static site.
-     * 
      */
     @Export(name="contentDistributionEndpoint", type=String.class, parameters={})
     private Output<String> contentDistributionEndpoint;
 
     /**
      * @return The content distribution endpoint for the static site.
-     * 
      */
     public Output<String> getContentDistributionEndpoint() {
         return this.contentDistributionEndpoint;
     }
     /**
      * The custom domains associated with this static site.
-     * 
      */
     @Export(name="customDomains", type=List.class, parameters={String.class})
     private Output<List<String>> customDomains;
 
     /**
      * @return The custom domains associated with this static site.
-     * 
      */
     public Output<List<String>> getCustomDomains() {
         return this.customDomains;
     }
     /**
      * The default autogenerated hostname for the static site.
-     * 
      */
     @Export(name="defaultHostname", type=String.class, parameters={})
     private Output<String> defaultHostname;
 
     /**
      * @return The default autogenerated hostname for the static site.
-     * 
      */
     public Output<String> getDefaultHostname() {
         return this.defaultHostname;
     }
     /**
      * Managed service identity.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return Managed service identity.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Identity to use for Key Vault Reference authentication.
-     * 
      */
     @Export(name="keyVaultReferenceIdentity", type=String.class, parameters={})
     private Output<String> keyVaultReferenceIdentity;
 
     /**
      * @return Identity to use for Key Vault Reference authentication.
-     * 
      */
     public Output<String> getKeyVaultReferenceIdentity() {
         return this.keyVaultReferenceIdentity;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Private endpoint connections
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse.class})
     private Output<List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return Private endpoint connections
-     * 
      */
     public Output<List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The provider that submitted the last deployment to the primary environment of the static site.
-     * 
      */
     @Export(name="provider", type=String.class, parameters={})
     private Output<String> provider;
 
     /**
      * @return The provider that submitted the last deployment to the primary environment of the static site.
-     * 
      */
     public Output<String> getProvider() {
         return this.provider;
     }
     /**
      * A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
-     * 
      */
     @Export(name="repositoryToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryToken;
 
     /**
      * @return A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
-     * 
      */
     public Output</* @Nullable */ String> getRepositoryToken() {
         return this.repositoryToken;
     }
     /**
      * URL for the repository of the static site.
-     * 
      */
     @Export(name="repositoryUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryUrl;
 
     /**
      * @return URL for the repository of the static site.
-     * 
      */
     public Output</* @Nullable */ String> getRepositoryUrl() {
         return this.repositoryUrl;
     }
     /**
      * Description of a SKU for a scalable resource.
-     * 
      */
     @Export(name="sku", type=SkuDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ SkuDescriptionResponse> sku;
 
     /**
      * @return Description of a SKU for a scalable resource.
-     * 
      */
     public Output</* @Nullable */ SkuDescriptionResponse> getSku() {
         return this.sku;
     }
     /**
      * State indicating whether staging environments are allowed or not allowed for a static web app.
-     * 
      */
     @Export(name="stagingEnvironmentPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> stagingEnvironmentPolicy;
 
     /**
      * @return State indicating whether staging environments are allowed or not allowed for a static web app.
-     * 
      */
     public Output</* @Nullable */ String> getStagingEnvironmentPolicy() {
         return this.stagingEnvironmentPolicy;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Template options for generating a new repository.
-     * 
      */
     @Export(name="templateProperties", type=StaticSiteTemplateOptionsResponse.class, parameters={})
     private Output</* @Nullable */ StaticSiteTemplateOptionsResponse> templateProperties;
 
     /**
      * @return Template options for generating a new repository.
-     * 
      */
     public Output</* @Nullable */ StaticSiteTemplateOptionsResponse> getTemplateProperties() {
         return this.templateProperties;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * User provided function apps registered with the static site
-     * 
      */
     @Export(name="userProvidedFunctionApps", type=List.class, parameters={StaticSiteUserProvidedFunctionAppResponse.class})
     private Output<List<StaticSiteUserProvidedFunctionAppResponse>> userProvidedFunctionApps;
 
     /**
      * @return User provided function apps registered with the static site
-     * 
      */
     public Output<List<StaticSiteUserProvidedFunctionAppResponse>> getUserProvidedFunctionApps() {
         return this.userProvidedFunctionApps;

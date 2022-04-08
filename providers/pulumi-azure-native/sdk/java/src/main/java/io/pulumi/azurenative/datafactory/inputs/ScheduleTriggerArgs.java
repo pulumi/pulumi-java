@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that creates pipeline runs periodically, on schedule.
- * 
  */
 public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -35,7 +33,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +43,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Pipelines that need to be started.
-     * 
      */
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
@@ -57,7 +53,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Recurrence schedule configuration.
-     * 
      */
     @Import(name="recurrence", required=true)
       private final Output<ScheduleTriggerRecurrenceArgs> recurrence;
@@ -69,7 +64,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Trigger type.
      * Expected value is 'ScheduleTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

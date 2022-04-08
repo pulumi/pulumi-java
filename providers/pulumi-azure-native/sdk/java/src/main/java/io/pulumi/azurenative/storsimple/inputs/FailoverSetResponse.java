@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The failover set on a device.
- * 
  */
 public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The eligibility result of the failover set, for failover.
-     * 
      */
     @Import(name="eligibilityResult")
       private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
@@ -33,7 +31,6 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of meta data of volume containers, which are part of the failover set.
-     * 
      */
     @Import(name="volumeContainers")
       private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;

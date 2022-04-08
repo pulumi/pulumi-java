@@ -14,7 +14,6 @@ public final class ListTenantAccessSecretsArgs extends io.pulumi.resources.Invok
 
     /**
      * The identifier of the Access configuration.
-     * 
      */
     @Import(name="accessName", required=true)
       private final String accessName;
@@ -25,7 +24,6 @@ public final class ListTenantAccessSecretsArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListTenantAccessSecretsArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

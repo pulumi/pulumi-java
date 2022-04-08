@@ -12,9 +12,8 @@ import javax.annotation.Nullable;
 
 
 /**
- * Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+ * Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
  * directories as per ICANN requirements.
- * 
  */
 public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mailing address.
-     * 
      */
     @Import(name="addressMailing")
       private final @Nullable Output<AddressArgs> addressMailing;
@@ -33,7 +31,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email address.
-     * 
      */
     @Import(name="email", required=true)
       private final Output<String> email;
@@ -44,7 +41,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fax number.
-     * 
      */
     @Import(name="fax")
       private final @Nullable Output<String> fax;
@@ -55,7 +51,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Job title.
-     * 
      */
     @Import(name="jobTitle")
       private final @Nullable Output<String> jobTitle;
@@ -66,7 +61,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * First name.
-     * 
      */
     @Import(name="nameFirst", required=true)
       private final Output<String> nameFirst;
@@ -77,7 +71,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last name.
-     * 
      */
     @Import(name="nameLast", required=true)
       private final Output<String> nameLast;
@@ -88,7 +81,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Middle name.
-     * 
      */
     @Import(name="nameMiddle")
       private final @Nullable Output<String> nameMiddle;
@@ -99,7 +91,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Organization contact belongs to.
-     * 
      */
     @Import(name="organization")
       private final @Nullable Output<String> organization;
@@ -110,7 +101,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Phone number.
-     * 
      */
     @Import(name="phone", required=true)
       private final Output<String> phone;

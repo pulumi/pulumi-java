@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Virtual Appliance Sku Properties.
- * 
  */
 public final class Office365PolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class Office365PolicyPropertiesResponse extends io.pulumi.resources
 
     /**
      * Office 365 breakout categories.
-     * 
      */
     @Import(name="breakOutCategories")
       private final @Nullable BreakOutCategoryPoliciesResponse breakOutCategories;

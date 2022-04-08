@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The vault's create mode to indicate whether the vault need to be recovered or not.
-     * 
      */
     @EnumType
     public enum CreateMode {

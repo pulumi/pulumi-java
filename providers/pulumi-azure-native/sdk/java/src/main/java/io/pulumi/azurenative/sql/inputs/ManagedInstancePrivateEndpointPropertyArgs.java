@@ -16,7 +16,6 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends io.pulumi.
 
     /**
      * Resource id of the private endpoint.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

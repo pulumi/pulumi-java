@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The enabled access level for Web Access over SSH.
-     * 
      */
     @EnumType
     public enum ConnectionType {

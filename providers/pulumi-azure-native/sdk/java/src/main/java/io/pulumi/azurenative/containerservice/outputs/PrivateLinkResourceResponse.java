@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class PrivateLinkResourceResponse {
     /**
      * The group ID of the resource.
-     * 
      */
     private final @Nullable String groupId;
     /**
      * The ID of the private link resource.
-     * 
      */
     private final @Nullable String id;
     /**
      * The name of the private link resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * The private link service ID of the resource, this field is exposed only to NRP internally.
-     * 
      */
     private final String privateLinkServiceID;
     /**
      * RequiredMembers of the resource
-     * 
      */
     private final @Nullable List<String> requiredMembers;
     /**
      * The resource type.
-     * 
      */
     private final @Nullable String type;
 
@@ -61,42 +55,36 @@ public final class PrivateLinkResourceResponse {
 
     /**
      * The group ID of the resource.
-     * 
     */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The ID of the private link resource.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the private link resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The private link service ID of the resource, this field is exposed only to NRP internally.
-     * 
     */
     public String getPrivateLinkServiceID() {
         return this.privateLinkServiceID;
     }
     /**
      * RequiredMembers of the resource
-     * 
     */
     public List<String> getRequiredMembers() {
         return this.requiredMembers == null ? List.of() : this.requiredMembers;
     }
     /**
      * The resource type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

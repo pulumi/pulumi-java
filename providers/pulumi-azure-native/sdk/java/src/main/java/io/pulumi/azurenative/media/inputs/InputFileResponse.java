@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * An InputDefinition for a single file.  TrackSelections are scoped to the file specified.
- * 
  */
 public final class InputFileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class InputFileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the file that this input definition applies to.
-     * 
      */
     @Import(name="filename")
       private final @Nullable String filename;
@@ -39,7 +37,6 @@ public final class InputFileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
-     * 
      */
     @Import(name="includedTracks")
       private final @Nullable List<Object> includedTracks;
@@ -51,7 +48,6 @@ public final class InputFileResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.InputFile'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

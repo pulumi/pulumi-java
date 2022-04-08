@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * GroupMembers Item.
- * 
  */
 public final class GroupMembersItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GroupMembersItemResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

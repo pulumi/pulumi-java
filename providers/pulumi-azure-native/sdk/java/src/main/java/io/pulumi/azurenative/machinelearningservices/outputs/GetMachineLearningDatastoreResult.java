@@ -17,42 +17,34 @@ import javax.annotation.Nullable;
 public final class GetMachineLearningDatastoreResult {
     /**
      * Specifies the resource ID.
-     * 
      */
     private final String id;
     /**
      * The identity of the resource.
-     * 
      */
     private final @Nullable IdentityResponse identity;
     /**
      * Specifies the location of the resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * Specifies the name of the resource.
-     * 
      */
     private final String name;
     /**
      * Datastore properties
-     * 
      */
     private final DatastoreResponse properties;
     /**
      * The sku of the workspace.
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Specifies the type of the resource.
-     * 
      */
     private final String type;
 
@@ -78,56 +70,48 @@ public final class GetMachineLearningDatastoreResult {
 
     /**
      * Specifies the resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
-     * 
     */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Specifies the location of the resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Datastore properties
-     * 
     */
     public DatastoreResponse getProperties() {
         return this.properties;
     }
     /**
      * The sku of the workspace.
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

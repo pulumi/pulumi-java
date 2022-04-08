@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Version related details.
- * 
  */
 public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Version expiry date.
-     * 
      */
     @Import(name="expiryDate")
       private final @Nullable String expiryDate;
@@ -31,7 +29,6 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A value indicating whether security update required.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -42,7 +39,6 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The agent version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

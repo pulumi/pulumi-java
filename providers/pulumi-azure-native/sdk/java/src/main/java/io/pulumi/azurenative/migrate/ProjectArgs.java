@@ -18,7 +18,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For optimistic concurrency control.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -29,7 +28,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure location in which project is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Migrate project.
-     * 
      */
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
@@ -51,7 +48,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the project.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ProjectPropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Resource Group that project is part of.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags provided by Azure Tagging service.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;

@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class KeyVaultContractPropertiesResponse {
     /**
      * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
-     * 
      */
     private final @Nullable String identityClientId;
     /**
      * Last time sync and refresh status of secret from key vault.
-     * 
      */
     private final @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
     /**
      * Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
-     * 
      */
     private final @Nullable String secretIdentifier;
 
@@ -40,21 +37,18 @@ public final class KeyVaultContractPropertiesResponse {
 
     /**
      * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
-     * 
     */
     public Optional<String> getIdentityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
      * Last time sync and refresh status of secret from key vault.
-     * 
     */
     public Optional<KeyVaultLastAccessStatusContractPropertiesResponse> getLastStatus() {
         return Optional.ofNullable(this.lastStatus);
     }
     /**
      * Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
-     * 
     */
     public Optional<String> getSecretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);

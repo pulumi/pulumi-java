@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Profile for gallery sharing to subscription or tenant
- * 
  */
 public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A list of sharing profile groups.
-     * 
      */
     @Import(name="groups", required=true)
       private final List<SharingProfileGroupResponse> groups;
@@ -33,7 +31,6 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
-     * 
      */
     @Import(name="permissions")
       private final @Nullable String permissions;

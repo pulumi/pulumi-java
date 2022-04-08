@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Guest OS Customization properties
- * 
  */
 public final class GuestOSCustomizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
 
     /**
      * List of dns servers to use
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
@@ -32,7 +30,6 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
 
     /**
      * Virtual Machine hostname
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -43,7 +40,6 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
 
     /**
      * Password for login
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -54,7 +50,6 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
 
     /**
      * id of customization policy
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -65,7 +60,6 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
 
     /**
      * Username for login
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

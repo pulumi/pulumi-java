@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class AliasPathResponse {
     /**
      * The API versions.
-     * 
      */
     private final @Nullable List<String> apiVersions;
     /**
      * The metadata of the alias path. If missing, fall back to the default metadata of the alias.
-     * 
      */
     private final AliasPathMetadataResponse metadata;
     /**
      * The path of an alias.
-     * 
      */
     private final @Nullable String path;
     /**
      * The pattern for an alias path.
-     * 
      */
     private final @Nullable AliasPatternResponse pattern;
 
@@ -49,28 +45,24 @@ public final class AliasPathResponse {
 
     /**
      * The API versions.
-     * 
     */
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
     /**
      * The metadata of the alias path. If missing, fall back to the default metadata of the alias.
-     * 
     */
     public AliasPathMetadataResponse getMetadata() {
         return this.metadata;
     }
     /**
      * The path of an alias.
-     * 
     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The pattern for an alias path.
-     * 
     */
     public Optional<AliasPatternResponse> getPattern() {
         return Optional.ofNullable(this.pattern);

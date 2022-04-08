@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of this virtual network gateway.
-     * 
      */
     @EnumType
     public enum VpnType {

@@ -18,7 +18,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Backup sets that are currently active (Either being uploaded or getting restored)
-     * 
      */
     @Import(name="activeBackupSets", required=true)
       private final List<BackupSetInfoResponse> activeBackupSets;
@@ -29,7 +28,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Name of container created in the Azure Storage account where backups are copied to
-     * 
      */
     @Import(name="containerName", required=true)
       private final String containerName;
@@ -40,7 +38,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Database migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -51,7 +48,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * prefix string to use for querying errors for this database
-     * 
      */
     @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
@@ -62,7 +58,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Migration exceptions and warnings
-     * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
@@ -73,7 +68,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Details of full backup set
-     * 
      */
     @Import(name="fullBackupSetInfo", required=true)
       private final BackupSetInfoResponse fullBackupSetInfo;
@@ -84,7 +78,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -95,7 +88,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Whether full backup has been applied to the target database or not
-     * 
      */
     @Import(name="isFullBackupRestored", required=true)
       private final Boolean isFullBackupRestored;
@@ -106,7 +98,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Last applied backup set information
-     * 
      */
     @Import(name="lastRestoredBackupSetInfo", required=true)
       private final BackupSetInfoResponse lastRestoredBackupSetInfo;
@@ -117,7 +108,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Current state of database
-     * 
      */
     @Import(name="migrationState", required=true)
       private final String migrationState;
@@ -129,7 +119,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     /**
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -140,7 +129,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
@@ -151,7 +139,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Database migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;

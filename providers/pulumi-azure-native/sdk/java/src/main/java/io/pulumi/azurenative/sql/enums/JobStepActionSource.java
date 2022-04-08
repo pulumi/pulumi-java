@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The source of the action to execute.
-     * 
      */
     @EnumType
     public enum JobStepActionSource {

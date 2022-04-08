@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Copy on Expiry Option
- * 
  */
 public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'CopyOnExpiryOption'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<String> objectType;

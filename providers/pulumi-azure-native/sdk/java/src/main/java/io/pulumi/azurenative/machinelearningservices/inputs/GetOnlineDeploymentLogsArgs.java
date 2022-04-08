@@ -19,7 +19,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
 
     /**
      * The type of container to retrieve logs from.
-     * 
      */
     @Import(name="containerType")
       private final @Nullable Either<String,ContainerType> containerType;
@@ -30,7 +29,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
 
     /**
      * The name and identifier for the endpoint.
-     * 
      */
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
@@ -41,7 +39,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
 
     /**
      * Inference endpoint name.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final String endpointName;
@@ -52,7 +49,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -63,7 +59,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
 
     /**
      * The maximum number of lines to tail.
-     * 
      */
     @Import(name="tail")
       private final @Nullable Integer tail;
@@ -74,7 +69,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

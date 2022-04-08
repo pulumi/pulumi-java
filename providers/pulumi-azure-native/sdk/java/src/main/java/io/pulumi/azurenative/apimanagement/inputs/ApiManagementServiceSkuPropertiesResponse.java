@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * API Management service resource SKU properties.
- * 
  */
 public final class ApiManagementServiceSkuPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ApiManagementServiceSkuPropertiesResponse extends io.pulumi.r
 
     /**
      * Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
-     * 
      */
     @Import(name="capacity", required=true)
       private final Integer capacity;
@@ -30,7 +28,6 @@ public final class ApiManagementServiceSkuPropertiesResponse extends io.pulumi.r
 
     /**
      * Name of the Sku.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

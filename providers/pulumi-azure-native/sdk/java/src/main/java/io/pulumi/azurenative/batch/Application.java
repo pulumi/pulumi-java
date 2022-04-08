@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Contains information about an application in a Batch account.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApplicationCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var application = new AzureNative.Batch.Application("application", new AzureNative.Batch.ApplicationArgs
+ *         {
+ *             AccountName = "sampleacct",
+ *             AllowUpdates = false,
+ *             ApplicationName = "app1",
+ *             DisplayName = "myAppName",
+ *             ResourceGroupName = "default-azurebatch-japaneast",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewApplication(ctx, "application", &batch.ApplicationArgs{
+ * 			AccountName:       pulumi.String("sampleacct"),
+ * 			AllowUpdates:      pulumi.Bool(false),
+ * 			ApplicationName:   pulumi.String("app1"),
+ * 			DisplayName:       pulumi.String("myAppName"),
+ * 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const application = new azure_native.batch.Application("application", {
+ *     accountName: "sampleacct",
+ *     allowUpdates: false,
+ *     applicationName: "app1",
+ *     displayName: "myAppName",
+ *     resourceGroupName: "default-azurebatch-japaneast",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application = azure_native.batch.Application("application",
+ *     account_name="sampleacct",
+ *     allow_updates=False,
+ *     application_name="app1",
+ *     display_name="myAppName",
+ *     resource_group_name="default-azurebatch-japaneast")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +113,72 @@ import javax.annotation.Nullable;
 public class Application extends io.pulumi.resources.CustomResource {
     /**
      * A value indicating whether packages within the application may be overwritten using the same version string.
-     * 
      */
     @Export(name="allowUpdates", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowUpdates;
 
     /**
      * @return A value indicating whether packages within the application may be overwritten using the same version string.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowUpdates() {
         return this.allowUpdates;
     }
     /**
      * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
-     * 
      */
     @Export(name="defaultVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultVersion;
 
     /**
      * @return The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
-     * 
      */
     public Output</* @Nullable */ String> getDefaultVersion() {
         return this.defaultVersion;
     }
     /**
      * The display name for the application.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name for the application.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The ETag of the resource, used for concurrency statements.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return The ETag of the resource, used for concurrency statements.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

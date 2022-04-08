@@ -18,7 +18,6 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
 
     /**
      * The name of the deployment.
-     * 
      */
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
@@ -29,7 +28,6 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
 
     /**
      * The management group ID.
-     * 
      */
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
@@ -40,7 +38,6 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
 
     /**
      * The location to store the deployment data.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
 
     /**
      * The deployment properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<DeploymentPropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
 
     /**
      * Deployment tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

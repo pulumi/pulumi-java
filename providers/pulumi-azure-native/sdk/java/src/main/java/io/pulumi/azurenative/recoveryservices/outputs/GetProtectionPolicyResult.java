@@ -21,37 +21,30 @@ import javax.annotation.Nullable;
 public final class GetProtectionPolicyResult {
     /**
      * Optional ETag.
-     * 
      */
     private final @Nullable String eTag;
     /**
      * Resource Id represents the complete path to the resource.
-     * 
      */
     private final String id;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name associated with the resource.
-     * 
      */
     private final String name;
     /**
      * ProtectionPolicyResource properties
-     * 
      */
     private final Object properties;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     private final String type;
 
@@ -75,49 +68,42 @@ public final class GetProtectionPolicyResult {
 
     /**
      * Optional ETag.
-     * 
     */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id represents the complete path to the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name associated with the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * ProtectionPolicyResource properties
-     * 
     */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
     */
     public String getType() {
         return this.type;

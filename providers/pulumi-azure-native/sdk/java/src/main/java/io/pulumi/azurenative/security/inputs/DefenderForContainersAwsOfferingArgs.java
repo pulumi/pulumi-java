@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Defender for Containers AWS offering configurations
- * 
  */
 public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
 
     /**
      * The cloudwatch to kinesis connection configuration
-     * 
      */
     @Import(name="cloudWatchToKinesis")
       private final @Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
@@ -35,7 +33,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
 
     /**
      * The kinesis to s3 connection configuration
-     * 
      */
     @Import(name="kinesisToS3")
       private final @Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
@@ -46,7 +43,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
 
     /**
      * The kubernetes to scuba connection configuration
-     * 
      */
     @Import(name="kubernetesScubaReader")
       private final @Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
@@ -57,7 +53,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
 
     /**
      * The kubernetes service connection configuration
-     * 
      */
     @Import(name="kubernetesService")
       private final @Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
@@ -69,7 +64,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
     /**
      * The type of the security offering.
      * Expected value is 'DefenderForContainersAws'.
-     * 
      */
     @Import(name="offeringType", required=true)
       private final Output<String> offeringType;

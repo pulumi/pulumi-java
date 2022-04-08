@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ComputeInstanceSshSettingsResponse {
     /**
      * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
-     * 
      */
     private final @Nullable String adminPublicKey;
     /**
      * Describes the admin user name.
-     * 
      */
     private final String adminUserName;
     /**
      * Describes the port for connecting through SSH.
-     * 
      */
     private final Integer sshPort;
     /**
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
-     * 
      */
     private final @Nullable String sshPublicAccess;
 
@@ -47,28 +43,24 @@ public final class ComputeInstanceSshSettingsResponse {
 
     /**
      * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
-     * 
     */
     public Optional<String> getAdminPublicKey() {
         return Optional.ofNullable(this.adminPublicKey);
     }
     /**
      * Describes the admin user name.
-     * 
     */
     public String getAdminUserName() {
         return this.adminUserName;
     }
     /**
      * Describes the port for connecting through SSH.
-     * 
     */
     public Integer getSshPort() {
         return this.sshPort;
     }
     /**
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
-     * 
     */
     public Optional<String> getSshPublicAccess() {
         return Optional.ofNullable(this.sshPublicAccess);

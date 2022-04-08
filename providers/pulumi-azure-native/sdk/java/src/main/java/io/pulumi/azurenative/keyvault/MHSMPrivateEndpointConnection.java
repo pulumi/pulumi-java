@@ -22,7 +22,96 @@ import javax.annotation.Nullable;
  * Private endpoint connection resource.
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ManagedHsmPutPrivateEndpointConnection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mhsmPrivateEndpointConnection = new AzureNative.KeyVault.MHSMPrivateEndpointConnection("mhsmPrivateEndpointConnection", new AzureNative.KeyVault.MHSMPrivateEndpointConnectionArgs
+ *         {
+ *             Name = "sample-mhsm",
+ *             PrivateEndpointConnectionName = "sample-pec",
+ *             PrivateLinkServiceConnectionState = new AzureNative.KeyVault.Inputs.MHSMPrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "My name is Joe and I'm approving this.",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "sample-group",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := keyvault.NewMHSMPrivateEndpointConnection(ctx, "mhsmPrivateEndpointConnection", &keyvault.MHSMPrivateEndpointConnectionArgs{
+ * 			Name:                          pulumi.String("sample-mhsm"),
+ * 			PrivateEndpointConnectionName: pulumi.String("sample-pec"),
+ * 			PrivateLinkServiceConnectionState: &keyvault.MHSMPrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("My name is Joe and I'm approving this."),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("sample-group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const mhsmPrivateEndpointConnection = new azure_native.keyvault.MHSMPrivateEndpointConnection("mhsmPrivateEndpointConnection", {
+ *     name: "sample-mhsm",
+ *     privateEndpointConnectionName: "sample-pec",
+ *     privateLinkServiceConnectionState: {
+ *         description: "My name is Joe and I'm approving this.",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "sample-group",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * mhsm_private_endpoint_connection = azure_native.keyvault.MHSMPrivateEndpointConnection("mhsmPrivateEndpointConnection",
+ *     name="sample-mhsm",
+ *     private_endpoint_connection_name="sample-pec",
+ *     private_link_service_connection_state=azure_native.keyvault.MHSMPrivateLinkServiceConnectionStateArgs(
+ *         description="My name is Joe and I'm approving this.",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="sample-group")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,140 +126,120 @@ import javax.annotation.Nullable;
 public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Modified whenever there is a change in the state of private endpoint connection.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Modified whenever there is a change in the state of private endpoint connection.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The supported Azure location where the managed HSM Pool should be created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The supported Azure location where the managed HSM Pool should be created.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the managed HSM Pool.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the managed HSM Pool.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
-     * 
      */
     @Export(name="privateEndpoint", type=MHSMPrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ MHSMPrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return Properties of the private endpoint object.
-     * 
      */
     public Output</* @Nullable */ MHSMPrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Approval state of the private link connection.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=MHSMPrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ MHSMPrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Approval state of the private link connection.
-     * 
      */
     public Output</* @Nullable */ MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the private endpoint connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the private endpoint connection.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SKU details
-     * 
      */
     @Export(name="sku", type=ManagedHsmSkuResponse.class, parameters={})
     private Output</* @Nullable */ ManagedHsmSkuResponse> sku;
 
     /**
      * @return SKU details
-     * 
      */
     public Output</* @Nullable */ ManagedHsmSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the key vault resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the key vault resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The resource type of the managed HSM Pool.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type of the managed HSM Pool.
-     * 
      */
     public Output<String> getType() {
         return this.type;

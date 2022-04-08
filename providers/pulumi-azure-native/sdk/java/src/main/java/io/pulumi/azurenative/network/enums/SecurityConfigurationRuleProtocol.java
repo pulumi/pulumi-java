@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Network protocol this rule applies to.
-     * 
      */
     @EnumType
     public enum SecurityConfigurationRuleProtocol {

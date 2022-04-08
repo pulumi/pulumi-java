@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes the override action to be applied when rule matches.
-     * 
      */
     @EnumType
     public enum ActionType {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enable Storage Auto Grow.
-     * 
      */
     @EnumType
     public enum StorageAutogrow {

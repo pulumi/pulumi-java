@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class FluidRelayEndpointsResponse {
     /**
      * The Fluid Relay Orderer endpoints.
-     * 
      */
     private final List<String> ordererEndpoints;
     /**
      * The Fluid Relay storage endpoints.
-     * 
      */
     private final List<String> storageEndpoints;
 
@@ -31,14 +29,12 @@ public final class FluidRelayEndpointsResponse {
 
     /**
      * The Fluid Relay Orderer endpoints.
-     * 
     */
     public List<String> getOrdererEndpoints() {
         return this.ordererEndpoints;
     }
     /**
      * The Fluid Relay storage endpoints.
-     * 
     */
     public List<String> getStorageEndpoints() {
         return this.storageEndpoints;

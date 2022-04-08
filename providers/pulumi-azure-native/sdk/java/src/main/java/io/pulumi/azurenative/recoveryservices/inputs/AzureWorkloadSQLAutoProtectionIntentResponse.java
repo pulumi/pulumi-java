@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Workload SQL Auto Protection intent item.
- * 
  */
 public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -31,7 +29,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
 
     /**
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
-     * 
      */
     @Import(name="itemId")
       private final @Nullable String itemId;
@@ -42,7 +39,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable String policyId;
@@ -54,7 +50,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
     /**
      * backup protectionIntent type.
      * Expected value is 'AzureWorkloadSQLAutoProtectionIntent'.
-     * 
      */
     @Import(name="protectionIntentItemType", required=true)
       private final String protectionIntentItemType;
@@ -65,7 +60,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable String protectionState;
@@ -76,7 +70,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
@@ -87,7 +80,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
 
     /**
      * Workload item type of the item for which intent is to be set
-     * 
      */
     @Import(name="workloadItemType")
       private final @Nullable String workloadItemType;

@@ -23,7 +23,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
-     * 
      */
     @Import(name="customerSecrets")
       private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
@@ -34,7 +33,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="dataManagerName", required=true)
       private final Output<String> dataManagerName;
@@ -45,7 +43,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A generic json used differently by each data service type.
-     * 
      */
     @Import(name="dataServiceInput")
       private final @Nullable Output<Object> dataServiceInput;
@@ -56,7 +53,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data service type of the job definition.
-     * 
      */
     @Import(name="dataServiceName", required=true)
       private final Output<String> dataServiceName;
@@ -67,7 +63,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data Sink Id associated to the job definition.
-     * 
      */
     @Import(name="dataSinkId", required=true)
       private final Output<String> dataSinkId;
@@ -78,7 +73,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data Source Id associated to the job definition.
-     * 
      */
     @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
@@ -89,7 +83,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job definition name to be created or updated.
-     * 
      */
     @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
@@ -100,7 +93,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last modified time of the job definition.
-     * 
      */
     @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
@@ -111,7 +103,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -122,7 +113,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is the preferred geo location for the job to run.
-     * 
      */
     @Import(name="runLocation")
       private final @Nullable Output<RunLocation> runLocation;
@@ -133,7 +123,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule for running the job definition
-     * 
      */
     @Import(name="schedules")
       private final @Nullable Output<List<ScheduleArgs>> schedules;
@@ -144,7 +133,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * State of the job definition.
-     * 
      */
     @Import(name="state", required=true)
       private final Output<State> state;
@@ -155,7 +143,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
-     * 
      */
     @Import(name="userConfirmation")
       private final @Nullable Output<UserConfirmation> userConfirmation;

@@ -14,7 +14,6 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
 
     /**
      * The provider location
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -25,7 +24,6 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
 
     /**
      * The name of the user settings
-     * 
      */
     @Import(name="userSettingsName", required=true)
       private final String userSettingsName;

@@ -17,17 +17,14 @@ import javax.annotation.Nullable;
 public final class DashboardLensResponse {
     /**
      * The dashboard len's metadata.
-     * 
      */
     private final @Nullable Map<String,Object> metadata;
     /**
      * The lens order.
-     * 
      */
     private final Integer order;
     /**
      * The dashboard parts.
-     * 
      */
     private final List<DashboardPartsResponse> parts;
 
@@ -43,21 +40,18 @@ public final class DashboardLensResponse {
 
     /**
      * The dashboard len's metadata.
-     * 
     */
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The lens order.
-     * 
     */
     public Integer getOrder() {
         return this.order;
     }
     /**
      * The dashboard parts.
-     * 
     */
     public List<DashboardPartsResponse> getParts() {
         return this.parts;

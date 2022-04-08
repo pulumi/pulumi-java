@@ -16,7 +16,6 @@ public final class GetOrderItemByNameArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * $expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetOrderItemByNameArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the order item
-     * 
      */
     @Import(name="orderItemName", required=true)
       private final String orderItemName;
@@ -38,7 +36,6 @@ public final class GetOrderItemByNameArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

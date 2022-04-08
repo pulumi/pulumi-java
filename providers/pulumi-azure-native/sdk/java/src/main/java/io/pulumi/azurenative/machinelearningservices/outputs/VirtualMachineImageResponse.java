@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class VirtualMachineImageResponse {
     /**
      * Virtual Machine image path
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class VirtualMachineImageResponse {
 
     /**
      * Virtual Machine image path
-     * 
     */
     public String getId() {
         return this.id;

@@ -14,7 +14,6 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the datastore.
-     * 
      */
     @Import(name="datastoreName", required=true)
       private final String datastoreName;
@@ -25,7 +24,6 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

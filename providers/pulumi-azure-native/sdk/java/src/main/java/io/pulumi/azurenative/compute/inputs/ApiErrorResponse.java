@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Api error.
- * 
  */
 public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -34,7 +32,6 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Api error details
-     * 
      */
     @Import(name="details")
       private final @Nullable List<ApiErrorBaseResponse> details;
@@ -45,7 +42,6 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Api inner error
-     * 
      */
     @Import(name="innererror")
       private final @Nullable InnerErrorResponse innererror;
@@ -56,7 +52,6 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -67,7 +62,6 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target of the particular error.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

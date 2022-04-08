@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents input files for a Job.
- * 
  */
 public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
-     * 
      */
     @Import(name="end")
       private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
@@ -39,7 +37,6 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of files. Required for JobInputHttp. Maximum of 4000 characters each.
-     * 
      */
     @Import(name="files")
       private final @Nullable List<String> files;
@@ -50,7 +47,6 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
-     * 
      */
     @Import(name="inputDefinitions")
       private final @Nullable List<Object> inputDefinitions;
@@ -61,7 +57,6 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -73,7 +68,6 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobInputClip'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -84,7 +78,6 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
-     * 
      */
     @Import(name="start")
       private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;

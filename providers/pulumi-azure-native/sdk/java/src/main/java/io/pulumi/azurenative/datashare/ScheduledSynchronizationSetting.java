@@ -18,7 +18,95 @@ import javax.annotation.Nullable;
  * A type of synchronization setting based on schedule
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SynchronizationSettings_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var scheduledSynchronizationSetting = new AzureNative.DataShare.ScheduledSynchronizationSetting("scheduledSynchronizationSetting", new AzureNative.DataShare.ScheduledSynchronizationSettingArgs
+ *         {
+ *             AccountName = "Account1",
+ *             Kind = "ScheduleBased",
+ *             RecurrenceInterval = "Day",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *             SynchronizationSettingName = "Dataset1",
+ *             SynchronizationTime = "2018-11-14T04:47:52.9614956Z",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewScheduledSynchronizationSetting(ctx, "scheduledSynchronizationSetting", &datashare.ScheduledSynchronizationSettingArgs{
+ * 			AccountName:                pulumi.String("Account1"),
+ * 			Kind:                       pulumi.String("ScheduleBased"),
+ * 			RecurrenceInterval:         pulumi.String("Day"),
+ * 			ResourceGroupName:          pulumi.String("SampleResourceGroup"),
+ * 			ShareName:                  pulumi.String("Share1"),
+ * 			SynchronizationSettingName: pulumi.String("Dataset1"),
+ * 			SynchronizationTime:        pulumi.String("2018-11-14T04:47:52.9614956Z"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const scheduledSynchronizationSetting = new azure_native.datashare.ScheduledSynchronizationSetting("scheduledSynchronizationSetting", {
+ *     accountName: "Account1",
+ *     kind: "ScheduleBased",
+ *     recurrenceInterval: "Day",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ *     synchronizationSettingName: "Dataset1",
+ *     synchronizationTime: "2018-11-14T04:47:52.9614956Z",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * scheduled_synchronization_setting = azure_native.datashare.ScheduledSynchronizationSetting("scheduledSynchronizationSetting",
+ *     account_name="Account1",
+ *     kind="ScheduleBased",
+ *     recurrence_interval="Day",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1",
+ *     synchronization_setting_name="Dataset1",
+ *     synchronization_time="2018-11-14T04:47:52.9614956Z")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +121,12 @@ import javax.annotation.Nullable;
 public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomResource {
     /**
      * Time at which the synchronization setting was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Time at which the synchronization setting was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
@@ -48,7 +134,6 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
     /**
      * Kind of synchronization setting.
      * Expected value is 'ScheduleBased'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -56,105 +141,90 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
     /**
      * @return Kind of synchronization setting.
      * Expected value is 'ScheduleBased'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Recurrence Interval
-     * 
      */
     @Export(name="recurrenceInterval", type=String.class, parameters={})
     private Output<String> recurrenceInterval;
 
     /**
      * @return Recurrence Interval
-     * 
      */
     public Output<String> getRecurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
      * Synchronization time
-     * 
      */
     @Export(name="synchronizationTime", type=String.class, parameters={})
     private Output<String> synchronizationTime;
 
     /**
      * @return Synchronization time
-     * 
      */
     public Output<String> getSynchronizationTime() {
         return this.synchronizationTime;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Name of the user who created the synchronization setting.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Name of the user who created the synchronization setting.
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

@@ -21,48 +21,39 @@ import javax.annotation.Nullable;
 public final class SapEccLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * The integration runtime reference.
-     * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
      * Linked service description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable String encryptedCredential;
     /**
      * Parameters for linked service.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * The password for Basic authentication.
-     * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
      * Expected value is 'SapEcc'.
-     * 
      */
     private final String type;
     /**
      * The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
-     * 
      */
     private final String url;
     /**
      * The username for Basic authentication. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable String username;
 
@@ -90,42 +81,36 @@ public final class SapEccLinkedServiceResponse {
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
-     * 
     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<String> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The password for Basic authentication.
-     * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
@@ -133,21 +118,18 @@ public final class SapEccLinkedServiceResponse {
     /**
      * Type of linked service.
      * Expected value is 'SapEcc'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
-     * 
     */
     public String getUrl() {
         return this.url;
     }
     /**
      * The username for Basic authentication. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);

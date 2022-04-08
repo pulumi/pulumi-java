@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Credential reference type.
- * 
  */
 public final class CredentialReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CredentialReferenceResponse extends io.pulumi.resources.Invok
 
     /**
      * Reference credential name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final String referenceName;
@@ -29,7 +27,6 @@ public final class CredentialReferenceResponse extends io.pulumi.resources.Invok
 
     /**
      * Credential reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a container label.
- * 
  */
 public final class ContainerLabelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ContainerLabelResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the container label.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ContainerLabelResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The value of the container label.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

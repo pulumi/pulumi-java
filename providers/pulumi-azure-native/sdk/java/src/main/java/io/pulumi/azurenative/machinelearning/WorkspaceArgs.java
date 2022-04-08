@@ -17,7 +17,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key vault identifier used for encrypted workspaces.
-     * 
      */
     @Import(name="keyVaultIdentifierId")
       private final @Nullable Output<String> keyVaultIdentifierId;
@@ -28,7 +27,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email id of the owner for this workspace.
-     * 
      */
     @Import(name="ownerEmail", required=true)
       private final Output<String> ownerEmail;
@@ -50,7 +47,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the machine learning workspace belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -72,7 +67,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified arm id of the storage account associated with this workspace.
-     * 
      */
     @Import(name="userStorageAccountId", required=true)
       private final Output<String> userStorageAccountId;
@@ -83,7 +77,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the machine learning workspace.
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

@@ -45,7 +45,6 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -56,7 +55,6 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -81,7 +79,6 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

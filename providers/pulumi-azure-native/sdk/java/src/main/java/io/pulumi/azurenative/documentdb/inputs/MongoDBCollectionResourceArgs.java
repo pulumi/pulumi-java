@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB MongoDB collection resource object
- * 
  */
 public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
 
     /**
      * Analytical TTL.
-     * 
      */
     @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Integer> analyticalStorageTtl;
@@ -35,7 +33,6 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the Cosmos DB MongoDB collection
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -46,7 +43,6 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
 
     /**
      * List of index keys
-     * 
      */
     @Import(name="indexes")
       private final @Nullable Output<List<MongoIndexArgs>> indexes;
@@ -57,7 +53,6 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
 
     /**
      * A key-value pair of shard keys to be applied for the request.
-     * 
      */
     @Import(name="shardKey")
       private final @Nullable Output<Map<String,String>> shardKey;

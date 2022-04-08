@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties used to create a new server.
- * 
  */
 public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-     * 
      */
     @Import(name="administratorLogin", required=true)
       private final Output<String> administratorLogin;
@@ -38,7 +36,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * The password of the administrator login.
-     * 
      */
     @Import(name="administratorLoginPassword", required=true)
       private final Output<String> administratorLoginPassword;
@@ -50,7 +47,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     /**
      * The mode to create a new server.
      * Expected value is 'Default'.
-     * 
      */
     @Import(name="createMode", required=true)
       private final Output<String> createMode;
@@ -61,7 +57,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * Status showing whether the server enabled infrastructure encryption.
-     * 
      */
     @Import(name="infrastructureEncryption")
       private final @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
@@ -72,7 +67,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * Enforce a minimal Tls version for the server.
-     * 
      */
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
@@ -83,7 +77,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
@@ -94,7 +87,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * Enable ssl enforcement or not when connect to server.
-     * 
      */
     @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
@@ -105,7 +97,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * Storage profile of a server.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -116,7 +107,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
 
     /**
      * Server version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;

@@ -19,7 +19,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
@@ -30,7 +29,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that created the resource.
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
@@ -41,7 +39,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
@@ -52,7 +49,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The endpoint name.
-     * 
      */
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
@@ -63,7 +59,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
@@ -74,7 +69,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
@@ -85,7 +79,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
@@ -96,7 +89,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource Id of the connectivity endpoint (optional).
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -107,7 +99,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
@@ -118,7 +109,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of endpoint.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,Type>> type;

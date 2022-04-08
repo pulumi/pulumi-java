@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The parameters to provide for the Line channel.
- * 
  */
 public final class LineChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of line channel registrations
-     * 
      */
     @Import(name="lineRegistrations", required=true)
       private final Output<List<LineRegistrationArgs>> lineRegistrations;

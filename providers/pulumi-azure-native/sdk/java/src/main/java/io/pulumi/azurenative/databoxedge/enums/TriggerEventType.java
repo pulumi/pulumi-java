@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Trigger Kind.
-     * 
      */
     @EnumType
     public enum TriggerEventType {

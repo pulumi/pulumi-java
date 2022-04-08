@@ -14,7 +14,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Account Name
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Channel Name
-     * 
      */
     @Import(name="channelName", required=true)
       private final String channelName;
@@ -36,7 +34,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

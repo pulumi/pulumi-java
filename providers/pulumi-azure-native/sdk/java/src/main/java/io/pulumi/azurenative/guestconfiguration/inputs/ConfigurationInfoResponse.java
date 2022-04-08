@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information about the configuration.
- * 
  */
 public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the configuration.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Version of the configuration.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Load balancing settings for a backend pool
- * 
  */
 public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
 
     /**
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
-     * 
      */
     @Import(name="additionalLatencyMilliseconds")
       private final @Nullable Output<Integer> additionalLatencyMilliseconds;
@@ -32,7 +30,6 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +40,6 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +50,6 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
 
     /**
      * The number of samples to consider for load balancing decisions
-     * 
      */
     @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
@@ -65,7 +60,6 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
 
     /**
      * The number of samples within the sample period that must succeed
-     * 
      */
     @Import(name="successfulSamplesRequired")
       private final @Nullable Output<Integer> successfulSamplesRequired;

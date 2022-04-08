@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define a match condition.
- * 
  */
 public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
 
     /**
      * List of possible match values.
-     * 
      */
     @Import(name="matchValue", required=true)
       private final List<String> matchValue;
@@ -33,7 +31,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
 
     /**
      * Request variable to compare with.
-     * 
      */
     @Import(name="matchVariable", required=true)
       private final String matchVariable;
@@ -44,7 +41,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
 
     /**
      * Describes if the result of this condition should be negated.
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
@@ -55,7 +51,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
 
     /**
      * Comparison type to use for matching with the variable value.
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -66,7 +61,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
 
     /**
      * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
-     * 
      */
     @Import(name="selector")
       private final @Nullable String selector;
@@ -77,7 +71,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
 
     /**
      * List of transforms.
-     * 
      */
     @Import(name="transforms")
       private final @Nullable List<String> transforms;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application gateway BackendHealthHttp settings.
- * 
  */
 public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
 
     /**
      * Reference to an ApplicationGatewayBackendHttpSettings resource.
-     * 
      */
     @Import(name="backendHttpSettings")
       private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
 
     /**
      * List of ApplicationGatewayBackendHealthServer resources.
-     * 
      */
     @Import(name="servers")
       private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;

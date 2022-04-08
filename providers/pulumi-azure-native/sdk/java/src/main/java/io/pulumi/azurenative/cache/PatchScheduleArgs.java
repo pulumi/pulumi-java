@@ -18,7 +18,6 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Default string modeled as parameter for auto generation to work correctly.
-     * 
      */
     @Import(name="default")
       private final @Nullable Output<String> default_;
@@ -29,7 +28,6 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Redis cache.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -40,7 +38,6 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of patch schedules for a Redis cache.
-     * 
      */
     @Import(name="scheduleEntries", required=true)
       private final Output<List<ScheduleEntryArgs>> scheduleEntries;

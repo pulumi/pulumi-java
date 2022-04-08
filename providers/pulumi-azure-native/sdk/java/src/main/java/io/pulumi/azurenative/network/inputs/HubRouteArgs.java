@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * RouteTable route.
- * 
  */
 public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of destinations (eg: CIDR, ResourceId, Service).
-     * 
      */
     @Import(name="destinationType", required=true)
       private final Output<String> destinationType;
@@ -31,7 +29,6 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of all destinations.
-     * 
      */
     @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
@@ -42,7 +39,6 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Route that is unique within a RouteTable. This name can be used to access this route.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -53,7 +49,6 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NextHop resource ID.
-     * 
      */
     @Import(name="nextHop", required=true)
       private final Output<String> nextHop;
@@ -64,7 +59,6 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of next hop (eg: ResourceId).
-     * 
      */
     @Import(name="nextHopType", required=true)
       private final Output<String> nextHopType;

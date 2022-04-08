@@ -17,38 +17,31 @@ import javax.annotation.Nullable;
 public final class SetVariableActivityResponse {
     /**
      * Activity depends on condition.
-     * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
      * Activity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Activity name.
-     * 
      */
     private final String name;
     /**
      * Type of activity.
      * Expected value is 'SetVariable'.
-     * 
      */
     private final String type;
     /**
      * Activity user properties.
-     * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
     /**
      * Value to be set. Could be a static value or Expression
-     * 
      */
     private final @Nullable Object value;
     /**
      * Name of the variable whose value needs to be set.
-     * 
      */
     private final @Nullable String variableName;
 
@@ -72,21 +65,18 @@ public final class SetVariableActivityResponse {
 
     /**
      * Activity depends on condition.
-     * 
     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -94,28 +84,24 @@ public final class SetVariableActivityResponse {
     /**
      * Type of activity.
      * Expected value is 'SetVariable'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
-     * 
     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Value to be set. Could be a static value or Expression
-     * 
     */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Name of the variable whose value needs to be set.
-     * 
     */
     public Optional<String> getVariableName() {
         return Optional.ofNullable(this.variableName);

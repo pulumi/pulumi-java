@@ -17,13 +17,11 @@ import javax.annotation.Nullable;
 public final class BinaryReadSettingsResponse {
     /**
      * Compression settings.
-     * 
      */
     private final @Nullable Object compressionProperties;
     /**
      * The read setting type.
      * Expected value is 'BinaryReadSettings'.
-     * 
      */
     private final String type;
 
@@ -37,7 +35,6 @@ public final class BinaryReadSettingsResponse {
 
     /**
      * Compression settings.
-     * 
     */
     public Optional<Object> getCompressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
@@ -45,7 +42,6 @@ public final class BinaryReadSettingsResponse {
     /**
      * The read setting type.
      * Expected value is 'BinaryReadSettings'.
-     * 
     */
     public String getType() {
         return this.type;

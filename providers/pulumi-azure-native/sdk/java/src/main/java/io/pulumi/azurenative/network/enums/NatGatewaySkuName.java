@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of Nat Gateway SKU.
-     * 
      */
     @EnumType
     public enum NatGatewaySkuName {

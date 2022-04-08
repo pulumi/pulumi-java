@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Compute infrastructure Resource
- * 
  */
 public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Memory in GB
-     * 
      */
     @Import(name="memoryInGB", required=true)
       private final Double memoryInGB;
@@ -30,7 +28,6 @@ public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Processor count
-     * 
      */
     @Import(name="processorCount", required=true)
       private final Integer processorCount;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Request variable to compare with.
-     * 
      */
     @EnumType
     public enum FrontDoorMatchVariable {

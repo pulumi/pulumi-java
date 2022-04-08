@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ErrorAdditionalInfoResponse {
     /**
      * The additional info.
-     * 
      */
     private final Object info;
     /**
      * The additional info type.
-     * 
      */
     private final String type;
 
@@ -31,14 +29,12 @@ public final class ErrorAdditionalInfoResponse {
 
     /**
      * The additional info.
-     * 
     */
     public Object getInfo() {
         return this.info;
     }
     /**
      * The additional info type.
-     * 
     */
     public String getType() {
         return this.type;

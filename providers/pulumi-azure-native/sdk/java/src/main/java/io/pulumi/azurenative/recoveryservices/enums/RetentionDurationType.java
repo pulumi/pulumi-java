@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Retention duration type of retention policy.
-     * 
      */
     @EnumType
     public enum RetentionDurationType {

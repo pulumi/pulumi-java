@@ -15,19 +15,16 @@ import javax.annotation.Nullable;
 public final class UserAccountResponse {
     /**
      * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
-     * 
      */
     private final @Nullable String elevationLevel;
     /**
      * This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
-     * 
      */
     private final @Nullable LinuxUserConfigurationResponse linuxUserConfiguration;
     private final String name;
     private final String password;
     /**
      * This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
-     * 
      */
     private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
@@ -47,14 +44,12 @@ public final class UserAccountResponse {
 
     /**
      * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
-     * 
     */
     public Optional<String> getElevationLevel() {
         return Optional.ofNullable(this.elevationLevel);
     }
     /**
      * This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
-     * 
     */
     public Optional<LinuxUserConfigurationResponse> getLinuxUserConfiguration() {
         return Optional.ofNullable(this.linuxUserConfiguration);
@@ -67,7 +62,6 @@ public final class UserAccountResponse {
     }
     /**
      * This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
-     * 
     */
     public Optional<WindowsUserConfigurationResponse> getWindowsUserConfiguration() {
         return Optional.ofNullable(this.windowsUserConfiguration);

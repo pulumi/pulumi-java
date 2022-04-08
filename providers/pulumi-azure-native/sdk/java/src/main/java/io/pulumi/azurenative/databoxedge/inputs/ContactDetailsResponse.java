@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains all the contact details of the customer.
- * 
  */
 public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the company.
-     * 
      */
     @Import(name="companyName", required=true)
       private final String companyName;
@@ -30,7 +28,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The contact person name.
-     * 
      */
     @Import(name="contactPerson", required=true)
       private final String contactPerson;
@@ -41,7 +38,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The email list.
-     * 
      */
     @Import(name="emailList", required=true)
       private final List<String> emailList;
@@ -52,7 +48,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The phone number.
-     * 
      */
     @Import(name="phone", required=true)
       private final String phone;

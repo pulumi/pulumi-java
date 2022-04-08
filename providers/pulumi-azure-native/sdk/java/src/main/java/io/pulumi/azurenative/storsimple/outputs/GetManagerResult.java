@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class GetManagerResult {
     /**
      * Represents the type of StorSimple Manager.
-     * 
      */
     private final @Nullable ManagerIntrinsicSettingsResponse cisIntrinsicSettings;
     /**
      * The etag of the manager.
-     * 
      */
     private final @Nullable String etag;
     /**
      * The resource ID.
-     * 
      */
     private final String id;
     /**
      * The geo location of the resource.
-     * 
      */
     private final String location;
     /**
      * The resource name.
-     * 
      */
     private final String name;
     /**
      * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
-     * 
      */
     private final @Nullable String provisioningState;
     /**
      * Specifies the Sku.
-     * 
      */
     private final @Nullable ManagerSkuResponse sku;
     /**
      * The tags attached to the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -84,63 +75,54 @@ public final class GetManagerResult {
 
     /**
      * Represents the type of StorSimple Manager.
-     * 
     */
     public Optional<ManagerIntrinsicSettingsResponse> getCisIntrinsicSettings() {
         return Optional.ofNullable(this.cisIntrinsicSettings);
     }
     /**
      * The etag of the manager.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The geo location of the resource.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
-     * 
     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Specifies the Sku.
-     * 
     */
     public Optional<ManagerSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The tags attached to the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

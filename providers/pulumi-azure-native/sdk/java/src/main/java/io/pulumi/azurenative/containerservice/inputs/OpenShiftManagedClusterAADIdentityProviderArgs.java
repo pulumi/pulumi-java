@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the Identity provider for MS AAD.
- * 
  */
 public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
 
     /**
      * The clientId password associated with the provider.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -31,7 +29,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
 
     /**
      * The groupId to be granted cluster admin role.
-     * 
      */
     @Import(name="customerAdminGroupId")
       private final @Nullable Output<String> customerAdminGroupId;
@@ -43,7 +40,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
     /**
      * The kind of the provider.
      * Expected value is 'AADIdentityProvider'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -54,7 +50,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
 
     /**
      * The secret password associated with the provider.
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<String> secret;
@@ -65,7 +60,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
 
     /**
      * The tenantId associated with the provider.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

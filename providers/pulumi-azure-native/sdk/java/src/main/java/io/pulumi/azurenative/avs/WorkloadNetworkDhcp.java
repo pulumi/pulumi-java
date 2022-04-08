@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * NSX DHCP
  * API Version: 2020-07-17-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkloadNetworks_CreateDhcp
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workloadNetworkDhcp = new AzureNative.AVS.WorkloadNetworkDhcp("workloadNetworkDhcp", new AzureNative.AVS.WorkloadNetworkDhcpArgs
+ *         {
+ *             DhcpId = "dhcp1",
+ *             DhcpType = "SERVER",
+ *             DisplayName = "dhcpConfigurations1",
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *             Revision = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewWorkloadNetworkDhcp(ctx, "workloadNetworkDhcp", &avs.WorkloadNetworkDhcpArgs{
+ * 			DhcpId:            pulumi.String("dhcp1"),
+ * 			DhcpType:          pulumi.String("SERVER"),
+ * 			DisplayName:       pulumi.String("dhcpConfigurations1"),
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 			Revision:          pulumi.Float64(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workloadNetworkDhcp = new azure_native.avs.WorkloadNetworkDhcp("workloadNetworkDhcp", {
+ *     dhcpId: "dhcp1",
+ *     dhcpType: "SERVER",
+ *     displayName: "dhcpConfigurations1",
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ *     revision: 1,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workload_network_dhcp = azure_native.avs.WorkloadNetworkDhcp("workloadNetworkDhcp",
+ *     dhcp_id="dhcp1",
+ *     dhcp_type="SERVER",
+ *     display_name="dhcpConfigurations1",
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1",
+ *     revision=1)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +117,84 @@ import javax.annotation.Nullable;
 public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
     /**
      * Type of DHCP: SERVER or RELAY.
-     * 
      */
     @Export(name="dhcpType", type=String.class, parameters={})
     private Output<String> dhcpType;
 
     /**
      * @return Type of DHCP: SERVER or RELAY.
-     * 
      */
     public Output<String> getDhcpType() {
         return this.dhcpType;
     }
     /**
      * Display name of the DHCP entity.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Display name of the DHCP entity.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
-     * 
      */
     @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
      * @return NSX revision number.
-     * 
      */
     public Output</* @Nullable */ Double> getRevision() {
         return this.revision;
     }
     /**
      * NSX Segments consuming DHCP.
-     * 
      */
     @Export(name="segments", type=List.class, parameters={String.class})
     private Output<List<String>> segments;
 
     /**
      * @return NSX Segments consuming DHCP.
-     * 
      */
     public Output<List<String>> getSegments() {
         return this.segments;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

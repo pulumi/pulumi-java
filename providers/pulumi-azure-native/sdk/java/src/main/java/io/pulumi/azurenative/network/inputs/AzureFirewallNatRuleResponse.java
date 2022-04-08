@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a NAT rule.
- * 
  */
 public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * Description of the rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.
-     * 
      */
     @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
@@ -43,7 +40,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * List of destination ports.
-     * 
      */
     @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
@@ -54,7 +50,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of the NAT rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -65,7 +60,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
-     * 
      */
     @Import(name="protocols")
       private final @Nullable List<String> protocols;
@@ -76,7 +70,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
@@ -87,7 +80,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
@@ -98,7 +90,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * The translated address for this NAT rule.
-     * 
      */
     @Import(name="translatedAddress")
       private final @Nullable String translatedAddress;
@@ -109,7 +100,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * The translated FQDN for this NAT rule.
-     * 
      */
     @Import(name="translatedFqdn")
       private final @Nullable String translatedFqdn;
@@ -120,7 +110,6 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
 
     /**
      * The translated port for this NAT rule.
-     * 
      */
     @Import(name="translatedPort")
       private final @Nullable String translatedPort;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
- * 
  */
 public final class DiskSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DiskSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class DiskSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku tier.
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;

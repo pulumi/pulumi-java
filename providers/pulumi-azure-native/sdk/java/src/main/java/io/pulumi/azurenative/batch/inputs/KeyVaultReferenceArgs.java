@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Identifies the Azure key vault associated with a Batch account.
- * 
  */
 public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource ID of the Azure key vault associated with the Batch account.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -30,7 +28,6 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The URL of the Azure key vault associated with the Batch account.
-     * 
      */
     @Import(name="url", required=true)
       private final Output<String> url;

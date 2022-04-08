@@ -17,57 +17,46 @@ import javax.annotation.Nullable;
 public final class GetPublishedBlueprintResult {
     /**
      * Name of the published blueprint definition.
-     * 
      */
     private final @Nullable String blueprintName;
     /**
      * Version-specific change notes.
-     * 
      */
     private final @Nullable String changeNotes;
     /**
      * Multi-line explain this resource.
-     * 
      */
     private final @Nullable String description;
     /**
      * One-liner string explain this resource.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * String Id used to locate any resource on Azure.
-     * 
      */
     private final String id;
     /**
      * Name of this resource.
-     * 
      */
     private final String name;
     /**
      * Parameters required by this blueprint definition.
-     * 
      */
     private final @Nullable Map<String,ParameterDefinitionResponse> parameters;
     /**
      * Resource group placeholders defined by this blueprint definition.
-     * 
      */
     private final @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups;
     /**
      * Status of the blueprint. This field is readonly.
-     * 
      */
     private final BlueprintStatusResponse status;
     /**
      * The scope where this blueprint definition can be assigned.
-     * 
      */
     private final @Nullable String targetScope;
     /**
      * Type of this resource.
-     * 
      */
     private final String type;
 
@@ -99,77 +88,66 @@ public final class GetPublishedBlueprintResult {
 
     /**
      * Name of the published blueprint definition.
-     * 
     */
     public Optional<String> getBlueprintName() {
         return Optional.ofNullable(this.blueprintName);
     }
     /**
      * Version-specific change notes.
-     * 
     */
     public Optional<String> getChangeNotes() {
         return Optional.ofNullable(this.changeNotes);
     }
     /**
      * Multi-line explain this resource.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Name of this resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Parameters required by this blueprint definition.
-     * 
     */
     public Map<String,ParameterDefinitionResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Resource group placeholders defined by this blueprint definition.
-     * 
     */
     public Map<String,ResourceGroupDefinitionResponse> getResourceGroups() {
         return this.resourceGroups == null ? Map.of() : this.resourceGroups;
     }
     /**
      * Status of the blueprint. This field is readonly.
-     * 
     */
     public BlueprintStatusResponse getStatus() {
         return this.status;
     }
     /**
      * The scope where this blueprint definition can be assigned.
-     * 
     */
     public Optional<String> getTargetScope() {
         return Optional.ofNullable(this.targetScope);
     }
     /**
      * Type of this resource.
-     * 
     */
     public String getType() {
         return this.type;

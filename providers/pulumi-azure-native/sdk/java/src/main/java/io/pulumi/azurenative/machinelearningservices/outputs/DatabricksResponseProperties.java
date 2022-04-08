@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class DatabricksResponseProperties {
     /**
      * Databricks access token
-     * 
      */
     private final @Nullable String databricksAccessToken;
     /**
      * Workspace Url
-     * 
      */
     private final @Nullable String workspaceUrl;
 
@@ -32,14 +30,12 @@ public final class DatabricksResponseProperties {
 
     /**
      * Databricks access token
-     * 
     */
     public Optional<String> getDatabricksAccessToken() {
         return Optional.ofNullable(this.databricksAccessToken);
     }
     /**
      * Workspace Url
-     * 
     */
     public Optional<String> getWorkspaceUrl() {
         return Optional.ofNullable(this.workspaceUrl);

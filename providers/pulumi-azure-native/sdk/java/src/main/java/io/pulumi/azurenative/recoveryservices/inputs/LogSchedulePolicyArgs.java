@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Log policy schedule.
- * 
  */
 public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Frequency of the log schedule operation of this policy in minutes.
-     * 
      */
     @Import(name="scheduleFrequencyInMins")
       private final @Nullable Output<Integer> scheduleFrequencyInMins;
@@ -33,7 +31,6 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'LogSchedulePolicy'.
-     * 
      */
     @Import(name="schedulePolicyType", required=true)
       private final Output<String> schedulePolicyType;

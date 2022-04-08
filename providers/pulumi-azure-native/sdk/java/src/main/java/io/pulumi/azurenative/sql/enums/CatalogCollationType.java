@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Collation of the metadata catalog.
-     * 
      */
     @EnumType
     public enum CatalogCollationType {

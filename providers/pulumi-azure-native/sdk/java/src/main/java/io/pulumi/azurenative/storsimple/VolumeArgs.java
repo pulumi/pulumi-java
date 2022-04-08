@@ -22,7 +22,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IDs of the access control records, associated with the volume.
-     * 
      */
     @Import(name="accessControlRecordIds", required=true)
       private final Output<List<String>> accessControlRecordIds;
@@ -33,7 +32,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -44,7 +42,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
@@ -55,7 +52,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
@@ -66,7 +62,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The monitoring status of the volume.
-     * 
      */
     @Import(name="monitoringStatus", required=true)
       private final Output<MonitoringStatus> monitoringStatus;
@@ -77,7 +72,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The size of the volume in bytes.
-     * 
      */
     @Import(name="sizeInBytes", required=true)
       private final Output<Double> sizeInBytes;
@@ -99,7 +92,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The volume container name.
-     * 
      */
     @Import(name="volumeContainerName", required=true)
       private final Output<String> volumeContainerName;
@@ -110,7 +102,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The volume name.
-     * 
      */
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
@@ -121,7 +112,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The volume status.
-     * 
      */
     @Import(name="volumeStatus", required=true)
       private final Output<VolumeStatus> volumeStatus;
@@ -132,7 +122,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the volume.
-     * 
      */
     @Import(name="volumeType", required=true)
       private final Output<VolumeType> volumeType;

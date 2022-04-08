@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * VPN client revoked certificate of virtual network gateway.
- * 
  */
 public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +29,6 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
 
     /**
      * The revoked VPN client certificate thumbprint.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;

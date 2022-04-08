@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of backup items associated with this container.
-     * 
      */
     @EnumType
     public enum BackupItemType {

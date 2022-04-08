@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set value for a Variable.
- * 
  */
 public final class SetVariableActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -35,7 +33,6 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -46,7 +43,6 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -58,7 +54,6 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
     /**
      * Type of activity.
      * Expected value is 'SetVariable'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -69,7 +64,6 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
@@ -80,7 +74,6 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Value to be set. Could be a static value or Expression
-     * 
      */
     @Import(name="value")
       private final @Nullable Object value;
@@ -91,7 +84,6 @@ public final class SetVariableActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Name of the variable whose value needs to be set.
-     * 
      */
     @Import(name="variableName")
       private final @Nullable String variableName;

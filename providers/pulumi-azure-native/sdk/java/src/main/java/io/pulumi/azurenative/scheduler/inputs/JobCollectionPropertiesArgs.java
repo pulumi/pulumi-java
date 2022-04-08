@@ -18,7 +18,6 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * Gets or sets the job collection quota.
-     * 
      */
     @Import(name="quota")
       private final @Nullable Output<JobCollectionQuotaArgs> quota;
@@ -29,7 +28,6 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * Gets or sets the SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -40,7 +38,6 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * Gets or sets the state.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<JobCollectionState> state;

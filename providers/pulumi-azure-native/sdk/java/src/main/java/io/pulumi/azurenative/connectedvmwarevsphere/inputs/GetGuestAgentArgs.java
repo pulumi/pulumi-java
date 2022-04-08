@@ -14,7 +14,6 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the GuestAgent.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the vm.
-     * 
      */
     @Import(name="virtualMachineName", required=true)
       private final String virtualMachineName;

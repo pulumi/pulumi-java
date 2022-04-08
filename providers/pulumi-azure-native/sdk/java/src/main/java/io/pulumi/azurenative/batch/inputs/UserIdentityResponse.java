@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specify either the userName or autoUser property, but not both.
- * 
  */
 public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
-     * 
      */
     @Import(name="autoUser")
       private final @Nullable AutoUserSpecificationResponse autoUser;
@@ -32,7 +30,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
-     * 
      */
     @Import(name="userName")
       private final @Nullable String userName;

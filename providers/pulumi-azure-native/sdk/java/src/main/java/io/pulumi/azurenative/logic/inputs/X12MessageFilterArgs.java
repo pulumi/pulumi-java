@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The X12 message filter for odata query.
- * 
  */
 public final class X12MessageFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class X12MessageFilterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The message filter type.
-     * 
      */
     @Import(name="messageFilterType", required=true)
       private final Output<Either<String,MessageFilterType>> messageFilterType;

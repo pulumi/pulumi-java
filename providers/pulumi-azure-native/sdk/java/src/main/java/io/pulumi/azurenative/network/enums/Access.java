@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The access type of the rule.
-     * 
      */
     @EnumType
     public enum Access {

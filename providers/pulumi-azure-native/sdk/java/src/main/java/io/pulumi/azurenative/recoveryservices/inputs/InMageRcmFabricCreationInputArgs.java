@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * InMageRcm fabric provider specific settings.
- * 
  */
 public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
 
     /**
      * The certificate to be used for AAD authentication.
-     * 
      */
     @Import(name="authCertificate")
       private final @Nullable Output<String> authCertificate;
@@ -33,7 +31,6 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
     /**
      * Gets the class type.
      * Expected value is 'InMageRcm'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -44,7 +41,6 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
 
     /**
      * The ARM Id of the physical site.
-     * 
      */
     @Import(name="physicalSiteId")
       private final @Nullable Output<String> physicalSiteId;
@@ -55,7 +51,6 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
 
     /**
      * The identity provider input for source agent authentication.
-     * 
      */
     @Import(name="sourceAgentIdentity")
       private final @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
@@ -66,7 +61,6 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
 
     /**
      * The ARM Id of the VMware site.
-     * 
      */
     @Import(name="vmwareSiteId")
       private final @Nullable Output<String> vmwareSiteId;

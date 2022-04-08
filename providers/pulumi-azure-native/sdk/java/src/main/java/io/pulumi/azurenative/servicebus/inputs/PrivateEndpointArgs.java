@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * PrivateEndpoint information.
- * 
  */
 public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ARM identifier for Private Endpoint.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

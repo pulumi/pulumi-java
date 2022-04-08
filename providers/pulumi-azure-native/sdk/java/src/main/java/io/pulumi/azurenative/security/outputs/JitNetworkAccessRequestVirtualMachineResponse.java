@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class JitNetworkAccessRequestVirtualMachineResponse {
     /**
      * Resource ID of the virtual machine that is linked to this policy
-     * 
      */
     private final String id;
     /**
      * The ports that were opened for the virtual machine
-     * 
      */
     private final List<JitNetworkAccessRequestPortResponse> ports;
 
@@ -32,14 +30,12 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
 
     /**
      * Resource ID of the virtual machine that is linked to this policy
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The ports that were opened for the virtual machine
-     * 
     */
     public List<JitNetworkAccessRequestPortResponse> getPorts() {
         return this.ports;

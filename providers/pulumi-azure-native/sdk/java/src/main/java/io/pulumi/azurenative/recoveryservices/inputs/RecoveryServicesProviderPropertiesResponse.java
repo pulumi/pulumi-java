@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery services provider properties.
- * 
  */
 public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The scenarios allowed on this provider.
-     * 
      */
     @Import(name="allowedScenarios")
       private final @Nullable List<String> allowedScenarios;
@@ -36,7 +34,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The authentication identity details.
-     * 
      */
     @Import(name="authenticationIdentityDetails")
       private final @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
@@ -47,7 +44,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * A value indicating whether DRA is responsive.
-     * 
      */
     @Import(name="connectionStatus")
       private final @Nullable String connectionStatus;
@@ -58,7 +54,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The DRA Id.
-     * 
      */
     @Import(name="draIdentifier")
       private final @Nullable String draIdentifier;
@@ -69,7 +64,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The fabric friendly name.
-     * 
      */
     @Import(name="fabricFriendlyName")
       private final @Nullable String fabricFriendlyName;
@@ -80,7 +74,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * Type of the site.
-     * 
      */
     @Import(name="fabricType")
       private final @Nullable String fabricType;
@@ -91,7 +84,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * Friendly name of the DRA.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -102,7 +94,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The recovery services provider health error details.
-     * 
      */
     @Import(name="healthErrorDetails")
       private final @Nullable List<HealthErrorResponse> healthErrorDetails;
@@ -113,7 +104,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * Time when last heartbeat was sent by the DRA.
-     * 
      */
     @Import(name="lastHeartBeat")
       private final @Nullable String lastHeartBeat;
@@ -124,7 +114,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * Number of protected VMs currently managed by the DRA.
-     * 
      */
     @Import(name="protectedItemCount")
       private final @Nullable Integer protectedItemCount;
@@ -135,7 +124,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The provider version.
-     * 
      */
     @Import(name="providerVersion")
       private final @Nullable String providerVersion;
@@ -146,7 +134,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The provider version details.
-     * 
      */
     @Import(name="providerVersionDetails")
       private final @Nullable VersionDetailsResponse providerVersionDetails;
@@ -157,7 +144,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * Expiry date of the version.
-     * 
      */
     @Import(name="providerVersionExpiryDate")
       private final @Nullable String providerVersionExpiryDate;
@@ -168,7 +154,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * DRA version status.
-     * 
      */
     @Import(name="providerVersionState")
       private final @Nullable String providerVersionState;
@@ -179,7 +164,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The resource access identity details.
-     * 
      */
     @Import(name="resourceAccessIdentityDetails")
       private final @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
@@ -190,7 +174,6 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
 
     /**
      * The fabric provider.
-     * 
      */
     @Import(name="serverVersion")
       private final @Nullable String serverVersion;

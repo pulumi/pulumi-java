@@ -29,7 +29,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the application resource.
-     * 
      */
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
@@ -40,7 +39,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -51,7 +49,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list that describes the correlation of the service with other services.
-     * 
      */
     @Import(name="correlationScheme")
       private final @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
@@ -62,7 +59,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the move cost for the service.
-     * 
      */
     @Import(name="defaultMoveCost")
       private final @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
@@ -73,7 +69,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -84,7 +79,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes how the service is partitioned.
-     * 
      */
     @Import(name="partitionDescription")
       private final @Nullable Output<Object> partitionDescription;
@@ -95,7 +89,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
-     * 
      */
     @Import(name="placementConstraints")
       private final @Nullable Output<String> placementConstraints;
@@ -106,7 +99,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -117,7 +109,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
-     * 
      */
     @Import(name="serviceDnsName")
       private final @Nullable Output<String> serviceDnsName;
@@ -128,7 +119,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of service (Stateless or Stateful).
-     * 
      */
     @Import(name="serviceKind", required=true)
       private final Output<Either<String,ServiceKind>> serviceKind;
@@ -139,7 +129,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service load metrics is given as an array of ServiceLoadMetricDescription objects.
-     * 
      */
     @Import(name="serviceLoadMetrics")
       private final @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
@@ -150,7 +139,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service resource in the format of {applicationName}~{serviceName}.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -161,7 +149,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The activation Mode of the service package
-     * 
      */
     @Import(name="servicePackageActivationMode")
       private final @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
@@ -172,7 +159,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list that describes the correlation of the service with other services.
-     * 
      */
     @Import(name="servicePlacementPolicies")
       private final @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
@@ -183,7 +169,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service type
-     * 
      */
     @Import(name="serviceTypeName")
       private final @Nullable Output<String> serviceTypeName;
@@ -194,7 +179,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

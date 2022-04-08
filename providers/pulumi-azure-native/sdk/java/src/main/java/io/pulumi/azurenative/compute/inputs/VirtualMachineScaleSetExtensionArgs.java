@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Virtual Machine Scale Set Extension.
- * 
  */
 public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -34,7 +32,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     @Import(name="enableAutomaticUpgrade")
       private final @Nullable Output<Boolean> enableAutomaticUpgrade;
@@ -45,7 +42,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -56,7 +52,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * The name of the extension.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +62,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
@@ -78,7 +72,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * Collection of extension names after which this extension needs to be provisioned.
-     * 
      */
     @Import(name="provisionAfterExtensions")
       private final @Nullable Output<List<String>> provisionAfterExtensions;
@@ -89,7 +82,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -100,7 +92,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
@@ -111,7 +102,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -122,7 +112,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;

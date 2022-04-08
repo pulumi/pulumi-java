@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data source precedence is a way to know the precedence of each data source.
- * 
  */
 public final class DataSourcePrecedenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The data source reference id.
-     * 
      */
     @Import(name="dataSourceReferenceId", required=true)
       private final String dataSourceReferenceId;
@@ -32,7 +30,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The data source type.
-     * 
      */
     @Import(name="dataSourceType", required=true)
       private final String dataSourceType;
@@ -43,7 +40,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The data source ID.
-     * 
      */
     @Import(name="id", required=true)
       private final Integer id;
@@ -54,7 +50,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The data source name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -65,7 +60,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
 
     /**
      * the precedence value.
-     * 
      */
     @Import(name="precedence")
       private final @Nullable Integer precedence;
@@ -76,7 +70,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The data source status.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

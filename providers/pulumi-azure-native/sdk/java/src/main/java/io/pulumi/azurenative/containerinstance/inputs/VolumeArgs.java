@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of the volume.
- * 
  */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure File volume.
-     * 
      */
     @Import(name="azureFile")
       private final @Nullable Output<AzureFileVolumeArgs> azureFile;
@@ -35,7 +33,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The empty directory volume.
-     * 
      */
     @Import(name="emptyDir")
       private final @Nullable Output<Object> emptyDir;
@@ -46,7 +43,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The git repo volume.
-     * 
      */
     @Import(name="gitRepo")
       private final @Nullable Output<GitRepoVolumeArgs> gitRepo;
@@ -57,7 +53,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the volume.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -68,7 +63,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secret volume.
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<Map<String,String>> secret;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Represent the identity type: systemAssigned, userAssigned, None
-     * 
      */
     @EnumType
     public enum ManagedIdentityType {

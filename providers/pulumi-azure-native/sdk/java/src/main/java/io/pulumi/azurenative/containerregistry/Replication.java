@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * An object that represents a replication for a container registry.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ReplicationCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replication = new AzureNative.ContainerRegistry.Replication("replication", new AzureNative.ContainerRegistry.ReplicationArgs
+ *         {
+ *             Location = "eastus",
+ *             RegistryName = "myRegistry",
+ *             ReplicationName = "myReplication",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "key", "value" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewReplication(ctx, "replication", &containerregistry.ReplicationArgs{
+ * 			Location:          pulumi.String("eastus"),
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ReplicationName:   pulumi.String("myReplication"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key": pulumi.String("value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replication = new azure_native.containerregistry.Replication("replication", {
+ *     location: "eastus",
+ *     registryName: "myRegistry",
+ *     replicationName: "myReplication",
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         key: "value",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication = azure_native.containerregistry.Replication("replication",
+ *     location="eastus",
+ *     registry_name="myRegistry",
+ *     replication_name="myReplication",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "key": "value",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +123,72 @@ import javax.annotation.Nullable;
 public class Replication extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the replication at the time the operation was called.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the replication at the time the operation was called.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the replication at the time the operation was called.
-     * 
      */
     @Export(name="status", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> status;
 
     /**
      * @return The status of the replication at the time the operation was called.
-     * 
      */
     public Output<StatusResponse> getStatus() {
         return this.status;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

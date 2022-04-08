@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * APIServerProfile represents an API server profile.
- * 
  */
 public final class APIServerProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The IP of the cluster API server (immutable).
-     * 
      */
     @Import(name="ip")
       private final @Nullable String ip;
@@ -31,7 +29,6 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The URL to access the cluster API server (immutable).
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;
@@ -42,7 +39,6 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * API server visibility (immutable).
-     * 
      */
     @Import(name="visibility")
       private final @Nullable String visibility;

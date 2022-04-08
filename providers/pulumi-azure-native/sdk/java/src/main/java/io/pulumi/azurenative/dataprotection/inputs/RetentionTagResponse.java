@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Retention tag
- * 
  */
 public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Retention Tag version.
-     * 
      */
     @Import(name="eTag", required=true)
       private final String eTag;
@@ -29,7 +27,6 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Retention Tag version.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -40,7 +37,6 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Retention Tag Name to relate it to retention rule.
-     * 
      */
     @Import(name="tagName", required=true)
       private final String tagName;

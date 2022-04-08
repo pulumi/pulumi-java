@@ -21,7 +21,1156 @@ import javax.annotation.Nullable;
  * Api details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateApi
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "tempgroup",
+ *             AuthenticationSettings = new AzureNative.ApiManagement.Inputs.AuthenticationSettingsContractArgs
+ *             {
+ *                 OAuth2 = new AzureNative.ApiManagement.Inputs.OAuth2AuthenticationSettingsContractArgs
+ *                 {
+ *                     AuthorizationServerId = "authorizationServerId2283",
+ *                     Scope = "oauth2scope2580",
+ *                 },
+ *             },
+ *             Description = "apidescription5200",
+ *             DisplayName = "apiname1463",
+ *             Path = "newapiPath",
+ *             Protocols = 
+ *             {
+ *                 "https",
+ *                 "http",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             ServiceUrl = "http://newechoapi.cloudapp.net/api",
+ *             SubscriptionKeyParameterNames = new AzureNative.ApiManagement.Inputs.SubscriptionKeyParameterNamesContractArgs
+ *             {
+ *                 Header = "header4520",
+ *                 Query = "query3037",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId: pulumi.String("tempgroup"),
+ * 			AuthenticationSettings: &apimanagement.AuthenticationSettingsContractArgs{
+ * 				OAuth2: &apimanagement.OAuth2AuthenticationSettingsContractArgs{
+ * 					AuthorizationServerId: pulumi.String("authorizationServerId2283"),
+ * 					Scope:                 pulumi.String("oauth2scope2580"),
+ * 				},
+ * 			},
+ * 			Description: pulumi.String("apidescription5200"),
+ * 			DisplayName: pulumi.String("apiname1463"),
+ * 			Path:        pulumi.String("newapiPath"),
+ * 			Protocols: []apimanagement.Protocol{
+ * 				"https",
+ * 				"http",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			ServiceUrl:        pulumi.String("http://newechoapi.cloudapp.net/api"),
+ * 			SubscriptionKeyParameterNames: &apimanagement.SubscriptionKeyParameterNamesContractArgs{
+ * 				Header: pulumi.String("header4520"),
+ * 				Query:  pulumi.String("query3037"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "tempgroup",
+ *     authenticationSettings: {
+ *         oAuth2: {
+ *             authorizationServerId: "authorizationServerId2283",
+ *             scope: "oauth2scope2580",
+ *         },
+ *     },
+ *     description: "apidescription5200",
+ *     displayName: "apiname1463",
+ *     path: "newapiPath",
+ *     protocols: [
+ *         "https",
+ *         "http",
+ *     ],
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     serviceUrl: "http://newechoapi.cloudapp.net/api",
+ *     subscriptionKeyParameterNames: {
+ *         header: "header4520",
+ *         query: "query3037",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="tempgroup",
+ *     authentication_settings=azure_native.apimanagement.AuthenticationSettingsContractArgs(
+ *         o_auth2=azure_native.apimanagement.OAuth2AuthenticationSettingsContractArgs(
+ *             authorization_server_id="authorizationServerId2283",
+ *             scope="oauth2scope2580",
+ *         ),
+ *     ),
+ *     description="apidescription5200",
+ *     display_name="apiname1463",
+ *     path="newapiPath",
+ *     protocols=[
+ *         "https",
+ *         "http",
+ *     ],
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     service_url="http://newechoapi.cloudapp.net/api",
+ *     subscription_key_parameter_names=azure_native.apimanagement.SubscriptionKeyParameterNamesContractArgs(
+ *         header="header4520",
+ *         query="query3037",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiClone
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "echo-api2",
+ *             Description = "Copy of Existing Echo Api including Operations.",
+ *             DisplayName = "Echo API2",
+ *             IsCurrent = true,
+ *             Path = "echo2",
+ *             Protocols = 
+ *             {
+ *                 "http",
+ *                 "https",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             ServiceUrl = "http://echoapi.cloudapp.net/api",
+ *             SourceApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001",
+ *             SubscriptionRequired = true,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:       pulumi.String("echo-api2"),
+ * 			Description: pulumi.String("Copy of Existing Echo Api including Operations."),
+ * 			DisplayName: pulumi.String("Echo API2"),
+ * 			IsCurrent:   pulumi.Bool(true),
+ * 			Path:        pulumi.String("echo2"),
+ * 			Protocols: []apimanagement.Protocol{
+ * 				"http",
+ * 				"https",
+ * 			},
+ * 			ResourceGroupName:    pulumi.String("rg1"),
+ * 			ServiceName:          pulumi.String("apimService1"),
+ * 			ServiceUrl:           pulumi.String("http://echoapi.cloudapp.net/api"),
+ * 			SourceApiId:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001"),
+ * 			SubscriptionRequired: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "echo-api2",
+ *     description: "Copy of Existing Echo Api including Operations.",
+ *     displayName: "Echo API2",
+ *     isCurrent: true,
+ *     path: "echo2",
+ *     protocols: [
+ *         "http",
+ *         "https",
+ *     ],
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     serviceUrl: "http://echoapi.cloudapp.net/api",
+ *     sourceApiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001",
+ *     subscriptionRequired: true,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="echo-api2",
+ *     description="Copy of Existing Echo Api including Operations.",
+ *     display_name="Echo API2",
+ *     is_current=True,
+ *     path="echo2",
+ *     protocols=[
+ *         "http",
+ *         "https",
+ *     ],
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     service_url="http://echoapi.cloudapp.net/api",
+ *     source_api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001",
+ *     subscription_required=True)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiNewVersionUsingExistingApi
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "echoapiv3",
+ *             ApiVersion = "v4",
+ *             ApiVersionSetId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
+ *             Description = "Create Echo API into a new Version using Existing Version Set and Copy all Operations.",
+ *             DisplayName = "Echo API2",
+ *             IsCurrent = true,
+ *             Path = "echo2",
+ *             Protocols = 
+ *             {
+ *                 "http",
+ *                 "https",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             ServiceUrl = "http://echoapi.cloudapp.net/api",
+ *             SourceApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath",
+ *             SubscriptionRequired = true,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:           pulumi.String("echoapiv3"),
+ * 			ApiVersion:      pulumi.String("v4"),
+ * 			ApiVersionSetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458"),
+ * 			Description:     pulumi.String("Create Echo API into a new Version using Existing Version Set and Copy all Operations."),
+ * 			DisplayName:     pulumi.String("Echo API2"),
+ * 			IsCurrent:       pulumi.Bool(true),
+ * 			Path:            pulumi.String("echo2"),
+ * 			Protocols: []apimanagement.Protocol{
+ * 				"http",
+ * 				"https",
+ * 			},
+ * 			ResourceGroupName:    pulumi.String("rg1"),
+ * 			ServiceName:          pulumi.String("apimService1"),
+ * 			ServiceUrl:           pulumi.String("http://echoapi.cloudapp.net/api"),
+ * 			SourceApiId:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath"),
+ * 			SubscriptionRequired: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "echoapiv3",
+ *     apiVersion: "v4",
+ *     apiVersionSetId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
+ *     description: "Create Echo API into a new Version using Existing Version Set and Copy all Operations.",
+ *     displayName: "Echo API2",
+ *     isCurrent: true,
+ *     path: "echo2",
+ *     protocols: [
+ *         "http",
+ *         "https",
+ *     ],
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     serviceUrl: "http://echoapi.cloudapp.net/api",
+ *     sourceApiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath",
+ *     subscriptionRequired: true,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="echoapiv3",
+ *     api_version="v4",
+ *     api_version_set_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
+ *     description="Create Echo API into a new Version using Existing Version Set and Copy all Operations.",
+ *     display_name="Echo API2",
+ *     is_current=True,
+ *     path="echo2",
+ *     protocols=[
+ *         "http",
+ *         "https",
+ *     ],
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     service_url="http://echoapi.cloudapp.net/api",
+ *     source_api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath",
+ *     subscription_required=True)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiRevisionFromExistingApi
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "echo-api;rev=3",
+ *             ApiRevisionDescription = "Creating a Revision of an existing API",
+ *             Path = "echo",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             ServiceUrl = "http://echoapi.cloudapp.net/apiv3",
+ *             SourceApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:                  pulumi.String("echo-api;rev=3"),
+ * 			ApiRevisionDescription: pulumi.String("Creating a Revision of an existing API"),
+ * 			Path:                   pulumi.String("echo"),
+ * 			ResourceGroupName:      pulumi.String("rg1"),
+ * 			ServiceName:            pulumi.String("apimService1"),
+ * 			ServiceUrl:             pulumi.String("http://echoapi.cloudapp.net/apiv3"),
+ * 			SourceApiId:            pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "echo-api;rev=3",
+ *     apiRevisionDescription: "Creating a Revision of an existing API",
+ *     path: "echo",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     serviceUrl: "http://echoapi.cloudapp.net/apiv3",
+ *     sourceApiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="echo-api;rev=3",
+ *     api_revision_description="Creating a Revision of an existing API",
+ *     path="echo",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     service_url="http://echoapi.cloudapp.net/apiv3",
+ *     source_api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiUsingImportOverrideServiceUrl
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "apidocs",
+ *             Format = "swagger-link",
+ *             Path = "petstoreapi123",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             ServiceUrl = "http://petstore.swagger.wordnik.com/api",
+ *             Value = "http://apimpimportviaurl.azurewebsites.net/api/apidocs/",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:             pulumi.String("apidocs"),
+ * 			Format:            pulumi.String("swagger-link"),
+ * 			Path:              pulumi.String("petstoreapi123"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			ServiceUrl:        pulumi.String("http://petstore.swagger.wordnik.com/api"),
+ * 			Value:             pulumi.String("http://apimpimportviaurl.azurewebsites.net/api/apidocs/"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "apidocs",
+ *     format: "swagger-link",
+ *     path: "petstoreapi123",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     serviceUrl: "http://petstore.swagger.wordnik.com/api",
+ *     value: "http://apimpimportviaurl.azurewebsites.net/api/apidocs/",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="apidocs",
+ *     format="swagger-link",
+ *     path="petstoreapi123",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     service_url="http://petstore.swagger.wordnik.com/api",
+ *     value="http://apimpimportviaurl.azurewebsites.net/api/apidocs/")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiUsingOai3Import
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "petstore",
+ *             Format = "openapi-link",
+ *             Path = "petstore",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Value = "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:             pulumi.String("petstore"),
+ * 			Format:            pulumi.String("openapi-link"),
+ * 			Path:              pulumi.String("petstore"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Value:             pulumi.String("https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "petstore",
+ *     format: "openapi-link",
+ *     path: "petstore",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     value: "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="petstore",
+ *     format="openapi-link",
+ *     path="petstore",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     value="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiUsingSwaggerImport
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "petstore",
+ *             Format = "swagger-link-json",
+ *             Path = "petstore",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Value = "http://petstore.swagger.io/v2/swagger.json",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:             pulumi.String("petstore"),
+ * 			Format:            pulumi.String("swagger-link-json"),
+ * 			Path:              pulumi.String("petstore"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Value:             pulumi.String("http://petstore.swagger.io/v2/swagger.json"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "petstore",
+ *     format: "swagger-link-json",
+ *     path: "petstore",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     value: "http://petstore.swagger.io/v2/swagger.json",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="petstore",
+ *     format="swagger-link-json",
+ *     path="petstore",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     value="http://petstore.swagger.io/v2/swagger.json")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiUsingWadlImport
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "petstore",
+ *             Format = "wadl-link-json",
+ *             Path = "collector",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Value = "https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:             pulumi.String("petstore"),
+ * 			Format:            pulumi.String("wadl-link-json"),
+ * 			Path:              pulumi.String("collector"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Value:             pulumi.String("https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "petstore",
+ *     format: "wadl-link-json",
+ *     path: "collector",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     value: "https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="petstore",
+ *     format="wadl-link-json",
+ *     path="collector",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     value="https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateApiWithOpenIdConnect
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "tempgroup",
+ *             AuthenticationSettings = new AzureNative.ApiManagement.Inputs.AuthenticationSettingsContractArgs
+ *             {
+ *                 Openid = new AzureNative.ApiManagement.Inputs.OpenIdAuthenticationSettingsContractArgs
+ *                 {
+ *                     BearerTokenSendingMethods = 
+ *                     {
+ *                         "authorizationHeader",
+ *                     },
+ *                     OpenidProviderId = "testopenid",
+ *                 },
+ *             },
+ *             Description = "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+ *             DisplayName = "Swagger Petstore",
+ *             Path = "petstore",
+ *             Protocols = 
+ *             {
+ *                 "https",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             ServiceUrl = "http://petstore.swagger.io/v2",
+ *             SubscriptionKeyParameterNames = new AzureNative.ApiManagement.Inputs.SubscriptionKeyParameterNamesContractArgs
+ *             {
+ *                 Header = "Ocp-Apim-Subscription-Key",
+ *                 Query = "subscription-key",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId: pulumi.String("tempgroup"),
+ * 			AuthenticationSettings: &apimanagement.AuthenticationSettingsContractArgs{
+ * 				Openid: &apimanagement.OpenIdAuthenticationSettingsContractArgs{
+ * 					BearerTokenSendingMethods: pulumi.StringArray{
+ * 						pulumi.String("authorizationHeader"),
+ * 					},
+ * 					OpenidProviderId: pulumi.String("testopenid"),
+ * 				},
+ * 			},
+ * 			Description: pulumi.String("This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."),
+ * 			DisplayName: pulumi.String("Swagger Petstore"),
+ * 			Path:        pulumi.String("petstore"),
+ * 			Protocols: []apimanagement.Protocol{
+ * 				"https",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			ServiceUrl:        pulumi.String("http://petstore.swagger.io/v2"),
+ * 			SubscriptionKeyParameterNames: &apimanagement.SubscriptionKeyParameterNamesContractArgs{
+ * 				Header: pulumi.String("Ocp-Apim-Subscription-Key"),
+ * 				Query:  pulumi.String("subscription-key"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "tempgroup",
+ *     authenticationSettings: {
+ *         openid: {
+ *             bearerTokenSendingMethods: ["authorizationHeader"],
+ *             openidProviderId: "testopenid",
+ *         },
+ *     },
+ *     description: "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+ *     displayName: "Swagger Petstore",
+ *     path: "petstore",
+ *     protocols: ["https"],
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     serviceUrl: "http://petstore.swagger.io/v2",
+ *     subscriptionKeyParameterNames: {
+ *         header: "Ocp-Apim-Subscription-Key",
+ *         query: "subscription-key",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="tempgroup",
+ *     authentication_settings=azure_native.apimanagement.AuthenticationSettingsContractArgs(
+ *         openid=azure_native.apimanagement.OpenIdAuthenticationSettingsContractArgs(
+ *             bearer_token_sending_methods=["authorizationHeader"],
+ *             openid_provider_id="testopenid",
+ *         ),
+ *     ),
+ *     description="This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+ *     display_name="Swagger Petstore",
+ *     path="petstore",
+ *     protocols=["https"],
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     service_url="http://petstore.swagger.io/v2",
+ *     subscription_key_parameter_names=azure_native.apimanagement.SubscriptionKeyParameterNamesContractArgs(
+ *         header="Ocp-Apim-Subscription-Key",
+ *         query="subscription-key",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateSoapPassThroughApiUsingWsdlImport
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "soapApi",
+ *             Format = "wsdl-link",
+ *             Path = "currency",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             SoapApiType = "soap",
+ *             Value = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+ *             WsdlSelector = new AzureNative.ApiManagement.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
+ *             {
+ *                 WsdlEndpointName = "CurrencyConvertorSoap",
+ *                 WsdlServiceName = "CurrencyConvertor",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:             pulumi.String("soapApi"),
+ * 			Format:            pulumi.String("wsdl-link"),
+ * 			Path:              pulumi.String("currency"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			SoapApiType:       pulumi.String("soap"),
+ * 			Value:             pulumi.String("http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"),
+ * 			WsdlSelector: &apimanagement.ApiCreateOrUpdatePropertiesWsdlSelectorArgs{
+ * 				WsdlEndpointName: pulumi.String("CurrencyConvertorSoap"),
+ * 				WsdlServiceName:  pulumi.String("CurrencyConvertor"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "soapApi",
+ *     format: "wsdl-link",
+ *     path: "currency",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     soapApiType: "soap",
+ *     value: "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+ *     wsdlSelector: {
+ *         wsdlEndpointName: "CurrencyConvertorSoap",
+ *         wsdlServiceName: "CurrencyConvertor",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="soapApi",
+ *     format="wsdl-link",
+ *     path="currency",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     soap_api_type="soap",
+ *     value="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+ *     wsdl_selector=azure_native.apimanagement.ApiCreateOrUpdatePropertiesWsdlSelectorArgs(
+ *         wsdl_endpoint_name="CurrencyConvertorSoap",
+ *         wsdl_service_name="CurrencyConvertor",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateSoapToRestApiUsingWsdlImport
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var api = new AzureNative.ApiManagement.Api("api", new AzureNative.ApiManagement.ApiArgs
+ *         {
+ *             ApiId = "soapApi",
+ *             Format = "wsdl-link",
+ *             Path = "currency",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Value = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+ *             WsdlSelector = new AzureNative.ApiManagement.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
+ *             {
+ *                 WsdlEndpointName = "CurrencyConvertorSoap",
+ *                 WsdlServiceName = "CurrencyConvertor",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
+ * 			ApiId:             pulumi.String("soapApi"),
+ * 			Format:            pulumi.String("wsdl-link"),
+ * 			Path:              pulumi.String("currency"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Value:             pulumi.String("http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"),
+ * 			WsdlSelector: &apimanagement.ApiCreateOrUpdatePropertiesWsdlSelectorArgs{
+ * 				WsdlEndpointName: pulumi.String("CurrencyConvertorSoap"),
+ * 				WsdlServiceName:  pulumi.String("CurrencyConvertor"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const api = new azure_native.apimanagement.Api("api", {
+ *     apiId: "soapApi",
+ *     format: "wsdl-link",
+ *     path: "currency",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     value: "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+ *     wsdlSelector: {
+ *         wsdlEndpointName: "CurrencyConvertorSoap",
+ *         wsdlServiceName: "CurrencyConvertor",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api = azure_native.apimanagement.Api("api",
+ *     api_id="soapApi",
+ *     format="wsdl-link",
+ *     path="currency",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     value="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+ *     wsdl_selector=azure_native.apimanagement.ApiCreateOrUpdatePropertiesWsdlSelectorArgs(
+ *         wsdl_endpoint_name="CurrencyConvertorSoap",
+ *         wsdl_service_name="CurrencyConvertor",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,280 +1185,240 @@ import javax.annotation.Nullable;
 public class Api extends io.pulumi.resources.CustomResource {
     /**
      * Describes the Revision of the Api. If no value is provided, default revision 1 is created
-     * 
      */
     @Export(name="apiRevision", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiRevision;
 
     /**
      * @return Describes the Revision of the Api. If no value is provided, default revision 1 is created
-     * 
      */
     public Output</* @Nullable */ String> getApiRevision() {
         return this.apiRevision;
     }
     /**
      * Description of the Api Revision.
-     * 
      */
     @Export(name="apiRevisionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiRevisionDescription;
 
     /**
      * @return Description of the Api Revision.
-     * 
      */
     public Output</* @Nullable */ String> getApiRevisionDescription() {
         return this.apiRevisionDescription;
     }
     /**
      * Type of API.
-     * 
      */
     @Export(name="apiType", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiType;
 
     /**
      * @return Type of API.
-     * 
      */
     public Output</* @Nullable */ String> getApiType() {
         return this.apiType;
     }
     /**
      * Indicates the Version identifier of the API if the API is versioned
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return Indicates the Version identifier of the API if the API is versioned
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Description of the Api Version.
-     * 
      */
     @Export(name="apiVersionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersionDescription;
 
     /**
      * @return Description of the Api Version.
-     * 
      */
     public Output</* @Nullable */ String> getApiVersionDescription() {
         return this.apiVersionDescription;
     }
     /**
      * Version set details
-     * 
      */
     @Export(name="apiVersionSet", type=ApiVersionSetContractDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ApiVersionSetContractDetailsResponse> apiVersionSet;
 
     /**
      * @return Version set details
-     * 
      */
     public Output</* @Nullable */ ApiVersionSetContractDetailsResponse> getApiVersionSet() {
         return this.apiVersionSet;
     }
     /**
      * A resource identifier for the related ApiVersionSet.
-     * 
      */
     @Export(name="apiVersionSetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersionSetId;
 
     /**
      * @return A resource identifier for the related ApiVersionSet.
-     * 
      */
     public Output</* @Nullable */ String> getApiVersionSetId() {
         return this.apiVersionSetId;
     }
     /**
      * Collection of authentication settings included into this API.
-     * 
      */
     @Export(name="authenticationSettings", type=AuthenticationSettingsContractResponse.class, parameters={})
     private Output</* @Nullable */ AuthenticationSettingsContractResponse> authenticationSettings;
 
     /**
      * @return Collection of authentication settings included into this API.
-     * 
      */
     public Output</* @Nullable */ AuthenticationSettingsContractResponse> getAuthenticationSettings() {
         return this.authenticationSettings;
     }
     /**
      * Description of the API. May include HTML formatting tags.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the API. May include HTML formatting tags.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * API name. Must be 1 to 300 characters long.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return API name. Must be 1 to 300 characters long.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Indicates if API revision is current api revision.
-     * 
      */
     @Export(name="isCurrent", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isCurrent;
 
     /**
      * @return Indicates if API revision is current api revision.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsCurrent() {
         return this.isCurrent;
     }
     /**
      * Indicates if API revision is accessible via the gateway.
-     * 
      */
     @Export(name="isOnline", type=Boolean.class, parameters={})
     private Output<Boolean> isOnline;
 
     /**
      * @return Indicates if API revision is accessible via the gateway.
-     * 
      */
     public Output<Boolean> getIsOnline() {
         return this.isOnline;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-     * 
      */
     @Export(name="path", type=String.class, parameters={})
     private Output<String> path;
 
     /**
      * @return Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-     * 
      */
     public Output<String> getPath() {
         return this.path;
     }
     /**
      * Describes on which protocols the operations in this API can be invoked.
-     * 
      */
     @Export(name="protocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> protocols;
 
     /**
      * @return Describes on which protocols the operations in this API can be invoked.
-     * 
      */
     public Output</* @Nullable */ List<String>> getProtocols() {
         return this.protocols;
     }
     /**
      * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-     * 
      */
     @Export(name="serviceUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceUrl;
 
     /**
      * @return Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-     * 
      */
     public Output</* @Nullable */ String> getServiceUrl() {
         return this.serviceUrl;
     }
     /**
      * API identifier of the source API.
-     * 
      */
     @Export(name="sourceApiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceApiId;
 
     /**
      * @return API identifier of the source API.
-     * 
      */
     public Output</* @Nullable */ String> getSourceApiId() {
         return this.sourceApiId;
     }
     /**
      * Protocols over which API is made available.
-     * 
      */
     @Export(name="subscriptionKeyParameterNames", type=SubscriptionKeyParameterNamesContractResponse.class, parameters={})
     private Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> subscriptionKeyParameterNames;
 
     /**
      * @return Protocols over which API is made available.
-     * 
      */
     public Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> getSubscriptionKeyParameterNames() {
         return this.subscriptionKeyParameterNames;
     }
     /**
      * Specifies whether an API or Product subscription is required for accessing the API.
-     * 
      */
     @Export(name="subscriptionRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> subscriptionRequired;
 
     /**
      * @return Specifies whether an API or Product subscription is required for accessing the API.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSubscriptionRequired() {
         return this.subscriptionRequired;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

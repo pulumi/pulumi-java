@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule to place restrictions on portions of the cache namespace being presented to clients.
- * 
  */
 public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Access allowed by this rule.
-     * 
      */
     @Import(name="access", required=true)
       private final String access;
@@ -32,7 +30,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
-     * 
      */
     @Import(name="anonymousGID")
       private final @Nullable String anonymousGID;
@@ -43,7 +40,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
-     * 
      */
     @Import(name="anonymousUID")
       private final @Nullable String anonymousUID;
@@ -54,7 +50,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
-     * 
      */
     @Import(name="filter")
       private final @Nullable String filter;
@@ -65,7 +60,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Map root accesses to anonymousUID and anonymousGID.
-     * 
      */
     @Import(name="rootSquash")
       private final @Nullable Boolean rootSquash;
@@ -76,7 +70,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Scope for this rule. The scope and filter determine which clients match the rule.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;
@@ -87,7 +80,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
-     * 
      */
     @Import(name="submountAccess")
       private final @Nullable Boolean submountAccess;
@@ -98,7 +90,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Allow SUID semantics.
-     * 
      */
     @Import(name="suid")
       private final @Nullable Boolean suid;

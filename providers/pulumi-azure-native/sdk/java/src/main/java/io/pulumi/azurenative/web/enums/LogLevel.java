@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Log level.
-     * 
      */
     @EnumType
     public enum LogLevel {

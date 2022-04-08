@@ -12,12 +12,10 @@ public final class SecureStringResponse {
     /**
      * Type of the secret.
      * Expected value is 'SecureString'.
-     * 
      */
     private final String type;
     /**
      * Value of secure string.
-     * 
      */
     private final String value;
 
@@ -32,14 +30,12 @@ public final class SecureStringResponse {
     /**
      * Type of the secret.
      * Expected value is 'SecureString'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Value of secure string.
-     * 
     */
     public String getValue() {
         return this.value;

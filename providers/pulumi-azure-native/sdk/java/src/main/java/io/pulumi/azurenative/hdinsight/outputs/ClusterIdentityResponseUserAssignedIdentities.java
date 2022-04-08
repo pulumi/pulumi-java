@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ClusterIdentityResponseUserAssignedIdentities {
     /**
      * The client id of user assigned identity.
-     * 
      */
     private final String clientId;
     /**
      * The principal id of user assigned identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant id of user assigned identity.
-     * 
      */
     private final @Nullable String tenantId;
 
@@ -39,21 +36,18 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
 
     /**
      * The client id of user assigned identity.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The principal id of user assigned identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id of user assigned identity.
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);

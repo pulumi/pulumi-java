@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GuestAgentProfileResponse {
     /**
      * The hybrid machine agent full version.
-     * 
      */
     private final String agentVersion;
     /**
      * Details about the error state.
-     * 
      */
     private final List<ErrorDetailResponse> errorDetails;
     /**
      * The time of the last status change.
-     * 
      */
     private final String lastStatusChange;
     /**
      * The status of the hybrid machine agent.
-     * 
      */
     private final String status;
     /**
      * Specifies the VM's unique SMBIOS ID.
-     * 
      */
     private final String vmUuid;
 
@@ -53,35 +48,30 @@ public final class GuestAgentProfileResponse {
 
     /**
      * The hybrid machine agent full version.
-     * 
     */
     public String getAgentVersion() {
         return this.agentVersion;
     }
     /**
      * Details about the error state.
-     * 
     */
     public List<ErrorDetailResponse> getErrorDetails() {
         return this.errorDetails;
     }
     /**
      * The time of the last status change.
-     * 
     */
     public String getLastStatusChange() {
         return this.lastStatusChange;
     }
     /**
      * The status of the hybrid machine agent.
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Specifies the VM's unique SMBIOS ID.
-     * 
     */
     public String getVmUuid() {
         return this.vmUuid;

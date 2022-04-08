@@ -14,7 +14,6 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the Network Virtual Appliance.
-     * 
      */
     @Import(name="networkVirtualApplianceName", required=true)
       private final String networkVirtualApplianceName;
@@ -25,7 +24,6 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the site.
-     * 
      */
     @Import(name="siteName", required=true)
       private final String siteName;

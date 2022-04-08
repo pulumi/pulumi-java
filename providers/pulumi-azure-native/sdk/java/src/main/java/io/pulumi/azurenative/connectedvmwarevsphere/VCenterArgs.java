@@ -20,7 +20,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username / Password Credentials to connect to vcenter.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<VICredentialArgs> credentials;
@@ -31,7 +30,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the extended location.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -42,7 +40,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the FQDN/IPAddress of the vCenter.
-     * 
      */
     @Import(name="fqdn", required=true)
       private final Output<String> fqdn;
@@ -53,7 +50,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -64,7 +60,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the port of the vCenter.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -86,7 +80,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -108,7 +100,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the vCenter.
-     * 
      */
     @Import(name="vcenterName")
       private final @Nullable Output<String> vcenterName;

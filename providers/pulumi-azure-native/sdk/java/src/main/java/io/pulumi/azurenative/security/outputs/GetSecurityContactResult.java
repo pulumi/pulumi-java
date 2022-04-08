@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class GetSecurityContactResult {
     /**
      * Defines whether to send email notifications about new security alerts
-     * 
      */
     private final @Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications;
     /**
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
-     * 
      */
     private final @Nullable String emails;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
-     * 
      */
     private final @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole;
     /**
      * The security contact's phone number
-     * 
      */
     private final @Nullable String phone;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -69,49 +62,42 @@ public final class GetSecurityContactResult {
 
     /**
      * Defines whether to send email notifications about new security alerts
-     * 
     */
     public Optional<SecurityContactPropertiesResponseAlertNotifications> getAlertNotifications() {
         return Optional.ofNullable(this.alertNotifications);
     }
     /**
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
-     * 
     */
     public Optional<String> getEmails() {
         return Optional.ofNullable(this.emails);
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
-     * 
     */
     public Optional<SecurityContactPropertiesResponseNotificationsByRole> getNotificationsByRole() {
         return Optional.ofNullable(this.notificationsByRole);
     }
     /**
      * The security contact's phone number
-     * 
     */
     public Optional<String> getPhone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The X12 agreement content.
- * 
  */
 public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The X12 one-way receive agreement.
-     * 
      */
     @Import(name="receiveAgreement", required=true)
       private final Output<X12OneWayAgreementArgs> receiveAgreement;
@@ -30,7 +28,6 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The X12 one-way send agreement.
-     * 
      */
     @Import(name="sendAgreement", required=true)
       private final Output<X12OneWayAgreementArgs> sendAgreement;

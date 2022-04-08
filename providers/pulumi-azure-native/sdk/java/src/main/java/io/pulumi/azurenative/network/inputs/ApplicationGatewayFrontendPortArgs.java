@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Frontend port of an application gateway.
- * 
  */
 public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -32,7 +30,6 @@ public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resource
 
     /**
      * Name of the frontend port that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resource
 
     /**
      * Frontend port.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Group connectivity details.
- * 
  */
 public final class GroupConnectivityInformationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
 
     /**
      * List of customer visible FQDNs.
-     * 
      */
     @Import(name="customerVisibleFqdns")
       private final @Nullable Output<List<String>> customerVisibleFqdns;
@@ -32,7 +30,6 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
 
     /**
      * PrivateLinkService ARM region.
-     * 
      */
     @Import(name="privateLinkServiceArmRegion")
       private final @Nullable Output<String> privateLinkServiceArmRegion;
@@ -43,7 +40,6 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
 
     /**
      * Redirect map ID.
-     * 
      */
     @Import(name="redirectMapId")
       private final @Nullable Output<String> redirectMapId;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The init container definition.
- * 
  */
 public final class InitContainerDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The command to execute within the init container in exec form.
-     * 
      */
     @Import(name="command")
       private final @Nullable List<String> command;
@@ -35,7 +33,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The environment variables to set in the init container.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
@@ -46,7 +43,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The image of the init container.
-     * 
      */
     @Import(name="image")
       private final @Nullable String image;
@@ -57,7 +53,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The instance view of the init container. Only valid in response.
-     * 
      */
     @Import(name="instanceView", required=true)
       private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
@@ -68,7 +63,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The name for the init container.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -79,7 +73,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The volume mounts available to the init container.
-     * 
      */
     @Import(name="volumeMounts")
       private final @Nullable List<VolumeMountResponse> volumeMounts;

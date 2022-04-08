@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The location of file server dataset.
- * 
  */
 public final class AzureFileStorageLocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFileStorageLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
@@ -32,7 +30,6 @@ public final class AzureFileStorageLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
@@ -44,7 +41,6 @@ public final class AzureFileStorageLocationArgs extends io.pulumi.resources.Reso
     /**
      * Type of dataset storage location.
      * Expected value is 'AzureFileStorageLocation'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

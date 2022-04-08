@@ -14,7 +14,6 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Experiment identifier associated with the Experiment
-     * 
      */
     @Import(name="experimentName", required=true)
       private final String experimentName;
@@ -25,7 +24,6 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Profile identifier associated with the Tenant and Partner
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -36,7 +34,6 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

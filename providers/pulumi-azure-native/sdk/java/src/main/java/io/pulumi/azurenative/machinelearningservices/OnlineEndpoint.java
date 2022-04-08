@@ -18,9 +18,226 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Online Endpoint.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var onlineEndpoint = new AzureNative.MachineLearningServices.OnlineEndpoint("onlineEndpoint", new AzureNative.MachineLearningServices.OnlineEndpointArgs
+ *         {
+ *             EndpointName = "testEndpoint",
+ *             Identity = new AzureNative.MachineLearningServices.Inputs.ResourceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity", new AzureNative.MachineLearningServices.Inputs.UserAssignedIdentityMetaArgs
+ *                     {
+ *                         ClientId = "string",
+ *                         PrincipalId = "string",
+ *                     } },
+ *                 },
+ *             },
+ *             Kind = "string",
+ *             Location = "string",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.OnlineEndpointArgs
+ *             {
+ *                 AuthMode = "AMLToken",
+ *                 Description = "string",
+ *                 Keys = new AzureNative.MachineLearningServices.Inputs.EndpointAuthKeysArgs
+ *                 {
+ *                     PrimaryKey = "string",
+ *                     SecondaryKey = "string",
+ *                 },
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 Target = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/compute123",
+ *                 Traffic = 
+ *                 {
+ *                     { "myDeployment1", 0 },
+ *                     { "myDeployment2", 1 },
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             Tags = 
+ *             {
+ *                 { "additionalProp1", "string" },
+ *                 { "additionalProp2", "string" },
+ *                 { "additionalProp3", "string" },
+ *             },
+ *             WorkspaceName = "workspace123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewOnlineEndpoint(ctx, "onlineEndpoint", &machinelearningservices.OnlineEndpointArgs{
+ * 			EndpointName: pulumi.String("testEndpoint"),
+ * 			Identity: &machinelearningservices.ResourceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+ * 					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+ * 						ClientId:    pulumi.String("string"),
+ * 						PrincipalId: pulumi.String("string"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Kind:     pulumi.String("string"),
+ * 			Location: pulumi.String("string"),
+ * 			Properties: &machinelearningservices.OnlineEndpointArgs{
+ * 				AuthMode:    pulumi.String("AMLToken"),
+ * 				Description: pulumi.String("string"),
+ * 				Keys: &machinelearningservices.EndpointAuthKeysArgs{
+ * 					PrimaryKey:   pulumi.String("string"),
+ * 					SecondaryKey: pulumi.String("string"),
+ * 				},
+ * 				Properties: pulumi.StringMap{
+ * 					"additionalProp1": pulumi.String("string"),
+ * 					"additionalProp2": pulumi.String("string"),
+ * 					"additionalProp3": pulumi.String("string"),
+ * 				},
+ * 				Target: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/compute123"),
+ * 				Traffic: pulumi.IntMap{
+ * 					"myDeployment1": pulumi.Int(0),
+ * 					"myDeployment2": pulumi.Int(1),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			Tags: pulumi.StringMap{
+ * 				"additionalProp1": pulumi.String("string"),
+ * 				"additionalProp2": pulumi.String("string"),
+ * 				"additionalProp3": pulumi.String("string"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("workspace123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const onlineEndpoint = new azure_native.machinelearningservices.OnlineEndpoint("onlineEndpoint", {
+ *     endpointName: "testEndpoint",
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": {
+ *                 clientId: "string",
+ *                 principalId: "string",
+ *             },
+ *         },
+ *     },
+ *     kind: "string",
+ *     location: "string",
+ *     properties: {
+ *         authMode: "AMLToken",
+ *         description: "string",
+ *         keys: {
+ *             primaryKey: "string",
+ *             secondaryKey: "string",
+ *         },
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         target: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/compute123",
+ *         traffic: {
+ *             myDeployment1: 0,
+ *             myDeployment2: 1,
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     tags: {
+ *         additionalProp1: "string",
+ *         additionalProp2: "string",
+ *         additionalProp3: "string",
+ *     },
+ *     workspaceName: "workspace123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * online_endpoint = azure_native.machinelearningservices.OnlineEndpoint("onlineEndpoint",
+ *     endpoint_name="testEndpoint",
+ *     identity=azure_native.machinelearningservices.ResourceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": azure_native.machinelearningservices.UserAssignedIdentityMetaArgs(
+ *                 client_id="string",
+ *                 principal_id="string",
+ *             ),
+ *         },
+ *     ),
+ *     kind="string",
+ *     location="string",
+ *     properties=azure_native.machinelearningservices.OnlineEndpointArgs(
+ *         auth_mode="AMLToken",
+ *         description="string",
+ *         keys=azure_native.machinelearningservices.EndpointAuthKeysArgs(
+ *             primary_key="string",
+ *             secondary_key="string",
+ *         ),
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         target="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/compute123",
+ *         traffic={
+ *             "myDeployment1": 0,
+ *             "myDeployment2": 1,
+ *         },
+ *     ),
+ *     resource_group_name="testrg123",
+ *     tags={
+ *         "additionalProp1": "string",
+ *         "additionalProp2": "string",
+ *         "additionalProp3": "string",
+ *     },
+ *     workspace_name="workspace123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +252,96 @@ import javax.annotation.Nullable;
 public class OnlineEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * Service identity associated with a resource.
-     * 
      */
     @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
      * @return Service identity associated with a resource.
-     * 
      */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=OnlineEndpointResponse.class, parameters={})
     private Output<OnlineEndpointResponse> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<OnlineEndpointResponse> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

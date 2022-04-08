@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the session cookie's expiration.
- * 
  */
 public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The convention used when determining the session cookie's expiration.
-     * 
      */
     @Import(name="convention")
       private final @Nullable Output<CookieExpirationConvention> convention;
@@ -32,7 +30,6 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The time after the request is made when the session cookie should expire.
-     * 
      */
     @Import(name="timeToExpiration")
       private final @Nullable Output<String> timeToExpiration;

@@ -19,7 +19,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the access policy.
-     * 
      */
     @Import(name="accessPolicyName")
       private final @Nullable Output<String> accessPolicyName;
@@ -30,7 +29,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An description of the access policy.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Time Series Insights environment associated with the specified resource group.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
@@ -52,7 +49,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The objectId of the principal in Azure Active Directory.
-     * 
      */
     @Import(name="principalObjectId")
       private final @Nullable Output<String> principalObjectId;
@@ -63,7 +59,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of roles the principal is assigned on the environment.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<Either<String,AccessPolicyRole>>> roles;

@@ -22,7 +22,92 @@ import javax.annotation.Nullable;
  * Definition of ARM tracked top level resource.
  * API Version: 2021-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update data collection endpoint
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataCollectionEndpoint = new AzureNative.Insights.DataCollectionEndpoint("dataCollectionEndpoint", new AzureNative.Insights.DataCollectionEndpointArgs
+ *         {
+ *             DataCollectionEndpointName = "myCollectionEndpoint",
+ *             Location = "eastus",
+ *             NetworkAcls = new AzureNative.Insights.Inputs.DataCollectionEndpointNetworkAclsArgs
+ *             {
+ *                 PublicNetworkAccess = "Enabled",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewDataCollectionEndpoint(ctx, "dataCollectionEndpoint", &insights.DataCollectionEndpointArgs{
+ * 			DataCollectionEndpointName: pulumi.String("myCollectionEndpoint"),
+ * 			Location:                   pulumi.String("eastus"),
+ * 			NetworkAcls: &insights.DataCollectionEndpointNetworkAclsArgs{
+ * 				PublicNetworkAccess: pulumi.String("Enabled"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataCollectionEndpoint = new azure_native.insights.DataCollectionEndpoint("dataCollectionEndpoint", {
+ *     dataCollectionEndpointName: "myCollectionEndpoint",
+ *     location: "eastus",
+ *     networkAcls: {
+ *         publicNetworkAccess: "Enabled",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_collection_endpoint = azure_native.insights.DataCollectionEndpoint("dataCollectionEndpoint",
+ *     data_collection_endpoint_name="myCollectionEndpoint",
+ *     location="eastus",
+ *     network_acls=azure_native.insights.DataCollectionEndpointNetworkAclsArgs(
+ *         public_network_access="Enabled",
+ *     ),
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,182 +122,156 @@ import javax.annotation.Nullable;
 public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * The endpoint used by agents to access their configuration.
-     * 
      */
     @Export(name="configurationAccess", type=DataCollectionEndpointResponseConfigurationAccess.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> configurationAccess;
 
     /**
      * @return The endpoint used by agents to access their configuration.
-     * 
      */
     public Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> getConfigurationAccess() {
         return this.configurationAccess;
     }
     /**
      * Description of the data collection endpoint.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the data collection endpoint.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Resource entity tag (ETag).
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource entity tag (ETag).
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
-     * 
      */
     @Export(name="immutableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> immutableId;
 
     /**
      * @return The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
-     * 
      */
     public Output</* @Nullable */ String> getImmutableId() {
         return this.immutableId;
     }
     /**
      * The kind of the resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The kind of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The endpoint used by clients to ingest logs.
-     * 
      */
     @Export(name="logsIngestion", type=DataCollectionEndpointResponseLogsIngestion.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> logsIngestion;
 
     /**
      * @return The endpoint used by clients to ingest logs.
-     * 
      */
     public Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> getLogsIngestion() {
         return this.logsIngestion;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network access control rules for the endpoints.
-     * 
      */
     @Export(name="networkAcls", type=DataCollectionEndpointResponseNetworkAcls.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> networkAcls;
 
     /**
      * @return Network access control rules for the endpoints.
-     * 
      */
     public Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> getNetworkAcls() {
         return this.networkAcls;
     }
     /**
      * The resource provisioning state. This property is READ-ONLY.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The resource provisioning state. This property is READ-ONLY.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=DataCollectionEndpointResourceResponseSystemData.class, parameters={})
     private Output<DataCollectionEndpointResourceResponseSystemData> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<DataCollectionEndpointResourceResponseSystemData> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

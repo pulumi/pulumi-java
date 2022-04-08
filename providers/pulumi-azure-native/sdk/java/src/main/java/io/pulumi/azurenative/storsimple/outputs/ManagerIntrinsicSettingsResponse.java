@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ManagerIntrinsicSettingsResponse {
     /**
      * The type of StorSimple Manager.
-     * 
      */
     private final String type;
 
@@ -22,7 +21,6 @@ public final class ManagerIntrinsicSettingsResponse {
 
     /**
      * The type of StorSimple Manager.
-     * 
     */
     public String getType() {
         return this.type;

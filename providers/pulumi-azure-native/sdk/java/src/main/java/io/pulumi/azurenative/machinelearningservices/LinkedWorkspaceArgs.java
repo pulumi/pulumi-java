@@ -17,7 +17,6 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Friendly name of the linked workspace
-     * 
      */
     @Import(name="linkName")
       private final @Nullable Output<String> linkName;
@@ -28,7 +27,6 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Friendly name of the linked workspace
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,7 +37,6 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * LinkedWorkspace specific properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<LinkedWorkspacePropsArgs> properties;
@@ -50,7 +47,6 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

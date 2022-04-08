@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Content type contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateContentTypeContentItem
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var contentItem = new AzureNative.ApiManagement.ContentItem("contentItem", new AzureNative.ApiManagement.ContentItemArgs
+ *         {
+ *             ContentItemId = "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
+ *             ContentTypeId = "page",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewContentItem(ctx, "contentItem", &apimanagement.ContentItemArgs{
+ * 			ContentItemId:     pulumi.String("4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8"),
+ * 			ContentTypeId:     pulumi.String("page"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const contentItem = new azure_native.apimanagement.ContentItem("contentItem", {
+ *     contentItemId: "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
+ *     contentTypeId: "page",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * content_item = azure_native.apimanagement.ContentItem("contentItem",
+ *     content_item_id="4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
+ *     content_type_id="page",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +109,36 @@ import javax.annotation.Nullable;
 public class ContentItem extends io.pulumi.resources.CustomResource {
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the content item.
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Properties of the content item.
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

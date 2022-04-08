@@ -14,7 +14,6 @@ public final class GetDeviceGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Device group name
-     * 
      */
     @Import(name="deviceGroupName", required=true)
       private final String deviceGroupName;
@@ -25,7 +24,6 @@ public final class GetDeviceGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defender for IoT location
-     * 
      */
     @Import(name="iotDefenderLocation", required=true)
       private final String iotDefenderLocation;

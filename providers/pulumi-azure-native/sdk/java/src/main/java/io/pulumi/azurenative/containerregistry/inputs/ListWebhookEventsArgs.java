@@ -14,7 +14,6 @@ public final class ListWebhookEventsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final String registryName;
@@ -25,7 +24,6 @@ public final class ListWebhookEventsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListWebhookEventsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the webhook.
-     * 
      */
     @Import(name="webhookName", required=true)
       private final String webhookName;

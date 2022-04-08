@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Message envelope that contains the common Azure resource manager properties and the resource provider specific content.
- * 
  */
 public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Azure-AsyncOperation Error info.
-     * 
      */
     @Import(name="error")
       private final @Nullable ErrorEntityResponse error;
@@ -40,7 +38,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
      * value for GET requests only.
      * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -51,7 +48,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * MSI resource
-     * 
      */
     @Import(name="identity")
       private final @Nullable ManagedServiceIdentityResponse identity;
@@ -62,7 +58,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -73,7 +68,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Name of resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -84,7 +78,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Azure resource manager plan.
-     * 
      */
     @Import(name="plan")
       private final @Nullable ArmPlanResponse plan;
@@ -95,7 +88,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Resource specific properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable RemotePrivateEndpointConnectionResponse properties;
@@ -106,7 +98,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * SKU description of the resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable SkuDescriptionResponse sku;
@@ -117,7 +108,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Azure-AsyncOperation Status info.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -128,7 +118,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Tags associated with resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -139,7 +128,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Type of resource e.g "Microsoft.Web/sites".
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -150,7 +138,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
 
     /**
      * Logical Availability Zones the service is hosted in
-     * 
      */
     @Import(name="zones")
       private final @Nullable List<String> zones;

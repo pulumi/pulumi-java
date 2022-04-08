@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class RunAsAccountResponse {
     /**
      * The CS RunAs account Id.
-     * 
      */
     private final @Nullable String accountId;
     /**
      * The CS RunAs account name.
-     * 
      */
     private final @Nullable String accountName;
 
@@ -32,14 +30,12 @@ public final class RunAsAccountResponse {
 
     /**
      * The CS RunAs account Id.
-     * 
     */
     public Optional<String> getAccountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * The CS RunAs account name.
-     * 
     */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);

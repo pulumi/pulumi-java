@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The error message associated with the cluster creation.
- * 
  */
 public final class ErrorsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ErrorsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class ErrorsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

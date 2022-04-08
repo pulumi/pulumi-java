@@ -18,7 +18,117 @@ import javax.annotation.Nullable;
  * The EngagementFabric channel
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ChannelsCreateOrUpdateExample
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var channel = new AzureNative.EngagementFabric.Channel("channel", new AzureNative.EngagementFabric.ChannelArgs
+ *         {
+ *             AccountName = "ExampleAccount",
+ *             ChannelFunctions = 
+ *             {
+ *                 "MockFunction1",
+ *                 "MockFunction2",
+ *             },
+ *             ChannelName = "ExampleChannel",
+ *             ChannelType = "MockChannel",
+ *             Credentials = 
+ *             {
+ *                 { "AppId", "exampleApp" },
+ *                 { "AppKey", "exampleAppKey" },
+ *             },
+ *             ResourceGroupName = "ExampleRg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	engagementfabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/engagementfabric"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := engagementfabric.NewChannel(ctx, "channel", &engagementfabric.ChannelArgs{
+ * 			AccountName: pulumi.String("ExampleAccount"),
+ * 			ChannelFunctions: pulumi.StringArray{
+ * 				pulumi.String("MockFunction1"),
+ * 				pulumi.String("MockFunction2"),
+ * 			},
+ * 			ChannelName: pulumi.String("ExampleChannel"),
+ * 			ChannelType: pulumi.String("MockChannel"),
+ * 			Credentials: pulumi.StringMap{
+ * 				"AppId":  pulumi.String("exampleApp"),
+ * 				"AppKey": pulumi.String("exampleAppKey"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("ExampleRg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const channel = new azure_native.engagementfabric.Channel("channel", {
+ *     accountName: "ExampleAccount",
+ *     channelFunctions: [
+ *         "MockFunction1",
+ *         "MockFunction2",
+ *     ],
+ *     channelName: "ExampleChannel",
+ *     channelType: "MockChannel",
+ *     credentials: {
+ *         AppId: "exampleApp",
+ *         AppKey: "exampleAppKey",
+ *     },
+ *     resourceGroupName: "ExampleRg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * channel = azure_native.engagementfabric.Channel("channel",
+ *     account_name="ExampleAccount",
+ *     channel_functions=[
+ *         "MockFunction1",
+ *         "MockFunction2",
+ *     ],
+ *     channel_name="ExampleChannel",
+ *     channel_type="MockChannel",
+ *     credentials={
+ *         "AppId": "exampleApp",
+ *         "AppKey": "exampleAppKey",
+ *     },
+ *     resource_group_name="ExampleRg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +143,60 @@ import javax.annotation.Nullable;
 public class Channel extends io.pulumi.resources.CustomResource {
     /**
      * The functions to be enabled for the channel
-     * 
      */
     @Export(name="channelFunctions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> channelFunctions;
 
     /**
      * @return The functions to be enabled for the channel
-     * 
      */
     public Output</* @Nullable */ List<String>> getChannelFunctions() {
         return this.channelFunctions;
     }
     /**
      * The channel type
-     * 
      */
     @Export(name="channelType", type=String.class, parameters={})
     private Output<String> channelType;
 
     /**
      * @return The channel type
-     * 
      */
     public Output<String> getChannelType() {
         return this.channelType;
     }
     /**
      * The channel credentials
-     * 
      */
     @Export(name="credentials", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> credentials;
 
     /**
      * @return The channel credentials
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getCredentials() {
         return this.credentials;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The fully qualified type of the resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The fully qualified type of the resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

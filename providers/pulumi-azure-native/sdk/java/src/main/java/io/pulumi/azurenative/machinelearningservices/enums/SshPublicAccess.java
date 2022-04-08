@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
-     * 
      */
     @EnumType
     public enum SshPublicAccess {

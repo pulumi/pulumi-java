@@ -20,7 +20,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * Default DNS zone of the DNS Service.
-     * 
      */
     @Import(name="defaultDnsZone")
       private final @Nullable Output<String> defaultDnsZone;
@@ -31,7 +30,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * Display name of the DNS Service.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -42,7 +40,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * NSX DNS Service identifier. Generally the same as the DNS Service's display name
-     * 
      */
     @Import(name="dnsServiceId")
       private final @Nullable Output<String> dnsServiceId;
@@ -53,7 +50,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * DNS service IP of the DNS Service.
-     * 
      */
     @Import(name="dnsServiceIp")
       private final @Nullable Output<String> dnsServiceIp;
@@ -64,7 +60,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * FQDN zones of the DNS Service.
-     * 
      */
     @Import(name="fqdnZones")
       private final @Nullable Output<List<String>> fqdnZones;
@@ -75,7 +70,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * DNS Service log level.
-     * 
      */
     @Import(name="logLevel")
       private final @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel;
@@ -86,7 +80,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -97,7 +90,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
 
     /**
      * NSX revision number.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Double> revision;

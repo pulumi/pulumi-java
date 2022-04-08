@@ -18,7 +18,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the Azure Resource Manager template that produced the environment.
-     * 
      */
     @Import(name="armTemplateDisplayName")
       private final @Nullable Output<String> armTemplateDisplayName;
@@ -29,7 +28,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The deployment properties of the environment.
-     * 
      */
     @Import(name="deploymentProperties")
       private final @Nullable Output<EnvironmentDeploymentPropertiesArgs> deploymentProperties;
@@ -40,7 +38,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -51,7 +48,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -62,7 +58,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the environment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +68,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -95,7 +88,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the user profile.
-     * 
      */
     @Import(name="userName", required=true)
       private final Output<String> userName;

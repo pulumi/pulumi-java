@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of Ssl Policy.
-     * 
      */
     @EnumType
     public enum ApplicationGatewaySslPolicyType {

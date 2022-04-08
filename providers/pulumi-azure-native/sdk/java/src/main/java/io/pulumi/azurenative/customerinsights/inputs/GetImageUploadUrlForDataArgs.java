@@ -16,7 +16,6 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
 
     /**
      * Type of entity. Can be Profile or Interaction.
-     * 
      */
     @Import(name="entityType")
       private final @Nullable String entityType;
@@ -27,7 +26,6 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the entity type.
-     * 
      */
     @Import(name="entityTypeName")
       private final @Nullable String entityTypeName;
@@ -38,7 +36,6 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final String hubName;
@@ -49,7 +46,6 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
 
     /**
      * Relative path of the image.
-     * 
      */
     @Import(name="relativePath")
       private final @Nullable String relativePath;
@@ -60,7 +56,6 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

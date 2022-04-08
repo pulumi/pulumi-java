@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hourly Schedule properties
- * 
  */
 public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates which minute snapshot should be taken
-     * 
      */
     @Import(name="minute")
       private final @Nullable Output<Integer> minute;
@@ -32,7 +30,6 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hourly snapshot count to keep
-     * 
      */
     @Import(name="snapshotsToKeep")
       private final @Nullable Output<Integer> snapshotsToKeep;
@@ -43,7 +40,6 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
-     * 
      */
     @Import(name="usedBytes")
       private final @Nullable Output<Double> usedBytes;

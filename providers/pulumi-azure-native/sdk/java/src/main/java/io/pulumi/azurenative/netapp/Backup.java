@@ -18,7 +18,95 @@ import javax.annotation.Nullable;
  * Backup of a Volume
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Backups_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var backup = new AzureNative.NetApp.Backup("backup", new AzureNative.NetApp.BackupArgs
+ *         {
+ *             AccountName = "account1",
+ *             BackupName = "backup1",
+ *             Label = "myLabel",
+ *             Location = "eastus",
+ *             PoolName = "pool1",
+ *             ResourceGroupName = "myRG",
+ *             VolumeName = "volume1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := netapp.NewBackup(ctx, "backup", &netapp.BackupArgs{
+ * 			AccountName:       pulumi.String("account1"),
+ * 			BackupName:        pulumi.String("backup1"),
+ * 			Label:             pulumi.String("myLabel"),
+ * 			Location:          pulumi.String("eastus"),
+ * 			PoolName:          pulumi.String("pool1"),
+ * 			ResourceGroupName: pulumi.String("myRG"),
+ * 			VolumeName:        pulumi.String("volume1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const backup = new azure_native.netapp.Backup("backup", {
+ *     accountName: "account1",
+ *     backupName: "backup1",
+ *     label: "myLabel",
+ *     location: "eastus",
+ *     poolName: "pool1",
+ *     resourceGroupName: "myRG",
+ *     volumeName: "volume1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * backup = azure_native.netapp.Backup("backup",
+ *     account_name="account1",
+ *     backup_name="backup1",
+ *     label="myLabel",
+ *     location="eastus",
+ *     pool_name="pool1",
+ *     resource_group_name="myRG",
+ *     volume_name="volume1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,154 +121,132 @@ import javax.annotation.Nullable;
 public class Backup extends io.pulumi.resources.CustomResource {
     /**
      * UUID v4 used to identify the Backup
-     * 
      */
     @Export(name="backupId", type=String.class, parameters={})
     private Output<String> backupId;
 
     /**
      * @return UUID v4 used to identify the Backup
-     * 
      */
     public Output<String> getBackupId() {
         return this.backupId;
     }
     /**
      * Type of backup Manual or Scheduled
-     * 
      */
     @Export(name="backupType", type=String.class, parameters={})
     private Output<String> backupType;
 
     /**
      * @return Type of backup Manual or Scheduled
-     * 
      */
     public Output<String> getBackupType() {
         return this.backupType;
     }
     /**
      * The creation date of the backup
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The creation date of the backup
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * Failure reason
-     * 
      */
     @Export(name="failureReason", type=String.class, parameters={})
     private Output<String> failureReason;
 
     /**
      * @return Failure reason
-     * 
      */
     public Output<String> getFailureReason() {
         return this.failureReason;
     }
     /**
      * Label for backup
-     * 
      */
     @Export(name="label", type=String.class, parameters={})
     private Output</* @Nullable */ String> label;
 
     /**
      * @return Label for backup
-     * 
      */
     public Output</* @Nullable */ String> getLabel() {
         return this.label;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Azure lifecycle management
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Size of backup
-     * 
      */
     @Export(name="size", type=Double.class, parameters={})
     private Output<Double> size;
 
     /**
      * @return Size of backup
-     * 
      */
     public Output<Double> getSize() {
         return this.size;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Volume name
-     * 
      */
     @Export(name="volumeName", type=String.class, parameters={})
     private Output<String> volumeName;
 
     /**
      * @return Volume name
-     * 
      */
     public Output<String> getVolumeName() {
         return this.volumeName;

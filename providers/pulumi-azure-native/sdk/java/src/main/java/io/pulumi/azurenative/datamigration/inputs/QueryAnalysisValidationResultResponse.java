@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Results for query analysis comparison between the source and target
- * 
  */
 public final class QueryAnalysisValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
 
     /**
      * List of queries executed and it's execution results in source and target
-     * 
      */
     @Import(name="queryResults", required=true)
       private final QueryExecutionResultResponse queryResults;
@@ -30,7 +28,6 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
 
     /**
      * Errors that are part of the execution
-     * 
      */
     @Import(name="validationErrors", required=true)
       private final ValidationErrorResponse validationErrors;

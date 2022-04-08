@@ -16,62 +16,50 @@ import javax.annotation.Nullable;
 public final class GetContainerAppResult {
     /**
      * Non versioned Container App configuration properties.
-     * 
      */
     private final @Nullable ConfigurationResponse configuration;
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource ID of the Container App's KubeEnvironment.
-     * 
      */
     private final @Nullable String kubeEnvironmentId;
     /**
      * Fully Qualified Domain Name of the latest revision of the Container App.
-     * 
      */
     private final String latestRevisionFqdn;
     /**
      * Name of the latest revision of the Container App.
-     * 
      */
     private final String latestRevisionName;
     /**
      * Resource Location.
-     * 
      */
     private final String location;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * Provisioning state of the Container App.
-     * 
      */
     private final String provisioningState;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Container App versioned application definition.
-     * 
      */
     private final @Nullable TemplateResponse template;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -105,84 +93,72 @@ public final class GetContainerAppResult {
 
     /**
      * Non versioned Container App configuration properties.
-     * 
     */
     public Optional<ConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource ID of the Container App's KubeEnvironment.
-     * 
     */
     public Optional<String> getKubeEnvironmentId() {
         return Optional.ofNullable(this.kubeEnvironmentId);
     }
     /**
      * Fully Qualified Domain Name of the latest revision of the Container App.
-     * 
     */
     public String getLatestRevisionFqdn() {
         return this.latestRevisionFqdn;
     }
     /**
      * Name of the latest revision of the Container App.
-     * 
     */
     public String getLatestRevisionName() {
         return this.latestRevisionName;
     }
     /**
      * Resource Location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Container App.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Container App versioned application definition.
-     * 
     */
     public Optional<TemplateResponse> getTemplate() {
         return Optional.ofNullable(this.template);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

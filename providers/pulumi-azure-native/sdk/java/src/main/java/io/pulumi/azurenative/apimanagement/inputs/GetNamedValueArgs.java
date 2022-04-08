@@ -14,7 +14,6 @@ public final class GetNamedValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identifier of the NamedValue.
-     * 
      */
     @Import(name="namedValueId", required=true)
       private final String namedValueId;
@@ -25,7 +24,6 @@ public final class GetNamedValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetNamedValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

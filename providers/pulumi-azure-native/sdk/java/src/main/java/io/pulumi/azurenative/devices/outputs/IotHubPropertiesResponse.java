@@ -26,92 +26,74 @@ import javax.annotation.Nullable;
 public final class IotHubPropertiesResponse {
     /**
      * The shared access policies you can use to secure a connection to the IoT hub.
-     * 
      */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies;
     /**
      * The IoT hub cloud-to-device messaging properties.
-     * 
      */
     private final @Nullable CloudToDevicePropertiesResponse cloudToDevice;
     /**
      * IoT hub comments.
-     * 
      */
     private final @Nullable String comments;
     /**
      * If True, file upload notifications are enabled.
-     * 
      */
     private final @Nullable Boolean enableFileUploadNotifications;
     /**
      * The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
-     * 
      */
     private final @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints;
     /**
      * The capabilities and features enabled for the IoT hub.
-     * 
      */
     private final @Nullable String features;
     /**
      * The name of the host.
-     * 
      */
     private final String hostName;
     /**
      * The IP filter rules.
-     * 
      */
     private final @Nullable List<IpFilterRuleResponse> ipFilterRules;
     /**
      * Primary and secondary location for iot hub
-     * 
      */
     private final List<IotHubLocationDescriptionResponse> locations;
     /**
      * The messaging endpoint properties for the file upload notification queue.
-     * 
      */
     private final @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints;
     /**
      * Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.
-     * 
      */
     private final @Nullable String minTlsVersion;
     /**
      * Network Rule Set Properties of IotHub
-     * 
      */
     private final @Nullable NetworkRuleSetPropertiesResponse networkRuleSets;
     /**
      * Private endpoint connections created on this IotHub
-     * 
      */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
      * The provisioning state.
-     * 
      */
     private final String provisioningState;
     /**
      * Whether requests from Public Network are allowed
-     * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
      * The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
-     * 
      */
     private final @Nullable RoutingPropertiesResponse routing;
     /**
      * The hub state.
-     * 
      */
     private final String state;
     /**
      * The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.
-     * 
      */
     private final @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
 
@@ -157,126 +139,108 @@ public final class IotHubPropertiesResponse {
 
     /**
      * The shared access policies you can use to secure a connection to the IoT hub.
-     * 
     */
     public List<SharedAccessSignatureAuthorizationRuleResponse> getAuthorizationPolicies() {
         return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
     }
     /**
      * The IoT hub cloud-to-device messaging properties.
-     * 
     */
     public Optional<CloudToDevicePropertiesResponse> getCloudToDevice() {
         return Optional.ofNullable(this.cloudToDevice);
     }
     /**
      * IoT hub comments.
-     * 
     */
     public Optional<String> getComments() {
         return Optional.ofNullable(this.comments);
     }
     /**
      * If True, file upload notifications are enabled.
-     * 
     */
     public Optional<Boolean> getEnableFileUploadNotifications() {
         return Optional.ofNullable(this.enableFileUploadNotifications);
     }
     /**
      * The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
-     * 
     */
     public Map<String,EventHubPropertiesResponse> getEventHubEndpoints() {
         return this.eventHubEndpoints == null ? Map.of() : this.eventHubEndpoints;
     }
     /**
      * The capabilities and features enabled for the IoT hub.
-     * 
     */
     public Optional<String> getFeatures() {
         return Optional.ofNullable(this.features);
     }
     /**
      * The name of the host.
-     * 
     */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * The IP filter rules.
-     * 
     */
     public List<IpFilterRuleResponse> getIpFilterRules() {
         return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
     }
     /**
      * Primary and secondary location for iot hub
-     * 
     */
     public List<IotHubLocationDescriptionResponse> getLocations() {
         return this.locations;
     }
     /**
      * The messaging endpoint properties for the file upload notification queue.
-     * 
     */
     public Map<String,MessagingEndpointPropertiesResponse> getMessagingEndpoints() {
         return this.messagingEndpoints == null ? Map.of() : this.messagingEndpoints;
     }
     /**
      * Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.
-     * 
     */
     public Optional<String> getMinTlsVersion() {
         return Optional.ofNullable(this.minTlsVersion);
     }
     /**
      * Network Rule Set Properties of IotHub
-     * 
     */
     public Optional<NetworkRuleSetPropertiesResponse> getNetworkRuleSets() {
         return Optional.ofNullable(this.networkRuleSets);
     }
     /**
      * Private endpoint connections created on this IotHub
-     * 
     */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * The provisioning state.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether requests from Public Network are allowed
-     * 
     */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
-     * 
     */
     public Optional<RoutingPropertiesResponse> getRouting() {
         return Optional.ofNullable(this.routing);
     }
     /**
      * The hub state.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.
-     * 
     */
     public Map<String,StorageEndpointPropertiesResponse> getStorageEndpoints() {
         return this.storageEndpoints == null ? Map.of() : this.storageEndpoints;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connection error
- * 
  */
 public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Code of the status
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<String> code;
@@ -32,7 +30,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource ETag
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -43,7 +40,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +50,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Description of the status
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -65,7 +60,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

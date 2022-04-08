@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The blob service properties for Last access time based tracking policy.
- * 
  */
 public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
 
     /**
      * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
-     * 
      */
     @Import(name="blobType")
       private final @Nullable List<String> blobType;
@@ -34,7 +32,6 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
 
     /**
      * When set to true last access time based tracking is enabled.
-     * 
      */
     @Import(name="enable", required=true)
       private final Boolean enable;
@@ -45,7 +42,6 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
 
     /**
      * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -56,7 +52,6 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
 
     /**
      * The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
-     * 
      */
     @Import(name="trackingGranularityInDays")
       private final @Nullable Integer trackingGranularityInDays;

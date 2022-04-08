@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network interface IP configuration properties.
- * 
  */
 public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
 
     /**
      * The list of DNS servers IP addresses.
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
@@ -32,7 +30,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
 
     /**
      * The value of the gateway.
-     * 
      */
     @Import(name="gateway")
       private final @Nullable String gateway;
@@ -43,7 +40,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
 
     /**
      * The value of the IP address.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -54,7 +50,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
 
     /**
      * IP address allocation method.
-     * 
      */
     @Import(name="ipAllocationMethod")
       private final @Nullable String ipAllocationMethod;
@@ -65,7 +60,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
 
     /**
      * IP address version.
-     * 
      */
     @Import(name="ipVersion")
       private final @Nullable String ipVersion;
@@ -76,7 +70,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
 
     /**
      * The value of the subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable String subnet;

@@ -17,7 +17,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Fabric name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
@@ -28,7 +27,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The properties of an add vCenter request.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<AddVCenterRequestPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -61,7 +57,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * vCenter name.
-     * 
      */
     @Import(name="vCenterName")
       private final @Nullable Output<String> vCenterName;

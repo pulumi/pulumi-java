@@ -13,12 +13,10 @@ public final class DeliveryRuleQueryStringConditionResponse {
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'QueryString'.
-     * 
      */
     private final String name;
     /**
      * Defines the parameters for the condition.
-     * 
      */
     private final QueryStringMatchConditionParametersResponse parameters;
 
@@ -33,14 +31,12 @@ public final class DeliveryRuleQueryStringConditionResponse {
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'QueryString'.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
-     * 
     */
     public QueryStringMatchConditionParametersResponse getParameters() {
         return this.parameters;

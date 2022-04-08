@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Deployment scale type.
-     * 
      */
     @EnumType
     public enum DeploymentScaleType {

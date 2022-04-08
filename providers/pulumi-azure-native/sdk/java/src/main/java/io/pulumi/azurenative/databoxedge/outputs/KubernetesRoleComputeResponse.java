@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class KubernetesRoleComputeResponse {
     /**
      * Memory in bytes
-     * 
      */
     private final Double memoryInBytes;
     /**
      * Processor count
-     * 
      */
     private final Integer processorCount;
     /**
      * VM profile
-     * 
      */
     private final String vmProfile;
 
@@ -39,21 +36,18 @@ public final class KubernetesRoleComputeResponse {
 
     /**
      * Memory in bytes
-     * 
     */
     public Double getMemoryInBytes() {
         return this.memoryInBytes;
     }
     /**
      * Processor count
-     * 
     */
     public Integer getProcessorCount() {
         return this.processorCount;
     }
     /**
      * VM profile
-     * 
     */
     public String getVmProfile() {
         return this.vmProfile;

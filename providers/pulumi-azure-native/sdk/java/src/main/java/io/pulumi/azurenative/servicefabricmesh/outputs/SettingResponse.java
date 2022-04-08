@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class SettingResponse {
     /**
      * The name of the setting.
-     * 
      */
     private final @Nullable String name;
     /**
      * The value of the setting.
-     * 
      */
     private final @Nullable String value;
 
@@ -32,14 +30,12 @@ public final class SettingResponse {
 
     /**
      * The name of the setting.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the setting.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

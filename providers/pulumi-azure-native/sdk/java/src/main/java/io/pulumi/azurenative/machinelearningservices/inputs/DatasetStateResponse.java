@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dataset state
- * 
  */
 public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Reference to better Dataset or a Definition
-     * 
      */
     @Import(name="deprecatedBy")
       private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
@@ -32,7 +30,6 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * eTag description
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -43,7 +40,6 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dataset state
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

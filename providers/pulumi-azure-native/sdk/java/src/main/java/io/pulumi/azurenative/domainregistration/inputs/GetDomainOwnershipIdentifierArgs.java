@@ -14,7 +14,6 @@ public final class GetDomainOwnershipIdentifierArgs extends io.pulumi.resources.
 
     /**
      * Name of domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -25,7 +24,6 @@ public final class GetDomainOwnershipIdentifierArgs extends io.pulumi.resources.
 
     /**
      * Name of identifier.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetDomainOwnershipIdentifierArgs extends io.pulumi.resources.
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -14,7 +14,6 @@ public final class GetCassandraDataCenterArgs extends io.pulumi.resources.Invoke
 
     /**
      * Managed Cassandra cluster name.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetCassandraDataCenterArgs extends io.pulumi.resources.Invoke
 
     /**
      * Data center name in a managed Cassandra cluster.
-     * 
      */
     @Import(name="dataCenterName", required=true)
       private final String dataCenterName;
@@ -36,7 +34,6 @@ public final class GetCassandraDataCenterArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

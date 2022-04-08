@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Which type of manipulation to apply to the header.
-     * 
      */
     @EnumType
     public enum HeaderActionType {

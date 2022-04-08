@@ -14,7 +14,6 @@ public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the action group.
-     * 
      */
     @Import(name="actionGroupName", required=true)
       private final String actionGroupName;
@@ -25,7 +24,6 @@ public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

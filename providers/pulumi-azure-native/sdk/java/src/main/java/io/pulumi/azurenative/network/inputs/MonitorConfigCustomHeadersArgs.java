@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom header name and value.
- * 
  */
 public final class MonitorConfigCustomHeadersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MonitorConfigCustomHeadersArgs extends io.pulumi.resources.Re
 
     /**
      * Header name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class MonitorConfigCustomHeadersArgs extends io.pulumi.resources.Re
 
     /**
      * Header value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata of Service Principal secret for autoprovisioning
- * 
  */
 public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
 
     /**
      * expiration date of service principal secret
-     * 
      */
     @Import(name="expiryDate")
       private final @Nullable Output<String> expiryDate;
@@ -31,7 +29,6 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
 
     /**
      * name of secret resource in parameter store
-     * 
      */
     @Import(name="parameterNameInStore")
       private final @Nullable Output<String> parameterNameInStore;
@@ -42,7 +39,6 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
 
     /**
      * region of parameter store where secret is kept
-     * 
      */
     @Import(name="parameterStoreRegion")
       private final @Nullable Output<String> parameterStoreRegion;

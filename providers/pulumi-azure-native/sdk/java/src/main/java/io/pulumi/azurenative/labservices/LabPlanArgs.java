@@ -22,7 +22,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The allowed regions for the lab creator to use when creating labs using this lab plan.
-     * 
      */
     @Import(name="allowedRegions")
       private final @Nullable Output<List<String>> allowedRegions;
@@ -33,7 +32,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
-     * 
      */
     @Import(name="defaultAutoShutdownProfile")
       private final @Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
@@ -44,7 +42,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
-     * 
      */
     @Import(name="defaultConnectionProfile")
       private final @Nullable Output<ConnectionProfileArgs> defaultConnectionProfile;
@@ -55,7 +52,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
-     * 
      */
     @Import(name="defaultNetworkProfile")
       private final @Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile;
@@ -66,7 +62,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
-     * 
      */
     @Import(name="labPlanName")
       private final @Nullable Output<String> labPlanName;
@@ -77,7 +72,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Base Url of the lms instance this lab plan can link lab rosters against.
-     * 
      */
     @Import(name="linkedLmsInstance")
       private final @Nullable Output<String> linkedLmsInstance;
@@ -88,7 +82,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -99,7 +92,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -110,7 +102,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
-     * 
      */
     @Import(name="sharedGalleryId")
       private final @Nullable Output<String> sharedGalleryId;
@@ -121,7 +112,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
-     * 
      */
     @Import(name="supportInfo")
       private final @Nullable Output<SupportInfoArgs> supportInfo;
@@ -132,7 +122,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Api resource definition.
- * 
  */
 public final class ApiResourceDefinitionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApiResourceDefinitionsResponse extends io.pulumi.resources.In
 
     /**
      * The modified swagger url.
-     * 
      */
     @Import(name="modifiedSwaggerUrl")
       private final @Nullable String modifiedSwaggerUrl;
@@ -31,7 +29,6 @@ public final class ApiResourceDefinitionsResponse extends io.pulumi.resources.In
 
     /**
      * The original swagger url.
-     * 
      */
     @Import(name="originalSwaggerUrl")
       private final @Nullable String originalSwaggerUrl;

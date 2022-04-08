@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Each KPI must contain a 'type' and 'enabled' key.
- * 
  */
 public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * show the KPI in the UI?
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -34,7 +32,6 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of resource related to metric (budget).
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -45,7 +42,6 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KPI type (Forecast, Budget).
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,KpiTypeType>> type;

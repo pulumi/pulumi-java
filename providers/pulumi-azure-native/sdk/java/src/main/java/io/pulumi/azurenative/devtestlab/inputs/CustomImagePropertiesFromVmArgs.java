@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for creating a custom image from a virtual machine.
- * 
  */
 public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
 
     /**
      * The Linux OS information of the VM.
-     * 
      */
     @Import(name="linuxOsInfo")
       private final @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
@@ -33,7 +31,6 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
 
     /**
      * The source vm identifier.
-     * 
      */
     @Import(name="sourceVmId")
       private final @Nullable Output<String> sourceVmId;
@@ -44,7 +41,6 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
 
     /**
      * The Windows OS information of the VM.
-     * 
      */
     @Import(name="windowsOsInfo")
       private final @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;

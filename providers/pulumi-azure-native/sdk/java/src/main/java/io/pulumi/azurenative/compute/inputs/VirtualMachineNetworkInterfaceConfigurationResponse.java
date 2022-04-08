@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine network interface configurations.
- * 
  */
 public final class VirtualMachineNetworkInterfaceConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * Specify what happens to the network interface when the VM is deleted
-     * 
      */
     @Import(name="deleteOption")
       private final @Nullable String deleteOption;
@@ -36,7 +34,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * The dns settings to be applied on the network interfaces.
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
@@ -54,7 +51,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * Specifies whether the network interface is accelerated networking-enabled.
-     * 
      */
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Boolean enableAcceleratedNetworking;
@@ -65,7 +61,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * Specifies whether the network interface is FPGA networking-enabled.
-     * 
      */
     @Import(name="enableFpga")
       private final @Nullable Boolean enableFpga;
@@ -76,7 +71,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * Whether IP forwarding enabled on this NIC.
-     * 
      */
     @Import(name="enableIPForwarding")
       private final @Nullable Boolean enableIPForwarding;
@@ -87,7 +81,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * Specifies the IP configurations of the network interface.
-     * 
      */
     @Import(name="ipConfigurations", required=true)
       private final List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
@@ -98,7 +91,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * The network interface configuration name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -109,7 +101,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * The network security group.
-     * 
      */
     @Import(name="networkSecurityGroup")
       private final @Nullable SubResourceResponse networkSecurityGroup;
@@ -120,7 +111,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
 
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Boolean primary;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of role definition
- * 
  */
 public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
 
     /**
      * Display name of the role definition
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
 
     /**
      * Id of the role definition
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -42,7 +39,6 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
 
     /**
      * Type of the role definition
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

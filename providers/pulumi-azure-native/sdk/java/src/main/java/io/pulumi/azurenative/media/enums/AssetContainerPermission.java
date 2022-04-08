@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The permissions to set on the SAS URL.
-     * 
      */
     @EnumType
     public enum AssetContainerPermission {
         /**
          * The SAS URL will allow read access to the container.
-         * 
          */
         Read("Read"),
         /**
          * The SAS URL will allow read and write access to the container.
-         * 
          */
         ReadWrite("ReadWrite"),
         /**
          * The SAS URL will allow read, write and delete access to the container.
-         * 
          */
         ReadWriteDelete("ReadWriteDelete");
 

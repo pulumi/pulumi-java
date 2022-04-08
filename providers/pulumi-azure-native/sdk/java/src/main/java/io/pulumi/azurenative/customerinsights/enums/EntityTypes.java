@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of entity.
-     * 
      */
     @EnumType
     public enum EntityTypes {

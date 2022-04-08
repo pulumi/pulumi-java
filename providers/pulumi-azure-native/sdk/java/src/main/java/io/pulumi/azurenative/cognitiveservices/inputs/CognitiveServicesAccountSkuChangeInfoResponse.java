@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Sku change info of account.
- * 
  */
 public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
 
     /**
      * Gets the count of downgrades.
-     * 
      */
     @Import(name="countOfDowngrades", required=true)
       private final Double countOfDowngrades;
@@ -30,7 +28,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
 
     /**
      * Gets the count of upgrades after downgrades.
-     * 
      */
     @Import(name="countOfUpgradesAfterDowngrades", required=true)
       private final Double countOfUpgradesAfterDowngrades;
@@ -41,7 +38,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
 
     /**
      * Gets the last change date.
-     * 
      */
     @Import(name="lastChangeDate", required=true)
       private final String lastChangeDate;

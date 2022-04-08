@@ -20,7 +20,83 @@ import javax.annotation.Nullable;
  * Specifies information about the proximity placement group.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update a proximity placement group.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var proximityPlacementGroup = new AzureNative.Compute.ProximityPlacementGroup("proximityPlacementGroup", new AzureNative.Compute.ProximityPlacementGroupArgs
+ *         {
+ *             Location = "westus",
+ *             ProximityPlacementGroupName = "myProximityPlacementGroup",
+ *             ProximityPlacementGroupType = "Standard",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewProximityPlacementGroup(ctx, "proximityPlacementGroup", &compute.ProximityPlacementGroupArgs{
+ * 			Location:                    pulumi.String("westus"),
+ * 			ProximityPlacementGroupName: pulumi.String("myProximityPlacementGroup"),
+ * 			ProximityPlacementGroupType: pulumi.String("Standard"),
+ * 			ResourceGroupName:           pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const proximityPlacementGroup = new azure_native.compute.ProximityPlacementGroup("proximityPlacementGroup", {
+ *     location: "westus",
+ *     proximityPlacementGroupName: "myProximityPlacementGroup",
+ *     proximityPlacementGroupType: "Standard",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * proximity_placement_group = azure_native.compute.ProximityPlacementGroup("proximityPlacementGroup",
+ *     location="westus",
+ *     proximity_placement_group_name="myProximityPlacementGroup",
+ *     proximity_placement_group_type="Standard",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +111,108 @@ import javax.annotation.Nullable;
 public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource {
     /**
      * A list of references to all availability sets in the proximity placement group.
-     * 
      */
     @Export(name="availabilitySets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> availabilitySets;
 
     /**
      * @return A list of references to all availability sets in the proximity placement group.
-     * 
      */
     public Output<List<SubResourceWithColocationStatusResponse>> getAvailabilitySets() {
         return this.availabilitySets;
     }
     /**
      * Describes colocation status of the Proximity Placement Group.
-     * 
      */
     @Export(name="colocationStatus", type=InstanceViewStatusResponse.class, parameters={})
     private Output</* @Nullable */ InstanceViewStatusResponse> colocationStatus;
 
     /**
      * @return Describes colocation status of the Proximity Placement Group.
-     * 
      */
     public Output</* @Nullable */ InstanceViewStatusResponse> getColocationStatus() {
         return this.colocationStatus;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
-     * 
      */
     @Export(name="proximityPlacementGroupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> proximityPlacementGroupType;
 
     /**
      * @return Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
-     * 
      */
     public Output</* @Nullable */ String> getProximityPlacementGroupType() {
         return this.proximityPlacementGroupType;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A list of references to all virtual machine scale sets in the proximity placement group.
-     * 
      */
     @Export(name="virtualMachineScaleSets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> virtualMachineScaleSets;
 
     /**
      * @return A list of references to all virtual machine scale sets in the proximity placement group.
-     * 
      */
     public Output<List<SubResourceWithColocationStatusResponse>> getVirtualMachineScaleSets() {
         return this.virtualMachineScaleSets;
     }
     /**
      * A list of references to all virtual machines in the proximity placement group.
-     * 
      */
     @Export(name="virtualMachines", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> virtualMachines;
 
     /**
      * @return A list of references to all virtual machines in the proximity placement group.
-     * 
      */
     public Output<List<SubResourceWithColocationStatusResponse>> getVirtualMachines() {
         return this.virtualMachines;

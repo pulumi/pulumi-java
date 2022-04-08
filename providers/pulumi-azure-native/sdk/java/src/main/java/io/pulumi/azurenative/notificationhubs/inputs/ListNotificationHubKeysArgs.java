@@ -14,7 +14,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
 
     /**
      * The connection string of the NotificationHub for the specified authorizationRule.
-     * 
      */
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
@@ -25,7 +24,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
 
     /**
      * The namespace name.
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
 
     /**
      * The notification hub name.
-     * 
      */
     @Import(name="notificationHubName", required=true)
       private final String notificationHubName;
@@ -47,7 +44,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

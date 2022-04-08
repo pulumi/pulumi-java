@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * LogAnalytics output properties
- * 
  */
 public final class LogAnalyticsOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LogAnalyticsOutputResponse extends io.pulumi.resources.Invoke
 
     /**
      * Output file Uri path to blob container.
-     * 
      */
     @Import(name="output", required=true)
       private final String output;

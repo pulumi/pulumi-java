@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Frontend IP configuration of an application gateway.
- * 
  */
 public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -43,7 +40,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * Name of the frontend IP configuration that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * PrivateIPAddress of the network interface IP Configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -65,7 +60,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
@@ -76,7 +70,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * Reference to the application gateway private link configuration.
-     * 
      */
     @Import(name="privateLinkConfiguration")
       private final @Nullable SubResourceResponse privateLinkConfiguration;
@@ -87,7 +80,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * The provisioning state of the frontend IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -98,7 +90,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * Reference to the PublicIP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable SubResourceResponse publicIPAddress;
@@ -109,7 +100,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * Reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
@@ -120,7 +110,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

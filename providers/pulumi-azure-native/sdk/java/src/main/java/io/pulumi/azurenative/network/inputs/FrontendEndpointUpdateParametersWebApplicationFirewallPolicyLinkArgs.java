@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the Web Application Firewall policy for each host (if applicable)
- * 
  */
 public final class FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FrontendEndpointUpdateParametersWebApplicationFirewallPolicyL
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

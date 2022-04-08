@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for creating a custom image from a VHD.
- * 
  */
 public final class CustomImagePropertiesCustomResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CustomImagePropertiesCustomResponse extends io.pulumi.resourc
 
     /**
      * The image name.
-     * 
      */
     @Import(name="imageName")
       private final @Nullable String imageName;
@@ -32,7 +30,6 @@ public final class CustomImagePropertiesCustomResponse extends io.pulumi.resourc
 
     /**
      * The OS type of the custom image (i.e. Windows, Linux)
-     * 
      */
     @Import(name="osType", required=true)
       private final String osType;
@@ -43,7 +40,6 @@ public final class CustomImagePropertiesCustomResponse extends io.pulumi.resourc
 
     /**
      * Indicates whether sysprep has been run on the VHD.
-     * 
      */
     @Import(name="sysPrep")
       private final @Nullable Boolean sysPrep;

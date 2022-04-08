@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for CosmosDB (MongoDB API) data source.
- * 
  */
 public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -36,7 +34,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -47,7 +44,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final Object connectionString;
@@ -58,7 +54,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="database", required=true)
       private final Object database;
@@ -69,7 +64,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -80,7 +74,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="isServerVersionAbove32")
       private final @Nullable Object isServerVersionAbove32;
@@ -91,7 +84,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -103,7 +95,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
     /**
      * Type of linked service.
      * Expected value is 'CosmosDbMongoDbApi'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

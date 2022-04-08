@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the webhook destination for an event subscription.
- * 
  */
 public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
 
     /**
      * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-     * 
      */
     @Import(name="azureActiveDirectoryApplicationIdOrUri")
       private final @Nullable String azureActiveDirectoryApplicationIdOrUri;
@@ -32,7 +30,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
 
     /**
      * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-     * 
      */
     @Import(name="azureActiveDirectoryTenantId")
       private final @Nullable String azureActiveDirectoryTenantId;
@@ -43,7 +40,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
 
     /**
      * The base URL that represents the endpoint of the destination of an event subscription.
-     * 
      */
     @Import(name="endpointBaseUrl", required=true)
       private final String endpointBaseUrl;
@@ -55,7 +51,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
     /**
      * Type of the endpoint for the event subscription destination.
      * Expected value is 'WebHook'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final String endpointType;
@@ -66,7 +61,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
 
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
-     * 
      */
     @Import(name="endpointUrl")
       private final @Nullable String endpointUrl;
@@ -77,7 +71,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
 
     /**
      * Maximum number of events per batch.
-     * 
      */
     @Import(name="maxEventsPerBatch")
       private final @Nullable Integer maxEventsPerBatch;
@@ -88,7 +81,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
 
     /**
      * Preferred batch size in Kilobytes.
-     * 
      */
     @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Integer preferredBatchSizeInKilobytes;

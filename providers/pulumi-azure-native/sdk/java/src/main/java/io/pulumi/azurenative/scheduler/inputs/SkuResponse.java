@@ -16,7 +16,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or set the SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

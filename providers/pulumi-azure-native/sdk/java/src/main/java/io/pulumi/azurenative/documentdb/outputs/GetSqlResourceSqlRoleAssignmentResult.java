@@ -13,32 +13,26 @@ import javax.annotation.Nullable;
 public final class GetSqlResourceSqlRoleAssignmentResult {
     /**
      * The unique resource identifier of the database account.
-     * 
      */
     private final String id;
     /**
      * The name of the database account.
-     * 
      */
     private final String name;
     /**
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
-     * 
      */
     private final @Nullable String principalId;
     /**
      * The unique identifier for the associated Role Definition.
-     * 
      */
     private final @Nullable String roleDefinitionId;
     /**
      * The data plane resource path for which access is being granted through this Role Assignment.
-     * 
      */
     private final @Nullable String scope;
     /**
      * The type of Azure resource.
-     * 
      */
     private final String type;
 
@@ -60,42 +54,36 @@ public final class GetSqlResourceSqlRoleAssignmentResult {
 
     /**
      * The unique resource identifier of the database account.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
-     * 
     */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The unique identifier for the associated Role Definition.
-     * 
     */
     public Optional<String> getRoleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
     /**
      * The data plane resource path for which access is being granted through this Role Assignment.
-     * 
     */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The type of Azure resource.
-     * 
     */
     public String getType() {
         return this.type;

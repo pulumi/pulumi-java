@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the storage settings for the virtual machine disks.
- * 
  */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine.
-     * 
      */
     @Import(name="dataDisks")
       private final @Nullable List<DataDiskResponse> dataDisks;
@@ -34,7 +32,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The image reference properties.
-     * 
      */
     @Import(name="imageReference")
       private final @Nullable ImageReferenceResponse imageReference;
@@ -45,7 +42,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies information about the operating system disk used by the virtual machine.
-     * 
      */
     @Import(name="osDisk")
       private final @Nullable OsDiskResponse osDisk;

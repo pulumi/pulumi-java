@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a NotificationHub GcmCredential.
- * 
  */
 public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
-     * 
      */
     @Import(name="gcmEndpoint")
       private final @Nullable Output<String> gcmEndpoint;
@@ -31,7 +29,6 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google API key.
-     * 
      */
     @Import(name="googleApiKey")
       private final @Nullable Output<String> googleApiKey;

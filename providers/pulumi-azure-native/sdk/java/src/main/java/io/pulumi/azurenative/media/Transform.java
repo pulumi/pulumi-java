@@ -19,7 +19,114 @@ import javax.annotation.Nullable;
  * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Transform
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var transform = new AzureNative.Media.Transform("transform", new AzureNative.Media.TransformArgs
+ *         {
+ *             AccountName = "contosomedia",
+ *             Description = "Example Transform to illustrate create and update.",
+ *             Outputs = 
+ *             {
+ *                 new AzureNative.Media.Inputs.TransformOutputArgs
+ *                 {
+ *                     Preset = new AzureNative.Media.Inputs.BuiltInStandardEncoderPresetArgs
+ *                     {
+ *                         OdataType = "#Microsoft.Media.BuiltInStandardEncoderPreset",
+ *                         PresetName = "AdaptiveStreaming",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "contosoresources",
+ *             TransformName = "createdTransform",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := media.NewTransform(ctx, "transform", &media.TransformArgs{
+ * 			AccountName: pulumi.String("contosomedia"),
+ * 			Description: pulumi.String("Example Transform to illustrate create and update."),
+ * 			Outputs: []media.TransformOutputArgs{
+ * 				media.TransformOutputArgs{
+ * 					Preset: media.BuiltInStandardEncoderPreset{
+ * 						OdataType:  "#Microsoft.Media.BuiltInStandardEncoderPreset",
+ * 						PresetName: "AdaptiveStreaming",
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("contosoresources"),
+ * 			TransformName:     pulumi.String("createdTransform"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const transform = new azure_native.media.Transform("transform", {
+ *     accountName: "contosomedia",
+ *     description: "Example Transform to illustrate create and update.",
+ *     outputs: [{
+ *         preset: {
+ *             odataType: "#Microsoft.Media.BuiltInStandardEncoderPreset",
+ *             presetName: "AdaptiveStreaming",
+ *         },
+ *     }],
+ *     resourceGroupName: "contosoresources",
+ *     transformName: "createdTransform",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * transform = azure_native.media.Transform("transform",
+ *     account_name="contosomedia",
+ *     description="Example Transform to illustrate create and update.",
+ *     outputs=[azure_native.media.TransformOutputArgs(
+ *         preset=azure_native.media.BuiltInStandardEncoderPresetArgs(
+ *             odata_type="#Microsoft.Media.BuiltInStandardEncoderPreset",
+ *             preset_name="AdaptiveStreaming",
+ *         ),
+ *     )],
+ *     resource_group_name="contosoresources",
+ *     transform_name="createdTransform")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +141,84 @@ import javax.annotation.Nullable;
 public class Transform extends io.pulumi.resources.CustomResource {
     /**
      * The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * An optional verbose description of the Transform.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return An optional verbose description of the Transform.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
      * @return The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * An array of one or more TransformOutputs that the Transform should generate.
-     * 
      */
     @Export(name="outputs", type=List.class, parameters={TransformOutputResponse.class})
     private Output<List<TransformOutputResponse>> outputs;
 
     /**
      * @return An array of one or more TransformOutputs that the Transform should generate.
-     * 
      */
     public Output<List<TransformOutputResponse>> getOutputs() {
         return this.outputs;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

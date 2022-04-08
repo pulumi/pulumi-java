@@ -14,7 +14,6 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the agent pool.
-     * 
      */
     @Import(name="agentPoolName", required=true)
       private final String agentPoolName;
@@ -25,7 +24,6 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final String registryName;
@@ -36,7 +34,6 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Select video tracks from the input by specifying an attribute and an attribute filter.
- * 
  */
 public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
 
     /**
      * The TrackAttribute to filter the tracks by.
-     * 
      */
     @Import(name="attribute", required=true)
       private final String attribute;
@@ -31,7 +29,6 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
 
     /**
      * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
-     * 
      */
     @Import(name="filter", required=true)
       private final String filter;
@@ -42,7 +39,6 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
 
     /**
      * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.
-     * 
      */
     @Import(name="filterValue")
       private final @Nullable String filterValue;
@@ -54,7 +50,6 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.SelectVideoTrackByAttribute'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

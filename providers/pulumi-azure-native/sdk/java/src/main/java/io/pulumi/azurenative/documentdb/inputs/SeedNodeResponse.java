@@ -16,7 +16,6 @@ public final class SeedNodeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * IP address of this seed node.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;

@@ -23,7 +23,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The name of the ExpressRouteCrossConnection.
-     * 
      */
     @Import(name="crossConnectionName", required=true)
       private final Output<String> crossConnectionName;
@@ -34,7 +33,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The GatewayManager Etag.
-     * 
      */
     @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
@@ -45,7 +43,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -56,7 +53,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The IPv6 peering configuration.
-     * 
      */
     @Import(name="ipv6PeeringConfig")
       private final @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
@@ -67,7 +63,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The Microsoft peering configuration.
-     * 
      */
     @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
@@ -78,7 +73,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -89,7 +83,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The peer ASN.
-     * 
      */
     @Import(name="peerASN")
       private final @Nullable Output<Double> peerASN;
@@ -100,7 +93,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
@@ -111,7 +103,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The peering type.
-     * 
      */
     @Import(name="peeringType")
       private final @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
@@ -122,7 +113,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The primary address prefix.
-     * 
      */
     @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
@@ -133,7 +123,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -144,7 +133,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The secondary address prefix.
-     * 
      */
     @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
@@ -155,7 +143,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The shared key.
-     * 
      */
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
@@ -166,7 +153,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The peering state.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
@@ -177,7 +163,6 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
 
     /**
      * The VLAN ID.
-     * 
      */
     @Import(name="vlanId")
       private final @Nullable Output<Integer> vlanId;

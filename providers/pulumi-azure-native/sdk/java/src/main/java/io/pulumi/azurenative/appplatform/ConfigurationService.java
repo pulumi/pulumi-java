@@ -19,7 +19,141 @@ import javax.annotation.Nullable;
  * Application Configuration Service resource
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ConfigurationServices_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var configurationService = new AzureNative.AppPlatform.ConfigurationService("configurationService", new AzureNative.AppPlatform.ConfigurationServiceArgs
+ *         {
+ *             ConfigurationServiceName = "default",
+ *             Properties = new AzureNative.AppPlatform.Inputs.ConfigurationServicePropertiesArgs
+ *             {
+ *                 Settings = new AzureNative.AppPlatform.Inputs.ConfigurationServiceSettingsArgs
+ *                 {
+ *                     GitProperty = new AzureNative.AppPlatform.Inputs.ConfigurationServiceGitPropertyArgs
+ *                     {
+ *                         Repositories = 
+ *                         {
+ *                             new AzureNative.AppPlatform.Inputs.ConfigurationServiceGitRepositoryArgs
+ *                             {
+ *                                 Label = "master",
+ *                                 Name = "fake",
+ *                                 Patterns = 
+ *                                 {
+ *                                     "app/dev",
+ *                                 },
+ *                                 Uri = "https://github.com/fake-user/fake-repository",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewConfigurationService(ctx, "configurationService", &appplatform.ConfigurationServiceArgs{
+ * 			ConfigurationServiceName: pulumi.String("default"),
+ * 			Properties: &appplatform.ConfigurationServicePropertiesArgs{
+ * 				Settings: &appplatform.ConfigurationServiceSettingsArgs{
+ * 					GitProperty: &appplatform.ConfigurationServiceGitPropertyArgs{
+ * 						Repositories: appplatform.ConfigurationServiceGitRepositoryArray{
+ * 							&appplatform.ConfigurationServiceGitRepositoryArgs{
+ * 								Label: pulumi.String("master"),
+ * 								Name:  pulumi.String("fake"),
+ * 								Patterns: pulumi.StringArray{
+ * 									pulumi.String("app/dev"),
+ * 								},
+ * 								Uri: pulumi.String("https://github.com/fake-user/fake-repository"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const configurationService = new azure_native.appplatform.ConfigurationService("configurationService", {
+ *     configurationServiceName: "default",
+ *     properties: {
+ *         settings: {
+ *             gitProperty: {
+ *                 repositories: [{
+ *                     label: "master",
+ *                     name: "fake",
+ *                     patterns: ["app/dev"],
+ *                     uri: "https://github.com/fake-user/fake-repository",
+ *                 }],
+ *             },
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * configuration_service = azure_native.appplatform.ConfigurationService("configurationService",
+ *     configuration_service_name="default",
+ *     properties=azure_native.appplatform.ConfigurationServicePropertiesArgs(
+ *         settings=azure_native.appplatform.ConfigurationServiceSettingsArgs(
+ *             git_property=azure_native.appplatform.ConfigurationServiceGitPropertyArgs(
+ *                 repositories=[azure_native.appplatform.ConfigurationServiceGitRepositoryArgs(
+ *                     label="master",
+ *                     name="fake",
+ *                     patterns=["app/dev"],
+ *                     uri="https://github.com/fake-user/fake-repository",
+ *                 )],
+ *             ),
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +168,48 @@ import javax.annotation.Nullable;
 public class ConfigurationService extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Application Configuration Service properties payload
-     * 
      */
     @Export(name="properties", type=ConfigurationServicePropertiesResponse.class, parameters={})
     private Output<ConfigurationServicePropertiesResponse> properties;
 
     /**
      * @return Application Configuration Service properties payload
-     * 
      */
     public Output<ConfigurationServicePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

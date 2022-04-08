@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sub-protection policy which includes schedule and retention
- * 
  */
 public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Type of backup policy type
-     * 
      */
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
@@ -39,7 +37,6 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Retention policy with the details on backup copy retention ranges.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
@@ -50,7 +47,6 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Backup schedule specified as part of backup policy.
-     * 
      */
     @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;

@@ -18,7 +18,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -29,7 +28,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database in the Kusto cluster.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -40,7 +38,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of the database
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
@@ -51,7 +48,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -62,7 +58,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

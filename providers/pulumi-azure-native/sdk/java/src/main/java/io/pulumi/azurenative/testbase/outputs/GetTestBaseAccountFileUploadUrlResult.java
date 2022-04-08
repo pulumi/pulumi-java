@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GetTestBaseAccountFileUploadUrlResult {
     /**
      * The blob path of the uploaded package. It will be used as the 'blobPath' property of PackageResource.
-     * 
      */
     private final String blobPath;
     /**
      * The URL used for uploading the package.
-     * 
      */
     private final String uploadUrl;
 
@@ -30,14 +28,12 @@ public final class GetTestBaseAccountFileUploadUrlResult {
 
     /**
      * The blob path of the uploaded package. It will be used as the 'blobPath' property of PackageResource.
-     * 
     */
     public String getBlobPath() {
         return this.blobPath;
     }
     /**
      * The URL used for uploading the package.
-     * 
     */
     public String getUploadUrl() {
         return this.uploadUrl;

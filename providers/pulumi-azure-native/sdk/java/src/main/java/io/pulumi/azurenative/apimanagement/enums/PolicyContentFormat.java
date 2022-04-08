@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Format of the policyContent.
-     * 
      */
     @EnumType
     public enum PolicyContentFormat {
         /**
          * The contents are inline and Content type is an XML document.
-         * 
          */
         Xml("xml"),
         /**
          * The policy XML document is hosted on a http endpoint accessible from the API Management service.
-         * 
          */
         Xmllink("xml-link"),
         /**
          * The contents are inline and Content type is a non XML encoded policy document.
-         * 
          */
         Rawxml("rawxml"),
         /**
          * The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.
-         * 
          */
         Rawxmllink("rawxml-link");
 

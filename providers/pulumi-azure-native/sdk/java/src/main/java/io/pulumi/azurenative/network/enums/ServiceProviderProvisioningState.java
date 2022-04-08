@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The ServiceProviderProvisioningState state of the resource.
-     * 
      */
     @EnumType
     public enum ServiceProviderProvisioningState {

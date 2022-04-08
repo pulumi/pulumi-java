@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class EncryptionPropertiesResponse {
     /**
      * User identity used for CMK.
-     * 
      */
     private final @Nullable EncryptionPropertiesResponseIdentity identity;
     /**
      * Encryption Key Source
-     * 
      */
     private final @Nullable String keySource;
     /**
      * Key vault properties.
-     * 
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
@@ -41,21 +38,18 @@ public final class EncryptionPropertiesResponse {
 
     /**
      * User identity used for CMK.
-     * 
     */
     public Optional<EncryptionPropertiesResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Encryption Key Source
-     * 
     */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * Key vault properties.
-     * 
     */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);

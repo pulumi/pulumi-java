@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Provisioning state of the vault.
-     * 
      */
     @EnumType
     public enum VaultProvisioningState {

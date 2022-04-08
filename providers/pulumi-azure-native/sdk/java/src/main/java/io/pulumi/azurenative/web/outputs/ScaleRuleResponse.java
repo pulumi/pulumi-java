@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class ScaleRuleResponse {
     /**
      * Azure Queue based scaling.
-     * 
      */
     private final @Nullable QueueScaleRuleResponse azureQueue;
     /**
      * Custom scale rule.
-     * 
      */
     private final @Nullable CustomScaleRuleResponse custom;
     /**
      * HTTP requests based scaling.
-     * 
      */
     private final @Nullable HttpScaleRuleResponse http;
     /**
      * Scale Rule Name
-     * 
      */
     private final @Nullable String name;
 
@@ -49,28 +45,24 @@ public final class ScaleRuleResponse {
 
     /**
      * Azure Queue based scaling.
-     * 
     */
     public Optional<QueueScaleRuleResponse> getAzureQueue() {
         return Optional.ofNullable(this.azureQueue);
     }
     /**
      * Custom scale rule.
-     * 
     */
     public Optional<CustomScaleRuleResponse> getCustom() {
         return Optional.ofNullable(this.custom);
     }
     /**
      * HTTP requests based scaling.
-     * 
     */
     public Optional<HttpScaleRuleResponse> getHttp() {
         return Optional.ofNullable(this.http);
     }
     /**
      * Scale Rule Name
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

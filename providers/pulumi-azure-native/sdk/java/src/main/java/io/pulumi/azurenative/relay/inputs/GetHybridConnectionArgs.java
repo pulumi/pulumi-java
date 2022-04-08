@@ -14,7 +14,6 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The hybrid connection name.
-     * 
      */
     @Import(name="hybridConnectionName", required=true)
       private final String hybridConnectionName;
@@ -25,7 +24,6 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

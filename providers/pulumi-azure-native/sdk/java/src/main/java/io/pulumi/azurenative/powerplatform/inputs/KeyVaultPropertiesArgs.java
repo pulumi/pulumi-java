@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings concerning key vault encryption for a configuration store.
- * 
  */
 public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Uri of KeyVault
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -32,7 +30,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Identity of the secret that includes name and version.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<KeyPropertiesArgs> key;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specify public IP sku tier
-     * 
      */
     @EnumType
     public enum PublicIPAddressSkuTier {

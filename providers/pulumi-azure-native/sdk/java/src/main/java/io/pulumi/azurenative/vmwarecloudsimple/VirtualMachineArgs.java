@@ -24,7 +24,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The amount of memory
-     * 
      */
     @Import(name="amountOfRam", required=true)
       private final Output<Integer> amountOfRam;
@@ -35,7 +34,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual machine properties
-     * 
      */
     @Import(name="customization")
       private final @Nullable Output<GuestOSCustomizationArgs> customization;
@@ -46,7 +44,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of Virtual Disks
-     * 
      */
     @Import(name="disks")
       private final @Nullable Output<List<VirtualDiskArgs>> disks;
@@ -57,7 +54,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expose Guest OS or not
-     * 
      */
     @Import(name="exposeToGuestVM")
       private final @Nullable Output<Boolean> exposeToGuestVM;
@@ -68,7 +64,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure region
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -79,7 +74,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of Virtual NICs
-     * 
      */
     @Import(name="nics")
       private final @Nullable Output<List<VirtualNicArgs>> nics;
@@ -90,7 +84,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of CPU cores
-     * 
      */
     @Import(name="numberOfCores", required=true)
       private final Output<Integer> numberOfCores;
@@ -101,7 +94,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password for login. Deprecated - use customization property
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -112,7 +104,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Private Cloud Id
-     * 
      */
     @Import(name="privateCloudId", required=true)
       private final Output<String> privateCloudId;
@@ -123,7 +114,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -134,7 +124,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual Machines Resource Pool
-     * 
      */
     @Import(name="resourcePool")
       private final @Nullable Output<ResourcePoolArgs> resourcePool;
@@ -145,7 +134,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -156,7 +144,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual Machine Template Id
-     * 
      */
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
@@ -167,7 +154,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username for login. Deprecated - use customization property
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;
@@ -178,7 +164,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of Virtual VSphere Networks
-     * 
      */
     @Import(name="vSphereNetworks")
       private final @Nullable Output<List<String>> vSphereNetworks;
@@ -189,7 +174,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * virtual machine name
-     * 
      */
     @Import(name="virtualMachineName")
       private final @Nullable Output<String> virtualMachineName;

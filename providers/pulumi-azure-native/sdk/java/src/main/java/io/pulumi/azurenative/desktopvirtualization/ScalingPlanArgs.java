@@ -26,7 +26,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of scaling plan.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -37,7 +36,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Exclusion tag for scaling plan.
-     * 
      */
     @Import(name="exclusionTag")
       private final @Nullable Output<String> exclusionTag;
@@ -48,7 +46,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User friendly name of scaling plan.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -59,7 +56,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of ScalingHostPoolReference definitions.
-     * 
      */
     @Import(name="hostPoolReferences")
       private final @Nullable Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences;
@@ -70,7 +66,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HostPool type for desktop.
-     * 
      */
     @Import(name="hostPoolType")
       private final @Nullable Output<Either<String,HostPoolType>> hostPoolType;
@@ -88,7 +83,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -99,7 +93,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -110,7 +103,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-     * 
      */
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
@@ -128,7 +120,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -139,7 +130,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ring number of scaling plan.
-     * 
      */
     @Import(name="ring")
       private final @Nullable Output<Integer> ring;
@@ -150,7 +140,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the scaling plan.
-     * 
      */
     @Import(name="scalingPlanName")
       private final @Nullable Output<String> scalingPlanName;
@@ -161,7 +150,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of ScalingSchedule definitions.
-     * 
      */
     @Import(name="schedules")
       private final @Nullable Output<List<ScalingScheduleArgs>> schedules;
@@ -179,7 +167,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -190,7 +177,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Timezone of the scaling plan.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

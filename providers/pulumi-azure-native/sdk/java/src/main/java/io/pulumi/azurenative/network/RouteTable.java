@@ -21,7 +21,179 @@ import javax.annotation.Nullable;
  * Route table resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create route table
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var routeTable = new AzureNative.Network.RouteTable("routeTable", new AzureNative.Network.RouteTableArgs
+ *         {
+ *             Location = "westus",
+ *             ResourceGroupName = "rg1",
+ *             RouteTableName = "testrt",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewRouteTable(ctx, "routeTable", &network.RouteTableArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			RouteTableName:    pulumi.String("testrt"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const routeTable = new azure_native.network.RouteTable("routeTable", {
+ *     location: "westus",
+ *     resourceGroupName: "rg1",
+ *     routeTableName: "testrt",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * route_table = azure_native.network.RouteTable("routeTable",
+ *     location="westus",
+ *     resource_group_name="rg1",
+ *     route_table_name="testrt")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create route table with route
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var routeTable = new AzureNative.Network.RouteTable("routeTable", new AzureNative.Network.RouteTableArgs
+ *         {
+ *             DisableBgpRoutePropagation = true,
+ *             Location = "westus",
+ *             ResourceGroupName = "rg1",
+ *             RouteTableName = "testrt",
+ *             Routes = 
+ *             {
+ *                 new AzureNative.Network.Inputs.RouteArgs
+ *                 {
+ *                     AddressPrefix = "10.0.3.0/24",
+ *                     Name = "route1",
+ *                     NextHopType = "VirtualNetworkGateway",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewRouteTable(ctx, "routeTable", &network.RouteTableArgs{
+ * 			DisableBgpRoutePropagation: pulumi.Bool(true),
+ * 			Location:                   pulumi.String("westus"),
+ * 			ResourceGroupName:          pulumi.String("rg1"),
+ * 			RouteTableName:             pulumi.String("testrt"),
+ * 			Routes: []network.RouteArgs{
+ * 				&network.RouteArgs{
+ * 					AddressPrefix: pulumi.String("10.0.3.0/24"),
+ * 					Name:          pulumi.String("route1"),
+ * 					NextHopType:   pulumi.String("VirtualNetworkGateway"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const routeTable = new azure_native.network.RouteTable("routeTable", {
+ *     disableBgpRoutePropagation: true,
+ *     location: "westus",
+ *     resourceGroupName: "rg1",
+ *     routeTableName: "testrt",
+ *     routes: [{
+ *         addressPrefix: "10.0.3.0/24",
+ *         name: "route1",
+ *         nextHopType: "VirtualNetworkGateway",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * route_table = azure_native.network.RouteTable("routeTable",
+ *     disable_bgp_route_propagation=True,
+ *     location="westus",
+ *     resource_group_name="rg1",
+ *     route_table_name="testrt",
+ *     routes=[azure_native.network.RouteArgs(
+ *         address_prefix="10.0.3.0/24",
+ *         name="route1",
+ *         next_hop_type="VirtualNetworkGateway",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,140 +208,120 @@ import javax.annotation.Nullable;
 public class RouteTable extends io.pulumi.resources.CustomResource {
     /**
      * Whether to disable the routes learned by BGP on that route table. True means disable.
-     * 
      */
     @Export(name="disableBgpRoutePropagation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableBgpRoutePropagation;
 
     /**
      * @return Whether to disable the routes learned by BGP on that route table. True means disable.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDisableBgpRoutePropagation() {
         return this.disableBgpRoutePropagation;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the route table resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the route table resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the route table.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resource GUID property of the route table.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Collection of routes contained within a route table.
-     * 
      */
     @Export(name="routes", type=List.class, parameters={RouteResponse.class})
     private Output</* @Nullable */ List<RouteResponse>> routes;
 
     /**
      * @return Collection of routes contained within a route table.
-     * 
      */
     public Output</* @Nullable */ List<RouteResponse>> getRoutes() {
         return this.routes;
     }
     /**
      * A collection of references to subnets.
-     * 
      */
     @Export(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output<List<SubnetResponse>> subnets;
 
     /**
      * @return A collection of references to subnets.
-     * 
      */
     public Output<List<SubnetResponse>> getSubnets() {
         return this.subnets;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

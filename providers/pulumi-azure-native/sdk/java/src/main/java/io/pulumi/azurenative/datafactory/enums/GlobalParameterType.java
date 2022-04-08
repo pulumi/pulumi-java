@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Global Parameter type.
-     * 
      */
     @EnumType
     public enum GlobalParameterType {

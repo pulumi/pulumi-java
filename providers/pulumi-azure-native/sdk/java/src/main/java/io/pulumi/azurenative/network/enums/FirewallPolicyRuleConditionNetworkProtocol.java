@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Network protocol of a Rule condition.
-     * 
      */
     @EnumType
     public enum FirewallPolicyRuleConditionNetworkProtocol {

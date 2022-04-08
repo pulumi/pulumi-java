@@ -19,7 +19,145 @@ import javax.annotation.Nullable;
  * Private endpoint connection proxy details.
  * API Version: 2020-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnectionProxyCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnectionProxy = new AzureNative.DeviceUpdate.PrivateEndpointConnectionProxy("privateEndpointConnectionProxy", new AzureNative.DeviceUpdate.PrivateEndpointConnectionProxyArgs
+ *         {
+ *             AccountName = "contoso",
+ *             PrivateEndpointConnectionProxyId = "peexample01",
+ *             RemotePrivateEndpoint = new AzureNative.DeviceUpdate.Inputs.RemotePrivateEndpointArgs
+ *             {
+ *                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}",
+ *                 ManualPrivateLinkServiceConnections = 
+ *                 {
+ *                     new AzureNative.DeviceUpdate.Inputs.PrivateLinkServiceConnectionArgs
+ *                     {
+ *                         GroupIds = 
+ *                         {
+ *                             "DeviceUpdate",
+ *                         },
+ *                         Name = "{privateEndpointConnectionProxyId}",
+ *                         RequestMessage = "Please approve my connection, thanks.",
+ *                     },
+ *                 },
+ *                 PrivateLinkServiceProxies = 
+ *                 {
+ *                     new AzureNative.DeviceUpdate.Inputs.PrivateLinkServiceProxyArgs
+ *                     {
+ *                         GroupConnectivityInformation = {},
+ *                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}/privateLinkServiceProxies/{privateEndpointConnectionProxyId}",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "test-rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	deviceupdate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deviceupdate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := deviceupdate.NewPrivateEndpointConnectionProxy(ctx, "privateEndpointConnectionProxy", &deviceupdate.PrivateEndpointConnectionProxyArgs{
+ * 			AccountName:                      pulumi.String("contoso"),
+ * 			PrivateEndpointConnectionProxyId: pulumi.String("peexample01"),
+ * 			RemotePrivateEndpoint: &deviceupdate.RemotePrivateEndpointArgs{
+ * 				Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}"),
+ * 				ManualPrivateLinkServiceConnections: deviceupdate.PrivateLinkServiceConnectionArray{
+ * 					&deviceupdate.PrivateLinkServiceConnectionArgs{
+ * 						GroupIds: pulumi.StringArray{
+ * 							pulumi.String("DeviceUpdate"),
+ * 						},
+ * 						Name:           pulumi.String("{privateEndpointConnectionProxyId}"),
+ * 						RequestMessage: pulumi.String("Please approve my connection, thanks."),
+ * 					},
+ * 				},
+ * 				PrivateLinkServiceProxies: deviceupdate.PrivateLinkServiceProxyArray{
+ * 					&deviceupdate.PrivateLinkServiceProxyArgs{
+ * 						GroupConnectivityInformation: deviceupdate.GroupConnectivityInformationArray{},
+ * 						Id:                           pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}/privateLinkServiceProxies/{privateEndpointConnectionProxyId}"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("test-rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnectionProxy = new azure_native.deviceupdate.PrivateEndpointConnectionProxy("privateEndpointConnectionProxy", {
+ *     accountName: "contoso",
+ *     privateEndpointConnectionProxyId: "peexample01",
+ *     remotePrivateEndpoint: {
+ *         id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}",
+ *         manualPrivateLinkServiceConnections: [{
+ *             groupIds: ["DeviceUpdate"],
+ *             name: "{privateEndpointConnectionProxyId}",
+ *             requestMessage: "Please approve my connection, thanks.",
+ *         }],
+ *         privateLinkServiceProxies: [{
+ *             groupConnectivityInformation: [],
+ *             id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}/privateLinkServiceProxies/{privateEndpointConnectionProxyId}",
+ *         }],
+ *     },
+ *     resourceGroupName: "test-rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection_proxy = azure_native.deviceupdate.PrivateEndpointConnectionProxy("privateEndpointConnectionProxy",
+ *     account_name="contoso",
+ *     private_endpoint_connection_proxy_id="peexample01",
+ *     remote_private_endpoint=azure_native.deviceupdate.RemotePrivateEndpointArgs(
+ *         id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}",
+ *         manual_private_link_service_connections=[azure_native.deviceupdate.PrivateLinkServiceConnectionArgs(
+ *             group_ids=["DeviceUpdate"],
+ *             name="{privateEndpointConnectionProxyId}",
+ *             request_message="Please approve my connection, thanks.",
+ *         )],
+ *         private_link_service_proxies=[azure_native.deviceupdate.PrivateLinkServiceProxyArgs(
+ *             group_connectivity_information=[],
+ *             id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}/privateLinkServiceProxies/{privateEndpointConnectionProxyId}",
+ *         )],
+ *     ),
+ *     resource_group_name="test-rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +172,84 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomResource {
     /**
      * ETag from NRP.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
      * @return ETag from NRP.
-     * 
      */
     public Output<String> getETag() {
         return this.eTag;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the private endpoint connection proxy resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private endpoint connection proxy resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Remote private endpoint details.
-     * 
      */
     @Export(name="remotePrivateEndpoint", type=RemotePrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ RemotePrivateEndpointResponse> remotePrivateEndpoint;
 
     /**
      * @return Remote private endpoint details.
-     * 
      */
     public Output</* @Nullable */ RemotePrivateEndpointResponse> getRemotePrivateEndpoint() {
         return this.remotePrivateEndpoint;
     }
     /**
      * Operation status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return Operation status.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

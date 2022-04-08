@@ -20,7 +20,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to disable the routes learned by BGP on that route table. True means disable.
-     * 
      */
     @Import(name="disableBgpRoutePropagation")
       private final @Nullable Output<Boolean> disableBgpRoutePropagation;
@@ -31,7 +30,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -42,7 +40,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the route table.
-     * 
      */
     @Import(name="routeTableName")
       private final @Nullable Output<String> routeTableName;
@@ -75,7 +70,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of routes contained within a route table.
-     * 
      */
     @Import(name="routes")
       private final @Nullable Output<List<RouteArgs>> routes;
@@ -86,7 +80,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

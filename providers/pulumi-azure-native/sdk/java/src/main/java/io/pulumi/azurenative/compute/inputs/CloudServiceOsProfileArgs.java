@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the OS profile for the cloud service.
- * 
  */
 public final class CloudServiceOsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
 
     /**
      * Specifies set of certificates that should be installed onto the role instances.
-     * 
      */
     @Import(name="secrets")
       private final @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;

@@ -12,13 +12,11 @@ import java.util.Objects;
 public final class WaitStepPropertiesResponse {
     /**
      * The Wait attributes
-     * 
      */
     private final WaitStepAttributesResponse attributes;
     /**
      * The type of step.
      * Expected value is 'Wait'.
-     * 
      */
     private final String stepType;
 
@@ -32,7 +30,6 @@ public final class WaitStepPropertiesResponse {
 
     /**
      * The Wait attributes
-     * 
     */
     public WaitStepAttributesResponse getAttributes() {
         return this.attributes;
@@ -40,7 +37,6 @@ public final class WaitStepPropertiesResponse {
     /**
      * The type of step.
      * Expected value is 'Wait'.
-     * 
     */
     public String getStepType() {
         return this.stepType;

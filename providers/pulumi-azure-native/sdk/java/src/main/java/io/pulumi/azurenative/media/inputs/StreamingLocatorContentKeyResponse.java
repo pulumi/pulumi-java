@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for content key in Streaming Locator
- * 
  */
 public final class StreamingLocatorContentKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
 
     /**
      * ID of Content Key
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -33,7 +31,6 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
 
     /**
      * Label of Content Key as specified in the Streaming Policy
-     * 
      */
     @Import(name="labelReferenceInStreamingPolicy")
       private final @Nullable String labelReferenceInStreamingPolicy;
@@ -44,7 +41,6 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
 
     /**
      * ContentKeyPolicy used by Content Key
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;
@@ -55,7 +51,6 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
 
     /**
      * Tracks which use this Content Key
-     * 
      */
     @Import(name="tracks", required=true)
       private final List<TrackSelectionResponse> tracks;
@@ -66,7 +61,6 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
 
     /**
      * Encryption type of Content Key
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -77,7 +71,6 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
 
     /**
      * Value of Content Key
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

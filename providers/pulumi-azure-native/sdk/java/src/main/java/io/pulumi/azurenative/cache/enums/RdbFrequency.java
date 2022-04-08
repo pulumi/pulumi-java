@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sets the frequency at which a snapshot of the database is created.
-     * 
      */
     @EnumType
     public enum RdbFrequency {

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class FlavorDataResponse {
     /**
      * Model flavor-specific data.
-     * 
      */
     private final @Nullable Map<String,String> data;
 
@@ -24,7 +23,6 @@ public final class FlavorDataResponse {
 
     /**
      * Model flavor-specific data.
-     * 
     */
     public Map<String,String> getData() {
         return this.data == null ? Map.of() : this.data;

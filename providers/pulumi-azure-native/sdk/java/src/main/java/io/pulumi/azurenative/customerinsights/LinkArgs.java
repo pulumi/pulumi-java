@@ -23,7 +23,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized descriptions for the Link.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
@@ -34,7 +33,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized display name for the Link.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
@@ -45,7 +43,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -56,7 +53,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the link.
-     * 
      */
     @Import(name="linkName")
       private final @Nullable Output<String> linkName;
@@ -67,7 +63,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of properties mappings between the source and target Types.
-     * 
      */
     @Import(name="mappings")
       private final @Nullable Output<List<TypePropertiesMappingArgs>> mappings;
@@ -78,7 +73,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
-     * 
      */
     @Import(name="operationType")
       private final @Nullable Output<InstanceOperationType> operationType;
@@ -89,7 +83,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties that represent the participating profile.
-     * 
      */
     @Import(name="participantPropertyReferences", required=true)
       private final Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
@@ -100,7 +93,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
-     * 
      */
     @Import(name="referenceOnly")
       private final @Nullable Output<Boolean> referenceOnly;
@@ -111,7 +103,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -122,7 +113,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of source entity.
-     * 
      */
     @Import(name="sourceEntityType", required=true)
       private final Output<EntityType> sourceEntityType;
@@ -133,7 +123,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the source Entity Type.
-     * 
      */
     @Import(name="sourceEntityTypeName", required=true)
       private final Output<String> sourceEntityTypeName;
@@ -144,7 +133,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of target entity.
-     * 
      */
     @Import(name="targetEntityType", required=true)
       private final Output<EntityType> targetEntityType;
@@ -155,7 +143,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the target Entity Type.
-     * 
      */
     @Import(name="targetEntityTypeName", required=true)
       private final Output<String> targetEntityTypeName;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ListGatewayKeysResult {
     /**
      * Primary gateway key.
-     * 
      */
     private final @Nullable String primary;
     /**
      * Secondary gateway key.
-     * 
      */
     private final @Nullable String secondary;
 
@@ -32,14 +30,12 @@ public final class ListGatewayKeysResult {
 
     /**
      * Primary gateway key.
-     * 
     */
     public Optional<String> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * Secondary gateway key.
-     * 
     */
     public Optional<String> getSecondary() {
         return Optional.ofNullable(this.secondary);

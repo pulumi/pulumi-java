@@ -16,77 +16,62 @@ import javax.annotation.Nullable;
 public final class GetEnvironmentSettingResult {
     /**
      * Describes the user's progress in configuring their environment setting
-     * 
      */
     private final @Nullable String configurationState;
     /**
      * Describes the environment and its resource settings
-     * 
      */
     private final @Nullable String description;
     /**
      * The identifier of the resource.
-     * 
      */
     private final String id;
     /**
      * Time when the template VM was last changed.
-     * 
      */
     private final String lastChanged;
     /**
      * Time when the template VM was last sent for publishing.
-     * 
      */
     private final String lastPublished;
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     private final LatestOperationResultResponse latestOperationResult;
     /**
      * The location of the resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The provisioning status of the resource.
-     * 
      */
     private final @Nullable String provisioningState;
     /**
      * Describes the readiness of this environment setting
-     * 
      */
     private final String publishingState;
     /**
      * The resource specific settings
-     * 
      */
     private final ResourceSettingsResponse resourceSettings;
     /**
      * The tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Brief title describing the environment and its resource settings
-     * 
      */
     private final @Nullable String title;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     private final @Nullable String uniqueIdentifier;
 
@@ -126,105 +111,90 @@ public final class GetEnvironmentSettingResult {
 
     /**
      * Describes the user's progress in configuring their environment setting
-     * 
     */
     public Optional<String> getConfigurationState() {
         return Optional.ofNullable(this.configurationState);
     }
     /**
      * Describes the environment and its resource settings
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The identifier of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Time when the template VM was last changed.
-     * 
     */
     public String getLastChanged() {
         return this.lastChanged;
     }
     /**
      * Time when the template VM was last sent for publishing.
-     * 
     */
     public String getLastPublished() {
         return this.lastPublished;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
     */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Describes the readiness of this environment setting
-     * 
     */
     public String getPublishingState() {
         return this.publishingState;
     }
     /**
      * The resource specific settings
-     * 
     */
     public ResourceSettingsResponse getResourceSettings() {
         return this.resourceSettings;
     }
     /**
      * The tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Brief title describing the environment and its resource settings
-     * 
     */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
     */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);

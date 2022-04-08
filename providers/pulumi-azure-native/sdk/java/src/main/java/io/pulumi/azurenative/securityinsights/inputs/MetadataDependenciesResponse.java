@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex dependencies.
- * 
  */
 public final class MetadataDependenciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
 
     /**
      * Id of the content item we depend on
-     * 
      */
     @Import(name="contentId")
       private final @Nullable String contentId;
@@ -32,7 +30,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
 
     /**
      * This is the list of dependencies we must fulfill, according to the AND/OR operator
-     * 
      */
     @Import(name="criteria")
       private final @Nullable List<MetadataDependenciesResponse> criteria;
@@ -43,7 +40,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
 
     /**
      * Type of the content item we depend on
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -54,7 +50,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of the content item
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -65,7 +60,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
 
     /**
      * Operator used for list of dependencies in criteria array.
-     * 
      */
     @Import(name="operator")
       private final @Nullable String operator;
@@ -76,7 +70,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
 
     /**
      * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

@@ -19,7 +19,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the hours of the day that the job should execute at.
-     * 
      */
     @Import(name="hours")
       private final @Nullable Output<List<Integer>> hours;
@@ -30,7 +29,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the minutes of the hour that the job should execute at.
-     * 
      */
     @Import(name="minutes")
       private final @Nullable Output<List<Integer>> minutes;
@@ -41,7 +39,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
-     * 
      */
     @Import(name="monthDays")
       private final @Nullable Output<List<Integer>> monthDays;
@@ -52,7 +49,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the occurrences of days within a month.
-     * 
      */
     @Import(name="monthlyOccurrences")
       private final @Nullable Output<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
@@ -63,7 +59,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the days of the week that the job should execute on.
-     * 
      */
     @Import(name="weekDays")
       private final @Nullable Output<List<DayOfWeek>> weekDays;

@@ -18,7 +18,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group
-     * 
      */
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
@@ -29,7 +28,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource kind. Only 'vm' (the default) is supported.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -40,7 +38,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public key of the service, used to encrypt secrets sent to the service
-     * 
      */
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
@@ -62,7 +58,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the service
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -73,7 +68,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Service SKU
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ServiceSkuArgs> sku;
@@ -84,7 +78,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -95,7 +88,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
-     * 
      */
     @Import(name="virtualSubnetId", required=true)
       private final Output<String> virtualSubnetId;

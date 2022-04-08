@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Permission group for validations
-     * 
      */
     @EnumType
     public enum ServerLevelPermissionsGroup {

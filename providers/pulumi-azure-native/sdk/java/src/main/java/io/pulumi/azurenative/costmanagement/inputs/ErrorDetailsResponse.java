@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The details of the error.
- * 
  */
 public final class ErrorDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ErrorDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class ErrorDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error message indicating why the operation failed.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

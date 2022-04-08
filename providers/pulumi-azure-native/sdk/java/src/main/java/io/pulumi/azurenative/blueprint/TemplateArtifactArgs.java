@@ -20,7 +20,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the blueprint artifact.
-     * 
      */
     @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
@@ -31,7 +30,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the blueprint definition.
-     * 
      */
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
@@ -42,7 +40,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Artifacts which need to be deployed before the specified artifact.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
@@ -53,7 +50,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Multi-line explain this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -64,7 +60,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * One-liner string explain this resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -76,7 +71,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Specifies the kind of blueprint artifact.
      * Expected value is 'template'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -87,7 +81,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource Manager template blueprint artifact parameter values.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
@@ -98,7 +91,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -109,7 +101,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
@@ -120,7 +111,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Resource Manager template blueprint artifact body.
-     * 
      */
     @Import(name="template", required=true)
       private final Output<Object> template;

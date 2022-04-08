@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the SKU.
-     * 
      */
     @EnumType
     public enum ClusterSkuNameEnum {

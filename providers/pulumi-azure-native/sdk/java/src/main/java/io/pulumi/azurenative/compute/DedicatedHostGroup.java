@@ -22,7 +22,109 @@ import javax.annotation.Nullable;
  * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a dedicated host group.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dedicatedHostGroup = new AzureNative.Compute.DedicatedHostGroup("dedicatedHostGroup", new AzureNative.Compute.DedicatedHostGroupArgs
+ *         {
+ *             HostGroupName = "myDedicatedHostGroup",
+ *             Location = "westus",
+ *             PlatformFaultDomainCount = 3,
+ *             ResourceGroupName = "myResourceGroup",
+ *             SupportAutomaticPlacement = true,
+ *             Tags = 
+ *             {
+ *                 { "department", "finance" },
+ *             },
+ *             Zones = 
+ *             {
+ *                 "1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewDedicatedHostGroup(ctx, "dedicatedHostGroup", &compute.DedicatedHostGroupArgs{
+ * 			HostGroupName:             pulumi.String("myDedicatedHostGroup"),
+ * 			Location:                  pulumi.String("westus"),
+ * 			PlatformFaultDomainCount:  pulumi.Int(3),
+ * 			ResourceGroupName:         pulumi.String("myResourceGroup"),
+ * 			SupportAutomaticPlacement: pulumi.Bool(true),
+ * 			Tags: pulumi.StringMap{
+ * 				"department": pulumi.String("finance"),
+ * 			},
+ * 			Zones: pulumi.StringArray{
+ * 				pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dedicatedHostGroup = new azure_native.compute.DedicatedHostGroup("dedicatedHostGroup", {
+ *     hostGroupName: "myDedicatedHostGroup",
+ *     location: "westus",
+ *     platformFaultDomainCount: 3,
+ *     resourceGroupName: "myResourceGroup",
+ *     supportAutomaticPlacement: true,
+ *     tags: {
+ *         department: "finance",
+ *     },
+ *     zones: ["1"],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dedicated_host_group = azure_native.compute.DedicatedHostGroup("dedicatedHostGroup",
+ *     host_group_name="myDedicatedHostGroup",
+ *     location="westus",
+ *     platform_fault_domain_count=3,
+ *     resource_group_name="myResourceGroup",
+ *     support_automatic_placement=True,
+ *     tags={
+ *         "department": "finance",
+ *     },
+ *     zones=["1"])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,126 +139,108 @@ import javax.annotation.Nullable;
 public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
     /**
      * A list of references to all dedicated hosts in the dedicated host group.
-     * 
      */
     @Export(name="hosts", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> hosts;
 
     /**
      * @return A list of references to all dedicated hosts in the dedicated host group.
-     * 
      */
     public Output<List<SubResourceReadOnlyResponse>> getHosts() {
         return this.hosts;
     }
     /**
      * The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
-     * 
      */
     @Export(name="instanceView", type=DedicatedHostGroupInstanceViewResponse.class, parameters={})
     private Output<DedicatedHostGroupInstanceViewResponse> instanceView;
 
     /**
      * @return The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
-     * 
      */
     public Output<DedicatedHostGroupInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Number of fault domains that the host group can span.
-     * 
      */
     @Export(name="platformFaultDomainCount", type=Integer.class, parameters={})
     private Output<Integer> platformFaultDomainCount;
 
     /**
      * @return Number of fault domains that the host group can span.
-     * 
      */
     public Output<Integer> getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
     /**
      * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
-     * 
      */
     @Export(name="supportAutomaticPlacement", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportAutomaticPlacement;
 
     /**
      * @return Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSupportAutomaticPlacement() {
         return this.supportAutomaticPlacement;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
-     * 
      */
     @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**
      * @return Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
-     * 
      */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;

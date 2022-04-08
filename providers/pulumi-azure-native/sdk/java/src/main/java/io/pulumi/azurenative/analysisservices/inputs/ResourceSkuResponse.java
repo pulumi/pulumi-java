@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the SKU name and Azure pricing tier for Analysis Services resource.
- * 
  */
 public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of instances in the read only query pool.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the SKU level.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Azure pricing tier to which the SKU applies.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

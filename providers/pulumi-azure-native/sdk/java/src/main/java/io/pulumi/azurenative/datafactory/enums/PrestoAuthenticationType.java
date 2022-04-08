@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication mechanism used to connect to the Presto server.
-     * 
      */
     @EnumType
     public enum PrestoAuthenticationType {

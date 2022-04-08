@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Data source object contains configuration to collect telemetry and one or more sinks to send that telemetry data to
- * 
  */
 public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Datasource kind
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Customer-initiated diagnostic log collection storage properties
- * 
  */
 public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
 
     /**
      * Authentication Type
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,AuthenticationType>> authenticationType;
@@ -33,7 +31,6 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
 
     /**
      * ConnectionString of the diagnostic storage account
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -44,7 +41,6 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
 
     /**
      * ResourceId of the diagnostic storage account
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;

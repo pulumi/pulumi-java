@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class AdditionalErrorInfoResponse {
     /**
      * Additional error info.
-     * 
      */
     private final @Nullable Object info;
     /**
      * Additional error type.
-     * 
      */
     private final @Nullable String type;
 
@@ -33,14 +31,12 @@ public final class AdditionalErrorInfoResponse {
 
     /**
      * Additional error info.
-     * 
     */
     public Optional<Object> getInfo() {
         return Optional.ofNullable(this.info);
     }
     /**
      * Additional error type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

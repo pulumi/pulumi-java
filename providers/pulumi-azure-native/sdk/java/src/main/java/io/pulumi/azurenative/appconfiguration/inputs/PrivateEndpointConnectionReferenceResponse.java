@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A reference to a related private endpoint connection.
- * 
  */
 public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
 
     /**
      * The resource ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -33,7 +31,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -44,7 +41,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
 
     /**
      * The resource of private endpoint.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
@@ -55,7 +51,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -66,7 +61,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
 
     /**
      * The provisioning status of the private endpoint connection.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -77,7 +71,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

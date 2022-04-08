@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListStreamingLocatorContentKeysResult {
     /**
      * ContentKeys used by current Streaming Locator
-     * 
      */
     private final @Nullable List<StreamingLocatorContentKeyResponse> contentKeys;
 
@@ -24,7 +23,6 @@ public final class ListStreamingLocatorContentKeysResult {
 
     /**
      * ContentKeys used by current Streaming Locator
-     * 
     */
     public List<StreamingLocatorContentKeyResponse> getContentKeys() {
         return this.contentKeys == null ? List.of() : this.contentKeys;

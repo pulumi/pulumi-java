@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a active directory administrator.
- * 
  */
 public final class ServerExternalAdministratorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
 
     /**
      * Type of the sever administrator.
-     * 
      */
     @Import(name="administratorType")
       private final @Nullable Output<Either<String,AdministratorType>> administratorType;
@@ -35,7 +33,6 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
 
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
      */
     @Import(name="azureADOnlyAuthentication")
       private final @Nullable Output<Boolean> azureADOnlyAuthentication;
@@ -46,7 +43,6 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
 
     /**
      * Login name of the server administrator.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<String> login;
@@ -57,7 +53,6 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
 
     /**
      * Principal Type of the sever administrator.
-     * 
      */
     @Import(name="principalType")
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
@@ -68,7 +63,6 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
 
     /**
      * SID (object ID) of the server administrator.
-     * 
      */
     @Import(name="sid")
       private final @Nullable Output<String> sid;
@@ -79,7 +73,6 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
 
     /**
      * Tenant ID of the administrator.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

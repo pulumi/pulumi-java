@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ApiEntityReferenceResponse {
     /**
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class ApiEntityReferenceResponse {
 
     /**
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

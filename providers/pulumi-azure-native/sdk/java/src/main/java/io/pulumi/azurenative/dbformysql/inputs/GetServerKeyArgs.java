@@ -14,7 +14,6 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the MySQL Server key to be retrieved.
-     * 
      */
     @Import(name="keyName", required=true)
       private final String keyName;
@@ -25,7 +24,6 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;

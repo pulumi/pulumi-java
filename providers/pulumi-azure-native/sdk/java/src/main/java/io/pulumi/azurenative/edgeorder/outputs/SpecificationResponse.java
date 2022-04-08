@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SpecificationResponse {
     /**
      * Name of the specification
-     * 
      */
     private final String name;
     /**
      * Value of the specification
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class SpecificationResponse {
 
     /**
      * Name of the specification
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Value of the specification
-     * 
     */
     public String getValue() {
         return this.value;

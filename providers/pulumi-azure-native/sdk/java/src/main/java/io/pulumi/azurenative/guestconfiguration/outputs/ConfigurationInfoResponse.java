@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ConfigurationInfoResponse {
     /**
      * Name of the configuration.
-     * 
      */
     private final String name;
     /**
      * Version of the configuration.
-     * 
      */
     private final String version;
 
@@ -30,14 +28,12 @@ public final class ConfigurationInfoResponse {
 
     /**
      * Name of the configuration.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Version of the configuration.
-     * 
     */
     public String getVersion() {
         return this.version;

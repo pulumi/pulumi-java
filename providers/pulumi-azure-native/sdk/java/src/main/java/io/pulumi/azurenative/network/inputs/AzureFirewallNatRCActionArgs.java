@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * AzureFirewall NAT Rule Collection Action.
- * 
  */
 public final class AzureFirewallNatRCActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AzureFirewallNatRCActionArgs extends io.pulumi.resources.Reso
 
     /**
      * The type of action.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,AzureFirewallNatRCActionType>> type;

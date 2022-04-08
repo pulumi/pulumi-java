@@ -16,7 +16,6 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -27,7 +26,6 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
 
     /**
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;
@@ -38,7 +36,6 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
 
     /**
      * The name of the virtual network.
-     * 
      */
     @Import(name="virtualNetworkName", required=true)
       private final String virtualNetworkName;

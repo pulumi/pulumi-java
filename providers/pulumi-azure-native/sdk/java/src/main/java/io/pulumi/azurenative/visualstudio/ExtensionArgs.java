@@ -18,7 +18,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Visual Studio Team Services account resource.
-     * 
      */
     @Import(name="accountResourceName", required=true)
       private final Output<String> accountResourceName;
@@ -29,7 +28,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the extension.
-     * 
      */
     @Import(name="extensionResourceName")
       private final @Nullable Output<String> extensionResourceName;
@@ -40,7 +38,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure region of the Visual Studio account associated with this request (i.e 'southcentralus'.)
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Extended information about the plan being purchased for this extension resource.
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<ExtensionResourcePlanArgs> plan;
@@ -62,7 +58,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A dictionary of extended properties. This property is currently unused.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -73,7 +68,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A dictionary of user-defined tags to be stored with the extension resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

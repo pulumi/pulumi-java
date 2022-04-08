@@ -14,7 +14,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the managed application.
-     * 
      */
     @Import(name="applicationName", required=true)
       private final String applicationName;
@@ -25,7 +24,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

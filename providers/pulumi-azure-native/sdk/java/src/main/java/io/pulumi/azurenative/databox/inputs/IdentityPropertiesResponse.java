@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed identity properties.
- * 
  */
 public final class IdentityPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Managed service identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -32,7 +30,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * User assigned identity properties.
-     * 
      */
     @Import(name="userAssigned")
       private final @Nullable UserAssignedPropertiesResponse userAssigned;

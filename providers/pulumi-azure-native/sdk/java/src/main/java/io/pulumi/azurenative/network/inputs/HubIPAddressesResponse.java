@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP addresses associated with azure firewall.
- * 
  */
 public final class HubIPAddressesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HubIPAddressesResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Private IP Address associated with azure firewall.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -32,7 +30,6 @@ public final class HubIPAddressesResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Public IP addresses associated with azure firewall.
-     * 
      */
     @Import(name="publicIPs")
       private final @Nullable HubPublicIPAddressesResponse publicIPs;

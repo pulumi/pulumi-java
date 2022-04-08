@@ -13,18 +13,15 @@ import javax.annotation.Nullable;
 public final class TokenCertificateResponse {
     /**
      * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
-     * 
      */
     private final @Nullable String encodedPemCertificate;
     /**
      * The expiry datetime of the certificate.
-     * 
      */
     private final @Nullable String expiry;
     private final @Nullable String name;
     /**
      * The thumbprint of the certificate.
-     * 
      */
     private final @Nullable String thumbprint;
 
@@ -42,14 +39,12 @@ public final class TokenCertificateResponse {
 
     /**
      * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
-     * 
     */
     public Optional<String> getEncodedPemCertificate() {
         return Optional.ofNullable(this.encodedPemCertificate);
     }
     /**
      * The expiry datetime of the certificate.
-     * 
     */
     public Optional<String> getExpiry() {
         return Optional.ofNullable(this.expiry);
@@ -59,7 +54,6 @@ public final class TokenCertificateResponse {
     }
     /**
      * The thumbprint of the certificate.
-     * 
     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);

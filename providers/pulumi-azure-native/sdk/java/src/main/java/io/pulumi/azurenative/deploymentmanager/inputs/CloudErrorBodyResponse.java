@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Detailed error information of any failure.
- * 
  */
 public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Error code string.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -32,7 +30,6 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * More detailed error information.
-     * 
      */
     @Import(name="details")
       private final @Nullable List<CloudErrorBodyResponse> details;
@@ -43,7 +40,6 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Descriptive error information.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -54,7 +50,6 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Error target
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

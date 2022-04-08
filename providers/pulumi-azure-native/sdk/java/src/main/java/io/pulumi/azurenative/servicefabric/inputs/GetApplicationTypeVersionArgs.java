@@ -14,7 +14,6 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the application type name resource.
-     * 
      */
     @Import(name="applicationTypeName", required=true)
       private final String applicationTypeName;
@@ -25,7 +24,6 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -36,7 +34,6 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
 
     /**
      * The application type version.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

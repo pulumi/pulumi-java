@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure VM managed disk input details.
- * 
  */
 public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
 
     /**
      * The recovery disk encryption information (for one / single pass flows).
-     * 
      */
     @Import(name="diskEncryptionInfo")
       private final @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
@@ -32,7 +30,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
 
     /**
      * The disk Id.
-     * 
      */
     @Import(name="diskId")
       private final @Nullable Output<String> diskId;
@@ -43,7 +40,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
 
     /**
      * The primary staging storage account Arm Id.
-     * 
      */
     @Import(name="primaryStagingAzureStorageAccountId")
       private final @Nullable Output<String> primaryStagingAzureStorageAccountId;
@@ -54,7 +50,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
 
     /**
      * The recovery disk encryption set Id.
-     * 
      */
     @Import(name="recoveryDiskEncryptionSetId")
       private final @Nullable Output<String> recoveryDiskEncryptionSetId;
@@ -65,7 +60,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
 
     /**
      * The replica disk type. Its an optional value and will be same as source disk type if not user provided.
-     * 
      */
     @Import(name="recoveryReplicaDiskAccountType")
       private final @Nullable Output<String> recoveryReplicaDiskAccountType;
@@ -76,7 +70,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
 
     /**
      * The target resource group Arm Id.
-     * 
      */
     @Import(name="recoveryResourceGroupId")
       private final @Nullable Output<String> recoveryResourceGroupId;
@@ -87,7 +80,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
 
     /**
      * The target disk type after failover. Its an optional value and will be same as source disk type if not user provided.
-     * 
      */
     @Import(name="recoveryTargetDiskAccountType")
       private final @Nullable Output<String> recoveryTargetDiskAccountType;

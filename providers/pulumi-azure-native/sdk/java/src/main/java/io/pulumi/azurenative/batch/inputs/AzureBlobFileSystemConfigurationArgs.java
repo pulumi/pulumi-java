@@ -16,7 +16,6 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
 
     /**
      * This property is mutually exclusive with sasKey and one must be specified.
-     * 
      */
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
@@ -34,7 +33,6 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
 
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
-     * 
      */
     @Import(name="blobfuseOptions")
       private final @Nullable Output<String> blobfuseOptions;
@@ -52,7 +50,6 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
 
     /**
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-     * 
      */
     @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;
@@ -63,7 +60,6 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
 
     /**
      * This property is mutually exclusive with accountKey and one must be specified.
-     * 
      */
     @Import(name="sasKey")
       private final @Nullable Output<String> sasKey;

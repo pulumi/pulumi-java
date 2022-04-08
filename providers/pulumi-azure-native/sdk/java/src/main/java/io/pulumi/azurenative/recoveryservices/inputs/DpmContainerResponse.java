@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * DPM workload-specific protection container.
- * 
  */
 public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -35,7 +33,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether the container is re-registrable.
-     * 
      */
     @Import(name="canReRegister")
       private final @Nullable Boolean canReRegister;
@@ -46,7 +43,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ID of container.
-     * 
      */
     @Import(name="containerId")
       private final @Nullable String containerId;
@@ -61,7 +57,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'DPMContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final String containerType;
@@ -72,7 +67,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Backup engine Agent version
-     * 
      */
     @Import(name="dpmAgentVersion")
       private final @Nullable String dpmAgentVersion;
@@ -83,7 +77,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of BackupEngines protecting the container
-     * 
      */
     @Import(name="dpmServers")
       private final @Nullable List<String> dpmServers;
@@ -94,7 +87,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Extended Info of the container.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable DPMContainerExtendedInfoResponse extendedInfo;
@@ -105,7 +97,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -116,7 +107,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -127,7 +117,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of protected items in the BackupEngine
-     * 
      */
     @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
@@ -138,7 +127,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Protection status of the container.
-     * 
      */
     @Import(name="protectionStatus")
       private final @Nullable String protectionStatus;
@@ -149,7 +137,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
@@ -160,7 +147,6 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * To check if upgrade available
-     * 
      */
     @Import(name="upgradeAvailable")
       private final @Nullable Boolean upgradeAvailable;

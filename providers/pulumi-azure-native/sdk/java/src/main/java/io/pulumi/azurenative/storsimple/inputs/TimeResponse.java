@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The time.
- * 
  */
 public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The hour.
-     * 
      */
     @Import(name="hours", required=true)
       private final Integer hours;
@@ -29,7 +27,6 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The minute.
-     * 
      */
     @Import(name="minutes", required=true)
       private final Integer minutes;
@@ -40,7 +37,6 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The second.
-     * 
      */
     @Import(name="seconds", required=true)
       private final Integer seconds;

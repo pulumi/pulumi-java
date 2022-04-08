@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * A lab.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Labs_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var lab = new AzureNative.DevTestLab.Lab("lab", new AzureNative.DevTestLab.LabArgs
+ *         {
+ *             LabStorageType = "{Standard|Premium}",
+ *             Location = "{location}",
+ *             Name = "{labName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *             Tags = 
+ *             {
+ *                 { "tagName1", "tagValue1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewLab(ctx, "lab", &devtestlab.LabArgs{
+ * 			LabStorageType:    pulumi.String("{Standard|Premium}"),
+ * 			Location:          pulumi.String("{location}"),
+ * 			Name:              pulumi.String("{labName}"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagName1": pulumi.String("tagValue1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const lab = new azure_native.devtestlab.Lab("lab", {
+ *     labStorageType: "{Standard|Premium}",
+ *     location: "{location}",
+ *     name: "{labName}",
+ *     resourceGroupName: "resourceGroupName",
+ *     tags: {
+ *         tagName1: "tagValue1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * lab = azure_native.devtestlab.Lab("lab",
+ *     lab_storage_type="{Standard|Premium}",
+ *     location="{location}",
+ *     name="{labName}",
+ *     resource_group_name="resourceGroupName",
+ *     tags={
+ *         "tagName1": "tagValue1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,210 +124,180 @@ import javax.annotation.Nullable;
 public class Lab extends io.pulumi.resources.CustomResource {
     /**
      * The properties of any lab announcement associated with this lab
-     * 
      */
     @Export(name="announcement", type=LabAnnouncementPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LabAnnouncementPropertiesResponse> announcement;
 
     /**
      * @return The properties of any lab announcement associated with this lab
-     * 
      */
     public Output</* @Nullable */ LabAnnouncementPropertiesResponse> getAnnouncement() {
         return this.announcement;
     }
     /**
      * The lab's artifact storage account.
-     * 
      */
     @Export(name="artifactsStorageAccount", type=String.class, parameters={})
     private Output<String> artifactsStorageAccount;
 
     /**
      * @return The lab's artifact storage account.
-     * 
      */
     public Output<String> getArtifactsStorageAccount() {
         return this.artifactsStorageAccount;
     }
     /**
      * The creation date of the lab.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The creation date of the lab.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The lab's default premium storage account.
-     * 
      */
     @Export(name="defaultPremiumStorageAccount", type=String.class, parameters={})
     private Output<String> defaultPremiumStorageAccount;
 
     /**
      * @return The lab's default premium storage account.
-     * 
      */
     public Output<String> getDefaultPremiumStorageAccount() {
         return this.defaultPremiumStorageAccount;
     }
     /**
      * The lab's default storage account.
-     * 
      */
     @Export(name="defaultStorageAccount", type=String.class, parameters={})
     private Output<String> defaultStorageAccount;
 
     /**
      * @return The lab's default storage account.
-     * 
      */
     public Output<String> getDefaultStorageAccount() {
         return this.defaultStorageAccount;
     }
     /**
      * The access rights to be granted to the user when provisioning an environment
-     * 
      */
     @Export(name="environmentPermission", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentPermission;
 
     /**
      * @return The access rights to be granted to the user when provisioning an environment
-     * 
      */
     public Output</* @Nullable */ String> getEnvironmentPermission() {
         return this.environmentPermission;
     }
     /**
      * Extended properties of the lab used for experimental features
-     * 
      */
     @Export(name="extendedProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> extendedProperties;
 
     /**
      * @return Extended properties of the lab used for experimental features
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getExtendedProperties() {
         return this.extendedProperties;
     }
     /**
      * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
-     * 
      */
     @Export(name="labStorageType", type=String.class, parameters={})
     private Output</* @Nullable */ String> labStorageType;
 
     /**
      * @return Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
-     * 
      */
     public Output</* @Nullable */ String> getLabStorageType() {
         return this.labStorageType;
     }
     /**
      * The load balancer used to for lab VMs that use shared IP address.
-     * 
      */
     @Export(name="loadBalancerId", type=String.class, parameters={})
     private Output<String> loadBalancerId;
 
     /**
      * @return The load balancer used to for lab VMs that use shared IP address.
-     * 
      */
     public Output<String> getLoadBalancerId() {
         return this.loadBalancerId;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
-     * 
      */
     @Export(name="mandatoryArtifactsResourceIdsLinux", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsLinux;
 
     /**
      * @return The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
-     * 
      */
     public Output</* @Nullable */ List<String>> getMandatoryArtifactsResourceIdsLinux() {
         return this.mandatoryArtifactsResourceIdsLinux;
     }
     /**
      * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
-     * 
      */
     @Export(name="mandatoryArtifactsResourceIdsWindows", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsWindows;
 
     /**
      * @return The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
-     * 
      */
     public Output</* @Nullable */ List<String>> getMandatoryArtifactsResourceIdsWindows() {
         return this.mandatoryArtifactsResourceIdsWindows;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
-     * 
      */
     @Export(name="networkSecurityGroupId", type=String.class, parameters={})
     private Output<String> networkSecurityGroupId;
 
     /**
      * @return The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
-     * 
      */
     public Output<String> getNetworkSecurityGroupId() {
         return this.networkSecurityGroupId;
     }
     /**
      * The lab's premium data disk storage account.
-     * 
      */
     @Export(name="premiumDataDiskStorageAccount", type=String.class, parameters={})
     private Output<String> premiumDataDiskStorageAccount;
 
     /**
      * @return The lab's premium data disk storage account.
-     * 
      */
     public Output<String> getPremiumDataDiskStorageAccount() {
         return this.premiumDataDiskStorageAccount;
@@ -247,7 +306,6 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The setting to enable usage of premium data disks.
      * When its value is 'Enabled', creation of standard or premium data disks is allowed.
      * When its value is 'Disabled', only creation of standard data disks is allowed.
-     * 
      */
     @Export(name="premiumDataDisks", type=String.class, parameters={})
     private Output</* @Nullable */ String> premiumDataDisks;
@@ -256,119 +314,102 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The setting to enable usage of premium data disks.
      * When its value is 'Enabled', creation of standard or premium data disks is allowed.
      * When its value is 'Disabled', only creation of standard data disks is allowed.
-     * 
      */
     public Output</* @Nullable */ String> getPremiumDataDisks() {
         return this.premiumDataDisks;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The public IP address for the lab's load balancer.
-     * 
      */
     @Export(name="publicIpId", type=String.class, parameters={})
     private Output<String> publicIpId;
 
     /**
      * @return The public IP address for the lab's load balancer.
-     * 
      */
     public Output<String> getPublicIpId() {
         return this.publicIpId;
     }
     /**
      * The properties of any lab support message associated with this lab
-     * 
      */
     @Export(name="support", type=LabSupportPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LabSupportPropertiesResponse> support;
 
     /**
      * @return The properties of any lab support message associated with this lab
-     * 
      */
     public Output</* @Nullable */ LabSupportPropertiesResponse> getSupport() {
         return this.support;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The lab's Key vault.
-     * 
      */
     @Export(name="vaultName", type=String.class, parameters={})
     private Output<String> vaultName;
 
     /**
      * @return The lab's Key vault.
-     * 
      */
     public Output<String> getVaultName() {
         return this.vaultName;
     }
     /**
      * The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
-     * 
      */
     @Export(name="vmCreationResourceGroup", type=String.class, parameters={})
     private Output<String> vmCreationResourceGroup;
 
     /**
      * @return The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
-     * 
      */
     public Output<String> getVmCreationResourceGroup() {
         return this.vmCreationResourceGroup;

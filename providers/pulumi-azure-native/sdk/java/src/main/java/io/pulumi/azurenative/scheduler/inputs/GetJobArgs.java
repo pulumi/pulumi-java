@@ -14,7 +14,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The job collection name.
-     * 
      */
     @Import(name="jobCollectionName", required=true)
       private final String jobCollectionName;
@@ -25,7 +24,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The job name.
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -36,7 +34,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

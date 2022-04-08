@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the HealthBot SKU
-     * 
      */
     @EnumType
     public enum SkuName {

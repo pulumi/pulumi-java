@@ -21,7 +21,87 @@ import javax.annotation.Nullable;
  * The representation of a single video in a Video Analyzer account.
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Register video entity.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var video = new AzureNative.VideoAnalyzer.Video("video", new AzureNative.VideoAnalyzer.VideoArgs
+ *         {
+ *             AccountName = "testaccount2",
+ *             Description = "Sample Description 1",
+ *             ResourceGroupName = "testrg",
+ *             Title = "Sample Title 1",
+ *             VideoName = "video1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	videoanalyzer "github.com/pulumi/pulumi-azure-native/sdk/go/azure/videoanalyzer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := videoanalyzer.NewVideo(ctx, "video", &videoanalyzer.VideoArgs{
+ * 			AccountName:       pulumi.String("testaccount2"),
+ * 			Description:       pulumi.String("Sample Description 1"),
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 			Title:             pulumi.String("Sample Title 1"),
+ * 			VideoName:         pulumi.String("video1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const video = new azure_native.videoanalyzer.Video("video", {
+ *     accountName: "testaccount2",
+ *     description: "Sample Description 1",
+ *     resourceGroupName: "testrg",
+ *     title: "Sample Title 1",
+ *     videoName: "video1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * video = azure_native.videoanalyzer.Video("video",
+ *     account_name="testaccount2",
+ *     description="Sample Description 1",
+ *     resource_group_name="testrg",
+ *     title="Sample Title 1",
+ *     video_name="video1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,112 +116,96 @@ import javax.annotation.Nullable;
 public class Video extends io.pulumi.resources.CustomResource {
     /**
      * Optional video description provided by the user. Value can be up to 2048 characters long.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Optional video description provided by the user. Value can be up to 2048 characters long.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Video flags contain information about the available video actions and its dynamic properties based on the current video state.
-     * 
      */
     @Export(name="flags", type=VideoFlagsResponse.class, parameters={})
     private Output<VideoFlagsResponse> flags;
 
     /**
      * @return Video flags contain information about the available video actions and its dynamic properties based on the current video state.
-     * 
      */
     public Output<VideoFlagsResponse> getFlags() {
         return this.flags;
     }
     /**
      * Contains information about the video and audio content.
-     * 
      */
     @Export(name="mediaInfo", type=VideoMediaInfoResponse.class, parameters={})
     private Output<VideoMediaInfoResponse> mediaInfo;
 
     /**
      * @return Contains information about the video and audio content.
-     * 
      */
     public Output<VideoMediaInfoResponse> getMediaInfo() {
         return this.mediaInfo;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Video streaming holds information about video streaming URLs.
-     * 
      */
     @Export(name="streaming", type=VideoStreamingResponse.class, parameters={})
     private Output<VideoStreamingResponse> streaming;
 
     /**
      * @return Video streaming holds information about video streaming URLs.
-     * 
      */
     public Output<VideoStreamingResponse> getStreaming() {
         return this.streaming;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Optional video title provided by the user. Value can be up to 256 characters long.
-     * 
      */
     @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
      * @return Optional video title provided by the user. Value can be up to 256 characters long.
-     * 
      */
     public Output</* @Nullable */ String> getTitle() {
         return this.title;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

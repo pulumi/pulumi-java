@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operation against the threshold that triggers alert rule.
-     * 
      */
     @EnumType
     public enum TriggerOperator {

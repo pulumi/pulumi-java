@@ -18,7 +18,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
 
     /**
      * The name of server active directory administrator.
-     * 
      */
     @Import(name="administratorName")
       private final @Nullable Output<String> administratorName;
@@ -29,7 +28,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
 
     /**
      * Type of the sever administrator.
-     * 
      */
     @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
@@ -40,7 +38,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
 
     /**
      * Login name of the server administrator.
-     * 
      */
     @Import(name="login", required=true)
       private final Output<String> login;
@@ -51,7 +48,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -73,7 +68,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
 
     /**
      * SID (object ID) of the server administrator.
-     * 
      */
     @Import(name="sid", required=true)
       private final Output<String> sid;
@@ -84,7 +78,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
 
     /**
      * Tenant ID of the administrator.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Supplementary contextual messages during a rollout.
- * 
  */
 public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The actual message text.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -29,7 +27,6 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time in UTC this message was provided.
-     * 
      */
     @Import(name="timeStamp", required=true)
       private final String timeStamp;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * MDE integration configuration
- * 
  */
 public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
 
     /**
      * Integration status
-     * 
      */
     @Import(name="status", required=true)
       private final Output<Either<String,MdeIntegration>> status;

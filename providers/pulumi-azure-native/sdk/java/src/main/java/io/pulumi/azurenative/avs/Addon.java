@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * An addon resource
  * API Version: 2020-07-17-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Addons_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var addon = new AzureNative.AVS.Addon("addon", new AzureNative.AVS.AddonArgs
+ *         {
+ *             AddonName = "srm",
+ *             AddonType = "SRM",
+ *             LicenseKey = "41915178-A8FF-4A4D-B683-6D735AF5E3F5",
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewAddon(ctx, "addon", &avs.AddonArgs{
+ * 			AddonName:         pulumi.String("srm"),
+ * 			AddonType:         pulumi.String("SRM"),
+ * 			LicenseKey:        pulumi.String("41915178-A8FF-4A4D-B683-6D735AF5E3F5"),
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const addon = new azure_native.avs.Addon("addon", {
+ *     addonName: "srm",
+ *     addonType: "SRM",
+ *     licenseKey: "41915178-A8FF-4A4D-B683-6D735AF5E3F5",
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * addon = azure_native.avs.Addon("addon",
+ *     addon_name="srm",
+ *     addon_type="SRM",
+ *     license_key="41915178-A8FF-4A4D-B683-6D735AF5E3F5",
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +112,60 @@ import javax.annotation.Nullable;
 public class Addon extends io.pulumi.resources.CustomResource {
     /**
      * The type of private cloud addon
-     * 
      */
     @Export(name="addonType", type=String.class, parameters={})
     private Output</* @Nullable */ String> addonType;
 
     /**
      * @return The type of private cloud addon
-     * 
      */
     public Output</* @Nullable */ String> getAddonType() {
         return this.addonType;
     }
     /**
      * The SRM license
-     * 
      */
     @Export(name="licenseKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseKey;
 
     /**
      * @return The SRM license
-     * 
      */
     public Output</* @Nullable */ String> getLicenseKey() {
         return this.licenseKey;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the addon provisioning
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The state of the addon provisioning
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

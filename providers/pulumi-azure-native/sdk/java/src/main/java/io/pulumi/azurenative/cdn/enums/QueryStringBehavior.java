@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Caching behavior for the requests
-     * 
      */
     @EnumType
     public enum QueryStringBehavior {

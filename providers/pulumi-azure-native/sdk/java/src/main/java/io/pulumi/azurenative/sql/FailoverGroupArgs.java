@@ -21,7 +21,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of databases in the failover group.
-     * 
      */
     @Import(name="databases")
       private final @Nullable Output<List<String>> databases;
@@ -32,7 +31,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the failover group.
-     * 
      */
     @Import(name="failoverGroupName")
       private final @Nullable Output<String> failoverGroupName;
@@ -43,7 +41,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of partner server information for the failover group.
-     * 
      */
     @Import(name="partnerServers", required=true)
       private final Output<List<PartnerInfoArgs>> partnerServers;
@@ -54,7 +51,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Read-only endpoint of the failover group instance.
-     * 
      */
     @Import(name="readOnlyEndpoint")
       private final @Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
@@ -65,7 +61,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Read-write endpoint of the failover group instance.
-     * 
      */
     @Import(name="readWriteEndpoint", required=true)
       private final Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
@@ -76,7 +71,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server containing the failover group.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -98,7 +91,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Filters limit replication to a subset of blobs within the storage account. A logical OR is performed on values in the filter. If multiple filters are defined, a logical AND is performed on all filters.
- * 
  */
 public final class ObjectReplicationPolicyFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ObjectReplicationPolicyFilterResponse extends io.pulumi.resou
 
     /**
      * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
-     * 
      */
     @Import(name="minCreationTime")
       private final @Nullable String minCreationTime;
@@ -32,7 +30,6 @@ public final class ObjectReplicationPolicyFilterResponse extends io.pulumi.resou
 
     /**
      * Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
-     * 
      */
     @Import(name="prefixMatch")
       private final @Nullable List<String> prefixMatch;

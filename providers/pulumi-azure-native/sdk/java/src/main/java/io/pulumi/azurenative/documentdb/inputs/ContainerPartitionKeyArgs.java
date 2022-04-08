@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of the partition key to be used for partitioning data into multiple partitions
- * 
  */
 public final class ContainerPartitionKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,PartitionKind>> kind;
@@ -35,7 +33,6 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of paths using which data within the container can be partitioned
-     * 
      */
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
@@ -46,7 +43,6 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Indicates the version of the partition key definition
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Integer> version;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specify action need to be taken when rule type is converting log to metric
- * 
  */
 public final class LogToMetricActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LogToMetricActionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Criteria of Metric
-     * 
      */
     @Import(name="criteria", required=true)
       private final List<CriteriaResponse> criteria;
@@ -32,7 +30,6 @@ public final class LogToMetricActionResponse extends io.pulumi.resources.InvokeA
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

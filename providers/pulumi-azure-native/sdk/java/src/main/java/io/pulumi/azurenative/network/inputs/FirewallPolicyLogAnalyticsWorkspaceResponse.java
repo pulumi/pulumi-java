@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Log Analytics Workspace for Firewall Policy Insights.
- * 
  */
 public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi
 
     /**
      * Region to configure the Workspace.
-     * 
      */
     @Import(name="region")
       private final @Nullable String region;
@@ -32,7 +30,6 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi
 
     /**
      * The workspace Id for Firewall Policy Insights.
-     * 
      */
     @Import(name="workspaceId")
       private final @Nullable SubResourceResponse workspaceId;

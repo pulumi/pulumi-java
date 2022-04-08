@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Private link service resource.
- * 
  */
 public final class PrivateLinkServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -30,7 +29,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The alias of the private link service.
-     * 
      */
     @Import(name="alias", required=true)
       private final String alias;
@@ -41,7 +39,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The auto-approval list of the private link service.
-     * 
      */
     @Import(name="autoApproval")
       private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
@@ -52,7 +49,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether the private link service is enabled for proxy protocol or not.
-     * 
      */
     @Import(name="enableProxyProtocol")
       private final @Nullable Boolean enableProxyProtocol;
@@ -63,7 +59,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -74,7 +69,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The extended location of the load balancer.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable ExtendedLocationResponse extendedLocation;
@@ -85,7 +79,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of Fqdn.
-     * 
      */
     @Import(name="fqdns")
       private final @Nullable List<String> fqdns;
@@ -96,7 +89,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -107,7 +99,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of private link service IP configurations.
-     * 
      */
     @Import(name="ipConfigurations")
       private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
@@ -118,7 +109,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of references to the load balancer IP configurations.
-     * 
      */
     @Import(name="loadBalancerFrontendIpConfigurations")
       private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
@@ -129,7 +119,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -140,7 +129,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -151,7 +139,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of references to the network interfaces created for this private link service.
-     * 
      */
     @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
@@ -162,7 +149,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * An array of list about connections to the private endpoint.
-     * 
      */
     @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
@@ -173,7 +159,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The provisioning state of the private link service resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -184,7 +169,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -195,7 +179,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -206,7 +189,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The visibility list of the private link service.
-     * 
      */
     @Import(name="visibility")
       private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;

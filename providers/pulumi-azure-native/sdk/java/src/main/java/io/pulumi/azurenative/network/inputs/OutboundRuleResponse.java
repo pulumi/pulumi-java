@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Outbound rule of the load balancer.
- * 
  */
 public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of outbound ports to be used for NAT.
-     * 
      */
     @Import(name="allocatedOutboundPorts")
       private final @Nullable Integer allocatedOutboundPorts;
@@ -35,7 +33,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
-     * 
      */
     @Import(name="backendAddressPool", required=true)
       private final SubResourceResponse backendAddressPool;
@@ -46,7 +43,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-     * 
      */
     @Import(name="enableTcpReset")
       private final @Nullable Boolean enableTcpReset;
@@ -57,7 +53,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -68,7 +63,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Frontend IP addresses of the load balancer.
-     * 
      */
     @Import(name="frontendIPConfigurations", required=true)
       private final List<SubResourceResponse> frontendIPConfigurations;
@@ -79,7 +73,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -90,7 +83,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timeout for the TCP idle connection.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
@@ -101,7 +93,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -112,7 +103,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The protocol for the outbound rule in load balancer.
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;
@@ -123,7 +113,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the outbound rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -134,7 +123,6 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine scale set storage profile.
- * 
  */
 public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
 
     /**
      * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
-     * 
      */
     @Import(name="dataDisks")
       private final @Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
@@ -34,7 +32,6 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
 
     /**
      * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
-     * 
      */
     @Import(name="imageReference")
       private final @Nullable Output<ImageReferenceArgs> imageReference;
@@ -45,7 +42,6 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
 
     /**
      * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
-     * 
      */
     @Import(name="osDisk")
       private final @Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk;

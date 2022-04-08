@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gets the workflow trigger callback URL query parameters.
- * 
  */
 public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
 
     /**
      * The api version.
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable String apiVersion;
@@ -31,7 +29,6 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
 
     /**
      * The SAS timestamp.
-     * 
      */
     @Import(name="se")
       private final @Nullable String se;
@@ -42,7 +39,6 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
 
     /**
      * The SAS signature.
-     * 
      */
     @Import(name="sig")
       private final @Nullable String sig;
@@ -53,7 +49,6 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
 
     /**
      * The SAS permissions.
-     * 
      */
     @Import(name="sp")
       private final @Nullable String sp;
@@ -64,7 +59,6 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
 
     /**
      * The SAS version.
-     * 
      */
     @Import(name="sv")
       private final @Nullable String sv;

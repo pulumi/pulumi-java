@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class IntegrationRuntimeReferenceResponse {
     /**
      * Arguments for integration runtime.
-     * 
      */
     private final @Nullable Map<String,Object> parameters;
     /**
      * Reference integration runtime name.
-     * 
      */
     private final String referenceName;
     /**
      * Type of integration runtime.
-     * 
      */
     private final String type;
 
@@ -40,21 +37,18 @@ public final class IntegrationRuntimeReferenceResponse {
 
     /**
      * Arguments for integration runtime.
-     * 
     */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference integration runtime name.
-     * 
     */
     public String getReferenceName() {
         return this.referenceName;
     }
     /**
      * Type of integration runtime.
-     * 
     */
     public String getType() {
         return this.type;

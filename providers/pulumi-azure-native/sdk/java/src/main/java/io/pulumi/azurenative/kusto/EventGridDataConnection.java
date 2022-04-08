@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Class representing an Event Grid data connection.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### KustoDataConnectionsCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eventGridDataConnection = new AzureNative.Kusto.EventGridDataConnection("eventGridDataConnection", new AzureNative.Kusto.EventGridDataConnectionArgs
+ *         {
+ *             ClusterName = "kustoclusterrptest4",
+ *             DataConnectionName = "DataConnections8",
+ *             DatabaseName = "KustoDatabase8",
+ *             ResourceGroupName = "kustorptest",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kusto.NewEventGridDataConnection(ctx, "eventGridDataConnection", &kusto.EventGridDataConnectionArgs{
+ * 			ClusterName:        pulumi.String("kustoclusterrptest4"),
+ * 			DataConnectionName: pulumi.String("DataConnections8"),
+ * 			DatabaseName:       pulumi.String("KustoDatabase8"),
+ * 			ResourceGroupName:  pulumi.String("kustorptest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const eventGridDataConnection = new azure_native.kusto.EventGridDataConnection("eventGridDataConnection", {
+ *     clusterName: "kustoclusterrptest4",
+ *     dataConnectionName: "DataConnections8",
+ *     databaseName: "KustoDatabase8",
+ *     resourceGroupName: "kustorptest",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * event_grid_data_connection = azure_native.kusto.EventGridDataConnection("eventGridDataConnection",
+ *     cluster_name="kustoclusterrptest4",
+ *     data_connection_name="DataConnections8",
+ *     database_name="KustoDatabase8",
+ *     resource_group_name="kustorptest")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +109,60 @@ import javax.annotation.Nullable;
 public class EventGridDataConnection extends io.pulumi.resources.CustomResource {
     /**
      * The name of blob storage event type to process.
-     * 
      */
     @Export(name="blobStorageEventType", type=String.class, parameters={})
     private Output</* @Nullable */ String> blobStorageEventType;
 
     /**
      * @return The name of blob storage event type to process.
-     * 
      */
     public Output</* @Nullable */ String> getBlobStorageEventType() {
         return this.blobStorageEventType;
     }
     /**
      * The event hub consumer group.
-     * 
      */
     @Export(name="consumerGroup", type=String.class, parameters={})
     private Output<String> consumerGroup;
 
     /**
      * @return The event hub consumer group.
-     * 
      */
     public Output<String> getConsumerGroup() {
         return this.consumerGroup;
     }
     /**
      * The data format of the message. Optionally the data format can be added to each message.
-     * 
      */
     @Export(name="dataFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataFormat;
 
     /**
      * @return The data format of the message. Optionally the data format can be added to each message.
-     * 
      */
     public Output</* @Nullable */ String> getDataFormat() {
         return this.dataFormat;
     }
     /**
      * The resource ID where the event grid is configured to send events.
-     * 
      */
     @Export(name="eventHubResourceId", type=String.class, parameters={})
     private Output<String> eventHubResourceId;
 
     /**
      * @return The resource ID where the event grid is configured to send events.
-     * 
      */
     public Output<String> getEventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
      * A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
-     * 
      */
     @Export(name="ignoreFirstRecord", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreFirstRecord;
 
     /**
      * @return A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
-     * 
      */
     public Output</* @Nullable */ Boolean> getIgnoreFirstRecord() {
         return this.ignoreFirstRecord;
@@ -104,7 +170,6 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
     /**
      * Kind of the endpoint for the data connection
      * Expected value is 'EventGrid'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -112,105 +177,90 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
     /**
      * @return Kind of the endpoint for the data connection
      * Expected value is 'EventGrid'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
      */
     @Export(name="mappingRuleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> mappingRuleName;
 
     /**
      * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
      */
     public Output</* @Nullable */ String> getMappingRuleName() {
         return this.mappingRuleName;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioned state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource ID of the storage account where the data resides.
-     * 
      */
     @Export(name="storageAccountResourceId", type=String.class, parameters={})
     private Output<String> storageAccountResourceId;
 
     /**
      * @return The resource ID of the storage account where the data resides.
-     * 
      */
     public Output<String> getStorageAccountResourceId() {
         return this.storageAccountResourceId;
     }
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
      */
     @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
      * @return The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
      */
     public Output</* @Nullable */ String> getTableName() {
         return this.tableName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

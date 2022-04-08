@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The purchase SKU for CloudSimple paid resources
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The capacity of the SKU
-     * 
      */
     @Import(name="capacity")
       private final @Nullable String capacity;
@@ -31,7 +29,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -42,7 +39,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here
-     * 
      */
     @Import(name="family")
       private final @Nullable String family;
@@ -53,7 +49,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the SKU for VMWare CloudSimple Node
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -64,7 +59,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tier of the SKU
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

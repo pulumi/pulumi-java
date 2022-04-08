@@ -14,7 +14,6 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
 
     /**
      * The name of the nat rule.
-     * 
      */
     @Import(name="natRuleName", required=true)
       private final String natRuleName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
 
     /**
      * The resource group name of the Virtual Network Gateway.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
 
     /**
      * The name of the gateway.
-     * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;

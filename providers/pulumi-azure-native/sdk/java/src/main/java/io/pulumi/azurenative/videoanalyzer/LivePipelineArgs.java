@@ -19,7 +19,6 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Video Analyzer account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -30,7 +29,6 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one 'noisy neighbor' does not affect other live pipelines in your account.
-     * 
      */
     @Import(name="bitrateKbps", required=true)
       private final Output<Integer> bitrateKbps;
@@ -41,7 +39,6 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description for the pipeline.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -52,7 +49,6 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Live pipeline unique identifier.
-     * 
      */
     @Import(name="livePipelineName")
       private final @Nullable Output<String> livePipelineName;
@@ -63,7 +59,6 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
@@ -74,7 +69,6 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reference to an existing pipeline topology defined for real-time content processing. When activated, this live pipeline will process content according to the pipeline topology definition.
-     * 
      */
     @Import(name="topologyName", required=true)
       private final Output<String> topologyName;

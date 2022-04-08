@@ -14,7 +14,6 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * GUID identifying the on-premises server.
-     * 
      */
     @Import(name="serverId", required=true)
       private final String serverId;
@@ -36,7 +34,6 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of Storage Sync Service resource.
-     * 
      */
     @Import(name="storageSyncServiceName", required=true)
       private final String storageSyncServiceName;

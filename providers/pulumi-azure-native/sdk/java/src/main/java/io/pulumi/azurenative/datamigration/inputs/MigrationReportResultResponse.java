@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Migration validation report result, contains the url for downloading the generated report.
- * 
  */
 public final class MigrationReportResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MigrationReportResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Migration validation result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class MigrationReportResultResponse extends io.pulumi.resources.Inv
 
     /**
      * The url of the report.
-     * 
      */
     @Import(name="reportUrl", required=true)
       private final String reportUrl;

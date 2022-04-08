@@ -21,7 +21,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets a JSON string containing the Azure AD Acl settings.
-     * 
      */
     @Import(name="aadClaimsAuthorization")
       private final @Nullable Output<String> aadClaimsAuthorization;
@@ -33,7 +32,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * Login parameters to send to the OpenID Connect authorization endpoint when
      * a user logs in. Each parameter must be in the form "key=value".
-     * 
      */
     @Import(name="additionalLoginParams")
       private final @Nullable Output<List<String>> additionalLoginParams;
@@ -43,10 +41,9 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allowed audience values to consider when validating JWTs issued by
+     * Allowed audience values to consider when validating JWTs issued by 
      * Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
      * allowed audience, regardless of this setting.
-     * 
      */
     @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
@@ -59,7 +56,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
      * This is an advanced setting typically only needed by Windows Store application backends.
      * Note that URLs within the current domain are always implicitly allowed.
-     * 
      */
     @Import(name="allowedExternalRedirectUrls")
       private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
@@ -71,7 +67,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The path of the config file containing auth settings.
      * If the path is relative, base will the site's root directory.
-     * 
      */
     @Import(name="authFilePath")
       private final @Nullable Output<String> authFilePath;
@@ -82,10 +77,9 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Client ID of this relying party application, known as the client_id.
-     * This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
+     * This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
      * other 3rd party OpenID Connect providers.
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -99,7 +93,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
      * Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
@@ -111,7 +104,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret. It is also optional.
-     * 
      */
     @Import(name="clientSecretCertificateThumbprint")
       private final @Nullable Output<String> clientSecretCertificateThumbprint;
@@ -122,7 +114,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The app setting name that contains the client secret of the relying party application.
-     * 
      */
     @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
@@ -134,7 +125,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The ConfigVersion of the Authentication / Authorization feature in use for the current app.
      * The setting in this value can control the behavior of the control plane for Authentication / Authorization.
-     * 
      */
     @Import(name="configVersion")
       private final @Nullable Output<String> configVersion;
@@ -147,7 +137,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
      * action is set to "RedirectToLoginPage".
-     * 
      */
     @Import(name="defaultProvider")
       private final @Nullable Output<BuiltInAuthenticationProvider> defaultProvider;
@@ -158,7 +147,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -171,7 +159,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The App ID of the Facebook app used for login.
      * This setting is required for enabling Facebook Login.
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-     * 
      */
     @Import(name="facebookAppId")
       private final @Nullable Output<String> facebookAppId;
@@ -184,7 +171,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The App Secret of the Facebook app used for Facebook Login.
      * This setting is required for enabling Facebook Login.
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-     * 
      */
     @Import(name="facebookAppSecret")
       private final @Nullable Output<String> facebookAppSecret;
@@ -195,7 +181,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The app setting name that contains the app secret used for Facebook Login.
-     * 
      */
     @Import(name="facebookAppSecretSettingName")
       private final @Nullable Output<String> facebookAppSecretSettingName;
@@ -208,7 +193,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
      * This setting is optional.
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-     * 
      */
     @Import(name="facebookOAuthScopes")
       private final @Nullable Output<List<String>> facebookOAuthScopes;
@@ -220,7 +204,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The Client Id of the GitHub app used for login.
      * This setting is required for enabling Github login
-     * 
      */
     @Import(name="gitHubClientId")
       private final @Nullable Output<String> gitHubClientId;
@@ -232,7 +215,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The Client Secret of the GitHub app used for Github Login.
      * This setting is required for enabling Github login.
-     * 
      */
     @Import(name="gitHubClientSecret")
       private final @Nullable Output<String> gitHubClientSecret;
@@ -244,7 +226,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The app setting name that contains the client secret of the Github
      * app used for GitHub Login.
-     * 
      */
     @Import(name="gitHubClientSecretSettingName")
       private final @Nullable Output<String> gitHubClientSecretSettingName;
@@ -256,7 +237,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
      * This setting is optional
-     * 
      */
     @Import(name="gitHubOAuthScopes")
       private final @Nullable Output<List<String>> gitHubOAuthScopes;
@@ -269,7 +249,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OpenID Connect Client ID for the Google web application.
      * This setting is required for enabling Google Sign-In.
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-     * 
      */
     @Import(name="googleClientId")
       private final @Nullable Output<String> googleClientId;
@@ -282,7 +261,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The client secret associated with the Google web application.
      * This setting is required for enabling Google Sign-In.
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-     * 
      */
     @Import(name="googleClientSecret")
       private final @Nullable Output<String> googleClientSecret;
@@ -292,9 +270,8 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     /**
-     * The app setting name that contains the client secret associated with
+     * The app setting name that contains the client secret associated with 
      * the Google web application.
-     * 
      */
     @Import(name="googleClientSecretSettingName")
       private final @Nullable Output<String> googleClientSecretSettingName;
@@ -307,7 +284,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
      * This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-     * 
      */
     @Import(name="googleOAuthScopes")
       private final @Nullable Output<List<String>> googleOAuthScopes;
@@ -319,7 +295,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * "true" if the auth config settings should be read from a file,
      * "false" otherwise
-     * 
      */
     @Import(name="isAuthFromFile")
       private final @Nullable Output<String> isAuthFromFile;
@@ -333,7 +308,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
      * This URI is a case-sensitive identifier for the token issuer.
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
-     * 
      */
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
@@ -344,7 +318,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -357,7 +330,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OAuth 2.0 client ID that was created for the app used for authentication.
      * This setting is required for enabling Microsoft Account authentication.
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
-     * 
      */
     @Import(name="microsoftAccountClientId")
       private final @Nullable Output<String> microsoftAccountClientId;
@@ -370,7 +342,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OAuth 2.0 client secret that was created for the app used for authentication.
      * This setting is required for enabling Microsoft Account authentication.
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
-     * 
      */
     @Import(name="microsoftAccountClientSecret")
       private final @Nullable Output<String> microsoftAccountClientSecret;
@@ -382,7 +353,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The app setting name containing the OAuth 2.0 client secret that was created for the
      * app used for authentication.
-     * 
      */
     @Import(name="microsoftAccountClientSecretSettingName")
       private final @Nullable Output<String> microsoftAccountClientSecretSettingName;
@@ -395,7 +365,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
      * This setting is optional. If not specified, "wl.basic" is used as the default scope.
      * Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
-     * 
      */
     @Import(name="microsoftAccountOAuthScopes")
       private final @Nullable Output<List<String>> microsoftAccountOAuthScopes;
@@ -406,7 +375,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of web app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -417,7 +385,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -429,7 +396,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
-     * 
      */
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
@@ -441,7 +407,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The number of hours after session token expiration that a session token can be used to
      * call the token refresh API. The default is 72 hours.
-     * 
      */
     @Import(name="tokenRefreshExtensionHours")
       private final @Nullable Output<Double> tokenRefreshExtensionHours;
@@ -453,7 +418,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
      *  The default is <code>false</code>.
-     * 
      */
     @Import(name="tokenStoreEnabled")
       private final @Nullable Output<Boolean> tokenStoreEnabled;
@@ -466,7 +430,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
      * This setting is required for enabling Twitter Sign-In.
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-     * 
      */
     @Import(name="twitterConsumerKey")
       private final @Nullable Output<String> twitterConsumerKey;
@@ -479,7 +442,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
      * This setting is required for enabling Twitter Sign-In.
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-     * 
      */
     @Import(name="twitterConsumerSecret")
       private final @Nullable Output<String> twitterConsumerSecret;
@@ -491,7 +453,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
      * application used for sign-in.
-     * 
      */
     @Import(name="twitterConsumerSecretSettingName")
       private final @Nullable Output<String> twitterConsumerSecretSettingName;
@@ -502,7 +463,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The action to take when an unauthenticated client attempts to access the app.
-     * 
      */
     @Import(name="unauthenticatedClientAction")
       private final @Nullable Output<UnauthenticatedClientAction> unauthenticatedClientAction;
@@ -513,7 +473,6 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
-     * 
      */
     @Import(name="validateIssuer")
       private final @Nullable Output<Boolean> validateIssuer;

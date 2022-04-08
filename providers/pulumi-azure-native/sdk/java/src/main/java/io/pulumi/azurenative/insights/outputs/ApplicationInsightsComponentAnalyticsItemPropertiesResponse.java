@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
     /**
      * A function alias, used when the type of the item is Function
-     * 
      */
     private final @Nullable String functionAlias;
 
@@ -24,7 +23,6 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
 
     /**
      * A function alias, used when the type of the item is Function
-     * 
     */
     public Optional<String> getFunctionAlias() {
         return Optional.ofNullable(this.functionAlias);

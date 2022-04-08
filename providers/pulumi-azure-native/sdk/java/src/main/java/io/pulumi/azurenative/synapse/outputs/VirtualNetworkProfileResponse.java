@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VirtualNetworkProfileResponse {
     /**
      * Subnet ID used for computes in workspace
-     * 
      */
     private final @Nullable String computeSubnetId;
 
@@ -24,7 +23,6 @@ public final class VirtualNetworkProfileResponse {
 
     /**
      * Subnet ID used for computes in workspace
-     * 
     */
     public Optional<String> getComputeSubnetId() {
         return Optional.ofNullable(this.computeSubnetId);

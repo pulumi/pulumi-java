@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse {
     /**
      * List of databases on target server
-     * 
      */
     private final List<String> databases;
     /**
      * Result identifier
-     * 
      */
     private final String id;
     /**
      * Target server brand version
-     * 
      */
     private final String targetServerBrandVersion;
     /**
      * Version of the target server
-     * 
      */
     private final String targetServerVersion;
     /**
      * Validation errors associated with the task
-     * 
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
@@ -53,35 +48,30 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse {
 
     /**
      * List of databases on target server
-     * 
     */
     public List<String> getDatabases() {
         return this.databases;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Target server brand version
-     * 
     */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Version of the target server
-     * 
     */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
     /**
      * Validation errors associated with the task
-     * 
     */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;

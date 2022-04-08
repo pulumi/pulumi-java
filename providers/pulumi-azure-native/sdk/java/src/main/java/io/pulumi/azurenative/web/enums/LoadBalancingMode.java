@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
-     * 
      */
     @EnumType
     public enum LoadBalancingMode {

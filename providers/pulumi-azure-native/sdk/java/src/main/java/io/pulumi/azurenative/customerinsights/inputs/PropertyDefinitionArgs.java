@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Property definition.
- * 
  */
 public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Array value separator for properties with isArray set.
-     * 
      */
     @Import(name="arrayValueSeparator")
       private final @Nullable Output<String> arrayValueSeparator;
@@ -35,7 +33,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Describes valid values for an enum property.
-     * 
      */
     @Import(name="enumValidValues")
       private final @Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
@@ -46,7 +43,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the property.
-     * 
      */
     @Import(name="fieldName", required=true)
       private final Output<String> fieldName;
@@ -57,7 +53,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Type of the property.
-     * 
      */
     @Import(name="fieldType", required=true)
       private final Output<String> fieldType;
@@ -68,7 +63,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates if the property is actually an array of the fieldType above on the data api.
-     * 
      */
     @Import(name="isArray")
       private final @Nullable Output<Boolean> isArray;
@@ -79,7 +73,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether property is available in graph or not.
-     * 
      */
     @Import(name="isAvailableInGraph")
       private final @Nullable Output<Boolean> isAvailableInGraph;
@@ -90,7 +83,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates if the property is an enum.
-     * 
      */
     @Import(name="isEnum")
       private final @Nullable Output<Boolean> isEnum;
@@ -101,7 +93,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates if the property is an flag enum.
-     * 
      */
     @Import(name="isFlagEnum")
       private final @Nullable Output<Boolean> isFlagEnum;
@@ -112,7 +103,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether the property is an Image.
-     * 
      */
     @Import(name="isImage")
       private final @Nullable Output<Boolean> isImage;
@@ -123,7 +113,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether the property is a localized string.
-     * 
      */
     @Import(name="isLocalizedString")
       private final @Nullable Output<Boolean> isLocalizedString;
@@ -134,7 +123,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether the property is a name or a part of name.
-     * 
      */
     @Import(name="isName")
       private final @Nullable Output<Boolean> isName;
@@ -145,7 +133,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
-     * 
      */
     @Import(name="isRequired")
       private final @Nullable Output<Boolean> isRequired;
@@ -156,7 +143,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Max length of string. Used only if type is string.
-     * 
      */
     @Import(name="maxLength")
       private final @Nullable Output<Integer> maxLength;
@@ -167,7 +153,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The ID associated with the property.
-     * 
      */
     @Import(name="propertyId")
       private final @Nullable Output<String> propertyId;
@@ -178,7 +163,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * URL encoded schema.org item prop link for the property.
-     * 
      */
     @Import(name="schemaItemPropLink")
       private final @Nullable Output<String> schemaItemPropLink;

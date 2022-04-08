@@ -158,7 +158,6 @@ import javax.annotation.Nullable;
 
 /**
  * Copy activity.
- * 
  */
 public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -166,7 +165,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="dataIntegrationUnits")
       private final @Nullable Object dataIntegrationUnits;
@@ -177,7 +175,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -188,7 +185,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -199,7 +195,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableSkipIncompatibleRow")
       private final @Nullable Object enableSkipIncompatibleRow;
@@ -210,7 +205,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableStaging")
       private final @Nullable Object enableStaging;
@@ -221,7 +215,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of inputs for the activity.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable List<DatasetReferenceResponse> inputs;
@@ -232,7 +225,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -243,7 +235,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Log settings customer needs provide when enabling log.
-     * 
      */
     @Import(name="logSettings")
       private final @Nullable LogSettingsResponse logSettings;
@@ -254,7 +245,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
-     * 
      */
     @Import(name="logStorageSettings")
       private final @Nullable LogStorageSettingsResponse logStorageSettings;
@@ -265,7 +255,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -276,7 +265,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of outputs for the activity.
-     * 
      */
     @Import(name="outputs")
       private final @Nullable List<DatasetReferenceResponse> outputs;
@@ -287,7 +275,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="parallelCopies")
       private final @Nullable Object parallelCopies;
@@ -298,7 +285,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -309,7 +295,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Preserve rules.
-     * 
      */
     @Import(name="preserve")
       private final @Nullable List<Object> preserve;
@@ -320,7 +305,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Preserve Rules.
-     * 
      */
     @Import(name="preserveRules")
       private final @Nullable List<Object> preserveRules;
@@ -331,7 +315,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
-     * 
      */
     @Import(name="redirectIncompatibleRowSettings")
       private final @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
@@ -342,7 +325,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Copy activity sink.
-     * 
      */
     @Import(name="sink", required=true)
       private final Object sink;
@@ -353,7 +335,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specify the fault tolerance for data consistency.
-     * 
      */
     @Import(name="skipErrorFile")
       private final @Nullable SkipErrorFileResponse skipErrorFile;
@@ -364,7 +345,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Copy activity source.
-     * 
      */
     @Import(name="source", required=true)
       private final Object source;
@@ -375,7 +355,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies interim staging settings when EnableStaging is true.
-     * 
      */
     @Import(name="stagingSettings")
       private final @Nullable StagingSettingsResponse stagingSettings;
@@ -386,7 +365,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Copy activity translator. If not specified, tabular translator is used.
-     * 
      */
     @Import(name="translator")
       private final @Nullable Object translator;
@@ -398,7 +376,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of activity.
      * Expected value is 'Copy'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -409,7 +386,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
@@ -420,7 +396,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="validateDataConsistency")
       private final @Nullable Object validateDataConsistency;

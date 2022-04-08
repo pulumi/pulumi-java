@@ -14,7 +14,6 @@ public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.In
 
     /**
      * The name of the diagnostic setting.
-     * 
      */
     @Import(name="diagnosticSettingsName", required=true)
       private final String diagnosticSettingsName;
@@ -25,7 +24,6 @@ public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

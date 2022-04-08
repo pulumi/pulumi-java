@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Blockchain member Sku in payload
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets Sku name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets Sku tier
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

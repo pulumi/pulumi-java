@@ -26,7 +26,504 @@ import javax.annotation.Nullable;
  * Information about the connection monitor.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create connection monitor V1
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connectionMonitor = new AzureNative.Network.ConnectionMonitor("connectionMonitor", new AzureNative.Network.ConnectionMonitorArgs
+ *         {
+ *             ConnectionMonitorName = "cm1",
+ *             Endpoints = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorEndpointArgs
+ *                 {
+ *                     Name = "source",
+ *                     ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
+ *                 },
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorEndpointArgs
+ *                 {
+ *                     Address = "bing.com",
+ *                     Name = "destination",
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             NetworkWatcherName = "nw1",
+ *             ResourceGroupName = "rg1",
+ *             TestConfigurations = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorTestConfigurationArgs
+ *                 {
+ *                     Name = "tcp",
+ *                     Protocol = "Tcp",
+ *                     TcpConfiguration = new AzureNative.Network.Inputs.ConnectionMonitorTcpConfigurationArgs
+ *                     {
+ *                         Port = 80,
+ *                     },
+ *                     TestFrequencySec = 60,
+ *                 },
+ *             },
+ *             TestGroups = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorTestGroupArgs
+ *                 {
+ *                     Destinations = 
+ *                     {
+ *                         "destination",
+ *                     },
+ *                     Name = "tg",
+ *                     Sources = 
+ *                     {
+ *                         "source",
+ *                     },
+ *                     TestConfigurations = 
+ *                     {
+ *                         "tcp",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewConnectionMonitor(ctx, "connectionMonitor", &network.ConnectionMonitorArgs{
+ * 			ConnectionMonitorName: pulumi.String("cm1"),
+ * 			Endpoints: []network.ConnectionMonitorEndpointArgs{
+ * 				&network.ConnectionMonitorEndpointArgs{
+ * 					Name:       pulumi.String("source"),
+ * 					ResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1"),
+ * 				},
+ * 				&network.ConnectionMonitorEndpointArgs{
+ * 					Address: pulumi.String("bing.com"),
+ * 					Name:    pulumi.String("destination"),
+ * 				},
+ * 			},
+ * 			Location:           pulumi.String("eastus"),
+ * 			NetworkWatcherName: pulumi.String("nw1"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			TestConfigurations: []network.ConnectionMonitorTestConfigurationArgs{
+ * 				&network.ConnectionMonitorTestConfigurationArgs{
+ * 					Name:     pulumi.String("tcp"),
+ * 					Protocol: pulumi.String("Tcp"),
+ * 					TcpConfiguration: &network.ConnectionMonitorTcpConfigurationArgs{
+ * 						Port: pulumi.Int(80),
+ * 					},
+ * 					TestFrequencySec: pulumi.Int(60),
+ * 				},
+ * 			},
+ * 			TestGroups: []network.ConnectionMonitorTestGroupArgs{
+ * 				&network.ConnectionMonitorTestGroupArgs{
+ * 					Destinations: pulumi.StringArray{
+ * 						pulumi.String("destination"),
+ * 					},
+ * 					Name: pulumi.String("tg"),
+ * 					Sources: pulumi.StringArray{
+ * 						pulumi.String("source"),
+ * 					},
+ * 					TestConfigurations: pulumi.StringArray{
+ * 						pulumi.String("tcp"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connectionMonitor = new azure_native.network.ConnectionMonitor("connectionMonitor", {
+ *     connectionMonitorName: "cm1",
+ *     endpoints: [
+ *         {
+ *             name: "source",
+ *             resourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
+ *         },
+ *         {
+ *             address: "bing.com",
+ *             name: "destination",
+ *         },
+ *     ],
+ *     location: "eastus",
+ *     networkWatcherName: "nw1",
+ *     resourceGroupName: "rg1",
+ *     testConfigurations: [{
+ *         name: "tcp",
+ *         protocol: "Tcp",
+ *         tcpConfiguration: {
+ *             port: 80,
+ *         },
+ *         testFrequencySec: 60,
+ *     }],
+ *     testGroups: [{
+ *         destinations: ["destination"],
+ *         name: "tg",
+ *         sources: ["source"],
+ *         testConfigurations: ["tcp"],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connection_monitor = azure_native.network.ConnectionMonitor("connectionMonitor",
+ *     connection_monitor_name="cm1",
+ *     endpoints=[
+ *         azure_native.network.ConnectionMonitorEndpointArgs(
+ *             name="source",
+ *             resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
+ *         ),
+ *         azure_native.network.ConnectionMonitorEndpointArgs(
+ *             address="bing.com",
+ *             name="destination",
+ *         ),
+ *     ],
+ *     location="eastus",
+ *     network_watcher_name="nw1",
+ *     resource_group_name="rg1",
+ *     test_configurations=[azure_native.network.ConnectionMonitorTestConfigurationArgs(
+ *         name="tcp",
+ *         protocol="Tcp",
+ *         tcp_configuration=azure_native.network.ConnectionMonitorTcpConfigurationArgs(
+ *             port=80,
+ *         ),
+ *         test_frequency_sec=60,
+ *     )],
+ *     test_groups=[azure_native.network.ConnectionMonitorTestGroupArgs(
+ *         destinations=["destination"],
+ *         name="tg",
+ *         sources=["source"],
+ *         test_configurations=["tcp"],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create connection monitor V2
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connectionMonitor = new AzureNative.Network.ConnectionMonitor("connectionMonitor", new AzureNative.Network.ConnectionMonitorArgs
+ *         {
+ *             ConnectionMonitorName = "cm1",
+ *             Endpoints = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorEndpointArgs
+ *                 {
+ *                     Name = "vm1",
+ *                     ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
+ *                 },
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorEndpointArgs
+ *                 {
+ *                     Filter = new AzureNative.Network.Inputs.ConnectionMonitorEndpointFilterArgs
+ *                     {
+ *                         Items = 
+ *                         {
+ *                             new AzureNative.Network.Inputs.ConnectionMonitorEndpointFilterItemArgs
+ *                             {
+ *                                 Address = "npmuser",
+ *                                 Type = "AgentAddress",
+ *                             },
+ *                         },
+ *                         Type = "Include",
+ *                     },
+ *                     Name = "CanaryWorkspaceVamshi",
+ *                     ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
+ *                 },
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorEndpointArgs
+ *                 {
+ *                     Address = "bing.com",
+ *                     Name = "bing",
+ *                 },
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorEndpointArgs
+ *                 {
+ *                     Address = "google.com",
+ *                     Name = "google",
+ *                 },
+ *             },
+ *             NetworkWatcherName = "nw1",
+ *             Outputs = {},
+ *             ResourceGroupName = "rg1",
+ *             TestConfigurations = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorTestConfigurationArgs
+ *                 {
+ *                     Name = "testConfig1",
+ *                     Protocol = "Tcp",
+ *                     TcpConfiguration = new AzureNative.Network.Inputs.ConnectionMonitorTcpConfigurationArgs
+ *                     {
+ *                         DisableTraceRoute = false,
+ *                         Port = 80,
+ *                     },
+ *                     TestFrequencySec = 60,
+ *                 },
+ *             },
+ *             TestGroups = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ConnectionMonitorTestGroupArgs
+ *                 {
+ *                     Destinations = 
+ *                     {
+ *                         "bing",
+ *                         "google",
+ *                     },
+ *                     Disable = false,
+ *                     Name = "test1",
+ *                     Sources = 
+ *                     {
+ *                         "vm1",
+ *                         "CanaryWorkspaceVamshi",
+ *                     },
+ *                     TestConfigurations = 
+ *                     {
+ *                         "testConfig1",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewConnectionMonitor(ctx, "connectionMonitor", &network.ConnectionMonitorArgs{
+ * 			ConnectionMonitorName: pulumi.String("cm1"),
+ * 			Endpoints: []network.ConnectionMonitorEndpointArgs{
+ * 				&network.ConnectionMonitorEndpointArgs{
+ * 					Name:       pulumi.String("vm1"),
+ * 					ResourceId: pulumi.String("/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1"),
+ * 				},
+ * 				&network.ConnectionMonitorEndpointArgs{
+ * 					Filter: &network.ConnectionMonitorEndpointFilterArgs{
+ * 						Items: network.ConnectionMonitorEndpointFilterItemArray{
+ * 							&network.ConnectionMonitorEndpointFilterItemArgs{
+ * 								Address: pulumi.String("npmuser"),
+ * 								Type:    pulumi.String("AgentAddress"),
+ * 							},
+ * 						},
+ * 						Type: pulumi.String("Include"),
+ * 					},
+ * 					Name:       pulumi.String("CanaryWorkspaceVamshi"),
+ * 					ResourceId: pulumi.String("/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace"),
+ * 				},
+ * 				&network.ConnectionMonitorEndpointArgs{
+ * 					Address: pulumi.String("bing.com"),
+ * 					Name:    pulumi.String("bing"),
+ * 				},
+ * 				&network.ConnectionMonitorEndpointArgs{
+ * 					Address: pulumi.String("google.com"),
+ * 					Name:    pulumi.String("google"),
+ * 				},
+ * 			},
+ * 			NetworkWatcherName: pulumi.String("nw1"),
+ * 			Outputs:            network.ConnectionMonitorOutputArray{},
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			TestConfigurations: []network.ConnectionMonitorTestConfigurationArgs{
+ * 				&network.ConnectionMonitorTestConfigurationArgs{
+ * 					Name:     pulumi.String("testConfig1"),
+ * 					Protocol: pulumi.String("Tcp"),
+ * 					TcpConfiguration: &network.ConnectionMonitorTcpConfigurationArgs{
+ * 						DisableTraceRoute: pulumi.Bool(false),
+ * 						Port:              pulumi.Int(80),
+ * 					},
+ * 					TestFrequencySec: pulumi.Int(60),
+ * 				},
+ * 			},
+ * 			TestGroups: []network.ConnectionMonitorTestGroupArgs{
+ * 				&network.ConnectionMonitorTestGroupArgs{
+ * 					Destinations: pulumi.StringArray{
+ * 						pulumi.String("bing"),
+ * 						pulumi.String("google"),
+ * 					},
+ * 					Disable: pulumi.Bool(false),
+ * 					Name:    pulumi.String("test1"),
+ * 					Sources: pulumi.StringArray{
+ * 						pulumi.String("vm1"),
+ * 						pulumi.String("CanaryWorkspaceVamshi"),
+ * 					},
+ * 					TestConfigurations: pulumi.StringArray{
+ * 						pulumi.String("testConfig1"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connectionMonitor = new azure_native.network.ConnectionMonitor("connectionMonitor", {
+ *     connectionMonitorName: "cm1",
+ *     endpoints: [
+ *         {
+ *             name: "vm1",
+ *             resourceId: "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
+ *         },
+ *         {
+ *             filter: {
+ *                 items: [{
+ *                     address: "npmuser",
+ *                     type: "AgentAddress",
+ *                 }],
+ *                 type: "Include",
+ *             },
+ *             name: "CanaryWorkspaceVamshi",
+ *             resourceId: "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
+ *         },
+ *         {
+ *             address: "bing.com",
+ *             name: "bing",
+ *         },
+ *         {
+ *             address: "google.com",
+ *             name: "google",
+ *         },
+ *     ],
+ *     networkWatcherName: "nw1",
+ *     outputs: [],
+ *     resourceGroupName: "rg1",
+ *     testConfigurations: [{
+ *         name: "testConfig1",
+ *         protocol: "Tcp",
+ *         tcpConfiguration: {
+ *             disableTraceRoute: false,
+ *             port: 80,
+ *         },
+ *         testFrequencySec: 60,
+ *     }],
+ *     testGroups: [{
+ *         destinations: [
+ *             "bing",
+ *             "google",
+ *         ],
+ *         disable: false,
+ *         name: "test1",
+ *         sources: [
+ *             "vm1",
+ *             "CanaryWorkspaceVamshi",
+ *         ],
+ *         testConfigurations: ["testConfig1"],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connection_monitor = azure_native.network.ConnectionMonitor("connectionMonitor",
+ *     connection_monitor_name="cm1",
+ *     endpoints=[
+ *         azure_native.network.ConnectionMonitorEndpointArgs(
+ *             name="vm1",
+ *             resource_id="/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
+ *         ),
+ *         azure_native.network.ConnectionMonitorEndpointArgs(
+ *             filter=azure_native.network.ConnectionMonitorEndpointFilterArgs(
+ *                 items=[azure_native.network.ConnectionMonitorEndpointFilterItemArgs(
+ *                     address="npmuser",
+ *                     type="AgentAddress",
+ *                 )],
+ *                 type="Include",
+ *             ),
+ *             name="CanaryWorkspaceVamshi",
+ *             resource_id="/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
+ *         ),
+ *         azure_native.network.ConnectionMonitorEndpointArgs(
+ *             address="bing.com",
+ *             name="bing",
+ *         ),
+ *         azure_native.network.ConnectionMonitorEndpointArgs(
+ *             address="google.com",
+ *             name="google",
+ *         ),
+ *     ],
+ *     network_watcher_name="nw1",
+ *     outputs=[],
+ *     resource_group_name="rg1",
+ *     test_configurations=[azure_native.network.ConnectionMonitorTestConfigurationArgs(
+ *         name="testConfig1",
+ *         protocol="Tcp",
+ *         tcp_configuration=azure_native.network.ConnectionMonitorTcpConfigurationArgs(
+ *             disable_trace_route=False,
+ *             port=80,
+ *         ),
+ *         test_frequency_sec=60,
+ *     )],
+ *     test_groups=[azure_native.network.ConnectionMonitorTestGroupArgs(
+ *         destinations=[
+ *             "bing",
+ *             "google",
+ *         ],
+ *         disable=False,
+ *         name="test1",
+ *         sources=[
+ *             "vm1",
+ *             "CanaryWorkspaceVamshi",
+ *         ],
+ *         test_configurations=["testConfig1"],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,252 +538,216 @@ import javax.annotation.Nullable;
 public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
     /**
      * Determines if the connection monitor will start automatically once created.
-     * 
      */
     @Export(name="autoStart", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoStart;
 
     /**
      * @return Determines if the connection monitor will start automatically once created.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoStart() {
         return this.autoStart;
     }
     /**
      * Type of connection monitor.
-     * 
      */
     @Export(name="connectionMonitorType", type=String.class, parameters={})
     private Output<String> connectionMonitorType;
 
     /**
      * @return Type of connection monitor.
-     * 
      */
     public Output<String> getConnectionMonitorType() {
         return this.connectionMonitorType;
     }
     /**
      * Describes the destination of connection monitor.
-     * 
      */
     @Export(name="destination", type=ConnectionMonitorDestinationResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionMonitorDestinationResponse> destination;
 
     /**
      * @return Describes the destination of connection monitor.
-     * 
      */
     public Output</* @Nullable */ ConnectionMonitorDestinationResponse> getDestination() {
         return this.destination;
     }
     /**
      * List of connection monitor endpoints.
-     * 
      */
     @Export(name="endpoints", type=List.class, parameters={ConnectionMonitorEndpointResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> endpoints;
 
     /**
      * @return List of connection monitor endpoints.
-     * 
      */
     public Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> getEndpoints() {
         return this.endpoints;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Connection monitor location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Connection monitor location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Monitoring interval in seconds.
-     * 
      */
     @Export(name="monitoringIntervalInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monitoringIntervalInSeconds;
 
     /**
      * @return Monitoring interval in seconds.
-     * 
      */
     public Output</* @Nullable */ Integer> getMonitoringIntervalInSeconds() {
         return this.monitoringIntervalInSeconds;
     }
     /**
      * The monitoring status of the connection monitor.
-     * 
      */
     @Export(name="monitoringStatus", type=String.class, parameters={})
     private Output<String> monitoringStatus;
 
     /**
      * @return The monitoring status of the connection monitor.
-     * 
      */
     public Output<String> getMonitoringStatus() {
         return this.monitoringStatus;
     }
     /**
      * Name of the connection monitor.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the connection monitor.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional notes to be associated with the connection monitor.
-     * 
      */
     @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
      * @return Optional notes to be associated with the connection monitor.
-     * 
      */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
     /**
      * List of connection monitor outputs.
-     * 
      */
     @Export(name="outputs", type=List.class, parameters={ConnectionMonitorOutputResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> outputs;
 
     /**
      * @return List of connection monitor outputs.
-     * 
      */
     public Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> getOutputs() {
         return this.outputs;
     }
     /**
      * The provisioning state of the connection monitor.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the connection monitor.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the source of connection monitor.
-     * 
      */
     @Export(name="source", type=ConnectionMonitorSourceResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionMonitorSourceResponse> source;
 
     /**
      * @return Describes the source of connection monitor.
-     * 
      */
     public Output</* @Nullable */ ConnectionMonitorSourceResponse> getSource() {
         return this.source;
     }
     /**
      * The date and time when the connection monitor was started.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return The date and time when the connection monitor was started.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * Connection monitor tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Connection monitor tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * List of connection monitor test configurations.
-     * 
      */
     @Export(name="testConfigurations", type=List.class, parameters={ConnectionMonitorTestConfigurationResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> testConfigurations;
 
     /**
      * @return List of connection monitor test configurations.
-     * 
      */
     public Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> getTestConfigurations() {
         return this.testConfigurations;
     }
     /**
      * List of connection monitor test groups.
-     * 
      */
     @Export(name="testGroups", type=List.class, parameters={ConnectionMonitorTestGroupResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> testGroups;
 
     /**
      * @return List of connection monitor test groups.
-     * 
      */
     public Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> getTestGroups() {
         return this.testGroups;
     }
     /**
      * Connection monitor type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Connection monitor type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of Cognitive Services account.
- * 
  */
 public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * The api properties for special APIs.
-     * 
      */
     @Import(name="apiProperties")
       private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
@@ -40,7 +38,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
-     * 
      */
     @Import(name="capabilities", required=true)
       private final List<SkuCapabilityResponse> capabilities;
@@ -51,7 +48,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * Optional subdomain name used for token-based authentication.
-     * 
      */
     @Import(name="customSubDomainName")
       private final @Nullable String customSubDomainName;
@@ -62,7 +58,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * Gets the date of cognitive services account creation.
-     * 
      */
     @Import(name="dateCreated", required=true)
       private final String dateCreated;
@@ -73,7 +68,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * The encryption properties for this resource.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable EncryptionResponse encryption;
@@ -84,7 +78,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * Endpoint of the created account.
-     * 
      */
     @Import(name="endpoint", required=true)
       private final String endpoint;
@@ -95,7 +88,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * The internal identifier.
-     * 
      */
     @Import(name="internalId", required=true)
       private final String internalId;
@@ -106,7 +98,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * If the resource is migrated from an existing key.
-     * 
      */
     @Import(name="isMigrated", required=true)
       private final Boolean isMigrated;
@@ -117,7 +108,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * A collection of rules governing the accessibility from specific network locations.
-     * 
      */
     @Import(name="networkAcls")
       private final @Nullable NetworkRuleSetResponse networkAcls;
@@ -128,7 +118,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * The private endpoint connection associated with the Cognitive Services account.
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
@@ -139,7 +128,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * Gets the status of the cognitive services account at the time the operation was called.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -150,7 +138,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
@@ -161,7 +148,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * Sku change info of account.
-     * 
      */
     @Import(name="skuChangeInfo", required=true)
       private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
@@ -172,7 +158,6 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
 
     /**
      * The storage accounts for this resource.
-     * 
      */
     @Import(name="userOwnedStorage")
       private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;

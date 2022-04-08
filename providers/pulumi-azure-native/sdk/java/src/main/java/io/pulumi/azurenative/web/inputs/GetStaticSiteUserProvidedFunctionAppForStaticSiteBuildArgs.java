@@ -14,7 +14,6 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
 
     /**
      * The stage site identifier.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final String environmentName;
@@ -25,7 +24,6 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
 
     /**
      * Name of the function app registered with the static site build.
-     * 
      */
     @Import(name="functionAppName", required=true)
       private final String functionAppName;
@@ -36,7 +34,6 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
 
     /**
      * Name of the static site.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -47,7 +44,6 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

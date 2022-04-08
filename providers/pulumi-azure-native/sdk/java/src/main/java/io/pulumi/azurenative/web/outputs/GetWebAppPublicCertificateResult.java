@@ -13,37 +13,30 @@ import javax.annotation.Nullable;
 public final class GetWebAppPublicCertificateResult {
     /**
      * Public Certificate byte array
-     * 
      */
     private final @Nullable String blob;
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * Public Certificate Location
-     * 
      */
     private final @Nullable String publicCertificateLocation;
     /**
      * Certificate Thumbprint
-     * 
      */
     private final String thumbprint;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -67,49 +60,42 @@ public final class GetWebAppPublicCertificateResult {
 
     /**
      * Public Certificate byte array
-     * 
     */
     public Optional<String> getBlob() {
         return Optional.ofNullable(this.blob);
     }
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Public Certificate Location
-     * 
     */
     public Optional<String> getPublicCertificateLocation() {
         return Optional.ofNullable(this.publicCertificateLocation);
     }
     /**
      * Certificate Thumbprint
-     * 
     */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

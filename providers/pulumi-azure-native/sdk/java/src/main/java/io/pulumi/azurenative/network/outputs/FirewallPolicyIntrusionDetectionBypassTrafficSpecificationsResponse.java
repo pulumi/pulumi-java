@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse {
     /**
      * Description of the bypass traffic rule.
-     * 
      */
     private final @Nullable String description;
     /**
      * List of destination IP addresses or ranges for this rule.
-     * 
      */
     private final @Nullable List<String> destinationAddresses;
     /**
      * List of destination IpGroups for this rule.
-     * 
      */
     private final @Nullable List<String> destinationIpGroups;
     /**
      * List of destination ports or ranges.
-     * 
      */
     private final @Nullable List<String> destinationPorts;
     /**
      * Name of the bypass traffic rule.
-     * 
      */
     private final @Nullable String name;
     /**
      * The rule bypass protocol.
-     * 
      */
     private final @Nullable String protocol;
     /**
      * List of source IP addresses or ranges for this rule.
-     * 
      */
     private final @Nullable List<String> sourceAddresses;
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     private final @Nullable List<String> sourceIpGroups;
 
@@ -75,56 +67,48 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
 
     /**
      * Description of the bypass traffic rule.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or ranges for this rule.
-     * 
     */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination IpGroups for this rule.
-     * 
     */
     public List<String> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
     /**
      * List of destination ports or ranges.
-     * 
     */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Name of the bypass traffic rule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The rule bypass protocol.
-     * 
     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * List of source IP addresses or ranges for this rule.
-     * 
     */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
-     * 
     */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;

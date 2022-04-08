@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App container Custom scaling rule.
- * 
  */
 public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Authentication secrets for the custom scale rule.
-     * 
      */
     @Import(name="auth")
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
@@ -34,7 +32,6 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata properties to describe http scale rule.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;

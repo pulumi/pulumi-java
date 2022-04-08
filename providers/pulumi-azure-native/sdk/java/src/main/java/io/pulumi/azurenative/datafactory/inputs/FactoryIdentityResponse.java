@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity properties of the factory resource.
- * 
  */
 public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The principal id of the identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -33,7 +31,6 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The client tenant id of the identity.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -44,7 +41,6 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -55,7 +51,6 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of user assigned identities for the factory.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,Object> userAssignedIdentities;

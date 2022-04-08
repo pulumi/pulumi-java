@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
-     * 
      */
     @EnumType
     public enum ManagedRuleEnabledState {

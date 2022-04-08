@@ -17,7 +17,6 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
 
     /**
      * Display name of the Public IP Block.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -28,7 +27,6 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
 
     /**
      * Number of Public IPs requested.
-     * 
      */
     @Import(name="numberOfPublicIPs")
       private final @Nullable Output<Double> numberOfPublicIPs;
@@ -39,7 +37,6 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -50,7 +47,6 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
 
     /**
      * NSX Public IP Block identifier. Generally the same as the Public IP Block's display name
-     * 
      */
     @Import(name="publicIPId")
       private final @Nullable Output<String> publicIPId;
@@ -61,7 +57,6 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

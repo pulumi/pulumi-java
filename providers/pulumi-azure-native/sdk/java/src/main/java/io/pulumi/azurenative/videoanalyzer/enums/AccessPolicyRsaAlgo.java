@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * RSA algorithm to be used: RS256, RS384 or RS512.
-     * 
      */
     @EnumType
     public enum AccessPolicyRsaAlgo {
         /**
          * RS256
-         * 
          */
         RS256("RS256"),
         /**
          * RS384
-         * 
          */
         RS384("RS384"),
         /**
          * RS512
-         * 
          */
         RS512("RS512");
 

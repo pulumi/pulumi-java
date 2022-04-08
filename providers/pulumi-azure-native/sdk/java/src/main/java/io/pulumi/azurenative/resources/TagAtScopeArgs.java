@@ -16,7 +16,6 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of tags.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<TagsArgs> properties;
@@ -27,7 +26,6 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource scope.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

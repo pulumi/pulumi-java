@@ -24,7 +24,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reason the incident was closed
-     * 
      */
     @Import(name="classification")
       private final @Nullable Output<Either<String,IncidentClassification>> classification;
@@ -35,7 +34,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the reason the incident was closed
-     * 
      */
     @Import(name="classificationComment")
       private final @Nullable Output<String> classificationComment;
@@ -46,7 +44,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The classification reason the incident was closed with
-     * 
      */
     @Import(name="classificationReason")
       private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
@@ -57,7 +54,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the incident
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -68,7 +64,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time of the first activity in the incident
-     * 
      */
     @Import(name="firstActivityTimeUtc")
       private final @Nullable Output<String> firstActivityTimeUtc;
@@ -79,7 +74,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Incident ID
-     * 
      */
     @Import(name="incidentId")
       private final @Nullable Output<String> incidentId;
@@ -90,7 +84,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of labels relevant to this incident
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<IncidentLabelArgs>> labels;
@@ -101,7 +94,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time of the last activity in the incident
-     * 
      */
     @Import(name="lastActivityTimeUtc")
       private final @Nullable Output<String> lastActivityTimeUtc;
@@ -112,7 +104,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a user that the incident is assigned to
-     * 
      */
     @Import(name="owner")
       private final @Nullable Output<IncidentOwnerInfoArgs> owner;
@@ -123,7 +114,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -134,7 +124,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The severity of the incident
-     * 
      */
     @Import(name="severity", required=true)
       private final Output<Either<String,IncidentSeverity>> severity;
@@ -145,7 +134,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the incident
-     * 
      */
     @Import(name="status", required=true)
       private final Output<Either<String,IncidentStatus>> status;
@@ -156,7 +144,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The title of the incident
-     * 
      */
     @Import(name="title", required=true)
       private final Output<String> title;
@@ -167,7 +154,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

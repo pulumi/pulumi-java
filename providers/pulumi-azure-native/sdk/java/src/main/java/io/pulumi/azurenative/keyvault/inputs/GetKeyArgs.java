@@ -14,7 +14,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the key to be retrieved.
-     * 
      */
     @Import(name="keyName", required=true)
       private final String keyName;
@@ -25,7 +24,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group which contains the specified key vault.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the vault which contains the key to be retrieved.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

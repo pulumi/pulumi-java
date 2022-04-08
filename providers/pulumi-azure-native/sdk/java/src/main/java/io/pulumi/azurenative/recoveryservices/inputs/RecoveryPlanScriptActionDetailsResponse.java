@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan script action details.
- * 
  */
 public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
 
     /**
      * The fabric location.
-     * 
      */
     @Import(name="fabricLocation", required=true)
       private final String fabricLocation;
@@ -32,7 +30,6 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is 'ScriptActionDetails'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -43,7 +40,6 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
 
     /**
      * The script path.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -54,7 +50,6 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
 
     /**
      * The script timeout.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable String timeout;

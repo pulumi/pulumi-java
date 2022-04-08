@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The sku deployment mode.
-     * 
      */
     @EnumType
     public enum SkuDeploymentMode {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies when the suppression should be applied
-     * 
      */
     @EnumType
     public enum SuppressionType {

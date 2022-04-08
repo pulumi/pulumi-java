@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Interface model
- * 
  */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the device key value.
-     * 
      */
     @Import(name="deviceKey")
       private final @Nullable Integer deviceKey;
@@ -34,7 +32,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the nic ip addresses.
-     * 
      */
     @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
@@ -45,7 +42,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the ipsettings.
-     * 
      */
     @Import(name="ipSettings")
       private final @Nullable NicIPSettingsResponse ipSettings;
@@ -56,7 +52,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the label of the virtual network in vCenter that the nic is connected to.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -67,7 +62,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the NIC MAC address.
-     * 
      */
     @Import(name="macAddress", required=true)
       private final String macAddress;
@@ -78,7 +72,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the name of the network interface.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -89,7 +82,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the ARM Id of the network resource to connect the virtual machine.
-     * 
      */
     @Import(name="networkId")
       private final @Nullable String networkId;
@@ -100,7 +92,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the name of the virtual network in vCenter that the nic is connected to.
-     * 
      */
     @Import(name="networkMoName", required=true)
       private final String networkMoName;
@@ -112,7 +103,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     /**
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
      * that the nic is connected to.
-     * 
      */
     @Import(name="networkMoRefId", required=true)
       private final String networkMoRefId;
@@ -123,7 +113,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * NIC type
-     * 
      */
     @Import(name="nicType")
       private final @Nullable String nicType;
@@ -134,7 +123,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the power on boot.
-     * 
      */
     @Import(name="powerOnBoot")
       private final @Nullable String powerOnBoot;

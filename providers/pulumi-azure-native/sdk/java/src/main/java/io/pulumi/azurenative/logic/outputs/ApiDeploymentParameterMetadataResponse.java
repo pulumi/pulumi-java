@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class ApiDeploymentParameterMetadataResponse {
     /**
      * The description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The display name.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Indicates whether its required.
-     * 
      */
     private final @Nullable Boolean isRequired;
     /**
      * The type.
-     * 
      */
     private final @Nullable String type;
     /**
      * The visibility.
-     * 
      */
     private final @Nullable String visibility;
 
@@ -54,35 +49,30 @@ public final class ApiDeploymentParameterMetadataResponse {
 
     /**
      * The description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Indicates whether its required.
-     * 
     */
     public Optional<Boolean> getIsRequired() {
         return Optional.ofNullable(this.isRequired);
     }
     /**
      * The type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The visibility.
-     * 
     */
     public Optional<String> getVisibility() {
         return Optional.ofNullable(this.visibility);

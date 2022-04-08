@@ -21,7 +21,139 @@ import javax.annotation.Nullable;
  * Machine Learning dataset object wrapped into ARM resource envelope.
  * API Version: 2020-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Dataset
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var machineLearningDataset = new AzureNative.MachineLearningServices.MachineLearningDataset("machineLearningDataset", new AzureNative.MachineLearningServices.MachineLearningDatasetArgs
+ *         {
+ *             DatasetName = "datasetName123",
+ *             DatasetType = "file",
+ *             Parameters = new AzureNative.MachineLearningServices.Inputs.DatasetCreateRequestParametersArgs
+ *             {
+ *                 Path = new AzureNative.MachineLearningServices.Inputs.DatasetCreateRequestPathArgs
+ *                 {
+ *                     DataPath = new AzureNative.MachineLearningServices.Inputs.DatasetCreateRequestDataPathArgs
+ *                     {
+ *                         DatastoreName = "testblobfromarm",
+ *                         RelativePath = "UI/03-26-2020_083359_UTC/latin1encoding.csv",
+ *                     },
+ *                 },
+ *             },
+ *             Registration = new AzureNative.MachineLearningServices.Inputs.DatasetCreateRequestRegistrationArgs
+ *             {
+ *                 Description = "test description",
+ *                 Name = "datasetName123",
+ *             },
+ *             ResourceGroupName = "acjain-mleastUS2",
+ *             SkipValidation = false,
+ *             WorkspaceName = "acjain-mleastUS2",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewMachineLearningDataset(ctx, "machineLearningDataset", &machinelearningservices.MachineLearningDatasetArgs{
+ * 			DatasetName: pulumi.String("datasetName123"),
+ * 			DatasetType: pulumi.String("file"),
+ * 			Parameters: &machinelearningservices.DatasetCreateRequestParametersArgs{
+ * 				Path: &machinelearningservices.DatasetCreateRequestPathArgs{
+ * 					DataPath: &machinelearningservices.DatasetCreateRequestDataPathArgs{
+ * 						DatastoreName: pulumi.String("testblobfromarm"),
+ * 						RelativePath:  pulumi.String("UI/03-26-2020_083359_UTC/latin1encoding.csv"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Registration: &machinelearningservices.DatasetCreateRequestRegistrationArgs{
+ * 				Description: pulumi.String("test description"),
+ * 				Name:        pulumi.String("datasetName123"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("acjain-mleastUS2"),
+ * 			SkipValidation:    pulumi.Bool(false),
+ * 			WorkspaceName:     pulumi.String("acjain-mleastUS2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const machineLearningDataset = new azure_native.machinelearningservices.MachineLearningDataset("machineLearningDataset", {
+ *     datasetName: "datasetName123",
+ *     datasetType: "file",
+ *     parameters: {
+ *         path: {
+ *             dataPath: {
+ *                 datastoreName: "testblobfromarm",
+ *                 relativePath: "UI/03-26-2020_083359_UTC/latin1encoding.csv",
+ *             },
+ *         },
+ *     },
+ *     registration: {
+ *         description: "test description",
+ *         name: "datasetName123",
+ *     },
+ *     resourceGroupName: "acjain-mleastUS2",
+ *     skipValidation: false,
+ *     workspaceName: "acjain-mleastUS2",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * machine_learning_dataset = azure_native.machinelearningservices.MachineLearningDataset("machineLearningDataset",
+ *     dataset_name="datasetName123",
+ *     dataset_type="file",
+ *     parameters=azure_native.machinelearningservices.DatasetCreateRequestParametersArgs(
+ *         path=azure_native.machinelearningservices.DatasetCreateRequestPathArgs(
+ *             data_path=azure_native.machinelearningservices.DatasetCreateRequestDataPathArgs(
+ *                 datastore_name="testblobfromarm",
+ *                 relative_path="UI/03-26-2020_083359_UTC/latin1encoding.csv",
+ *             ),
+ *         ),
+ *     ),
+ *     registration=azure_native.machinelearningservices.DatasetCreateRequestRegistrationArgs(
+ *         description="test description",
+ *         name="datasetName123",
+ *     ),
+ *     resource_group_name="acjain-mleastUS2",
+ *     skip_validation=False,
+ *     workspace_name="acjain-mleastUS2")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,98 +168,84 @@ import javax.annotation.Nullable;
 public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Specifies the location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies the name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Dataset properties
-     * 
      */
     @Export(name="properties", type=DatasetResponse.class, parameters={})
     private Output<DatasetResponse> properties;
 
     /**
      * @return Dataset properties
-     * 
      */
     public Output<DatasetResponse> getProperties() {
         return this.properties;
     }
     /**
      * The sku of the workspace.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku of the workspace.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Contains resource tags defined as key/value pairs.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

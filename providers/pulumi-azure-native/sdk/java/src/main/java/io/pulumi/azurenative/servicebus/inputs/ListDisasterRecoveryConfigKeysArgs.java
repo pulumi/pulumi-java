@@ -14,7 +14,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
 
     /**
      * The Disaster Recovery configuration name
-     * 
      */
     @Import(name="alias", required=true)
       private final String alias;
@@ -25,7 +24,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
 
     /**
      * The authorization rule name.
-     * 
      */
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
@@ -36,7 +34,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -47,7 +44,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

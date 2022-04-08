@@ -21,7 +21,96 @@ import javax.annotation.Nullable;
  * A virtual network.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VirtualNetworks_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetwork = new AzureNative.DevTestLab.VirtualNetwork("virtualNetwork", new AzureNative.DevTestLab.VirtualNetworkArgs
+ *         {
+ *             LabName = "{labName}",
+ *             Location = "{location}",
+ *             Name = "{virtualNetworkName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *             Tags = 
+ *             {
+ *                 { "tagName1", "tagValue1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewVirtualNetwork(ctx, "virtualNetwork", &devtestlab.VirtualNetworkArgs{
+ * 			LabName:           pulumi.String("{labName}"),
+ * 			Location:          pulumi.String("{location}"),
+ * 			Name:              pulumi.String("{virtualNetworkName}"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagName1": pulumi.String("tagValue1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwork", {
+ *     labName: "{labName}",
+ *     location: "{location}",
+ *     name: "{virtualNetworkName}",
+ *     resourceGroupName: "resourceGroupName",
+ *     tags: {
+ *         tagName1: "tagValue1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network = azure_native.devtestlab.VirtualNetwork("virtualNetwork",
+ *     lab_name="{labName}",
+ *     location="{location}",
+ *     name="{virtualNetworkName}",
+ *     resource_group_name="resourceGroupName",
+ *     tags={
+ *         "tagName1": "tagValue1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,168 +125,144 @@ import javax.annotation.Nullable;
 public class VirtualNetwork extends io.pulumi.resources.CustomResource {
     /**
      * The allowed subnets of the virtual network.
-     * 
      */
     @Export(name="allowedSubnets", type=List.class, parameters={SubnetResponse.class})
     private Output</* @Nullable */ List<SubnetResponse>> allowedSubnets;
 
     /**
      * @return The allowed subnets of the virtual network.
-     * 
      */
     public Output</* @Nullable */ List<SubnetResponse>> getAllowedSubnets() {
         return this.allowedSubnets;
     }
     /**
      * The creation date of the virtual network.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The creation date of the virtual network.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The description of the virtual network.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the virtual network.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The Microsoft.Network resource identifier of the virtual network.
-     * 
      */
     @Export(name="externalProviderResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalProviderResourceId;
 
     /**
      * @return The Microsoft.Network resource identifier of the virtual network.
-     * 
      */
     public Output</* @Nullable */ String> getExternalProviderResourceId() {
         return this.externalProviderResourceId;
     }
     /**
      * The external subnet properties.
-     * 
      */
     @Export(name="externalSubnets", type=List.class, parameters={ExternalSubnetResponse.class})
     private Output<List<ExternalSubnetResponse>> externalSubnets;
 
     /**
      * @return The external subnet properties.
-     * 
      */
     public Output<List<ExternalSubnetResponse>> getExternalSubnets() {
         return this.externalSubnets;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The subnet overrides of the virtual network.
-     * 
      */
     @Export(name="subnetOverrides", type=List.class, parameters={SubnetOverrideResponse.class})
     private Output</* @Nullable */ List<SubnetOverrideResponse>> subnetOverrides;
 
     /**
      * @return The subnet overrides of the virtual network.
-     * 
      */
     public Output</* @Nullable */ List<SubnetOverrideResponse>> getSubnetOverrides() {
         return this.subnetOverrides;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

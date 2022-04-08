@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Sku definition
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sku Name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

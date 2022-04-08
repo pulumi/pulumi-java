@@ -14,7 +14,6 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity of the volume.
-     * 
      */
     @Import(name="volumeResourceName", required=true)
       private final String volumeResourceName;

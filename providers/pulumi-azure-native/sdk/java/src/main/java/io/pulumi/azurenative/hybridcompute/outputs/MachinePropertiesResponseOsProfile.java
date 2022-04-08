@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MachinePropertiesResponseOsProfile {
     /**
      * Specifies the host OS name of the hybrid machine.
-     * 
      */
     private final String computerName;
 
@@ -22,7 +21,6 @@ public final class MachinePropertiesResponseOsProfile {
 
     /**
      * Specifies the host OS name of the hybrid machine.
-     * 
     */
     public String getComputerName() {
         return this.computerName;

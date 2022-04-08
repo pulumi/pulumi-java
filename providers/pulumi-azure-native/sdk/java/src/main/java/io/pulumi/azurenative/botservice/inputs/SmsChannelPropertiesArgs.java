@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Sms channel.
- * 
  */
 public final class SmsChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="accountSID", required=true)
       private final Output<String> accountSID;
@@ -32,7 +30,6 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="authToken")
       private final @Nullable Output<String> authToken;
@@ -43,7 +40,6 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -54,7 +50,6 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Whether this channel is validated for the bot
-     * 
      */
     @Import(name="isValidated")
       private final @Nullable Output<Boolean> isValidated;
@@ -65,7 +60,6 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The Sms phone
-     * 
      */
     @Import(name="phone", required=true)
       private final Output<String> phone;

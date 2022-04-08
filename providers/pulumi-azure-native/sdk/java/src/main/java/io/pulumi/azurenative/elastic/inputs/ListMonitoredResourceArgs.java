@@ -14,7 +14,6 @@ public final class ListMonitoredResourceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -25,7 +24,6 @@ public final class ListMonitoredResourceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group to which the Elastic resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

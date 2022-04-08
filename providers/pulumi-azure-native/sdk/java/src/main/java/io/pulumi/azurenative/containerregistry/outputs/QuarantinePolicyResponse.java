@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class QuarantinePolicyResponse {
     /**
      * The value that indicates whether the policy is enabled or not.
-     * 
      */
     private final @Nullable String status;
 
@@ -24,7 +23,6 @@ public final class QuarantinePolicyResponse {
 
     /**
      * The value that indicates whether the policy is enabled or not.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);

@@ -18,7 +18,121 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB User Definition
  * API Version: 2021-10-15-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBMongoDBUserDefinitionCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mongoDBResourceMongoUserDefinition = new AzureNative.DocumentDB.MongoDBResourceMongoUserDefinition("mongoDBResourceMongoUserDefinition", new AzureNative.DocumentDB.MongoDBResourceMongoUserDefinitionArgs
+ *         {
+ *             AccountName = "myAccountName",
+ *             CustomData = "My custom data",
+ *             DatabaseName = "sales",
+ *             Mechanisms = "SCRAM-SHA-256",
+ *             MongoUserDefinitionId = "myMongoUserDefinitionId",
+ *             Password = "myPassword",
+ *             ResourceGroupName = "myResourceGroupName",
+ *             Roles = 
+ *             {
+ *                 new AzureNative.DocumentDB.Inputs.RoleArgs
+ *                 {
+ *                     Db = "sales",
+ *                     Role = "myReadRole",
+ *                 },
+ *             },
+ *             UserName = "myUserName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewMongoDBResourceMongoUserDefinition(ctx, "mongoDBResourceMongoUserDefinition", &documentdb.MongoDBResourceMongoUserDefinitionArgs{
+ * 			AccountName:           pulumi.String("myAccountName"),
+ * 			CustomData:            pulumi.String("My custom data"),
+ * 			DatabaseName:          pulumi.String("sales"),
+ * 			Mechanisms:            pulumi.String("SCRAM-SHA-256"),
+ * 			MongoUserDefinitionId: pulumi.String("myMongoUserDefinitionId"),
+ * 			Password:              pulumi.String("myPassword"),
+ * 			ResourceGroupName:     pulumi.String("myResourceGroupName"),
+ * 			Roles: []documentdb.RoleArgs{
+ * 				&documentdb.RoleArgs{
+ * 					Db:   pulumi.String("sales"),
+ * 					Role: pulumi.String("myReadRole"),
+ * 				},
+ * 			},
+ * 			UserName: pulumi.String("myUserName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const mongoDBResourceMongoUserDefinition = new azure_native.documentdb.MongoDBResourceMongoUserDefinition("mongoDBResourceMongoUserDefinition", {
+ *     accountName: "myAccountName",
+ *     customData: "My custom data",
+ *     databaseName: "sales",
+ *     mechanisms: "SCRAM-SHA-256",
+ *     mongoUserDefinitionId: "myMongoUserDefinitionId",
+ *     password: "myPassword",
+ *     resourceGroupName: "myResourceGroupName",
+ *     roles: [{
+ *         db: "sales",
+ *         role: "myReadRole",
+ *     }],
+ *     userName: "myUserName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * mongo_db_resource_mongo_user_definition = azure_native.documentdb.MongoDBResourceMongoUserDefinition("mongoDBResourceMongoUserDefinition",
+ *     account_name="myAccountName",
+ *     custom_data="My custom data",
+ *     database_name="sales",
+ *     mechanisms="SCRAM-SHA-256",
+ *     mongo_user_definition_id="myMongoUserDefinitionId",
+ *     password="myPassword",
+ *     resource_group_name="myResourceGroupName",
+ *     roles=[azure_native.documentdb.RoleArgs(
+ *         db="sales",
+ *         role="myReadRole",
+ *     )],
+ *     user_name="myUserName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +147,96 @@ import javax.annotation.Nullable;
 public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.CustomResource {
     /**
      * A custom definition for the USer Definition.
-     * 
      */
     @Export(name="customData", type=String.class, parameters={})
     private Output</* @Nullable */ String> customData;
 
     /**
      * @return A custom definition for the USer Definition.
-     * 
      */
     public Output</* @Nullable */ String> getCustomData() {
         return this.customData;
     }
     /**
      * The database name for which access is being granted for this User Definition.
-     * 
      */
     @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
      * @return The database name for which access is being granted for this User Definition.
-     * 
      */
     public Output</* @Nullable */ String> getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
-     * 
      */
     @Export(name="mechanisms", type=String.class, parameters={})
     private Output</* @Nullable */ String> mechanisms;
 
     /**
      * @return The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
-     * 
      */
     public Output</* @Nullable */ String> getMechanisms() {
         return this.mechanisms;
     }
     /**
      * The name of the database account.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the database account.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The password for User Definition. Response does not contain user password.
-     * 
      */
     @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
      * @return The password for User Definition. Response does not contain user password.
-     * 
      */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
     /**
      * The set of roles inherited by the User Definition.
-     * 
      */
     @Export(name="roles", type=List.class, parameters={RoleResponse.class})
     private Output</* @Nullable */ List<RoleResponse>> roles;
 
     /**
      * @return The set of roles inherited by the User Definition.
-     * 
      */
     public Output</* @Nullable */ List<RoleResponse>> getRoles() {
         return this.roles;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The user name for User Definition.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
     /**
      * @return The user name for User Definition.
-     * 
      */
     public Output</* @Nullable */ String> getUserName() {
         return this.userName;

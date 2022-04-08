@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The trigger based on base image dependency.
- * 
  */
 public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The type of the auto trigger for base image dependency updates.
-     * 
      */
     @Import(name="baseImageTriggerType", required=true)
       private final String baseImageTriggerType;
@@ -31,7 +29,6 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the trigger.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The current status of trigger.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -53,7 +49,6 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The endpoint URL for receiving update triggers.
-     * 
      */
     @Import(name="updateTriggerEndpoint")
       private final @Nullable String updateTriggerEndpoint;
@@ -64,7 +59,6 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of Payload body for Base image update triggers.
-     * 
      */
     @Import(name="updateTriggerPayloadType")
       private final @Nullable String updateTriggerPayloadType;

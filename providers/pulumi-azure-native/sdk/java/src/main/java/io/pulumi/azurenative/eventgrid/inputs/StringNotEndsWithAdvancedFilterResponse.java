@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * StringNotEndsWith Advanced Filter.
- * 
  */
 public final class StringNotEndsWithAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StringNotEndsWithAdvancedFilterResponse extends io.pulumi.res
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -33,7 +31,6 @@ public final class StringNotEndsWithAdvancedFilterResponse extends io.pulumi.res
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'StringNotEndsWith'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final String operatorType;
@@ -44,7 +41,6 @@ public final class StringNotEndsWithAdvancedFilterResponse extends io.pulumi.res
 
     /**
      * The set of filter values.
-     * 
      */
     @Import(name="values")
       private final @Nullable List<String> values;

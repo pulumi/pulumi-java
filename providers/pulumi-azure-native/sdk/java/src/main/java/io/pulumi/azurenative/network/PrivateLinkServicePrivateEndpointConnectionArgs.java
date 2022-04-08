@@ -17,7 +17,6 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -28,7 +27,6 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,7 +37,6 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the private end point connection.
-     * 
      */
     @Import(name="peConnectionName")
       private final @Nullable Output<String> peConnectionName;
@@ -50,7 +47,6 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -61,7 +57,6 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the private link service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

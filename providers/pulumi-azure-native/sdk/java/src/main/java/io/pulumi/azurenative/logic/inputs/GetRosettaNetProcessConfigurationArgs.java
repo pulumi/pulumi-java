@@ -14,7 +14,6 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -25,7 +24,6 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
 
     /**
      * The integration account RosettaNetProcessConfiguration name.
-     * 
      */
     @Import(name="rosettaNetProcessConfigurationName", required=true)
       private final String rosettaNetProcessConfigurationName;

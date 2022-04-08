@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class IdentityResponse {
     /**
      * Principal Id of managed service identity.
-     * 
      */
     private final String principalId;
     /**
      * Tenant of managed service identity.
-     * 
      */
     private final String tenantId;
     /**
      * Type of managed service identity.
-     * 
      */
     private final @Nullable String type;
     /**
      * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
-     * 
      */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
@@ -48,28 +44,24 @@ public final class IdentityResponse {
 
     /**
      * Principal Id of managed service identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Tenant of managed service identity.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Type of managed service identity.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
-     * 
     */
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

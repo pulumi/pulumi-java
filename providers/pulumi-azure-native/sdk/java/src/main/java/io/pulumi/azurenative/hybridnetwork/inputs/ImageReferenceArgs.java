@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The image reference properties.
- * 
  */
 public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies in decimal numbers, the exact version of image used to create the virtual machine.
-     * 
      */
     @Import(name="exactVersion")
       private final @Nullable Output<String> exactVersion;
@@ -31,7 +29,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the offer of the image used to create the virtual machine.
-     * 
      */
     @Import(name="offer")
       private final @Nullable Output<String> offer;
@@ -42,7 +39,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The image publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -53,7 +49,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The image SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;
@@ -64,7 +59,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

@@ -21,7 +21,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the export pipeline.
-     * 
      */
     @Import(name="exportPipelineName")
       private final @Nullable Output<String> exportPipelineName;
@@ -32,7 +31,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the export pipeline.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
@@ -43,7 +41,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the export pipeline.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of all options configured for the pipeline.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
@@ -65,7 +61,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -76,7 +71,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target properties of the export pipeline.
-     * 
      */
     @Import(name="target", required=true)
       private final Output<ExportPipelineTargetPropertiesArgs> target;

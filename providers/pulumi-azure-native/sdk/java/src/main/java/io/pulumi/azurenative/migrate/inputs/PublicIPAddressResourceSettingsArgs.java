@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the public IP address resource settings.
- * 
  */
 public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets the domain name label.
-     * 
      */
     @Import(name="domainNameLabel")
       private final @Nullable Output<String> domainNameLabel;
@@ -31,7 +29,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets the fully qualified domain name.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
@@ -42,7 +39,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets public IP allocation method.
-     * 
      */
     @Import(name="publicIpAllocationMethod")
       private final @Nullable Output<String> publicIpAllocationMethod;
@@ -54,7 +50,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Network/publicIPAddresses'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -65,7 +60,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets public IP sku.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;
@@ -76,7 +70,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
@@ -87,7 +80,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets public IP zones.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<String> zones;

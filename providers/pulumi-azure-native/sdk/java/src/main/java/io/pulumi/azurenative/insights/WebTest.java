@@ -22,7 +22,280 @@ import javax.annotation.Nullable;
  * An Application Insights web test definition.
  * API Version: 2015-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### webTestCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webTest = new AzureNative.Insights.WebTest("webTest", new AzureNative.Insights.WebTestArgs
+ *         {
+ *             Configuration = new AzureNative.Insights.Inputs.WebTestPropertiesConfigurationArgs
+ *             {
+ *                 WebTest = "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+ *             },
+ *             Description = "Ping web test alert for mytestwebapp",
+ *             Enabled = true,
+ *             Frequency = 900,
+ *             Kind = "ping",
+ *             Location = "South Central US",
+ *             Locations = 
+ *             {
+ *                 new AzureNative.Insights.Inputs.WebTestGeolocationArgs
+ *                 {
+ *                     Location = "us-fl-mia-edge",
+ *                 },
+ *             },
+ *             ResourceGroupName = "my-resource-group",
+ *             RetryEnabled = true,
+ *             SyntheticMonitorId = "my-webtest-my-component",
+ *             Timeout = 120,
+ *             WebTestKind = "ping",
+ *             WebTestName = "my-webtest-my-component",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewWebTest(ctx, "webTest", &insights.WebTestArgs{
+ * 			Configuration: &insights.WebTestPropertiesConfigurationArgs{
+ * 				WebTest: pulumi.String("<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>"),
+ * 			},
+ * 			Description: pulumi.String("Ping web test alert for mytestwebapp"),
+ * 			Enabled:     pulumi.Bool(true),
+ * 			Frequency:   pulumi.Int(900),
+ * 			Kind:        "ping",
+ * 			Location:    pulumi.String("South Central US"),
+ * 			Locations: insights.WebTestGeolocationArray{
+ * 				&insights.WebTestGeolocationArgs{
+ * 					Location: pulumi.String("us-fl-mia-edge"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName:  pulumi.String("my-resource-group"),
+ * 			RetryEnabled:       pulumi.Bool(true),
+ * 			SyntheticMonitorId: pulumi.String("my-webtest-my-component"),
+ * 			Timeout:            pulumi.Int(120),
+ * 			WebTestKind:        "ping",
+ * 			WebTestName:        pulumi.String("my-webtest-my-component"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webTest = new azure_native.insights.WebTest("webTest", {
+ *     configuration: {
+ *         webTest: "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+ *     },
+ *     description: "Ping web test alert for mytestwebapp",
+ *     enabled: true,
+ *     frequency: 900,
+ *     kind: "ping",
+ *     location: "South Central US",
+ *     locations: [{
+ *         location: "us-fl-mia-edge",
+ *     }],
+ *     resourceGroupName: "my-resource-group",
+ *     retryEnabled: true,
+ *     syntheticMonitorId: "my-webtest-my-component",
+ *     timeout: 120,
+ *     webTestKind: "ping",
+ *     webTestName: "my-webtest-my-component",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * web_test = azure_native.insights.WebTest("webTest",
+ *     configuration=azure_native.insights.WebTestPropertiesConfigurationArgs(
+ *         web_test="<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+ *     ),
+ *     description="Ping web test alert for mytestwebapp",
+ *     enabled=True,
+ *     frequency=900,
+ *     kind="ping",
+ *     location="South Central US",
+ *     locations=[azure_native.insights.WebTestGeolocationArgs(
+ *         location="us-fl-mia-edge",
+ *     )],
+ *     resource_group_name="my-resource-group",
+ *     retry_enabled=True,
+ *     synthetic_monitor_id="my-webtest-my-component",
+ *     timeout=120,
+ *     web_test_kind="ping",
+ *     web_test_name="my-webtest-my-component")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### webTestUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webTest = new AzureNative.Insights.WebTest("webTest", new AzureNative.Insights.WebTestArgs
+ *         {
+ *             Configuration = new AzureNative.Insights.Inputs.WebTestPropertiesConfigurationArgs
+ *             {
+ *                 WebTest = "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+ *             },
+ *             Frequency = 600,
+ *             Kind = "ping",
+ *             Location = "South Central US",
+ *             Locations = 
+ *             {
+ *                 new AzureNative.Insights.Inputs.WebTestGeolocationArgs
+ *                 {
+ *                     Location = "us-fl-mia-edge",
+ *                 },
+ *                 new AzureNative.Insights.Inputs.WebTestGeolocationArgs
+ *                 {
+ *                     Location = "apac-hk-hkn-azr",
+ *                 },
+ *             },
+ *             ResourceGroupName = "my-resource-group",
+ *             SyntheticMonitorId = "my-webtest-my-component",
+ *             Timeout = 30,
+ *             WebTestKind = "ping",
+ *             WebTestName = "my-webtest-my-component",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewWebTest(ctx, "webTest", &insights.WebTestArgs{
+ * 			Configuration: &insights.WebTestPropertiesConfigurationArgs{
+ * 				WebTest: pulumi.String("<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>"),
+ * 			},
+ * 			Frequency: pulumi.Int(600),
+ * 			Kind:      "ping",
+ * 			Location:  pulumi.String("South Central US"),
+ * 			Locations: insights.WebTestGeolocationArray{
+ * 				&insights.WebTestGeolocationArgs{
+ * 					Location: pulumi.String("us-fl-mia-edge"),
+ * 				},
+ * 				&insights.WebTestGeolocationArgs{
+ * 					Location: pulumi.String("apac-hk-hkn-azr"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName:  pulumi.String("my-resource-group"),
+ * 			SyntheticMonitorId: pulumi.String("my-webtest-my-component"),
+ * 			Timeout:            pulumi.Int(30),
+ * 			WebTestKind:        "ping",
+ * 			WebTestName:        pulumi.String("my-webtest-my-component"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webTest = new azure_native.insights.WebTest("webTest", {
+ *     configuration: {
+ *         webTest: "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+ *     },
+ *     frequency: 600,
+ *     kind: "ping",
+ *     location: "South Central US",
+ *     locations: [
+ *         {
+ *             location: "us-fl-mia-edge",
+ *         },
+ *         {
+ *             location: "apac-hk-hkn-azr",
+ *         },
+ *     ],
+ *     resourceGroupName: "my-resource-group",
+ *     syntheticMonitorId: "my-webtest-my-component",
+ *     timeout: 30,
+ *     webTestKind: "ping",
+ *     webTestName: "my-webtest-my-component",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * web_test = azure_native.insights.WebTest("webTest",
+ *     configuration=azure_native.insights.WebTestPropertiesConfigurationArgs(
+ *         web_test="<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+ *     ),
+ *     frequency=600,
+ *     kind="ping",
+ *     location="South Central US",
+ *     locations=[
+ *         azure_native.insights.WebTestGeolocationArgs(
+ *             location="us-fl-mia-edge",
+ *         ),
+ *         azure_native.insights.WebTestGeolocationArgs(
+ *             location="apac-hk-hkn-azr",
+ *         ),
+ *     ],
+ *     resource_group_name="my-resource-group",
+ *     synthetic_monitor_id="my-webtest-my-component",
+ *     timeout=30,
+ *     web_test_kind="ping",
+ *     web_test_name="my-webtest-my-component")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,224 +310,192 @@ import javax.annotation.Nullable;
 public class WebTest extends io.pulumi.resources.CustomResource {
     /**
      * An XML configuration specification for a WebTest.
-     * 
      */
     @Export(name="configuration", type=WebTestPropertiesResponseConfiguration.class, parameters={})
     private Output</* @Nullable */ WebTestPropertiesResponseConfiguration> configuration;
 
     /**
      * @return An XML configuration specification for a WebTest.
-     * 
      */
     public Output</* @Nullable */ WebTestPropertiesResponseConfiguration> getConfiguration() {
         return this.configuration;
     }
     /**
      * Purpose/user defined descriptive test for this WebTest.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Purpose/user defined descriptive test for this WebTest.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Is the test actively being monitored.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Is the test actively being monitored.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Interval in seconds between test runs for this WebTest. Default value is 300.
-     * 
      */
     @Export(name="frequency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> frequency;
 
     /**
      * @return Interval in seconds between test runs for this WebTest. Default value is 300.
-     * 
      */
     public Output</* @Nullable */ Integer> getFrequency() {
         return this.frequency;
     }
     /**
      * The kind of web test that this web test watches. Choices are ping and multistep.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The kind of web test that this web test watches. Choices are ping and multistep.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * A list of where to physically run the tests from to give global coverage for accessibility of your application.
-     * 
      */
     @Export(name="locations", type=List.class, parameters={WebTestGeolocationResponse.class})
     private Output<List<WebTestGeolocationResponse>> locations;
 
     /**
      * @return A list of where to physically run the tests from to give global coverage for accessibility of your application.
-     * 
      */
     public Output<List<WebTestGeolocationResponse>> getLocations() {
         return this.locations;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Allow for retries should this WebTest fail.
-     * 
      */
     @Export(name="retryEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> retryEnabled;
 
     /**
      * @return Allow for retries should this WebTest fail.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRetryEnabled() {
         return this.retryEnabled;
     }
     /**
      * Unique ID of this WebTest. This is typically the same value as the Name field.
-     * 
      */
     @Export(name="syntheticMonitorId", type=String.class, parameters={})
     private Output<String> syntheticMonitorId;
 
     /**
      * @return Unique ID of this WebTest. This is typically the same value as the Name field.
-     * 
      */
     public Output<String> getSyntheticMonitorId() {
         return this.syntheticMonitorId;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Seconds until this WebTest will timeout and fail. Default value is 30.
-     * 
      */
     @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
      * @return Seconds until this WebTest will timeout and fail. Default value is 30.
-     * 
      */
     public Output</* @Nullable */ Integer> getTimeout() {
         return this.timeout;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The kind of web test this is, valid choices are ping and multistep.
-     * 
      */
     @Export(name="webTestKind", type=String.class, parameters={})
     private Output<String> webTestKind;
 
     /**
      * @return The kind of web test this is, valid choices are ping and multistep.
-     * 
      */
     public Output<String> getWebTestKind() {
         return this.webTestKind;
     }
     /**
      * User defined name if this WebTest.
-     * 
      */
     @Export(name="webTestName", type=String.class, parameters={})
     private Output<String> webTestName;
 
     /**
      * @return User defined name if this WebTest.
-     * 
      */
     public Output<String> getWebTestName() {
         return this.webTestName;

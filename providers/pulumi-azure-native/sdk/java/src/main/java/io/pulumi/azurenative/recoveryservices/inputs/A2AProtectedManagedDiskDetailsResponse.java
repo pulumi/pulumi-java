@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A2A protected managed disk details.
- * 
  */
 public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The disk level operations list.
-     * 
      */
     @Import(name="allowedDiskLevelOperation")
       private final @Nullable List<String> allowedDiskLevelOperation;
@@ -35,7 +33,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The data pending at source virtual machine in MB.
-     * 
      */
     @Import(name="dataPendingAtSourceAgentInMB")
       private final @Nullable Double dataPendingAtSourceAgentInMB;
@@ -46,7 +43,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The data pending for replication in MB at staging account.
-     * 
      */
     @Import(name="dataPendingInStagingStorageAccountInMB")
       private final @Nullable Double dataPendingInStagingStorageAccountInMB;
@@ -57,7 +53,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The KeyVault resource id for secret (BEK).
-     * 
      */
     @Import(name="dekKeyVaultArmId")
       private final @Nullable String dekKeyVaultArmId;
@@ -68,7 +63,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The disk capacity in bytes.
-     * 
      */
     @Import(name="diskCapacityInBytes")
       private final @Nullable Double diskCapacityInBytes;
@@ -79,7 +73,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The managed disk Arm id.
-     * 
      */
     @Import(name="diskId")
       private final @Nullable String diskId;
@@ -90,7 +83,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="diskName")
       private final @Nullable String diskName;
@@ -101,7 +93,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The disk state.
-     * 
      */
     @Import(name="diskState")
       private final @Nullable String diskState;
@@ -112,7 +103,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The type of disk.
-     * 
      */
     @Import(name="diskType")
       private final @Nullable String diskType;
@@ -123,7 +113,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The failover name for the managed disk.
-     * 
      */
     @Import(name="failoverDiskName")
       private final @Nullable String failoverDiskName;
@@ -134,7 +123,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating whether vm has encrypted os disk or not.
-     * 
      */
     @Import(name="isDiskEncrypted")
       private final @Nullable Boolean isDiskEncrypted;
@@ -145,7 +133,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating whether disk key got encrypted or not.
-     * 
      */
     @Import(name="isDiskKeyEncrypted")
       private final @Nullable Boolean isDiskKeyEncrypted;
@@ -156,7 +143,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The KeyVault resource id for key (KEK).
-     * 
      */
     @Import(name="kekKeyVaultArmId")
       private final @Nullable String kekKeyVaultArmId;
@@ -167,7 +153,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The key URL / identifier (KEK).
-     * 
      */
     @Import(name="keyIdentifier")
       private final @Nullable String keyIdentifier;
@@ -178,7 +163,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-     * 
      */
     @Import(name="monitoringJobType")
       private final @Nullable String monitoringJobType;
@@ -189,7 +173,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-     * 
      */
     @Import(name="monitoringPercentageCompletion")
       private final @Nullable Integer monitoringPercentageCompletion;
@@ -200,7 +183,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The primary staging storage account.
-     * 
      */
     @Import(name="primaryStagingAzureStorageAccountId")
       private final @Nullable String primaryStagingAzureStorageAccountId;
@@ -211,7 +193,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The recovery disk encryption set Id.
-     * 
      */
     @Import(name="recoveryDiskEncryptionSetId")
       private final @Nullable String recoveryDiskEncryptionSetId;
@@ -222,7 +203,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The replica disk type. Its an optional value and will be same as source disk type if not user provided.
-     * 
      */
     @Import(name="recoveryReplicaDiskAccountType")
       private final @Nullable String recoveryReplicaDiskAccountType;
@@ -233,7 +213,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * Recovery replica disk Arm Id.
-     * 
      */
     @Import(name="recoveryReplicaDiskId")
       private final @Nullable String recoveryReplicaDiskId;
@@ -244,7 +223,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The recovery disk resource group Arm Id.
-     * 
      */
     @Import(name="recoveryResourceGroupId")
       private final @Nullable String recoveryResourceGroupId;
@@ -255,7 +233,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The target disk type after failover. Its an optional value and will be same as source disk type if not user provided.
-     * 
      */
     @Import(name="recoveryTargetDiskAccountType")
       private final @Nullable String recoveryTargetDiskAccountType;
@@ -266,7 +243,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * Recovery target disk Arm Id.
-     * 
      */
     @Import(name="recoveryTargetDiskId")
       private final @Nullable String recoveryTargetDiskId;
@@ -277,7 +253,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating whether resync is required for this disk.
-     * 
      */
     @Import(name="resyncRequired")
       private final @Nullable Boolean resyncRequired;
@@ -288,7 +263,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The secret URL / identifier (BEK).
-     * 
      */
     @Import(name="secretIdentifier")
       private final @Nullable String secretIdentifier;
@@ -299,7 +273,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
 
     /**
      * The test failover name for the managed disk.
-     * 
      */
     @Import(name="tfoDiskName")
       private final @Nullable String tfoDiskName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets the state of virtual network rule.
-     * 
      */
     @EnumType
     public enum State {

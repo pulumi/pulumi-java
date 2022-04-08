@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Global configuration for services in the cluster.
- * 
  */
 public final class GlobalServiceConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
 
     /**
      * The auto-scale configuration
-     * 
      */
     @Import(name="autoScale")
       private final @Nullable AutoScaleConfigurationResponse autoScale;
@@ -34,7 +32,6 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
 
     /**
      * The configuration ETag for updates.
-     * 
      */
     @Import(name="etag")
       private final @Nullable String etag;
@@ -45,7 +42,6 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
 
     /**
      * Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
-     * 
      */
     @Import(name="serviceAuth")
       private final @Nullable ServiceAuthConfigurationResponse serviceAuth;
@@ -56,7 +52,6 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
 
     /**
      * The SSL configuration properties
-     * 
      */
     @Import(name="ssl")
       private final @Nullable SslConfigurationResponse ssl;

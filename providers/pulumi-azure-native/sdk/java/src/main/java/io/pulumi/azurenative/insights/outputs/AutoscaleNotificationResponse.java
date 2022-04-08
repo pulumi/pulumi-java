@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class AutoscaleNotificationResponse {
     /**
      * the email notification.
-     * 
      */
     private final @Nullable EmailNotificationResponse email;
     /**
      * the operation associated with the notification and its value must be "scale"
-     * 
      */
     private final String operation;
     /**
      * the collection of webhook notifications.
-     * 
      */
     private final @Nullable List<WebhookNotificationResponse> webhooks;
 
@@ -42,21 +39,18 @@ public final class AutoscaleNotificationResponse {
 
     /**
      * the email notification.
-     * 
     */
     public Optional<EmailNotificationResponse> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * the operation associated with the notification and its value must be "scale"
-     * 
     */
     public String getOperation() {
         return this.operation;
     }
     /**
      * the collection of webhook notifications.
-     * 
     */
     public List<WebhookNotificationResponse> getWebhooks() {
         return this.webhooks == null ? List.of() : this.webhooks;

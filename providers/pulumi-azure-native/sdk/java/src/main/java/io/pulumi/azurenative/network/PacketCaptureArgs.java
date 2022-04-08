@@ -21,7 +21,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of bytes captured per packet, the remaining bytes are truncated.
-     * 
      */
     @Import(name="bytesToCapturePerPacket")
       private final @Nullable Output<Double> bytesToCapturePerPacket;
@@ -32,7 +31,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of packet capture filters.
-     * 
      */
     @Import(name="filters")
       private final @Nullable Output<List<PacketCaptureFilterArgs>> filters;
@@ -43,7 +41,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the network watcher.
-     * 
      */
     @Import(name="networkWatcherName", required=true)
       private final Output<String> networkWatcherName;
@@ -54,7 +51,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the packet capture session.
-     * 
      */
     @Import(name="packetCaptureName")
       private final @Nullable Output<String> packetCaptureName;
@@ -65,7 +61,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The storage location for a packet capture session.
-     * 
      */
     @Import(name="storageLocation", required=true)
       private final Output<PacketCaptureStorageLocationArgs> storageLocation;
@@ -87,7 +81,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the targeted resource, only VM is currently supported.
-     * 
      */
     @Import(name="target", required=true)
       private final Output<String> target;
@@ -98,7 +91,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum duration of the capture session in seconds.
-     * 
      */
     @Import(name="timeLimitInSeconds")
       private final @Nullable Output<Integer> timeLimitInSeconds;
@@ -109,7 +101,6 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum size of the capture output.
-     * 
      */
     @Import(name="totalBytesPerSession")
       private final @Nullable Output<Double> totalBytesPerSession;

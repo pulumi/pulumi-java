@@ -14,7 +14,6 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;
@@ -25,7 +24,6 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;

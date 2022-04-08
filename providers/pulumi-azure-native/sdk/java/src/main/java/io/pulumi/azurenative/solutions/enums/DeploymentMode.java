@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The managed application deployment mode.
-     * 
      */
     @EnumType
     public enum DeploymentMode {

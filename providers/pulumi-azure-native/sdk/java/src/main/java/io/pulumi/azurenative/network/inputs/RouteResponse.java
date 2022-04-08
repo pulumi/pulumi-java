@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Route resource.
- * 
  */
 public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The destination CIDR to which the route applies.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
@@ -32,7 +30,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -43,7 +40,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
-     * 
      */
     @Import(name="hasBgpOverride")
       private final @Nullable Boolean hasBgpOverride;
@@ -54,7 +50,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -65,7 +60,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -76,7 +70,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-     * 
      */
     @Import(name="nextHopIpAddress")
       private final @Nullable String nextHopIpAddress;
@@ -87,7 +80,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of Azure hop the packet should be sent to.
-     * 
      */
     @Import(name="nextHopType", required=true)
       private final String nextHopType;
@@ -98,7 +90,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the route resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -109,7 +100,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

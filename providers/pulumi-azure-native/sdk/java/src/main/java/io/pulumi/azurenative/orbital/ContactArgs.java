@@ -17,7 +17,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contact Name
-     * 
      */
     @Import(name="contactName")
       private final @Nullable Output<String> contactName;
@@ -28,7 +27,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reference to the contact profile resource.
-     * 
      */
     @Import(name="contactProfile", required=true)
       private final Output<ResourceReferenceArgs> contactProfile;
@@ -39,7 +37,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure Ground Station name.
-     * 
      */
     @Import(name="groundStationName", required=true)
       private final Output<String> groundStationName;
@@ -50,7 +47,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Reservation end time of a contact.
-     * 
      */
     @Import(name="reservationEndTime", required=true)
       private final Output<String> reservationEndTime;
@@ -61,7 +57,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Reservation start time of a contact.
-     * 
      */
     @Import(name="reservationStartTime", required=true)
       private final Output<String> reservationStartTime;
@@ -72,7 +67,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Spacecraft ID
-     * 
      */
     @Import(name="spacecraftName", required=true)
       private final Output<String> spacecraftName;

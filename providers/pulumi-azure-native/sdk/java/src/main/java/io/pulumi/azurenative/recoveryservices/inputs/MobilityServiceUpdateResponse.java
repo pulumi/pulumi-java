@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Mobility Service update details.
- * 
  */
 public final class MobilityServiceUpdateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
 
     /**
      * The OS type.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -31,7 +29,6 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
 
     /**
      * The reboot status of the update - whether it is required or not.
-     * 
      */
     @Import(name="rebootStatus")
       private final @Nullable String rebootStatus;
@@ -42,7 +39,6 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
 
     /**
      * The version of the latest update.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

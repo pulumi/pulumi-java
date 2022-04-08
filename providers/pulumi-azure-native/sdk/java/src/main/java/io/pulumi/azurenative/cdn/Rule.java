@@ -42,7 +42,178 @@ import javax.annotation.Nullable;
  * Friendly Rules name mapping to the any Rules or secret related information.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Rules_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var rule = new AzureNative.Cdn.Rule("rule", new AzureNative.Cdn.RuleArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 new AzureNative.Cdn.Inputs.DeliveryRuleResponseHeaderActionArgs
+ *                 {
+ *                     Name = "ModifyResponseHeader",
+ *                     Parameters = new AzureNative.Cdn.Inputs.HeaderActionParametersArgs
+ *                     {
+ *                         HeaderAction = "Overwrite",
+ *                         HeaderName = "X-CDN",
+ *                         OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+ *                         Value = "MSFT",
+ *                     },
+ *                 },
+ *             },
+ *             Conditions = 
+ *             {
+ *                 new AzureNative.Cdn.Inputs.DeliveryRuleRequestMethodConditionArgs
+ *                 {
+ *                     Name = "RequestMethod",
+ *                     Parameters = new AzureNative.Cdn.Inputs.RequestMethodMatchConditionParametersArgs
+ *                     {
+ *                         MatchValues = 
+ *                         {
+ *                             "GET",
+ *                         },
+ *                         NegateCondition = false,
+ *                         OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+ *                         Operator = "Equal",
+ *                     },
+ *                 },
+ *             },
+ *             Order = 1,
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *             RuleName = "rule1",
+ *             RuleSetName = "ruleSet1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cdn.NewRule(ctx, "rule", &cdn.RuleArgs{
+ * 			Actions: pulumi.AnyArray{
+ * 				cdn.DeliveryRuleResponseHeaderAction{
+ * 					Name: "ModifyResponseHeader",
+ * 					Parameters: cdn.HeaderActionParameters{
+ * 						HeaderAction: "Overwrite",
+ * 						HeaderName:   "X-CDN",
+ * 						OdataType:    "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+ * 						Value:        "MSFT",
+ * 					},
+ * 				},
+ * 			},
+ * 			Conditions: pulumi.AnyArray{
+ * 				cdn.DeliveryRuleRequestMethodCondition{
+ * 					Name: "RequestMethod",
+ * 					Parameters: cdn.RequestMethodMatchConditionParameters{
+ * 						MatchValues: []string{
+ * 							"GET",
+ * 						},
+ * 						NegateCondition: false,
+ * 						OdataType:       "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+ * 						Operator:        "Equal",
+ * 					},
+ * 				},
+ * 			},
+ * 			Order:             pulumi.Int(1),
+ * 			ProfileName:       pulumi.String("profile1"),
+ * 			ResourceGroupName: pulumi.String("RG"),
+ * 			RuleName:          pulumi.String("rule1"),
+ * 			RuleSetName:       pulumi.String("ruleSet1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const rule = new azure_native.cdn.Rule("rule", {
+ *     actions: [{
+ *         name: "ModifyResponseHeader",
+ *         parameters: {
+ *             headerAction: "Overwrite",
+ *             headerName: "X-CDN",
+ *             odataType: "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+ *             value: "MSFT",
+ *         },
+ *     }],
+ *     conditions: [{
+ *         name: "RequestMethod",
+ *         parameters: {
+ *             matchValues: ["GET"],
+ *             negateCondition: false,
+ *             odataType: "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+ *             operator: "Equal",
+ *         },
+ *     }],
+ *     order: 1,
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ *     ruleName: "rule1",
+ *     ruleSetName: "ruleSet1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * rule = azure_native.cdn.Rule("rule",
+ *     actions=[azure_native.cdn.DeliveryRuleResponseHeaderActionArgs(
+ *         name="ModifyResponseHeader",
+ *         parameters=azure_native.cdn.HeaderActionParametersArgs(
+ *             header_action="Overwrite",
+ *             header_name="X-CDN",
+ *             odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+ *             value="MSFT",
+ *         ),
+ *     )],
+ *     conditions=[azure_native.cdn.DeliveryRuleRequestMethodConditionArgs(
+ *         name="RequestMethod",
+ *         parameters=azure_native.cdn.RequestMethodMatchConditionParametersArgs(
+ *             match_values=["GET"],
+ *             negate_condition=False,
+ *             odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+ *             operator="Equal",
+ *         ),
+ *     )],
+ *     order=1,
+ *     profile_name="profile1",
+ *     resource_group_name="RG",
+ *     rule_name="rule1",
+ *     rule_set_name="ruleSet1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -57,28 +228,24 @@ import javax.annotation.Nullable;
 public class Rule extends io.pulumi.resources.CustomResource {
     /**
      * A list of actions that are executed when all the conditions of a rule are satisfied.
-     * 
      */
     @Export(name="actions", type=List.class, parameters={Object.class})
     private Output<List<Object>> actions;
 
     /**
      * @return A list of actions that are executed when all the conditions of a rule are satisfied.
-     * 
      */
     public Output<List<Object>> getActions() {
         return this.actions;
     }
     /**
      * A list of conditions that must be matched for the actions to be executed
-     * 
      */
     @Export(name="conditions", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> conditions;
 
     /**
      * @return A list of conditions that must be matched for the actions to be executed
-     * 
      */
     public Output</* @Nullable */ List<Object>> getConditions() {
         return this.conditions;
@@ -91,84 +258,72 @@ public class Rule extends io.pulumi.resources.CustomResource {
     }
     /**
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
      */
     @Export(name="matchProcessingBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> matchProcessingBehavior;
 
     /**
      * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
      */
     public Output</* @Nullable */ String> getMatchProcessingBehavior() {
         return this.matchProcessingBehavior;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
-     * 
      */
     @Export(name="order", type=Integer.class, parameters={})
     private Output<Integer> order;
 
     /**
      * @return The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
-     * 
      */
     public Output<Integer> getOrder() {
         return this.order;
     }
     /**
      * Provisioning status
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

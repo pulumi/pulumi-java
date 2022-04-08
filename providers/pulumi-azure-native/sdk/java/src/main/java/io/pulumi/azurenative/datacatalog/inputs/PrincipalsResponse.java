@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * User principals.
- * 
  */
 public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Object Id for the user
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -31,7 +29,6 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * UPN of the user.
-     * 
      */
     @Import(name="upn")
       private final @Nullable String upn;

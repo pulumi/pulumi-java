@@ -14,7 +14,6 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Add-on name.
-     * 
      */
     @Import(name="premierAddOnName", required=true)
       private final String premierAddOnName;
@@ -36,7 +34,6 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

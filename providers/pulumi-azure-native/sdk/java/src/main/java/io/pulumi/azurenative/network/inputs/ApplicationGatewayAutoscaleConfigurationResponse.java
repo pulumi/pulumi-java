@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application Gateway autoscale configuration.
- * 
  */
 public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
 
     /**
      * Upper bound on number of Application Gateway capacity.
-     * 
      */
     @Import(name="maxCapacity")
       private final @Nullable Integer maxCapacity;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
 
     /**
      * Lower bound on number of Application Gateway capacity.
-     * 
      */
     @Import(name="minCapacity", required=true)
       private final Integer minCapacity;

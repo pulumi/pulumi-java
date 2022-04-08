@@ -22,7 +22,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the configuration store.
-     * 
      */
     @Import(name="configStoreName")
       private final @Nullable Output<String> configStoreName;
@@ -33,7 +32,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The encryption settings of the configuration store.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
@@ -44,7 +42,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The managed identity information, if configured.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -55,7 +52,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -66,7 +62,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -77,7 +72,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The sku of the configuration store.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -99,7 +92,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

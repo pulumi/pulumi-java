@@ -12,7 +12,6 @@ public final class RolloutIdentityAuthenticationResponse {
     /**
      * The authentication type.
      * Expected value is 'RolloutIdentity'.
-     * 
      */
     private final String type;
 
@@ -24,7 +23,6 @@ public final class RolloutIdentityAuthenticationResponse {
     /**
      * The authentication type.
      * Expected value is 'RolloutIdentity'.
-     * 
     */
     public String getType() {
         return this.type;

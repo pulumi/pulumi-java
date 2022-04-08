@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption configuration for the integration service environment.
- * 
  */
 public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
 
     /**
      * The encryption key reference.
-     * 
      */
     @Import(name="encryptionKeyReference")
       private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;

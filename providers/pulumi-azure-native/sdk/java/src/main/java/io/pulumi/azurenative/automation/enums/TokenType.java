@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The token type. Must be either PersonalAccessToken or Oauth.
-     * 
      */
     @EnumType
     public enum TokenType {

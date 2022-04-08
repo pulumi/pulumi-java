@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * Specifies for what type of messages sampling settings should not apply.
-     * 
      */
     @EnumType
     public enum AlwaysLog {
         /**
          * Always log all erroneous request regardless of sampling settings.
-         * 
          */
         AllErrors("allErrors");
 

@@ -14,28 +14,23 @@ import javax.annotation.Nullable;
 public final class ImageTemplateShellCustomizerResponse {
     /**
      * Array of shell commands to execute
-     * 
      */
     private final @Nullable List<String> inline;
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
      */
     private final @Nullable String name;
     /**
      * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
-     * 
      */
     private final @Nullable String scriptUri;
     /**
      * SHA256 checksum of the shell script provided in the scriptUri field
-     * 
      */
     private final @Nullable String sha256Checksum;
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'Shell'.
-     * 
      */
     private final String type;
 
@@ -55,28 +50,24 @@ public final class ImageTemplateShellCustomizerResponse {
 
     /**
      * Array of shell commands to execute
-     * 
     */
     public List<String> getInline() {
         return this.inline == null ? List.of() : this.inline;
     }
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
-     * 
     */
     public Optional<String> getScriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
     /**
      * SHA256 checksum of the shell script provided in the scriptUri field
-     * 
     */
     public Optional<String> getSha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
@@ -84,7 +75,6 @@ public final class ImageTemplateShellCustomizerResponse {
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'Shell'.
-     * 
     */
     public String getType() {
         return this.type;

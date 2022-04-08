@@ -62,7 +62,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of activities in pipeline.
-     * 
      */
     @Import(name="activities")
       private final @Nullable Output<List<Object>> activities;
@@ -73,7 +72,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of tags that can be used for describing the Pipeline.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -84,7 +82,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The max number of concurrent runs for the pipeline.
-     * 
      */
     @Import(name="concurrency")
       private final @Nullable Output<Integer> concurrency;
@@ -95,7 +92,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the pipeline.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -106,7 +102,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
@@ -117,7 +112,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<PipelineFolderArgs> folder;
@@ -128,7 +122,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of parameters for pipeline.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -139,7 +132,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The pipeline name.
-     * 
      */
     @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
@@ -150,7 +142,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pipeline Policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<PipelinePolicyArgs> policy;
@@ -161,7 +152,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -172,7 +162,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dimensions emitted by Pipeline.
-     * 
      */
     @Import(name="runDimensions")
       private final @Nullable Output<Map<String,Object>> runDimensions;
@@ -183,7 +172,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of variables for pipeline.
-     * 
      */
     @Import(name="variables")
       private final @Nullable Output<Map<String,VariableSpecificationArgs>> variables;

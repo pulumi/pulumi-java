@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * AgentPoolMode represents mode of an agent pool
-     * 
      */
     @EnumType
     public enum AgentPoolMode {

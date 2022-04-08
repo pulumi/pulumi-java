@@ -16,7 +16,6 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -27,7 +26,6 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the database in the Kusto cluster.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -38,7 +36,6 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
 
     /**
      * The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
      */
     @Import(name="hotCachePeriod")
       private final @Nullable Output<String> hotCachePeriod;
@@ -50,7 +47,6 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     /**
      * Kind of the database
      * Expected value is 'ReadOnlyFollowing'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -61,7 +57,6 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -72,7 +67,6 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

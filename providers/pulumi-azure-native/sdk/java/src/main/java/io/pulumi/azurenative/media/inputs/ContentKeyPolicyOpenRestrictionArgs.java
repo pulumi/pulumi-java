@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents an open restriction. License or key will be delivered on every request.
- * 
  */
 public final class ContentKeyPolicyOpenRestrictionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContentKeyPolicyOpenRestrictionArgs extends io.pulumi.resourc
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyOpenRestriction'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

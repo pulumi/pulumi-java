@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 public final class GetPartnerTopicEventSubscriptionDeliveryAttributesResult {
     /**
      * A collection of DeliveryAttributeMapping
-     * 
      */
     private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value;
 
@@ -26,7 +25,6 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesResult {
 
     /**
      * A collection of DeliveryAttributeMapping
-     * 
     */
     public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> getValue() {
         return this.value == null ? List.of() : this.value;

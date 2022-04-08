@@ -23,33 +23,27 @@ import javax.annotation.Nullable;
 public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
     /**
      * Array of command properties.
-     * 
      */
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     private final List<ODataErrorResponse> errors;
     /**
      * Task input
-     * 
      */
     private final @Nullable MigrateSqlServerSqlMISyncTaskInputResponse input;
     /**
      * Task output. This is ignored if submitted.
-     * 
      */
     private final List<Object> output;
     /**
      * The state of the task. This is ignored if submitted.
-     * 
      */
     private final String state;
     /**
      * Task type.
      * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
-     * 
      */
     private final String taskType;
 
@@ -71,35 +65,30 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
 
     /**
      * Array of command properties.
-     * 
     */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
-     * 
     */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
-     * 
     */
     public Optional<MigrateSqlServerSqlMISyncTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
-     * 
     */
     public List<Object> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
-     * 
     */
     public String getState() {
         return this.state;
@@ -107,7 +96,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
     /**
      * Task type.
      * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
-     * 
     */
     public String getTaskType() {
         return this.taskType;

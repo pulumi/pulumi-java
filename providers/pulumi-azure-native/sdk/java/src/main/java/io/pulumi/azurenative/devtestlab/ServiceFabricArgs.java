@@ -17,7 +17,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource id of the environment under which the service fabric resource is present
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
@@ -28,7 +27,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The backing service fabric resource's id
-     * 
      */
     @Import(name="externalServiceFabricId")
       private final @Nullable Output<String> externalServiceFabricId;
@@ -39,7 +37,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -50,7 +47,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -61,7 +57,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service fabric.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -72,7 +67,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -94,7 +87,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the user profile.
-     * 
      */
     @Import(name="userName", required=true)
       private final Output<String> userName;

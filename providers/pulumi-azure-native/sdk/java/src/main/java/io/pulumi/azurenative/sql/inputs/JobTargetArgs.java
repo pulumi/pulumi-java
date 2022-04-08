@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A job target, for example a specific database or a container of databases that is evaluated during job execution.
- * 
  */
 public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target database name.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -34,7 +32,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target elastic pool name.
-     * 
      */
     @Import(name="elasticPoolName")
       private final @Nullable Output<String> elasticPoolName;
@@ -45,7 +42,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the target is included or excluded from the group.
-     * 
      */
     @Import(name="membershipType")
       private final @Nullable Output<JobTargetGroupMembershipType> membershipType;
@@ -56,7 +52,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
-     * 
      */
     @Import(name="refreshCredential")
       private final @Nullable Output<String> refreshCredential;
@@ -67,7 +62,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target server name.
-     * 
      */
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
@@ -78,7 +72,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target shard map.
-     * 
      */
     @Import(name="shardMapName")
       private final @Nullable Output<String> shardMapName;
@@ -89,7 +82,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,JobTargetType>> type;

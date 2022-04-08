@@ -18,7 +18,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
 
     /**
      * Error message
-     * 
      */
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
@@ -29,7 +28,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
 
     /**
      * List of error events.
-     * 
      */
     @Import(name="events")
       private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
@@ -40,7 +38,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -52,7 +49,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     /**
      * Result type
      * Expected value is 'DatabaseLevelErrorOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The size of the virtual machine.
-     * 
      */
     @EnumType
     public enum VirtualMachineSizeTypes {

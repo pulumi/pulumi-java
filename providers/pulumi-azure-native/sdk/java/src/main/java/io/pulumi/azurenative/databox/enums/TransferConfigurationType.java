@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Type of the configuration for transfer.
-     * 
      */
     @EnumType
     public enum TransferConfigurationType {
         /**
          * Transfer all the data.
-         * 
          */
         TransferAll("TransferAll"),
         /**
          * Transfer using filter.
-         * 
          */
         TransferUsingFilter("TransferUsingFilter");
 

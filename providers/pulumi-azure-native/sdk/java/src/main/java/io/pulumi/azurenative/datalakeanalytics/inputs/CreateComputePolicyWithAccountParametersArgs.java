@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters used to create a new compute policy while creating a new Data Lake Analytics account.
- * 
  */
 public final class CreateComputePolicyWithAccountParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
 
     /**
      * The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
-     * 
      */
     @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
@@ -34,7 +32,6 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
 
     /**
      * The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
-     * 
      */
     @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
@@ -45,7 +42,6 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
 
     /**
      * The unique name of the compute policy to create.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -56,7 +52,6 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
 
     /**
      * The AAD object identifier for the entity to create a policy for.
-     * 
      */
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
@@ -67,7 +62,6 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
 
     /**
      * The type of AAD object the object identifier refers to.
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<Either<String,AADObjectType>> objectType;

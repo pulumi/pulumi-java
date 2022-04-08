@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates what services are allowed to bypass firewall checks.
-     * 
      */
     @EnumType
     public enum NetworkAclBypass {

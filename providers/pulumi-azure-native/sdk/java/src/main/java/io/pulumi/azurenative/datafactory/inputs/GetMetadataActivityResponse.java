@@ -36,7 +36,6 @@ import javax.annotation.Nullable;
 
 /**
  * Activity to get metadata of dataset
- * 
  */
 public final class GetMetadataActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -44,7 +43,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * GetMetadata activity dataset reference.
-     * 
      */
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
@@ -55,7 +53,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -66,7 +63,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -77,7 +73,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Fields of metadata to get from dataset.
-     * 
      */
     @Import(name="fieldList")
       private final @Nullable List<Object> fieldList;
@@ -88,7 +83,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * GetMetadata activity format settings.
-     * 
      */
     @Import(name="formatSettings")
       private final @Nullable Object formatSettings;
@@ -99,7 +93,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -110,7 +103,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -121,7 +113,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -132,7 +123,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * GetMetadata activity store settings.
-     * 
      */
     @Import(name="storeSettings")
       private final @Nullable Object storeSettings;
@@ -144,7 +134,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
     /**
      * Type of activity.
      * Expected value is 'GetMetadata'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -155,7 +144,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

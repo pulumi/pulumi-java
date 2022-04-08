@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The instance view of a virtual machine run command.
- * 
  */
 public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * Script end time.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -34,7 +32,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * Script error stream.
-     * 
      */
     @Import(name="error")
       private final @Nullable String error;
@@ -45,7 +42,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * Communicate script configuration errors or execution messages.
-     * 
      */
     @Import(name="executionMessage")
       private final @Nullable String executionMessage;
@@ -56,7 +52,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * Script execution status.
-     * 
      */
     @Import(name="executionState")
       private final @Nullable String executionState;
@@ -67,7 +62,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * Exit code returned from script execution.
-     * 
      */
     @Import(name="exitCode")
       private final @Nullable Integer exitCode;
@@ -78,7 +72,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * Script output stream.
-     * 
      */
     @Import(name="output")
       private final @Nullable String output;
@@ -89,7 +82,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * Script start time.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -100,7 +92,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
 
     /**
      * The resource status information.
-     * 
      */
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;

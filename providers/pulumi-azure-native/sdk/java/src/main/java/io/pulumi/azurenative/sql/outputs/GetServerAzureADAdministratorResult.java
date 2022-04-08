@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class GetServerAzureADAdministratorResult {
     /**
      * Type of the sever administrator.
-     * 
      */
     private final String administratorType;
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
      */
     private final Boolean azureADOnlyAuthentication;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Login name of the server administrator.
-     * 
      */
     private final String login;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * SID (object ID) of the server administrator.
-     * 
      */
     private final String sid;
     /**
      * Tenant ID of the administrator.
-     * 
      */
     private final @Nullable String tenantId;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -75,56 +67,48 @@ public final class GetServerAzureADAdministratorResult {
 
     /**
      * Type of the sever administrator.
-     * 
     */
     public String getAdministratorType() {
         return this.administratorType;
     }
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
     */
     public Boolean getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Login name of the server administrator.
-     * 
     */
     public String getLogin() {
         return this.login;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * SID (object ID) of the server administrator.
-     * 
     */
     public String getSid() {
         return this.sid;
     }
     /**
      * Tenant ID of the administrator.
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

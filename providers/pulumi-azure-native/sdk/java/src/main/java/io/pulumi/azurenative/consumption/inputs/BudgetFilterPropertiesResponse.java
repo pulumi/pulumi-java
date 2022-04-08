@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Dimensions or Tags to filter a budget by.
- * 
  */
 public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Has comparison expression for a dimension
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable BudgetComparisonExpressionResponse dimensions;
@@ -31,7 +29,6 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Has comparison expression for a tag
-     * 
      */
     @Import(name="tags")
       private final @Nullable BudgetComparisonExpressionResponse tags;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an output column for the Azure Machine Learning web service endpoint.
- * 
  */
 public final class AzureMachineLearningWebServiceOutputColumnResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends io
 
     /**
      * The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
-     * 
      */
     @Import(name="dataType")
       private final @Nullable String dataType;
@@ -31,7 +29,6 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends io
 
     /**
      * The name of the output column.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

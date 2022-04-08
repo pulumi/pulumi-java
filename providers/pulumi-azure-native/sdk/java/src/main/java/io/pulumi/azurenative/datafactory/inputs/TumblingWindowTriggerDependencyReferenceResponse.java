@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Referenced tumbling window trigger dependency.
- * 
  */
 public final class TumblingWindowTriggerDependencyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
 
     /**
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
-     * 
      */
     @Import(name="offset")
       private final @Nullable String offset;
@@ -32,7 +30,6 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
 
     /**
      * Referenced trigger.
-     * 
      */
     @Import(name="referenceTrigger", required=true)
       private final TriggerReferenceResponse referenceTrigger;
@@ -43,7 +40,6 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
 
     /**
      * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
-     * 
      */
     @Import(name="size")
       private final @Nullable String size;
@@ -55,7 +51,6 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
     /**
      * The type of dependency reference.
      * Expected value is 'TumblingWindowTriggerDependencyReference'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

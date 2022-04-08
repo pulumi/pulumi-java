@@ -14,45 +14,37 @@ import javax.annotation.Nullable;
 public final class ListWebAppSitePushSettingsSlotResult {
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
-     * 
      */
     private final @Nullable String dynamicTagsJson;
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
-     * 
      */
     private final Boolean isPushEnabled;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
-     * 
      */
     private final @Nullable String tagWhitelistJson;
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * '_', '@', '#', '.', ':', '-'. 
      * Validation should be performed at the PushRequestHandler.
-     * 
      */
     private final @Nullable String tagsRequiringAuth;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -78,42 +70,36 @@ public final class ListWebAppSitePushSettingsSlotResult {
 
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
-     * 
     */
     public Optional<String> getDynamicTagsJson() {
         return Optional.ofNullable(this.dynamicTagsJson);
     }
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
-     * 
     */
     public Boolean getIsPushEnabled() {
         return this.isPushEnabled;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
-     * 
     */
     public Optional<String> getTagWhitelistJson() {
         return Optional.ofNullable(this.tagWhitelistJson);
@@ -121,16 +107,14 @@ public final class ListWebAppSitePushSettingsSlotResult {
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * '_', '@', '#', '.', ':', '-'. 
      * Validation should be performed at the PushRequestHandler.
-     * 
     */
     public Optional<String> getTagsRequiringAuth() {
         return Optional.ofNullable(this.tagsRequiringAuth);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

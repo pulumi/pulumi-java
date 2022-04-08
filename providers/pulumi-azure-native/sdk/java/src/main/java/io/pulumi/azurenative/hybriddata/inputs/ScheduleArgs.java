@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schedule for the job run.
- * 
  */
 public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the schedule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of repetition intervals in ISO 8601 format.
-     * 
      */
     @Import(name="policyList")
       private final @Nullable Output<List<String>> policyList;

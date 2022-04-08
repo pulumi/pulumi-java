@@ -14,7 +14,6 @@ public final class GetRemediationAtSubscriptionArgs extends io.pulumi.resources.
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gets or sets the virtual machine resource settings.
- * 
  */
 public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Compute/virtualMachines'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -34,7 +32,6 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets the target availability set id for virtual machines not in an availability set at source.
-     * 
      */
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
@@ -45,7 +42,6 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets the target availability zone.
-     * 
      */
     @Import(name="targetAvailabilityZone")
       private final @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
@@ -56,7 +52,6 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
@@ -67,7 +62,6 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets the target virtual machine size.
-     * 
      */
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;

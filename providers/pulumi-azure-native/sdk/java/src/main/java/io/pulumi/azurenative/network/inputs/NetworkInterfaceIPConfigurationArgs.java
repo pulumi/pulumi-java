@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * IPConfiguration in a network interface.
- * 
  */
 public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -32,7 +31,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The reference to ApplicationGatewayBackendAddressPool resource.
-     * 
      */
     @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
@@ -43,7 +41,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Application security groups in which the IP configuration is included.
-     * 
      */
     @Import(name="applicationSecurityGroups")
       private final @Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
@@ -54,7 +51,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -65,7 +61,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The reference to LoadBalancerBackendAddressPool resource.
-     * 
      */
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
@@ -76,7 +71,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * A list of references of LoadBalancerInboundNatRules.
-     * 
      */
     @Import(name="loadBalancerInboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
@@ -87,7 +81,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -98,7 +91,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Whether this is a primary customer address on the network interface.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
@@ -109,7 +101,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
@@ -120,7 +111,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
-     * 
      */
     @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
@@ -131,7 +121,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -142,7 +131,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Public IP address bound to the IP configuration.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
@@ -153,7 +141,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Subnet bound to the IP configuration.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
@@ -164,7 +151,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -175,7 +161,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The reference to Virtual Network Taps.
-     * 
      */
     @Import(name="virtualNetworkTaps")
       private final @Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps;

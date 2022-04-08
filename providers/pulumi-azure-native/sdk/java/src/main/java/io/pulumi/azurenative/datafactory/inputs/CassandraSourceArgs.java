@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for a Cassandra database.
- * 
  */
 public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
@@ -34,7 +32,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
-     * 
      */
     @Import(name="consistencyLevel")
       private final @Nullable Output<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel;
@@ -45,7 +42,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -56,7 +52,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -67,7 +62,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Database query. Should be a SQL-92 query expression or Cassandra Query Language (CQL) command. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<Object> query;
@@ -78,7 +72,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
@@ -89,7 +82,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -100,7 +92,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -112,7 +103,6 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Copy source type.
      * Expected value is 'CassandraSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

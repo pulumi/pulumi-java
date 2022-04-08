@@ -23,7 +23,174 @@ import javax.annotation.Nullable;
  * NetworkVirtualAppliance Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create NetworkVirtualAppliance
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var networkVirtualAppliance = new AzureNative.Network.NetworkVirtualAppliance("networkVirtualAppliance", new AzureNative.Network.NetworkVirtualApplianceArgs
+ *         {
+ *             BootStrapConfigurationBlobs = 
+ *             {
+ *                 "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig",
+ *             },
+ *             CloudInitConfigurationBlobs = 
+ *             {
+ *                 "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig",
+ *             },
+ *             Identity = new AzureNative.Network.Inputs.ManagedServiceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1",  },
+ *                 },
+ *             },
+ *             Location = "West US",
+ *             NetworkVirtualApplianceName = "nva",
+ *             NvaSku = new AzureNative.Network.Inputs.VirtualApplianceSkuPropertiesArgs
+ *             {
+ *                 BundledScaleUnit = "1",
+ *                 MarketPlaceVersion = "12.1",
+ *                 Vendor = "Cisco SDWAN",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             VirtualApplianceAsn = 10000,
+ *             VirtualHub = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewNetworkVirtualAppliance(ctx, "networkVirtualAppliance", &network.NetworkVirtualApplianceArgs{
+ * 			BootStrapConfigurationBlobs: pulumi.StringArray{
+ * 				pulumi.String("https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"),
+ * 			},
+ * 			CloudInitConfigurationBlobs: pulumi.StringArray{
+ * 				pulumi.String("https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"),
+ * 			},
+ * 			Identity: &network.ManagedServiceIdentityArgs{
+ * 				Type: "UserAssigned",
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
+ * 				},
+ * 			},
+ * 			Location:                    pulumi.String("West US"),
+ * 			NetworkVirtualApplianceName: pulumi.String("nva"),
+ * 			NvaSku: &network.VirtualApplianceSkuPropertiesArgs{
+ * 				BundledScaleUnit:   pulumi.String("1"),
+ * 				MarketPlaceVersion: pulumi.String("12.1"),
+ * 				Vendor:             pulumi.String("Cisco SDWAN"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			VirtualApplianceAsn: pulumi.Float64(10000),
+ * 			VirtualHub: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const networkVirtualAppliance = new azure_native.network.NetworkVirtualAppliance("networkVirtualAppliance", {
+ *     bootStrapConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
+ *     cloudInitConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
+ *         },
+ *     },
+ *     location: "West US",
+ *     networkVirtualApplianceName: "nva",
+ *     nvaSku: {
+ *         bundledScaleUnit: "1",
+ *         marketPlaceVersion: "12.1",
+ *         vendor: "Cisco SDWAN",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     virtualApplianceAsn: 10000,
+ *     virtualHub: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * network_virtual_appliance = azure_native.network.NetworkVirtualAppliance("networkVirtualAppliance",
+ *     boot_strap_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
+ *     cloud_init_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
+ *     identity=azure_native.network.ManagedServiceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
+ *         },
+ *     ),
+ *     location="West US",
+ *     network_virtual_appliance_name="nva",
+ *     nva_sku=azure_native.network.VirtualApplianceSkuPropertiesArgs(
+ *         bundled_scale_unit="1",
+ *         market_place_version="12.1",
+ *         vendor="Cisco SDWAN",
+ *     ),
+ *     resource_group_name="rg1",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     virtual_appliance_asn=10000,
+ *     virtual_hub=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,238 +205,204 @@ import javax.annotation.Nullable;
 public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource {
     /**
      * Address Prefix.
-     * 
      */
     @Export(name="addressPrefix", type=String.class, parameters={})
     private Output<String> addressPrefix;
 
     /**
      * @return Address Prefix.
-     * 
      */
     public Output<String> getAddressPrefix() {
         return this.addressPrefix;
     }
     /**
      * BootStrapConfigurationBlobs storage URLs.
-     * 
      */
     @Export(name="bootStrapConfigurationBlobs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> bootStrapConfigurationBlobs;
 
     /**
      * @return BootStrapConfigurationBlobs storage URLs.
-     * 
      */
     public Output</* @Nullable */ List<String>> getBootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs;
     }
     /**
      * CloudInitConfiguration string in plain text.
-     * 
      */
     @Export(name="cloudInitConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudInitConfiguration;
 
     /**
      * @return CloudInitConfiguration string in plain text.
-     * 
      */
     public Output</* @Nullable */ String> getCloudInitConfiguration() {
         return this.cloudInitConfiguration;
     }
     /**
      * CloudInitConfigurationBlob storage URLs.
-     * 
      */
     @Export(name="cloudInitConfigurationBlobs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cloudInitConfigurationBlobs;
 
     /**
      * @return CloudInitConfigurationBlob storage URLs.
-     * 
      */
     public Output</* @Nullable */ List<String>> getCloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The service principal that has read access to cloud-init and config blob.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return The service principal that has read access to cloud-init and config blob.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * List of references to InboundSecurityRules.
-     * 
      */
     @Export(name="inboundSecurityRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> inboundSecurityRules;
 
     /**
      * @return List of references to InboundSecurityRules.
-     * 
      */
     public Output<List<SubResourceResponse>> getInboundSecurityRules() {
         return this.inboundSecurityRules;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network Virtual Appliance SKU.
-     * 
      */
     @Export(name="nvaSku", type=VirtualApplianceSkuPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> nvaSku;
 
     /**
      * @return Network Virtual Appliance SKU.
-     * 
      */
     public Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> getNvaSku() {
         return this.nvaSku;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * VirtualAppliance ASN.
-     * 
      */
     @Export(name="virtualApplianceAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> virtualApplianceAsn;
 
     /**
      * @return VirtualAppliance ASN.
-     * 
      */
     public Output</* @Nullable */ Double> getVirtualApplianceAsn() {
         return this.virtualApplianceAsn;
     }
     /**
      * List of Virtual Appliance Network Interfaces.
-     * 
      */
     @Export(name="virtualApplianceNics", type=List.class, parameters={VirtualApplianceNicPropertiesResponse.class})
     private Output<List<VirtualApplianceNicPropertiesResponse>> virtualApplianceNics;
 
     /**
      * @return List of Virtual Appliance Network Interfaces.
-     * 
      */
     public Output<List<VirtualApplianceNicPropertiesResponse>> getVirtualApplianceNics() {
         return this.virtualApplianceNics;
     }
     /**
      * List of references to VirtualApplianceSite.
-     * 
      */
     @Export(name="virtualApplianceSites", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualApplianceSites;
 
     /**
      * @return List of references to VirtualApplianceSite.
-     * 
      */
     public Output<List<SubResourceResponse>> getVirtualApplianceSites() {
         return this.virtualApplianceSites;
     }
     /**
      * The Virtual Hub where Network Virtual Appliance is being deployed.
-     * 
      */
     @Export(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
     /**
      * @return The Virtual Hub where Network Virtual Appliance is being deployed.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
         return this.virtualHub;

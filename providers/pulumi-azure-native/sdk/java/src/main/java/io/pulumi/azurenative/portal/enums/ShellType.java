@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The shell type of the cloud shell.
-     * 
      */
     @EnumType
     public enum ShellType {

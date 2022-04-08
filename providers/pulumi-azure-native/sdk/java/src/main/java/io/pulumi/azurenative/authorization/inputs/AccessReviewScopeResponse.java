@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Descriptor for what needs to be reviewed
- * 
  */
 public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The role assignment state eligible/active to review
-     * 
      */
     @Import(name="assignmentState", required=true)
       private final String assignmentState;
@@ -32,7 +30,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag to indicate whether to expand nested memberships or not.
-     * 
      */
     @Import(name="expandNestedMemberships")
       private final @Nullable Boolean expandNestedMemberships;
@@ -43,7 +40,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     * 
      */
     @Import(name="inactiveDuration")
       private final @Nullable String inactiveDuration;
@@ -54,7 +50,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The identity type user/servicePrincipal to review
-     * 
      */
     @Import(name="principalType", required=true)
       private final String principalType;
@@ -65,7 +60,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * ResourceId in which this review is getting created
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -76,7 +70,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * This is used to indicate the role being reviewed
-     * 
      */
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;

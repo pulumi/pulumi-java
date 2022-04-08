@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for SAP Cloud for Customer source.
- * 
  */
 public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -32,7 +30,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="httpRequestTimeout")
       private final @Nullable Object httpRequestTimeout;
@@ -54,7 +50,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -65,7 +60,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * SAP Cloud for Customer OData query. For example, "$top=1". Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Object query;
@@ -76,7 +70,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -87,7 +80,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -98,7 +90,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -110,7 +101,6 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
     /**
      * Copy source type.
      * Expected value is 'SapCloudForCustomerSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

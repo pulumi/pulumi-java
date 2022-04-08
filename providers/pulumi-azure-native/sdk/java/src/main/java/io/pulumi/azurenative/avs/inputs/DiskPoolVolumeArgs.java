@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An iSCSI volume from Microsoft.StoragePool provider
- * 
  */
 public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * iSCSI provider target IP address list
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable Output<List<String>> endpoints;
@@ -32,7 +30,6 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the LUN to be used
-     * 
      */
     @Import(name="lunName")
       private final @Nullable Output<String> lunName;

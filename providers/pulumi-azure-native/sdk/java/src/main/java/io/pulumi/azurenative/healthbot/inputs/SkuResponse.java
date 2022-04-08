@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The resource model definition representing SKU
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the HealthBot SKU
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

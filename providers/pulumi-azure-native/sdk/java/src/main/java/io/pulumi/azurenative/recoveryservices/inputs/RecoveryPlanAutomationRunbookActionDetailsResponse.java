@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan Automation runbook action details.
- * 
  */
 public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
 
     /**
      * The fabric location.
-     * 
      */
     @Import(name="fabricLocation", required=true)
       private final String fabricLocation;
@@ -32,7 +30,6 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is 'AutomationRunbookActionDetails'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -43,7 +40,6 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
 
     /**
      * The runbook ARM Id.
-     * 
      */
     @Import(name="runbookId")
       private final @Nullable String runbookId;
@@ -54,7 +50,6 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
 
     /**
      * The runbook timeout.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable String timeout;

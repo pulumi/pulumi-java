@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Managed Identity details for storage account.
- * 
  */
 public final class ManagedIdentityConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
 
     /**
      * The objectId of the Managed Identity that is linked to the Managed Storage account.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -29,7 +27,6 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
 
     /**
      * The tenant Id where the Managed Identity is created.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -40,7 +37,6 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
 
     /**
      * The type of Identity created. It can be either SystemAssigned or UserAssigned.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

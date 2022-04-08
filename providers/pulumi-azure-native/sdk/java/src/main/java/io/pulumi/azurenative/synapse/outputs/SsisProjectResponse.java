@@ -17,43 +17,35 @@ import javax.annotation.Nullable;
 public final class SsisProjectResponse {
     /**
      * Metadata description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Environment reference in project
-     * 
      */
     private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
     /**
      * Folder id which contains project.
-     * 
      */
     private final @Nullable Double folderId;
     /**
      * Metadata id.
-     * 
      */
     private final @Nullable Double id;
     /**
      * Metadata name.
-     * 
      */
     private final @Nullable String name;
     /**
      * Parameters in project
-     * 
      */
     private final @Nullable List<SsisParameterResponse> parameters;
     /**
      * The type of SSIS object metadata.
      * Expected value is 'Project'.
-     * 
      */
     private final String type;
     /**
      * Project version.
-     * 
      */
     private final @Nullable Double version;
 
@@ -79,42 +71,36 @@ public final class SsisProjectResponse {
 
     /**
      * Metadata description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Environment reference in project
-     * 
     */
     public List<SsisEnvironmentReferenceResponse> getEnvironmentRefs() {
         return this.environmentRefs == null ? List.of() : this.environmentRefs;
     }
     /**
      * Folder id which contains project.
-     * 
     */
     public Optional<Double> getFolderId() {
         return Optional.ofNullable(this.folderId);
     }
     /**
      * Metadata id.
-     * 
     */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Parameters in project
-     * 
     */
     public List<SsisParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -122,14 +108,12 @@ public final class SsisProjectResponse {
     /**
      * The type of SSIS object metadata.
      * Expected value is 'Project'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Project version.
-     * 
     */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);

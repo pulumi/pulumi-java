@@ -26,7 +26,505 @@ import javax.annotation.Nullable;
  * Contains information about an Azure Batch account.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BatchAccountCreate_BYOS
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batchAccount = new AzureNative.Batch.BatchAccount("batchAccount", new AzureNative.Batch.BatchAccountArgs
+ *         {
+ *             AccountName = "sampleacct",
+ *             AutoStorage = new AzureNative.Batch.Inputs.AutoStorageBasePropertiesArgs
+ *             {
+ *                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *             },
+ *             KeyVaultReference = new AzureNative.Batch.Inputs.KeyVaultReferenceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+ *                 Url = "http://sample.vault.azure.net/",
+ *             },
+ *             Location = "japaneast",
+ *             PoolAllocationMode = "UserSubscription",
+ *             ResourceGroupName = "default-azurebatch-japaneast",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewBatchAccount(ctx, "batchAccount", &batch.BatchAccountArgs{
+ * 			AccountName: pulumi.String("sampleacct"),
+ * 			AutoStorage: &batch.AutoStorageBasePropertiesArgs{
+ * 				StorageAccountId: pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage"),
+ * 			},
+ * 			KeyVaultReference: &batch.KeyVaultReferenceArgs{
+ * 				Id:  pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample"),
+ * 				Url: pulumi.String("http://sample.vault.azure.net/"),
+ * 			},
+ * 			Location:           pulumi.String("japaneast"),
+ * 			PoolAllocationMode: "UserSubscription",
+ * 			ResourceGroupName:  pulumi.String("default-azurebatch-japaneast"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const batchAccount = new azure_native.batch.BatchAccount("batchAccount", {
+ *     accountName: "sampleacct",
+ *     autoStorage: {
+ *         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     },
+ *     keyVaultReference: {
+ *         id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+ *         url: "http://sample.vault.azure.net/",
+ *     },
+ *     location: "japaneast",
+ *     poolAllocationMode: "UserSubscription",
+ *     resourceGroupName: "default-azurebatch-japaneast",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * batch_account = azure_native.batch.BatchAccount("batchAccount",
+ *     account_name="sampleacct",
+ *     auto_storage=azure_native.batch.AutoStorageBasePropertiesArgs(
+ *         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     ),
+ *     key_vault_reference=azure_native.batch.KeyVaultReferenceArgs(
+ *         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+ *         url="http://sample.vault.azure.net/",
+ *     ),
+ *     location="japaneast",
+ *     pool_allocation_mode="UserSubscription",
+ *     resource_group_name="default-azurebatch-japaneast")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### BatchAccountCreate_Default
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batchAccount = new AzureNative.Batch.BatchAccount("batchAccount", new AzureNative.Batch.BatchAccountArgs
+ *         {
+ *             AccountName = "sampleacct",
+ *             AutoStorage = new AzureNative.Batch.Inputs.AutoStorageBasePropertiesArgs
+ *             {
+ *                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *             },
+ *             Location = "japaneast",
+ *             ResourceGroupName = "default-azurebatch-japaneast",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewBatchAccount(ctx, "batchAccount", &batch.BatchAccountArgs{
+ * 			AccountName: pulumi.String("sampleacct"),
+ * 			AutoStorage: &batch.AutoStorageBasePropertiesArgs{
+ * 				StorageAccountId: pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage"),
+ * 			},
+ * 			Location:          pulumi.String("japaneast"),
+ * 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const batchAccount = new azure_native.batch.BatchAccount("batchAccount", {
+ *     accountName: "sampleacct",
+ *     autoStorage: {
+ *         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     },
+ *     location: "japaneast",
+ *     resourceGroupName: "default-azurebatch-japaneast",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * batch_account = azure_native.batch.BatchAccount("batchAccount",
+ *     account_name="sampleacct",
+ *     auto_storage=azure_native.batch.AutoStorageBasePropertiesArgs(
+ *         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     ),
+ *     location="japaneast",
+ *     resource_group_name="default-azurebatch-japaneast")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### BatchAccountCreate_SystemAssignedIdentity
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batchAccount = new AzureNative.Batch.BatchAccount("batchAccount", new AzureNative.Batch.BatchAccountArgs
+ *         {
+ *             AccountName = "sampleacct",
+ *             AutoStorage = new AzureNative.Batch.Inputs.AutoStorageBasePropertiesArgs
+ *             {
+ *                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *             },
+ *             Identity = new AzureNative.Batch.Inputs.BatchAccountIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "japaneast",
+ *             ResourceGroupName = "default-azurebatch-japaneast",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewBatchAccount(ctx, "batchAccount", &batch.BatchAccountArgs{
+ * 			AccountName: pulumi.String("sampleacct"),
+ * 			AutoStorage: &batch.AutoStorageBasePropertiesArgs{
+ * 				StorageAccountId: pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage"),
+ * 			},
+ * 			Identity: &batch.BatchAccountIdentityArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			Location:          pulumi.String("japaneast"),
+ * 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const batchAccount = new azure_native.batch.BatchAccount("batchAccount", {
+ *     accountName: "sampleacct",
+ *     autoStorage: {
+ *         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     },
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "japaneast",
+ *     resourceGroupName: "default-azurebatch-japaneast",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * batch_account = azure_native.batch.BatchAccount("batchAccount",
+ *     account_name="sampleacct",
+ *     auto_storage=azure_native.batch.AutoStorageBasePropertiesArgs(
+ *         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     ),
+ *     identity=azure_native.batch.BatchAccountIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="japaneast",
+ *     resource_group_name="default-azurebatch-japaneast")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### BatchAccountCreate_UserAssignedIdentity
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batchAccount = new AzureNative.Batch.BatchAccount("batchAccount", new AzureNative.Batch.BatchAccountArgs
+ *         {
+ *             AccountName = "sampleacct",
+ *             AutoStorage = new AzureNative.Batch.Inputs.AutoStorageBasePropertiesArgs
+ *             {
+ *                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *             },
+ *             Identity = new AzureNative.Batch.Inputs.BatchAccountIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",  },
+ *                 },
+ *             },
+ *             Location = "japaneast",
+ *             ResourceGroupName = "default-azurebatch-japaneast",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewBatchAccount(ctx, "batchAccount", &batch.BatchAccountArgs{
+ * 			AccountName: pulumi.String("sampleacct"),
+ * 			AutoStorage: &batch.AutoStorageBasePropertiesArgs{
+ * 				StorageAccountId: pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage"),
+ * 			},
+ * 			Identity: &batch.BatchAccountIdentityArgs{
+ * 				Type: "UserAssigned",
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("japaneast"),
+ * 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const batchAccount = new azure_native.batch.BatchAccount("batchAccount", {
+ *     accountName: "sampleacct",
+ *     autoStorage: {
+ *         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     },
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+ *         },
+ *     },
+ *     location: "japaneast",
+ *     resourceGroupName: "default-azurebatch-japaneast",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * batch_account = azure_native.batch.BatchAccount("batchAccount",
+ *     account_name="sampleacct",
+ *     auto_storage=azure_native.batch.AutoStorageBasePropertiesArgs(
+ *         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     ),
+ *     identity=azure_native.batch.BatchAccountIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+ *         },
+ *     ),
+ *     location="japaneast",
+ *     resource_group_name="default-azurebatch-japaneast")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PrivateBatchAccountCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batchAccount = new AzureNative.Batch.BatchAccount("batchAccount", new AzureNative.Batch.BatchAccountArgs
+ *         {
+ *             AccountName = "sampleacct",
+ *             AutoStorage = new AzureNative.Batch.Inputs.AutoStorageBasePropertiesArgs
+ *             {
+ *                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *             },
+ *             KeyVaultReference = new AzureNative.Batch.Inputs.KeyVaultReferenceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+ *                 Url = "http://sample.vault.azure.net/",
+ *             },
+ *             Location = "japaneast",
+ *             PublicNetworkAccess = "Disabled",
+ *             ResourceGroupName = "default-azurebatch-japaneast",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewBatchAccount(ctx, "batchAccount", &batch.BatchAccountArgs{
+ * 			AccountName: pulumi.String("sampleacct"),
+ * 			AutoStorage: &batch.AutoStorageBasePropertiesArgs{
+ * 				StorageAccountId: pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage"),
+ * 			},
+ * 			KeyVaultReference: &batch.KeyVaultReferenceArgs{
+ * 				Id:  pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample"),
+ * 				Url: pulumi.String("http://sample.vault.azure.net/"),
+ * 			},
+ * 			Location:            pulumi.String("japaneast"),
+ * 			PublicNetworkAccess: "Disabled",
+ * 			ResourceGroupName:   pulumi.String("default-azurebatch-japaneast"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const batchAccount = new azure_native.batch.BatchAccount("batchAccount", {
+ *     accountName: "sampleacct",
+ *     autoStorage: {
+ *         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     },
+ *     keyVaultReference: {
+ *         id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+ *         url: "http://sample.vault.azure.net/",
+ *     },
+ *     location: "japaneast",
+ *     publicNetworkAccess: "Disabled",
+ *     resourceGroupName: "default-azurebatch-japaneast",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * batch_account = azure_native.batch.BatchAccount("batchAccount",
+ *     account_name="sampleacct",
+ *     auto_storage=azure_native.batch.AutoStorageBasePropertiesArgs(
+ *         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+ *     ),
+ *     key_vault_reference=azure_native.batch.KeyVaultReferenceArgs(
+ *         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+ *         url="http://sample.vault.azure.net/",
+ *     ),
+ *     location="japaneast",
+ *     public_network_access="Disabled",
+ *     resource_group_name="default-azurebatch-japaneast")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,14 +539,12 @@ import javax.annotation.Nullable;
 public class BatchAccount extends io.pulumi.resources.CustomResource {
     /**
      * The account endpoint used to interact with the Batch service.
-     * 
      */
     @Export(name="accountEndpoint", type=String.class, parameters={})
     private Output<String> accountEndpoint;
 
     /**
      * @return The account endpoint used to interact with the Batch service.
-     * 
      */
     public Output<String> getAccountEndpoint() {
         return this.accountEndpoint;
@@ -61,154 +557,132 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
     }
     /**
      * Contains information about the auto-storage account associated with a Batch account.
-     * 
      */
     @Export(name="autoStorage", type=AutoStoragePropertiesResponse.class, parameters={})
     private Output<AutoStoragePropertiesResponse> autoStorage;
 
     /**
      * @return Contains information about the auto-storage account associated with a Batch account.
-     * 
      */
     public Output<AutoStoragePropertiesResponse> getAutoStorage() {
         return this.autoStorage;
     }
     /**
      * For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
-     * 
      */
     @Export(name="dedicatedCoreQuota", type=Integer.class, parameters={})
     private Output<Integer> dedicatedCoreQuota;
 
     /**
      * @return For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
-     * 
      */
     public Output<Integer> getDedicatedCoreQuota() {
         return this.dedicatedCoreQuota;
     }
     /**
      * A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
-     * 
      */
     @Export(name="dedicatedCoreQuotaPerVMFamily", type=List.class, parameters={VirtualMachineFamilyCoreQuotaResponse.class})
     private Output<List<VirtualMachineFamilyCoreQuotaResponse>> dedicatedCoreQuotaPerVMFamily;
 
     /**
      * @return A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
-     * 
      */
     public Output<List<VirtualMachineFamilyCoreQuotaResponse>> getDedicatedCoreQuotaPerVMFamily() {
         return this.dedicatedCoreQuotaPerVMFamily;
     }
     /**
      * Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.
-     * 
      */
     @Export(name="dedicatedCoreQuotaPerVMFamilyEnforced", type=Boolean.class, parameters={})
     private Output<Boolean> dedicatedCoreQuotaPerVMFamilyEnforced;
 
     /**
      * @return Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.
-     * 
      */
     public Output<Boolean> getDedicatedCoreQuotaPerVMFamilyEnforced() {
         return this.dedicatedCoreQuotaPerVMFamilyEnforced;
     }
     /**
      * Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
-     * 
      */
     @Export(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
     private Output<EncryptionPropertiesResponse> encryption;
 
     /**
      * @return Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
-     * 
      */
     public Output<EncryptionPropertiesResponse> getEncryption() {
         return this.encryption;
     }
     /**
      * The identity of the Batch account.
-     * 
      */
     @Export(name="identity", type=BatchAccountIdentityResponse.class, parameters={})
     private Output</* @Nullable */ BatchAccountIdentityResponse> identity;
 
     /**
      * @return The identity of the Batch account.
-     * 
      */
     public Output</* @Nullable */ BatchAccountIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Identifies the Azure key vault associated with a Batch account.
-     * 
      */
     @Export(name="keyVaultReference", type=KeyVaultReferenceResponse.class, parameters={})
     private Output<KeyVaultReferenceResponse> keyVaultReference;
 
     /**
      * @return Identifies the Azure key vault associated with a Batch account.
-     * 
      */
     public Output<KeyVaultReferenceResponse> getKeyVaultReference() {
         return this.keyVaultReference;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
-     * 
      */
     @Export(name="lowPriorityCoreQuota", type=Integer.class, parameters={})
     private Output<Integer> lowPriorityCoreQuota;
 
     /**
      * @return For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
-     * 
      */
     public Output<Integer> getLowPriorityCoreQuota() {
         return this.lowPriorityCoreQuota;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The allocation mode for creating pools in the Batch account.
-     * 
      */
     @Export(name="poolAllocationMode", type=String.class, parameters={})
     private Output<String> poolAllocationMode;
 
     /**
      * @return The allocation mode for creating pools in the Batch account.
-     * 
      */
     public Output<String> getPoolAllocationMode() {
         return this.poolAllocationMode;
@@ -221,70 +695,60 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
     }
     /**
      * List of private endpoint connections associated with the Batch account
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of private endpoint connections associated with the Batch account
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The provisioned state of the resource
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioned state of the resource
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * If not specified, the default value is 'enabled'.
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output<String> publicNetworkAccess;
 
     /**
      * @return If not specified, the default value is 'enabled'.
-     * 
      */
     public Output<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

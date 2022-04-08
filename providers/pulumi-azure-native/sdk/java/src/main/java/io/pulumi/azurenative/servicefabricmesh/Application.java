@@ -20,7 +20,223 @@ import javax.annotation.Nullable;
  * This type describes an application resource.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdateApplication
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var application = new AzureNative.ServiceFabricMesh.Application("application", new AzureNative.ServiceFabricMesh.ApplicationArgs
+ *         {
+ *             ApplicationResourceName = "sampleApplication",
+ *             Description = "Service Fabric Mesh sample application.",
+ *             Location = "EastUS",
+ *             ResourceGroupName = "sbz_demo",
+ *             Services = 
+ *             {
+ *                 new AzureNative.ServiceFabricMesh.Inputs.ServiceResourceDescriptionArgs
+ *                 {
+ *                     CodePackages = 
+ *                     {
+ *                         new AzureNative.ServiceFabricMesh.Inputs.ContainerCodePackagePropertiesArgs
+ *                         {
+ *                             Endpoints = 
+ *                             {
+ *                                 new AzureNative.ServiceFabricMesh.Inputs.EndpointPropertiesArgs
+ *                                 {
+ *                                     Name = "helloWorldListener",
+ *                                     Port = 80,
+ *                                 },
+ *                             },
+ *                             Image = "seabreeze/sbz-helloworld:1.0-alpine",
+ *                             Name = "helloWorldCode",
+ *                             Resources = new AzureNative.ServiceFabricMesh.Inputs.ResourceRequirementsArgs
+ *                             {
+ *                                 Requests = new AzureNative.ServiceFabricMesh.Inputs.ResourceRequestsArgs
+ *                                 {
+ *                                     Cpu = 1,
+ *                                     MemoryInGB = 1,
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     Description = "SeaBreeze Hello World Service.",
+ *                     Name = "helloWorldService",
+ *                     NetworkRefs = 
+ *                     {
+ *                         new AzureNative.ServiceFabricMesh.Inputs.NetworkRefArgs
+ *                         {
+ *                             EndpointRefs = 
+ *                             {
+ *                                 new AzureNative.ServiceFabricMesh.Inputs.EndpointRefArgs
+ *                                 {
+ *                                     Name = "helloWorldListener",
+ *                                 },
+ *                             },
+ *                             Name = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
+ *                         },
+ *                     },
+ *                     OsType = "Linux",
+ *                     ReplicaCount = 1,
+ *                 },
+ *             },
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabricmesh "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabricmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabricmesh.NewApplication(ctx, "application", &servicefabricmesh.ApplicationArgs{
+ * 			ApplicationResourceName: pulumi.String("sampleApplication"),
+ * 			Description:             pulumi.String("Service Fabric Mesh sample application."),
+ * 			Location:                pulumi.String("EastUS"),
+ * 			ResourceGroupName:       pulumi.String("sbz_demo"),
+ * 			Services: []servicefabricmesh.ServiceResourceDescriptionArgs{
+ * 				&servicefabricmesh.ServiceResourceDescriptionArgs{
+ * 					CodePackages: []servicefabricmesh.ContainerCodePackagePropertiesArgs{
+ * 						&servicefabricmesh.ContainerCodePackagePropertiesArgs{
+ * 							Endpoints: servicefabricmesh.EndpointPropertiesArray{
+ * 								&servicefabricmesh.EndpointPropertiesArgs{
+ * 									Name: pulumi.String("helloWorldListener"),
+ * 									Port: pulumi.Int(80),
+ * 								},
+ * 							},
+ * 							Image: pulumi.String("seabreeze/sbz-helloworld:1.0-alpine"),
+ * 							Name:  pulumi.String("helloWorldCode"),
+ * 							Resources: &servicefabricmesh.ResourceRequirementsArgs{
+ * 								Requests: &servicefabricmesh.ResourceRequestsArgs{
+ * 									Cpu:        pulumi.Float64(1),
+ * 									MemoryInGB: pulumi.Float64(1),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					Description: pulumi.String("SeaBreeze Hello World Service."),
+ * 					Name:        pulumi.String("helloWorldService"),
+ * 					NetworkRefs: servicefabricmesh.NetworkRefArray{
+ * 						&servicefabricmesh.NetworkRefArgs{
+ * 							EndpointRefs: servicefabricmesh.EndpointRefArray{
+ * 								&servicefabricmesh.EndpointRefArgs{
+ * 									Name: pulumi.String("helloWorldListener"),
+ * 								},
+ * 							},
+ * 							Name: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork"),
+ * 						},
+ * 					},
+ * 					OsType:       pulumi.String("Linux"),
+ * 					ReplicaCount: pulumi.Int(1),
+ * 				},
+ * 			},
+ * 			Tags: nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const application = new azure_native.servicefabricmesh.Application("application", {
+ *     applicationResourceName: "sampleApplication",
+ *     description: "Service Fabric Mesh sample application.",
+ *     location: "EastUS",
+ *     resourceGroupName: "sbz_demo",
+ *     services: [{
+ *         codePackages: [{
+ *             endpoints: [{
+ *                 name: "helloWorldListener",
+ *                 port: 80,
+ *             }],
+ *             image: "seabreeze/sbz-helloworld:1.0-alpine",
+ *             name: "helloWorldCode",
+ *             resources: {
+ *                 requests: {
+ *                     cpu: 1,
+ *                     memoryInGB: 1,
+ *                 },
+ *             },
+ *         }],
+ *         description: "SeaBreeze Hello World Service.",
+ *         name: "helloWorldService",
+ *         networkRefs: [{
+ *             endpointRefs: [{
+ *                 name: "helloWorldListener",
+ *             }],
+ *             name: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
+ *         }],
+ *         osType: "Linux",
+ *         replicaCount: 1,
+ *     }],
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application = azure_native.servicefabricmesh.Application("application",
+ *     application_resource_name="sampleApplication",
+ *     description="Service Fabric Mesh sample application.",
+ *     location="EastUS",
+ *     resource_group_name="sbz_demo",
+ *     services=[azure_native.servicefabricmesh.ServiceResourceDescriptionArgs(
+ *         code_packages=[azure_native.servicefabricmesh.ContainerCodePackagePropertiesArgs(
+ *             endpoints=[azure_native.servicefabricmesh.EndpointPropertiesArgs(
+ *                 name="helloWorldListener",
+ *                 port=80,
+ *             )],
+ *             image="seabreeze/sbz-helloworld:1.0-alpine",
+ *             name="helloWorldCode",
+ *             resources=azure_native.servicefabricmesh.ResourceRequirementsArgs(
+ *                 requests=azure_native.servicefabricmesh.ResourceRequestsArgs(
+ *                     cpu=1,
+ *                     memory_in_gb=1,
+ *                 ),
+ *             ),
+ *         )],
+ *         description="SeaBreeze Hello World Service.",
+ *         name="helloWorldService",
+ *         network_refs=[azure_native.servicefabricmesh.NetworkRefArgs(
+ *             endpoint_refs=[azure_native.servicefabricmesh.EndpointRefArgs(
+ *                 name="helloWorldListener",
+ *             )],
+ *             name="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
+ *         )],
+ *         os_type="Linux",
+ *         replica_count=1,
+ *     )],
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,196 +251,168 @@ import javax.annotation.Nullable;
 public class Application extends io.pulumi.resources.CustomResource {
     /**
      * Internal - used by Visual Studio to setup the debugging session on the local development environment.
-     * 
      */
     @Export(name="debugParams", type=String.class, parameters={})
     private Output</* @Nullable */ String> debugParams;
 
     /**
      * @return Internal - used by Visual Studio to setup the debugging session on the local development environment.
-     * 
      */
     public Output</* @Nullable */ String> getDebugParams() {
         return this.debugParams;
     }
     /**
      * User readable description of the application.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return User readable description of the application.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Describes the diagnostics definition and usage for an application resource.
-     * 
      */
     @Export(name="diagnostics", type=DiagnosticsDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ DiagnosticsDescriptionResponse> diagnostics;
 
     /**
      * @return Describes the diagnostics definition and usage for an application resource.
-     * 
      */
     public Output</* @Nullable */ DiagnosticsDescriptionResponse> getDiagnostics() {
         return this.diagnostics;
     }
     /**
      * Describes the health state of an application resource.
-     * 
      */
     @Export(name="healthState", type=String.class, parameters={})
     private Output<String> healthState;
 
     /**
      * @return Describes the health state of an application resource.
-     * 
      */
     public Output<String> getHealthState() {
         return this.healthState;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return State of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Names of the services in the application.
-     * 
      */
     @Export(name="serviceNames", type=List.class, parameters={String.class})
     private Output<List<String>> serviceNames;
 
     /**
      * @return Names of the services in the application.
-     * 
      */
     public Output<List<String>> getServiceNames() {
         return this.serviceNames;
     }
     /**
      * Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
-     * 
      */
     @Export(name="services", type=List.class, parameters={ServiceResourceDescriptionResponse.class})
     private Output</* @Nullable */ List<ServiceResourceDescriptionResponse>> services;
 
     /**
      * @return Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
-     * 
      */
     public Output</* @Nullable */ List<ServiceResourceDescriptionResponse>> getServices() {
         return this.services;
     }
     /**
      * Status of the application.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Status of the application.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the application.
-     * 
      */
     @Export(name="statusDetails", type=String.class, parameters={})
     private Output<String> statusDetails;
 
     /**
      * @return Gives additional information about the current status of the application.
-     * 
      */
     public Output<String> getStatusDetails() {
         return this.statusDetails;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
-     * 
      */
     @Export(name="unhealthyEvaluation", type=String.class, parameters={})
     private Output<String> unhealthyEvaluation;
 
     /**
      * @return When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
-     * 
      */
     public Output<String> getUnhealthyEvaluation() {
         return this.unhealthyEvaluation;

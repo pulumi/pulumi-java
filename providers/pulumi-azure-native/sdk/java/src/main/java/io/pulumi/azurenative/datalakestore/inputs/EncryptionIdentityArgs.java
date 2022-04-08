@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The encryption identity properties.
- * 
  */
 public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<EncryptionIdentityType> type;

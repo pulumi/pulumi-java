@@ -28,7 +28,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the Azure Machine Learning compute.
-     * 
      */
     @Import(name="computeName")
       private final @Nullable Output<String> computeName;
@@ -39,7 +38,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -50,7 +48,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -61,7 +58,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * Compute properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
@@ -72,7 +68,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +78,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * The sku of the workspace.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -94,7 +88,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -105,7 +98,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

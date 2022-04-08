@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class VirtualMachineRunCommandInstanceViewResponse {
     /**
      * Script end time.
-     * 
      */
     private final @Nullable String endTime;
     /**
      * Script error stream.
-     * 
      */
     private final @Nullable String error;
     /**
      * Communicate script configuration errors or execution messages.
-     * 
      */
     private final @Nullable String executionMessage;
     /**
      * Script execution status.
-     * 
      */
     private final @Nullable String executionState;
     /**
      * Exit code returned from script execution.
-     * 
      */
     private final @Nullable Integer exitCode;
     /**
      * Script output stream.
-     * 
      */
     private final @Nullable String output;
     /**
      * Script start time.
-     * 
      */
     private final @Nullable String startTime;
     /**
      * The resource status information.
-     * 
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
@@ -77,56 +69,48 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
 
     /**
      * Script end time.
-     * 
     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Script error stream.
-     * 
     */
     public Optional<String> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Communicate script configuration errors or execution messages.
-     * 
     */
     public Optional<String> getExecutionMessage() {
         return Optional.ofNullable(this.executionMessage);
     }
     /**
      * Script execution status.
-     * 
     */
     public Optional<String> getExecutionState() {
         return Optional.ofNullable(this.executionState);
     }
     /**
      * Exit code returned from script execution.
-     * 
     */
     public Optional<Integer> getExitCode() {
         return Optional.ofNullable(this.exitCode);
     }
     /**
      * Script output stream.
-     * 
     */
     public Optional<String> getOutput() {
         return Optional.ofNullable(this.output);
     }
     /**
      * Script start time.
-     * 
     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The resource status information.
-     * 
     */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;

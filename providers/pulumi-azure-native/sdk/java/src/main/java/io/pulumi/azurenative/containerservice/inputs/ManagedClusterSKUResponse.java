@@ -16,7 +16,6 @@ public final class ManagedClusterSKUResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Name of a managed cluster SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -27,7 +26,6 @@ public final class ManagedClusterSKUResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Tier of a managed cluster SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

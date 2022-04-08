@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration details.
- * 
  */
 public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The backend address pools associated with the IP configuration.
-     * 
      */
     @Import(name="lBBackendAddressPoolIds")
       private final @Nullable List<String> lBBackendAddressPoolIds;
@@ -32,7 +30,6 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Id of the public IP address associated with the IP configuration.
-     * 
      */
     @Import(name="publicIpAddressId")
       private final @Nullable String publicIpAddressId;
@@ -43,7 +40,6 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The static IP address of the IP configuration.
-     * 
      */
     @Import(name="staticIPAddress")
       private final @Nullable String staticIPAddress;

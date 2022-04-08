@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The provisioning state of the workspace.
-     * 
      */
     @EnumType
     public enum WorkspaceEntityStatus {

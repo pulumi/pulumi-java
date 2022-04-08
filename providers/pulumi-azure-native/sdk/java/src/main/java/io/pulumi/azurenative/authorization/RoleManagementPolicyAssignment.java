@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Role management policy
  * API Version: 2020-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutRoleManagementPolicyAssignment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var roleManagementPolicyAssignment = new AzureNative.Authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment", new AzureNative.Authorization.RoleManagementPolicyAssignmentArgs
+ *         {
+ *             PolicyId = "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+ *             RoleDefinitionId = "/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+ *             RoleManagementPolicyAssignmentName = "b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+ *             Scope = "/subscriptions/129ff972-28f8-46b8-a726-e497be039368",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewRoleManagementPolicyAssignment(ctx, "roleManagementPolicyAssignment", &authorization.RoleManagementPolicyAssignmentArgs{
+ * 			PolicyId:                           pulumi.String("/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9"),
+ * 			RoleDefinitionId:                   pulumi.String("/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24"),
+ * 			RoleManagementPolicyAssignmentName: pulumi.String("b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24"),
+ * 			Scope:                              pulumi.String("/subscriptions/129ff972-28f8-46b8-a726-e497be039368"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const roleManagementPolicyAssignment = new azure_native.authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment", {
+ *     policyId: "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+ *     roleDefinitionId: "/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+ *     roleManagementPolicyAssignmentName: "b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+ *     scope: "/subscriptions/129ff972-28f8-46b8-a726-e497be039368",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * role_management_policy_assignment = azure_native.authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment",
+ *     policy_id="/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+ *     role_definition_id="/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+ *     role_management_policy_assignment_name="b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+ *     scope="/subscriptions/129ff972-28f8-46b8-a726-e497be039368")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +109,72 @@ import javax.annotation.Nullable;
 public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomResource {
     /**
      * The role management policy name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The role management policy name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional properties of scope, role definition and policy
-     * 
      */
     @Export(name="policyAssignmentProperties", type=PolicyAssignmentPropertiesResponse.class, parameters={})
     private Output<PolicyAssignmentPropertiesResponse> policyAssignmentProperties;
 
     /**
      * @return Additional properties of scope, role definition and policy
-     * 
      */
     public Output<PolicyAssignmentPropertiesResponse> getPolicyAssignmentProperties() {
         return this.policyAssignmentProperties;
     }
     /**
      * The policy id role management policy assignment.
-     * 
      */
     @Export(name="policyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyId;
 
     /**
      * @return The policy id role management policy assignment.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyId() {
         return this.policyId;
     }
     /**
      * The role definition of management policy assignment.
-     * 
      */
     @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleDefinitionId;
 
     /**
      * @return The role definition of management policy assignment.
-     * 
      */
     public Output</* @Nullable */ String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * The role management policy scope.
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
      * @return The role management policy scope.
-     * 
      */
     public Output</* @Nullable */ String> getScope() {
         return this.scope;
     }
     /**
      * The role management policy type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The role management policy type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

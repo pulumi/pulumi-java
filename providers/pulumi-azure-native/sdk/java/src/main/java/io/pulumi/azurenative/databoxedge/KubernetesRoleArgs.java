@@ -21,7 +21,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -32,7 +31,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Host OS supported by the Kubernetes role.
-     * 
      */
     @Import(name="hostPlatform", required=true)
       private final Output<Either<String,PlatformType>> hostPlatform;
@@ -44,7 +42,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Role type.
      * Expected value is 'Kubernetes'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -55,7 +52,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kubernetes cluster configuration
-     * 
      */
     @Import(name="kubernetesClusterInfo", required=true)
       private final Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
@@ -66,7 +62,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kubernetes role resources
-     * 
      */
     @Import(name="kubernetesRoleResources", required=true)
       private final Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
@@ -77,7 +72,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -88,7 +82,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role status.
-     * 
      */
     @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;

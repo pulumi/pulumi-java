@@ -21,7 +21,302 @@ import javax.annotation.Nullable;
  * The profile resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Profiles_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var profile = new AzureNative.CustomerInsights.Profile("profile", new AzureNative.CustomerInsights.ProfileArgs
+ *         {
+ *             ApiEntitySetName = "TestProfileType396",
+ *             Fields = 
+ *             {
+ *                 new AzureNative.CustomerInsights.Inputs.PropertyDefinitionArgs
+ *                 {
+ *                     FieldName = "Id",
+ *                     FieldType = "Edm.String",
+ *                     IsArray = false,
+ *                     IsRequired = true,
+ *                 },
+ *                 new AzureNative.CustomerInsights.Inputs.PropertyDefinitionArgs
+ *                 {
+ *                     FieldName = "ProfileId",
+ *                     FieldType = "Edm.String",
+ *                     IsArray = false,
+ *                     IsRequired = true,
+ *                 },
+ *                 new AzureNative.CustomerInsights.Inputs.PropertyDefinitionArgs
+ *                 {
+ *                     FieldName = "LastName",
+ *                     FieldType = "Edm.String",
+ *                     IsArray = false,
+ *                     IsRequired = true,
+ *                 },
+ *                 new AzureNative.CustomerInsights.Inputs.PropertyDefinitionArgs
+ *                 {
+ *                     FieldName = "TestProfileType396",
+ *                     FieldType = "Edm.String",
+ *                     IsArray = false,
+ *                     IsRequired = true,
+ *                 },
+ *                 new AzureNative.CustomerInsights.Inputs.PropertyDefinitionArgs
+ *                 {
+ *                     FieldName = "SavingAccountBalance",
+ *                     FieldType = "Edm.Int32",
+ *                     IsArray = false,
+ *                     IsRequired = true,
+ *                 },
+ *             },
+ *             HubName = "sdkTestHub",
+ *             LargeImage = "\\\\Images\\\\LargeImage",
+ *             MediumImage = "\\\\Images\\\\MediumImage",
+ *             ProfileName = "TestProfileType396",
+ *             ResourceGroupName = "TestHubRG",
+ *             SchemaItemTypeLink = "SchemaItemTypeLink",
+ *             SmallImage = "\\\\Images\\\\smallImage",
+ *             StrongIds = 
+ *             {
+ *                 new AzureNative.CustomerInsights.Inputs.StrongIdArgs
+ *                 {
+ *                     KeyPropertyNames = 
+ *                     {
+ *                         "Id",
+ *                         "SavingAccountBalance",
+ *                     },
+ *                     StrongIdName = "Id",
+ *                 },
+ *                 new AzureNative.CustomerInsights.Inputs.StrongIdArgs
+ *                 {
+ *                     KeyPropertyNames = 
+ *                     {
+ *                         "ProfileId",
+ *                         "LastName",
+ *                     },
+ *                     StrongIdName = "ProfileId",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewProfile(ctx, "profile", &customerinsights.ProfileArgs{
+ * 			ApiEntitySetName: pulumi.String("TestProfileType396"),
+ * 			Fields: []customerinsights.PropertyDefinitionArgs{
+ * 				&customerinsights.PropertyDefinitionArgs{
+ * 					FieldName:  pulumi.String("Id"),
+ * 					FieldType:  pulumi.String("Edm.String"),
+ * 					IsArray:    pulumi.Bool(false),
+ * 					IsRequired: pulumi.Bool(true),
+ * 				},
+ * 				&customerinsights.PropertyDefinitionArgs{
+ * 					FieldName:  pulumi.String("ProfileId"),
+ * 					FieldType:  pulumi.String("Edm.String"),
+ * 					IsArray:    pulumi.Bool(false),
+ * 					IsRequired: pulumi.Bool(true),
+ * 				},
+ * 				&customerinsights.PropertyDefinitionArgs{
+ * 					FieldName:  pulumi.String("LastName"),
+ * 					FieldType:  pulumi.String("Edm.String"),
+ * 					IsArray:    pulumi.Bool(false),
+ * 					IsRequired: pulumi.Bool(true),
+ * 				},
+ * 				&customerinsights.PropertyDefinitionArgs{
+ * 					FieldName:  pulumi.String("TestProfileType396"),
+ * 					FieldType:  pulumi.String("Edm.String"),
+ * 					IsArray:    pulumi.Bool(false),
+ * 					IsRequired: pulumi.Bool(true),
+ * 				},
+ * 				&customerinsights.PropertyDefinitionArgs{
+ * 					FieldName:  pulumi.String("SavingAccountBalance"),
+ * 					FieldType:  pulumi.String("Edm.Int32"),
+ * 					IsArray:    pulumi.Bool(false),
+ * 					IsRequired: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			HubName:            pulumi.String("sdkTestHub"),
+ * 			LargeImage:         pulumi.String("\\\\Images\\\\LargeImage"),
+ * 			MediumImage:        pulumi.String("\\\\Images\\\\MediumImage"),
+ * 			ProfileName:        pulumi.String("TestProfileType396"),
+ * 			ResourceGroupName:  pulumi.String("TestHubRG"),
+ * 			SchemaItemTypeLink: pulumi.String("SchemaItemTypeLink"),
+ * 			SmallImage:         pulumi.String("\\\\Images\\\\smallImage"),
+ * 			StrongIds: []customerinsights.StrongIdArgs{
+ * 				&customerinsights.StrongIdArgs{
+ * 					KeyPropertyNames: pulumi.StringArray{
+ * 						pulumi.String("Id"),
+ * 						pulumi.String("SavingAccountBalance"),
+ * 					},
+ * 					StrongIdName: pulumi.String("Id"),
+ * 				},
+ * 				&customerinsights.StrongIdArgs{
+ * 					KeyPropertyNames: pulumi.StringArray{
+ * 						pulumi.String("ProfileId"),
+ * 						pulumi.String("LastName"),
+ * 					},
+ * 					StrongIdName: pulumi.String("ProfileId"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const profile = new azure_native.customerinsights.Profile("profile", {
+ *     apiEntitySetName: "TestProfileType396",
+ *     fields: [
+ *         {
+ *             fieldName: "Id",
+ *             fieldType: "Edm.String",
+ *             isArray: false,
+ *             isRequired: true,
+ *         },
+ *         {
+ *             fieldName: "ProfileId",
+ *             fieldType: "Edm.String",
+ *             isArray: false,
+ *             isRequired: true,
+ *         },
+ *         {
+ *             fieldName: "LastName",
+ *             fieldType: "Edm.String",
+ *             isArray: false,
+ *             isRequired: true,
+ *         },
+ *         {
+ *             fieldName: "TestProfileType396",
+ *             fieldType: "Edm.String",
+ *             isArray: false,
+ *             isRequired: true,
+ *         },
+ *         {
+ *             fieldName: "SavingAccountBalance",
+ *             fieldType: "Edm.Int32",
+ *             isArray: false,
+ *             isRequired: true,
+ *         },
+ *     ],
+ *     hubName: "sdkTestHub",
+ *     largeImage: "\\\\Images\\\\LargeImage",
+ *     mediumImage: "\\\\Images\\\\MediumImage",
+ *     profileName: "TestProfileType396",
+ *     resourceGroupName: "TestHubRG",
+ *     schemaItemTypeLink: "SchemaItemTypeLink",
+ *     smallImage: "\\\\Images\\\\smallImage",
+ *     strongIds: [
+ *         {
+ *             keyPropertyNames: [
+ *                 "Id",
+ *                 "SavingAccountBalance",
+ *             ],
+ *             strongIdName: "Id",
+ *         },
+ *         {
+ *             keyPropertyNames: [
+ *                 "ProfileId",
+ *                 "LastName",
+ *             ],
+ *             strongIdName: "ProfileId",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * profile = azure_native.customerinsights.Profile("profile",
+ *     api_entity_set_name="TestProfileType396",
+ *     fields=[
+ *         azure_native.customerinsights.PropertyDefinitionArgs(
+ *             field_name="Id",
+ *             field_type="Edm.String",
+ *             is_array=False,
+ *             is_required=True,
+ *         ),
+ *         azure_native.customerinsights.PropertyDefinitionArgs(
+ *             field_name="ProfileId",
+ *             field_type="Edm.String",
+ *             is_array=False,
+ *             is_required=True,
+ *         ),
+ *         azure_native.customerinsights.PropertyDefinitionArgs(
+ *             field_name="LastName",
+ *             field_type="Edm.String",
+ *             is_array=False,
+ *             is_required=True,
+ *         ),
+ *         azure_native.customerinsights.PropertyDefinitionArgs(
+ *             field_name="TestProfileType396",
+ *             field_type="Edm.String",
+ *             is_array=False,
+ *             is_required=True,
+ *         ),
+ *         azure_native.customerinsights.PropertyDefinitionArgs(
+ *             field_name="SavingAccountBalance",
+ *             field_type="Edm.Int32",
+ *             is_array=False,
+ *             is_required=True,
+ *         ),
+ *     ],
+ *     hub_name="sdkTestHub",
+ *     large_image="\\\\Images\\\\LargeImage",
+ *     medium_image="\\\\Images\\\\MediumImage",
+ *     profile_name="TestProfileType396",
+ *     resource_group_name="TestHubRG",
+ *     schema_item_type_link="SchemaItemTypeLink",
+ *     small_image="\\\\Images\\\\smallImage",
+ *     strong_ids=[
+ *         azure_native.customerinsights.StrongIdArgs(
+ *             key_property_names=[
+ *                 "Id",
+ *                 "SavingAccountBalance",
+ *             ],
+ *             strong_id_name="Id",
+ *         ),
+ *         azure_native.customerinsights.StrongIdArgs(
+ *             key_property_names=[
+ *                 "ProfileId",
+ *                 "LastName",
+ *             ],
+ *             strong_id_name="ProfileId",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,280 +331,240 @@ import javax.annotation.Nullable;
 public class Profile extends io.pulumi.resources.CustomResource {
     /**
      * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
-     * 
      */
     @Export(name="apiEntitySetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiEntitySetName;
 
     /**
      * @return The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
-     * 
      */
     public Output</* @Nullable */ String> getApiEntitySetName() {
         return this.apiEntitySetName;
     }
     /**
      * The attributes for the Type.
-     * 
      */
     @Export(name="attributes", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> attributes;
 
     /**
      * @return The attributes for the Type.
-     * 
      */
     public Output</* @Nullable */ Map<String,List<String>>> getAttributes() {
         return this.attributes;
     }
     /**
      * Localized descriptions for the property.
-     * 
      */
     @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
      * @return Localized descriptions for the property.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
     /**
      * Localized display names for the property.
-     * 
      */
     @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
      * @return Localized display names for the property.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
     /**
      * Type of entity.
-     * 
      */
     @Export(name="entityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityType;
 
     /**
      * @return Type of entity.
-     * 
      */
     public Output</* @Nullable */ String> getEntityType() {
         return this.entityType;
     }
     /**
      * The properties of the Profile.
-     * 
      */
     @Export(name="fields", type=List.class, parameters={PropertyDefinitionResponse.class})
     private Output</* @Nullable */ List<PropertyDefinitionResponse>> fields;
 
     /**
      * @return The properties of the Profile.
-     * 
      */
     public Output</* @Nullable */ List<PropertyDefinitionResponse>> getFields() {
         return this.fields;
     }
     /**
      * The instance count.
-     * 
      */
     @Export(name="instancesCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> instancesCount;
 
     /**
      * @return The instance count.
-     * 
      */
     public Output</* @Nullable */ Integer> getInstancesCount() {
         return this.instancesCount;
     }
     /**
      * Large Image associated with the Property or EntityType.
-     * 
      */
     @Export(name="largeImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> largeImage;
 
     /**
      * @return Large Image associated with the Property or EntityType.
-     * 
      */
     public Output</* @Nullable */ String> getLargeImage() {
         return this.largeImage;
     }
     /**
      * The last changed time for the type definition.
-     * 
      */
     @Export(name="lastChangedUtc", type=String.class, parameters={})
     private Output<String> lastChangedUtc;
 
     /**
      * @return The last changed time for the type definition.
-     * 
      */
     public Output<String> getLastChangedUtc() {
         return this.lastChangedUtc;
     }
     /**
      * Any custom localized attributes for the Type.
-     * 
      */
     @Export(name="localizedAttributes", type=Map.class, parameters={String.class, Map.class})
     private Output</* @Nullable */ Map<String,Map<String,String>>> localizedAttributes;
 
     /**
      * @return Any custom localized attributes for the Type.
-     * 
      */
     public Output</* @Nullable */ Map<String,Map<String,String>>> getLocalizedAttributes() {
         return this.localizedAttributes;
     }
     /**
      * Medium Image associated with the Property or EntityType.
-     * 
      */
     @Export(name="mediumImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> mediumImage;
 
     /**
      * @return Medium Image associated with the Property or EntityType.
-     * 
      */
     public Output</* @Nullable */ String> getMediumImage() {
         return this.mediumImage;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The schema org link. This helps ACI identify and suggest semantic models.
-     * 
      */
     @Export(name="schemaItemTypeLink", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaItemTypeLink;
 
     /**
      * @return The schema org link. This helps ACI identify and suggest semantic models.
-     * 
      */
     public Output</* @Nullable */ String> getSchemaItemTypeLink() {
         return this.schemaItemTypeLink;
     }
     /**
      * Small Image associated with the Property or EntityType.
-     * 
      */
     @Export(name="smallImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> smallImage;
 
     /**
      * @return Small Image associated with the Property or EntityType.
-     * 
      */
     public Output</* @Nullable */ String> getSmallImage() {
         return this.smallImage;
     }
     /**
      * The strong IDs.
-     * 
      */
     @Export(name="strongIds", type=List.class, parameters={StrongIdResponse.class})
     private Output</* @Nullable */ List<StrongIdResponse>> strongIds;
 
     /**
      * @return The strong IDs.
-     * 
      */
     public Output</* @Nullable */ List<StrongIdResponse>> getStrongIds() {
         return this.strongIds;
     }
     /**
      * The hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The timestamp property name. Represents the time when the interaction or profile update happened.
-     * 
      */
     @Export(name="timestampFieldName", type=String.class, parameters={})
     private Output</* @Nullable */ String> timestampFieldName;
 
     /**
      * @return The timestamp property name. Represents the time when the interaction or profile update happened.
-     * 
      */
     public Output</* @Nullable */ String> getTimestampFieldName() {
         return this.timestampFieldName;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The name of the entity.
-     * 
      */
     @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
     /**
      * @return The name of the entity.
-     * 
      */
     public Output</* @Nullable */ String> getTypeName() {
         return this.typeName;

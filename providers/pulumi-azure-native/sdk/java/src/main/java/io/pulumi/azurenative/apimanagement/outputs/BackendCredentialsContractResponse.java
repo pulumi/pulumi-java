@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class BackendCredentialsContractResponse {
     /**
      * Authorization header authentication
-     * 
      */
     private final @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
     /**
      * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
-     * 
      */
     private final @Nullable List<String> certificate;
     /**
      * List of Client Certificate Ids.
-     * 
      */
     private final @Nullable List<String> certificateIds;
     /**
      * Header Parameter description.
-     * 
      */
     private final @Nullable Map<String,List<String>> header;
     /**
      * Query Parameter description.
-     * 
      */
     private final @Nullable Map<String,List<String>> query;
 
@@ -56,35 +51,30 @@ public final class BackendCredentialsContractResponse {
 
     /**
      * Authorization header authentication
-     * 
     */
     public Optional<BackendAuthorizationHeaderCredentialsResponse> getAuthorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
      * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
-     * 
     */
     public List<String> getCertificate() {
         return this.certificate == null ? List.of() : this.certificate;
     }
     /**
      * List of Client Certificate Ids.
-     * 
     */
     public List<String> getCertificateIds() {
         return this.certificateIds == null ? List.of() : this.certificateIds;
     }
     /**
      * Header Parameter description.
-     * 
     */
     public Map<String,List<String>> getHeader() {
         return this.header == null ? Map.of() : this.header;
     }
     /**
      * Query Parameter description.
-     * 
     */
     public Map<String,List<String>> getQuery() {
         return this.query == null ? Map.of() : this.query;

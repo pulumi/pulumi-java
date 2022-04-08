@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The endpoint used by clients to ingest logs.
- * 
  */
 public final class DataCollectionEndpointResponseLogsIngestion extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataCollectionEndpointResponseLogsIngestion extends io.pulumi
 
     /**
      * The endpoint. This property is READ-ONLY.
-     * 
      */
     @Import(name="endpoint", required=true)
       private final String endpoint;

@@ -17,7 +17,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
@@ -28,7 +27,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the Azure Cognitive Search service associated with the specified resource group.
-     * 
      */
     @Import(name="searchServiceName", required=true)
       private final Output<String> searchServiceName;
@@ -50,7 +47,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
-     * 
      */
     @Import(name="sharedPrivateLinkResourceName")
       private final @Nullable Output<String> sharedPrivateLinkResourceName;

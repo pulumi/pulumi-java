@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A path element of a management group ancestors.
- * 
  */
 public final class ManagementGroupPathElementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
 
     /**
      * The friendly name of the group.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
 
     /**
      * The name of the group.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

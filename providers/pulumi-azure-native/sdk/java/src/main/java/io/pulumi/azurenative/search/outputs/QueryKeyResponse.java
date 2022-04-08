@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class QueryKeyResponse {
     /**
      * The value of the query API key.
-     * 
      */
     private final String key;
     /**
      * The name of the query API key; may be empty.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class QueryKeyResponse {
 
     /**
      * The value of the query API key.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The name of the query API key; may be empty.
-     * 
     */
     public String getName() {
         return this.name;

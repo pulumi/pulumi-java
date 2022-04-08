@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies configuration of a redis module
- * 
  */
 public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
-     * 
      */
     @Import(name="args")
       private final @Nullable String args;
@@ -31,7 +29,6 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The version of the module, e.g. '1.0'.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

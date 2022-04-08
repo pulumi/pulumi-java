@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
- * 
  */
 public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      *  The Batch Account has a System Assigned identity
      *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
      *  The KeyVault has soft-delete and purge protection enabled
-     * 
      */
     @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;

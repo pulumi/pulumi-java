@@ -18,7 +18,205 @@ import javax.annotation.Nullable;
  * An Azure SQL Database sync member.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a new sync member
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var syncMember = new AzureNative.Sql.SyncMember("syncMember", new AzureNative.Sql.SyncMemberArgs
+ *         {
+ *             DatabaseName = "syncgroupcrud-4328",
+ *             DatabaseType = "AzureSqlDatabase",
+ *             ResourceGroupName = "syncgroupcrud-65440",
+ *             ServerName = "syncgroupcrud-8475",
+ *             SyncDirection = "Bidirectional",
+ *             SyncGroupName = "syncgroupcrud-3187",
+ *             SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+ *             SyncMemberName = "syncmembercrud-4879",
+ *             UsePrivateLinkConnection = true,
+ *             UserName = "myUser",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
+ * 			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
+ * 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
+ * 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
+ * 			ServerName:                        pulumi.String("syncgroupcrud-8475"),
+ * 			SyncDirection:                     pulumi.String("Bidirectional"),
+ * 			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
+ * 			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
+ * 			SyncMemberName:                    pulumi.String("syncmembercrud-4879"),
+ * 			UsePrivateLinkConnection:          pulumi.Bool(true),
+ * 			UserName:                          pulumi.String("myUser"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const syncMember = new azure_native.sql.SyncMember("syncMember", {
+ *     databaseName: "syncgroupcrud-4328",
+ *     databaseType: "AzureSqlDatabase",
+ *     resourceGroupName: "syncgroupcrud-65440",
+ *     serverName: "syncgroupcrud-8475",
+ *     syncDirection: "Bidirectional",
+ *     syncGroupName: "syncgroupcrud-3187",
+ *     syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+ *     syncMemberName: "syncmembercrud-4879",
+ *     usePrivateLinkConnection: true,
+ *     userName: "myUser",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sync_member = azure_native.sql.SyncMember("syncMember",
+ *     database_name="syncgroupcrud-4328",
+ *     database_type="AzureSqlDatabase",
+ *     resource_group_name="syncgroupcrud-65440",
+ *     server_name="syncgroupcrud-8475",
+ *     sync_direction="Bidirectional",
+ *     sync_group_name="syncgroupcrud-3187",
+ *     sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+ *     sync_member_name="syncmembercrud-4879",
+ *     use_private_link_connection=True,
+ *     user_name="myUser")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Update a sync member
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var syncMember = new AzureNative.Sql.SyncMember("syncMember", new AzureNative.Sql.SyncMemberArgs
+ *         {
+ *             DatabaseName = "syncgroupcrud-4328",
+ *             DatabaseType = "AzureSqlDatabase",
+ *             ResourceGroupName = "syncgroupcrud-65440",
+ *             ServerName = "syncgroupcrud-8475",
+ *             SyncDirection = "Bidirectional",
+ *             SyncGroupName = "syncgroupcrud-3187",
+ *             SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+ *             SyncMemberName = "syncmembercrud-4879",
+ *             UsePrivateLinkConnection = true,
+ *             UserName = "myUser",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
+ * 			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
+ * 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
+ * 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
+ * 			ServerName:                        pulumi.String("syncgroupcrud-8475"),
+ * 			SyncDirection:                     pulumi.String("Bidirectional"),
+ * 			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
+ * 			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
+ * 			SyncMemberName:                    pulumi.String("syncmembercrud-4879"),
+ * 			UsePrivateLinkConnection:          pulumi.Bool(true),
+ * 			UserName:                          pulumi.String("myUser"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const syncMember = new azure_native.sql.SyncMember("syncMember", {
+ *     databaseName: "syncgroupcrud-4328",
+ *     databaseType: "AzureSqlDatabase",
+ *     resourceGroupName: "syncgroupcrud-65440",
+ *     serverName: "syncgroupcrud-8475",
+ *     syncDirection: "Bidirectional",
+ *     syncGroupName: "syncgroupcrud-3187",
+ *     syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+ *     syncMemberName: "syncmembercrud-4879",
+ *     usePrivateLinkConnection: true,
+ *     userName: "myUser",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sync_member = azure_native.sql.SyncMember("syncMember",
+ *     database_name="syncgroupcrud-4328",
+ *     database_type="AzureSqlDatabase",
+ *     resource_group_name="syncgroupcrud-65440",
+ *     server_name="syncgroupcrud-8475",
+ *     sync_direction="Bidirectional",
+ *     sync_group_name="syncgroupcrud-3187",
+ *     sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+ *     sync_member_name="syncmembercrud-4879",
+ *     use_private_link_connection=True,
+ *     user_name="myUser")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,182 +231,156 @@ import javax.annotation.Nullable;
 public class SyncMember extends io.pulumi.resources.CustomResource {
     /**
      * Database name of the member database in the sync member.
-     * 
      */
     @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
      * @return Database name of the member database in the sync member.
-     * 
      */
     public Output</* @Nullable */ String> getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Database type of the sync member.
-     * 
      */
     @Export(name="databaseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseType;
 
     /**
      * @return Database type of the sync member.
-     * 
      */
     public Output</* @Nullable */ String> getDatabaseType() {
         return this.databaseType;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
-     * 
      */
     @Export(name="privateEndpointName", type=String.class, parameters={})
     private Output<String> privateEndpointName;
 
     /**
      * @return Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
-     * 
      */
     public Output<String> getPrivateEndpointName() {
         return this.privateEndpointName;
     }
     /**
      * Server name of the member database in the sync member
-     * 
      */
     @Export(name="serverName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverName;
 
     /**
      * @return Server name of the member database in the sync member
-     * 
      */
     public Output</* @Nullable */ String> getServerName() {
         return this.serverName;
     }
     /**
      * SQL Server database id of the sync member.
-     * 
      */
     @Export(name="sqlServerDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlServerDatabaseId;
 
     /**
      * @return SQL Server database id of the sync member.
-     * 
      */
     public Output</* @Nullable */ String> getSqlServerDatabaseId() {
         return this.sqlServerDatabaseId;
     }
     /**
      * ARM resource id of the sync agent in the sync member.
-     * 
      */
     @Export(name="syncAgentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncAgentId;
 
     /**
      * @return ARM resource id of the sync agent in the sync member.
-     * 
      */
     public Output</* @Nullable */ String> getSyncAgentId() {
         return this.syncAgentId;
     }
     /**
      * Sync direction of the sync member.
-     * 
      */
     @Export(name="syncDirection", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncDirection;
 
     /**
      * @return Sync direction of the sync member.
-     * 
      */
     public Output</* @Nullable */ String> getSyncDirection() {
         return this.syncDirection;
     }
     /**
      * ARM resource id of the sync member logical database, for sync members in Azure.
-     * 
      */
     @Export(name="syncMemberAzureDatabaseResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncMemberAzureDatabaseResourceId;
 
     /**
      * @return ARM resource id of the sync member logical database, for sync members in Azure.
-     * 
      */
     public Output</* @Nullable */ String> getSyncMemberAzureDatabaseResourceId() {
         return this.syncMemberAzureDatabaseResourceId;
     }
     /**
      * Sync state of the sync member.
-     * 
      */
     @Export(name="syncState", type=String.class, parameters={})
     private Output<String> syncState;
 
     /**
      * @return Sync state of the sync member.
-     * 
      */
     public Output<String> getSyncState() {
         return this.syncState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Whether to use private link connection.
-     * 
      */
     @Export(name="usePrivateLinkConnection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePrivateLinkConnection;
 
     /**
      * @return Whether to use private link connection.
-     * 
      */
     public Output</* @Nullable */ Boolean> getUsePrivateLinkConnection() {
         return this.usePrivateLinkConnection;
     }
     /**
      * User name of the member database in the sync member.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
     /**
      * @return User name of the member database in the sync member.
-     * 
      */
     public Output</* @Nullable */ String> getUserName() {
         return this.userName;

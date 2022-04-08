@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class OsDiskImageResponse {
     /**
      * OS operating system type.
-     * 
      */
     private final String operatingSystem;
     /**
      * SAS key for source blob.
-     * 
      */
     private final String sourceBlobSasUri;
 
@@ -30,14 +28,12 @@ public final class OsDiskImageResponse {
 
     /**
      * OS operating system type.
-     * 
     */
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
     /**
      * SAS key for source blob.
-     * 
     */
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;

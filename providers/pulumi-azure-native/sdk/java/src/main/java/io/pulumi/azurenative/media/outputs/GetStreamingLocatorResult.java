@@ -16,72 +16,58 @@ import javax.annotation.Nullable;
 public final class GetStreamingLocatorResult {
     /**
      * Alternative Media ID of this Streaming Locator
-     * 
      */
     private final @Nullable String alternativeMediaId;
     /**
      * Asset Name
-     * 
      */
     private final String assetName;
     /**
      * The ContentKeys used by this Streaming Locator.
-     * 
      */
     private final @Nullable List<StreamingLocatorContentKeyResponse> contentKeys;
     /**
      * The creation time of the Streaming Locator.
-     * 
      */
     private final String created;
     /**
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
-     * 
      */
     private final @Nullable String defaultContentKeyPolicyName;
     /**
      * The end time of the Streaming Locator.
-     * 
      */
     private final @Nullable String endTime;
     /**
      * A list of asset or account filters which apply to this streaming locator
-     * 
      */
     private final @Nullable List<String> filters;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The start time of the Streaming Locator.
-     * 
      */
     private final @Nullable String startTime;
     /**
      * The StreamingLocatorId of the Streaming Locator.
-     * 
      */
     private final @Nullable String streamingLocatorId;
     /**
      * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
-     * 
      */
     private final String streamingPolicyName;
     /**
      * The system metadata relating to this resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -119,98 +105,84 @@ public final class GetStreamingLocatorResult {
 
     /**
      * Alternative Media ID of this Streaming Locator
-     * 
     */
     public Optional<String> getAlternativeMediaId() {
         return Optional.ofNullable(this.alternativeMediaId);
     }
     /**
      * Asset Name
-     * 
     */
     public String getAssetName() {
         return this.assetName;
     }
     /**
      * The ContentKeys used by this Streaming Locator.
-     * 
     */
     public List<StreamingLocatorContentKeyResponse> getContentKeys() {
         return this.contentKeys == null ? List.of() : this.contentKeys;
     }
     /**
      * The creation time of the Streaming Locator.
-     * 
     */
     public String getCreated() {
         return this.created;
     }
     /**
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
-     * 
     */
     public Optional<String> getDefaultContentKeyPolicyName() {
         return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
     /**
      * The end time of the Streaming Locator.
-     * 
     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * A list of asset or account filters which apply to this streaming locator
-     * 
     */
     public List<String> getFilters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The start time of the Streaming Locator.
-     * 
     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The StreamingLocatorId of the Streaming Locator.
-     * 
     */
     public Optional<String> getStreamingLocatorId() {
         return Optional.ofNullable(this.streamingLocatorId);
     }
     /**
      * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
-     * 
     */
     public String getStreamingPolicyName() {
         return this.streamingPolicyName;
     }
     /**
      * The system metadata relating to this resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

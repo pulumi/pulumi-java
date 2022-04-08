@@ -25,7 +25,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<List<MetricAlertActionArgs>> actions;
@@ -36,7 +35,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the flag that indicates whether the alert should be auto resolved or not. The default is true.
-     * 
      */
     @Import(name="autoMitigate")
       private final @Nullable Output<Boolean> autoMitigate;
@@ -47,7 +45,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * defines the specific alert criteria information.
-     * 
      */
     @Import(name="criteria", required=true)
       private final Output<Object> criteria;
@@ -58,7 +55,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the description of the metric alert that will be included in the alert email.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -69,7 +65,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the flag that indicates whether the metric alert is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -80,7 +75,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * how often the metric alert is evaluated represented in ISO 8601 duration format.
-     * 
      */
     @Import(name="evaluationFrequency", required=true)
       private final Output<String> evaluationFrequency;
@@ -91,7 +85,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -102,7 +95,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -113,7 +105,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the rule.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
@@ -124,7 +115,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the list of resource id's that this metric alert is scoped to.
-     * 
      */
     @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
@@ -135,7 +125,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Alert severity {0, 1, 2, 3, 4}
-     * 
      */
     @Import(name="severity", required=true)
       private final Output<Integer> severity;
@@ -146,7 +135,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -157,7 +145,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
-     * 
      */
     @Import(name="targetResourceRegion")
       private final @Nullable Output<String> targetResourceRegion;
@@ -168,7 +155,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
-     * 
      */
     @Import(name="targetResourceType")
       private final @Nullable Output<String> targetResourceType;
@@ -179,7 +165,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
-     * 
      */
     @Import(name="windowSize", required=true)
       private final Output<String> windowSize;

@@ -14,7 +14,6 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique name of a group within a project.
-     * 
      */
     @Import(name="groupName", required=true)
       private final String groupName;
@@ -25,7 +24,6 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Azure Migrate project.
-     * 
      */
     @Import(name="projectName", required=true)
       private final String projectName;
@@ -36,7 +34,6 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Azure Resource Group that project is part of.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

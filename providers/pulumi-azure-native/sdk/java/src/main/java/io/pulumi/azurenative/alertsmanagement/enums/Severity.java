@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The alert rule severity.
-     * 
      */
     @EnumType
     public enum Severity {

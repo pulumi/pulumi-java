@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service properties payload
- * 
  */
 public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Network profile of the Service
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;

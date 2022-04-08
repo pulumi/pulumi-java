@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Private Endpoint Connection resource.
- * 
  */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The location of the private endpoint connection
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -32,7 +30,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Resource properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;

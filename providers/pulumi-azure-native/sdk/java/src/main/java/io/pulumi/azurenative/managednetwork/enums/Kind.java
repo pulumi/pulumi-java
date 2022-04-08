@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Responsibility role under which this Managed Network Group will be created
-     * 
      */
     @EnumType
     public enum Kind {

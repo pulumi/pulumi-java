@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * VMM fabric specific details.
- * 
  */
 public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMM'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;

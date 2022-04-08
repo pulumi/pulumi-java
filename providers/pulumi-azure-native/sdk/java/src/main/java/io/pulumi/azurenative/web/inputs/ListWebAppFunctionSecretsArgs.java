@@ -14,7 +14,6 @@ public final class ListWebAppFunctionSecretsArgs extends io.pulumi.resources.Inv
 
     /**
      * Function name.
-     * 
      */
     @Import(name="functionName", required=true)
       private final String functionName;
@@ -25,7 +24,6 @@ public final class ListWebAppFunctionSecretsArgs extends io.pulumi.resources.Inv
 
     /**
      * Site name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class ListWebAppFunctionSecretsArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

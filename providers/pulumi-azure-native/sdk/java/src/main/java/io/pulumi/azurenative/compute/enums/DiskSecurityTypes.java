@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the SecurityType of the VM. Applicable for OS disks only.
-     * 
      */
     @EnumType
     public enum DiskSecurityTypes {
         /**
          * Trusted Launch provides security features such as secure boot and virtual Trusted Platform Module (vTPM)
-         * 
          */
         TrustedLaunch("TrustedLaunch");
 

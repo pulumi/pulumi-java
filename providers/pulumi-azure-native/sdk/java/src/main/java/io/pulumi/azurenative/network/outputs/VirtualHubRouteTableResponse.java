@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VirtualHubRouteTableResponse {
     /**
      * List of all routes.
-     * 
      */
     private final @Nullable List<VirtualHubRouteResponse> routes;
 
@@ -24,7 +23,6 @@ public final class VirtualHubRouteTableResponse {
 
     /**
      * List of all routes.
-     * 
     */
     public List<VirtualHubRouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;

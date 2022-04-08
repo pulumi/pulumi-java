@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetDeploymentLogFileUrlResult {
     /**
      * URL of the log file
-     * 
      */
     private final String url;
 
@@ -22,7 +21,6 @@ public final class GetDeploymentLogFileUrlResult {
 
     /**
      * URL of the log file
-     * 
     */
     public String getUrl() {
         return this.url;

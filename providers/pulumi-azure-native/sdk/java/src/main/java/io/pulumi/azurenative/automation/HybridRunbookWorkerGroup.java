@@ -20,7 +20,92 @@ import javax.annotation.Nullable;
  * Definition of hybrid runbook worker group.
  * API Version: 2021-06-22.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a hybrid worker group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hybridRunbookWorkerGroup = new AzureNative.Automation.HybridRunbookWorkerGroup("hybridRunbookWorkerGroup", new AzureNative.Automation.HybridRunbookWorkerGroupArgs
+ *         {
+ *             AutomationAccountName = "testaccount",
+ *             Credential = new AzureNative.Automation.Inputs.RunAsCredentialAssociationPropertyArgs
+ *             {
+ *                 Name = "myRunAsCredentialName",
+ *             },
+ *             HybridRunbookWorkerGroupName = "TestHybridGroup",
+ *             ResourceGroupName = "rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewHybridRunbookWorkerGroup(ctx, "hybridRunbookWorkerGroup", &automation.HybridRunbookWorkerGroupArgs{
+ * 			AutomationAccountName: pulumi.String("testaccount"),
+ * 			Credential: &automation.RunAsCredentialAssociationPropertyArgs{
+ * 				Name: pulumi.String("myRunAsCredentialName"),
+ * 			},
+ * 			HybridRunbookWorkerGroupName: pulumi.String("TestHybridGroup"),
+ * 			ResourceGroupName:            pulumi.String("rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hybridRunbookWorkerGroup = new azure_native.automation.HybridRunbookWorkerGroup("hybridRunbookWorkerGroup", {
+ *     automationAccountName: "testaccount",
+ *     credential: {
+ *         name: "myRunAsCredentialName",
+ *     },
+ *     hybridRunbookWorkerGroupName: "TestHybridGroup",
+ *     resourceGroupName: "rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hybrid_runbook_worker_group = azure_native.automation.HybridRunbookWorkerGroup("hybridRunbookWorkerGroup",
+ *     automation_account_name="testaccount",
+ *     credential=azure_native.automation.RunAsCredentialAssociationPropertyArgs(
+ *         name="myRunAsCredentialName",
+ *     ),
+ *     hybrid_runbook_worker_group_name="TestHybridGroup",
+ *     resource_group_name="rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +120,72 @@ import javax.annotation.Nullable;
 public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource {
     /**
      * Sets the credential of a worker group.
-     * 
      */
     @Export(name="credential", type=RunAsCredentialAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> credential;
 
     /**
      * @return Sets the credential of a worker group.
-     * 
      */
     public Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> getCredential() {
         return this.credential;
     }
     /**
      * Type of the HybridWorkerGroup.
-     * 
      */
     @Export(name="groupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> groupType;
 
     /**
      * @return Type of the HybridWorkerGroup.
-     * 
      */
     public Output</* @Nullable */ String> getGroupType() {
         return this.groupType;
     }
     /**
      * Gets or sets the list of hybrid runbook workers.
-     * 
      */
     @Export(name="hybridRunbookWorkers", type=List.class, parameters={HybridRunbookWorkerLegacyResponse.class})
     private Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> hybridRunbookWorkers;
 
     /**
      * @return Gets or sets the list of hybrid runbook workers.
-     * 
      */
     public Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> getHybridRunbookWorkers() {
         return this.hybridRunbookWorkers;
     }
     /**
      * Gets or sets the name of the group.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Gets or sets the name of the group.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Resource system metadata.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Resource system metadata.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

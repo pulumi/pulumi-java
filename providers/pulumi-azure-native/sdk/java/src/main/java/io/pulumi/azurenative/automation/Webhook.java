@@ -20,7 +20,108 @@ import javax.annotation.Nullable;
  * Definition of the webhook type.
  * API Version: 2015-10-31.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update webhook
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webhook = new AzureNative.Automation.Webhook("webhook", new AzureNative.Automation.WebhookArgs
+ *         {
+ *             AutomationAccountName = "myAutomationAccount33",
+ *             ExpiryTime = "2018-03-29T22:18:13.7002872Z",
+ *             IsEnabled = true,
+ *             Name = "TestWebhook",
+ *             ResourceGroupName = "rg",
+ *             Runbook = new AzureNative.Automation.Inputs.RunbookAssociationPropertyArgs
+ *             {
+ *                 Name = "TestRunbook",
+ *             },
+ *             Uri = "<uri>",
+ *             WebhookName = "TestWebhook",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewWebhook(ctx, "webhook", &automation.WebhookArgs{
+ * 			AutomationAccountName: pulumi.String("myAutomationAccount33"),
+ * 			ExpiryTime:            pulumi.String("2018-03-29T22:18:13.7002872Z"),
+ * 			IsEnabled:             pulumi.Bool(true),
+ * 			Name:                  pulumi.String("TestWebhook"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 			Runbook: &automation.RunbookAssociationPropertyArgs{
+ * 				Name: pulumi.String("TestRunbook"),
+ * 			},
+ * 			Uri:         pulumi.String("<uri>"),
+ * 			WebhookName: pulumi.String("TestWebhook"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webhook = new azure_native.automation.Webhook("webhook", {
+ *     automationAccountName: "myAutomationAccount33",
+ *     expiryTime: "2018-03-29T22:18:13.7002872Z",
+ *     isEnabled: true,
+ *     name: "TestWebhook",
+ *     resourceGroupName: "rg",
+ *     runbook: {
+ *         name: "TestRunbook",
+ *     },
+ *     uri: "<uri>",
+ *     webhookName: "TestWebhook",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * webhook = azure_native.automation.Webhook("webhook",
+ *     automation_account_name="myAutomationAccount33",
+ *     expiry_time="2018-03-29T22:18:13.7002872Z",
+ *     is_enabled=True,
+ *     name="TestWebhook",
+ *     resource_group_name="rg",
+ *     runbook=azure_native.automation.RunbookAssociationPropertyArgs(
+ *         name="TestRunbook",
+ *     ),
+ *     uri="<uri>",
+ *     webhook_name="TestWebhook")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,182 +136,156 @@ import javax.annotation.Nullable;
 public class Webhook extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
      * @return Gets or sets the creation time.
-     * 
      */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets or sets the expiry time.
-     * 
      */
     @Export(name="expiryTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiryTime;
 
     /**
      * @return Gets or sets the expiry time.
-     * 
      */
     public Output</* @Nullable */ String> getExpiryTime() {
         return this.expiryTime;
     }
     /**
      * Gets or sets the value of the enabled flag of the webhook.
-     * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
      * @return Gets or sets the value of the enabled flag of the webhook.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Gets or sets the last invoked time.
-     * 
      */
     @Export(name="lastInvokedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastInvokedTime;
 
     /**
      * @return Gets or sets the last invoked time.
-     * 
      */
     public Output</* @Nullable */ String> getLastInvokedTime() {
         return this.lastInvokedTime;
     }
     /**
      * Details of the user who last modified the Webhook
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
      * @return Details of the user who last modified the Webhook
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
      * @return Gets or sets the last modified time.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
      * @return Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getParameters() {
         return this.parameters;
     }
     /**
      * Gets or sets the name of the hybrid worker group the webhook job will run on.
-     * 
      */
     @Export(name="runOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> runOn;
 
     /**
      * @return Gets or sets the name of the hybrid worker group the webhook job will run on.
-     * 
      */
     public Output</* @Nullable */ String> getRunOn() {
         return this.runOn;
     }
     /**
      * Gets or sets the runbook the webhook is associated with.
-     * 
      */
     @Export(name="runbook", type=RunbookAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook;
 
     /**
      * @return Gets or sets the runbook the webhook is associated with.
-     * 
      */
     public Output</* @Nullable */ RunbookAssociationPropertyResponse> getRunbook() {
         return this.runbook;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets the webhook uri.
-     * 
      */
     @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
      * @return Gets or sets the webhook uri.
-     * 
      */
     public Output</* @Nullable */ String> getUri() {
         return this.uri;

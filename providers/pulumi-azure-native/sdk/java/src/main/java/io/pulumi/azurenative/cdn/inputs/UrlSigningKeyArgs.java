@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Url signing key
- * 
  */
 public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
-     * 
      */
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
@@ -31,7 +29,6 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the parameters for using customer key vault for Url Signing Key.
-     * 
      */
     @Import(name="keySourceParameters", required=true)
       private final Output<KeyVaultSigningKeyParametersArgs> keySourceParameters;

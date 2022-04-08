@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container for SQL workloads under SQL Availability Group.
- * 
  */
 public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -40,7 +38,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'SQLAGWorkLoadContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
@@ -51,7 +48,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Additional details of a workload container.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
@@ -62,7 +58,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -73,7 +68,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
@@ -84,7 +78,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Time stamp when this container was updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
@@ -95,7 +88,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Re-Do Operation
-     * 
      */
     @Import(name="operationType")
       private final @Nullable Output<Either<String,OperationType>> operationType;
@@ -106,7 +98,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
@@ -117,7 +108,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * ARM ID of the virtual machine represented by this Azure Workload Container
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -128,7 +118,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
 
     /**
      * Workload type for which registration was sent.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,WorkloadType>> workloadType;

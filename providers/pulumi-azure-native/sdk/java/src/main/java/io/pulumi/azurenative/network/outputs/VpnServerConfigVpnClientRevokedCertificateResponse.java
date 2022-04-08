@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class VpnServerConfigVpnClientRevokedCertificateResponse {
     /**
      * The certificate name.
-     * 
      */
     private final @Nullable String name;
     /**
      * The revoked VPN client certificate thumbprint.
-     * 
      */
     private final @Nullable String thumbprint;
 
@@ -32,14 +30,12 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse {
 
     /**
      * The certificate name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The revoked VPN client certificate thumbprint.
-     * 
     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);

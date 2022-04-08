@@ -17,7 +17,95 @@ import javax.annotation.Nullable;
  * Contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateApiTagDescription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apiTagDescription = new AzureNative.ApiManagement.ApiTagDescription("apiTagDescription", new AzureNative.ApiManagement.ApiTagDescriptionArgs
+ *         {
+ *             ApiId = "5931a75ae4bbd512a88c680b",
+ *             Description = "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+ *             ExternalDocsDescription = "Description of the external docs resource",
+ *             ExternalDocsUrl = "http://some.url/additionaldoc",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             TagDescriptionId = "tagId1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApiTagDescription(ctx, "apiTagDescription", &apimanagement.ApiTagDescriptionArgs{
+ * 			ApiId:                   pulumi.String("5931a75ae4bbd512a88c680b"),
+ * 			Description:             pulumi.String("Some description that will be displayed for operation's tag if the tag is assigned to operation of the API"),
+ * 			ExternalDocsDescription: pulumi.String("Description of the external docs resource"),
+ * 			ExternalDocsUrl:         pulumi.String("http://some.url/additionaldoc"),
+ * 			ResourceGroupName:       pulumi.String("rg1"),
+ * 			ServiceName:             pulumi.String("apimService1"),
+ * 			TagDescriptionId:        pulumi.String("tagId1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const apiTagDescription = new azure_native.apimanagement.ApiTagDescription("apiTagDescription", {
+ *     apiId: "5931a75ae4bbd512a88c680b",
+ *     description: "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+ *     externalDocsDescription: "Description of the external docs resource",
+ *     externalDocsUrl: "http://some.url/additionaldoc",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     tagDescriptionId: "tagId1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api_tag_description = azure_native.apimanagement.ApiTagDescription("apiTagDescription",
+ *     api_id="5931a75ae4bbd512a88c680b",
+ *     description="Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+ *     external_docs_description="Description of the external docs resource",
+ *     external_docs_url="http://some.url/additionaldoc",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     tag_description_id="tagId1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,98 +120,84 @@ import javax.annotation.Nullable;
 public class ApiTagDescription extends io.pulumi.resources.CustomResource {
     /**
      * Description of the Tag.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the Tag.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Tag name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Tag name.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Description of the external resources describing the tag.
-     * 
      */
     @Export(name="externalDocsDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsDescription;
 
     /**
      * @return Description of the external resources describing the tag.
-     * 
      */
     public Output</* @Nullable */ String> getExternalDocsDescription() {
         return this.externalDocsDescription;
     }
     /**
      * Absolute URL of external resources describing the tag.
-     * 
      */
     @Export(name="externalDocsUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsUrl;
 
     /**
      * @return Absolute URL of external resources describing the tag.
-     * 
      */
     public Output</* @Nullable */ String> getExternalDocsUrl() {
         return this.externalDocsUrl;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Identifier of the tag in the form of /tags/{tagId}
-     * 
      */
     @Export(name="tagId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagId;
 
     /**
      * @return Identifier of the tag in the form of /tags/{tagId}
-     * 
      */
     public Output</* @Nullable */ String> getTagId() {
         return this.tagId;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

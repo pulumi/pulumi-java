@@ -15,18 +15,15 @@ public final class DockerImageResponse {
     /**
      * Image name of a custom base image.
      * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
-     * 
      */
     private final String dockerImageUri;
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is 'Image'.
-     * 
      */
     private final String dockerSpecificationType;
     /**
      * The platform information of the docker image.
-     * 
      */
     private final @Nullable DockerImagePlatformResponse platform;
 
@@ -43,7 +40,6 @@ public final class DockerImageResponse {
     /**
      * Image name of a custom base image.
      * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
-     * 
     */
     public String getDockerImageUri() {
         return this.dockerImageUri;
@@ -51,14 +47,12 @@ public final class DockerImageResponse {
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is 'Image'.
-     * 
     */
     public String getDockerSpecificationType() {
         return this.dockerSpecificationType;
     }
     /**
      * The platform information of the docker image.
-     * 
     */
     public Optional<DockerImagePlatformResponse> getPlatform() {
         return Optional.ofNullable(this.platform);

@@ -18,7 +18,6 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the managed instance key to be operated on (updated or created).
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -29,7 +28,6 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
@@ -40,7 +38,6 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The key type like 'ServiceManaged', 'AzureKeyVault'.
-     * 
      */
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
@@ -62,7 +58,6 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

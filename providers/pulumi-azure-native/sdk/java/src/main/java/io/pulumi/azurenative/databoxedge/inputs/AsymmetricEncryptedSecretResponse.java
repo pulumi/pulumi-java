@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represent the secrets intended for encryption with asymmetric key pair.
- * 
  */
 public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
 
     /**
      * The algorithm used to encrypt "Value".
-     * 
      */
     @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
@@ -31,7 +29,6 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
 
     /**
      * Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
-     * 
      */
     @Import(name="encryptionCertThumbprint")
       private final @Nullable String encryptionCertThumbprint;
@@ -42,7 +39,6 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
 
     /**
      * The value of the secret.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure SQL Managed Instance linked service.
- * 
  */
 public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Sql always encrypted properties.
-     * 
      */
     @Import(name="alwaysEncryptedSettings")
       private final @Nullable Output<SqlAlwaysEncryptedPropertiesArgs> alwaysEncryptedSettings;
@@ -41,7 +39,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -52,7 +49,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
@@ -63,7 +59,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -74,7 +69,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final Output<Object> connectionString;
@@ -85,7 +79,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
@@ -96,7 +89,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -107,7 +99,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -118,7 +109,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -129,7 +119,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The Azure key vault secret reference of password in connection string.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> password;
@@ -140,7 +129,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The ID of the service principal used to authenticate against Azure SQL Managed Instance. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
@@ -151,7 +139,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The key of the service principal used to authenticate against Azure SQL Managed Instance.
-     * 
      */
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
@@ -162,7 +149,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
@@ -174,7 +160,6 @@ public final class AzureSqlMILinkedServiceArgs extends io.pulumi.resources.Resou
     /**
      * Type of linked service.
      * Expected value is 'AzureSqlMI'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

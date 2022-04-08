@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The recurrence type : weekly, monthly, etc.
-     * 
      */
     @EnumType
     public enum AccessReviewRecurrencePatternType {

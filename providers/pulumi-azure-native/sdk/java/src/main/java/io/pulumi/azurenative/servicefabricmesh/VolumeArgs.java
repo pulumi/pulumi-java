@@ -20,7 +20,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This type describes a volume provided by an Azure Files file share.
-     * 
      */
     @Import(name="azureFileParameters")
       private final @Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters;
@@ -31,7 +30,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User readable description of the volume.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +40,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provider of the volume.
-     * 
      */
     @Import(name="provider", required=true)
       private final Output<Either<String,VolumeProvider>> provider;
@@ -64,7 +60,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -86,7 +80,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the volume.
-     * 
      */
     @Import(name="volumeResourceName")
       private final @Nullable Output<String> volumeResourceName;

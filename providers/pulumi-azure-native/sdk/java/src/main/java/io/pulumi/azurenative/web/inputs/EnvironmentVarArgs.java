@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App container environment variable.
- * 
  */
 public final class EnvironmentVarArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Environment variable name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class EnvironmentVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Container App secret from which to pull the environment variable value.
-     * 
      */
     @Import(name="secretRef")
       private final @Nullable Output<String> secretRef;
@@ -42,7 +39,6 @@ public final class EnvironmentVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Non-secret environment variable value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -56,7 +56,6 @@ import javax.annotation.Nullable;
 
 /**
  * This activity is used for iterating over a collection and execute given activities.
- * 
  */
 public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -64,7 +63,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of activities to execute .
-     * 
      */
     @Import(name="activities", required=true)
       private final List<Object> activities;
@@ -75,7 +73,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
-     * 
      */
     @Import(name="batchCount")
       private final @Nullable Integer batchCount;
@@ -86,7 +83,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -97,7 +93,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -108,7 +103,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Should the loop be executed in sequence or in parallel (max 50)
-     * 
      */
     @Import(name="isSequential")
       private final @Nullable Boolean isSequential;
@@ -119,7 +113,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Collection to iterate.
-     * 
      */
     @Import(name="items", required=true)
       private final ExpressionResponse items;
@@ -130,7 +123,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -142,7 +134,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
     /**
      * Type of activity.
      * Expected value is 'ForEach'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -153,7 +144,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

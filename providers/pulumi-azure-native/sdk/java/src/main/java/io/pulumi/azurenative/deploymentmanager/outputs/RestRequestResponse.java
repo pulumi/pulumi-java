@@ -14,17 +14,14 @@ import java.util.Objects;
 public final class RestRequestResponse {
     /**
      * The authentication information required in the request to the health provider.
-     * 
      */
     private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
     /**
      * The HTTP method to use for the request.
-     * 
      */
     private final String method;
     /**
      * The HTTP URI to use for the request.
-     * 
      */
     private final String uri;
 
@@ -40,21 +37,18 @@ public final class RestRequestResponse {
 
     /**
      * The authentication information required in the request to the health provider.
-     * 
     */
     public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> getAuthentication() {
         return this.authentication;
     }
     /**
      * The HTTP method to use for the request.
-     * 
     */
     public String getMethod() {
         return this.method;
     }
     /**
      * The HTTP URI to use for the request.
-     * 
     */
     public String getUri() {
         return this.uri;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * API key payload which is exposed in the request/response of the resource provider.
- * 
  */
 public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the API key name.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable String keyName;
@@ -31,7 +29,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the API key value.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

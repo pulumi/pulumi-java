@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A voice receiver.
- * 
  */
 public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The country code of the voice receiver.
-     * 
      */
     @Import(name="countryCode", required=true)
       private final Output<String> countryCode;
@@ -30,7 +28,6 @@ public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the voice receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -41,7 +38,6 @@ public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The phone number of the voice receiver.
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;

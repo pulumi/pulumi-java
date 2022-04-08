@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Default Action for Network Rule Set
-     * 
      */
     @EnumType
     public enum DefaultAction {

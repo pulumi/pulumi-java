@@ -16,7 +16,6 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Diagnostic identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="diagnosticId", required=true)
       private final Output<String> diagnosticId;
@@ -27,7 +26,6 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Logger identifier. Must be unique in the API Management service instance.
-     * 
      */
     @Import(name="loggerid")
       private final @Nullable Output<String> loggerid;
@@ -38,7 +36,6 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

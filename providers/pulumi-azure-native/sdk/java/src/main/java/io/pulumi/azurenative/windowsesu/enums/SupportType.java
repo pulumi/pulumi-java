@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of support
-     * 
      */
     @EnumType
     public enum SupportType {

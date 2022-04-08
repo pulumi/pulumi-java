@@ -21,7 +21,119 @@ import javax.annotation.Nullable;
  * Server Endpoint object.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ServerEndpoints_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverEndpoint = new AzureNative.StorageSync.ServerEndpoint("serverEndpoint", new AzureNative.StorageSync.ServerEndpointArgs
+ *         {
+ *             CloudTiering = "off",
+ *             InitialDownloadPolicy = "NamespaceThenModifiedFiles",
+ *             LocalCacheMode = "UpdateLocallyCachedFiles",
+ *             OfflineDataTransfer = "on",
+ *             OfflineDataTransferShareName = "myfileshare",
+ *             ResourceGroupName = "SampleResourceGroup_1",
+ *             ServerEndpointName = "SampleServerEndpoint_1",
+ *             ServerLocalPath = "D:\\SampleServerEndpoint_1",
+ *             ServerResourceId = "/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+ *             StorageSyncServiceName = "SampleStorageSyncService_1",
+ *             SyncGroupName = "SampleSyncGroup_1",
+ *             TierFilesOlderThanDays = 0,
+ *             VolumeFreeSpacePercent = 100,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storagesync "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagesync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagesync.NewServerEndpoint(ctx, "serverEndpoint", &storagesync.ServerEndpointArgs{
+ * 			CloudTiering:                 pulumi.String("off"),
+ * 			InitialDownloadPolicy:        pulumi.String("NamespaceThenModifiedFiles"),
+ * 			LocalCacheMode:               pulumi.String("UpdateLocallyCachedFiles"),
+ * 			OfflineDataTransfer:          pulumi.String("on"),
+ * 			OfflineDataTransferShareName: pulumi.String("myfileshare"),
+ * 			ResourceGroupName:            pulumi.String("SampleResourceGroup_1"),
+ * 			ServerEndpointName:           pulumi.String("SampleServerEndpoint_1"),
+ * 			ServerLocalPath:              pulumi.String("D:\\SampleServerEndpoint_1"),
+ * 			ServerResourceId:             pulumi.String("/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a"),
+ * 			StorageSyncServiceName:       pulumi.String("SampleStorageSyncService_1"),
+ * 			SyncGroupName:                pulumi.String("SampleSyncGroup_1"),
+ * 			TierFilesOlderThanDays:       pulumi.Int(0),
+ * 			VolumeFreeSpacePercent:       pulumi.Int(100),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverEndpoint = new azure_native.storagesync.ServerEndpoint("serverEndpoint", {
+ *     cloudTiering: "off",
+ *     initialDownloadPolicy: "NamespaceThenModifiedFiles",
+ *     localCacheMode: "UpdateLocallyCachedFiles",
+ *     offlineDataTransfer: "on",
+ *     offlineDataTransferShareName: "myfileshare",
+ *     resourceGroupName: "SampleResourceGroup_1",
+ *     serverEndpointName: "SampleServerEndpoint_1",
+ *     serverLocalPath: "D:\\SampleServerEndpoint_1",
+ *     serverResourceId: "/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+ *     storageSyncServiceName: "SampleStorageSyncService_1",
+ *     syncGroupName: "SampleSyncGroup_1",
+ *     tierFilesOlderThanDays: 0,
+ *     volumeFreeSpacePercent: 100,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_endpoint = azure_native.storagesync.ServerEndpoint("serverEndpoint",
+ *     cloud_tiering="off",
+ *     initial_download_policy="NamespaceThenModifiedFiles",
+ *     local_cache_mode="UpdateLocallyCachedFiles",
+ *     offline_data_transfer="on",
+ *     offline_data_transfer_share_name="myfileshare",
+ *     resource_group_name="SampleResourceGroup_1",
+ *     server_endpoint_name="SampleServerEndpoint_1",
+ *     server_local_path="D:\\SampleServerEndpoint_1",
+ *     server_resource_id="/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+ *     storage_sync_service_name="SampleStorageSyncService_1",
+ *     sync_group_name="SampleSyncGroup_1",
+ *     tier_files_older_than_days=0,
+ *     volume_free_space_percent=100)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,280 +148,240 @@ import javax.annotation.Nullable;
 public class ServerEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * Cloud Tiering.
-     * 
      */
     @Export(name="cloudTiering", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudTiering;
 
     /**
      * @return Cloud Tiering.
-     * 
      */
     public Output</* @Nullable */ String> getCloudTiering() {
         return this.cloudTiering;
     }
     /**
      * Cloud tiering status. Only populated if cloud tiering is enabled.
-     * 
      */
     @Export(name="cloudTieringStatus", type=ServerEndpointCloudTieringStatusResponse.class, parameters={})
     private Output<ServerEndpointCloudTieringStatusResponse> cloudTieringStatus;
 
     /**
      * @return Cloud tiering status. Only populated if cloud tiering is enabled.
-     * 
      */
     public Output<ServerEndpointCloudTieringStatusResponse> getCloudTieringStatus() {
         return this.cloudTieringStatus;
     }
     /**
      * Friendly Name
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
      * @return Friendly Name
-     * 
      */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * Policy for how namespace and files are recalled during FastDr.
-     * 
      */
     @Export(name="initialDownloadPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> initialDownloadPolicy;
 
     /**
      * @return Policy for how namespace and files are recalled during FastDr.
-     * 
      */
     public Output</* @Nullable */ String> getInitialDownloadPolicy() {
         return this.initialDownloadPolicy;
     }
     /**
      * Resource Last Operation Name
-     * 
      */
     @Export(name="lastOperationName", type=String.class, parameters={})
     private Output<String> lastOperationName;
 
     /**
      * @return Resource Last Operation Name
-     * 
      */
     public Output<String> getLastOperationName() {
         return this.lastOperationName;
     }
     /**
      * ServerEndpoint lastWorkflowId
-     * 
      */
     @Export(name="lastWorkflowId", type=String.class, parameters={})
     private Output<String> lastWorkflowId;
 
     /**
      * @return ServerEndpoint lastWorkflowId
-     * 
      */
     public Output<String> getLastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
      * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
-     * 
      */
     @Export(name="localCacheMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> localCacheMode;
 
     /**
      * @return Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
-     * 
      */
     public Output</* @Nullable */ String> getLocalCacheMode() {
         return this.localCacheMode;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Offline data transfer
-     * 
      */
     @Export(name="offlineDataTransfer", type=String.class, parameters={})
     private Output</* @Nullable */ String> offlineDataTransfer;
 
     /**
      * @return Offline data transfer
-     * 
      */
     public Output</* @Nullable */ String> getOfflineDataTransfer() {
         return this.offlineDataTransfer;
     }
     /**
      * Offline data transfer share name
-     * 
      */
     @Export(name="offlineDataTransferShareName", type=String.class, parameters={})
     private Output</* @Nullable */ String> offlineDataTransferShareName;
 
     /**
      * @return Offline data transfer share name
-     * 
      */
     public Output</* @Nullable */ String> getOfflineDataTransferShareName() {
         return this.offlineDataTransferShareName;
     }
     /**
      * Offline data transfer storage account resource ID
-     * 
      */
     @Export(name="offlineDataTransferStorageAccountResourceId", type=String.class, parameters={})
     private Output<String> offlineDataTransferStorageAccountResourceId;
 
     /**
      * @return Offline data transfer storage account resource ID
-     * 
      */
     public Output<String> getOfflineDataTransferStorageAccountResourceId() {
         return this.offlineDataTransferStorageAccountResourceId;
     }
     /**
      * Offline data transfer storage account tenant ID
-     * 
      */
     @Export(name="offlineDataTransferStorageAccountTenantId", type=String.class, parameters={})
     private Output<String> offlineDataTransferStorageAccountTenantId;
 
     /**
      * @return Offline data transfer storage account tenant ID
-     * 
      */
     public Output<String> getOfflineDataTransferStorageAccountTenantId() {
         return this.offlineDataTransferStorageAccountTenantId;
     }
     /**
      * ServerEndpoint Provisioning State
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return ServerEndpoint Provisioning State
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Recall status. Only populated if cloud tiering is enabled.
-     * 
      */
     @Export(name="recallStatus", type=ServerEndpointRecallStatusResponse.class, parameters={})
     private Output<ServerEndpointRecallStatusResponse> recallStatus;
 
     /**
      * @return Recall status. Only populated if cloud tiering is enabled.
-     * 
      */
     public Output<ServerEndpointRecallStatusResponse> getRecallStatus() {
         return this.recallStatus;
     }
     /**
      * Server Local path.
-     * 
      */
     @Export(name="serverLocalPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverLocalPath;
 
     /**
      * @return Server Local path.
-     * 
      */
     public Output</* @Nullable */ String> getServerLocalPath() {
         return this.serverLocalPath;
     }
     /**
      * Server Resource Id.
-     * 
      */
     @Export(name="serverResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverResourceId;
 
     /**
      * @return Server Resource Id.
-     * 
      */
     public Output</* @Nullable */ String> getServerResourceId() {
         return this.serverResourceId;
     }
     /**
      * Server Endpoint sync status
-     * 
      */
     @Export(name="syncStatus", type=ServerEndpointSyncStatusResponse.class, parameters={})
     private Output<ServerEndpointSyncStatusResponse> syncStatus;
 
     /**
      * @return Server Endpoint sync status
-     * 
      */
     public Output<ServerEndpointSyncStatusResponse> getSyncStatus() {
         return this.syncStatus;
     }
     /**
      * Tier files older than days.
-     * 
      */
     @Export(name="tierFilesOlderThanDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tierFilesOlderThanDays;
 
     /**
      * @return Tier files older than days.
-     * 
      */
     public Output</* @Nullable */ Integer> getTierFilesOlderThanDays() {
         return this.tierFilesOlderThanDays;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Level of free space to be maintained by Cloud Tiering if it is enabled.
-     * 
      */
     @Export(name="volumeFreeSpacePercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> volumeFreeSpacePercent;
 
     /**
      * @return Level of free space to be maintained by Cloud Tiering if it is enabled.
-     * 
      */
     public Output</* @Nullable */ Integer> getVolumeFreeSpacePercent() {
         return this.volumeFreeSpacePercent;

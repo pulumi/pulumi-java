@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specifies the retention policy for the log.
- * 
  */
 public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of days for the retention in days. A value of 0 will retain the events indefinitely.
-     * 
      */
     @Import(name="days", required=true)
       private final Output<Integer> days;
@@ -31,7 +29,6 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A value indicating whether the retention policy is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;

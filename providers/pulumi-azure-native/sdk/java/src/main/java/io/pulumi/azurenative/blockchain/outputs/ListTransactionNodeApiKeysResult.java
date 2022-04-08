@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListTransactionNodeApiKeysResult {
     /**
      * Gets or sets the collection of API key.
-     * 
      */
     private final @Nullable List<ApiKeyResponse> keys;
 
@@ -24,7 +23,6 @@ public final class ListTransactionNodeApiKeysResult {
 
     /**
      * Gets or sets the collection of API key.
-     * 
     */
     public List<ApiKeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;

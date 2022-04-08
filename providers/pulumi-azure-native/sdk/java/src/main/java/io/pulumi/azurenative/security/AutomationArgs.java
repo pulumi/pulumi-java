@@ -25,7 +25,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<List<Object>> actions;
@@ -36,7 +35,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The security automation name.
-     * 
      */
     @Import(name="automationName")
       private final @Nullable Output<String> automationName;
@@ -47,7 +45,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The security automation description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -58,7 +55,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the security automation is enabled.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
@@ -69,7 +65,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of the resource
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -80,7 +75,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location where the resource is stored
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -91,7 +85,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -102,7 +95,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
-     * 
      */
     @Import(name="scopes")
       private final @Nullable Output<List<AutomationScopeArgs>> scopes;
@@ -113,7 +105,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of the source event types which evaluate the security automation set of rules.
-     * 
      */
     @Import(name="sources")
       private final @Nullable Output<List<AutomationSourceArgs>> sources;
@@ -124,7 +115,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key value pairs that describe the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

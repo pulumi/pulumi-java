@@ -12,32 +12,26 @@ import java.util.Objects;
 public final class ManagedIntegrationRuntimeOperationResultResponse {
     /**
      * The activity id for the operation request.
-     * 
      */
     private final String activityId;
     /**
      * The error code.
-     * 
      */
     private final String errorCode;
     /**
      * Managed integration runtime error parameters.
-     * 
      */
     private final List<String> parameters;
     /**
      * The operation result.
-     * 
      */
     private final String result;
     /**
      * The start time of the operation.
-     * 
      */
     private final String startTime;
     /**
      * The operation type. Could be start or stop.
-     * 
      */
     private final String type;
 
@@ -59,42 +53,36 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
 
     /**
      * The activity id for the operation request.
-     * 
     */
     public String getActivityId() {
         return this.activityId;
     }
     /**
      * The error code.
-     * 
     */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * Managed integration runtime error parameters.
-     * 
     */
     public List<String> getParameters() {
         return this.parameters;
     }
     /**
      * The operation result.
-     * 
     */
     public String getResult() {
         return this.result;
     }
     /**
      * The start time of the operation.
-     * 
     */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The operation type. Could be start or stop.
-     * 
     */
     public String getType() {
         return this.type;

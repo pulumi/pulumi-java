@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The connectivity properties
- * 
  */
 public final class ConnectivityEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
 
     /**
      * The location of the endpoint.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -32,7 +30,6 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
 
     /**
      * The name of the endpoint.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
 
     /**
      * The port to connect to.
-     * 
      */
     @Import(name="port")
       private final @Nullable Integer port;
@@ -54,7 +50,6 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
 
     /**
      * The private ip address of the endpoint.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -65,7 +60,6 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
 
     /**
      * The protocol of the endpoint.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;

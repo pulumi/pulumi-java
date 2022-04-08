@@ -13,28 +13,23 @@ import javax.annotation.Nullable;
 public final class NetworkResourcePropertiesResponse {
     /**
      * User readable description of the network.
-     * 
      */
     private final @Nullable String description;
     /**
      * The type of a Service Fabric container network.
      * Expected value is 'NetworkResourceProperties'.
-     * 
      */
     private final String kind;
     /**
      * State of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Status of the network.
-     * 
      */
     private final String status;
     /**
      * Gives additional information about the current status of the network.
-     * 
      */
     private final String statusDetails;
 
@@ -54,7 +49,6 @@ public final class NetworkResourcePropertiesResponse {
 
     /**
      * User readable description of the network.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
@@ -62,28 +56,24 @@ public final class NetworkResourcePropertiesResponse {
     /**
      * The type of a Service Fabric container network.
      * Expected value is 'NetworkResourceProperties'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * State of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of the network.
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the network.
-     * 
     */
     public String getStatusDetails() {
         return this.statusDetails;

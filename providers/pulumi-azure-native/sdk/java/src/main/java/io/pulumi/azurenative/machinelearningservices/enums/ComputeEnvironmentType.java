@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The compute environment type for the service.
-     * 
      */
     @EnumType
     public enum ComputeEnvironmentType {

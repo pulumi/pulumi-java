@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the command that completes sync migration for a database.
- * 
  */
 public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
     /**
      * Command type.
      * Expected value is 'Migrate.Sync.Complete.Database'.
-     * 
      */
     @Import(name="commandType", required=true)
       private final String commandType;
@@ -36,7 +34,6 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
 
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
@@ -47,7 +44,6 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
 
     /**
      * Command input
-     * 
      */
     @Import(name="input")
       private final @Nullable MigrateSyncCompleteCommandInputResponse input;
@@ -58,7 +54,6 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
 
     /**
      * Command output. This is ignored if submitted.
-     * 
      */
     @Import(name="output", required=true)
       private final MigrateSyncCompleteCommandOutputResponse output;
@@ -69,7 +64,6 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
 
     /**
      * The state of the command. This is ignored if submitted.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

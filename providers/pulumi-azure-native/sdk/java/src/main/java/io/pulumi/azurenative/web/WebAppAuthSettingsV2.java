@@ -34,112 +34,96 @@ import javax.annotation.Nullable;
 public class WebAppAuthSettingsV2 extends io.pulumi.resources.CustomResource {
     /**
      * The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
-     * 
      */
     @Export(name="globalValidation", type=GlobalValidationResponse.class, parameters={})
     private Output</* @Nullable */ GlobalValidationResponse> globalValidation;
 
     /**
      * @return The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
-     * 
      */
     public Output</* @Nullable */ GlobalValidationResponse> getGlobalValidation() {
         return this.globalValidation;
     }
     /**
      * The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
-     * 
      */
     @Export(name="httpSettings", type=HttpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ HttpSettingsResponse> httpSettings;
 
     /**
      * @return The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
-     * 
      */
     public Output</* @Nullable */ HttpSettingsResponse> getHttpSettings() {
         return this.httpSettings;
     }
     /**
      * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
-     * 
      */
     @Export(name="identityProviders", type=IdentityProvidersResponse.class, parameters={})
     private Output</* @Nullable */ IdentityProvidersResponse> identityProviders;
 
     /**
      * @return The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
-     * 
      */
     public Output</* @Nullable */ IdentityProvidersResponse> getIdentityProviders() {
         return this.identityProviders;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The configuration settings of the login flow of users using App Service Authentication/Authorization.
-     * 
      */
     @Export(name="login", type=LoginResponse.class, parameters={})
     private Output</* @Nullable */ LoginResponse> login;
 
     /**
      * @return The configuration settings of the login flow of users using App Service Authentication/Authorization.
-     * 
      */
     public Output</* @Nullable */ LoginResponse> getLogin() {
         return this.login;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The configuration settings of the platform of App Service Authentication/Authorization.
-     * 
      */
     @Export(name="platform", type=AuthPlatformResponse.class, parameters={})
     private Output</* @Nullable */ AuthPlatformResponse> platform;
 
     /**
      * @return The configuration settings of the platform of App Service Authentication/Authorization.
-     * 
      */
     public Output</* @Nullable */ AuthPlatformResponse> getPlatform() {
         return this.platform;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

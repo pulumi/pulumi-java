@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Value for the specified parameter. Can be either 'value' or 'reference' but not both.
- * 
  */
 public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Parameter value as reference type.
-     * 
      */
     @Import(name="reference")
       private final @Nullable SecretValueReferenceResponse reference;
@@ -32,7 +30,6 @@ public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
-     * 
      */
     @Import(name="value")
       private final @Nullable Object value;

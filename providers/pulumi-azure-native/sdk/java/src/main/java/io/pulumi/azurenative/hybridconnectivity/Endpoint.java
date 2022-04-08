@@ -17,7 +17,153 @@ import javax.annotation.Nullable;
  * The endpoint for the target resource.
  * API Version: 2021-10-06-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### HybridConnectivityEndpointsPutCustom
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var endpoint = new AzureNative.HybridConnectivity.Endpoint("endpoint", new AzureNative.HybridConnectivity.EndpointArgs
+ *         {
+ *             EndpointName = "custom",
+ *             ResourceId = "/subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.Relay/namespaces/custom-relay-namespace",
+ *             ResourceUri = "subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine",
+ *             Type = "custom",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridconnectivity "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridconnectivity"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridconnectivity.NewEndpoint(ctx, "endpoint", &hybridconnectivity.EndpointArgs{
+ * 			EndpointName: pulumi.String("custom"),
+ * 			ResourceId:   pulumi.String("/subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.Relay/namespaces/custom-relay-namespace"),
+ * 			ResourceUri:  pulumi.String("subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine"),
+ * 			Type:         pulumi.String("custom"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const endpoint = new azure_native.hybridconnectivity.Endpoint("endpoint", {
+ *     endpointName: "custom",
+ *     resourceId: "/subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.Relay/namespaces/custom-relay-namespace",
+ *     resourceUri: "subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine",
+ *     type: "custom",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * endpoint = azure_native.hybridconnectivity.Endpoint("endpoint",
+ *     endpoint_name="custom",
+ *     resource_id="/subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.Relay/namespaces/custom-relay-namespace",
+ *     resource_uri="subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine",
+ *     type="custom")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### HybridConnectivityEndpointsPutDefault
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var endpoint = new AzureNative.HybridConnectivity.Endpoint("endpoint", new AzureNative.HybridConnectivity.EndpointArgs
+ *         {
+ *             EndpointName = "default",
+ *             ResourceUri = "subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine",
+ *             Type = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridconnectivity "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridconnectivity"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridconnectivity.NewEndpoint(ctx, "endpoint", &hybridconnectivity.EndpointArgs{
+ * 			EndpointName: pulumi.String("default"),
+ * 			ResourceUri:  pulumi.String("subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine"),
+ * 			Type:         pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const endpoint = new azure_native.hybridconnectivity.Endpoint("endpoint", {
+ *     endpointName: "default",
+ *     resourceUri: "subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine",
+ *     type: "default",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * endpoint = azure_native.hybridconnectivity.Endpoint("endpoint",
+ *     endpoint_name="default",
+ *     resource_uri="subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine",
+ *     type="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,98 +178,84 @@ import javax.annotation.Nullable;
 public class Endpoint extends io.pulumi.resources.CustomResource {
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
      * @return The timestamp of resource creation (UTC).
-     * 
      */
     public Output</* @Nullable */ String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The identity that created the resource.
-     * 
      */
     @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
      * @return The identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
      * @return The type of identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedByType() {
         return this.createdByType;
     }
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
      * @return The timestamp of resource last modification (UTC)
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
      * @return The identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
      * @return The type of identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -136,28 +268,24 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
     }
     /**
      * The resource Id of the connectivity endpoint (optional).
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return The resource Id of the connectivity endpoint (optional).
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

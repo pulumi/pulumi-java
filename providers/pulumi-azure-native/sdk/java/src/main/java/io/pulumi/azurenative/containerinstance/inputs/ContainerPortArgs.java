@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The port exposed on the container instance.
- * 
  */
 public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port number exposed within the container group.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;
@@ -34,7 +32,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The protocol associated with the port.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ContainerNetworkProtocol>> protocol;

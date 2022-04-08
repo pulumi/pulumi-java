@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sql always encrypted properties.
- * 
  */
 public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
 
     /**
      * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="alwaysEncryptedAkvAuthType", required=true)
       private final Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
@@ -37,7 +35,6 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
@@ -48,7 +45,6 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
@@ -59,7 +55,6 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The key of the service principal used to authenticate against Azure Key Vault.
-     * 
      */
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;

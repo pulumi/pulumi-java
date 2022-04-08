@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Request routing rule of an application gateway.
- * 
  */
 public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Backend address pool resource of the application gateway.
-     * 
      */
     @Import(name="backendAddressPool")
       private final @Nullable SubResourceResponse backendAddressPool;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Backend http settings resource of the application gateway.
-     * 
      */
     @Import(name="backendHttpSettings")
       private final @Nullable SubResourceResponse backendHttpSettings;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -55,7 +51,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Http listener resource of the application gateway.
-     * 
      */
     @Import(name="httpListener")
       private final @Nullable SubResourceResponse httpListener;
@@ -66,7 +61,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -77,7 +71,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Name of the request routing rule that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -88,7 +81,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Priority of the request routing rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -99,7 +91,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * The provisioning state of the request routing rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -110,7 +101,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Redirect configuration resource of the application gateway.
-     * 
      */
     @Import(name="redirectConfiguration")
       private final @Nullable SubResourceResponse redirectConfiguration;
@@ -121,7 +111,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Rewrite Rule Set resource in Basic rule of the application gateway.
-     * 
      */
     @Import(name="rewriteRuleSet")
       private final @Nullable SubResourceResponse rewriteRuleSet;
@@ -132,7 +121,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Rule type.
-     * 
      */
     @Import(name="ruleType")
       private final @Nullable String ruleType;
@@ -143,7 +131,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -154,7 +141,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
 
     /**
      * URL path map resource of the application gateway.
-     * 
      */
     @Import(name="urlPathMap")
       private final @Nullable SubResourceResponse urlPathMap;

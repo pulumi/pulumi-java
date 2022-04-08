@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the user.
-     * 
      */
     @EnumType
     public enum UserType {

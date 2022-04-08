@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ApiPortalInstanceResponse {
     /**
      * Name of the API portal instance
-     * 
      */
     private final String name;
     /**
      * Status of the API portal instance
-     * 
      */
     private final String status;
 
@@ -30,14 +28,12 @@ public final class ApiPortalInstanceResponse {
 
     /**
      * Name of the API portal instance
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the API portal instance
-     * 
     */
     public String getStatus() {
         return this.status;

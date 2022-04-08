@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application gateway probe health response match.
- * 
  */
 public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
 
     /**
      * Body that must be contained in the health response. Default value is empty.
-     * 
      */
     @Import(name="body")
       private final @Nullable Output<String> body;
@@ -32,7 +30,6 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
 
     /**
      * Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
-     * 
      */
     @Import(name="statusCodes")
       private final @Nullable Output<List<String>> statusCodes;

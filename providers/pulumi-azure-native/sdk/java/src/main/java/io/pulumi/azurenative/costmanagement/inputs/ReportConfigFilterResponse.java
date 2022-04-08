@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The filter expression to be used in the report.
- * 
  */
 public final class ReportConfigFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
 
     /**
      * The logical "AND" expression. Must have at least 2 items.
-     * 
      */
     @Import(name="and")
       private final @Nullable List<ReportConfigFilterResponse> and;
@@ -32,7 +30,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
 
     /**
      * Has comparison expression for a dimension
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
@@ -43,7 +40,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
 
     /**
      * The logical "OR" expression. Must have at least 2 items.
-     * 
      */
     @Import(name="or")
       private final @Nullable List<ReportConfigFilterResponse> or;
@@ -54,7 +50,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
 
     /**
      * Has comparison expression for a tag key
-     * 
      */
     @Import(name="tagKey")
       private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
@@ -65,7 +60,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
 
     /**
      * Has comparison expression for a tag value
-     * 
      */
     @Import(name="tagValue")
       private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
@@ -76,7 +70,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
 
     /**
      * Has comparison expression for a tag
-     * 
      */
     @Import(name="tags")
       private final @Nullable ReportConfigComparisonExpressionResponse tags;

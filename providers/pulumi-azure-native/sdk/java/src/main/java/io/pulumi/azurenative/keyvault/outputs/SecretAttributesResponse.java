@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class SecretAttributesResponse {
     /**
      * Creation time in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     private final Integer created;
     /**
      * Determines whether the object is enabled.
-     * 
      */
     private final @Nullable Boolean enabled;
     /**
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     private final @Nullable Integer expires;
     /**
      * Not before date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     private final @Nullable Integer notBefore;
     /**
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     private final Integer updated;
 
@@ -54,35 +49,30 @@ public final class SecretAttributesResponse {
 
     /**
      * Creation time in seconds since 1970-01-01T00:00:00Z.
-     * 
     */
     public Integer getCreated() {
         return this.created;
     }
     /**
      * Determines whether the object is enabled.
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
-     * 
     */
     public Optional<Integer> getExpires() {
         return Optional.ofNullable(this.expires);
     }
     /**
      * Not before date in seconds since 1970-01-01T00:00:00Z.
-     * 
     */
     public Optional<Integer> getNotBefore() {
         return Optional.ofNullable(this.notBefore);
     }
     /**
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
-     * 
     */
     public Integer getUpdated() {
         return this.updated;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enable ssl enforcement or not when connect to server.
-     * 
      */
     @EnumType
     public enum SslEnforcementEnum {

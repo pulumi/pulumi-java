@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Edifact schema reference.
- * 
  */
 public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
 
     /**
      * The association assigned code.
-     * 
      */
     @Import(name="associationAssignedCode")
       private final @Nullable Output<String> associationAssignedCode;
@@ -31,7 +29,6 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
 
     /**
      * The message id.
-     * 
      */
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
@@ -42,7 +39,6 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
 
     /**
      * The message release version.
-     * 
      */
     @Import(name="messageRelease", required=true)
       private final Output<String> messageRelease;
@@ -53,7 +49,6 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
 
     /**
      * The message version.
-     * 
      */
     @Import(name="messageVersion", required=true)
       private final Output<String> messageVersion;
@@ -64,7 +59,6 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
 
     /**
      * The schema name.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
@@ -75,7 +69,6 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
 
     /**
      * The sender application id.
-     * 
      */
     @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;
@@ -86,7 +79,6 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
 
     /**
      * The sender application qualifier.
-     * 
      */
     @Import(name="senderApplicationQualifier")
       private final @Nullable Output<String> senderApplicationQualifier;

@@ -26,7 +26,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Confidence of threat intelligence entity
-     * 
      */
     @Import(name="confidence")
       private final @Nullable Output<Integer> confidence;
@@ -37,7 +36,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Created by
-     * 
      */
     @Import(name="created")
       private final @Nullable Output<String> created;
@@ -48,7 +46,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Created by reference of threat intelligence entity
-     * 
      */
     @Import(name="createdByRef")
       private final @Nullable Output<String> createdByRef;
@@ -59,7 +56,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Is threat intelligence entity defanged
-     * 
      */
     @Import(name="defanged")
       private final @Nullable Output<Boolean> defanged;
@@ -70,7 +66,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Description of a threat intelligence entity
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -81,7 +76,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Display name of a threat intelligence entity
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -92,7 +86,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Extensions map
-     * 
      */
     @Import(name="extensions")
       private final @Nullable Output<Object> extensions;
@@ -103,7 +96,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * External ID of threat intelligence entity
-     * 
      */
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
@@ -114,7 +106,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * External last updated time in UTC
-     * 
      */
     @Import(name="externalLastUpdatedTimeUtc")
       private final @Nullable Output<String> externalLastUpdatedTimeUtc;
@@ -125,7 +116,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * External References
-     * 
      */
     @Import(name="externalReferences")
       private final @Nullable Output<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences;
@@ -136,7 +126,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Granular Markings
-     * 
      */
     @Import(name="granularMarkings")
       private final @Nullable Output<List<ThreatIntelligenceGranularMarkingModelArgs>> granularMarkings;
@@ -147,7 +136,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Indicator types of threat intelligence entities
-     * 
      */
     @Import(name="indicatorTypes")
       private final @Nullable Output<List<String>> indicatorTypes;
@@ -158,7 +146,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Kill chain phases
-     * 
      */
     @Import(name="killChainPhases")
       private final @Nullable Output<List<ThreatIntelligenceKillChainPhaseArgs>> killChainPhases;
@@ -169,7 +156,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * The kind of the entity.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,ThreatIntelligenceResourceKind>> kind;
@@ -180,7 +166,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Labels  of threat intelligence entity
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
@@ -191,7 +176,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Language of threat intelligence entity
-     * 
      */
     @Import(name="language")
       private final @Nullable Output<String> language;
@@ -202,7 +186,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Last updated time in UTC
-     * 
      */
     @Import(name="lastUpdatedTimeUtc")
       private final @Nullable Output<String> lastUpdatedTimeUtc;
@@ -213,7 +196,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Modified by
-     * 
      */
     @Import(name="modified")
       private final @Nullable Output<String> modified;
@@ -224,7 +206,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Threat intelligence indicator name field.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -235,7 +216,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Threat intelligence entity object marking references
-     * 
      */
     @Import(name="objectMarkingRefs")
       private final @Nullable Output<List<String>> objectMarkingRefs;
@@ -246,7 +226,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -257,7 +236,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Parsed patterns
-     * 
      */
     @Import(name="parsedPattern")
       private final @Nullable Output<List<ThreatIntelligenceParsedPatternArgs>> parsedPattern;
@@ -268,7 +246,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Pattern of a threat intelligence entity
-     * 
      */
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
@@ -279,7 +256,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Pattern type of a threat intelligence entity
-     * 
      */
     @Import(name="patternType")
       private final @Nullable Output<String> patternType;
@@ -290,7 +266,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Pattern version of a threat intelligence entity
-     * 
      */
     @Import(name="patternVersion")
       private final @Nullable Output<String> patternVersion;
@@ -301,7 +276,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -312,7 +286,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Is threat intelligence entity revoked
-     * 
      */
     @Import(name="revoked")
       private final @Nullable Output<Boolean> revoked;
@@ -323,7 +296,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Source of a threat intelligence entity
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;
@@ -334,7 +306,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * List of tags
-     * 
      */
     @Import(name="threatIntelligenceTags")
       private final @Nullable Output<List<String>> threatIntelligenceTags;
@@ -345,7 +316,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Threat types
-     * 
      */
     @Import(name="threatTypes")
       private final @Nullable Output<List<String>> threatTypes;
@@ -356,7 +326,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Valid from
-     * 
      */
     @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
@@ -367,7 +336,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * Valid until
-     * 
      */
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
@@ -378,7 +346,6 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

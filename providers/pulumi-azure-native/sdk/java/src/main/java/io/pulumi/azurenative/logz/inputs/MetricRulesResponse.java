@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set of rules for sending metrics for the Monitor resource.
- * 
  */
 public final class MetricRulesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MetricRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
-     * 
      */
     @Import(name="filteringTags")
       private final @Nullable List<FilteringTagResponse> filteringTags;
@@ -33,7 +31,6 @@ public final class MetricRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Subscription Id for which filtering tags are applicable
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;

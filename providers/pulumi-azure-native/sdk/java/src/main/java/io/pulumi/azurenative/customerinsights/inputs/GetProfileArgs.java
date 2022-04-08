@@ -16,7 +16,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final String hubName;
@@ -27,7 +26,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Locale of profile to retrieve, default is en-us.
-     * 
      */
     @Import(name="localeCode")
       private final @Nullable String localeCode;
@@ -38,7 +36,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the profile.
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -49,7 +46,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -15,27 +15,22 @@ public final class LineChannelResponse {
     /**
      * The channel name
      * Expected value is 'LineChannel'.
-     * 
      */
     private final String channelName;
     /**
      * Entity Tag of the resource
-     * 
      */
     private final @Nullable String etag;
     /**
      * Specifies the location of the resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * The set of properties specific to line channel resource
-     * 
      */
     private final @Nullable LineChannelPropertiesResponse properties;
     /**
      * Provisioning state of the resource
-     * 
      */
     private final String provisioningState;
 
@@ -56,35 +51,30 @@ public final class LineChannelResponse {
     /**
      * The channel name
      * Expected value is 'LineChannel'.
-     * 
     */
     public String getChannelName() {
         return this.channelName;
     }
     /**
      * Entity Tag of the resource
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the location of the resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The set of properties specific to line channel resource
-     * 
     */
     public Optional<LineChannelPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Provisioning state of the resource
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

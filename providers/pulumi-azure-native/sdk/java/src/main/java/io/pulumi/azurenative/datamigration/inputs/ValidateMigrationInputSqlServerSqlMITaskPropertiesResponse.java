@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for task that validates migration input for SQL to Azure SQL Database Managed Instance
- * 
  */
 public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
 
     /**
      * Array of command properties.
-     * 
      */
     @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
@@ -38,7 +36,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
 
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
@@ -49,7 +46,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable ValidateMigrationInputSqlServerSqlMITaskInputResponse input;
@@ -60,7 +56,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
 
     /**
      * Task output. This is ignored if submitted.
-     * 
      */
     @Import(name="output", required=true)
       private final List<ValidateMigrationInputSqlServerSqlMITaskOutputResponse> output;
@@ -71,7 +66,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
 
     /**
      * The state of the task. This is ignored if submitted.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -83,7 +77,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
     /**
      * Task type.
      * Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final String taskType;

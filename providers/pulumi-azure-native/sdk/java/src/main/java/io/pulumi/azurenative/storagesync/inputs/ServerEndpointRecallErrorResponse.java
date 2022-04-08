@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Server endpoint recall error object
- * 
  */
 public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
 
     /**
      * Count of occurences of the error
-     * 
      */
     @Import(name="count", required=true)
       private final Double count;
@@ -30,7 +28,6 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
 
     /**
      * Error code (HResult)
-     * 
      */
     @Import(name="errorCode", required=true)
       private final Integer errorCode;

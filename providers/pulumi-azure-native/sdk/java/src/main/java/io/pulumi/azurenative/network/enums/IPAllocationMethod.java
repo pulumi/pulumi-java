@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @EnumType
     public enum IPAllocationMethod {

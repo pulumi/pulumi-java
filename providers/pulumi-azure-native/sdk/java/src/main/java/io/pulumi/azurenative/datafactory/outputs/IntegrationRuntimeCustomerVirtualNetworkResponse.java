@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IntegrationRuntimeCustomerVirtualNetworkResponse {
     /**
      * The ID of subnet to which Azure-SSIS integration runtime will join.
-     * 
      */
     private final @Nullable String subnetId;
 
@@ -24,7 +23,6 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse {
 
     /**
      * The ID of subnet to which Azure-SSIS integration runtime will join.
-     * 
     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);

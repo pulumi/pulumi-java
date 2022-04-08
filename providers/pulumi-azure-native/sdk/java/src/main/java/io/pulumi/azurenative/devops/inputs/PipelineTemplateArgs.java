@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Template used to bootstrap the pipeline.
- * 
  */
 public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Unique identifier of the pipeline template.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -32,7 +30,6 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Dictionary of input parameters used in the pipeline template.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;

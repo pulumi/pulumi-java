@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 /**
  * Environment specification version details.
  * <see href="https://repo2docker.readthedocs.io/en/latest/specification.html" />
- * 
  */
 public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     /**
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
      * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
-     * 
      */
     @Import(name="condaFile")
       private final @Nullable Output<String> condaFile;
@@ -39,7 +37,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -50,7 +47,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * Configuration settings for Docker.
-     * 
      */
     @Import(name="docker")
       private final @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
@@ -61,7 +57,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * Defines configuration specific to inference.
-     * 
      */
     @Import(name="inferenceContainerProperties")
       private final @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
@@ -72,7 +67,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * If the name version are system generated (anonymous registration).
-     * 
      */
     @Import(name="isAnonymous")
       private final @Nullable Output<Boolean> isAnonymous;
@@ -83,7 +77,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -94,7 +87,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

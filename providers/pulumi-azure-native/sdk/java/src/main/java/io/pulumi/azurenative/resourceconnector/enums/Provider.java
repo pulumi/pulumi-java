@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Information about the connected appliance.
-     * 
      */
     @EnumType
     public enum Provider {

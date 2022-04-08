@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for the task that migrates on-prem SQL Server databases to Azure SQL Database for online migrations
- * 
  */
 public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
 
     /**
      * Databases to migrate
-     * 
      */
     @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
@@ -34,7 +32,6 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
 
     /**
      * Information for connecting to source
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
@@ -45,7 +42,6 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
 
     /**
      * Information for connecting to target
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
@@ -56,7 +52,6 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
 
     /**
      * Validation options
-     * 
      */
     @Import(name="validationOptions")
       private final @Nullable MigrationValidationOptionsResponse validationOptions;

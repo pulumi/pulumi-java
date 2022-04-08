@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Diagnostics settings for Geneva.
- * 
  */
 public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
 
     /**
      * Azure Internal monitoring pipeline account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable String accountName;
@@ -32,7 +30,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
 
     /**
      * Azure Internal monitoring pipeline autokey associated with the certificate.
-     * 
      */
     @Import(name="autoKeyConfigUrl")
       private final @Nullable String autoKeyConfigUrl;
@@ -43,7 +40,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
 
     /**
      * A description of the sink.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -54,7 +50,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
 
     /**
      * Azure Internal monitoring agent fluentd configuration.
-     * 
      */
     @Import(name="fluentdConfigUrl")
       private final @Nullable Object fluentdConfigUrl;
@@ -66,7 +61,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     /**
      * The kind of DiagnosticsSink.
      * Expected value is 'AzureInternalMonitoringPipeline'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -77,7 +71,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
 
     /**
      * Azure Internal monitoring agent configuration.
-     * 
      */
     @Import(name="maConfigUrl")
       private final @Nullable String maConfigUrl;
@@ -88,7 +81,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
 
     /**
      * Name of the sink. This value is referenced by DiagnosticsReferenceDescription
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -99,7 +91,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
 
     /**
      * Azure Internal monitoring pipeline account namespace.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable String namespace;

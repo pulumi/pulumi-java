@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class IncidentOwnerInfoResponse {
     /**
      * The name of the user the incident is assigned to.
-     * 
      */
     private final @Nullable String assignedTo;
     /**
      * The email of the user the incident is assigned to.
-     * 
      */
     private final @Nullable String email;
     /**
      * The object id of the user the incident is assigned to.
-     * 
      */
     private final @Nullable String objectId;
     /**
      * The user principal name of the user the incident is assigned to.
-     * 
      */
     private final @Nullable String userPrincipalName;
 
@@ -46,28 +42,24 @@ public final class IncidentOwnerInfoResponse {
 
     /**
      * The name of the user the incident is assigned to.
-     * 
     */
     public Optional<String> getAssignedTo() {
         return Optional.ofNullable(this.assignedTo);
     }
     /**
      * The email of the user the incident is assigned to.
-     * 
     */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The object id of the user the incident is assigned to.
-     * 
     */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The user principal name of the user the incident is assigned to.
-     * 
     */
     public Optional<String> getUserPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);

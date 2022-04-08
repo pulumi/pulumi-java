@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * PrivateDnsZoneConfig resource.
- * 
  */
 public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The resource id of the private dns zone.
-     * 
      */
     @Import(name="privateDnsZoneId")
       private final @Nullable Output<String> privateDnsZoneId;

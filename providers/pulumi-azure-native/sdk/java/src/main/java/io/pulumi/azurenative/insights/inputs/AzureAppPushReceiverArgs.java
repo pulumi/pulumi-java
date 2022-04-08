@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Azure mobile App push notification receiver.
- * 
  */
 public final class AzureAppPushReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
 
     /**
      * The email address registered for the Azure mobile app.
-     * 
      */
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
@@ -30,7 +28,6 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

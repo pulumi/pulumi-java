@@ -20,7 +20,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The engine type
-     * 
      */
     @Import(name="engineType")
       private final @Nullable Output<Either<String,EngineType>> engineType;
@@ -31,7 +30,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName")
       private final @Nullable Output<String> kustoPoolName;
@@ -42,7 +40,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the kusto pool.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<AzureSkuArgs> sku;
@@ -75,7 +70,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -86,7 +80,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
@@ -97,7 +90,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace unique identifier.
-     * 
      */
     @Import(name="workspaceUid")
       private final @Nullable Output<String> workspaceUid;

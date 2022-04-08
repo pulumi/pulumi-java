@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application gateway backendhealth http settings.
- * 
  */
 public final class ApplicationGatewayBackendHealthServerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
 
     /**
      * IP address or FQDN of backend server.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;
@@ -32,7 +30,6 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
 
     /**
      * Health of backend server.
-     * 
      */
     @Import(name="health")
       private final @Nullable String health;
@@ -43,7 +40,6 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
 
     /**
      * Health Probe Log.
-     * 
      */
     @Import(name="healthProbeLog")
       private final @Nullable String healthProbeLog;
@@ -54,7 +50,6 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
 
     /**
      * Reference to IP configuration of backend server.
-     * 
      */
     @Import(name="ipConfiguration")
       private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure backup rule
- * 
  */
 public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * BackupParameters base
-     * 
      */
     @Import(name="backupParameters")
       private final @Nullable AzureBackupParamsResponse backupParameters;
@@ -36,7 +34,6 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * DataStoreInfo base
-     * 
      */
     @Import(name="dataStore", required=true)
       private final DataStoreInfoBaseResponse dataStore;
@@ -53,8 +50,8 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
     }
 
     /**
-     * Expected value is 'AzureBackupRule'.
      * 
+     * Expected value is 'AzureBackupRule'.
      */
     @Import(name="objectType", required=true)
       private final String objectType;
@@ -65,7 +62,6 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Trigger context
-     * 
      */
     @Import(name="trigger", required=true)
       private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;

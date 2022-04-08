@@ -19,7 +19,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * category of the standard provided
-     * 
      */
     @Import(name="category")
       private final @Nullable Output<String> category;
@@ -30,7 +29,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
-     * 
      */
     @Import(name="components")
       private final @Nullable Output<List<StandardComponentPropertiesArgs>> components;
@@ -41,7 +39,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * description of the standard
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -52,7 +49,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * display name of the standard, equivalent to the standardId
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -63,7 +59,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of the resource
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -74,7 +69,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location where the resource is stored
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -85,7 +79,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +89,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Security Standard key - unique key for the standard type
-     * 
      */
     @Import(name="standardId")
       private final @Nullable Output<String> standardId;
@@ -107,7 +99,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key value pairs that describe the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

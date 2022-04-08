@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether or not private link is enabled.
-     * 
      */
     @EnumType
     public enum PrivateLink {

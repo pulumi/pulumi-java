@@ -14,7 +14,6 @@ public final class GetDscpConfigurationArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="dscpConfigurationName", required=true)
       private final String dscpConfigurationName;
@@ -25,7 +24,6 @@ public final class GetDscpConfigurationArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

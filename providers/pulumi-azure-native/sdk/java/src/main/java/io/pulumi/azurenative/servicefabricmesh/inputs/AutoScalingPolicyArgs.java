@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Describes the auto scaling policy
- * 
  */
 public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The mechanism that is used to scale when auto scaling operation is invoked.
-     * 
      */
     @Import(name="mechanism", required=true)
       private final Output<AddRemoveReplicaScalingMechanismArgs> mechanism;
@@ -32,7 +30,6 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the auto scaling policy.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -43,7 +40,6 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Determines when auto scaling operation will be invoked.
-     * 
      */
     @Import(name="trigger", required=true)
       private final Output<AverageLoadScalingTriggerArgs> trigger;

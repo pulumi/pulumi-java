@@ -18,7 +18,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains the property payload that describes the web service.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<WebServicePropertiesForGraphArgs> properties;
@@ -40,7 +38,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group in which the web service is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -62,7 +58,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the web service.
-     * 
      */
     @Import(name="webServiceName")
       private final @Nullable Output<String> webServiceName;

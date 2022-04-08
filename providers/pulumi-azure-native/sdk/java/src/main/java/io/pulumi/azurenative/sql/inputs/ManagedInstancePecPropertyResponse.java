@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A private endpoint connection under a managed instance
- * 
  */
 public final class ManagedInstancePecPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ManagedInstancePecPropertyResponse extends io.pulumi.resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -30,7 +28,6 @@ public final class ManagedInstancePecPropertyResponse extends io.pulumi.resource
 
     /**
      * Private endpoint connection properties
-     * 
      */
     @Import(name="properties", required=true)
       private final ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;

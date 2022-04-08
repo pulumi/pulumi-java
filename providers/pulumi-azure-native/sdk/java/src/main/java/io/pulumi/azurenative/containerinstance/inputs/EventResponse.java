@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A container group or container instance event.
- * 
  */
 public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The count of the event.
-     * 
      */
     @Import(name="count", required=true)
       private final Integer count;
@@ -30,7 +28,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The date-time of the earliest logged event.
-     * 
      */
     @Import(name="firstTimestamp", required=true)
       private final String firstTimestamp;
@@ -41,7 +38,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The date-time of the latest logged event.
-     * 
      */
     @Import(name="lastTimestamp", required=true)
       private final String lastTimestamp;
@@ -52,7 +48,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event message.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -63,7 +58,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -74,7 +68,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

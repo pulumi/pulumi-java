@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Output for command that completes online migration for an Azure SQL Database Managed Instance.
- * 
  */
 public final class MigrateMISyncCompleteCommandOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MigrateMISyncCompleteCommandOutputResponse extends io.pulumi.
 
     /**
      * List of errors that happened during the command execution
-     * 
      */
     @Import(name="errors")
       private final @Nullable List<ReportableExceptionResponse> errors;

@@ -20,7 +20,105 @@ import javax.annotation.Nullable;
  * Create or update Restore Point collection parameters.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a restore point collection.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var restorePointCollection = new AzureNative.Compute.RestorePointCollection("restorePointCollection", new AzureNative.Compute.RestorePointCollectionArgs
+ *         {
+ *             Location = "norwayeast",
+ *             ResourceGroupName = "myResourceGroup",
+ *             RestorePointCollectionName = "myRpc",
+ *             Source = new AzureNative.Compute.Inputs.RestorePointCollectionSourcePropertiesArgs
+ *             {
+ *                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "myTag1", "tagValue1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewRestorePointCollection(ctx, "restorePointCollection", &compute.RestorePointCollectionArgs{
+ * 			Location:                   pulumi.String("norwayeast"),
+ * 			ResourceGroupName:          pulumi.String("myResourceGroup"),
+ * 			RestorePointCollectionName: pulumi.String("myRpc"),
+ * 			Source: &compute.RestorePointCollectionSourcePropertiesArgs{
+ * 				Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"myTag1": pulumi.String("tagValue1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const restorePointCollection = new azure_native.compute.RestorePointCollection("restorePointCollection", {
+ *     location: "norwayeast",
+ *     resourceGroupName: "myResourceGroup",
+ *     restorePointCollectionName: "myRpc",
+ *     source: {
+ *         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+ *     },
+ *     tags: {
+ *         myTag1: "tagValue1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * restore_point_collection = azure_native.compute.RestorePointCollection("restorePointCollection",
+ *     location="norwayeast",
+ *     resource_group_name="myResourceGroup",
+ *     restore_point_collection_name="myRpc",
+ *     source=azure_native.compute.RestorePointCollectionSourcePropertiesArgs(
+ *         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+ *     ),
+ *     tags={
+ *         "myTag1": "tagValue1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +133,96 @@ import javax.annotation.Nullable;
 public class RestorePointCollection extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the restore point collection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the restore point collection.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The unique id of the restore point collection.
-     * 
      */
     @Export(name="restorePointCollectionId", type=String.class, parameters={})
     private Output<String> restorePointCollectionId;
 
     /**
      * @return The unique id of the restore point collection.
-     * 
      */
     public Output<String> getRestorePointCollectionId() {
         return this.restorePointCollectionId;
     }
     /**
      * A list containing all restore points created under this restore point collection.
-     * 
      */
     @Export(name="restorePoints", type=List.class, parameters={RestorePointResponse.class})
     private Output<List<RestorePointResponse>> restorePoints;
 
     /**
      * @return A list containing all restore points created under this restore point collection.
-     * 
      */
     public Output<List<RestorePointResponse>> getRestorePoints() {
         return this.restorePoints;
     }
     /**
      * The properties of the source resource that this restore point collection is created from.
-     * 
      */
     @Export(name="source", type=RestorePointCollectionSourcePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> source;
 
     /**
      * @return The properties of the source resource that this restore point collection is created from.
-     * 
      */
     public Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> getSource() {
         return this.source;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

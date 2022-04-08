@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure Table sink.
- * 
  */
 public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Azure Table default partition key value. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureTableDefaultPartitionKeyValue")
       private final @Nullable Object azureTableDefaultPartitionKeyValue;
@@ -32,7 +30,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Azure Table insert type. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureTableInsertType")
       private final @Nullable Object azureTableInsertType;
@@ -43,7 +40,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Azure Table partition key name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureTablePartitionKeyName")
       private final @Nullable Object azureTablePartitionKeyName;
@@ -54,7 +50,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Azure Table row key name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureTableRowKeyName")
       private final @Nullable Object azureTableRowKeyName;
@@ -65,7 +60,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -76,7 +70,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -87,7 +80,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
@@ -98,7 +90,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
@@ -110,7 +101,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Copy sink type.
      * Expected value is 'AzureTableSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -121,7 +111,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
@@ -132,7 +121,6 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;

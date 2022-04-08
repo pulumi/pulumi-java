@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Describes a built-in preset for encoding the input video with the Standard Encoder.
- * 
  */
 public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.BuiltInStandardEncoderPreset'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -33,7 +31,6 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
 
     /**
      * The built-in preset to be used for encoding videos.
-     * 
      */
     @Import(name="presetName", required=true)
       private final Output<Either<String,EncoderNamedPreset>> presetName;

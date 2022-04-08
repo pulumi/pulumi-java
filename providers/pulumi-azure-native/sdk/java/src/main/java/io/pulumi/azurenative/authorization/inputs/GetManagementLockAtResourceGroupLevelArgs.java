@@ -14,7 +14,6 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.r
 
     /**
      * The name of the lock to get.
-     * 
      */
     @Import(name="lockName", required=true)
       private final String lockName;
@@ -25,7 +24,6 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.r
 
     /**
      * The name of the locked resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Tag filter information for the VM.
- * 
  */
 public final class TagSettingsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Filter VMs by Any or All specified tags.
-     * 
      */
     @Import(name="filterOperator")
       private final @Nullable Output<TagOperators> filterOperator;
@@ -34,7 +32,6 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Dictionary of tags with its list of values.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,List<String>>> tags;

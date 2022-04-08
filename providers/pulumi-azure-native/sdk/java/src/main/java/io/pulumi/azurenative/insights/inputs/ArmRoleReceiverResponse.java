@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An arm role receiver.
- * 
  */
 public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the arm role receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -32,7 +30,6 @@ public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The arm role id.
-     * 
      */
     @Import(name="roleId", required=true)
       private final String roleId;
@@ -43,7 +40,6 @@ public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates whether to use common alert schema.
-     * 
      */
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;

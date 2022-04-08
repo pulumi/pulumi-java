@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The kubernetes service connection configuration
- * 
  */
 public final class DefenderForContainersAwsOfferingKubernetesServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DefenderForContainersAwsOfferingKubernetesServiceArgs extends
 
     /**
      * The cloud role ARN in AWS for this feature
-     * 
      */
     @Import(name="cloudRoleArn")
       private final @Nullable Output<String> cloudRoleArn;

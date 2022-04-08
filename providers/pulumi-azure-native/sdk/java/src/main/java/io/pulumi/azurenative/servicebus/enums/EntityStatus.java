@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enumerates the possible values for the status of a messaging entity.
-     * 
      */
     @EnumType
     public enum EntityStatus {

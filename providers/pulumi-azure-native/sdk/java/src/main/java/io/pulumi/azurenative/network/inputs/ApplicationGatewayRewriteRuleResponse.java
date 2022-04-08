@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rewrite rule of an application gateway.
- * 
  */
 public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
 
     /**
      * Set of actions to be done as part of the rewrite Rule.
-     * 
      */
     @Import(name="actionSet")
       private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
@@ -35,7 +33,6 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
 
     /**
      * Conditions based on which the action set execution will be evaluated.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
@@ -46,7 +43,6 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
 
     /**
      * Name of the rewrite rule that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -57,7 +53,6 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
 
     /**
      * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
-     * 
      */
     @Import(name="ruleSequence")
       private final @Nullable Integer ruleSequence;

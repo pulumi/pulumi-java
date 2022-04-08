@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Output for task that validates migration input for SQL to Azure SQL Managed Instance migrations
- * 
  */
 public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Errors associated with the BackupFolder path
-     * 
      */
     @Import(name="backupFolderErrors", required=true)
       private final List<ReportableExceptionResponse> backupFolderErrors;
@@ -34,7 +32,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Errors associated with backup share user name and password credentials
-     * 
      */
     @Import(name="backupShareCredentialsErrors", required=true)
       private final List<ReportableExceptionResponse> backupShareCredentialsErrors;
@@ -45,7 +42,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Errors associated with the storage account provided.
-     * 
      */
     @Import(name="backupStorageAccountErrors", required=true)
       private final List<ReportableExceptionResponse> backupStorageAccountErrors;
@@ -56,7 +52,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Information about backup files when existing backup mode is used.
-     * 
      */
     @Import(name="databaseBackupInfo")
       private final @Nullable DatabaseBackupInfoResponse databaseBackupInfo;
@@ -67,7 +62,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Errors associated with existing backup files.
-     * 
      */
     @Import(name="existingBackupErrors", required=true)
       private final List<ReportableExceptionResponse> existingBackupErrors;
@@ -78,7 +72,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -89,7 +82,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Name of database
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -100,7 +92,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
 
     /**
      * Errors associated with the RestoreDatabaseName
-     * 
      */
     @Import(name="restoreDatabaseNameErrors", required=true)
       private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;

@@ -19,38 +19,31 @@ import javax.annotation.Nullable;
 public final class AzureKeyVaultLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).
-     * 
      */
     private final Object baseUrl;
     /**
      * The integration runtime reference.
-     * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
      * The credential reference containing authentication information.
-     * 
      */
     private final @Nullable CredentialReferenceResponse credential;
     /**
      * Linked service description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Parameters for linked service.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
      * Expected value is 'AzureKeyVault'.
-     * 
      */
     private final String type;
 
@@ -74,42 +67,36 @@ public final class AzureKeyVaultLinkedServiceResponse {
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).
-     * 
     */
     public Object getBaseUrl() {
         return this.baseUrl;
     }
     /**
      * The integration runtime reference.
-     * 
     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
-     * 
     */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Parameters for linked service.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -117,7 +104,6 @@ public final class AzureKeyVaultLinkedServiceResponse {
     /**
      * Type of linked service.
      * Expected value is 'AzureKeyVault'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contact Details.
- * 
  */
 public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contact name of the person.
-     * 
      */
     @Import(name="contactName", required=true)
       private final Output<String> contactName;
@@ -32,7 +30,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Email-ids to be notified about job progress.
-     * 
      */
     @Import(name="emailList", required=true)
       private final Output<List<String>> emailList;
@@ -43,7 +40,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mobile number of the contact person.
-     * 
      */
     @Import(name="mobile")
       private final @Nullable Output<String> mobile;
@@ -54,7 +50,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Phone number of the contact person.
-     * 
      */
     @Import(name="phone", required=true)
       private final Output<String> phone;
@@ -65,7 +60,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Phone extension number of the contact person.
-     * 
      */
     @Import(name="phoneExtension")
       private final @Nullable Output<String> phoneExtension;

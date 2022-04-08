@@ -20,7 +20,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
-     * 
      */
     @Import(name="customerSecrets")
       private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
@@ -31,7 +30,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="dataManagerName", required=true)
       private final Output<String> dataManagerName;
@@ -42,7 +40,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data store/repository name to be created or updated.
-     * 
      */
     @Import(name="dataStoreName")
       private final @Nullable Output<String> dataStoreName;
@@ -53,7 +50,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The arm id of the data store type.
-     * 
      */
     @Import(name="dataStoreTypeId", required=true)
       private final Output<String> dataStoreTypeId;
@@ -64,7 +60,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A generic json used differently by each data source type.
-     * 
      */
     @Import(name="extendedProperties")
       private final @Nullable Output<Object> extendedProperties;
@@ -75,7 +70,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Arm Id for the manager resource to which the data source is associated. This is optional.
-     * 
      */
     @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
@@ -86,7 +80,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * State of the data source.
-     * 
      */
     @Import(name="state", required=true)
       private final Output<State> state;

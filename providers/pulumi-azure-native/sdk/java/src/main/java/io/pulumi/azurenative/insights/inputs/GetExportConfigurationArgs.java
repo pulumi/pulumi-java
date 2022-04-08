@@ -14,7 +14,6 @@ public final class GetExportConfigurationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The Continuous Export configuration ID. This is unique within a Application Insights component.
-     * 
      */
     @Import(name="exportId", required=true)
       private final String exportId;
@@ -25,7 +24,6 @@ public final class GetExportConfigurationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetExportConfigurationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

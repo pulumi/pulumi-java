@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for DataTransferServiceResource.
- * 
  */
 public final class DataTransferServiceResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
 
     /**
      * Time of the last state change (ISO-8601 format).
-     * 
      */
     @Import(name="creationTime", required=true)
       private final String creationTime;
@@ -34,7 +32,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
 
     /**
      * Instance count for the service.
-     * 
      */
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
@@ -45,7 +42,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
 
     /**
      * Instance type for the service.
-     * 
      */
     @Import(name="instanceSize")
       private final @Nullable String instanceSize;
@@ -56,7 +52,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
 
     /**
      * An array that contains all of the locations for the service.
-     * 
      */
     @Import(name="locations", required=true)
       private final List<DataTransferRegionalServiceResourceResponse> locations;
@@ -68,7 +63,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
     /**
      * ServiceType for the service.
      * Expected value is 'DataTransfer'.
-     * 
      */
     @Import(name="serviceType", required=true)
       private final String serviceType;
@@ -79,7 +73,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
 
     /**
      * Describes the status of a service.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

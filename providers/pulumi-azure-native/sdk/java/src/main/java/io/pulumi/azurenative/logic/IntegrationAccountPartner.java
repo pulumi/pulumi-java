@@ -20,7 +20,135 @@ import javax.annotation.Nullable;
  * The integration account partner.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a partner
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integrationAccountPartner = new AzureNative.Logic.IntegrationAccountPartner("integrationAccountPartner", new AzureNative.Logic.IntegrationAccountPartnerArgs
+ *         {
+ *             Content = new AzureNative.Logic.Inputs.PartnerContentArgs
+ *             {
+ *                 B2b = new AzureNative.Logic.Inputs.B2BPartnerContentArgs
+ *                 {
+ *                     BusinessIdentities = 
+ *                     {
+ *                         new AzureNative.Logic.Inputs.BusinessIdentityArgs
+ *                         {
+ *                             Qualifier = "AA",
+ *                             Value = "ZZ",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             IntegrationAccountName = "testIntegrationAccount",
+ *             Location = "westus",
+ *             Metadata = ,
+ *             PartnerName = "testPartner",
+ *             PartnerType = "B2B",
+ *             ResourceGroupName = "testResourceGroup",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logic.NewIntegrationAccountPartner(ctx, "integrationAccountPartner", &logic.IntegrationAccountPartnerArgs{
+ * 			Content: &logic.PartnerContentArgs{
+ * 				B2b: &logic.B2BPartnerContentArgs{
+ * 					BusinessIdentities: logic.BusinessIdentityArray{
+ * 						&logic.BusinessIdentityArgs{
+ * 							Qualifier: pulumi.String("AA"),
+ * 							Value:     pulumi.String("ZZ"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
+ * 			Location:               pulumi.String("westus"),
+ * 			Metadata:               nil,
+ * 			PartnerName:            pulumi.String("testPartner"),
+ * 			PartnerType:            pulumi.String("B2B"),
+ * 			ResourceGroupName:      pulumi.String("testResourceGroup"),
+ * 			Tags:                   nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartner("integrationAccountPartner", {
+ *     content: {
+ *         b2b: {
+ *             businessIdentities: [{
+ *                 qualifier: "AA",
+ *                 value: "ZZ",
+ *             }],
+ *         },
+ *     },
+ *     integrationAccountName: "testIntegrationAccount",
+ *     location: "westus",
+ *     metadata: {},
+ *     partnerName: "testPartner",
+ *     partnerType: "B2B",
+ *     resourceGroupName: "testResourceGroup",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * integration_account_partner = azure_native.logic.IntegrationAccountPartner("integrationAccountPartner",
+ *     content=azure_native.logic.PartnerContentArgs(
+ *         b2b=azure_native.logic.B2BPartnerContentArgs(
+ *             business_identities=[azure_native.logic.BusinessIdentityArgs(
+ *                 qualifier="AA",
+ *                 value="ZZ",
+ *             )],
+ *         ),
+ *     ),
+ *     integration_account_name="testIntegrationAccount",
+ *     location="westus",
+ *     metadata={},
+ *     partner_name="testPartner",
+ *     partner_type="B2B",
+ *     resource_group_name="testResourceGroup",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +163,108 @@ import javax.annotation.Nullable;
 public class IntegrationAccountPartner extends io.pulumi.resources.CustomResource {
     /**
      * The changed time.
-     * 
      */
     @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
      * @return The changed time.
-     * 
      */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
     /**
      * The partner content.
-     * 
      */
     @Export(name="content", type=PartnerContentResponse.class, parameters={})
     private Output<PartnerContentResponse> content;
 
     /**
      * @return The partner content.
-     * 
      */
     public Output<PartnerContentResponse> getContent() {
         return this.content;
     }
     /**
      * The created time.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The created time.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The metadata.
-     * 
      */
     @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
      * @return The metadata.
-     * 
      */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
     /**
      * Gets the resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The partner type.
-     * 
      */
     @Export(name="partnerType", type=String.class, parameters={})
     private Output<String> partnerType;
 
     /**
      * @return The partner type.
-     * 
      */
     public Output<String> getPartnerType() {
         return this.partnerType;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets the resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

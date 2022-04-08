@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class WorkspaceKeyDetailsResponse {
     /**
      * Workspace Key sub-resource key vault url
-     * 
      */
     private final @Nullable String keyVaultUrl;
     /**
      * Workspace Key sub-resource name
-     * 
      */
     private final @Nullable String name;
 
@@ -32,14 +30,12 @@ public final class WorkspaceKeyDetailsResponse {
 
     /**
      * Workspace Key sub-resource key vault url
-     * 
     */
     public Optional<String> getKeyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
     /**
      * Workspace Key sub-resource name
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

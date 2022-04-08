@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Time and capacity request parameters
- * 
  */
 public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
 
     /**
      * The maximum instance count of the cluster
-     * 
      */
     @Import(name="maxInstanceCount")
       private final @Nullable Integer maxInstanceCount;
@@ -32,7 +30,6 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
 
     /**
      * The minimum instance count of the cluster
-     * 
      */
     @Import(name="minInstanceCount")
       private final @Nullable Integer minInstanceCount;
@@ -43,7 +40,6 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
 
     /**
      * 24-hour time in the form xx:xx
-     * 
      */
     @Import(name="time")
       private final @Nullable String time;

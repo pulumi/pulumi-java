@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protocol either UDP or TCP.
-     * 
      */
     @EnumType
     public enum Protocol {

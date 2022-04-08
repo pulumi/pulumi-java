@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the webhook destination for an event subscription.
- * 
  */
 public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
 
     /**
      * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-     * 
      */
     @Import(name="azureActiveDirectoryApplicationIdOrUri")
       private final @Nullable Output<String> azureActiveDirectoryApplicationIdOrUri;
@@ -32,7 +30,6 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
 
     /**
      * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-     * 
      */
     @Import(name="azureActiveDirectoryTenantId")
       private final @Nullable Output<String> azureActiveDirectoryTenantId;
@@ -44,7 +41,6 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     /**
      * Type of the endpoint for the event subscription destination.
      * Expected value is 'WebHook'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
@@ -55,7 +51,6 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
 
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
-     * 
      */
     @Import(name="endpointUrl")
       private final @Nullable Output<String> endpointUrl;
@@ -66,7 +61,6 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
 
     /**
      * Maximum number of events per batch.
-     * 
      */
     @Import(name="maxEventsPerBatch")
       private final @Nullable Output<Integer> maxEventsPerBatch;
@@ -77,7 +71,6 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
 
     /**
      * Preferred batch size in Kilobytes.
-     * 
      */
     @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Output<Integer> preferredBatchSizeInKilobytes;

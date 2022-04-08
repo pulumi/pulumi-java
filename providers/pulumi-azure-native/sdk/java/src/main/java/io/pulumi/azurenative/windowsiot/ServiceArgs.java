@@ -18,7 +18,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Windows IoT Device Service OEM AAD domain
-     * 
      */
     @Import(name="adminDomainName")
       private final @Nullable Output<String> adminDomainName;
@@ -29,7 +28,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Windows IoT Device Service ODM AAD domain
-     * 
      */
     @Import(name="billingDomainName")
       private final @Nullable Output<String> billingDomainName;
@@ -40,7 +38,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Windows IoT Device Service.
-     * 
      */
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
@@ -51,7 +48,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -62,7 +58,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Windows IoT Device Service notes.
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -73,7 +68,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Windows IoT Device Service device allocation,
-     * 
      */
     @Import(name="quantity")
       private final @Nullable Output<Double> quantity;
@@ -84,7 +78,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the Windows IoT Device Service.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

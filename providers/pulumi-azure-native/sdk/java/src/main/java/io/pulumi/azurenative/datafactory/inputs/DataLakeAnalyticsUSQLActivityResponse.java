@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data Lake Analytics U-SQL activity.
- * 
  */
 public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="compilationMode")
       private final @Nullable Object compilationMode;
@@ -38,7 +36,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
-     * 
      */
     @Import(name="degreeOfParallelism")
       private final @Nullable Object degreeOfParallelism;
@@ -49,7 +46,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -60,7 +56,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -71,7 +66,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -82,7 +76,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -93,7 +86,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Parameters for U-SQL job request.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
@@ -104,7 +96,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -115,7 +106,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Object priority;
@@ -126,7 +116,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="runtimeVersion")
       private final @Nullable Object runtimeVersion;
@@ -137,7 +126,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Script linked service reference.
-     * 
      */
     @Import(name="scriptLinkedService", required=true)
       private final LinkedServiceReferenceResponse scriptLinkedService;
@@ -148,7 +136,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="scriptPath", required=true)
       private final Object scriptPath;
@@ -160,7 +147,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
     /**
      * Type of activity.
      * Expected value is 'DataLakeAnalyticsU-SQL'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -171,7 +157,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

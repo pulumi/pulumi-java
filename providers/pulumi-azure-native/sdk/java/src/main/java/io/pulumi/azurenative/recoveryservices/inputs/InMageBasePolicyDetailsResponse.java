@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for the policies of providers using InMage replication.
- * 
  */
 public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The app consistent snapshot frequency in minutes.
-     * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Integer appConsistentFrequencyInMinutes;
@@ -33,7 +31,6 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'InMageBasePolicyDetails'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -44,7 +41,6 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
 
     /**
      * A value indicating whether multi-VM sync has to be enabled.
-     * 
      */
     @Import(name="multiVmSyncStatus")
       private final @Nullable String multiVmSyncStatus;
@@ -55,7 +51,6 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
      */
     @Import(name="recoveryPointHistory")
       private final @Nullable Integer recoveryPointHistory;
@@ -66,7 +61,6 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The recovery point threshold in minutes.
-     * 
      */
     @Import(name="recoveryPointThresholdInMinutes")
       private final @Nullable Integer recoveryPointThresholdInMinutes;

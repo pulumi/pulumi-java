@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ShipmentType of the order
-     * 
      */
     @EnumType
     public enum ShipmentType {

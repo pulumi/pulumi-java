@@ -21,7 +21,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is optional input that contains the authentication that should be used to generate the namespace.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
@@ -32,7 +31,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
-     * 
      */
     @Import(name="clusterExtensionIds")
       private final @Nullable Output<List<String>> clusterExtensionIds;
@@ -43,7 +41,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name for the Custom Locations location.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -54,7 +51,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
-     * 
      */
     @Import(name="hostResourceId")
       private final @Nullable Output<String> hostResourceId;
@@ -65,7 +61,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of host the Custom Locations is referencing (Kubernetes, etc...).
-     * 
      */
     @Import(name="hostType")
       private final @Nullable Output<Either<String,HostType>> hostType;
@@ -76,7 +71,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kubernetes namespace that will be created on the specified cluster.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -98,7 +91,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provisioning State for the Custom Location.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -109,7 +101,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -120,7 +111,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom Locations name.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -131,7 +121,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

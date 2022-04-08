@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VirtualNetworkConfigResponse {
     /**
      * Resource id of a pre-existing subnet.
-     * 
      */
     private final @Nullable String subnetId;
 
@@ -24,7 +23,6 @@ public final class VirtualNetworkConfigResponse {
 
     /**
      * Resource id of a pre-existing subnet.
-     * 
     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);

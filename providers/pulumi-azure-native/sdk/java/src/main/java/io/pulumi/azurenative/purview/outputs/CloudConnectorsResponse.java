@@ -12,7 +12,6 @@ public final class CloudConnectorsResponse {
     /**
      * AWS external identifier.
      * Configured in AWS to allow use of the role arn used for scanning
-     * 
      */
     private final String awsExternalId;
 
@@ -24,7 +23,6 @@ public final class CloudConnectorsResponse {
     /**
      * AWS external identifier.
      * Configured in AWS to allow use of the role arn used for scanning
-     * 
     */
     public String getAwsExternalId() {
         return this.awsExternalId;

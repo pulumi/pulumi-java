@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Export operation configuration information
- * 
  */
 public final class FhirServiceExportConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FhirServiceExportConfigurationArgs extends io.pulumi.resource
 
     /**
      * The name of the default export storage account.
-     * 
      */
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;

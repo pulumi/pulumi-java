@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Incoming Traffic Policy
-     * 
      */
     @EnumType
     public enum IncomingTrafficPolicy {

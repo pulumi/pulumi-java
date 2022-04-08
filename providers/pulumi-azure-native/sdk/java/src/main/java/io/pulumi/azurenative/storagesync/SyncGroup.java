@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * Sync Group object.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SyncGroups_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var syncGroup = new AzureNative.StorageSync.SyncGroup("syncGroup", new AzureNative.StorageSync.SyncGroupArgs
+ *         {
+ *             ResourceGroupName = "SampleResourceGroup_1",
+ *             StorageSyncServiceName = "SampleStorageSyncService_1",
+ *             SyncGroupName = "SampleSyncGroup_1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storagesync "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagesync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagesync.NewSyncGroup(ctx, "syncGroup", &storagesync.SyncGroupArgs{
+ * 			ResourceGroupName:      pulumi.String("SampleResourceGroup_1"),
+ * 			StorageSyncServiceName: pulumi.String("SampleStorageSyncService_1"),
+ * 			SyncGroupName:          pulumi.String("SampleSyncGroup_1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const syncGroup = new azure_native.storagesync.SyncGroup("syncGroup", {
+ *     resourceGroupName: "SampleResourceGroup_1",
+ *     storageSyncServiceName: "SampleStorageSyncService_1",
+ *     syncGroupName: "SampleSyncGroup_1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sync_group = azure_native.storagesync.SyncGroup("syncGroup",
+ *     resource_group_name="SampleResourceGroup_1",
+ *     storage_sync_service_name="SampleStorageSyncService_1",
+ *     sync_group_name="SampleSyncGroup_1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +104,48 @@ import javax.annotation.Nullable;
 public class SyncGroup extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Sync group status
-     * 
      */
     @Export(name="syncGroupStatus", type=String.class, parameters={})
     private Output<String> syncGroupStatus;
 
     /**
      * @return Sync group status
-     * 
      */
     public Output<String> getSyncGroupStatus() {
         return this.syncGroupStatus;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Unique Id
-     * 
      */
     @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**
      * @return Unique Id
-     * 
      */
     public Output<String> getUniqueId() {
         return this.uniqueId;

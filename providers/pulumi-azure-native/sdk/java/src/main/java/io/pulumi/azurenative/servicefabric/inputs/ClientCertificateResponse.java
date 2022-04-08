@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Client Certificate definition.
- * 
  */
 public final class ClientCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Certificate Common name.
-     * 
      */
     @Import(name="commonName")
       private final @Nullable String commonName;
@@ -32,7 +30,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Whether the certificate is admin or not.
-     * 
      */
     @Import(name="isAdmin", required=true)
       private final Boolean isAdmin;
@@ -43,7 +40,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Issuer thumbprint for the certificate. Only used together with CommonName.
-     * 
      */
     @Import(name="issuerThumbprint")
       private final @Nullable String issuerThumbprint;
@@ -54,7 +50,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Certificate Thumbprint.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;

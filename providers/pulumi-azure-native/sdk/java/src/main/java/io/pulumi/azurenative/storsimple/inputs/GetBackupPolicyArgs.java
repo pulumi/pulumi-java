@@ -14,7 +14,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of backup policy to be fetched.
-     * 
      */
     @Import(name="backupPolicyName", required=true)
       private final String backupPolicyName;
@@ -25,7 +24,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The device name
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -36,7 +34,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final String managerName;
@@ -47,7 +44,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

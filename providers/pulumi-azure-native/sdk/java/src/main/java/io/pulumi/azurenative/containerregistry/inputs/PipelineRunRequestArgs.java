@@ -15,18 +15,16 @@ import javax.annotation.Nullable;
 
 /**
  * The request properties provided for a pipeline run.
- * 
  */
 public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineRunRequestArgs Empty = new PipelineRunRequestArgs();
 
     /**
-     * List of source artifacts to be transferred by the pipeline.
+     * List of source artifacts to be transferred by the pipeline. 
      * Specify an image by repository ('hello-world'). This will use the 'latest' tag.
      * Specify an image by tag ('hello-world:latest').
      * Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
-     * 
      */
     @Import(name="artifacts")
       private final @Nullable Output<List<String>> artifacts;
@@ -37,7 +35,6 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The digest of the tar used to transfer the artifacts.
-     * 
      */
     @Import(name="catalogDigest")
       private final @Nullable Output<String> catalogDigest;
@@ -48,7 +45,6 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The resource ID of the pipeline to run.
-     * 
      */
     @Import(name="pipelineResourceId")
       private final @Nullable Output<String> pipelineResourceId;
@@ -59,7 +55,6 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The source properties of the pipeline run.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<PipelineRunSourcePropertiesArgs> source;
@@ -70,7 +65,6 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The target properties of the pipeline run.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<PipelineRunTargetPropertiesArgs> target;

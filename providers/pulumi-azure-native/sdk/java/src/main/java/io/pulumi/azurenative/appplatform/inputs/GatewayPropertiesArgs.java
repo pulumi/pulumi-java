@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Spring Cloud Gateway properties payload
- * 
  */
 public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * API metadata property for Spring Cloud Gateway
-     * 
      */
     @Import(name="apiMetadataProperties")
       private final @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
@@ -35,7 +33,6 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Cross-Origin Resource Sharing property
-     * 
      */
     @Import(name="corsProperties")
       private final @Nullable Output<GatewayCorsPropertiesArgs> corsProperties;
@@ -46,7 +43,6 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Indicate if only https is allowed.
-     * 
      */
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
@@ -57,7 +53,6 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
-     * 
      */
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
@@ -68,7 +63,6 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
      */
     @Import(name="resourceRequests")
       private final @Nullable Output<GatewayResourceRequestsArgs> resourceRequests;
@@ -79,7 +73,6 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Single sign-on related configuration
-     * 
      */
     @Import(name="ssoProperties")
       private final @Nullable Output<SsoPropertiesArgs> ssoProperties;

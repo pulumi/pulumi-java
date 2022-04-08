@@ -14,7 +14,6 @@ public final class GetWebAppDeploymentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Deployment ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -25,7 +24,6 @@ public final class GetWebAppDeploymentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetWebAppDeploymentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * HBase server linked service.
- * 
  */
 public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-     * 
      */
     @Import(name="allowHostNameCNMismatch")
       private final @Nullable Output<Object> allowHostNameCNMismatch;
@@ -40,7 +38,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
-     * 
      */
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Output<Object> allowSelfSignedServerCert;
@@ -51,7 +48,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -62,7 +58,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The authentication mechanism to use to connect to the HBase server.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,HBaseAuthenticationType>> authenticationType;
@@ -73,7 +68,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -84,7 +78,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -95,7 +88,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-     * 
      */
     @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
@@ -106,7 +98,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -117,7 +108,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The IP address or host name of the HBase server. (i.e. 192.168.222.160)
-     * 
      */
     @Import(name="host", required=true)
       private final Output<Object> host;
@@ -128,7 +118,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The partial URL corresponding to the HBase server. (i.e. /gateway/sandbox/hbase/version)
-     * 
      */
     @Import(name="httpPath")
       private final @Nullable Output<Object> httpPath;
@@ -139,7 +128,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -150,7 +138,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The password corresponding to the user name.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -161,7 +148,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The TCP port that the HBase instance uses to listen for client connections. The default value is 9090.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Object> port;
@@ -172,7 +158,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-     * 
      */
     @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
@@ -184,7 +169,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     /**
      * Type of linked service.
      * Expected value is 'HBase'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -195,7 +179,6 @@ public final class HBaseLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The user name used to connect to the HBase instance.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<Object> username;

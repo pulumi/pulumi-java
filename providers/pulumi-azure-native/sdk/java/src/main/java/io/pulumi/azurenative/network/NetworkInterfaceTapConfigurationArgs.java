@@ -17,7 +17,6 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -28,7 +27,6 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,7 +37,6 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the network interface.
-     * 
      */
     @Import(name="networkInterfaceName", required=true)
       private final Output<String> networkInterfaceName;
@@ -50,7 +47,6 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the tap configuration.
-     * 
      */
     @Import(name="tapConfigurationName")
       private final @Nullable Output<String> tapConfigurationName;
@@ -72,7 +67,6 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
 
     /**
      * The reference to the Virtual Network Tap resource.
-     * 
      */
     @Import(name="virtualNetworkTap")
       private final @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;

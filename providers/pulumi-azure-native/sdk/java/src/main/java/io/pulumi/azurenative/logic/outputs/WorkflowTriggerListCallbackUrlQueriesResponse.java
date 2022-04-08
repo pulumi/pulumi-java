@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class WorkflowTriggerListCallbackUrlQueriesResponse {
     /**
      * The api version.
-     * 
      */
     private final @Nullable String apiVersion;
     /**
      * The SAS timestamp.
-     * 
      */
     private final @Nullable String se;
     /**
      * The SAS signature.
-     * 
      */
     private final @Nullable String sig;
     /**
      * The SAS permissions.
-     * 
      */
     private final @Nullable String sp;
     /**
      * The SAS version.
-     * 
      */
     private final @Nullable String sv;
 
@@ -53,35 +48,30 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
 
     /**
      * The api version.
-     * 
     */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * The SAS timestamp.
-     * 
     */
     public Optional<String> getSe() {
         return Optional.ofNullable(this.se);
     }
     /**
      * The SAS signature.
-     * 
     */
     public Optional<String> getSig() {
         return Optional.ofNullable(this.sig);
     }
     /**
      * The SAS permissions.
-     * 
     */
     public Optional<String> getSp() {
         return Optional.ofNullable(this.sp);
     }
     /**
      * The SAS version.
-     * 
     */
     public Optional<String> getSv() {
         return Optional.ofNullable(this.sv);

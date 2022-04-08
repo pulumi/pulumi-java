@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Status information about a virtual machine.
- * 
  */
 public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
 
     /**
      * Gets the status Code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
 
     /**
      * Gets the short localizable label for the status.
-     * 
      */
     @Import(name="displayStatus")
       private final @Nullable String displayStatus;
@@ -42,7 +39,6 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
 
     /**
      * Gets the message associated with the status.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

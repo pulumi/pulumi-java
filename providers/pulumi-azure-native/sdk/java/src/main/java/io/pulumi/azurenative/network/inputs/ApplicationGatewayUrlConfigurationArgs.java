@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Url configuration of the Actions set in Application Gateway.
- * 
  */
 public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
 
     /**
      * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
-     * 
      */
     @Import(name="modifiedPath")
       private final @Nullable Output<String> modifiedPath;
@@ -32,7 +30,6 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
 
     /**
      * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
-     * 
      */
     @Import(name="modifiedQueryString")
       private final @Nullable Output<String> modifiedQueryString;
@@ -43,7 +40,6 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
 
     /**
      * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
-     * 
      */
     @Import(name="reroute")
       private final @Nullable Output<Boolean> reroute;

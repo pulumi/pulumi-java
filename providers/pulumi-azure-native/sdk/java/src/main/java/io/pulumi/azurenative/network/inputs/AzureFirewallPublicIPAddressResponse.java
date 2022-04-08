@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Public IP Address associated with azure firewall.
- * 
  */
 public final class AzureFirewallPublicIPAddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureFirewallPublicIPAddressResponse extends io.pulumi.resour
 
     /**
      * Public IP Address value.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;

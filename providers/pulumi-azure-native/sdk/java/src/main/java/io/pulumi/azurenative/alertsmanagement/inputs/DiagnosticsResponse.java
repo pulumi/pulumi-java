@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Action rule with diagnostics configuration
- * 
  */
 public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * conditions on which alerts will be filtered
-     * 
      */
     @Import(name="conditions")
       private final @Nullable ConditionsResponse conditions;
@@ -33,7 +31,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Creation time of action rule. Date-Time in ISO-8601 format.
-     * 
      */
     @Import(name="createdAt", required=true)
       private final String createdAt;
@@ -44,7 +41,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Created by user name.
-     * 
      */
     @Import(name="createdBy", required=true)
       private final String createdBy;
@@ -55,7 +51,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Description of action rule
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -66,7 +61,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Last updated time of action rule. Date-Time in ISO-8601 format.
-     * 
      */
     @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
@@ -77,7 +71,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Last modified by user name.
-     * 
      */
     @Import(name="lastModifiedBy", required=true)
       private final String lastModifiedBy;
@@ -88,7 +81,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * scope on which action rule will apply
-     * 
      */
     @Import(name="scope")
       private final @Nullable ScopeResponse scope;
@@ -99,7 +91,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates if the given action rule is enabled or disabled
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -111,7 +102,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Indicates type of action rule
      * Expected value is 'Diagnostics'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

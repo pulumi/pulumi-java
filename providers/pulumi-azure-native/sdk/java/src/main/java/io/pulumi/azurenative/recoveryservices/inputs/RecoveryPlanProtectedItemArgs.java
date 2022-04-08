@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan protected item.
- * 
  */
 public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
 
     /**
      * The ARM Id of the recovery plan protected item.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +29,6 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
 
     /**
      * The virtual machine Id.
-     * 
      */
     @Import(name="virtualMachineId")
       private final @Nullable Output<String> virtualMachineId;

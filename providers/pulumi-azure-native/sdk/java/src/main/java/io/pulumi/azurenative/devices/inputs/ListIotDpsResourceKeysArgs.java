@@ -14,7 +14,6 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
 
     /**
      * The provisioning service name to get the shared access keys for.
-     * 
      */
     @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
@@ -25,7 +24,6 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
 
     /**
      * resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

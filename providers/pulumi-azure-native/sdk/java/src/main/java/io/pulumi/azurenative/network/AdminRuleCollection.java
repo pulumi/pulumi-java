@@ -19,7 +19,105 @@ import javax.annotation.Nullable;
  * Defines the rule collection.
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update an admin rule collection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var adminRuleCollection = new AzureNative.Network.AdminRuleCollection("adminRuleCollection", new AzureNative.Network.AdminRuleCollectionArgs
+ *         {
+ *             AppliesToGroups = 
+ *             {
+ *                 new AzureNative.Network.Inputs.NetworkManagerSecurityGroupItemArgs
+ *                 {
+ *                     NetworkGroupId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup",
+ *                 },
+ *             },
+ *             ConfigurationName = "myTestSecurityConfig",
+ *             Description = "A sample policy",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "rg1",
+ *             RuleCollectionName = "testRuleCollection",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewAdminRuleCollection(ctx, "adminRuleCollection", &network.AdminRuleCollectionArgs{
+ * 			AppliesToGroups: []network.NetworkManagerSecurityGroupItemArgs{
+ * 				&network.NetworkManagerSecurityGroupItemArgs{
+ * 					NetworkGroupId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup"),
+ * 				},
+ * 			},
+ * 			ConfigurationName:  pulumi.String("myTestSecurityConfig"),
+ * 			Description:        pulumi.String("A sample policy"),
+ * 			NetworkManagerName: pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			RuleCollectionName: pulumi.String("testRuleCollection"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const adminRuleCollection = new azure_native.network.AdminRuleCollection("adminRuleCollection", {
+ *     appliesToGroups: [{
+ *         networkGroupId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup",
+ *     }],
+ *     configurationName: "myTestSecurityConfig",
+ *     description: "A sample policy",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "rg1",
+ *     ruleCollectionName: "testRuleCollection",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * admin_rule_collection = azure_native.network.AdminRuleCollection("adminRuleCollection",
+ *     applies_to_groups=[azure_native.network.NetworkManagerSecurityGroupItemArgs(
+ *         network_group_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup",
+ *     )],
+ *     configuration_name="myTestSecurityConfig",
+ *     description="A sample policy",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="rg1",
+ *     rule_collection_name="testRuleCollection")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +132,96 @@ import javax.annotation.Nullable;
 public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
     /**
      * Groups for configuration
-     * 
      */
     @Export(name="appliesToGroups", type=List.class, parameters={NetworkManagerSecurityGroupItemResponse.class})
     private Output</* @Nullable */ List<NetworkManagerSecurityGroupItemResponse>> appliesToGroups;
 
     /**
      * @return Groups for configuration
-     * 
      */
     public Output</* @Nullable */ List<NetworkManagerSecurityGroupItemResponse>> getAppliesToGroups() {
         return this.appliesToGroups;
     }
     /**
      * A description of the rule collection.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the rule collection.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A display name of the rule collection.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A display name of the rule collection.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

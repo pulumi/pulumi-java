@@ -27,7 +27,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of this gallery image definition resource. This property is updatable.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +37,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the disallowed disk types.
-     * 
      */
     @Import(name="disallowed")
       private final @Nullable Output<DisallowedArgs> disallowed;
@@ -49,7 +47,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
-     * 
      */
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
@@ -60,7 +57,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Eula agreement for the gallery image definition.
-     * 
      */
     @Import(name="eula")
       private final @Nullable Output<String> eula;
@@ -71,7 +67,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of gallery image features.
-     * 
      */
     @Import(name="features")
       private final @Nullable Output<List<GalleryImageFeatureArgs>> features;
@@ -82,7 +77,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the gallery image definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.
-     * 
      */
     @Import(name="galleryImageName")
       private final @Nullable Output<String> galleryImageName;
@@ -93,7 +87,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Shared Image Gallery in which the Image Definition is to be created.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
@@ -104,7 +97,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
-     * 
      */
     @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
@@ -115,7 +107,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is the gallery image definition identifier.
-     * 
      */
     @Import(name="identifier", required=true)
       private final Output<GalleryImageIdentifierArgs> identifier;
@@ -126,7 +117,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -137,7 +127,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
-     * 
      */
     @Import(name="osState", required=true)
       private final Output<OperatingSystemStateTypes> osState;
@@ -148,7 +137,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     * 
      */
     @Import(name="osType", required=true)
       private final Output<OperatingSystemTypes> osType;
@@ -159,7 +147,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The privacy statement uri.
-     * 
      */
     @Import(name="privacyStatementUri")
       private final @Nullable Output<String> privacyStatementUri;
@@ -170,7 +157,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the gallery image definition purchase plan. This is used by marketplace images.
-     * 
      */
     @Import(name="purchasePlan")
       private final @Nullable Output<ImagePurchasePlanArgs> purchasePlan;
@@ -181,7 +167,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
-     * 
      */
     @Import(name="recommended")
       private final @Nullable Output<RecommendedMachineConfigurationArgs> recommended;
@@ -192,7 +177,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The release note uri.
-     * 
      */
     @Import(name="releaseNoteUri")
       private final @Nullable Output<String> releaseNoteUri;
@@ -203,7 +187,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -214,7 +197,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

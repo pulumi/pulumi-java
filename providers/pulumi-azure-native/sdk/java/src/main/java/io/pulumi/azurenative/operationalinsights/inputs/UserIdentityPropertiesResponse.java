@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * User assigned identity properties.
- * 
  */
 public final class UserIdentityPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The client id of user assigned identity.
-     * 
      */
     @Import(name="clientId", required=true)
       private final String clientId;
@@ -29,7 +27,6 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The principal id of user assigned identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;

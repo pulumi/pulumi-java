@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class AutomaticOSUpgradePolicyResponse {
     /**
      * Whether OS image rollback feature should be disabled. Default value is false.
-     * 
      */
     private final @Nullable Boolean disableAutomaticRollback;
     /**
      * Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. <br><br> If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
-     * 
      */
     private final @Nullable Boolean enableAutomaticOSUpgrade;
 
@@ -32,14 +30,12 @@ public final class AutomaticOSUpgradePolicyResponse {
 
     /**
      * Whether OS image rollback feature should be disabled. Default value is false.
-     * 
     */
     public Optional<Boolean> getDisableAutomaticRollback() {
         return Optional.ofNullable(this.disableAutomaticRollback);
     }
     /**
      * Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. <br><br> If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
-     * 
     */
     public Optional<Boolean> getEnableAutomaticOSUpgrade() {
         return Optional.ofNullable(this.enableAutomaticOSUpgrade);

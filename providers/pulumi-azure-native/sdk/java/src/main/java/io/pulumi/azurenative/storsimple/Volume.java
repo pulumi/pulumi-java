@@ -18,7 +18,112 @@ import javax.annotation.Nullable;
  * The volume.
  * API Version: 2017-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VolumesCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var volume = new AzureNative.StorSimple.Volume("volume", new AzureNative.StorSimple.VolumeArgs
+ *         {
+ *             AccessControlRecordIds = 
+ *             {
+ *                 "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2",
+ *             },
+ *             DeviceName = "Device05ForSDKTest",
+ *             ManagerName = "ManagerForSDKTest1",
+ *             MonitoringStatus = "Enabled",
+ *             ResourceGroupName = "ResourceGroupForSDKTest",
+ *             SizeInBytes = 5368709120,
+ *             VolumeContainerName = "VolumeContainerForSDKTest",
+ *             VolumeName = "Volume1ForSDKTest",
+ *             VolumeStatus = "Offline",
+ *             VolumeType = "Tiered",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storsimple.NewVolume(ctx, "volume", &storsimple.VolumeArgs{
+ * 			AccessControlRecordIds: pulumi.StringArray{
+ * 				pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"),
+ * 			},
+ * 			DeviceName:          pulumi.String("Device05ForSDKTest"),
+ * 			ManagerName:         pulumi.String("ManagerForSDKTest1"),
+ * 			MonitoringStatus:    "Enabled",
+ * 			ResourceGroupName:   pulumi.String("ResourceGroupForSDKTest"),
+ * 			SizeInBytes:         pulumi.Float64(5368709120),
+ * 			VolumeContainerName: pulumi.String("VolumeContainerForSDKTest"),
+ * 			VolumeName:          pulumi.String("Volume1ForSDKTest"),
+ * 			VolumeStatus:        "Offline",
+ * 			VolumeType:          "Tiered",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const volume = new azure_native.storsimple.Volume("volume", {
+ *     accessControlRecordIds: ["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
+ *     deviceName: "Device05ForSDKTest",
+ *     managerName: "ManagerForSDKTest1",
+ *     monitoringStatus: "Enabled",
+ *     resourceGroupName: "ResourceGroupForSDKTest",
+ *     sizeInBytes: 5368709120,
+ *     volumeContainerName: "VolumeContainerForSDKTest",
+ *     volumeName: "Volume1ForSDKTest",
+ *     volumeStatus: "Offline",
+ *     volumeType: "Tiered",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * volume = azure_native.storsimple.Volume("volume",
+ *     access_control_record_ids=["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
+ *     device_name="Device05ForSDKTest",
+ *     manager_name="ManagerForSDKTest1",
+ *     monitoring_status="Enabled",
+ *     resource_group_name="ResourceGroupForSDKTest",
+ *     size_in_bytes=5368709120,
+ *     volume_container_name="VolumeContainerForSDKTest",
+ *     volume_name="Volume1ForSDKTest",
+ *     volume_status="Offline",
+ *     volume_type="Tiered")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,168 +138,144 @@ import javax.annotation.Nullable;
 public class Volume extends io.pulumi.resources.CustomResource {
     /**
      * The IDs of the access control records, associated with the volume.
-     * 
      */
     @Export(name="accessControlRecordIds", type=List.class, parameters={String.class})
     private Output<List<String>> accessControlRecordIds;
 
     /**
      * @return The IDs of the access control records, associated with the volume.
-     * 
      */
     public Output<List<String>> getAccessControlRecordIds() {
         return this.accessControlRecordIds;
     }
     /**
      * The IDs of the backup policies, in which this volume is part of.
-     * 
      */
     @Export(name="backupPolicyIds", type=List.class, parameters={String.class})
     private Output<List<String>> backupPolicyIds;
 
     /**
      * @return The IDs of the backup policies, in which this volume is part of.
-     * 
      */
     public Output<List<String>> getBackupPolicyIds() {
         return this.backupPolicyIds;
     }
     /**
      * The backup status of the volume.
-     * 
      */
     @Export(name="backupStatus", type=String.class, parameters={})
     private Output<String> backupStatus;
 
     /**
      * @return The backup status of the volume.
-     * 
      */
     public Output<String> getBackupStatus() {
         return this.backupStatus;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The monitoring status of the volume.
-     * 
      */
     @Export(name="monitoringStatus", type=String.class, parameters={})
     private Output<String> monitoringStatus;
 
     /**
      * @return The monitoring status of the volume.
-     * 
      */
     public Output<String> getMonitoringStatus() {
         return this.monitoringStatus;
     }
     /**
      * The name of the object.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the object.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The operation status on the volume.
-     * 
      */
     @Export(name="operationStatus", type=String.class, parameters={})
     private Output<String> operationStatus;
 
     /**
      * @return The operation status on the volume.
-     * 
      */
     public Output<String> getOperationStatus() {
         return this.operationStatus;
     }
     /**
      * The size of the volume in bytes.
-     * 
      */
     @Export(name="sizeInBytes", type=Double.class, parameters={})
     private Output<Double> sizeInBytes;
 
     /**
      * @return The size of the volume in bytes.
-     * 
      */
     public Output<Double> getSizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The ID of the volume container, in which this volume is created.
-     * 
      */
     @Export(name="volumeContainerId", type=String.class, parameters={})
     private Output<String> volumeContainerId;
 
     /**
      * @return The ID of the volume container, in which this volume is created.
-     * 
      */
     public Output<String> getVolumeContainerId() {
         return this.volumeContainerId;
     }
     /**
      * The volume status.
-     * 
      */
     @Export(name="volumeStatus", type=String.class, parameters={})
     private Output<String> volumeStatus;
 
     /**
      * @return The volume status.
-     * 
      */
     public Output<String> getVolumeStatus() {
         return this.volumeStatus;
     }
     /**
      * The type of the volume.
-     * 
      */
     @Export(name="volumeType", type=String.class, parameters={})
     private Output<String> volumeType;
 
     /**
      * @return The type of the volume.
-     * 
      */
     public Output<String> getVolumeType() {
         return this.volumeType;

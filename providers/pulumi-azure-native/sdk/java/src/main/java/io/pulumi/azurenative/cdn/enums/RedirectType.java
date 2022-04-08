@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The redirect type the rule will use when redirecting traffic.
-     * 
      */
     @EnumType
     public enum RedirectType {

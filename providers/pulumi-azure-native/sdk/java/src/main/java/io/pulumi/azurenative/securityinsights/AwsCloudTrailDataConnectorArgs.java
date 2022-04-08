@@ -17,7 +17,6 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
 
     /**
      * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-     * 
      */
     @Import(name="awsRoleArn")
       private final @Nullable Output<String> awsRoleArn;
@@ -28,7 +27,6 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
 
     /**
      * Connector ID
-     * 
      */
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
@@ -39,7 +37,6 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
 
     /**
      * The available data types for the connector.
-     * 
      */
     @Import(name="dataTypes")
       private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
@@ -51,7 +48,6 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
     /**
      * The kind of the data connector
      * Expected value is 'AmazonWebServicesCloudTrail'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -62,7 +58,6 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

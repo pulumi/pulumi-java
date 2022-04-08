@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Data policy of the storage Account.
-     * 
      */
     @EnumType
     public enum DataPolicy {

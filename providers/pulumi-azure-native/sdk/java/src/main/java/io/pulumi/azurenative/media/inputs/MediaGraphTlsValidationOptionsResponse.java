@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Options for controlling the authentication of TLS endpoints.
- * 
  */
 public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
 
     /**
      * Ignore the host name (common name) during validation.
-     * 
      */
     @Import(name="ignoreHostname", required=true)
       private final Boolean ignoreHostname;
@@ -29,7 +27,6 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
 
     /**
      * Ignore the integrity of the certificate chain at the current time.
-     * 
      */
     @Import(name="ignoreSignature", required=true)
       private final Boolean ignoreSignature;

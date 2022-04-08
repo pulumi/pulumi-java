@@ -18,7 +18,477 @@ import javax.annotation.Nullable;
  * A DataSet data transfer object.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataSets_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataSet = new AzureNative.DataShare.DataSet("dataSet", new AzureNative.DataShare.DataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             Kind = "Blob",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewDataSet(ctx, "dataSet", &datashare.DataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			Kind:              pulumi.String("Blob"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataSet = new azure_native.datashare.DataSet("dataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     kind: "Blob",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_set = azure_native.datashare.DataSet("dataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     kind="Blob",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_KustoCluster_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataSet = new AzureNative.DataShare.DataSet("dataSet", new AzureNative.DataShare.DataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             Kind = "KustoCluster",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewDataSet(ctx, "dataSet", &datashare.DataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			Kind:              pulumi.String("KustoCluster"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataSet = new azure_native.datashare.DataSet("dataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     kind: "KustoCluster",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_set = azure_native.datashare.DataSet("dataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     kind="KustoCluster",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_KustoDatabase_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataSet = new AzureNative.DataShare.DataSet("dataSet", new AzureNative.DataShare.DataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             Kind = "KustoDatabase",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewDataSet(ctx, "dataSet", &datashare.DataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			Kind:              pulumi.String("KustoDatabase"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataSet = new azure_native.datashare.DataSet("dataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     kind: "KustoDatabase",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_set = azure_native.datashare.DataSet("dataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     kind="KustoDatabase",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SqlDBTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataSet = new AzureNative.DataShare.DataSet("dataSet", new AzureNative.DataShare.DataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             Kind = "SqlDBTable",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewDataSet(ctx, "dataSet", &datashare.DataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			Kind:              pulumi.String("SqlDBTable"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataSet = new azure_native.datashare.DataSet("dataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     kind: "SqlDBTable",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_set = azure_native.datashare.DataSet("dataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     kind="SqlDBTable",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SqlDWTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataSet = new AzureNative.DataShare.DataSet("dataSet", new AzureNative.DataShare.DataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             Kind = "SqlDWTable",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewDataSet(ctx, "dataSet", &datashare.DataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			Kind:              pulumi.String("SqlDWTable"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataSet = new azure_native.datashare.DataSet("dataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     kind: "SqlDWTable",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_set = azure_native.datashare.DataSet("dataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     kind="SqlDWTable",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SynapseWorkspaceSqlPoolTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataSet = new AzureNative.DataShare.DataSet("dataSet", new AzureNative.DataShare.DataSetArgs
+ *         {
+ *             AccountName = "sourceAccount",
+ *             DataSetName = "dataset1",
+ *             Kind = "SynapseWorkspaceSqlPoolTable",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewDataSet(ctx, "dataSet", &datashare.DataSetArgs{
+ * 			AccountName:       pulumi.String("sourceAccount"),
+ * 			DataSetName:       pulumi.String("dataset1"),
+ * 			Kind:              pulumi.String("SynapseWorkspaceSqlPoolTable"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataSet = new azure_native.datashare.DataSet("dataSet", {
+ *     accountName: "sourceAccount",
+ *     dataSetName: "dataset1",
+ *     kind: "SynapseWorkspaceSqlPoolTable",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_set = azure_native.datashare.DataSet("dataSet",
+ *     account_name="sourceAccount",
+ *     data_set_name="dataset1",
+ *     kind="SynapseWorkspaceSqlPoolTable",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,63 +500,54 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: ADLSGen1FileDataSet, ADLSGen1FolderDataSet, ADLSGen2FileDataSet, ADLSGen2FileSystemDataSet, ADLSGen2FolderDataSet, BlobContainerDataSet, BlobDataSet, BlobFolderDataSet, KustoClusterDataSet, KustoDatabaseDataSet, SqlDBTableDataSet, SqlDWTableDataSet, SynapseWorkspaceSqlPoolTableDataSet.
- * 
  */
 @Deprecated /* Please use one of the variants: ADLSGen1FileDataSet, ADLSGen1FolderDataSet, ADLSGen2FileDataSet, ADLSGen2FileSystemDataSet, ADLSGen2FolderDataSet, BlobContainerDataSet, BlobDataSet, BlobFolderDataSet, KustoClusterDataSet, KustoDatabaseDataSet, SqlDBTableDataSet, SqlDWTableDataSet, SynapseWorkspaceSqlPoolTableDataSet. */
 @ResourceType(type="azure-native:datashare:DataSet")
 public class DataSet extends io.pulumi.resources.CustomResource {
     /**
      * Kind of data set.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Kind of data set.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

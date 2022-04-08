@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A user that can be assigned to a compute instance.
- * 
  */
 public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User’s AAD Object Id.
-     * 
      */
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
@@ -30,7 +28,6 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User’s AAD Tenant Id.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;

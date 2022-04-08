@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration used to bootstrap a Pipeline.
- * 
  */
 public final class BootstrapConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
 
     /**
      * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
-     * 
      */
     @Import(name="sourceRepository")
       private final @Nullable CodeRepositoryResponse sourceRepository;
@@ -32,7 +30,6 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
 
     /**
      * Template used to bootstrap the pipeline.
-     * 
      */
     @Import(name="template", required=true)
       private final PipelineTemplateResponse template;

@@ -19,7 +19,6 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="azureBlobFileSystemConfiguration")
       private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
@@ -30,7 +29,6 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="azureFileShareConfiguration")
       private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
@@ -41,7 +39,6 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="cifsMountConfiguration")
       private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
@@ -52,7 +49,6 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="nfsMountConfiguration")
       private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;

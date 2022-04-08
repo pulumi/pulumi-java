@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class SubResourceResponse {
     /**
      * The identifier of the referenced resource.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class SubResourceResponse {
 
     /**
      * The identifier of the referenced resource.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

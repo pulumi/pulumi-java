@@ -16,7 +16,6 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the role assignment. It can be any valid GUID.
-     * 
      */
     @Import(name="roleAssignmentName", required=true)
       private final String roleAssignmentName;
@@ -27,7 +26,6 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;
@@ -38,7 +36,6 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Tenant ID for cross-tenant request
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

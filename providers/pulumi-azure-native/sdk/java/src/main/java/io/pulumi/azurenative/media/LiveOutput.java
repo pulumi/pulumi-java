@@ -19,7 +19,112 @@ import javax.annotation.Nullable;
  * The Live Output.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a LiveOutput
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var liveOutput = new AzureNative.Media.LiveOutput("liveOutput", new AzureNative.Media.LiveOutputArgs
+ *         {
+ *             AccountName = "slitestmedia10",
+ *             ArchiveWindowLength = "PT5M",
+ *             AssetName = "6f3264f5-a189-48b4-a29a-a40f22575212",
+ *             Description = "test live output 1",
+ *             Hls = new AzureNative.Media.Inputs.HlsArgs
+ *             {
+ *                 FragmentsPerTsSegment = 5,
+ *             },
+ *             LiveEventName = "myLiveEvent1",
+ *             LiveOutputName = "myLiveOutput1",
+ *             ManifestName = "testmanifest",
+ *             ResourceGroupName = "mediaresources",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := media.NewLiveOutput(ctx, "liveOutput", &media.LiveOutputArgs{
+ * 			AccountName:         pulumi.String("slitestmedia10"),
+ * 			ArchiveWindowLength: pulumi.String("PT5M"),
+ * 			AssetName:           pulumi.String("6f3264f5-a189-48b4-a29a-a40f22575212"),
+ * 			Description:         pulumi.String("test live output 1"),
+ * 			Hls: &media.HlsArgs{
+ * 				FragmentsPerTsSegment: pulumi.Int(5),
+ * 			},
+ * 			LiveEventName:     pulumi.String("myLiveEvent1"),
+ * 			LiveOutputName:    pulumi.String("myLiveOutput1"),
+ * 			ManifestName:      pulumi.String("testmanifest"),
+ * 			ResourceGroupName: pulumi.String("mediaresources"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
+ *     accountName: "slitestmedia10",
+ *     archiveWindowLength: "PT5M",
+ *     assetName: "6f3264f5-a189-48b4-a29a-a40f22575212",
+ *     description: "test live output 1",
+ *     hls: {
+ *         fragmentsPerTsSegment: 5,
+ *     },
+ *     liveEventName: "myLiveEvent1",
+ *     liveOutputName: "myLiveOutput1",
+ *     manifestName: "testmanifest",
+ *     resourceGroupName: "mediaresources",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * live_output = azure_native.media.LiveOutput("liveOutput",
+ *     account_name="slitestmedia10",
+ *     archive_window_length="PT5M",
+ *     asset_name="6f3264f5-a189-48b4-a29a-a40f22575212",
+ *     description="test live output 1",
+ *     hls=azure_native.media.HlsArgs(
+ *         fragments_per_ts_segment=5,
+ *     ),
+ *     live_event_name="myLiveEvent1",
+ *     live_output_name="myLiveOutput1",
+ *     manifest_name="testmanifest",
+ *     resource_group_name="mediaresources")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,168 +139,144 @@ import javax.annotation.Nullable;
 public class LiveOutput extends io.pulumi.resources.CustomResource {
     /**
      * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
-     * 
      */
     @Export(name="archiveWindowLength", type=String.class, parameters={})
     private Output<String> archiveWindowLength;
 
     /**
      * @return ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
-     * 
      */
     public Output<String> getArchiveWindowLength() {
         return this.archiveWindowLength;
     }
     /**
      * The asset that the live output will write to.
-     * 
      */
     @Export(name="assetName", type=String.class, parameters={})
     private Output<String> assetName;
 
     /**
      * @return The asset that the live output will write to.
-     * 
      */
     public Output<String> getAssetName() {
         return this.assetName;
     }
     /**
      * The creation time the live output.
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return The creation time the live output.
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * The description of the live output.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the live output.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * HTTP Live Streaming (HLS) packing setting for the live output.
-     * 
      */
     @Export(name="hls", type=HlsResponse.class, parameters={})
     private Output</* @Nullable */ HlsResponse> hls;
 
     /**
      * @return HTTP Live Streaming (HLS) packing setting for the live output.
-     * 
      */
     public Output</* @Nullable */ HlsResponse> getHls() {
         return this.hls;
     }
     /**
      * The time the live output was last modified.
-     * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
      * @return The time the live output was last modified.
-     * 
      */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
     /**
      * The manifest file name. If not provided, the service will generate one automatically.
-     * 
      */
     @Export(name="manifestName", type=String.class, parameters={})
     private Output</* @Nullable */ String> manifestName;
 
     /**
      * @return The manifest file name. If not provided, the service will generate one automatically.
-     * 
      */
     public Output</* @Nullable */ String> getManifestName() {
         return this.manifestName;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The initial timestamp that the live output will start at, any content before this value will not be archived.
-     * 
      */
     @Export(name="outputSnapTime", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> outputSnapTime;
 
     /**
      * @return The initial timestamp that the live output will start at, any content before this value will not be archived.
-     * 
      */
     public Output</* @Nullable */ Double> getOutputSnapTime() {
         return this.outputSnapTime;
     }
     /**
      * The provisioning state of the live output.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the live output.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource state of the live output.
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return The resource state of the live output.
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

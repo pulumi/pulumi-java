@@ -19,7 +19,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Provision states for FluidRelay RP
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
@@ -52,7 +49,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The resource group containing the resource.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -63,7 +59,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

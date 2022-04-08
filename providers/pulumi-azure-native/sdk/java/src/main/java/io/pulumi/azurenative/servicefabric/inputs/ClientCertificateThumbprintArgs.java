@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Describes the client certificate details using thumbprint.
- * 
  */
 public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
 
     /**
      * The thumbprint of the client certificate.
-     * 
      */
     @Import(name="certificateThumbprint", required=true)
       private final Output<String> certificateThumbprint;
@@ -31,7 +29,6 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
 
     /**
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
-     * 
      */
     @Import(name="isAdmin", required=true)
       private final Output<Boolean> isAdmin;

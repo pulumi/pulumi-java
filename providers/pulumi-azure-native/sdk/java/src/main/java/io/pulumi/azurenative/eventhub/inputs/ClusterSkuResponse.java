@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU parameters particular to a cluster instance.
- * 
  */
 public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of this SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -20,7 +20,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the private endpoint.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
@@ -31,7 +30,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the connection state.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
@@ -42,7 +40,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a connection monitor output destination.
- * 
  */
 public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
 
     /**
      * Connection monitor output destination type. Currently, only "Workspace" is supported.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -32,7 +30,6 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
 
     /**
      * Describes the settings for producing output into a log analytics workspace.
-     * 
      */
     @Import(name="workspaceSettings")
       private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;

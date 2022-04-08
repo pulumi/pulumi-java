@@ -23,7 +23,315 @@ import javax.annotation.Nullable;
  * Defines web application firewall policy.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a WAF policy within a resource group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webApplicationFirewallPolicy = new AzureNative.Network.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", new AzureNative.Network.WebApplicationFirewallPolicyArgs
+ *         {
+ *             CustomRules = 
+ *             {
+ *                 new AzureNative.Network.Inputs.WebApplicationFirewallCustomRuleArgs
+ *                 {
+ *                     Action = "Block",
+ *                     MatchConditions = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.MatchConditionArgs
+ *                         {
+ *                             MatchValues = 
+ *                             {
+ *                                 "192.168.1.0/24",
+ *                                 "10.0.0.0/24",
+ *                             },
+ *                             MatchVariables = 
+ *                             {
+ *                                 new AzureNative.Network.Inputs.MatchVariableArgs
+ *                                 {
+ *                                     VariableName = "RemoteAddr",
+ *                                 },
+ *                             },
+ *                             Operator = "IPMatch",
+ *                         },
+ *                     },
+ *                     Name = "Rule1",
+ *                     Priority = 1,
+ *                     RuleType = "MatchRule",
+ *                 },
+ *                 new AzureNative.Network.Inputs.WebApplicationFirewallCustomRuleArgs
+ *                 {
+ *                     Action = "Block",
+ *                     MatchConditions = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.MatchConditionArgs
+ *                         {
+ *                             MatchValues = 
+ *                             {
+ *                                 "192.168.1.0/24",
+ *                             },
+ *                             MatchVariables = 
+ *                             {
+ *                                 new AzureNative.Network.Inputs.MatchVariableArgs
+ *                                 {
+ *                                     VariableName = "RemoteAddr",
+ *                                 },
+ *                             },
+ *                             Operator = "IPMatch",
+ *                         },
+ *                         new AzureNative.Network.Inputs.MatchConditionArgs
+ *                         {
+ *                             MatchValues = 
+ *                             {
+ *                                 "Windows",
+ *                             },
+ *                             MatchVariables = 
+ *                             {
+ *                                 new AzureNative.Network.Inputs.MatchVariableArgs
+ *                                 {
+ *                                     Selector = "UserAgent",
+ *                                     VariableName = "RequestHeaders",
+ *                                 },
+ *                             },
+ *                             Operator = "Contains",
+ *                         },
+ *                     },
+ *                     Name = "Rule2",
+ *                     Priority = 2,
+ *                     RuleType = "MatchRule",
+ *                 },
+ *             },
+ *             Location = "WestUs",
+ *             ManagedRules = new AzureNative.Network.Inputs.ManagedRulesDefinitionArgs
+ *             {
+ *                 ManagedRuleSets = 
+ *                 {
+ *                     new AzureNative.Network.Inputs.ManagedRuleSetArgs
+ *                     {
+ *                         RuleSetType = "OWASP",
+ *                         RuleSetVersion = "3.0",
+ *                     },
+ *                 },
+ *             },
+ *             PolicyName = "Policy1",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewWebApplicationFirewallPolicy(ctx, "webApplicationFirewallPolicy", &network.WebApplicationFirewallPolicyArgs{
+ * 			CustomRules: []network.WebApplicationFirewallCustomRuleArgs{
+ * 				&network.WebApplicationFirewallCustomRuleArgs{
+ * 					Action: pulumi.String("Block"),
+ * 					MatchConditions: []network.MatchConditionArgs{
+ * 						&network.MatchConditionArgs{
+ * 							MatchValues: pulumi.StringArray{
+ * 								pulumi.String("192.168.1.0/24"),
+ * 								pulumi.String("10.0.0.0/24"),
+ * 							},
+ * 							MatchVariables: []network.MatchVariableArgs{
+ * 								&network.MatchVariableArgs{
+ * 									VariableName: pulumi.String("RemoteAddr"),
+ * 								},
+ * 							},
+ * 							Operator: pulumi.String("IPMatch"),
+ * 						},
+ * 					},
+ * 					Name:     pulumi.String("Rule1"),
+ * 					Priority: pulumi.Int(1),
+ * 					RuleType: pulumi.String("MatchRule"),
+ * 				},
+ * 				&network.WebApplicationFirewallCustomRuleArgs{
+ * 					Action: pulumi.String("Block"),
+ * 					MatchConditions: []network.MatchConditionArgs{
+ * 						&network.MatchConditionArgs{
+ * 							MatchValues: pulumi.StringArray{
+ * 								pulumi.String("192.168.1.0/24"),
+ * 							},
+ * 							MatchVariables: []network.MatchVariableArgs{
+ * 								&network.MatchVariableArgs{
+ * 									VariableName: pulumi.String("RemoteAddr"),
+ * 								},
+ * 							},
+ * 							Operator: pulumi.String("IPMatch"),
+ * 						},
+ * 						&network.MatchConditionArgs{
+ * 							MatchValues: pulumi.StringArray{
+ * 								pulumi.String("Windows"),
+ * 							},
+ * 							MatchVariables: []network.MatchVariableArgs{
+ * 								&network.MatchVariableArgs{
+ * 									Selector:     pulumi.String("UserAgent"),
+ * 									VariableName: pulumi.String("RequestHeaders"),
+ * 								},
+ * 							},
+ * 							Operator: pulumi.String("Contains"),
+ * 						},
+ * 					},
+ * 					Name:     pulumi.String("Rule2"),
+ * 					Priority: pulumi.Int(2),
+ * 					RuleType: pulumi.String("MatchRule"),
+ * 				},
+ * 			},
+ * 			Location: pulumi.String("WestUs"),
+ * 			ManagedRules: &network.ManagedRulesDefinitionArgs{
+ * 				ManagedRuleSets: network.ManagedRuleSetArray{
+ * 					&network.ManagedRuleSetArgs{
+ * 						RuleSetType:    pulumi.String("OWASP"),
+ * 						RuleSetVersion: pulumi.String("3.0"),
+ * 					},
+ * 				},
+ * 			},
+ * 			PolicyName:        pulumi.String("Policy1"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webApplicationFirewallPolicy = new azure_native.network.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", {
+ *     customRules: [
+ *         {
+ *             action: "Block",
+ *             matchConditions: [{
+ *                 matchValues: [
+ *                     "192.168.1.0/24",
+ *                     "10.0.0.0/24",
+ *                 ],
+ *                 matchVariables: [{
+ *                     variableName: "RemoteAddr",
+ *                 }],
+ *                 operator: "IPMatch",
+ *             }],
+ *             name: "Rule1",
+ *             priority: 1,
+ *             ruleType: "MatchRule",
+ *         },
+ *         {
+ *             action: "Block",
+ *             matchConditions: [
+ *                 {
+ *                     matchValues: ["192.168.1.0/24"],
+ *                     matchVariables: [{
+ *                         variableName: "RemoteAddr",
+ *                     }],
+ *                     operator: "IPMatch",
+ *                 },
+ *                 {
+ *                     matchValues: ["Windows"],
+ *                     matchVariables: [{
+ *                         selector: "UserAgent",
+ *                         variableName: "RequestHeaders",
+ *                     }],
+ *                     operator: "Contains",
+ *                 },
+ *             ],
+ *             name: "Rule2",
+ *             priority: 2,
+ *             ruleType: "MatchRule",
+ *         },
+ *     ],
+ *     location: "WestUs",
+ *     managedRules: {
+ *         managedRuleSets: [{
+ *             ruleSetType: "OWASP",
+ *             ruleSetVersion: "3.0",
+ *         }],
+ *     },
+ *     policyName: "Policy1",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * web_application_firewall_policy = azure_native.network.WebApplicationFirewallPolicy("webApplicationFirewallPolicy",
+ *     custom_rules=[
+ *         azure_native.network.WebApplicationFirewallCustomRuleArgs(
+ *             action="Block",
+ *             match_conditions=[azure_native.network.MatchConditionArgs(
+ *                 match_values=[
+ *                     "192.168.1.0/24",
+ *                     "10.0.0.0/24",
+ *                 ],
+ *                 match_variables=[azure_native.network.MatchVariableArgs(
+ *                     variable_name="RemoteAddr",
+ *                 )],
+ *                 operator="IPMatch",
+ *             )],
+ *             name="Rule1",
+ *             priority=1,
+ *             rule_type="MatchRule",
+ *         ),
+ *         azure_native.network.WebApplicationFirewallCustomRuleArgs(
+ *             action="Block",
+ *             match_conditions=[
+ *                 azure_native.network.MatchConditionArgs(
+ *                     match_values=["192.168.1.0/24"],
+ *                     match_variables=[azure_native.network.MatchVariableArgs(
+ *                         variable_name="RemoteAddr",
+ *                     )],
+ *                     operator="IPMatch",
+ *                 ),
+ *                 azure_native.network.MatchConditionArgs(
+ *                     match_values=["Windows"],
+ *                     match_variables=[azure_native.network.MatchVariableArgs(
+ *                         selector="UserAgent",
+ *                         variable_name="RequestHeaders",
+ *                     )],
+ *                     operator="Contains",
+ *                 ),
+ *             ],
+ *             name="Rule2",
+ *             priority=2,
+ *             rule_type="MatchRule",
+ *         ),
+ *     ],
+ *     location="WestUs",
+ *     managed_rules=azure_native.network.ManagedRulesDefinitionArgs(
+ *         managed_rule_sets=[azure_native.network.ManagedRuleSetArgs(
+ *             rule_set_type="OWASP",
+ *             rule_set_version="3.0",
+ *         )],
+ *     ),
+ *     policy_name="Policy1",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,182 +346,156 @@ import javax.annotation.Nullable;
 public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomResource {
     /**
      * A collection of references to application gateways.
-     * 
      */
     @Export(name="applicationGateways", type=List.class, parameters={ApplicationGatewayResponse.class})
     private Output<List<ApplicationGatewayResponse>> applicationGateways;
 
     /**
      * @return A collection of references to application gateways.
-     * 
      */
     public Output<List<ApplicationGatewayResponse>> getApplicationGateways() {
         return this.applicationGateways;
     }
     /**
      * The custom rules inside the policy.
-     * 
      */
     @Export(name="customRules", type=List.class, parameters={WebApplicationFirewallCustomRuleResponse.class})
     private Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> customRules;
 
     /**
      * @return The custom rules inside the policy.
-     * 
      */
     public Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> getCustomRules() {
         return this.customRules;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * A collection of references to application gateway http listeners.
-     * 
      */
     @Export(name="httpListeners", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> httpListeners;
 
     /**
      * @return A collection of references to application gateway http listeners.
-     * 
      */
     public Output<List<SubResourceResponse>> getHttpListeners() {
         return this.httpListeners;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Describes the managedRules structure.
-     * 
      */
     @Export(name="managedRules", type=ManagedRulesDefinitionResponse.class, parameters={})
     private Output<ManagedRulesDefinitionResponse> managedRules;
 
     /**
      * @return Describes the managedRules structure.
-     * 
      */
     public Output<ManagedRulesDefinitionResponse> getManagedRules() {
         return this.managedRules;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A collection of references to application gateway path rules.
-     * 
      */
     @Export(name="pathBasedRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> pathBasedRules;
 
     /**
      * @return A collection of references to application gateway path rules.
-     * 
      */
     public Output<List<SubResourceResponse>> getPathBasedRules() {
         return this.pathBasedRules;
     }
     /**
      * The PolicySettings for policy.
-     * 
      */
     @Export(name="policySettings", type=PolicySettingsResponse.class, parameters={})
     private Output</* @Nullable */ PolicySettingsResponse> policySettings;
 
     /**
      * @return The PolicySettings for policy.
-     * 
      */
     public Output</* @Nullable */ PolicySettingsResponse> getPolicySettings() {
         return this.policySettings;
     }
     /**
      * The provisioning state of the web application firewall policy resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the web application firewall policy resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the policy.
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return Resource status of the policy.
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

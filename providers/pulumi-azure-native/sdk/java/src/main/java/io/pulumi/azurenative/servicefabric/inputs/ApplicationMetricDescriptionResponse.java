@@ -36,7 +36,6 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
 
     /**
      * The name of the metric.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

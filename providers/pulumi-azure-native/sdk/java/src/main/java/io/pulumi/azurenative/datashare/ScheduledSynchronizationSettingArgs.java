@@ -18,7 +18,6 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -30,7 +29,6 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     /**
      * Kind of synchronization setting.
      * Expected value is 'ScheduleBased'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -41,7 +39,6 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
 
     /**
      * Recurrence Interval
-     * 
      */
     @Import(name="recurrenceInterval", required=true)
       private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
@@ -52,7 +49,6 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
 
     /**
      * The name of the share to add the synchronization setting to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -74,7 +69,6 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
 
     /**
      * The name of the synchronizationSetting.
-     * 
      */
     @Import(name="synchronizationSettingName")
       private final @Nullable Output<String> synchronizationSettingName;
@@ -85,7 +79,6 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
 
     /**
      * Synchronization time
-     * 
      */
     @Import(name="synchronizationTime", required=true)
       private final Output<String> synchronizationTime;

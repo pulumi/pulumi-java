@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * This type describes the requested resources for a given container. It describes the least amount of resources required for the container. A container can consume more than requested resources up to the specified limits before being restarted. Currently, the requested resources are treated as limits.
- * 
  */
 public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Requested number of CPU cores. At present, only full cores are supported.
-     * 
      */
     @Import(name="cpu", required=true)
       private final Output<Double> cpu;
@@ -30,7 +28,6 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The memory request in GB for this container.
-     * 
      */
     @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;

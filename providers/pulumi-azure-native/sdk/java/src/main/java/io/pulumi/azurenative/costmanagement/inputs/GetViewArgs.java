@@ -14,7 +14,6 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * View name
-     * 
      */
     @Import(name="viewName", required=true)
       private final String viewName;

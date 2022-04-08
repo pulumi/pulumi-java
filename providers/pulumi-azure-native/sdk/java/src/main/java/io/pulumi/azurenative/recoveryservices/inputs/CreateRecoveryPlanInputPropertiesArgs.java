@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan creation properties.
- * 
  */
 public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
 
     /**
      * The failover deployment model.
-     * 
      */
     @Import(name="failoverDeploymentModel")
       private final @Nullable Output<Either<String,FailoverDeploymentModel>> failoverDeploymentModel;
@@ -36,7 +34,6 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
 
     /**
      * The recovery plan groups.
-     * 
      */
     @Import(name="groups", required=true)
       private final Output<List<RecoveryPlanGroupArgs>> groups;
@@ -47,7 +44,6 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
 
     /**
      * The primary fabric Id.
-     * 
      */
     @Import(name="primaryFabricId", required=true)
       private final Output<String> primaryFabricId;
@@ -58,7 +54,6 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
 
     /**
      * The provider specific input.
-     * 
      */
     @Import(name="providerSpecificInput")
       private final @Nullable Output<List<RecoveryPlanA2AInputArgs>> providerSpecificInput;
@@ -69,7 +64,6 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
 
     /**
      * The recovery fabric Id.
-     * 
      */
     @Import(name="recoveryFabricId", required=true)
       private final Output<String> recoveryFabricId;

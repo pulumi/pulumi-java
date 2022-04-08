@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of Cognitive Services account.
- * 
  */
 public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
 
     /**
      * The api properties for special APIs.
-     * 
      */
     @Import(name="apiProperties")
       private final @Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
@@ -39,7 +37,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
 
     /**
      * Optional subdomain name used for token-based authentication.
-     * 
      */
     @Import(name="customSubDomainName")
       private final @Nullable Output<String> customSubDomainName;
@@ -50,7 +47,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
 
     /**
      * The encryption properties for this resource.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
@@ -61,7 +57,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
 
     /**
      * A collection of rules governing the accessibility from specific network locations.
-     * 
      */
     @Import(name="networkAcls")
       private final @Nullable Output<NetworkRuleSetArgs> networkAcls;
@@ -72,7 +67,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
 
     /**
      * The private endpoint connection associated with the Cognitive Services account.
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
@@ -83,7 +77,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
 
     /**
      * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -94,7 +87,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
 
     /**
      * The storage accounts for this resource.
-     * 
      */
     @Import(name="userOwnedStorage")
       private final @Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage;

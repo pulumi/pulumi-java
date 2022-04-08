@@ -15,52 +15,42 @@ import javax.annotation.Nullable;
 public final class GetPrefixResult {
     /**
      * The error message for validation state
-     * 
      */
     private final String errorMessage;
     /**
      * The list of events for peering service prefix
-     * 
      */
     private final List<PeeringServicePrefixEventResponse> events;
     /**
      * The ID of the resource.
-     * 
      */
     private final String id;
     /**
      * The prefix learned type
-     * 
      */
     private final String learnedType;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The peering service prefix key
-     * 
      */
     private final @Nullable String peeringServicePrefixKey;
     /**
      * The prefix from which your traffic originates.
-     * 
      */
     private final @Nullable String prefix;
     /**
      * The prefix validation state
-     * 
      */
     private final String prefixValidationState;
     /**
      * The provisioning state of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -90,70 +80,60 @@ public final class GetPrefixResult {
 
     /**
      * The error message for validation state
-     * 
     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The list of events for peering service prefix
-     * 
     */
     public List<PeeringServicePrefixEventResponse> getEvents() {
         return this.events;
     }
     /**
      * The ID of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The prefix learned type
-     * 
     */
     public String getLearnedType() {
         return this.learnedType;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The peering service prefix key
-     * 
     */
     public Optional<String> getPeeringServicePrefixKey() {
         return Optional.ofNullable(this.peeringServicePrefixKey);
     }
     /**
      * The prefix from which your traffic originates.
-     * 
     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The prefix validation state
-     * 
     */
     public String getPrefixValidationState() {
         return this.prefixValidationState;
     }
     /**
      * The provisioning state of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

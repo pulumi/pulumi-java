@@ -14,7 +14,6 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the attached database configuration.
-     * 
      */
     @Import(name="attachedDatabaseConfigurationName", required=true)
       private final String attachedDatabaseConfigurationName;
@@ -25,7 +24,6 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -36,7 +34,6 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

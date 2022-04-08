@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class StorageAccountResponse {
     /**
      * The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
-     * 
      */
     private final @Nullable String id;
     /**
      * The type of the storage account.
-     * 
      */
     private final String type;
 
@@ -32,14 +30,12 @@ public final class StorageAccountResponse {
 
     /**
      * The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The type of the storage account.
-     * 
     */
     public String getType() {
         return this.type;

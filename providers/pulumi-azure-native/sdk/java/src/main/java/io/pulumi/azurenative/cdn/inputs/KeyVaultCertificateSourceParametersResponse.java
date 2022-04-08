@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the parameters for using a user's KeyVault certificate for securing custom domain.
- * 
  */
 public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
 
     /**
      * Describes the action that shall be taken when the certificate is removed from Key Vault.
-     * 
      */
     @Import(name="deleteRule", required=true)
       private final String deleteRule;
@@ -38,7 +36,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
 
     /**
      * Resource group of the user's Key Vault containing the SSL certificate
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -49,7 +46,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
 
     /**
      * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
-     * 
      */
     @Import(name="secretName", required=true)
       private final String secretName;
@@ -60,7 +56,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
 
     /**
      * The version(GUID) of Key Vault Secret in Key Vault.
-     * 
      */
     @Import(name="secretVersion")
       private final @Nullable String secretVersion;
@@ -71,7 +66,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
 
     /**
      * Subscription Id of the user's Key Vault containing the SSL certificate
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
@@ -82,7 +76,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
 
     /**
      * Describes the action that shall be taken when the certificate is updated in Key Vault.
-     * 
      */
     @Import(name="updateRule", required=true)
       private final String updateRule;
@@ -93,7 +86,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
 
     /**
      * The name of the user's Key Vault containing the SSL certificate
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

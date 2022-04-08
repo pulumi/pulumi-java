@@ -17,7 +17,6 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
 
     /**
      * Indicates whether Advanced Threat Protection is enabled.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
@@ -28,7 +27,6 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
@@ -39,7 +37,6 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
 
     /**
      * Advanced Threat Protection setting name.
-     * 
      */
     @Import(name="settingName")
       private final @Nullable Output<String> settingName;

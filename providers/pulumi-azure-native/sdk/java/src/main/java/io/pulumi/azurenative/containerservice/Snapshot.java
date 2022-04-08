@@ -20,7 +20,109 @@ import javax.annotation.Nullable;
  * A node pool snapshot resource.
  * API Version: 2021-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create/Update Snapshot
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var snapshot = new AzureNative.ContainerService.Snapshot("snapshot", new AzureNative.ContainerService.SnapshotArgs
+ *         {
+ *             CreationData = new AzureNative.ContainerService.Inputs.CreationDataArgs
+ *             {
+ *                 SourceResourceId = "/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool0",
+ *             },
+ *             Location = "westus",
+ *             ResourceGroupName = "rg1",
+ *             ResourceName = "snapshot1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "val1" },
+ *                 { "key2", "val2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerservice.NewSnapshot(ctx, "snapshot", &containerservice.SnapshotArgs{
+ * 			CreationData: &containerservice.CreationDataArgs{
+ * 				SourceResourceId: pulumi.String("/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool0"),
+ * 			},
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ResourceName:      pulumi.String("snapshot1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("val1"),
+ * 				"key2": pulumi.String("val2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const snapshot = new azure_native.containerservice.Snapshot("snapshot", {
+ *     creationData: {
+ *         sourceResourceId: "/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool0",
+ *     },
+ *     location: "westus",
+ *     resourceGroupName: "rg1",
+ *     resourceName: "snapshot1",
+ *     tags: {
+ *         key1: "val1",
+ *         key2: "val2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * snapshot = azure_native.containerservice.Snapshot("snapshot",
+ *     creation_data=azure_native.containerservice.CreationDataArgs(
+ *         source_resource_id="/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool0",
+ *     ),
+ *     location="westus",
+ *     resource_group_name="rg1",
+ *     resource_name="snapshot1",
+ *     tags={
+ *         "key1": "val1",
+ *         "key2": "val2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +137,84 @@ import javax.annotation.Nullable;
 public class Snapshot extends io.pulumi.resources.CustomResource {
     /**
      * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
-     * 
      */
     @Export(name="creationData", type=CreationDataResponse.class, parameters={})
     private Output</* @Nullable */ CreationDataResponse> creationData;
 
     /**
      * @return CreationData to be used to specify the source agent pool resource ID to create this snapshot.
-     * 
      */
     public Output</* @Nullable */ CreationDataResponse> getCreationData() {
         return this.creationData;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of a snapshot. The default is NodePool.
-     * 
      */
     @Export(name="snapshotType", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotType;
 
     /**
      * @return The type of a snapshot. The default is NodePool.
-     * 
      */
     public Output</* @Nullable */ String> getSnapshotType() {
         return this.snapshotType;
     }
     /**
      * The system metadata relating to this snapshot.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this snapshot.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
 
     /**
      * The feature name.
-     * 
      */
     @Import(name="featureName", required=true)
       private final String featureName;
@@ -25,7 +24,6 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
 
     /**
      * The provider namespace.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;

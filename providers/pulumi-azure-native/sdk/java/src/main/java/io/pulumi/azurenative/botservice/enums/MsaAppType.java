@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Microsoft App Type for the bot
-     * 
      */
     @EnumType
     public enum MsaAppType {

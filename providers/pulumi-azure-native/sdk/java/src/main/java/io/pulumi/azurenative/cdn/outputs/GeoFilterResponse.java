@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class GeoFilterResponse {
     /**
      * Action of the geo filter, i.e. allow or block access.
-     * 
      */
     private final String action;
     /**
      * Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
-     * 
      */
     private final List<String> countryCodes;
     /**
      * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
-     * 
      */
     private final String relativePath;
 
@@ -38,21 +35,18 @@ public final class GeoFilterResponse {
 
     /**
      * Action of the geo filter, i.e. allow or block access.
-     * 
     */
     public String getAction() {
         return this.action;
     }
     /**
      * Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
-     * 
     */
     public List<String> getCountryCodes() {
         return this.countryCodes;
     }
     /**
      * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
-     * 
     */
     public String getRelativePath() {
         return this.relativePath;

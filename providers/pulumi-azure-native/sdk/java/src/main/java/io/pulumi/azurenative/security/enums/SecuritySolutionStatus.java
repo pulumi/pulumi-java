@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Status of the IoT Security solution.
-     * 
      */
     @EnumType
     public enum SecuritySolutionStatus {

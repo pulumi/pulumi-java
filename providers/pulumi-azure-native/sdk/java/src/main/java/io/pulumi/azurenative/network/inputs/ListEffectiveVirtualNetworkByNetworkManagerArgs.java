@@ -17,7 +17,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
 
     /**
      * Conditional Members.
-     * 
      */
     @Import(name="conditionalMembers")
       private final @Nullable String conditionalMembers;
@@ -28,7 +27,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -39,7 +37,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -50,7 +47,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
 
     /**
      * Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;
@@ -61,7 +57,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
 
     /**
      * An optional query parameter which specifies the maximum number of records to be returned by the server.
-     * 
      */
     @Import(name="top")
       private final @Nullable Integer top;

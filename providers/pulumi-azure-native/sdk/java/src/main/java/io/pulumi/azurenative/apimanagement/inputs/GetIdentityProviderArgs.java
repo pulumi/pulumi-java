@@ -14,7 +14,6 @@ public final class GetIdentityProviderArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Identity Provider Type identifier.
-     * 
      */
     @Import(name="identityProviderName", required=true)
       private final String identityProviderName;
@@ -25,7 +24,6 @@ public final class GetIdentityProviderArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetIdentityProviderArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

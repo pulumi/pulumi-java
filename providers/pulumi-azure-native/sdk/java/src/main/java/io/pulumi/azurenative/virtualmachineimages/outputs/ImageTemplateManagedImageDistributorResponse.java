@@ -13,28 +13,23 @@ import javax.annotation.Nullable;
 public final class ImageTemplateManagedImageDistributorResponse {
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
-     * 
      */
     private final @Nullable Map<String,String> artifactTags;
     /**
      * Resource Id of the Managed Disk Image
-     * 
      */
     private final String imageId;
     /**
      * Azure location for the image, should match if image already exists
-     * 
      */
     private final String location;
     /**
      * The name to be used for the associated RunOutput.
-     * 
      */
     private final String runOutputName;
     /**
      * Type of distribution.
      * Expected value is 'ManagedImage'.
-     * 
      */
     private final String type;
 
@@ -54,28 +49,24 @@ public final class ImageTemplateManagedImageDistributorResponse {
 
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
-     * 
     */
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
     /**
      * Resource Id of the Managed Disk Image
-     * 
     */
     public String getImageId() {
         return this.imageId;
     }
     /**
      * Azure location for the image, should match if image already exists
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name to be used for the associated RunOutput.
-     * 
     */
     public String getRunOutputName() {
         return this.runOutputName;
@@ -83,7 +74,6 @@ public final class ImageTemplateManagedImageDistributorResponse {
     /**
      * Type of distribution.
      * Expected value is 'ManagedImage'.
-     * 
     */
     public String getType() {
         return this.type;

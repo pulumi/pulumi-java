@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class DataMaskingResponse {
     /**
      * Masking settings for headers
-     * 
      */
     private final @Nullable List<DataMaskingEntityResponse> headers;
     /**
      * Masking settings for Url query parameters
-     * 
      */
     private final @Nullable List<DataMaskingEntityResponse> queryParams;
 
@@ -32,14 +30,12 @@ public final class DataMaskingResponse {
 
     /**
      * Masking settings for headers
-     * 
     */
     public List<DataMaskingEntityResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Masking settings for Url query parameters
-     * 
     */
     public List<DataMaskingEntityResponse> getQueryParams() {
         return this.queryParams == null ? List.of() : this.queryParams;

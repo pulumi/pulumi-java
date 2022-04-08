@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information of backup set
- * 
  */
 public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Date and time that the backup operation finished
-     * 
      */
     @Import(name="backupFinishedDate")
       private final @Nullable String backupFinishedDate;
@@ -34,7 +32,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Id for the set of backup files
-     * 
      */
     @Import(name="backupSetId")
       private final @Nullable String backupSetId;
@@ -45,7 +42,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Date and time that the backup operation began
-     * 
      */
     @Import(name="backupStartDate")
       private final @Nullable String backupStartDate;
@@ -56,7 +52,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Enum of the different backup types
-     * 
      */
     @Import(name="backupType")
       private final @Nullable String backupType;
@@ -67,7 +62,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the database to which the backup set belongs
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable String databaseName;
@@ -78,7 +72,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * First log sequence number of the backup file
-     * 
      */
     @Import(name="firstLsn")
       private final @Nullable String firstLsn;
@@ -89,7 +82,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Whether the backup set is restored or not
-     * 
      */
     @Import(name="isBackupRestored")
       private final @Nullable Boolean isBackupRestored;
@@ -100,7 +92,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Last log sequence number of the backup file
-     * 
      */
     @Import(name="lastLsn")
       private final @Nullable String lastLsn;
@@ -111,7 +102,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Last modified time of the backup file in share location
-     * 
      */
     @Import(name="lastModifiedTime")
       private final @Nullable String lastModifiedTime;
@@ -122,7 +112,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * List of files in the backup set
-     * 
      */
     @Import(name="listOfBackupFiles")
       private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;

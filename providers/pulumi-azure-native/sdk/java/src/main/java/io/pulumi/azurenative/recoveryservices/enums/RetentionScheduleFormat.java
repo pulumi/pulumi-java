@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Retention schedule format for yearly retention policy.
-     * 
      */
     @EnumType
     public enum RetentionScheduleFormat {

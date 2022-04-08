@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SKU details
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU family name
-     * 
      */
     @Import(name="family", required=true)
       private final String family;
@@ -29,7 +27,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU name to specify whether the key vault is a standard vault or a premium vault.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

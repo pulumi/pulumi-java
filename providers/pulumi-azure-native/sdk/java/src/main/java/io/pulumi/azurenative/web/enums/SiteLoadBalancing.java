@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Site load balancing.
-     * 
      */
     @EnumType
     public enum SiteLoadBalancing {

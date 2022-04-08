@@ -18,53 +18,43 @@ import javax.annotation.Nullable;
 public final class ValidationActivityResponse {
     /**
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object childItems;
     /**
      * Validation activity dataset reference.
-     * 
      */
     private final DatasetReferenceResponse dataset;
     /**
      * Activity depends on condition.
-     * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
      * Activity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object minimumSize;
     /**
      * Activity name.
-     * 
      */
     private final String name;
     /**
      * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object sleep;
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     private final @Nullable Object timeout;
     /**
      * Type of activity.
      * Expected value is 'Validation'.
-     * 
      */
     private final String type;
     /**
      * Activity user properties.
-     * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -94,56 +84,48 @@ public final class ValidationActivityResponse {
 
     /**
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getChildItems() {
         return Optional.ofNullable(this.childItems);
     }
     /**
      * Validation activity dataset reference.
-     * 
     */
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }
     /**
      * Activity depends on condition.
-     * 
     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getMinimumSize() {
         return Optional.ofNullable(this.minimumSize);
     }
     /**
      * Activity name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getSleep() {
         return Optional.ofNullable(this.sleep);
     }
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
     */
     public Optional<Object> getTimeout() {
         return Optional.ofNullable(this.timeout);
@@ -151,14 +133,12 @@ public final class ValidationActivityResponse {
     /**
      * Type of activity.
      * Expected value is 'Validation'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
-     * 
     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

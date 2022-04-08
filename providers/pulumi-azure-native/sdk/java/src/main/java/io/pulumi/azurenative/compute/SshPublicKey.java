@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Specifies information about the SSH public key.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a new SSH public key resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sshPublicKey = new AzureNative.Compute.SshPublicKey("sshPublicKey", new AzureNative.Compute.SshPublicKeyArgs
+ *         {
+ *             Location = "westus",
+ *             PublicKey = "{ssh-rsa public key}",
+ *             ResourceGroupName = "myResourceGroup",
+ *             SshPublicKeyName = "mySshPublicKeyName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSshPublicKey(ctx, "sshPublicKey", &compute.SshPublicKeyArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			PublicKey:         pulumi.String("{ssh-rsa public key}"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			SshPublicKeyName:  pulumi.String("mySshPublicKeyName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sshPublicKey = new azure_native.compute.SshPublicKey("sshPublicKey", {
+ *     location: "westus",
+ *     publicKey: "{ssh-rsa public key}",
+ *     resourceGroupName: "myResourceGroup",
+ *     sshPublicKeyName: "mySshPublicKeyName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * ssh_public_key = azure_native.compute.SshPublicKey("sshPublicKey",
+ *     location="westus",
+ *     public_key="{ssh-rsa public key}",
+ *     resource_group_name="myResourceGroup",
+ *     ssh_public_key_name="mySshPublicKeyName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +109,60 @@ import javax.annotation.Nullable;
 public class SshPublicKey extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * SSH public key used to authenticate to a virtual machine through ssh. If this property is not initially provided when the resource is created, the publicKey property will be populated when generateKeyPair is called. If the public key is provided upon resource creation, the provided public key needs to be at least 2048-bit and in ssh-rsa format.
-     * 
      */
     @Export(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
     /**
      * @return SSH public key used to authenticate to a virtual machine through ssh. If this property is not initially provided when the resource is created, the publicKey property will be populated when generateKeyPair is called. If the public key is provided upon resource creation, the provided public key needs to be at least 2048-bit and in ssh-rsa format.
-     * 
      */
     public Output</* @Nullable */ String> getPublicKey() {
         return this.publicKey;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

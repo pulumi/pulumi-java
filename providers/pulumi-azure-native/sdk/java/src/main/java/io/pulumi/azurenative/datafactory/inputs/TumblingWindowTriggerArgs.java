@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that schedules pipeline runs for all fixed time interval windows from a start time without gaps and also supports backfill scenarios (when start time is in the past).
- * 
  */
 public final class TumblingWindowTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -41,7 +39,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="delay")
       private final @Nullable Output<Object> delay;
@@ -52,7 +49,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Triggers that this trigger depends on. Only tumbling window triggers are supported.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<Object>> dependsOn;
@@ -63,7 +59,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -74,7 +69,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -85,7 +79,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * The frequency of the time windows.
-     * 
      */
     @Import(name="frequency", required=true)
       private final Output<Either<String,TumblingWindowFrequency>> frequency;
@@ -96,7 +89,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * The interval of the time windows. The minimum interval allowed is 15 Minutes.
-     * 
      */
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
@@ -107,7 +99,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * The max number of parallel time windows (ready for execution) for which a new run is triggered.
-     * 
      */
     @Import(name="maxConcurrency", required=true)
       private final Output<Integer> maxConcurrency;
@@ -118,7 +109,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Pipeline for which runs are created when an event is fired for trigger window that is ready.
-     * 
      */
     @Import(name="pipeline", required=true)
       private final Output<TriggerPipelineReferenceArgs> pipeline;
@@ -129,7 +119,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Retry policy that will be applied for failed pipeline runs.
-     * 
      */
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
@@ -140,7 +129,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
 
     /**
      * The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
-     * 
      */
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
@@ -152,7 +140,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     /**
      * Trigger type.
      * Expected value is 'TumblingWindowTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

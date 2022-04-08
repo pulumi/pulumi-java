@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specification for a Kubernetes Environment to use for this resource.
- * 
  */
 public final class KubeEnvironmentProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KubeEnvironmentProfileArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource ID of the Kubernetes Environment.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

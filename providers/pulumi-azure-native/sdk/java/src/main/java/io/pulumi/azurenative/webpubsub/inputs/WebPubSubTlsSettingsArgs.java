@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * TLS settings for the resource
- * 
  */
 public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * Request client certificate during TLS handshake if enabled
-     * 
      */
     @Import(name="clientCertEnabled")
       private final @Nullable Output<Boolean> clientCertEnabled;

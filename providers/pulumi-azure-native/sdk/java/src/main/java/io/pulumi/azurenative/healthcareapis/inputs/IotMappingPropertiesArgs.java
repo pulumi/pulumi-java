@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The mapping content.
- * 
  */
 public final class IotMappingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The mapping.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<Object> content;

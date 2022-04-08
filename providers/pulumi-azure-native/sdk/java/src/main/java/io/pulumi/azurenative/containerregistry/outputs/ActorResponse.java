@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ActorResponse {
     /**
      * The subject or username associated with the request context that generated the event.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class ActorResponse {
 
     /**
      * The subject or username associated with the request context that generated the event.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

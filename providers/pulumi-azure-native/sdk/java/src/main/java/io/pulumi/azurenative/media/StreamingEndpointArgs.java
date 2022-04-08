@@ -23,7 +23,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The access control definition of the streaming endpoint.
-     * 
      */
     @Import(name="accessControl")
       private final @Nullable Output<StreamingEndpointAccessControlArgs> accessControl;
@@ -34,7 +33,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -45,7 +43,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The flag indicates if the resource should be automatically started on creation.
-     * 
      */
     @Import(name="autoStart")
       private final @Nullable Output<Boolean> autoStart;
@@ -56,7 +53,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * This feature is deprecated, do not set a value for this property.
-     * 
      */
     @Import(name="availabilitySetName")
       private final @Nullable Output<String> availabilitySetName;
@@ -67,7 +63,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The CDN enabled flag.
-     * 
      */
     @Import(name="cdnEnabled")
       private final @Nullable Output<Boolean> cdnEnabled;
@@ -78,7 +73,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The CDN profile name.
-     * 
      */
     @Import(name="cdnProfile")
       private final @Nullable Output<String> cdnProfile;
@@ -89,7 +83,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The CDN provider name.
-     * 
      */
     @Import(name="cdnProvider")
       private final @Nullable Output<String> cdnProvider;
@@ -100,7 +93,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The streaming endpoint access policies.
-     * 
      */
     @Import(name="crossSiteAccessPolicies")
       private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
@@ -111,7 +103,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The custom host names of the streaming endpoint
-     * 
      */
     @Import(name="customHostNames")
       private final @Nullable Output<List<String>> customHostNames;
@@ -122,7 +113,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The streaming endpoint description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -133,7 +123,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -144,7 +133,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Max cache age
-     * 
      */
     @Import(name="maxCacheAge")
       private final @Nullable Output<Double> maxCacheAge;
@@ -155,7 +143,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -166,7 +153,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The number of scale units. Use the Scale operation to adjust this value.
-     * 
      */
     @Import(name="scaleUnits", required=true)
       private final Output<Integer> scaleUnits;
@@ -177,7 +163,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the streaming endpoint, maximum length is 24.
-     * 
      */
     @Import(name="streamingEndpointName")
       private final @Nullable Output<String> streamingEndpointName;
@@ -188,7 +173,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

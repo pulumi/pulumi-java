@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that validates connection to PostgreSQL and source server requirements
- * 
  */
 public final class ConnectToSourcePostgreSqlSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse extends io.pul
 
     /**
      * Connection information for source PostgreSQL server
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protection state of the backup engine
-     * 
      */
     @EnumType
     public enum ProtectedItemState {

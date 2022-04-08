@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Activity dependency information.
- * 
  */
 public final class ActivityDependencyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="activity", required=true)
       private final String activity;
@@ -30,7 +28,6 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
 
     /**
      * Match-Condition for the dependency.
-     * 
      */
     @Import(name="dependencyConditions", required=true)
       private final List<String> dependencyConditions;

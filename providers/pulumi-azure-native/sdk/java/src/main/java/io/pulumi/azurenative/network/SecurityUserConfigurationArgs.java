@@ -19,7 +19,6 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the network manager security Configuration.
-     * 
      */
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
@@ -30,7 +29,6 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Flag if need to delete existing network security groups.
-     * 
      */
     @Import(name="deleteExistingNSGs")
       private final @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
@@ -41,7 +39,6 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * A description of the security configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -52,7 +49,6 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * A display name of the security configuration.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -63,7 +59,6 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
@@ -74,7 +69,6 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Security Type.
-     * 
      */
     @Import(name="securityType")
       private final @Nullable Output<Either<String,SecurityType>> securityType;

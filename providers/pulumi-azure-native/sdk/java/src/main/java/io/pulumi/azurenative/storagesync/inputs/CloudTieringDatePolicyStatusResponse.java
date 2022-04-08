@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Status of the date policy
- * 
  */
 public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resour
 
     /**
      * Last updated timestamp
-     * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
@@ -29,7 +27,6 @@ public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resour
 
     /**
      * Most recent access time of tiered files
-     * 
      */
     @Import(name="tieredFilesMostRecentAccessTimestamp", required=true)
       private final String tieredFilesMostRecentAccessTimestamp;

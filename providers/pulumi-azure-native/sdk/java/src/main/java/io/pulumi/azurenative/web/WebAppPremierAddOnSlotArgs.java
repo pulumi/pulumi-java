@@ -17,7 +17,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -28,7 +27,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Premier add on Marketplace offer.
-     * 
      */
     @Import(name="marketplaceOffer")
       private final @Nullable Output<String> marketplaceOffer;
@@ -50,7 +47,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Premier add on Marketplace publisher.
-     * 
      */
     @Import(name="marketplacePublisher")
       private final @Nullable Output<String> marketplacePublisher;
@@ -61,7 +57,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -72,7 +67,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Add-on name.
-     * 
      */
     @Import(name="premierAddOnName")
       private final @Nullable Output<String> premierAddOnName;
@@ -83,7 +77,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Premier add on Product.
-     * 
      */
     @Import(name="product")
       private final @Nullable Output<String> product;
@@ -94,7 +87,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -105,7 +97,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Premier add on SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;
@@ -116,7 +107,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API will update the named add-on for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;
@@ -127,7 +117,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -138,7 +127,6 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
 
     /**
      * Premier add on Vendor.
-     * 
      */
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;

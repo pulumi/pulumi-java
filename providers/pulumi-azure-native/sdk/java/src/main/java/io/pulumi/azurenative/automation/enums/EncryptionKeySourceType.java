@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Encryption Key Source
-     * 
      */
     @EnumType
     public enum EncryptionKeySourceType {

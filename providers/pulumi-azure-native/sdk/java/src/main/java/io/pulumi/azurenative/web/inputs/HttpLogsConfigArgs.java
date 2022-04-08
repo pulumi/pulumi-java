@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Http logs configuration.
- * 
  */
 public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Http logs to azure blob storage configuration.
-     * 
      */
     @Import(name="azureBlobStorage")
       private final @Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
@@ -32,7 +30,6 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Http logs to file system configuration.
-     * 
      */
     @Import(name="fileSystem")
       private final @Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem;

@@ -15,33 +15,27 @@ import javax.annotation.Nullable;
 public final class JitNetworkAccessRequestPortResponse {
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
-     * 
      */
     private final @Nullable String allowedSourceAddressPrefix;
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
-     * 
      */
     private final @Nullable List<String> allowedSourceAddressPrefixes;
     /**
      * The date & time at which the request ends in UTC
-     * 
      */
     private final String endTimeUtc;
     /**
      * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
-     * 
      */
     private final @Nullable Integer mappedPort;
     private final Integer number;
     /**
      * The status of the port
-     * 
      */
     private final String status;
     /**
      * A description of why the `status` has its value
-     * 
      */
     private final String statusReason;
 
@@ -65,28 +59,24 @@ public final class JitNetworkAccessRequestPortResponse {
 
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
-     * 
     */
     public Optional<String> getAllowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
-     * 
     */
     public List<String> getAllowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
     /**
      * The date & time at which the request ends in UTC
-     * 
     */
     public String getEndTimeUtc() {
         return this.endTimeUtc;
     }
     /**
      * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
-     * 
     */
     public Optional<Integer> getMappedPort() {
         return Optional.ofNullable(this.mappedPort);
@@ -96,14 +86,12 @@ public final class JitNetworkAccessRequestPortResponse {
     }
     /**
      * The status of the port
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * A description of why the `status` has its value
-     * 
     */
     public String getStatusReason() {
         return this.statusReason;

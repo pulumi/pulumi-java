@@ -19,7 +19,6 @@ public final class PrivateEndpointConnectionResponseProperties extends io.pulumi
 
     /**
      * The list of group ids for the private endpoint connection.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
@@ -44,7 +43,6 @@ public final class PrivateEndpointConnectionResponseProperties extends io.pulumi
 
     /**
      * The provisioning state.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

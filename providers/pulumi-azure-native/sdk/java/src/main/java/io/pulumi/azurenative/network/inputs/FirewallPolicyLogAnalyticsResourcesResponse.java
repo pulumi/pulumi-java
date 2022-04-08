@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Log Analytics Resources for Firewall Policy Insights.
- * 
  */
 public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
 
     /**
      * The default workspace Id for Firewall Policy Insights.
-     * 
      */
     @Import(name="defaultWorkspaceId")
       private final @Nullable SubResourceResponse defaultWorkspaceId;
@@ -33,7 +31,6 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
 
     /**
      * List of workspaces for Firewall Policy Insights.
-     * 
      */
     @Import(name="workspaces")
       private final @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;

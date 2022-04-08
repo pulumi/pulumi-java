@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains ServiceProviderProperties in an ExpressRouteCircuit.
- * 
  */
 public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
 
     /**
      * The BandwidthInMbps.
-     * 
      */
     @Import(name="bandwidthInMbps")
       private final @Nullable Output<Integer> bandwidthInMbps;
@@ -32,7 +30,6 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
 
     /**
      * The peering location.
-     * 
      */
     @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
@@ -43,7 +40,6 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
 
     /**
      * The serviceProviderName.
-     * 
      */
     @Import(name="serviceProviderName")
       private final @Nullable Output<String> serviceProviderName;

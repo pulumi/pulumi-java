@@ -14,7 +14,6 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
 
     /**
      * The name of the Firewall Policy.
-     * 
      */
     @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
@@ -25,7 +24,6 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
 
     /**
      * The name of the FirewallPolicyRuleCollectionGroup.
-     * 
      */
     @Import(name="ruleCollectionGroupName", required=true)
       private final String ruleCollectionGroupName;

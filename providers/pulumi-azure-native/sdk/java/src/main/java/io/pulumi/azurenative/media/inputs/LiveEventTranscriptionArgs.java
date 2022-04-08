@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the transcription tracks in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
- * 
  */
 public final class LiveEventTranscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
-     * 
      */
     @Import(name="inputTrackSelection")
       private final @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
@@ -34,7 +32,6 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
-     * 
      */
     @Import(name="language")
       private final @Nullable Output<String> language;
@@ -45,7 +42,6 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
-     * 
      */
     @Import(name="outputTranscriptionTrack")
       private final @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;

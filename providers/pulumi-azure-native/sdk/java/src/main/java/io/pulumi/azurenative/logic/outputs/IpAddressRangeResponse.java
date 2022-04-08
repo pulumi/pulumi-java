@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IpAddressRangeResponse {
     /**
      * The IP address range.
-     * 
      */
     private final @Nullable String addressRange;
 
@@ -24,7 +23,6 @@ public final class IpAddressRangeResponse {
 
     /**
      * The IP address range.
-     * 
     */
     public Optional<String> getAddressRange() {
         return Optional.ofNullable(this.addressRange);

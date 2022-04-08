@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The recurrence schedule.
- * 
  */
 public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The hours.
-     * 
      */
     @Import(name="hours")
       private final @Nullable Output<List<Integer>> hours;
@@ -34,7 +32,6 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The minutes.
-     * 
      */
     @Import(name="minutes")
       private final @Nullable Output<List<Integer>> minutes;
@@ -45,7 +42,6 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The month days.
-     * 
      */
     @Import(name="monthDays")
       private final @Nullable Output<List<Integer>> monthDays;
@@ -56,7 +52,6 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The monthly occurrences.
-     * 
      */
     @Import(name="monthlyOccurrences")
       private final @Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
@@ -67,7 +62,6 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The days of the week.
-     * 
      */
     @Import(name="weekDays")
       private final @Nullable Output<List<DaysOfWeek>> weekDays;

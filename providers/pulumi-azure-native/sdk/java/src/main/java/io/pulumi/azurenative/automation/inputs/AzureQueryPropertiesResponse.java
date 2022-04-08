@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure query for the update configuration.
- * 
  */
 public final class AzureQueryPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * List of locations to scope the query to.
-     * 
      */
     @Import(name="locations")
       private final @Nullable List<String> locations;
@@ -33,7 +31,6 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * List of Subscription or Resource Group ARM Ids.
-     * 
      */
     @Import(name="scope")
       private final @Nullable List<String> scope;
@@ -44,7 +41,6 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Tag settings for the VM.
-     * 
      */
     @Import(name="tagSettings")
       private final @Nullable TagSettingsPropertiesResponse tagSettings;

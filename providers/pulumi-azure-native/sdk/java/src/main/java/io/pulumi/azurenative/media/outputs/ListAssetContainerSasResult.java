@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListAssetContainerSasResult {
     /**
      * The list of Asset container SAS URLs.
-     * 
      */
     private final @Nullable List<String> assetContainerSasUrls;
 
@@ -24,7 +23,6 @@ public final class ListAssetContainerSasResult {
 
     /**
      * The list of Asset container SAS URLs.
-     * 
     */
     public List<String> getAssetContainerSasUrls() {
         return this.assetContainerSasUrls == null ? List.of() : this.assetContainerSasUrls;

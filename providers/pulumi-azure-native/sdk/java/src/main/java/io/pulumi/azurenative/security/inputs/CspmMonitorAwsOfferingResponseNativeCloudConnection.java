@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The native cloud connection configuration
- * 
  */
 public final class CspmMonitorAwsOfferingResponseNativeCloudConnection extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection extends i
 
     /**
      * The cloud role ARN in AWS for this feature
-     * 
      */
     @Import(name="cloudRoleArn")
       private final @Nullable String cloudRoleArn;

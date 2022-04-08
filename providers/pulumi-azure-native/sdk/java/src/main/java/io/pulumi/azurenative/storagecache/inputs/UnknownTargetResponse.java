@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties pertaining to the UnknownTarget
- * 
  */
 public final class UnknownTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class UnknownTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Dictionary of string->string pairs containing information about the Storage Target.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable Map<String,String> attributes;

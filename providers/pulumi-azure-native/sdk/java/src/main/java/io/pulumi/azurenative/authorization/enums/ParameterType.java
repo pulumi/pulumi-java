@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The data type of the parameter.
-     * 
      */
     @EnumType
     public enum ParameterType {

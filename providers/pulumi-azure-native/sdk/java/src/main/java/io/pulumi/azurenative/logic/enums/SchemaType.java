@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The schema type.
-     * 
      */
     @EnumType
     public enum SchemaType {

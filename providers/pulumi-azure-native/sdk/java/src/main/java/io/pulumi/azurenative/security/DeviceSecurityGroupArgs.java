@@ -21,7 +21,6 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The allow-list custom alert rules.
-     * 
      */
     @Import(name="allowlistRules")
       private final @Nullable Output<List<AllowlistCustomAlertRuleArgs>> allowlistRules;
@@ -32,7 +31,6 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The deny-list custom alert rules.
-     * 
      */
     @Import(name="denylistRules")
       private final @Nullable Output<List<DenylistCustomAlertRuleArgs>> denylistRules;
@@ -43,7 +41,6 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the device security group. Note that the name of the device security group is case insensitive.
-     * 
      */
     @Import(name="deviceSecurityGroupName")
       private final @Nullable Output<String> deviceSecurityGroupName;
@@ -54,7 +51,6 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
@@ -65,7 +61,6 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The list of custom alert threshold rules.
-     * 
      */
     @Import(name="thresholdRules")
       private final @Nullable Output<List<ThresholdCustomAlertRuleArgs>> thresholdRules;
@@ -76,7 +71,6 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The list of custom alert time-window rules.
-     * 
      */
     @Import(name="timeWindowRules")
       private final @Nullable Output<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules;

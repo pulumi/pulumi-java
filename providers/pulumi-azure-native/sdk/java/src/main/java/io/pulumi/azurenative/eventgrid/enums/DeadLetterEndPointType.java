@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the endpoint for the dead letter destination
-     * 
      */
     @EnumType
     public enum DeadLetterEndPointType {

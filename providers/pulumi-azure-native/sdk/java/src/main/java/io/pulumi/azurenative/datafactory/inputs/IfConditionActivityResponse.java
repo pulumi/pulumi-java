@@ -54,7 +54,6 @@ import javax.annotation.Nullable;
 
 /**
  * This activity evaluates a boolean expression and executes either the activities under the ifTrueActivities property or the ifFalseActivities property depending on the result of the expression.
- * 
  */
 public final class IfConditionActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -62,7 +61,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -73,7 +71,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -84,7 +81,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
-     * 
      */
     @Import(name="expression", required=true)
       private final ExpressionResponse expression;
@@ -95,7 +91,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
-     * 
      */
     @Import(name="ifFalseActivities")
       private final @Nullable List<Object> ifFalseActivities;
@@ -106,7 +101,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
-     * 
      */
     @Import(name="ifTrueActivities")
       private final @Nullable List<Object> ifTrueActivities;
@@ -117,7 +111,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -129,7 +122,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
     /**
      * Type of activity.
      * Expected value is 'IfCondition'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -140,7 +132,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

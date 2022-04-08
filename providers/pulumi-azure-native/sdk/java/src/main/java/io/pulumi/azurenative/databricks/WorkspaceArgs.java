@@ -21,7 +21,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace provider authorizations.
-     * 
      */
     @Import(name="authorizations")
       private final @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations;
@@ -32,7 +31,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +41,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The managed resource group Id.
-     * 
      */
     @Import(name="managedResourceGroupId", required=true)
       private final Output<String> managedResourceGroupId;
@@ -54,7 +51,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace's custom parameters.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<WorkspaceCustomParametersArgs> parameters;
@@ -65,7 +61,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -87,7 +81,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -98,7 +91,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The blob URI where the UI definition file is located.
-     * 
      */
     @Import(name="uiDefinitionUri")
       private final @Nullable Output<String> uiDefinitionUri;
@@ -109,7 +101,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

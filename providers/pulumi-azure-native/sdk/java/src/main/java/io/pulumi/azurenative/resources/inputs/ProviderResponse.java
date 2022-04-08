@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource provider information.
- * 
  */
 public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provider ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -33,7 +31,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The namespace of the resource provider.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable String namespace;
@@ -44,7 +41,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The registration policy of the resource provider.
-     * 
      */
     @Import(name="registrationPolicy", required=true)
       private final String registrationPolicy;
@@ -55,7 +51,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The registration state of the resource provider.
-     * 
      */
     @Import(name="registrationState", required=true)
       private final String registrationState;
@@ -66,7 +61,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The collection of provider resource types.
-     * 
      */
     @Import(name="resourceTypes", required=true)
       private final List<ProviderResourceTypeResponse> resourceTypes;

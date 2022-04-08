@@ -21,7 +21,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The integration account agreement name.
-     * 
      */
     @Import(name="agreementName")
       private final @Nullable Output<String> agreementName;
@@ -32,7 +31,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The agreement type.
-     * 
      */
     @Import(name="agreementType", required=true)
       private final Output<AgreementType> agreementType;
@@ -43,7 +41,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The agreement content.
-     * 
      */
     @Import(name="content", required=true)
       private final Output<AgreementContentArgs> content;
@@ -54,7 +51,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The business identity of the guest partner.
-     * 
      */
     @Import(name="guestIdentity", required=true)
       private final Output<BusinessIdentityArgs> guestIdentity;
@@ -65,7 +61,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The integration account partner that is set as guest partner for this agreement.
-     * 
      */
     @Import(name="guestPartner", required=true)
       private final Output<String> guestPartner;
@@ -76,7 +71,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The business identity of the host partner.
-     * 
      */
     @Import(name="hostIdentity", required=true)
       private final Output<BusinessIdentityArgs> hostIdentity;
@@ -87,7 +81,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The integration account partner that is set as host partner for this agreement.
-     * 
      */
     @Import(name="hostPartner", required=true)
       private final Output<String> hostPartner;
@@ -98,7 +91,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -109,7 +101,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -120,7 +111,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -131,7 +121,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -142,7 +131,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

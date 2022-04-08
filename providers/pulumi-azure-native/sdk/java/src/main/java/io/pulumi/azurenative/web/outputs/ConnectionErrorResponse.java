@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class ConnectionErrorResponse {
     /**
      * Code of the status
-     * 
      */
     private final @Nullable String code;
     /**
      * Resource ETag
-     * 
      */
     private final @Nullable String etag;
     /**
      * Resource id
-     * 
      */
     private final String id;
     /**
      * Resource location
-     * 
      */
     private final @Nullable String location;
     /**
      * Description of the status
-     * 
      */
     private final @Nullable String message;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -75,56 +67,48 @@ public final class ConnectionErrorResponse {
 
     /**
      * Code of the status
-     * 
     */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Resource ETag
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Description of the status
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

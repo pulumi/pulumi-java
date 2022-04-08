@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Address details for an order item.
- * 
  */
 public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Customer address and contact details. It should be address resource
-     * 
      */
     @Import(name="forwardAddress", required=true)
       private final Output<AddressPropertiesArgs> forwardAddress;

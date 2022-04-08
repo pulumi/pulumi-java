@@ -14,17 +14,14 @@ import java.util.Objects;
 public final class GetTdeCertificatesSqlTaskInputResponse {
     /**
      * Backup file share information for file share to be used for temporarily storing files.
-     * 
      */
     private final FileShareResponse backupFileShare;
     /**
      * Connection information for SQL Server
-     * 
      */
     private final SqlConnectionInfoResponse connectionInfo;
     /**
      * List containing certificate names and corresponding password to use for encrypting the exported certificate.
-     * 
      */
     private final List<SelectedCertificateInputResponse> selectedCertificates;
 
@@ -40,21 +37,18 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
 
     /**
      * Backup file share information for file share to be used for temporarily storing files.
-     * 
     */
     public FileShareResponse getBackupFileShare() {
         return this.backupFileShare;
     }
     /**
      * Connection information for SQL Server
-     * 
     */
     public SqlConnectionInfoResponse getConnectionInfo() {
         return this.connectionInfo;
     }
     /**
      * List containing certificate names and corresponding password to use for encrypting the exported certificate.
-     * 
     */
     public List<SelectedCertificateInputResponse> getSelectedCertificates() {
         return this.selectedCertificates;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Required. Gets or sets the Kind of the resource.
-     * 
      */
     @EnumType
     public enum Kind {

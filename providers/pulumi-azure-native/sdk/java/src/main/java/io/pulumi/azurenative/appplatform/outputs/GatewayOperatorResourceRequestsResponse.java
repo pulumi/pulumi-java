@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class GatewayOperatorResourceRequestsResponse {
     /**
      * Cpu allocated to each Spring Cloud Gateway Operator instance.
-     * 
      */
     private final String cpu;
     /**
      * Instance count of the Spring Cloud Gateway Operator.
-     * 
      */
     private final Integer instanceCount;
     /**
      * Memory allocated to each Spring Cloud Gateway Operator instance.
-     * 
      */
     private final String memory;
 
@@ -38,21 +35,18 @@ public final class GatewayOperatorResourceRequestsResponse {
 
     /**
      * Cpu allocated to each Spring Cloud Gateway Operator instance.
-     * 
     */
     public String getCpu() {
         return this.cpu;
     }
     /**
      * Instance count of the Spring Cloud Gateway Operator.
-     * 
     */
     public Integer getInstanceCount() {
         return this.instanceCount;
     }
     /**
      * Memory allocated to each Spring Cloud Gateway Operator instance.
-     * 
     */
     public String getMemory() {
         return this.memory;

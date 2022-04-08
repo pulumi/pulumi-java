@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the indexing mode.
-     * 
      */
     @EnumType
     public enum IndexingMode {

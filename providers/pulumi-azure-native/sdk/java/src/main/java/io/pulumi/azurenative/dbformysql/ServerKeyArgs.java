@@ -18,7 +18,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the MySQL Server key to be operated on (updated or created).
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -29,7 +28,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -40,7 +38,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key type like 'AzureKeyVault'.
-     * 
      */
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
@@ -51,7 +48,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -62,7 +58,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of the key.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

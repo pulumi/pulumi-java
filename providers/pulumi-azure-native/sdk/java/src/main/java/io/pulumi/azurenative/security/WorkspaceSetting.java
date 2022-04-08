@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * Configures where to store the OMS agent data for workspaces under a scope
  * API Version: 2017-08-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a workspace setting data for subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspaceSetting = new AzureNative.Security.WorkspaceSetting("workspaceSetting", new AzureNative.Security.WorkspaceSettingArgs
+ *         {
+ *             Scope = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+ *             WorkspaceId = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
+ *             WorkspaceSettingName = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewWorkspaceSetting(ctx, "workspaceSetting", &security.WorkspaceSettingArgs{
+ * 			Scope:                pulumi.String("/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23"),
+ * 			WorkspaceId:          pulumi.String("/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace"),
+ * 			WorkspaceSettingName: pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspaceSetting = new azure_native.security.WorkspaceSetting("workspaceSetting", {
+ *     scope: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+ *     workspaceId: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
+ *     workspaceSettingName: "default",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace_setting = azure_native.security.WorkspaceSetting("workspaceSetting",
+ *     scope="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+ *     workspace_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
+ *     workspace_setting_name="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +104,48 @@ import javax.annotation.Nullable;
 public class WorkspaceSetting extends io.pulumi.resources.CustomResource {
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
      * @return All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
-     * 
      */
     public Output<String> getScope() {
         return this.scope;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The full Azure ID of the workspace to save the data in
-     * 
      */
     @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**
      * @return The full Azure ID of the workspace to save the data in
-     * 
      */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;

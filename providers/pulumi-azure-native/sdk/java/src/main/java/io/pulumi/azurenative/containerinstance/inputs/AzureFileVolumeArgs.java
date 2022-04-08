@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of the Azure File volume. Azure File shares are mounted as volumes.
- * 
  */
 public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The flag indicating whether the Azure File shared mounted as a volume is read-only.
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -32,7 +30,6 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Azure File share to be mounted as a volume.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -43,7 +40,6 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The storage account access key used to access the Azure File share.
-     * 
      */
     @Import(name="storageAccountKey")
       private final @Nullable Output<String> storageAccountKey;
@@ -54,7 +50,6 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the storage account that contains the Azure File share.
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;

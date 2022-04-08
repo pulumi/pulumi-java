@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * ManagementConfiguration properties supported by the OperationsManagement resource provider.
- * 
  */
 public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
 
     /**
      * The applicationId of the appliance for this Management.
-     * 
      */
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
@@ -34,7 +32,6 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
 
     /**
      * Parameters to run the ARM template
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<List<ArmTemplateParameterArgs>> parameters;
@@ -45,7 +42,6 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
 
     /**
      * The type of the parent resource.
-     * 
      */
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
@@ -56,7 +52,6 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
 
     /**
      * The Json object containing the ARM template to deploy
-     * 
      */
     @Import(name="template", required=true)
       private final Output<Object> template;

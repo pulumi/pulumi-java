@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ServiceAccessPolicyEntryResponse {
     /**
      * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
-     * 
      */
     private final String objectId;
 
@@ -22,7 +21,6 @@ public final class ServiceAccessPolicyEntryResponse {
 
     /**
      * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
-     * 
     */
     public String getObjectId() {
         return this.objectId;

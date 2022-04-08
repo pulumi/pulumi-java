@@ -14,7 +14,6 @@ public final class ListGatewayKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
-     * 
      */
     @Import(name="gatewayId", required=true)
       private final String gatewayId;
@@ -25,7 +24,6 @@ public final class ListGatewayKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListGatewayKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

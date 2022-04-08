@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Properties of managed integration runtime operation result.
- * 
  */
 public final class ManagedIntegrationRuntimeOperationResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
 
     /**
      * The activity id for the operation request.
-     * 
      */
     @Import(name="activityId", required=true)
       private final String activityId;
@@ -30,7 +28,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
 
     /**
      * The error code.
-     * 
      */
     @Import(name="errorCode", required=true)
       private final String errorCode;
@@ -41,7 +38,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
 
     /**
      * Managed integration runtime error parameters.
-     * 
      */
     @Import(name="parameters", required=true)
       private final List<String> parameters;
@@ -52,7 +48,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
 
     /**
      * The operation result.
-     * 
      */
     @Import(name="result", required=true)
       private final String result;
@@ -63,7 +58,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
 
     /**
      * The start time of the operation.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -74,7 +68,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
 
     /**
      * The operation type. Could be start or stop.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -11,13 +11,11 @@ import java.util.Objects;
 public final class ContentKeyPolicySymmetricTokenKeyResponse {
     /**
      * The key value of the key
-     * 
      */
     private final String keyValue;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
-     * 
      */
     private final String odataType;
 
@@ -31,7 +29,6 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
 
     /**
      * The key value of the key
-     * 
     */
     public String getKeyValue() {
         return this.keyValue;
@@ -39,7 +36,6 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

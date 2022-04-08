@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Azure Storage account information.
- * 
  */
 public final class StorageAccountInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
 
     /**
      * The resource identifier.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
 
     /**
      * The resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
 
     /**
      * The optional suffix for the storage account.
-     * 
      */
     @Import(name="suffix", required=true)
       private final String suffix;
@@ -51,7 +47,6 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sftp write settings.
- * 
  */
 public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The type of copy behavior for copy sink.
-     * 
      */
     @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
@@ -32,7 +30,6 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -54,7 +50,6 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="operationTimeout")
       private final @Nullable Object operationTimeout;
@@ -66,7 +61,6 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
     /**
      * The write setting type.
      * Expected value is 'SftpWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -77,7 +71,6 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="useTempFileRename")
       private final @Nullable Object useTempFileRename;

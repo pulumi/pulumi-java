@@ -12,7 +12,6 @@ public final class CopyOnExpiryOptionResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'CopyOnExpiryOption'.
-     * 
      */
     private final String objectType;
 
@@ -24,7 +23,6 @@ public final class CopyOnExpiryOptionResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'CopyOnExpiryOption'.
-     * 
     */
     public String getObjectType() {
         return this.objectType;

@@ -19,7 +19,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Config information.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<Object> config;
@@ -30,7 +29,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Config URI.
-     * 
      */
     @Import(name="configHref")
       private final @Nullable Output<String> configHref;
@@ -41,7 +39,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * File list.
-     * 
      */
     @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
@@ -52,7 +49,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Function App ID.
-     * 
      */
     @Import(name="functionAppId")
       private final @Nullable Output<String> functionAppId;
@@ -63,7 +59,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Function name.
-     * 
      */
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
@@ -74,7 +69,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Function URI.
-     * 
      */
     @Import(name="href")
       private final @Nullable Output<String> href;
@@ -85,7 +79,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The invocation URL
-     * 
      */
     @Import(name="invokeUrlTemplate")
       private final @Nullable Output<String> invokeUrlTemplate;
@@ -96,7 +89,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a value indicating whether the function is disabled
-     * 
      */
     @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
@@ -107,7 +99,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -118,7 +109,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The function language
-     * 
      */
     @Import(name="language")
       private final @Nullable Output<String> language;
@@ -129,7 +119,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Site name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -140,7 +129,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -151,7 +139,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Script URI.
-     * 
      */
     @Import(name="scriptHref")
       private final @Nullable Output<String> scriptHref;
@@ -162,7 +149,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Script root path URI.
-     * 
      */
     @Import(name="scriptRootPathHref")
       private final @Nullable Output<String> scriptRootPathHref;
@@ -173,7 +159,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secrets file URI.
-     * 
      */
     @Import(name="secretsFileHref")
       private final @Nullable Output<String> secretsFileHref;
@@ -184,7 +169,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Test data used when testing via the Azure Portal.
-     * 
      */
     @Import(name="testData")
       private final @Nullable Output<String> testData;
@@ -195,7 +179,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Test data URI.
-     * 
      */
     @Import(name="testDataHref")
       private final @Nullable Output<String> testDataHref;

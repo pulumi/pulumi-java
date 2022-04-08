@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Active Directory
- * 
  */
 public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Id of the Active Directory
-     * 
      */
     @Import(name="activeDirectoryId")
       private final @Nullable String activeDirectoryId;
@@ -33,7 +31,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the active directory machine. This optional parameter is used only while creating kerberos volume
-     * 
      */
     @Import(name="adName")
       private final @Nullable String adName;
@@ -44,7 +41,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * If enabled, AES encryption will be enabled for SMB communication.
-     * 
      */
     @Import(name="aesEncryption")
       private final @Nullable Boolean aesEncryption;
@@ -55,7 +51,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      *  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
-     * 
      */
     @Import(name="allowLocalNfsUsersWithLdap")
       private final @Nullable Boolean allowLocalNfsUsersWithLdap;
@@ -66,7 +61,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
-     * 
      */
     @Import(name="backupOperators")
       private final @Nullable List<String> backupOperators;
@@ -77,7 +71,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
-     * 
      */
     @Import(name="dns")
       private final @Nullable String dns;
@@ -88,7 +81,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the Active Directory domain
-     * 
      */
     @Import(name="domain")
       private final @Nullable String domain;
@@ -99,7 +91,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
-     * 
      */
     @Import(name="kdcIP")
       private final @Nullable String kdcIP;
@@ -110,7 +101,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies whether or not the LDAP traffic needs to be secured via TLS.
-     * 
      */
     @Import(name="ldapOverTLS")
       private final @Nullable Boolean ldapOverTLS;
@@ -121,7 +111,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies whether or not the LDAP traffic needs to be signed.
-     * 
      */
     @Import(name="ldapSigning")
       private final @Nullable Boolean ldapSigning;
@@ -132,7 +121,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The Organizational Unit (OU) within the Windows Active Directory
-     * 
      */
     @Import(name="organizationalUnit")
       private final @Nullable String organizationalUnit;
@@ -143,7 +131,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Plain text password of Active Directory domain administrator, value is masked in the response
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -154,7 +141,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
-     * 
      */
     @Import(name="securityOperators")
       private final @Nullable List<String> securityOperators;
@@ -165,7 +151,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
-     * 
      */
     @Import(name="serverRootCACertificate")
       private final @Nullable String serverRootCACertificate;
@@ -176,7 +161,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The Active Directory site the service will limit Domain Controller discovery to
-     * 
      */
     @Import(name="site")
       private final @Nullable String site;
@@ -187,7 +171,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
-     * 
      */
     @Import(name="smbServerName")
       private final @Nullable String smbServerName;
@@ -198,7 +181,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Status of the Active Directory
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -209,7 +191,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Any details in regards to the Status of the Active Directory
-     * 
      */
     @Import(name="statusDetails", required=true)
       private final String statusDetails;
@@ -220,7 +201,6 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Username of Active Directory domain administrator
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

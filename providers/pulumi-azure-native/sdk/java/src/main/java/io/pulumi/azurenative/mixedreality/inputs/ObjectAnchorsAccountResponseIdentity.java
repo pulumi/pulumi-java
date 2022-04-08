@@ -16,7 +16,6 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
 
     /**
      * The principal ID of resource identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -27,7 +26,6 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
 
     /**
      * The tenant ID of resource.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -38,7 +36,6 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

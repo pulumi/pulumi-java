@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class GetApiSchemaResult {
     /**
      * Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
-     * 
      */
     private final String contentType;
     /**
      * Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.
-     * 
      */
     private final @Nullable Object definitions;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource type for API Management resource.
-     * 
      */
     private final String type;
     /**
      * Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
-     * 
      */
     private final @Nullable String value;
 
@@ -61,42 +55,36 @@ public final class GetApiSchemaResult {
 
     /**
      * Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
-     * 
     */
     public String getContentType() {
         return this.contentType;
     }
     /**
      * Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.
-     * 
     */
     public Optional<Object> getDefinitions() {
         return Optional.ofNullable(this.definitions);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Monthly Schedule properties
- * 
  */
 public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates which days of the month snapshot should be taken. A comma delimited string.
-     * 
      */
     @Import(name="daysOfMonth")
       private final @Nullable String daysOfMonth;
@@ -33,7 +31,6 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates which hour in UTC timezone a snapshot should be taken
-     * 
      */
     @Import(name="hour")
       private final @Nullable Integer hour;
@@ -44,7 +41,6 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates which minute snapshot should be taken
-     * 
      */
     @Import(name="minute")
       private final @Nullable Integer minute;
@@ -55,7 +51,6 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Monthly snapshot count to keep
-     * 
      */
     @Import(name="snapshotsToKeep")
       private final @Nullable Integer snapshotsToKeep;
@@ -66,7 +61,6 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
-     * 
      */
     @Import(name="usedBytes")
       private final @Nullable Double usedBytes;

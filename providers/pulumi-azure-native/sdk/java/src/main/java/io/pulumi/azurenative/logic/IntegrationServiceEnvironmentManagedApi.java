@@ -26,7 +26,83 @@ import javax.annotation.Nullable;
  * The integration service environment managed api.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Gets the integration service environment managed Apis
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integrationServiceEnvironmentManagedApi = new AzureNative.Logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureNative.Logic.IntegrationServiceEnvironmentManagedApiArgs
+ *         {
+ *             ApiName = "servicebus",
+ *             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
+ *             Location = "brazilsouth",
+ *             ResourceGroup = "testResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logic.NewIntegrationServiceEnvironmentManagedApi(ctx, "integrationServiceEnvironmentManagedApi", &logic.IntegrationServiceEnvironmentManagedApiArgs{
+ * 			ApiName:                           pulumi.String("servicebus"),
+ * 			IntegrationServiceEnvironmentName: pulumi.String("testIntegrationServiceEnvironment"),
+ * 			Location:                          pulumi.String("brazilsouth"),
+ * 			ResourceGroup:                     pulumi.String("testResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const integrationServiceEnvironmentManagedApi = new azure_native.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
+ *     apiName: "servicebus",
+ *     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
+ *     location: "brazilsouth",
+ *     resourceGroup: "testResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * integration_service_environment_managed_api = azure_native.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
+ *     api_name="servicebus",
+ *     integration_service_environment_name="testIntegrationServiceEnvironment",
+ *     location="brazilsouth",
+ *     resource_group="testResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,238 +117,204 @@ import javax.annotation.Nullable;
 public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources.CustomResource {
     /**
      * The API definition.
-     * 
      */
     @Export(name="apiDefinitionUrl", type=String.class, parameters={})
     private Output<String> apiDefinitionUrl;
 
     /**
      * @return The API definition.
-     * 
      */
     public Output<String> getApiDefinitionUrl() {
         return this.apiDefinitionUrl;
     }
     /**
      * The api definitions.
-     * 
      */
     @Export(name="apiDefinitions", type=ApiResourceDefinitionsResponse.class, parameters={})
     private Output<ApiResourceDefinitionsResponse> apiDefinitions;
 
     /**
      * @return The api definitions.
-     * 
      */
     public Output<ApiResourceDefinitionsResponse> getApiDefinitions() {
         return this.apiDefinitions;
     }
     /**
      * The backend service.
-     * 
      */
     @Export(name="backendService", type=ApiResourceBackendServiceResponse.class, parameters={})
     private Output<ApiResourceBackendServiceResponse> backendService;
 
     /**
      * @return The backend service.
-     * 
      */
     public Output<ApiResourceBackendServiceResponse> getBackendService() {
         return this.backendService;
     }
     /**
      * The capabilities.
-     * 
      */
     @Export(name="capabilities", type=List.class, parameters={String.class})
     private Output<List<String>> capabilities;
 
     /**
      * @return The capabilities.
-     * 
      */
     public Output<List<String>> getCapabilities() {
         return this.capabilities;
     }
     /**
      * The category.
-     * 
      */
     @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
      * @return The category.
-     * 
      */
     public Output<String> getCategory() {
         return this.category;
     }
     /**
      * The connection parameters.
-     * 
      */
     @Export(name="connectionParameters", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> connectionParameters;
 
     /**
      * @return The connection parameters.
-     * 
      */
     public Output<Map<String,Object>> getConnectionParameters() {
         return this.connectionParameters;
     }
     /**
      * The integration service environment managed api deployment parameters.
-     * 
      */
     @Export(name="deploymentParameters", type=IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse.class, parameters={})
     private Output</* @Nullable */ IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> deploymentParameters;
 
     /**
      * @return The integration service environment managed api deployment parameters.
-     * 
      */
     public Output</* @Nullable */ IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> getDeploymentParameters() {
         return this.deploymentParameters;
     }
     /**
      * The api general information.
-     * 
      */
     @Export(name="generalInformation", type=ApiResourceGeneralInformationResponse.class, parameters={})
     private Output<ApiResourceGeneralInformationResponse> generalInformation;
 
     /**
      * @return The api general information.
-     * 
      */
     public Output<ApiResourceGeneralInformationResponse> getGeneralInformation() {
         return this.generalInformation;
     }
     /**
      * The integration service environment reference.
-     * 
      */
     @Export(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment;
 
     /**
      * @return The integration service environment reference.
-     * 
      */
     public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationServiceEnvironment() {
         return this.integrationServiceEnvironment;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The metadata.
-     * 
      */
     @Export(name="metadata", type=ApiResourceMetadataResponse.class, parameters={})
     private Output<ApiResourceMetadataResponse> metadata;
 
     /**
      * @return The metadata.
-     * 
      */
     public Output<ApiResourceMetadataResponse> getMetadata() {
         return this.metadata;
     }
     /**
      * Gets the resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The policies for the API.
-     * 
      */
     @Export(name="policies", type=ApiResourcePoliciesResponse.class, parameters={})
     private Output<ApiResourcePoliciesResponse> policies;
 
     /**
      * @return The policies for the API.
-     * 
      */
     public Output<ApiResourcePoliciesResponse> getPolicies() {
         return this.policies;
     }
     /**
      * The provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The runtime urls.
-     * 
      */
     @Export(name="runtimeUrls", type=List.class, parameters={String.class})
     private Output<List<String>> runtimeUrls;
 
     /**
      * @return The runtime urls.
-     * 
      */
     public Output<List<String>> getRuntimeUrls() {
         return this.runtimeUrls;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets the resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

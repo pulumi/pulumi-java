@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class CertificateInformationResponse {
     /**
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
      */
     private final String expiry;
     /**
      * Subject of the certificate.
-     * 
      */
     private final String subject;
     /**
      * Thumbprint of the certificate.
-     * 
      */
     private final String thumbprint;
 
@@ -37,21 +34,18 @@ public final class CertificateInformationResponse {
 
     /**
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
     */
     public String getExpiry() {
         return this.expiry;
     }
     /**
      * Subject of the certificate.
-     * 
     */
     public String getSubject() {
         return this.subject;
     }
     /**
      * Thumbprint of the certificate.
-     * 
     */
     public String getThumbprint() {
         return this.thumbprint;

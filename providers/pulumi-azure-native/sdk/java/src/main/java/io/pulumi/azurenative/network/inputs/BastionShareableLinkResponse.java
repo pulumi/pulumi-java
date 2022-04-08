@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Bastion Shareable Link.
- * 
  */
 public final class BastionShareableLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
 
     /**
      * The unique Bastion Shareable Link to the virtual machine.
-     * 
      */
     @Import(name="bsl", required=true)
       private final String bsl;
@@ -30,7 +28,6 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
 
     /**
      * The time when the link was created.
-     * 
      */
     @Import(name="createdAt", required=true)
       private final String createdAt;
@@ -41,7 +38,6 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
 
     /**
      * Optional field indicating the warning or error message related to the vm in case of partial failure.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -52,7 +48,6 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
 
     /**
      * Reference of the virtual machine resource.
-     * 
      */
     @Import(name="vm", required=true)
       private final VMResponse vm;

@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GetRegistrationAssignmentResult {
     /**
      * The fully qualified path of the registration assignment.
-     * 
      */
     private final String id;
     /**
      * Name of the registration assignment.
-     * 
      */
     private final String name;
     /**
      * Properties of a registration assignment.
-     * 
      */
     private final RegistrationAssignmentPropertiesResponse properties;
     /**
      * Type of the resource.
-     * 
      */
     private final String type;
 
@@ -45,28 +41,24 @@ public final class GetRegistrationAssignmentResult {
 
     /**
      * The fully qualified path of the registration assignment.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the registration assignment.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a registration assignment.
-     * 
     */
     public RegistrationAssignmentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

@@ -16,7 +16,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -27,7 +26,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * The integration runtime name.
-     * 
      */
     @Import(name="integrationRuntimeName", required=true)
       private final String integrationRuntimeName;
@@ -38,7 +36,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * Metadata path.
-     * 
      */
     @Import(name="metadataPath")
       private final @Nullable String metadataPath;
@@ -49,7 +46,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

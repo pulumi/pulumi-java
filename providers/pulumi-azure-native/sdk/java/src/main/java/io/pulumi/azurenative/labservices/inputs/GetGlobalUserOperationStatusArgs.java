@@ -14,7 +14,6 @@ public final class GetGlobalUserOperationStatusArgs extends io.pulumi.resources.
 
     /**
      * The operation url of long running operation
-     * 
      */
     @Import(name="operationUrl", required=true)
       private final String operationUrl;
@@ -25,7 +24,6 @@ public final class GetGlobalUserOperationStatusArgs extends io.pulumi.resources.
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

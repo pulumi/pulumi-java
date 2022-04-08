@@ -17,7 +17,6 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Boolean value to indicate whether to include JobInstructions in response.
-     * 
      */
     @Import(name="includeJobInstructions")
       private final @Nullable Boolean includeJobInstructions;
@@ -28,7 +27,6 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Boolean value to indicate whether to include LabelCategories in response.
-     * 
      */
     @Import(name="includeLabelCategories")
       private final @Nullable Boolean includeLabelCategories;
@@ -39,7 +37,6 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name and identifier for LabelingJob.
-     * 
      */
     @Import(name="labelingJobId", required=true)
       private final String labelingJobId;
@@ -50,7 +47,6 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -61,7 +57,6 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

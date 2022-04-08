@@ -16,7 +16,6 @@ public final class DockerImagePlatformResponse extends io.pulumi.resources.Invok
 
     /**
      * The OS type the Environment.
-     * 
      */
     @Import(name="operatingSystemType")
       private final @Nullable String operatingSystemType;

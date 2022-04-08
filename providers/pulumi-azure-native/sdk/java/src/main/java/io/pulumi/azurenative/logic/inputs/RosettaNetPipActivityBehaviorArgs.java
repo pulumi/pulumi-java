@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * The integration account RosettaNet ProcessConfiguration activity behavior.
- * 
  */
 public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The value indicating whether the RosettaNet PIP is used for a single action.
-     * 
      */
     @Import(name="actionType", required=true)
       private final Output<RosettaNetActionType> actionType;
@@ -34,7 +32,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The value indicating whether authorization is required.
-     * 
      */
     @Import(name="isAuthorizationRequired", required=true)
       private final Output<Boolean> isAuthorizationRequired;
@@ -45,7 +42,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The value indicating whether secured transport is required.
-     * 
      */
     @Import(name="isSecuredTransportRequired", required=true)
       private final Output<Boolean> isSecuredTransportRequired;
@@ -56,7 +52,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The value indicating whether non-repudiation is for origin and content.
-     * 
      */
     @Import(name="nonRepudiationOfOriginAndContent", required=true)
       private final Output<Boolean> nonRepudiationOfOriginAndContent;
@@ -67,7 +62,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The persistent confidentiality encryption scope.
-     * 
      */
     @Import(name="persistentConfidentialityScope", required=true)
       private final Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
@@ -78,7 +72,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The value indicating whether the RosettaNet PIP communication is synchronous.
-     * 
      */
     @Import(name="responseType", required=true)
       private final Output<RosettaNetResponseType> responseType;
@@ -89,7 +82,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The value indicating retry count.
-     * 
      */
     @Import(name="retryCount", required=true)
       private final Output<Integer> retryCount;
@@ -100,7 +92,6 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
 
     /**
      * The time to perform in seconds.
-     * 
      */
     @Import(name="timeToPerformInSeconds", required=true)
       private final Output<Integer> timeToPerformInSeconds;

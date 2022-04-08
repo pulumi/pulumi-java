@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Group connectivity type.
-     * 
      */
     @EnumType
     public enum GroupConnectivity {

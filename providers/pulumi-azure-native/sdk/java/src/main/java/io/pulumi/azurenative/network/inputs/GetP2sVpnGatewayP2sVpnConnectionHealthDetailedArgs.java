@@ -17,7 +17,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
 
     /**
      * The name of the P2SVpnGateway.
-     * 
      */
     @Import(name="gatewayName", required=true)
       private final String gatewayName;
@@ -28,7 +27,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
 
     /**
      * The sas-url to download the P2S Vpn connection health detail.
-     * 
      */
     @Import(name="outputBlobSasUrl")
       private final @Nullable String outputBlobSasUrl;
@@ -39,7 +37,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -50,7 +47,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
 
     /**
      * The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
-     * 
      */
     @Import(name="vpnUserNamesFilter")
       private final @Nullable List<String> vpnUserNamesFilter;

@@ -14,7 +14,6 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Azure Video Analyzer for Media account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

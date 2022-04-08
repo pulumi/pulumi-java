@@ -16,7 +16,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the dataSet.
-     * 
      */
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
@@ -39,7 +37,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
     /**
      * Kind of data set.
      * Expected value is 'KustoDatabase'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -50,7 +47,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
 
     /**
      * Resource id of the kusto database.
-     * 
      */
     @Import(name="kustoDatabaseResourceId", required=true)
       private final Output<String> kustoDatabaseResourceId;
@@ -61,7 +57,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the share to add the data set to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;

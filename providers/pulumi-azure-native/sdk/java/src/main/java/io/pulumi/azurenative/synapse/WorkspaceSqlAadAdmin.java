@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * 
  * Note: SQL AAD Admin is configured automatically during workspace creation and assigned to the current user. One can't add more admins with this resource unless you manually delete the current SQL AAD Admin.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update workspace active directory admin
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspaceSqlAadAdmin = new AzureNative.Synapse.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", new AzureNative.Synapse.WorkspaceSqlAadAdminArgs
+ *         {
+ *             AdministratorType = "ActiveDirectory",
+ *             Login = "bob@contoso.com",
+ *             ResourceGroupName = "resourceGroup1",
+ *             Sid = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *             TenantId = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *             WorkspaceName = "workspace1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewWorkspaceSqlAadAdmin(ctx, "workspaceSqlAadAdmin", &synapse.WorkspaceSqlAadAdminArgs{
+ * 			AdministratorType: pulumi.String("ActiveDirectory"),
+ * 			Login:             pulumi.String("bob@contoso.com"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup1"),
+ * 			Sid:               pulumi.String("c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c"),
+ * 			TenantId:          pulumi.String("c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c"),
+ * 			WorkspaceName:     pulumi.String("workspace1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspaceSqlAadAdmin = new azure_native.synapse.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", {
+ *     administratorType: "ActiveDirectory",
+ *     login: "bob@contoso.com",
+ *     resourceGroupName: "resourceGroup1",
+ *     sid: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *     tenantId: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *     workspaceName: "workspace1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace_sql_aad_admin = azure_native.synapse.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin",
+ *     administrator_type="ActiveDirectory",
+ *     login="bob@contoso.com",
+ *     resource_group_name="resourceGroup1",
+ *     sid="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *     tenant_id="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *     workspace_name="workspace1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +118,72 @@ import javax.annotation.Nullable;
 public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
     /**
      * Workspace active directory administrator type
-     * 
      */
     @Export(name="administratorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorType;
 
     /**
      * @return Workspace active directory administrator type
-     * 
      */
     public Output</* @Nullable */ String> getAdministratorType() {
         return this.administratorType;
     }
     /**
      * Login of the workspace active directory administrator
-     * 
      */
     @Export(name="login", type=String.class, parameters={})
     private Output</* @Nullable */ String> login;
 
     /**
      * @return Login of the workspace active directory administrator
-     * 
      */
     public Output</* @Nullable */ String> getLogin() {
         return this.login;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Object ID of the workspace active directory administrator
-     * 
      */
     @Export(name="sid", type=String.class, parameters={})
     private Output</* @Nullable */ String> sid;
 
     /**
      * @return Object ID of the workspace active directory administrator
-     * 
      */
     public Output</* @Nullable */ String> getSid() {
         return this.sid;
     }
     /**
      * Tenant ID of the workspace active directory administrator
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return Tenant ID of the workspace active directory administrator
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

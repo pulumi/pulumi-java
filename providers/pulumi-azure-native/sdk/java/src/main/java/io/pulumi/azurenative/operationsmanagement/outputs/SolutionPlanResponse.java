@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class SolutionPlanResponse {
     /**
      * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
-     * 
      */
     private final @Nullable String name;
     /**
      * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
-     * 
      */
     private final @Nullable String product;
     /**
      * promotionCode, Not really used now, can you left as empty
-     * 
      */
     private final @Nullable String promotionCode;
     /**
      * Publisher name. For gallery solution, it is Microsoft.
-     * 
      */
     private final @Nullable String publisher;
 
@@ -46,28 +42,24 @@ public final class SolutionPlanResponse {
 
     /**
      * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
-     * 
     */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * promotionCode, Not really used now, can you left as empty
-     * 
     */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * Publisher name. For gallery solution, it is Microsoft.
-     * 
     */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);

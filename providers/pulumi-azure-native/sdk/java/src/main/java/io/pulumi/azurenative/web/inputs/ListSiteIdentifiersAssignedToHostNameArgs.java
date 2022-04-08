@@ -16,7 +16,6 @@ public final class ListSiteIdentifiersAssignedToHostNameArgs extends io.pulumi.r
 
     /**
      * Name of the object.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

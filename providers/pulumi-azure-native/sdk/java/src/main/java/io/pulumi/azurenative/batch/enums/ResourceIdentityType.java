@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The type of identity used for the Batch account.
-     * 
      */
     @EnumType
     public enum ResourceIdentityType {
         /**
          * Batch account has a system assigned identity with it.
-         * 
          */
         SystemAssigned("SystemAssigned"),
         /**
          * Batch account has user assigned identities with it.
-         * 
          */
         UserAssigned("UserAssigned"),
         /**
          * Batch account has no identity associated with it. Setting `None` in update account will remove existing identities.
-         * 
          */
         None("None");
 

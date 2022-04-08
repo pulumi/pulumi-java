@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A DataLakeAnalytics compute.
- * 
  */
 public final class DataLakeAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DataLakeAnalyticsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Location for the underlying compute
-     * 
      */
     @Import(name="computeLocation")
       private final @Nullable Output<String> computeLocation;
@@ -33,7 +31,6 @@ public final class DataLakeAnalyticsArgs extends io.pulumi.resources.ResourceArg
     /**
      * The type of compute
      * Expected value is 'DataLakeAnalytics'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
@@ -44,7 +41,6 @@ public final class DataLakeAnalyticsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The description of the Machine Learning compute.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -62,7 +58,6 @@ public final class DataLakeAnalyticsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * ARM resource id of the underlying compute
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

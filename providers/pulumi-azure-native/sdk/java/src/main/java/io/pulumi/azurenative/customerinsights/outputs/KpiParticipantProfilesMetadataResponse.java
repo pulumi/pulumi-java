@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class KpiParticipantProfilesMetadataResponse {
     /**
      * Name of the type.
-     * 
      */
     private final String typeName;
 
@@ -22,7 +21,6 @@ public final class KpiParticipantProfilesMetadataResponse {
 
     /**
      * Name of the type.
-     * 
     */
     public String getTypeName() {
         return this.typeName;

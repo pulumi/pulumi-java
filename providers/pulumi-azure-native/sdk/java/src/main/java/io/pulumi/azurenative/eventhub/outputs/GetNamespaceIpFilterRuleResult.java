@@ -13,32 +13,26 @@ import javax.annotation.Nullable;
 public final class GetNamespaceIpFilterRuleResult {
     /**
      * The IP Filter Action
-     * 
      */
     private final @Nullable String action;
     /**
      * IP Filter name
-     * 
      */
     private final @Nullable String filterName;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * IP Mask
-     * 
      */
     private final @Nullable String ipMask;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -60,42 +54,36 @@ public final class GetNamespaceIpFilterRuleResult {
 
     /**
      * The IP Filter Action
-     * 
     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Filter name
-     * 
     */
     public Optional<String> getFilterName() {
         return Optional.ofNullable(this.filterName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * IP Mask
-     * 
     */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

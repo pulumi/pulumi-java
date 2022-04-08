@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes properties of an assessment metadata.
- * 
  */
 public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-     * 
      */
     @Import(name="assessmentType", required=true)
       private final String assessmentType;
@@ -41,7 +39,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * Human readable description of the assessment
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -52,7 +49,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * User friendly display name of the assessment
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -63,7 +59,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * The implementation effort required to remediate this assessment
-     * 
      */
     @Import(name="implementationEffort")
       private final @Nullable String implementationEffort;
@@ -74,7 +69,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * Describes the partner that created the assessment
-     * 
      */
     @Import(name="partnerData")
       private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
@@ -85,7 +79,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * Azure resource ID of the policy definition that turns this assessment calculation on
-     * 
      */
     @Import(name="policyDefinitionId", required=true)
       private final String policyDefinitionId;
@@ -96,7 +89,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * True if this assessment is in preview release status
-     * 
      */
     @Import(name="preview")
       private final @Nullable Boolean preview;
@@ -107,7 +99,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * Human readable description of what you should do to mitigate this security issue
-     * 
      */
     @Import(name="remediationDescription")
       private final @Nullable String remediationDescription;
@@ -118,7 +109,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * The severity level of the assessment
-     * 
      */
     @Import(name="severity", required=true)
       private final String severity;
@@ -136,7 +126,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
 
     /**
      * The user impact of the assessment
-     * 
      */
     @Import(name="userImpact")
       private final @Nullable String userImpact;

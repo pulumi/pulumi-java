@@ -19,7 +19,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The ProactiveDetection configuration ID. This is unique within a Application Insights component.
-     * 
      */
     @Import(name="configurationId")
       private final @Nullable Output<String> configurationId;
@@ -30,7 +29,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Custom email addresses for this rule notifications
-     * 
      */
     @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
@@ -41,7 +39,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * A flag that indicates whether this rule is enabled by the user
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -52,7 +49,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The last time this rule was updated
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
@@ -63,7 +59,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The rule name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -74,7 +69,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -96,7 +89,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * Static definitions of the ProactiveDetection configuration rule (same values for all components).
-     * 
      */
     @Import(name="ruleDefinitions")
       private final @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
@@ -107,7 +99,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
 
     /**
      * A flag that indicated whether notifications on this rule should be sent to subscription owners
-     * 
      */
     @Import(name="sendEmailsToSubscriptionOwners")
       private final @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;

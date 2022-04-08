@@ -16,7 +16,6 @@ public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Action to perform based on the match or no match of the IpMask.
-     * 
      */
     @Import(name="action")
       private final @Nullable String action;
@@ -27,7 +26,6 @@ public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * IP Address in CIDR notation e.g., 10.0.0.0/8.
-     * 
      */
     @Import(name="ipMask")
       private final @Nullable String ipMask;

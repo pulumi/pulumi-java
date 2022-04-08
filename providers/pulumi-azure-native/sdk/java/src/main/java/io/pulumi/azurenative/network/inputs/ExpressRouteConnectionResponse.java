@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * ExpressRouteConnection resource.
- * 
  */
 public final class ExpressRouteConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * Authorization key to establish the connection.
-     * 
      */
     @Import(name="authorizationKey")
       private final @Nullable String authorizationKey;
@@ -35,7 +33,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * Enable internet security.
-     * 
      */
     @Import(name="enableInternetSecurity")
       private final @Nullable Boolean enableInternetSecurity;
@@ -46,7 +43,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * The ExpressRoute circuit peering.
-     * 
      */
     @Import(name="expressRouteCircuitPeering", required=true)
       private final ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering;
@@ -57,7 +53,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * Enable FastPath to vWan Firewall hub.
-     * 
      */
     @Import(name="expressRouteGatewayBypass")
       private final @Nullable Boolean expressRouteGatewayBypass;
@@ -68,7 +63,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -79,7 +73,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -90,7 +83,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * The provisioning state of the express route connection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -101,7 +93,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     @Import(name="routingConfiguration")
       private final @Nullable RoutingConfigurationResponse routingConfiguration;
@@ -112,7 +103,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
 
     /**
      * The routing weight associated to the connection.
-     * 
      */
     @Import(name="routingWeight")
       private final @Nullable Integer routingWeight;

@@ -19,7 +19,83 @@ import javax.annotation.Nullable;
  * A class representing a CommunicationService resource.
  * API Version: 2020-08-20.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var communicationService = new AzureNative.Communication.CommunicationService("communicationService", new AzureNative.Communication.CommunicationServiceArgs
+ *         {
+ *             CommunicationServiceName = "MyCommunicationResource",
+ *             DataLocation = "United States",
+ *             Location = "Global",
+ *             ResourceGroupName = "MyResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	communication "github.com/pulumi/pulumi-azure-native/sdk/go/azure/communication"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := communication.NewCommunicationService(ctx, "communicationService", &communication.CommunicationServiceArgs{
+ * 			CommunicationServiceName: pulumi.String("MyCommunicationResource"),
+ * 			DataLocation:             pulumi.String("United States"),
+ * 			Location:                 pulumi.String("Global"),
+ * 			ResourceGroupName:        pulumi.String("MyResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const communicationService = new azure_native.communication.CommunicationService("communicationService", {
+ *     communicationServiceName: "MyCommunicationResource",
+ *     dataLocation: "United States",
+ *     location: "Global",
+ *     resourceGroupName: "MyResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * communication_service = azure_native.communication.CommunicationService("communicationService",
+ *     communication_service_name="MyCommunicationResource",
+ *     data_location="United States",
+ *     location="Global",
+ *     resource_group_name="MyResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,154 +110,132 @@ import javax.annotation.Nullable;
 public class CommunicationService extends io.pulumi.resources.CustomResource {
     /**
      * The location where the communication service stores its data at rest.
-     * 
      */
     @Export(name="dataLocation", type=String.class, parameters={})
     private Output<String> dataLocation;
 
     /**
      * @return The location where the communication service stores its data at rest.
-     * 
      */
     public Output<String> getDataLocation() {
         return this.dataLocation;
     }
     /**
      * FQDN of the CommunicationService instance.
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return FQDN of the CommunicationService instance.
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
     }
     /**
      * The immutable resource Id of the communication service.
-     * 
      */
     @Export(name="immutableResourceId", type=String.class, parameters={})
     private Output<String> immutableResourceId;
 
     /**
      * @return The immutable resource Id of the communication service.
-     * 
      */
     public Output<String> getImmutableResourceId() {
         return this.immutableResourceId;
     }
     /**
      * The Azure location where the CommunicationService is running.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The Azure location where the CommunicationService is running.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource ID of an Azure Notification Hub linked to this resource.
-     * 
      */
     @Export(name="notificationHubId", type=String.class, parameters={})
     private Output<String> notificationHubId;
 
     /**
      * @return Resource ID of an Azure Notification Hub linked to this resource.
-     * 
      */
     public Output<String> getNotificationHubId() {
         return this.notificationHubId;
     }
     /**
      * Provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

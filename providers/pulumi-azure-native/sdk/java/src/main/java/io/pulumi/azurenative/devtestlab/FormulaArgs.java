@@ -19,7 +19,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the formula.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content of the formula.
-     * 
      */
     @Import(name="formulaContent")
       private final @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
@@ -41,7 +39,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -52,7 +49,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the formula.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -74,7 +69,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The OS type of the formula.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<String> osType;
@@ -85,7 +79,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +89,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -107,7 +99,6 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information about a VM from which a formula is to be created.
-     * 
      */
     @Import(name="vm")
       private final @Nullable Output<FormulaPropertiesFromVmArgs> vm;

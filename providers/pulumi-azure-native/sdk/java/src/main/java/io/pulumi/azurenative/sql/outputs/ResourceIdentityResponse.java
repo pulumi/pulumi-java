@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class ResourceIdentityResponse {
     /**
      * The Azure Active Directory principal id.
-     * 
      */
     private final String principalId;
     /**
      * The Azure Active Directory tenant id.
-     * 
      */
     private final String tenantId;
     /**
      * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
-     * 
      */
     private final @Nullable String type;
     /**
      * The resource ids of the user assigned identities to use
-     * 
      */
     private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
 
@@ -48,28 +44,24 @@ public final class ResourceIdentityResponse {
 
     /**
      * The Azure Active Directory principal id.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The Azure Active Directory tenant id.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The resource ids of the user assigned identities to use
-     * 
     */
     public Map<String,UserIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

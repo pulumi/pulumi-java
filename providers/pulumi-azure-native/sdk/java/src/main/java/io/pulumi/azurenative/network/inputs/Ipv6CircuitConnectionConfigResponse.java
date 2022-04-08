@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IPv6 Circuit Connection properties for global reach.
- * 
  */
 public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resourc
 
     /**
      * /125 IP address space to carve out customer addresses for global reach.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
@@ -31,7 +29,6 @@ public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resourc
 
     /**
      * Express Route Circuit connection state.
-     * 
      */
     @Import(name="circuitConnectionStatus", required=true)
       private final String circuitConnectionStatus;

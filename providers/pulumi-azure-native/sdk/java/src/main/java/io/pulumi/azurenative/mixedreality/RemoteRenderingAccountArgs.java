@@ -19,7 +19,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of an Mixed Reality Account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -30,7 +29,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The identity associated with this account
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -41,7 +39,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The kind of account, if supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<SkuArgs> kind;
@@ -52,7 +49,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The plan associated with this account
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<IdentityArgs> plan;
@@ -74,7 +69,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The sku associated with this account
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -96,7 +89,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the storage account associated with this accountId
-     * 
      */
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
@@ -107,7 +99,6 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

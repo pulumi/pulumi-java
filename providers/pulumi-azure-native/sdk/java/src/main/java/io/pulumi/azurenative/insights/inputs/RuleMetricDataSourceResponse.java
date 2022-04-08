@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rule metric data source. The discriminator value is always RuleMetricDataSource in this case.
- * 
  */
 public final class RuleMetricDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
 
     /**
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     * 
      */
     @Import(name="legacyResourceId")
       private final @Nullable String legacyResourceId;
@@ -31,7 +29,6 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
 
     /**
      * the name of the metric that defines what the rule monitors.
-     * 
      */
     @Import(name="metricName")
       private final @Nullable String metricName;
@@ -42,7 +39,6 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
 
     /**
      * the namespace of the metric.
-     * 
      */
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
@@ -54,7 +50,6 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
     /**
      * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -65,7 +60,6 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
 
     /**
      * the location of the resource.
-     * 
      */
     @Import(name="resourceLocation")
       private final @Nullable String resourceLocation;
@@ -76,7 +70,6 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
 
     /**
      * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     * 
      */
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;

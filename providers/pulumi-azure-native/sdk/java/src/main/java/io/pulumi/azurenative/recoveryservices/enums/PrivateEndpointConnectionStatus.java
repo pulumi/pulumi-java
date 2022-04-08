@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the status
-     * 
      */
     @EnumType
     public enum PrivateEndpointConnectionStatus {

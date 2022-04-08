@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Microsoft Teams channel.
- * 
  */
 public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Calling web hook for Skype channel
-     * 
      */
     @Import(name="callingWebHook")
       private final @Nullable Output<String> callingWebHook;
@@ -32,7 +30,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable calling for Skype channel
-     * 
      */
     @Import(name="enableCalling")
       private final @Nullable Output<Boolean> enableCalling;
@@ -43,7 +40,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable groups for Skype channel
-     * 
      */
     @Import(name="enableGroups")
       private final @Nullable Output<Boolean> enableGroups;
@@ -54,7 +50,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable media cards for Skype channel
-     * 
      */
     @Import(name="enableMediaCards")
       private final @Nullable Output<Boolean> enableMediaCards;
@@ -65,7 +60,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable messaging for Skype channel
-     * 
      */
     @Import(name="enableMessaging")
       private final @Nullable Output<Boolean> enableMessaging;
@@ -76,7 +70,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable screen sharing for Skype channel
-     * 
      */
     @Import(name="enableScreenSharing")
       private final @Nullable Output<Boolean> enableScreenSharing;
@@ -87,7 +80,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Enable video for Skype channel
-     * 
      */
     @Import(name="enableVideo")
       private final @Nullable Output<Boolean> enableVideo;
@@ -98,7 +90,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Group mode for Skype channel
-     * 
      */
     @Import(name="groupsMode")
       private final @Nullable Output<String> groupsMode;
@@ -109,7 +100,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Incoming call route for Skype channel
-     * 
      */
     @Import(name="incomingCallRoute")
       private final @Nullable Output<String> incomingCallRoute;
@@ -120,7 +110,6 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;

@@ -20,7 +20,483 @@ import javax.annotation.Nullable;
  * Deployment script object.
  * API Version: 2020-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DeploymentScriptsCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deploymentScript = new AzureNative.Resources.DeploymentScript("deploymentScript", new AzureNative.Resources.DeploymentScriptArgs
+ *         {
+ *             Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+ *                 },
+ *             },
+ *             Kind = "AzurePowerShell",
+ *             Location = "westus",
+ *             ResourceGroupName = "script-rg",
+ *             ScriptName = "MyDeploymentScript",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+ * 			Identity: &resources.ManagedServiceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+ * 				},
+ * 			},
+ * 			Kind:              pulumi.String("AzurePowerShell"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("script-rg"),
+ * 			ScriptName:        pulumi.String("MyDeploymentScript"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deploymentScript = new azure_native.resources.DeploymentScript("deploymentScript", {
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     },
+ *     kind: "AzurePowerShell",
+ *     location: "westus",
+ *     resourceGroupName: "script-rg",
+ *     scriptName: "MyDeploymentScript",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment_script = azure_native.resources.DeploymentScript("deploymentScript",
+ *     identity=azure_native.resources.ManagedServiceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     ),
+ *     kind="AzurePowerShell",
+ *     location="westus",
+ *     resource_group_name="script-rg",
+ *     script_name="MyDeploymentScript")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DeploymentScriptsCreateNoUserManagedIdentity
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deploymentScript = new AzureNative.Resources.DeploymentScript("deploymentScript", new AzureNative.Resources.DeploymentScriptArgs
+ *         {
+ *             Kind = "AzurePowerShell",
+ *             Location = "westus",
+ *             ResourceGroupName = "script-rg",
+ *             ScriptName = "MyDeploymentScript",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+ * 			Kind:              pulumi.String("AzurePowerShell"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("script-rg"),
+ * 			ScriptName:        pulumi.String("MyDeploymentScript"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deploymentScript = new azure_native.resources.DeploymentScript("deploymentScript", {
+ *     kind: "AzurePowerShell",
+ *     location: "westus",
+ *     resourceGroupName: "script-rg",
+ *     scriptName: "MyDeploymentScript",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment_script = azure_native.resources.DeploymentScript("deploymentScript",
+ *     kind="AzurePowerShell",
+ *     location="westus",
+ *     resource_group_name="script-rg",
+ *     script_name="MyDeploymentScript")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DeploymentScriptsCreate_MinCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deploymentScript = new AzureNative.Resources.DeploymentScript("deploymentScript", new AzureNative.Resources.DeploymentScriptArgs
+ *         {
+ *             Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+ *                 },
+ *             },
+ *             Kind = "AzurePowerShell",
+ *             Location = "westus",
+ *             ResourceGroupName = "script-rg",
+ *             ScriptName = "MyDeploymentScript",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+ * 			Identity: &resources.ManagedServiceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+ * 				},
+ * 			},
+ * 			Kind:              pulumi.String("AzurePowerShell"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("script-rg"),
+ * 			ScriptName:        pulumi.String("MyDeploymentScript"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deploymentScript = new azure_native.resources.DeploymentScript("deploymentScript", {
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     },
+ *     kind: "AzurePowerShell",
+ *     location: "westus",
+ *     resourceGroupName: "script-rg",
+ *     scriptName: "MyDeploymentScript",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment_script = azure_native.resources.DeploymentScript("deploymentScript",
+ *     identity=azure_native.resources.ManagedServiceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     ),
+ *     kind="AzurePowerShell",
+ *     location="westus",
+ *     resource_group_name="script-rg",
+ *     script_name="MyDeploymentScript")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DeploymentScriptsCreate_UsingCustomACIName
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deploymentScript = new AzureNative.Resources.DeploymentScript("deploymentScript", new AzureNative.Resources.DeploymentScriptArgs
+ *         {
+ *             Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+ *                 },
+ *             },
+ *             Kind = "AzurePowerShell",
+ *             Location = "westus",
+ *             ResourceGroupName = "script-rg",
+ *             ScriptName = "MyDeploymentScript",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+ * 			Identity: &resources.ManagedServiceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+ * 				},
+ * 			},
+ * 			Kind:              pulumi.String("AzurePowerShell"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("script-rg"),
+ * 			ScriptName:        pulumi.String("MyDeploymentScript"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deploymentScript = new azure_native.resources.DeploymentScript("deploymentScript", {
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     },
+ *     kind: "AzurePowerShell",
+ *     location: "westus",
+ *     resourceGroupName: "script-rg",
+ *     scriptName: "MyDeploymentScript",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment_script = azure_native.resources.DeploymentScript("deploymentScript",
+ *     identity=azure_native.resources.ManagedServiceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     ),
+ *     kind="AzurePowerShell",
+ *     location="westus",
+ *     resource_group_name="script-rg",
+ *     script_name="MyDeploymentScript")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DeploymentScriptsCreate_UsingExistingStorageAccount
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deploymentScript = new AzureNative.Resources.DeploymentScript("deploymentScript", new AzureNative.Resources.DeploymentScriptArgs
+ *         {
+ *             Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+ *                 },
+ *             },
+ *             Kind = "AzurePowerShell",
+ *             Location = "westus",
+ *             ResourceGroupName = "script-rg",
+ *             ScriptName = "MyDeploymentScript",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+ * 			Identity: &resources.ManagedServiceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+ * 				},
+ * 			},
+ * 			Kind:              pulumi.String("AzurePowerShell"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("script-rg"),
+ * 			ScriptName:        pulumi.String("MyDeploymentScript"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deploymentScript = new azure_native.resources.DeploymentScript("deploymentScript", {
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     },
+ *     kind: "AzurePowerShell",
+ *     location: "westus",
+ *     resourceGroupName: "script-rg",
+ *     scriptName: "MyDeploymentScript",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment_script = azure_native.resources.DeploymentScript("deploymentScript",
+ *     identity=azure_native.resources.ManagedServiceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+ *         },
+ *     ),
+ *     kind="AzurePowerShell",
+ *     location="westus",
+ *     resource_group_name="script-rg",
+ *     script_name="MyDeploymentScript")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,105 +508,90 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: AzureCliScript, AzurePowerShellScript.
- * 
  */
 @Deprecated /* Please use one of the variants: AzureCliScript, AzurePowerShellScript. */
 @ResourceType(type="azure-native:resources:DeploymentScript")
 public class DeploymentScript extends io.pulumi.resources.CustomResource {
     /**
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Type of the script.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Type of the script.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The location of the ACI and the storage account for the deployment script.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the ACI and the storage account for the deployment script.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Name of this resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of this resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Type of this resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of this resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

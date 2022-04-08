@@ -28,7 +28,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * If true, enables Application Insights logging.
-     * 
      */
     @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
@@ -39,7 +38,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Code configuration for the endpoint deployment.
-     * 
      */
     @Import(name="codeConfiguration")
       private final @Nullable CodeConfigurationResponse codeConfiguration;
@@ -50,7 +48,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Description of the endpoint deployment.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -62,7 +59,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
     /**
      * Enum to determine endpoint compute type.
      * Expected value is 'Managed'.
-     * 
      */
     @Import(name="endpointComputeType", required=true)
       private final String endpointComputeType;
@@ -73,7 +69,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable String environmentId;
@@ -84,7 +79,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Environment variables configuration for the deployment.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
@@ -95,7 +89,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Compute instance type.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable String instanceType;
@@ -106,7 +99,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Deployment container liveness/readiness probe configuration.
-     * 
      */
     @Import(name="livenessProbe")
       private final @Nullable ProbeSettingsResponse livenessProbe;
@@ -117,7 +109,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Reference to the model asset for the endpoint deployment.
-     * 
      */
     @Import(name="model")
       private final @Nullable Object model;
@@ -128,7 +119,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -139,7 +129,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Provisioning state for the endpoint deployment.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -150,7 +139,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Deployment container liveness/readiness probe configuration.
-     * 
      */
     @Import(name="readinessProbe")
       private final @Nullable ProbeSettingsResponse readinessProbe;
@@ -161,7 +149,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Online deployment scoring requests configuration.
-     * 
      */
     @Import(name="requestSettings")
       private final @Nullable OnlineRequestSettingsResponse requestSettings;
@@ -172,7 +159,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
 
     /**
      * Online deployment scaling configuration.
-     * 
      */
     @Import(name="scaleSettings")
       private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;

@@ -12,7 +12,6 @@ public final class ImmediateCopyOptionResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'ImmediateCopyOption'.
-     * 
      */
     private final String objectType;
 
@@ -24,7 +23,6 @@ public final class ImmediateCopyOptionResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'ImmediateCopyOption'.
-     * 
     */
     public String getObjectType() {
         return this.objectType;

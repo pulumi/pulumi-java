@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The algorithm used to encrypt "Value".
-     * 
      */
     @EnumType
     public enum EncryptionAlgorithm {

@@ -14,7 +14,6 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
 
     /**
      * The name of the authorization.
-     * 
      */
     @Import(name="authorizationName", required=true)
       private final String authorizationName;
@@ -25,7 +24,6 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
 
     /**
      * The name of the express route circuit.
-     * 
      */
     @Import(name="circuitName", required=true)
       private final String circuitName;
@@ -36,7 +34,6 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

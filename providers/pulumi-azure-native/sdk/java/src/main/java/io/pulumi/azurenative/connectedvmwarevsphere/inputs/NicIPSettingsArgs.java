@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the network interface ip settings.
- * 
  */
 public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the nic allocation method.
-     * 
      */
     @Import(name="allocationMethod")
       private final @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
@@ -34,7 +32,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the dns servers.
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
@@ -45,7 +42,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the gateway.
-     * 
      */
     @Import(name="gateway")
       private final @Nullable Output<List<String>> gateway;
@@ -56,7 +52,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the ip address for the nic.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
@@ -67,7 +62,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the mask.
-     * 
      */
     @Import(name="subnetMask")
       private final @Nullable Output<String> subnetMask;

@@ -22,7 +22,503 @@ import javax.annotation.Nullable;
  * The connector setting
  * API Version: 2020-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AwsAssumeRole - Create a cloud account connector for a subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connector = new AzureNative.Security.Connector("connector", new AzureNative.Security.ConnectorArgs
+ *         {
+ *             AuthenticationDetails = new AzureNative.Security.Inputs.AwAssumeRoleAuthenticationDetailsPropertiesArgs
+ *             {
+ *                 AuthenticationType = "awsAssumeRole",
+ *                 AwsAssumeRoleArn = "arn:aws:iam::81231569658:role/AscConnector",
+ *                 AwsExternalId = "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+ *             },
+ *             ConnectorName = "aws_dev2",
+ *             HybridComputeSettings = new AzureNative.Security.Inputs.HybridComputeSettingsPropertiesArgs
+ *             {
+ *                 AutoProvision = "On",
+ *                 ProxyServer = new AzureNative.Security.Inputs.ProxyServerPropertiesArgs
+ *                 {
+ *                     Ip = "167.220.197.140",
+ *                     Port = "34",
+ *                 },
+ *                 Region = "West US 2",
+ *                 ResourceGroupName = "AwsConnectorRG",
+ *                 ServicePrincipal = new AzureNative.Security.Inputs.ServicePrincipalPropertiesArgs
+ *                 {
+ *                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
+ *                     Secret = "<secret>",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewConnector(ctx, "connector", &security.ConnectorArgs{
+ * 			AuthenticationDetails: security.AwAssumeRoleAuthenticationDetailsProperties{
+ * 				AuthenticationType: "awsAssumeRole",
+ * 				AwsAssumeRoleArn:   "arn:aws:iam::81231569658:role/AscConnector",
+ * 				AwsExternalId:      "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+ * 			},
+ * 			ConnectorName: pulumi.String("aws_dev2"),
+ * 			HybridComputeSettings: &security.HybridComputeSettingsPropertiesArgs{
+ * 				AutoProvision: pulumi.String("On"),
+ * 				ProxyServer: &security.ProxyServerPropertiesArgs{
+ * 					Ip:   pulumi.String("167.220.197.140"),
+ * 					Port: pulumi.String("34"),
+ * 				},
+ * 				Region:            pulumi.String("West US 2"),
+ * 				ResourceGroupName: pulumi.String("AwsConnectorRG"),
+ * 				ServicePrincipal: &security.ServicePrincipalPropertiesArgs{
+ * 					ApplicationId: pulumi.String("ad9bcd79-be9c-45ab-abd8-80ca1654a7d1"),
+ * 					Secret:        pulumi.String("<secret>"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connector = new azure_native.security.Connector("connector", {
+ *     authenticationDetails: {
+ *         authenticationType: "awsAssumeRole",
+ *         awsAssumeRoleArn: "arn:aws:iam::81231569658:role/AscConnector",
+ *         awsExternalId: "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+ *     },
+ *     connectorName: "aws_dev2",
+ *     hybridComputeSettings: {
+ *         autoProvision: "On",
+ *         proxyServer: {
+ *             ip: "167.220.197.140",
+ *             port: "34",
+ *         },
+ *         region: "West US 2",
+ *         resourceGroupName: "AwsConnectorRG",
+ *         servicePrincipal: {
+ *             applicationId: "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
+ *             secret: "<secret>",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connector = azure_native.security.Connector("connector",
+ *     authentication_details=azure_native.security.AwAssumeRoleAuthenticationDetailsPropertiesArgs(
+ *         authentication_type="awsAssumeRole",
+ *         aws_assume_role_arn="arn:aws:iam::81231569658:role/AscConnector",
+ *         aws_external_id="20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+ *     ),
+ *     connector_name="aws_dev2",
+ *     hybrid_compute_settings=azure_native.security.HybridComputeSettingsPropertiesArgs(
+ *         auto_provision="On",
+ *         proxy_server=azure_native.security.ProxyServerPropertiesArgs(
+ *             ip="167.220.197.140",
+ *             port="34",
+ *         ),
+ *         region="West US 2",
+ *         resource_group_name="AwsConnectorRG",
+ *         service_principal=azure_native.security.ServicePrincipalPropertiesArgs(
+ *             application_id="ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
+ *             secret="<secret>",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### AwsCred - Create a cloud account connector for a subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connector = new AzureNative.Security.Connector("connector", new AzureNative.Security.ConnectorArgs
+ *         {
+ *             AuthenticationDetails = new AzureNative.Security.Inputs.AwsCredsAuthenticationDetailsPropertiesArgs
+ *             {
+ *                 AuthenticationType = "awsCreds",
+ *                 AwsAccessKeyId = "AKIARPZCNODDNAEQFSOE",
+ *                 AwsSecretAccessKey = "<awsSecretAccessKey>",
+ *             },
+ *             ConnectorName = "aws_dev1",
+ *             HybridComputeSettings = new AzureNative.Security.Inputs.HybridComputeSettingsPropertiesArgs
+ *             {
+ *                 AutoProvision = "On",
+ *                 ProxyServer = new AzureNative.Security.Inputs.ProxyServerPropertiesArgs
+ *                 {
+ *                     Ip = "167.220.197.140",
+ *                     Port = "34",
+ *                 },
+ *                 Region = "West US 2",
+ *                 ResourceGroupName = "AwsConnectorRG",
+ *                 ServicePrincipal = new AzureNative.Security.Inputs.ServicePrincipalPropertiesArgs
+ *                 {
+ *                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
+ *                     Secret = "<secret>",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewConnector(ctx, "connector", &security.ConnectorArgs{
+ * 			AuthenticationDetails: security.AwsCredsAuthenticationDetailsProperties{
+ * 				AuthenticationType: "awsCreds",
+ * 				AwsAccessKeyId:     "AKIARPZCNODDNAEQFSOE",
+ * 				AwsSecretAccessKey: "<awsSecretAccessKey>",
+ * 			},
+ * 			ConnectorName: pulumi.String("aws_dev1"),
+ * 			HybridComputeSettings: &security.HybridComputeSettingsPropertiesArgs{
+ * 				AutoProvision: pulumi.String("On"),
+ * 				ProxyServer: &security.ProxyServerPropertiesArgs{
+ * 					Ip:   pulumi.String("167.220.197.140"),
+ * 					Port: pulumi.String("34"),
+ * 				},
+ * 				Region:            pulumi.String("West US 2"),
+ * 				ResourceGroupName: pulumi.String("AwsConnectorRG"),
+ * 				ServicePrincipal: &security.ServicePrincipalPropertiesArgs{
+ * 					ApplicationId: pulumi.String("ad9bcd79-be9c-45ab-abd8-80ca1654a7d1"),
+ * 					Secret:        pulumi.String("<secret>"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connector = new azure_native.security.Connector("connector", {
+ *     authenticationDetails: {
+ *         authenticationType: "awsCreds",
+ *         awsAccessKeyId: "AKIARPZCNODDNAEQFSOE",
+ *         awsSecretAccessKey: "<awsSecretAccessKey>",
+ *     },
+ *     connectorName: "aws_dev1",
+ *     hybridComputeSettings: {
+ *         autoProvision: "On",
+ *         proxyServer: {
+ *             ip: "167.220.197.140",
+ *             port: "34",
+ *         },
+ *         region: "West US 2",
+ *         resourceGroupName: "AwsConnectorRG",
+ *         servicePrincipal: {
+ *             applicationId: "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
+ *             secret: "<secret>",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connector = azure_native.security.Connector("connector",
+ *     authentication_details=azure_native.security.AwsCredsAuthenticationDetailsPropertiesArgs(
+ *         authentication_type="awsCreds",
+ *         aws_access_key_id="AKIARPZCNODDNAEQFSOE",
+ *         aws_secret_access_key="<awsSecretAccessKey>",
+ *     ),
+ *     connector_name="aws_dev1",
+ *     hybrid_compute_settings=azure_native.security.HybridComputeSettingsPropertiesArgs(
+ *         auto_provision="On",
+ *         proxy_server=azure_native.security.ProxyServerPropertiesArgs(
+ *             ip="167.220.197.140",
+ *             port="34",
+ *         ),
+ *         region="West US 2",
+ *         resource_group_name="AwsConnectorRG",
+ *         service_principal=azure_native.security.ServicePrincipalPropertiesArgs(
+ *             application_id="ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
+ *             secret="<secret>",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### gcpCredentials - Create a cloud account connector for a subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connector = new AzureNative.Security.Connector("connector", new AzureNative.Security.ConnectorArgs
+ *         {
+ *             AuthenticationDetails = new AzureNative.Security.Inputs.GcpCredentialsDetailsPropertiesArgs
+ *             {
+ *                 AuthProviderX509CertUrl = "https://www.googleapis.com/oauth2/v1/certs",
+ *                 AuthUri = "https://accounts.google.com/o/oauth2/auth",
+ *                 AuthenticationType = "gcpCredentials",
+ *                 ClientEmail = "asc-135@asc-project-1234.iam.gserviceaccount.com",
+ *                 ClientId = "105889053725632919854",
+ *                 ClientX509CertUrl = "https://www.googleapis.com/robot/v1/metadata/x509/asc-135%40asc-project-1234.iam.gserviceaccount.com",
+ *                 OrganizationId = "AscDemoOrg",
+ *                 PrivateKey = @"-----BEGIN PRIVATE KEY-----
+ * MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpxYHcLzcDZ6/Q
+ * AeQZnQXM5GTb3p09Xsbjo2T2F61b6I7FZiQXBrbw3Zf0CUCkkqTTpD5xifl82yQ6
+ * 89V7SAe8hxI7esAcVDhm/aJMqzVjHLISAU2L3li1sn0jjY2oYtndwN6bRivP8O6t
+ * 9F+W6E0zMlbCxtpZEHLbb6WxlJJrwEQ0MPH2yOCwZUQi6NHksAtEzX2nNKJNyUC7
+ * QyBVHHMm34H2bmZwsuQp3y2otpcJ9tJnVmYfC3k/w4x2L+DIK7JnQP/C1wQqu2du
+ * c0w6sydF6RhLoHButrVdYRJTdfK4k03SsSTyMqZ+f7LNnKw3xenzw1VmEpk8mvoQ
+ * t08tCBOrAgMBAAECggEAByzz6iyMtLYjNjV+QJ7kad6VbL2iA8AHxANZ9xTVHPdd
+ * YXaJu/dqsA+NpqDlfI8+LDva782XH/HbPCqmMUnAGfXTjXQIvqnIoIHD5F2wKfpC
+ * hIRNlMXXFgbvRxtqi11yO+80+XcjzuwuCmgzyhsTeEB+bkkdXXpWgHPdmv3emnM6
+ * MQM9Zgrug0UndPmiUwKOcJSU4PlmlTpHEV4vA6JfA4bvphy9m1jxO5qWeah5yym2
+ * 6FP5BRIDF98kFrDnSXJjajwgLCQ+MypFQXyax6XkxDxuKXbng1bv7eZDjqazIChk
+ * m0y14X0s0jnWc+AX8vfeSf7d+EsGdVinEwR1aAawEQKBgQDqDB0qxcIQ1oI1Kww8
+ * 9vXefTiuWsf47F+fJ/DIOEbiRfE8IdCgmOABvcqJIoxW/DFMBEdLCcx73Km7pOmd
+ * Kg1ddScnaO8cOj2v/Ub+fAqVrA4ki4ViYP0A7/Nogga3Jr/x3ey5bitrIfFImteS
+ * CgBHBzZvoQpvO4lB2tKVgo2P9wKBgQC5sgTEq4sasRGSAY6lIoJno0I8w28a/16D
+ * es60XQeY1ger8uTGwlT02v/u/arDUmRLPClpujXq6gK29KvtRCHy7JkpGbqW2bZs
+ * PFKKWR7Tk3XPKYyjv94AIi5/xoFeDhS4lpAvy3Z5tQhYS6wqWKvT6yZQ3kM+Hfxs
+ * pHgvu3mU7QKBgQC9/E1k3hj1cBtMK4CIsHPPQljTd4+iacYJPPPAo6YuoVX8WPqw
+ * ksgrwbN59Fh1d8xQh5yTtgWOegYx8uFMGcm1lpbM7+pBQKm4hWGuzGQPMRZd5f/F
+ * ZzOZIi61I+9tlv/yxxIVR+/ozCm/pSneO04UWi9/F/uPZYW6tnWAtfRR6wKBgGsZ
+ * 8MQaCK4JaI/klAhMghgSQnbXZXKVzUZaA3Rln6cX8u7KtgapOOTMlwaZie8Dy1LV
+ * TTFstAJcm9o3/h1nyYjZy3C4JTUyNpPwqs6enjf7edxVI4eidwFutZD+xcigqHTa
+ * aikW2atSrZB3fMIjyF7+5meH+hKOqvNiXOty3qn1AoGAZuVxYQy5FVq3YZxzr3Aa
+ * Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
+ * 3b6MvaUqdNhNnWodJXLhgtmGEHDKmTppz2JSTx/tVzCfhFdcOC79StZvcKLhtoFQ
+ * +/3lEw6NCIXzm5E4+dtJG4k=
+ * -----END PRIVATE KEY-----
+ * ",
+ *                 PrivateKeyId = "6efg587hra2568as34d22326b044cc20dc2af",
+ *                 ProjectId = "asc-project-1234",
+ *                 TokenUri = "https://oauth2.googleapis.com/token",
+ *                 Type = "service_account",
+ *             },
+ *             ConnectorName = "gcp_dev",
+ *             HybridComputeSettings = new AzureNative.Security.Inputs.HybridComputeSettingsPropertiesArgs
+ *             {
+ *                 AutoProvision = "Off",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewConnector(ctx, "connector", &security.ConnectorArgs{
+ * 			AuthenticationDetails: security.GcpCredentialsDetailsProperties{
+ * 				AuthProviderX509CertUrl: "https://www.googleapis.com/oauth2/v1/certs",
+ * 				AuthUri:                 "https://accounts.google.com/o/oauth2/auth",
+ * 				AuthenticationType:      "gcpCredentials",
+ * 				ClientEmail:             "asc-135@asc-project-1234.iam.gserviceaccount.com",
+ * 				ClientId:                "105889053725632919854",
+ * 				ClientX509CertUrl:       fmt.Sprintf("%v%v%v", "https://www.googleapis.com/robot/v1/metadata/x509/asc-135", "%", "40asc-project-1234.iam.gserviceaccount.com"),
+ * 				OrganizationId:          "AscDemoOrg",
+ * 				PrivateKey:              "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpxYHcLzcDZ6/Q\nAeQZnQXM5GTb3p09Xsbjo2T2F61b6I7FZiQXBrbw3Zf0CUCkkqTTpD5xifl82yQ6\n89V7SAe8hxI7esAcVDhm/aJMqzVjHLISAU2L3li1sn0jjY2oYtndwN6bRivP8O6t\n9F+W6E0zMlbCxtpZEHLbb6WxlJJrwEQ0MPH2yOCwZUQi6NHksAtEzX2nNKJNyUC7\nQyBVHHMm34H2bmZwsuQp3y2otpcJ9tJnVmYfC3k/w4x2L+DIK7JnQP/C1wQqu2du\nc0w6sydF6RhLoHButrVdYRJTdfK4k03SsSTyMqZ+f7LNnKw3xenzw1VmEpk8mvoQ\nt08tCBOrAgMBAAECggEAByzz6iyMtLYjNjV+QJ7kad6VbL2iA8AHxANZ9xTVHPdd\nYXaJu/dqsA+NpqDlfI8+LDva782XH/HbPCqmMUnAGfXTjXQIvqnIoIHD5F2wKfpC\nhIRNlMXXFgbvRxtqi11yO+80+XcjzuwuCmgzyhsTeEB+bkkdXXpWgHPdmv3emnM6\nMQM9Zgrug0UndPmiUwKOcJSU4PlmlTpHEV4vA6JfA4bvphy9m1jxO5qWeah5yym2\n6FP5BRIDF98kFrDnSXJjajwgLCQ+MypFQXyax6XkxDxuKXbng1bv7eZDjqazIChk\nm0y14X0s0jnWc+AX8vfeSf7d+EsGdVinEwR1aAawEQKBgQDqDB0qxcIQ1oI1Kww8\n9vXefTiuWsf47F+fJ/DIOEbiRfE8IdCgmOABvcqJIoxW/DFMBEdLCcx73Km7pOmd\nKg1ddScnaO8cOj2v/Ub+fAqVrA4ki4ViYP0A7/Nogga3Jr/x3ey5bitrIfFImteS\nCgBHBzZvoQpvO4lB2tKVgo2P9wKBgQC5sgTEq4sasRGSAY6lIoJno0I8w28a/16D\nes60XQeY1ger8uTGwlT02v/u/arDUmRLPClpujXq6gK29KvtRCHy7JkpGbqW2bZs\nPFKKWR7Tk3XPKYyjv94AIi5/xoFeDhS4lpAvy3Z5tQhYS6wqWKvT6yZQ3kM+Hfxs\npHgvu3mU7QKBgQC9/E1k3hj1cBtMK4CIsHPPQljTd4+iacYJPPPAo6YuoVX8WPqw\nksgrwbN59Fh1d8xQh5yTtgWOegYx8uFMGcm1lpbM7+pBQKm4hWGuzGQPMRZd5f/F\nZzOZIi61I+9tlv/yxxIVR+/ozCm/pSneO04UWi9/F/uPZYW6tnWAtfRR6wKBgGsZ\n8MQaCK4JaI/klAhMghgSQnbXZXKVzUZaA3Rln6cX8u7KtgapOOTMlwaZie8Dy1LV\nTTFstAJcm9o3/h1nyYjZy3C4JTUyNpPwqs6enjf7edxVI4eidwFutZD+xcigqHTa\naikW2atSrZB3fMIjyF7+5meH+hKOqvNiXOty3qn1AoGAZuVxYQy5FVq3YZxzr3Aa\nAm0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8\n3b6MvaUqdNhNnWodJXLhgtmGEHDKmTppz2JSTx/tVzCfhFdcOC79StZvcKLhtoFQ\n+/3lEw6NCIXzm5E4+dtJG4k=\n-----END PRIVATE KEY-----\n",
+ * 				PrivateKeyId:            "6efg587hra2568as34d22326b044cc20dc2af",
+ * 				ProjectId:               "asc-project-1234",
+ * 				TokenUri:                "https://oauth2.googleapis.com/token",
+ * 				Type:                    "service_account",
+ * 			},
+ * 			ConnectorName: pulumi.String("gcp_dev"),
+ * 			HybridComputeSettings: &security.HybridComputeSettingsPropertiesArgs{
+ * 				AutoProvision: pulumi.String("Off"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connector = new azure_native.security.Connector("connector", {
+ *     authenticationDetails: {
+ *         authProviderX509CertUrl: "https://www.googleapis.com/oauth2/v1/certs",
+ *         authUri: "https://accounts.google.com/o/oauth2/auth",
+ *         authenticationType: "gcpCredentials",
+ *         clientEmail: "asc-135@asc-project-1234.iam.gserviceaccount.com",
+ *         clientId: "105889053725632919854",
+ *         clientX509CertUrl: `https://www.googleapis.com/robot/v1/metadata/x509/asc-135%40asc-project-1234.iam.gserviceaccount.com`,
+ *         organizationId: "AscDemoOrg",
+ *         privateKey: `-----BEGIN PRIVATE KEY-----
+ * MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpxYHcLzcDZ6/Q
+ * AeQZnQXM5GTb3p09Xsbjo2T2F61b6I7FZiQXBrbw3Zf0CUCkkqTTpD5xifl82yQ6
+ * 89V7SAe8hxI7esAcVDhm/aJMqzVjHLISAU2L3li1sn0jjY2oYtndwN6bRivP8O6t
+ * 9F+W6E0zMlbCxtpZEHLbb6WxlJJrwEQ0MPH2yOCwZUQi6NHksAtEzX2nNKJNyUC7
+ * QyBVHHMm34H2bmZwsuQp3y2otpcJ9tJnVmYfC3k/w4x2L+DIK7JnQP/C1wQqu2du
+ * c0w6sydF6RhLoHButrVdYRJTdfK4k03SsSTyMqZ+f7LNnKw3xenzw1VmEpk8mvoQ
+ * t08tCBOrAgMBAAECggEAByzz6iyMtLYjNjV+QJ7kad6VbL2iA8AHxANZ9xTVHPdd
+ * YXaJu/dqsA+NpqDlfI8+LDva782XH/HbPCqmMUnAGfXTjXQIvqnIoIHD5F2wKfpC
+ * hIRNlMXXFgbvRxtqi11yO+80+XcjzuwuCmgzyhsTeEB+bkkdXXpWgHPdmv3emnM6
+ * MQM9Zgrug0UndPmiUwKOcJSU4PlmlTpHEV4vA6JfA4bvphy9m1jxO5qWeah5yym2
+ * 6FP5BRIDF98kFrDnSXJjajwgLCQ+MypFQXyax6XkxDxuKXbng1bv7eZDjqazIChk
+ * m0y14X0s0jnWc+AX8vfeSf7d+EsGdVinEwR1aAawEQKBgQDqDB0qxcIQ1oI1Kww8
+ * 9vXefTiuWsf47F+fJ/DIOEbiRfE8IdCgmOABvcqJIoxW/DFMBEdLCcx73Km7pOmd
+ * Kg1ddScnaO8cOj2v/Ub+fAqVrA4ki4ViYP0A7/Nogga3Jr/x3ey5bitrIfFImteS
+ * CgBHBzZvoQpvO4lB2tKVgo2P9wKBgQC5sgTEq4sasRGSAY6lIoJno0I8w28a/16D
+ * es60XQeY1ger8uTGwlT02v/u/arDUmRLPClpujXq6gK29KvtRCHy7JkpGbqW2bZs
+ * PFKKWR7Tk3XPKYyjv94AIi5/xoFeDhS4lpAvy3Z5tQhYS6wqWKvT6yZQ3kM+Hfxs
+ * pHgvu3mU7QKBgQC9/E1k3hj1cBtMK4CIsHPPQljTd4+iacYJPPPAo6YuoVX8WPqw
+ * ksgrwbN59Fh1d8xQh5yTtgWOegYx8uFMGcm1lpbM7+pBQKm4hWGuzGQPMRZd5f/F
+ * ZzOZIi61I+9tlv/yxxIVR+/ozCm/pSneO04UWi9/F/uPZYW6tnWAtfRR6wKBgGsZ
+ * 8MQaCK4JaI/klAhMghgSQnbXZXKVzUZaA3Rln6cX8u7KtgapOOTMlwaZie8Dy1LV
+ * TTFstAJcm9o3/h1nyYjZy3C4JTUyNpPwqs6enjf7edxVI4eidwFutZD+xcigqHTa
+ * aikW2atSrZB3fMIjyF7+5meH+hKOqvNiXOty3qn1AoGAZuVxYQy5FVq3YZxzr3Aa
+ * Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
+ * 3b6MvaUqdNhNnWodJXLhgtmGEHDKmTppz2JSTx/tVzCfhFdcOC79StZvcKLhtoFQ
+ * +/3lEw6NCIXzm5E4+dtJG4k=
+ * -----END PRIVATE KEY-----
+ * `,
+ *         privateKeyId: "6efg587hra2568as34d22326b044cc20dc2af",
+ *         projectId: "asc-project-1234",
+ *         tokenUri: "https://oauth2.googleapis.com/token",
+ *         type: "service_account",
+ *     },
+ *     connectorName: "gcp_dev",
+ *     hybridComputeSettings: {
+ *         autoProvision: "Off",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connector = azure_native.security.Connector("connector",
+ *     authentication_details=azure_native.security.GcpCredentialsDetailsPropertiesArgs(
+ *         auth_provider_x509_cert_url="https://www.googleapis.com/oauth2/v1/certs",
+ *         auth_uri="https://accounts.google.com/o/oauth2/auth",
+ *         authentication_type="gcpCredentials",
+ *         client_email="asc-135@asc-project-1234.iam.gserviceaccount.com",
+ *         client_id="105889053725632919854",
+ *         client_x509_cert_url="https://www.googleapis.com/robot/v1/metadata/x509/asc-135%40asc-project-1234.iam.gserviceaccount.com",
+ *         organization_id="AscDemoOrg",
+ *         private_key="""-----BEGIN PRIVATE KEY-----
+ * MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpxYHcLzcDZ6/Q
+ * AeQZnQXM5GTb3p09Xsbjo2T2F61b6I7FZiQXBrbw3Zf0CUCkkqTTpD5xifl82yQ6
+ * 89V7SAe8hxI7esAcVDhm/aJMqzVjHLISAU2L3li1sn0jjY2oYtndwN6bRivP8O6t
+ * 9F+W6E0zMlbCxtpZEHLbb6WxlJJrwEQ0MPH2yOCwZUQi6NHksAtEzX2nNKJNyUC7
+ * QyBVHHMm34H2bmZwsuQp3y2otpcJ9tJnVmYfC3k/w4x2L+DIK7JnQP/C1wQqu2du
+ * c0w6sydF6RhLoHButrVdYRJTdfK4k03SsSTyMqZ+f7LNnKw3xenzw1VmEpk8mvoQ
+ * t08tCBOrAgMBAAECggEAByzz6iyMtLYjNjV+QJ7kad6VbL2iA8AHxANZ9xTVHPdd
+ * YXaJu/dqsA+NpqDlfI8+LDva782XH/HbPCqmMUnAGfXTjXQIvqnIoIHD5F2wKfpC
+ * hIRNlMXXFgbvRxtqi11yO+80+XcjzuwuCmgzyhsTeEB+bkkdXXpWgHPdmv3emnM6
+ * MQM9Zgrug0UndPmiUwKOcJSU4PlmlTpHEV4vA6JfA4bvphy9m1jxO5qWeah5yym2
+ * 6FP5BRIDF98kFrDnSXJjajwgLCQ+MypFQXyax6XkxDxuKXbng1bv7eZDjqazIChk
+ * m0y14X0s0jnWc+AX8vfeSf7d+EsGdVinEwR1aAawEQKBgQDqDB0qxcIQ1oI1Kww8
+ * 9vXefTiuWsf47F+fJ/DIOEbiRfE8IdCgmOABvcqJIoxW/DFMBEdLCcx73Km7pOmd
+ * Kg1ddScnaO8cOj2v/Ub+fAqVrA4ki4ViYP0A7/Nogga3Jr/x3ey5bitrIfFImteS
+ * CgBHBzZvoQpvO4lB2tKVgo2P9wKBgQC5sgTEq4sasRGSAY6lIoJno0I8w28a/16D
+ * es60XQeY1ger8uTGwlT02v/u/arDUmRLPClpujXq6gK29KvtRCHy7JkpGbqW2bZs
+ * PFKKWR7Tk3XPKYyjv94AIi5/xoFeDhS4lpAvy3Z5tQhYS6wqWKvT6yZQ3kM+Hfxs
+ * pHgvu3mU7QKBgQC9/E1k3hj1cBtMK4CIsHPPQljTd4+iacYJPPPAo6YuoVX8WPqw
+ * ksgrwbN59Fh1d8xQh5yTtgWOegYx8uFMGcm1lpbM7+pBQKm4hWGuzGQPMRZd5f/F
+ * ZzOZIi61I+9tlv/yxxIVR+/ozCm/pSneO04UWi9/F/uPZYW6tnWAtfRR6wKBgGsZ
+ * 8MQaCK4JaI/klAhMghgSQnbXZXKVzUZaA3Rln6cX8u7KtgapOOTMlwaZie8Dy1LV
+ * TTFstAJcm9o3/h1nyYjZy3C4JTUyNpPwqs6enjf7edxVI4eidwFutZD+xcigqHTa
+ * aikW2atSrZB3fMIjyF7+5meH+hKOqvNiXOty3qn1AoGAZuVxYQy5FVq3YZxzr3Aa
+ * Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
+ * 3b6MvaUqdNhNnWodJXLhgtmGEHDKmTppz2JSTx/tVzCfhFdcOC79StZvcKLhtoFQ
+ * +/3lEw6NCIXzm5E4+dtJG4k=
+ * -----END PRIVATE KEY-----
+ * """,
+ *         private_key_id="6efg587hra2568as34d22326b044cc20dc2af",
+ *         project_id="asc-project-1234",
+ *         token_uri="https://oauth2.googleapis.com/token",
+ *         type="service_account",
+ *     ),
+ *     connector_name="gcp_dev",
+ *     hybrid_compute_settings=azure_native.security.HybridComputeSettingsPropertiesArgs(
+ *         auto_provision="Off",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,56 +533,48 @@ import javax.annotation.Nullable;
 public class Connector extends io.pulumi.resources.CustomResource {
     /**
      * Settings for authentication management, these settings are relevant only for the cloud connector.
-     * 
      */
     @Export(name="authenticationDetails", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> authenticationDetails;
 
     /**
      * @return Settings for authentication management, these settings are relevant only for the cloud connector.
-     * 
      */
     public Output</* @Nullable */ Object> getAuthenticationDetails() {
         return this.authenticationDetails;
     }
     /**
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
-     * 
      */
     @Export(name="hybridComputeSettings", type=HybridComputeSettingsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ HybridComputeSettingsPropertiesResponse> hybridComputeSettings;
 
     /**
      * @return Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
-     * 
      */
     public Output</* @Nullable */ HybridComputeSettingsPropertiesResponse> getHybridComputeSettings() {
         return this.hybridComputeSettings;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

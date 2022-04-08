@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger based on total requests.
- * 
  */
 public final class RequestsBasedTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
 
     /**
      * Request Count.
-     * 
      */
     @Import(name="count")
       private final @Nullable Integer count;
@@ -32,7 +30,6 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
 
     /**
      * Time interval.
-     * 
      */
     @Import(name="timeInterval")
       private final @Nullable String timeInterval;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Data disk image.
- * 
  */
 public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The LUN.
-     * 
      */
     @Import(name="lun", required=true)
       private final Integer lun;
@@ -30,7 +28,6 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * SAS key for source blob.
-     * 
      */
     @Import(name="sourceBlobSasUri", required=true)
       private final String sourceBlobSasUri;

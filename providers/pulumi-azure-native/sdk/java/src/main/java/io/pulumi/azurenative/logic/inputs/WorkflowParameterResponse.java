@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The workflow parameters.
- * 
  */
 public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Object metadata;
@@ -43,7 +40,6 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -54,7 +50,6 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Object value;

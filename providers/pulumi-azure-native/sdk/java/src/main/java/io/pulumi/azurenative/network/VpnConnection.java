@@ -25,7 +25,147 @@ import javax.annotation.Nullable;
  * VpnConnection Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VpnConnectionPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vpnConnection = new AzureNative.Network.VpnConnection("vpnConnection", new AzureNative.Network.VpnConnectionArgs
+ *         {
+ *             ConnectionName = "vpnConnection1",
+ *             GatewayName = "gateway1",
+ *             RemoteVpnSite = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             TrafficSelectorPolicies = {},
+ *             VpnLinkConnections = 
+ *             {
+ *                 new AzureNative.Network.Inputs.VpnSiteLinkConnectionArgs
+ *                 {
+ *                     ConnectionBandwidth = 200,
+ *                     Name = "Connection-Link1",
+ *                     SharedKey = "key",
+ *                     UsePolicyBasedTrafficSelectors = false,
+ *                     VpnConnectionProtocolType = "IKEv2",
+ *                     VpnLinkConnectionMode = "Default",
+ *                     VpnSiteLink = new AzureNative.Network.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVpnConnection(ctx, "vpnConnection", &network.VpnConnectionArgs{
+ * 			ConnectionName: pulumi.String("vpnConnection1"),
+ * 			GatewayName:    pulumi.String("gateway1"),
+ * 			RemoteVpnSite: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1"),
+ * 			},
+ * 			ResourceGroupName:       pulumi.String("rg1"),
+ * 			TrafficSelectorPolicies: network.TrafficSelectorPolicyArray{},
+ * 			VpnLinkConnections: []network.VpnSiteLinkConnectionArgs{
+ * 				&network.VpnSiteLinkConnectionArgs{
+ * 					ConnectionBandwidth:            pulumi.Int(200),
+ * 					Name:                           pulumi.String("Connection-Link1"),
+ * 					SharedKey:                      pulumi.String("key"),
+ * 					UsePolicyBasedTrafficSelectors: pulumi.Bool(false),
+ * 					VpnConnectionProtocolType:      pulumi.String("IKEv2"),
+ * 					VpnLinkConnectionMode:          pulumi.String("Default"),
+ * 					VpnSiteLink: &network.SubResourceArgs{
+ * 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const vpnConnection = new azure_native.network.VpnConnection("vpnConnection", {
+ *     connectionName: "vpnConnection1",
+ *     gatewayName: "gateway1",
+ *     remoteVpnSite: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     trafficSelectorPolicies: [],
+ *     vpnLinkConnections: [{
+ *         connectionBandwidth: 200,
+ *         name: "Connection-Link1",
+ *         sharedKey: "key",
+ *         usePolicyBasedTrafficSelectors: false,
+ *         vpnConnectionProtocolType: "IKEv2",
+ *         vpnLinkConnectionMode: "Default",
+ *         vpnSiteLink: {
+ *             id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
+ *         },
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * vpn_connection = azure_native.network.VpnConnection("vpnConnection",
+ *     connection_name="vpnConnection1",
+ *     gateway_name="gateway1",
+ *     remote_vpn_site=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+ *     ),
+ *     resource_group_name="rg1",
+ *     traffic_selector_policies=[],
+ *     vpn_link_connections=[azure_native.network.VpnSiteLinkConnectionArgs(
+ *         connection_bandwidth=200,
+ *         name="Connection-Link1",
+ *         shared_key="key",
+ *         use_policy_based_traffic_selectors=False,
+ *         vpn_connection_protocol_type="IKEv2",
+ *         vpn_link_connection_mode="Default",
+ *         vpn_site_link=azure_native.network.SubResourceArgs(
+ *             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
+ *         ),
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,294 +180,252 @@ import javax.annotation.Nullable;
 public class VpnConnection extends io.pulumi.resources.CustomResource {
     /**
      * Expected bandwidth in MBPS.
-     * 
      */
     @Export(name="connectionBandwidth", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> connectionBandwidth;
 
     /**
      * @return Expected bandwidth in MBPS.
-     * 
      */
     public Output</* @Nullable */ Integer> getConnectionBandwidth() {
         return this.connectionBandwidth;
     }
     /**
      * The connection status.
-     * 
      */
     @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
      * @return The connection status.
-     * 
      */
     public Output<String> getConnectionStatus() {
         return this.connectionStatus;
     }
     /**
      * DPD timeout in seconds for vpn connection.
-     * 
      */
     @Export(name="dpdTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dpdTimeoutSeconds;
 
     /**
      * @return DPD timeout in seconds for vpn connection.
-     * 
      */
     public Output</* @Nullable */ Integer> getDpdTimeoutSeconds() {
         return this.dpdTimeoutSeconds;
     }
     /**
      * Egress bytes transferred.
-     * 
      */
     @Export(name="egressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> egressBytesTransferred;
 
     /**
      * @return Egress bytes transferred.
-     * 
      */
     public Output<Double> getEgressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
      * EnableBgp flag.
-     * 
      */
     @Export(name="enableBgp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBgp;
 
     /**
      * @return EnableBgp flag.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableBgp() {
         return this.enableBgp;
     }
     /**
      * Enable internet security.
-     * 
      */
     @Export(name="enableInternetSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInternetSecurity;
 
     /**
      * @return Enable internet security.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity;
     }
     /**
      * EnableBgp flag.
-     * 
      */
     @Export(name="enableRateLimiting", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableRateLimiting;
 
     /**
      * @return EnableBgp flag.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableRateLimiting() {
         return this.enableRateLimiting;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Ingress bytes transferred.
-     * 
      */
     @Export(name="ingressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> ingressBytesTransferred;
 
     /**
      * @return Ingress bytes transferred.
-     * 
      */
     public Output<Double> getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
      * The IPSec Policies to be considered by this connection.
-     * 
      */
     @Export(name="ipsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies;
 
     /**
      * @return The IPSec Policies to be considered by this connection.
-     * 
      */
     public Output</* @Nullable */ List<IpsecPolicyResponse>> getIpsecPolicies() {
         return this.ipsecPolicies;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the VPN connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the VPN connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Id of the connected vpn site.
-     * 
      */
     @Export(name="remoteVpnSite", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> remoteVpnSite;
 
     /**
      * @return Id of the connected vpn site.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getRemoteVpnSite() {
         return this.remoteVpnSite;
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     @Export(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration;
 
     /**
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     public Output</* @Nullable */ RoutingConfigurationResponse> getRoutingConfiguration() {
         return this.routingConfiguration;
     }
     /**
      * Routing weight for vpn connection.
-     * 
      */
     @Export(name="routingWeight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> routingWeight;
 
     /**
      * @return Routing weight for vpn connection.
-     * 
      */
     public Output</* @Nullable */ Integer> getRoutingWeight() {
         return this.routingWeight;
     }
     /**
      * SharedKey for the vpn connection.
-     * 
      */
     @Export(name="sharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedKey;
 
     /**
      * @return SharedKey for the vpn connection.
-     * 
      */
     public Output</* @Nullable */ String> getSharedKey() {
         return this.sharedKey;
     }
     /**
      * The Traffic Selector Policies to be considered by this connection.
-     * 
      */
     @Export(name="trafficSelectorPolicies", type=List.class, parameters={TrafficSelectorPolicyResponse.class})
     private Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies;
 
     /**
      * @return The Traffic Selector Policies to be considered by this connection.
-     * 
      */
     public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> getTrafficSelectorPolicies() {
         return this.trafficSelectorPolicies;
     }
     /**
      * Use local azure ip to initiate connection.
-     * 
      */
     @Export(name="useLocalAzureIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useLocalAzureIpAddress;
 
     /**
      * @return Use local azure ip to initiate connection.
-     * 
      */
     public Output</* @Nullable */ Boolean> getUseLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress;
     }
     /**
      * Enable policy-based traffic selectors.
-     * 
      */
     @Export(name="usePolicyBasedTrafficSelectors", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors;
 
     /**
      * @return Enable policy-based traffic selectors.
-     * 
      */
     public Output</* @Nullable */ Boolean> getUsePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors;
     }
     /**
      * Connection protocol used for this connection.
-     * 
      */
     @Export(name="vpnConnectionProtocolType", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnConnectionProtocolType;
 
     /**
      * @return Connection protocol used for this connection.
-     * 
      */
     public Output</* @Nullable */ String> getVpnConnectionProtocolType() {
         return this.vpnConnectionProtocolType;
     }
     /**
      * List of all vpn site link connections to the gateway.
-     * 
      */
     @Export(name="vpnLinkConnections", type=List.class, parameters={VpnSiteLinkConnectionResponse.class})
     private Output</* @Nullable */ List<VpnSiteLinkConnectionResponse>> vpnLinkConnections;
 
     /**
      * @return List of all vpn site link connections to the gateway.
-     * 
      */
     public Output</* @Nullable */ List<VpnSiteLinkConnectionResponse>> getVpnLinkConnections() {
         return this.vpnLinkConnections;

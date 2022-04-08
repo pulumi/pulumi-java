@@ -14,7 +14,6 @@ public final class GetTIDataConnectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Connector ID
-     * 
      */
     @Import(name="dataConnectorId", required=true)
       private final String dataConnectorId;
@@ -25,7 +24,6 @@ public final class GetTIDataConnectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetTIDataConnectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

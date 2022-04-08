@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * A secret.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Secrets_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var secret = new AzureNative.DevTestLab.Secret("secret", new AzureNative.DevTestLab.SecretArgs
+ *         {
+ *             LabName = "{labName}",
+ *             Name = "{secretName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *             UserName = "{userName}",
+ *             Value = "{secret}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewSecret(ctx, "secret", &devtestlab.SecretArgs{
+ * 			LabName:           pulumi.String("{labName}"),
+ * 			Name:              pulumi.String("{secretName}"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			UserName:          pulumi.String("{userName}"),
+ * 			Value:             pulumi.String("{secret}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const secret = new azure_native.devtestlab.Secret("secret", {
+ *     labName: "{labName}",
+ *     name: "{secretName}",
+ *     resourceGroupName: "resourceGroupName",
+ *     userName: "{userName}",
+ *     value: "{secret}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * secret = azure_native.devtestlab.Secret("secret",
+ *     lab_name="{labName}",
+ *     name="{secretName}",
+ *     resource_group_name="resourceGroupName",
+ *     user_name="{userName}",
+ *     value="{secret}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +113,84 @@ import javax.annotation.Nullable;
 public class Secret extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The value of the secret for secret creation.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
      * @return The value of the secret for secret creation.
-     * 
      */
     public Output</* @Nullable */ String> getValue() {
         return this.value;

@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Defines secondary layer of software-based encryption enablement.
-     * 
      */
     @EnumType
     public enum DoubleEncryption {
         /**
          * Software-based encryption is enabled.
-         * 
          */
         Enabled("Enabled"),
         /**
          * Software-based encryption is disabled.
-         * 
          */
         Disabled("Disabled");
 

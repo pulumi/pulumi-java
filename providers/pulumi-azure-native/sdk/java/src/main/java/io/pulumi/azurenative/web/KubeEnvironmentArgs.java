@@ -30,7 +30,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Cluster configuration which enables the log daemon to export
      * app logs to a destination. Currently only "log-analytics" is
      * supported
-     * 
      */
     @Import(name="appLogsConfiguration")
       private final @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
@@ -43,7 +42,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Cluster configuration which determines the ARC cluster
      * components types. Eg: Choosing between BuildService kind,
      * FrontEnd Service ArtifactsStorageType etc.
-     * 
      */
     @Import(name="arcConfiguration")
       private final @Nullable Output<ArcConfigurationArgs> arcConfiguration;
@@ -54,7 +52,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Extended Location.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -65,7 +62,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Only visible within Vnet/Subnet
-     * 
      */
     @Import(name="internalLoadBalancerEnabled")
       private final @Nullable Output<Boolean> internalLoadBalancerEnabled;
@@ -76,7 +72,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -87,7 +82,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -98,7 +92,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the Kubernetes Environment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -109,7 +102,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -120,7 +112,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Static IP of the KubeEnvironment
-     * 
      */
     @Import(name="staticIp")
       private final @Nullable Output<String> staticIp;
@@ -131,7 +122,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

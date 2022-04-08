@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Power Query data flow.
- * 
  */
 public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of tags that can be used for describing the data flow.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -35,7 +33,6 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The description of the data flow.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -46,7 +43,6 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Locale of the Power query mashup document.
-     * 
      */
     @Import(name="documentLocale")
       private final @Nullable String documentLocale;
@@ -57,7 +53,6 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DataFlowResponseFolder folder;
@@ -68,7 +63,6 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Power query mashup script.
-     * 
      */
     @Import(name="script")
       private final @Nullable String script;
@@ -79,7 +73,6 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of sources in Power Query.
-     * 
      */
     @Import(name="sources")
       private final @Nullable List<PowerQuerySourceResponse> sources;
@@ -91,7 +84,6 @@ public final class WranglingDataFlowResponse extends io.pulumi.resources.InvokeA
     /**
      * Type of data flow.
      * Expected value is 'WranglingDataFlow'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
- * 
  */
 public final class SecureStringResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SecureStringResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of the secret.
      * Expected value is 'SecureString'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -30,7 +28,6 @@ public final class SecureStringResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value of secure string.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

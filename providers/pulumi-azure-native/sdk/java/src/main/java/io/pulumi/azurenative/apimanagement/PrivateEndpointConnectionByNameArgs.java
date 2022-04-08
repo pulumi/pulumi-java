@@ -17,7 +17,6 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
 
     /**
      * Private Endpoint Connection Resource Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -28,7 +27,6 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
 
     /**
      * Name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -39,7 +37,6 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
 
     /**
      * The connection state of the private endpoint connection.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

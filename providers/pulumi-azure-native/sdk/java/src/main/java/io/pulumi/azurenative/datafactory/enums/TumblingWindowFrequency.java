@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The frequency of the time windows.
-     * 
      */
     @EnumType
     public enum TumblingWindowFrequency {

@@ -14,7 +14,6 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group that contains the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
 
     /**
      * The name of the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -36,7 +34,6 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
 
     /**
      * Name of time series database connection.
-     * 
      */
     @Import(name="timeSeriesDatabaseConnectionName", required=true)
       private final String timeSeriesDatabaseConnectionName;

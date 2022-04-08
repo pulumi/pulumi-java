@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes the properties of a run command parameter.
- * 
  */
 public final class RunCommandInputParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RunCommandInputParameterResponse extends io.pulumi.resources.
 
     /**
      * The run command parameter name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class RunCommandInputParameterResponse extends io.pulumi.resources.
 
     /**
      * The run command parameter value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Controls certain runtime behaviors of the streaming job.
-     * 
      */
     @EnumType
     public enum CompatibilityLevel {

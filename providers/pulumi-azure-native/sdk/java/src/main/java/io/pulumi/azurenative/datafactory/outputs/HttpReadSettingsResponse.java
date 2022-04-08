@@ -15,48 +15,39 @@ import javax.annotation.Nullable;
 public final class HttpReadSettingsResponse {
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object additionalHeaders;
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
      * Indicates whether to enable partition discovery.
-     * 
      */
     private final @Nullable Boolean enablePartitionDiscovery;
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object partitionRootPath;
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object requestBody;
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object requestMethod;
     /**
      * Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
-     * 
      */
     private final @Nullable Object requestTimeout;
     /**
      * The read setting type.
      * Expected value is 'HttpReadSettings'.
-     * 
      */
     private final String type;
 
@@ -84,56 +75,48 @@ public final class HttpReadSettingsResponse {
 
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getAdditionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Indicates whether to enable partition discovery.
-     * 
     */
     public Optional<Boolean> getEnablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getPartitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getRequestBody() {
         return Optional.ofNullable(this.requestBody);
     }
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getRequestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
     /**
      * Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
-     * 
     */
     public Optional<Object> getRequestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
@@ -141,7 +124,6 @@ public final class HttpReadSettingsResponse {
     /**
      * The read setting type.
      * Expected value is 'HttpReadSettings'.
-     * 
     */
     public String getType() {
         return this.type;

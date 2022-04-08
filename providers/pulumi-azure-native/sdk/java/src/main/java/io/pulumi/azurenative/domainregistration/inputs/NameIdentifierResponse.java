@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identifies an object.
- * 
  */
 public final class NameIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class NameIdentifierResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the object.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to specify properties of all content keys in Streaming Policy
- * 
  */
 public final class StreamingPolicyContentKeysResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class StreamingPolicyContentKeysResponse extends io.pulumi.resource
 
     /**
      * Default content key for an encryption scheme
-     * 
      */
     @Import(name="defaultKey")
       private final @Nullable DefaultKeyResponse defaultKey;
@@ -33,7 +31,6 @@ public final class StreamingPolicyContentKeysResponse extends io.pulumi.resource
 
     /**
      * Representing tracks needs separate content key
-     * 
      */
     @Import(name="keyToTrackMappings")
       private final @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;

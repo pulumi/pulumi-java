@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a load balancing rule.
- * 
  */
 public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-     * 
      */
     @Import(name="backendPort", required=true)
       private final Integer backendPort;
@@ -32,7 +30,6 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
-     * 
      */
     @Import(name="frontendPort", required=true)
       private final Integer frontendPort;
@@ -43,7 +40,6 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * the reference to the load balancer probe used by the load balancing rule.
-     * 
      */
     @Import(name="probeProtocol", required=true)
       private final String probeProtocol;
@@ -54,7 +50,6 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The probe request path. Only supported for HTTP/HTTPS probes.
-     * 
      */
     @Import(name="probeRequestPath")
       private final @Nullable String probeRequestPath;
@@ -65,7 +60,6 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The reference to the transport protocol used by the load balancing rule.
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;

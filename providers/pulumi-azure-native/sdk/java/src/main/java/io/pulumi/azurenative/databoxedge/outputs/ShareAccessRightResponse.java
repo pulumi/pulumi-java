@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ShareAccessRightResponse {
     /**
      * Type of access to be allowed on the share for this user.
-     * 
      */
     private final String accessType;
     /**
      * The share ID.
-     * 
      */
     private final String shareId;
 
@@ -30,14 +28,12 @@ public final class ShareAccessRightResponse {
 
     /**
      * Type of access to be allowed on the share for this user.
-     * 
     */
     public String getAccessType() {
         return this.accessType;
     }
     /**
      * The share ID.
-     * 
     */
     public String getShareId() {
         return this.shareId;

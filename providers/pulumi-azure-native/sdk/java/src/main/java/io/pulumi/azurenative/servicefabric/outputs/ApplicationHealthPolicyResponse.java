@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ApplicationHealthPolicyResponse {
     /**
      * The health policy used by default to evaluate the health of a service type.
-     * 
      */
     private final @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
     /**
      * The map with service type health policy per service type name. The map is empty by default.
-     * 
      */
     private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
 
@@ -34,14 +32,12 @@ public final class ApplicationHealthPolicyResponse {
 
     /**
      * The health policy used by default to evaluate the health of a service type.
-     * 
     */
     public Optional<ServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
     /**
      * The map with service type health policy per service type name. The map is empty by default.
-     * 
     */
     public Map<String,ServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicies() {
         return this.serviceTypeHealthPolicies == null ? Map.of() : this.serviceTypeHealthPolicies;

@@ -18,7 +18,105 @@ import javax.annotation.Nullable;
  * The private endpoint connection of a Digital Twin.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update the status of a private endpoint connection with the given name
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.DigitalTwins.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.DigitalTwins.PrivateEndpointConnectionArgs
+ *         {
+ *             PrivateEndpointConnectionName = "myPrivateConnection",
+ *             Properties = new AzureNative.DigitalTwins.Inputs.PrivateEndpointConnectionPropertiesArgs
+ *             {
+ *                 PrivateLinkServiceConnectionState = new AzureNative.DigitalTwins.Inputs.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs
+ *                 {
+ *                     Description = "Approved by johndoe@company.com.",
+ *                     Status = "Approved",
+ *                 },
+ *             },
+ *             ResourceGroupName = "resRg",
+ *             ResourceName = "myDigitalTwinsService",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := digitaltwins.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &digitaltwins.PrivateEndpointConnectionArgs{
+ * 			PrivateEndpointConnectionName: pulumi.String("myPrivateConnection"),
+ * 			Properties: &digitaltwins.PrivateEndpointConnectionPropertiesArgs{
+ * 				PrivateLinkServiceConnectionState: &digitaltwins.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs{
+ * 					Description: pulumi.String("Approved by johndoe@company.com."),
+ * 					Status:      pulumi.String("Approved"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resRg"),
+ * 			ResourceName:      pulumi.String("myDigitalTwinsService"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.digitaltwins.PrivateEndpointConnection("privateEndpointConnection", {
+ *     privateEndpointConnectionName: "myPrivateConnection",
+ *     properties: {
+ *         privateLinkServiceConnectionState: {
+ *             description: "Approved by johndoe@company.com.",
+ *             status: "Approved",
+ *         },
+ *     },
+ *     resourceGroupName: "resRg",
+ *     resourceName: "myDigitalTwinsService",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.digitaltwins.PrivateEndpointConnection("privateEndpointConnection",
+ *     private_endpoint_connection_name="myPrivateConnection",
+ *     properties=azure_native.digitaltwins.PrivateEndpointConnectionPropertiesArgs(
+ *         private_link_service_connection_state=azure_native.digitaltwins.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
+ *             description="Approved by johndoe@company.com.",
+ *             status="Approved",
+ *         ),
+ *     ),
+ *     resource_group_name="resRg",
+ *     resource_name="myDigitalTwinsService")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +131,12 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -53,14 +149,12 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration parameters used while performing a rolling upgrade.
- * 
  */
 public final class RollingUpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
 
     /**
      * Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.
-     * 
      */
     @Import(name="enableCrossZoneUpgrade")
       private final @Nullable Output<Boolean> enableCrossZoneUpgrade;
@@ -33,7 +31,6 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
 
     /**
      * The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. The default value for this parameter is 20%.
-     * 
      */
     @Import(name="maxBatchInstancePercent")
       private final @Nullable Output<Integer> maxBatchInstancePercent;
@@ -44,7 +41,6 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
 
     /**
      * The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. The default value for this parameter is 20%.
-     * 
      */
     @Import(name="maxUnhealthyInstancePercent")
       private final @Nullable Output<Integer> maxUnhealthyInstancePercent;
@@ -55,7 +51,6 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
 
     /**
      * The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. The default value for this parameter is 20%.
-     * 
      */
     @Import(name="maxUnhealthyUpgradedInstancePercent")
       private final @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent;
@@ -66,7 +61,6 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
 
     /**
      * The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).
-     * 
      */
     @Import(name="pauseTimeBetweenBatches")
       private final @Nullable Output<String> pauseTimeBetweenBatches;
@@ -77,7 +71,6 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
 
     /**
      * Upgrade all unhealthy instances in a scale set before any healthy instances.
-     * 
      */
     @Import(name="prioritizeUnhealthyInstances")
       private final @Nullable Output<Boolean> prioritizeUnhealthyInstances;

@@ -43,7 +43,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of actions that are executed when all the conditions of a rule are satisfied.
-     * 
      */
     @Import(name="actions", required=true)
       private final Output<List<Object>> actions;
@@ -54,7 +53,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of conditions that must be matched for the actions to be executed
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<Object>> conditions;
@@ -65,7 +63,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
      */
     @Import(name="matchProcessingBehavior")
       private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
@@ -76,7 +73,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
-     * 
      */
     @Import(name="order", required=true)
       private final Output<Integer> order;
@@ -87,7 +83,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -98,7 +93,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -109,7 +103,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the delivery rule which is unique within the endpoint.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
@@ -120,7 +113,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the rule set under the profile.
-     * 
      */
     @Import(name="ruleSetName", required=true)
       private final Output<String> ruleSetName;

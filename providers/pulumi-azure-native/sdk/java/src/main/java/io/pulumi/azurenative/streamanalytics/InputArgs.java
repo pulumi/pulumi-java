@@ -19,7 +19,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the input.
-     * 
      */
     @Import(name="inputName")
       private final @Nullable Output<String> inputName;
@@ -30,7 +29,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the streaming job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
@@ -41,7 +39,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
@@ -63,7 +59,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

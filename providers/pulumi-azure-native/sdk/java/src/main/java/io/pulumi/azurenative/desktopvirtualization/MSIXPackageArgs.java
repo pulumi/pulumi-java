@@ -19,8 +19,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     public static final MSIXPackageArgs Empty = new MSIXPackageArgs();
 
     /**
-     * User friendly Name to be displayed in the portal.
-     * 
+     * User friendly Name to be displayed in the portal. 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -31,7 +30,6 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the host pool within the specified resource group
-     * 
      */
     @Import(name="hostPoolName", required=true)
       private final Output<String> hostPoolName;
@@ -42,7 +40,6 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VHD/CIM image path on Network Share.
-     * 
      */
     @Import(name="imagePath")
       private final @Nullable Output<String> imagePath;
@@ -52,8 +49,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Make this version of the package the active one across the hostpool.
-     * 
+     * Make this version of the package the active one across the hostpool. 
      */
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
@@ -64,7 +60,6 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies how to register Package in feed.
-     * 
      */
     @Import(name="isRegularRegistration")
       private final @Nullable Output<Boolean> isRegularRegistration;
@@ -74,8 +69,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Date Package was last updated, found in the appxmanifest.xml.
-     * 
+     * Date Package was last updated, found in the appxmanifest.xml. 
      */
     @Import(name="lastUpdated")
       private final @Nullable Output<String> lastUpdated;
@@ -86,7 +80,6 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version specific package full name of the MSIX package within specified hostpool
-     * 
      */
     @Import(name="msixPackageFullName")
       private final @Nullable Output<String> msixPackageFullName;
@@ -96,8 +89,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of package applications.
-     * 
+     * List of package applications. 
      */
     @Import(name="packageApplications")
       private final @Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications;
@@ -107,8 +99,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of package dependencies.
-     * 
+     * List of package dependencies. 
      */
     @Import(name="packageDependencies")
       private final @Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies;
@@ -118,8 +109,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
-     * 
+     * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. 
      */
     @Import(name="packageFamilyName")
       private final @Nullable Output<String> packageFamilyName;
@@ -129,8 +119,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Package Name from appxmanifest.xml.
-     * 
+     * Package Name from appxmanifest.xml. 
      */
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
@@ -140,8 +129,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Relative Path to the package inside the image.
-     * 
+     * Relative Path to the package inside the image. 
      */
     @Import(name="packageRelativePath")
       private final @Nullable Output<String> packageRelativePath;
@@ -152,7 +140,6 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -162,8 +149,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Package Version found in the appxmanifest.xml.
-     * 
+     * Package Version found in the appxmanifest.xml. 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

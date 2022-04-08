@@ -21,7 +21,6 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
      * an order of preference among them, although applications of JWK Sets
      * can choose to assign a meaning to the order for their purposes, if
      * desired.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<List<JSONWebKeyArgs>> keys;

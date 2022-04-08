@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Network mode used for building Kubernetes network.
-     * 
      */
     @EnumType
     public enum NetworkMode {

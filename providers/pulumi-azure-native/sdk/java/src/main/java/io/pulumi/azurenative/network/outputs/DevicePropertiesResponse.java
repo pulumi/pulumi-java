@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class DevicePropertiesResponse {
     /**
      * Model of the device.
-     * 
      */
     private final @Nullable String deviceModel;
     /**
      * Name of the device Vendor.
-     * 
      */
     private final @Nullable String deviceVendor;
     /**
      * Link speed.
-     * 
      */
     private final @Nullable Integer linkSpeedInMbps;
 
@@ -40,21 +37,18 @@ public final class DevicePropertiesResponse {
 
     /**
      * Model of the device.
-     * 
     */
     public Optional<String> getDeviceModel() {
         return Optional.ofNullable(this.deviceModel);
     }
     /**
      * Name of the device Vendor.
-     * 
     */
     public Optional<String> getDeviceVendor() {
         return Optional.ofNullable(this.deviceVendor);
     }
     /**
      * Link speed.
-     * 
     */
     public Optional<Integer> getLinkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);

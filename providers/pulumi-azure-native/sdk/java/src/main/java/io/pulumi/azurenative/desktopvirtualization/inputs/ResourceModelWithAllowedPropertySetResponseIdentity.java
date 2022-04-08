@@ -16,7 +16,6 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends i
 
     /**
      * The principal ID of resource identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -27,7 +26,6 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends i
 
     /**
      * The tenant ID of resource.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -38,7 +36,6 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends i
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

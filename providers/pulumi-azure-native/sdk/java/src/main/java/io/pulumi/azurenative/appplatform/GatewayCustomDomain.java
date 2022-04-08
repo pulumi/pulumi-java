@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * Custom domain of the Spring Cloud Gateway
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### GatewayCustomDomains_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var gatewayCustomDomain = new AzureNative.AppPlatform.GatewayCustomDomain("gatewayCustomDomain", new AzureNative.AppPlatform.GatewayCustomDomainArgs
+ *         {
+ *             DomainName = "myDomainName",
+ *             GatewayName = "default",
+ *             Properties = new AzureNative.AppPlatform.Inputs.GatewayCustomDomainPropertiesArgs
+ *             {
+ *                 Thumbprint = "*",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewGatewayCustomDomain(ctx, "gatewayCustomDomain", &appplatform.GatewayCustomDomainArgs{
+ * 			DomainName:  pulumi.String("myDomainName"),
+ * 			GatewayName: pulumi.String("default"),
+ * 			Properties: &appplatform.GatewayCustomDomainPropertiesArgs{
+ * 				Thumbprint: pulumi.String("*"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const gatewayCustomDomain = new azure_native.appplatform.GatewayCustomDomain("gatewayCustomDomain", {
+ *     domainName: "myDomainName",
+ *     gatewayName: "default",
+ *     properties: {
+ *         thumbprint: "*",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * gateway_custom_domain = azure_native.appplatform.GatewayCustomDomain("gatewayCustomDomain",
+ *     domain_name="myDomainName",
+ *     gateway_name="default",
+ *     properties=azure_native.appplatform.GatewayCustomDomainPropertiesArgs(
+ *         thumbprint="*",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +123,48 @@ import javax.annotation.Nullable;
 public class GatewayCustomDomain extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties of custom domain for Spring Cloud Gateway
-     * 
      */
     @Export(name="properties", type=GatewayCustomDomainPropertiesResponse.class, parameters={})
     private Output<GatewayCustomDomainPropertiesResponse> properties;
 
     /**
      * @return The properties of custom domain for Spring Cloud Gateway
-     * 
      */
     public Output<GatewayCustomDomainPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

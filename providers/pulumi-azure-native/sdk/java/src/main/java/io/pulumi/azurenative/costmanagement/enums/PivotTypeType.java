@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Data type to show in view.
-     * 
      */
     @EnumType
     public enum PivotTypeType {

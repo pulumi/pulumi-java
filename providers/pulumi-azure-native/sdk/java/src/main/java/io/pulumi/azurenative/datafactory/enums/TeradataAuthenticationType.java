@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * AuthenticationType to be used for connection.
-     * 
      */
     @EnumType
     public enum TeradataAuthenticationType {

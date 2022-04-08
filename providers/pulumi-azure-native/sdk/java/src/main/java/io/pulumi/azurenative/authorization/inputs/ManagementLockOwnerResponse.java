@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Lock owner properties.
- * 
  */
 public final class ManagementLockOwnerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementLockOwnerResponse extends io.pulumi.resources.Invok
 
     /**
      * The application ID of the lock owner.
-     * 
      */
     @Import(name="applicationId")
       private final @Nullable String applicationId;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * This is the gallery image definition identifier.
- * 
  */
 public final class GalleryImageIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the gallery image definition offer.
-     * 
      */
     @Import(name="offer", required=true)
       private final Output<String> offer;
@@ -30,7 +28,6 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the gallery image definition publisher.
-     * 
      */
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
@@ -41,7 +38,6 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the gallery image definition SKU.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<String> sku;

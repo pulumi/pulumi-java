@@ -14,7 +14,6 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends io.pulumi.res
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends io.pulumi.res
 
     /**
      * The name of the notebook workspace resource.
-     * 
      */
     @Import(name="notebookWorkspaceName", required=true)
       private final String notebookWorkspaceName;
@@ -36,7 +34,6 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends io.pulumi.res
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

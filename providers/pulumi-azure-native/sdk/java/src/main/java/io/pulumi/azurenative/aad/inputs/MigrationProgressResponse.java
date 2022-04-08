@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Migration Progress
- * 
  */
 public final class MigrationProgressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Completion Percentage
-     * 
      */
     @Import(name="completionPercentage")
       private final @Nullable Double completionPercentage;
@@ -32,7 +30,6 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Progress Message
-     * 
      */
     @Import(name="progressMessage")
       private final @Nullable String progressMessage;

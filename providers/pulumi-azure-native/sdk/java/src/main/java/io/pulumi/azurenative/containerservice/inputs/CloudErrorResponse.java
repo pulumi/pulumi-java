@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An error response from the Container service.
- * 
  */
 public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Details about the error.
-     * 
      */
     @Import(name="error")
       private final @Nullable CloudErrorBodyResponse error;

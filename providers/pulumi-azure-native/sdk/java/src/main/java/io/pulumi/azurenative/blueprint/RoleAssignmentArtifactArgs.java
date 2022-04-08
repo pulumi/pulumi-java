@@ -18,7 +18,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the blueprint artifact.
-     * 
      */
     @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
@@ -29,7 +28,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the blueprint definition.
-     * 
      */
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
@@ -40,7 +38,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Artifacts which need to be deployed before the specified artifact.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
@@ -51,7 +48,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Multi-line explain this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -62,7 +58,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * One-liner string explain this resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -74,7 +69,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
     /**
      * Specifies the kind of blueprint artifact.
      * Expected value is 'roleAssignment'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -85,7 +79,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
-     * 
      */
     @Import(name="principalIds", required=true)
       private final Output<Object> principalIds;
@@ -96,7 +89,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -107,7 +99,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
@@ -118,7 +109,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Azure resource ID of the RoleDefinition.
-     * 
      */
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;

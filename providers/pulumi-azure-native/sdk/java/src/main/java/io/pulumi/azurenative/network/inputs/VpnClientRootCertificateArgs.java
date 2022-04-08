@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * VPN client root certificate of virtual network gateway.
- * 
  */
 public final class VpnClientRootCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +29,6 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
 
     /**
      * The certificate public data.
-     * 
      */
     @Import(name="publicCertData", required=true)
       private final Output<String> publicCertData;

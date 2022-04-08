@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
      */
     @EnumType
     public enum PolicyType {

@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class AzureFileshareProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this item in the service.
-     * 
      */
     private final @Nullable String oldestRecoveryPoint;
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
-     * 
      */
     private final @Nullable String policyState;
     /**
      * Number of available backup copies associated with this backup item.
-     * 
      */
     private final @Nullable Integer recoveryPointCount;
     /**
      * Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
-     * 
      */
     private final String resourceState;
     /**
      * The resource state sync time for this backup item.
-     * 
      */
     private final String resourceStateSyncTime;
 
@@ -54,35 +49,30 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
 
     /**
      * The oldest backup copy available for this item in the service.
-     * 
     */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
-     * 
     */
     public Optional<String> getPolicyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Number of available backup copies associated with this backup item.
-     * 
     */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
     /**
      * Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
-     * 
     */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * The resource state sync time for this backup item.
-     * 
     */
     public String getResourceStateSyncTime() {
         return this.resourceStateSyncTime;

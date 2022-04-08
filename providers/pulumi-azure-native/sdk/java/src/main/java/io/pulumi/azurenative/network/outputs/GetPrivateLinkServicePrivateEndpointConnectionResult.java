@@ -15,42 +15,34 @@ import javax.annotation.Nullable;
 public final class GetPrivateLinkServicePrivateEndpointConnectionResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * The consumer link id.
-     * 
      */
     private final String linkIdentifier;
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * The resource of private end point.
-     * 
      */
     private final PrivateEndpointResponse privateEndpoint;
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -76,56 +68,48 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionResult {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The consumer link id.
-     * 
     */
     public String getLinkIdentifier() {
         return this.linkIdentifier;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource of private end point.
-     * 
     */
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
     */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

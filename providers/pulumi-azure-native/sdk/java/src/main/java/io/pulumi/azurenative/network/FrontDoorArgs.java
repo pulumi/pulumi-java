@@ -26,7 +26,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend pools available to routing rules.
-     * 
      */
     @Import(name="backendPools")
       private final @Nullable Output<List<BackendPoolArgs>> backendPools;
@@ -37,7 +36,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for all backendPools
-     * 
      */
     @Import(name="backendPoolsSettings")
       private final @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
@@ -48,7 +46,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
@@ -59,7 +56,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A friendly name for the frontDoor
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -70,7 +66,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Front Door which is globally unique.
-     * 
      */
     @Import(name="frontDoorName")
       private final @Nullable Output<String> frontDoorName;
@@ -81,7 +76,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Frontend endpoints available to routing rules.
-     * 
      */
     @Import(name="frontendEndpoints")
       private final @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
@@ -92,7 +86,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Health probe settings associated with this Front Door instance.
-     * 
      */
     @Import(name="healthProbeSettings")
       private final @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
@@ -103,7 +96,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Load balancing settings associated with this Front Door instance.
-     * 
      */
     @Import(name="loadBalancingSettings")
       private final @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
@@ -114,7 +106,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -125,7 +116,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -136,7 +126,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Routing rules associated with this Front Door.
-     * 
      */
     @Import(name="routingRules")
       private final @Nullable Output<List<RoutingRuleArgs>> routingRules;
@@ -147,7 +136,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

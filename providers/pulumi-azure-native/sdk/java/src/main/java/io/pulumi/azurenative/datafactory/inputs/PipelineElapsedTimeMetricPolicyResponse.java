@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pipeline ElapsedTime Metric Policy.
- * 
  */
 public final class PipelineElapsedTimeMetricPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PipelineElapsedTimeMetricPolicyResponse extends io.pulumi.res
 
     /**
      * TimeSpan value, after which an Azure Monitoring Metric is fired.
-     * 
      */
     @Import(name="duration")
       private final @Nullable Object duration;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contact Profile Link Channel
- * 
  */
 public final class ContactProfileLinkChannelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
 
     /**
      * Bandwidth in MHz
-     * 
      */
     @Import(name="bandwidthMHz", required=true)
       private final Double bandwidthMHz;
@@ -33,7 +31,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
 
     /**
      * Center Frequency in MHz
-     * 
      */
     @Import(name="centerFrequencyMHz", required=true)
       private final Double centerFrequencyMHz;
@@ -44,7 +41,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
 
     /**
      * Configuration for decoding
-     * 
      */
     @Import(name="decodingConfiguration")
       private final @Nullable String decodingConfiguration;
@@ -55,7 +51,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
 
     /**
      * Configuration for demodulation
-     * 
      */
     @Import(name="demodulationConfiguration")
       private final @Nullable String demodulationConfiguration;
@@ -66,7 +61,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
 
     /**
      * Configuration for encoding
-     * 
      */
     @Import(name="encodingConfiguration")
       private final @Nullable String encodingConfiguration;
@@ -77,7 +71,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
 
     /**
      * Customer End point to store/retrieve data during a contact.
-     * 
      */
     @Import(name="endPoint", required=true)
       private final EndPointResponse endPoint;
@@ -88,7 +81,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
 
     /**
      * Configuration for modulation
-     * 
      */
     @Import(name="modulationConfiguration")
       private final @Nullable String modulationConfiguration;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the Cookies condition for the delivery rule.
- * 
  */
 public final class DeliveryRuleCookiesConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeliveryRuleCookiesConditionArgs extends io.pulumi.resources.
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'Cookies'.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class DeliveryRuleCookiesConditionArgs extends io.pulumi.resources.
 
     /**
      * Defines the parameters for the condition.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<CookiesMatchConditionParametersArgs> parameters;

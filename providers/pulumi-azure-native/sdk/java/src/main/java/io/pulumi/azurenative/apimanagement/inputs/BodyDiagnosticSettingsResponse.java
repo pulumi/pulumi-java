@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Body logging settings.
- * 
  */
 public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.In
 
     /**
      * Number of request body bytes to log.
-     * 
      */
     @Import(name="bytes")
       private final @Nullable Integer bytes;

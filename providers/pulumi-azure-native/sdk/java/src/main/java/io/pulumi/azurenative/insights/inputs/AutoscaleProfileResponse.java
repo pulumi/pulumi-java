@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Autoscale profile.
- * 
  */
 public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * the number of instances that can be used during this profile.
-     * 
      */
     @Import(name="capacity", required=true)
       private final ScaleCapacityResponse capacity;
@@ -36,7 +34,6 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * the specific date-time for the profile. This element is not used if the Recurrence element is used.
-     * 
      */
     @Import(name="fixedDate")
       private final @Nullable TimeWindowResponse fixedDate;
@@ -47,7 +44,6 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * the name of the profile.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -58,7 +54,6 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
-     * 
      */
     @Import(name="recurrence")
       private final @Nullable RecurrenceResponse recurrence;
@@ -69,7 +64,6 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
-     * 
      */
     @Import(name="rules", required=true)
       private final List<ScaleRuleResponse> rules;

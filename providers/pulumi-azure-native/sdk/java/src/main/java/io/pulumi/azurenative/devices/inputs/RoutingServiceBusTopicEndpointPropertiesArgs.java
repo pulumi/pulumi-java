@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties related to service bus topic endpoint types.
- * 
  */
 public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * Method used to authenticate against the service bus topic endpoint
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
@@ -33,7 +31,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * The connection string of the service bus topic endpoint.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -44,7 +41,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * The url of the service bus topic endpoint. It must include the protocol sb://
-     * 
      */
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
@@ -55,7 +51,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * Queue name on the service bus topic
-     * 
      */
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
@@ -66,7 +61,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * Id of the service bus topic endpoint
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -77,7 +71,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -88,7 +81,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * The name of the resource group of the service bus topic endpoint.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -99,7 +91,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends io.pulum
 
     /**
      * The subscription identifier of the service bus topic endpoint.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;

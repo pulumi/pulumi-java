@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An AAAA record.
- * 
  */
 public final class AaaaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AaaaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IPv6 address of this AAAA record.
-     * 
      */
     @Import(name="ipv6Address")
       private final @Nullable String ipv6Address;

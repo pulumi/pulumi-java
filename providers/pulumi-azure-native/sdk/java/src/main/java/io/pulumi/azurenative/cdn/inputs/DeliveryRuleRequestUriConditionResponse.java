@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the RequestUri condition for the delivery rule.
- * 
  */
 public final class DeliveryRuleRequestUriConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DeliveryRuleRequestUriConditionResponse extends io.pulumi.res
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'RequestUri'.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class DeliveryRuleRequestUriConditionResponse extends io.pulumi.res
 
     /**
      * Defines the parameters for the condition.
-     * 
      */
     @Import(name="parameters", required=true)
       private final RequestUriMatchConditionParametersResponse parameters;

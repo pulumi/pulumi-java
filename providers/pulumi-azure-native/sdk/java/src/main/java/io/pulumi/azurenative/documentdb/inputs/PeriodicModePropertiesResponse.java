@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration values for periodic mode backup
- * 
  */
 public final class PeriodicModePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
 
     /**
      * An integer representing the interval in minutes between two backups
-     * 
      */
     @Import(name="backupIntervalInMinutes")
       private final @Nullable Integer backupIntervalInMinutes;
@@ -31,7 +29,6 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
 
     /**
      * An integer representing the time (in hours) that each backup is retained
-     * 
      */
     @Import(name="backupRetentionIntervalInHours")
       private final @Nullable Integer backupRetentionIntervalInHours;

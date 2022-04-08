@@ -25,7 +25,312 @@ import javax.annotation.Nullable;
  * A class represent a SignalR service resource.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SignalR_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var signalR = new AzureNative.SignalRService.SignalR("signalR", new AzureNative.SignalRService.SignalRArgs
+ *         {
+ *             Cors = new AzureNative.SignalRService.Inputs.SignalRCorsSettingsArgs
+ *             {
+ *                 AllowedOrigins = 
+ *                 {
+ *                     "https://foo.com",
+ *                     "https://bar.com",
+ *                 },
+ *             },
+ *             Features = 
+ *             {
+ *                 new AzureNative.SignalRService.Inputs.SignalRFeatureArgs
+ *                 {
+ *                     Flag = "ServiceMode",
+ *                     Properties = ,
+ *                     Value = "Serverless",
+ *                 },
+ *                 new AzureNative.SignalRService.Inputs.SignalRFeatureArgs
+ *                 {
+ *                     Flag = "EnableConnectivityLogs",
+ *                     Properties = ,
+ *                     Value = "True",
+ *                 },
+ *                 new AzureNative.SignalRService.Inputs.SignalRFeatureArgs
+ *                 {
+ *                     Flag = "EnableMessagingLogs",
+ *                     Properties = ,
+ *                     Value = "False",
+ *                 },
+ *             },
+ *             Kind = "SignalR",
+ *             Location = "eastus",
+ *             NetworkACLs = new AzureNative.SignalRService.Inputs.SignalRNetworkACLsArgs
+ *             {
+ *                 DefaultAction = "Deny",
+ *                 PrivateEndpoints = 
+ *                 {
+ *                     new AzureNative.SignalRService.Inputs.PrivateEndpointACLArgs
+ *                     {
+ *                         Allow = 
+ *                         {
+ *                             "ServerConnection",
+ *                         },
+ *                         Name = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *                     },
+ *                 },
+ *                 PublicNetwork = new AzureNative.SignalRService.Inputs.NetworkACLArgs
+ *                 {
+ *                     Allow = 
+ *                     {
+ *                         "ClientConnection",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourceName = "mySignalRService",
+ *             Sku = new AzureNative.SignalRService.Inputs.ResourceSkuArgs
+ *             {
+ *                 Capacity = 1,
+ *                 Name = "Standard_S1",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             Upstream = new AzureNative.SignalRService.Inputs.ServerlessUpstreamSettingsArgs
+ *             {
+ *                 Templates = 
+ *                 {
+ *                     new AzureNative.SignalRService.Inputs.UpstreamTemplateArgs
+ *                     {
+ *                         CategoryPattern = "*",
+ *                         EventPattern = "connect,disconnect",
+ *                         HubPattern = "*",
+ *                         UrlTemplate = "https://example.com/chat/api/connect",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	signalrservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/signalrservice"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := signalrservice.NewSignalR(ctx, "signalR", &signalrservice.SignalRArgs{
+ * 			Cors: &signalrservice.SignalRCorsSettingsArgs{
+ * 				AllowedOrigins: pulumi.StringArray{
+ * 					pulumi.String("https://foo.com"),
+ * 					pulumi.String("https://bar.com"),
+ * 				},
+ * 			},
+ * 			Features: []signalrservice.SignalRFeatureArgs{
+ * 				&signalrservice.SignalRFeatureArgs{
+ * 					Flag:       pulumi.String("ServiceMode"),
+ * 					Properties: nil,
+ * 					Value:      pulumi.String("Serverless"),
+ * 				},
+ * 				&signalrservice.SignalRFeatureArgs{
+ * 					Flag:       pulumi.String("EnableConnectivityLogs"),
+ * 					Properties: nil,
+ * 					Value:      pulumi.String("True"),
+ * 				},
+ * 				&signalrservice.SignalRFeatureArgs{
+ * 					Flag:       pulumi.String("EnableMessagingLogs"),
+ * 					Properties: nil,
+ * 					Value:      pulumi.String("False"),
+ * 				},
+ * 			},
+ * 			Kind:     pulumi.String("SignalR"),
+ * 			Location: pulumi.String("eastus"),
+ * 			NetworkACLs: &signalrservice.SignalRNetworkACLsArgs{
+ * 				DefaultAction: pulumi.String("Deny"),
+ * 				PrivateEndpoints: signalrservice.PrivateEndpointACLArray{
+ * 					&signalrservice.PrivateEndpointACLArgs{
+ * 						Allow: pulumi.StringArray{
+ * 							pulumi.String("ServerConnection"),
+ * 						},
+ * 						Name: pulumi.String("mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e"),
+ * 					},
+ * 				},
+ * 				PublicNetwork: &signalrservice.NetworkACLArgs{
+ * 					Allow: pulumi.StringArray{
+ * 						pulumi.String("ClientConnection"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ResourceName:      pulumi.String("mySignalRService"),
+ * 			Sku: &signalrservice.ResourceSkuArgs{
+ * 				Capacity: pulumi.Int(1),
+ * 				Name:     pulumi.String("Standard_S1"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			Upstream: &signalrservice.ServerlessUpstreamSettingsArgs{
+ * 				Templates: signalrservice.UpstreamTemplateArray{
+ * 					&signalrservice.UpstreamTemplateArgs{
+ * 						CategoryPattern: pulumi.String("*"),
+ * 						EventPattern:    pulumi.String("connect,disconnect"),
+ * 						HubPattern:      pulumi.String("*"),
+ * 						UrlTemplate:     pulumi.String("https://example.com/chat/api/connect"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const signalR = new azure_native.signalrservice.SignalR("signalR", {
+ *     cors: {
+ *         allowedOrigins: [
+ *             "https://foo.com",
+ *             "https://bar.com",
+ *         ],
+ *     },
+ *     features: [
+ *         {
+ *             flag: "ServiceMode",
+ *             properties: {},
+ *             value: "Serverless",
+ *         },
+ *         {
+ *             flag: "EnableConnectivityLogs",
+ *             properties: {},
+ *             value: "True",
+ *         },
+ *         {
+ *             flag: "EnableMessagingLogs",
+ *             properties: {},
+ *             value: "False",
+ *         },
+ *     ],
+ *     kind: "SignalR",
+ *     location: "eastus",
+ *     networkACLs: {
+ *         defaultAction: "Deny",
+ *         privateEndpoints: [{
+ *             allow: ["ServerConnection"],
+ *             name: "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *         }],
+ *         publicNetwork: {
+ *             allow: ["ClientConnection"],
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     resourceName: "mySignalRService",
+ *     sku: {
+ *         capacity: 1,
+ *         name: "Standard_S1",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     upstream: {
+ *         templates: [{
+ *             categoryPattern: "*",
+ *             eventPattern: "connect,disconnect",
+ *             hubPattern: "*",
+ *             urlTemplate: "https://example.com/chat/api/connect",
+ *         }],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * signal_r = azure_native.signalrservice.SignalR("signalR",
+ *     cors=azure_native.signalrservice.SignalRCorsSettingsArgs(
+ *         allowed_origins=[
+ *             "https://foo.com",
+ *             "https://bar.com",
+ *         ],
+ *     ),
+ *     features=[
+ *         azure_native.signalrservice.SignalRFeatureArgs(
+ *             flag="ServiceMode",
+ *             properties={},
+ *             value="Serverless",
+ *         ),
+ *         azure_native.signalrservice.SignalRFeatureArgs(
+ *             flag="EnableConnectivityLogs",
+ *             properties={},
+ *             value="True",
+ *         ),
+ *         azure_native.signalrservice.SignalRFeatureArgs(
+ *             flag="EnableMessagingLogs",
+ *             properties={},
+ *             value="False",
+ *         ),
+ *     ],
+ *     kind="SignalR",
+ *     location="eastus",
+ *     network_acls=azure_native.signalrservice.SignalRNetworkACLsArgs(
+ *         default_action="Deny",
+ *         private_endpoints=[azure_native.signalrservice.PrivateEndpointACLArgs(
+ *             allow=["ServerConnection"],
+ *             name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *         )],
+ *         public_network=azure_native.signalrservice.NetworkACLArgs(
+ *             allow=["ClientConnection"],
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     resource_name="mySignalRService",
+ *     sku=azure_native.signalrservice.ResourceSkuArgs(
+ *         capacity=1,
+ *         name="Standard_S1",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     upstream=azure_native.signalrservice.ServerlessUpstreamSettingsArgs(
+ *         templates=[azure_native.signalrservice.UpstreamTemplateArgs(
+ *             category_pattern="*",
+ *             event_pattern="connect,disconnect",
+ *             hub_pattern="*",
+ *             url_template="https://example.com/chat/api/connect",
+ *         )],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,28 +345,24 @@ import javax.annotation.Nullable;
 public class SignalR extends io.pulumi.resources.CustomResource {
     /**
      * Cross-Origin Resource Sharing (CORS) settings.
-     * 
      */
     @Export(name="cors", type=SignalRCorsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ SignalRCorsSettingsResponse> cors;
 
     /**
      * @return Cross-Origin Resource Sharing (CORS) settings.
-     * 
      */
     public Output</* @Nullable */ SignalRCorsSettingsResponse> getCors() {
         return this.cors;
     }
     /**
      * The publicly accessible IP of the SignalR service.
-     * 
      */
     @Export(name="externalIP", type=String.class, parameters={})
     private Output<String> externalIP;
 
     /**
      * @return The publicly accessible IP of the SignalR service.
-     * 
      */
     public Output<String> getExternalIP() {
         return this.externalIP;
@@ -70,10 +371,9 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * List of SignalR featureFlags. e.g. ServiceMode.
      * 
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
-     * And the response will only include featureFlags that are explicitly set.
-     * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+     * And the response will only include featureFlags that are explicitly set. 
+     * When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
-     * 
      */
     @Export(name="features", type=List.class, parameters={SignalRFeatureResponse.class})
     private Output</* @Nullable */ List<SignalRFeatureResponse>> features;
@@ -82,24 +382,21 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return List of SignalR featureFlags. e.g. ServiceMode.
      * 
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
-     * And the response will only include featureFlags that are explicitly set.
-     * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+     * And the response will only include featureFlags that are explicitly set. 
+     * When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
-     * 
      */
     public Output</* @Nullable */ List<SignalRFeatureResponse>> getFeatures() {
         return this.features;
     }
     /**
      * FQDN of the SignalR service instance. Format: xxx.service.signalr.net
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return FQDN of the SignalR service instance. Format: xxx.service.signalr.net
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
@@ -107,7 +404,6 @@ public class SignalR extends io.pulumi.resources.CustomResource {
     /**
      * Prefix for the hostName of the SignalR service. Retained for future use.
      * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
-     * 
      */
     @Export(name="hostNamePrefix", type=String.class, parameters={})
     private Output<String> hostNamePrefix;
@@ -115,189 +411,162 @@ public class SignalR extends io.pulumi.resources.CustomResource {
     /**
      * @return Prefix for the hostName of the SignalR service. Retained for future use.
      * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
-     * 
      */
     public Output<String> getHostNamePrefix() {
         return this.hostNamePrefix;
     }
     /**
      * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network ACLs
-     * 
      */
     @Export(name="networkACLs", type=SignalRNetworkACLsResponse.class, parameters={})
     private Output</* @Nullable */ SignalRNetworkACLsResponse> networkACLs;
 
     /**
      * @return Network ACLs
-     * 
      */
     public Output</* @Nullable */ SignalRNetworkACLsResponse> getNetworkACLs() {
         return this.networkACLs;
     }
     /**
      * Private endpoint connections to the SignalR resource.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return Private endpoint connections to the SignalR resource.
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publicly accessible port of the SignalR service which is designed for browser/client side usage.
-     * 
      */
     @Export(name="publicPort", type=Integer.class, parameters={})
     private Output<Integer> publicPort;
 
     /**
      * @return The publicly accessible port of the SignalR service which is designed for browser/client side usage.
-     * 
      */
     public Output<Integer> getPublicPort() {
         return this.publicPort;
     }
     /**
      * The publicly accessible port of the SignalR service which is designed for customer server side usage.
-     * 
      */
     @Export(name="serverPort", type=Integer.class, parameters={})
     private Output<Integer> serverPort;
 
     /**
      * @return The publicly accessible port of the SignalR service which is designed for customer server side usage.
-     * 
      */
     public Output<Integer> getServerPort() {
         return this.serverPort;
     }
     /**
      * The billing information of the resource.(e.g. Free, Standard)
-     * 
      */
     @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
      * @return The billing information of the resource.(e.g. Free, Standard)
-     * 
      */
     public Output</* @Nullable */ ResourceSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Upstream settings when the Azure SignalR is in server-less mode.
-     * 
      */
     @Export(name="upstream", type=ServerlessUpstreamSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ServerlessUpstreamSettingsResponse> upstream;
 
     /**
      * @return Upstream settings when the Azure SignalR is in server-less mode.
-     * 
      */
     public Output</* @Nullable */ ServerlessUpstreamSettingsResponse> getUpstream() {
         return this.upstream;
     }
     /**
      * Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

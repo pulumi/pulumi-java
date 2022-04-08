@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Msi identity details of the resource
- * 
  */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Service Principal Id backing the Msi
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Home Tenant Id
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Identity type
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

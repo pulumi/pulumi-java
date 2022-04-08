@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The access control configuration policy.
- * 
  */
 public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
 
     /**
      * The allowed caller IP address ranges.
-     * 
      */
     @Import(name="allowedCallerIpAddresses")
       private final @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
@@ -33,7 +31,6 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
 
     /**
      * The authentication policies for workflow.
-     * 
      */
     @Import(name="openAuthenticationPolicies")
       private final @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual Network Profile
- * 
  */
 public final class VirtualNetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
 
     /**
      * Subnet ID used for computes in workspace
-     * 
      */
     @Import(name="computeSubnetId")
       private final @Nullable String computeSubnetId;

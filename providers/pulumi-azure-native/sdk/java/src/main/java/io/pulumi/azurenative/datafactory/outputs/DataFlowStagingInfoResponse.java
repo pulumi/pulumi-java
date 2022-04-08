@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class DataFlowStagingInfoResponse {
     /**
      * Folder path for staging blob. Type: string (or Expression with resultType string)
-     * 
      */
     private final @Nullable Object folderPath;
     /**
      * Staging linked service reference.
-     * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedService;
 
@@ -33,14 +31,12 @@ public final class DataFlowStagingInfoResponse {
 
     /**
      * Folder path for staging blob. Type: string (or Expression with resultType string)
-     * 
     */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * Staging linked service reference.
-     * 
     */
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return Optional.ofNullable(this.linkedService);

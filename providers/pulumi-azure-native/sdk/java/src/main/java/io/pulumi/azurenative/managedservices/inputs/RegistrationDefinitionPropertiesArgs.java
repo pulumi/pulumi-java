@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a registration definition.
- * 
  */
 public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
 
     /**
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
-     * 
      */
     @Import(name="authorizations", required=true)
       private final Output<List<AuthorizationArgs>> authorizations;
@@ -33,7 +31,6 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
 
     /**
      * Description of the registration definition.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +41,6 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
 
     /**
      * Id of the managedBy tenant.
-     * 
      */
     @Import(name="managedByTenantId", required=true)
       private final Output<String> managedByTenantId;
@@ -55,7 +51,6 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
 
     /**
      * Name of the registration definition.
-     * 
      */
     @Import(name="registrationDefinitionName")
       private final @Nullable Output<String> registrationDefinitionName;

@@ -18,7 +18,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Indicating whether all subscriptions are selected (=true) or not (=false).
-     * 
      */
     @Import(name="allSubscriptions")
       private final @Nullable Output<Boolean> allSubscriptions;
@@ -29,7 +28,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the association with Commercial's Billing Account.
-     * 
      */
     @Import(name="claim")
       private final @Nullable Output<String> claim;
@@ -40,7 +38,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The collection ID
-     * 
      */
     @Import(name="collectionId")
       private final @Nullable Output<String> collectionId;
@@ -51,7 +48,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets collection name.
-     * 
      */
     @Import(name="collectionName")
       private final @Nullable Output<String> collectionName;
@@ -62,7 +58,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Indicating whether the collection is enabled or disabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -73,7 +68,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The store ID - must use the tenant ID
-     * 
      */
     @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
@@ -84,7 +78,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
-     * 
      */
     @Import(name="subscriptionsList")
       private final @Nullable Output<List<String>> subscriptionsList;

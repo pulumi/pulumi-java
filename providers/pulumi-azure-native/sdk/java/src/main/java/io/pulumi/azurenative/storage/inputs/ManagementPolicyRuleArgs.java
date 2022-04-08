@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
- * 
  */
 public final class ManagementPolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * An object that defines the Lifecycle rule.
-     * 
      */
     @Import(name="definition", required=true)
       private final Output<ManagementPolicyDefinitionArgs> definition;
@@ -35,7 +33,6 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * Rule is enabled if set to true.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -46,7 +43,6 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -57,7 +53,6 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * The valid value is Lifecycle
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,RuleType>> type;

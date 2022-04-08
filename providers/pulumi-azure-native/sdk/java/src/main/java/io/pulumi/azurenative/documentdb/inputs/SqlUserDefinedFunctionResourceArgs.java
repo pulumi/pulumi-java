@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB SQL userDefinedFunction resource object
- * 
  */
 public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
 
     /**
      * Body of the User Defined Function
-     * 
      */
     @Import(name="body")
       private final @Nullable Output<String> body;
@@ -31,7 +29,6 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
 
     /**
      * Name of the Cosmos DB SQL userDefinedFunction
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

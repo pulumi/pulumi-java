@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class UserObjectReceiverValueResponse {
     /**
      * user object ids.
-     * 
      */
     private final @Nullable List<String> userObjectIds;
 
@@ -24,7 +23,6 @@ public final class UserObjectReceiverValueResponse {
 
     /**
      * user object ids.
-     * 
     */
     public List<String> getUserObjectIds() {
         return this.userObjectIds == null ? List.of() : this.userObjectIds;

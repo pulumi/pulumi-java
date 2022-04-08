@@ -16,7 +16,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Action ID
-     * 
      */
     @Import(name="actionId")
       private final @Nullable Output<String> actionId;
@@ -27,7 +26,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-     * 
      */
     @Import(name="logicAppResourceId", required=true)
       private final Output<String> logicAppResourceId;
@@ -38,7 +36,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Alert rule ID
-     * 
      */
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
@@ -60,7 +56,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Logic App Callback URL for this specific workflow.
-     * 
      */
     @Import(name="triggerUri", required=true)
       private final Output<String> triggerUri;
@@ -71,7 +66,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

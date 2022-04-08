@@ -16,57 +16,46 @@ import javax.annotation.Nullable;
 public final class GetPolicyExemptionResult {
     /**
      * The description of the policy exemption.
-     * 
      */
     private final @Nullable String description;
     /**
      * The display name of the policy exemption.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * The policy exemption category. Possible values are Waiver and Mitigated.
-     * 
      */
     private final String exemptionCategory;
     /**
      * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
-     * 
      */
     private final @Nullable String expiresOn;
     /**
      * The ID of the policy exemption.
-     * 
      */
     private final String id;
     /**
      * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     private final @Nullable Object metadata;
     /**
      * The name of the policy exemption.
-     * 
      */
     private final String name;
     /**
      * The ID of the policy assignment that is being exempted.
-     * 
      */
     private final String policyAssignmentId;
     /**
      * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
-     * 
      */
     private final @Nullable List<String> policyDefinitionReferenceIds;
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource (Microsoft.Authorization/policyExemptions).
-     * 
      */
     private final String type;
 
@@ -98,77 +87,66 @@ public final class GetPolicyExemptionResult {
 
     /**
      * The description of the policy exemption.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the policy exemption.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The policy exemption category. Possible values are Waiver and Mitigated.
-     * 
     */
     public String getExemptionCategory() {
         return this.exemptionCategory;
     }
     /**
      * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
-     * 
     */
     public Optional<String> getExpiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
     /**
      * The ID of the policy exemption.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
     */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The name of the policy exemption.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The ID of the policy assignment that is being exempted.
-     * 
     */
     public String getPolicyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
      * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
-     * 
     */
     public List<String> getPolicyDefinitionReferenceIds() {
         return this.policyDefinitionReferenceIds == null ? List.of() : this.policyDefinitionReferenceIds;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource (Microsoft.Authorization/policyExemptions).
-     * 
     */
     public String getType() {
         return this.type;

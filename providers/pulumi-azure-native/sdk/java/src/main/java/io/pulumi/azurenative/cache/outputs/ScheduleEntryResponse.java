@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ScheduleEntryResponse {
     /**
      * Day of the week when a cache can be patched.
-     * 
      */
     private final String dayOfWeek;
     /**
-     * ISO8601 timespan specifying how much time cache patching can take.
-     * 
+     * ISO8601 timespan specifying how much time cache patching can take. 
      */
     private final @Nullable String maintenanceWindow;
     /**
      * Start hour after which cache patching can start.
-     * 
      */
     private final Integer startHourUtc;
 
@@ -40,21 +37,18 @@ public final class ScheduleEntryResponse {
 
     /**
      * Day of the week when a cache can be patched.
-     * 
     */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
     /**
-     * ISO8601 timespan specifying how much time cache patching can take.
-     * 
+     * ISO8601 timespan specifying how much time cache patching can take. 
     */
     public Optional<String> getMaintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
     /**
      * Start hour after which cache patching can start.
-     * 
     */
     public Integer getStartHourUtc() {
         return this.startHourUtc;

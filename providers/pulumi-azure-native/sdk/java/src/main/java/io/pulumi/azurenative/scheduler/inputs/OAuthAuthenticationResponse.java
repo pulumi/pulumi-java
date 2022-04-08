@@ -16,7 +16,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the audience.
-     * 
      */
     @Import(name="audience")
       private final @Nullable String audience;
@@ -27,7 +26,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the client identifier.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -38,7 +36,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the secret, return value will always be empty.
-     * 
      */
     @Import(name="secret")
       private final @Nullable String secret;
@@ -49,7 +46,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the tenant.
-     * 
      */
     @Import(name="tenant")
       private final @Nullable String tenant;
@@ -61,7 +57,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
     /**
      * Gets or sets the HTTP authentication type.
      * Expected value is 'ActiveDirectoryOAuth'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

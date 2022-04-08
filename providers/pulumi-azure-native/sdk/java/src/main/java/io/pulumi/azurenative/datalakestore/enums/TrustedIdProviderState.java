@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The current state of the trusted identity provider feature for this Data Lake Store account.
-     * 
      */
     @EnumType
     public enum TrustedIdProviderState {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The identity type.
-     * 
      */
     @EnumType
     public enum IdentityType {

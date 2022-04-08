@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * Batch inference settings per deployment.
- * 
  */
 public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -32,7 +31,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Code configuration for the endpoint deployment.
-     * 
      */
     @Import(name="codeConfiguration")
       private final @Nullable CodeConfigurationResponse codeConfiguration;
@@ -43,7 +41,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Configuration for compute binding.
-     * 
      */
     @Import(name="compute")
       private final @Nullable ComputeConfigurationResponse compute;
@@ -54,7 +51,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Description of the endpoint deployment.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -65,7 +61,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable String environmentId;
@@ -76,7 +71,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Environment variables configuration for the deployment.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
@@ -91,7 +85,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * For FileDataset, this value is the count of file failures.
      * For TabularDataset, this value is the count of record failures.
      * If set to -1 (the lower bound), all failures during batch inference will be ignored.
-     * 
      */
     @Import(name="errorThreshold")
       private final @Nullable Integer errorThreshold;
@@ -102,7 +95,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Logging level for batch inference operation.
-     * 
      */
     @Import(name="loggingLevel")
       private final @Nullable String loggingLevel;
@@ -115,7 +107,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Size of the mini-batch passed to each batch invocation.
      * For FileDataset, this is the number of files per mini-batch.
      * For TabularDataset, this is the size of the records in bytes, per mini-batch.
-     * 
      */
     @Import(name="miniBatchSize")
       private final @Nullable Double miniBatchSize;
@@ -126,7 +117,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Reference to the model asset for the endpoint deployment.
-     * 
      */
     @Import(name="model")
       private final @Nullable Object model;
@@ -137,7 +127,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Output configuration for the batch inference operation.
-     * 
      */
     @Import(name="outputConfiguration")
       private final @Nullable BatchOutputConfigurationResponse outputConfiguration;
@@ -148,7 +137,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Partition keys list used for Named partitioning.
-     * 
      */
     @Import(name="partitionKeys")
       private final @Nullable List<String> partitionKeys;
@@ -159,7 +147,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -170,7 +157,6 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Retry Settings for the batch inference operation.
-     * 
      */
     @Import(name="retrySettings")
       private final @Nullable BatchRetrySettingsResponse retrySettings;

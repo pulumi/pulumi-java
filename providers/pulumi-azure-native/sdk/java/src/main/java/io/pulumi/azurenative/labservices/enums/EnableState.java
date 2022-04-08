@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
-     * 
      */
     @EnumType
     public enum EnableState {

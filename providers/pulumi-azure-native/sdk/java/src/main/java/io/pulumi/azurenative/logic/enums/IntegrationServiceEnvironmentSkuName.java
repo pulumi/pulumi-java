@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The sku name.
-     * 
      */
     @EnumType
     public enum IntegrationServiceEnvironmentSkuName {

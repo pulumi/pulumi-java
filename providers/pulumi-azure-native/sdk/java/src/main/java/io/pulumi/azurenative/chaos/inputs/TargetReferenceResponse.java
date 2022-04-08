@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Model that represents a reference to a Target in the selector.
- * 
  */
 public final class TargetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TargetReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * String of the resource ID of a Target resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class TargetReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Enum of the Target reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

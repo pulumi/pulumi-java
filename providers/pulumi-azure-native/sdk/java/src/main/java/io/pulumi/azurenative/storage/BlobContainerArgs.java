@@ -19,7 +19,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -30,7 +29,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -41,7 +39,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Default the container to use specified encryption scope for all writes.
-     * 
      */
     @Import(name="defaultEncryptionScope")
       private final @Nullable Output<String> defaultEncryptionScope;
@@ -52,7 +49,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Block override of encryption scope from the container default.
-     * 
      */
     @Import(name="denyEncryptionScopeOverride")
       private final @Nullable Output<Boolean> denyEncryptionScopeOverride;
@@ -63,7 +59,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name-value pair to associate with the container as metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -74,7 +69,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether data in the container may be accessed publicly and the level of access.
-     * 
      */
     @Import(name="publicAccess")
       private final @Nullable Output<PublicAccess> publicAccess;
@@ -85,7 +79,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

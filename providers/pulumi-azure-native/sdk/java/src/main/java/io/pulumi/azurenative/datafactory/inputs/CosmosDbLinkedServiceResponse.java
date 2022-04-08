@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Microsoft Azure Cosmos Database (CosmosDB) linked service.
- * 
  */
 public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="accountEndpoint")
       private final @Nullable Object accountEndpoint;
@@ -40,7 +38,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="accountKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
@@ -51,7 +48,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -62,7 +58,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureCloudType")
       private final @Nullable Object azureCloudType;
@@ -73,7 +68,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -84,7 +78,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="connectionMode")
       private final @Nullable String connectionMode;
@@ -95,7 +88,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
@@ -106,7 +98,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
@@ -117,7 +108,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The name of the database. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="database")
       private final @Nullable Object database;
@@ -128,7 +118,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -139,7 +128,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -150,7 +138,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -161,7 +148,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="servicePrincipalCredential")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
@@ -172,7 +158,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalCredentialType")
       private final @Nullable String servicePrincipalCredentialType;
@@ -183,7 +168,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
@@ -194,7 +178,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tenant")
       private final @Nullable Object tenant;
@@ -206,7 +189,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
     /**
      * Type of linked service.
      * Expected value is 'CosmosDb'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

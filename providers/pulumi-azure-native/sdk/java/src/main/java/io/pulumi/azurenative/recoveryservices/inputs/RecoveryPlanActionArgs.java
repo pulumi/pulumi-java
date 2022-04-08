@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Recovery plan action details.
- * 
  */
 public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The action name.
-     * 
      */
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
@@ -34,7 +32,6 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The list of failover directions.
-     * 
      */
     @Import(name="failoverDirections", required=true)
       private final Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
@@ -45,7 +42,6 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The list of failover types.
-     * 
      */
     @Import(name="failoverTypes", required=true)
       private final Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;

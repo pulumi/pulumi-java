@@ -13,12 +13,10 @@ public final class UrlRewriteActionResponse {
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'UrlRewrite'.
-     * 
      */
     private final String name;
     /**
      * Defines the parameters for the action.
-     * 
      */
     private final UrlRewriteActionParametersResponse parameters;
 
@@ -33,14 +31,12 @@ public final class UrlRewriteActionResponse {
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'UrlRewrite'.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
-     * 
     */
     public UrlRewriteActionParametersResponse getParameters() {
         return this.parameters;

@@ -18,7 +18,6 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * Private endpoint associated with the private endpoint connection
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
@@ -29,7 +28,6 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * The name of the private endpoint connection associated with the SignalR resource.
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -40,7 +38,6 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * Connection state
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -51,7 +48,6 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * The name of the SignalR resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

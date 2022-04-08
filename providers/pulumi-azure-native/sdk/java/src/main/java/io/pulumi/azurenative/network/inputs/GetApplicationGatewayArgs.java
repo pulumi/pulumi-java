@@ -14,7 +14,6 @@ public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the application gateway.
-     * 
      */
     @Import(name="applicationGatewayName", required=true)
       private final String applicationGatewayName;
@@ -25,7 +24,6 @@ public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

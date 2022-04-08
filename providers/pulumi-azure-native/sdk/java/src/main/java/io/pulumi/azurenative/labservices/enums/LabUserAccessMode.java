@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Lab user access mode (open to all vs. restricted to those listed on the lab).
-     * 
      */
     @EnumType
     public enum LabUserAccessMode {
         /**
          * Only users registered with the lab can access VMs.
-         * 
          */
         Restricted("Restricted"),
         /**
          * Any user can register with the lab and access its VMs.
-         * 
          */
         Open("Open");
 

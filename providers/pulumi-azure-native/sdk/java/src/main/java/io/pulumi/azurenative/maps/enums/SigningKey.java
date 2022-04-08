@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Map account key to use for signing.
-     * 
      */
     @EnumType
     public enum SigningKey {

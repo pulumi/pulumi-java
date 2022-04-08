@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The default action of allow or deny when no other rules match.
-     * 
      */
     @EnumType
     public enum DefaultAction {

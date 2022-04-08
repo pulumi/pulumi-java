@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state of notifications feature.
-     * 
      */
     @EnumType
     public enum NotificationsState {

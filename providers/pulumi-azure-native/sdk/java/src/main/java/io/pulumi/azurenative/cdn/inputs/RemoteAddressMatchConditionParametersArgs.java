@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for RemoteAddress match conditions
- * 
  */
 public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
 
     /**
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
-     * 
      */
     @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
@@ -36,7 +34,6 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
 
     /**
      * Describes if this is negate condition or not
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
@@ -54,7 +51,6 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
 
     /**
      * Describes operator to be matched
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,RemoteAddressOperator>> operator;
@@ -65,7 +61,6 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
 
     /**
      * List of transforms
-     * 
      */
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;

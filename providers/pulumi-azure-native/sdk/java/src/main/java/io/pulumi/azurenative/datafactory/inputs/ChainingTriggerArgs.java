@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that allows the referenced pipeline to depend on other pipeline runs based on runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs should have the values for those runDimensions. The referenced pipeline run would be triggered if the values for the runDimension match for all upstream pipeline runs.
- * 
  */
 public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -35,7 +33,6 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Upstream Pipelines.
-     * 
      */
     @Import(name="dependsOn", required=true)
       private final Output<List<PipelineReferenceArgs>> dependsOn;
@@ -46,7 +43,6 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +53,6 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Pipeline for which runs are created when all upstream pipelines complete successfully.
-     * 
      */
     @Import(name="pipeline", required=true)
       private final Output<TriggerPipelineReferenceArgs> pipeline;
@@ -68,7 +63,6 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Run Dimension property that needs to be emitted by upstream pipelines.
-     * 
      */
     @Import(name="runDimension", required=true)
       private final Output<String> runDimension;
@@ -80,7 +74,6 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Trigger type.
      * Expected value is 'ChainingTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

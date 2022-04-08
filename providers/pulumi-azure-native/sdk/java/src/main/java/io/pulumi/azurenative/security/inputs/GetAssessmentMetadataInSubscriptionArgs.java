@@ -14,7 +14,6 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.res
 
     /**
      * The Assessment Key - Unique key for the assessment type
-     * 
      */
     @Import(name="assessmentMetadataName", required=true)
       private final String assessmentMetadataName;

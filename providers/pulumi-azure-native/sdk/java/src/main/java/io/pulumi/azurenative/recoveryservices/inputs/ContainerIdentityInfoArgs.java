@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container identity information
- * 
  */
 public final class ContainerIdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
 
     /**
      * Protection container identity - AAD Tenant
-     * 
      */
     @Import(name="aadTenantId")
       private final @Nullable Output<String> aadTenantId;
@@ -31,7 +29,6 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
 
     /**
      * Protection container identity - Audience
-     * 
      */
     @Import(name="audience")
       private final @Nullable Output<String> audience;
@@ -42,7 +39,6 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
 
     /**
      * Protection container identity - AAD Service Principal
-     * 
      */
     @Import(name="servicePrincipalClientId")
       private final @Nullable Output<String> servicePrincipalClientId;
@@ -53,7 +49,6 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
 
     /**
      * Unique name of the container
-     * 
      */
     @Import(name="uniqueName")
       private final @Nullable Output<String> uniqueName;

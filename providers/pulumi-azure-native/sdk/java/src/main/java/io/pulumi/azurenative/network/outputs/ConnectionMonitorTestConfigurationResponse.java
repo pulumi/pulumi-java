@@ -18,42 +18,34 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorTestConfigurationResponse {
     /**
      * The parameters used to perform test evaluation over HTTP.
-     * 
      */
     private final @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
     /**
      * The parameters used to perform test evaluation over ICMP.
-     * 
      */
     private final @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
     /**
      * The name of the connection monitor test configuration.
-     * 
      */
     private final String name;
     /**
      * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
-     * 
      */
     private final @Nullable String preferredIPVersion;
     /**
      * The protocol to use in test evaluation.
-     * 
      */
     private final String protocol;
     /**
      * The threshold for declaring a test successful.
-     * 
      */
     private final @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
     /**
      * The parameters used to perform test evaluation over TCP.
-     * 
      */
     private final @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
     /**
      * The frequency of test evaluation, in seconds.
-     * 
      */
     private final @Nullable Integer testFrequencySec;
 
@@ -79,56 +71,48 @@ public final class ConnectionMonitorTestConfigurationResponse {
 
     /**
      * The parameters used to perform test evaluation over HTTP.
-     * 
     */
     public Optional<ConnectionMonitorHttpConfigurationResponse> getHttpConfiguration() {
         return Optional.ofNullable(this.httpConfiguration);
     }
     /**
      * The parameters used to perform test evaluation over ICMP.
-     * 
     */
     public Optional<ConnectionMonitorIcmpConfigurationResponse> getIcmpConfiguration() {
         return Optional.ofNullable(this.icmpConfiguration);
     }
     /**
      * The name of the connection monitor test configuration.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
-     * 
     */
     public Optional<String> getPreferredIPVersion() {
         return Optional.ofNullable(this.preferredIPVersion);
     }
     /**
      * The protocol to use in test evaluation.
-     * 
     */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The threshold for declaring a test successful.
-     * 
     */
     public Optional<ConnectionMonitorSuccessThresholdResponse> getSuccessThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The parameters used to perform test evaluation over TCP.
-     * 
     */
     public Optional<ConnectionMonitorTcpConfigurationResponse> getTcpConfiguration() {
         return Optional.ofNullable(this.tcpConfiguration);
     }
     /**
      * The frequency of test evaluation, in seconds.
-     * 
     */
     public Optional<Integer> getTestFrequencySec() {
         return Optional.ofNullable(this.testFrequencySec);

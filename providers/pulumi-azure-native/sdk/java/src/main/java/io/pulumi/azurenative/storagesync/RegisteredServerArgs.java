@@ -16,7 +16,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server Agent Version
-     * 
      */
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
@@ -27,7 +26,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server clusterId
-     * 
      */
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
@@ -38,7 +36,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server clusterName
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -49,7 +46,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Friendly Name
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -60,7 +56,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server last heart beat
-     * 
      */
     @Import(name="lastHeartBeat")
       private final @Nullable Output<String> lastHeartBeat;
@@ -71,7 +66,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -82,7 +76,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server Certificate
-     * 
      */
     @Import(name="serverCertificate")
       private final @Nullable Output<String> serverCertificate;
@@ -93,7 +86,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server serverId
-     * 
      */
     @Import(name="serverId")
       private final @Nullable Output<String> serverId;
@@ -104,7 +96,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server OS Version
-     * 
      */
     @Import(name="serverOSVersion")
       private final @Nullable Output<String> serverOSVersion;
@@ -115,7 +106,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Registered Server serverRole
-     * 
      */
     @Import(name="serverRole")
       private final @Nullable Output<String> serverRole;
@@ -126,7 +116,6 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of Storage Sync Service resource.
-     * 
      */
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
-     * 
      */
     @EnumType
     public enum ReplicationMode {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The workflow trigger recurrence.
- * 
  */
 public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
 
     /**
      * The end time.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -33,7 +31,6 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
 
     /**
      * The frequency.
-     * 
      */
     @Import(name="frequency")
       private final @Nullable String frequency;
@@ -44,7 +41,6 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
 
     /**
      * The interval.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Integer interval;
@@ -55,7 +51,6 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
 
     /**
      * The recurrence schedule.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable RecurrenceScheduleResponse schedule;
@@ -66,7 +61,6 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
 
     /**
      * The start time.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -77,7 +71,6 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
 
     /**
      * The time zone.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable String timeZone;

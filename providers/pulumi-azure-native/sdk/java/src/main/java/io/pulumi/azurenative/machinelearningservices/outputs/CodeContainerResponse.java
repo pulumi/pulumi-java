@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class CodeContainerResponse {
     /**
      * The asset description text.
-     * 
      */
     private final @Nullable String description;
     /**
      * The asset property dictionary.
-     * 
      */
     private final @Nullable Map<String,String> properties;
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     private final @Nullable Map<String,String> tags;
 
@@ -40,21 +37,18 @@ public final class CodeContainerResponse {
 
     /**
      * The asset description text.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The asset property dictionary.
-     * 
     */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

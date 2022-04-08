@@ -14,7 +14,6 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The id of a specific query defined in the Log Analytics QueryPack
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -25,7 +24,6 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Log Analytics QueryPack resource.
-     * 
      */
     @Import(name="queryPackName", required=true)
       private final String queryPackName;
@@ -36,7 +34,6 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

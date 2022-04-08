@@ -16,7 +16,6 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -27,7 +26,6 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the domain topic.
-     * 
      */
     @Import(name="domainTopicName")
       private final @Nullable Output<String> domainTopicName;
@@ -38,7 +36,6 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

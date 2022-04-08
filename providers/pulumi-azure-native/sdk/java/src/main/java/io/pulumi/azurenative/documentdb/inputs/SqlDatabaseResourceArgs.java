@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Cosmos DB SQL database resource object
- * 
  */
 public final class SqlDatabaseResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SqlDatabaseResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the Cosmos DB SQL database
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

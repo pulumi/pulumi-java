@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The private link service ip configuration.
- * 
  */
 public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -36,7 +34,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
 
     /**
      * The name of private link service ip configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -47,7 +44,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
 
     /**
      * Whether the ip configuration is primary or not.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
@@ -58,7 +54,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
@@ -69,7 +64,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
 
     /**
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
-     * 
      */
     @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
@@ -80,7 +74,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -91,7 +84,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;

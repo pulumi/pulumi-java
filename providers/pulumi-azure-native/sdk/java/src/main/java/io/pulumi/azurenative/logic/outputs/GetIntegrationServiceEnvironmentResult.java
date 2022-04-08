@@ -17,42 +17,34 @@ import javax.annotation.Nullable;
 public final class GetIntegrationServiceEnvironmentResult {
     /**
      * The resource id.
-     * 
      */
     private final String id;
     /**
      * Managed service identity properties.
-     * 
      */
     private final @Nullable ManagedServiceIdentityResponse identity;
     /**
      * The resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Gets the resource name.
-     * 
      */
     private final String name;
     /**
      * The integration service environment properties.
-     * 
      */
     private final IntegrationServiceEnvironmentPropertiesResponse properties;
     /**
      * The sku.
-     * 
      */
     private final @Nullable IntegrationServiceEnvironmentSkuResponse sku;
     /**
      * The resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Gets the resource type.
-     * 
      */
     private final String type;
 
@@ -78,56 +70,48 @@ public final class GetIntegrationServiceEnvironmentResult {
 
     /**
      * The resource id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Managed service identity properties.
-     * 
     */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The integration service environment properties.
-     * 
     */
     public IntegrationServiceEnvironmentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The sku.
-     * 
     */
     public Optional<IntegrationServiceEnvironmentSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
-     * 
     */
     public String getType() {
         return this.type;

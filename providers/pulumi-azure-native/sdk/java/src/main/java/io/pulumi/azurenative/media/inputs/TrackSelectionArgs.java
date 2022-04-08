@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to select a track
- * 
  */
 public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TrackSelections is a track property condition list which can specify track(s)
-     * 
      */
     @Import(name="trackSelections")
       private final @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;

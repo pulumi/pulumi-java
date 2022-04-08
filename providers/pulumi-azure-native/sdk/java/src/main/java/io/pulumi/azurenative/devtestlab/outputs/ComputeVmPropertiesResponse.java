@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class ComputeVmPropertiesResponse {
     /**
      * Gets data disks blob uri for the virtual machine.
-     * 
      */
     private final @Nullable List<String> dataDiskIds;
     /**
      * Gets all data disks attached to the virtual machine.
-     * 
      */
     private final @Nullable List<ComputeDataDiskResponse> dataDisks;
     /**
      * Gets the network interface ID of the virtual machine.
-     * 
      */
     private final @Nullable String networkInterfaceId;
     /**
      * Gets OS disk blob uri for the virtual machine.
-     * 
      */
     private final @Nullable String osDiskId;
     /**
      * Gets the OS type of the virtual machine.
-     * 
      */
     private final @Nullable String osType;
     /**
      * Gets the statuses of the virtual machine.
-     * 
      */
     private final @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
     /**
      * Gets the size of the virtual machine.
-     * 
      */
     private final @Nullable String vmSize;
 
@@ -70,49 +63,42 @@ public final class ComputeVmPropertiesResponse {
 
     /**
      * Gets data disks blob uri for the virtual machine.
-     * 
     */
     public List<String> getDataDiskIds() {
         return this.dataDiskIds == null ? List.of() : this.dataDiskIds;
     }
     /**
      * Gets all data disks attached to the virtual machine.
-     * 
     */
     public List<ComputeDataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Gets the network interface ID of the virtual machine.
-     * 
     */
     public Optional<String> getNetworkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
     /**
      * Gets OS disk blob uri for the virtual machine.
-     * 
     */
     public Optional<String> getOsDiskId() {
         return Optional.ofNullable(this.osDiskId);
     }
     /**
      * Gets the OS type of the virtual machine.
-     * 
     */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Gets the statuses of the virtual machine.
-     * 
     */
     public List<ComputeVmInstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Gets the size of the virtual machine.
-     * 
     */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);

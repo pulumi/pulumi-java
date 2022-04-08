@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schedule based backup criteria
- * 
  */
 public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     /**
      * it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
      * and should be part of AbsoluteMarker enum
-     * 
      */
     @Import(name="absoluteCriteria")
       private final @Nullable List<String> absoluteCriteria;
@@ -34,7 +32,6 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
 
     /**
      * This is day of the month from 1 to 28 other wise last of month
-     * 
      */
     @Import(name="daysOfMonth")
       private final @Nullable List<DayResponse> daysOfMonth;
@@ -45,7 +42,6 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
 
     /**
      * It should be Sunday/Monday/T..../Saturday
-     * 
      */
     @Import(name="daysOfTheWeek")
       private final @Nullable List<String> daysOfTheWeek;
@@ -56,7 +52,6 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
 
     /**
      * It should be January/February/....../December
-     * 
      */
     @Import(name="monthsOfYear")
       private final @Nullable List<String> monthsOfYear;
@@ -68,7 +63,6 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'ScheduleBasedBackupCriteria'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;
@@ -79,7 +73,6 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
 
     /**
      * List of schedule times for backup
-     * 
      */
     @Import(name="scheduleTimes")
       private final @Nullable List<String> scheduleTimes;
@@ -90,7 +83,6 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
 
     /**
      * It should be First/Second/Third/Fourth/Last
-     * 
      */
     @Import(name="weeksOfTheMonth")
       private final @Nullable List<String> weeksOfTheMonth;

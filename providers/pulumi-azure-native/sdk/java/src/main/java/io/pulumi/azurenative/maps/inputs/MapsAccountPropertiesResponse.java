@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional Map account properties
- * 
  */
 public final class MapsAccountPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MapsAccountPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * A unique identifier for the maps account
-     * 
      */
     @Import(name="xMsClientId")
       private final @Nullable String xMsClientId;

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The connector mapping properties.
- * 
  */
 public final class ConnectorMappingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * The availability of mapping property.
-     * 
      */
     @Import(name="availability", required=true)
       private final ConnectorMappingAvailabilityResponse availability;
@@ -38,7 +36,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * The operation after import is done.
-     * 
      */
     @Import(name="completeOperation", required=true)
       private final ConnectorMappingCompleteOperationResponse completeOperation;
@@ -49,7 +46,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * The error management setting for the mapping.
-     * 
      */
     @Import(name="errorManagement", required=true)
       private final ConnectorMappingErrorManagementResponse errorManagement;
@@ -60,7 +56,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * The file filter for the mapping.
-     * 
      */
     @Import(name="fileFilter")
       private final @Nullable String fileFilter;
@@ -71,7 +66,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * The folder path for the mapping.
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable String folderPath;
@@ -82,7 +76,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * The format of mapping property.
-     * 
      */
     @Import(name="format", required=true)
       private final ConnectorMappingFormatResponse format;
@@ -93,7 +86,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * If the file contains a header or not.
-     * 
      */
     @Import(name="hasHeader")
       private final @Nullable Boolean hasHeader;
@@ -104,7 +96,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
 
     /**
      * Ingestion mapping information at property level.
-     * 
      */
     @Import(name="structure", required=true)
       private final List<ConnectorMappingStructureResponse> structure;

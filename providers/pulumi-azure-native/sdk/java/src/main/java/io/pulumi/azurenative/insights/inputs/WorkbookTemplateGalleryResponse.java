@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gallery information for a workbook template.
- * 
  */
 public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
 
     /**
      * Category for the gallery.
-     * 
      */
     @Import(name="category")
       private final @Nullable String category;
@@ -32,7 +30,6 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
 
     /**
      * Name of the workbook template in the gallery.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
 
     /**
      * Order of the template within the gallery.
-     * 
      */
     @Import(name="order")
       private final @Nullable Integer order;
@@ -54,7 +50,6 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
 
     /**
      * Azure resource type supported by the gallery.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable String resourceType;
@@ -65,7 +60,6 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
 
     /**
      * Type of workbook supported by the workbook template.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

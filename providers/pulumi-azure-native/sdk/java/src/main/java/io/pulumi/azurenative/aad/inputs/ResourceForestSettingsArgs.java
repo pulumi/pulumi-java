@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for Resource Forest
- * 
  */
 public final class ResourceForestSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource Forest
-     * 
      */
     @Import(name="resourceForest")
       private final @Nullable Output<String> resourceForest;
@@ -33,7 +31,6 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * List of settings for Resource Forest
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<List<ForestTrustArgs>> settings;

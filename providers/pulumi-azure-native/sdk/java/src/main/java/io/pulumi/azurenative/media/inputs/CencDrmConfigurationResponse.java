@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to specify DRM configurations of CommonEncryptionCenc scheme in Streaming Policy
- * 
  */
 public final class CencDrmConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CencDrmConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * PlayReady configurations
-     * 
      */
     @Import(name="playReady")
       private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
@@ -32,7 +30,6 @@ public final class CencDrmConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * Widevine configurations
-     * 
      */
     @Import(name="widevine")
       private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;

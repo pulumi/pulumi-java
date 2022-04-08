@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Describes the resource that is used for triggering auto scaling.
- * 
  */
 public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
     /**
      * Enumerates the metrics that are used for triggering auto scaling.
      * Expected value is 'Resource'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -33,7 +31,6 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,AutoScalingResourceMetricName>> name;

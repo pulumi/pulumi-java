@@ -18,7 +18,118 @@ import javax.annotation.Nullable;
  * Migration item.
  * API Version: 2018-07-10.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Enables migration.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replicationMigrationItem = new AzureNative.RecoveryServices.ReplicationMigrationItem("replicationMigrationItem", new AzureNative.RecoveryServices.ReplicationMigrationItemArgs
+ *         {
+ *             FabricName = "vmwarefabric1",
+ *             MigrationItemName = "virtualmachine1",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.EnableMigrationInputPropertiesArgs
+ *             {
+ *                 PolicyId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
+ *                 ProviderSpecificDetails = new AzureNative.RecoveryServices.Inputs.VMwareCbtEnableMigrationInputArgs
+ *                 {
+ *                     DataMoverRunAsAccountId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
+ *                     DisksToInclude = 
+ *                     {
+ *                         new AzureNative.RecoveryServices.Inputs.VMwareCbtDiskInputArgs
+ *                         {
+ *                             DiskId = "disk1",
+ *                             IsOSDisk = "true",
+ *                             LogStorageAccountId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
+ *                             LogStorageAccountSasSecretName = "logStorageSas",
+ *                         },
+ *                     },
+ *                     InstanceType = "VMwareCbt",
+ *                     SnapshotRunAsAccountId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1",
+ *                     TargetNetworkId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1",
+ *                     TargetResourceGroupId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1",
+ *                     VmwareMachineId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1",
+ *                 },
+ *             },
+ *             ProtectionContainerName = "vmwareContainer1",
+ *             ResourceGroupName = "resourcegroup1",
+ *             ResourceName = "migrationvault",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replicationMigrationItem = new azure_native.recoveryservices.ReplicationMigrationItem("replicationMigrationItem", {
+ *     fabricName: "vmwarefabric1",
+ *     migrationItemName: "virtualmachine1",
+ *     properties: {
+ *         policyId: "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
+ *         providerSpecificDetails: {
+ *             dataMoverRunAsAccountId: "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
+ *             disksToInclude: [{
+ *                 diskId: "disk1",
+ *                 isOSDisk: "true",
+ *                 logStorageAccountId: "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
+ *                 logStorageAccountSasSecretName: "logStorageSas",
+ *             }],
+ *             instanceType: "VMwareCbt",
+ *             snapshotRunAsAccountId: "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1",
+ *             targetNetworkId: "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1",
+ *             targetResourceGroupId: "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1",
+ *             vmwareMachineId: "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1",
+ *         },
+ *     },
+ *     protectionContainerName: "vmwareContainer1",
+ *     resourceGroupName: "resourcegroup1",
+ *     resourceName: "migrationvault",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication_migration_item = azure_native.recoveryservices.ReplicationMigrationItem("replicationMigrationItem",
+ *     fabric_name="vmwarefabric1",
+ *     migration_item_name="virtualmachine1",
+ *     properties=azure_native.recoveryservices.EnableMigrationInputPropertiesArgs(
+ *         policy_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
+ *         provider_specific_details={
+ *             "dataMoverRunAsAccountId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
+ *             "disksToInclude": [azure_native.recoveryservices.VMwareCbtDiskInputArgs(
+ *                 disk_id="disk1",
+ *                 is_os_disk="true",
+ *                 log_storage_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
+ *                 log_storage_account_sas_secret_name="logStorageSas",
+ *             )],
+ *             "instanceType": "VMwareCbt",
+ *             "snapshotRunAsAccountId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1",
+ *             "targetNetworkId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1",
+ *             "targetResourceGroupId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1",
+ *             "vmwareMachineId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1",
+ *         },
+ *     ),
+ *     protection_container_name="vmwareContainer1",
+ *     resource_group_name="resourcegroup1",
+ *     resource_name="migrationvault")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +144,48 @@ import javax.annotation.Nullable;
 public class ReplicationMigrationItem extends io.pulumi.resources.CustomResource {
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The migration item properties.
-     * 
      */
     @Export(name="properties", type=MigrationItemPropertiesResponse.class, parameters={})
     private Output<MigrationItemPropertiesResponse> properties;
 
     /**
      * @return The migration item properties.
-     * 
      */
     public Output<MigrationItemPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource Type
-     * 
      */
     public Output<String> getType() {
         return this.type;

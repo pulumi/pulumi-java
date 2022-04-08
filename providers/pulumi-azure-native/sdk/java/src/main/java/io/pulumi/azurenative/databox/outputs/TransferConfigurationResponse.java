@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class TransferConfigurationResponse {
     /**
      * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
-     * 
      */
     private final @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails;
     /**
      * Type of the configuration for transfer.
-     * 
      */
     private final String transferConfigurationType;
     /**
      * Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
-     * 
      */
     private final @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
 
@@ -41,21 +38,18 @@ public final class TransferConfigurationResponse {
 
     /**
      * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
-     * 
     */
     public Optional<TransferConfigurationResponseTransferAllDetails> getTransferAllDetails() {
         return Optional.ofNullable(this.transferAllDetails);
     }
     /**
      * Type of the configuration for transfer.
-     * 
     */
     public String getTransferConfigurationType() {
         return this.transferConfigurationType;
     }
     /**
      * Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
-     * 
     */
     public Optional<TransferConfigurationResponseTransferFilterDetails> getTransferFilterDetails() {
         return Optional.ofNullable(this.transferFilterDetails);

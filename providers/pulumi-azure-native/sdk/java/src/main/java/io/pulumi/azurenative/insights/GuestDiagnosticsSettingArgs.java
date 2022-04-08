@@ -19,7 +19,6 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * the array of data source object which are configured to collect and send data
-     * 
      */
     @Import(name="dataSources")
       private final @Nullable Output<List<DataSourceArgs>> dataSources;
@@ -30,7 +29,6 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the diagnostic setting.
-     * 
      */
     @Import(name="diagnosticSettingsName")
       private final @Nullable Output<String> diagnosticSettingsName;
@@ -41,7 +39,6 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * Operating system type for the configuration
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<String> osType;
@@ -70,7 +66,6 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -81,7 +76,6 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

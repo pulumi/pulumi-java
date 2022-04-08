@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of a rectangular window applied to the input media before processing it.
- * 
  */
 public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     * 
      */
     @Import(name="height")
       private final @Nullable String height;
@@ -31,7 +29,6 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     * 
      */
     @Import(name="left")
       private final @Nullable String left;
@@ -42,7 +39,6 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     * 
      */
     @Import(name="top")
       private final @Nullable String top;
@@ -53,7 +49,6 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     * 
      */
     @Import(name="width")
       private final @Nullable String width;

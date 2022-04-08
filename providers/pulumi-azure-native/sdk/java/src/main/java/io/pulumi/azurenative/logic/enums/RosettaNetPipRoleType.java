@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The RosettaNet ProcessConfiguration role type.
-     * 
      */
     @EnumType
     public enum RosettaNetPipRoleType {

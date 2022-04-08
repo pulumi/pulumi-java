@@ -18,7 +18,6 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Managed Network.
-     * 
      */
     @Import(name="managedNetworkName")
       private final @Nullable Output<String> managedNetworkName;
@@ -40,7 +38,6 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
@@ -62,7 +58,6 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

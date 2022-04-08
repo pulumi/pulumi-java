@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a service instance.
- * 
  */
 public final class ServicesPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The access policies of the service instance.
-     * 
      */
     @Import(name="accessPolicies")
       private final @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
@@ -38,7 +36,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The authentication configuration for the service instance.
-     * 
      */
     @Import(name="authenticationConfiguration")
       private final @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
@@ -49,7 +46,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The settings for the CORS configuration of the service instance.
-     * 
      */
     @Import(name="corsConfiguration")
       private final @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
@@ -60,7 +56,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The settings for the Cosmos DB database backing the service.
-     * 
      */
     @Import(name="cosmosDbConfiguration")
       private final @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
@@ -71,7 +66,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The settings for the export operation of the service instance.
-     * 
      */
     @Import(name="exportConfiguration")
       private final @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
@@ -82,7 +76,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of private endpoint connections that are set up for this resource.
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
@@ -93,7 +86,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The provisioning state.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -104,7 +96,6 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;

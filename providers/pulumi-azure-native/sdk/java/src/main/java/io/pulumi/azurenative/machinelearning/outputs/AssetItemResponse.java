@@ -19,42 +19,34 @@ import javax.annotation.Nullable;
 public final class AssetItemResponse {
     /**
      * Asset's Id.
-     * 
      */
     private final @Nullable String id;
     /**
      * Information about the asset's input ports.
-     * 
      */
     private final @Nullable Map<String,InputPortResponse> inputPorts;
     /**
      * Access information for the asset.
-     * 
      */
     private final BlobLocationResponse locationInfo;
     /**
      * If the asset is a custom module, this holds the module's metadata.
-     * 
      */
     private final @Nullable Map<String,String> metadata;
     /**
      * Asset's friendly name.
-     * 
      */
     private final String name;
     /**
      * Information about the asset's output ports.
-     * 
      */
     private final @Nullable Map<String,OutputPortResponse> outputPorts;
     /**
      * If the asset is a custom module, this holds the module's parameters.
-     * 
      */
     private final @Nullable List<ModuleAssetParameterResponse> parameters;
     /**
      * Asset's type.
-     * 
      */
     private final String type;
 
@@ -80,56 +72,48 @@ public final class AssetItemResponse {
 
     /**
      * Asset's Id.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Information about the asset's input ports.
-     * 
     */
     public Map<String,InputPortResponse> getInputPorts() {
         return this.inputPorts == null ? Map.of() : this.inputPorts;
     }
     /**
      * Access information for the asset.
-     * 
     */
     public BlobLocationResponse getLocationInfo() {
         return this.locationInfo;
     }
     /**
      * If the asset is a custom module, this holds the module's metadata.
-     * 
     */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * Asset's friendly name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Information about the asset's output ports.
-     * 
     */
     public Map<String,OutputPortResponse> getOutputPorts() {
         return this.outputPorts == null ? Map.of() : this.outputPorts;
     }
     /**
      * If the asset is a custom module, this holds the module's parameters.
-     * 
     */
     public List<ModuleAssetParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Asset's type.
-     * 
     */
     public String getType() {
         return this.type;

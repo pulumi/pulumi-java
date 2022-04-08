@@ -17,7 +17,6 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -35,7 +34,6 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

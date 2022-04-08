@@ -14,7 +14,6 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;
@@ -25,7 +24,6 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the IoT sensor
-     * 
      */
     @Import(name="sensorName", required=true)
       private final String sensorName;

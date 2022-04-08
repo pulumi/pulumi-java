@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Source information for a deployment
- * 
  */
 public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Selector for the artifact to be used for the deployment for multi-module projects. This should be
      * the relative path to the target module/project.
-     * 
      */
     @Import(name="artifactSelector")
       private final @Nullable String artifactSelector;
@@ -32,7 +30,6 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Relative path of the storage which stores the source
-     * 
      */
     @Import(name="relativePath")
       private final @Nullable String relativePath;
@@ -43,7 +40,6 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Type of the source uploaded
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -54,7 +50,6 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Version of the source
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

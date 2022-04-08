@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is optional input that contains the authentication that should be used to generate the namespace.
- * 
  */
 public final class CustomLocationPropertiesAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomLocationPropertiesAuthenticationArgs extends io.pulumi.
 
     /**
      * The type of the Custom Locations authentication
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -31,7 +29,6 @@ public final class CustomLocationPropertiesAuthenticationArgs extends io.pulumi.
 
     /**
      * The kubeconfig value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

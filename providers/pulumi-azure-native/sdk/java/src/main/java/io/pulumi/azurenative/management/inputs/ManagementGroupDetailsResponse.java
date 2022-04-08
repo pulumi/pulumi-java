@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The details of a management group.
- * 
  */
 public final class ManagementGroupDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
 
     /**
      * (Optional) The ID of the parent management group.
-     * 
      */
     @Import(name="parent")
       private final @Nullable ParentGroupInfoResponse parent;
@@ -35,7 +33,6 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
 
     /**
      * The path from the root to the current group.
-     * 
      */
     @Import(name="path")
       private final @Nullable List<ManagementGroupPathElementResponse> path;
@@ -46,7 +43,6 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
 
     /**
      * The identity of the principal or process that updated the object.
-     * 
      */
     @Import(name="updatedBy")
       private final @Nullable String updatedBy;
@@ -57,7 +53,6 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
 
     /**
      * The date and time when this object was last updated.
-     * 
      */
     @Import(name="updatedTime")
       private final @Nullable String updatedTime;
@@ -68,7 +63,6 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
 
     /**
      * The version number of the object.
-     * 
      */
     @Import(name="version")
       private final @Nullable Double version;

@@ -20,7 +20,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
@@ -31,7 +30,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the endpoint under the profile which is unique globally.
-     * 
      */
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
@@ -42,7 +40,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
-     * 
      */
     @Import(name="originResponseTimeoutSeconds")
       private final @Nullable Output<Integer> originResponseTimeoutSeconds;
@@ -64,7 +60,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -75,7 +70,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
-     * 
      */
     @EnumType
     public enum SqlAlwaysEncryptedAkvAuthType {

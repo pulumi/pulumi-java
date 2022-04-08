@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The set of roles permitted through this Role Definition.
- * 
  */
 public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The database name the role is applied.
-     * 
      */
     @Import(name="db")
       private final @Nullable String db;
@@ -31,7 +29,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="role")
       private final @Nullable String role;

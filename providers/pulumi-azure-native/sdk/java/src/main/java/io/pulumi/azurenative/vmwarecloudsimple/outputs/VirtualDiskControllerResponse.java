@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class VirtualDiskControllerResponse {
     /**
      * Controller's id
-     * 
      */
     private final String id;
     /**
      * The display name of Controller
-     * 
      */
     private final String name;
     /**
      * dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
-     * 
      */
     private final String subType;
     /**
      * disk controller type (SCSI)
-     * 
      */
     private final String type;
 
@@ -44,28 +40,24 @@ public final class VirtualDiskControllerResponse {
 
     /**
      * Controller's id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The display name of Controller
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
-     * 
     */
     public String getSubType() {
         return this.subType;
     }
     /**
      * disk controller type (SCSI)
-     * 
     */
     public String getType() {
         return this.type;

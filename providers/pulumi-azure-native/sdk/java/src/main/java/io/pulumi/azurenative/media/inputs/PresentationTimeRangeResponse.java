@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The presentation time range, this is asset related and not recommended for Account Filter.
- * 
  */
 public final class PresentationTimeRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
 
     /**
      * The absolute end time boundary.
-     * 
      */
     @Import(name="endTimestamp")
       private final @Nullable Double endTimestamp;
@@ -32,7 +30,6 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
 
     /**
      * The indicator of forcing existing of end time stamp.
-     * 
      */
     @Import(name="forceEndTimestamp")
       private final @Nullable Boolean forceEndTimestamp;
@@ -43,7 +40,6 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
 
     /**
      * The relative to end right edge.
-     * 
      */
     @Import(name="liveBackoffDuration")
       private final @Nullable Double liveBackoffDuration;
@@ -54,7 +50,6 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
 
     /**
      * The relative to end sliding window.
-     * 
      */
     @Import(name="presentationWindowDuration")
       private final @Nullable Double presentationWindowDuration;
@@ -65,7 +60,6 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
 
     /**
      * The absolute start time boundary.
-     * 
      */
     @Import(name="startTimestamp")
       private final @Nullable Double startTimestamp;
@@ -76,7 +70,6 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
 
     /**
      * The time scale of time stamps.
-     * 
      */
     @Import(name="timescale")
       private final @Nullable Double timescale;

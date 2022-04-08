@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The entity reference.
- * 
  */
 public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of this referenced entity.
-     * 
      */
     @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
@@ -33,7 +31,6 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of this referenced entity.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type;

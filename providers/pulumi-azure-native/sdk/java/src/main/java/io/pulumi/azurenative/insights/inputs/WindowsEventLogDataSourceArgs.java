@@ -16,16 +16,14 @@ import javax.annotation.Nullable;
 /**
  * Definition of which Windows Event Log events will be collected and how they will be collected.
  * Only collected from Windows machines.
- * 
  */
 public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsEventLogDataSourceArgs Empty = new WindowsEventLogDataSourceArgs();
 
     /**
-     * A friendly name for the data source.
+     * A friendly name for the data source. 
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -37,7 +35,6 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
     /**
      * List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     * 
      */
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
@@ -48,7 +45,6 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
 
     /**
      * A list of Windows Event Log queries in XPATH format.
-     * 
      */
     @Import(name="xPathQueries")
       private final @Nullable Output<List<String>> xPathQueries;

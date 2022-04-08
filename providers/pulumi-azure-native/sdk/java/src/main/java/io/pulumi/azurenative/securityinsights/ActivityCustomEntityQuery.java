@@ -21,7 +21,292 @@ import javax.annotation.Nullable;
  * Represents Activity entity query.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an Activity entity query.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var activityCustomEntityQuery = new AzureNative.SecurityInsights.ActivityCustomEntityQuery("activityCustomEntityQuery", new AzureNative.SecurityInsights.ActivityCustomEntityQueryArgs
+ *         {
+ *             Content = "On '{{Computer}}' the account '{{TargetAccount}}' was deleted by '{{AddedBy}}'",
+ *             Description = "Account deleted on host",
+ *             Enabled = true,
+ *             EntitiesFilter = 
+ *             {
+ *                 { "Host_OsFamily", 
+ *                 {
+ *                     "Windows",
+ *                 } },
+ *             },
+ *             EntityQueryId = "07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+ *             InputEntityType = "Host",
+ *             Kind = "Activity",
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalIinsights",
+ *             QueryDefinitions = new AzureNative.SecurityInsights.Inputs.ActivityEntityQueriesPropertiesQueryDefinitionsArgs
+ *             {
+ *                 Query = @"let GetAccountActions = (v_Host_Name:string, v_Host_NTDomain:string, v_Host_DnsDomain:string, v_Host_AzureID:string, v_Host_OMSAgentID:string){
+ * SecurityEvent
+ * | where EventID in (4725, 4726, 4767, 4720, 4722, 4723, 4724)
+ * // parsing for Host to handle variety of conventions coming from data
+ * | extend Host_HostName = case(
+ * Computer has '@', tostring(split(Computer, '@')[0]),
+ * Computer has '\\', tostring(split(Computer, '\\')[1]),
+ * Computer has '.', tostring(split(Computer, '.')[0]),
+ * Computer
+ * )
+ * | extend Host_NTDomain = case(
+ * Computer has '\\', tostring(split(Computer, '\\')[0]), 
+ * Computer has '.', tostring(split(Computer, '.')[-2]), 
+ * Computer
+ * )
+ * | extend Host_DnsDomain = case(
+ * Computer has '\\', tostring(split(Computer, '\\')[0]), 
+ * Computer has '.', strcat_array(array_slice(split(Computer,'.'),-2,-1),'.'), 
+ * Computer
+ * )
+ * | where (Host_HostName =~ v_Host_Name and Host_NTDomain =~ v_Host_NTDomain) 
+ * or (Host_HostName =~ v_Host_Name and Host_DnsDomain =~ v_Host_DnsDomain) 
+ * or v_Host_AzureID =~ _ResourceId 
+ * or v_Host_OMSAgentID == SourceComputerId
+ * | project TimeGenerated, EventID, Activity, Computer, TargetAccount, TargetUserName, TargetDomainName, TargetSid, SubjectUserName, SubjectUserSid, _ResourceId, SourceComputerId
+ * | extend AddedBy = SubjectUserName
+ * // Future support for Activities
+ * | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = TargetAccount
+ * };
+ * GetAccountActions('{{Host_HostName}}', '{{Host_NTDomain}}', '{{Host_DnsDomain}}', '{{Host_AzureID}}', '{{Host_OMSAgentID}}')
+ *  
+ * | where EventID == 4726 ",
+ *             },
+ *             RequiredInputFieldsSets = 
+ *             {
+ *                 
+ *                 {
+ *                     "Host_HostName",
+ *                     "Host_NTDomain",
+ *                 },
+ *                 
+ *                 {
+ *                     "Host_HostName",
+ *                     "Host_DnsDomain",
+ *                 },
+ *                 
+ *                 {
+ *                     "Host_AzureID",
+ *                 },
+ *                 
+ *                 {
+ *                     "Host_OMSAgentID",
+ *                 },
+ *             },
+ *             ResourceGroupName = "myRg",
+ *             Title = "An account was deleted on this host",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewActivityCustomEntityQuery(ctx, "activityCustomEntityQuery", &securityinsights.ActivityCustomEntityQueryArgs{
+ * 			Content:     pulumi.String("On '{{Computer}}' the account '{{TargetAccount}}' was deleted by '{{AddedBy}}'"),
+ * 			Description: pulumi.String("Account deleted on host"),
+ * 			Enabled:     pulumi.Bool(true),
+ * 			EntitiesFilter: pulumi.StringArrayMap{
+ * 				"Host_OsFamily": pulumi.StringArray{
+ * 					pulumi.String("Windows"),
+ * 				},
+ * 			},
+ * 			EntityQueryId:                       pulumi.String("07da3cc8-c8ad-4710-a44e-334cdcb7882b"),
+ * 			InputEntityType:                     pulumi.String("Host"),
+ * 			Kind:                                pulumi.String("Activity"),
+ * 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalIinsights"),
+ * 			QueryDefinitions: &securityinsights.ActivityEntityQueriesPropertiesQueryDefinitionsArgs{
+ * 				Query: pulumi.String("let GetAccountActions = (v_Host_Name:string, v_Host_NTDomain:string, v_Host_DnsDomain:string, v_Host_AzureID:string, v_Host_OMSAgentID:string){\nSecurityEvent\n| where EventID in (4725, 4726, 4767, 4720, 4722, 4723, 4724)\n// parsing for Host to handle variety of conventions coming from data\n| extend Host_HostName = case(\nComputer has '@', tostring(split(Computer, '@')[0]),\nComputer has '\\\\', tostring(split(Computer, '\\\\')[1]),\nComputer has '.', tostring(split(Computer, '.')[0]),\nComputer\n)\n| extend Host_NTDomain = case(\nComputer has '\\\\', tostring(split(Computer, '\\\\')[0]), \nComputer has '.', tostring(split(Computer, '.')[-2]), \nComputer\n)\n| extend Host_DnsDomain = case(\nComputer has '\\\\', tostring(split(Computer, '\\\\')[0]), \nComputer has '.', strcat_array(array_slice(split(Computer,'.'),-2,-1),'.'), \nComputer\n)\n| where (Host_HostName =~ v_Host_Name and Host_NTDomain =~ v_Host_NTDomain) \nor (Host_HostName =~ v_Host_Name and Host_DnsDomain =~ v_Host_DnsDomain) \nor v_Host_AzureID =~ _ResourceId \nor v_Host_OMSAgentID == SourceComputerId\n| project TimeGenerated, EventID, Activity, Computer, TargetAccount, TargetUserName, TargetDomainName, TargetSid, SubjectUserName, SubjectUserSid, _ResourceId, SourceComputerId\n| extend AddedBy = SubjectUserName\n// Future support for Activities\n| extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = TargetAccount\n};\nGetAccountActions('{{Host_HostName}}', '{{Host_NTDomain}}', '{{Host_DnsDomain}}', '{{Host_AzureID}}', '{{Host_OMSAgentID}}')\n \n| where EventID == 4726 "),
+ * 			},
+ * 			RequiredInputFieldsSets: pulumi.StringArrayArray{
+ * 				pulumi.StringArray{
+ * 					pulumi.String("Host_HostName"),
+ * 					pulumi.String("Host_NTDomain"),
+ * 				},
+ * 				pulumi.StringArray{
+ * 					pulumi.String("Host_HostName"),
+ * 					pulumi.String("Host_DnsDomain"),
+ * 				},
+ * 				pulumi.StringArray{
+ * 					pulumi.String("Host_AzureID"),
+ * 				},
+ * 				pulumi.StringArray{
+ * 					pulumi.String("Host_OMSAgentID"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			Title:             pulumi.String("An account was deleted on this host"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const activityCustomEntityQuery = new azure_native.securityinsights.ActivityCustomEntityQuery("activityCustomEntityQuery", {
+ *     content: "On '{{Computer}}' the account '{{TargetAccount}}' was deleted by '{{AddedBy}}'",
+ *     description: "Account deleted on host",
+ *     enabled: true,
+ *     entitiesFilter: {
+ *         Host_OsFamily: ["Windows"],
+ *     },
+ *     entityQueryId: "07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+ *     inputEntityType: "Host",
+ *     kind: "Activity",
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalIinsights",
+ *     queryDefinitions: {
+ *         query: `let GetAccountActions = (v_Host_Name:string, v_Host_NTDomain:string, v_Host_DnsDomain:string, v_Host_AzureID:string, v_Host_OMSAgentID:string){
+ * SecurityEvent
+ * | where EventID in (4725, 4726, 4767, 4720, 4722, 4723, 4724)
+ * // parsing for Host to handle variety of conventions coming from data
+ * | extend Host_HostName = case(
+ * Computer has '@', tostring(split(Computer, '@')[0]),
+ * Computer has '\\\\', tostring(split(Computer, '\\\\')[1]),
+ * Computer has '.', tostring(split(Computer, '.')[0]),
+ * Computer
+ * )
+ * | extend Host_NTDomain = case(
+ * Computer has '\\\\', tostring(split(Computer, '\\\\')[0]), 
+ * Computer has '.', tostring(split(Computer, '.')[-2]), 
+ * Computer
+ * )
+ * | extend Host_DnsDomain = case(
+ * Computer has '\\\\', tostring(split(Computer, '\\\\')[0]), 
+ * Computer has '.', strcat_array(array_slice(split(Computer,'.'),-2,-1),'.'), 
+ * Computer
+ * )
+ * | where (Host_HostName =~ v_Host_Name and Host_NTDomain =~ v_Host_NTDomain) 
+ * or (Host_HostName =~ v_Host_Name and Host_DnsDomain =~ v_Host_DnsDomain) 
+ * or v_Host_AzureID =~ _ResourceId 
+ * or v_Host_OMSAgentID == SourceComputerId
+ * | project TimeGenerated, EventID, Activity, Computer, TargetAccount, TargetUserName, TargetDomainName, TargetSid, SubjectUserName, SubjectUserSid, _ResourceId, SourceComputerId
+ * | extend AddedBy = SubjectUserName
+ * // Future support for Activities
+ * | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = TargetAccount
+ * };
+ * GetAccountActions('{{Host_HostName}}', '{{Host_NTDomain}}', '{{Host_DnsDomain}}', '{{Host_AzureID}}', '{{Host_OMSAgentID}}')
+ *  
+ * | where EventID == 4726 `,
+ *     },
+ *     requiredInputFieldsSets: [
+ *         [
+ *             "Host_HostName",
+ *             "Host_NTDomain",
+ *         ],
+ *         [
+ *             "Host_HostName",
+ *             "Host_DnsDomain",
+ *         ],
+ *         ["Host_AzureID"],
+ *         ["Host_OMSAgentID"],
+ *     ],
+ *     resourceGroupName: "myRg",
+ *     title: "An account was deleted on this host",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * activity_custom_entity_query = azure_native.securityinsights.ActivityCustomEntityQuery("activityCustomEntityQuery",
+ *     content="On '{{Computer}}' the account '{{TargetAccount}}' was deleted by '{{AddedBy}}'",
+ *     description="Account deleted on host",
+ *     enabled=True,
+ *     entities_filter={
+ *         "Host_OsFamily": ["Windows"],
+ *     },
+ *     entity_query_id="07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+ *     input_entity_type="Host",
+ *     kind="Activity",
+ *     operational_insights_resource_provider="Microsoft.OperationalIinsights",
+ *     query_definitions=azure_native.securityinsights.ActivityEntityQueriesPropertiesQueryDefinitionsArgs(
+ *         query="""let GetAccountActions = (v_Host_Name:string, v_Host_NTDomain:string, v_Host_DnsDomain:string, v_Host_AzureID:string, v_Host_OMSAgentID:string){
+ * SecurityEvent
+ * | where EventID in (4725, 4726, 4767, 4720, 4722, 4723, 4724)
+ * // parsing for Host to handle variety of conventions coming from data
+ * | extend Host_HostName = case(
+ * Computer has '@', tostring(split(Computer, '@')[0]),
+ * Computer has '\\', tostring(split(Computer, '\\')[1]),
+ * Computer has '.', tostring(split(Computer, '.')[0]),
+ * Computer
+ * )
+ * | extend Host_NTDomain = case(
+ * Computer has '\\', tostring(split(Computer, '\\')[0]), 
+ * Computer has '.', tostring(split(Computer, '.')[-2]), 
+ * Computer
+ * )
+ * | extend Host_DnsDomain = case(
+ * Computer has '\\', tostring(split(Computer, '\\')[0]), 
+ * Computer has '.', strcat_array(array_slice(split(Computer,'.'),-2,-1),'.'), 
+ * Computer
+ * )
+ * | where (Host_HostName =~ v_Host_Name and Host_NTDomain =~ v_Host_NTDomain) 
+ * or (Host_HostName =~ v_Host_Name and Host_DnsDomain =~ v_Host_DnsDomain) 
+ * or v_Host_AzureID =~ _ResourceId 
+ * or v_Host_OMSAgentID == SourceComputerId
+ * | project TimeGenerated, EventID, Activity, Computer, TargetAccount, TargetUserName, TargetDomainName, TargetSid, SubjectUserName, SubjectUserSid, _ResourceId, SourceComputerId
+ * | extend AddedBy = SubjectUserName
+ * // Future support for Activities
+ * | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = TargetAccount
+ * };
+ * GetAccountActions('{{Host_HostName}}', '{{Host_NTDomain}}', '{{Host_DnsDomain}}', '{{Host_AzureID}}', '{{Host_OMSAgentID}}')
+ *  
+ * | where EventID == 4726 """,
+ *     ),
+ *     required_input_fields_sets=[
+ *         [
+ *             "Host_HostName",
+ *             "Host_NTDomain",
+ *         ],
+ *         [
+ *             "Host_HostName",
+ *             "Host_DnsDomain",
+ *         ],
+ *         ["Host_AzureID"],
+ *         ["Host_OMSAgentID"],
+ *     ],
+ *     resource_group_name="myRg",
+ *     title="An account was deleted on this host",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,98 +321,84 @@ import javax.annotation.Nullable;
 public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResource {
     /**
      * The entity query content to display in timeline
-     * 
      */
     @Export(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
     /**
      * @return The entity query content to display in timeline
-     * 
      */
     public Output</* @Nullable */ String> getContent() {
         return this.content;
     }
     /**
      * The time the activity was created
-     * 
      */
     @Export(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
     /**
      * @return The time the activity was created
-     * 
      */
     public Output<String> getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * The entity query description
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The entity query description
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Determines whether this activity is enabled or disabled.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Determines whether this activity is enabled or disabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * The query applied only to entities matching to all filters
-     * 
      */
     @Export(name="entitiesFilter", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> entitiesFilter;
 
     /**
      * @return The query applied only to entities matching to all filters
-     * 
      */
     public Output</* @Nullable */ Map<String,List<String>>> getEntitiesFilter() {
         return this.entitiesFilter;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The type of the query's source entity
-     * 
      */
     @Export(name="inputEntityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputEntityType;
 
     /**
      * @return The type of the query's source entity
-     * 
      */
     public Output</* @Nullable */ String> getInputEntityType() {
         return this.inputEntityType;
@@ -135,7 +406,6 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
     /**
      * The kind of the entity query
      * Expected value is 'Activity'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -143,119 +413,102 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
     /**
      * @return The kind of the entity query
      * Expected value is 'Activity'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The last time the activity was updated
-     * 
      */
     @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
      * @return The last time the activity was updated
-     * 
      */
     public Output<String> getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Activity query definitions
-     * 
      */
     @Export(name="queryDefinitions", type=ActivityEntityQueriesPropertiesResponseQueryDefinitions.class, parameters={})
     private Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> queryDefinitions;
 
     /**
      * @return The Activity query definitions
-     * 
      */
     public Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> getQueryDefinitions() {
         return this.queryDefinitions;
     }
     /**
      * List of the fields of the source entity that are required to run the query
-     * 
      */
     @Export(name="requiredInputFieldsSets", type=List.class, parameters={List.class})
     private Output</* @Nullable */ List<List<String>>> requiredInputFieldsSets;
 
     /**
      * @return List of the fields of the source entity that are required to run the query
-     * 
      */
     public Output</* @Nullable */ List<List<String>>> getRequiredInputFieldsSets() {
         return this.requiredInputFieldsSets;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The template id this activity was created from
-     * 
      */
     @Export(name="templateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateName;
 
     /**
      * @return The template id this activity was created from
-     * 
      */
     public Output</* @Nullable */ String> getTemplateName() {
         return this.templateName;
     }
     /**
      * The entity query title
-     * 
      */
     @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
      * @return The entity query title
-     * 
      */
     public Output</* @Nullable */ String> getTitle() {
         return this.title;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

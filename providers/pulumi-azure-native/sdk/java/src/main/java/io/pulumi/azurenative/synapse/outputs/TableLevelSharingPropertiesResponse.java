@@ -13,32 +13,26 @@ import javax.annotation.Nullable;
 public final class TableLevelSharingPropertiesResponse {
     /**
      * List of external tables exclude from the follower database
-     * 
      */
     private final @Nullable List<String> externalTablesToExclude;
     /**
      * List of external tables to include in the follower database
-     * 
      */
     private final @Nullable List<String> externalTablesToInclude;
     /**
      * List of materialized views exclude from the follower database
-     * 
      */
     private final @Nullable List<String> materializedViewsToExclude;
     /**
      * List of materialized views to include in the follower database
-     * 
      */
     private final @Nullable List<String> materializedViewsToInclude;
     /**
      * List of tables to exclude from the follower database
-     * 
      */
     private final @Nullable List<String> tablesToExclude;
     /**
      * List of tables to include in the follower database
-     * 
      */
     private final @Nullable List<String> tablesToInclude;
 
@@ -60,42 +54,36 @@ public final class TableLevelSharingPropertiesResponse {
 
     /**
      * List of external tables exclude from the follower database
-     * 
     */
     public List<String> getExternalTablesToExclude() {
         return this.externalTablesToExclude == null ? List.of() : this.externalTablesToExclude;
     }
     /**
      * List of external tables to include in the follower database
-     * 
     */
     public List<String> getExternalTablesToInclude() {
         return this.externalTablesToInclude == null ? List.of() : this.externalTablesToInclude;
     }
     /**
      * List of materialized views exclude from the follower database
-     * 
     */
     public List<String> getMaterializedViewsToExclude() {
         return this.materializedViewsToExclude == null ? List.of() : this.materializedViewsToExclude;
     }
     /**
      * List of materialized views to include in the follower database
-     * 
     */
     public List<String> getMaterializedViewsToInclude() {
         return this.materializedViewsToInclude == null ? List.of() : this.materializedViewsToInclude;
     }
     /**
      * List of tables to exclude from the follower database
-     * 
     */
     public List<String> getTablesToExclude() {
         return this.tablesToExclude == null ? List.of() : this.tablesToExclude;
     }
     /**
      * List of tables to include in the follower database
-     * 
     */
     public List<String> getTablesToInclude() {
         return this.tablesToInclude == null ? List.of() : this.tablesToInclude;

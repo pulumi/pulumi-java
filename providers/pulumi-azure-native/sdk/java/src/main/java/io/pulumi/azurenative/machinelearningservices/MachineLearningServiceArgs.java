@@ -21,7 +21,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The compute environment type for the service.
-     * 
      */
     @Import(name="computeType", required=true)
       private final Output<Either<String,ComputeEnvironmentType>> computeType;
@@ -32,7 +31,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The description of the service.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The Environment, models and assets needed for inferencing.
-     * 
      */
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
@@ -54,7 +51,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The authentication keys.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
@@ -65,7 +61,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The service tag dictionary. Tags are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
@@ -76,7 +71,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the Azure location/region.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The service properties dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -98,7 +91,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -109,7 +101,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the Azure Machine Learning service.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -120,7 +111,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

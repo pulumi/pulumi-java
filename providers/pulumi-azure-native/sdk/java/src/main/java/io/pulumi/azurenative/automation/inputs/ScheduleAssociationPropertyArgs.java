@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The schedule property associated with the entity.
- * 
  */
 public final class ScheduleAssociationPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ScheduleAssociationPropertyArgs extends io.pulumi.resources.R
 
     /**
      * Gets or sets the name of the Schedule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

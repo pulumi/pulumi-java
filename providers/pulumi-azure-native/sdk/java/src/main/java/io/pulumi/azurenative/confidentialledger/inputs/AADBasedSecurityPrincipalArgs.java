@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * AAD based security principal with associated Ledger RoleName
- * 
  */
 public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
 
     /**
      * LedgerRole associated with the Security Principal of Ledger
-     * 
      */
     @Import(name="ledgerRoleName")
       private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
@@ -33,7 +31,6 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
 
     /**
      * UUID/GUID based Principal Id of the Security Principal
-     * 
      */
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
@@ -44,7 +41,6 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
 
     /**
      * UUID/GUID based Tenant Id of the Security Principal
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

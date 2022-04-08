@@ -14,7 +14,6 @@ public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.I
 
     /**
      * The name of the resource provider hosted within ProviderHub.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
@@ -25,7 +24,6 @@ public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.I
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;

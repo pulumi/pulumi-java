@@ -21,7 +21,114 @@ import javax.annotation.Nullable;
  * ExpressRoute gateway resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ExpressRouteGatewayCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var expressRouteGateway = new AzureNative.Network.ExpressRouteGateway("expressRouteGateway", new AzureNative.Network.ExpressRouteGatewayArgs
+ *         {
+ *             AutoScaleConfiguration = new AzureNative.Network.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
+ *             {
+ *                 Bounds = new AzureNative.Network.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
+ *                 {
+ *                     Min = 3,
+ *                 },
+ *             },
+ *             ExpressRouteGatewayName = "gateway-2",
+ *             Location = "westus",
+ *             ResourceGroupName = "resourceGroupName",
+ *             VirtualHub = new AzureNative.Network.Inputs.VirtualHubIdArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewExpressRouteGateway(ctx, "expressRouteGateway", &network.ExpressRouteGatewayArgs{
+ * 			AutoScaleConfiguration: &network.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs{
+ * 				Bounds: &network.ExpressRouteGatewayPropertiesBoundsArgs{
+ * 					Min: pulumi.Int(3),
+ * 				},
+ * 			},
+ * 			ExpressRouteGatewayName: pulumi.String("gateway-2"),
+ * 			Location:                pulumi.String("westus"),
+ * 			ResourceGroupName:       pulumi.String("resourceGroupName"),
+ * 			VirtualHub: &network.VirtualHubIdArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const expressRouteGateway = new azure_native.network.ExpressRouteGateway("expressRouteGateway", {
+ *     autoScaleConfiguration: {
+ *         bounds: {
+ *             min: 3,
+ *         },
+ *     },
+ *     expressRouteGatewayName: "gateway-2",
+ *     location: "westus",
+ *     resourceGroupName: "resourceGroupName",
+ *     virtualHub: {
+ *         id: "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * express_route_gateway = azure_native.network.ExpressRouteGateway("expressRouteGateway",
+ *     auto_scale_configuration=azure_native.network.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(
+ *         bounds=azure_native.network.ExpressRouteGatewayPropertiesBoundsArgs(
+ *             min=3,
+ *         ),
+ *     ),
+ *     express_route_gateway_name="gateway-2",
+ *     location="westus",
+ *     resource_group_name="resourceGroupName",
+ *     virtual_hub=azure_native.network.VirtualHubIdArgs(
+ *         id="/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,126 +143,108 @@ import javax.annotation.Nullable;
 public class ExpressRouteGateway extends io.pulumi.resources.CustomResource {
     /**
      * Configuration for auto scaling.
-     * 
      */
     @Export(name="autoScaleConfiguration", type=ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration.class, parameters={})
     private Output</* @Nullable */ ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> autoScaleConfiguration;
 
     /**
      * @return Configuration for auto scaling.
-     * 
      */
     public Output</* @Nullable */ ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> getAutoScaleConfiguration() {
         return this.autoScaleConfiguration;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * List of ExpressRoute connections to the ExpressRoute gateway.
-     * 
      */
     @Export(name="expressRouteConnections", type=List.class, parameters={ExpressRouteConnectionResponse.class})
     private Output<List<ExpressRouteConnectionResponse>> expressRouteConnections;
 
     /**
      * @return List of ExpressRoute connections to the ExpressRoute gateway.
-     * 
      */
     public Output<List<ExpressRouteConnectionResponse>> getExpressRouteConnections() {
         return this.expressRouteConnections;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the express route gateway resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the express route gateway resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
-     * 
      */
     @Export(name="virtualHub", type=VirtualHubIdResponse.class, parameters={})
     private Output<VirtualHubIdResponse> virtualHub;
 
     /**
      * @return The Virtual Hub where the ExpressRoute gateway is or will be deployed.
-     * 
      */
     public Output<VirtualHubIdResponse> getVirtualHub() {
         return this.virtualHub;

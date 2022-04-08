@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Static delivery attribute mapping details.
- * 
  */
 public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
 
     /**
      * Boolean flag to tell if the attribute contains sensitive information .
-     * 
      */
     @Import(name="isSecret")
       private final @Nullable Boolean isSecret;
@@ -32,7 +30,6 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
 
     /**
      * Name of the delivery attribute or header.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -44,7 +41,6 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
     /**
      * Type of the delivery attribute or header name.
      * Expected value is 'Static'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -55,7 +51,6 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
 
     /**
      * Value of the delivery attribute.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

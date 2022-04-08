@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
-     * 
      */
     @EnumType
     public enum DigitalTwinsIdentityType {

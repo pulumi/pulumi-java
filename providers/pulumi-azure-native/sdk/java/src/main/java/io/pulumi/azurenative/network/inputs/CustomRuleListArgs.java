@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines contents of custom rules
- * 
  */
 public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of rules
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<CustomRuleArgs>> rules;

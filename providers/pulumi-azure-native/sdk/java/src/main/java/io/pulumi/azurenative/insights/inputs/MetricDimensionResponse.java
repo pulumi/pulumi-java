@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies a metric dimension.
- * 
  */
 public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the dimension.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * the dimension operator. Only 'Include' and 'Exclude' are supported
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -41,7 +38,6 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * list of dimension values.
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

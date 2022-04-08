@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class ImageOSDiskResponse {
     /**
      * The Virtual Hard Disk.
-     * 
      */
     private final @Nullable String blobUri;
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
      */
     private final @Nullable String caching;
     /**
      * Specifies the customer managed disk encryption set resource id for the managed image disk.
-     * 
      */
     private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
     /**
      * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     * 
      */
     private final @Nullable Integer diskSizeGB;
     /**
      * The managedDisk.
-     * 
      */
     private final @Nullable SubResourceResponse managedDisk;
     /**
      * The OS State.
-     * 
      */
     private final String osState;
     /**
      * This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     * 
      */
     private final String osType;
     /**
      * The snapshot.
-     * 
      */
     private final @Nullable SubResourceResponse snapshot;
     /**
      * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
-     * 
      */
     private final @Nullable String storageAccountType;
 
@@ -84,63 +75,54 @@ public final class ImageOSDiskResponse {
 
     /**
      * The Virtual Hard Disk.
-     * 
     */
     public Optional<String> getBlobUri() {
         return Optional.ofNullable(this.blobUri);
     }
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
     */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
     /**
      * Specifies the customer managed disk encryption set resource id for the managed image disk.
-     * 
     */
     public Optional<DiskEncryptionSetParametersResponse> getDiskEncryptionSet() {
         return Optional.ofNullable(this.diskEncryptionSet);
     }
     /**
      * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     * 
     */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * The managedDisk.
-     * 
     */
     public Optional<SubResourceResponse> getManagedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
      * The OS State.
-     * 
     */
     public String getOsState() {
         return this.osState;
     }
     /**
      * This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     * 
     */
     public String getOsType() {
         return this.osType;
     }
     /**
      * The snapshot.
-     * 
     */
     public Optional<SubResourceResponse> getSnapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
      * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
-     * 
     */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);

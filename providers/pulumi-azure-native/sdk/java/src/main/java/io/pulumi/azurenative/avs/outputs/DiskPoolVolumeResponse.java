@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class DiskPoolVolumeResponse {
     /**
      * iSCSI provider target IP address list
-     * 
      */
     private final @Nullable List<String> endpoints;
     /**
      * Name of the LUN to be used
-     * 
      */
     private final @Nullable String lunName;
 
@@ -33,14 +31,12 @@ public final class DiskPoolVolumeResponse {
 
     /**
      * iSCSI provider target IP address list
-     * 
     */
     public List<String> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * Name of the LUN to be used
-     * 
     */
     public Optional<String> getLunName() {
         return Optional.ofNullable(this.lunName);

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AzureSkuResponse {
     /**
      * SKU name
-     * 
      */
     private final String name;
     /**
      * SKU tier
-     * 
      */
     private final String tier;
 
@@ -30,14 +28,12 @@ public final class AzureSkuResponse {
 
     /**
      * SKU name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * SKU tier
-     * 
     */
     public String getTier() {
         return this.tier;

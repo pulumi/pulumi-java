@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The rule type.
-     * 
      */
     @EnumType
     public enum WebApplicationFirewallRuleType {

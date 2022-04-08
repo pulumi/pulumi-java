@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PartnerContentResponse {
     /**
      * The B2B partner content.
-     * 
      */
     private final @Nullable B2BPartnerContentResponse b2b;
 
@@ -24,7 +23,6 @@ public final class PartnerContentResponse {
 
     /**
      * The B2B partner content.
-     * 
     */
     public Optional<B2BPartnerContentResponse> getB2b() {
         return Optional.ofNullable(this.b2b);

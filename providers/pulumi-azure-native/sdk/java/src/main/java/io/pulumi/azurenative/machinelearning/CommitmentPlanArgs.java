@@ -18,7 +18,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure ML commitment plan name.
-     * 
      */
     @Import(name="commitmentPlanName")
       private final @Nullable Output<String> commitmentPlanName;
@@ -29,7 +28,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The commitment plan SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
@@ -62,7 +58,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-defined tags for the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

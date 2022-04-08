@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Azure Automation Runbook notification receiver.
- * 
  */
 public final class AutomationRunbookReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
 
     /**
      * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
-     * 
      */
     @Import(name="automationAccountId", required=true)
       private final String automationAccountId;
@@ -32,7 +30,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
 
     /**
      * Indicates whether this instance is global runbook.
-     * 
      */
     @Import(name="isGlobalRunbook", required=true)
       private final Boolean isGlobalRunbook;
@@ -43,7 +40,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
 
     /**
      * Indicates name of the webhook.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
 
     /**
      * The name for this runbook.
-     * 
      */
     @Import(name="runbookName", required=true)
       private final String runbookName;
@@ -65,7 +60,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
 
     /**
      * The URI where webhooks should be sent.
-     * 
      */
     @Import(name="serviceUri")
       private final @Nullable String serviceUri;
@@ -76,7 +70,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
 
     /**
      * Indicates whether to use common alert schema.
-     * 
      */
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
@@ -87,7 +80,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
 
     /**
      * The resource id for webhook linked to this runbook.
-     * 
      */
     @Import(name="webhookResourceId", required=true)
       private final String webhookResourceId;

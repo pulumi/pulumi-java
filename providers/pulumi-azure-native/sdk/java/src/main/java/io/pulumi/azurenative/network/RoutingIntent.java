@@ -18,7 +18,140 @@ import javax.annotation.Nullable;
  * The routing intent child resource of a Virtual hub.
  * API Version: 2021-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RouteTablePut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var routingIntent = new AzureNative.Network.RoutingIntent("routingIntent", new AzureNative.Network.RoutingIntentArgs
+ *         {
+ *             ResourceGroupName = "rg1",
+ *             RoutingIntentName = "Intent1",
+ *             RoutingPolicies = 
+ *             {
+ *                 new AzureNative.Network.Inputs.RoutingPolicyArgs
+ *                 {
+ *                     Destinations = 
+ *                     {
+ *                         "Internet",
+ *                     },
+ *                     Name = "InternetTraffic",
+ *                     NextHop = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1",
+ *                 },
+ *                 new AzureNative.Network.Inputs.RoutingPolicyArgs
+ *                 {
+ *                     Destinations = 
+ *                     {
+ *                         "PrivateTraffic",
+ *                     },
+ *                     Name = "PrivateTrafficPolicy",
+ *                     NextHop = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1",
+ *                 },
+ *             },
+ *             VirtualHubName = "virtualHub1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewRoutingIntent(ctx, "routingIntent", &network.RoutingIntentArgs{
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			RoutingIntentName: pulumi.String("Intent1"),
+ * 			RoutingPolicies: []network.RoutingPolicyArgs{
+ * 				&network.RoutingPolicyArgs{
+ * 					Destinations: pulumi.StringArray{
+ * 						pulumi.String("Internet"),
+ * 					},
+ * 					Name:    pulumi.String("InternetTraffic"),
+ * 					NextHop: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1"),
+ * 				},
+ * 				&network.RoutingPolicyArgs{
+ * 					Destinations: pulumi.StringArray{
+ * 						pulumi.String("PrivateTraffic"),
+ * 					},
+ * 					Name:    pulumi.String("PrivateTrafficPolicy"),
+ * 					NextHop: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1"),
+ * 				},
+ * 			},
+ * 			VirtualHubName: pulumi.String("virtualHub1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const routingIntent = new azure_native.network.RoutingIntent("routingIntent", {
+ *     resourceGroupName: "rg1",
+ *     routingIntentName: "Intent1",
+ *     routingPolicies: [
+ *         {
+ *             destinations: ["Internet"],
+ *             name: "InternetTraffic",
+ *             nextHop: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1",
+ *         },
+ *         {
+ *             destinations: ["PrivateTraffic"],
+ *             name: "PrivateTrafficPolicy",
+ *             nextHop: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1",
+ *         },
+ *     ],
+ *     virtualHubName: "virtualHub1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * routing_intent = azure_native.network.RoutingIntent("routingIntent",
+ *     resource_group_name="rg1",
+ *     routing_intent_name="Intent1",
+ *     routing_policies=[
+ *         azure_native.network.RoutingPolicyArgs(
+ *             destinations=["Internet"],
+ *             name="InternetTraffic",
+ *             next_hop="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1",
+ *         ),
+ *         azure_native.network.RoutingPolicyArgs(
+ *             destinations=["PrivateTraffic"],
+ *             name="PrivateTrafficPolicy",
+ *             next_hop="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1",
+ *         ),
+ *     ],
+ *     virtual_hub_name="virtualHub1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +166,60 @@ import javax.annotation.Nullable;
 public class RoutingIntent extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the RoutingIntent resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the RoutingIntent resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * List of routing policies.
-     * 
      */
     @Export(name="routingPolicies", type=List.class, parameters={RoutingPolicyResponse.class})
     private Output</* @Nullable */ List<RoutingPolicyResponse>> routingPolicies;
 
     /**
      * @return List of routing policies.
-     * 
      */
     public Output</* @Nullable */ List<RoutingPolicyResponse>> getRoutingPolicies() {
         return this.routingPolicies;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

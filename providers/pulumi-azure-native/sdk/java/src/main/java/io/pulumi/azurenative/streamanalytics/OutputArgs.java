@@ -29,7 +29,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="datasource")
       private final @Nullable Output<Object> datasource;
@@ -40,7 +39,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the streaming job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
@@ -51,7 +49,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -62,7 +59,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the output.
-     * 
      */
     @Import(name="outputName")
       private final @Nullable Output<String> outputName;
@@ -73,7 +69,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +79,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;

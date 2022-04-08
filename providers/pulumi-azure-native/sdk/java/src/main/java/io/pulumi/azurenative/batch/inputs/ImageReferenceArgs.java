@@ -16,7 +16,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -27,7 +26,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For example, UbuntuServer or WindowsServer.
-     * 
      */
     @Import(name="offer")
       private final @Nullable Output<String> offer;
@@ -38,7 +36,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For example, Canonical or MicrosoftWindowsServer.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -49,7 +46,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For example, 18.04-LTS or 2019-Datacenter.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;
@@ -60,7 +56,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

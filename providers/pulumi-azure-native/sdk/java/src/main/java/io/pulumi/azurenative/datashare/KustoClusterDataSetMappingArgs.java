@@ -16,7 +16,6 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
 
     /**
      * The id of the source data set.
-     * 
      */
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
@@ -38,7 +36,6 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the data set mapping to be created.
-     * 
      */
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
@@ -50,7 +47,6 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     /**
      * Kind of data set mapping.
      * Expected value is 'KustoCluster'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -61,7 +57,6 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
 
     /**
      * Resource id of the sink kusto cluster.
-     * 
      */
     @Import(name="kustoClusterResourceId", required=true)
       private final Output<String> kustoClusterResourceId;
@@ -72,7 +67,6 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the share subscription which will hold the data set sink.
-     * 
      */
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;

@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * An Azure SQL DB Server Outbound Firewall Rule.
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Approve or reject a outbound firewall rule with a given name.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var outboundFirewallRule = new AzureNative.Sql.OutboundFirewallRule("outboundFirewallRule", new AzureNative.Sql.OutboundFirewallRuleArgs
+ *         {
+ *             OutboundRuleFqdn = "server.database.windows.net",
+ *             ResourceGroupName = "sqlcrudtest-7398",
+ *             ServerName = "sqlcrudtest-4645",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewOutboundFirewallRule(ctx, "outboundFirewallRule", &sql.OutboundFirewallRuleArgs{
+ * 			OutboundRuleFqdn:  pulumi.String("server.database.windows.net"),
+ * 			ResourceGroupName: pulumi.String("sqlcrudtest-7398"),
+ * 			ServerName:        pulumi.String("sqlcrudtest-4645"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const outboundFirewallRule = new azure_native.sql.OutboundFirewallRule("outboundFirewallRule", {
+ *     outboundRuleFqdn: "server.database.windows.net",
+ *     resourceGroupName: "sqlcrudtest-7398",
+ *     serverName: "sqlcrudtest-4645",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * outbound_firewall_rule = azure_native.sql.OutboundFirewallRule("outboundFirewallRule",
+ *     outbound_rule_fqdn="server.database.windows.net",
+ *     resource_group_name="sqlcrudtest-7398",
+ *     server_name="sqlcrudtest-4645")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +104,36 @@ import javax.annotation.Nullable;
 public class OutboundFirewallRule extends io.pulumi.resources.CustomResource {
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the outbound rule.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The state of the outbound rule.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

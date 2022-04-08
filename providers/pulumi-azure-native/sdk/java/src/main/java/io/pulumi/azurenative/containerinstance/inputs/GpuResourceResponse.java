@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The GPU resource.
- * 
  */
 public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The count of the GPU resource.
-     * 
      */
     @Import(name="count", required=true)
       private final Integer count;
@@ -30,7 +28,6 @@ public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SKU of the GPU resource.
-     * 
      */
     @Import(name="sku", required=true)
       private final String sku;

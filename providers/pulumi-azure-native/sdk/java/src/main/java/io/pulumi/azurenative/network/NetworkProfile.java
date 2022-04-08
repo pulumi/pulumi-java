@@ -20,7 +20,128 @@ import javax.annotation.Nullable;
  * Network profile resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create network profile defaults
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var networkProfile = new AzureNative.Network.NetworkProfile("networkProfile", new AzureNative.Network.NetworkProfileArgs
+ *         {
+ *             ContainerNetworkInterfaceConfigurations = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ContainerNetworkInterfaceConfigurationArgs
+ *                 {
+ *                     IpConfigurations = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.IPConfigurationProfileArgs
+ *                         {
+ *                             Name = "ipconfig1",
+ *                             Subnet = new AzureNative.Network.Inputs.SubnetArgs
+ *                             {
+ *                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1",
+ *                             },
+ *                         },
+ *                     },
+ *                     Name = "eth1",
+ *                 },
+ *             },
+ *             Location = "westus",
+ *             NetworkProfileName = "networkProfile1",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewNetworkProfile(ctx, "networkProfile", &network.NetworkProfileArgs{
+ * 			ContainerNetworkInterfaceConfigurations: []network.ContainerNetworkInterfaceConfigurationArgs{
+ * 				&network.ContainerNetworkInterfaceConfigurationArgs{
+ * 					IpConfigurations: network.IPConfigurationProfileArray{
+ * 						&network.IPConfigurationProfileArgs{
+ * 							Name: pulumi.String("ipconfig1"),
+ * 							Subnet: &network.SubnetArgs{
+ * 								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1"),
+ * 							},
+ * 						},
+ * 					},
+ * 					Name: pulumi.String("eth1"),
+ * 				},
+ * 			},
+ * 			Location:           pulumi.String("westus"),
+ * 			NetworkProfileName: pulumi.String("networkProfile1"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const networkProfile = new azure_native.network.NetworkProfile("networkProfile", {
+ *     containerNetworkInterfaceConfigurations: [{
+ *         ipConfigurations: [{
+ *             name: "ipconfig1",
+ *             subnet: {
+ *                 id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1",
+ *             },
+ *         }],
+ *         name: "eth1",
+ *     }],
+ *     location: "westus",
+ *     networkProfileName: "networkProfile1",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * network_profile = azure_native.network.NetworkProfile("networkProfile",
+ *     container_network_interface_configurations=[azure_native.network.ContainerNetworkInterfaceConfigurationArgs(
+ *         ip_configurations=[azure_native.network.IPConfigurationProfileArgs(
+ *             name="ipconfig1",
+ *             subnet=azure_native.network.SubnetArgs(
+ *                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1",
+ *             ),
+ *         )],
+ *         name="eth1",
+ *     )],
+ *     location="westus",
+ *     network_profile_name="networkProfile1",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +156,108 @@ import javax.annotation.Nullable;
 public class NetworkProfile extends io.pulumi.resources.CustomResource {
     /**
      * List of chid container network interface configurations.
-     * 
      */
     @Export(name="containerNetworkInterfaceConfigurations", type=List.class, parameters={ContainerNetworkInterfaceConfigurationResponse.class})
     private Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> containerNetworkInterfaceConfigurations;
 
     /**
      * @return List of chid container network interface configurations.
-     * 
      */
     public Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> getContainerNetworkInterfaceConfigurations() {
         return this.containerNetworkInterfaceConfigurations;
     }
     /**
      * List of child container network interfaces.
-     * 
      */
     @Export(name="containerNetworkInterfaces", type=List.class, parameters={ContainerNetworkInterfaceResponse.class})
     private Output<List<ContainerNetworkInterfaceResponse>> containerNetworkInterfaces;
 
     /**
      * @return List of child container network interfaces.
-     * 
      */
     public Output<List<ContainerNetworkInterfaceResponse>> getContainerNetworkInterfaces() {
         return this.containerNetworkInterfaces;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the network profile resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the network profile resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the network profile resource.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resource GUID property of the network profile resource.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

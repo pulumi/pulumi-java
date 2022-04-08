@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class CloudToDevicePropertiesResponse {
     /**
      * The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
      */
     private final @Nullable String defaultTtlAsIso8601;
     /**
      * The properties of the feedback queue for cloud-to-device messages.
-     * 
      */
     private final @Nullable FeedbackPropertiesResponse feedback;
     /**
      * The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
      */
     private final @Nullable Integer maxDeliveryCount;
 
@@ -41,21 +38,18 @@ public final class CloudToDevicePropertiesResponse {
 
     /**
      * The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
     */
     public Optional<String> getDefaultTtlAsIso8601() {
         return Optional.ofNullable(this.defaultTtlAsIso8601);
     }
     /**
      * The properties of the feedback queue for cloud-to-device messages.
-     * 
     */
     public Optional<FeedbackPropertiesResponse> getFeedback() {
         return Optional.ofNullable(this.feedback);
     }
     /**
      * The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
     */
     public Optional<Integer> getMaxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);

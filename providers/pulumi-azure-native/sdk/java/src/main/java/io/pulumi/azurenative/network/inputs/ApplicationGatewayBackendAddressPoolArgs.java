@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backend Address Pool of an application gateway.
- * 
  */
 public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
 
     /**
      * Backend addresses.
-     * 
      */
     @Import(name="backendAddresses")
       private final @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
 
     /**
      * Name of the backend address pool that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

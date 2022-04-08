@@ -23,7 +23,171 @@ import javax.annotation.Nullable;
  * Snapshot policy information
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SnapshotPolicies_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var snapshotPolicy = new AzureNative.NetApp.SnapshotPolicy("snapshotPolicy", new AzureNative.NetApp.SnapshotPolicyArgs
+ *         {
+ *             AccountName = "account1",
+ *             DailySchedule = new AzureNative.NetApp.Inputs.DailyScheduleArgs
+ *             {
+ *                 Hour = 14,
+ *                 Minute = 30,
+ *                 SnapshotsToKeep = 4,
+ *             },
+ *             HourlySchedule = new AzureNative.NetApp.Inputs.HourlyScheduleArgs
+ *             {
+ *                 Minute = 50,
+ *                 SnapshotsToKeep = 2,
+ *             },
+ *             Location = "eastus",
+ *             MonthlySchedule = new AzureNative.NetApp.Inputs.MonthlyScheduleArgs
+ *             {
+ *                 DaysOfMonth = "10,11,12",
+ *                 Hour = 14,
+ *                 Minute = 15,
+ *                 SnapshotsToKeep = 5,
+ *             },
+ *             ResourceGroupName = "myRG",
+ *             SnapshotPolicyName = "snapshotPolicyName",
+ *             WeeklySchedule = new AzureNative.NetApp.Inputs.WeeklyScheduleArgs
+ *             {
+ *                 Day = "Wednesday",
+ *                 Hour = 14,
+ *                 Minute = 45,
+ *                 SnapshotsToKeep = 3,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := netapp.NewSnapshotPolicy(ctx, "snapshotPolicy", &netapp.SnapshotPolicyArgs{
+ * 			AccountName: pulumi.String("account1"),
+ * 			DailySchedule: &netapp.DailyScheduleArgs{
+ * 				Hour:            pulumi.Int(14),
+ * 				Minute:          pulumi.Int(30),
+ * 				SnapshotsToKeep: pulumi.Int(4),
+ * 			},
+ * 			HourlySchedule: &netapp.HourlyScheduleArgs{
+ * 				Minute:          pulumi.Int(50),
+ * 				SnapshotsToKeep: pulumi.Int(2),
+ * 			},
+ * 			Location: pulumi.String("eastus"),
+ * 			MonthlySchedule: &netapp.MonthlyScheduleArgs{
+ * 				DaysOfMonth:     pulumi.String("10,11,12"),
+ * 				Hour:            pulumi.Int(14),
+ * 				Minute:          pulumi.Int(15),
+ * 				SnapshotsToKeep: pulumi.Int(5),
+ * 			},
+ * 			ResourceGroupName:  pulumi.String("myRG"),
+ * 			SnapshotPolicyName: pulumi.String("snapshotPolicyName"),
+ * 			WeeklySchedule: &netapp.WeeklyScheduleArgs{
+ * 				Day:             pulumi.String("Wednesday"),
+ * 				Hour:            pulumi.Int(14),
+ * 				Minute:          pulumi.Int(45),
+ * 				SnapshotsToKeep: pulumi.Int(3),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", {
+ *     accountName: "account1",
+ *     dailySchedule: {
+ *         hour: 14,
+ *         minute: 30,
+ *         snapshotsToKeep: 4,
+ *     },
+ *     hourlySchedule: {
+ *         minute: 50,
+ *         snapshotsToKeep: 2,
+ *     },
+ *     location: "eastus",
+ *     monthlySchedule: {
+ *         daysOfMonth: "10,11,12",
+ *         hour: 14,
+ *         minute: 15,
+ *         snapshotsToKeep: 5,
+ *     },
+ *     resourceGroupName: "myRG",
+ *     snapshotPolicyName: "snapshotPolicyName",
+ *     weeklySchedule: {
+ *         day: "Wednesday",
+ *         hour: 14,
+ *         minute: 45,
+ *         snapshotsToKeep: 3,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * snapshot_policy = azure_native.netapp.SnapshotPolicy("snapshotPolicy",
+ *     account_name="account1",
+ *     daily_schedule=azure_native.netapp.DailyScheduleArgs(
+ *         hour=14,
+ *         minute=30,
+ *         snapshots_to_keep=4,
+ *     ),
+ *     hourly_schedule=azure_native.netapp.HourlyScheduleArgs(
+ *         minute=50,
+ *         snapshots_to_keep=2,
+ *     ),
+ *     location="eastus",
+ *     monthly_schedule=azure_native.netapp.MonthlyScheduleArgs(
+ *         days_of_month="10,11,12",
+ *         hour=14,
+ *         minute=15,
+ *         snapshots_to_keep=5,
+ *     ),
+ *     resource_group_name="myRG",
+ *     snapshot_policy_name="snapshotPolicyName",
+ *     weekly_schedule=azure_native.netapp.WeeklyScheduleArgs(
+ *         day="Wednesday",
+ *         hour=14,
+ *         minute=45,
+ *         snapshots_to_keep=3,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,140 +202,120 @@ import javax.annotation.Nullable;
 public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Schedule for daily snapshots
-     * 
      */
     @Export(name="dailySchedule", type=DailyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ DailyScheduleResponse> dailySchedule;
 
     /**
      * @return Schedule for daily snapshots
-     * 
      */
     public Output</* @Nullable */ DailyScheduleResponse> getDailySchedule() {
         return this.dailySchedule;
     }
     /**
      * The property to decide policy is enabled or not
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return The property to decide policy is enabled or not
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Schedule for hourly snapshots
-     * 
      */
     @Export(name="hourlySchedule", type=HourlyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ HourlyScheduleResponse> hourlySchedule;
 
     /**
      * @return Schedule for hourly snapshots
-     * 
      */
     public Output</* @Nullable */ HourlyScheduleResponse> getHourlySchedule() {
         return this.hourlySchedule;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Schedule for monthly snapshots
-     * 
      */
     @Export(name="monthlySchedule", type=MonthlyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ MonthlyScheduleResponse> monthlySchedule;
 
     /**
      * @return Schedule for monthly snapshots
-     * 
      */
     public Output</* @Nullable */ MonthlyScheduleResponse> getMonthlySchedule() {
         return this.monthlySchedule;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Azure lifecycle management
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Schedule for weekly snapshots
-     * 
      */
     @Export(name="weeklySchedule", type=WeeklyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ WeeklyScheduleResponse> weeklySchedule;
 
     /**
      * @return Schedule for weekly snapshots
-     * 
      */
     public Output</* @Nullable */ WeeklyScheduleResponse> getWeeklySchedule() {
         return this.weeklySchedule;

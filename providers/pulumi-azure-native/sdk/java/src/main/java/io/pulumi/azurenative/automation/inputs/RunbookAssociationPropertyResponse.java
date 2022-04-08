@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The runbook property associated with the entity.
- * 
  */
 public final class RunbookAssociationPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RunbookAssociationPropertyResponse extends io.pulumi.resource
 
     /**
      * Gets or sets the name of the runbook.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

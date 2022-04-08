@@ -22,7 +22,231 @@ import javax.annotation.Nullable;
  * IoT Connector definition.
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an IoT Connector
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var iotConnector = new AzureNative.HealthcareApis.IotConnector("iotConnector", new AzureNative.HealthcareApis.IotConnectorArgs
+ *         {
+ *             DeviceMapping = new AzureNative.HealthcareApis.Inputs.IotMappingPropertiesArgs
+ *             {
+ *                 Content = 
+ *                 {
+ *                     { "template", 
+ *                     {
+ *                         
+ *                         {
+ *                             { "template", 
+ *                             {
+ *                                 { "deviceIdExpression", "$.deviceid" },
+ *                                 { "timestampExpression", "$.measurementdatetime" },
+ *                                 { "typeMatchExpression", "$..[?(@heartrate)]" },
+ *                                 { "typeName", "heartrate" },
+ *                                 { "values", 
+ *                                 {
+ *                                     
+ *                                     {
+ *                                         { "required", "true" },
+ *                                         { "valueExpression", "$.heartrate" },
+ *                                         { "valueName", "hr" },
+ *                                     },
+ *                                 } },
+ *                             } },
+ *                             { "templateType", "JsonPathContent" },
+ *                         },
+ *                     } },
+ *                     { "templateType", "CollectionContent" },
+ *                 },
+ *             },
+ *             Identity = new AzureNative.HealthcareApis.Inputs.ServiceManagedIdentityIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             IngestionEndpointConfiguration = new AzureNative.HealthcareApis.Inputs.IotEventHubIngestionEndpointConfigurationArgs
+ *             {
+ *                 ConsumerGroup = "ConsumerGroupA",
+ *                 EventHubName = "MyEventHubName",
+ *                 FullyQualifiedEventHubNamespace = "myeventhub.servicesbus.windows.net",
+ *             },
+ *             IotConnectorName = "blue",
+ *             Location = "westus",
+ *             ResourceGroupName = "testRG",
+ *             Tags = 
+ *             {
+ *                 { "additionalProp1", "string" },
+ *                 { "additionalProp2", "string" },
+ *                 { "additionalProp3", "string" },
+ *             },
+ *             WorkspaceName = "workspace1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	healthcareapis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthcareapis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := healthcareapis.NewIotConnector(ctx, "iotConnector", &healthcareapis.IotConnectorArgs{
+ * 			DeviceMapping: &healthcareapis.IotMappingPropertiesArgs{
+ * 				Content: pulumi.Any{
+ * 					Template: []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"template": map[string]interface{}{
+ * 								"deviceIdExpression":  fmt.Sprintf("%v%v", "$", ".deviceid"),
+ * 								"timestampExpression": fmt.Sprintf("%v%v", "$", ".measurementdatetime"),
+ * 								"typeMatchExpression": fmt.Sprintf("%v%v", "$", "..[?(@heartrate)]"),
+ * 								"typeName":            "heartrate",
+ * 								"values": []map[string]interface{}{
+ * 									map[string]interface{}{
+ * 										"required":        "true",
+ * 										"valueExpression": fmt.Sprintf("%v%v", "$", ".heartrate"),
+ * 										"valueName":       "hr",
+ * 									},
+ * 								},
+ * 							},
+ * 							"templateType": "JsonPathContent",
+ * 						},
+ * 					},
+ * 					TemplateType: "CollectionContent",
+ * 				},
+ * 			},
+ * 			Identity: &healthcareapis.ServiceManagedIdentityIdentityArgs{
+ * 				Type: pulumi.String("SystemAssigned"),
+ * 			},
+ * 			IngestionEndpointConfiguration: &healthcareapis.IotEventHubIngestionEndpointConfigurationArgs{
+ * 				ConsumerGroup:                   pulumi.String("ConsumerGroupA"),
+ * 				EventHubName:                    pulumi.String("MyEventHubName"),
+ * 				FullyQualifiedEventHubNamespace: pulumi.String("myeventhub.servicesbus.windows.net"),
+ * 			},
+ * 			IotConnectorName:  pulumi.String("blue"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("testRG"),
+ * 			Tags: pulumi.StringMap{
+ * 				"additionalProp1": pulumi.String("string"),
+ * 				"additionalProp2": pulumi.String("string"),
+ * 				"additionalProp3": pulumi.String("string"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("workspace1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const iotConnector = new azure_native.healthcareapis.IotConnector("iotConnector", {
+ *     deviceMapping: {
+ *         content: {
+ *             template: [{
+ *                 template: {
+ *                     deviceIdExpression: `$.deviceid`,
+ *                     timestampExpression: `$.measurementdatetime`,
+ *                     typeMatchExpression: `$..[?(@heartrate)]`,
+ *                     typeName: "heartrate",
+ *                     values: [{
+ *                         required: "true",
+ *                         valueExpression: `$.heartrate`,
+ *                         valueName: "hr",
+ *                     }],
+ *                 },
+ *                 templateType: "JsonPathContent",
+ *             }],
+ *             templateType: "CollectionContent",
+ *         },
+ *     },
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     ingestionEndpointConfiguration: {
+ *         consumerGroup: "ConsumerGroupA",
+ *         eventHubName: "MyEventHubName",
+ *         fullyQualifiedEventHubNamespace: "myeventhub.servicesbus.windows.net",
+ *     },
+ *     iotConnectorName: "blue",
+ *     location: "westus",
+ *     resourceGroupName: "testRG",
+ *     tags: {
+ *         additionalProp1: "string",
+ *         additionalProp2: "string",
+ *         additionalProp3: "string",
+ *     },
+ *     workspaceName: "workspace1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * iot_connector = azure_native.healthcareapis.IotConnector("iotConnector",
+ *     device_mapping=azure_native.healthcareapis.IotMappingPropertiesArgs(
+ *         content={
+ *             "template": [{
+ *                 "template": {
+ *                     "deviceIdExpression": "$.deviceid",
+ *                     "timestampExpression": "$.measurementdatetime",
+ *                     "typeMatchExpression": "$..[?(@heartrate)]",
+ *                     "typeName": "heartrate",
+ *                     "values": [{
+ *                         "required": "true",
+ *                         "valueExpression": "$.heartrate",
+ *                         "valueName": "hr",
+ *                     }],
+ *                 },
+ *                 "templateType": "JsonPathContent",
+ *             }],
+ *             "templateType": "CollectionContent",
+ *         },
+ *     ),
+ *     identity=azure_native.healthcareapis.ServiceManagedIdentityIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     ingestion_endpoint_configuration=azure_native.healthcareapis.IotEventHubIngestionEndpointConfigurationArgs(
+ *         consumer_group="ConsumerGroupA",
+ *         event_hub_name="MyEventHubName",
+ *         fully_qualified_event_hub_namespace="myeventhub.servicesbus.windows.net",
+ *     ),
+ *     iot_connector_name="blue",
+ *     location="westus",
+ *     resource_group_name="testRG",
+ *     tags={
+ *         "additionalProp1": "string",
+ *         "additionalProp2": "string",
+ *         "additionalProp3": "string",
+ *     },
+ *     workspace_name="workspace1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,140 +261,120 @@ import javax.annotation.Nullable;
 public class IotConnector extends io.pulumi.resources.CustomResource {
     /**
      * Device Mappings.
-     * 
      */
     @Export(name="deviceMapping", type=IotMappingPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IotMappingPropertiesResponse> deviceMapping;
 
     /**
      * @return Device Mappings.
-     * 
      */
     public Output</* @Nullable */ IotMappingPropertiesResponse> getDeviceMapping() {
         return this.deviceMapping;
     }
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
-     * 
      */
     @Export(name="identity", type=ServiceManagedIdentityResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity;
 
     /**
      * @return Setting indicating whether the service has a managed identity associated with it.
-     * 
      */
     public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> getIdentity() {
         return this.identity;
     }
     /**
      * Source configuration.
-     * 
      */
     @Export(name="ingestionEndpointConfiguration", type=IotEventHubIngestionEndpointConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ IotEventHubIngestionEndpointConfigurationResponse> ingestionEndpointConfiguration;
 
     /**
      * @return Source configuration.
-     * 
      */
     public Output</* @Nullable */ IotEventHubIngestionEndpointConfigurationResponse> getIngestionEndpointConfiguration() {
         return this.ingestionEndpointConfiguration;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

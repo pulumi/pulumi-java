@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class ApplicationJitAccessPolicyResponse {
     /**
      * Whether the JIT access is enabled.
-     * 
      */
     private final Boolean jitAccessEnabled;
     /**
      * JIT approval mode.
-     * 
      */
     private final @Nullable String jitApprovalMode;
     /**
      * The JIT approvers
-     * 
      */
     private final @Nullable List<JitApproverDefinitionResponse> jitApprovers;
     /**
      * The maximum duration JIT access is granted. This is an ISO8601 time period value.
-     * 
      */
     private final @Nullable String maximumJitAccessDuration;
 
@@ -49,28 +45,24 @@ public final class ApplicationJitAccessPolicyResponse {
 
     /**
      * Whether the JIT access is enabled.
-     * 
     */
     public Boolean getJitAccessEnabled() {
         return this.jitAccessEnabled;
     }
     /**
      * JIT approval mode.
-     * 
     */
     public Optional<String> getJitApprovalMode() {
         return Optional.ofNullable(this.jitApprovalMode);
     }
     /**
      * The JIT approvers
-     * 
     */
     public List<JitApproverDefinitionResponse> getJitApprovers() {
         return this.jitApprovers == null ? List.of() : this.jitApprovers;
     }
     /**
      * The maximum duration JIT access is granted. This is an ISO8601 time period value.
-     * 
     */
     public Optional<String> getMaximumJitAccessDuration() {
         return Optional.ofNullable(this.maximumJitAccessDuration);

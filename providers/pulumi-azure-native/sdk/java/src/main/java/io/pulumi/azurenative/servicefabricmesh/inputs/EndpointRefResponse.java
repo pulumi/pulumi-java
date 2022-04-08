@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a reference to a service endpoint.
- * 
  */
 public final class EndpointRefResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointRefResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the endpoint.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

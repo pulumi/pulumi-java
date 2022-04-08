@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class A2AUnprotectedDiskDetailsResponse {
     /**
      * The source lun Id for the data disk.
-     * 
      */
     private final @Nullable Integer diskLunId;
 
@@ -24,7 +23,6 @@ public final class A2AUnprotectedDiskDetailsResponse {
 
     /**
      * The source lun Id for the data disk.
-     * 
     */
     public Optional<Integer> getDiskLunId() {
         return Optional.ofNullable(this.diskLunId);

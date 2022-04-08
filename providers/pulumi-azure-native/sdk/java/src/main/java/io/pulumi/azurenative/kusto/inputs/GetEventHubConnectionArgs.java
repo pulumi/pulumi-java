@@ -14,7 +14,6 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the database in the Kusto cluster.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -36,7 +34,6 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the event hub connection.
-     * 
      */
     @Import(name="eventHubConnectionName", required=true)
       private final String eventHubConnectionName;
@@ -47,7 +44,6 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

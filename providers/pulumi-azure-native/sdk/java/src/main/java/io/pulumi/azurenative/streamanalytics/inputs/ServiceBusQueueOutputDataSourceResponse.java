@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Service Bus Queue output data source.
- * 
  */
 public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
 
     /**
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
-     * 
      */
     @Import(name="propertyColumns")
       private final @Nullable List<String> propertyColumns;
@@ -32,7 +30,6 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
 
     /**
      * The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="queueName")
       private final @Nullable String queueName;
@@ -43,7 +40,6 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
 
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serviceBusNamespace")
       private final @Nullable String serviceBusNamespace;
@@ -54,7 +50,6 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
 
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable String sharedAccessPolicyKey;
@@ -65,7 +60,6 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
 
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyName")
       private final @Nullable String sharedAccessPolicyName;
@@ -77,7 +71,6 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.ServiceBus/Queue'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

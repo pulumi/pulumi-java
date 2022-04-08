@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Support information for the content item.
- * 
  */
 public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Email of support contact
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;
@@ -33,7 +31,6 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Link for support help, like to support page to open a ticket etc.
-     * 
      */
     @Import(name="link")
       private final @Nullable Output<String> link;
@@ -44,7 +41,6 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the support contact. Company or person.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +51,6 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Type of support for content item
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<Either<String,SupportTier>> tier;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AttributesResponse {
     /**
      * Indicates whether or not authentication is enabled on the ACL.
-     * 
      */
     private final Boolean authentication;
     /**
      * Indicates whether or not write protect is enabled on the LUNs.
-     * 
      */
     private final Boolean prodModeWriteProtect;
 
@@ -30,14 +28,12 @@ public final class AttributesResponse {
 
     /**
      * Indicates whether or not authentication is enabled on the ACL.
-     * 
     */
     public Boolean getAuthentication() {
         return this.authentication;
     }
     /**
      * Indicates whether or not write protect is enabled on the LUNs.
-     * 
     */
     public Boolean getProdModeWriteProtect() {
         return this.prodModeWriteProtect;

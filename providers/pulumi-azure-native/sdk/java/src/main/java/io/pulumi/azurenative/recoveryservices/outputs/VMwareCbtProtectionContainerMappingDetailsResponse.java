@@ -12,37 +12,30 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMwareCbt'.
-     * 
      */
     private final String instanceType;
     /**
      * The target key vault ARM Id.
-     * 
      */
     private final String keyVaultId;
     /**
      * The target key vault URI.
-     * 
      */
     private final String keyVaultUri;
     /**
      * The secret name of the service bus connection string.
-     * 
      */
     private final String serviceBusConnectionStringSecretName;
     /**
      * The storage account ARM Id.
-     * 
      */
     private final String storageAccountId;
     /**
      * The secret name of the storage account.
-     * 
      */
     private final String storageAccountSasSecretName;
     /**
      * The target location.
-     * 
      */
     private final String targetLocation;
 
@@ -67,49 +60,42 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMwareCbt'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The target key vault ARM Id.
-     * 
     */
     public String getKeyVaultId() {
         return this.keyVaultId;
     }
     /**
      * The target key vault URI.
-     * 
     */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The secret name of the service bus connection string.
-     * 
     */
     public String getServiceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
     /**
      * The storage account ARM Id.
-     * 
     */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }
     /**
      * The secret name of the storage account.
-     * 
     */
     public String getStorageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
     /**
      * The target location.
-     * 
     */
     public String getTargetLocation() {
         return this.targetLocation;

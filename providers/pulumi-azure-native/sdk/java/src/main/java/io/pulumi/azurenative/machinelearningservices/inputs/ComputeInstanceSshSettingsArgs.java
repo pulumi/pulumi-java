@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies policy and settings for SSH access.
- * 
  */
 public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
-     * 
      */
     @Import(name="adminPublicKey")
       private final @Nullable Output<String> adminPublicKey;
@@ -33,7 +31,6 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
-     * 
      */
     @Import(name="sshPublicAccess")
       private final @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the publisher information of a process/rule
- * 
  */
 public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The "OriginalName" field taken from the file's version resource
-     * 
      */
     @Import(name="binaryName")
       private final @Nullable Output<String> binaryName;
@@ -31,7 +29,6 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The product name taken from the file's version resource
-     * 
      */
     @Import(name="productName")
       private final @Nullable Output<String> productName;
@@ -42,7 +39,6 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
-     * 
      */
     @Import(name="publisherName")
       private final @Nullable Output<String> publisherName;
@@ -53,7 +49,6 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The binary file version taken from the file's version resource
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

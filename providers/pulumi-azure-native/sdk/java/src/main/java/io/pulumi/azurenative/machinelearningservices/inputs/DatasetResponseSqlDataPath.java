@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Sql Query/Table/Stored Procedure details.
- * 
  */
 public final class DatasetResponseSqlDataPath extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
 
     /**
      * SQL query timeout. Unit in seconds.
-     * 
      */
     @Import(name="queryTimeout", required=true)
       private final Double queryTimeout;
@@ -30,7 +28,6 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
 
     /**
      * SQL query
-     * 
      */
     @Import(name="sqlQuery", required=true)
       private final String sqlQuery;
@@ -41,7 +38,6 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
 
     /**
      * SQL storedProcedure name
-     * 
      */
     @Import(name="sqlStoredProcedureName", required=true)
       private final String sqlStoredProcedureName;
@@ -52,7 +48,6 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
 
     /**
      * SQL table name
-     * 
      */
     @Import(name="sqlTableName", required=true)
       private final String sqlTableName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of container to retrieve logs from.
-     * 
      */
     @EnumType
     public enum ContainerType {

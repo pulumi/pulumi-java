@@ -23,7 +23,113 @@ import javax.annotation.Nullable;
  * VirtualHub Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VirtualHubPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualHub = new AzureNative.Network.VirtualHub("virtualHub", new AzureNative.Network.VirtualHubArgs
+ *         {
+ *             AddressPrefix = "10.168.0.0/24",
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *             Sku = "Basic",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             VirtualHubName = "virtualHub2",
+ *             VirtualWan = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualHub(ctx, "virtualHub", &network.VirtualHubArgs{
+ * 			AddressPrefix:     pulumi.String("10.168.0.0/24"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Sku:               pulumi.String("Basic"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			VirtualHubName: pulumi.String("virtualHub2"),
+ * 			VirtualWan: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualHub = new azure_native.network.VirtualHub("virtualHub", {
+ *     addressPrefix: "10.168.0.0/24",
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ *     sku: "Basic",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     virtualHubName: "virtualHub2",
+ *     virtualWan: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_hub = azure_native.network.VirtualHub("virtualHub",
+ *     address_prefix="10.168.0.0/24",
+ *     location="West US",
+ *     resource_group_name="rg1",
+ *     sku="Basic",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     virtual_hub_name="virtualHub2",
+ *     virtual_wan=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,322 +144,276 @@ import javax.annotation.Nullable;
 public class VirtualHub extends io.pulumi.resources.CustomResource {
     /**
      * Address-prefix for this VirtualHub.
-     * 
      */
     @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
      * @return Address-prefix for this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ String> getAddressPrefix() {
         return this.addressPrefix;
     }
     /**
      * Flag to control transit for VirtualRouter hub.
-     * 
      */
     @Export(name="allowBranchToBranchTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowBranchToBranchTraffic;
 
     /**
      * @return Flag to control transit for VirtualRouter hub.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowBranchToBranchTraffic() {
         return this.allowBranchToBranchTraffic;
     }
     /**
      * The azureFirewall associated with this VirtualHub.
-     * 
      */
     @Export(name="azureFirewall", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> azureFirewall;
 
     /**
      * @return The azureFirewall associated with this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getAzureFirewall() {
         return this.azureFirewall;
     }
     /**
      * List of references to Bgp Connections.
-     * 
      */
     @Export(name="bgpConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> bgpConnections;
 
     /**
      * @return List of references to Bgp Connections.
-     * 
      */
     public Output<List<SubResourceResponse>> getBgpConnections() {
         return this.bgpConnections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The expressRouteGateway associated with this VirtualHub.
-     * 
      */
     @Export(name="expressRouteGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> expressRouteGateway;
 
     /**
      * @return The expressRouteGateway associated with this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getExpressRouteGateway() {
         return this.expressRouteGateway;
     }
     /**
      * List of references to IpConfigurations.
-     * 
      */
     @Export(name="ipConfigurations", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> ipConfigurations;
 
     /**
      * @return List of references to IpConfigurations.
-     * 
      */
     public Output<List<SubResourceResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The P2SVpnGateway associated with this VirtualHub.
-     * 
      */
     @Export(name="p2SVpnGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> p2SVpnGateway;
 
     /**
      * @return The P2SVpnGateway associated with this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getP2SVpnGateway() {
         return this.p2SVpnGateway;
     }
     /**
      * The provisioning state of the virtual hub resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the virtual hub resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The routeTable associated with this virtual hub.
-     * 
      */
     @Export(name="routeTable", type=VirtualHubRouteTableResponse.class, parameters={})
     private Output</* @Nullable */ VirtualHubRouteTableResponse> routeTable;
 
     /**
      * @return The routeTable associated with this virtual hub.
-     * 
      */
     public Output</* @Nullable */ VirtualHubRouteTableResponse> getRouteTable() {
         return this.routeTable;
     }
     /**
      * The routing state.
-     * 
      */
     @Export(name="routingState", type=String.class, parameters={})
     private Output<String> routingState;
 
     /**
      * @return The routing state.
-     * 
      */
     public Output<String> getRoutingState() {
         return this.routingState;
     }
     /**
      * The securityPartnerProvider associated with this VirtualHub.
-     * 
      */
     @Export(name="securityPartnerProvider", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> securityPartnerProvider;
 
     /**
      * @return The securityPartnerProvider associated with this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getSecurityPartnerProvider() {
         return this.securityPartnerProvider;
     }
     /**
      * The Security Provider name.
-     * 
      */
     @Export(name="securityProviderName", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityProviderName;
 
     /**
      * @return The Security Provider name.
-     * 
      */
     public Output</* @Nullable */ String> getSecurityProviderName() {
         return this.securityProviderName;
     }
     /**
      * The sku of this VirtualHub.
-     * 
      */
     @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
      * @return The sku of this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ String> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * List of all virtual hub route table v2s associated with this VirtualHub.
-     * 
      */
     @Export(name="virtualHubRouteTableV2s", type=List.class, parameters={VirtualHubRouteTableV2Response.class})
     private Output</* @Nullable */ List<VirtualHubRouteTableV2Response>> virtualHubRouteTableV2s;
 
     /**
      * @return List of all virtual hub route table v2s associated with this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ List<VirtualHubRouteTableV2Response>> getVirtualHubRouteTableV2s() {
         return this.virtualHubRouteTableV2s;
     }
     /**
      * VirtualRouter ASN.
-     * 
      */
     @Export(name="virtualRouterAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> virtualRouterAsn;
 
     /**
      * @return VirtualRouter ASN.
-     * 
      */
     public Output</* @Nullable */ Double> getVirtualRouterAsn() {
         return this.virtualRouterAsn;
     }
     /**
      * VirtualRouter IPs.
-     * 
      */
     @Export(name="virtualRouterIps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> virtualRouterIps;
 
     /**
      * @return VirtualRouter IPs.
-     * 
      */
     public Output</* @Nullable */ List<String>> getVirtualRouterIps() {
         return this.virtualRouterIps;
     }
     /**
      * The VirtualWAN to which the VirtualHub belongs.
-     * 
      */
     @Export(name="virtualWan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualWan;
 
     /**
      * @return The VirtualWAN to which the VirtualHub belongs.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getVirtualWan() {
         return this.virtualWan;
     }
     /**
      * The VpnGateway associated with this VirtualHub.
-     * 
      */
     @Export(name="vpnGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> vpnGateway;
 
     /**
      * @return The VpnGateway associated with this VirtualHub.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getVpnGateway() {
         return this.vpnGateway;

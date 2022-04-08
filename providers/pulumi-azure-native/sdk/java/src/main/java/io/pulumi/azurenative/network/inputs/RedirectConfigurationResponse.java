@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes Redirect Route.
- * 
  */
 public final class RedirectConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
-     * 
      */
     @Import(name="customFragment")
       private final @Nullable String customFragment;
@@ -31,7 +29,6 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * Host to redirect. Leave empty to use the incoming host as the destination host.
-     * 
      */
     @Import(name="customHost")
       private final @Nullable String customHost;
@@ -42,7 +39,6 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
-     * 
      */
     @Import(name="customPath")
       private final @Nullable String customPath;
@@ -53,7 +49,6 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
-     * 
      */
     @Import(name="customQueryString")
       private final @Nullable String customQueryString;
@@ -63,8 +58,8 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
     }
 
     /**
-     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'.
      * 
+     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'.
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -75,7 +70,6 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * The protocol of the destination to where the traffic is redirected
-     * 
      */
     @Import(name="redirectProtocol")
       private final @Nullable String redirectProtocol;
@@ -86,7 +80,6 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * The redirect type the rule will use when redirecting traffic.
-     * 
      */
     @Import(name="redirectType")
       private final @Nullable String redirectType;

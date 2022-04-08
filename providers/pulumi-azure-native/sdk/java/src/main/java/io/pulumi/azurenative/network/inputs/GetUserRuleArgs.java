@@ -14,7 +14,6 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network manager security Configuration.
-     * 
      */
     @Import(name="configurationName", required=true)
       private final String configurationName;
@@ -25,7 +24,6 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -36,7 +34,6 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network manager security Configuration rule collection.
-     * 
      */
     @Import(name="ruleCollectionName", required=true)
       private final String ruleCollectionName;
@@ -58,7 +54,6 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the rule.
-     * 
      */
     @Import(name="ruleName", required=true)
       private final String ruleName;

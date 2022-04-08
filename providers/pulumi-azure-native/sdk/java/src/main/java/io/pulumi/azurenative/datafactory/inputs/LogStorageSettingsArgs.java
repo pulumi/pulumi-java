@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * (Deprecated. Please use LogSettings) Log storage settings.
- * 
  */
 public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableReliableLogging")
       private final @Nullable Output<Object> enableReliableLogging;
@@ -32,7 +30,6 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Log storage linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -43,7 +40,6 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="logLevel")
       private final @Nullable Output<Object> logLevel;
@@ -54,7 +50,6 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<Object> path;

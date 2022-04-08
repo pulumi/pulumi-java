@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of scheduled scan
-     * 
      */
     @EnumType
     public enum ScanType {

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The load-based autoscale request parameters
- * 
  */
 public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The maximum instance count of the cluster
-     * 
      */
     @Import(name="maxInstanceCount")
       private final @Nullable Integer maxInstanceCount;
@@ -31,7 +29,6 @@ public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The minimum instance count of the cluster
-     * 
      */
     @Import(name="minInstanceCount")
       private final @Nullable Integer minInstanceCount;

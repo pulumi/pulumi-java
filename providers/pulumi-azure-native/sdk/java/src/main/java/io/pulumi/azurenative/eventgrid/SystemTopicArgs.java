@@ -18,7 +18,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity information for the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityInfoArgs> identity;
@@ -29,7 +28,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source for the system topic.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;
@@ -62,7 +58,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the system topic.
-     * 
      */
     @Import(name="systemTopicName")
       private final @Nullable Output<String> systemTopicName;
@@ -73,7 +68,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -84,7 +78,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TopicType for the system topic.
-     * 
      */
     @Import(name="topicType")
       private final @Nullable Output<String> topicType;

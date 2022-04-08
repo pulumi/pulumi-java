@@ -13,12 +13,10 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
     /**
      * The authorization type for integration runtime sharing.
      * Expected value is 'Key'.
-     * 
      */
     private final String authorizationType;
     /**
      * The key used for authorization.
-     * 
      */
     private final SecureStringResponse key;
 
@@ -33,14 +31,12 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
     /**
      * The authorization type for integration runtime sharing.
      * Expected value is 'Key'.
-     * 
     */
     public String getAuthorizationType() {
         return this.authorizationType;
     }
     /**
      * The key used for authorization.
-     * 
     */
     public SecureStringResponse getKey() {
         return this.key;

@@ -14,7 +14,6 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
 
     /**
      * The name of the Bot Service Connection Setting resource.
-     * 
      */
     @Import(name="connectionName", required=true)
       private final String connectionName;
@@ -25,7 +24,6 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
 
     /**
      * The name of the Bot resource group in the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
 
     /**
      * The name of the Bot resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

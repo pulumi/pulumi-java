@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Virtual Appliance Sku Properties.
- * 
  */
 public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
 
     /**
      * Virtual Appliance Scale Unit.
-     * 
      */
     @Import(name="bundledScaleUnit")
       private final @Nullable String bundledScaleUnit;
@@ -31,7 +29,6 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
 
     /**
      * Virtual Appliance Version.
-     * 
      */
     @Import(name="marketPlaceVersion")
       private final @Nullable String marketPlaceVersion;
@@ -42,7 +39,6 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
 
     /**
      * Virtual Appliance Vendor.
-     * 
      */
     @Import(name="vendor")
       private final @Nullable String vendor;

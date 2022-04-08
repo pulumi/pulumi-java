@@ -20,7 +20,79 @@ import javax.annotation.Nullable;
  * Kubernetes role.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RolePut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kubernetesRole = new AzureNative.DataBoxEdge.KubernetesRole("kubernetesRole", new AzureNative.DataBoxEdge.KubernetesRoleArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             Name = "IoTRole1",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewKubernetesRole(ctx, "kubernetesRole", &databoxedge.KubernetesRoleArgs{
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Name:              pulumi.String("IoTRole1"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kubernetesRole = new azure_native.databoxedge.KubernetesRole("kubernetesRole", {
+ *     deviceName: "testedgedevice",
+ *     name: "IoTRole1",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kubernetes_role = azure_native.databoxedge.KubernetesRole("kubernetesRole",
+ *     device_name="testedgedevice",
+ *     name="IoTRole1",
+ *     resource_group_name="GroupForEdgeAutomation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,28 +107,24 @@ import javax.annotation.Nullable;
 public class KubernetesRole extends io.pulumi.resources.CustomResource {
     /**
      * Host OS supported by the Kubernetes role.
-     * 
      */
     @Export(name="hostPlatform", type=String.class, parameters={})
     private Output<String> hostPlatform;
 
     /**
      * @return Host OS supported by the Kubernetes role.
-     * 
      */
     public Output<String> getHostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the runtime is hosted.
-     * 
      */
     @Export(name="hostPlatformType", type=String.class, parameters={})
     private Output<String> hostPlatformType;
 
     /**
      * @return Platform where the runtime is hosted.
-     * 
      */
     public Output<String> getHostPlatformType() {
         return this.hostPlatformType;
@@ -64,7 +132,6 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
     /**
      * Role type.
      * Expected value is 'Kubernetes'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -72,105 +139,90 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
     /**
      * @return Role type.
      * Expected value is 'Kubernetes'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Kubernetes cluster configuration
-     * 
      */
     @Export(name="kubernetesClusterInfo", type=KubernetesClusterInfoResponse.class, parameters={})
     private Output<KubernetesClusterInfoResponse> kubernetesClusterInfo;
 
     /**
      * @return Kubernetes cluster configuration
-     * 
      */
     public Output<KubernetesClusterInfoResponse> getKubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
     /**
      * Kubernetes role resources
-     * 
      */
     @Export(name="kubernetesRoleResources", type=KubernetesRoleResourcesResponse.class, parameters={})
     private Output<KubernetesRoleResourcesResponse> kubernetesRoleResources;
 
     /**
      * @return Kubernetes role resources
-     * 
      */
     public Output<KubernetesRoleResourcesResponse> getKubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of Kubernetes deployment
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return State of Kubernetes deployment
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Role status.
-     * 
      */
     @Export(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
     /**
      * @return Role status.
-     * 
      */
     public Output<String> getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Role configured on ASE resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

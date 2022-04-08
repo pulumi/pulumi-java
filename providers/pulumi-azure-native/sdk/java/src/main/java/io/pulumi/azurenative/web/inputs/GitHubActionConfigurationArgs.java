@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The GitHub action configuration.
- * 
  */
 public final class GitHubActionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * GitHub Action code configuration.
-     * 
      */
     @Import(name="codeConfiguration")
       private final @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration;
@@ -33,7 +31,6 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * GitHub Action container configuration.
-     * 
      */
     @Import(name="containerConfiguration")
       private final @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration;
@@ -44,7 +41,6 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Workflow option to determine whether the workflow file should be generated and written to the repository.
-     * 
      */
     @Import(name="generateWorkflowFile")
       private final @Nullable Output<Boolean> generateWorkflowFile;
@@ -55,7 +51,6 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * This will help determine the workflow configuration to select.
-     * 
      */
     @Import(name="isLinux")
       private final @Nullable Output<Boolean> isLinux;

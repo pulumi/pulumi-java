@@ -20,7 +20,142 @@ import javax.annotation.Nullable;
  * Organization resource.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Organization_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var organization = new AzureNative.Confluent.Organization("organization", new AzureNative.Confluent.OrganizationArgs
+ *         {
+ *             Location = "West US",
+ *             OfferDetail = new AzureNative.Confluent.Inputs.OrganizationResourcePropertiesOfferDetailArgs
+ *             {
+ *                 Id = "string",
+ *                 PlanId = "string",
+ *                 PlanName = "string",
+ *                 PublisherId = "string",
+ *                 TermUnit = "string",
+ *             },
+ *             OrganizationName = "myOrganization",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "Environment", "Dev" },
+ *             },
+ *             UserDetail = new AzureNative.Confluent.Inputs.OrganizationResourcePropertiesUserDetailArgs
+ *             {
+ *                 EmailAddress = "contoso@microsoft.com",
+ *                 FirstName = "string",
+ *                 LastName = "string",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	confluent "github.com/pulumi/pulumi-azure-native/sdk/go/azure/confluent"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := confluent.NewOrganization(ctx, "organization", &confluent.OrganizationArgs{
+ * 			Location: pulumi.String("West US"),
+ * 			OfferDetail: &confluent.OrganizationResourcePropertiesOfferDetailArgs{
+ * 				Id:          pulumi.String("string"),
+ * 				PlanId:      pulumi.String("string"),
+ * 				PlanName:    pulumi.String("string"),
+ * 				PublisherId: pulumi.String("string"),
+ * 				TermUnit:    pulumi.String("string"),
+ * 			},
+ * 			OrganizationName:  pulumi.String("myOrganization"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("Dev"),
+ * 			},
+ * 			UserDetail: &confluent.OrganizationResourcePropertiesUserDetailArgs{
+ * 				EmailAddress: pulumi.String("contoso@microsoft.com"),
+ * 				FirstName:    pulumi.String("string"),
+ * 				LastName:     pulumi.String("string"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const organization = new azure_native.confluent.Organization("organization", {
+ *     location: "West US",
+ *     offerDetail: {
+ *         id: "string",
+ *         planId: "string",
+ *         planName: "string",
+ *         publisherId: "string",
+ *         termUnit: "string",
+ *     },
+ *     organizationName: "myOrganization",
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         Environment: "Dev",
+ *     },
+ *     userDetail: {
+ *         emailAddress: "contoso@microsoft.com",
+ *         firstName: "string",
+ *         lastName: "string",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * organization = azure_native.confluent.Organization("organization",
+ *     location="West US",
+ *     offer_detail=azure_native.confluent.OrganizationResourcePropertiesOfferDetailArgs(
+ *         id="string",
+ *         plan_id="string",
+ *         plan_name="string",
+ *         publisher_id="string",
+ *         term_unit="string",
+ *     ),
+ *     organization_name="myOrganization",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "Environment": "Dev",
+ *     },
+ *     user_detail=azure_native.confluent.OrganizationResourcePropertiesUserDetailArgs(
+ *         email_address="contoso@microsoft.com",
+ *         first_name="string",
+ *         last_name="string",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,140 +170,120 @@ import javax.annotation.Nullable;
 public class Organization extends io.pulumi.resources.CustomResource {
     /**
      * The creation time of the resource.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The creation time of the resource.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Location of Organization resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of Organization resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Confluent offer detail
-     * 
      */
     @Export(name="offerDetail", type=OrganizationResourcePropertiesResponseOfferDetail.class, parameters={})
     private Output</* @Nullable */ OrganizationResourcePropertiesResponseOfferDetail> offerDetail;
 
     /**
      * @return Confluent offer detail
-     * 
      */
     public Output</* @Nullable */ OrganizationResourcePropertiesResponseOfferDetail> getOfferDetail() {
         return this.offerDetail;
     }
     /**
      * Id of the Confluent organization.
-     * 
      */
     @Export(name="organizationId", type=String.class, parameters={})
     private Output<String> organizationId;
 
     /**
      * @return Id of the Confluent organization.
-     * 
      */
     public Output<String> getOrganizationId() {
         return this.organizationId;
     }
     /**
      * Provision states for confluent RP
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provision states for confluent RP
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SSO url for the Confluent organization.
-     * 
      */
     @Export(name="ssoUrl", type=String.class, parameters={})
     private Output<String> ssoUrl;
 
     /**
      * @return SSO url for the Confluent organization.
-     * 
      */
     public Output<String> getSsoUrl() {
         return this.ssoUrl;
     }
     /**
      * Organization resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Organization resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Subscriber detail
-     * 
      */
     @Export(name="userDetail", type=OrganizationResourcePropertiesResponseUserDetail.class, parameters={})
     private Output</* @Nullable */ OrganizationResourcePropertiesResponseUserDetail> userDetail;
 
     /**
      * @return Subscriber detail
-     * 
      */
     public Output</* @Nullable */ OrganizationResourcePropertiesResponseUserDetail> getUserDetail() {
         return this.userDetail;

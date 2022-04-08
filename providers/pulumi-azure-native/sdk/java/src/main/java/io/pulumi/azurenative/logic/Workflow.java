@@ -25,7 +25,221 @@ import javax.annotation.Nullable;
  * The workflow type.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a workflow
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workflow = new AzureNative.Logic.Workflow("workflow", new AzureNative.Logic.WorkflowArgs
+ *         {
+ *             Definition = 
+ *             {
+ *                 { "$schema", "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#" },
+ *                 { "actions", 
+ *                 {
+ *                     { "Find_pet_by_ID", 
+ *                     {
+ *                         { "inputs", 
+ *                         {
+ *                             { "host", 
+ *                             {
+ *                                 { "connection", 
+ *                                 {
+ *                                     { "name", "@parameters('$connections')['test-custom-connector']['connectionId']" },
+ *                                 } },
+ *                             } },
+ *                             { "method", "get" },
+ *                             { "path", "/pet/@{encodeURIComponent('1')}" },
+ *                         } },
+ *                         { "runAfter",  },
+ *                         { "type", "ApiConnection" },
+ *                     } },
+ *                 } },
+ *                 { "contentVersion", "1.0.0.0" },
+ *                 { "outputs",  },
+ *                 { "parameters", 
+ *                 {
+ *                     { "$connections", 
+ *                     {
+ *                         { "defaultValue",  },
+ *                         { "type", "Object" },
+ *                     } },
+ *                 } },
+ *                 { "triggers", 
+ *                 {
+ *                     { "manual", 
+ *                     {
+ *                         { "inputs", 
+ *                         {
+ *                             { "schema",  },
+ *                         } },
+ *                         { "kind", "Http" },
+ *                         { "type", "Request" },
+ *                     } },
+ *                 } },
+ *             },
+ *             IntegrationAccount = new AzureNative.Logic.Inputs.ResourceReferenceArgs
+ *             {
+ *                 Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account",
+ *             },
+ *             Location = "brazilsouth",
+ *             Parameters = 
+ *             {
+ *                 { "$connections", new AzureNative.Logic.Inputs.WorkflowParameterArgs
+ *                 {
+ *                     Value = 
+ *                     {
+ *                         { "test-custom-connector", 
+ *                         {
+ *                             { "connectionId", "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Web/connections/test-custom-connector" },
+ *                             { "connectionName", "test-custom-connector" },
+ *                             { "id", "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/brazilsouth/managedApis/test-custom-connector" },
+ *                         } },
+ *                     },
+ *                 } },
+ *             },
+ *             ResourceGroupName = "test-resource-group",
+ *             Tags = ,
+ *             WorkflowName = "test-workflow",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workflow = new azure_native.logic.Workflow("workflow", {
+ *     definition: {
+ *         `$schema`: "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+ *         actions: {
+ *             Find_pet_by_ID: {
+ *                 inputs: {
+ *                     host: {
+ *                         connection: {
+ *                             name: `@parameters('$connections')['test-custom-connector']['connectionId']`,
+ *                         },
+ *                     },
+ *                     method: "get",
+ *                     path: "/pet/@{encodeURIComponent('1')}",
+ *                 },
+ *                 runAfter: {},
+ *                 type: "ApiConnection",
+ *             },
+ *         },
+ *         contentVersion: "1.0.0.0",
+ *         outputs: {},
+ *         parameters: {
+ *             `$connections`: {
+ *                 defaultValue: {},
+ *                 type: "Object",
+ *             },
+ *         },
+ *         triggers: {
+ *             manual: {
+ *                 inputs: {
+ *                     schema: {},
+ *                 },
+ *                 kind: "Http",
+ *                 type: "Request",
+ *             },
+ *         },
+ *     },
+ *     integrationAccount: {
+ *         id: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account",
+ *     },
+ *     location: "brazilsouth",
+ *     parameters: {
+ *         `$connections`: {
+ *             value: {
+ *                 "test-custom-connector": {
+ *                     connectionId: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Web/connections/test-custom-connector",
+ *                     connectionName: "test-custom-connector",
+ *                     id: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/brazilsouth/managedApis/test-custom-connector",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     resourceGroupName: "test-resource-group",
+ *     tags: {},
+ *     workflowName: "test-workflow",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workflow = azure_native.logic.Workflow("workflow",
+ *     definition={
+ *         "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+ *         "actions": {
+ *             "Find_pet_by_ID": {
+ *                 "inputs": {
+ *                     "host": {
+ *                         "connection": {
+ *                             "name": "@parameters('$connections')['test-custom-connector']['connectionId']",
+ *                         },
+ *                     },
+ *                     "method": "get",
+ *                     "path": "/pet/@{encodeURIComponent('1')}",
+ *                 },
+ *                 "runAfter": {},
+ *                 "type": "ApiConnection",
+ *             },
+ *         },
+ *         "contentVersion": "1.0.0.0",
+ *         "outputs": {},
+ *         "parameters": {
+ *             "$connections": {
+ *                 "defaultValue": {},
+ *                 "type": "Object",
+ *             },
+ *         },
+ *         "triggers": {
+ *             "manual": {
+ *                 "inputs": {
+ *                     "schema": {},
+ *                 },
+ *                 "kind": "Http",
+ *                 "type": "Request",
+ *             },
+ *         },
+ *     },
+ *     integration_account=azure_native.logic.ResourceReferenceArgs(
+ *         id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account",
+ *     ),
+ *     location="brazilsouth",
+ *     parameters={
+ *         "$connections": azure_native.logic.WorkflowParameterArgs(
+ *             value={
+ *                 "test-custom-connector": {
+ *                     "connectionId": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Web/connections/test-custom-connector",
+ *                     "connectionName": "test-custom-connector",
+ *                     "id": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/brazilsouth/managedApis/test-custom-connector",
+ *                 },
+ *             },
+ *         ),
+ *     },
+ *     resource_group_name="test-resource-group",
+ *     tags={},
+ *     workflow_name="test-workflow")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,252 +254,216 @@ import javax.annotation.Nullable;
 public class Workflow extends io.pulumi.resources.CustomResource {
     /**
      * The access control configuration.
-     * 
      */
     @Export(name="accessControl", type=FlowAccessControlConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FlowAccessControlConfigurationResponse> accessControl;
 
     /**
      * @return The access control configuration.
-     * 
      */
     public Output</* @Nullable */ FlowAccessControlConfigurationResponse> getAccessControl() {
         return this.accessControl;
     }
     /**
      * Gets the access endpoint.
-     * 
      */
     @Export(name="accessEndpoint", type=String.class, parameters={})
     private Output<String> accessEndpoint;
 
     /**
      * @return Gets the access endpoint.
-     * 
      */
     public Output<String> getAccessEndpoint() {
         return this.accessEndpoint;
     }
     /**
      * Gets the changed time.
-     * 
      */
     @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
      * @return Gets the changed time.
-     * 
      */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
     /**
      * Gets the created time.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return Gets the created time.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The definition.
-     * 
      */
     @Export(name="definition", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> definition;
 
     /**
      * @return The definition.
-     * 
      */
     public Output</* @Nullable */ Object> getDefinition() {
         return this.definition;
     }
     /**
      * The endpoints configuration.
-     * 
      */
     @Export(name="endpointsConfiguration", type=FlowEndpointsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FlowEndpointsConfigurationResponse> endpointsConfiguration;
 
     /**
      * @return The endpoints configuration.
-     * 
      */
     public Output</* @Nullable */ FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
         return this.endpointsConfiguration;
     }
     /**
      * Managed service identity properties.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return Managed service identity properties.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The integration account.
-     * 
      */
     @Export(name="integrationAccount", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationAccount;
 
     /**
      * @return The integration account.
-     * 
      */
     public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationAccount() {
         return this.integrationAccount;
     }
     /**
      * The integration service environment.
-     * 
      */
     @Export(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment;
 
     /**
      * @return The integration service environment.
-     * 
      */
     public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationServiceEnvironment() {
         return this.integrationServiceEnvironment;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets the resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The parameters.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, WorkflowParameterResponse.class})
     private Output</* @Nullable */ Map<String,WorkflowParameterResponse>> parameters;
 
     /**
      * @return The parameters.
-     * 
      */
     public Output</* @Nullable */ Map<String,WorkflowParameterResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * Gets the provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets the provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return The sku.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return The state.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets the resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets the version.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Gets the version.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class ConnectToSourceSqlServerTaskInputResponse {
     /**
      * Permission group for validations
-     * 
      */
     private final @Nullable String checkPermissionsGroup;
     /**
      * Flag for whether to collect agent jobs from source server.
-     * 
      */
     private final @Nullable Boolean collectAgentJobs;
     /**
      * Flag for whether to collect logins from source server.
-     * 
      */
     private final @Nullable Boolean collectLogins;
     /**
      * Connection information for Source SQL Server
-     * 
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
 
@@ -48,28 +44,24 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
 
     /**
      * Permission group for validations
-     * 
     */
     public Optional<String> getCheckPermissionsGroup() {
         return Optional.ofNullable(this.checkPermissionsGroup);
     }
     /**
      * Flag for whether to collect agent jobs from source server.
-     * 
     */
     public Optional<Boolean> getCollectAgentJobs() {
         return Optional.ofNullable(this.collectAgentJobs);
     }
     /**
      * Flag for whether to collect logins from source server.
-     * 
     */
     public Optional<Boolean> getCollectLogins() {
         return Optional.ofNullable(this.collectLogins);
     }
     /**
      * Connection information for Source SQL Server
-     * 
     */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;

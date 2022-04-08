@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Plan accessibility
-     * 
      */
     @EnumType
     public enum Accessibility {

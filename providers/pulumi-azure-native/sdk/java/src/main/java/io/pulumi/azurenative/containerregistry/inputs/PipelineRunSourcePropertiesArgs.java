@@ -18,7 +18,6 @@ public final class PipelineRunSourcePropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The name of the source.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -29,7 +28,6 @@ public final class PipelineRunSourcePropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The type of the source.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,PipelineRunSourceType>> type;

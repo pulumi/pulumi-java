@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of a Reference Vm
- * 
  */
 public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The password of the virtual machine. This will be set to null in GET resource API
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -32,7 +30,6 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The username of the virtual machine
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;
@@ -43,7 +40,6 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * VM resource Id for the environment
-     * 
      */
     @Import(name="vmResourceId", required=true)
       private final String vmResourceId;
@@ -54,7 +50,6 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The state details for the reference virtual machine.
-     * 
      */
     @Import(name="vmStateDetails", required=true)
       private final VmStateDetailsResponse vmStateDetails;

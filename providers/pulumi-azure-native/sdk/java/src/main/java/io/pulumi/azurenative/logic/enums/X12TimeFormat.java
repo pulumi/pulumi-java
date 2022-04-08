@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The group header time format.
-     * 
      */
     @EnumType
     public enum X12TimeFormat {

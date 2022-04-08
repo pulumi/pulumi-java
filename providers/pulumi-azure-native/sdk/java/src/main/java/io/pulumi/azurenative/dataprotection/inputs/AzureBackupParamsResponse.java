@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Azure backup parameters
- * 
  */
 public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * BackupType ; Full/Incremental etc
-     * 
      */
     @Import(name="backupType", required=true)
       private final String backupType;
@@ -30,7 +28,6 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AzureBackupParams'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;

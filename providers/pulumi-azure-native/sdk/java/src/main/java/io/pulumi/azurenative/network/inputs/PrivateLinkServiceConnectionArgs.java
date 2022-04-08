@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * PrivateLinkServiceConnection resource.
- * 
  */
 public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
@@ -33,7 +31,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -44,7 +41,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +51,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * A collection of read-only information about the state of the connection to the remote resource.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -66,7 +61,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * The resource id of private link service.
-     * 
      */
     @Import(name="privateLinkServiceId")
       private final @Nullable Output<String> privateLinkServiceId;
@@ -77,7 +71,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
 
     /**
      * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;

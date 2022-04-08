@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protocol to use for the redirect. The default value is MatchRequest
-     * 
      */
     @EnumType
     public enum DestinationProtocol {

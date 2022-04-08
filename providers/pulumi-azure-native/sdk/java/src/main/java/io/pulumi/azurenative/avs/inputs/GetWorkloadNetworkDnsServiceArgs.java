@@ -14,7 +14,6 @@ public final class GetWorkloadNetworkDnsServiceArgs extends io.pulumi.resources.
 
     /**
      * NSX DNS Service identifier. Generally the same as the DNS Service's display name
-     * 
      */
     @Import(name="dnsServiceId", required=true)
       private final String dnsServiceId;
@@ -25,7 +24,6 @@ public final class GetWorkloadNetworkDnsServiceArgs extends io.pulumi.resources.
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
@@ -36,7 +34,6 @@ public final class GetWorkloadNetworkDnsServiceArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -16,97 +16,78 @@ import javax.annotation.Nullable;
 public final class GetDedicatedCloudNodeResult {
     /**
      * Availability Zone id, e.g. "az1"
-     * 
      */
     private final String availabilityZoneId;
     /**
      * Availability Zone name, e.g. "Availability Zone 1"
-     * 
      */
     private final String availabilityZoneName;
     /**
      * VMWare Cloud Rack Name
-     * 
      */
     private final String cloudRackName;
     /**
      * date time the resource was created
-     * 
      */
     private final String created;
     /**
      * SKU's id
-     * 
      */
     private final String id;
     /**
      * Azure region
-     * 
      */
     private final String location;
     /**
      * SKU's name
-     * 
      */
     private final String name;
     /**
      * count of nodes to create
-     * 
      */
     private final Integer nodesCount;
     /**
      * Placement Group id, e.g. "n1"
-     * 
      */
     private final String placementGroupId;
     /**
      * Placement Name, e.g. "Placement Group 1"
-     * 
      */
     private final String placementGroupName;
     /**
      * Private Cloud Id
-     * 
      */
     private final String privateCloudId;
     /**
      * Resource Pool Name
-     * 
      */
     private final String privateCloudName;
     /**
      * The provisioning status of the resource
-     * 
      */
     private final String provisioningState;
     /**
      * purchase id
-     * 
      */
     private final String purchaseId;
     /**
      * Dedicated Cloud Nodes SKU
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Node status, indicates is private cloud set up on this node or not
-     * 
      */
     private final String status;
     /**
      * Dedicated Cloud Nodes tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     private final String type;
     /**
      * VMWare Cluster Name
-     * 
      */
     private final String vmwareClusterName;
 
@@ -154,133 +135,114 @@ public final class GetDedicatedCloudNodeResult {
 
     /**
      * Availability Zone id, e.g. "az1"
-     * 
     */
     public String getAvailabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * Availability Zone name, e.g. "Availability Zone 1"
-     * 
     */
     public String getAvailabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
      * VMWare Cloud Rack Name
-     * 
     */
     public String getCloudRackName() {
         return this.cloudRackName;
     }
     /**
      * date time the resource was created
-     * 
     */
     public String getCreated() {
         return this.created;
     }
     /**
      * SKU's id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Azure region
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * SKU's name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * count of nodes to create
-     * 
     */
     public Integer getNodesCount() {
         return this.nodesCount;
     }
     /**
      * Placement Group id, e.g. "n1"
-     * 
     */
     public String getPlacementGroupId() {
         return this.placementGroupId;
     }
     /**
      * Placement Name, e.g. "Placement Group 1"
-     * 
     */
     public String getPlacementGroupName() {
         return this.placementGroupName;
     }
     /**
      * Private Cloud Id
-     * 
     */
     public String getPrivateCloudId() {
         return this.privateCloudId;
     }
     /**
      * Resource Pool Name
-     * 
     */
     public String getPrivateCloudName() {
         return this.privateCloudName;
     }
     /**
      * The provisioning status of the resource
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * purchase id
-     * 
     */
     public String getPurchaseId() {
         return this.purchaseId;
     }
     /**
      * Dedicated Cloud Nodes SKU
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Node status, indicates is private cloud set up on this node or not
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Dedicated Cloud Nodes tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * VMWare Cluster Name
-     * 
     */
     public String getVmwareClusterName() {
         return this.vmwareClusterName;

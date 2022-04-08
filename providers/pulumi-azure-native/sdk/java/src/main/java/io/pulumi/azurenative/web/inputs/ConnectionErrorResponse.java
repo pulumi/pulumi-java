@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connection error
- * 
  */
 public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Code of the status
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -32,7 +30,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource ETag
-     * 
      */
     @Import(name="etag")
       private final @Nullable String etag;
@@ -43,7 +40,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -54,7 +50,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -65,7 +60,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Description of the status
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -76,7 +70,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -87,7 +80,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -98,7 +90,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

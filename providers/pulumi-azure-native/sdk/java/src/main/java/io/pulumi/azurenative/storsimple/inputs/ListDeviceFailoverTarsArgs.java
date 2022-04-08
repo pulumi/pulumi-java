@@ -17,7 +17,6 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final String managerName;
@@ -28,7 +27,6 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -39,7 +37,6 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
 
     /**
      * The source device name on which failover is performed.
-     * 
      */
     @Import(name="sourceDeviceName", required=true)
       private final String sourceDeviceName;
@@ -50,7 +47,6 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
 
     /**
      * The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
-     * 
      */
     @Import(name="volumeContainers")
       private final @Nullable List<String> volumeContainers;

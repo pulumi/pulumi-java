@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The expression.
- * 
  */
 public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The azure resource error info.
-     * 
      */
     @Import(name="error")
       private final @Nullable AzureResourceErrorInfoResponse error;
@@ -34,7 +32,6 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sub expressions.
-     * 
      */
     @Import(name="subexpressions")
       private final @Nullable List<ExpressionResponse> subexpressions;
@@ -45,7 +42,6 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The text.
-     * 
      */
     @Import(name="text")
       private final @Nullable String text;

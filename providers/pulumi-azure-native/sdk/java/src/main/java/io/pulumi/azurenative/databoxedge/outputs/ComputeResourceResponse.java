@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ComputeResourceResponse {
     /**
      * Memory in GB
-     * 
      */
     private final Double memoryInGB;
     /**
      * Processor count
-     * 
      */
     private final Integer processorCount;
 
@@ -31,14 +29,12 @@ public final class ComputeResourceResponse {
 
     /**
      * Memory in GB
-     * 
     */
     public Double getMemoryInGB() {
         return this.memoryInGB;
     }
     /**
      * Processor count
-     * 
     */
     public Integer getProcessorCount() {
         return this.processorCount;

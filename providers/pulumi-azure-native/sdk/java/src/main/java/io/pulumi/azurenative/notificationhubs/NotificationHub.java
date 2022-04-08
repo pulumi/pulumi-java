@@ -26,7 +26,83 @@ import javax.annotation.Nullable;
  * Description of a NotificationHub Resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NotificationHubCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notificationHub = new AzureNative.NotificationHubs.NotificationHub("notificationHub", new AzureNative.NotificationHubs.NotificationHubArgs
+ *         {
+ *             Location = "eastus",
+ *             NamespaceName = "nh-sdk-ns",
+ *             NotificationHubName = "nh-sdk-hub",
+ *             ResourceGroupName = "5ktrial",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	notificationhubs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/notificationhubs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := notificationhubs.NewNotificationHub(ctx, "notificationHub", &notificationhubs.NotificationHubArgs{
+ * 			Location:            pulumi.String("eastus"),
+ * 			NamespaceName:       pulumi.String("nh-sdk-ns"),
+ * 			NotificationHubName: pulumi.String("nh-sdk-hub"),
+ * 			ResourceGroupName:   pulumi.String("5ktrial"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notificationHub = new azure_native.notificationhubs.NotificationHub("notificationHub", {
+ *     location: "eastus",
+ *     namespaceName: "nh-sdk-ns",
+ *     notificationHubName: "nh-sdk-hub",
+ *     resourceGroupName: "5ktrial",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notification_hub = azure_native.notificationhubs.NotificationHub("notificationHub",
+ *     location="eastus",
+ *     namespace_name="nh-sdk-ns",
+ *     notification_hub_name="nh-sdk-hub",
+ *     resource_group_name="5ktrial")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,182 +117,156 @@ import javax.annotation.Nullable;
 public class NotificationHub extends io.pulumi.resources.CustomResource {
     /**
      * The AdmCredential of the created NotificationHub
-     * 
      */
     @Export(name="admCredential", type=AdmCredentialResponse.class, parameters={})
     private Output</* @Nullable */ AdmCredentialResponse> admCredential;
 
     /**
      * @return The AdmCredential of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ AdmCredentialResponse> getAdmCredential() {
         return this.admCredential;
     }
     /**
      * The ApnsCredential of the created NotificationHub
-     * 
      */
     @Export(name="apnsCredential", type=ApnsCredentialResponse.class, parameters={})
     private Output</* @Nullable */ ApnsCredentialResponse> apnsCredential;
 
     /**
      * @return The ApnsCredential of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ ApnsCredentialResponse> getApnsCredential() {
         return this.apnsCredential;
     }
     /**
      * The AuthorizationRules of the created NotificationHub
-     * 
      */
     @Export(name="authorizationRules", type=List.class, parameters={SharedAccessAuthorizationRulePropertiesResponse.class})
     private Output</* @Nullable */ List<SharedAccessAuthorizationRulePropertiesResponse>> authorizationRules;
 
     /**
      * @return The AuthorizationRules of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ List<SharedAccessAuthorizationRulePropertiesResponse>> getAuthorizationRules() {
         return this.authorizationRules;
     }
     /**
      * The BaiduCredential of the created NotificationHub
-     * 
      */
     @Export(name="baiduCredential", type=BaiduCredentialResponse.class, parameters={})
     private Output</* @Nullable */ BaiduCredentialResponse> baiduCredential;
 
     /**
      * @return The BaiduCredential of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ BaiduCredentialResponse> getBaiduCredential() {
         return this.baiduCredential;
     }
     /**
      * The GcmCredential of the created NotificationHub
-     * 
      */
     @Export(name="gcmCredential", type=GcmCredentialResponse.class, parameters={})
     private Output</* @Nullable */ GcmCredentialResponse> gcmCredential;
 
     /**
      * @return The GcmCredential of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ GcmCredentialResponse> getGcmCredential() {
         return this.gcmCredential;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The MpnsCredential of the created NotificationHub
-     * 
      */
     @Export(name="mpnsCredential", type=MpnsCredentialResponse.class, parameters={})
     private Output</* @Nullable */ MpnsCredentialResponse> mpnsCredential;
 
     /**
      * @return The MpnsCredential of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ MpnsCredentialResponse> getMpnsCredential() {
         return this.mpnsCredential;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The RegistrationTtl of the created NotificationHub
-     * 
      */
     @Export(name="registrationTtl", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationTtl;
 
     /**
      * @return The RegistrationTtl of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ String> getRegistrationTtl() {
         return this.registrationTtl;
     }
     /**
      * The sku of the created namespace
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku of the created namespace
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The WnsCredential of the created NotificationHub
-     * 
      */
     @Export(name="wnsCredential", type=WnsCredentialResponse.class, parameters={})
     private Output</* @Nullable */ WnsCredentialResponse> wnsCredential;
 
     /**
      * @return The WnsCredential of the created NotificationHub
-     * 
      */
     public Output</* @Nullable */ WnsCredentialResponse> getWnsCredential() {
         return this.wnsCredential;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service End point policy resource.
- * 
  */
 public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -35,7 +33,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -46,7 +43,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Kind of service endpoint policy. This is metadata used for the Azure portal experience.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -57,7 +53,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -68,7 +63,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -79,7 +73,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * The provisioning state of the service endpoint policy resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -90,7 +83,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * The resource GUID property of the service endpoint policy resource.
-     * 
      */
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
@@ -101,7 +93,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * A collection of service endpoint policy definitions of the service endpoint policy.
-     * 
      */
     @Import(name="serviceEndpointPolicyDefinitions")
       private final @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions;
@@ -112,7 +103,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * A collection of references to subnets.
-     * 
      */
     @Import(name="subnets", required=true)
       private final List<SubnetResponse> subnets;
@@ -123,7 +113,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -134,7 +123,6 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

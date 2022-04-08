@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Virtual Appliance Sku Properties.
- * 
  */
 public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
 
     /**
      * Flag to control breakout of o365 allow category.
-     * 
      */
     @Import(name="allow")
       private final @Nullable Boolean allow;
@@ -31,7 +29,6 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
 
     /**
      * Flag to control breakout of o365 default category.
-     * 
      */
     @Import(name="default")
       private final @Nullable Boolean default_;
@@ -42,7 +39,6 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
 
     /**
      * Flag to control breakout of o365 optimize category.
-     * 
      */
     @Import(name="optimize")
       private final @Nullable Boolean optimize;

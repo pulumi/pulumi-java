@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The child information of a management group.
- * 
  */
 public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
 
     /**
      * The list of children.
-     * 
      */
     @Import(name="children")
       private final @Nullable List<ManagementGroupChildInfoResponse> children;
@@ -32,7 +30,6 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
 
     /**
      * The friendly name of the child resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -43,7 +40,6 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
 
     /**
      * The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -54,7 +50,6 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
 
     /**
      * The name of the child entity.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -65,7 +60,6 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
 
     /**
      * The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

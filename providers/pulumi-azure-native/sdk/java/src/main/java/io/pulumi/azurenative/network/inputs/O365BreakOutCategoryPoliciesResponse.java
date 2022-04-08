@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Office365 breakout categories.
- * 
  */
 public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resour
 
     /**
      * Flag to control allow category.
-     * 
      */
     @Import(name="allow")
       private final @Nullable Boolean allow;
@@ -31,7 +29,6 @@ public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resour
 
     /**
      * Flag to control default category.
-     * 
      */
     @Import(name="default")
       private final @Nullable Boolean default_;
@@ -42,7 +39,6 @@ public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resour
 
     /**
      * Flag to control optimize category.
-     * 
      */
     @Import(name="optimize")
       private final @Nullable Boolean optimize;

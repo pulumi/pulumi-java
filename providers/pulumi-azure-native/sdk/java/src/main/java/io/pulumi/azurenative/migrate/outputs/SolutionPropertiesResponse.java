@@ -17,37 +17,30 @@ import javax.annotation.Nullable;
 public final class SolutionPropertiesResponse {
     /**
      * Gets or sets the cleanup state of the solution.
-     * 
      */
     private final @Nullable String cleanupState;
     /**
      * Gets or sets the details of the solution.
-     * 
      */
     private final @Nullable SolutionDetailsResponse details;
     /**
      * Gets or sets the goal of the solution.
-     * 
      */
     private final @Nullable String goal;
     /**
      * Gets or sets the purpose of the solution.
-     * 
      */
     private final @Nullable String purpose;
     /**
      * Gets or sets the current status of the solution.
-     * 
      */
     private final @Nullable String status;
     /**
      * Gets or sets the summary of the solution.
-     * 
      */
     private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
     /**
      * Gets or sets the tool being used in the solution.
-     * 
      */
     private final @Nullable String tool;
 
@@ -71,49 +64,42 @@ public final class SolutionPropertiesResponse {
 
     /**
      * Gets or sets the cleanup state of the solution.
-     * 
     */
     public Optional<String> getCleanupState() {
         return Optional.ofNullable(this.cleanupState);
     }
     /**
      * Gets or sets the details of the solution.
-     * 
     */
     public Optional<SolutionDetailsResponse> getDetails() {
         return Optional.ofNullable(this.details);
     }
     /**
      * Gets or sets the goal of the solution.
-     * 
     */
     public Optional<String> getGoal() {
         return Optional.ofNullable(this.goal);
     }
     /**
      * Gets or sets the purpose of the solution.
-     * 
     */
     public Optional<String> getPurpose() {
         return Optional.ofNullable(this.purpose);
     }
     /**
      * Gets or sets the current status of the solution.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Gets or sets the summary of the solution.
-     * 
     */
     public Optional<Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse>> getSummary() {
         return Optional.ofNullable(this.summary);
     }
     /**
      * Gets or sets the tool being used in the solution.
-     * 
     */
     public Optional<String> getTool() {
         return Optional.ofNullable(this.tool);

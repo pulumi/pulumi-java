@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration filters
- * 
  */
 public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Filters specific to product
-     * 
      */
     @Import(name="filterableProperty")
       private final @Nullable List<FilterableProperty> filterableProperty;
@@ -33,7 +31,6 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Product hierarchy information
-     * 
      */
     @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformation hierarchyInformation;

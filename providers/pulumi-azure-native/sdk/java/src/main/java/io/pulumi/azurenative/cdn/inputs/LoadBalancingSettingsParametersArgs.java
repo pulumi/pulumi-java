@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Round-Robin load balancing settings for a backend pool
- * 
  */
 public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
 
     /**
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
-     * 
      */
     @Import(name="additionalLatencyInMilliseconds")
       private final @Nullable Output<Integer> additionalLatencyInMilliseconds;
@@ -31,7 +29,6 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
 
     /**
      * The number of samples to consider for load balancing decisions
-     * 
      */
     @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
@@ -42,7 +39,6 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
 
     /**
      * The number of samples within the sample period that must succeed
-     * 
      */
     @Import(name="successfulSamplesRequired")
       private final @Nullable Output<Integer> successfulSamplesRequired;

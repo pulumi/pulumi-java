@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ServerEndpointRecallErrorResponse {
     /**
      * Count of occurences of the error
-     * 
      */
     private final Double count;
     /**
      * Error code (HResult)
-     * 
      */
     private final Integer errorCode;
 
@@ -31,14 +29,12 @@ public final class ServerEndpointRecallErrorResponse {
 
     /**
      * Count of occurences of the error
-     * 
     */
     public Double getCount() {
         return this.count;
     }
     /**
      * Error code (HResult)
-     * 
     */
     public Integer getErrorCode() {
         return this.errorCode;

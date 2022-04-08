@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The current Term object.
- * 
  */
 public final class SaasPropertiesResponseTerm extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
 
     /**
      * The end date of the current term
-     * 
      */
     @Import(name="endDate")
       private final @Nullable String endDate;
@@ -31,7 +29,6 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
 
     /**
      * The start date of the current term
-     * 
      */
     @Import(name="startDate")
       private final @Nullable String startDate;
@@ -42,7 +39,6 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
 
     /**
      * The unit indicating Monthly / Yearly
-     * 
      */
     @Import(name="termUnit")
       private final @Nullable String termUnit;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Avro write settings.
- * 
  */
 public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileNamePrefix")
       private final @Nullable Object fileNamePrefix;
@@ -32,7 +30,6 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxRowsPerFile")
       private final @Nullable Object maxRowsPerFile;
@@ -43,7 +40,6 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Top level record name in write result, which is required in AVRO spec.
-     * 
      */
     @Import(name="recordName")
       private final @Nullable String recordName;
@@ -54,7 +50,6 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Record namespace in the write result.
-     * 
      */
     @Import(name="recordNamespace")
       private final @Nullable String recordNamespace;
@@ -66,7 +61,6 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
     /**
      * The write setting type.
      * Expected value is 'AvroWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

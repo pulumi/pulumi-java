@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of the modify properties automation rule action
- * 
  */
 public final class AutomationRuleModifyPropertiesActionResponseActionConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
 
     /**
      * The reason the incident was closed
-     * 
      */
     @Import(name="classification")
       private final @Nullable String classification;
@@ -34,7 +32,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
 
     /**
      * Describes the reason the incident was closed
-     * 
      */
     @Import(name="classificationComment")
       private final @Nullable String classificationComment;
@@ -45,7 +42,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
 
     /**
      * The classification reason to close the incident with
-     * 
      */
     @Import(name="classificationReason")
       private final @Nullable String classificationReason;
@@ -56,7 +52,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
 
     /**
      * List of labels to add to the incident
-     * 
      */
     @Import(name="labels")
       private final @Nullable List<IncidentLabelResponse> labels;
@@ -67,7 +62,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
 
     /**
      * Describes a user that the incident is assigned to
-     * 
      */
     @Import(name="owner")
       private final @Nullable IncidentOwnerInfoResponse owner;
@@ -78,7 +72,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
 
     /**
      * The severity of the incident
-     * 
      */
     @Import(name="severity")
       private final @Nullable String severity;
@@ -89,7 +82,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
 
     /**
      * The status of the incident
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

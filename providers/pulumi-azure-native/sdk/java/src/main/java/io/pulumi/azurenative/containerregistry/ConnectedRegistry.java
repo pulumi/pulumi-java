@@ -23,7 +23,126 @@ import javax.annotation.Nullable;
  * An object that represents a connected registry for a container registry.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ConnectedRegistryCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connectedRegistry = new AzureNative.ContainerRegistry.ConnectedRegistry("connectedRegistry", new AzureNative.ContainerRegistry.ConnectedRegistryArgs
+ *         {
+ *             ClientTokenIds = 
+ *             {
+ *                 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token",
+ *             },
+ *             ConnectedRegistryName = "myConnectedRegistry",
+ *             Mode = "Registry",
+ *             Parent = new AzureNative.ContainerRegistry.Inputs.ParentPropertiesArgs
+ *             {
+ *                 SyncProperties = new AzureNative.ContainerRegistry.Inputs.SyncPropertiesArgs
+ *                 {
+ *                     MessageTtl = "P2D",
+ *                     Schedule = "0 9 * * *",
+ *                     SyncWindow = "PT3H",
+ *                     TokenId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/syncToken",
+ *                 },
+ *             },
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewConnectedRegistry(ctx, "connectedRegistry", &containerregistry.ConnectedRegistryArgs{
+ * 			ClientTokenIds: pulumi.StringArray{
+ * 				pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token"),
+ * 			},
+ * 			ConnectedRegistryName: pulumi.String("myConnectedRegistry"),
+ * 			Mode:                  pulumi.String("Registry"),
+ * 			Parent: &containerregistry.ParentPropertiesArgs{
+ * 				SyncProperties: &containerregistry.SyncPropertiesArgs{
+ * 					MessageTtl: pulumi.String("P2D"),
+ * 					Schedule:   pulumi.String("0 9 * * *"),
+ * 					SyncWindow: pulumi.String("PT3H"),
+ * 					TokenId:    pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/syncToken"),
+ * 				},
+ * 			},
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connectedRegistry = new azure_native.containerregistry.ConnectedRegistry("connectedRegistry", {
+ *     clientTokenIds: ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token"],
+ *     connectedRegistryName: "myConnectedRegistry",
+ *     mode: "Registry",
+ *     parent: {
+ *         syncProperties: {
+ *             messageTtl: "P2D",
+ *             schedule: "0 9 * * *",
+ *             syncWindow: "PT3H",
+ *             tokenId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/syncToken",
+ *         },
+ *     },
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connected_registry = azure_native.containerregistry.ConnectedRegistry("connectedRegistry",
+ *     client_token_ids=["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token"],
+ *     connected_registry_name="myConnectedRegistry",
+ *     mode="Registry",
+ *     parent=azure_native.containerregistry.ParentPropertiesArgs(
+ *         sync_properties=azure_native.containerregistry.SyncPropertiesArgs(
+ *             message_ttl="P2D",
+ *             schedule="0 9 * * *",
+ *             sync_window="PT3H",
+ *             token_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/syncToken",
+ *         ),
+ *     ),
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,196 +157,168 @@ import javax.annotation.Nullable;
 public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
     /**
      * The activation properties of the connected registry.
-     * 
      */
     @Export(name="activation", type=ActivationPropertiesResponse.class, parameters={})
     private Output<ActivationPropertiesResponse> activation;
 
     /**
      * @return The activation properties of the connected registry.
-     * 
      */
     public Output<ActivationPropertiesResponse> getActivation() {
         return this.activation;
     }
     /**
      * The list of the ACR token resource IDs used to authenticate clients to the connected registry.
-     * 
      */
     @Export(name="clientTokenIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clientTokenIds;
 
     /**
      * @return The list of the ACR token resource IDs used to authenticate clients to the connected registry.
-     * 
      */
     public Output</* @Nullable */ List<String>> getClientTokenIds() {
         return this.clientTokenIds;
     }
     /**
      * The current connection state of the connected registry.
-     * 
      */
     @Export(name="connectionState", type=String.class, parameters={})
     private Output<String> connectionState;
 
     /**
      * @return The current connection state of the connected registry.
-     * 
      */
     public Output<String> getConnectionState() {
         return this.connectionState;
     }
     /**
      * The last activity time of the connected registry.
-     * 
      */
     @Export(name="lastActivityTime", type=String.class, parameters={})
     private Output<String> lastActivityTime;
 
     /**
      * @return The last activity time of the connected registry.
-     * 
      */
     public Output<String> getLastActivityTime() {
         return this.lastActivityTime;
     }
     /**
      * The logging properties of the connected registry.
-     * 
      */
     @Export(name="logging", type=LoggingPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LoggingPropertiesResponse> logging;
 
     /**
      * @return The logging properties of the connected registry.
-     * 
      */
     public Output</* @Nullable */ LoggingPropertiesResponse> getLogging() {
         return this.logging;
     }
     /**
      * The login server properties of the connected registry.
-     * 
      */
     @Export(name="loginServer", type=LoginServerPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LoginServerPropertiesResponse> loginServer;
 
     /**
      * @return The login server properties of the connected registry.
-     * 
      */
     public Output</* @Nullable */ LoginServerPropertiesResponse> getLoginServer() {
         return this.loginServer;
     }
     /**
      * The mode of the connected registry resource that indicates the permissions of the registry.
-     * 
      */
     @Export(name="mode", type=String.class, parameters={})
     private Output<String> mode;
 
     /**
      * @return The mode of the connected registry resource that indicates the permissions of the registry.
-     * 
      */
     public Output<String> getMode() {
         return this.mode;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The parent of the connected registry.
-     * 
      */
     @Export(name="parent", type=ParentPropertiesResponse.class, parameters={})
     private Output<ParentPropertiesResponse> parent;
 
     /**
      * @return The parent of the connected registry.
-     * 
      */
     public Output<ParentPropertiesResponse> getParent() {
         return this.parent;
     }
     /**
      * Provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of current statuses of the connected registry.
-     * 
      */
     @Export(name="statusDetails", type=List.class, parameters={StatusDetailPropertiesResponse.class})
     private Output<List<StatusDetailPropertiesResponse>> statusDetails;
 
     /**
      * @return The list of current statuses of the connected registry.
-     * 
      */
     public Output<List<StatusDetailPropertiesResponse>> getStatusDetails() {
         return this.statusDetails;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The current version of ACR runtime on the connected registry.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return The current version of ACR runtime on the connected registry.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

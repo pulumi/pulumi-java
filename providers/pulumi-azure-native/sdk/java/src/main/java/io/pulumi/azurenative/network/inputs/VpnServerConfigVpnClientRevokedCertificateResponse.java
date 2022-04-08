@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the revoked VPN client certificate of VpnServerConfiguration.
- * 
  */
 public final class VpnServerConfigVpnClientRevokedCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse extends io
 
     /**
      * The certificate name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse extends io
 
     /**
      * The revoked VPN client certificate thumbprint.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;

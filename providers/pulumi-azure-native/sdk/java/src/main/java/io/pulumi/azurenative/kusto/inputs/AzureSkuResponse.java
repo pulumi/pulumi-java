@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure SKU definition.
- * 
  */
 public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of instances of the cluster.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU tier.
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;

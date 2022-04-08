@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * The EngagementFabric account
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AccountsCreateOrUpdateExample
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new AzureNative.EngagementFabric.Account("account", new AzureNative.EngagementFabric.AccountArgs
+ *         {
+ *             AccountName = "ExampleAccount",
+ *             Location = "WestUS",
+ *             ResourceGroupName = "ExampleRg",
+ *             Sku = new AzureNative.EngagementFabric.Inputs.SKUArgs
+ *             {
+ *                 Name = "B1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	engagementfabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/engagementfabric"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := engagementfabric.NewAccount(ctx, "account", &engagementfabric.AccountArgs{
+ * 			AccountName:       pulumi.String("ExampleAccount"),
+ * 			Location:          pulumi.String("WestUS"),
+ * 			ResourceGroupName: pulumi.String("ExampleRg"),
+ * 			Sku: &engagementfabric.SKUArgs{
+ * 				Name: pulumi.String("B1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const account = new azure_native.engagementfabric.Account("account", {
+ *     accountName: "ExampleAccount",
+ *     location: "WestUS",
+ *     resourceGroupName: "ExampleRg",
+ *     sku: {
+ *         name: "B1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * account = azure_native.engagementfabric.Account("account",
+ *     account_name="ExampleAccount",
+ *     location="WestUS",
+ *     resource_group_name="ExampleRg",
+ *     sku=azure_native.engagementfabric.SKUArgs(
+ *         name="B1",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +119,60 @@ import javax.annotation.Nullable;
 public class Account extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The SKU of the resource
-     * 
      */
     @Export(name="sku", type=SKUResponse.class, parameters={})
     private Output<SKUResponse> sku;
 
     /**
      * @return The SKU of the resource
-     * 
      */
     public Output<SKUResponse> getSku() {
         return this.sku;
     }
     /**
      * The tags of the resource
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The fully qualified type of the resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The fully qualified type of the resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

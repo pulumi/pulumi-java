@@ -19,7 +19,176 @@ import javax.annotation.Nullable;
  * Represents a SourceControl in Azure Security Insights.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates a source control.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sourceControl = new AzureNative.SecurityInsights.SourceControl("sourceControl", new AzureNative.SecurityInsights.SourceControlArgs
+ *         {
+ *             ContentTypes = 
+ *             {
+ *                 "AnalyticRules",
+ *                 "Workbook",
+ *             },
+ *             Description = "This is a source control",
+ *             DisplayName = "My Source Control",
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+ *             RepoType = "Github",
+ *             Repository = new AzureNative.SecurityInsights.Inputs.RepositoryArgs
+ *             {
+ *                 Branch = "master",
+ *                 DisplayUrl = "https://github.com/user/repo",
+ *                 PathMapping = 
+ *                 {
+ *                     new AzureNative.SecurityInsights.Inputs.ContentPathMapArgs
+ *                     {
+ *                         ContentType = "AnalyticRules",
+ *                         Path = "path/to/rules",
+ *                     },
+ *                     new AzureNative.SecurityInsights.Inputs.ContentPathMapArgs
+ *                     {
+ *                         ContentType = "Workbook",
+ *                         Path = "path/to/workbooks",
+ *                     },
+ *                 },
+ *                 Url = "https://github.com/user/repo",
+ *             },
+ *             ResourceGroupName = "myRg",
+ *             SourceControlId = "789e0c1f-4a3d-43ad-809c-e713b677b04a",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewSourceControl(ctx, "sourceControl", &securityinsights.SourceControlArgs{
+ * 			ContentTypes: pulumi.StringArray{
+ * 				pulumi.String("AnalyticRules"),
+ * 				pulumi.String("Workbook"),
+ * 			},
+ * 			Description:                         pulumi.String("This is a source control"),
+ * 			DisplayName:                         pulumi.String("My Source Control"),
+ * 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+ * 			RepoType:                            pulumi.String("Github"),
+ * 			Repository: &securityinsights.RepositoryArgs{
+ * 				Branch:     pulumi.String("master"),
+ * 				DisplayUrl: pulumi.String("https://github.com/user/repo"),
+ * 				PathMapping: securityinsights.ContentPathMapArray{
+ * 					&securityinsights.ContentPathMapArgs{
+ * 						ContentType: pulumi.String("AnalyticRules"),
+ * 						Path:        pulumi.String("path/to/rules"),
+ * 					},
+ * 					&securityinsights.ContentPathMapArgs{
+ * 						ContentType: pulumi.String("Workbook"),
+ * 						Path:        pulumi.String("path/to/workbooks"),
+ * 					},
+ * 				},
+ * 				Url: pulumi.String("https://github.com/user/repo"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			SourceControlId:   pulumi.String("789e0c1f-4a3d-43ad-809c-e713b677b04a"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sourceControl = new azure_native.securityinsights.SourceControl("sourceControl", {
+ *     contentTypes: [
+ *         "AnalyticRules",
+ *         "Workbook",
+ *     ],
+ *     description: "This is a source control",
+ *     displayName: "My Source Control",
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+ *     repoType: "Github",
+ *     repository: {
+ *         branch: "master",
+ *         displayUrl: "https://github.com/user/repo",
+ *         pathMapping: [
+ *             {
+ *                 contentType: "AnalyticRules",
+ *                 path: "path/to/rules",
+ *             },
+ *             {
+ *                 contentType: "Workbook",
+ *                 path: "path/to/workbooks",
+ *             },
+ *         ],
+ *         url: "https://github.com/user/repo",
+ *     },
+ *     resourceGroupName: "myRg",
+ *     sourceControlId: "789e0c1f-4a3d-43ad-809c-e713b677b04a",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * source_control = azure_native.securityinsights.SourceControl("sourceControl",
+ *     content_types=[
+ *         "AnalyticRules",
+ *         "Workbook",
+ *     ],
+ *     description="This is a source control",
+ *     display_name="My Source Control",
+ *     operational_insights_resource_provider="Microsoft.OperationalInsights",
+ *     repo_type="Github",
+ *     repository=azure_native.securityinsights.RepositoryArgs(
+ *         branch="master",
+ *         display_url="https://github.com/user/repo",
+ *         path_mapping=[
+ *             azure_native.securityinsights.ContentPathMapArgs(
+ *                 content_type="AnalyticRules",
+ *                 path="path/to/rules",
+ *             ),
+ *             azure_native.securityinsights.ContentPathMapArgs(
+ *                 content_type="Workbook",
+ *                 path="path/to/workbooks",
+ *             ),
+ *         ],
+ *         url="https://github.com/user/repo",
+ *     ),
+ *     resource_group_name="myRg",
+ *     source_control_id="789e0c1f-4a3d-43ad-809c-e713b677b04a",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,210 +203,180 @@ import javax.annotation.Nullable;
 public class SourceControl extends io.pulumi.resources.CustomResource {
     /**
      * Array of source control content types.
-     * 
      */
     @Export(name="contentTypes", type=List.class, parameters={String.class})
     private Output<List<String>> contentTypes;
 
     /**
      * @return Array of source control content types.
-     * 
      */
     public Output<List<String>> getContentTypes() {
         return this.contentTypes;
     }
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
      * @return The timestamp of resource creation (UTC).
-     * 
      */
     public Output</* @Nullable */ String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The identity that created the resource.
-     * 
      */
     @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
      * @return The identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
      * @return The type of identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedByType() {
         return this.createdByType;
     }
     /**
      * A description of the source control
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the source control
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The display name of the source control
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the source control
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
      * @return The timestamp of resource last modification (UTC)
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
      * @return The identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
      * @return The type of identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The repository type of the source control
-     * 
      */
     @Export(name="repoType", type=String.class, parameters={})
     private Output<String> repoType;
 
     /**
      * @return The repository type of the source control
-     * 
      */
     public Output<String> getRepoType() {
         return this.repoType;
     }
     /**
      * Repository metadata.
-     * 
      */
     @Export(name="repository", type=RepositoryResponse.class, parameters={})
     private Output<RepositoryResponse> repository;
 
     /**
      * @return Repository metadata.
-     * 
      */
     public Output<RepositoryResponse> getRepository() {
         return this.repository;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

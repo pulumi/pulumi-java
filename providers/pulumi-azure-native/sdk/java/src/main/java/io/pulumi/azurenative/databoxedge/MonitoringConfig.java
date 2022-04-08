@@ -18,7 +18,137 @@ import javax.annotation.Nullable;
  * The metric setting details for the role
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutMonitoringConfig
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var monitoringConfig = new AzureNative.DataBoxEdge.MonitoringConfig("monitoringConfig", new AzureNative.DataBoxEdge.MonitoringConfigArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             MetricConfigurations = 
+ *             {
+ *                 new AzureNative.DataBoxEdge.Inputs.MetricConfigurationArgs
+ *                 {
+ *                     CounterSets = 
+ *                     {
+ *                         new AzureNative.DataBoxEdge.Inputs.MetricCounterSetArgs
+ *                         {
+ *                             Counters = 
+ *                             {
+ *                                 new AzureNative.DataBoxEdge.Inputs.MetricCounterArgs
+ *                                 {
+ *                                     Name = "test",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     MdmAccount = "test",
+ *                     MetricNameSpace = "test",
+ *                     ResourceId = "test",
+ *                 },
+ *             },
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *             RoleName = "testrole",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewMonitoringConfig(ctx, "monitoringConfig", &databoxedge.MonitoringConfigArgs{
+ * 			DeviceName: pulumi.String("testedgedevice"),
+ * 			MetricConfigurations: databoxedge.MetricConfigurationArray{
+ * 				&databoxedge.MetricConfigurationArgs{
+ * 					CounterSets: databoxedge.MetricCounterSetArray{
+ * 						&databoxedge.MetricCounterSetArgs{
+ * 							Counters: databoxedge.MetricCounterArray{
+ * 								&databoxedge.MetricCounterArgs{
+ * 									Name: pulumi.String("test"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					MdmAccount:      pulumi.String("test"),
+ * 					MetricNameSpace: pulumi.String("test"),
+ * 					ResourceId:      pulumi.String("test"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 			RoleName:          pulumi.String("testrole"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitoringConfig", {
+ *     deviceName: "testedgedevice",
+ *     metricConfigurations: [{
+ *         counterSets: [{
+ *             counters: [{
+ *                 name: "test",
+ *             }],
+ *         }],
+ *         mdmAccount: "test",
+ *         metricNameSpace: "test",
+ *         resourceId: "test",
+ *     }],
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ *     roleName: "testrole",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * monitoring_config = azure_native.databoxedge.MonitoringConfig("monitoringConfig",
+ *     device_name="testedgedevice",
+ *     metric_configurations=[azure_native.databoxedge.MetricConfigurationArgs(
+ *         counter_sets=[azure_native.databoxedge.MetricCounterSetArgs(
+ *             counters=[azure_native.databoxedge.MetricCounterArgs(
+ *                 name="test",
+ *             )],
+ *         )],
+ *         mdm_account="test",
+ *         metric_name_space="test",
+ *         resource_id="test",
+ *     )],
+ *     resource_group_name="GroupForEdgeAutomation",
+ *     role_name="testrole")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +163,36 @@ import javax.annotation.Nullable;
 public class MonitoringConfig extends io.pulumi.resources.CustomResource {
     /**
      * The metrics configuration details
-     * 
      */
     @Export(name="metricConfigurations", type=List.class, parameters={MetricConfigurationResponse.class})
     private Output<List<MetricConfigurationResponse>> metricConfigurations;
 
     /**
      * @return The metrics configuration details
-     * 
      */
     public Output<List<MetricConfigurationResponse>> getMetricConfigurations() {
         return this.metricConfigurations;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ListStaticSiteUsersResult {
     /**
      * Link to next page of resources.
-     * 
      */
     private final String nextLink;
     /**
      * Collection of resources.
-     * 
      */
     private final List<StaticSiteUserARMResourceResponse> value;
 
@@ -32,14 +30,12 @@ public final class ListStaticSiteUsersResult {
 
     /**
      * Link to next page of resources.
-     * 
     */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
-     * 
     */
     public List<StaticSiteUserARMResourceResponse> getValue() {
         return this.value;

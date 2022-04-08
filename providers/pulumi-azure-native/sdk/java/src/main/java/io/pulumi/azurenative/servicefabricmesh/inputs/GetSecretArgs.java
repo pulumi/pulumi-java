@@ -14,7 +14,6 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the secret resource.
-     * 
      */
     @Import(name="secretResourceName", required=true)
       private final String secretResourceName;

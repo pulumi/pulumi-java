@@ -18,7 +18,161 @@ import javax.annotation.Nullable;
  * The resource representation of a service topology.
  * API Version: 2019-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a topology with Artifact Source
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceTopology = new AzureNative.DeploymentManager.ServiceTopology("serviceTopology", new AzureNative.DeploymentManager.ServiceTopologyArgs
+ *         {
+ *             ArtifactSourceId = "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+ *             Location = "centralus",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceTopologyName = "myTopology",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := deploymentmanager.NewServiceTopology(ctx, "serviceTopology", &deploymentmanager.ServiceTopologyArgs{
+ * 			ArtifactSourceId:    pulumi.String("Microsoft.DeploymentManager/artifactSources/myArtifactSource"),
+ * 			Location:            pulumi.String("centralus"),
+ * 			ResourceGroupName:   pulumi.String("myResourceGroup"),
+ * 			ServiceTopologyName: pulumi.String("myTopology"),
+ * 			Tags:                nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceTopology = new azure_native.deploymentmanager.ServiceTopology("serviceTopology", {
+ *     artifactSourceId: "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+ *     location: "centralus",
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceTopologyName: "myTopology",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_topology = azure_native.deploymentmanager.ServiceTopology("serviceTopology",
+ *     artifact_source_id="Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+ *     location="centralus",
+ *     resource_group_name="myResourceGroup",
+ *     service_topology_name="myTopology",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a topology without Artifact Source
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceTopology = new AzureNative.DeploymentManager.ServiceTopology("serviceTopology", new AzureNative.DeploymentManager.ServiceTopologyArgs
+ *         {
+ *             Location = "centralus",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceTopologyName = "myTopology",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := deploymentmanager.NewServiceTopology(ctx, "serviceTopology", &deploymentmanager.ServiceTopologyArgs{
+ * 			Location:            pulumi.String("centralus"),
+ * 			ResourceGroupName:   pulumi.String("myResourceGroup"),
+ * 			ServiceTopologyName: pulumi.String("myTopology"),
+ * 			Tags:                nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceTopology = new azure_native.deploymentmanager.ServiceTopology("serviceTopology", {
+ *     location: "centralus",
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceTopologyName: "myTopology",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_topology = azure_native.deploymentmanager.ServiceTopology("serviceTopology",
+ *     location="centralus",
+ *     resource_group_name="myResourceGroup",
+ *     service_topology_name="myTopology",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +187,60 @@ import javax.annotation.Nullable;
 public class ServiceTopology extends io.pulumi.resources.CustomResource {
     /**
      * The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
-     * 
      */
     @Export(name="artifactSourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> artifactSourceId;
 
     /**
      * @return The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
-     * 
      */
     public Output</* @Nullable */ String> getArtifactSourceId() {
         return this.artifactSourceId;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

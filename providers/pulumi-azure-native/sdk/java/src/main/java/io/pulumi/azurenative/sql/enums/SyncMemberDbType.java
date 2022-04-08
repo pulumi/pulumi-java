@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Database type of the sync member.
-     * 
      */
     @EnumType
     public enum SyncMemberDbType {

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application Configuration Service properties payload
- * 
  */
 public final class ConfigurationServicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
 
     /**
      * The settings of Application Configuration Service.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<ConfigurationServiceSettingsArgs> settings;

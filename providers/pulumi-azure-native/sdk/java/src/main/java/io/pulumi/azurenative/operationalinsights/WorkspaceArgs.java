@@ -25,7 +25,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ETag of the workspace.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -36,7 +35,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Workspace features.
-     * 
      */
     @Import(name="features")
       private final @Nullable Output<WorkspaceFeaturesArgs> features;
@@ -47,7 +45,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether customer managed storage is mandatory for query management.
-     * 
      */
     @Import(name="forceCmkForQuery")
       private final @Nullable Output<Boolean> forceCmkForQuery;
@@ -58,7 +55,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -69,7 +65,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The provisioning state of the workspace.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
@@ -80,7 +75,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The network access type for accessing Log Analytics ingestion.
-     * 
      */
     @Import(name="publicNetworkAccessForIngestion")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
@@ -91,7 +85,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The network access type for accessing Log Analytics query.
-     * 
      */
     @Import(name="publicNetworkAccessForQuery")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
@@ -102,7 +95,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -113,7 +105,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-     * 
      */
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
@@ -124,7 +115,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the workspace.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<WorkspaceSkuArgs> sku;
@@ -135,7 +125,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -146,7 +135,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The daily volume cap for ingestion.
-     * 
      */
     @Import(name="workspaceCapping")
       private final @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
@@ -157,7 +145,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

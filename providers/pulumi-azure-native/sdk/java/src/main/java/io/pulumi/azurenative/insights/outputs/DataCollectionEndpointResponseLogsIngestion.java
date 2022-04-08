@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DataCollectionEndpointResponseLogsIngestion {
     /**
      * The endpoint. This property is READ-ONLY.
-     * 
      */
     private final String endpoint;
 
@@ -22,7 +21,6 @@ public final class DataCollectionEndpointResponseLogsIngestion {
 
     /**
      * The endpoint. This property is READ-ONLY.
-     * 
     */
     public String getEndpoint() {
         return this.endpoint;

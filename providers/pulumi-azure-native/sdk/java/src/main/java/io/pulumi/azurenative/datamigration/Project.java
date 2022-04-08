@@ -24,7 +24,91 @@ import javax.annotation.Nullable;
  * A project resource
  * API Version: 2018-04-19.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Projects_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = new AzureNative.DataMigration.Project("project", new AzureNative.DataMigration.ProjectArgs
+ *         {
+ *             GroupName = "DmsSdkRg",
+ *             Location = "southcentralus",
+ *             ProjectName = "DmsSdkProject",
+ *             ServiceName = "DmsSdkService",
+ *             SourcePlatform = "SQL",
+ *             TargetPlatform = "SQLDB",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datamigration.NewProject(ctx, "project", &datamigration.ProjectArgs{
+ * 			GroupName:      pulumi.String("DmsSdkRg"),
+ * 			Location:       pulumi.String("southcentralus"),
+ * 			ProjectName:    pulumi.String("DmsSdkProject"),
+ * 			ServiceName:    pulumi.String("DmsSdkService"),
+ * 			SourcePlatform: pulumi.String("SQL"),
+ * 			TargetPlatform: pulumi.String("SQLDB"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const project = new azure_native.datamigration.Project("project", {
+ *     groupName: "DmsSdkRg",
+ *     location: "southcentralus",
+ *     projectName: "DmsSdkProject",
+ *     serviceName: "DmsSdkService",
+ *     sourcePlatform: "SQL",
+ *     targetPlatform: "SQLDB",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * project = azure_native.datamigration.Project("project",
+ *     group_name="DmsSdkRg",
+ *     location="southcentralus",
+ *     project_name="DmsSdkProject",
+ *     service_name="DmsSdkService",
+ *     source_platform="SQL",
+ *     target_platform="SQLDB")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,154 +123,132 @@ import javax.annotation.Nullable;
 public class Project extends io.pulumi.resources.CustomResource {
     /**
      * UTC Date and time when project was created
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return UTC Date and time when project was created
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * List of DatabaseInfo
-     * 
      */
     @Export(name="databasesInfo", type=List.class, parameters={DatabaseInfoResponse.class})
     private Output</* @Nullable */ List<DatabaseInfoResponse>> databasesInfo;
 
     /**
      * @return List of DatabaseInfo
-     * 
      */
     public Output</* @Nullable */ List<DatabaseInfoResponse>> getDatabasesInfo() {
         return this.databasesInfo;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The project's provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The project's provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Information for connecting to source
-     * 
      */
     @Export(name="sourceConnectionInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> sourceConnectionInfo;
 
     /**
      * @return Information for connecting to source
-     * 
      */
     public Output</* @Nullable */ Object> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Source platform for the project
-     * 
      */
     @Export(name="sourcePlatform", type=String.class, parameters={})
     private Output<String> sourcePlatform;
 
     /**
      * @return Source platform for the project
-     * 
      */
     public Output<String> getSourcePlatform() {
         return this.sourcePlatform;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Information for connecting to target
-     * 
      */
     @Export(name="targetConnectionInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> targetConnectionInfo;
 
     /**
      * @return Information for connecting to target
-     * 
      */
     public Output</* @Nullable */ Object> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
     /**
      * Target platform for the project
-     * 
      */
     @Export(name="targetPlatform", type=String.class, parameters={})
     private Output<String> targetPlatform;
 
     /**
      * @return Target platform for the project
-     * 
      */
     public Output<String> getTargetPlatform() {
         return this.targetPlatform;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

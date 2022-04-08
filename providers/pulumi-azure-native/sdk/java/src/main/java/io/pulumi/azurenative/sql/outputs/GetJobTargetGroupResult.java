@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class GetJobTargetGroupResult {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Members of the target group.
-     * 
      */
     private final List<JobTargetResponse> members;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -46,28 +42,24 @@ public final class GetJobTargetGroupResult {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Members of the target group.
-     * 
     */
     public List<JobTargetResponse> getMembers() {
         return this.members;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

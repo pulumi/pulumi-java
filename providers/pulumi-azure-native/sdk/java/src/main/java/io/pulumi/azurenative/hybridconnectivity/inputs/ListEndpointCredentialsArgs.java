@@ -17,7 +17,6 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
 
     /**
      * The endpoint name.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final String endpointName;
@@ -28,7 +27,6 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
 
     /**
      * The is how long the endpoint access token is valid (in seconds).
-     * 
      */
     @Import(name="expiresin")
       private final @Nullable Integer expiresin;
@@ -39,7 +37,6 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
 
     /**
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

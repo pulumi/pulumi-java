@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sync direction of the sync member.
-     * 
      */
     @EnumType
     public enum SyncDirection {

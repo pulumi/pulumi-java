@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The system service type
-     * 
      */
     @EnumType
     public enum SystemServiceType {

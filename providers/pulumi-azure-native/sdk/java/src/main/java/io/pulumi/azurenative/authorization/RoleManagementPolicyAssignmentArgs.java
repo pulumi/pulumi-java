@@ -16,7 +16,6 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
 
     /**
      * The policy id role management policy assignment.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -27,7 +26,6 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
 
     /**
      * The role definition of management policy assignment.
-     * 
      */
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
@@ -38,7 +36,6 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of format {guid_guid} the role management policy assignment to upsert.
-     * 
      */
     @Import(name="roleManagementPolicyAssignmentName")
       private final @Nullable Output<String> roleManagementPolicyAssignmentName;
@@ -49,7 +46,6 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
 
     /**
      * The role management policy scope.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

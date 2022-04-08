@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The status of an Azure resource at the time the operation was called.
- * 
  */
 public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The short label for the status.
-     * 
      */
     @Import(name="displayStatus", required=true)
       private final String displayStatus;
@@ -29,7 +27,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The detailed message for the status, including alerts and error messages.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -40,7 +37,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timestamp when the status was changed to the current value.
-     * 
      */
     @Import(name="timestamp", required=true)
       private final String timestamp;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
-     * 
      */
     @EnumType
     public enum IdentityType {

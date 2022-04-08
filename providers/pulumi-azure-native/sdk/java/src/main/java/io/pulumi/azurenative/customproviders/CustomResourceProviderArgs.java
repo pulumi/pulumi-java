@@ -21,7 +21,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
 
     /**
      * A list of actions that the custom resource provider implements.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
@@ -32,7 +31,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +41,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -54,7 +51,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource provider.
-     * 
      */
     @Import(name="resourceProviderName")
       private final @Nullable Output<String> resourceProviderName;
@@ -65,7 +61,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
 
     /**
      * A list of resource types that the custom resource provider implements.
-     * 
      */
     @Import(name="resourceTypes")
       private final @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
@@ -76,7 +71,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -87,7 +81,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
 
     /**
      * A list of validations to run on the custom resource provider's requests.
-     * 
      */
     @Import(name="validations")
       private final @Nullable Output<List<CustomRPValidationsArgs>> validations;

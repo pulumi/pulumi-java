@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of completion operation.
-     * 
      */
     @EnumType
     public enum CompletionOperationTypes {

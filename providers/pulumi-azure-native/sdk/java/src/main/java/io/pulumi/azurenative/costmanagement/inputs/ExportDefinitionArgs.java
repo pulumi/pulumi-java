@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of an export.
- * 
  */
 public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The definition for data in the export.
-     * 
      */
     @Import(name="dataSet")
       private final @Nullable Output<ExportDatasetArgs> dataSet;
@@ -36,7 +34,6 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Has time period for pulling data for the export.
-     * 
      */
     @Import(name="timePeriod")
       private final @Nullable Output<ExportTimePeriodArgs> timePeriod;
@@ -47,7 +44,6 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The time frame for pulling data for the export. If custom, then a specific time period must be provided.
-     * 
      */
     @Import(name="timeframe", required=true)
       private final Output<Either<String,TimeframeType>> timeframe;
@@ -58,7 +54,6 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ExportType>> type;

@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class GetManagedNetworkPeeringPolicyResult {
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The geo-location where the resource lives
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Gets or sets the properties of a Managed Network Policy
-     * 
      */
     private final ManagedNetworkPeeringPolicyPropertiesResponse properties;
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     private final String type;
 
@@ -54,35 +49,30 @@ public final class GetManagedNetworkPeeringPolicyResult {
 
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the properties of a Managed Network Policy
-     * 
     */
     public ManagedNetworkPeeringPolicyPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
     */
     public String getType() {
         return this.type;

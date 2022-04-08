@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DiskSecretResponse {
     /**
      * Bit Locker key of the disk which can be used to unlock the disk to copy data.
-     * 
      */
     private final String bitLockerKey;
     /**
      * Serial number of the assigned disk.
-     * 
      */
     private final String diskSerialNumber;
 
@@ -30,14 +28,12 @@ public final class DiskSecretResponse {
 
     /**
      * Bit Locker key of the disk which can be used to unlock the disk to copy data.
-     * 
     */
     public String getBitLockerKey() {
         return this.bitLockerKey;
     }
     /**
      * Serial number of the assigned disk.
-     * 
     */
     public String getDiskSerialNumber() {
         return this.diskSerialNumber;

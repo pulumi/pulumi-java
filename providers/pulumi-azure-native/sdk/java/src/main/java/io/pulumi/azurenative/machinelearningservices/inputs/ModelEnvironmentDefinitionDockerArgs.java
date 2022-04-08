@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a Docker container.
- * 
  */
 public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
 
     /**
      * Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
-     * 
      */
     @Import(name="baseDockerfile")
       private final @Nullable Output<String> baseDockerfile;
@@ -32,7 +30,6 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
 
     /**
      * Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
-     * 
      */
     @Import(name="baseImage")
       private final @Nullable Output<String> baseImage;
@@ -43,7 +40,6 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
 
     /**
      * Image registry that contains the base image.
-     * 
      */
     @Import(name="baseImageRegistry")
       private final @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;

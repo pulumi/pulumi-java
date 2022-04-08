@@ -16,7 +16,6 @@ public final class NFSMountConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
-     * 
      */
     @Import(name="mountOptions")
       private final @Nullable String mountOptions;
@@ -27,7 +26,6 @@ public final class NFSMountConfigurationResponse extends io.pulumi.resources.Inv
 
     /**
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-     * 
      */
     @Import(name="relativeMountPath", required=true)
       private final String relativeMountPath;

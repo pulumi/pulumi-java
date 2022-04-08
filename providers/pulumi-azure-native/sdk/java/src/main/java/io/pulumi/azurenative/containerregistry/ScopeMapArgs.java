@@ -19,7 +19,6 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * The list of scoped permissions for registry artifacts.
      * E.g. repositories/repository-name/content/read,
      * repositories/repository-name/metadata/write
-     * 
      */
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
@@ -30,7 +29,6 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user friendly description of the scope map.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -52,7 +49,6 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the scope map.
-     * 
      */
     @Import(name="scopeMapName")
       private final @Nullable Output<String> scopeMapName;

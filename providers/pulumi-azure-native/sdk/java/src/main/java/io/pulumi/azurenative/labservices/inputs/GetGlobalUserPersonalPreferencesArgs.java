@@ -18,7 +18,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
 
     /**
      * Enum indicating if user is adding or removing a favorite lab
-     * 
      */
     @Import(name="addRemove")
       private final @Nullable Either<String,AddRemove> addRemove;
@@ -29,7 +28,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
 
     /**
      * Resource Id of the lab account
-     * 
      */
     @Import(name="labAccountResourceId")
       private final @Nullable String labAccountResourceId;
@@ -40,7 +38,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
 
     /**
      * Resource Id of the lab to add/remove from the favorites list
-     * 
      */
     @Import(name="labResourceId")
       private final @Nullable String labResourceId;
@@ -51,7 +48,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IsNullOrUndefined Advanced Filter.
- * 
  */
 public final class IsNullOrUndefinedAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IsNullOrUndefinedAdvancedFilterArgs extends io.pulumi.resourc
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -32,7 +30,6 @@ public final class IsNullOrUndefinedAdvancedFilterArgs extends io.pulumi.resourc
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'IsNullOrUndefined'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;

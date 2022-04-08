@@ -16,7 +16,6 @@ public final class ListShareSynchronizationsArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -27,7 +26,6 @@ public final class ListShareSynchronizationsArgs extends io.pulumi.resources.Inv
 
     /**
      * Filters the results using OData syntax.
-     * 
      */
     @Import(name="filter")
       private final @Nullable String filter;
@@ -38,7 +36,6 @@ public final class ListShareSynchronizationsArgs extends io.pulumi.resources.Inv
 
     /**
      * Sorts the results using OData syntax.
-     * 
      */
     @Import(name="orderby")
       private final @Nullable String orderby;
@@ -49,7 +46,6 @@ public final class ListShareSynchronizationsArgs extends io.pulumi.resources.Inv
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -60,7 +56,6 @@ public final class ListShareSynchronizationsArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the share.
-     * 
      */
     @Import(name="shareName", required=true)
       private final String shareName;
@@ -71,7 +66,6 @@ public final class ListShareSynchronizationsArgs extends io.pulumi.resources.Inv
 
     /**
      * Continuation token
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;

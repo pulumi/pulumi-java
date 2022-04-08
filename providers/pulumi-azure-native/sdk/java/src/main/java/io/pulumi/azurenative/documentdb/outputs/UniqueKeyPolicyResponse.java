@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class UniqueKeyPolicyResponse {
     /**
      * List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
-     * 
      */
     private final @Nullable List<UniqueKeyResponse> uniqueKeys;
 
@@ -24,7 +23,6 @@ public final class UniqueKeyPolicyResponse {
 
     /**
      * List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
-     * 
     */
     public List<UniqueKeyResponse> getUniqueKeys() {
         return this.uniqueKeys == null ? List.of() : this.uniqueKeys;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A CAA record.
- * 
  */
 public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The flags for this CAA record as an integer between 0 and 255.
-     * 
      */
     @Import(name="flags")
       private final @Nullable Output<Integer> flags;
@@ -32,7 +30,6 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tag for this CAA record.
-     * 
      */
     @Import(name="tag")
       private final @Nullable Output<String> tag;
@@ -43,7 +40,6 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value for this CAA record.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

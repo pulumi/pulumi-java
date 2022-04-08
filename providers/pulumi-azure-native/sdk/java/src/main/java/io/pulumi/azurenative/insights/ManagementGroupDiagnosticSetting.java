@@ -18,7 +18,134 @@ import javax.annotation.Nullable;
  * The management group diagnostic setting resource.
  * API Version: 2020-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or Updates the management group diagnostic setting
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementGroupDiagnosticSetting = new AzureNative.Insights.ManagementGroupDiagnosticSetting("managementGroupDiagnosticSetting", new AzureNative.Insights.ManagementGroupDiagnosticSettingArgs
+ *         {
+ *             EventHubAuthorizationRuleId = "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+ *             EventHubName = "myeventhub",
+ *             Logs = 
+ *             {
+ *                 new AzureNative.Insights.Inputs.ManagementGroupLogSettingsArgs
+ *                 {
+ *                     Category = "Administrative",
+ *                     Enabled = true,
+ *                 },
+ *                 new AzureNative.Insights.Inputs.ManagementGroupLogSettingsArgs
+ *                 {
+ *                     Category = "Policy",
+ *                     Enabled = true,
+ *                 },
+ *             },
+ *             ManagementGroupId = "testChildMG7",
+ *             Name = "setting1",
+ *             StorageAccountId = "/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5",
+ *             WorkspaceId = "/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewManagementGroupDiagnosticSetting(ctx, "managementGroupDiagnosticSetting", &insights.ManagementGroupDiagnosticSettingArgs{
+ * 			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
+ * 			EventHubName:                pulumi.String("myeventhub"),
+ * 			Logs: []insights.ManagementGroupLogSettingsArgs{
+ * 				&insights.ManagementGroupLogSettingsArgs{
+ * 					Category: pulumi.String("Administrative"),
+ * 					Enabled:  pulumi.Bool(true),
+ * 				},
+ * 				&insights.ManagementGroupLogSettingsArgs{
+ * 					Category: pulumi.String("Policy"),
+ * 					Enabled:  pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			ManagementGroupId: pulumi.String("testChildMG7"),
+ * 			Name:              pulumi.String("setting1"),
+ * 			StorageAccountId:  pulumi.String("/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5"),
+ * 			WorkspaceId:       pulumi.String("/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementGroupDiagnosticSetting = new azure_native.insights.ManagementGroupDiagnosticSetting("managementGroupDiagnosticSetting", {
+ *     eventHubAuthorizationRuleId: "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+ *     eventHubName: "myeventhub",
+ *     logs: [
+ *         {
+ *             category: "Administrative",
+ *             enabled: true,
+ *         },
+ *         {
+ *             category: "Policy",
+ *             enabled: true,
+ *         },
+ *     ],
+ *     managementGroupId: "testChildMG7",
+ *     name: "setting1",
+ *     storageAccountId: "/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5",
+ *     workspaceId: "/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_group_diagnostic_setting = azure_native.insights.ManagementGroupDiagnosticSetting("managementGroupDiagnosticSetting",
+ *     event_hub_authorization_rule_id="/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+ *     event_hub_name="myeventhub",
+ *     logs=[
+ *         azure_native.insights.ManagementGroupLogSettingsArgs(
+ *             category="Administrative",
+ *             enabled=True,
+ *         ),
+ *         azure_native.insights.ManagementGroupLogSettingsArgs(
+ *             category="Policy",
+ *             enabled=True,
+ *         ),
+ *     ],
+ *     management_group_id="testChildMG7",
+ *     name="setting1",
+ *     storage_account_id="/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5",
+ *     workspace_id="/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +160,108 @@ import javax.annotation.Nullable;
 public class ManagementGroupDiagnosticSetting extends io.pulumi.resources.CustomResource {
     /**
      * The resource Id for the event hub authorization rule.
-     * 
      */
     @Export(name="eventHubAuthorizationRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubAuthorizationRuleId;
 
     /**
      * @return The resource Id for the event hub authorization rule.
-     * 
      */
     public Output</* @Nullable */ String> getEventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId;
     }
     /**
      * The name of the event hub. If none is specified, the default event hub will be selected.
-     * 
      */
     @Export(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
     /**
      * @return The name of the event hub. If none is specified, the default event hub will be selected.
-     * 
      */
     public Output</* @Nullable */ String> getEventHubName() {
         return this.eventHubName;
     }
     /**
      * Location of the resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of the resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The list of logs settings.
-     * 
      */
     @Export(name="logs", type=List.class, parameters={ManagementGroupLogSettingsResponse.class})
     private Output</* @Nullable */ List<ManagementGroupLogSettingsResponse>> logs;
 
     /**
      * @return The list of logs settings.
-     * 
      */
     public Output</* @Nullable */ List<ManagementGroupLogSettingsResponse>> getLogs() {
         return this.logs;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     * 
      */
     @Export(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
     /**
      * @return The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     * 
      */
     public Output</* @Nullable */ String> getServiceBusRuleId() {
         return this.serviceBusRuleId;
     }
     /**
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     * 
      */
     @Export(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
     /**
      * @return The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountId() {
         return this.storageAccountId;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     * 
      */
     @Export(name="workspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspaceId;
 
     /**
      * @return The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     * 
      */
     public Output</* @Nullable */ String> getWorkspaceId() {
         return this.workspaceId;

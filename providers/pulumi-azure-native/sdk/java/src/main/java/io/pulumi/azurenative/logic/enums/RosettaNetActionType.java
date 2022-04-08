@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The value indicating whether the RosettaNet PIP is used for a single action.
-     * 
      */
     @EnumType
     public enum RosettaNetActionType {

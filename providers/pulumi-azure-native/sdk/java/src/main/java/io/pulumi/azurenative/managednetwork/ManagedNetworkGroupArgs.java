@@ -20,7 +20,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Responsibility role under which this Managed Network Group will be created
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
@@ -31,7 +30,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the Managed Network Group.
-     * 
      */
     @Import(name="managedNetworkGroupName")
       private final @Nullable Output<String> managedNetworkGroupName;
@@ -53,7 +50,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the Managed Network.
-     * 
      */
     @Import(name="managedNetworkName", required=true)
       private final Output<String> managedNetworkName;
@@ -64,7 +60,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The collection of management groups covered by the Managed Network
-     * 
      */
     @Import(name="managementGroups")
       private final @Nullable Output<List<ResourceIdArgs>> managementGroups;
@@ -75,7 +70,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The collection of  subnets covered by the Managed Network
-     * 
      */
     @Import(name="subnets")
       private final @Nullable Output<List<ResourceIdArgs>> subnets;
@@ -97,7 +90,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The collection of subscriptions covered by the Managed Network
-     * 
      */
     @Import(name="subscriptions")
       private final @Nullable Output<List<ResourceIdArgs>> subscriptions;
@@ -108,7 +100,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The collection of virtual nets covered by the Managed Network
-     * 
      */
     @Import(name="virtualNetworks")
       private final @Nullable Output<List<ResourceIdArgs>> virtualNetworks;

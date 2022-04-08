@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contact Profile link
- * 
  */
 public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Contact Profile Link Channel
-     * 
      */
     @Import(name="channels", required=true)
       private final Output<List<ContactProfileLinkChannelArgs>> channels;
@@ -37,7 +35,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Direction (uplink or downlink)
-     * 
      */
     @Import(name="direction", required=true)
       private final Output<Either<String,Direction>> direction;
@@ -48,7 +45,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Effective Isotropic Radiated Power (EIRP) in dBW.
-     * 
      */
     @Import(name="eirpdBW")
       private final @Nullable Output<Double> eirpdBW;
@@ -59,7 +55,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gain To Noise Temperature in db/K.
-     * 
      */
     @Import(name="gainOverTemperature")
       private final @Nullable Output<Double> gainOverTemperature;
@@ -70,7 +65,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * polarization. eg (RHCP, LHCP)
-     * 
      */
     @Import(name="polarization", required=true)
       private final Output<Either<String,Polarization>> polarization;

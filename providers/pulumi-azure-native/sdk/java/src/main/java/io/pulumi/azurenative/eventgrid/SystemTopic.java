@@ -20,7 +20,104 @@ import javax.annotation.Nullable;
  * EventGrid System Topic.
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SystemTopics_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var systemTopic = new AzureNative.EventGrid.SystemTopic("systemTopic", new AzureNative.EventGrid.SystemTopicArgs
+ *         {
+ *             Location = "westus2",
+ *             ResourceGroupName = "examplerg",
+ *             Source = "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/azureeventgridrunnerrgcentraluseuap/providers/microsoft.storage/storageaccounts/pubstgrunnerb71cd29e",
+ *             SystemTopicName = "exampleSystemTopic1",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *             TopicType = "microsoft.storage.storageaccounts",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventgrid.NewSystemTopic(ctx, "systemTopic", &eventgrid.SystemTopicArgs{
+ * 			Location:          pulumi.String("westus2"),
+ * 			ResourceGroupName: pulumi.String("examplerg"),
+ * 			Source:            pulumi.String("/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/azureeventgridrunnerrgcentraluseuap/providers/microsoft.storage/storageaccounts/pubstgrunnerb71cd29e"),
+ * 			SystemTopicName:   pulumi.String("exampleSystemTopic1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 			TopicType: pulumi.String("microsoft.storage.storageaccounts"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const systemTopic = new azure_native.eventgrid.SystemTopic("systemTopic", {
+ *     location: "westus2",
+ *     resourceGroupName: "examplerg",
+ *     source: "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/azureeventgridrunnerrgcentraluseuap/providers/microsoft.storage/storageaccounts/pubstgrunnerb71cd29e",
+ *     systemTopicName: "exampleSystemTopic1",
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ *     topicType: "microsoft.storage.storageaccounts",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * system_topic = azure_native.eventgrid.SystemTopic("systemTopic",
+ *     location="westus2",
+ *     resource_group_name="examplerg",
+ *     source="/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/azureeventgridrunnerrgcentraluseuap/providers/microsoft.storage/storageaccounts/pubstgrunnerb71cd29e",
+ *     system_topic_name="exampleSystemTopic1",
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     },
+ *     topic_type="microsoft.storage.storageaccounts")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,140 +132,120 @@ import javax.annotation.Nullable;
 public class SystemTopic extends io.pulumi.resources.CustomResource {
     /**
      * Identity information for the resource.
-     * 
      */
     @Export(name="identity", type=IdentityInfoResponse.class, parameters={})
     private Output</* @Nullable */ IdentityInfoResponse> identity;
 
     /**
      * @return Identity information for the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityInfoResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location of the resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Metric resource id for the system topic.
-     * 
      */
     @Export(name="metricResourceId", type=String.class, parameters={})
     private Output<String> metricResourceId;
 
     /**
      * @return Metric resource id for the system topic.
-     * 
      */
     public Output<String> getMetricResourceId() {
         return this.metricResourceId;
     }
     /**
      * Name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the system topic.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the system topic.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Source for the system topic.
-     * 
      */
     @Export(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
     /**
      * @return Source for the system topic.
-     * 
      */
     public Output</* @Nullable */ String> getSource() {
         return this.source;
     }
     /**
      * The system metadata relating to System Topic resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to System Topic resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * TopicType for the system topic.
-     * 
      */
     @Export(name="topicType", type=String.class, parameters={})
     private Output</* @Nullable */ String> topicType;
 
     /**
      * @return TopicType for the system topic.
-     * 
      */
     public Output</* @Nullable */ String> getTopicType() {
         return this.topicType;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

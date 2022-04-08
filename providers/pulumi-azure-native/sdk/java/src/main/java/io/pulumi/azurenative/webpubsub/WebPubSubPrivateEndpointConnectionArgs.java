@@ -18,7 +18,6 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * Private endpoint associated with the private endpoint connection
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
@@ -29,7 +28,6 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * The name of the private endpoint connection
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -40,7 +38,6 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * Connection state
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -51,7 +48,6 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class WebPubSubPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

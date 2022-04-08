@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.
- * 
  */
 public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +29,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the offer of the platform image or marketplace image used to create the virtual machine.
-     * 
      */
     @Import(name="offer")
       private final @Nullable Output<String> offer;
@@ -42,7 +39,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The image publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -53,7 +49,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The image SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;
@@ -64,7 +59,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

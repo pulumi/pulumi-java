@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings that will be leveraged for SAP HANA source partitioning.
- * 
  */
 public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;

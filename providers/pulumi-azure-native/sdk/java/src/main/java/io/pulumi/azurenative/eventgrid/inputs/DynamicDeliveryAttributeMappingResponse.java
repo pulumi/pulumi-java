@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dynamic delivery attribute mapping details.
- * 
  */
 public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
 
     /**
      * Name of the delivery attribute or header.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
 
     /**
      * JSON path in the event which contains attribute value.
-     * 
      */
     @Import(name="sourceField")
       private final @Nullable String sourceField;
@@ -43,7 +40,6 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
     /**
      * Type of the delivery attribute or header name.
      * Expected value is 'Dynamic'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

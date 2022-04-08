@@ -14,7 +14,6 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the CdnWebApplicationFirewallPolicy.
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;
@@ -25,7 +24,6 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

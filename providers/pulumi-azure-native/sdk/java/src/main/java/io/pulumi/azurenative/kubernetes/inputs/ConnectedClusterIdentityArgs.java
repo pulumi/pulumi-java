@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Identity for the connected cluster.
- * 
  */
 public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.Reso
 
     /**
      * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;

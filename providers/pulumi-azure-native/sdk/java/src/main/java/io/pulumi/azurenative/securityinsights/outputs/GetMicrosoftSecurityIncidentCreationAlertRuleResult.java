@@ -15,73 +15,59 @@ import javax.annotation.Nullable;
 public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
     /**
      * The Name of the alert rule template used to create this rule.
-     * 
      */
     private final @Nullable String alertRuleTemplateName;
     /**
      * The description of the alert rule.
-     * 
      */
     private final @Nullable String description;
     /**
      * The display name for alerts created by this alert rule.
-     * 
      */
     private final String displayName;
     /**
      * the alerts' displayNames on which the cases will not be generated
-     * 
      */
     private final @Nullable List<String> displayNamesExcludeFilter;
     /**
      * the alerts' displayNames on which the cases will be generated
-     * 
      */
     private final @Nullable List<String> displayNamesFilter;
     /**
      * Determines whether this alert rule is enabled or disabled.
-     * 
      */
     private final Boolean enabled;
     /**
      * Etag of the azure resource
-     * 
      */
     private final @Nullable String etag;
     /**
      * Azure resource Id
-     * 
      */
     private final String id;
     /**
      * The kind of the alert rule
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
-     * 
      */
     private final String kind;
     /**
      * The last time that this alert has been modified.
-     * 
      */
     private final String lastModifiedUtc;
     /**
      * Azure resource name
-     * 
      */
     private final String name;
     /**
      * The alerts' productName on which the cases will be generated
-     * 
      */
     private final String productFilter;
     /**
      * the alerts' severities on which the cases will be generated
-     * 
      */
     private final @Nullable List<String> severitiesFilter;
     /**
      * Azure resource type
-     * 
      */
     private final String type;
 
@@ -119,56 +105,48 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
 
     /**
      * The Name of the alert rule template used to create this rule.
-     * 
     */
     public Optional<String> getAlertRuleTemplateName() {
         return Optional.ofNullable(this.alertRuleTemplateName);
     }
     /**
      * The description of the alert rule.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name for alerts created by this alert rule.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * the alerts' displayNames on which the cases will not be generated
-     * 
     */
     public List<String> getDisplayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter == null ? List.of() : this.displayNamesExcludeFilter;
     }
     /**
      * the alerts' displayNames on which the cases will be generated
-     * 
     */
     public List<String> getDisplayNamesFilter() {
         return this.displayNamesFilter == null ? List.of() : this.displayNamesFilter;
     }
     /**
      * Determines whether this alert rule is enabled or disabled.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Etag of the azure resource
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
-     * 
     */
     public String getId() {
         return this.id;
@@ -176,42 +154,36 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
     /**
      * The kind of the alert rule
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * The last time that this alert has been modified.
-     * 
     */
     public String getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Azure resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The alerts' productName on which the cases will be generated
-     * 
     */
     public String getProductFilter() {
         return this.productFilter;
     }
     /**
      * the alerts' severities on which the cases will be generated
-     * 
     */
     public List<String> getSeveritiesFilter() {
         return this.severitiesFilter == null ? List.of() : this.severitiesFilter;
     }
     /**
      * Azure resource type
-     * 
     */
     public String getType() {
         return this.type;

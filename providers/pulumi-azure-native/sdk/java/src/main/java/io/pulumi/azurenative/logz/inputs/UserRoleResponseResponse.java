@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Response for checking user's role for Logz.io account.
- * 
  */
 public final class UserRoleResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserRoleResponseResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * User roles on configured in Logz.io account.
-     * 
      */
     @Import(name="role")
       private final @Nullable String role;

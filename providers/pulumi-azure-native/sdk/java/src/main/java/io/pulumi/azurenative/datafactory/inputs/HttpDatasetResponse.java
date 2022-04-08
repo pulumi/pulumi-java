@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * A file in an HTTP web server.
- * 
  */
 public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -34,7 +33,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * The headers for the HTTP Request. e.g. request-header-name-1:request-header-value-1
      * ...
      * request-header-name-n:request-header-value-n Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="additionalHeaders")
       private final @Nullable Object additionalHeaders;
@@ -45,7 +43,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -56,7 +53,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data compression method used on files.
-     * 
      */
     @Import(name="compression")
       private final @Nullable DatasetCompressionResponse compression;
@@ -67,7 +63,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -78,7 +73,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
@@ -89,7 +83,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The format of files.
-     * 
      */
     @Import(name="format")
       private final @Nullable Object format;
@@ -100,7 +93,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -111,7 +103,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -122,7 +113,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="relativeUrl")
       private final @Nullable Object relativeUrl;
@@ -133,7 +123,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The body for the HTTP request. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestBody")
       private final @Nullable Object requestBody;
@@ -144,7 +133,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTP method for the HTTP request. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestMethod")
       private final @Nullable Object requestMethod;
@@ -155,7 +143,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Object schema;
@@ -166,7 +153,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Object structure;
@@ -178,7 +164,6 @@ public final class HttpDatasetResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of dataset.
      * Expected value is 'HttpFile'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

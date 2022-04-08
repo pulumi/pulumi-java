@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies information related to a SAP system ID
- * 
  */
 public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Group ID of the HANA database user.
-     * 
      */
     @Import(name="gid")
       private final @Nullable Output<String> gid;
@@ -31,7 +29,6 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SAP system ID as database identifier.
-     * 
      */
     @Import(name="sid")
       private final @Nullable Output<String> sid;
@@ -42,7 +39,6 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User ID of the HANA database user.
-     * 
      */
     @Import(name="uid")
       private final @Nullable Output<String> uid;
@@ -53,7 +49,6 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the HANA database user.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes Forwarding Route.
- * 
  */
 public final class ForwardingConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * A reference to the BackendPool which this rule routes to.
-     * 
      */
     @Import(name="backendPool")
       private final @Nullable Output<SubResourceArgs> backendPool;
@@ -35,7 +33,6 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The caching configuration associated with this rule.
-     * 
      */
     @Import(name="cacheConfiguration")
       private final @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
@@ -46,7 +43,6 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
-     * 
      */
     @Import(name="customForwardingPath")
       private final @Nullable Output<String> customForwardingPath;
@@ -57,7 +53,6 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * Protocol this rule will use when forwarding traffic to backends.
-     * 
      */
     @Import(name="forwardingProtocol")
       private final @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
@@ -67,8 +62,8 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
      * 
+     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

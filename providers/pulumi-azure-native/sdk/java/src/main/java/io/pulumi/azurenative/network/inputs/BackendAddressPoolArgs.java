@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pool of backend IP addresses.
- * 
  */
 public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -33,7 +31,6 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An array of backend addresses.
-     * 
      */
     @Import(name="loadBalancerBackendAddresses")
       private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
@@ -44,7 +41,6 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The location of the backend address pool.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +51,6 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class GatewayDetailsResponse {
     /**
      * Uri of the DMTS cluster.
-     * 
      */
     private final String dmtsClusterUri;
     /**
      * Gateway object id from in the DMTS cluster for the gateway resource.
-     * 
      */
     private final String gatewayObjectId;
     /**
      * Gateway resource to be associated with the server.
-     * 
      */
     private final @Nullable String gatewayResourceId;
 
@@ -39,21 +36,18 @@ public final class GatewayDetailsResponse {
 
     /**
      * Uri of the DMTS cluster.
-     * 
     */
     public String getDmtsClusterUri() {
         return this.dmtsClusterUri;
     }
     /**
      * Gateway object id from in the DMTS cluster for the gateway resource.
-     * 
     */
     public String getGatewayObjectId() {
         return this.gatewayObjectId;
     }
     /**
      * Gateway resource to be associated with the server.
-     * 
     */
     public Optional<String> getGatewayResourceId() {
         return Optional.ofNullable(this.gatewayResourceId);

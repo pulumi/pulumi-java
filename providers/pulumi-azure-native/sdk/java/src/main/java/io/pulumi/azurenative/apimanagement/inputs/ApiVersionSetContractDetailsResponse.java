@@ -11,8 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * An API Version Set contains the common configuration for a set of API Versions relating
- * 
+ * An API Version Set contains the common configuration for a set of API Versions relating 
  */
 public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
 
     /**
      * Description of API Version Set.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -31,7 +29,6 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
 
     /**
      * Identifier for existing API Version Set. Omit this value to create a new Version Set.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -42,7 +39,6 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
 
     /**
      * The display Name of the API Version Set.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -53,7 +49,6 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
 
     /**
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-     * 
      */
     @Import(name="versionHeaderName")
       private final @Nullable String versionHeaderName;
@@ -64,7 +59,6 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
 
     /**
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
-     * 
      */
     @Import(name="versionQueryName")
       private final @Nullable String versionQueryName;
@@ -75,7 +69,6 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
 
     /**
      * An value that determines where the API Version identifier will be located in a HTTP request.
-     * 
      */
     @Import(name="versioningScheme")
       private final @Nullable String versioningScheme;

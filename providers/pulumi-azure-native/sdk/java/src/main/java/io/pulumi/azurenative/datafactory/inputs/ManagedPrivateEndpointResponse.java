@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a managed private endpoint
- * 
  */
 public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The managed private endpoint connection state
-     * 
      */
     @Import(name="connectionState")
       private final @Nullable ConnectionStatePropertiesResponse connectionState;
@@ -34,7 +32,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
 
     /**
      * Fully qualified domain names
-     * 
      */
     @Import(name="fqdns")
       private final @Nullable List<String> fqdns;
@@ -45,7 +42,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The groupId to which the managed private endpoint is created
-     * 
      */
     @Import(name="groupId")
       private final @Nullable String groupId;
@@ -56,7 +52,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
 
     /**
      * Denotes whether the managed private endpoint is reserved
-     * 
      */
     @Import(name="isReserved", required=true)
       private final Boolean isReserved;
@@ -67,7 +62,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The ARM resource ID of the resource to which the managed private endpoint is created
-     * 
      */
     @Import(name="privateLinkResourceId")
       private final @Nullable String privateLinkResourceId;
@@ -78,7 +72,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
 
     /**
      * The managed private endpoint provisioning state
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

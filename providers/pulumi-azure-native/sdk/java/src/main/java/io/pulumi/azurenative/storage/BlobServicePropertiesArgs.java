@@ -22,7 +22,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -33,7 +32,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Deprecated in favor of isVersioningEnabled property.
-     * 
      */
     @Import(name="automaticSnapshotPolicyEnabled")
       private final @Nullable Output<Boolean> automaticSnapshotPolicyEnabled;
@@ -44,7 +42,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the blob Service within the specified storage account. Blob Service Name must be 'default'
-     * 
      */
     @Import(name="blobServicesName")
       private final @Nullable Output<String> blobServicesName;
@@ -55,7 +52,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The blob service properties for change feed events.
-     * 
      */
     @Import(name="changeFeed")
       private final @Nullable Output<ChangeFeedArgs> changeFeed;
@@ -66,7 +62,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The blob service properties for container soft delete.
-     * 
      */
     @Import(name="containerDeleteRetentionPolicy")
       private final @Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
@@ -77,7 +72,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
-     * 
      */
     @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
@@ -88,7 +82,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
-     * 
      */
     @Import(name="defaultServiceVersion")
       private final @Nullable Output<String> defaultServiceVersion;
@@ -99,7 +92,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The blob service properties for blob soft delete.
-     * 
      */
     @Import(name="deleteRetentionPolicy")
       private final @Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
@@ -110,7 +102,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Versioning is enabled if set to true.
-     * 
      */
     @Import(name="isVersioningEnabled")
       private final @Nullable Output<Boolean> isVersioningEnabled;
@@ -121,7 +112,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The blob service property to configure last access time based tracking policy.
-     * 
      */
     @Import(name="lastAccessTimeTrackingPolicy")
       private final @Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
@@ -132,7 +122,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -143,7 +132,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The blob service properties for blob restore policy.
-     * 
      */
     @Import(name="restorePolicy")
       private final @Nullable Output<RestorePolicyPropertiesArgs> restorePolicy;

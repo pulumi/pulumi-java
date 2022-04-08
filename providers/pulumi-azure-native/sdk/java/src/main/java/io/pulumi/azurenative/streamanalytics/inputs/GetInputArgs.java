@@ -14,7 +14,6 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the input.
-     * 
      */
     @Import(name="inputName", required=true)
       private final String inputName;
@@ -25,7 +24,6 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the streaming job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -36,7 +34,6 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

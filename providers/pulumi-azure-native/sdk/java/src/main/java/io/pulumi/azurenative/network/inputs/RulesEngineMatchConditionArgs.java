@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define a match condition
- * 
  */
 public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Describes if this is negate condition or not
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
@@ -37,7 +35,6 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
-     * 
      */
     @Import(name="rulesEngineMatchValue", required=true)
       private final Output<List<String>> rulesEngineMatchValue;
@@ -48,7 +45,6 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Match Variable
-     * 
      */
     @Import(name="rulesEngineMatchVariable", required=true)
       private final Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
@@ -59,7 +55,6 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Describes operator to apply to the match condition.
-     * 
      */
     @Import(name="rulesEngineOperator", required=true)
       private final Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
@@ -70,7 +65,6 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Name of selector in RequestHeader or RequestBody to be matched
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;
@@ -81,7 +75,6 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
 
     /**
      * List of transforms
-     * 
      */
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;

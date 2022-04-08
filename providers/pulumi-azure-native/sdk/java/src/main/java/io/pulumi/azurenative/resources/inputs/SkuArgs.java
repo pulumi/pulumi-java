@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU for the resource.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU capacity.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -32,7 +30,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU family.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -43,7 +40,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU model.
-     * 
      */
     @Import(name="model")
       private final @Nullable Output<String> model;
@@ -54,7 +50,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -65,7 +60,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU size.
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -76,7 +70,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

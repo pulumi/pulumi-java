@@ -13,43 +13,35 @@ import java.util.Objects;
 public final class GetCloudEdgeManagementRoleResult {
     /**
      * Edge Profile of the resource
-     * 
      */
     private final EdgeProfileResponse edgeProfile;
     /**
      * The path ID that uniquely identifies the object.
-     * 
      */
     private final String id;
     /**
      * Role type.
      * Expected value is 'CloudEdgeManagement'.
-     * 
      */
     private final String kind;
     /**
      * Local Edge Management Status
-     * 
      */
     private final String localManagementStatus;
     /**
      * The object name.
-     * 
      */
     private final String name;
     /**
      * Role status.
-     * 
      */
     private final String roleStatus;
     /**
      * Role configured on ASE resource
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The hierarchical type of the object.
-     * 
      */
     private final String type;
 
@@ -75,14 +67,12 @@ public final class GetCloudEdgeManagementRoleResult {
 
     /**
      * Edge Profile of the resource
-     * 
     */
     public EdgeProfileResponse getEdgeProfile() {
         return this.edgeProfile;
     }
     /**
      * The path ID that uniquely identifies the object.
-     * 
     */
     public String getId() {
         return this.id;
@@ -90,42 +80,36 @@ public final class GetCloudEdgeManagementRoleResult {
     /**
      * Role type.
      * Expected value is 'CloudEdgeManagement'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Local Edge Management Status
-     * 
     */
     public String getLocalManagementStatus() {
         return this.localManagementStatus;
     }
     /**
      * The object name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Role status.
-     * 
     */
     public String getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
     */
     public String getType() {
         return this.type;

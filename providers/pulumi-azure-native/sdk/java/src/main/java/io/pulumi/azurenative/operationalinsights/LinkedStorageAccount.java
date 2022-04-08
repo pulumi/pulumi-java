@@ -17,7 +17,96 @@ import javax.annotation.Nullable;
  * Linked storage accounts top level resource container.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### LinkedStorageAccountsCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var linkedStorageAccount = new AzureNative.OperationalInsights.LinkedStorageAccount("linkedStorageAccount", new AzureNative.OperationalInsights.LinkedStorageAccountArgs
+ *         {
+ *             DataSourceType = "CustomLogs",
+ *             ResourceGroupName = "mms-eus",
+ *             StorageAccountIds = 
+ *             {
+ *                 "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+ *                 "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+ *             },
+ *             WorkspaceName = "testLinkStorageAccountsWS",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewLinkedStorageAccount(ctx, "linkedStorageAccount", &operationalinsights.LinkedStorageAccountArgs{
+ * 			DataSourceType:    pulumi.String("CustomLogs"),
+ * 			ResourceGroupName: pulumi.String("mms-eus"),
+ * 			StorageAccountIds: pulumi.StringArray{
+ * 				pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA"),
+ * 				pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("testLinkStorageAccountsWS"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const linkedStorageAccount = new azure_native.operationalinsights.LinkedStorageAccount("linkedStorageAccount", {
+ *     dataSourceType: "CustomLogs",
+ *     resourceGroupName: "mms-eus",
+ *     storageAccountIds: [
+ *         "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+ *         "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+ *     ],
+ *     workspaceName: "testLinkStorageAccountsWS",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * linked_storage_account = azure_native.operationalinsights.LinkedStorageAccount("linkedStorageAccount",
+ *     data_source_type="CustomLogs",
+ *     resource_group_name="mms-eus",
+ *     storage_account_ids=[
+ *         "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+ *         "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+ *     ],
+ *     workspace_name="testLinkStorageAccountsWS")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +121,48 @@ import javax.annotation.Nullable;
 public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
     /**
      * Linked storage accounts type.
-     * 
      */
     @Export(name="dataSourceType", type=String.class, parameters={})
     private Output<String> dataSourceType;
 
     /**
      * @return Linked storage accounts type.
-     * 
      */
     public Output<String> getDataSourceType() {
         return this.dataSourceType;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Linked storage accounts resources ids.
-     * 
      */
     @Export(name="storageAccountIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> storageAccountIds;
 
     /**
      * @return Linked storage accounts resources ids.
-     * 
      */
     public Output</* @Nullable */ List<String>> getStorageAccountIds() {
         return this.storageAccountIds;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

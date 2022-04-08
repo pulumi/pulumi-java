@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of IPConfigurationBgpPeeringAddress.
- * 
  */
 public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
 
     /**
      * The list of custom BGP peering addresses which belong to IP configuration.
-     * 
      */
     @Import(name="customBgpIpAddresses")
       private final @Nullable Output<List<String>> customBgpIpAddresses;
@@ -32,7 +30,6 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
 
     /**
      * The ID of IP configuration which belongs to gateway.
-     * 
      */
     @Import(name="ipconfigurationId")
       private final @Nullable Output<String> ipconfigurationId;

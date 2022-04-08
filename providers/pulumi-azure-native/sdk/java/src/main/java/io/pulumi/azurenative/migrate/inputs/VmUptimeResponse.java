@@ -16,7 +16,6 @@ public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of days in a month for VM uptime.
-     * 
      */
     @Import(name="daysPerMonth")
       private final @Nullable Double daysPerMonth;
@@ -27,7 +26,6 @@ public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of hours per day for VM uptime.
-     * 
      */
     @Import(name="hoursPerDay")
       private final @Nullable Double hoursPerDay;

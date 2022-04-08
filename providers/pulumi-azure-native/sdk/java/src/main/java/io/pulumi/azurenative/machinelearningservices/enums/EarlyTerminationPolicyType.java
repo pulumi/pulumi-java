@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of policy configuration
-     * 
      */
     @EnumType
     public enum EarlyTerminationPolicyType {

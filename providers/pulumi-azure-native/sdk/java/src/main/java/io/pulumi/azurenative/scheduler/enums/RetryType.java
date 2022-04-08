@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the retry strategy to be used.
-     * 
      */
     @EnumType
     public enum RetryType {

@@ -17,7 +17,6 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
@@ -28,7 +27,6 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Definition of the properties for a TagRules resource.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -57,7 +54,6 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Sub Account resource name
-     * 
      */
     @Import(name="subAccountName", required=true)
       private final Output<String> subAccountName;

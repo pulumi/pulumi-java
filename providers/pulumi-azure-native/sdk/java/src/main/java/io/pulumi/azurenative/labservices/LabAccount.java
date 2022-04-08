@@ -33,126 +33,108 @@ import javax.annotation.Nullable;
 public class LabAccount extends io.pulumi.resources.CustomResource {
     /**
      * Represents if region selection is enabled
-     * 
      */
     @Export(name="enabledRegionSelection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabledRegionSelection;
 
     /**
      * @return Represents if region selection is enabled
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabledRegionSelection() {
         return this.enabledRegionSelection;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
      * @return The details of the latest operation. ex: status, error
-     * 
      */
     public Output<LatestOperationResultResponse> getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Represents the size configuration under the lab account
-     * 
      */
     @Export(name="sizeConfiguration", type=SizeConfigurationPropertiesResponse.class, parameters={})
     private Output<SizeConfigurationPropertiesResponse> sizeConfiguration;
 
     /**
      * @return Represents the size configuration under the lab account
-     * 
      */
     public Output<SizeConfigurationPropertiesResponse> getSizeConfiguration() {
         return this.sizeConfiguration;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output</* @Nullable */ String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

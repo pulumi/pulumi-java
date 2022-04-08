@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Library/package information of a Big Data pool powered by Apache Spark
- * 
  */
 public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage blob container name.
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -31,7 +29,6 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the library.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage blob path of library.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -53,7 +49,6 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the library.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

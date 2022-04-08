@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * VirtualHubRouteTableV2 Resource.
- * 
  */
 public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
 
     /**
      * List of all connections attached to this route table v2.
-     * 
      */
     @Import(name="attachedConnections")
       private final @Nullable Output<List<String>> attachedConnections;
@@ -33,7 +31,6 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -44,7 +41,6 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +51,6 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
 
     /**
      * List of all routes.
-     * 
      */
     @Import(name="routes")
       private final @Nullable Output<List<VirtualHubRouteV2Args>> routes;

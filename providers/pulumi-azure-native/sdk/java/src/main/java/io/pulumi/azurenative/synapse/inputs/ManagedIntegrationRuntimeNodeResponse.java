@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of integration runtime node.
- * 
  */
 public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
 
     /**
      * The errors that occurred on this integration runtime node.
-     * 
      */
     @Import(name="errors")
       private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
@@ -33,7 +31,6 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
 
     /**
      * The managed integration runtime node id.
-     * 
      */
     @Import(name="nodeId", required=true)
       private final String nodeId;
@@ -44,7 +41,6 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
 
     /**
      * The managed integration runtime node status.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

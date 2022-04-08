@@ -13,23 +13,19 @@ import javax.annotation.Nullable;
 public final class ManagedIdentityResponse {
     /**
      * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
-     * 
      */
     private final @Nullable String clientId;
     /**
      * Enum to determine identity framework.
      * Expected value is 'Managed'.
-     * 
      */
     private final String identityType;
     /**
      * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
-     * 
      */
     private final @Nullable String objectId;
     /**
      * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
-     * 
      */
     private final @Nullable String resourceId;
 
@@ -47,7 +43,6 @@ public final class ManagedIdentityResponse {
 
     /**
      * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
-     * 
     */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
@@ -55,21 +50,18 @@ public final class ManagedIdentityResponse {
     /**
      * Enum to determine identity framework.
      * Expected value is 'Managed'.
-     * 
     */
     public String getIdentityType() {
         return this.identityType;
     }
     /**
      * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
-     * 
     */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the endpoint properties
- * 
  */
 public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The endpoint URL
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
@@ -31,7 +29,6 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the endpoint
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

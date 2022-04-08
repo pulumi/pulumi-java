@@ -25,7 +25,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
@@ -36,7 +35,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the trigger.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -47,7 +45,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -58,7 +55,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The trigger name.
-     * 
      */
     @Import(name="triggerName")
       private final @Nullable Output<String> triggerName;

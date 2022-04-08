@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The details of the event associated with a prefix.
- * 
  */
 public final class PeeringServicePrefixEventResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
 
     /**
      * The description of the event associated with a prefix.
-     * 
      */
     @Import(name="eventDescription", required=true)
       private final String eventDescription;
@@ -29,7 +27,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
 
     /**
      * The level of the event associated with a prefix.
-     * 
      */
     @Import(name="eventLevel", required=true)
       private final String eventLevel;
@@ -40,7 +37,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
 
     /**
      * The summary of the event associated with a prefix.
-     * 
      */
     @Import(name="eventSummary", required=true)
       private final String eventSummary;
@@ -51,7 +47,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
 
     /**
      * The timestamp of the event associated with a prefix.
-     * 
      */
     @Import(name="eventTimestamp", required=true)
       private final String eventTimestamp;
@@ -62,7 +57,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
 
     /**
      * The type of the event associated with a prefix.
-     * 
      */
     @Import(name="eventType", required=true)
       private final String eventType;

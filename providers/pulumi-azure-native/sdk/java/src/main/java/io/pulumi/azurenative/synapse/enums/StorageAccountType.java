@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The storage account type used to store backups for this sql pool.
-     * 
      */
     @EnumType
     public enum StorageAccountType {

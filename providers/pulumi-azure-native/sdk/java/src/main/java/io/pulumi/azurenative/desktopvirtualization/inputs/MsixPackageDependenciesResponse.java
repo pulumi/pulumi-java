@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schema for MSIX Package Dependencies properties.
- * 
  */
 public final class MsixPackageDependenciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MsixPackageDependenciesResponse extends io.pulumi.resources.I
 
     /**
      * Name of package dependency.
-     * 
      */
     @Import(name="dependencyName")
       private final @Nullable String dependencyName;
@@ -31,7 +29,6 @@ public final class MsixPackageDependenciesResponse extends io.pulumi.resources.I
 
     /**
      * Dependency version required.
-     * 
      */
     @Import(name="minVersion")
       private final @Nullable String minVersion;
@@ -42,7 +39,6 @@ public final class MsixPackageDependenciesResponse extends io.pulumi.resources.I
 
     /**
      * Name of dependency publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;

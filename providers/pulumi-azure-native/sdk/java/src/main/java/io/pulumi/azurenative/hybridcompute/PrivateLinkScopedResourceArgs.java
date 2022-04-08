@@ -16,7 +16,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The resource id of the scoped Azure monitor resource.
-     * 
      */
     @Import(name="linkedResourceId")
       private final @Nullable Output<String> linkedResourceId;
@@ -27,7 +26,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the scoped resource object.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -38,7 +36,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the Azure Arc PrivateLinkScope resource.
-     * 
      */
     @Import(name="scopeName", required=true)
       private final Output<String> scopeName;

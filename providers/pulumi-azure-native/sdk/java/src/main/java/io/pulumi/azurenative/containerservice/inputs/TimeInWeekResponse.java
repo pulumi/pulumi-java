@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Time in a week.
- * 
  */
 public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A day in a week.
-     * 
      */
     @Import(name="day")
       private final @Nullable String day;
@@ -33,7 +31,6 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * hour slots in a day.
-     * 
      */
     @Import(name="hourSlots")
       private final @Nullable List<Integer> hourSlots;

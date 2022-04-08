@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Magento server linked service.
- * 
  */
 public final class MagentoLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The access token from Magento.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
@@ -39,7 +37,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -50,7 +47,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -61,7 +57,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -72,7 +67,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -83,7 +77,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The URL of the Magento instance. (i.e. 192.168.222.110/magento3)
-     * 
      */
     @Import(name="host", required=true)
       private final Output<Object> host;
@@ -94,7 +87,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -106,7 +98,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
     /**
      * Type of linked service.
      * Expected value is 'Magento'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -117,7 +108,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
@@ -128,7 +118,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
@@ -139,7 +128,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details the service to which the subnet is delegated.
- * 
  */
 public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The actions permitted to the service upon delegation.
-     * 
      */
     @Import(name="actions", required=true)
       private final List<String> actions;
@@ -32,7 +30,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -43,7 +40,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -54,7 +50,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource that is unique within a subnet. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -65,7 +60,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the service delegation resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -76,7 +70,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable String serviceName;
@@ -87,7 +80,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

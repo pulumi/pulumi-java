@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed application billing details definition.
- * 
  */
 public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi
 
     /**
      * The managed application resource usage Id.
-     * 
      */
     @Import(name="resourceUsageId")
       private final @Nullable String resourceUsageId;

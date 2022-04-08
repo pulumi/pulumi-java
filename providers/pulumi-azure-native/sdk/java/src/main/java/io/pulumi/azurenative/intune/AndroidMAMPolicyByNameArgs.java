@@ -102,7 +102,6 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
 
     /**
      * Location hostName for the tenant
-     * 
      */
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
@@ -113,7 +112,6 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource Location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -152,7 +150,6 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
 
     /**
      * Unique name for the policy
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -170,7 +167,6 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource Tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

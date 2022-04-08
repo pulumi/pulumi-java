@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Filter type that is evaluated against a BrokeredMessage.
-     * 
      */
     @EnumType
     public enum FilterType {

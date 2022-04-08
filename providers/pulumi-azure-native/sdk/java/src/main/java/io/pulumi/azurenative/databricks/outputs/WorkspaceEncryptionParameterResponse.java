@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class WorkspaceEncryptionParameterResponse {
     /**
      * The type of variable that this is
-     * 
      */
     private final String type;
     /**
      * The value which should be used for this field.
-     * 
      */
     private final @Nullable EncryptionResponse value;
 
@@ -33,14 +31,12 @@ public final class WorkspaceEncryptionParameterResponse {
 
     /**
      * The type of variable that this is
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
-     * 
     */
     public Optional<EncryptionResponse> getValue() {
         return Optional.ofNullable(this.value);

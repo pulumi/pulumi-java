@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Responsys linked service.
- * 
  */
 public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The client ID associated with the Responsys application. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<Object> clientId;
@@ -50,7 +47,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The client secret associated with the Responsys application. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
@@ -61,7 +57,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -72,7 +67,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -83,7 +77,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -94,7 +87,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The endpoint of the Responsys server.
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Output<Object> endpoint;
@@ -105,7 +97,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -117,7 +108,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
     /**
      * Type of linked service.
      * Expected value is 'Responsys'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -128,7 +118,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
@@ -139,7 +128,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
@@ -150,7 +138,6 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;

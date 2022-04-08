@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the vault.
- * 
  */
 public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Customer Managed Key details of the resource.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<VaultPropertiesEncryptionArgs> encryption;

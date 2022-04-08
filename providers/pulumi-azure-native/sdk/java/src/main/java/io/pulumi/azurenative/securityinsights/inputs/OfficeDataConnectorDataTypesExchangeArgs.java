@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Exchange data type connection.
- * 
  */
 public final class OfficeDataConnectorDataTypesExchangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OfficeDataConnectorDataTypesExchangeArgs extends io.pulumi.re
 
     /**
      * Describe whether this data type connection is enabled or not.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,DataTypeState>> state;

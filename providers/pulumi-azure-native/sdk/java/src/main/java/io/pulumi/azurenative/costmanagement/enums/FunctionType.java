@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the aggregation function to use.
-     * 
      */
     @EnumType
     public enum FunctionType {

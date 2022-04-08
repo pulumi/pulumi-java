@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
- * 
  */
 public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of encryption specifications for data disk images.
-     * 
      */
     @Import(name="dataDiskImages")
       private final @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
@@ -33,7 +31,6 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Contains encryption settings for an OS disk image.
-     * 
      */
     @Import(name="osDiskImage")
       private final @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;

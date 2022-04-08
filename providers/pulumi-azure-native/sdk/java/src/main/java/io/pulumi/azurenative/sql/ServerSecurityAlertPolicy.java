@@ -20,7 +20,199 @@ import javax.annotation.Nullable;
  * A server security alert policy.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update a server's threat detection policy with all parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverSecurityAlertPolicy = new AzureNative.Sql.ServerSecurityAlertPolicy("serverSecurityAlertPolicy", new AzureNative.Sql.ServerSecurityAlertPolicyArgs
+ *         {
+ *             DisabledAlerts = 
+ *             {
+ *                 "Access_Anomaly",
+ *                 "Usage_Anomaly",
+ *             },
+ *             EmailAccountAdmins = true,
+ *             EmailAddresses = 
+ *             {
+ *                 "testSecurityAlert@microsoft.com",
+ *             },
+ *             ResourceGroupName = "securityalert-4799",
+ *             RetentionDays = 5,
+ *             SecurityAlertPolicyName = "Default",
+ *             ServerName = "securityalert-6440",
+ *             State = "Enabled",
+ *             StorageAccountAccessKey = "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *             StorageEndpoint = "https://mystorage.blob.core.windows.net",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerSecurityAlertPolicy(ctx, "serverSecurityAlertPolicy", &sql.ServerSecurityAlertPolicyArgs{
+ * 			DisabledAlerts: pulumi.StringArray{
+ * 				pulumi.String("Access_Anomaly"),
+ * 				pulumi.String("Usage_Anomaly"),
+ * 			},
+ * 			EmailAccountAdmins: pulumi.Bool(true),
+ * 			EmailAddresses: pulumi.StringArray{
+ * 				pulumi.String("testSecurityAlert@microsoft.com"),
+ * 			},
+ * 			ResourceGroupName:       pulumi.String("securityalert-4799"),
+ * 			RetentionDays:           pulumi.Int(5),
+ * 			SecurityAlertPolicyName: pulumi.String("Default"),
+ * 			ServerName:              pulumi.String("securityalert-6440"),
+ * 			State:                   "Enabled",
+ * 			StorageAccountAccessKey: pulumi.String("sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD=="),
+ * 			StorageEndpoint:         pulumi.String("https://mystorage.blob.core.windows.net"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverSecurityAlertPolicy = new azure_native.sql.ServerSecurityAlertPolicy("serverSecurityAlertPolicy", {
+ *     disabledAlerts: [
+ *         "Access_Anomaly",
+ *         "Usage_Anomaly",
+ *     ],
+ *     emailAccountAdmins: true,
+ *     emailAddresses: ["testSecurityAlert@microsoft.com"],
+ *     resourceGroupName: "securityalert-4799",
+ *     retentionDays: 5,
+ *     securityAlertPolicyName: "Default",
+ *     serverName: "securityalert-6440",
+ *     state: "Enabled",
+ *     storageAccountAccessKey: "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *     storageEndpoint: "https://mystorage.blob.core.windows.net",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_security_alert_policy = azure_native.sql.ServerSecurityAlertPolicy("serverSecurityAlertPolicy",
+ *     disabled_alerts=[
+ *         "Access_Anomaly",
+ *         "Usage_Anomaly",
+ *     ],
+ *     email_account_admins=True,
+ *     email_addresses=["testSecurityAlert@microsoft.com"],
+ *     resource_group_name="securityalert-4799",
+ *     retention_days=5,
+ *     security_alert_policy_name="Default",
+ *     server_name="securityalert-6440",
+ *     state="Enabled",
+ *     storage_account_access_key="sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *     storage_endpoint="https://mystorage.blob.core.windows.net")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Update a server's threat detection policy with minimal parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverSecurityAlertPolicy = new AzureNative.Sql.ServerSecurityAlertPolicy("serverSecurityAlertPolicy", new AzureNative.Sql.ServerSecurityAlertPolicyArgs
+ *         {
+ *             ResourceGroupName = "securityalert-4799",
+ *             SecurityAlertPolicyName = "Default",
+ *             ServerName = "securityalert-6440",
+ *             State = "Enabled",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerSecurityAlertPolicy(ctx, "serverSecurityAlertPolicy", &sql.ServerSecurityAlertPolicyArgs{
+ * 			ResourceGroupName:       pulumi.String("securityalert-4799"),
+ * 			SecurityAlertPolicyName: pulumi.String("Default"),
+ * 			ServerName:              pulumi.String("securityalert-6440"),
+ * 			State:                   "Enabled",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverSecurityAlertPolicy = new azure_native.sql.ServerSecurityAlertPolicy("serverSecurityAlertPolicy", {
+ *     resourceGroupName: "securityalert-4799",
+ *     securityAlertPolicyName: "Default",
+ *     serverName: "securityalert-6440",
+ *     state: "Enabled",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_security_alert_policy = azure_native.sql.ServerSecurityAlertPolicy("serverSecurityAlertPolicy",
+ *     resource_group_name="securityalert-4799",
+ *     security_alert_policy_name="Default",
+ *     server_name="securityalert-6440",
+ *     state="Enabled")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,154 +227,132 @@ import javax.annotation.Nullable;
 public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the UTC creation time of the policy.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Specifies the UTC creation time of the policy.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
-     * 
      */
     @Export(name="disabledAlerts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> disabledAlerts;
 
     /**
      * @return Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
-     * 
      */
     public Output</* @Nullable */ List<String>> getDisabledAlerts() {
         return this.disabledAlerts;
     }
     /**
      * Specifies that the alert is sent to the account administrators.
-     * 
      */
     @Export(name="emailAccountAdmins", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> emailAccountAdmins;
 
     /**
      * @return Specifies that the alert is sent to the account administrators.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEmailAccountAdmins() {
         return this.emailAccountAdmins;
     }
     /**
      * Specifies an array of e-mail addresses to which the alert is sent.
-     * 
      */
     @Export(name="emailAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> emailAddresses;
 
     /**
      * @return Specifies an array of e-mail addresses to which the alert is sent.
-     * 
      */
     public Output</* @Nullable */ List<String>> getEmailAddresses() {
         return this.emailAddresses;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the number of days to keep in the Threat Detection audit logs.
-     * 
      */
     @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**
      * @return Specifies the number of days to keep in the Threat Detection audit logs.
-     * 
      */
     public Output</* @Nullable */ Integer> getRetentionDays() {
         return this.retentionDays;
     }
     /**
      * Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Specifies the identifier key of the Threat Detection audit storage account.
-     * 
      */
     @Export(name="storageAccountAccessKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountAccessKey;
 
     /**
      * @return Specifies the identifier key of the Threat Detection audit storage account.
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountAccessKey() {
         return this.storageAccountAccessKey;
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-     * 
      */
     @Export(name="storageEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageEndpoint;
 
     /**
      * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-     * 
      */
     public Output</* @Nullable */ String> getStorageEndpoint() {
         return this.storageEndpoint;
     }
     /**
      * SystemData of SecurityAlertPolicyResource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return SystemData of SecurityAlertPolicyResource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

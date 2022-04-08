@@ -14,7 +14,6 @@ public final class GetLinkedServerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the linked server.
-     * 
      */
     @Import(name="linkedServerName", required=true)
       private final String linkedServerName;
@@ -25,7 +24,6 @@ public final class GetLinkedServerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the redis cache.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetLinkedServerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

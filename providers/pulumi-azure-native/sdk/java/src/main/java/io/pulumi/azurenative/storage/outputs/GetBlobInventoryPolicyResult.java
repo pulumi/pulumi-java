@@ -13,32 +13,26 @@ import java.util.Objects;
 public final class GetBlobInventoryPolicyResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * Returns the last modified date and time of the blob inventory policy.
-     * 
      */
     private final String lastModifiedTime;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The storage account blob inventory policy object. It is composed of policy rules.
-     * 
      */
     private final BlobInventoryPolicySchemaResponse policy;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -60,42 +54,36 @@ public final class GetBlobInventoryPolicyResult {
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Returns the last modified date and time of the blob inventory policy.
-     * 
     */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The storage account blob inventory policy object. It is composed of policy rules.
-     * 
     */
     public BlobInventoryPolicySchemaResponse getPolicy() {
         return this.policy;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

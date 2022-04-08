@@ -20,7 +20,6 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * Describes colocation status of the Proximity Placement Group.
-     * 
      */
     @Import(name="colocationStatus")
       private final @Nullable Output<InstanceViewStatusArgs> colocationStatus;
@@ -31,7 +30,6 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the proximity placement group.
-     * 
      */
     @Import(name="proximityPlacementGroupName")
       private final @Nullable Output<String> proximityPlacementGroupName;
@@ -53,7 +50,6 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
-     * 
      */
     @Import(name="proximityPlacementGroupType")
       private final @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
@@ -64,7 +60,6 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

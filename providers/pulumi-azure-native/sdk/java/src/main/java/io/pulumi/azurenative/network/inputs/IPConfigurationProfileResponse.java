@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration profile child resource.
- * 
  */
 public final class IPConfigurationProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -43,7 +40,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
 
     /**
      * The name of the resource. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
 
     /**
      * The provisioning state of the IP configuration profile resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -65,7 +60,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
 
     /**
      * The reference to the subnet resource to create a container network interface ip configuration.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
@@ -76,7 +70,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
 
     /**
      * Sub Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

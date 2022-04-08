@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A track selection condition. This property is reserved for future use, any value set on this property will be ignored.
- * 
  */
 public final class LiveEventInputTrackSelectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LiveEventInputTrackSelectionResponse extends io.pulumi.resour
 
     /**
      * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
-     * 
      */
     @Import(name="operation")
       private final @Nullable String operation;
@@ -31,7 +29,6 @@ public final class LiveEventInputTrackSelectionResponse extends io.pulumi.resour
 
     /**
      * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
-     * 
      */
     @Import(name="property")
       private final @Nullable String property;
@@ -42,7 +39,6 @@ public final class LiveEventInputTrackSelectionResponse extends io.pulumi.resour
 
     /**
      * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

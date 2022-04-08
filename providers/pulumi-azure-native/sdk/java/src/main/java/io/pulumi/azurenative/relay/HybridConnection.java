@@ -19,7 +19,83 @@ import javax.annotation.Nullable;
  * Description of hybrid connection resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RelayHybridConnectionCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hybridConnection = new AzureNative.Relay.HybridConnection("hybridConnection", new AzureNative.Relay.HybridConnectionArgs
+ *         {
+ *             HybridConnectionName = "example-Relay-Hybrid-01",
+ *             NamespaceName = "example-RelayNamespace-01",
+ *             RequiresClientAuthorization = true,
+ *             ResourceGroupName = "resourcegroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := relay.NewHybridConnection(ctx, "hybridConnection", &relay.HybridConnectionArgs{
+ * 			HybridConnectionName:        pulumi.String("example-Relay-Hybrid-01"),
+ * 			NamespaceName:               pulumi.String("example-RelayNamespace-01"),
+ * 			RequiresClientAuthorization: pulumi.Bool(true),
+ * 			ResourceGroupName:           pulumi.String("resourcegroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hybridConnection = new azure_native.relay.HybridConnection("hybridConnection", {
+ *     hybridConnectionName: "example-Relay-Hybrid-01",
+ *     namespaceName: "example-RelayNamespace-01",
+ *     requiresClientAuthorization: true,
+ *     resourceGroupName: "resourcegroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hybrid_connection = azure_native.relay.HybridConnection("hybridConnection",
+ *     hybrid_connection_name="example-Relay-Hybrid-01",
+ *     namespace_name="example-RelayNamespace-01",
+ *     requires_client_authorization=True,
+ *     resource_group_name="resourcegroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +110,84 @@ import javax.annotation.Nullable;
 public class HybridConnection extends io.pulumi.resources.CustomResource {
     /**
      * The time the hybrid connection was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time the hybrid connection was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
-     * 
      */
     @Export(name="listenerCount", type=Integer.class, parameters={})
     private Output<Integer> listenerCount;
 
     /**
      * @return The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
-     * 
      */
     public Output<Integer> getListenerCount() {
         return this.listenerCount;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
-     * 
      */
     @Export(name="requiresClientAuthorization", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresClientAuthorization;
 
     /**
      * @return Returns true if client authorization is needed for this hybrid connection; otherwise, false.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRequiresClientAuthorization() {
         return this.requiresClientAuthorization;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The time the namespace was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;
     }
     /**
      * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     * 
      */
     @Export(name="userMetadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> userMetadata;
 
     /**
      * @return The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     * 
      */
     public Output</* @Nullable */ String> getUserMetadata() {
         return this.userMetadata;

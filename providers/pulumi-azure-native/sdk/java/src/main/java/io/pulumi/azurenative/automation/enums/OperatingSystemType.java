@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * operating system of target machines
-     * 
      */
     @EnumType
     public enum OperatingSystemType {

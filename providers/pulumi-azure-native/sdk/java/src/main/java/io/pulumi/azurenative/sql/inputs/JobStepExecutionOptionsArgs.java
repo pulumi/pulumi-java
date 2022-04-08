@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The execution options of a job step.
- * 
  */
 public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Initial delay between retries for job step execution.
-     * 
      */
     @Import(name="initialRetryIntervalSeconds")
       private final @Nullable Output<Integer> initialRetryIntervalSeconds;
@@ -32,7 +30,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * The maximum amount of time to wait between retries for job step execution.
-     * 
      */
     @Import(name="maximumRetryIntervalSeconds")
       private final @Nullable Output<Integer> maximumRetryIntervalSeconds;
@@ -43,7 +40,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Maximum number of times the job step will be reattempted if the first attempt fails.
-     * 
      */
     @Import(name="retryAttempts")
       private final @Nullable Output<Integer> retryAttempts;
@@ -54,7 +50,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * The backoff multiplier for the time between retries.
-     * 
      */
     @Import(name="retryIntervalBackoffMultiplier")
       private final @Nullable Output<Double> retryIntervalBackoffMultiplier;
@@ -65,7 +60,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Execution timeout for the job step.
-     * 
      */
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;

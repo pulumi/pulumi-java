@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Guest configuration assignment properties.
- * 
  */
 public final class GuestConfigurationAssignmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * Combined hash of the configuration package and parameters.
-     * 
      */
     @Import(name="assignmentHash", required=true)
       private final String assignmentHash;
@@ -35,7 +33,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
-     * 
      */
     @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
@@ -46,7 +43,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * The source which initiated the guest configuration assignment. Ex: Azure Policy
-     * 
      */
     @Import(name="context")
       private final @Nullable String context;
@@ -57,7 +53,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * The guest configuration to assign.
-     * 
      */
     @Import(name="guestConfiguration")
       private final @Nullable GuestConfigurationNavigationResponse guestConfiguration;
@@ -68,7 +63,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * Date and time when last compliance status was checked.
-     * 
      */
     @Import(name="lastComplianceStatusChecked", required=true)
       private final String lastComplianceStatusChecked;
@@ -79,7 +73,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * Last reported guest configuration assignment report.
-     * 
      */
     @Import(name="latestAssignmentReport")
       private final @Nullable AssignmentReportResponse latestAssignmentReport;
@@ -89,8 +82,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
     }
 
     /**
-     * Id of the latest report for the guest configuration assignment.
-     * 
+     * Id of the latest report for the guest configuration assignment. 
      */
     @Import(name="latestReportId", required=true)
       private final String latestReportId;
@@ -100,8 +92,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
     }
 
     /**
-     * parameter hash for the guest configuration assignment.
-     * 
+     * parameter hash for the guest configuration assignment. 
      */
     @Import(name="parameterHash", required=true)
       private final String parameterHash;
@@ -112,7 +103,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -123,7 +113,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * Type of the resource - VMSS / VM
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;
@@ -134,7 +123,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * VM resource Id.
-     * 
      */
     @Import(name="targetResourceId", required=true)
       private final String targetResourceId;
@@ -145,7 +133,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
 
     /**
      * The list of VM Compliance data for VMSS
-     * 
      */
     @Import(name="vmssVMList")
       private final @Nullable List<VMSSVMInfoResponse> vmssVMList;

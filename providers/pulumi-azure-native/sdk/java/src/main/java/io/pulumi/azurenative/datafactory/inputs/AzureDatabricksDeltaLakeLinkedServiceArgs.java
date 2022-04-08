@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Databricks Delta Lake linked service.
- * 
  */
 public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
@@ -40,7 +38,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -51,7 +48,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="clusterId")
       private final @Nullable Output<Object> clusterId;
@@ -62,7 +58,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -73,7 +68,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
@@ -84,7 +78,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -95,7 +88,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="domain", required=true)
       private final Output<Object> domain;
@@ -106,7 +98,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -117,7 +108,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -129,7 +119,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     /**
      * Type of linked service.
      * Expected value is 'AzureDatabricksDeltaLake'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -140,7 +129,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
 
     /**
      * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="workspaceResourceId")
       private final @Nullable Output<Object> workspaceResourceId;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * VMwareV2 fabric specific details.
- * 
  */
 public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMwareV2'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -30,7 +28,6 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
 
     /**
      * The Migration solution ARM Id.
-     * 
      */
     @Import(name="migrationSolutionId", required=true)
       private final String migrationSolutionId;
@@ -41,7 +38,6 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
 
     /**
      * The service endpoint.
-     * 
      */
     @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
@@ -52,7 +48,6 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
 
     /**
      * The service resource Id.
-     * 
      */
     @Import(name="serviceResourceId", required=true)
       private final String serviceResourceId;
@@ -63,7 +58,6 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
 
     /**
      * The ARM Id of the VMware site.
-     * 
      */
     @Import(name="vmwareSiteId", required=true)
       private final String vmwareSiteId;

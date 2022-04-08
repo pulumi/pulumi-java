@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the compute profile.
- * 
  */
 public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of roles in the cluster.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;

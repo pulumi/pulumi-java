@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Resource Type of Application.
-     * 
      */
     @EnumType
     public enum RemoteApplicationType {

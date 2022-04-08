@@ -20,7 +20,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Time Series Insights environment associated with the specified resource group.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
@@ -31,7 +30,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the event source.
-     * 
      */
     @Import(name="eventSourceName")
       private final @Nullable Output<String> eventSourceName;
@@ -42,7 +40,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the event source.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,EventSourceKind>> kind;
@@ -53,7 +50,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
-     * 
      */
     @Import(name="localTimestamp")
       private final @Nullable Output<LocalTimestampArgs> localTimestamp;
@@ -64,7 +60,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key-value pairs of additional properties for the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

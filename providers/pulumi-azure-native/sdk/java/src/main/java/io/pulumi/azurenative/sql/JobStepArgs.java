@@ -20,7 +20,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action payload of the job step.
-     * 
      */
     @Import(name="action", required=true)
       private final Output<JobStepActionArgs> action;
@@ -31,7 +30,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the job credential that will be used to connect to the targets.
-     * 
      */
     @Import(name="credential", required=true)
       private final Output<String> credential;
@@ -42,7 +40,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Execution options for the job step.
-     * 
      */
     @Import(name="executionOptions")
       private final @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
@@ -53,7 +50,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job agent.
-     * 
      */
     @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
@@ -64,7 +60,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
@@ -75,7 +70,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Output destination properties of the job step.
-     * 
      */
     @Import(name="output")
       private final @Nullable Output<JobStepOutputArgs> output;
@@ -86,7 +80,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -108,7 +100,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
-     * 
      */
     @Import(name="stepId")
       private final @Nullable Output<Integer> stepId;
@@ -119,7 +110,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job step.
-     * 
      */
     @Import(name="stepName")
       private final @Nullable Output<String> stepName;
@@ -130,7 +120,6 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the target group that the job step will be executed on.
-     * 
      */
     @Import(name="targetGroup", required=true)
       private final Output<String> targetGroup;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan custom details.
- * 
  */
 public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The list of allowed operations.
-     * 
      */
     @Import(name="allowedOperations")
       private final @Nullable List<String> allowedOperations;
@@ -35,7 +33,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The current scenario details.
-     * 
      */
     @Import(name="currentScenario")
       private final @Nullable CurrentScenarioDetailsResponse currentScenario;
@@ -46,7 +43,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The recovery plan status.
-     * 
      */
     @Import(name="currentScenarioStatus")
       private final @Nullable String currentScenarioStatus;
@@ -57,7 +53,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The recovery plan status description.
-     * 
      */
     @Import(name="currentScenarioStatusDescription")
       private final @Nullable String currentScenarioStatusDescription;
@@ -68,7 +63,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The failover deployment model.
-     * 
      */
     @Import(name="failoverDeploymentModel")
       private final @Nullable String failoverDeploymentModel;
@@ -79,7 +73,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The friendly name.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -90,7 +83,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The recovery plan groups.
-     * 
      */
     @Import(name="groups")
       private final @Nullable List<RecoveryPlanGroupResponse> groups;
@@ -101,7 +93,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The start time of the last planned failover.
-     * 
      */
     @Import(name="lastPlannedFailoverTime")
       private final @Nullable String lastPlannedFailoverTime;
@@ -112,7 +103,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The start time of the last test failover.
-     * 
      */
     @Import(name="lastTestFailoverTime")
       private final @Nullable String lastTestFailoverTime;
@@ -123,7 +113,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The start time of the last unplanned failover.
-     * 
      */
     @Import(name="lastUnplannedFailoverTime")
       private final @Nullable String lastUnplannedFailoverTime;
@@ -134,7 +123,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The primary fabric friendly name.
-     * 
      */
     @Import(name="primaryFabricFriendlyName")
       private final @Nullable String primaryFabricFriendlyName;
@@ -145,7 +133,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The primary fabric Id.
-     * 
      */
     @Import(name="primaryFabricId")
       private final @Nullable String primaryFabricId;
@@ -156,7 +143,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The provider id and provider specific details.
-     * 
      */
     @Import(name="providerSpecificDetails", required=true)
       private final List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
@@ -167,7 +153,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The recovery fabric friendly name.
-     * 
      */
     @Import(name="recoveryFabricFriendlyName")
       private final @Nullable String recoveryFabricFriendlyName;
@@ -178,7 +163,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The recovery fabric Id.
-     * 
      */
     @Import(name="recoveryFabricId")
       private final @Nullable String recoveryFabricId;
@@ -189,7 +173,6 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The list of replication providers.
-     * 
      */
     @Import(name="replicationProviders")
       private final @Nullable List<String> replicationProviders;

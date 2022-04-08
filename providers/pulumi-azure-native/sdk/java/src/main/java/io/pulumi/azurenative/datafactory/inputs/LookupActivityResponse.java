@@ -114,7 +114,6 @@ import javax.annotation.Nullable;
 
 /**
  * Lookup activity.
- * 
  */
 public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -122,7 +121,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Lookup activity dataset reference.
-     * 
      */
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
@@ -133,7 +131,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -144,7 +141,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -155,7 +151,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="firstRowOnly")
       private final @Nullable Object firstRowOnly;
@@ -166,7 +161,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -177,7 +171,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -188,7 +181,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -199,7 +191,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Dataset-specific source properties, same as copy activity source.
-     * 
      */
     @Import(name="source", required=true)
       private final Object source;
@@ -211,7 +202,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Type of activity.
      * Expected value is 'Lookup'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -222,7 +212,6 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

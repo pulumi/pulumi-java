@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class StorageAccountPropertiesResponse {
     /**
      * The resource ID of the storage account.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class StorageAccountPropertiesResponse {
 
     /**
      * The resource ID of the storage account.
-     * 
     */
     public String getId() {
         return this.id;

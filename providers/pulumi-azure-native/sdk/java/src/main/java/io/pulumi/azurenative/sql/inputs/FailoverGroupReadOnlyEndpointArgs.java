@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Read-only endpoint of the failover group instance.
- * 
  */
 public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
 
     /**
      * Failover policy of the read-only endpoint for the failover group.
-     * 
      */
     @Import(name="failoverPolicy")
       private final @Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters to reconcile to the GitRepository source kind type.
- * 
  */
 public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
-     * 
      */
     @Import(name="httpsCAFile")
       private final @Nullable String httpsCAFile;
@@ -33,7 +31,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * Base64-encoded HTTPS username used to access private git repositories over HTTPS
-     * 
      */
     @Import(name="httpsUser")
       private final @Nullable String httpsUser;
@@ -44,7 +41,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
-     * 
      */
     @Import(name="localAuthRef")
       private final @Nullable String localAuthRef;
@@ -55,7 +51,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The source reference for the GitRepository object.
-     * 
      */
     @Import(name="repositoryRef")
       private final @Nullable RepositoryRefDefinitionResponse repositoryRef;
@@ -66,7 +61,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
-     * 
      */
     @Import(name="sshKnownHosts")
       private final @Nullable String sshKnownHosts;
@@ -77,7 +71,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The interval at which to re-reconcile the cluster git repository source with the remote.
-     * 
      */
     @Import(name="syncIntervalInSeconds")
       private final @Nullable Double syncIntervalInSeconds;
@@ -88,7 +81,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The maximum time to attempt to reconcile the cluster git repository source with the remote.
-     * 
      */
     @Import(name="timeoutInSeconds")
       private final @Nullable Double timeoutInSeconds;
@@ -99,7 +91,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
 
     /**
      * The URL to sync for the flux configuration git repository.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

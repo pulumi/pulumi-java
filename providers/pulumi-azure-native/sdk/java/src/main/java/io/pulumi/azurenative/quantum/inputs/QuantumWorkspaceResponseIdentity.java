@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed Identity information.
- * 
  */
 public final class QuantumWorkspaceResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class QuantumWorkspaceResponseIdentity extends io.pulumi.resources.
 
     /**
      * The principal ID of resource identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class QuantumWorkspaceResponseIdentity extends io.pulumi.resources.
 
     /**
      * The tenant ID of resource.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class QuantumWorkspaceResponseIdentity extends io.pulumi.resources.
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

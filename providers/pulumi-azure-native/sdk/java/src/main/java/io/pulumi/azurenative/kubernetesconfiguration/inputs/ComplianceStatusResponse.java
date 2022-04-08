@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Compliance Status details
- * 
  */
 public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The compliance state of the configuration.
-     * 
      */
     @Import(name="complianceState", required=true)
       private final String complianceState;
@@ -31,7 +29,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Datetime the configuration was last applied.
-     * 
      */
     @Import(name="lastConfigApplied")
       private final @Nullable String lastConfigApplied;
@@ -42,7 +39,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Message from when the configuration was applied.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -53,7 +49,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Level of the message.
-     * 
      */
     @Import(name="messageLevel")
       private final @Nullable String messageLevel;

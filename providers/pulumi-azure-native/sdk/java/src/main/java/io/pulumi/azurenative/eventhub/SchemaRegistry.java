@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * Single item in List or Get Schema Group operation
  * API Version: 2021-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SchemaRegistryCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var schemaRegistry = new AzureNative.EventHub.SchemaRegistry("schemaRegistry", new AzureNative.EventHub.SchemaRegistryArgs
+ *         {
+ *             GroupProperties = ,
+ *             NamespaceName = "ali-ua-test-eh-system-1",
+ *             ResourceGroupName = "alitest",
+ *             SchemaCompatibility = "Forward",
+ *             SchemaGroupName = "testSchemaGroup1",
+ *             SchemaType = "Avro",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventhub.NewSchemaRegistry(ctx, "schemaRegistry", &eventhub.SchemaRegistryArgs{
+ * 			GroupProperties:     nil,
+ * 			NamespaceName:       pulumi.String("ali-ua-test-eh-system-1"),
+ * 			ResourceGroupName:   pulumi.String("alitest"),
+ * 			SchemaCompatibility: pulumi.String("Forward"),
+ * 			SchemaGroupName:     pulumi.String("testSchemaGroup1"),
+ * 			SchemaType:          pulumi.String("Avro"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const schemaRegistry = new azure_native.eventhub.SchemaRegistry("schemaRegistry", {
+ *     groupProperties: {},
+ *     namespaceName: "ali-ua-test-eh-system-1",
+ *     resourceGroupName: "alitest",
+ *     schemaCompatibility: "Forward",
+ *     schemaGroupName: "testSchemaGroup1",
+ *     schemaType: "Avro",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * schema_registry = azure_native.eventhub.SchemaRegistry("schemaRegistry",
+ *     group_properties={},
+ *     namespace_name="ali-ua-test-eh-system-1",
+ *     resource_group_name="alitest",
+ *     schema_compatibility="Forward",
+ *     schema_group_name="testSchemaGroup1",
+ *     schema_type="Avro")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +118,60 @@ import javax.annotation.Nullable;
 public class SchemaRegistry extends io.pulumi.resources.CustomResource {
     /**
      * Exact time the Schema Group was created.
-     * 
      */
     @Export(name="createdAtUtc", type=String.class, parameters={})
     private Output<String> createdAtUtc;
 
     /**
      * @return Exact time the Schema Group was created.
-     * 
      */
     public Output<String> getCreatedAtUtc() {
         return this.createdAtUtc;
     }
     /**
      * The ETag value.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
      * @return The ETag value.
-     * 
      */
     public Output<String> getETag() {
         return this.eTag;
     }
     /**
      * dictionary object for SchemaGroup group properties
-     * 
      */
     @Export(name="groupProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> groupProperties;
 
     /**
      * @return dictionary object for SchemaGroup group properties
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getGroupProperties() {
         return this.groupProperties;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -116,42 +190,36 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
     }
     /**
      * The system meta data relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system meta data relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Exact time the Schema Group was updated
-     * 
      */
     @Export(name="updatedAtUtc", type=String.class, parameters={})
     private Output<String> updatedAtUtc;
 
     /**
      * @return Exact time the Schema Group was updated
-     * 
      */
     public Output<String> getUpdatedAtUtc() {
         return this.updatedAtUtc;

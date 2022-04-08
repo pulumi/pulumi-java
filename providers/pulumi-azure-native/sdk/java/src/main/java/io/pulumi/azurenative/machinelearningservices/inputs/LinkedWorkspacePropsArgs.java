@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * LinkedWorkspace specific properties.
- * 
  */
 public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
 
     /**
      * ResourceId of the link target of the linked workspace.
-     * 
      */
     @Import(name="linkedWorkspaceResourceId")
       private final @Nullable Output<String> linkedWorkspaceResourceId;
@@ -31,7 +29,6 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
 
     /**
      * ResourceId of the user assigned identity for the linked workspace.
-     * 
      */
     @Import(name="userAssignedIdentityResourceId")
       private final @Nullable Output<String> userAssignedIdentityResourceId;

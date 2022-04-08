@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains custom Dns resolution configuration from customer.
- * 
  */
 public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
 
     /**
      * Fqdn that resolves to private endpoint ip address.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable String fqdn;
@@ -32,7 +30,6 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
 
     /**
      * A list of private ip addresses of the private endpoint.
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;

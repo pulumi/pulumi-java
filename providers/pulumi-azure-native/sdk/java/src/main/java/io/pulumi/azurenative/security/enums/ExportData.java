@@ -12,7 +12,6 @@ import java.util.StringJoiner;
     public enum ExportData {
         /**
          * Agent raw events
-         * 
          */
         RawEvents("RawEvents");
 

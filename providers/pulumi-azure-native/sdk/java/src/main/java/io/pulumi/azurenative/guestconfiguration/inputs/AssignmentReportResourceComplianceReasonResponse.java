@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Reason and code for the compliance of the guest configuration assignment resource.
- * 
  */
 public final class AssignmentReportResourceComplianceReasonResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
 
     /**
      * Code for the compliance of the guest configuration assignment resource.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
 
     /**
      * Reason for the compliance of the guest configuration assignment resource.
-     * 
      */
     @Import(name="phrase", required=true)
       private final String phrase;

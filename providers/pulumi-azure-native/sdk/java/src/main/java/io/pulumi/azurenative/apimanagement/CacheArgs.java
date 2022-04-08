@@ -16,7 +16,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).
-     * 
      */
     @Import(name="cacheId")
       private final @Nullable Output<String> cacheId;
@@ -27,7 +26,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Runtime connection string to cache
-     * 
      */
     @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
@@ -38,7 +36,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cache description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +46,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Original uri of entity in external system cache points to
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -71,7 +66,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -82,7 +76,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
-     * 
      */
     @Import(name="useFromLocation", required=true)
       private final Output<String> useFromLocation;

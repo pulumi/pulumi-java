@@ -14,7 +14,6 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Incident ID
-     * 
      */
     @Import(name="incidentId", required=true)
       private final String incidentId;
@@ -25,7 +24,6 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
@@ -36,7 +34,6 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Relation Name
-     * 
      */
     @Import(name="relationName", required=true)
       private final String relationName;
@@ -47,7 +44,6 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

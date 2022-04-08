@@ -14,7 +14,6 @@ public final class ListOnlineEndpointKeysArgs extends io.pulumi.resources.Invoke
 
     /**
      * Online Endpoint name.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final String endpointName;
@@ -25,7 +24,6 @@ public final class ListOnlineEndpointKeysArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListOnlineEndpointKeysArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

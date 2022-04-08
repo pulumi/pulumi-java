@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     @EnumType
     public enum BackendEnabledState {

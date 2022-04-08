@@ -18,7 +18,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The private link resource group id.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
@@ -29,7 +28,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * Unique name of the private link.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * The resource id that private link links to.
-     * 
      */
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
@@ -51,7 +48,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * Request message.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
@@ -62,7 +58,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
 
     /**
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;

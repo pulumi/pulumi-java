@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * A privateLinkHub
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a privateLinkHub
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkHub = new AzureNative.Synapse.PrivateLinkHub("privateLinkHub", new AzureNative.Synapse.PrivateLinkHubArgs
+ *         {
+ *             Location = "East US",
+ *             PrivateLinkHubName = "privateLinkHub1",
+ *             ResourceGroupName = "resourceGroup1",
+ *             Tags = 
+ *             {
+ *                 { "key", "value" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewPrivateLinkHub(ctx, "privateLinkHub", &synapse.PrivateLinkHubArgs{
+ * 			Location:           pulumi.String("East US"),
+ * 			PrivateLinkHubName: pulumi.String("privateLinkHub1"),
+ * 			ResourceGroupName:  pulumi.String("resourceGroup1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key": pulumi.String("value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkHub = new azure_native.synapse.PrivateLinkHub("privateLinkHub", {
+ *     location: "East US",
+ *     privateLinkHubName: "privateLinkHub1",
+ *     resourceGroupName: "resourceGroup1",
+ *     tags: {
+ *         key: "value",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_hub = azure_native.synapse.PrivateLinkHub("privateLinkHub",
+ *     location="East US",
+ *     private_link_hub_name="privateLinkHub1",
+ *     resource_group_name="resourceGroup1",
+ *     tags={
+ *         "key": "value",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +119,72 @@ import javax.annotation.Nullable;
 public class PrivateLinkHub extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of private endpoint connections
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionForPrivateLinkHubBasicResponse.class})
     private Output<List<PrivateEndpointConnectionForPrivateLinkHubBasicResponse>> privateEndpointConnections;
 
     /**
      * @return List of private endpoint connections
-     * 
      */
     public Output<List<PrivateEndpointConnectionForPrivateLinkHubBasicResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * PrivateLinkHub provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return PrivateLinkHub provisioning state
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

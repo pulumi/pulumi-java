@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption identity for the storage account.
- * 
  */
 public final class EncryptionIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
-     * 
      */
     @Import(name="encryptionUserAssignedIdentity")
       private final @Nullable String encryptionUserAssignedIdentity;

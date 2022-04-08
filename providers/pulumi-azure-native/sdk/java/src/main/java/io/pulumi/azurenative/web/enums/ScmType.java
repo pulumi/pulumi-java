@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SCM type.
-     * 
      */
     @EnumType
     public enum ScmType {

@@ -14,7 +14,6 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network group to get.
-     * 
      */
     @Import(name="networkGroupName", required=true)
       private final String networkGroupName;
@@ -25,7 +24,6 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -36,7 +34,6 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

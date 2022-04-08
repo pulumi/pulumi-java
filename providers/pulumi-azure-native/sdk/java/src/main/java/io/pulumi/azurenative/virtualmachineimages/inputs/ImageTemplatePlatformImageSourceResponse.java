@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an image source from [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
- * 
  */
 public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
 
     /**
      * Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-     * 
      */
     @Import(name="offer")
       private final @Nullable String offer;
@@ -32,7 +30,6 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
 
     /**
      * Optional configuration of purchase plan for platform image.
-     * 
      */
     @Import(name="planInfo")
       private final @Nullable PlatformImagePurchasePlanResponse planInfo;
@@ -43,7 +40,6 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
 
     /**
      * Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;
@@ -54,7 +50,6 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
 
     /**
      * Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-     * 
      */
     @Import(name="sku")
       private final @Nullable String sku;
@@ -66,7 +61,6 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
     /**
      * Specifies the type of source image you want to start with.
      * Expected value is 'PlatformImage'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -77,7 +71,6 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
 
     /**
      * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

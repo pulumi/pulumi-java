@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the capabilities/features allowed for a specific SKU.
- * 
  */
 public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the SKU capability.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Reason of the SKU capability.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -42,7 +39,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value of the SKU capability.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

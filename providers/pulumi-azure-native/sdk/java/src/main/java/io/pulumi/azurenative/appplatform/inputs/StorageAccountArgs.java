@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * storage resource of type Azure Storage Account.
- * 
  */
 public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account key of the Azure Storage Account.
-     * 
      */
     @Import(name="accountKey", required=true)
       private final Output<String> accountKey;
@@ -30,7 +28,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account name of the Azure Storage Account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -42,7 +39,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The type of the storage.
      * Expected value is 'StorageAccount'.
-     * 
      */
     @Import(name="storageType", required=true)
       private final Output<String> storageType;

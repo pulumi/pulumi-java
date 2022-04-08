@@ -14,7 +14,6 @@ public final class GetLiveEventArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetLiveEventArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the live event, maximum length is 32.
-     * 
      */
     @Import(name="liveEventName", required=true)
       private final String liveEventName;
@@ -36,7 +34,6 @@ public final class GetLiveEventArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

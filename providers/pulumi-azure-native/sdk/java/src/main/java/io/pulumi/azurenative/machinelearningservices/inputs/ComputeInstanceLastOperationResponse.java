@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The last operation on ComputeInstance.
- * 
  */
 public final class ComputeInstanceLastOperationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
 
     /**
      * Name of the last operation.
-     * 
      */
     @Import(name="operationName")
       private final @Nullable String operationName;
@@ -31,7 +29,6 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
 
     /**
      * Operation status.
-     * 
      */
     @Import(name="operationStatus")
       private final @Nullable String operationStatus;
@@ -42,7 +39,6 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
 
     /**
      * Time of the last operation.
-     * 
      */
     @Import(name="operationTime")
       private final @Nullable String operationTime;

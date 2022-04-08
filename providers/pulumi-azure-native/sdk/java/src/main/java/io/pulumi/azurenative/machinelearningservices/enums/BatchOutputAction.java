@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates how the output will be organized.
-     * 
      */
     @EnumType
     public enum BatchOutputAction {

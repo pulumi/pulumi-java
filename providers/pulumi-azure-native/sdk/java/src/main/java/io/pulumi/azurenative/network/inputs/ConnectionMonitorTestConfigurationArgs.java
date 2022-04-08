@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a connection monitor test configuration.
- * 
  */
 public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The parameters used to perform test evaluation over HTTP.
-     * 
      */
     @Import(name="httpConfiguration")
       private final @Nullable Output<ConnectionMonitorHttpConfigurationArgs> httpConfiguration;
@@ -39,7 +37,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The parameters used to perform test evaluation over ICMP.
-     * 
      */
     @Import(name="icmpConfiguration")
       private final @Nullable Output<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration;
@@ -50,7 +47,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The name of the connection monitor test configuration.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -61,7 +57,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
-     * 
      */
     @Import(name="preferredIPVersion")
       private final @Nullable Output<Either<String,PreferredIPVersion>> preferredIPVersion;
@@ -72,7 +67,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The protocol to use in test evaluation.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol;
@@ -83,7 +77,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The threshold for declaring a test successful.
-     * 
      */
     @Import(name="successThreshold")
       private final @Nullable Output<ConnectionMonitorSuccessThresholdArgs> successThreshold;
@@ -94,7 +87,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The parameters used to perform test evaluation over TCP.
-     * 
      */
     @Import(name="tcpConfiguration")
       private final @Nullable Output<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration;
@@ -105,7 +97,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
 
     /**
      * The frequency of test evaluation, in seconds.
-     * 
      */
     @Import(name="testFrequencySec")
       private final @Nullable Output<Integer> testFrequencySec;

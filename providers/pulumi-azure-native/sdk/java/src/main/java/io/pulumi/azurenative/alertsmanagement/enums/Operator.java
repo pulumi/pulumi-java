@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * operator for a given condition
-     * 
      */
     @EnumType
     public enum Operator {

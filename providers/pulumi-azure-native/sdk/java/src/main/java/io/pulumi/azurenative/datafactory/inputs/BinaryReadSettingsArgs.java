@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Binary read settings.
- * 
  */
 public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Compression settings.
-     * 
      */
     @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
@@ -36,7 +34,6 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
     /**
      * The read setting type.
      * Expected value is 'BinaryReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

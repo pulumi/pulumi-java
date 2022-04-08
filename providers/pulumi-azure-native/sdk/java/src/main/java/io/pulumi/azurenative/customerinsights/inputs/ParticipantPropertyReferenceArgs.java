@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The participant property reference.
- * 
  */
 public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
 
     /**
      * The source property that maps to the target property.
-     * 
      */
     @Import(name="sourcePropertyName", required=true)
       private final Output<String> sourcePropertyName;
@@ -30,7 +28,6 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
 
     /**
      * The target property that maps to the source property.
-     * 
      */
     @Import(name="targetPropertyName", required=true)
       private final Output<String> targetPropertyName;

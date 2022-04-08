@@ -14,7 +14,6 @@ public final class GetTransactionNodeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Blockchain member name.
-     * 
      */
     @Import(name="blockchainMemberName", required=true)
       private final String blockchainMemberName;
@@ -25,7 +24,6 @@ public final class GetTransactionNodeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetTransactionNodeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Transaction node name.
-     * 
      */
     @Import(name="transactionNodeName", required=true)
       private final String transactionNodeName;

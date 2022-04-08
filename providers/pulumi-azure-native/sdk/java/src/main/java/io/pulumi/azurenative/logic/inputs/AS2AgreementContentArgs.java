@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The integration account AS2 agreement content.
- * 
  */
 public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The AS2 one-way receive agreement.
-     * 
      */
     @Import(name="receiveAgreement", required=true)
       private final Output<AS2OneWayAgreementArgs> receiveAgreement;
@@ -30,7 +28,6 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The AS2 one-way send agreement.
-     * 
      */
     @Import(name="sendAgreement", required=true)
       private final Output<AS2OneWayAgreementArgs> sendAgreement;

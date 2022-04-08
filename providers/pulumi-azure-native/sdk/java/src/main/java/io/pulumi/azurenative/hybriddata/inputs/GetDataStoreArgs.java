@@ -14,7 +14,6 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="dataManagerName", required=true)
       private final String dataManagerName;
@@ -25,7 +24,6 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data store/repository name queried.
-     * 
      */
     @Import(name="dataStoreName", required=true)
       private final String dataStoreName;
@@ -36,7 +34,6 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

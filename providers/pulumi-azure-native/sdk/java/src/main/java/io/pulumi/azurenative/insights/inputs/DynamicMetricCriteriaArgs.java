@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Criterion for dynamic threshold.
- * 
  */
 public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
-     * 
      */
     @Import(name="alertSensitivity", required=true)
       private final Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
@@ -40,7 +38,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     /**
      * Specifies the type of threshold criteria
      * Expected value is 'DynamicThresholdCriterion'.
-     * 
      */
     @Import(name="criterionType", required=true)
       private final Output<String> criterionType;
@@ -51,7 +48,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of dimension conditions.
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
@@ -62,7 +58,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * The minimum number of violations required within the selected lookback time window required to raise an alert.
-     * 
      */
     @Import(name="failingPeriods", required=true)
       private final Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
@@ -73,7 +68,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
-     * 
      */
     @Import(name="ignoreDataBefore")
       private final @Nullable Output<String> ignoreDataBefore;
@@ -84,7 +78,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the metric.
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -95,7 +88,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * Namespace of the metric.
-     * 
      */
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
@@ -106,7 +98,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the criteria.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -117,7 +108,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * The operator used to compare the metric value against the threshold.
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,DynamicThresholdOperator>> operator;
@@ -128,7 +118,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
-     * 
      */
     @Import(name="skipMetricValidation")
       private final @Nullable Output<Boolean> skipMetricValidation;
@@ -139,7 +128,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
 
     /**
      * the criteria time aggregation types.
-     * 
      */
     @Import(name="timeAggregation", required=true)
       private final Output<Either<String,AggregationTypeEnum>> timeAggregation;

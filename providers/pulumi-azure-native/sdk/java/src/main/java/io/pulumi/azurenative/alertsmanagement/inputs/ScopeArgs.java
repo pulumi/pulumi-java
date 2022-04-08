@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Target scope for a given action rule. By default scope will be the subscription. User can also provide list of resource groups or list of resources from the scope subscription as well.
- * 
  */
 public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * type of target scope
-     * 
      */
     @Import(name="scopeType")
       private final @Nullable Output<Either<String,ScopeType>> scopeType;
@@ -34,7 +32,6 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * list of ARM IDs of the given scope type which will be the target of the given action rule.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

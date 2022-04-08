@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Desired outbound IP resources for the cluster load balancer.
- * 
  */
 public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
 
     /**
      * A list of public IP resources.
-     * 
      */
     @Import(name="publicIPs")
       private final @Nullable Output<List<ResourceReferenceArgs>> publicIPs;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the legacy Microsoft Account provider.
- * 
  */
 public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * <code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -34,7 +32,6 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The configuration settings of the login flow.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
@@ -45,7 +42,6 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The configuration settings of the app registration for the legacy Microsoft Account provider.
-     * 
      */
     @Import(name="registration")
       private final @Nullable Output<ClientRegistrationArgs> registration;
@@ -56,7 +52,6 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
 
     /**
      * The configuration settings of the legacy Microsoft Account provider token validation flow.
-     * 
      */
     @Import(name="validation")
       private final @Nullable Output<AllowedAudiencesValidationArgs> validation;

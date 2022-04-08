@@ -19,7 +19,108 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB userDefinedFunction.
  * API Version: 2021-03-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBSqlUserDefinedFunctionCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlResourceSqlUserDefinedFunction = new AzureNative.DocumentDB.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", new AzureNative.DocumentDB.SqlResourceSqlUserDefinedFunctionArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             ContainerName = "containerName",
+ *             DatabaseName = "databaseName",
+ *             Options = ,
+ *             Resource = new AzureNative.DocumentDB.Inputs.SqlUserDefinedFunctionResourceArgs
+ *             {
+ *                 Body = "body",
+ *                 Id = "userDefinedFunctionName",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             UserDefinedFunctionName = "userDefinedFunctionName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewSqlResourceSqlUserDefinedFunction(ctx, "sqlResourceSqlUserDefinedFunction", &documentdb.SqlResourceSqlUserDefinedFunctionArgs{
+ * 			AccountName:   pulumi.String("ddb1"),
+ * 			ContainerName: pulumi.String("containerName"),
+ * 			DatabaseName:  pulumi.String("databaseName"),
+ * 			Options:       nil,
+ * 			Resource: &documentdb.SqlUserDefinedFunctionResourceArgs{
+ * 				Body: pulumi.String("body"),
+ * 				Id:   pulumi.String("userDefinedFunctionName"),
+ * 			},
+ * 			ResourceGroupName:       pulumi.String("rg1"),
+ * 			UserDefinedFunctionName: pulumi.String("userDefinedFunctionName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlResourceSqlUserDefinedFunction = new azure_native.documentdb.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", {
+ *     accountName: "ddb1",
+ *     containerName: "containerName",
+ *     databaseName: "databaseName",
+ *     options: {},
+ *     resource: {
+ *         body: "body",
+ *         id: "userDefinedFunctionName",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     userDefinedFunctionName: "userDefinedFunctionName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_resource_sql_user_defined_function = azure_native.documentdb.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction",
+ *     account_name="ddb1",
+ *     container_name="containerName",
+ *     database_name="databaseName",
+ *     options=azure_native.documentdb.CreateUpdateOptionsArgs(),
+ *     resource=azure_native.documentdb.SqlUserDefinedFunctionResourceArgs(
+ *         body="body",
+ *         id="userDefinedFunctionName",
+ *     ),
+ *     resource_group_name="rg1",
+ *     user_defined_function_name="userDefinedFunctionName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,28 +135,24 @@ import javax.annotation.Nullable;
 public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource group to which the resource belongs.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the ARM resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the ARM resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -68,28 +165,24 @@ public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.Custo
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

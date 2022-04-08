@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ConnStringValueTypePairResponse {
     /**
      * Type of database.
-     * 
      */
     private final String type;
     /**
      * Value of pair.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class ConnStringValueTypePairResponse {
 
     /**
      * Type of database.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Value of pair.
-     * 
     */
     public String getValue() {
         return this.value;

@@ -14,7 +14,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Visual Studio Team Services account resource.
-     * 
      */
     @Import(name="accountResourceName", required=true)
       private final String accountResourceName;
@@ -25,7 +24,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the extension.
-     * 
      */
     @Import(name="extensionResourceName", required=true)
       private final String extensionResourceName;
@@ -36,7 +34,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

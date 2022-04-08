@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class IdentityResponse {
     /**
      * Gets or sets the principal id.
-     * 
      */
     private final @Nullable String principalId;
     /**
      * Gets or sets the tenant id.
-     * 
      */
     private final @Nullable String tenantId;
     /**
      * The type of identity used for the resource mover service.
-     * 
      */
     private final @Nullable String type;
 
@@ -39,21 +36,18 @@ public final class IdentityResponse {
 
     /**
      * Gets or sets the principal id.
-     * 
     */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * Gets or sets the tenant id.
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of identity used for the resource mover service.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

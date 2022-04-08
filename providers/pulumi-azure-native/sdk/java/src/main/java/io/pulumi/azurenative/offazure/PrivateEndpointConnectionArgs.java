@@ -16,7 +16,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Private link resource name.
-     * 
      */
     @Import(name="peConnectionName")
       private final @Nullable Output<String> peConnectionName;
@@ -27,7 +26,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Site name.
-     * 
      */
     @Import(name="siteName", required=true)
       private final Output<String> siteName;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties specific to the monitor resource.
- * 
  */
 public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Elastic cloud properties.
-     * 
      */
     @Import(name="elasticProperties")
       private final @Nullable ElasticPropertiesResponse elasticProperties;
@@ -40,7 +38,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The priority of the resource.
-     * 
      */
     @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
@@ -51,7 +48,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
-     * 
      */
     @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
@@ -62,7 +58,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Provisioning state of the monitor resource.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;

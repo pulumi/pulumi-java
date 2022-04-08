@@ -13,37 +13,30 @@ import javax.annotation.Nullable;
 public final class SourceTriggerDescriptorResponse {
     /**
      * The branch name in the repository.
-     * 
      */
     private final @Nullable String branchName;
     /**
      * The unique ID that identifies a commit.
-     * 
      */
     private final @Nullable String commitId;
     /**
      * The event type of the trigger.
-     * 
      */
     private final @Nullable String eventType;
     /**
      * The unique ID of the trigger.
-     * 
      */
     private final @Nullable String id;
     /**
      * The source control provider type.
-     * 
      */
     private final @Nullable String providerType;
     /**
      * The unique ID that identifies pull request.
-     * 
      */
     private final @Nullable String pullRequestId;
     /**
      * The repository URL.
-     * 
      */
     private final @Nullable String repositoryUrl;
 
@@ -67,49 +60,42 @@ public final class SourceTriggerDescriptorResponse {
 
     /**
      * The branch name in the repository.
-     * 
     */
     public Optional<String> getBranchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
      * The unique ID that identifies a commit.
-     * 
     */
     public Optional<String> getCommitId() {
         return Optional.ofNullable(this.commitId);
     }
     /**
      * The event type of the trigger.
-     * 
     */
     public Optional<String> getEventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
      * The unique ID of the trigger.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The source control provider type.
-     * 
     */
     public Optional<String> getProviderType() {
         return Optional.ofNullable(this.providerType);
     }
     /**
      * The unique ID that identifies pull request.
-     * 
     */
     public Optional<String> getPullRequestId() {
         return Optional.ofNullable(this.pullRequestId);
     }
     /**
      * The repository URL.
-     * 
     */
     public Optional<String> getRepositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);

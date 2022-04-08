@@ -20,7 +20,138 @@ import javax.annotation.Nullable;
  * A vSphere Distributed Resource Scheduler (DRS) placement policy
  * API Version: 2021-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PlacementPolicies_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var placementPolicy = new AzureNative.AVS.PlacementPolicy("placementPolicy", new AzureNative.AVS.PlacementPolicyArgs
+ *         {
+ *             ClusterName = "cluster1",
+ *             PlacementPolicyName = "policy1",
+ *             PrivateCloudName = "cloud1",
+ *             Properties = new AzureNative.AVS.Inputs.VmHostPlacementPolicyPropertiesArgs
+ *             {
+ *                 AffinityType = "AntiAffinity",
+ *                 HostMembers = 
+ *                 {
+ *                     "fakehost22.nyc1.kubernetes.center",
+ *                     "fakehost23.nyc1.kubernetes.center",
+ *                     "fakehost24.nyc1.kubernetes.center",
+ *                 },
+ *                 Type = "VmHost",
+ *                 VmMembers = 
+ *                 {
+ *                     "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-128",
+ *                     "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-256",
+ *                 },
+ *             },
+ *             ResourceGroupName = "group1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewPlacementPolicy(ctx, "placementPolicy", &avs.PlacementPolicyArgs{
+ * 			ClusterName:         pulumi.String("cluster1"),
+ * 			PlacementPolicyName: pulumi.String("policy1"),
+ * 			PrivateCloudName:    pulumi.String("cloud1"),
+ * 			Properties: avs.VmHostPlacementPolicyProperties{
+ * 				AffinityType: "AntiAffinity",
+ * 				HostMembers: []string{
+ * 					"fakehost22.nyc1.kubernetes.center",
+ * 					"fakehost23.nyc1.kubernetes.center",
+ * 					"fakehost24.nyc1.kubernetes.center",
+ * 				},
+ * 				Type: "VmHost",
+ * 				VmMembers: []string{
+ * 					"/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-128",
+ * 					"/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-256",
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const placementPolicy = new azure_native.avs.PlacementPolicy("placementPolicy", {
+ *     clusterName: "cluster1",
+ *     placementPolicyName: "policy1",
+ *     privateCloudName: "cloud1",
+ *     properties: {
+ *         affinityType: "AntiAffinity",
+ *         hostMembers: [
+ *             "fakehost22.nyc1.kubernetes.center",
+ *             "fakehost23.nyc1.kubernetes.center",
+ *             "fakehost24.nyc1.kubernetes.center",
+ *         ],
+ *         type: "VmHost",
+ *         vmMembers: [
+ *             "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-128",
+ *             "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-256",
+ *         ],
+ *     },
+ *     resourceGroupName: "group1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * placement_policy = azure_native.avs.PlacementPolicy("placementPolicy",
+ *     cluster_name="cluster1",
+ *     placement_policy_name="policy1",
+ *     private_cloud_name="cloud1",
+ *     properties=azure_native.avs.VmHostPlacementPolicyPropertiesArgs(
+ *         affinity_type="AntiAffinity",
+ *         host_members=[
+ *             "fakehost22.nyc1.kubernetes.center",
+ *             "fakehost23.nyc1.kubernetes.center",
+ *             "fakehost24.nyc1.kubernetes.center",
+ *         ],
+ *         type="VmHost",
+ *         vm_members=[
+ *             "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-128",
+ *             "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-256",
+ *         ],
+ *     ),
+ *     resource_group_name="group1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,42 +166,36 @@ import javax.annotation.Nullable;
 public class PlacementPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * placement policy properties
-     * 
      */
     @Export(name="properties", type=Either.class, parameters={VmHostPlacementPolicyPropertiesResponse.class, VmVmPlacementPolicyPropertiesResponse.class})
     private Output<Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse>> properties;
 
     /**
      * @return placement policy properties
-     * 
      */
     public Output<Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse>> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

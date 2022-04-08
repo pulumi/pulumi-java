@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class PublicIPAddressConfigurationResponse {
     /**
      * The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
-     * 
      */
     private final @Nullable List<String> ipAddressIds;
     /**
      * The default value is BatchManaged
-     * 
      */
     private final @Nullable String provision;
 
@@ -33,14 +31,12 @@ public final class PublicIPAddressConfigurationResponse {
 
     /**
      * The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
-     * 
     */
     public List<String> getIpAddressIds() {
         return this.ipAddressIds == null ? List.of() : this.ipAddressIds;
     }
     /**
      * The default value is BatchManaged
-     * 
     */
     public Optional<String> getProvision() {
         return Optional.ofNullable(this.provision);

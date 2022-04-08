@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of an inquired protectable item.
- * 
  */
 public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
 
     /**
      * Inquiry validation such as permissions and other backup validations.
-     * 
      */
     @Import(name="inquiryValidation")
       private final @Nullable Output<InquiryValidationArgs> inquiryValidation;
@@ -33,7 +31,6 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
 
     /**
      * Contains the protectable item Count inside this Container.
-     * 
      */
     @Import(name="itemCount")
       private final @Nullable Output<Double> itemCount;
@@ -44,7 +41,6 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
 
     /**
      * Type of the Workload such as SQL, Oracle etc.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

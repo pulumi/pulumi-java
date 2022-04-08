@@ -18,7 +18,6 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
 
     /**
      * Plan details for the managed services.
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
@@ -29,7 +28,6 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
 
     /**
      * Properties of a registration definition.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
@@ -40,7 +38,6 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
 
     /**
      * Guid of the registration definition.
-     * 
      */
     @Import(name="registrationDefinitionId")
       private final @Nullable Output<String> registrationDefinitionId;
@@ -51,7 +48,6 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
 
     /**
      * Scope of the resource.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the IP address of the network interface.
- * 
  */
 public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the IP address of the network interface.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;

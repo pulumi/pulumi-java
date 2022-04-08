@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * We currently support Baseline, Main, High, High422, High444. Default is Auto.
-     * 
      */
     @EnumType
     public enum H264VideoProfile {
         /**
          * Tells the encoder to automatically determine the appropriate H.264 profile.
-         * 
          */
         Auto("Auto"),
         /**
          * Baseline profile
-         * 
          */
         Baseline("Baseline"),
         /**
          * Main profile
-         * 
          */
         Main("Main"),
         /**
          * High profile.
-         * 
          */
         High("High"),
         /**
          * High 4:2:2 profile.
-         * 
          */
         High422("High422"),
         /**
          * High 4:4:4 predictive profile.
-         * 
          */
         High444("High444");
 

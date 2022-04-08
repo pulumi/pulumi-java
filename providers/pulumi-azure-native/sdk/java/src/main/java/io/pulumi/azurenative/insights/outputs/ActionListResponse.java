@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ActionListResponse {
     /**
      * The list of the Action Groups.
-     * 
      */
     private final @Nullable List<ActionGroupResponse> actionGroups;
 
@@ -24,7 +23,6 @@ public final class ActionListResponse {
 
     /**
      * The list of the Action Groups.
-     * 
     */
     public List<ActionGroupResponse> getActionGroups() {
         return this.actionGroups == null ? List.of() : this.actionGroups;

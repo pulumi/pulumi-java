@@ -17,24 +17,20 @@ public final class PerfCounterDataSourceResponse {
      * A list of specifier names of the performance counters you want to collect.
      * Use a wildcard (*) to collect a counter for all instances.
      * To get a list of performance counters on Windows, run the command 'typeperf'.
-     * 
      */
     private final @Nullable List<String> counterSpecifiers;
     /**
-     * A friendly name for the data source.
+     * A friendly name for the data source. 
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
-     * 
      */
     private final @Nullable String name;
     /**
      * The number of seconds between consecutive counter measurements (samples).
-     * 
      */
     private final @Nullable Integer samplingFrequencyInSeconds;
     /**
      * List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     * 
      */
     private final @Nullable List<String> streams;
 
@@ -54,22 +50,19 @@ public final class PerfCounterDataSourceResponse {
      * A list of specifier names of the performance counters you want to collect.
      * Use a wildcard (*) to collect a counter for all instances.
      * To get a list of performance counters on Windows, run the command 'typeperf'.
-     * 
     */
     public List<String> getCounterSpecifiers() {
         return this.counterSpecifiers == null ? List.of() : this.counterSpecifiers;
     }
     /**
-     * A friendly name for the data source.
+     * A friendly name for the data source. 
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The number of seconds between consecutive counter measurements (samples).
-     * 
     */
     public Optional<Integer> getSamplingFrequencyInSeconds() {
         return Optional.ofNullable(this.samplingFrequencyInSeconds);
@@ -77,7 +70,6 @@ public final class PerfCounterDataSourceResponse {
     /**
      * List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     * 
     */
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;

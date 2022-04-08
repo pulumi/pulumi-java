@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Gateway routing details.
- * 
  */
 public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The route's AS path sequence.
-     * 
      */
     @Import(name="asPath", required=true)
       private final String asPath;
@@ -30,7 +28,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The gateway's local address.
-     * 
      */
     @Import(name="localAddress", required=true)
       private final String localAddress;
@@ -41,7 +38,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The route's network prefix.
-     * 
      */
     @Import(name="network", required=true)
       private final String network;
@@ -52,7 +48,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The route's next hop.
-     * 
      */
     @Import(name="nextHop", required=true)
       private final String nextHop;
@@ -63,7 +58,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source this route was learned from.
-     * 
      */
     @Import(name="origin", required=true)
       private final String origin;
@@ -74,7 +68,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The peer this route was learned from.
-     * 
      */
     @Import(name="sourcePeer", required=true)
       private final String sourcePeer;
@@ -85,7 +78,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The route's weight.
-     * 
      */
     @Import(name="weight", required=true)
       private final Integer weight;

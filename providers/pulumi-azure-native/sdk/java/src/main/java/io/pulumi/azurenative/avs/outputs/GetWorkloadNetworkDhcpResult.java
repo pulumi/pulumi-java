@@ -15,42 +15,34 @@ import javax.annotation.Nullable;
 public final class GetWorkloadNetworkDhcpResult {
     /**
      * Type of DHCP: SERVER or RELAY.
-     * 
      */
     private final String dhcpType;
     /**
      * Display name of the DHCP entity.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The provisioning state
-     * 
      */
     private final String provisioningState;
     /**
      * NSX revision number.
-     * 
      */
     private final @Nullable Double revision;
     /**
      * NSX Segments consuming DHCP.
-     * 
      */
     private final List<String> segments;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -76,56 +68,48 @@ public final class GetWorkloadNetworkDhcpResult {
 
     /**
      * Type of DHCP: SERVER or RELAY.
-     * 
     */
     public String getDhcpType() {
         return this.dhcpType;
     }
     /**
      * Display name of the DHCP entity.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
-     * 
     */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * NSX Segments consuming DHCP.
-     * 
     */
     public List<String> getSegments() {
         return this.segments;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

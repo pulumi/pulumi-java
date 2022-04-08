@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class GetRegistryBuildSourceUploadUrlResult {
     /**
      * The relative path to the source. This is used to submit the subsequent queue build request.
-     * 
      */
     private final @Nullable String relativePath;
     /**
      * The URL where the client can upload the source.
-     * 
      */
     private final @Nullable String uploadUrl;
 
@@ -32,14 +30,12 @@ public final class GetRegistryBuildSourceUploadUrlResult {
 
     /**
      * The relative path to the source. This is used to submit the subsequent queue build request.
-     * 
     */
     public Optional<String> getRelativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
      * The URL where the client can upload the source.
-     * 
     */
     public Optional<String> getUploadUrl() {
         return Optional.ofNullable(this.uploadUrl);

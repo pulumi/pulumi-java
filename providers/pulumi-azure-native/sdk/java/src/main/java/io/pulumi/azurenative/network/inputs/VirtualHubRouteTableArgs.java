@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VirtualHub route table.
- * 
  */
 public final class VirtualHubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
 
     /**
      * List of all routes.
-     * 
      */
     @Import(name="routes")
       private final @Nullable Output<List<VirtualHubRouteArgs>> routes;

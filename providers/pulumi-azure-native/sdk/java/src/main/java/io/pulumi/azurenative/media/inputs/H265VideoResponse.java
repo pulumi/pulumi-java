@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes all the properties for encoding a video with the H.265 codec.
- * 
  */
 public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
-     * 
      */
     @Import(name="complexity")
       private final @Nullable String complexity;
@@ -34,7 +32,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
-     * 
      */
     @Import(name="keyFrameInterval")
       private final @Nullable String keyFrameInterval;
@@ -45,7 +42,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -56,7 +52,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The collection of output H.265 layers to be produced by the encoder.
-     * 
      */
     @Import(name="layers")
       private final @Nullable List<H265LayerResponse> layers;
@@ -68,7 +63,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.H265Video'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -79,7 +73,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
-     * 
      */
     @Import(name="sceneChangeDetection")
       private final @Nullable Boolean sceneChangeDetection;
@@ -90,7 +83,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
-     * 
      */
     @Import(name="stretchMode")
       private final @Nullable String stretchMode;
@@ -101,7 +93,6 @@ public final class H265VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Video Sync Mode
-     * 
      */
     @Import(name="syncMode")
       private final @Nullable String syncMode;

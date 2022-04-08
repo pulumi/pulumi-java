@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of the IoT hub.
- * 
  */
 public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
 
     /**
      * weight to apply for a given iot h.
-     * 
      */
     @Import(name="allocationWeight")
       private final @Nullable Integer allocationWeight;
@@ -33,7 +31,6 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
 
     /**
      * flag for applying allocationPolicy or not for a given iot hub.
-     * 
      */
     @Import(name="applyAllocationPolicy")
       private final @Nullable Boolean applyAllocationPolicy;
@@ -44,7 +41,6 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Connection string of the IoT hub.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final String connectionString;
@@ -55,7 +51,6 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
 
     /**
      * ARM region of the IoT hub.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -66,7 +61,6 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Host name of the IoT hub.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

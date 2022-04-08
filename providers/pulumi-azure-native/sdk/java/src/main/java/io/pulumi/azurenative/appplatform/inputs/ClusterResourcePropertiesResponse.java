@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service properties payload
- * 
  */
 public final class ClusterResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * Network profile of the Service
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable NetworkProfileResponse networkProfile;
@@ -33,7 +31,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * Provisioning state of the Service
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -44,7 +41,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * ServiceInstanceEntity GUID which uniquely identifies a created resource
-     * 
      */
     @Import(name="serviceId", required=true)
       private final String serviceId;
@@ -55,7 +51,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * Version of the Service
-     * 
      */
     @Import(name="version", required=true)
       private final Integer version;

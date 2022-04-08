@@ -18,7 +18,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -29,7 +28,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -40,7 +38,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
 
     /**
      * Azure storage accounts.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,AzureStorageInfoValueArgs>> properties;
@@ -51,7 +48,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API will update the Azure storage account configurations for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;

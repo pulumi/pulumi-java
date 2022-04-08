@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration of an Azure Firewall.
- * 
  */
 public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -32,7 +30,6 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
 
     /**
      * Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
@@ -54,7 +50,6 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
 
     /**
      * Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;

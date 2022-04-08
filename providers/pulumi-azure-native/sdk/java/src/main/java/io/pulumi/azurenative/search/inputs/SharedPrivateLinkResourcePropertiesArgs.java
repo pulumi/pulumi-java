@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
- * 
  */
 public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
 
     /**
      * The group id from the provider of resource the shared private link resource is for.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
@@ -33,7 +31,6 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
 
     /**
      * The resource id of the resource the shared private link resource is for.
-     * 
      */
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
@@ -44,7 +41,6 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
 
     /**
      * The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState;
@@ -55,7 +51,6 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
 
     /**
      * The request message for requesting approval of the shared private link resource.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
@@ -66,7 +61,6 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
 
     /**
      * Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
-     * 
      */
     @Import(name="resourceRegion")
       private final @Nullable Output<String> resourceRegion;
@@ -77,7 +71,6 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
 
     /**
      * Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<SharedPrivateLinkResourceStatus> status;

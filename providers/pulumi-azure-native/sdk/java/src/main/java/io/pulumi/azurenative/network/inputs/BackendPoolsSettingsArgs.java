@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings that apply to all backend pools.
- * 
  */
 public final class BackendPoolsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
-     * 
      */
     @Import(name="enforceCertificateNameCheck")
       private final @Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
@@ -34,7 +32,6 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
-     * 
      */
     @Import(name="sendRecvTimeoutSeconds")
       private final @Nullable Output<Integer> sendRecvTimeoutSeconds;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The location of Google Cloud Storage dataset.
- * 
  */
 public final class GoogleCloudStorageLocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudStorageLocationResponse extends io.pulumi.resource
 
     /**
      * Specify the bucketName of Google Cloud Storage. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="bucketName")
       private final @Nullable Object bucketName;
@@ -32,7 +30,6 @@ public final class GoogleCloudStorageLocationResponse extends io.pulumi.resource
 
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Object fileName;
@@ -43,7 +40,6 @@ public final class GoogleCloudStorageLocationResponse extends io.pulumi.resource
 
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Object folderPath;
@@ -55,7 +51,6 @@ public final class GoogleCloudStorageLocationResponse extends io.pulumi.resource
     /**
      * Type of dataset storage location.
      * Expected value is 'GoogleCloudStorageLocation'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -66,7 +61,6 @@ public final class GoogleCloudStorageLocationResponse extends io.pulumi.resource
 
     /**
      * Specify the version of Google Cloud Storage. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="version")
       private final @Nullable Object version;

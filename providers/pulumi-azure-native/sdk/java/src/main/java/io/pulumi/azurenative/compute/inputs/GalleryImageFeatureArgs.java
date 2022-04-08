@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A feature for gallery image.
- * 
  */
 public final class GalleryImageFeatureArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GalleryImageFeatureArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the gallery image feature.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class GalleryImageFeatureArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value of the gallery image feature.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

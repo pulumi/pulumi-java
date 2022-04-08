@@ -30,140 +30,120 @@ import javax.annotation.Nullable;
 public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Premier add on Marketplace offer.
-     * 
      */
     @Export(name="marketplaceOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> marketplaceOffer;
 
     /**
      * @return Premier add on Marketplace offer.
-     * 
      */
     public Output</* @Nullable */ String> getMarketplaceOffer() {
         return this.marketplaceOffer;
     }
     /**
      * Premier add on Marketplace publisher.
-     * 
      */
     @Export(name="marketplacePublisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> marketplacePublisher;
 
     /**
      * @return Premier add on Marketplace publisher.
-     * 
      */
     public Output</* @Nullable */ String> getMarketplacePublisher() {
         return this.marketplacePublisher;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Premier add on Product.
-     * 
      */
     @Export(name="product", type=String.class, parameters={})
     private Output</* @Nullable */ String> product;
 
     /**
      * @return Premier add on Product.
-     * 
      */
     public Output</* @Nullable */ String> getProduct() {
         return this.product;
     }
     /**
      * Premier add on SKU.
-     * 
      */
     @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
      * @return Premier add on SKU.
-     * 
      */
     public Output</* @Nullable */ String> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Premier add on Vendor.
-     * 
      */
     @Export(name="vendor", type=String.class, parameters={})
     private Output</* @Nullable */ String> vendor;
 
     /**
      * @return Premier add on Vendor.
-     * 
      */
     public Output</* @Nullable */ String> getVendor() {
         return this.vendor;

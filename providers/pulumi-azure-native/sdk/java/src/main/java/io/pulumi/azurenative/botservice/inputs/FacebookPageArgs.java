@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Facebook page for Facebook channel registration
- * 
  */
 public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
@@ -31,7 +29,6 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Page id
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

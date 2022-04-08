@@ -16,7 +16,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * The id of the source data set.
-     * 
      */
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
@@ -38,7 +36,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * The name of the data set mapping to be created.
-     * 
      */
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
@@ -49,7 +46,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * The file system name.
-     * 
      */
     @Import(name="fileSystem", required=true)
       private final Output<String> fileSystem;
@@ -61,7 +57,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     /**
      * Kind of data set mapping.
      * Expected value is 'AdlsGen2FileSystem'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -72,7 +67,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * Resource group of storage account.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -83,7 +77,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +87,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * The name of the share subscription which will hold the data set sink.
-     * 
      */
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
@@ -105,7 +97,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * Storage account name of the source data set.
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
@@ -116,7 +107,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
 
     /**
      * Subscription id of storage account.
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;

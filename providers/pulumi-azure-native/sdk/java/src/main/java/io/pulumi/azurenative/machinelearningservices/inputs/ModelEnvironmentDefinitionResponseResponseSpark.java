@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration for a Spark environment.
- * 
  */
 public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
 
     /**
      * The Spark packages to use.
-     * 
      */
     @Import(name="packages")
       private final @Nullable List<SparkMavenPackageResponse> packages;
@@ -34,7 +32,6 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
 
     /**
      * Whether to precache the packages.
-     * 
      */
     @Import(name="precachePackages")
       private final @Nullable Boolean precachePackages;
@@ -45,7 +42,6 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
 
     /**
      * The list of spark repositories.
-     * 
      */
     @Import(name="repositories")
       private final @Nullable List<String> repositories;

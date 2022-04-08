@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Protection status details
- * 
  */
 public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.I
 
     /**
      * Specifies the protection status error of the resource
-     * 
      */
     @Import(name="errorDetails")
       private final @Nullable UserFacingErrorResponse errorDetails;
@@ -32,7 +30,6 @@ public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.I
 
     /**
      * Specifies the protection status of the resource
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

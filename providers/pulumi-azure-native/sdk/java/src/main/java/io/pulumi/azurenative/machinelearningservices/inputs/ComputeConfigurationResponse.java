@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for compute binding.
- * 
  */
 public final class ComputeConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * Number of instances or nodes.
-     * 
      */
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
@@ -34,7 +32,6 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * SKU type to run on.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable String instanceType;
@@ -45,7 +42,6 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * Set to true for jobs running on local compute.
-     * 
      */
     @Import(name="isLocal")
       private final @Nullable Boolean isLocal;
@@ -56,7 +52,6 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * Location for virtual cluster run.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -67,7 +62,6 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * Additional properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -78,7 +72,6 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * ARM resource ID of the compute resource.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

@@ -22,7 +22,100 @@ import javax.annotation.Nullable;
  * EventGrid Partner Namespace.
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PartnerNamespaces_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var partnerNamespace = new AzureNative.EventGrid.PartnerNamespace("partnerNamespace", new AzureNative.EventGrid.PartnerNamespaceArgs
+ *         {
+ *             Location = "westus",
+ *             PartnerNamespaceName = "examplePartnerNamespaceName1",
+ *             PartnerRegistrationFullyQualifiedId = "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
+ *             ResourceGroupName = "examplerg",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventgrid.NewPartnerNamespace(ctx, "partnerNamespace", &eventgrid.PartnerNamespaceArgs{
+ * 			Location:                            pulumi.String("westus"),
+ * 			PartnerNamespaceName:                pulumi.String("examplePartnerNamespaceName1"),
+ * 			PartnerRegistrationFullyQualifiedId: pulumi.String("/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1"),
+ * 			ResourceGroupName:                   pulumi.String("examplerg"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const partnerNamespace = new azure_native.eventgrid.PartnerNamespace("partnerNamespace", {
+ *     location: "westus",
+ *     partnerNamespaceName: "examplePartnerNamespaceName1",
+ *     partnerRegistrationFullyQualifiedId: "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
+ *     resourceGroupName: "examplerg",
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * partner_namespace = azure_native.eventgrid.PartnerNamespace("partnerNamespace",
+ *     location="westus",
+ *     partner_namespace_name="examplePartnerNamespaceName1",
+ *     partner_registration_fully_qualified_id="/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
+ *     resource_group_name="examplerg",
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,70 +130,60 @@ import javax.annotation.Nullable;
 public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     /**
      * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
-     * 
      */
     @Export(name="disableLocalAuth", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableLocalAuth;
 
     /**
      * @return This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth;
     }
     /**
      * Endpoint for the partner namespace.
-     * 
      */
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
      * @return Endpoint for the partner namespace.
-     * 
      */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
     /**
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-     * 
      */
     @Export(name="inboundIpRules", type=List.class, parameters={InboundIpRuleResponse.class})
     private Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules;
 
     /**
      * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-     * 
      */
     public Output</* @Nullable */ List<InboundIpRuleResponse>> getInboundIpRules() {
         return this.inboundIpRules;
     }
     /**
      * Location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location of the resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -108,7 +191,6 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     /**
      * The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
-     * 
      */
     @Export(name="partnerRegistrationFullyQualifiedId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerRegistrationFullyQualifiedId;
@@ -116,7 +198,6 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     /**
      * @return The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
-     * 
      */
     public Output</* @Nullable */ String> getPartnerRegistrationFullyQualifiedId() {
         return this.partnerRegistrationFullyQualifiedId;
@@ -129,14 +210,12 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     }
     /**
      * Provisioning state of the partner namespace.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the partner namespace.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
@@ -144,7 +223,6 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
@@ -152,49 +230,42 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     /**
      * @return This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The system metadata relating to Partner Namespace resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to Partner Namespace resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

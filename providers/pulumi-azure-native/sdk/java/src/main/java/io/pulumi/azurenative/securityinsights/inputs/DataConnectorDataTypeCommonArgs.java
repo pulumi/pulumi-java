@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Common field for data type in data connectors.
- * 
  */
 public final class DataConnectorDataTypeCommonArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DataConnectorDataTypeCommonArgs extends io.pulumi.resources.R
 
     /**
      * Describe whether this data type connection is enabled or not.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,DataTypeState>> state;

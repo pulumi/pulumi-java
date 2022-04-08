@@ -19,7 +19,6 @@ public final class CassandraClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Managed Cassandra cluster name.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -30,7 +29,6 @@ public final class CassandraClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Identity for the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -41,7 +39,6 @@ public final class CassandraClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class CassandraClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Properties of a managed Cassandra cluster.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ClusterResourcePropertiesArgs> properties;
@@ -63,7 +59,6 @@ public final class CassandraClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class CassandraClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

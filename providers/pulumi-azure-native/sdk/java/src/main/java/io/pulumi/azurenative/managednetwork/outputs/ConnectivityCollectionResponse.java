@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ConnectivityCollectionResponse {
     /**
      * The collection of connectivity related Managed Network Groups within the Managed Network
-     * 
      */
     private final List<ManagedNetworkGroupResponse> groups;
     /**
      * The collection of Managed Network Peering Policies within the Managed Network
-     * 
      */
     private final List<ManagedNetworkPeeringPolicyResponse> peerings;
 
@@ -32,14 +30,12 @@ public final class ConnectivityCollectionResponse {
 
     /**
      * The collection of connectivity related Managed Network Groups within the Managed Network
-     * 
     */
     public List<ManagedNetworkGroupResponse> getGroups() {
         return this.groups;
     }
     /**
      * The collection of Managed Network Peering Policies within the Managed Network
-     * 
     */
     public List<ManagedNetworkPeeringPolicyResponse> getPeerings() {
         return this.peerings;

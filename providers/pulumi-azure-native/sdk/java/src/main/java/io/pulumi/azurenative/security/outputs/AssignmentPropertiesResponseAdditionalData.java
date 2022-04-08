@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AssignmentPropertiesResponseAdditionalData {
     /**
      * Exemption category of this assignment
-     * 
      */
     private final @Nullable String exemptionCategory;
 
@@ -24,7 +23,6 @@ public final class AssignmentPropertiesResponseAdditionalData {
 
     /**
      * Exemption category of this assignment
-     * 
     */
     public Optional<String> getExemptionCategory() {
         return Optional.ofNullable(this.exemptionCategory);

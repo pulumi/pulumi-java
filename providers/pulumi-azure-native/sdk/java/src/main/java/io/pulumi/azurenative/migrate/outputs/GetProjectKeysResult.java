@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GetProjectKeysResult {
     /**
      * ID of Migration Project.
-     * 
      */
     private final String workspaceId;
     /**
      * Key of Migration Project.
-     * 
      */
     private final String workspaceKey;
 
@@ -30,14 +28,12 @@ public final class GetProjectKeysResult {
 
     /**
      * ID of Migration Project.
-     * 
     */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * Key of Migration Project.
-     * 
     */
     public String getWorkspaceKey() {
         return this.workspaceKey;

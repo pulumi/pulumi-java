@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the Apple provider.
- * 
  */
 public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -33,7 +31,6 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the login flow.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
@@ -44,7 +41,6 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the Apple registration.
-     * 
      */
     @Import(name="registration")
       private final @Nullable Output<AppleRegistrationArgs> registration;

@@ -20,9 +20,623 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate K8S Online Deployment.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var onlineDeployment = new AzureNative.MachineLearningServices.OnlineDeployment("onlineDeployment", new AzureNative.MachineLearningServices.OnlineDeploymentArgs
+ *         {
+ *             DeploymentName = "testDeployment",
+ *             EndpointName = "testEndpoint",
+ *             Identity = new AzureNative.MachineLearningServices.Inputs.ResourceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity", new AzureNative.MachineLearningServices.Inputs.UserAssignedIdentityMetaArgs
+ *                     {
+ *                         ClientId = "string",
+ *                         PrincipalId = "string",
+ *                     } },
+ *                 },
+ *             },
+ *             Kind = "string",
+ *             Location = "string",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.K8sOnlineDeploymentArgs
+ *             {
+ *                 AppInsightsEnabled = true,
+ *                 CodeConfiguration = new AzureNative.MachineLearningServices.Inputs.CodeConfigurationArgs
+ *                 {
+ *                     CodeId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ *                     ScoringScript = "string",
+ *                 },
+ *                 ContainerResourceRequirements = new AzureNative.MachineLearningServices.Inputs.ContainerResourceRequirementsArgs
+ *                 {
+ *                     Cpu = 4,
+ *                     CpuLimit = 4,
+ *                     MemoryInGB = 64,
+ *                     MemoryInGBLimit = 64,
+ *                 },
+ *                 Description = "string",
+ *                 EndpointComputeType = "K8S",
+ *                 EnvironmentId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ *                 LivenessProbe = new AzureNative.MachineLearningServices.Inputs.ProbeSettingsArgs
+ *                 {
+ *                     FailureThreshold = 50,
+ *                     InitialDelay = "PT1M",
+ *                     Period = "PT1M",
+ *                     SuccessThreshold = 50,
+ *                     Timeout = "PT1M",
+ *                 },
+ *                 Model = new AzureNative.MachineLearningServices.Inputs.IdAssetReferenceArgs
+ *                 {
+ *                     AssetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ *                     ReferenceType = "Id",
+ *                 },
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 RequestSettings = new AzureNative.MachineLearningServices.Inputs.OnlineRequestSettingsArgs
+ *                 {
+ *                     MaxConcurrentRequestsPerInstance = 5,
+ *                     MaxQueueWait = "PT1M",
+ *                     RequestTimeout = "PT1M",
+ *                 },
+ *                 ScaleSettings = new AzureNative.MachineLearningServices.Inputs.AutoScaleSettingsArgs
+ *                 {
+ *                     PollingInterval = "PT1M",
+ *                     ScaleType = "Auto",
+ *                     TargetUtilizationPercentage = 50,
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             Tags = 
+ *             {
+ *                 { "additionalProp1", "string" },
+ *                 { "additionalProp2", "string" },
+ *                 { "additionalProp3", "string" },
+ *             },
+ *             WorkspaceName = "workspace123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewOnlineDeployment(ctx, "onlineDeployment", &machinelearningservices.OnlineDeploymentArgs{
+ * 			DeploymentName: pulumi.String("testDeployment"),
+ * 			EndpointName:   pulumi.String("testEndpoint"),
+ * 			Identity: &machinelearningservices.ResourceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+ * 					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+ * 						ClientId:    pulumi.String("string"),
+ * 						PrincipalId: pulumi.String("string"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Kind:     pulumi.String("string"),
+ * 			Location: pulumi.String("string"),
+ * 			Properties: machinelearningservices.K8sOnlineDeployment{
+ * 				AppInsightsEnabled: true,
+ * 				CodeConfiguration: machinelearningservices.CodeConfiguration{
+ * 					CodeId:        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ * 					ScoringScript: "string",
+ * 				},
+ * 				ContainerResourceRequirements: machinelearningservices.ContainerResourceRequirements{
+ * 					Cpu:             4,
+ * 					CpuLimit:        4,
+ * 					MemoryInGB:      64,
+ * 					MemoryInGBLimit: 64,
+ * 				},
+ * 				Description:         "string",
+ * 				EndpointComputeType: "K8S",
+ * 				EnvironmentId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ * 				LivenessProbe: machinelearningservices.ProbeSettings{
+ * 					FailureThreshold: 50,
+ * 					InitialDelay:     "PT1M",
+ * 					Period:           "PT1M",
+ * 					SuccessThreshold: 50,
+ * 					Timeout:          "PT1M",
+ * 				},
+ * 				Model: machinelearningservices.IdAssetReference{
+ * 					AssetId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ * 					ReferenceType: "Id",
+ * 				},
+ * 				Properties: map[string]interface{}{
+ * 					"additionalProp1": "string",
+ * 					"additionalProp2": "string",
+ * 					"additionalProp3": "string",
+ * 				},
+ * 				RequestSettings: machinelearningservices.OnlineRequestSettings{
+ * 					MaxConcurrentRequestsPerInstance: 5,
+ * 					MaxQueueWait:                     "PT1M",
+ * 					RequestTimeout:                   "PT1M",
+ * 				},
+ * 				ScaleSettings: machinelearningservices.AutoScaleSettings{
+ * 					PollingInterval:             "PT1M",
+ * 					ScaleType:                   "Auto",
+ * 					TargetUtilizationPercentage: 50,
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			Tags: pulumi.StringMap{
+ * 				"additionalProp1": pulumi.String("string"),
+ * 				"additionalProp2": pulumi.String("string"),
+ * 				"additionalProp3": pulumi.String("string"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("workspace123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const onlineDeployment = new azure_native.machinelearningservices.OnlineDeployment("onlineDeployment", {
+ *     deploymentName: "testDeployment",
+ *     endpointName: "testEndpoint",
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": {
+ *                 clientId: "string",
+ *                 principalId: "string",
+ *             },
+ *         },
+ *     },
+ *     kind: "string",
+ *     location: "string",
+ *     properties: {
+ *         appInsightsEnabled: true,
+ *         codeConfiguration: {
+ *             codeId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ *             scoringScript: "string",
+ *         },
+ *         containerResourceRequirements: {
+ *             cpu: 4,
+ *             cpuLimit: 4,
+ *             memoryInGB: 64,
+ *             memoryInGBLimit: 64,
+ *         },
+ *         description: "string",
+ *         endpointComputeType: "K8S",
+ *         environmentId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ *         livenessProbe: {
+ *             failureThreshold: 50,
+ *             initialDelay: "PT1M",
+ *             period: "PT1M",
+ *             successThreshold: 50,
+ *             timeout: "PT1M",
+ *         },
+ *         model: {
+ *             assetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ *             referenceType: "Id",
+ *         },
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         requestSettings: {
+ *             maxConcurrentRequestsPerInstance: 5,
+ *             maxQueueWait: "PT1M",
+ *             requestTimeout: "PT1M",
+ *         },
+ *         scaleSettings: {
+ *             pollingInterval: "PT1M",
+ *             scaleType: "Auto",
+ *             targetUtilizationPercentage: 50,
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     tags: {
+ *         additionalProp1: "string",
+ *         additionalProp2: "string",
+ *         additionalProp3: "string",
+ *     },
+ *     workspaceName: "workspace123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * online_deployment = azure_native.machinelearningservices.OnlineDeployment("onlineDeployment",
+ *     deployment_name="testDeployment",
+ *     endpoint_name="testEndpoint",
+ *     identity=azure_native.machinelearningservices.ResourceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": azure_native.machinelearningservices.UserAssignedIdentityMetaArgs(
+ *                 client_id="string",
+ *                 principal_id="string",
+ *             ),
+ *         },
+ *     ),
+ *     kind="string",
+ *     location="string",
+ *     properties=azure_native.machinelearningservices.K8sOnlineDeploymentArgs(
+ *         app_insights_enabled=True,
+ *         code_configuration=azure_native.machinelearningservices.CodeConfigurationArgs(
+ *             code_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ *             scoring_script="string",
+ *         ),
+ *         container_resource_requirements=azure_native.machinelearningservices.ContainerResourceRequirementsArgs(
+ *             cpu=4,
+ *             cpu_limit=4,
+ *             memory_in_gb=64,
+ *             memory_in_gb_limit=64,
+ *         ),
+ *         description="string",
+ *         endpoint_compute_type="K8S",
+ *         environment_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ *         liveness_probe=azure_native.machinelearningservices.ProbeSettingsArgs(
+ *             failure_threshold=50,
+ *             initial_delay="PT1M",
+ *             period="PT1M",
+ *             success_threshold=50,
+ *             timeout="PT1M",
+ *         ),
+ *         model=azure_native.machinelearningservices.IdAssetReferenceArgs(
+ *             asset_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ *             reference_type="Id",
+ *         ),
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         request_settings=azure_native.machinelearningservices.OnlineRequestSettingsArgs(
+ *             max_concurrent_requests_per_instance=5,
+ *             max_queue_wait="PT1M",
+ *             request_timeout="PT1M",
+ *         ),
+ *         scale_settings=azure_native.machinelearningservices.AutoScaleSettingsArgs(
+ *             polling_interval="PT1M",
+ *             scale_type="Auto",
+ *             target_utilization_percentage=50,
+ *         ),
+ *     ),
+ *     resource_group_name="testrg123",
+ *     tags={
+ *         "additionalProp1": "string",
+ *         "additionalProp2": "string",
+ *         "additionalProp3": "string",
+ *     },
+ *     workspace_name="workspace123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### CreateOrUpdate Managed Online Deployment.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var onlineDeployment = new AzureNative.MachineLearningServices.OnlineDeployment("onlineDeployment", new AzureNative.MachineLearningServices.OnlineDeploymentArgs
+ *         {
+ *             DeploymentName = "testDeployment",
+ *             EndpointName = "testEndpoint",
+ *             Identity = new AzureNative.MachineLearningServices.Inputs.ResourceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity", new AzureNative.MachineLearningServices.Inputs.UserAssignedIdentityMetaArgs
+ *                     {
+ *                         ClientId = "string",
+ *                         PrincipalId = "string",
+ *                     } },
+ *                 },
+ *             },
+ *             Kind = "string",
+ *             Location = "string",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.ManagedOnlineDeploymentArgs
+ *             {
+ *                 AppInsightsEnabled = true,
+ *                 CodeConfiguration = new AzureNative.MachineLearningServices.Inputs.CodeConfigurationArgs
+ *                 {
+ *                     CodeId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ *                     ScoringScript = "string",
+ *                 },
+ *                 Description = "string",
+ *                 EndpointComputeType = "Managed",
+ *                 EnvironmentId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ *                 LivenessProbe = new AzureNative.MachineLearningServices.Inputs.ProbeSettingsArgs
+ *                 {
+ *                     FailureThreshold = 50,
+ *                     InitialDelay = "PT1M",
+ *                     Period = "PT1M",
+ *                     SuccessThreshold = 50,
+ *                     Timeout = "PT1M",
+ *                 },
+ *                 Model = new AzureNative.MachineLearningServices.Inputs.IdAssetReferenceArgs
+ *                 {
+ *                     AssetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ *                     ReferenceType = "Id",
+ *                 },
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 RequestSettings = new AzureNative.MachineLearningServices.Inputs.OnlineRequestSettingsArgs
+ *                 {
+ *                     MaxConcurrentRequestsPerInstance = 5,
+ *                     MaxQueueWait = "PT1M",
+ *                     RequestTimeout = "PT1M",
+ *                 },
+ *                 ScaleSettings = new AzureNative.MachineLearningServices.Inputs.AutoScaleSettingsArgs
+ *                 {
+ *                     PollingInterval = "PT1M",
+ *                     ScaleType = "Auto",
+ *                     TargetUtilizationPercentage = 50,
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             Tags = 
+ *             {
+ *                 { "additionalProp1", "string" },
+ *                 { "additionalProp2", "string" },
+ *                 { "additionalProp3", "string" },
+ *             },
+ *             WorkspaceName = "workspace123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewOnlineDeployment(ctx, "onlineDeployment", &machinelearningservices.OnlineDeploymentArgs{
+ * 			DeploymentName: pulumi.String("testDeployment"),
+ * 			EndpointName:   pulumi.String("testEndpoint"),
+ * 			Identity: &machinelearningservices.ResourceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+ * 					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+ * 						ClientId:    pulumi.String("string"),
+ * 						PrincipalId: pulumi.String("string"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Kind:     pulumi.String("string"),
+ * 			Location: pulumi.String("string"),
+ * 			Properties: machinelearningservices.ManagedOnlineDeployment{
+ * 				AppInsightsEnabled: true,
+ * 				CodeConfiguration: machinelearningservices.CodeConfiguration{
+ * 					CodeId:        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ * 					ScoringScript: "string",
+ * 				},
+ * 				Description:         "string",
+ * 				EndpointComputeType: "Managed",
+ * 				EnvironmentId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ * 				LivenessProbe: machinelearningservices.ProbeSettings{
+ * 					FailureThreshold: 50,
+ * 					InitialDelay:     "PT1M",
+ * 					Period:           "PT1M",
+ * 					SuccessThreshold: 50,
+ * 					Timeout:          "PT1M",
+ * 				},
+ * 				Model: machinelearningservices.IdAssetReference{
+ * 					AssetId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ * 					ReferenceType: "Id",
+ * 				},
+ * 				Properties: map[string]interface{}{
+ * 					"additionalProp1": "string",
+ * 					"additionalProp2": "string",
+ * 					"additionalProp3": "string",
+ * 				},
+ * 				RequestSettings: machinelearningservices.OnlineRequestSettings{
+ * 					MaxConcurrentRequestsPerInstance: 5,
+ * 					MaxQueueWait:                     "PT1M",
+ * 					RequestTimeout:                   "PT1M",
+ * 				},
+ * 				ScaleSettings: machinelearningservices.AutoScaleSettings{
+ * 					PollingInterval:             "PT1M",
+ * 					ScaleType:                   "Auto",
+ * 					TargetUtilizationPercentage: 50,
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			Tags: pulumi.StringMap{
+ * 				"additionalProp1": pulumi.String("string"),
+ * 				"additionalProp2": pulumi.String("string"),
+ * 				"additionalProp3": pulumi.String("string"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("workspace123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const onlineDeployment = new azure_native.machinelearningservices.OnlineDeployment("onlineDeployment", {
+ *     deploymentName: "testDeployment",
+ *     endpointName: "testEndpoint",
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": {
+ *                 clientId: "string",
+ *                 principalId: "string",
+ *             },
+ *         },
+ *     },
+ *     kind: "string",
+ *     location: "string",
+ *     properties: {
+ *         appInsightsEnabled: true,
+ *         codeConfiguration: {
+ *             codeId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ *             scoringScript: "string",
+ *         },
+ *         description: "string",
+ *         endpointComputeType: "Managed",
+ *         environmentId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ *         livenessProbe: {
+ *             failureThreshold: 50,
+ *             initialDelay: "PT1M",
+ *             period: "PT1M",
+ *             successThreshold: 50,
+ *             timeout: "PT1M",
+ *         },
+ *         model: {
+ *             assetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ *             referenceType: "Id",
+ *         },
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         requestSettings: {
+ *             maxConcurrentRequestsPerInstance: 5,
+ *             maxQueueWait: "PT1M",
+ *             requestTimeout: "PT1M",
+ *         },
+ *         scaleSettings: {
+ *             pollingInterval: "PT1M",
+ *             scaleType: "Auto",
+ *             targetUtilizationPercentage: 50,
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     tags: {
+ *         additionalProp1: "string",
+ *         additionalProp2: "string",
+ *         additionalProp3: "string",
+ *     },
+ *     workspaceName: "workspace123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * online_deployment = azure_native.machinelearningservices.OnlineDeployment("onlineDeployment",
+ *     deployment_name="testDeployment",
+ *     endpoint_name="testEndpoint",
+ *     identity=azure_native.machinelearningservices.ResourceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": azure_native.machinelearningservices.UserAssignedIdentityMetaArgs(
+ *                 client_id="string",
+ *                 principal_id="string",
+ *             ),
+ *         },
+ *     ),
+ *     kind="string",
+ *     location="string",
+ *     properties=azure_native.machinelearningservices.ManagedOnlineDeploymentArgs(
+ *         app_insights_enabled=True,
+ *         code_configuration=azure_native.machinelearningservices.CodeConfigurationArgs(
+ *             code_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+ *             scoring_script="string",
+ *         ),
+ *         description="string",
+ *         endpoint_compute_type="Managed",
+ *         environment_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+ *         liveness_probe=azure_native.machinelearningservices.ProbeSettingsArgs(
+ *             failure_threshold=50,
+ *             initial_delay="PT1M",
+ *             period="PT1M",
+ *             success_threshold=50,
+ *             timeout="PT1M",
+ *         ),
+ *         model=azure_native.machinelearningservices.IdAssetReferenceArgs(
+ *             asset_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+ *             reference_type="Id",
+ *         ),
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         request_settings=azure_native.machinelearningservices.OnlineRequestSettingsArgs(
+ *             max_concurrent_requests_per_instance=5,
+ *             max_queue_wait="PT1M",
+ *             request_timeout="PT1M",
+ *         ),
+ *         scale_settings=azure_native.machinelearningservices.AutoScaleSettingsArgs(
+ *             polling_interval="PT1M",
+ *             scale_type="Auto",
+ *             target_utilization_percentage=50,
+ *         ),
+ *     ),
+ *     resource_group_name="testrg123",
+ *     tags={
+ *         "additionalProp1": "string",
+ *         "additionalProp2": "string",
+ *         "additionalProp3": "string",
+ *     },
+ *     workspace_name="workspace123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,112 +651,96 @@ import javax.annotation.Nullable;
 public class OnlineDeployment extends io.pulumi.resources.CustomResource {
     /**
      * Service identity associated with a resource.
-     * 
      */
     @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
      * @return Service identity associated with a resource.
-     * 
      */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=Either.class, parameters={K8sOnlineDeploymentResponse.class, ManagedOnlineDeploymentResponse.class})
     private Output<Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse>> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse>> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

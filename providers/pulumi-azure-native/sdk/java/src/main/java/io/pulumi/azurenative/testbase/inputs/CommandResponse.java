@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The command used in the test
- * 
  */
 public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The action of the command.
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -33,7 +31,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether to run the command even if a previous command is failed.
-     * 
      */
     @Import(name="alwaysRun")
       private final @Nullable Boolean alwaysRun;
@@ -44,7 +41,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether to apply update before the command.
-     * 
      */
     @Import(name="applyUpdateBefore")
       private final @Nullable Boolean applyUpdateBefore;
@@ -55,7 +51,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The content of the command. The content depends on source type.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;
@@ -66,7 +61,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of command content.
-     * 
      */
     @Import(name="contentType", required=true)
       private final String contentType;
@@ -77,7 +71,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the max run time of the command.
-     * 
      */
     @Import(name="maxRunTime")
       private final @Nullable Integer maxRunTime;
@@ -88,7 +81,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the command.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -99,7 +91,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether to restart the VM after the command executed.
-     * 
      */
     @Import(name="restartAfter")
       private final @Nullable Boolean restartAfter;
@@ -110,7 +101,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether to run the command in interactive mode.
-     * 
      */
     @Import(name="runAsInteractive")
       private final @Nullable Boolean runAsInteractive;
@@ -121,7 +111,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether to run the command as administrator.
-     * 
      */
     @Import(name="runElevated")
       private final @Nullable Boolean runElevated;

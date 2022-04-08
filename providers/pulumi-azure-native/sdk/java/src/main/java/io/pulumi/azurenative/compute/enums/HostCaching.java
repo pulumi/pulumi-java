@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
-     * 
      */
     @EnumType
     public enum HostCaching {

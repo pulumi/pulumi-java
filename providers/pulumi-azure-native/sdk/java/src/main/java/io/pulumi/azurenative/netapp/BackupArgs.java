@@ -16,7 +16,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the NetApp account
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the backup
-     * 
      */
     @Import(name="backupName")
       private final @Nullable Output<String> backupName;
@@ -38,7 +36,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Label for backup
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -49,7 +46,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -60,7 +56,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the capacity pool
-     * 
      */
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
@@ -71,7 +66,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -82,7 +76,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the volume
-     * 
      */
     @Import(name="volumeName", required=true)
       private final Output<String> volumeName;

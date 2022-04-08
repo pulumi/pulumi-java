@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The SKU of a container registry.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU name of the container registry. Required for registry creation.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;

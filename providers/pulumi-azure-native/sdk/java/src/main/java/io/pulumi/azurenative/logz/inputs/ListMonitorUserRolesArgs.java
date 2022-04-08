@@ -16,7 +16,6 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Email of the user used by Logz for contacting them if needed
-     * 
      */
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;
@@ -27,7 +26,6 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -38,7 +36,6 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

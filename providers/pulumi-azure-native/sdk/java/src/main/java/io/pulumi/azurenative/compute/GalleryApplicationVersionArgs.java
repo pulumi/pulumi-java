@@ -18,7 +18,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the gallery Application Definition in which the Application Version is to be created.
-     * 
      */
     @Import(name="galleryApplicationName", required=true)
       private final Output<String> galleryApplicationName;
@@ -29,7 +28,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>
-     * 
      */
     @Import(name="galleryApplicationVersionName")
       private final @Nullable Output<String> galleryApplicationVersionName;
@@ -40,7 +38,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the Shared Application Gallery in which the Application Definition resides.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
@@ -51,7 +48,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -62,7 +58,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     /**
      * The publishing profile of a gallery image version.
-     * 
      */
     @Import(name="publishingProfile", required=true)
       private final Output<GalleryApplicationVersionPublishingProfileArgs> publishingProfile;
@@ -73,7 +68,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -20,7 +20,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the availability group listener.
-     * 
      */
     @Import(name="availabilityGroupListenerName")
       private final @Nullable Output<String> availabilityGroupListenerName;
@@ -31,7 +30,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the availability group.
-     * 
      */
     @Import(name="availabilityGroupName")
       private final @Nullable Output<String> availabilityGroupName;
@@ -42,7 +40,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     /**
      * Create a default availability group if it does not exist.
-     * 
      */
     @Import(name="createDefaultAvailabilityGroupIfNotExist")
       private final @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
@@ -53,7 +50,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     /**
      * List of load balancer configurations for an availability group listener.
-     * 
      */
     @Import(name="loadBalancerConfigurations")
       private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
@@ -64,7 +60,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     /**
      * Listener port.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -75,7 +70,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the SQL virtual machine group.
-     * 
      */
     @Import(name="sqlVirtualMachineGroupName", required=true)
       private final Output<String> sqlVirtualMachineGroupName;

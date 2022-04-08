@@ -14,7 +14,6 @@ public final class GetTenantConfigurationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The configuration name. Value must be 'default'
-     * 
      */
     @Import(name="configurationName", required=true)
       private final String configurationName;

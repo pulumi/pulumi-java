@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the parameters for the origin group override action.
- * 
  */
 public final class OriginGroupOverrideActionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
 
     /**
      * defines the OriginGroup that would override the DefaultOriginGroup.
-     * 
      */
     @Import(name="originGroup", required=true)
       private final ResourceReferenceResponse originGroup;

@@ -19,7 +19,142 @@ import javax.annotation.Nullable;
  * App resource payload
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Apps_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new AzureNative.AppPlatform.App("app", new AzureNative.AppPlatform.AppArgs
+ *         {
+ *             AppName = "myapp",
+ *             Location = "eastus",
+ *             Properties = new AzureNative.AppPlatform.Inputs.AppResourcePropertiesArgs
+ *             {
+ *                 ActiveDeploymentName = "mydeployment1",
+ *                 Fqdn = "myapp.mydomain.com",
+ *                 HttpsOnly = false,
+ *                 PersistentDisk = new AzureNative.AppPlatform.Inputs.PersistentDiskArgs
+ *                 {
+ *                     MountPath = "/mypersistentdisk",
+ *                     SizeInGB = 2,
+ *                 },
+ *                 Public = true,
+ *                 TemporaryDisk = new AzureNative.AppPlatform.Inputs.TemporaryDiskArgs
+ *                 {
+ *                     MountPath = "/mytemporarydisk",
+ *                     SizeInGB = 2,
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewApp(ctx, "app", &appplatform.AppArgs{
+ * 			AppName:  pulumi.String("myapp"),
+ * 			Location: pulumi.String("eastus"),
+ * 			Properties: &appplatform.AppResourcePropertiesArgs{
+ * 				ActiveDeploymentName: pulumi.String("mydeployment1"),
+ * 				Fqdn:                 pulumi.String("myapp.mydomain.com"),
+ * 				HttpsOnly:            pulumi.Bool(false),
+ * 				PersistentDisk: &appplatform.PersistentDiskArgs{
+ * 					MountPath: pulumi.String("/mypersistentdisk"),
+ * 					SizeInGB:  pulumi.Int(2),
+ * 				},
+ * 				Public: pulumi.Bool(true),
+ * 				TemporaryDisk: &appplatform.TemporaryDiskArgs{
+ * 					MountPath: pulumi.String("/mytemporarydisk"),
+ * 					SizeInGB:  pulumi.Int(2),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const app = new azure_native.appplatform.App("app", {
+ *     appName: "myapp",
+ *     location: "eastus",
+ *     properties: {
+ *         activeDeploymentName: "mydeployment1",
+ *         fqdn: "myapp.mydomain.com",
+ *         httpsOnly: false,
+ *         persistentDisk: {
+ *             mountPath: "/mypersistentdisk",
+ *             sizeInGB: 2,
+ *         },
+ *         "public": true,
+ *         temporaryDisk: {
+ *             mountPath: "/mytemporarydisk",
+ *             sizeInGB: 2,
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * app = azure_native.appplatform.App("app",
+ *     app_name="myapp",
+ *     location="eastus",
+ *     properties=azure_native.appplatform.AppResourcePropertiesArgs(
+ *         active_deployment_name="mydeployment1",
+ *         fqdn="myapp.mydomain.com",
+ *         https_only=False,
+ *         persistent_disk=azure_native.appplatform.PersistentDiskArgs(
+ *             mount_path="/mypersistentdisk",
+ *             size_in_gb=2,
+ *         ),
+ *         public=True,
+ *         temporary_disk=azure_native.appplatform.TemporaryDiskArgs(
+ *             mount_path="/mytemporarydisk",
+ *             size_in_gb=2,
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +169,60 @@ import javax.annotation.Nullable;
 public class App extends io.pulumi.resources.CustomResource {
     /**
      * The Managed Identity type of the app resource
-     * 
      */
     @Export(name="identity", type=ManagedIdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityPropertiesResponse> identity;
 
     /**
      * @return The Managed Identity type of the app resource
-     * 
      */
     public Output</* @Nullable */ ManagedIdentityPropertiesResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The GEO location of the application, always the same with its parent resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The GEO location of the application, always the same with its parent resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the App resource
-     * 
      */
     @Export(name="properties", type=AppResourcePropertiesResponse.class, parameters={})
     private Output<AppResourcePropertiesResponse> properties;
 
     /**
      * @return Properties of the App resource
-     * 
      */
     public Output<AppResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

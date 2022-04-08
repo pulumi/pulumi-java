@@ -14,7 +14,6 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
 
     /**
      * Name of the App Service plan.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
 
     /**
      * The name of the Service Bus namespace.
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
 
     /**
      * The name of the Service Bus relay.
-     * 
      */
     @Import(name="relayName", required=true)
       private final String relayName;
@@ -47,7 +44,6 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

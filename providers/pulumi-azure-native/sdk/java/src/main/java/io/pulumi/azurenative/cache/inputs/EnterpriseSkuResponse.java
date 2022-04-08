@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU parameters supplied to the create RedisEnterprise operation.
- * 
  */
 public final class EnterpriseSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EnterpriseSkuResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class EnterpriseSkuResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

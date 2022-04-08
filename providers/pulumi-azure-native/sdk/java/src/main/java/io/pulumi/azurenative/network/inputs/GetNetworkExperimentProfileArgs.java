@@ -14,7 +14,6 @@ public final class GetNetworkExperimentProfileArgs extends io.pulumi.resources.I
 
     /**
      * The Profile identifier associated with the Tenant and Partner
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -25,7 +24,6 @@ public final class GetNetworkExperimentProfileArgs extends io.pulumi.resources.I
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

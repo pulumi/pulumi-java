@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class NonAzureQueryPropertiesResponse {
     /**
      * Log Analytics Saved Search name.
-     * 
      */
     private final @Nullable String functionAlias;
     /**
      * Workspace Id for Log Analytics in which the saved Search is resided.
-     * 
      */
     private final @Nullable String workspaceId;
 
@@ -32,14 +30,12 @@ public final class NonAzureQueryPropertiesResponse {
 
     /**
      * Log Analytics Saved Search name.
-     * 
     */
     public Optional<String> getFunctionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
     /**
      * Workspace Id for Log Analytics in which the saved Search is resided.
-     * 
     */
     public Optional<String> getWorkspaceId() {
         return Optional.ofNullable(this.workspaceId);

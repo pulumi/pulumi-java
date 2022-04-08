@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class NameIdentifierResponse {
     /**
      * Name of the object.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class NameIdentifierResponse {
 
     /**
      * Name of the object.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

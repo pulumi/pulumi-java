@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB Cassandra table cluster key
- * 
  */
 public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Cosmos DB Cassandra table cluster key
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
-     * 
      */
     @Import(name="orderBy")
       private final @Nullable Output<String> orderBy;

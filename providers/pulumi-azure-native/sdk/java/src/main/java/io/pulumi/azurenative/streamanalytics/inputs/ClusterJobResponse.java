@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A streaming job.
- * 
  */
 public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID of the streaming job.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -30,7 +28,6 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The current execution state of the streaming job.
-     * 
      */
     @Import(name="jobState", required=true)
       private final String jobState;
@@ -41,7 +38,6 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of streaming units that are used by the streaming job.
-     * 
      */
     @Import(name="streamingUnits", required=true)
       private final Integer streamingUnits;

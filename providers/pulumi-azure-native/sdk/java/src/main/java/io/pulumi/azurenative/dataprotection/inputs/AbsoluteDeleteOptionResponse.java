@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Delete option with duration
- * 
  */
 public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
 
     /**
      * Duration of deletion after given timespan
-     * 
      */
     @Import(name="duration", required=true)
       private final String duration;
@@ -30,7 +28,6 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AbsoluteDeleteOption'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;

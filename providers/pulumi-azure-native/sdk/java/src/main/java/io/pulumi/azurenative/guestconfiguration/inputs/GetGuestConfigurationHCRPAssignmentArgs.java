@@ -14,7 +14,6 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
 
     /**
      * The guest configuration assignment name.
-     * 
      */
     @Import(name="guestConfigurationAssignmentName", required=true)
       private final String guestConfigurationAssignmentName;
@@ -25,7 +24,6 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
 
     /**
      * The name of the ARC machine.
-     * 
      */
     @Import(name="machineName", required=true)
       private final String machineName;
@@ -36,7 +34,6 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

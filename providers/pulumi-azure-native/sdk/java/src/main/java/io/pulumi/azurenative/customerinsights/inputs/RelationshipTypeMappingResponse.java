@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Maps fields in Profile to their corresponding StrongIds in Related Profile.
- * 
  */
 public final class RelationshipTypeMappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RelationshipTypeMappingResponse extends io.pulumi.resources.I
 
     /**
      * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
-     * 
      */
     @Import(name="fieldMappings", required=true)
       private final List<RelationshipTypeFieldMappingResponse> fieldMappings;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The network configuration group resource
- * 
  */
 public final class ConfigurationGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
 
     /**
      * Network group conditional filter.
-     * 
      */
     @Import(name="conditionalMembership")
       private final @Nullable String conditionalMembership;
@@ -33,7 +31,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
 
     /**
      * A description of the network group.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -44,7 +41,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
 
     /**
      * A friendly name for the network group.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -55,7 +51,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
 
     /**
      * Group members of network group.
-     * 
      */
     @Import(name="groupMembers")
       private final @Nullable List<GroupMembersItemResponse> groupMembers;
@@ -66,7 +61,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -77,7 +71,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
 
     /**
      * Group member type.
-     * 
      */
     @Import(name="memberType")
       private final @Nullable String memberType;
@@ -88,7 +81,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
 
     /**
      * The provisioning state of the scope assignment resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

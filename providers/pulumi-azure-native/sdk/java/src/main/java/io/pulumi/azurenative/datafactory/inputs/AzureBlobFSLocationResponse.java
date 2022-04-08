@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The location of azure blobFS dataset.
- * 
  */
 public final class AzureBlobFSLocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureBlobFSLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Object fileName;
@@ -32,7 +30,6 @@ public final class AzureBlobFSLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileSystem")
       private final @Nullable Object fileSystem;
@@ -43,7 +40,6 @@ public final class AzureBlobFSLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Object folderPath;
@@ -55,7 +51,6 @@ public final class AzureBlobFSLocationResponse extends io.pulumi.resources.Invok
     /**
      * Type of dataset storage location.
      * Expected value is 'AzureBlobFSLocation'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

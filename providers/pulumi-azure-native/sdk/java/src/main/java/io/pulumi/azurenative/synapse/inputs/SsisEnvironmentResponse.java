@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ssis environment.
- * 
  */
 public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Metadata description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -34,7 +32,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Folder id which contains environment.
-     * 
      */
     @Import(name="folderId")
       private final @Nullable Double folderId;
@@ -45,7 +42,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Metadata id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Double id;
@@ -56,7 +52,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Metadata name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -68,7 +63,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
     /**
      * The type of SSIS object metadata.
      * Expected value is 'Environment'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -79,7 +73,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Variable in environment
-     * 
      */
     @Import(name="variables")
       private final @Nullable List<SsisVariableResponse> variables;

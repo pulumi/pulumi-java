@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The validation results. There's validation on package when it's created or updated.
- * 
  */
 public final class PackageValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
 
     /**
      * Error information.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<String> errors;
@@ -31,7 +29,6 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
 
     /**
      * Indicates whether the package passed the validation.
-     * 
      */
     @Import(name="isValid", required=true)
       private final Boolean isValid;
@@ -42,7 +39,6 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
 
     /**
      * Validation name.
-     * 
      */
     @Import(name="validationName", required=true)
       private final String validationName;

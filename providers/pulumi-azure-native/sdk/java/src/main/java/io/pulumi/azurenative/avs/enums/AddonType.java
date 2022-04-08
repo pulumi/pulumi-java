@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of private cloud addon
-     * 
      */
     @EnumType
     public enum AddonType {

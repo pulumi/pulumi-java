@@ -24,7 +24,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether another user can take ownership of the virtual machine
-     * 
      */
     @Import(name="allowClaim")
       private final @Nullable Output<Boolean> allowClaim;
@@ -35,7 +34,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The artifacts to be installed on the virtual machine.
-     * 
      */
     @Import(name="artifacts")
       private final @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
@@ -46,7 +44,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The creation date of the virtual machine.
-     * 
      */
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
@@ -57,7 +54,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The custom image identifier of the virtual machine.
-     * 
      */
     @Import(name="customImageId")
       private final @Nullable Output<String> customImageId;
@@ -68,7 +64,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * New or existing data disks to attach to the virtual machine after creation
-     * 
      */
     @Import(name="dataDiskParameters")
       private final @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
@@ -79,7 +74,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the virtual machine is to be created without a public IP address.
-     * 
      */
     @Import(name="disallowPublicIpAddress")
       private final @Nullable Output<Boolean> disallowPublicIpAddress;
@@ -90,7 +84,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the environment that contains this virtual machine, if any.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
@@ -101,7 +94,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The expiration date for VM.
-     * 
      */
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
@@ -112,7 +104,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Microsoft Azure Marketplace image reference of the virtual machine.
-     * 
      */
     @Import(name="galleryImageReference")
       private final @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
@@ -123,7 +114,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether this virtual machine uses an SSH key for authentication.
-     * 
      */
     @Import(name="isAuthenticationWithSshKey")
       private final @Nullable Output<Boolean> isAuthenticationWithSshKey;
@@ -134,7 +124,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -145,7 +134,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The lab subnet name of the virtual machine.
-     * 
      */
     @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
@@ -156,7 +144,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The lab virtual network identifier of the virtual machine.
-     * 
      */
     @Import(name="labVirtualNetworkId")
       private final @Nullable Output<String> labVirtualNetworkId;
@@ -167,7 +154,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -178,7 +164,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the virtual machine.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -189,7 +174,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The network interface properties.
-     * 
      */
     @Import(name="networkInterface")
       private final @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
@@ -200,7 +184,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The notes of the virtual machine.
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -211,7 +194,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The object identifier of the owner of the virtual machine.
-     * 
      */
     @Import(name="ownerObjectId")
       private final @Nullable Output<String> ownerObjectId;
@@ -222,7 +204,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user principal name of the virtual machine owner.
-     * 
      */
     @Import(name="ownerUserPrincipalName")
       private final @Nullable Output<String> ownerUserPrincipalName;
@@ -233,7 +214,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The password of the virtual machine administrator.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -244,7 +224,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id of the plan associated with the virtual machine image
-     * 
      */
     @Import(name="planId")
       private final @Nullable Output<String> planId;
@@ -255,7 +234,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -266,7 +244,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual Machine schedules to be created
-     * 
      */
     @Import(name="scheduleParameters")
       private final @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
@@ -277,7 +254,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The size of the virtual machine.
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -288,7 +264,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SSH key of the virtual machine administrator.
-     * 
      */
     @Import(name="sshKey")
       private final @Nullable Output<String> sshKey;
@@ -299,7 +274,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage type to use for virtual machine (i.e. Standard, Premium).
-     * 
      */
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
@@ -310,7 +284,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -321,7 +294,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user name of the virtual machine.
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

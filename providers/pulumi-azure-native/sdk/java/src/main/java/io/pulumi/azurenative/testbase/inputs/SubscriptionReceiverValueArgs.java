@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The subscription role receiver value.
- * 
  */
 public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
 
     /**
      * The role of the notification receiver.
-     * 
      */
     @Import(name="role")
       private final @Nullable Output<String> role;
@@ -31,7 +29,6 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
 
     /**
      * The subscription id of the notification receiver.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -42,7 +39,6 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
 
     /**
      * The subscription name of the notification receiver.
-     * 
      */
     @Import(name="subscriptionName")
       private final @Nullable Output<String> subscriptionName;

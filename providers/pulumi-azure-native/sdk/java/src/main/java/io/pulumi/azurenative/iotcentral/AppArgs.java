@@ -18,7 +18,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the application.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -29,7 +28,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the IoT Central application.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARM resource name of the IoT Central application.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -62,7 +58,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A valid instance SKU.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<AppSkuInfoArgs> sku;
@@ -73,7 +68,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subdomain of the application.
-     * 
      */
     @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
@@ -84,7 +78,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -95,7 +88,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
-     * 
      */
     @Import(name="template")
       private final @Nullable Output<String> template;

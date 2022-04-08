@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The operation for configuring intrusion detection.
- * 
  */
 public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends io.
 
     /**
      * List of rules for traffic to bypass.
-     * 
      */
     @Import(name="bypassTrafficSettings")
       private final @Nullable Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings;
@@ -33,7 +31,6 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends io.
 
     /**
      * List of specific signatures states.
-     * 
      */
     @Import(name="signatureOverrides")
       private final @Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides;

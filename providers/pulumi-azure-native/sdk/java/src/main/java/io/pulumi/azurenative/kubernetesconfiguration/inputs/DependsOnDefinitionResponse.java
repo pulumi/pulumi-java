@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specify which kustomizations must succeed reconciliation on the cluster prior to reconciling this kustomization
- * 
  */
 public final class DependsOnDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DependsOnDefinitionResponse extends io.pulumi.resources.Invok
 
     /**
      * Name of the kustomization to claim dependency on
-     * 
      */
     @Import(name="kustomizationName")
       private final @Nullable String kustomizationName;

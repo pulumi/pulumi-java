@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container with items backed up using MAB backup engine.
- * 
  */
 public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Agent version of this container.
-     * 
      */
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
@@ -36,7 +34,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -47,7 +44,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Can the container be registered one more time.
-     * 
      */
     @Import(name="canReRegister")
       private final @Nullable Boolean canReRegister;
@@ -58,7 +54,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health state of mab container.
-     * 
      */
     @Import(name="containerHealthState")
       private final @Nullable String containerHealthState;
@@ -69,7 +64,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ContainerID represents the container.
-     * 
      */
     @Import(name="containerId")
       private final @Nullable Double containerId;
@@ -84,7 +78,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'Windows'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final String containerType;
@@ -95,7 +88,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Additional information for this container
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable MabContainerExtendedInfoResponse extendedInfo;
@@ -106,7 +98,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -117,7 +108,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -128,7 +118,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health details on this mab container.
-     * 
      */
     @Import(name="mabContainerHealthDetails")
       private final @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
@@ -139,7 +128,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of items backed up in this container.
-     * 
      */
     @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
@@ -150,7 +138,6 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * VM Resource Ids
- * 
  */
 public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Version of the Logz agent installed on the VM.
-     * 
      */
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
@@ -31,7 +29,6 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Request of a list vm host update operation.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

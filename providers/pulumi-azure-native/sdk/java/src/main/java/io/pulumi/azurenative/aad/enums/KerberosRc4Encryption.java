@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
-     * 
      */
     @EnumType
     public enum KerberosRc4Encryption {

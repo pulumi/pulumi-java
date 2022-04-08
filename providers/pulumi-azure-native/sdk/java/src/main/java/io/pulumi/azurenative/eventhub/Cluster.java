@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * Single Event Hubs Cluster resource in List or Get operations.
  * API Version: 2018-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ClusterPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cluster = new AzureNative.EventHub.Cluster("cluster", new AzureNative.EventHub.ClusterArgs
+ *         {
+ *             ClusterName = "testCluster",
+ *             Location = "South Central US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.EventHub.Inputs.ClusterSkuArgs
+ *             {
+ *                 Capacity = 1,
+ *                 Name = "Dedicated",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventhub.NewCluster(ctx, "cluster", &eventhub.ClusterArgs{
+ * 			ClusterName:       pulumi.String("testCluster"),
+ * 			Location:          pulumi.String("South Central US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &eventhub.ClusterSkuArgs{
+ * 				Capacity: pulumi.Int(1),
+ * 				Name:     pulumi.String("Dedicated"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cluster = new azure_native.eventhub.Cluster("cluster", {
+ *     clusterName: "testCluster",
+ *     location: "South Central US",
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 1,
+ *         name: "Dedicated",
+ *     },
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cluster = azure_native.eventhub.Cluster("cluster",
+ *     cluster_name="testCluster",
+ *     location="South Central US",
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.eventhub.ClusterSkuArgs(
+ *         capacity=1,
+ *         name="Dedicated",
+ *     ),
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +140,108 @@ import javax.annotation.Nullable;
 public class Cluster extends io.pulumi.resources.CustomResource {
     /**
      * The UTC time when the Event Hubs Cluster was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The UTC time when the Event Hubs Cluster was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
-     * 
      */
     @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
      * @return The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
-     * 
      */
     public Output<String> getMetricId() {
         return this.metricId;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the cluster SKU.
-     * 
      */
     @Export(name="sku", type=ClusterSkuResponse.class, parameters={})
     private Output</* @Nullable */ ClusterSkuResponse> sku;
 
     /**
      * @return Properties of the cluster SKU.
-     * 
      */
     public Output</* @Nullable */ ClusterSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Status of the Cluster resource
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Status of the Cluster resource
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The UTC time when the Event Hubs Cluster was last updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The UTC time when the Event Hubs Cluster was last updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;

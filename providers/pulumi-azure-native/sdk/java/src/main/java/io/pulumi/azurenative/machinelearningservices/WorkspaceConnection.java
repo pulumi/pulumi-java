@@ -17,7 +17,99 @@ import javax.annotation.Nullable;
  * Workspace connection.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateWorkspaceConnection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspaceConnection = new AzureNative.MachineLearningServices.WorkspaceConnection("workspaceConnection", new AzureNative.MachineLearningServices.WorkspaceConnectionArgs
+ *         {
+ *             AuthType = "PAT",
+ *             Category = "ACR",
+ *             ConnectionName = "connection-1",
+ *             Name = "connection-1",
+ *             ResourceGroupName = "resourceGroup-1",
+ *             Target = "www.facebook.com",
+ *             Value = "secrets",
+ *             WorkspaceName = "workspace-1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewWorkspaceConnection(ctx, "workspaceConnection", &machinelearningservices.WorkspaceConnectionArgs{
+ * 			AuthType:          pulumi.String("PAT"),
+ * 			Category:          pulumi.String("ACR"),
+ * 			ConnectionName:    pulumi.String("connection-1"),
+ * 			Name:              pulumi.String("connection-1"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup-1"),
+ * 			Target:            pulumi.String("www.facebook.com"),
+ * 			Value:             pulumi.String("secrets"),
+ * 			WorkspaceName:     pulumi.String("workspace-1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspaceConnection = new azure_native.machinelearningservices.WorkspaceConnection("workspaceConnection", {
+ *     authType: "PAT",
+ *     category: "ACR",
+ *     connectionName: "connection-1",
+ *     name: "connection-1",
+ *     resourceGroupName: "resourceGroup-1",
+ *     target: "www.facebook.com",
+ *     value: "secrets",
+ *     workspaceName: "workspace-1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace_connection = azure_native.machinelearningservices.WorkspaceConnection("workspaceConnection",
+ *     auth_type="PAT",
+ *     category="ACR",
+ *     connection_name="connection-1",
+ *     name="connection-1",
+ *     resource_group_name="resourceGroup-1",
+ *     target="www.facebook.com",
+ *     value="secrets",
+ *     workspace_name="workspace-1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,98 +124,84 @@ import javax.annotation.Nullable;
 public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
     /**
      * Authorization type of the workspace connection.
-     * 
      */
     @Export(name="authType", type=String.class, parameters={})
     private Output</* @Nullable */ String> authType;
 
     /**
      * @return Authorization type of the workspace connection.
-     * 
      */
     public Output</* @Nullable */ String> getAuthType() {
         return this.authType;
     }
     /**
      * Category of the workspace connection.
-     * 
      */
     @Export(name="category", type=String.class, parameters={})
     private Output</* @Nullable */ String> category;
 
     /**
      * @return Category of the workspace connection.
-     * 
      */
     public Output</* @Nullable */ String> getCategory() {
         return this.category;
     }
     /**
      * Friendly name of the workspace connection.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Friendly name of the workspace connection.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Target of the workspace connection.
-     * 
      */
     @Export(name="target", type=String.class, parameters={})
     private Output</* @Nullable */ String> target;
 
     /**
      * @return Target of the workspace connection.
-     * 
      */
     public Output</* @Nullable */ String> getTarget() {
         return this.target;
     }
     /**
      * Resource type of workspace connection.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type of workspace connection.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Value details of the workspace connection.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
      * @return Value details of the workspace connection.
-     * 
      */
     public Output</* @Nullable */ String> getValue() {
         return this.value;
     }
     /**
      * format for the workspace connection value
-     * 
      */
     @Export(name="valueFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> valueFormat;
 
     /**
      * @return format for the workspace connection value
-     * 
      */
     public Output</* @Nullable */ String> getValueFormat() {
         return this.valueFormat;

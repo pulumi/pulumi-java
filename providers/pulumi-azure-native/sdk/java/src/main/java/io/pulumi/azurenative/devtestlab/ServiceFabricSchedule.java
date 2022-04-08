@@ -22,7 +22,225 @@ import javax.annotation.Nullable;
  * A schedule.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ServiceFabricSchedules_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceFabricSchedule = new AzureNative.DevTestLab.ServiceFabricSchedule("serviceFabricSchedule", new AzureNative.DevTestLab.ServiceFabricScheduleArgs
+ *         {
+ *             DailyRecurrence = new AzureNative.DevTestLab.Inputs.DayDetailsArgs
+ *             {
+ *                 Time = "19:00",
+ *             },
+ *             HourlyRecurrence = new AzureNative.DevTestLab.Inputs.HourDetailsArgs
+ *             {
+ *                 Minute = 0,
+ *             },
+ *             LabName = "{labName}",
+ *             Location = "{location}",
+ *             Name = "{scheduleName}",
+ *             NotificationSettings = new AzureNative.DevTestLab.Inputs.NotificationSettingsArgs
+ *             {
+ *                 EmailRecipient = "{email}",
+ *                 NotificationLocale = "EN",
+ *                 Status = "{Enabled|Disabled}",
+ *                 TimeInMinutes = 15,
+ *                 WebhookUrl = "{webhoolUrl}",
+ *             },
+ *             ResourceGroupName = "resourceGroupName",
+ *             ServiceFabricName = "{serviceFrabicName}",
+ *             Status = "{Enabled|Disabled}",
+ *             Tags = 
+ *             {
+ *                 { "tagName1", "tagValue1" },
+ *             },
+ *             TargetResourceId = "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}",
+ *             TaskType = "{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}",
+ *             TimeZoneId = "Pacific Standard Time",
+ *             UserName = "@me",
+ *             WeeklyRecurrence = new AzureNative.DevTestLab.Inputs.WeekDetailsArgs
+ *             {
+ *                 Time = "19:00",
+ *                 Weekdays = 
+ *                 {
+ *                     "Monday",
+ *                     "Tuesday",
+ *                     "Wednesday",
+ *                     "Thursday",
+ *                     "Friday",
+ *                     "Saturday",
+ *                     "Sunday",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewServiceFabricSchedule(ctx, "serviceFabricSchedule", &devtestlab.ServiceFabricScheduleArgs{
+ * 			DailyRecurrence: &devtestlab.DayDetailsArgs{
+ * 				Time: pulumi.String("19:00"),
+ * 			},
+ * 			HourlyRecurrence: &devtestlab.HourDetailsArgs{
+ * 				Minute: pulumi.Int(0),
+ * 			},
+ * 			LabName:  pulumi.String("{labName}"),
+ * 			Location: pulumi.String("{location}"),
+ * 			Name:     pulumi.String("{scheduleName}"),
+ * 			NotificationSettings: &devtestlab.NotificationSettingsArgs{
+ * 				EmailRecipient:     pulumi.String("{email}"),
+ * 				NotificationLocale: pulumi.String("EN"),
+ * 				Status:             pulumi.String("{Enabled|Disabled}"),
+ * 				TimeInMinutes:      pulumi.Int(15),
+ * 				WebhookUrl:         pulumi.String("{webhoolUrl}"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			ServiceFabricName: pulumi.String("{serviceFrabicName}"),
+ * 			Status:            pulumi.String("{Enabled|Disabled}"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagName1": pulumi.String("tagValue1"),
+ * 			},
+ * 			TargetResourceId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}"),
+ * 			TaskType:         pulumi.String("{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}"),
+ * 			TimeZoneId:       pulumi.String("Pacific Standard Time"),
+ * 			UserName:         pulumi.String("@me"),
+ * 			WeeklyRecurrence: &devtestlab.WeekDetailsArgs{
+ * 				Time: pulumi.String("19:00"),
+ * 				Weekdays: pulumi.StringArray{
+ * 					pulumi.String("Monday"),
+ * 					pulumi.String("Tuesday"),
+ * 					pulumi.String("Wednesday"),
+ * 					pulumi.String("Thursday"),
+ * 					pulumi.String("Friday"),
+ * 					pulumi.String("Saturday"),
+ * 					pulumi.String("Sunday"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceFabricSchedule = new azure_native.devtestlab.ServiceFabricSchedule("serviceFabricSchedule", {
+ *     dailyRecurrence: {
+ *         time: "19:00",
+ *     },
+ *     hourlyRecurrence: {
+ *         minute: 0,
+ *     },
+ *     labName: "{labName}",
+ *     location: "{location}",
+ *     name: "{scheduleName}",
+ *     notificationSettings: {
+ *         emailRecipient: "{email}",
+ *         notificationLocale: "EN",
+ *         status: "{Enabled|Disabled}",
+ *         timeInMinutes: 15,
+ *         webhookUrl: "{webhoolUrl}",
+ *     },
+ *     resourceGroupName: "resourceGroupName",
+ *     serviceFabricName: "{serviceFrabicName}",
+ *     status: "{Enabled|Disabled}",
+ *     tags: {
+ *         tagName1: "tagValue1",
+ *     },
+ *     targetResourceId: "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}",
+ *     taskType: "{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}",
+ *     timeZoneId: "Pacific Standard Time",
+ *     userName: "@me",
+ *     weeklyRecurrence: {
+ *         time: "19:00",
+ *         weekdays: [
+ *             "Monday",
+ *             "Tuesday",
+ *             "Wednesday",
+ *             "Thursday",
+ *             "Friday",
+ *             "Saturday",
+ *             "Sunday",
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_fabric_schedule = azure_native.devtestlab.ServiceFabricSchedule("serviceFabricSchedule",
+ *     daily_recurrence=azure_native.devtestlab.DayDetailsArgs(
+ *         time="19:00",
+ *     ),
+ *     hourly_recurrence=azure_native.devtestlab.HourDetailsArgs(
+ *         minute=0,
+ *     ),
+ *     lab_name="{labName}",
+ *     location="{location}",
+ *     name="{scheduleName}",
+ *     notification_settings=azure_native.devtestlab.NotificationSettingsArgs(
+ *         email_recipient="{email}",
+ *         notification_locale="EN",
+ *         status="{Enabled|Disabled}",
+ *         time_in_minutes=15,
+ *         webhook_url="{webhoolUrl}",
+ *     ),
+ *     resource_group_name="resourceGroupName",
+ *     service_fabric_name="{serviceFrabicName}",
+ *     status="{Enabled|Disabled}",
+ *     tags={
+ *         "tagName1": "tagValue1",
+ *     },
+ *     target_resource_id="/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}",
+ *     task_type="{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}",
+ *     time_zone_id="Pacific Standard Time",
+ *     user_name="@me",
+ *     weekly_recurrence=azure_native.devtestlab.WeekDetailsArgs(
+ *         time="19:00",
+ *         weekdays=[
+ *             "Monday",
+ *             "Tuesday",
+ *             "Wednesday",
+ *             "Thursday",
+ *             "Friday",
+ *             "Saturday",
+ *             "Sunday",
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,210 +255,180 @@ import javax.annotation.Nullable;
 public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
     /**
      * The creation date of the schedule.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The creation date of the schedule.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     @Export(name="dailyRecurrence", type=DayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DayDetailsResponse> dailyRecurrence;
 
     /**
      * @return If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     public Output</* @Nullable */ DayDetailsResponse> getDailyRecurrence() {
         return this.dailyRecurrence;
     }
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     @Export(name="hourlyRecurrence", type=HourDetailsResponse.class, parameters={})
     private Output</* @Nullable */ HourDetailsResponse> hourlyRecurrence;
 
     /**
      * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     public Output</* @Nullable */ HourDetailsResponse> getHourlyRecurrence() {
         return this.hourlyRecurrence;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Notification settings.
-     * 
      */
     @Export(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NotificationSettingsResponse> notificationSettings;
 
     /**
      * @return Notification settings.
-     * 
      */
     public Output</* @Nullable */ NotificationSettingsResponse> getNotificationSettings() {
         return this.notificationSettings;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The resource ID to which the schedule belongs
-     * 
      */
     @Export(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
     /**
      * @return The resource ID to which the schedule belongs
-     * 
      */
     public Output</* @Nullable */ String> getTargetResourceId() {
         return this.targetResourceId;
     }
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     @Export(name="taskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskType;
 
     /**
      * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     public Output</* @Nullable */ String> getTaskType() {
         return this.taskType;
     }
     /**
      * The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     @Export(name="timeZoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZoneId;
 
     /**
      * @return The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     public Output</* @Nullable */ String> getTimeZoneId() {
         return this.timeZoneId;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     @Export(name="weeklyRecurrence", type=WeekDetailsResponse.class, parameters={})
     private Output</* @Nullable */ WeekDetailsResponse> weeklyRecurrence;
 
     /**
      * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     public Output</* @Nullable */ WeekDetailsResponse> getWeeklyRecurrence() {
         return this.weeklyRecurrence;

@@ -21,7 +21,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the Firewall Policy.
-     * 
      */
     @Import(name="firewallPolicyName", required=true)
       private final Output<String> firewallPolicyName;
@@ -32,7 +31,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +41,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +51,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * Priority of the Firewall Policy Rule Group resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -65,7 +61,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the FirewallPolicyRuleGroup.
-     * 
      */
     @Import(name="ruleGroupName")
       private final @Nullable Output<String> ruleGroupName;
@@ -87,7 +81,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     /**
      * Group of Firewall Policy rules.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules;

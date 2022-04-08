@@ -33,7 +33,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
-     * 
      */
     @Import(name="accessTier")
       private final @Nullable Output<AccessTier> accessTier;
@@ -44,7 +43,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -55,7 +53,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
-     * 
      */
     @Import(name="allowBlobPublicAccess")
       private final @Nullable Output<Boolean> allowBlobPublicAccess;
@@ -66,7 +63,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
-     * 
      */
     @Import(name="allowSharedKeyAccess")
       private final @Nullable Output<Boolean> allowSharedKeyAccess;
@@ -77,7 +73,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provides the identity based authentication settings for Azure Files.
-     * 
      */
     @Import(name="azureFilesIdentityBasedAuthentication")
       private final @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
@@ -88,7 +83,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.
-     * 
      */
     @Import(name="customDomain")
       private final @Nullable Output<CustomDomainArgs> customDomain;
@@ -99,7 +93,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
-     * 
      */
     @Import(name="enableHttpsTrafficOnly")
       private final @Nullable Output<Boolean> enableHttpsTrafficOnly;
@@ -110,7 +103,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NFS 3.0 protocol support enabled if set to true.
-     * 
      */
     @Import(name="enableNfsV3")
       private final @Nullable Output<Boolean> enableNfsV3;
@@ -121,7 +113,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
@@ -132,7 +123,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -143,7 +133,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -154,7 +143,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Account HierarchicalNamespace enabled if sets to true.
-     * 
      */
     @Import(name="isHnsEnabled")
       private final @Nullable Output<Boolean> isHnsEnabled;
@@ -165,7 +153,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KeyPolicy assigned to the storage account.
-     * 
      */
     @Import(name="keyPolicy")
       private final @Nullable Output<KeyPolicyArgs> keyPolicy;
@@ -176,7 +163,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required. Indicates the type of storage account.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
@@ -187,7 +173,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
-     * 
      */
     @Import(name="largeFileSharesState")
       private final @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState;
@@ -198,7 +183,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -209,7 +193,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
-     * 
      */
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion;
@@ -220,7 +203,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network rule set
-     * 
      */
     @Import(name="networkRuleSet")
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
@@ -231,7 +213,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -242,7 +223,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maintains information about the network routing choice opted by the user for data transfer
-     * 
      */
     @Import(name="routingPreference")
       private final @Nullable Output<RoutingPreferenceArgs> routingPreference;
@@ -253,7 +233,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SasPolicy assigned to the storage account.
-     * 
      */
     @Import(name="sasPolicy")
       private final @Nullable Output<SasPolicyArgs> sasPolicy;
@@ -264,7 +243,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required. Gets or sets the SKU name.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -275,7 +253,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

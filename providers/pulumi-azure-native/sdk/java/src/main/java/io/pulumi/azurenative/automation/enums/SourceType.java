@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
-     * 
      */
     @EnumType
     public enum SourceType {

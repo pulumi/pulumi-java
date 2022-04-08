@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Billing information related properties of a server.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scale up/out capacity, representing server's compute units.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -34,7 +32,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The family of hardware.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -45,7 +42,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -56,7 +52,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The size code, to be interpreted by resource as appropriate.
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -67,7 +62,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tier of the particular SKU, e.g. Basic.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,SkuTier>> tier;

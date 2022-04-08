@@ -21,7 +21,143 @@ import javax.annotation.Nullable;
  * The resource proxy definition object for quantum workspace.
  * API Version: 2019-11-04-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### QuantumWorkspacesPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.Quantum.Workspace("workspace", new AzureNative.Quantum.WorkspaceArgs
+ *         {
+ *             Location = "West US",
+ *             Providers = 
+ *             {
+ *                 new AzureNative.Quantum.Inputs.ProviderArgs
+ *                 {
+ *                     ProviderId = "Honeywell",
+ *                     ProviderSku = "Basic",
+ *                 },
+ *                 new AzureNative.Quantum.Inputs.ProviderArgs
+ *                 {
+ *                     ProviderId = "IonQ",
+ *                     ProviderSku = "Basic",
+ *                 },
+ *                 new AzureNative.Quantum.Inputs.ProviderArgs
+ *                 {
+ *                     ProviderId = "OneQBit",
+ *                     ProviderSku = "Basic",
+ *                 },
+ *             },
+ *             ResourceGroupName = "quantumResourcegroup",
+ *             StorageAccount = "/subscriptions/1C4B2828-7D49-494F-933D-061373BE28C2/resourceGroups/quantumResourcegroup/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+ *             WorkspaceName = "quantumworkspace1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	quantum "github.com/pulumi/pulumi-azure-native/sdk/go/azure/quantum"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := quantum.NewWorkspace(ctx, "workspace", &quantum.WorkspaceArgs{
+ * 			Location: pulumi.String("West US"),
+ * 			Providers: []quantum.ProviderArgs{
+ * 				&quantum.ProviderArgs{
+ * 					ProviderId:  pulumi.String("Honeywell"),
+ * 					ProviderSku: pulumi.String("Basic"),
+ * 				},
+ * 				&quantum.ProviderArgs{
+ * 					ProviderId:  pulumi.String("IonQ"),
+ * 					ProviderSku: pulumi.String("Basic"),
+ * 				},
+ * 				&quantum.ProviderArgs{
+ * 					ProviderId:  pulumi.String("OneQBit"),
+ * 					ProviderSku: pulumi.String("Basic"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("quantumResourcegroup"),
+ * 			StorageAccount:    pulumi.String("/subscriptions/1C4B2828-7D49-494F-933D-061373BE28C2/resourceGroups/quantumResourcegroup/providers/Microsoft.Storage/storageAccounts/testStorageAccount"),
+ * 			WorkspaceName:     pulumi.String("quantumworkspace1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.quantum.Workspace("workspace", {
+ *     location: "West US",
+ *     providers: [
+ *         {
+ *             providerId: "Honeywell",
+ *             providerSku: "Basic",
+ *         },
+ *         {
+ *             providerId: "IonQ",
+ *             providerSku: "Basic",
+ *         },
+ *         {
+ *             providerId: "OneQBit",
+ *             providerSku: "Basic",
+ *         },
+ *     ],
+ *     resourceGroupName: "quantumResourcegroup",
+ *     storageAccount: "/subscriptions/1C4B2828-7D49-494F-933D-061373BE28C2/resourceGroups/quantumResourcegroup/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+ *     workspaceName: "quantumworkspace1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.quantum.Workspace("workspace",
+ *     location="West US",
+ *     providers=[
+ *         azure_native.quantum.ProviderArgs(
+ *             provider_id="Honeywell",
+ *             provider_sku="Basic",
+ *         ),
+ *         azure_native.quantum.ProviderArgs(
+ *             provider_id="IonQ",
+ *             provider_sku="Basic",
+ *         ),
+ *         azure_native.quantum.ProviderArgs(
+ *             provider_id="OneQBit",
+ *             provider_sku="Basic",
+ *         ),
+ *     ],
+ *     resource_group_name="quantumResourcegroup",
+ *     storage_account="/subscriptions/1C4B2828-7D49-494F-933D-061373BE28C2/resourceGroups/quantumResourcegroup/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+ *     workspace_name="quantumworkspace1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,154 +172,132 @@ import javax.annotation.Nullable;
 public class Workspace extends io.pulumi.resources.CustomResource {
     /**
      * The URI of the workspace endpoint.
-     * 
      */
     @Export(name="endpointUri", type=String.class, parameters={})
     private Output<String> endpointUri;
 
     /**
      * @return The URI of the workspace endpoint.
-     * 
      */
     public Output<String> getEndpointUri() {
         return this.endpointUri;
     }
     /**
      * Managed Identity information.
-     * 
      */
     @Export(name="identity", type=QuantumWorkspaceResponseIdentity.class, parameters={})
     private Output</* @Nullable */ QuantumWorkspaceResponseIdentity> identity;
 
     /**
      * @return Managed Identity information.
-     * 
      */
     public Output</* @Nullable */ QuantumWorkspaceResponseIdentity> getIdentity() {
         return this.identity;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of Providers selected for this Workspace
-     * 
      */
     @Export(name="providers", type=List.class, parameters={ProviderResponse.class})
     private Output</* @Nullable */ List<ProviderResponse>> providers;
 
     /**
      * @return List of Providers selected for this Workspace
-     * 
      */
     public Output</* @Nullable */ List<ProviderResponse>> getProviders() {
         return this.providers;
     }
     /**
      * Provisioning status field
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status field
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * ARM Resource Id of the storage account associated with this workspace.
-     * 
      */
     @Export(name="storageAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccount;
 
     /**
      * @return ARM Resource Id of the storage account associated with this workspace.
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccount() {
         return this.storageAccount;
     }
     /**
      * System metadata
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System metadata
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Whether the current workspace is ready to accept Jobs.
-     * 
      */
     @Export(name="usable", type=String.class, parameters={})
     private Output<String> usable;
 
     /**
      * @return Whether the current workspace is ready to accept Jobs.
-     * 
      */
     public Output<String> getUsable() {
         return this.usable;

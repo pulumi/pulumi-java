@@ -16,7 +16,6 @@ public final class TimerTriggerDescriptorResponse extends io.pulumi.resources.In
 
     /**
      * The occurrence that triggered the run.
-     * 
      */
     @Import(name="scheduleOccurrence")
       private final @Nullable String scheduleOccurrence;
@@ -27,7 +26,6 @@ public final class TimerTriggerDescriptorResponse extends io.pulumi.resources.In
 
     /**
      * The timer trigger name that caused the run.
-     * 
      */
     @Import(name="timerTriggerName")
       private final @Nullable String timerTriggerName;

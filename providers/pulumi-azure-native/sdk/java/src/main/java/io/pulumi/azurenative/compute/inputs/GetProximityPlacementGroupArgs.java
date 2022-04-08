@@ -16,7 +16,6 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
 
     /**
      * includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
-     * 
      */
     @Import(name="includeColocationStatus")
       private final @Nullable String includeColocationStatus;
@@ -27,7 +26,6 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
 
     /**
      * The name of the proximity placement group.
-     * 
      */
     @Import(name="proximityPlacementGroupName", required=true)
       private final String proximityPlacementGroupName;
@@ -38,7 +36,6 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

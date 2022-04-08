@@ -14,7 +14,6 @@ public final class GetPacketCaptureArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network watcher.
-     * 
      */
     @Import(name="networkWatcherName", required=true)
       private final String networkWatcherName;
@@ -25,7 +24,6 @@ public final class GetPacketCaptureArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the packet capture session.
-     * 
      */
     @Import(name="packetCaptureName", required=true)
       private final String packetCaptureName;
@@ -36,7 +34,6 @@ public final class GetPacketCaptureArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

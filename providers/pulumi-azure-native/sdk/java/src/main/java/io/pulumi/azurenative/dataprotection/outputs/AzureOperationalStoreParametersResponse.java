@@ -13,18 +13,15 @@ import javax.annotation.Nullable;
 public final class AzureOperationalStoreParametersResponse {
     /**
      * type of datastore; Operational/Vault/Archive
-     * 
      */
     private final String dataStoreType;
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AzureOperationalStoreParameters'.
-     * 
      */
     private final String objectType;
     /**
      * Gets or sets the Snapshot Resource Group Uri.
-     * 
      */
     private final @Nullable String resourceGroupId;
 
@@ -40,7 +37,6 @@ public final class AzureOperationalStoreParametersResponse {
 
     /**
      * type of datastore; Operational/Vault/Archive
-     * 
     */
     public String getDataStoreType() {
         return this.dataStoreType;
@@ -48,14 +44,12 @@ public final class AzureOperationalStoreParametersResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AzureOperationalStoreParameters'.
-     * 
     */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Gets or sets the Snapshot Resource Group Uri.
-     * 
     */
     public Optional<String> getResourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies authentication type being used for connecting to the storage account.
-     * 
      */
     @EnumType
     public enum AuthenticationType {

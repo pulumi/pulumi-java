@@ -13,78 +13,63 @@ import java.util.Objects;
 public final class CopyProgressResponse {
     /**
      * Id of the account where the data needs to be uploaded.
-     * 
      */
     private final String accountId;
     /**
      * To indicate bytes transferred.
-     * 
      */
     private final Double bytesProcessed;
     /**
      * Data Account Type.
-     * 
      */
     private final String dataAccountType;
     /**
      * To indicate directories errored out in the job.
-     * 
      */
     private final Double directoriesErroredOut;
     /**
      * Number of files which could not be copied
-     * 
      */
     private final Double filesErroredOut;
     /**
      * Number of files processed
-     * 
      */
     private final Double filesProcessed;
     /**
      * To indicate directories renamed
-     * 
      */
     private final Double invalidDirectoriesProcessed;
     /**
      * Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
-     * 
      */
     private final Double invalidFileBytesUploaded;
     /**
      * Number of files not adhering to azure naming conventions which were processed by automatic renaming
-     * 
      */
     private final Double invalidFilesProcessed;
     /**
-     * To indicate if enumeration of data is in progress.
+     * To indicate if enumeration of data is in progress. 
      * Until this is true, the TotalBytesToProcess may not be valid.
-     * 
      */
     private final Boolean isEnumerationInProgress;
     /**
      * Number of folders not adhering to azure naming conventions which were processed by automatic renaming
-     * 
      */
     private final Double renamedContainerCount;
     /**
      * Name of the storage account. This will be empty for data account types other than storage account.
-     * 
      */
     private final String storageAccountName;
     /**
      * Total amount of data to be processed by the job.
-     * 
      */
     private final Double totalBytesToProcess;
     /**
      * Total files to process
-     * 
      */
     private final Double totalFilesToProcess;
     /**
      * Transfer type of data
-     * 
      */
     private final String transferType;
 
@@ -124,106 +109,91 @@ public final class CopyProgressResponse {
 
     /**
      * Id of the account where the data needs to be uploaded.
-     * 
     */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * To indicate bytes transferred.
-     * 
     */
     public Double getBytesProcessed() {
         return this.bytesProcessed;
     }
     /**
      * Data Account Type.
-     * 
     */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
     /**
      * To indicate directories errored out in the job.
-     * 
     */
     public Double getDirectoriesErroredOut() {
         return this.directoriesErroredOut;
     }
     /**
      * Number of files which could not be copied
-     * 
     */
     public Double getFilesErroredOut() {
         return this.filesErroredOut;
     }
     /**
      * Number of files processed
-     * 
     */
     public Double getFilesProcessed() {
         return this.filesProcessed;
     }
     /**
      * To indicate directories renamed
-     * 
     */
     public Double getInvalidDirectoriesProcessed() {
         return this.invalidDirectoriesProcessed;
     }
     /**
      * Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
-     * 
     */
     public Double getInvalidFileBytesUploaded() {
         return this.invalidFileBytesUploaded;
     }
     /**
      * Number of files not adhering to azure naming conventions which were processed by automatic renaming
-     * 
     */
     public Double getInvalidFilesProcessed() {
         return this.invalidFilesProcessed;
     }
     /**
-     * To indicate if enumeration of data is in progress.
+     * To indicate if enumeration of data is in progress. 
      * Until this is true, the TotalBytesToProcess may not be valid.
-     * 
     */
     public Boolean getIsEnumerationInProgress() {
         return this.isEnumerationInProgress;
     }
     /**
      * Number of folders not adhering to azure naming conventions which were processed by automatic renaming
-     * 
     */
     public Double getRenamedContainerCount() {
         return this.renamedContainerCount;
     }
     /**
      * Name of the storage account. This will be empty for data account types other than storage account.
-     * 
     */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Total amount of data to be processed by the job.
-     * 
     */
     public Double getTotalBytesToProcess() {
         return this.totalBytesToProcess;
     }
     /**
      * Total files to process
-     * 
     */
     public Double getTotalFilesToProcess() {
         return this.totalFilesToProcess;
     }
     /**
      * Transfer type of data
-     * 
     */
     public String getTransferType() {
         return this.transferType;

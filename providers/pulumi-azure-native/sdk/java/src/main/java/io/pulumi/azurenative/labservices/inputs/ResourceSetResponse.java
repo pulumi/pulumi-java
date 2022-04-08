@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a VM and the setting Id it was created for.
- * 
  */
 public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * resourceSettingId for the environment
-     * 
      */
     @Import(name="resourceSettingId")
       private final @Nullable String resourceSettingId;
@@ -31,7 +29,6 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * VM resource Id for the environment
-     * 
      */
     @Import(name="vmResourceId")
       private final @Nullable String vmResourceId;

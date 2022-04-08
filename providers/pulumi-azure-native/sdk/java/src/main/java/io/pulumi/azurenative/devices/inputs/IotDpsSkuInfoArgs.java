@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * List of possible provisioning service SKUs.
- * 
  */
 public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of units to provision
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
@@ -34,7 +32,6 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sku name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,IotDpsSku>> name;

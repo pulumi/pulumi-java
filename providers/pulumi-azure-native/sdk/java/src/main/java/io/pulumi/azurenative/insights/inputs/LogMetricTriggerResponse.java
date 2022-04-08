@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A log metrics trigger descriptor.
- * 
  */
 public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Evaluation of metric on a particular column
-     * 
      */
     @Import(name="metricColumn")
       private final @Nullable String metricColumn;
@@ -32,7 +30,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Metric Trigger Type - 'Consecutive' or 'Total'
-     * 
      */
     @Import(name="metricTriggerType")
       private final @Nullable String metricTriggerType;
@@ -43,7 +40,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The threshold of the metric trigger.
-     * 
      */
     @Import(name="threshold")
       private final @Nullable Double threshold;
@@ -54,7 +50,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
-     * 
      */
     @Import(name="thresholdOperator")
       private final @Nullable String thresholdOperator;

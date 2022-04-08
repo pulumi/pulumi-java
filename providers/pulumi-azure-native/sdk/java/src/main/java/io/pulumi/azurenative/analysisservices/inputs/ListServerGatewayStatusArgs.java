@@ -14,7 +14,6 @@ public final class ListServerGatewayStatusArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListServerGatewayStatusArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the Analysis Services server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;

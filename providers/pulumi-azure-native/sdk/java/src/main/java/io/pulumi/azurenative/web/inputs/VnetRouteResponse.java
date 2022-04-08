@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual Network route contract used to pass routing information for a Virtual Network.
- * 
  */
 public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-     * 
      */
     @Import(name="endAddress")
       private final @Nullable String endAddress;
@@ -31,7 +29,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -53,7 +49,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -69,7 +64,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * STATIC - Static route set on the app only
      * 
      * These values will be used for syncing an app's routes with those from a Virtual Network.
-     * 
      */
     @Import(name="routeType")
       private final @Nullable String routeType;
@@ -80,7 +74,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
-     * 
      */
     @Import(name="startAddress")
       private final @Nullable String startAddress;
@@ -91,7 +84,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

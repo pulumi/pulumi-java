@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * EngagementFabric channel description
- * 
  */
 public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Text description for the channel
-     * 
      */
     @Import(name="channelDescription")
       private final @Nullable String channelDescription;
@@ -32,7 +30,6 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * All the available functions for the channel
-     * 
      */
     @Import(name="channelFunctions")
       private final @Nullable List<String> channelFunctions;
@@ -43,7 +40,6 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Channel type
-     * 
      */
     @Import(name="channelType")
       private final @Nullable String channelType;

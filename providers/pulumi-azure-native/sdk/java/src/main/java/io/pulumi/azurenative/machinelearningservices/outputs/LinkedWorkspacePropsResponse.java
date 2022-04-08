@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class LinkedWorkspacePropsResponse {
     /**
      * ResourceId of the link target of the linked workspace.
-     * 
      */
     private final @Nullable String linkedWorkspaceResourceId;
     /**
      * ResourceId of the user assigned identity for the linked workspace.
-     * 
      */
     private final @Nullable String userAssignedIdentityResourceId;
 
@@ -32,14 +30,12 @@ public final class LinkedWorkspacePropsResponse {
 
     /**
      * ResourceId of the link target of the linked workspace.
-     * 
     */
     public Optional<String> getLinkedWorkspaceResourceId() {
         return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
     /**
      * ResourceId of the user assigned identity for the linked workspace.
-     * 
     */
     public Optional<String> getUserAssignedIdentityResourceId() {
         return Optional.ofNullable(this.userAssignedIdentityResourceId);

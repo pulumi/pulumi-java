@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Represents a Database.
  * API Version: 2018-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DatabaseCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var database = new AzureNative.DBforMariaDB.Database("database", new AzureNative.DBforMariaDB.DatabaseArgs
+ *         {
+ *             Charset = "utf8",
+ *             Collation = "utf8_general_ci",
+ *             DatabaseName = "db1",
+ *             ResourceGroupName = "TestGroup",
+ *             ServerName = "testserver",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dbformariadb.NewDatabase(ctx, "database", &dbformariadb.DatabaseArgs{
+ * 			Charset:           pulumi.String("utf8"),
+ * 			Collation:         pulumi.String("utf8_general_ci"),
+ * 			DatabaseName:      pulumi.String("db1"),
+ * 			ResourceGroupName: pulumi.String("TestGroup"),
+ * 			ServerName:        pulumi.String("testserver"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const database = new azure_native.dbformariadb.Database("database", {
+ *     charset: "utf8",
+ *     collation: "utf8_general_ci",
+ *     databaseName: "db1",
+ *     resourceGroupName: "TestGroup",
+ *     serverName: "testserver",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * database = azure_native.dbformariadb.Database("database",
+ *     charset="utf8",
+ *     collation="utf8_general_ci",
+ *     database_name="db1",
+ *     resource_group_name="TestGroup",
+ *     server_name="testserver")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +112,48 @@ import javax.annotation.Nullable;
 public class Database extends io.pulumi.resources.CustomResource {
     /**
      * The charset of the database.
-     * 
      */
     @Export(name="charset", type=String.class, parameters={})
     private Output</* @Nullable */ String> charset;
 
     /**
      * @return The charset of the database.
-     * 
      */
     public Output</* @Nullable */ String> getCharset() {
         return this.charset;
     }
     /**
      * The collation of the database.
-     * 
      */
     @Export(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
     /**
      * @return The collation of the database.
-     * 
      */
     public Output</* @Nullable */ String> getCollation() {
         return this.collation;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

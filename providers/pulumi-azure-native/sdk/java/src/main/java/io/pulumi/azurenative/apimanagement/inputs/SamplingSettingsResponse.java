@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sampling settings for Diagnostic.
- * 
  */
 public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Rate of sampling for fixed-rate sampling.
-     * 
      */
     @Import(name="percentage")
       private final @Nullable Double percentage;
@@ -32,7 +30,6 @@ public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Sampling type.
-     * 
      */
     @Import(name="samplingType")
       private final @Nullable String samplingType;

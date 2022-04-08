@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ScheduledEventsProfileResponse {
     /**
      * Specifies Terminate Scheduled Event related configurations.
-     * 
      */
     private final @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 
@@ -24,7 +23,6 @@ public final class ScheduledEventsProfileResponse {
 
     /**
      * Specifies Terminate Scheduled Event related configurations.
-     * 
     */
     public Optional<TerminateNotificationProfileResponse> getTerminateNotificationProfile() {
         return Optional.ofNullable(this.terminateNotificationProfile);

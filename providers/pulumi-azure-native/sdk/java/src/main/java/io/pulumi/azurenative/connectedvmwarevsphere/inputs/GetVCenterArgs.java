@@ -14,7 +14,6 @@ public final class GetVCenterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVCenterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the vCenter.
-     * 
      */
     @Import(name="vcenterName", required=true)
       private final String vcenterName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content hash.
- * 
  */
 public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The algorithm of the content hash.
-     * 
      */
     @Import(name="algorithm")
       private final @Nullable String algorithm;
@@ -31,7 +29,6 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value of the content hash.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

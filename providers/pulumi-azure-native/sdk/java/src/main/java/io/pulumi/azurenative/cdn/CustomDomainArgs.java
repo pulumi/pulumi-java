@@ -16,7 +16,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the custom domain within an endpoint.
-     * 
      */
     @Import(name="customDomainName")
       private final @Nullable Output<String> customDomainName;
@@ -27,7 +26,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the endpoint under the profile which is unique globally.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
@@ -38,7 +36,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The host name of the custom domain. Must be a domain name.
-     * 
      */
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
@@ -49,7 +46,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -60,7 +56,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

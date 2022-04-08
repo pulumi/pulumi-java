@@ -20,104 +20,89 @@ import javax.annotation.Nullable;
 /**
  * A report resource.
  * API Version: 2018-08-01-preview.
- * 
  */
 @ResourceType(type="azure-native:costmanagement:ReportByResourceGroupName")
 public class ReportByResourceGroupName extends io.pulumi.resources.CustomResource {
     /**
      * Has definition for the report.
-     * 
      */
     @Export(name="definition", type=ReportDefinitionResponse.class, parameters={})
     private Output<ReportDefinitionResponse> definition;
 
     /**
      * @return Has definition for the report.
-     * 
      */
     public Output<ReportDefinitionResponse> getDefinition() {
         return this.definition;
     }
     /**
      * Has delivery information for the report.
-     * 
      */
     @Export(name="deliveryInfo", type=ReportDeliveryInfoResponse.class, parameters={})
     private Output<ReportDeliveryInfoResponse> deliveryInfo;
 
     /**
      * @return Has delivery information for the report.
-     * 
      */
     public Output<ReportDeliveryInfoResponse> getDeliveryInfo() {
         return this.deliveryInfo;
     }
     /**
      * The format of the report being delivered.
-     * 
      */
     @Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
      * @return The format of the report being delivered.
-     * 
      */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Has schedule information for the report.
-     * 
      */
     @Export(name="schedule", type=ReportScheduleResponse.class, parameters={})
     private Output</* @Nullable */ ReportScheduleResponse> schedule;
 
     /**
      * @return Has schedule information for the report.
-     * 
      */
     public Output</* @Nullable */ ReportScheduleResponse> getSchedule() {
         return this.schedule;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The desired action for requests captured by this rule.
-     * 
      */
     @EnumType
     public enum IpFilterActionType {

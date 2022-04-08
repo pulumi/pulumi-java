@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CosmosDbSettingsResponse {
     /**
      * The throughput of the collections in cosmosdb database
-     * 
      */
     private final @Nullable Integer collectionsThroughput;
 
@@ -24,7 +23,6 @@ public final class CosmosDbSettingsResponse {
 
     /**
      * The throughput of the collections in cosmosdb database
-     * 
     */
     public Optional<Integer> getCollectionsThroughput() {
         return Optional.ofNullable(this.collectionsThroughput);

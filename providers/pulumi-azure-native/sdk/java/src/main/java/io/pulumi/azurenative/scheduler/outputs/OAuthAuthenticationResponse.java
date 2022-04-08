@@ -13,28 +13,23 @@ import javax.annotation.Nullable;
 public final class OAuthAuthenticationResponse {
     /**
      * Gets or sets the audience.
-     * 
      */
     private final @Nullable String audience;
     /**
      * Gets or sets the client identifier.
-     * 
      */
     private final @Nullable String clientId;
     /**
      * Gets or sets the secret, return value will always be empty.
-     * 
      */
     private final @Nullable String secret;
     /**
      * Gets or sets the tenant.
-     * 
      */
     private final @Nullable String tenant;
     /**
      * Gets or sets the HTTP authentication type.
      * Expected value is 'ActiveDirectoryOAuth'.
-     * 
      */
     private final String type;
 
@@ -54,28 +49,24 @@ public final class OAuthAuthenticationResponse {
 
     /**
      * Gets or sets the audience.
-     * 
     */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * Gets or sets the client identifier.
-     * 
     */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Gets or sets the secret, return value will always be empty.
-     * 
     */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * Gets or sets the tenant.
-     * 
     */
     public Optional<String> getTenant() {
         return Optional.ofNullable(this.tenant);
@@ -83,7 +74,6 @@ public final class OAuthAuthenticationResponse {
     /**
      * Gets or sets the HTTP authentication type.
      * Expected value is 'ActiveDirectoryOAuth'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -23,7 +23,129 @@ import javax.annotation.Nullable;
  * Represents a ApplicationGroup definition.
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApplicationGroup_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var applicationGroup = new AzureNative.DesktopVirtualization.ApplicationGroup("applicationGroup", new AzureNative.DesktopVirtualization.ApplicationGroupArgs
+ *         {
+ *             ApplicationGroupName = "applicationGroup1",
+ *             ApplicationGroupType = "RemoteApp",
+ *             Description = "des1",
+ *             FriendlyName = "friendly",
+ *             HostPoolArmPath = "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+ *             Location = "centralus",
+ *             MigrationRequest = new AzureNative.DesktopVirtualization.Inputs.MigrationRequestPropertiesArgs
+ *             {
+ *                 MigrationPath = "TenantGroups/{defaultV1TenantGroup.Name}/Tenants/{defaultV1Tenant.Name}/HostPools/{sessionHostPool.Name}",
+ *                 Operation = "Start",
+ *             },
+ *             ResourceGroupName = "resourceGroup1",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := desktopvirtualization.NewApplicationGroup(ctx, "applicationGroup", &desktopvirtualization.ApplicationGroupArgs{
+ * 			ApplicationGroupName: pulumi.String("applicationGroup1"),
+ * 			ApplicationGroupType: pulumi.String("RemoteApp"),
+ * 			Description:          pulumi.String("des1"),
+ * 			FriendlyName:         pulumi.String("friendly"),
+ * 			HostPoolArmPath:      pulumi.String("/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1"),
+ * 			Location:             pulumi.String("centralus"),
+ * 			MigrationRequest: &desktopvirtualization.MigrationRequestPropertiesArgs{
+ * 				MigrationPath: pulumi.String("TenantGroups/{defaultV1TenantGroup.Name}/Tenants/{defaultV1Tenant.Name}/HostPools/{sessionHostPool.Name}"),
+ * 				Operation:     pulumi.String("Start"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroup1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const applicationGroup = new azure_native.desktopvirtualization.ApplicationGroup("applicationGroup", {
+ *     applicationGroupName: "applicationGroup1",
+ *     applicationGroupType: "RemoteApp",
+ *     description: "des1",
+ *     friendlyName: "friendly",
+ *     hostPoolArmPath: "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+ *     location: "centralus",
+ *     migrationRequest: {
+ *         migrationPath: "TenantGroups/{defaultV1TenantGroup.Name}/Tenants/{defaultV1Tenant.Name}/HostPools/{sessionHostPool.Name}",
+ *         operation: "Start",
+ *     },
+ *     resourceGroupName: "resourceGroup1",
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application_group = azure_native.desktopvirtualization.ApplicationGroup("applicationGroup",
+ *     application_group_name="applicationGroup1",
+ *     application_group_type="RemoteApp",
+ *     description="des1",
+ *     friendly_name="friendly",
+ *     host_pool_arm_path="/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+ *     location="centralus",
+ *     migration_request=azure_native.desktopvirtualization.MigrationRequestPropertiesArgs(
+ *         migration_path="TenantGroups/{defaultV1TenantGroup.Name}/Tenants/{defaultV1Tenant.Name}/HostPools/{sessionHostPool.Name}",
+ *         operation="Start",
+ *     ),
+ *     resource_group_name="resourceGroup1",
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,84 +160,72 @@ import javax.annotation.Nullable;
 public class ApplicationGroup extends io.pulumi.resources.CustomResource {
     /**
      * Resource Type of ApplicationGroup.
-     * 
      */
     @Export(name="applicationGroupType", type=String.class, parameters={})
     private Output<String> applicationGroupType;
 
     /**
      * @return Resource Type of ApplicationGroup.
-     * 
      */
     public Output<String> getApplicationGroupType() {
         return this.applicationGroupType;
     }
     /**
      * Is cloud pc resource.
-     * 
      */
     @Export(name="cloudPcResource", type=Boolean.class, parameters={})
     private Output<Boolean> cloudPcResource;
 
     /**
      * @return Is cloud pc resource.
-     * 
      */
     public Output<Boolean> getCloudPcResource() {
         return this.cloudPcResource;
     }
     /**
      * Description of ApplicationGroup.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of ApplicationGroup.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
-     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
-     * 
+     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
-     * 
+     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Friendly name of ApplicationGroup.
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
      * @return Friendly name of ApplicationGroup.
-     * 
      */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * HostPool arm path of ApplicationGroup.
-     * 
      */
     @Export(name="hostPoolArmPath", type=String.class, parameters={})
     private Output<String> hostPoolArmPath;
 
     /**
      * @return HostPool arm path of ApplicationGroup.
-     * 
      */
     public Output<String> getHostPoolArmPath() {
         return this.hostPoolArmPath;
@@ -128,84 +238,72 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-     * 
      */
     @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
      * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-     * 
      */
     public Output</* @Nullable */ String> getManagedBy() {
         return this.managedBy;
     }
     /**
      * The registration info of HostPool.
-     * 
      */
     @Export(name="migrationRequest", type=MigrationRequestPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ MigrationRequestPropertiesResponse> migrationRequest;
 
     /**
      * @return The registration info of HostPool.
-     * 
      */
     public Output</* @Nullable */ MigrationRequestPropertiesResponse> getMigrationRequest() {
         return this.migrationRequest;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * ObjectId of ApplicationGroup. (internal use)
-     * 
      */
     @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
      * @return ObjectId of ApplicationGroup. (internal use)
-     * 
      */
     public Output<String> getObjectId() {
         return this.objectId;
@@ -224,42 +322,36 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Workspace arm path of ApplicationGroup.
-     * 
      */
     @Export(name="workspaceArmPath", type=String.class, parameters={})
     private Output<String> workspaceArmPath;
 
     /**
      * @return Workspace arm path of ApplicationGroup.
-     * 
      */
     public Output<String> getWorkspaceArmPath() {
         return this.workspaceArmPath;

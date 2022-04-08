@@ -18,7 +18,6 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A collection of DFP instance administrators
-     * 
      */
     @Import(name="administration")
       private final @Nullable Output<DFPInstanceAdministratorsArgs> administration;
@@ -29,7 +28,6 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the DFP instances. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
@@ -40,7 +38,6 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Location of the DFP resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

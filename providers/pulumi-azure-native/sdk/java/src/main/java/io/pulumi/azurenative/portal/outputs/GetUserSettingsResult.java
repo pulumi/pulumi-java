@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetUserSettingsResult {
     /**
      * The cloud shell user settings properties.
-     * 
      */
     private final UserPropertiesResponse properties;
 
@@ -22,7 +21,6 @@ public final class GetUserSettingsResult {
 
     /**
      * The cloud shell user settings properties.
-     * 
     */
     public UserPropertiesResponse getProperties() {
         return this.properties;

@@ -20,7 +20,130 @@ import javax.annotation.Nullable;
  * Spring Cloud Gateway resource
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Gateways_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var gateway = new AzureNative.AppPlatform.Gateway("gateway", new AzureNative.AppPlatform.GatewayArgs
+ *         {
+ *             GatewayName = "default",
+ *             Properties = new AzureNative.AppPlatform.Inputs.GatewayPropertiesArgs
+ *             {
+ *                 Public = true,
+ *                 ResourceRequests = new AzureNative.AppPlatform.Inputs.GatewayResourceRequestsArgs
+ *                 {
+ *                     Cpu = "1",
+ *                     Memory = "1G",
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *             Sku = new AzureNative.AppPlatform.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 2,
+ *                 Name = "E0",
+ *                 Tier = "Enterprise",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewGateway(ctx, "gateway", &appplatform.GatewayArgs{
+ * 			GatewayName: pulumi.String("default"),
+ * 			Properties: &appplatform.GatewayPropertiesArgs{
+ * 				Public: pulumi.Bool(true),
+ * 				ResourceRequests: &appplatform.GatewayResourceRequestsArgs{
+ * 					Cpu:    pulumi.String("1"),
+ * 					Memory: pulumi.String("1G"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 			Sku: &appplatform.SkuArgs{
+ * 				Capacity: pulumi.Int(2),
+ * 				Name:     pulumi.String("E0"),
+ * 				Tier:     pulumi.String("Enterprise"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const gateway = new azure_native.appplatform.Gateway("gateway", {
+ *     gatewayName: "default",
+ *     properties: {
+ *         "public": true,
+ *         resourceRequests: {
+ *             cpu: "1",
+ *             memory: "1G",
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ *     sku: {
+ *         capacity: 2,
+ *         name: "E0",
+ *         tier: "Enterprise",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * gateway = azure_native.appplatform.Gateway("gateway",
+ *     gateway_name="default",
+ *     properties=azure_native.appplatform.GatewayPropertiesArgs(
+ *         public=True,
+ *         resource_requests=azure_native.appplatform.GatewayResourceRequestsArgs(
+ *             cpu="1",
+ *             memory="1G",
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice",
+ *     sku=azure_native.appplatform.SkuArgs(
+ *         capacity=2,
+ *         name="E0",
+ *         tier="Enterprise",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,70 +158,60 @@ import javax.annotation.Nullable;
 public class Gateway extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Spring Cloud Gateway properties payload
-     * 
      */
     @Export(name="properties", type=GatewayPropertiesResponse.class, parameters={})
     private Output<GatewayPropertiesResponse> properties;
 
     /**
      * @return Spring Cloud Gateway properties payload
-     * 
      */
     public Output<GatewayPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Spring Cloud Gateway resource
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Sku of the Spring Cloud Gateway resource
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

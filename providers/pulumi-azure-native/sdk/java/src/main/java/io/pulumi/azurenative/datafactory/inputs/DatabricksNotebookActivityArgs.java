@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * DatabricksNotebook activity.
- * 
  */
 public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
-     * 
      */
     @Import(name="baseParameters")
       private final @Nullable Output<Map<String,Object>> baseParameters;
@@ -38,7 +36,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -49,7 +46,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -60,7 +56,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * A list of libraries to be installed on the cluster that will execute the job.
-     * 
      */
     @Import(name="libraries")
       private final @Nullable Output<List<Map<String,Object>>> libraries;
@@ -71,7 +66,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -82,7 +76,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -93,7 +86,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="notebookPath", required=true)
       private final Output<Object> notebookPath;
@@ -104,7 +96,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -116,7 +107,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
     /**
      * Type of activity.
      * Expected value is 'DatabricksNotebook'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -127,7 +117,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of authentication used to connect to the OData service.
-     * 
      */
     @EnumType
     public enum ODataAuthenticationType {

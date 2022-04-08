@@ -17,7 +17,65 @@ import javax.annotation.Nullable;
  * Class representing Traffic Manager User Metrics.
  * API Version: 2018-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TrafficManagerUserMetricsKeys-PUT
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var trafficManagerUserMetricsKey = new AzureNative.Network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", new AzureNative.Network.TrafficManagerUserMetricsKeyArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewTrafficManagerUserMetricsKey(ctx, "trafficManagerUserMetricsKey", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const trafficManagerUserMetricsKey = new azure_native.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", {});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * traffic_manager_user_metrics_key = azure_native.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +90,36 @@ import javax.annotation.Nullable;
 public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomResource {
     /**
      * The key returned by the User Metrics operation.
-     * 
      */
     @Export(name="key", type=String.class, parameters={})
     private Output</* @Nullable */ String> key;
 
     /**
      * @return The key returned by the User Metrics operation.
-     * 
      */
     public Output</* @Nullable */ String> getKey() {
         return this.key;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Inbound NAT rule of the load balancer.
- * 
  */
 public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
-     * 
      */
     @Import(name="backendIPConfiguration", required=true)
       private final NetworkInterfaceIPConfigurationResponse backendIPConfiguration;
@@ -35,7 +33,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
-     * 
      */
     @Import(name="backendPort")
       private final @Nullable Integer backendPort;
@@ -46,7 +43,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-     * 
      */
     @Import(name="enableFloatingIP")
       private final @Nullable Boolean enableFloatingIP;
@@ -57,7 +53,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-     * 
      */
     @Import(name="enableTcpReset")
       private final @Nullable Boolean enableTcpReset;
@@ -68,7 +63,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -79,7 +73,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A reference to frontend IP addresses.
-     * 
      */
     @Import(name="frontendIPConfiguration")
       private final @Nullable SubResourceResponse frontendIPConfiguration;
@@ -90,7 +83,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
-     * 
      */
     @Import(name="frontendPort")
       private final @Nullable Integer frontendPort;
@@ -101,7 +93,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -112,7 +103,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
@@ -123,7 +113,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -134,7 +123,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The reference to the transport protocol used by the load balancing rule.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;
@@ -145,7 +133,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The provisioning state of the inbound NAT rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -156,7 +143,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

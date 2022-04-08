@@ -13,13 +13,11 @@ import javax.annotation.Nullable;
 public final class AutoScaleRunErrorResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-     * 
      */
     private final String code;
     private final @Nullable List<AutoScaleRunErrorResponse> details;
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
-     * 
      */
     private final String message;
 
@@ -35,7 +33,6 @@ public final class AutoScaleRunErrorResponse {
 
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-     * 
     */
     public String getCode() {
         return this.code;
@@ -45,7 +42,6 @@ public final class AutoScaleRunErrorResponse {
     }
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
-     * 
     */
     public String getMessage() {
         return this.message;

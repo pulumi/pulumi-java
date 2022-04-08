@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a subnet.
- * 
  */
 public final class SubnetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SubnetPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Subnet name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ConfigurationServiceGitPropertyResponse {
     /**
      * Repositories of Application Configuration Service git property.
-     * 
      */
     private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
 
@@ -24,7 +23,6 @@ public final class ConfigurationServiceGitPropertyResponse {
 
     /**
      * Repositories of Application Configuration Service git property.
-     * 
     */
     public List<ConfigurationServiceGitRepositoryResponse> getRepositories() {
         return this.repositories == null ? List.of() : this.repositories;

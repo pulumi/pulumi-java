@@ -12,16 +12,14 @@ import javax.annotation.Nullable;
 
 /**
  * Log Analytics destination.
- * 
  */
 public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogAnalyticsDestinationArgs Empty = new LogAnalyticsDestinationArgs();
 
     /**
-     * A friendly name for the destination.
+     * A friendly name for the destination. 
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource ID of the Log Analytics workspace.
-     * 
      */
     @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;

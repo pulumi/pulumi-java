@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Administrative state of the physical port.
-     * 
      */
     @EnumType
     public enum ExpressRouteLinkAdminState {

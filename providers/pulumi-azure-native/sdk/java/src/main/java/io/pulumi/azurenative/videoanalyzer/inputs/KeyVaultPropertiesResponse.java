@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The details for accessing the encryption keys in Key Vault.
- * 
  */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The current key used to encrypt Video Analyzer account, including the key version.
-     * 
      */
     @Import(name="currentKeyIdentifier", required=true)
       private final String currentKeyIdentifier;
@@ -29,7 +27,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
-     * 
      */
     @Import(name="keyIdentifier", required=true)
       private final String keyIdentifier;

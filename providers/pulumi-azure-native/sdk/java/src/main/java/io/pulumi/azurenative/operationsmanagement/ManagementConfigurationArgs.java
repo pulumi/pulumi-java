@@ -17,7 +17,6 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * User Management Configuration Name.
-     * 
      */
     @Import(name="managementConfigurationName")
       private final @Nullable Output<String> managementConfigurationName;
@@ -39,7 +37,6 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group to get. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

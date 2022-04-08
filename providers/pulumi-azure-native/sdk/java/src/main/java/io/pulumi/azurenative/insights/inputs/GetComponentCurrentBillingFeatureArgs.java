@@ -14,7 +14,6 @@ public final class GetComponentCurrentBillingFeatureArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetComponentCurrentBillingFeatureArgs extends io.pulumi.resou
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

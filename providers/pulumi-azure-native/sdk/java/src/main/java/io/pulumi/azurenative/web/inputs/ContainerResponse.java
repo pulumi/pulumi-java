@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App container definition.
- * 
  */
 public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container start command arguments.
-     * 
      */
     @Import(name="args")
       private final @Nullable List<String> args;
@@ -34,7 +32,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container start command.
-     * 
      */
     @Import(name="command")
       private final @Nullable List<String> command;
@@ -45,7 +42,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container environment variables.
-     * 
      */
     @Import(name="env")
       private final @Nullable List<EnvironmentVarResponse> env;
@@ -56,7 +52,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container image tag.
-     * 
      */
     @Import(name="image")
       private final @Nullable String image;
@@ -67,7 +62,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Custom container name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -78,7 +72,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container resource requirements.
-     * 
      */
     @Import(name="resources")
       private final @Nullable ContainerResourcesResponse resources;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Common Data Service for Apps sink.
- * 
  */
 public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="alternateKeyName")
       private final @Nullable Object alternateKeyName;
@@ -32,7 +30,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="ignoreNullValues")
       private final @Nullable Object ignoreNullValues;
@@ -54,7 +50,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -65,7 +60,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
@@ -76,7 +70,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
@@ -88,7 +81,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
     /**
      * Copy sink type.
      * Expected value is 'CommonDataServiceForAppsSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -99,7 +91,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
@@ -110,7 +101,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
@@ -121,7 +111,6 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
 
     /**
      * The write behavior for the operation.
-     * 
      */
     @Import(name="writeBehavior", required=true)
       private final String writeBehavior;

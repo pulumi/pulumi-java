@@ -12,17 +12,14 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
-     * 
      */
     private final String odataType;
     /**
      * Password for a username/password pair.
-     * 
      */
     private final String password;
     /**
      * Username for a username/password pair.
-     * 
      */
     private final String username;
 
@@ -39,21 +36,18 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Password for a username/password pair.
-     * 
     */
     public String getPassword() {
         return this.password;
     }
     /**
      * Username for a username/password pair.
-     * 
     */
     public String getUsername() {
         return this.username;

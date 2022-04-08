@@ -18,7 +18,6 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connector ID
-     * 
      */
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
@@ -29,7 +28,6 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data connector kind
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectorKind>> kind;
@@ -40,7 +38,6 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

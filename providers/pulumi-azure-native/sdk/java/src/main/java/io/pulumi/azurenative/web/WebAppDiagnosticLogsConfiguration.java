@@ -32,98 +32,84 @@ import javax.annotation.Nullable;
 public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Application logs configuration.
-     * 
      */
     @Export(name="applicationLogs", type=ApplicationLogsConfigResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationLogsConfigResponse> applicationLogs;
 
     /**
      * @return Application logs configuration.
-     * 
      */
     public Output</* @Nullable */ ApplicationLogsConfigResponse> getApplicationLogs() {
         return this.applicationLogs;
     }
     /**
      * Detailed error messages configuration.
-     * 
      */
     @Export(name="detailedErrorMessages", type=EnabledConfigResponse.class, parameters={})
     private Output</* @Nullable */ EnabledConfigResponse> detailedErrorMessages;
 
     /**
      * @return Detailed error messages configuration.
-     * 
      */
     public Output</* @Nullable */ EnabledConfigResponse> getDetailedErrorMessages() {
         return this.detailedErrorMessages;
     }
     /**
      * Failed requests tracing configuration.
-     * 
      */
     @Export(name="failedRequestsTracing", type=EnabledConfigResponse.class, parameters={})
     private Output</* @Nullable */ EnabledConfigResponse> failedRequestsTracing;
 
     /**
      * @return Failed requests tracing configuration.
-     * 
      */
     public Output</* @Nullable */ EnabledConfigResponse> getFailedRequestsTracing() {
         return this.failedRequestsTracing;
     }
     /**
      * HTTP logs configuration.
-     * 
      */
     @Export(name="httpLogs", type=HttpLogsConfigResponse.class, parameters={})
     private Output</* @Nullable */ HttpLogsConfigResponse> httpLogs;
 
     /**
      * @return HTTP logs configuration.
-     * 
      */
     public Output</* @Nullable */ HttpLogsConfigResponse> getHttpLogs() {
         return this.httpLogs;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

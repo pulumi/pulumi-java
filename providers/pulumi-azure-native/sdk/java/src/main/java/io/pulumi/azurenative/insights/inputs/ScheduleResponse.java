@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines how often to run the search and the time interval.
- * 
  */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * frequency (in minutes) at which rule condition should be evaluated.
-     * 
      */
     @Import(name="frequencyInMinutes", required=true)
       private final Integer frequencyInMinutes;
@@ -29,7 +27,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
-     * 
      */
     @Import(name="timeWindowInMinutes", required=true)
       private final Integer timeWindowInMinutes;

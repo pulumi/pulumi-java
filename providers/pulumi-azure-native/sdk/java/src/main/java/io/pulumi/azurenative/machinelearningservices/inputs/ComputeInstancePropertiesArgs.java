@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Compute Instance properties
- * 
  */
 public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
-     * 
      */
     @Import(name="applicationSharingPolicy")
       private final @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
@@ -38,7 +36,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The Compute Instance Authorization type. Available values are personal (default).
-     * 
      */
     @Import(name="computeInstanceAuthorizationType")
       private final @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
@@ -49,7 +46,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Settings for a personal compute instance.
-     * 
      */
     @Import(name="personalComputeInstanceSettings")
       private final @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
@@ -60,7 +56,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Details of customized scripts to execute for setting up the cluster.
-     * 
      */
     @Import(name="setupScripts")
       private final @Nullable Output<SetupScriptsArgs> setupScripts;
@@ -71,7 +66,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies policy and settings for SSH access.
-     * 
      */
     @Import(name="sshSettings")
       private final @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
@@ -82,7 +76,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Virtual network subnet resource ID the compute nodes belong to.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<ResourceIdArgs> subnet;
@@ -93,7 +86,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Virtual Machine Size
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;

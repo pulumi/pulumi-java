@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Unencrypted credentials for accessing device.
- * 
  */
 public final class UnencryptedCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class UnencryptedCredentialsResponse extends io.pulumi.resources.In
 
     /**
      * Name of the job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -33,7 +31,6 @@ public final class UnencryptedCredentialsResponse extends io.pulumi.resources.In
 
     /**
      * Secrets related to this job.
-     * 
      */
     @Import(name="jobSecrets", required=true)
       private final Object jobSecrets;

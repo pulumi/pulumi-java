@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Individual resource operation information.
- * 
  */
 public final class ResourceOperationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
-     * 
      */
     @Import(name="operationId", required=true)
       private final String operationId;
@@ -31,7 +29,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -42,7 +39,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable String resourceName;
@@ -53,7 +49,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable String resourceType;
@@ -64,7 +59,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Http status code of the operation.
-     * 
      */
     @Import(name="statusCode", required=true)
       private final String statusCode;
@@ -75,7 +69,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Descriptive information of the resource operation.
-     * 
      */
     @Import(name="statusMessage", required=true)
       private final String statusMessage;

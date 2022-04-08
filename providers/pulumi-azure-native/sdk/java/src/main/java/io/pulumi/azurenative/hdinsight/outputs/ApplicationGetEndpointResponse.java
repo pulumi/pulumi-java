@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ApplicationGetEndpointResponse {
     /**
      * The destination port to connect to.
-     * 
      */
     private final @Nullable Integer destinationPort;
     /**
      * The location of the endpoint.
-     * 
      */
     private final @Nullable String location;
     /**
      * The private ip address of the endpoint.
-     * 
      */
     private final @Nullable String privateIPAddress;
     /**
      * The public port to connect to.
-     * 
      */
     private final @Nullable Integer publicPort;
 
@@ -47,28 +43,24 @@ public final class ApplicationGetEndpointResponse {
 
     /**
      * The destination port to connect to.
-     * 
     */
     public Optional<Integer> getDestinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
      * The location of the endpoint.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The private ip address of the endpoint.
-     * 
     */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The public port to connect to.
-     * 
     */
     public Optional<Integer> getPublicPort() {
         return Optional.ofNullable(this.publicPort);

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The format of the report being delivered.
-     * 
      */
     @EnumType
     public enum FormatType {

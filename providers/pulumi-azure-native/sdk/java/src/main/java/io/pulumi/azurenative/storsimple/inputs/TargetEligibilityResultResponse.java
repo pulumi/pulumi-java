@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The eligibility result of device, as a failover target device.
- * 
  */
 public final class TargetEligibilityResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
 
     /**
      * The eligibility status of device, as a failover target device.
-     * 
      */
     @Import(name="eligibilityStatus")
       private final @Nullable String eligibilityStatus;
@@ -33,7 +31,6 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
 
     /**
      * The list of error messages, if a device does not qualify as a failover target device.
-     * 
      */
     @Import(name="messages")
       private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;

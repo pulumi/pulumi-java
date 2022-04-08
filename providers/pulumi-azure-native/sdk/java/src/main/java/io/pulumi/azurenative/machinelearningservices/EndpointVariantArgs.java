@@ -24,7 +24,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * The compute environment type for the service.
      * Expected value is 'Custom'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
@@ -35,7 +34,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The description of the service.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +44,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Environment, models and assets needed for inferencing.
-     * 
      */
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
@@ -57,7 +54,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Is this the default variant.
-     * 
      */
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
@@ -68,7 +64,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The authentication keys.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
@@ -79,7 +74,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The service tag dictionary. Tags are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
@@ -90,7 +84,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Azure location/region.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -101,7 +94,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The service properties dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -112,7 +104,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -123,7 +114,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the Azure Machine Learning service.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -134,7 +124,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The amount of traffic variant receives.
-     * 
      */
     @Import(name="trafficPercentile")
       private final @Nullable Output<Double> trafficPercentile;
@@ -145,7 +134,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of the variant.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,VariantType>> type;
@@ -156,7 +144,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -20,7 +20,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
 
     /**
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
-     * 
      */
     @Import(name="level", required=true)
       private final Output<Either<String,LockLevel>> level;
@@ -31,7 +30,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
 
     /**
      * The lock name. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.
-     * 
      */
     @Import(name="lockName")
       private final @Nullable Output<String> lockName;
@@ -42,7 +40,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
 
     /**
      * Notes about the lock. Maximum of 512 characters.
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -53,7 +50,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
 
     /**
      * The owners of the lock.
-     * 
      */
     @Import(name="owners")
       private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
@@ -64,7 +60,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group to lock.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

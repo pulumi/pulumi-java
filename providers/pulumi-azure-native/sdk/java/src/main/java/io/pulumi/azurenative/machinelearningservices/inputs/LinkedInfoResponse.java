@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Info about origin if it is linked.
- * 
  */
 public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * LinkedId id.
-     * 
      */
     @Import(name="linkedId")
       private final @Nullable String linkedId;
@@ -31,7 +29,6 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Linked resource name.
-     * 
      */
     @Import(name="linkedResourceName")
       private final @Nullable String linkedResourceName;
@@ -42,7 +39,6 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Datastore origin
-     * 
      */
     @Import(name="origin")
       private final @Nullable String origin;

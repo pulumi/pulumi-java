@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ApplicationPackageSupportUrlsResponse {
     /**
      * The government cloud support URL.
-     * 
      */
     private final @Nullable String governmentCloud;
     /**
      * The public azure support URL.
-     * 
      */
     private final @Nullable String publicAzure;
 
@@ -32,14 +30,12 @@ public final class ApplicationPackageSupportUrlsResponse {
 
     /**
      * The government cloud support URL.
-     * 
     */
     public Optional<String> getGovernmentCloud() {
         return Optional.ofNullable(this.governmentCloud);
     }
     /**
      * The public azure support URL.
-     * 
     */
     public Optional<String> getPublicAzure() {
         return Optional.ofNullable(this.publicAzure);

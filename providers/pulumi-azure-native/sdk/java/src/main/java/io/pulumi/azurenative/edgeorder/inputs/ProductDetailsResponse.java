@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents product details
- * 
  */
 public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Quantity of the product
-     * 
      */
     @Import(name="count", required=true)
       private final Integer count;
@@ -36,7 +34,6 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * list of device details
-     * 
      */
     @Import(name="deviceDetails", required=true)
       private final List<DeviceDetailsResponse> deviceDetails;
@@ -47,7 +44,6 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Display details of the product
-     * 
      */
     @Import(name="displayInfo")
       private final @Nullable DisplayInfoResponse displayInfo;
@@ -58,7 +54,6 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Hierarchy of the product which uniquely identifies the product
-     * 
      */
     @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformationResponse hierarchyInformation;
@@ -69,7 +64,6 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Double encryption status of the configuration. Read-only field.
-     * 
      */
     @Import(name="productDoubleEncryptionStatus", required=true)
       private final String productDoubleEncryptionStatus;

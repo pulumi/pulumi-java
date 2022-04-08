@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Deployment instance payload
- * 
  */
 public final class DeploymentInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Discovery status of the deployment instance
-     * 
      */
     @Import(name="discoveryStatus", required=true)
       private final String discoveryStatus;
@@ -29,7 +27,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the deployment instance
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Failed reason of the deployment instance
-     * 
      */
     @Import(name="reason", required=true)
       private final String reason;
@@ -51,7 +47,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Start time of the deployment instance
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -62,7 +57,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Status of the deployment instance
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

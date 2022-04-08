@@ -25,7 +25,83 @@ import javax.annotation.Nullable;
  * Account resource
  * API Version: 2020-12-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Accounts_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new AzureNative.Purview.Account("account", new AzureNative.Purview.AccountArgs
+ *         {
+ *             AccountName = "account1",
+ *             Location = "West US 2",
+ *             ManagedResourceGroupName = "custom-rgname",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	purview "github.com/pulumi/pulumi-azure-native/sdk/go/azure/purview"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := purview.NewAccount(ctx, "account", &purview.AccountArgs{
+ * 			AccountName:              pulumi.String("account1"),
+ * 			Location:                 pulumi.String("West US 2"),
+ * 			ManagedResourceGroupName: pulumi.String("custom-rgname"),
+ * 			ResourceGroupName:        pulumi.String("SampleResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const account = new azure_native.purview.Account("account", {
+ *     accountName: "account1",
+ *     location: "West US 2",
+ *     managedResourceGroupName: "custom-rgname",
+ *     resourceGroupName: "SampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * account = azure_native.purview.Account("account",
+ *     account_name="account1",
+ *     location="West US 2",
+ *     managed_resource_group_name="custom-rgname",
+ *     resource_group_name="SampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,7 +117,6 @@ public class Account extends io.pulumi.resources.CustomResource {
     /**
      * Cloud connectors.
      * External cloud identifier used as part of scanning configuration.
-     * 
      */
     @Export(name="cloudConnectors", type=CloudConnectorsResponse.class, parameters={})
     private Output</* @Nullable */ CloudConnectorsResponse> cloudConnectors;
@@ -49,245 +124,210 @@ public class Account extends io.pulumi.resources.CustomResource {
     /**
      * @return Cloud connectors.
      * External cloud identifier used as part of scanning configuration.
-     * 
      */
     public Output</* @Nullable */ CloudConnectorsResponse> getCloudConnectors() {
         return this.cloudConnectors;
     }
     /**
      * Gets the time at which the entity was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Gets the time at which the entity was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Gets the creator of the entity.
-     * 
      */
     @Export(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
     /**
      * @return Gets the creator of the entity.
-     * 
      */
     public Output<String> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Gets the creators of the entity's object id.
-     * 
      */
     @Export(name="createdByObjectId", type=String.class, parameters={})
     private Output<String> createdByObjectId;
 
     /**
      * @return Gets the creators of the entity's object id.
-     * 
      */
     public Output<String> getCreatedByObjectId() {
         return this.createdByObjectId;
     }
     /**
      * The URIs that are the public endpoints of the account.
-     * 
      */
     @Export(name="endpoints", type=AccountPropertiesResponseEndpoints.class, parameters={})
     private Output<AccountPropertiesResponseEndpoints> endpoints;
 
     /**
      * @return The URIs that are the public endpoints of the account.
-     * 
      */
     public Output<AccountPropertiesResponseEndpoints> getEndpoints() {
         return this.endpoints;
     }
     /**
      * Gets or sets the friendly name.
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
      * @return Gets or sets the friendly name.
-     * 
      */
     public Output<String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * Identity Info on the tracked resource
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return Identity Info on the tracked resource
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Gets or sets the location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Gets or sets the location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets or sets the managed resource group name
-     * 
      */
     @Export(name="managedResourceGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupName;
 
     /**
      * @return Gets or sets the managed resource group name
-     * 
      */
     public Output</* @Nullable */ String> getManagedResourceGroupName() {
         return this.managedResourceGroupName;
     }
     /**
      * Gets the resource identifiers of the managed resources.
-     * 
      */
     @Export(name="managedResources", type=AccountPropertiesResponseManagedResources.class, parameters={})
     private Output<AccountPropertiesResponseManagedResources> managedResources;
 
     /**
      * @return Gets the resource identifiers of the managed resources.
-     * 
      */
     public Output<AccountPropertiesResponseManagedResources> getManagedResources() {
         return this.managedResources;
     }
     /**
      * Gets or sets the name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets or sets the name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets the private endpoint connections information.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return Gets the private endpoint connections information.
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Gets or sets the state of the provisioning.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the state of the provisioning.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the public network access.
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
      * @return Gets or sets the public network access.
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * Gets or sets the Sku.
-     * 
      */
     @Export(name="sku", type=AccountResponseSku.class, parameters={})
     private Output<AccountResponseSku> sku;
 
     /**
      * @return Gets or sets the Sku.
-     * 
      */
     public Output<AccountResponseSku> getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=AccountPropertiesResponseSystemData.class, parameters={})
     private Output<AccountPropertiesResponseSystemData> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<AccountPropertiesResponseSystemData> getSystemData() {
         return this.systemData;
     }
     /**
      * Tags on the azure resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags on the azure resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets or sets the type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets or sets the type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

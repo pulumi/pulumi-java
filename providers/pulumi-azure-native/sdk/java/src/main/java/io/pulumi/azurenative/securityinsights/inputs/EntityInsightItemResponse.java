@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Entity insight Item.
- * 
  */
 public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Query results for table insights query.
-     * 
      */
     @Import(name="chartQueryResults")
       private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
@@ -34,7 +32,6 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The query id of the insight
-     * 
      */
     @Import(name="queryId")
       private final @Nullable String queryId;
@@ -45,7 +42,6 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The Time interval that the query actually executed on.
-     * 
      */
     @Import(name="queryTimeInterval")
       private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
@@ -56,7 +52,6 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Query results for table insights query.
-     * 
      */
     @Import(name="tableQueryResults")
       private final @Nullable InsightsTableResultResponse tableQueryResults;

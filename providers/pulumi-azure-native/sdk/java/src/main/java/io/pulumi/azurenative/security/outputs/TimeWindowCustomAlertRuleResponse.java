@@ -13,38 +13,31 @@ import java.util.Objects;
 public final class TimeWindowCustomAlertRuleResponse {
     /**
      * The description of the custom alert.
-     * 
      */
     private final String description;
     /**
      * The display name of the custom alert.
-     * 
      */
     private final String displayName;
     /**
      * Status of the custom alert.
-     * 
      */
     private final Boolean isEnabled;
     /**
      * The maximum threshold.
-     * 
      */
     private final Integer maxThreshold;
     /**
      * The minimum threshold.
-     * 
      */
     private final Integer minThreshold;
     /**
      * The type of the custom alert rule.
      * Expected value is 'TimeWindowCustomAlertRule'.
-     * 
      */
     private final String ruleType;
     /**
      * The time window size in iso8601 format.
-     * 
      */
     private final String timeWindowSize;
 
@@ -68,35 +61,30 @@ public final class TimeWindowCustomAlertRuleResponse {
 
     /**
      * The description of the custom alert.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The display name of the custom alert.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Status of the custom alert.
-     * 
     */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The maximum threshold.
-     * 
     */
     public Integer getMaxThreshold() {
         return this.maxThreshold;
     }
     /**
      * The minimum threshold.
-     * 
     */
     public Integer getMinThreshold() {
         return this.minThreshold;
@@ -104,14 +92,12 @@ public final class TimeWindowCustomAlertRuleResponse {
     /**
      * The type of the custom alert rule.
      * Expected value is 'TimeWindowCustomAlertRule'.
-     * 
     */
     public String getRuleType() {
         return this.ruleType;
     }
     /**
      * The time window size in iso8601 format.
-     * 
     */
     public String getTimeWindowSize() {
         return this.timeWindowSize;

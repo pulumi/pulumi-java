@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The daily volume cap for ingestion.
- * 
  */
 public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The workspace daily quota for ingestion.
-     * 
      */
     @Import(name="dailyQuotaGb")
       private final @Nullable Double dailyQuotaGb;
@@ -32,7 +30,6 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The status of data ingestion for this workspace.
-     * 
      */
     @Import(name="dataIngestionStatus", required=true)
       private final String dataIngestionStatus;
@@ -43,7 +40,6 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time when the quota will be rest.
-     * 
      */
     @Import(name="quotaNextResetTime", required=true)
       private final String quotaNextResetTime;

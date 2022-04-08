@@ -18,7 +18,105 @@ import javax.annotation.Nullable;
  * The private endpoint connection of an IotHub
  * API Version: 2020-08-31.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnection_Update
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.Devices.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Devices.PrivateEndpointConnectionArgs
+ *         {
+ *             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
+ *             Properties = new AzureNative.Devices.Inputs.PrivateEndpointConnectionPropertiesArgs
+ *             {
+ *                 PrivateLinkServiceConnectionState = new AzureNative.Devices.Inputs.PrivateLinkServiceConnectionStateArgs
+ *                 {
+ *                     Description = "Approved by johndoe@contoso.com",
+ *                     Status = "Approved",
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourceName = "testHub",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devices.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &devices.PrivateEndpointConnectionArgs{
+ * 			PrivateEndpointConnectionName: pulumi.String("myPrivateEndpointConnection"),
+ * 			Properties: &devices.PrivateEndpointConnectionPropertiesArgs{
+ * 				PrivateLinkServiceConnectionState: &devices.PrivateLinkServiceConnectionStateArgs{
+ * 					Description: pulumi.String("Approved by johndoe@contoso.com"),
+ * 					Status:      pulumi.String("Approved"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ResourceName:      pulumi.String("testHub"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.devices.PrivateEndpointConnection("privateEndpointConnection", {
+ *     privateEndpointConnectionName: "myPrivateEndpointConnection",
+ *     properties: {
+ *         privateLinkServiceConnectionState: {
+ *             description: "Approved by johndoe@contoso.com",
+ *             status: "Approved",
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     resourceName: "testHub",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.devices.PrivateEndpointConnection("privateEndpointConnection",
+ *     private_endpoint_connection_name="myPrivateEndpointConnection",
+ *     properties=azure_native.devices.PrivateEndpointConnectionPropertiesArgs(
+ *         private_link_service_connection_state=azure_native.devices.PrivateLinkServiceConnectionStateArgs(
+ *             description="Approved by johndoe@contoso.com",
+ *             status="Approved",
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     resource_name="testHub")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +131,36 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties of a private endpoint connection
-     * 
      */
     @Export(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
     /**
      * @return The properties of a private endpoint connection
-     * 
      */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

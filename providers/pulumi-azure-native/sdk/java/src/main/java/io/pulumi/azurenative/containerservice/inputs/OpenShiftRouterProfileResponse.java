@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an OpenShift router
- * 
  */
 public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
 
     /**
      * Auto-allocated FQDN for the OpenShift router.
-     * 
      */
     @Import(name="fqdn", required=true)
       private final String fqdn;
@@ -31,7 +29,6 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
 
     /**
      * Name of the router profile.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -42,7 +39,6 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
 
     /**
      * DNS subdomain for OpenShift router.
-     * 
      */
     @Import(name="publicSubdomain", required=true)
       private final String publicSubdomain;

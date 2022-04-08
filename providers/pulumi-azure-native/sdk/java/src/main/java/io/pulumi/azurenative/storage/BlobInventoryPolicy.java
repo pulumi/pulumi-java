@@ -19,7 +19,186 @@ import javax.annotation.Nullable;
  * The storage account blob inventory policy.
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### StorageAccountSetBlobInventoryPolicy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var blobInventoryPolicy = new AzureNative.Storage.BlobInventoryPolicy("blobInventoryPolicy", new AzureNative.Storage.BlobInventoryPolicyArgs
+ *         {
+ *             AccountName = "sto9699",
+ *             BlobInventoryPolicyName = "default",
+ *             Policy = new AzureNative.Storage.Inputs.BlobInventoryPolicySchemaArgs
+ *             {
+ *                 Destination = "containerName",
+ *                 Enabled = true,
+ *                 Rules = 
+ *                 {
+ *                     new AzureNative.Storage.Inputs.BlobInventoryPolicyRuleArgs
+ *                     {
+ *                         Definition = new AzureNative.Storage.Inputs.BlobInventoryPolicyDefinitionArgs
+ *                         {
+ *                             Filters = new AzureNative.Storage.Inputs.BlobInventoryPolicyFilterArgs
+ *                             {
+ *                                 BlobTypes = 
+ *                                 {
+ *                                     "blockBlob",
+ *                                     "appendBlob",
+ *                                     "pageBlob",
+ *                                 },
+ *                                 IncludeBlobVersions = true,
+ *                                 IncludeSnapshots = true,
+ *                                 PrefixMatch = 
+ *                                 {
+ *                                     "inventoryprefix1",
+ *                                     "inventoryprefix2",
+ *                                 },
+ *                             },
+ *                         },
+ *                         Enabled = true,
+ *                         Name = "inventoryPolicyRule1",
+ *                     },
+ *                 },
+ *                 Type = "Inventory",
+ *             },
+ *             ResourceGroupName = "res7687",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBlobInventoryPolicy(ctx, "blobInventoryPolicy", &storage.BlobInventoryPolicyArgs{
+ * 			AccountName:             pulumi.String("sto9699"),
+ * 			BlobInventoryPolicyName: pulumi.String("default"),
+ * 			Policy: &storage.BlobInventoryPolicySchemaArgs{
+ * 				Destination: pulumi.String("containerName"),
+ * 				Enabled:     pulumi.Bool(true),
+ * 				Rules: storage.BlobInventoryPolicyRuleArray{
+ * 					&storage.BlobInventoryPolicyRuleArgs{
+ * 						Definition: &storage.BlobInventoryPolicyDefinitionArgs{
+ * 							Filters: &storage.BlobInventoryPolicyFilterArgs{
+ * 								BlobTypes: pulumi.StringArray{
+ * 									pulumi.String("blockBlob"),
+ * 									pulumi.String("appendBlob"),
+ * 									pulumi.String("pageBlob"),
+ * 								},
+ * 								IncludeBlobVersions: pulumi.Bool(true),
+ * 								IncludeSnapshots:    pulumi.Bool(true),
+ * 								PrefixMatch: pulumi.StringArray{
+ * 									pulumi.String("inventoryprefix1"),
+ * 									pulumi.String("inventoryprefix2"),
+ * 								},
+ * 							},
+ * 						},
+ * 						Enabled: pulumi.Bool(true),
+ * 						Name:    pulumi.String("inventoryPolicyRule1"),
+ * 					},
+ * 				},
+ * 				Type: pulumi.String("Inventory"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("res7687"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const blobInventoryPolicy = new azure_native.storage.BlobInventoryPolicy("blobInventoryPolicy", {
+ *     accountName: "sto9699",
+ *     blobInventoryPolicyName: "default",
+ *     policy: {
+ *         destination: "containerName",
+ *         enabled: true,
+ *         rules: [{
+ *             definition: {
+ *                 filters: {
+ *                     blobTypes: [
+ *                         "blockBlob",
+ *                         "appendBlob",
+ *                         "pageBlob",
+ *                     ],
+ *                     includeBlobVersions: true,
+ *                     includeSnapshots: true,
+ *                     prefixMatch: [
+ *                         "inventoryprefix1",
+ *                         "inventoryprefix2",
+ *                     ],
+ *                 },
+ *             },
+ *             enabled: true,
+ *             name: "inventoryPolicyRule1",
+ *         }],
+ *         type: "Inventory",
+ *     },
+ *     resourceGroupName: "res7687",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * blob_inventory_policy = azure_native.storage.BlobInventoryPolicy("blobInventoryPolicy",
+ *     account_name="sto9699",
+ *     blob_inventory_policy_name="default",
+ *     policy=azure_native.storage.BlobInventoryPolicySchemaArgs(
+ *         destination="containerName",
+ *         enabled=True,
+ *         rules=[azure_native.storage.BlobInventoryPolicyRuleArgs(
+ *             definition=azure_native.storage.BlobInventoryPolicyDefinitionArgs(
+ *                 filters=azure_native.storage.BlobInventoryPolicyFilterArgs(
+ *                     blob_types=[
+ *                         "blockBlob",
+ *                         "appendBlob",
+ *                         "pageBlob",
+ *                     ],
+ *                     include_blob_versions=True,
+ *                     include_snapshots=True,
+ *                     prefix_match=[
+ *                         "inventoryprefix1",
+ *                         "inventoryprefix2",
+ *                     ],
+ *                 ),
+ *             ),
+ *             enabled=True,
+ *             name="inventoryPolicyRule1",
+ *         )],
+ *         type="Inventory",
+ *     ),
+ *     resource_group_name="res7687")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +213,60 @@ import javax.annotation.Nullable;
 public class BlobInventoryPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Returns the last modified date and time of the blob inventory policy.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return Returns the last modified date and time of the blob inventory policy.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The storage account blob inventory policy object. It is composed of policy rules.
-     * 
      */
     @Export(name="policy", type=BlobInventoryPolicySchemaResponse.class, parameters={})
     private Output<BlobInventoryPolicySchemaResponse> policy;
 
     /**
      * @return The storage account blob inventory policy object. It is composed of policy rules.
-     * 
      */
     public Output<BlobInventoryPolicySchemaResponse> getPolicy() {
         return this.policy;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

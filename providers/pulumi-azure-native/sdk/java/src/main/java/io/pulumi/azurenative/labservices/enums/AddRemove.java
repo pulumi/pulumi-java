@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Enum indicating if user is adding or removing a favorite lab
-     * 
      */
     @EnumType
     public enum AddRemove {
         /**
          * Indicates that a user is adding a favorite lab
-         * 
          */
         Add("Add"),
         /**
          * Indicates that a user is removing a favorite lab
-         * 
          */
         Remove("Remove");
 

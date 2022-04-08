@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * SSIS package execution credential.
- * 
  */
 public final class SSISExecutionCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
 
     /**
      * Domain for windows authentication.
-     * 
      */
     @Import(name="domain", required=true)
       private final Object domain;
@@ -30,7 +28,6 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
 
     /**
      * Password for windows authentication.
-     * 
      */
     @Import(name="password", required=true)
       private final SecureStringResponse password;
@@ -41,7 +38,6 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
 
     /**
      * UseName for windows authentication.
-     * 
      */
     @Import(name="userName", required=true)
       private final Object userName;

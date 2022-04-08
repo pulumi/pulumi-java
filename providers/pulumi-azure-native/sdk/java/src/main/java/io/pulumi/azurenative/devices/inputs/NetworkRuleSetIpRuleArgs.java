@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP Rule to be applied as part of Network Rule Set
- * 
  */
 public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * IP Filter Action
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
@@ -33,7 +31,6 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the IP filter rule.
-     * 
      */
     @Import(name="filterName", required=true)
       private final Output<String> filterName;
@@ -44,7 +41,6 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * A string that contains the IP address range in CIDR notation for the rule.
-     * 
      */
     @Import(name="ipMask", required=true)
       private final Output<String> ipMask;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * specifies the type of the alert criteria.
-     * 
      */
     @EnumType
     public enum Odatatype {

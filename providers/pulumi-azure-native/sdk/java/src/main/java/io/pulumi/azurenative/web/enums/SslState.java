@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SSL type.
-     * 
      */
     @EnumType
     public enum SslState {

@@ -14,7 +14,6 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
 
     /**
      * The name of the Event Hub-compatible endpoint in the IoT hub.
-     * 
      */
     @Import(name="eventHubEndpointName", required=true)
       private final String eventHubEndpointName;
@@ -25,7 +24,6 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
 
     /**
      * The name of the consumer group to retrieve.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
 
     /**
      * The name of the resource group that contains the IoT hub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
 
     /**
      * The name of the IoT hub.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

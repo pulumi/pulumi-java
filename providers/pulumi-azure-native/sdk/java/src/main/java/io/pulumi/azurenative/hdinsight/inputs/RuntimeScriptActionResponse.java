@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a script action on a running cluster.
- * 
  */
 public final class RuntimeScriptActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
 
     /**
      * The application name of the script action, if any.
-     * 
      */
     @Import(name="applicationName", required=true)
       private final String applicationName;
@@ -32,7 +30,6 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
 
     /**
      * The name of the script action.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
 
     /**
      * The parameters for the script
-     * 
      */
     @Import(name="parameters")
       private final @Nullable String parameters;
@@ -54,7 +50,6 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
 
     /**
      * The list of roles where script will be executed.
-     * 
      */
     @Import(name="roles", required=true)
       private final List<String> roles;
@@ -65,7 +60,6 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
 
     /**
      * The URI to the script.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

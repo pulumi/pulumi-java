@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Https settings for a domain
- * 
  */
 public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Defines the source of the SSL certificate
-     * 
      */
     @Import(name="certificateSource", required=true)
       private final String certificateSource;
@@ -32,7 +30,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Defines the type of the certificate used for secure connections to a frontendEndpoint
-     * 
      */
     @Import(name="certificateType")
       private final @Nullable String certificateType;
@@ -43,7 +40,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
 
     /**
      * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
-     * 
      */
     @Import(name="minimumTlsVersion", required=true)
       private final String minimumTlsVersion;
@@ -54,7 +50,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Defines the TLS extension protocol that is used for secure delivery
-     * 
      */
     @Import(name="protocolType", required=true)
       private final String protocolType;
@@ -65,7 +60,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
 
     /**
      * The name of the Key Vault secret representing the full certificate PFX
-     * 
      */
     @Import(name="secretName")
       private final @Nullable String secretName;
@@ -76,7 +70,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
 
     /**
      * The version of the Key Vault secret representing the full certificate PFX
-     * 
      */
     @Import(name="secretVersion")
       private final @Nullable String secretVersion;
@@ -87,7 +80,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
 
     /**
      * The Key Vault containing the SSL certificate
-     * 
      */
     @Import(name="vault")
       private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;

@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class VirtualMachineResponseProperties {
     /**
      * Public IP address of the virtual machine.
-     * 
      */
     private final @Nullable String address;
     /**
      * Admin credentials for virtual machine
-     * 
      */
     private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
     /**
      * Port open for ssh connections.
-     * 
      */
     private final @Nullable Integer sshPort;
     /**
      * Virtual Machine size
-     * 
      */
     private final @Nullable String virtualMachineSize;
 
@@ -48,28 +44,24 @@ public final class VirtualMachineResponseProperties {
 
     /**
      * Public IP address of the virtual machine.
-     * 
     */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Admin credentials for virtual machine
-     * 
     */
     public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
     /**
      * Port open for ssh connections.
-     * 
     */
     public Optional<Integer> getSshPort() {
         return Optional.ofNullable(this.sshPort);
     }
     /**
      * Virtual Machine size
-     * 
     */
     public Optional<String> getVirtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);

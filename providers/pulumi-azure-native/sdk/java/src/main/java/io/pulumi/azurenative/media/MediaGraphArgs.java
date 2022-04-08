@@ -19,7 +19,6 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -30,7 +29,6 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Media Graph description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Media Graph name.
-     * 
      */
     @Import(name="mediaGraphName")
       private final @Nullable Output<String> mediaGraphName;
@@ -52,7 +49,6 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Media Graph sinks.
-     * 
      */
     @Import(name="sinks", required=true)
       private final Output<List<MediaGraphAssetSinkArgs>> sinks;
@@ -74,7 +69,6 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Media Graph sources.
-     * 
      */
     @Import(name="sources", required=true)
       private final Output<List<MediaGraphRtspSourceArgs>> sources;

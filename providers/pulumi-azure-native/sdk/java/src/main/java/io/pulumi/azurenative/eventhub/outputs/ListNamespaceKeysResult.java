@@ -11,37 +11,30 @@ import java.util.Objects;
 public final class ListNamespaceKeysResult {
     /**
      * Primary connection string of the alias if GEO DR is enabled
-     * 
      */
     private final String aliasPrimaryConnectionString;
     /**
      * Secondary  connection string of the alias if GEO DR is enabled
-     * 
      */
     private final String aliasSecondaryConnectionString;
     /**
      * A string that describes the AuthorizationRule.
-     * 
      */
     private final String keyName;
     /**
      * Primary connection string of the created namespace AuthorizationRule.
-     * 
      */
     private final String primaryConnectionString;
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
      */
     private final String primaryKey;
     /**
      * Secondary connection string of the created namespace AuthorizationRule.
-     * 
      */
     private final String secondaryConnectionString;
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
      */
     private final String secondaryKey;
 
@@ -65,49 +58,42 @@ public final class ListNamespaceKeysResult {
 
     /**
      * Primary connection string of the alias if GEO DR is enabled
-     * 
     */
     public String getAliasPrimaryConnectionString() {
         return this.aliasPrimaryConnectionString;
     }
     /**
      * Secondary  connection string of the alias if GEO DR is enabled
-     * 
     */
     public String getAliasSecondaryConnectionString() {
         return this.aliasSecondaryConnectionString;
     }
     /**
      * A string that describes the AuthorizationRule.
-     * 
     */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * Primary connection string of the created namespace AuthorizationRule.
-     * 
     */
     public String getPrimaryConnectionString() {
         return this.primaryConnectionString;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
     */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * Secondary connection string of the created namespace AuthorizationRule.
-     * 
     */
     public String getSecondaryConnectionString() {
         return this.secondaryConnectionString;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
     */
     public String getSecondaryKey() {
         return this.secondaryKey;

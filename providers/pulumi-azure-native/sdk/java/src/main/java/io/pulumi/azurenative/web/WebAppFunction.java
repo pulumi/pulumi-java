@@ -32,224 +32,192 @@ import javax.annotation.Nullable;
 public class WebAppFunction extends io.pulumi.resources.CustomResource {
     /**
      * Config information.
-     * 
      */
     @Export(name="config", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> config;
 
     /**
      * @return Config information.
-     * 
      */
     public Output</* @Nullable */ Object> getConfig() {
         return this.config;
     }
     /**
      * Config URI.
-     * 
      */
     @Export(name="configHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> configHref;
 
     /**
      * @return Config URI.
-     * 
      */
     public Output</* @Nullable */ String> getConfigHref() {
         return this.configHref;
     }
     /**
      * File list.
-     * 
      */
     @Export(name="files", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> files;
 
     /**
      * @return File list.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getFiles() {
         return this.files;
     }
     /**
      * Function App ID.
-     * 
      */
     @Export(name="functionAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAppId;
 
     /**
      * @return Function App ID.
-     * 
      */
     public Output</* @Nullable */ String> getFunctionAppId() {
         return this.functionAppId;
     }
     /**
      * Function URI.
-     * 
      */
     @Export(name="href", type=String.class, parameters={})
     private Output</* @Nullable */ String> href;
 
     /**
      * @return Function URI.
-     * 
      */
     public Output</* @Nullable */ String> getHref() {
         return this.href;
     }
     /**
      * The invocation URL
-     * 
      */
     @Export(name="invokeUrlTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> invokeUrlTemplate;
 
     /**
      * @return The invocation URL
-     * 
      */
     public Output</* @Nullable */ String> getInvokeUrlTemplate() {
         return this.invokeUrlTemplate;
     }
     /**
      * Gets or sets a value indicating whether the function is disabled
-     * 
      */
     @Export(name="isDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDisabled;
 
     /**
      * @return Gets or sets a value indicating whether the function is disabled
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsDisabled() {
         return this.isDisabled;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The function language
-     * 
      */
     @Export(name="language", type=String.class, parameters={})
     private Output</* @Nullable */ String> language;
 
     /**
      * @return The function language
-     * 
      */
     public Output</* @Nullable */ String> getLanguage() {
         return this.language;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Script URI.
-     * 
      */
     @Export(name="scriptHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptHref;
 
     /**
      * @return Script URI.
-     * 
      */
     public Output</* @Nullable */ String> getScriptHref() {
         return this.scriptHref;
     }
     /**
      * Script root path URI.
-     * 
      */
     @Export(name="scriptRootPathHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptRootPathHref;
 
     /**
      * @return Script root path URI.
-     * 
      */
     public Output</* @Nullable */ String> getScriptRootPathHref() {
         return this.scriptRootPathHref;
     }
     /**
      * Secrets file URI.
-     * 
      */
     @Export(name="secretsFileHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretsFileHref;
 
     /**
      * @return Secrets file URI.
-     * 
      */
     public Output</* @Nullable */ String> getSecretsFileHref() {
         return this.secretsFileHref;
     }
     /**
      * Test data used when testing via the Azure Portal.
-     * 
      */
     @Export(name="testData", type=String.class, parameters={})
     private Output</* @Nullable */ String> testData;
 
     /**
      * @return Test data used when testing via the Azure Portal.
-     * 
      */
     public Output</* @Nullable */ String> getTestData() {
         return this.testData;
     }
     /**
      * Test data URI.
-     * 
      */
     @Export(name="testDataHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> testDataHref;
 
     /**
      * @return Test data URI.
-     * 
      */
     public Output</* @Nullable */ String> getTestDataHref() {
         return this.testDataHref;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

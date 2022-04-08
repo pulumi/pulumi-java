@@ -17,7 +17,6 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends io.pulumi.res
 
     /**
      * The name of the host pool within the specified resource group
-     * 
      */
     @Import(name="hostPoolName", required=true)
       private final Output<String> hostPoolName;
@@ -28,7 +27,6 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends io.pulumi.res
 
     /**
      * The name of the private endpoint connection associated with the Azure resource
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -39,7 +37,6 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends io.pulumi.res
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -50,7 +47,6 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends io.pulumi.res
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

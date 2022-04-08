@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Load balancer configuration
- * 
  */
 public final class LoadBalancerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LoadBalancerConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Load balancer type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -29,7 +27,6 @@ public final class LoadBalancerConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Load balancer version
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

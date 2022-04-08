@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App Dapr configuration.
- * 
  */
 public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dapr application identifier
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -35,7 +33,6 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Port on which the Dapr side car
-     * 
      */
     @Import(name="appPort")
       private final @Nullable Output<Integer> appPort;
@@ -46,7 +43,6 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of Dapr components
-     * 
      */
     @Import(name="components")
       private final @Nullable Output<List<DaprComponentArgs>> components;
@@ -57,7 +53,6 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Boolean indicating if the Dapr side car is enabled
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

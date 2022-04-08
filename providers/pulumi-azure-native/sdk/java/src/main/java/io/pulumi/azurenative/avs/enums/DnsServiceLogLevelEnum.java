@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * DNS Service log level.
-     * 
      */
     @EnumType
     public enum DnsServiceLogLevelEnum {

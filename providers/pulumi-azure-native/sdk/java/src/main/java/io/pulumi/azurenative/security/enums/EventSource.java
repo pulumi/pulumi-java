@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A valid event source type.
-     * 
      */
     @EnumType
     public enum EventSource {

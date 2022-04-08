@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Select audio tracks from the input by specifying a track identifier.
- * 
  */
 public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
-     * 
      */
     @Import(name="channelMapping")
       private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
@@ -35,7 +33,6 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.SelectAudioTrackById'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -46,7 +43,6 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
 
     /**
      * Track identifier to select
-     * 
      */
     @Import(name="trackId", required=true)
       private final Output<Double> trackId;

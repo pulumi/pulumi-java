@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state of the Experiment
-     * 
      */
     @EnumType
     public enum State {

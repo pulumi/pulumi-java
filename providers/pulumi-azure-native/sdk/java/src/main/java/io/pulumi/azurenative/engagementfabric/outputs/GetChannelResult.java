@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class GetChannelResult {
     /**
      * The functions to be enabled for the channel
-     * 
      */
     private final @Nullable List<String> channelFunctions;
     /**
      * The channel type
-     * 
      */
     private final String channelType;
     /**
      * The channel credentials
-     * 
      */
     private final @Nullable Map<String,String> credentials;
     /**
      * The ID of the resource
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The fully qualified type of the resource
-     * 
      */
     private final String type;
 
@@ -61,42 +55,36 @@ public final class GetChannelResult {
 
     /**
      * The functions to be enabled for the channel
-     * 
     */
     public List<String> getChannelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
     /**
      * The channel type
-     * 
     */
     public String getChannelType() {
         return this.channelType;
     }
     /**
      * The channel credentials
-     * 
     */
     public Map<String,String> getCredentials() {
         return this.credentials == null ? Map.of() : this.credentials;
     }
     /**
      * The ID of the resource
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The fully qualified type of the resource
-     * 
     */
     public String getType() {
         return this.type;

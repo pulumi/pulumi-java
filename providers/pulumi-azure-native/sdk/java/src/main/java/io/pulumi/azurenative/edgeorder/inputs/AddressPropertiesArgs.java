@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Address Properties
- * 
  */
 public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Contact details for the address
-     * 
      */
     @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
@@ -32,7 +30,6 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Shipping details for the address
-     * 
      */
     @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;

@@ -24,7 +24,6 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authentication type.
-     * 
      */
     @Import(name="authInfo")
       private final @Nullable Output<Object> authInfo;
@@ -35,7 +34,6 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The application client type
-     * 
      */
     @Import(name="clientType")
       private final @Nullable Output<Either<String,ClientType>> clientType;
@@ -46,7 +44,6 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name Linker resource.
-     * 
      */
     @Import(name="linkerName")
       private final @Nullable Output<String> linkerName;
@@ -57,7 +54,6 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
@@ -68,7 +64,6 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource Id of target service.
-     * 
      */
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;

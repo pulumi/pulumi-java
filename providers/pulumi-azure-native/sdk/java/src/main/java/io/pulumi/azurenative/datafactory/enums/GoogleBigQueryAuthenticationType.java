@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
-     * 
      */
     @EnumType
     public enum GoogleBigQueryAuthenticationType {

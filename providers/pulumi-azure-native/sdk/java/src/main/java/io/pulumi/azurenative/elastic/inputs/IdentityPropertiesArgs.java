@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity properties.
- * 
  */
 public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Managed identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityTypes>> type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListClusterLanguageExtensionsResult {
     /**
      * The list of language extensions.
-     * 
      */
     private final @Nullable List<LanguageExtensionResponse> value;
 
@@ -24,7 +23,6 @@ public final class ListClusterLanguageExtensionsResult {
 
     /**
      * The list of language extensions.
-     * 
     */
     public List<LanguageExtensionResponse> getValue() {
         return this.value == null ? List.of() : this.value;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Azure Active Directory Application
- * 
  */
 public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
 
     /**
      * Key used to authenticate to the Azure Active Directory Application
-     * 
      */
     @Import(name="appKey", required=true)
       private final String appKey;
@@ -29,7 +27,6 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
 
     /**
      * Application ID of the Azure Active Directory Application
-     * 
      */
     @Import(name="applicationId", required=true)
       private final String applicationId;
@@ -40,7 +37,6 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
 
     /**
      * Tenant id of the customer
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;

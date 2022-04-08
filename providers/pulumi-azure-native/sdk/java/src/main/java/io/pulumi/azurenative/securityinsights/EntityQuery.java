@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Specific entity query.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an Activity entity query.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var entityQuery = new AzureNative.SecurityInsights.EntityQuery("entityQuery", new AzureNative.SecurityInsights.EntityQueryArgs
+ *         {
+ *             EntityQueryId = "07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+ *             Kind = "Activity",
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalIinsights",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewEntityQuery(ctx, "entityQuery", &securityinsights.EntityQueryArgs{
+ * 			EntityQueryId:                       pulumi.String("07da3cc8-c8ad-4710-a44e-334cdcb7882b"),
+ * 			Kind:                                pulumi.String("Activity"),
+ * 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalIinsights"),
+ * 			ResourceGroupName:                   pulumi.String("myRg"),
+ * 			WorkspaceName:                       pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const entityQuery = new azure_native.securityinsights.EntityQuery("entityQuery", {
+ *     entityQueryId: "07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+ *     kind: "Activity",
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalIinsights",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * entity_query = azure_native.securityinsights.EntityQuery("entityQuery",
+ *     entity_query_id="07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+ *     kind="Activity",
+ *     operational_insights_resource_provider="Microsoft.OperationalIinsights",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,77 +110,66 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: ActivityCustomEntityQuery.
- * 
  */
 @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
 @ResourceType(type="azure-native:securityinsights:EntityQuery")
 public class EntityQuery extends io.pulumi.resources.CustomResource {
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * the entity query kind
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return the entity query kind
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

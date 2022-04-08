@@ -16,7 +16,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * Client ID of developer console which is the client application.
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
@@ -27,7 +26,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * Client Secret of developer console which is the client application.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
@@ -38,7 +36,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * User-friendly description of OpenID Connect Provider.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +46,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * User-friendly OpenID Connect Provider name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -60,7 +56,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * Metadata endpoint URI.
-     * 
      */
     @Import(name="metadataEndpoint", required=true)
       private final Output<String> metadataEndpoint;
@@ -71,7 +66,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * Identifier of the OpenID Connect Provider.
-     * 
      */
     @Import(name="opid")
       private final @Nullable Output<String> opid;
@@ -82,7 +76,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -93,7 +86,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

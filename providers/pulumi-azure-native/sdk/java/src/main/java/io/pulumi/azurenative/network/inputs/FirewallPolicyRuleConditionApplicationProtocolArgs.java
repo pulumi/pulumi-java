@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the application rule protocol.
- * 
  */
 public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
 
     /**
      * Port number for the protocol, cannot be greater than 64000.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -34,7 +32,6 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
 
     /**
      * Protocol type.
-     * 
      */
     @Import(name="protocolType")
       private final @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;

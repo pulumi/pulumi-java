@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Forward shipment details.
- * 
  */
 public final class ForwardShippingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Carrier Name for display purpose. Not to be used for any processing.
-     * 
      */
     @Import(name="carrierDisplayName", required=true)
       private final String carrierDisplayName;
@@ -29,7 +27,6 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Name of the carrier.
-     * 
      */
     @Import(name="carrierName", required=true)
       private final String carrierName;
@@ -40,7 +37,6 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
 
     /**
      * TrackingId of the package
-     * 
      */
     @Import(name="trackingId", required=true)
       private final String trackingId;
@@ -51,7 +47,6 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
 
     /**
      * TrackingUrl of the package.
-     * 
      */
     @Import(name="trackingUrl", required=true)
       private final String trackingUrl;

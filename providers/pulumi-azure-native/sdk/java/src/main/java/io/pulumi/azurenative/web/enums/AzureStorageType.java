@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of storage.
-     * 
      */
     @EnumType
     public enum AzureStorageType {

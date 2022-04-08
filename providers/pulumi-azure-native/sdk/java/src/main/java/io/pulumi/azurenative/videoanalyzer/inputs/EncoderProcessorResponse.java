@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Encoder processor allows for encoding of the input content. For example, it can used to change the resolution from 4K to 1280x720.
- * 
  */
 public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * An array of upstream node references within the topology to be used as inputs for this node.
-     * 
      */
     @Import(name="inputs", required=true)
       private final List<NodeInputResponse> inputs;
@@ -34,7 +32,6 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Node name. Must be unique within the topology.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -45,7 +42,6 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The encoder preset, which defines the recipe or instructions on how the input content should be processed.
-     * 
      */
     @Import(name="preset", required=true)
       private final Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
@@ -57,7 +53,6 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

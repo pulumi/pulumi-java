@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Weekly retention format.
- * 
  */
 public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
 
     /**
      * List of days of the week.
-     * 
      */
     @Import(name="daysOfTheWeek")
       private final @Nullable List<String> daysOfTheWeek;
@@ -32,7 +30,6 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
 
     /**
      * List of weeks of month.
-     * 
      */
     @Import(name="weeksOfTheMonth")
       private final @Nullable List<String> weeksOfTheMonth;

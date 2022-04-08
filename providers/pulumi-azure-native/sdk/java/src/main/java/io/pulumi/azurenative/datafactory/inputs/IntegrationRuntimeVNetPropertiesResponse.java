@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VNet properties for managed integration runtime.
- * 
  */
 public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
 
     /**
      * Resource IDs of the public IP addresses that this integration runtime will use.
-     * 
      */
     @Import(name="publicIPs")
       private final @Nullable List<String> publicIPs;
@@ -32,7 +30,6 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
 
     /**
      * The name of the subnet this integration runtime will join.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable String subnet;
@@ -43,7 +40,6 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
 
     /**
      * The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable String subnetId;
@@ -54,7 +50,6 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
 
     /**
      * The ID of the VNet that this integration runtime will join.
-     * 
      */
     @Import(name="vNetId")
       private final @Nullable String vNetId;

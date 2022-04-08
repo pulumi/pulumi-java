@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Facebook channel.
- * 
  */
 public final class FacebookChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
 
     /**
      * Facebook application id
-     * 
      */
     @Import(name="appId", required=true)
       private final String appId;
@@ -34,7 +32,6 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
 
     /**
      * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="appSecret")
       private final @Nullable String appSecret;
@@ -45,7 +42,6 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
 
     /**
      * Callback Url
-     * 
      */
     @Import(name="callbackUrl", required=true)
       private final String callbackUrl;
@@ -56,7 +52,6 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -67,7 +62,6 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
 
     /**
      * The list of Facebook pages
-     * 
      */
     @Import(name="pages")
       private final @Nullable List<FacebookPageResponse> pages;
@@ -78,7 +72,6 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
 
     /**
      * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="verifyToken", required=true)
       private final String verifyToken;

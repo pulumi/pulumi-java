@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the managed identities for an Azure resource.
- * 
  */
 public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of managed identity for the resource.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ManagedIdentityType> type;

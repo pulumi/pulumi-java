@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Virtual Machine Extension.
- * 
  */
 public final class VirtualMachineExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Boolean autoUpgradeMinorVersion;
@@ -35,7 +33,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     @Import(name="enableAutomaticUpgrade")
       private final @Nullable Boolean enableAutomaticUpgrade;
@@ -46,7 +43,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable String forceUpdateTag;
@@ -57,7 +53,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -68,7 +63,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * The virtual machine extension instance view.
-     * 
      */
     @Import(name="instanceView")
       private final @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
@@ -79,7 +73,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -90,7 +83,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -101,7 +93,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Object protectedSettings;
@@ -112,7 +103,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -123,7 +113,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;
@@ -134,7 +123,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Object settings;
@@ -145,7 +133,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -156,7 +143,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Resource type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -167,7 +153,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;

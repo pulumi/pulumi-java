@@ -22,7 +22,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the environment
-     * 
      */
     @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
@@ -34,7 +33,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * The kind of the environment.
      * Expected value is 'Gen2'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -45,7 +43,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -56,7 +53,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -67,7 +63,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -78,7 +73,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
-     * 
      */
     @Import(name="storageConfiguration", required=true)
       private final Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
@@ -89,7 +83,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Key-value pairs of additional properties for the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -100,7 +93,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The list of event properties which will be used to define the environment's time series id.
-     * 
      */
     @Import(name="timeSeriesIdProperties", required=true)
       private final Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
@@ -111,7 +103,6 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
-     * 
      */
     @Import(name="warmStoreConfiguration")
       private final @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;

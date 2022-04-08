@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class BlobRestoreStatusResponse {
     /**
      * Failure reason when blob restore is failed.
-     * 
      */
     private final String failureReason;
     /**
      * Blob restore request parameters.
-     * 
      */
     private final BlobRestoreParametersResponse parameters;
     /**
      * Id for tracking blob restore request.
-     * 
      */
     private final String restoreId;
     /**
      * The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
-     * 
      */
     private final String status;
 
@@ -45,28 +41,24 @@ public final class BlobRestoreStatusResponse {
 
     /**
      * Failure reason when blob restore is failed.
-     * 
     */
     public String getFailureReason() {
         return this.failureReason;
     }
     /**
      * Blob restore request parameters.
-     * 
     */
     public BlobRestoreParametersResponse getParameters() {
         return this.parameters;
     }
     /**
      * Id for tracking blob restore request.
-     * 
     */
     public String getRestoreId() {
         return this.restoreId;
     }
     /**
      * The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
-     * 
     */
     public String getStatus() {
         return this.status;

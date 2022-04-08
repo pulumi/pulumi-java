@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Application definition artifact.
- * 
  */
 public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
 
     /**
      * The managed application definition artifact name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
 
     /**
      * The managed application definition artifact type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -40,7 +37,6 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
 
     /**
      * The managed application definition artifact blob uri.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

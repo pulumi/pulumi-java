@@ -23,7 +23,181 @@ import javax.annotation.Nullable;
  * The KPI resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Kpi_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kpi = new AzureNative.CustomerInsights.Kpi("kpi", new AzureNative.CustomerInsights.KpiArgs
+ *         {
+ *             Aliases = 
+ *             {
+ *                 new AzureNative.CustomerInsights.Inputs.KpiAliasArgs
+ *                 {
+ *                     AliasName = "alias",
+ *                     Expression = "Id+4",
+ *                 },
+ *             },
+ *             CalculationWindow = "Day",
+ *             Description = 
+ *             {
+ *                 { "en-us", "Kpi Description" },
+ *             },
+ *             DisplayName = 
+ *             {
+ *                 { "en-us", "Kpi DisplayName" },
+ *             },
+ *             EntityType = "Profile",
+ *             EntityTypeName = "testProfile2327128",
+ *             Expression = "SavingAccountBalance",
+ *             Function = "Sum",
+ *             GroupBy = 
+ *             {
+ *                 "SavingAccountBalance",
+ *             },
+ *             HubName = "sdkTestHub",
+ *             KpiName = "kpiTest45453647",
+ *             ResourceGroupName = "TestHubRG",
+ *             ThresHolds = new AzureNative.CustomerInsights.Inputs.KpiThresholdsArgs
+ *             {
+ *                 IncreasingKpi = true,
+ *                 LowerLimit = 5,
+ *                 UpperLimit = 50,
+ *             },
+ *             Unit = "unit",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewKpi(ctx, "kpi", &customerinsights.KpiArgs{
+ * 			Aliases: []customerinsights.KpiAliasArgs{
+ * 				&customerinsights.KpiAliasArgs{
+ * 					AliasName:  pulumi.String("alias"),
+ * 					Expression: pulumi.String("Id+4"),
+ * 				},
+ * 			},
+ * 			CalculationWindow: "Day",
+ * 			Description: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Kpi Description"),
+ * 			},
+ * 			DisplayName: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Kpi DisplayName"),
+ * 			},
+ * 			EntityType:     "Profile",
+ * 			EntityTypeName: pulumi.String("testProfile2327128"),
+ * 			Expression:     pulumi.String("SavingAccountBalance"),
+ * 			Function:       "Sum",
+ * 			GroupBy: pulumi.StringArray{
+ * 				pulumi.String("SavingAccountBalance"),
+ * 			},
+ * 			HubName:           pulumi.String("sdkTestHub"),
+ * 			KpiName:           pulumi.String("kpiTest45453647"),
+ * 			ResourceGroupName: pulumi.String("TestHubRG"),
+ * 			ThresHolds: &customerinsights.KpiThresholdsArgs{
+ * 				IncreasingKpi: pulumi.Bool(true),
+ * 				LowerLimit:    pulumi.Float64(5),
+ * 				UpperLimit:    pulumi.Float64(50),
+ * 			},
+ * 			Unit: pulumi.String("unit"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kpi = new azure_native.customerinsights.Kpi("kpi", {
+ *     aliases: [{
+ *         aliasName: "alias",
+ *         expression: "Id+4",
+ *     }],
+ *     calculationWindow: "Day",
+ *     description: {
+ *         "en-us": "Kpi Description",
+ *     },
+ *     displayName: {
+ *         "en-us": "Kpi DisplayName",
+ *     },
+ *     entityType: "Profile",
+ *     entityTypeName: "testProfile2327128",
+ *     expression: "SavingAccountBalance",
+ *     "function": "Sum",
+ *     groupBy: ["SavingAccountBalance"],
+ *     hubName: "sdkTestHub",
+ *     kpiName: "kpiTest45453647",
+ *     resourceGroupName: "TestHubRG",
+ *     thresHolds: {
+ *         increasingKpi: true,
+ *         lowerLimit: 5,
+ *         upperLimit: 50,
+ *     },
+ *     unit: "unit",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kpi = azure_native.customerinsights.Kpi("kpi",
+ *     aliases=[azure_native.customerinsights.KpiAliasArgs(
+ *         alias_name="alias",
+ *         expression="Id+4",
+ *     )],
+ *     calculation_window="Day",
+ *     description={
+ *         "en-us": "Kpi Description",
+ *     },
+ *     display_name={
+ *         "en-us": "Kpi DisplayName",
+ *     },
+ *     entity_type="Profile",
+ *     entity_type_name="testProfile2327128",
+ *     expression="SavingAccountBalance",
+ *     function="Sum",
+ *     group_by=["SavingAccountBalance"],
+ *     hub_name="sdkTestHub",
+ *     kpi_name="kpiTest45453647",
+ *     resource_group_name="TestHubRG",
+ *     thres_holds=azure_native.customerinsights.KpiThresholdsArgs(
+ *         increasing_kpi=True,
+ *         lower_limit=5,
+ *         upper_limit=50,
+ *     ),
+ *     unit="unit")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,294 +212,252 @@ import javax.annotation.Nullable;
 public class Kpi extends io.pulumi.resources.CustomResource {
     /**
      * The aliases.
-     * 
      */
     @Export(name="aliases", type=List.class, parameters={KpiAliasResponse.class})
     private Output</* @Nullable */ List<KpiAliasResponse>> aliases;
 
     /**
      * @return The aliases.
-     * 
      */
     public Output</* @Nullable */ List<KpiAliasResponse>> getAliases() {
         return this.aliases;
     }
     /**
      * The calculation window.
-     * 
      */
     @Export(name="calculationWindow", type=String.class, parameters={})
     private Output<String> calculationWindow;
 
     /**
      * @return The calculation window.
-     * 
      */
     public Output<String> getCalculationWindow() {
         return this.calculationWindow;
     }
     /**
      * Name of calculation window field.
-     * 
      */
     @Export(name="calculationWindowFieldName", type=String.class, parameters={})
     private Output</* @Nullable */ String> calculationWindowFieldName;
 
     /**
      * @return Name of calculation window field.
-     * 
      */
     public Output</* @Nullable */ String> getCalculationWindowFieldName() {
         return this.calculationWindowFieldName;
     }
     /**
      * Localized description for the KPI.
-     * 
      */
     @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
      * @return Localized description for the KPI.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
     /**
      * Localized display name for the KPI.
-     * 
      */
     @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
      * @return Localized display name for the KPI.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
     /**
      * The mapping entity type.
-     * 
      */
     @Export(name="entityType", type=String.class, parameters={})
     private Output<String> entityType;
 
     /**
      * @return The mapping entity type.
-     * 
      */
     public Output<String> getEntityType() {
         return this.entityType;
     }
     /**
      * The mapping entity name.
-     * 
      */
     @Export(name="entityTypeName", type=String.class, parameters={})
     private Output<String> entityTypeName;
 
     /**
      * @return The mapping entity name.
-     * 
      */
     public Output<String> getEntityTypeName() {
         return this.entityTypeName;
     }
     /**
      * The computation expression for the KPI.
-     * 
      */
     @Export(name="expression", type=String.class, parameters={})
     private Output<String> expression;
 
     /**
      * @return The computation expression for the KPI.
-     * 
      */
     public Output<String> getExpression() {
         return this.expression;
     }
     /**
      * The KPI extracts.
-     * 
      */
     @Export(name="extracts", type=List.class, parameters={KpiExtractResponse.class})
     private Output</* @Nullable */ List<KpiExtractResponse>> extracts;
 
     /**
      * @return The KPI extracts.
-     * 
      */
     public Output</* @Nullable */ List<KpiExtractResponse>> getExtracts() {
         return this.extracts;
     }
     /**
      * The filter expression for the KPI.
-     * 
      */
     @Export(name="filter", type=String.class, parameters={})
     private Output</* @Nullable */ String> filter;
 
     /**
      * @return The filter expression for the KPI.
-     * 
      */
     public Output</* @Nullable */ String> getFilter() {
         return this.filter;
     }
     /**
      * The computation function for the KPI.
-     * 
      */
     @Export(name="function", type=String.class, parameters={})
     private Output<String> function;
 
     /**
      * @return The computation function for the KPI.
-     * 
      */
     public Output<String> getFunction() {
         return this.function;
     }
     /**
      * the group by properties for the KPI.
-     * 
      */
     @Export(name="groupBy", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> groupBy;
 
     /**
      * @return the group by properties for the KPI.
-     * 
      */
     public Output</* @Nullable */ List<String>> getGroupBy() {
         return this.groupBy;
     }
     /**
      * The KPI GroupByMetadata.
-     * 
      */
     @Export(name="groupByMetadata", type=List.class, parameters={KpiGroupByMetadataResponse.class})
     private Output<List<KpiGroupByMetadataResponse>> groupByMetadata;
 
     /**
      * @return The KPI GroupByMetadata.
-     * 
      */
     public Output<List<KpiGroupByMetadataResponse>> getGroupByMetadata() {
         return this.groupByMetadata;
     }
     /**
      * The KPI name.
-     * 
      */
     @Export(name="kpiName", type=String.class, parameters={})
     private Output<String> kpiName;
 
     /**
      * @return The KPI name.
-     * 
      */
     public Output<String> getKpiName() {
         return this.kpiName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The participant profiles.
-     * 
      */
     @Export(name="participantProfilesMetadata", type=List.class, parameters={KpiParticipantProfilesMetadataResponse.class})
     private Output<List<KpiParticipantProfilesMetadataResponse>> participantProfilesMetadata;
 
     /**
      * @return The participant profiles.
-     * 
      */
     public Output<List<KpiParticipantProfilesMetadataResponse>> getParticipantProfilesMetadata() {
         return this.participantProfilesMetadata;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The KPI thresholds.
-     * 
      */
     @Export(name="thresHolds", type=KpiThresholdsResponse.class, parameters={})
     private Output</* @Nullable */ KpiThresholdsResponse> thresHolds;
 
     /**
      * @return The KPI thresholds.
-     * 
      */
     public Output</* @Nullable */ KpiThresholdsResponse> getThresHolds() {
         return this.thresHolds;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unit of measurement for the KPI.
-     * 
      */
     @Export(name="unit", type=String.class, parameters={})
     private Output</* @Nullable */ String> unit;
 
     /**
      * @return The unit of measurement for the KPI.
-     * 
      */
     public Output</* @Nullable */ String> getUnit() {
         return this.unit;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Key Vault containing the SSL certificate
- * 
  */
 public final class KeyVaultCertificateSourceParametersResponseVault extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KeyVaultCertificateSourceParametersResponseVault extends io.p
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

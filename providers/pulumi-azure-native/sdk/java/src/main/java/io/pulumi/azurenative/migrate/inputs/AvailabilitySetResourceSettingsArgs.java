@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gets or sets the availability set resource settings.
- * 
  */
 public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets the target fault domain.
-     * 
      */
     @Import(name="faultDomain")
       private final @Nullable Output<Integer> faultDomain;
@@ -33,7 +31,6 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Compute/availabilitySets'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -44,7 +41,6 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
@@ -55,7 +51,6 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
 
     /**
      * Gets or sets the target update domain.
-     * 
      */
     @Import(name="updateDomain")
       private final @Nullable Output<Integer> updateDomain;

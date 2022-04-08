@@ -32,7 +32,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
-     * 
      */
     @Import(name="burstingEnabled")
       private final @Nullable Output<Boolean> burstingEnabled;
@@ -43,7 +42,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Disk source information. CreationData information cannot be changed after the disk has been created.
-     * 
      */
     @Import(name="creationData", required=true)
       private final Output<CreationDataArgs> creationData;
@@ -54,7 +52,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM id of the DiskAccess resource for using private endpoints on disks.
-     * 
      */
     @Import(name="diskAccessId")
       private final @Nullable Output<String> diskAccessId;
@@ -65,7 +62,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
-     * 
      */
     @Import(name="diskIOPSReadOnly")
       private final @Nullable Output<Double> diskIOPSReadOnly;
@@ -76,7 +72,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
-     * 
      */
     @Import(name="diskIOPSReadWrite")
       private final @Nullable Output<Double> diskIOPSReadWrite;
@@ -87,7 +82,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
-     * 
      */
     @Import(name="diskMBpsReadOnly")
       private final @Nullable Output<Double> diskMBpsReadOnly;
@@ -98,7 +92,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
-     * 
      */
     @Import(name="diskMBpsReadWrite")
       private final @Nullable Output<Double> diskMBpsReadWrite;
@@ -109,7 +102,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
-     * 
      */
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
@@ -120,7 +112,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
@@ -131,7 +122,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
@@ -142,7 +132,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
-     * 
      */
     @Import(name="encryptionSettingsCollection")
       private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
@@ -153,7 +142,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The extended location where the disk will be created. Extended location cannot be changed.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -164,7 +152,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
-     * 
      */
     @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
@@ -175,7 +162,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -186,7 +172,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
-     * 
      */
     @Import(name="maxShares")
       private final @Nullable Output<Integer> maxShares;
@@ -197,7 +182,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Policy for accessing the disk via network.
-     * 
      */
     @Import(name="networkAccessPolicy")
       private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
@@ -208,7 +192,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Operating System type.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<OperatingSystemTypes> osType;
@@ -219,7 +202,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
-     * 
      */
     @Import(name="purchasePlan")
       private final @Nullable Output<PurchasePlanArgs> purchasePlan;
@@ -230,7 +212,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -241,7 +222,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains the security related information for the resource.
-     * 
      */
     @Import(name="securityProfile")
       private final @Nullable Output<DiskSecurityProfileArgs> securityProfile;
@@ -252,7 +232,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<DiskSkuArgs> sku;
@@ -263,7 +242,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the OS on a disk supports hibernation.
-     * 
      */
     @Import(name="supportsHibernation")
       private final @Nullable Output<Boolean> supportsHibernation;
@@ -274,7 +252,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -285,7 +262,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;
@@ -296,7 +272,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Logical zone list for Disk.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

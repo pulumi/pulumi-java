@@ -16,7 +16,6 @@ public final class SubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

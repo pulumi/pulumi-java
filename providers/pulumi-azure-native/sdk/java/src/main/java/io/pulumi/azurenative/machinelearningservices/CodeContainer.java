@@ -19,7 +19,109 @@ import javax.annotation.Nullable;
  * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Code Container.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var codeContainer = new AzureNative.MachineLearningServices.CodeContainer("codeContainer", new AzureNative.MachineLearningServices.CodeContainerArgs
+ *         {
+ *             Name = "testContainer",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.CodeContainerArgs
+ *             {
+ *                 Description = "string",
+ *                 Tags = 
+ *                 {
+ *                     { "tag1", "value1" },
+ *                     { "tag2", "value2" },
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewCodeContainer(ctx, "codeContainer", &machinelearningservices.CodeContainerArgs{
+ * 			Name: pulumi.String("testContainer"),
+ * 			Properties: &machinelearningservices.CodeContainerArgs{
+ * 				Description: pulumi.String("string"),
+ * 				Tags: pulumi.StringMap{
+ * 					"tag1": pulumi.String("value1"),
+ * 					"tag2": pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			WorkspaceName:     pulumi.String("testworkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const codeContainer = new azure_native.machinelearningservices.CodeContainer("codeContainer", {
+ *     name: "testContainer",
+ *     properties: {
+ *         description: "string",
+ *         tags: {
+ *             tag1: "value1",
+ *             tag2: "value2",
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * code_container = azure_native.machinelearningservices.CodeContainer("codeContainer",
+ *     name="testContainer",
+ *     properties=azure_native.machinelearningservices.CodeContainerArgs(
+ *         description="string",
+ *         tags={
+ *             "tag1": "value1",
+ *             "tag2": "value2",
+ *         },
+ *     ),
+ *     resource_group_name="testrg123",
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +136,48 @@ import javax.annotation.Nullable;
 public class CodeContainer extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=CodeContainerResponse.class, parameters={})
     private Output<CodeContainerResponse> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<CodeContainerResponse> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CacheResponseSku {
     /**
      * SKU name for this Cache.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class CacheResponseSku {
 
     /**
      * SKU name for this Cache.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

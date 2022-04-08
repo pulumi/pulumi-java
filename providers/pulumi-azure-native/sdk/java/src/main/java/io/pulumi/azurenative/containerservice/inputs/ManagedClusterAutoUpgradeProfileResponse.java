@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Auto upgrade profile for a managed cluster.
- * 
  */
 public final class ManagedClusterAutoUpgradeProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends io.pulumi.re
 
     /**
      * upgrade channel for auto upgrade.
-     * 
      */
     @Import(name="upgradeChannel")
       private final @Nullable String upgradeChannel;

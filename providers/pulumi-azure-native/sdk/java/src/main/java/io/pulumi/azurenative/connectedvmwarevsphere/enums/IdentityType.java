@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of managed service identity.
-     * 
      */
     @EnumType
     public enum IdentityType {

@@ -21,7 +21,103 @@ import javax.annotation.Nullable;
  * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AFDOrigins_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var afdOrigin = new AzureNative.Cdn.AFDOrigin("afdOrigin", new AzureNative.Cdn.AFDOriginArgs
+ *         {
+ *             EnabledState = "Enabled",
+ *             HostName = "host1.blob.core.windows.net",
+ *             HttpPort = 80,
+ *             HttpsPort = 443,
+ *             OriginGroupName = "origingroup1",
+ *             OriginHostHeader = "host1.foo.com",
+ *             OriginName = "origin1",
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cdn.NewAFDOrigin(ctx, "afdOrigin", &cdn.AFDOriginArgs{
+ * 			EnabledState:      pulumi.String("Enabled"),
+ * 			HostName:          pulumi.String("host1.blob.core.windows.net"),
+ * 			HttpPort:          pulumi.Int(80),
+ * 			HttpsPort:         pulumi.Int(443),
+ * 			OriginGroupName:   pulumi.String("origingroup1"),
+ * 			OriginHostHeader:  pulumi.String("host1.foo.com"),
+ * 			OriginName:        pulumi.String("origin1"),
+ * 			ProfileName:       pulumi.String("profile1"),
+ * 			ResourceGroupName: pulumi.String("RG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const afdOrigin = new azure_native.cdn.AFDOrigin("afdOrigin", {
+ *     enabledState: "Enabled",
+ *     hostName: "host1.blob.core.windows.net",
+ *     httpPort: 80,
+ *     httpsPort: 443,
+ *     originGroupName: "origingroup1",
+ *     originHostHeader: "host1.foo.com",
+ *     originName: "origin1",
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * afd_origin = azure_native.cdn.AFDOrigin("afdOrigin",
+ *     enabled_state="Enabled",
+ *     host_name="host1.blob.core.windows.net",
+ *     http_port=80,
+ *     https_port=443,
+ *     origin_group_name="origingroup1",
+ *     origin_host_header="host1.foo.com",
+ *     origin_name="origin1",
+ *     profile_name="profile1",
+ *     resource_group_name="RG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,14 +132,12 @@ import javax.annotation.Nullable;
 public class AFDOrigin extends io.pulumi.resources.CustomResource {
     /**
      * Resource reference to the Azure origin resource.
-     * 
      */
     @Export(name="azureOrigin", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> azureOrigin;
 
     /**
      * @return Resource reference to the Azure origin resource.
-     * 
      */
     public Output</* @Nullable */ ResourceReferenceResponse> getAzureOrigin() {
         return this.azureOrigin;
@@ -56,168 +150,144 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
     }
     /**
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
-     * 
      */
     @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
      * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
-     * 
      */
     public Output</* @Nullable */ String> getEnabledState() {
         return this.enabledState;
     }
     /**
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
     }
     /**
      * The value of the HTTP port. Must be between 1 and 65535.
-     * 
      */
     @Export(name="httpPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpPort;
 
     /**
      * @return The value of the HTTP port. Must be between 1 and 65535.
-     * 
      */
     public Output</* @Nullable */ Integer> getHttpPort() {
         return this.httpPort;
     }
     /**
      * The value of the HTTPS port. Must be between 1 and 65535.
-     * 
      */
     @Export(name="httpsPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpsPort;
 
     /**
      * @return The value of the HTTPS port. Must be between 1 and 65535.
-     * 
      */
     public Output</* @Nullable */ Integer> getHttpsPort() {
         return this.httpsPort;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
-     * 
      */
     @Export(name="originHostHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> originHostHeader;
 
     /**
      * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
-     * 
      */
     public Output</* @Nullable */ String> getOriginHostHeader() {
         return this.originHostHeader;
     }
     /**
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
-     * 
      */
     @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
      * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
-     * 
      */
     public Output</* @Nullable */ Integer> getPriority() {
         return this.priority;
     }
     /**
      * Provisioning status
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The properties of the private link resource for private origin.
-     * 
      */
     @Export(name="sharedPrivateLinkResource", type=SharedPrivateLinkResourcePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ SharedPrivateLinkResourcePropertiesResponse> sharedPrivateLinkResource;
 
     /**
      * @return The properties of the private link resource for private origin.
-     * 
      */
     public Output</* @Nullable */ SharedPrivateLinkResourcePropertiesResponse> getSharedPrivateLinkResource() {
         return this.sharedPrivateLinkResource;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
-     * 
      */
     @Export(name="weight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weight;
 
     /**
      * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
-     * 
      */
     public Output</* @Nullable */ Integer> getWeight() {
         return this.weight;

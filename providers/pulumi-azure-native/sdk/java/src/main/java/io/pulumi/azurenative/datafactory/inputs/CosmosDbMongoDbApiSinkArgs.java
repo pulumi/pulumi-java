@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity sink for a CosmosDB (MongoDB API) database.
- * 
  */
 public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -32,7 +30,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -43,7 +40,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -54,7 +50,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -66,7 +61,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     /**
      * Copy sink type.
      * Expected value is 'CosmosDbMongoDbApiSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -77,7 +71,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -88,7 +81,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
@@ -99,7 +91,6 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="writeBehavior")
       private final @Nullable Output<Object> writeBehavior;

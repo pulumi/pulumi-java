@@ -16,9 +16,8 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
     public static final WebAppVnetConnectionSlotArgs Empty = new WebAppVnetConnectionSlotArgs();
 
     /**
-     * A certificate file (.cer) blob containing the public key of the private key used to authenticate a
+     * A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
      * Point-To-Site VPN connection.
-     * 
      */
     @Import(name="certBlob")
       private final @Nullable Output<String> certBlob;
@@ -29,7 +28,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable Output<String> dnsServers;
@@ -40,7 +38,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Flag that is used to denote if this is VNET injection
-     * 
      */
     @Import(name="isSwift")
       private final @Nullable Output<Boolean> isSwift;
@@ -51,7 +48,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -62,7 +58,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -73,7 +68,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API will add or update connections for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;
@@ -95,7 +88,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of an existing Virtual Network.
-     * 
      */
     @Import(name="vnetName")
       private final @Nullable Output<String> vnetName;
@@ -106,7 +98,6 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
 
     /**
      * The Virtual Network's resource ID.
-     * 
      */
     @Import(name="vnetResourceId")
       private final @Nullable Output<String> vnetResourceId;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authorization in an ExpressRouteCircuit resource.
- * 
  */
 public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
 
     /**
      * The authorization key.
-     * 
      */
     @Import(name="authorizationKey")
       private final @Nullable String authorizationKey;
@@ -31,7 +29,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
 
     /**
      * The authorization use status.
-     * 
      */
     @Import(name="authorizationUseStatus")
       private final @Nullable String authorizationUseStatus;
@@ -42,7 +39,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -53,7 +49,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -64,7 +59,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -75,7 +69,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
 
     /**
      * The provisioning state of the authorization resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -86,7 +79,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

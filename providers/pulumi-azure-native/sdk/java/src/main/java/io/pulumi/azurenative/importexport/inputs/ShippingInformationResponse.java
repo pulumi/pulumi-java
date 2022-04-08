@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information about the Microsoft datacenter to which the drives should be shipped.
- * 
  */
 public final class ShippingInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
 
     /**
      * Additional shipping information for customer, specific to datacenter to which customer should send their disks.
-     * 
      */
     @Import(name="additionalInformation", required=true)
       private final String additionalInformation;
@@ -31,7 +29,6 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
 
     /**
      * The city name to use when returning the drives.
-     * 
      */
     @Import(name="city")
       private final @Nullable String city;
@@ -41,8 +38,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     }
 
     /**
-     * The country or region to use when returning the drives.
-     * 
+     * The country or region to use when returning the drives. 
      */
     @Import(name="countryOrRegion")
       private final @Nullable String countryOrRegion;
@@ -53,7 +49,6 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
 
     /**
      * Phone number of the recipient of the returned drives.
-     * 
      */
     @Import(name="phone")
       private final @Nullable String phone;
@@ -64,7 +59,6 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
 
     /**
      * The postal code to use when returning the drives.
-     * 
      */
     @Import(name="postalCode")
       private final @Nullable String postalCode;
@@ -74,8 +68,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     }
 
     /**
-     * The name of the recipient who will receive the hard drives when they are returned.
-     * 
+     * The name of the recipient who will receive the hard drives when they are returned. 
      */
     @Import(name="recipientName")
       private final @Nullable String recipientName;
@@ -86,7 +79,6 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
 
     /**
      * The state or province to use when returning the drives.
-     * 
      */
     @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
@@ -96,8 +88,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     }
 
     /**
-     * The first line of the street address to use when returning the drives.
-     * 
+     * The first line of the street address to use when returning the drives. 
      */
     @Import(name="streetAddress1")
       private final @Nullable String streetAddress1;
@@ -107,8 +98,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     }
 
     /**
-     * The second line of the street address to use when returning the drives.
-     * 
+     * The second line of the street address to use when returning the drives. 
      */
     @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;

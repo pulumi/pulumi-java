@@ -14,7 +14,6 @@ public final class GetProviderInstanceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the provider instance.
-     * 
      */
     @Import(name="providerInstanceName", required=true)
       private final String providerInstanceName;
@@ -25,7 +24,6 @@ public final class GetProviderInstanceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetProviderInstanceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the SAP monitor resource.
-     * 
      */
     @Import(name="sapMonitorName", required=true)
       private final String sapMonitorName;

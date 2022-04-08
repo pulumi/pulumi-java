@@ -11,13 +11,11 @@ import java.util.Objects;
 public final class StorageAccountResponse {
     /**
      * The account name of the Azure Storage Account.
-     * 
      */
     private final String accountName;
     /**
      * The type of the storage.
      * Expected value is 'StorageAccount'.
-     * 
      */
     private final String storageType;
 
@@ -31,7 +29,6 @@ public final class StorageAccountResponse {
 
     /**
      * The account name of the Azure Storage Account.
-     * 
     */
     public String getAccountName() {
         return this.accountName;
@@ -39,7 +36,6 @@ public final class StorageAccountResponse {
     /**
      * The type of the storage.
      * Expected value is 'StorageAccount'.
-     * 
     */
     public String getStorageType() {
         return this.storageType;

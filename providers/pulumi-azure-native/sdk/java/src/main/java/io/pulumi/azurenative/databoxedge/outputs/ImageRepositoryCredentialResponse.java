@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ImageRepositoryCredentialResponse {
     /**
      * Image repository url (e.g.: mcr.microsoft.com).
-     * 
      */
     private final String imageRepositoryUrl;
     /**
      * Repository user password.
-     * 
      */
     private final @Nullable AsymmetricEncryptedSecretResponse password;
     /**
      * Repository user name.
-     * 
      */
     private final String userName;
 
@@ -40,21 +37,18 @@ public final class ImageRepositoryCredentialResponse {
 
     /**
      * Image repository url (e.g.: mcr.microsoft.com).
-     * 
     */
     public String getImageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
     /**
      * Repository user password.
-     * 
     */
     public Optional<AsymmetricEncryptedSecretResponse> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Repository user name.
-     * 
     */
     public String getUserName() {
         return this.userName;

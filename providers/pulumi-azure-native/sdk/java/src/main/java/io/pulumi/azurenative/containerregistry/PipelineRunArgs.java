@@ -17,7 +17,6 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -28,7 +27,6 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the pipeline run.
-     * 
      */
     @Import(name="pipelineRunName")
       private final @Nullable Output<String> pipelineRunName;
@@ -39,7 +37,6 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -50,7 +47,6 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The request parameters for a pipeline run.
-     * 
      */
     @Import(name="request")
       private final @Nullable Output<PipelineRunRequestArgs> request;
@@ -61,7 +57,6 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

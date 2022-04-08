@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DefenderSettingsPropertiesResponseMdeIntegration {
     /**
      * Integration status
-     * 
      */
     private final String status;
 
@@ -22,7 +21,6 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
 
     /**
      * Integration status
-     * 
     */
     public String getStatus() {
         return this.status;

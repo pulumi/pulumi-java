@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connection provider parameters
- * 
  */
 public final class ConnectionParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectionParameterResponse extends io.pulumi.resources.Invok
 
     /**
      * OAuth settings for the connection provider
-     * 
      */
     @Import(name="oAuthSettings")
       private final @Nullable ApiOAuthSettingsResponse oAuthSettings;
@@ -32,7 +30,6 @@ public final class ConnectionParameterResponse extends io.pulumi.resources.Invok
 
     /**
      * Type of the parameter
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

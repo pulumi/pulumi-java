@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A job target, for example a specific database or a container of databases that is evaluated during job execution.
- * 
  */
 public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target database name.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable String databaseName;
@@ -31,7 +29,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target elastic pool name.
-     * 
      */
     @Import(name="elasticPoolName")
       private final @Nullable String elasticPoolName;
@@ -42,7 +39,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether the target is included or excluded from the group.
-     * 
      */
     @Import(name="membershipType")
       private final @Nullable String membershipType;
@@ -53,7 +49,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
-     * 
      */
     @Import(name="refreshCredential")
       private final @Nullable String refreshCredential;
@@ -64,7 +59,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target server name.
-     * 
      */
     @Import(name="serverName")
       private final @Nullable String serverName;
@@ -75,7 +69,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target shard map.
-     * 
      */
     @Import(name="shardMapName")
       private final @Nullable String shardMapName;
@@ -86,7 +79,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

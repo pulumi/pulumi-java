@@ -20,7 +20,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The reference to the private IP address on the internal Load Balancer that will receive the tap.
-     * 
      */
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
       private final @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
@@ -31,7 +30,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The reference to the private IP Address of the collector nic that will receive the tap.
-     * 
      */
     @Import(name="destinationNetworkInterfaceIPConfiguration")
       private final @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
@@ -42,7 +40,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The VXLAN destination port that will receive the tapped traffic.
-     * 
      */
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
@@ -53,7 +50,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -64,7 +60,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -97,7 +90,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the virtual network tap.
-     * 
      */
     @Import(name="tapName")
       private final @Nullable Output<String> tapName;

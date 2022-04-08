@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol associated with the port.
-     * 
      */
     @EnumType
     public enum ContainerGroupNetworkProtocol {

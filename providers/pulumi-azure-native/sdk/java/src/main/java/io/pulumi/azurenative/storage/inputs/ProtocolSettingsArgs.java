@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Protocol settings for file service
- * 
  */
 public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Setting for SMB protocol
-     * 
      */
     @Import(name="smb")
       private final @Nullable Output<SmbSettingArgs> smb;

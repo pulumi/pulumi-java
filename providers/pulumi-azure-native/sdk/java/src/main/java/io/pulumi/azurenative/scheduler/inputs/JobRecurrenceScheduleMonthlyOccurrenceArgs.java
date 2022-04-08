@@ -17,7 +17,6 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
 
     /**
      * Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-     * 
      */
     @Import(name="day")
       private final @Nullable Output<JobScheduleDay> day;
@@ -28,7 +27,6 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
 
     /**
      * Gets or sets the occurrence. Must be between -5 and 5.
-     * 
      */
     @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;

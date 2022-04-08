@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for hybrid compute management
- * 
  */
 public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
 
     /**
      * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
-     * 
      */
     @Import(name="autoProvision", required=true)
       private final String autoProvision;
@@ -33,7 +31,6 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
 
     /**
      * State of the service principal and its secret
-     * 
      */
     @Import(name="hybridComputeProvisioningState", required=true)
       private final String hybridComputeProvisioningState;
@@ -44,7 +41,6 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
 
     /**
      * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
-     * 
      */
     @Import(name="proxyServer")
       private final @Nullable ProxyServerPropertiesResponse proxyServer;
@@ -55,7 +51,6 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
 
     /**
      * The location where the metadata of machines will be stored
-     * 
      */
     @Import(name="region")
       private final @Nullable String region;
@@ -66,7 +61,6 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
 
     /**
      * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
@@ -77,7 +71,6 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
 
     /**
      * An object to access resources that are secured by an Azure AD tenant.
-     * 
      */
     @Import(name="servicePrincipal")
       private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;

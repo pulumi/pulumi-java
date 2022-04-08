@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class PeeringPropertiesExchangeResponse {
     /**
      * The set of connections that constitute an exchange peering.
-     * 
      */
     private final @Nullable List<ExchangeConnectionResponse> connections;
     /**
      * The reference of the peer ASN.
-     * 
      */
     private final @Nullable SubResourceResponse peerAsn;
 
@@ -34,14 +32,12 @@ public final class PeeringPropertiesExchangeResponse {
 
     /**
      * The set of connections that constitute an exchange peering.
-     * 
     */
     public List<ExchangeConnectionResponse> getConnections() {
         return this.connections == null ? List.of() : this.connections;
     }
     /**
      * The reference of the peer ASN.
-     * 
     */
     public Optional<SubResourceResponse> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The error details.
- * 
  */
 public final class AKSReplicaStatusResponseError extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AKSReplicaStatusResponseError extends io.pulumi.resources.Inv
 
     /**
      * The error response.
-     * 
      */
     @Import(name="error", required=true)
       private final ErrorResponseResponse error;

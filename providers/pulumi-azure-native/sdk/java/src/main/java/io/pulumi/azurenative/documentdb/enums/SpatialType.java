@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the spatial type of index.
-     * 
      */
     @EnumType
     public enum SpatialType {

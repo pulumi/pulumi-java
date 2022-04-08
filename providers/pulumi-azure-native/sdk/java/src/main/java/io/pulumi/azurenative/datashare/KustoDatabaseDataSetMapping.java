@@ -18,7 +18,379 @@ import javax.annotation.Nullable;
  * A Kusto database data set mapping
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataSetMappings_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kustoDatabaseDataSetMapping = new AzureNative.DataShare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", new AzureNative.DataShare.KustoDatabaseDataSetMappingArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetMappingName = "DatasetMapping1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareSubscriptionName = "ShareSubscription1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewKustoDatabaseDataSetMapping(ctx, "kustoDatabaseDataSetMapping", &datashare.KustoDatabaseDataSetMappingArgs{
+ * 			AccountName:           pulumi.String("Account1"),
+ * 			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+ * 			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+ * 			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kustoDatabaseDataSetMapping = new azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", {
+ *     accountName: "Account1",
+ *     dataSetMappingName: "DatasetMapping1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareSubscriptionName: "ShareSubscription1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kusto_database_data_set_mapping = azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping",
+ *     account_name="Account1",
+ *     data_set_mapping_name="DatasetMapping1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_subscription_name="ShareSubscription1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSetMappings_SqlDB_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kustoDatabaseDataSetMapping = new AzureNative.DataShare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", new AzureNative.DataShare.KustoDatabaseDataSetMappingArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetMappingName = "DatasetMapping1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareSubscriptionName = "ShareSubscription1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewKustoDatabaseDataSetMapping(ctx, "kustoDatabaseDataSetMapping", &datashare.KustoDatabaseDataSetMappingArgs{
+ * 			AccountName:           pulumi.String("Account1"),
+ * 			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+ * 			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+ * 			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kustoDatabaseDataSetMapping = new azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", {
+ *     accountName: "Account1",
+ *     dataSetMappingName: "DatasetMapping1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareSubscriptionName: "ShareSubscription1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kusto_database_data_set_mapping = azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping",
+ *     account_name="Account1",
+ *     data_set_mapping_name="DatasetMapping1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_subscription_name="ShareSubscription1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kustoDatabaseDataSetMapping = new AzureNative.DataShare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", new AzureNative.DataShare.KustoDatabaseDataSetMappingArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetMappingName = "DatasetMapping1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareSubscriptionName = "ShareSubscription1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewKustoDatabaseDataSetMapping(ctx, "kustoDatabaseDataSetMapping", &datashare.KustoDatabaseDataSetMappingArgs{
+ * 			AccountName:           pulumi.String("Account1"),
+ * 			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+ * 			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+ * 			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kustoDatabaseDataSetMapping = new azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", {
+ *     accountName: "Account1",
+ *     dataSetMappingName: "DatasetMapping1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareSubscriptionName: "ShareSubscription1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kusto_database_data_set_mapping = azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping",
+ *     account_name="Account1",
+ *     data_set_mapping_name="DatasetMapping1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_subscription_name="ShareSubscription1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSetMappings_SqlDW_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kustoDatabaseDataSetMapping = new AzureNative.DataShare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", new AzureNative.DataShare.KustoDatabaseDataSetMappingArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetMappingName = "DatasetMapping1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareSubscriptionName = "ShareSubscription1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewKustoDatabaseDataSetMapping(ctx, "kustoDatabaseDataSetMapping", &datashare.KustoDatabaseDataSetMappingArgs{
+ * 			AccountName:           pulumi.String("Account1"),
+ * 			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+ * 			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+ * 			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kustoDatabaseDataSetMapping = new azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", {
+ *     accountName: "Account1",
+ *     dataSetMappingName: "DatasetMapping1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareSubscriptionName: "ShareSubscription1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kusto_database_data_set_mapping = azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping",
+ *     account_name="Account1",
+ *     data_set_mapping_name="DatasetMapping1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_subscription_name="ShareSubscription1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kustoDatabaseDataSetMapping = new AzureNative.DataShare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", new AzureNative.DataShare.KustoDatabaseDataSetMappingArgs
+ *         {
+ *             AccountName = "consumerAccount",
+ *             DataSetMappingName = "datasetMappingName1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareSubscriptionName = "ShareSubscription1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewKustoDatabaseDataSetMapping(ctx, "kustoDatabaseDataSetMapping", &datashare.KustoDatabaseDataSetMappingArgs{
+ * 			AccountName:           pulumi.String("consumerAccount"),
+ * 			DataSetMappingName:    pulumi.String("datasetMappingName1"),
+ * 			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+ * 			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kustoDatabaseDataSetMapping = new azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping", {
+ *     accountName: "consumerAccount",
+ *     dataSetMappingName: "datasetMappingName1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareSubscriptionName: "ShareSubscription1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kusto_database_data_set_mapping = azure_native.datashare.KustoDatabaseDataSetMapping("kustoDatabaseDataSetMapping",
+ *     account_name="consumerAccount",
+ *     data_set_mapping_name="datasetMappingName1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_subscription_name="ShareSubscription1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,28 +405,24 @@ import javax.annotation.Nullable;
 public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResource {
     /**
      * The id of the source data set.
-     * 
      */
     @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
      * @return The id of the source data set.
-     * 
      */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
-     * 
      */
     @Export(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
     /**
      * @return Gets the status of the data set mapping.
-     * 
      */
     public Output<String> getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
@@ -62,7 +430,6 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
     /**
      * Kind of data set mapping.
      * Expected value is 'KustoDatabase'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -70,91 +437,78 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
     /**
      * @return Kind of data set mapping.
      * Expected value is 'KustoDatabase'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource id of the sink kusto cluster.
-     * 
      */
     @Export(name="kustoClusterResourceId", type=String.class, parameters={})
     private Output<String> kustoClusterResourceId;
 
     /**
      * @return Resource id of the sink kusto cluster.
-     * 
      */
     public Output<String> getKustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
      * Location of the sink kusto cluster.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location of the sink kusto cluster.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the data set mapping.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the data set mapping.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

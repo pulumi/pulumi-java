@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class RouteResponse {
     /**
      * The path for the route.
-     * 
      */
     private final String path;
     /**
      * The port for the route.
-     * 
      */
     private final Integer port;
 
@@ -31,14 +29,12 @@ public final class RouteResponse {
 
     /**
      * The path for the route.
-     * 
     */
     public String getPath() {
         return this.path;
     }
     /**
      * The port for the route.
-     * 
     */
     public Integer getPort() {
         return this.port;

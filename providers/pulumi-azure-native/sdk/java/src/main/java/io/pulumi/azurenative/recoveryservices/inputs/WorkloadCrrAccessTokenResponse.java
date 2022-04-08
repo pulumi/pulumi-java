@@ -19,7 +19,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Access token used for authentication
-     * 
      */
     @Import(name="accessTokenString")
       private final @Nullable String accessTokenString;
@@ -30,7 +29,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Active region name of BMS Stamp
-     * 
      */
     @Import(name="bMSActiveRegion")
       private final @Nullable String bMSActiveRegion;
@@ -41,7 +39,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Backup Management Type
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -52,7 +49,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Container Id
-     * 
      */
     @Import(name="containerId")
       private final @Nullable String containerId;
@@ -63,7 +59,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Container Unique name
-     * 
      */
     @Import(name="containerName")
       private final @Nullable String containerName;
@@ -74,7 +69,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Container Type
-     * 
      */
     @Import(name="containerType")
       private final @Nullable String containerType;
@@ -85,7 +79,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * CoordinatorServiceStampId to be used by BCM in restore call
-     * 
      */
     @Import(name="coordinatorServiceStampId")
       private final @Nullable String coordinatorServiceStampId;
@@ -96,7 +89,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * CoordinatorServiceStampUri to be used by BCM in restore call
-     * 
      */
     @Import(name="coordinatorServiceStampUri")
       private final @Nullable String coordinatorServiceStampUri;
@@ -107,7 +99,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Datasource Container Unique Name
-     * 
      */
     @Import(name="datasourceContainerName")
       private final @Nullable String datasourceContainerName;
@@ -118,7 +109,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Datasource Id
-     * 
      */
     @Import(name="datasourceId")
       private final @Nullable String datasourceId;
@@ -129,7 +119,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Datasource Friendly Name
-     * 
      */
     @Import(name="datasourceName")
       private final @Nullable String datasourceName;
@@ -140,7 +129,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Datasource Type
-     * 
      */
     @Import(name="datasourceType")
       private final @Nullable String datasourceType;
@@ -152,7 +140,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'WorkloadCrrAccessToken'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;
@@ -163,7 +150,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Policy Id
-     * 
      */
     @Import(name="policyId")
       private final @Nullable String policyId;
@@ -174,7 +160,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Policy Name
-     * 
      */
     @Import(name="policyName")
       private final @Nullable String policyName;
@@ -227,7 +212,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Protected item container id
-     * 
      */
     @Import(name="protectionContainerId")
       private final @Nullable Double protectionContainerId;
@@ -238,7 +222,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * ProtectionServiceStampId to be used by BCM in restore call
-     * 
      */
     @Import(name="protectionServiceStampId")
       private final @Nullable String protectionServiceStampId;
@@ -249,7 +232,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * ProtectionServiceStampUri to be used by BCM in restore call
-     * 
      */
     @Import(name="protectionServiceStampUri")
       private final @Nullable String protectionServiceStampUri;
@@ -260,7 +242,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Recovery Point Id
-     * 
      */
     @Import(name="recoveryPointId")
       private final @Nullable String recoveryPointId;
@@ -271,7 +252,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Recovery Point Time
-     * 
      */
     @Import(name="recoveryPointTime")
       private final @Nullable String recoveryPointTime;
@@ -282,7 +262,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Resource Group name of the source vault
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
@@ -293,7 +272,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Resource Id of the source vault
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;
@@ -304,7 +282,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Resource Name of the source vault
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable String resourceName;
@@ -315,7 +292,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Recovery point information: Managed virtual machine
-     * 
      */
     @Import(name="rpIsManagedVirtualMachine")
       private final @Nullable Boolean rpIsManagedVirtualMachine;
@@ -326,7 +302,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Recovery point information: Original SA option
-     * 
      */
     @Import(name="rpOriginalSAOption")
       private final @Nullable Boolean rpOriginalSAOption;
@@ -337,7 +312,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Recovery point Tier Information
-     * 
      */
     @Import(name="rpTierInformation")
       private final @Nullable Map<String,String> rpTierInformation;
@@ -348,7 +322,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Recovery point information: VM size description
-     * 
      */
     @Import(name="rpVMSizeDescription")
       private final @Nullable String rpVMSizeDescription;
@@ -359,7 +332,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Subscription Id of the source vault
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
@@ -370,7 +342,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
 
     /**
      * Extended Information about the token like FileSpec etc.
-     * 
      */
     @Import(name="tokenExtendedInformation")
       private final @Nullable String tokenExtendedInformation;

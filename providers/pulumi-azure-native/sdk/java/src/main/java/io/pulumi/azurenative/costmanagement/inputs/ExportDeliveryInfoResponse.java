@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The delivery information associated with a export.
- * 
  */
 public final class ExportDeliveryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExportDeliveryInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Has destination for the export being delivered.
-     * 
      */
     @Import(name="destination", required=true)
       private final ExportDeliveryDestinationResponse destination;

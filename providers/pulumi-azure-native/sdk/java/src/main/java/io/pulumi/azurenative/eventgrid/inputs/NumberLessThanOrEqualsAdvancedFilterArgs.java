@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * NumberLessThanOrEquals Advanced Filter.
- * 
  */
 public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -33,7 +31,6 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'NumberLessThanOrEquals'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
@@ -44,7 +41,6 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
 
     /**
      * The filter value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<Double> value;

@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
- * 
  */
 public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -34,7 +33,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="datasource")
       private final @Nullable Object datasource;
@@ -45,7 +43,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
-     * 
      */
     @Import(name="diagnostics", required=true)
       private final DiagnosticsResponse diagnostics;
@@ -56,7 +53,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -67,7 +63,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -78,7 +73,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -89,7 +83,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serialization")
       private final @Nullable Object serialization;
@@ -100,7 +93,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

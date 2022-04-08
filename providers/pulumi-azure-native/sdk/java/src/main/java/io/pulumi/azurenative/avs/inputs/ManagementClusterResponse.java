@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The properties of a default cluster
- * 
  */
 public final class ManagementClusterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The identity
-     * 
      */
     @Import(name="clusterId", required=true)
       private final Integer clusterId;
@@ -31,7 +29,6 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The cluster size
-     * 
      */
     @Import(name="clusterSize", required=true)
       private final Integer clusterSize;
@@ -42,7 +39,6 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The hosts
-     * 
      */
     @Import(name="hosts", required=true)
       private final List<String> hosts;
@@ -53,7 +49,6 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The state of the cluster provisioning
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

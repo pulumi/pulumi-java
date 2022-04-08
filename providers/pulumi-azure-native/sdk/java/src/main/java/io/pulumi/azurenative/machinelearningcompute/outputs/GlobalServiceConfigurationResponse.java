@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class GlobalServiceConfigurationResponse {
     /**
      * The auto-scale configuration
-     * 
      */
     private final @Nullable AutoScaleConfigurationResponse autoScale;
     /**
      * The configuration ETag for updates.
-     * 
      */
     private final @Nullable String etag;
     /**
      * Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
-     * 
      */
     private final @Nullable ServiceAuthConfigurationResponse serviceAuth;
     /**
      * The SSL configuration properties
-     * 
      */
     private final @Nullable SslConfigurationResponse ssl;
 
@@ -49,28 +45,24 @@ public final class GlobalServiceConfigurationResponse {
 
     /**
      * The auto-scale configuration
-     * 
     */
     public Optional<AutoScaleConfigurationResponse> getAutoScale() {
         return Optional.ofNullable(this.autoScale);
     }
     /**
      * The configuration ETag for updates.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
-     * 
     */
     public Optional<ServiceAuthConfigurationResponse> getServiceAuth() {
         return Optional.ofNullable(this.serviceAuth);
     }
     /**
      * The SSL configuration properties
-     * 
     */
     public Optional<SslConfigurationResponse> getSsl() {
         return Optional.ofNullable(this.ssl);

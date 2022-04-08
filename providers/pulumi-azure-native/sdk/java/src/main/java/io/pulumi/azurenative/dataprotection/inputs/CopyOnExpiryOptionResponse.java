@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Copy on Expiry Option
- * 
  */
 public final class CopyOnExpiryOptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CopyOnExpiryOptionResponse extends io.pulumi.resources.Invoke
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'CopyOnExpiryOption'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;

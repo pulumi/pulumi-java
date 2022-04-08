@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PurviewConfigurationResponse {
     /**
      * Purview Resource ID
-     * 
      */
     private final @Nullable String purviewResourceId;
 
@@ -24,7 +23,6 @@ public final class PurviewConfigurationResponse {
 
     /**
      * Purview Resource ID
-     * 
     */
     public Optional<String> getPurviewResourceId() {
         return Optional.ofNullable(this.purviewResourceId);

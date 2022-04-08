@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specify action need to be taken when rule type is Alert
- * 
  */
 public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure action group reference.
-     * 
      */
     @Import(name="aznsAction")
       private final @Nullable Output<AzNsActionGroupArgs> aznsAction;
@@ -37,7 +35,6 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -48,7 +45,6 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Severity of the alert
-     * 
      */
     @Import(name="severity", required=true)
       private final Output<Either<String,AlertSeverity>> severity;
@@ -59,7 +55,6 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * time (in minutes) for which Alerts should be throttled or suppressed.
-     * 
      */
     @Import(name="throttlingInMin")
       private final @Nullable Output<Integer> throttlingInMin;
@@ -70,7 +65,6 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The trigger condition that results in the alert rule being.
-     * 
      */
     @Import(name="trigger", required=true)
       private final Output<TriggerConditionArgs> trigger;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the HttpVersion condition for the delivery rule.
- * 
  */
 public final class DeliveryRuleHttpVersionConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DeliveryRuleHttpVersionConditionResponse extends io.pulumi.re
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'HttpVersion'.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class DeliveryRuleHttpVersionConditionResponse extends io.pulumi.re
 
     /**
      * Defines the parameters for the condition.
-     * 
      */
     @Import(name="parameters", required=true)
       private final HttpVersionMatchConditionParametersResponse parameters;

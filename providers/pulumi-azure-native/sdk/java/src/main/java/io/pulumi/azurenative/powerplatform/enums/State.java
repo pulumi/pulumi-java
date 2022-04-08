@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * lockbox configuration
-     * 
      */
     @EnumType
     public enum State {

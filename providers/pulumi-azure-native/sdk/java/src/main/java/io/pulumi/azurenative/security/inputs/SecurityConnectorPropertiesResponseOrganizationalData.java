@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The multi cloud account's organizational data
- * 
  */
 public final class SecurityConnectorPropertiesResponseOrganizationalData extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
 
     /**
      * If the multi cloud account is of membership type organization, list of accounts excluded from offering
-     * 
      */
     @Import(name="excludedAccountIds")
       private final @Nullable List<String> excludedAccountIds;
@@ -32,7 +30,6 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
 
     /**
      * The multi cloud account's membership type in the organization
-     * 
      */
     @Import(name="organizationMembershipType")
       private final @Nullable String organizationMembershipType;
@@ -43,7 +40,6 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
 
     /**
      * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
-     * 
      */
     @Import(name="parentHierarchyId")
       private final @Nullable String parentHierarchyId;
@@ -54,7 +50,6 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
 
     /**
      * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
-     * 
      */
     @Import(name="stacksetName")
       private final @Nullable String stacksetName;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines NIC IP configuration properties.
- * 
  */
 public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Gets or sets the references of the load balancer backend address pools.
-     * 
      */
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
@@ -37,7 +35,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Gets or sets the references of the load balancer NAT rules.
-     * 
      */
     @Import(name="loadBalancerNatRules")
       private final @Nullable Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
@@ -48,7 +45,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Gets or sets the IP configuration name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -59,7 +55,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Gets or sets a value indicating whether this IP configuration is the primary.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
@@ -70,7 +65,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Gets or sets the private IP address of the network interface IP Configuration.
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
@@ -81,7 +75,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Gets or sets the private IP address allocation method.
-     * 
      */
     @Import(name="privateIpAllocationMethod")
       private final @Nullable Output<String> privateIpAllocationMethod;
@@ -92,7 +85,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Defines reference to a public IP.
-     * 
      */
     @Import(name="publicIp")
       private final @Nullable Output<PublicIpReferenceArgs> publicIp;
@@ -103,7 +95,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
 
     /**
      * Defines reference to subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetReferenceArgs> subnet;

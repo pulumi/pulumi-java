@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an Event Hub output data source.
- * 
  */
 public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
@@ -31,7 +29,6 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The key/column that is used to determine to which partition to send event data.
-     * 
      */
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
@@ -42,7 +39,6 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
@@ -53,7 +49,6 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
@@ -64,7 +59,6 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
@@ -76,7 +70,6 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.ServiceBus/EventHub'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of the dedicated HSM
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU of the dedicated HSM
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,SkuName>> name;

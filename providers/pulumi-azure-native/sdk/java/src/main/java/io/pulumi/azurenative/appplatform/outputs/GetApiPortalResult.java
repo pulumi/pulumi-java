@@ -16,32 +16,26 @@ import javax.annotation.Nullable;
 public final class GetApiPortalResult {
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * API portal properties payload
-     * 
      */
     private final ApiPortalPropertiesResponse properties;
     /**
      * Sku of the API portal resource
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -63,42 +57,36 @@ public final class GetApiPortalResult {
 
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * API portal properties payload
-     * 
     */
     public ApiPortalPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Sku of the API portal resource
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

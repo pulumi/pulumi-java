@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The KPI extract.
- * 
  */
 public final class KpiExtractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KpiExtractResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The expression.
-     * 
      */
     @Import(name="expression", required=true)
       private final String expression;
@@ -29,7 +27,6 @@ public final class KpiExtractResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * KPI extract name.
-     * 
      */
     @Import(name="extractName", required=true)
       private final String extractName;

@@ -113,7 +113,276 @@ import javax.annotation.Nullable;
  * Dataset resource type.
  * API Version: 2018-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Datasets_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new AzureNative.DataFactory.Dataset("dataset", new AzureNative.DataFactory.DatasetArgs
+ *         {
+ *             DatasetName = "exampleDataset",
+ *             FactoryName = "exampleFactoryName",
+ *             Properties = new AzureNative.DataFactory.Inputs.AzureBlobDatasetArgs
+ *             {
+ *                 FileName = 
+ *                 {
+ *                     { "type", "Expression" },
+ *                     { "value", "@dataset().MyFileName" },
+ *                 },
+ *                 FolderPath = 
+ *                 {
+ *                     { "type", "Expression" },
+ *                     { "value", "@dataset().MyFolderPath" },
+ *                 },
+ *                 Format = new AzureNative.DataFactory.Inputs.TextFormatArgs
+ *                 {
+ *                     Type = "TextFormat",
+ *                 },
+ *                 LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
+ *                 {
+ *                     ReferenceName = "exampleLinkedService",
+ *                     Type = "LinkedServiceReference",
+ *                 },
+ *                 Parameters = 
+ *                 {
+ *                     { "MyFileName", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
+ *                     {
+ *                         Type = "String",
+ *                     } },
+ *                     { "MyFolderPath", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
+ *                     {
+ *                         Type = "String",
+ *                     } },
+ *                 },
+ *                 Type = "AzureBlob",
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataset = new azure_native.datafactory.Dataset("dataset", {
+ *     datasetName: "exampleDataset",
+ *     factoryName: "exampleFactoryName",
+ *     properties: {
+ *         fileName: {
+ *             type: "Expression",
+ *             value: "@dataset().MyFileName",
+ *         },
+ *         folderPath: {
+ *             type: "Expression",
+ *             value: "@dataset().MyFolderPath",
+ *         },
+ *         format: {
+ *             type: "TextFormat",
+ *         },
+ *         linkedServiceName: {
+ *             referenceName: "exampleLinkedService",
+ *             type: "LinkedServiceReference",
+ *         },
+ *         parameters: {
+ *             MyFileName: {
+ *                 type: "String",
+ *             },
+ *             MyFolderPath: {
+ *                 type: "String",
+ *             },
+ *         },
+ *         type: "AzureBlob",
+ *     },
+ *     resourceGroupName: "exampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dataset = azure_native.datafactory.Dataset("dataset",
+ *     dataset_name="exampleDataset",
+ *     factory_name="exampleFactoryName",
+ *     properties=azure_native.datafactory.AzureBlobDatasetArgs(
+ *         file_name={
+ *             "type": "Expression",
+ *             "value": "@dataset().MyFileName",
+ *         },
+ *         folder_path={
+ *             "type": "Expression",
+ *             "value": "@dataset().MyFolderPath",
+ *         },
+ *         format=azure_native.datafactory.TextFormatArgs(
+ *             type="TextFormat",
+ *         ),
+ *         linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
+ *             reference_name="exampleLinkedService",
+ *             type="LinkedServiceReference",
+ *         ),
+ *         parameters={
+ *             "MyFileName": azure_native.datafactory.ParameterSpecificationArgs(
+ *                 type="String",
+ *             ),
+ *             "MyFolderPath": azure_native.datafactory.ParameterSpecificationArgs(
+ *                 type="String",
+ *             ),
+ *         },
+ *         type="AzureBlob",
+ *     ),
+ *     resource_group_name="exampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Datasets_Update
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new AzureNative.DataFactory.Dataset("dataset", new AzureNative.DataFactory.DatasetArgs
+ *         {
+ *             DatasetName = "exampleDataset",
+ *             FactoryName = "exampleFactoryName",
+ *             Properties = new AzureNative.DataFactory.Inputs.AzureBlobDatasetArgs
+ *             {
+ *                 Description = "Example description",
+ *                 FileName = 
+ *                 {
+ *                     { "type", "Expression" },
+ *                     { "value", "@dataset().MyFileName" },
+ *                 },
+ *                 FolderPath = 
+ *                 {
+ *                     { "type", "Expression" },
+ *                     { "value", "@dataset().MyFolderPath" },
+ *                 },
+ *                 Format = new AzureNative.DataFactory.Inputs.TextFormatArgs
+ *                 {
+ *                     Type = "TextFormat",
+ *                 },
+ *                 LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
+ *                 {
+ *                     ReferenceName = "exampleLinkedService",
+ *                     Type = "LinkedServiceReference",
+ *                 },
+ *                 Parameters = 
+ *                 {
+ *                     { "MyFileName", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
+ *                     {
+ *                         Type = "String",
+ *                     } },
+ *                     { "MyFolderPath", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
+ *                     {
+ *                         Type = "String",
+ *                     } },
+ *                 },
+ *                 Type = "AzureBlob",
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataset = new azure_native.datafactory.Dataset("dataset", {
+ *     datasetName: "exampleDataset",
+ *     factoryName: "exampleFactoryName",
+ *     properties: {
+ *         description: "Example description",
+ *         fileName: {
+ *             type: "Expression",
+ *             value: "@dataset().MyFileName",
+ *         },
+ *         folderPath: {
+ *             type: "Expression",
+ *             value: "@dataset().MyFolderPath",
+ *         },
+ *         format: {
+ *             type: "TextFormat",
+ *         },
+ *         linkedServiceName: {
+ *             referenceName: "exampleLinkedService",
+ *             type: "LinkedServiceReference",
+ *         },
+ *         parameters: {
+ *             MyFileName: {
+ *                 type: "String",
+ *             },
+ *             MyFolderPath: {
+ *                 type: "String",
+ *             },
+ *         },
+ *         type: "AzureBlob",
+ *     },
+ *     resourceGroupName: "exampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dataset = azure_native.datafactory.Dataset("dataset",
+ *     dataset_name="exampleDataset",
+ *     factory_name="exampleFactoryName",
+ *     properties=azure_native.datafactory.AzureBlobDatasetArgs(
+ *         description="Example description",
+ *         file_name={
+ *             "type": "Expression",
+ *             "value": "@dataset().MyFileName",
+ *         },
+ *         folder_path={
+ *             "type": "Expression",
+ *             "value": "@dataset().MyFolderPath",
+ *         },
+ *         format=azure_native.datafactory.TextFormatArgs(
+ *             type="TextFormat",
+ *         ),
+ *         linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
+ *             reference_name="exampleLinkedService",
+ *             type="LinkedServiceReference",
+ *         ),
+ *         parameters={
+ *             "MyFileName": azure_native.datafactory.ParameterSpecificationArgs(
+ *                 type="String",
+ *             ),
+ *             "MyFolderPath": azure_native.datafactory.ParameterSpecificationArgs(
+ *                 type="String",
+ *             ),
+ *         },
+ *         type="AzureBlob",
+ *     ),
+ *     resource_group_name="exampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -128,56 +397,48 @@ import javax.annotation.Nullable;
 public class Dataset extends io.pulumi.resources.CustomResource {
     /**
      * Etag identifies change in the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Etag identifies change in the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Dataset properties.
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Dataset properties.
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

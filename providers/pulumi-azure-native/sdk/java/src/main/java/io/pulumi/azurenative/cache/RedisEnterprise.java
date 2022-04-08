@@ -20,7 +20,134 @@ import javax.annotation.Nullable;
  * Describes the RedisEnterprise cluster
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RedisEnterpriseCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var redisEnterprise = new AzureNative.Cache.RedisEnterprise("redisEnterprise", new AzureNative.Cache.RedisEnterpriseArgs
+ *         {
+ *             ClusterName = "cache1",
+ *             Location = "West US",
+ *             MinimumTlsVersion = "1.2",
+ *             ResourceGroupName = "rg1",
+ *             Sku = new AzureNative.Cache.Inputs.EnterpriseSkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "EnterpriseFlash_F300",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *             },
+ *             Zones = 
+ *             {
+ *                 "1",
+ *                 "2",
+ *                 "3",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cache.NewRedisEnterprise(ctx, "redisEnterprise", &cache.RedisEnterpriseArgs{
+ * 			ClusterName:       pulumi.String("cache1"),
+ * 			Location:          pulumi.String("West US"),
+ * 			MinimumTlsVersion: pulumi.String("1.2"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Sku: &cache.EnterpriseSkuArgs{
+ * 				Capacity: pulumi.Int(3),
+ * 				Name:     pulumi.String("EnterpriseFlash_F300"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 			},
+ * 			Zones: pulumi.StringArray{
+ * 				pulumi.String("1"),
+ * 				pulumi.String("2"),
+ * 				pulumi.String("3"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const redisEnterprise = new azure_native.cache.RedisEnterprise("redisEnterprise", {
+ *     clusterName: "cache1",
+ *     location: "West US",
+ *     minimumTlsVersion: "1.2",
+ *     resourceGroupName: "rg1",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "EnterpriseFlash_F300",
+ *     },
+ *     tags: {
+ *         tag1: "value1",
+ *     },
+ *     zones: [
+ *         "1",
+ *         "2",
+ *         "3",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * redis_enterprise = azure_native.cache.RedisEnterprise("redisEnterprise",
+ *     cluster_name="cache1",
+ *     location="West US",
+ *     minimum_tls_version="1.2",
+ *     resource_group_name="rg1",
+ *     sku=azure_native.cache.EnterpriseSkuArgs(
+ *         capacity=3,
+ *         name="EnterpriseFlash_F300",
+ *     ),
+ *     tags={
+ *         "tag1": "value1",
+ *     },
+ *     zones=[
+ *         "1",
+ *         "2",
+ *         "3",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +162,144 @@ import javax.annotation.Nullable;
 public class RedisEnterprise extends io.pulumi.resources.CustomResource {
     /**
      * DNS name of the cluster endpoint
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return DNS name of the cluster endpoint
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The minimum TLS version for the cluster to support, e.g. '1.2'
-     * 
      */
     @Export(name="minimumTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimumTlsVersion;
 
     /**
      * @return The minimum TLS version for the cluster to support, e.g. '1.2'
-     * 
      */
     public Output</* @Nullable */ String> getMinimumTlsVersion() {
         return this.minimumTlsVersion;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of private endpoint connections associated with the specified RedisEnterprise cluster
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of private endpoint connections associated with the specified RedisEnterprise cluster
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Current provisioning status of the cluster
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current provisioning status of the cluster
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Version of redis the cluster supports, e.g. '6'
-     * 
      */
     @Export(name="redisVersion", type=String.class, parameters={})
     private Output<String> redisVersion;
 
     /**
      * @return Version of redis the cluster supports, e.g. '6'
-     * 
      */
     public Output<String> getRedisVersion() {
         return this.redisVersion;
     }
     /**
      * Current resource status of the cluster
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return Current resource status of the cluster
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * The SKU to create, which affects price, performance, and features.
-     * 
      */
     @Export(name="sku", type=EnterpriseSkuResponse.class, parameters={})
     private Output<EnterpriseSkuResponse> sku;
 
     /**
      * @return The SKU to create, which affects price, performance, and features.
-     * 
      */
     public Output<EnterpriseSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The Availability Zones where this cluster will be deployed.
-     * 
      */
     @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**
      * @return The Availability Zones where this cluster will be deployed.
-     * 
      */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;

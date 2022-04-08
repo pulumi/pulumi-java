@@ -19,7 +19,6 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activation key of the MEC.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
@@ -30,7 +29,6 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -42,7 +40,6 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Role type.
      * Expected value is 'MEC'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -53,7 +50,6 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -64,7 +60,6 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role status.
-     * 
      */
     @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;

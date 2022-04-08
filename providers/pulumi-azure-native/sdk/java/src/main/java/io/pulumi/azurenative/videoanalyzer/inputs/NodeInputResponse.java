@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes an input signal to be used on a pipeline node.
- * 
  */
 public final class NodeInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NodeInputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the upstream node in the pipeline which output is used as input of the current node.
-     * 
      */
     @Import(name="nodeName", required=true)
       private final String nodeName;

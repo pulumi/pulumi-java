@@ -18,7 +18,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * True if branch to branch traffic is allowed.
-     * 
      */
     @Import(name="allowBranchToBranchTraffic")
       private final @Nullable Output<Boolean> allowBranchToBranchTraffic;
@@ -29,7 +28,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * True if Vnet to Vnet traffic is allowed.
-     * 
      */
     @Import(name="allowVnetToVnetTraffic")
       private final @Nullable Output<Boolean> allowVnetToVnetTraffic;
@@ -40,7 +38,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Vpn encryption to be disabled or not.
-     * 
      */
     @Import(name="disableVpnEncryption")
       private final @Nullable Output<Boolean> disableVpnEncryption;
@@ -51,7 +48,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -62,7 +58,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -73,7 +68,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name of the VirtualWan.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -95,7 +88,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the VirtualWAN.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -106,7 +98,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the VirtualWAN being created or updated.
-     * 
      */
     @Import(name="virtualWANName")
       private final @Nullable Output<String> virtualWANName;

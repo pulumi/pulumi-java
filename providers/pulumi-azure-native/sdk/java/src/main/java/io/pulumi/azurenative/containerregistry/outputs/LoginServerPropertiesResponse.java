@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class LoginServerPropertiesResponse {
     /**
      * The host of the connected registry. Can be FQDN or IP.
-     * 
      */
     private final String host;
     /**
      * The TLS properties of the connected registry login server.
-     * 
      */
     private final TlsPropertiesResponse tls;
 
@@ -31,14 +29,12 @@ public final class LoginServerPropertiesResponse {
 
     /**
      * The host of the connected registry. Can be FQDN or IP.
-     * 
     */
     public String getHost() {
         return this.host;
     }
     /**
      * The TLS properties of the connected registry login server.
-     * 
     */
     public TlsPropertiesResponse getTls() {
         return this.tls;

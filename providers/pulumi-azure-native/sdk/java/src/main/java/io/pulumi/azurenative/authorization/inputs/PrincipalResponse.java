@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The name of the entity last modified it
- * 
  */
 public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the principal made changes
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Email of principal
-     * 
      */
     @Import(name="email")
       private final @Nullable String email;
@@ -42,7 +39,6 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The id of the principal made changes
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -53,7 +49,6 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of principal such as user , group etc
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

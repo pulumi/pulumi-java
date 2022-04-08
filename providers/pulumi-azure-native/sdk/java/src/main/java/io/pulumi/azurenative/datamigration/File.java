@@ -18,7 +18,96 @@ import javax.annotation.Nullable;
  * A file resource
  * API Version: 2018-07-15-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Files_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var file = new AzureNative.DataMigration.File("file", new AzureNative.DataMigration.FileArgs
+ *         {
+ *             FileName = "x114d023d8",
+ *             GroupName = "DmsSdkRg",
+ *             ProjectName = "DmsSdkProject",
+ *             Properties = new AzureNative.DataMigration.Inputs.ProjectFilePropertiesArgs
+ *             {
+ *                 FilePath = "DmsSdkFilePath/DmsSdkFile.sql",
+ *             },
+ *             ServiceName = "DmsSdkService",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datamigration.NewFile(ctx, "file", &datamigration.FileArgs{
+ * 			FileName:    pulumi.String("x114d023d8"),
+ * 			GroupName:   pulumi.String("DmsSdkRg"),
+ * 			ProjectName: pulumi.String("DmsSdkProject"),
+ * 			Properties: &datamigration.ProjectFilePropertiesArgs{
+ * 				FilePath: pulumi.String("DmsSdkFilePath/DmsSdkFile.sql"),
+ * 			},
+ * 			ServiceName: pulumi.String("DmsSdkService"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const file = new azure_native.datamigration.File("file", {
+ *     fileName: "x114d023d8",
+ *     groupName: "DmsSdkRg",
+ *     projectName: "DmsSdkProject",
+ *     properties: {
+ *         filePath: "DmsSdkFilePath/DmsSdkFile.sql",
+ *     },
+ *     serviceName: "DmsSdkService",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * file = azure_native.datamigration.File("file",
+ *     file_name="x114d023d8",
+ *     group_name="DmsSdkRg",
+ *     project_name="DmsSdkProject",
+ *     properties=azure_native.datamigration.ProjectFilePropertiesArgs(
+ *         file_path="DmsSdkFilePath/DmsSdkFile.sql",
+ *     ),
+ *     service_name="DmsSdkService")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +122,48 @@ import javax.annotation.Nullable;
 public class File extends io.pulumi.resources.CustomResource {
     /**
      * HTTP strong entity tag value. This is ignored if submitted.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return HTTP strong entity tag value. This is ignored if submitted.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Custom file properties
-     * 
      */
     @Export(name="properties", type=ProjectFilePropertiesResponse.class, parameters={})
     private Output<ProjectFilePropertiesResponse> properties;
 
     /**
      * @return Custom file properties
-     * 
      */
     public Output<ProjectFilePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

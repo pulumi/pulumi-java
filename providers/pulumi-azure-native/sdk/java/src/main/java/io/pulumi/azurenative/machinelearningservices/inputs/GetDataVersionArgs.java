@@ -14,7 +14,6 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Version identifier.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;
@@ -47,7 +44,6 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Instance view status.
- * 
  */
 public final class InstanceViewStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * The status code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * The short localizable label for the status.
-     * 
      */
     @Import(name="displayStatus")
       private final @Nullable String displayStatus;
@@ -42,7 +39,6 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * The level code.
-     * 
      */
     @Import(name="level")
       private final @Nullable String level;
@@ -53,7 +49,6 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * The detailed status message, including for alerts and error messages.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -64,7 +59,6 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * The time of the status.
-     * 
      */
     @Import(name="time")
       private final @Nullable String time;

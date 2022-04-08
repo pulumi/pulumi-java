@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The action of the command.
-     * 
      */
     @EnumType
     public enum Action {

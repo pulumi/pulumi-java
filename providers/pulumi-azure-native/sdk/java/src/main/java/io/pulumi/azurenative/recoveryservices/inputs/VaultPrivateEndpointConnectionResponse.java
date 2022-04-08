@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Private Endpoint Connection Response Properties.
- * 
  */
 public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
 
     /**
      * The Private Endpoint network resource that is linked to the Private Endpoint connection.
-     * 
      */
     @Import(name="privateEndpoint", required=true)
       private final PrivateEndpointResponse privateEndpoint;
@@ -31,7 +29,6 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
 
     /**
      * Gets or sets private link service connection state.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -42,7 +39,6 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
 
     /**
      * Gets or sets provisioning state of the private endpoint connection.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

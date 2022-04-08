@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class RuleManagementEventClaimsDataSourceResponse {
     /**
      * the email address.
-     * 
      */
     private final @Nullable String emailAddress;
 
@@ -24,7 +23,6 @@ public final class RuleManagementEventClaimsDataSourceResponse {
 
     /**
      * the email address.
-     * 
     */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Criteria to limit import of WSDL to a subset of the document.
- * 
  */
 public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
 
     /**
      * Name of endpoint(port) to import from WSDL
-     * 
      */
     @Import(name="wsdlEndpointName")
       private final @Nullable Output<String> wsdlEndpointName;
@@ -31,7 +29,6 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
 
     /**
      * Name of service to import from WSDL
-     * 
      */
     @Import(name="wsdlServiceName")
       private final @Nullable Output<String> wsdlServiceName;

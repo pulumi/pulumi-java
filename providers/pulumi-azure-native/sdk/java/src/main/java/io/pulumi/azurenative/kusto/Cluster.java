@@ -26,7 +26,125 @@ import javax.annotation.Nullable;
  * Class representing a Kusto cluster.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### KustoClustersCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cluster = new AzureNative.Kusto.Cluster("cluster", new AzureNative.Kusto.ClusterArgs
+ *         {
+ *             ClusterName = "kustoclusterrptest4",
+ *             EnableDoubleEncryption = false,
+ *             EnablePurge = true,
+ *             EnableStreamingIngest = true,
+ *             Identity = new AzureNative.Kusto.Inputs.IdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "westus",
+ *             ResourceGroupName = "kustorptest",
+ *             Sku = new AzureNative.Kusto.Inputs.AzureSkuArgs
+ *             {
+ *                 Capacity = 2,
+ *                 Name = "Standard_L8s",
+ *                 Tier = "Standard",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kusto.NewCluster(ctx, "cluster", &kusto.ClusterArgs{
+ * 			ClusterName:            pulumi.String("kustoclusterrptest4"),
+ * 			EnableDoubleEncryption: pulumi.Bool(false),
+ * 			EnablePurge:            pulumi.Bool(true),
+ * 			EnableStreamingIngest:  pulumi.Bool(true),
+ * 			Identity: &kusto.IdentityArgs{
+ * 				Type: pulumi.String("SystemAssigned"),
+ * 			},
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("kustorptest"),
+ * 			Sku: &kusto.AzureSkuArgs{
+ * 				Capacity: pulumi.Int(2),
+ * 				Name:     pulumi.String("Standard_L8s"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cluster = new azure_native.kusto.Cluster("cluster", {
+ *     clusterName: "kustoclusterrptest4",
+ *     enableDoubleEncryption: false,
+ *     enablePurge: true,
+ *     enableStreamingIngest: true,
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "westus",
+ *     resourceGroupName: "kustorptest",
+ *     sku: {
+ *         capacity: 2,
+ *         name: "Standard_L8s",
+ *         tier: "Standard",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cluster = azure_native.kusto.Cluster("cluster",
+ *     cluster_name="kustoclusterrptest4",
+ *     enable_double_encryption=False,
+ *     enable_purge=True,
+ *     enable_streaming_ingest=True,
+ *     identity=azure_native.kusto.IdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="westus",
+ *     resource_group_name="kustorptest",
+ *     sku=azure_native.kusto.AzureSkuArgs(
+ *         capacity=2,
+ *         name="Standard_L8s",
+ *         tier="Standard",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,322 +159,276 @@ import javax.annotation.Nullable;
 public class Cluster extends io.pulumi.resources.CustomResource {
     /**
      * The cluster data ingestion URI.
-     * 
      */
     @Export(name="dataIngestionUri", type=String.class, parameters={})
     private Output<String> dataIngestionUri;
 
     /**
      * @return The cluster data ingestion URI.
-     * 
      */
     public Output<String> getDataIngestionUri() {
         return this.dataIngestionUri;
     }
     /**
      * A boolean value that indicates if the cluster's disks are encrypted.
-     * 
      */
     @Export(name="enableDiskEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDiskEncryption;
 
     /**
      * @return A boolean value that indicates if the cluster's disks are encrypted.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableDiskEncryption() {
         return this.enableDiskEncryption;
     }
     /**
      * A boolean value that indicates if double encryption is enabled.
-     * 
      */
     @Export(name="enableDoubleEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDoubleEncryption;
 
     /**
      * @return A boolean value that indicates if double encryption is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableDoubleEncryption() {
         return this.enableDoubleEncryption;
     }
     /**
      * A boolean value that indicates if the purge operations are enabled.
-     * 
      */
     @Export(name="enablePurge", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePurge;
 
     /**
      * @return A boolean value that indicates if the purge operations are enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnablePurge() {
         return this.enablePurge;
     }
     /**
      * A boolean value that indicates if the streaming ingest is enabled.
-     * 
      */
     @Export(name="enableStreamingIngest", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableStreamingIngest;
 
     /**
      * @return A boolean value that indicates if the streaming ingest is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableStreamingIngest() {
         return this.enableStreamingIngest;
     }
     /**
      * The engine type
-     * 
      */
     @Export(name="engineType", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineType;
 
     /**
      * @return The engine type
-     * 
      */
     public Output</* @Nullable */ String> getEngineType() {
         return this.engineType;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The identity of the cluster, if configured.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the cluster, if configured.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * KeyVault properties for the cluster encryption.
-     * 
      */
     @Export(name="keyVaultProperties", type=KeyVaultPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties;
 
     /**
      * @return KeyVault properties for the cluster encryption.
-     * 
      */
     public Output</* @Nullable */ KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return this.keyVaultProperties;
     }
     /**
      * List of the cluster's language extensions.
-     * 
      */
     @Export(name="languageExtensions", type=LanguageExtensionsListResponse.class, parameters={})
     private Output<LanguageExtensionsListResponse> languageExtensions;
 
     /**
      * @return List of the cluster's language extensions.
-     * 
      */
     public Output<LanguageExtensionsListResponse> getLanguageExtensions() {
         return this.languageExtensions;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optimized auto scale definition.
-     * 
      */
     @Export(name="optimizedAutoscale", type=OptimizedAutoscaleResponse.class, parameters={})
     private Output</* @Nullable */ OptimizedAutoscaleResponse> optimizedAutoscale;
 
     /**
      * @return Optimized auto scale definition.
-     * 
      */
     public Output</* @Nullable */ OptimizedAutoscaleResponse> getOptimizedAutoscale() {
         return this.optimizedAutoscale;
     }
     /**
      * The provisioned state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioned state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the cluster.
-     * 
      */
     @Export(name="sku", type=AzureSkuResponse.class, parameters={})
     private Output<AzureSkuResponse> sku;
 
     /**
      * @return The SKU of the cluster.
-     * 
      */
     public Output<AzureSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The state of the resource.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the resource.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The reason for the cluster's current state.
-     * 
      */
     @Export(name="stateReason", type=String.class, parameters={})
     private Output<String> stateReason;
 
     /**
      * @return The reason for the cluster's current state.
-     * 
      */
     public Output<String> getStateReason() {
         return this.stateReason;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The cluster's external tenants.
-     * 
      */
     @Export(name="trustedExternalTenants", type=List.class, parameters={TrustedExternalTenantResponse.class})
     private Output</* @Nullable */ List<TrustedExternalTenantResponse>> trustedExternalTenants;
 
     /**
      * @return The cluster's external tenants.
-     * 
      */
     public Output</* @Nullable */ List<TrustedExternalTenantResponse>> getTrustedExternalTenants() {
         return this.trustedExternalTenants;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The cluster URI.
-     * 
      */
     @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     /**
      * @return The cluster URI.
-     * 
      */
     public Output<String> getUri() {
         return this.uri;
     }
     /**
      * Virtual network definition.
-     * 
      */
     @Export(name="virtualNetworkConfiguration", type=VirtualNetworkConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkConfigurationResponse> virtualNetworkConfiguration;
 
     /**
      * @return Virtual network definition.
-     * 
      */
     public Output</* @Nullable */ VirtualNetworkConfigurationResponse> getVirtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration;
     }
     /**
      * The availability zones of the cluster.
-     * 
      */
     @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**
      * @return The availability zones of the cluster.
-     * 
      */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;

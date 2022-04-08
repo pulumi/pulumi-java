@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Direction of port mirroring profile.
-     * 
      */
     @EnumType
     public enum PortMirroringDirectionEnum {

@@ -20,7 +20,109 @@ import javax.annotation.Nullable;
  * An account data transfer object.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Accounts_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new AzureNative.DataShare.Account("account", new AzureNative.DataShare.AccountArgs
+ *         {
+ *             AccountName = "Account1",
+ *             Identity = new AzureNative.DataShare.Inputs.IdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "West US 2",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "Red" },
+ *                 { "tag2", "White" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewAccount(ctx, "account", &datashare.AccountArgs{
+ * 			AccountName: pulumi.String("Account1"),
+ * 			Identity: &datashare.IdentityArgs{
+ * 				Type: pulumi.String("SystemAssigned"),
+ * 			},
+ * 			Location:          pulumi.String("West US 2"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("Red"),
+ * 				"tag2": pulumi.String("White"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const account = new azure_native.datashare.Account("account", {
+ *     accountName: "Account1",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "West US 2",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     tags: {
+ *         tag1: "Red",
+ *         tag2: "White",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * account = azure_native.datashare.Account("account",
+ *     account_name="Account1",
+ *     identity=azure_native.datashare.IdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="West US 2",
+ *     resource_group_name="SampleResourceGroup",
+ *     tags={
+ *         "tag1": "Red",
+ *         "tag2": "White",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,140 +137,120 @@ import javax.annotation.Nullable;
 public class Account extends io.pulumi.resources.CustomResource {
     /**
      * Time at which the account was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Time at which the account was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Identity Info on the Account
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output<IdentityResponse> identity;
 
     /**
      * @return Identity Info on the Account
-     * 
      */
     public Output<IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Location of the azure resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of the azure resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Account
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the Account
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Tags on the azure resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags on the azure resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
-     * 
      */
     @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**
      * @return Email of the user who created the resource
-     * 
      */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Name of the user who created the resource
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

@@ -15,18 +15,15 @@ import javax.annotation.Nullable;
 public final class DatadogHostResponse {
     /**
      * The aliases for the host.
-     * 
      */
     private final @Nullable List<String> aliases;
     /**
      * The Datadog integrations reporting metrics for the host.
-     * 
      */
     private final @Nullable List<String> apps;
     private final @Nullable DatadogHostMetadataResponse meta;
     /**
      * The name of the host.
-     * 
      */
     private final @Nullable String name;
 
@@ -44,14 +41,12 @@ public final class DatadogHostResponse {
 
     /**
      * The aliases for the host.
-     * 
     */
     public List<String> getAliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
     /**
      * The Datadog integrations reporting metrics for the host.
-     * 
     */
     public List<String> getApps() {
         return this.apps == null ? List.of() : this.apps;
@@ -61,7 +56,6 @@ public final class DatadogHostResponse {
     }
     /**
      * The name of the host.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

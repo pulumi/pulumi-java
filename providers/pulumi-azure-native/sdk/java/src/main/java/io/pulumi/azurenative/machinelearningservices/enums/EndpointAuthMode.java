@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Inference endpoint authentication mode type
-     * 
      */
     @EnumType
     public enum EndpointAuthMode {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Workload item type of the item for which intent is to be set
-     * 
      */
     @EnumType
     public enum WorkloadItemType {

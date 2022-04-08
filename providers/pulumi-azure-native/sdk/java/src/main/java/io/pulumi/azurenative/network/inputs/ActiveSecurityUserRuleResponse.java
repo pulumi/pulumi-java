@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network security user rule.
- * 
  */
 public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * Deployment time string.
-     * 
      */
     @Import(name="commitTime")
       private final @Nullable String commitTime;
@@ -35,7 +33,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * A description of the security user configuration.
-     * 
      */
     @Import(name="configurationDescription")
       private final @Nullable String configurationDescription;
@@ -46,7 +43,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * A display name of the security user configuration.
-     * 
      */
     @Import(name="configurationDisplayName")
       private final @Nullable String configurationDisplayName;
@@ -57,7 +53,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * A description for this rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -68,7 +63,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * The destination port ranges.
-     * 
      */
     @Import(name="destinationPortRanges")
       private final @Nullable List<String> destinationPortRanges;
@@ -79,7 +73,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     @Import(name="destinations")
       private final @Nullable List<AddressPrefixItemResponse> destinations;
@@ -90,7 +83,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
-     * 
      */
     @Import(name="direction", required=true)
       private final String direction;
@@ -101,7 +93,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * A friendly name for the rule.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -112,7 +103,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -124,7 +114,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
     /**
      * Whether the rule is custom or default.
      * Expected value is 'Custom'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -135,7 +124,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * Network protocol this rule applies to.
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;
@@ -146,7 +134,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * The provisioning state of the security configuration user rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -157,7 +144,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * Deployment region.
-     * 
      */
     @Import(name="region")
       private final @Nullable String region;
@@ -168,7 +154,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * Groups for rule collection
-     * 
      */
     @Import(name="ruleCollectionAppliesToGroups")
       private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
@@ -179,7 +164,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * A description of the rule collection.
-     * 
      */
     @Import(name="ruleCollectionDescription")
       private final @Nullable String ruleCollectionDescription;
@@ -190,7 +174,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * A display name of the rule collection.
-     * 
      */
     @Import(name="ruleCollectionDisplayName")
       private final @Nullable String ruleCollectionDisplayName;
@@ -201,7 +184,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * Effective configuration groups.
-     * 
      */
     @Import(name="ruleGroups")
       private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
@@ -212,7 +194,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * The source port ranges.
-     * 
      */
     @Import(name="sourcePortRanges")
       private final @Nullable List<String> sourcePortRanges;
@@ -223,7 +204,6 @@ public final class ActiveSecurityUserRuleResponse extends io.pulumi.resources.In
 
     /**
      * The CIDR or source IP ranges.
-     * 
      */
     @Import(name="sources")
       private final @Nullable List<AddressPrefixItemResponse> sources;

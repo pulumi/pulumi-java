@@ -21,7 +21,108 @@ import javax.annotation.Nullable;
  * ExpressRouteConnection resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ExpressRouteConnectionCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var expressRouteConnection = new AzureNative.Network.ExpressRouteConnection("expressRouteConnection", new AzureNative.Network.ExpressRouteConnectionArgs
+ *         {
+ *             AuthorizationKey = "authorizationKey",
+ *             ConnectionName = "connectionName",
+ *             ExpressRouteCircuitPeering = new AzureNative.Network.Inputs.ExpressRouteCircuitPeeringIdArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering",
+ *             },
+ *             ExpressRouteGatewayName = "gateway-2",
+ *             Id = "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName",
+ *             Name = "connectionName",
+ *             ResourceGroupName = "resourceGroupName",
+ *             RoutingWeight = 2,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewExpressRouteConnection(ctx, "expressRouteConnection", &network.ExpressRouteConnectionArgs{
+ * 			AuthorizationKey: pulumi.String("authorizationKey"),
+ * 			ConnectionName:   pulumi.String("connectionName"),
+ * 			ExpressRouteCircuitPeering: &network.ExpressRouteCircuitPeeringIdArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering"),
+ * 			},
+ * 			ExpressRouteGatewayName: pulumi.String("gateway-2"),
+ * 			Id:                      pulumi.String("/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName"),
+ * 			Name:                    pulumi.String("connectionName"),
+ * 			ResourceGroupName:       pulumi.String("resourceGroupName"),
+ * 			RoutingWeight:           pulumi.Int(2),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const expressRouteConnection = new azure_native.network.ExpressRouteConnection("expressRouteConnection", {
+ *     authorizationKey: "authorizationKey",
+ *     connectionName: "connectionName",
+ *     expressRouteCircuitPeering: {
+ *         id: "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering",
+ *     },
+ *     expressRouteGatewayName: "gateway-2",
+ *     id: "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName",
+ *     name: "connectionName",
+ *     resourceGroupName: "resourceGroupName",
+ *     routingWeight: 2,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * express_route_connection = azure_native.network.ExpressRouteConnection("expressRouteConnection",
+ *     authorization_key="authorizationKey",
+ *     connection_name="connectionName",
+ *     express_route_circuit_peering=azure_native.network.ExpressRouteCircuitPeeringIdArgs(
+ *         id="/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering",
+ *     ),
+ *     express_route_gateway_name="gateway-2",
+ *     id="/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName",
+ *     name="connectionName",
+ *     resource_group_name="resourceGroupName",
+ *     routing_weight=2)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,112 +137,96 @@ import javax.annotation.Nullable;
 public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
     /**
      * Authorization key to establish the connection.
-     * 
      */
     @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
      * @return Authorization key to establish the connection.
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizationKey() {
         return this.authorizationKey;
     }
     /**
      * Enable internet security.
-     * 
      */
     @Export(name="enableInternetSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInternetSecurity;
 
     /**
      * @return Enable internet security.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity;
     }
     /**
      * The ExpressRoute circuit peering.
-     * 
      */
     @Export(name="expressRouteCircuitPeering", type=ExpressRouteCircuitPeeringIdResponse.class, parameters={})
     private Output<ExpressRouteCircuitPeeringIdResponse> expressRouteCircuitPeering;
 
     /**
      * @return The ExpressRoute circuit peering.
-     * 
      */
     public Output<ExpressRouteCircuitPeeringIdResponse> getExpressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
     /**
      * Enable FastPath to vWan Firewall hub.
-     * 
      */
     @Export(name="expressRouteGatewayBypass", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> expressRouteGatewayBypass;
 
     /**
      * @return Enable FastPath to vWan Firewall hub.
-     * 
      */
     public Output</* @Nullable */ Boolean> getExpressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the express route connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the express route connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     @Export(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration;
 
     /**
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     public Output</* @Nullable */ RoutingConfigurationResponse> getRoutingConfiguration() {
         return this.routingConfiguration;
     }
     /**
      * The routing weight associated to the connection.
-     * 
      */
     @Export(name="routingWeight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> routingWeight;
 
     /**
      * @return The routing weight associated to the connection.
-     * 
      */
     public Output</* @Nullable */ Integer> getRoutingWeight() {
         return this.routingWeight;

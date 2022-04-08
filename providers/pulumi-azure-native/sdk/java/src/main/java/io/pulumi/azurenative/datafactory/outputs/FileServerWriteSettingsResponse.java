@@ -14,23 +14,19 @@ import javax.annotation.Nullable;
 public final class FileServerWriteSettingsResponse {
     /**
      * The type of copy behavior for copy sink.
-     * 
      */
     private final @Nullable Object copyBehavior;
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
      * The write setting type.
      * Expected value is 'FileServerWriteSettings'.
-     * 
      */
     private final String type;
 
@@ -48,21 +44,18 @@ public final class FileServerWriteSettingsResponse {
 
     /**
      * The type of copy behavior for copy sink.
-     * 
     */
     public Optional<Object> getCopyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
@@ -70,7 +63,6 @@ public final class FileServerWriteSettingsResponse {
     /**
      * The write setting type.
      * Expected value is 'FileServerWriteSettings'.
-     * 
     */
     public String getType() {
         return this.type;

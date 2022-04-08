@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the data to be used for exporting data from azure.
- * 
  */
 public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Account details of the data to be transferred
-     * 
      */
     @Import(name="accountDetails", required=true)
       private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
@@ -35,7 +33,6 @@ public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Level of the logs to be collected.
-     * 
      */
     @Import(name="logCollectionLevel")
       private final @Nullable String logCollectionLevel;
@@ -46,7 +43,6 @@ public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Configuration for the data transfer.
-     * 
      */
     @Import(name="transferConfiguration", required=true)
       private final TransferConfigurationResponse transferConfiguration;

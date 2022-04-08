@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom linked service.
- * 
  */
 public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -36,7 +34,6 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -47,7 +44,6 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -58,7 +54,6 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -70,7 +65,6 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
     /**
      * Type of linked service.
      * Expected value is 'CustomDataSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

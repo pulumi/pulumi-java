@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The SKU that defines the tier and kind of the peering.
- * 
  */
 public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The family of the peering SKU.
-     * 
      */
     @Import(name="family")
       private final @Nullable String family;
@@ -31,7 +29,6 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the peering SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -42,7 +39,6 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The size of the peering SKU.
-     * 
      */
     @Import(name="size")
       private final @Nullable String size;
@@ -53,7 +49,6 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tier of the peering SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

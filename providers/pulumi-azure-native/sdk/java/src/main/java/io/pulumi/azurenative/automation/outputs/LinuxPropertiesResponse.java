@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class LinuxPropertiesResponse {
     /**
      * packages excluded from the software update configuration.
-     * 
      */
     private final @Nullable List<String> excludedPackageNameMasks;
     /**
      * Update classifications included in the software update configuration.
-     * 
      */
     private final @Nullable String includedPackageClassifications;
     /**
      * packages included from the software update configuration.
-     * 
      */
     private final @Nullable List<String> includedPackageNameMasks;
     /**
      * Reboot setting for the software update configuration.
-     * 
      */
     private final @Nullable String rebootSetting;
 
@@ -47,28 +43,24 @@ public final class LinuxPropertiesResponse {
 
     /**
      * packages excluded from the software update configuration.
-     * 
     */
     public List<String> getExcludedPackageNameMasks() {
         return this.excludedPackageNameMasks == null ? List.of() : this.excludedPackageNameMasks;
     }
     /**
      * Update classifications included in the software update configuration.
-     * 
     */
     public Optional<String> getIncludedPackageClassifications() {
         return Optional.ofNullable(this.includedPackageClassifications);
     }
     /**
      * packages included from the software update configuration.
-     * 
     */
     public List<String> getIncludedPackageNameMasks() {
         return this.includedPackageNameMasks == null ? List.of() : this.includedPackageNameMasks;
     }
     /**
      * Reboot setting for the software update configuration.
-     * 
     */
     public Optional<String> getRebootSetting() {
         return Optional.ofNullable(this.rebootSetting);

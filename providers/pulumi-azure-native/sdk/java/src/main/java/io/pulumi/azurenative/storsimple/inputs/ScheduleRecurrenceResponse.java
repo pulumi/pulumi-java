@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The schedule recurrence.
- * 
  */
 public final class ScheduleRecurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The recurrence type.
-     * 
      */
     @Import(name="recurrenceType", required=true)
       private final String recurrenceType;
@@ -33,7 +31,6 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The recurrence value.
-     * 
      */
     @Import(name="recurrenceValue", required=true)
       private final Integer recurrenceValue;
@@ -44,7 +41,6 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The week days list. Applicable only for schedules of recurrence type 'weekly'.
-     * 
      */
     @Import(name="weeklyDaysList")
       private final @Nullable List<String> weeklyDaysList;

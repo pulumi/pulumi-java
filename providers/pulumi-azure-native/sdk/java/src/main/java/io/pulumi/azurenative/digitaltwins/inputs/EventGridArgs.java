@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties related to EventGrid.
- * 
  */
 public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EventGrid secondary accesskey. Will be obfuscated during read.
-     * 
      */
     @Import(name="accessKey1", required=true)
       private final Output<String> accessKey1;
@@ -33,7 +31,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EventGrid secondary accesskey. Will be obfuscated during read.
-     * 
      */
     @Import(name="accessKey2")
       private final @Nullable Output<String> accessKey2;
@@ -44,7 +41,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the authentication type being used for connecting to the endpoint.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
@@ -55,7 +51,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
@@ -66,7 +61,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dead letter storage URL for identity-based authentication.
-     * 
      */
     @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
@@ -78,7 +72,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The type of Digital Twins endpoint
      * Expected value is 'EventGrid'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
@@ -89,7 +82,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EventGrid Topic Endpoint
-     * 
      */
     @Import(name="topicEndpoint", required=true)
       private final Output<String> topicEndpoint;

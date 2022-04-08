@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class MatchConditionResponse {
     /**
      * Match value.
-     * 
      */
     private final List<String> matchValues;
     /**
      * List of match variables.
-     * 
      */
     private final List<MatchVariableResponse> matchVariables;
     /**
      * Whether this is negate condition or not.
-     * 
      */
     private final @Nullable Boolean negationConditon;
     /**
      * The operator to be matched.
-     * 
      */
     private final String operator;
     /**
      * List of transforms.
-     * 
      */
     private final @Nullable List<String> transforms;
 
@@ -56,35 +51,30 @@ public final class MatchConditionResponse {
 
     /**
      * Match value.
-     * 
     */
     public List<String> getMatchValues() {
         return this.matchValues;
     }
     /**
      * List of match variables.
-     * 
     */
     public List<MatchVariableResponse> getMatchVariables() {
         return this.matchVariables;
     }
     /**
      * Whether this is negate condition or not.
-     * 
     */
     public Optional<Boolean> getNegationConditon() {
         return Optional.ofNullable(this.negationConditon);
     }
     /**
      * The operator to be matched.
-     * 
     */
     public String getOperator() {
         return this.operator;
     }
     /**
      * List of transforms.
-     * 
     */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;

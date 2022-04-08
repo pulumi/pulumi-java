@@ -17,7 +17,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the File
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
@@ -28,7 +27,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group
-     * 
      */
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
@@ -39,7 +37,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the project
-     * 
      */
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
@@ -50,7 +47,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom file properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ProjectFilePropertiesArgs> properties;
@@ -61,7 +57,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the service
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

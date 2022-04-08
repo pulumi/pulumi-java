@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * P2SConnectionConfiguration Resource.
- * 
  */
 public final class P2SConnectionConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
 
     /**
      * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
-     * 
      */
     @Import(name="enableInternetSecurity")
       private final @Nullable Boolean enableInternetSecurity;
@@ -34,7 +32,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -45,7 +42,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -56,7 +52,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -67,7 +62,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
 
     /**
      * The provisioning state of the P2SConnectionConfiguration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -78,7 +72,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
 
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     * 
      */
     @Import(name="routingConfiguration")
       private final @Nullable RoutingConfigurationResponse routingConfiguration;
@@ -89,7 +82,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
 
     /**
      * The reference to the address space resource which represents Address space for P2S VpnClient.
-     * 
      */
     @Import(name="vpnClientAddressPool")
       private final @Nullable AddressSpaceResponse vpnClientAddressPool;

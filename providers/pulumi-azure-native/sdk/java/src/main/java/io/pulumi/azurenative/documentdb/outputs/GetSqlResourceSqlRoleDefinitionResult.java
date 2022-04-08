@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class GetSqlResourceSqlRoleDefinitionResult {
     /**
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
-     * 
      */
     private final @Nullable List<String> assignableScopes;
     /**
      * The unique resource identifier of the database account.
-     * 
      */
     private final String id;
     /**
      * The name of the database account.
-     * 
      */
     private final String name;
     /**
      * The set of operations allowed through this Role Definition.
-     * 
      */
     private final @Nullable List<PermissionResponse> permissions;
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
-     * 
      */
     private final @Nullable String roleName;
     /**
      * The type of Azure resource.
-     * 
      */
     private final String type;
 
@@ -62,42 +56,36 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
 
     /**
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
-     * 
     */
     public List<String> getAssignableScopes() {
         return this.assignableScopes == null ? List.of() : this.assignableScopes;
     }
     /**
      * The unique resource identifier of the database account.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The set of operations allowed through this Role Definition.
-     * 
     */
     public List<PermissionResponse> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
-     * 
     */
     public Optional<String> getRoleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * The type of Azure resource.
-     * 
     */
     public String getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption configuration for the account.
- * 
  */
 public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The Key Vault information for connecting to user managed encryption keys.
-     * 
      */
     @Import(name="keyVaultMetaInfo")
       private final @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
@@ -32,7 +30,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

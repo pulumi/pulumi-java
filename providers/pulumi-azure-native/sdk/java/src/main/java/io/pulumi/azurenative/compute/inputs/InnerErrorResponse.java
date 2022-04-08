@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Inner error details.
- * 
  */
 public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The internal error message or exception dump.
-     * 
      */
     @Import(name="errordetail")
       private final @Nullable String errordetail;
@@ -31,7 +29,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The exception type.
-     * 
      */
     @Import(name="exceptiontype")
       private final @Nullable String exceptiontype;

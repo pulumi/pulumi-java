@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The default value is BatchManaged
-     * 
      */
     @EnumType
     public enum IPAddressProvisioningType {
         /**
          * A public IP will be created and managed by Batch. There may be multiple public IPs depending on the size of the Pool.
-         * 
          */
         BatchManaged("BatchManaged"),
         /**
          * Public IPs are provided by the user and will be used to provision the Compute Nodes.
-         * 
          */
         UserManaged("UserManaged"),
         /**
          * No public IP Address will be created for the Compute Nodes in the Pool.
-         * 
          */
         NoPublicIPAddresses("NoPublicIPAddresses");
 

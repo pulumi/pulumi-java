@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the connection monitor endpoint.
- * 
  */
 public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
 
     /**
      * Address of the connection monitor endpoint (IP or domain name).
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -36,7 +34,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
 
     /**
      * Test coverage for the endpoint.
-     * 
      */
     @Import(name="coverageLevel")
       private final @Nullable Output<Either<String,CoverageLevel>> coverageLevel;
@@ -47,7 +44,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
 
     /**
      * Filter for sub-items within the endpoint.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter;
@@ -58,7 +54,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the connection monitor endpoint.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -69,7 +64,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
 
     /**
      * Resource ID of the connection monitor endpoint.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -80,7 +74,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
 
     /**
      * Endpoint scope.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope;
@@ -91,7 +84,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
 
     /**
      * The endpoint type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,EndpointType>> type;

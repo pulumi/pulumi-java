@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Rest service source.
- * 
  */
 public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -32,7 +30,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="additionalHeaders")
       private final @Nullable Object additionalHeaders;
@@ -43,7 +40,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -54,7 +50,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="httpRequestTimeout")
       private final @Nullable Object httpRequestTimeout;
@@ -65,7 +60,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -76,7 +70,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="paginationRules")
       private final @Nullable Object paginationRules;
@@ -87,7 +80,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestBody")
       private final @Nullable Object requestBody;
@@ -97,8 +89,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The time to await before sending next page request.
-     * 
+     * The time to await before sending next page request. 
      */
     @Import(name="requestInterval")
       private final @Nullable Object requestInterval;
@@ -109,7 +100,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestMethod")
       private final @Nullable Object requestMethod;
@@ -120,7 +110,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -131,7 +120,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -143,7 +131,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Copy source type.
      * Expected value is 'RestSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the content source type.
-     * 
      */
     @EnumType
     public enum ContentSourceType {

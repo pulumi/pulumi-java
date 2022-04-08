@@ -20,7 +20,104 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB Cassandra keyspace.
  * API Version: 2021-03-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBCassandraKeyspaceCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cassandraResourceCassandraKeyspace = new AzureNative.DocumentDB.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", new AzureNative.DocumentDB.CassandraResourceCassandraKeyspaceArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             KeyspaceName = "keyspaceName",
+ *             Location = "West US",
+ *             Options = ,
+ *             Resource = new AzureNative.DocumentDB.Inputs.CassandraKeyspaceResourceArgs
+ *             {
+ *                 Id = "keyspaceName",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewCassandraResourceCassandraKeyspace(ctx, "cassandraResourceCassandraKeyspace", &documentdb.CassandraResourceCassandraKeyspaceArgs{
+ * 			AccountName:  pulumi.String("ddb1"),
+ * 			KeyspaceName: pulumi.String("keyspaceName"),
+ * 			Location:     pulumi.String("West US"),
+ * 			Options:      nil,
+ * 			Resource: &documentdb.CassandraKeyspaceResourceArgs{
+ * 				Id: pulumi.String("keyspaceName"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags:              nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cassandraResourceCassandraKeyspace = new azure_native.documentdb.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
+ *     accountName: "ddb1",
+ *     keyspaceName: "keyspaceName",
+ *     location: "West US",
+ *     options: {},
+ *     resource: {
+ *         id: "keyspaceName",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cassandra_resource_cassandra_keyspace = azure_native.documentdb.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace",
+ *     account_name="ddb1",
+ *     keyspace_name="keyspaceName",
+ *     location="West US",
+ *     options=azure_native.documentdb.CreateUpdateOptionsArgs(),
+ *     resource=azure_native.documentdb.CassandraKeyspaceResourceArgs(
+ *         id="keyspaceName",
+ *     ),
+ *     resource_group_name="rg1",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,28 +132,24 @@ import javax.annotation.Nullable;
 public class CassandraResourceCassandraKeyspace extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource group to which the resource belongs.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the ARM resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the ARM resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -75,28 +168,24 @@ public class CassandraResourceCassandraKeyspace extends io.pulumi.resources.Cust
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

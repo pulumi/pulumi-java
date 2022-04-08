@@ -17,9 +17,117 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2020-11-20.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Operations_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var operationByProviderRegistration = new AzureNative.ProviderHub.OperationByProviderRegistration("operationByProviderRegistration", new AzureNative.ProviderHub.OperationByProviderRegistrationArgs
+ *         {
+ *             Contents = 
+ *             {
+ *                 new AzureNative.ProviderHub.Inputs.OperationsDefinitionArgs
+ *                 {
+ *                     Display = new AzureNative.ProviderHub.Inputs.OperationsDefinitionDisplayArgs
+ *                     {
+ *                         Description = "Read employees",
+ *                         Operation = "Gets/List employee resources",
+ *                         Provider = "Microsoft.Contoso",
+ *                         Resource = "Employees",
+ *                     },
+ *                     Name = "Microsoft.Contoso/Employees/Read",
+ *                 },
+ *             },
+ *             ProviderNamespace = "Microsoft.Contoso",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providerhub.NewOperationByProviderRegistration(ctx, "operationByProviderRegistration", &providerhub.OperationByProviderRegistrationArgs{
+ * 			Contents: providerhub.OperationsDefinitionArray{
+ * 				&providerhub.OperationsDefinitionArgs{
+ * 					Display: &providerhub.OperationsDefinitionDisplayArgs{
+ * 						Description: pulumi.String("Read employees"),
+ * 						Operation:   pulumi.String("Gets/List employee resources"),
+ * 						Provider:    pulumi.String("Microsoft.Contoso"),
+ * 						Resource:    pulumi.String("Employees"),
+ * 					},
+ * 					Name: pulumi.String("Microsoft.Contoso/Employees/Read"),
+ * 				},
+ * 			},
+ * 			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const operationByProviderRegistration = new azure_native.providerhub.OperationByProviderRegistration("operationByProviderRegistration", {
+ *     contents: [{
+ *         display: {
+ *             description: "Read employees",
+ *             operation: "Gets/List employee resources",
+ *             provider: "Microsoft.Contoso",
+ *             resource: "Employees",
+ *         },
+ *         name: "Microsoft.Contoso/Employees/Read",
+ *     }],
+ *     providerNamespace: "Microsoft.Contoso",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * operation_by_provider_registration = azure_native.providerhub.OperationByProviderRegistration("operationByProviderRegistration",
+ *     contents=[azure_native.providerhub.OperationsDefinitionArgs(
+ *         display=azure_native.providerhub.OperationsDefinitionDisplayArgs(
+ *             description="Read employees",
+ *             operation="Gets/List employee resources",
+ *             provider="Microsoft.Contoso",
+ *             resource="Employees",
+ *         ),
+ *         name="Microsoft.Contoso/Employees/Read",
+ *     )],
+ *     provider_namespace="Microsoft.Contoso")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,42 +148,36 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
     }
     /**
      * Display information of the operation.
-     * 
      */
     @Export(name="display", type=OperationsDefinitionResponseDisplay.class, parameters={})
     private Output<OperationsDefinitionResponseDisplay> display;
 
     /**
      * @return Display information of the operation.
-     * 
      */
     public Output<OperationsDefinitionResponseDisplay> getDisplay() {
         return this.display;
     }
     /**
      * Indicates whether the operation applies to data-plane.
-     * 
      */
     @Export(name="isDataAction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDataAction;
 
     /**
      * @return Indicates whether the operation applies to data-plane.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsDataAction() {
         return this.isDataAction;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -94,14 +196,12 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

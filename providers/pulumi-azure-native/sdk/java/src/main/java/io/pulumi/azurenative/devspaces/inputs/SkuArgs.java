@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Model representing SKU for Azure Dev Spaces Controller.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SKU for Azure Dev Spaces Controller.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
@@ -34,7 +32,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tier of the SKU for Azure Dev Spaces Controller.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,SkuTier>> tier;

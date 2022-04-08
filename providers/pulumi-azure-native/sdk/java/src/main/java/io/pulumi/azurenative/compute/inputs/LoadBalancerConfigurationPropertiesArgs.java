@@ -16,7 +16,6 @@ public final class LoadBalancerConfigurationPropertiesArgs extends io.pulumi.res
 
     /**
      * Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
-     * 
      */
     @Import(name="frontendIPConfigurations", required=true)
       private final Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;

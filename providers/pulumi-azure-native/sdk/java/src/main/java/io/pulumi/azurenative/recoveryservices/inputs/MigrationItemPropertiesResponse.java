@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Migration item properties.
- * 
  */
 public final class MigrationItemPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The allowed operations on the migration item, based on the current migration state of the item.
-     * 
      */
     @Import(name="allowedOperations", required=true)
       private final List<String> allowedOperations;
@@ -35,7 +33,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The current job details.
-     * 
      */
     @Import(name="currentJob", required=true)
       private final CurrentJobDetailsResponse currentJob;
@@ -46,7 +43,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The consolidated health.
-     * 
      */
     @Import(name="health", required=true)
       private final String health;
@@ -57,7 +53,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The list of health errors.
-     * 
      */
     @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
@@ -68,7 +63,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The on-premise virtual machine name.
-     * 
      */
     @Import(name="machineName", required=true)
       private final String machineName;
@@ -79,7 +73,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The migration status.
-     * 
      */
     @Import(name="migrationState", required=true)
       private final String migrationState;
@@ -90,7 +83,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The migration state description.
-     * 
      */
     @Import(name="migrationStateDescription", required=true)
       private final String migrationStateDescription;
@@ -101,7 +93,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The name of policy governing this item.
-     * 
      */
     @Import(name="policyFriendlyName", required=true)
       private final String policyFriendlyName;
@@ -112,7 +103,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The ARM Id of policy governing this item.
-     * 
      */
     @Import(name="policyId", required=true)
       private final String policyId;
@@ -123,7 +113,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The migration provider custom settings.
-     * 
      */
     @Import(name="providerSpecificDetails")
       private final @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
@@ -134,7 +123,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The recovery services provider ARM Id.
-     * 
      */
     @Import(name="recoveryServicesProviderId", required=true)
       private final String recoveryServicesProviderId;
@@ -145,7 +133,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The test migrate state.
-     * 
      */
     @Import(name="testMigrateState", required=true)
       private final String testMigrateState;
@@ -156,7 +143,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * The test migrate state description.
-     * 
      */
     @Import(name="testMigrateStateDescription", required=true)
       private final String testMigrateStateDescription;

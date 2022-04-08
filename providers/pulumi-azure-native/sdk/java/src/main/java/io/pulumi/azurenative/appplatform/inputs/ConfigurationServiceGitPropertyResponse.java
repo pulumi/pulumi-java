@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Property of git environment.
- * 
  */
 public final class ConfigurationServiceGitPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConfigurationServiceGitPropertyResponse extends io.pulumi.res
 
     /**
      * Repositories of Application Configuration Service git property.
-     * 
      */
     @Import(name="repositories")
       private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;

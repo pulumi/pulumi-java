@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The classification reason the incident was closed with
-     * 
      */
     @EnumType
     public enum IncidentClassificationReason {
         /**
          * Classification reason was suspicious activity
-         * 
          */
         SuspiciousActivity("SuspiciousActivity"),
         /**
          * Classification reason was suspicious but expected
-         * 
          */
         SuspiciousButExpected("SuspiciousButExpected"),
         /**
          * Classification reason was incorrect alert logic
-         * 
          */
         IncorrectAlertLogic("IncorrectAlertLogic"),
         /**
          * Classification reason was inaccurate data
-         * 
          */
         InaccurateData("InaccurateData");
 

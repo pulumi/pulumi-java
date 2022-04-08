@@ -23,7 +23,269 @@ import javax.annotation.Nullable;
  * Definition of the runbook type.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update runbook and publish it
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var runbook = new AzureNative.Automation.Runbook("runbook", new AzureNative.Automation.RunbookArgs
+ *         {
+ *             AutomationAccountName = "ContoseAutomationAccount",
+ *             Description = "Description of the Runbook",
+ *             Location = "East US 2",
+ *             LogActivityTrace = 1,
+ *             LogProgress = true,
+ *             LogVerbose = false,
+ *             Name = "Get-AzureVMTutorial",
+ *             PublishContentLink = new AzureNative.Automation.Inputs.ContentLinkArgs
+ *             {
+ *                 ContentHash = new AzureNative.Automation.Inputs.ContentHashArgs
+ *                 {
+ *                     Algorithm = "SHA256",
+ *                     Value = "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
+ *                 },
+ *                 Uri = "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+ *             },
+ *             ResourceGroupName = "rg",
+ *             RunbookName = "Get-AzureVMTutorial",
+ *             RunbookType = "PowerShellWorkflow",
+ *             Tags = 
+ *             {
+ *                 { "tag01", "value01" },
+ *                 { "tag02", "value02" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewRunbook(ctx, "runbook", &automation.RunbookArgs{
+ * 			AutomationAccountName: pulumi.String("ContoseAutomationAccount"),
+ * 			Description:           pulumi.String("Description of the Runbook"),
+ * 			Location:              pulumi.String("East US 2"),
+ * 			LogActivityTrace:      pulumi.Int(1),
+ * 			LogProgress:           pulumi.Bool(true),
+ * 			LogVerbose:            pulumi.Bool(false),
+ * 			Name:                  pulumi.String("Get-AzureVMTutorial"),
+ * 			PublishContentLink: &automation.ContentLinkArgs{
+ * 				ContentHash: &automation.ContentHashArgs{
+ * 					Algorithm: pulumi.String("SHA256"),
+ * 					Value:     pulumi.String("115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80"),
+ * 				},
+ * 				Uri: pulumi.String("https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			RunbookName:       pulumi.String("Get-AzureVMTutorial"),
+ * 			RunbookType:       pulumi.String("PowerShellWorkflow"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag01": pulumi.String("value01"),
+ * 				"tag02": pulumi.String("value02"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const runbook = new azure_native.automation.Runbook("runbook", {
+ *     automationAccountName: "ContoseAutomationAccount",
+ *     description: "Description of the Runbook",
+ *     location: "East US 2",
+ *     logActivityTrace: 1,
+ *     logProgress: true,
+ *     logVerbose: false,
+ *     name: "Get-AzureVMTutorial",
+ *     publishContentLink: {
+ *         contentHash: {
+ *             algorithm: "SHA256",
+ *             value: "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
+ *         },
+ *         uri: "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+ *     },
+ *     resourceGroupName: "rg",
+ *     runbookName: "Get-AzureVMTutorial",
+ *     runbookType: "PowerShellWorkflow",
+ *     tags: {
+ *         tag01: "value01",
+ *         tag02: "value02",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * runbook = azure_native.automation.Runbook("runbook",
+ *     automation_account_name="ContoseAutomationAccount",
+ *     description="Description of the Runbook",
+ *     location="East US 2",
+ *     log_activity_trace=1,
+ *     log_progress=True,
+ *     log_verbose=False,
+ *     name="Get-AzureVMTutorial",
+ *     publish_content_link=azure_native.automation.ContentLinkArgs(
+ *         content_hash=azure_native.automation.ContentHashArgs(
+ *             algorithm="SHA256",
+ *             value="115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
+ *         ),
+ *         uri="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+ *     ),
+ *     resource_group_name="rg",
+ *     runbook_name="Get-AzureVMTutorial",
+ *     runbook_type="PowerShellWorkflow",
+ *     tags={
+ *         "tag01": "value01",
+ *         "tag02": "value02",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create runbook as draft
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var runbook = new AzureNative.Automation.Runbook("runbook", new AzureNative.Automation.RunbookArgs
+ *         {
+ *             AutomationAccountName = "ContoseAutomationAccount",
+ *             Description = "Description of the Runbook",
+ *             Draft = ,
+ *             Location = "East US 2",
+ *             LogProgress = false,
+ *             LogVerbose = false,
+ *             Name = "Get-AzureVMTutorial",
+ *             ResourceGroupName = "rg",
+ *             RunbookName = "Get-AzureVMTutorial",
+ *             RunbookType = "PowerShellWorkflow",
+ *             Tags = 
+ *             {
+ *                 { "tag01", "value01" },
+ *                 { "tag02", "value02" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewRunbook(ctx, "runbook", &automation.RunbookArgs{
+ * 			AutomationAccountName: pulumi.String("ContoseAutomationAccount"),
+ * 			Description:           pulumi.String("Description of the Runbook"),
+ * 			Draft:                 nil,
+ * 			Location:              pulumi.String("East US 2"),
+ * 			LogProgress:           pulumi.Bool(false),
+ * 			LogVerbose:            pulumi.Bool(false),
+ * 			Name:                  pulumi.String("Get-AzureVMTutorial"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 			RunbookName:           pulumi.String("Get-AzureVMTutorial"),
+ * 			RunbookType:           pulumi.String("PowerShellWorkflow"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag01": pulumi.String("value01"),
+ * 				"tag02": pulumi.String("value02"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const runbook = new azure_native.automation.Runbook("runbook", {
+ *     automationAccountName: "ContoseAutomationAccount",
+ *     description: "Description of the Runbook",
+ *     draft: {},
+ *     location: "East US 2",
+ *     logProgress: false,
+ *     logVerbose: false,
+ *     name: "Get-AzureVMTutorial",
+ *     resourceGroupName: "rg",
+ *     runbookName: "Get-AzureVMTutorial",
+ *     runbookType: "PowerShellWorkflow",
+ *     tags: {
+ *         tag01: "value01",
+ *         tag02: "value02",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * runbook = azure_native.automation.Runbook("runbook",
+ *     automation_account_name="ContoseAutomationAccount",
+ *     description="Description of the Runbook",
+ *     draft=azure_native.automation.RunbookDraftArgs(),
+ *     location="East US 2",
+ *     log_progress=False,
+ *     log_verbose=False,
+ *     name="Get-AzureVMTutorial",
+ *     resource_group_name="rg",
+ *     runbook_name="Get-AzureVMTutorial",
+ *     runbook_type="PowerShellWorkflow",
+ *     tags={
+ *         "tag01": "value01",
+ *         "tag02": "value02",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,280 +300,240 @@ import javax.annotation.Nullable;
 public class Runbook extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
      * @return Gets or sets the creation time.
-     * 
      */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets or sets the draft runbook properties.
-     * 
      */
     @Export(name="draft", type=RunbookDraftResponse.class, parameters={})
     private Output</* @Nullable */ RunbookDraftResponse> draft;
 
     /**
      * @return Gets or sets the draft runbook properties.
-     * 
      */
     public Output</* @Nullable */ RunbookDraftResponse> getDraft() {
         return this.draft;
     }
     /**
      * Gets or sets the etag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Gets or sets the etag of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Gets or sets the job count of the runbook.
-     * 
      */
     @Export(name="jobCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> jobCount;
 
     /**
      * @return Gets or sets the job count of the runbook.
-     * 
      */
     public Output</* @Nullable */ Integer> getJobCount() {
         return this.jobCount;
     }
     /**
      * Gets or sets the last modified by.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
      * @return Gets or sets the last modified by.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
      * @return Gets or sets the last modified time.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The Azure Region where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets or sets the option to log activity trace of the runbook.
-     * 
      */
     @Export(name="logActivityTrace", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> logActivityTrace;
 
     /**
      * @return Gets or sets the option to log activity trace of the runbook.
-     * 
      */
     public Output</* @Nullable */ Integer> getLogActivityTrace() {
         return this.logActivityTrace;
     }
     /**
      * Gets or sets progress log option.
-     * 
      */
     @Export(name="logProgress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logProgress;
 
     /**
      * @return Gets or sets progress log option.
-     * 
      */
     public Output</* @Nullable */ Boolean> getLogProgress() {
         return this.logProgress;
     }
     /**
      * Gets or sets verbose log option.
-     * 
      */
     @Export(name="logVerbose", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logVerbose;
 
     /**
      * @return Gets or sets verbose log option.
-     * 
      */
     public Output</* @Nullable */ Boolean> getLogVerbose() {
         return this.logVerbose;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the runbook output types.
-     * 
      */
     @Export(name="outputTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> outputTypes;
 
     /**
      * @return Gets or sets the runbook output types.
-     * 
      */
     public Output</* @Nullable */ List<String>> getOutputTypes() {
         return this.outputTypes;
     }
     /**
      * Gets or sets the runbook parameters.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, RunbookParameterResponse.class})
     private Output</* @Nullable */ Map<String,RunbookParameterResponse>> parameters;
 
     /**
      * @return Gets or sets the runbook parameters.
-     * 
      */
     public Output</* @Nullable */ Map<String,RunbookParameterResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * Gets or sets the provisioning state of the runbook.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state of the runbook.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the published runbook content link.
-     * 
      */
     @Export(name="publishContentLink", type=ContentLinkResponse.class, parameters={})
     private Output</* @Nullable */ ContentLinkResponse> publishContentLink;
 
     /**
      * @return Gets or sets the published runbook content link.
-     * 
      */
     public Output</* @Nullable */ ContentLinkResponse> getPublishContentLink() {
         return this.publishContentLink;
     }
     /**
      * Gets or sets the type of the runbook.
-     * 
      */
     @Export(name="runbookType", type=String.class, parameters={})
     private Output</* @Nullable */ String> runbookType;
 
     /**
      * @return Gets or sets the type of the runbook.
-     * 
      */
     public Output</* @Nullable */ String> getRunbookType() {
         return this.runbookType;
     }
     /**
      * Gets or sets the state of the runbook.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return Gets or sets the state of the runbook.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

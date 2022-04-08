@@ -14,7 +14,6 @@ public final class GetActivityLogAlertArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the Activity Log Alert rule.
-     * 
      */
     @Import(name="activityLogAlertName", required=true)
       private final String activityLogAlertName;
@@ -25,7 +24,6 @@ public final class GetActivityLogAlertArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

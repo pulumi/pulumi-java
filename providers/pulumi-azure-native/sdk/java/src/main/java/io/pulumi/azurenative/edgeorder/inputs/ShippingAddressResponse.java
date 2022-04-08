@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Shipping address where customer wishes to receive the device.
- * 
  */
 public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Type of address.
-     * 
      */
     @Import(name="addressType")
       private final @Nullable String addressType;
@@ -31,7 +29,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the City.
-     * 
      */
     @Import(name="city")
       private final @Nullable String city;
@@ -42,7 +39,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the company.
-     * 
      */
     @Import(name="companyName")
       private final @Nullable String companyName;
@@ -53,7 +49,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the Country.
-     * 
      */
     @Import(name="country", required=true)
       private final String country;
@@ -64,7 +59,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Postal code.
-     * 
      */
     @Import(name="postalCode")
       private final @Nullable String postalCode;
@@ -75,7 +69,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the State or Province.
-     * 
      */
     @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
@@ -86,7 +79,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Street Address line 1.
-     * 
      */
     @Import(name="streetAddress1", required=true)
       private final String streetAddress1;
@@ -97,7 +89,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Street Address line 2.
-     * 
      */
     @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;
@@ -108,7 +99,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Street Address line 3.
-     * 
      */
     @Import(name="streetAddress3")
       private final @Nullable String streetAddress3;
@@ -119,7 +109,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Extended Zip Code.
-     * 
      */
     @Import(name="zipExtendedCode")
       private final @Nullable String zipExtendedCode;

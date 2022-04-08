@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connector mapping property format.
- * 
  */
 public final class ConnectorMappingFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
 
     /**
      * The oData language.
-     * 
      */
     @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
@@ -31,7 +29,6 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
 
     /**
      * Character separating array elements.
-     * 
      */
     @Import(name="arraySeparator")
       private final @Nullable String arraySeparator;
@@ -42,7 +39,6 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
 
     /**
      * The character that signifies a break between columns.
-     * 
      */
     @Import(name="columnDelimiter")
       private final @Nullable String columnDelimiter;
@@ -53,7 +49,6 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
 
     /**
      * The type mapping format.
-     * 
      */
     @Import(name="formatType", required=true)
       private final String formatType;
@@ -64,7 +59,6 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
 
     /**
      * Quote character, used to indicate enquoted fields.
-     * 
      */
     @Import(name="quoteCharacter")
       private final @Nullable String quoteCharacter;
@@ -75,7 +69,6 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
 
     /**
      * Escape character for quotes, can be the same as the quoteCharacter.
-     * 
      */
     @Import(name="quoteEscapeCharacter")
       private final @Nullable String quoteEscapeCharacter;

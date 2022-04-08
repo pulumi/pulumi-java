@@ -19,7 +19,100 @@ import javax.annotation.Nullable;
  * PrivateEndpointConnection resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### approve or reject private end point connection for a private link service
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkServicePrivateEndpointConnection = new AzureNative.Network.PrivateLinkServicePrivateEndpointConnection("privateLinkServicePrivateEndpointConnection", new AzureNative.Network.PrivateLinkServicePrivateEndpointConnectionArgs
+ *         {
+ *             Name = "testPlePeConnection",
+ *             PeConnectionName = "testPlePeConnection",
+ *             PrivateLinkServiceConnectionState = new AzureNative.Network.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "approved it for some reason.",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "testPls",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewPrivateLinkServicePrivateEndpointConnection(ctx, "privateLinkServicePrivateEndpointConnection", &network.PrivateLinkServicePrivateEndpointConnectionArgs{
+ * 			Name:             pulumi.String("testPlePeConnection"),
+ * 			PeConnectionName: pulumi.String("testPlePeConnection"),
+ * 			PrivateLinkServiceConnectionState: &network.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("approved it for some reason."),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("testPls"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkServicePrivateEndpointConnection = new azure_native.network.PrivateLinkServicePrivateEndpointConnection("privateLinkServicePrivateEndpointConnection", {
+ *     name: "testPlePeConnection",
+ *     peConnectionName: "testPlePeConnection",
+ *     privateLinkServiceConnectionState: {
+ *         description: "approved it for some reason.",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     serviceName: "testPls",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_service_private_endpoint_connection = azure_native.network.PrivateLinkServicePrivateEndpointConnection("privateLinkServicePrivateEndpointConnection",
+ *     name="testPlePeConnection",
+ *     pe_connection_name="testPlePeConnection",
+ *     private_link_service_connection_state=azure_native.network.PrivateLinkServiceConnectionStateArgs(
+ *         description="approved it for some reason.",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="rg1",
+ *     service_name="testPls")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +127,84 @@ import javax.annotation.Nullable;
 public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The consumer link id.
-     * 
      */
     @Export(name="linkIdentifier", type=String.class, parameters={})
     private Output<String> linkIdentifier;
 
     /**
      * @return The consumer link id.
-     * 
      */
     public Output<String> getLinkIdentifier() {
         return this.linkIdentifier;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output<PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The resource of private end point.
-     * 
      */
     public Output<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private endpoint connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The JSON object that contains the properties to secure a domain.
- * 
  */
 public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
 
     /**
      * Defines the source of the SSL certificate.
-     * 
      */
     @Import(name="certificateType", required=true)
       private final String certificateType;
@@ -32,7 +30,6 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
 
     /**
      * TLS protocol version that will be used for Https
-     * 
      */
     @Import(name="minimumTlsVersion")
       private final @Nullable String minimumTlsVersion;
@@ -43,7 +40,6 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
 
     /**
      * Resource reference to the secret. ie. subs/rg/profile/secret
-     * 
      */
     @Import(name="secret")
       private final @Nullable ResourceReferenceResponse secret;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AzureAppPushReceiverResponse {
     /**
      * The email address registered for the Azure mobile app.
-     * 
      */
     private final String emailAddress;
     /**
      * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class AzureAppPushReceiverResponse {
 
     /**
      * The email address registered for the Azure mobile app.
-     * 
     */
     public String getEmailAddress() {
         return this.emailAddress;
     }
     /**
      * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
-     * 
     */
     public String getName() {
         return this.name;

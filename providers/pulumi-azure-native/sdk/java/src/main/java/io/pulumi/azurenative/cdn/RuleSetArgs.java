@@ -16,7 +16,6 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -27,7 +26,6 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the rule set under the profile which is unique globally
-     * 
      */
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;

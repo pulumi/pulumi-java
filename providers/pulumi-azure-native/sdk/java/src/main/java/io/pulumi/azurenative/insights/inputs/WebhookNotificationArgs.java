@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Webhook notification of an autoscale event.
- * 
  */
 public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * a property bag of settings. This value can be empty.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -32,7 +30,6 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * the service address to receive the notification.
-     * 
      */
     @Import(name="serviceUri")
       private final @Nullable Output<String> serviceUri;

@@ -18,7 +18,97 @@ import javax.annotation.Nullable;
  * Private dns zone group resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create private dns zone group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateDnsZoneGroup = new AzureNative.Network.PrivateDnsZoneGroup("privateDnsZoneGroup", new AzureNative.Network.PrivateDnsZoneGroupArgs
+ *         {
+ *             PrivateDnsZoneConfigs = 
+ *             {
+ *                 new AzureNative.Network.Inputs.PrivateDnsZoneConfigArgs
+ *                 {
+ *                     PrivateDnsZoneId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
+ *                 },
+ *             },
+ *             PrivateDnsZoneGroupName = "testPdnsgroup",
+ *             PrivateEndpointName = "testPe",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewPrivateDnsZoneGroup(ctx, "privateDnsZoneGroup", &network.PrivateDnsZoneGroupArgs{
+ * 			PrivateDnsZoneConfigs: []network.PrivateDnsZoneConfigArgs{
+ * 				&network.PrivateDnsZoneConfigArgs{
+ * 					PrivateDnsZoneId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com"),
+ * 				},
+ * 			},
+ * 			PrivateDnsZoneGroupName: pulumi.String("testPdnsgroup"),
+ * 			PrivateEndpointName:     pulumi.String("testPe"),
+ * 			ResourceGroupName:       pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateDnsZoneGroup = new azure_native.network.PrivateDnsZoneGroup("privateDnsZoneGroup", {
+ *     privateDnsZoneConfigs: [{
+ *         privateDnsZoneId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
+ *     }],
+ *     privateDnsZoneGroupName: "testPdnsgroup",
+ *     privateEndpointName: "testPe",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_dns_zone_group = azure_native.network.PrivateDnsZoneGroup("privateDnsZoneGroup",
+ *     private_dns_zone_configs=[azure_native.network.PrivateDnsZoneConfigArgs(
+ *         private_dns_zone_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
+ *     )],
+ *     private_dns_zone_group_name="testPdnsgroup",
+ *     private_endpoint_name="testPe",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +123,48 @@ import javax.annotation.Nullable;
 public class PrivateDnsZoneGroup extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A collection of private dns zone configurations of the private dns zone group.
-     * 
      */
     @Export(name="privateDnsZoneConfigs", type=List.class, parameters={PrivateDnsZoneConfigResponse.class})
     private Output</* @Nullable */ List<PrivateDnsZoneConfigResponse>> privateDnsZoneConfigs;
 
     /**
      * @return A collection of private dns zone configurations of the private dns zone group.
-     * 
      */
     public Output</* @Nullable */ List<PrivateDnsZoneConfigResponse>> getPrivateDnsZoneConfigs() {
         return this.privateDnsZoneConfigs;
     }
     /**
      * The provisioning state of the private dns zone group resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private dns zone group resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;

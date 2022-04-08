@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Markdown part metadata.
- * 
  */
 public final class MarkdownPartMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
 
     /**
      * Input to dashboard part.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable List<Object> inputs;
@@ -34,7 +32,6 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
 
     /**
      * Markdown part settings.
-     * 
      */
     @Import(name="settings")
       private final @Nullable MarkdownPartMetadataResponseSettings settings;
@@ -46,7 +43,6 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
     /**
      * The type of dashboard part.
      * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

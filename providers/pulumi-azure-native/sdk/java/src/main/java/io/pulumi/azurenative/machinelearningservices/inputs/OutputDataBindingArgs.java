@@ -18,7 +18,6 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * ARM resource ID of the datastore where the data output will be stored.
-     * 
      */
     @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
@@ -29,7 +28,6 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Mechanism for data movement to datastore.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
@@ -40,7 +38,6 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Location of data inside the container process.
-     * 
      */
     @Import(name="pathOnCompute")
       private final @Nullable Output<String> pathOnCompute;
@@ -51,7 +48,6 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Path within the datastore to the data.
-     * 
      */
     @Import(name="pathOnDatastore")
       private final @Nullable Output<String> pathOnDatastore;

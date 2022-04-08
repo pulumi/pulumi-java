@@ -20,7 +20,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
 
     /**
      * The feature description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
 
     /**
      * Key-value pairs for meta data.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -42,7 +40,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
 
     /**
      * Indicates whether feature should be displayed in Portal.
-     * 
      */
     @Import(name="shouldFeatureDisplayInPortal")
       private final @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
@@ -53,7 +50,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
 
     /**
      * The state.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;

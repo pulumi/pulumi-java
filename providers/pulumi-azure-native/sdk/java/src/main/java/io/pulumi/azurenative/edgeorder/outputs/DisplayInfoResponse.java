@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DisplayInfoResponse {
     /**
      * Configuration display name
-     * 
      */
     private final String configurationDisplayName;
     /**
      * Product family display name
-     * 
      */
     private final String productFamilyDisplayName;
 
@@ -30,14 +28,12 @@ public final class DisplayInfoResponse {
 
     /**
      * Configuration display name
-     * 
     */
     public String getConfigurationDisplayName() {
         return this.configurationDisplayName;
     }
     /**
      * Product family display name
-     * 
     */
     public String getProductFamilyDisplayName() {
         return this.productFamilyDisplayName;

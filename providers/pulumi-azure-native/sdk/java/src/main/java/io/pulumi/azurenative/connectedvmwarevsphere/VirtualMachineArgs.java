@@ -26,7 +26,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the extended location.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -37,7 +36,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Firmware type
-     * 
      */
     @Import(name="firmwareType")
       private final @Nullable Output<Either<String,FirmwareType>> firmwareType;
@@ -48,7 +46,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hardware properties.
-     * 
      */
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
@@ -59,7 +56,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -70,7 +66,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the inventory Item ID for the virtual machine.
-     * 
      */
     @Import(name="inventoryItemId")
       private final @Nullable Output<String> inventoryItemId;
@@ -81,7 +76,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -92,7 +86,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -103,7 +96,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
-     * 
      */
     @Import(name="moRefId")
       private final @Nullable Output<String> moRefId;
@@ -114,7 +106,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network properties.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
@@ -125,7 +116,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * OS properties.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable Output<OsProfileArgs> osProfile;
@@ -136,7 +126,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Placement properties.
-     * 
      */
     @Import(name="placementProfile")
       private final @Nullable Output<PlacementProfileArgs> placementProfile;
@@ -147,7 +136,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -159,7 +147,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will
      * deploy.
-     * 
      */
     @Import(name="resourcePoolId")
       private final @Nullable Output<String> resourcePoolId;
@@ -170,7 +157,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the SMBIOS UUID of the vm.
-     * 
      */
     @Import(name="smbiosUuid")
       private final @Nullable Output<String> smbiosUuid;
@@ -181,7 +167,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage properties.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -192,7 +177,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -203,7 +187,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the ARM Id of the template resource to deploy the virtual machine.
-     * 
      */
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
@@ -214,7 +197,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
-     * 
      */
     @Import(name="vCenterId")
       private final @Nullable Output<String> vCenterId;
@@ -225,7 +207,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the virtual machine resource.
-     * 
      */
     @Import(name="virtualMachineName")
       private final @Nullable Output<String> virtualMachineName;

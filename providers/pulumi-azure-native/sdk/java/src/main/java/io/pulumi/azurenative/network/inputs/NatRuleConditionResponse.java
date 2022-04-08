@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule condition of type nat.
- * 
  */
 public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Description of the rule condition.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of destination IP addresses or Service Tags.
-     * 
      */
     @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
@@ -43,7 +40,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of destination ports.
-     * 
      */
     @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
@@ -54,7 +50,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Array of FirewallPolicyRuleConditionNetworkProtocols.
-     * 
      */
     @Import(name="ipProtocols")
       private final @Nullable List<String> ipProtocols;
@@ -65,7 +60,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the rule condition.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -77,7 +71,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
     /**
      * Rule Condition Type.
      * Expected value is 'NatRuleCondition'.
-     * 
      */
     @Import(name="ruleConditionType", required=true)
       private final String ruleConditionType;
@@ -88,7 +81,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
@@ -99,7 +91,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;

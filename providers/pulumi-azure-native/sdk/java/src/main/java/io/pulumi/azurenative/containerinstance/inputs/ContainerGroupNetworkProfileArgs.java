@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Container group network profile information.
- * 
  */
 public final class ContainerGroupNetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ContainerGroupNetworkProfileArgs extends io.pulumi.resources.
 
     /**
      * The identifier for a network profile.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

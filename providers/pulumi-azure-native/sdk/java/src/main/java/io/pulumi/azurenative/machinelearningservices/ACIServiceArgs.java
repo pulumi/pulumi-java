@@ -24,7 +24,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not Application Insights is enabled.
-     * 
      */
     @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
@@ -35,7 +34,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not authentication is enabled on the service.
-     * 
      */
     @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
@@ -46,7 +44,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CName for the service.
-     * 
      */
     @Import(name="cname")
       private final @Nullable Output<String> cname;
@@ -58,7 +55,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The compute environment type for the service.
      * Expected value is 'ACI'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
@@ -69,7 +65,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The container resource requirements.
-     * 
      */
     @Import(name="containerResourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
@@ -80,7 +75,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of the data collection options specified.
-     * 
      */
     @Import(name="dataCollection")
       private final @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
@@ -91,7 +85,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the service.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -102,7 +95,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Dns label for the service.
-     * 
      */
     @Import(name="dnsNameLabel")
       private final @Nullable Output<String> dnsNameLabel;
@@ -113,7 +105,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The encryption properties.
-     * 
      */
     @Import(name="encryptionProperties")
       private final @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
@@ -124,7 +115,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Environment, models and assets needed for inferencing.
-     * 
      */
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
@@ -135,7 +125,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authentication keys.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
@@ -146,7 +135,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service tag dictionary. Tags are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
@@ -157,7 +145,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure location/region.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -168,7 +155,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service properties dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -179,7 +165,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -190,7 +175,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Machine Learning service.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -201,7 +185,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public SSL certificate in PEM format to use if SSL is enabled.
-     * 
      */
     @Import(name="sslCertificate")
       private final @Nullable Output<String> sslCertificate;
@@ -212,7 +195,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not SSL is enabled.
-     * 
      */
     @Import(name="sslEnabled")
       private final @Nullable Output<Boolean> sslEnabled;
@@ -223,7 +205,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public SSL key in PEM format for the certificate.
-     * 
      */
     @Import(name="sslKey")
       private final @Nullable Output<String> sslKey;
@@ -234,7 +215,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The virtual network configuration.
-     * 
      */
     @Import(name="vnetConfiguration")
       private final @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
@@ -245,7 +225,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

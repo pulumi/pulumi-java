@@ -32,7 +32,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container group.
-     * 
      */
     @Import(name="containerGroupName")
       private final @Nullable Output<String> containerGroupName;
@@ -43,7 +42,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The containers within the container group.
-     * 
      */
     @Import(name="containers", required=true)
       private final Output<List<ContainerArgs>> containers;
@@ -54,7 +52,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The diagnostic information for a container group.
-     * 
      */
     @Import(name="diagnostics")
       private final @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
@@ -65,7 +62,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The DNS config information for a container group.
-     * 
      */
     @Import(name="dnsConfig")
       private final @Nullable Output<DnsConfigurationArgs> dnsConfig;
@@ -76,7 +72,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The encryption properties for a container group.
-     * 
      */
     @Import(name="encryptionProperties")
       private final @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
@@ -87,7 +82,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the container group, if configured.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ContainerGroupIdentityArgs> identity;
@@ -98,7 +92,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The image registry credentials by which the container group is created from.
-     * 
      */
     @Import(name="imageRegistryCredentials")
       private final @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
@@ -109,7 +102,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The init containers for a container group.
-     * 
      */
     @Import(name="initContainers")
       private final @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
@@ -120,7 +112,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP address type of the container group.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<IpAddressArgs> ipAddress;
@@ -131,7 +122,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -142,7 +132,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The network profile information for a container group.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
@@ -153,7 +142,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The operating system type required by the containers in the container group.
-     * 
      */
     @Import(name="osType", required=true)
       private final Output<Either<String,OperatingSystemTypes>> osType;
@@ -164,7 +152,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -174,7 +161,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Restart policy for all containers within the container group.
+     * Restart policy for all containers within the container group. 
      * - `Always` Always restart
      * - `OnFailure` Restart on failure
      * - `Never` Never restart
@@ -189,7 +176,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU for a container group.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<Either<String,ContainerGroupSku>> sku;
@@ -200,7 +186,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -211,7 +196,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of volumes that can be mounted by containers in this container group.
-     * 
      */
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;

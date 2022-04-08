@@ -16,7 +16,6 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
 
     /**
      * The ID that uniquely identifies a billing account.
-     * 
      */
     @Import(name="billingAccountName", required=true)
       private final Output<String> billingAccountName;
@@ -27,7 +26,6 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
 
     /**
      * The ID that uniquely identifies a role assignment.
-     * 
      */
     @Import(name="billingRoleAssignmentName")
       private final @Nullable Output<String> billingRoleAssignmentName;
@@ -38,7 +36,6 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
 
     /**
      * The principal id of the user to whom the role was assigned.
-     * 
      */
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
@@ -49,7 +46,6 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
 
     /**
      * The principal tenant id of the user to whom the role was assigned.
-     * 
      */
     @Import(name="principalTenantId")
       private final @Nullable Output<String> principalTenantId;
@@ -60,7 +56,6 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
 
     /**
      * The ID of the role definition.
-     * 
      */
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
@@ -71,7 +66,6 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
 
     /**
      * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     @Import(name="userAuthenticationType")
       private final @Nullable Output<String> userAuthenticationType;
@@ -82,7 +76,6 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
 
     /**
      * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     @Import(name="userEmailAddress")
       private final @Nullable Output<String> userEmailAddress;

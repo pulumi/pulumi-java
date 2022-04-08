@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operator to be matched.
-     * 
      */
     @EnumType
     public enum WebApplicationFirewallOperator {

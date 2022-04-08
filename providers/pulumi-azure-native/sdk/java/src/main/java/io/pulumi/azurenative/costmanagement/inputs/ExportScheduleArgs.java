@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The schedule associated with the export.
- * 
  */
 public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The schedule recurrence.
-     * 
      */
     @Import(name="recurrence")
       private final @Nullable Output<Either<String,RecurrenceType>> recurrence;
@@ -35,7 +33,6 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
-     * 
      */
     @Import(name="recurrencePeriod")
       private final @Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod;
@@ -46,7 +43,6 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the export's schedule. If 'Inactive', the export's schedule is paused.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,StatusType>> status;

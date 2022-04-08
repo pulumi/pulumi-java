@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class AssociatedWorkspaceResponse {
     /**
      * The time of workspace association.
-     * 
      */
     private final String associateDate;
     /**
      * The ResourceId id the assigned workspace.
-     * 
      */
     private final String resourceId;
     /**
      * The id of the assigned workspace.
-     * 
      */
     private final String workspaceId;
     /**
      * The name id the assigned workspace.
-     * 
      */
     private final String workspaceName;
 
@@ -44,28 +40,24 @@ public final class AssociatedWorkspaceResponse {
 
     /**
      * The time of workspace association.
-     * 
     */
     public String getAssociateDate() {
         return this.associateDate;
     }
     /**
      * The ResourceId id the assigned workspace.
-     * 
     */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * The id of the assigned workspace.
-     * 
     */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The name id the assigned workspace.
-     * 
     */
     public String getWorkspaceName() {
         return this.workspaceName;

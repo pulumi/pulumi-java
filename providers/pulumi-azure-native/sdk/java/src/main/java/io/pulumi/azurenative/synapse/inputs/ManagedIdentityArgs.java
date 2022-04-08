@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The workspace managed identity
- * 
  */
 public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of managed identity for the workspace
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;

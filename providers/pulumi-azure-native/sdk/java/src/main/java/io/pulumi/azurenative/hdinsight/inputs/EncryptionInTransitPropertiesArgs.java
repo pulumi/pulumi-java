@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption-in-transit properties.
- * 
  */
 public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
 
     /**
      * Indicates whether or not inter cluster node communication is encrypted in transit.
-     * 
      */
     @Import(name="isEncryptionInTransitEnabled")
       private final @Nullable Output<Boolean> isEncryptionInTransitEnabled;

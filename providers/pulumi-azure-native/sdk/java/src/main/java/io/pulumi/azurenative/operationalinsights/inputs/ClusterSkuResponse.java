@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The cluster sku definition.
- * 
  */
 public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The capacity value
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Double capacity;
@@ -32,7 +30,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

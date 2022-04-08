@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An event to be notified for.
- * 
  */
 public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
-     * 
      */
     @Import(name="eventName")
       private final @Nullable String eventName;

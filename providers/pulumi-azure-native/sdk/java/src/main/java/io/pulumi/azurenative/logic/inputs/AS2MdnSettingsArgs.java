@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AS2 agreement mdn settings.
- * 
  */
 public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The disposition notification to header value.
-     * 
      */
     @Import(name="dispositionNotificationTo")
       private final @Nullable Output<String> dispositionNotificationTo;
@@ -34,7 +32,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The MDN text.
-     * 
      */
     @Import(name="mdnText")
       private final @Nullable Output<String> mdnText;
@@ -45,7 +42,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The signing or hashing algorithm.
-     * 
      */
     @Import(name="micHashingAlgorithm", required=true)
       private final Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
@@ -56,7 +52,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value indicating whether to send or request a MDN.
-     * 
      */
     @Import(name="needMDN", required=true)
       private final Output<Boolean> needMDN;
@@ -67,7 +62,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The receipt delivery URL.
-     * 
      */
     @Import(name="receiptDeliveryUrl")
       private final @Nullable Output<String> receiptDeliveryUrl;
@@ -78,7 +72,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value indicating whether to send inbound MDN to message box.
-     * 
      */
     @Import(name="sendInboundMDNToMessageBox", required=true)
       private final Output<Boolean> sendInboundMDNToMessageBox;
@@ -89,7 +82,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value indicating whether to send the asynchronous MDN.
-     * 
      */
     @Import(name="sendMDNAsynchronously", required=true)
       private final Output<Boolean> sendMDNAsynchronously;
@@ -100,7 +92,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value indicating whether the MDN needs to be signed or not.
-     * 
      */
     @Import(name="signMDN", required=true)
       private final Output<Boolean> signMDN;
@@ -111,7 +102,6 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value indicating whether to sign the outbound MDN if optional.
-     * 
      */
     @Import(name="signOutboundMDNIfOptional", required=true)
       private final Output<Boolean> signOutboundMDNIfOptional;

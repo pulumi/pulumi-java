@@ -21,7 +21,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -32,7 +31,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -43,7 +41,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the resource that manages this resource.
-     * 
      */
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
@@ -65,7 +61,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parent resource identity.
-     * 
      */
     @Import(name="parentResourcePath", required=true)
       private final Output<String> parentResourcePath;
@@ -76,7 +71,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The plan of the resource.
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
@@ -87,7 +81,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
@@ -98,7 +91,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group for the resource. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -109,7 +101,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource to create.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -120,7 +111,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of the resource provider.
-     * 
      */
     @Import(name="resourceProviderNamespace", required=true)
       private final Output<String> resourceProviderNamespace;
@@ -131,7 +121,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource type of the resource to create.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -142,7 +131,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -153,7 +141,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

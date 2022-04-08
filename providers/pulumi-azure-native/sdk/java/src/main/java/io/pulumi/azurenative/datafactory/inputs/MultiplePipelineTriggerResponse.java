@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for all triggers that support one to many model for trigger to pipeline.
- * 
  */
 public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -34,7 +32,6 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -45,7 +42,6 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
 
     /**
      * Pipelines that need to be started.
-     * 
      */
     @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
@@ -56,7 +52,6 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
 
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     * 
      */
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
@@ -68,7 +63,6 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
     /**
      * Trigger type.
      * Expected value is 'MultiplePipelineTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

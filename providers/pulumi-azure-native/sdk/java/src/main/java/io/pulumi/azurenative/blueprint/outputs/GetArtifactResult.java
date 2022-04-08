@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class GetArtifactResult {
     /**
      * String Id used to locate any resource on Azure.
-     * 
      */
     private final String id;
     /**
      * Specifies the kind of blueprint artifact.
-     * 
      */
     private final String kind;
     /**
      * Name of this resource.
-     * 
      */
     private final String name;
     /**
      * Type of this resource.
-     * 
      */
     private final String type;
 
@@ -44,28 +40,24 @@ public final class GetArtifactResult {
 
     /**
      * String Id used to locate any resource on Azure.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the kind of blueprint artifact.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of this resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Type of this resource.
-     * 
     */
     public String getType() {
         return this.type;

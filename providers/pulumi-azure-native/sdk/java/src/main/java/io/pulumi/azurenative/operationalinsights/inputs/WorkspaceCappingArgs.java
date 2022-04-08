@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The daily volume cap for ingestion.
- * 
  */
 public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The workspace daily quota for ingestion.
-     * 
      */
     @Import(name="dailyQuotaGb")
       private final @Nullable Output<Double> dailyQuotaGb;

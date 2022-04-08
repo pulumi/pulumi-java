@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Statuses of objects deployed by the user-specified kustomizations from the git repository.
- * 
  */
 public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * Object reference to the Kustomization that applied this object
-     * 
      */
     @Import(name="appliedBy")
       private final @Nullable ObjectReferenceDefinitionResponse appliedBy;
@@ -35,7 +33,6 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * Compliance state of the applied object showing whether the applied object has come into a ready state on the cluster.
-     * 
      */
     @Import(name="complianceState")
       private final @Nullable String complianceState;
@@ -46,7 +43,6 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * Additional properties that are provided from objects of the HelmRelease kind
-     * 
      */
     @Import(name="helmReleaseProperties")
       private final @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
@@ -57,7 +53,6 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * Kind of the applied object
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -68,7 +63,6 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * Name of the applied object
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -79,7 +73,6 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * Namespace of the applied object
-     * 
      */
     @Import(name="namespace")
       private final @Nullable String namespace;
@@ -90,7 +83,6 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * List of Kubernetes object status conditions present on the cluster
-     * 
      */
     @Import(name="statusConditions")
       private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;

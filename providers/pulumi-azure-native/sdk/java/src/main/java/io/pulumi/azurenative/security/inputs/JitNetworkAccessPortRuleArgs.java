@@ -20,7 +20,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
 
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
-     * 
      */
     @Import(name="allowedSourceAddressPrefix")
       private final @Nullable Output<String> allowedSourceAddressPrefix;
@@ -31,7 +30,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
 
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
-     * 
      */
     @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
@@ -42,7 +40,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
 
     /**
      * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
-     * 
      */
     @Import(name="maxRequestAccessDuration", required=true)
       private final Output<String> maxRequestAccessDuration;

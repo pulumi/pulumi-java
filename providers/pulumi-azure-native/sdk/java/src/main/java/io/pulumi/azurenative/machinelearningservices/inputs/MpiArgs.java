@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * MPI distribution configuration.
- * 
  */
 public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Enum to determine the job distribution type.
      * Expected value is 'Mpi'.
-     * 
      */
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
@@ -33,7 +31,6 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of processes per MPI node.
-     * 
      */
     @Import(name="processCountPerInstance")
       private final @Nullable Output<Integer> processCountPerInstance;

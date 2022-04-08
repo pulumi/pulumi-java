@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Source type of the content
-     * 
      */
     @EnumType
     public enum SourceKind {

@@ -17,7 +17,157 @@ import javax.annotation.Nullable;
  * Data connector.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an Office365 data connector.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataConnector = new AzureNative.SecurityInsights.DataConnector("dataConnector", new AzureNative.SecurityInsights.DataConnectorArgs
+ *         {
+ *             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             Kind = "Office365",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewDataConnector(ctx, "dataConnector", &securityinsights.DataConnectorArgs{
+ * 			DataConnectorId:   pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			Kind:              pulumi.String("Office365"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataConnector = new azure_native.securityinsights.DataConnector("dataConnector", {
+ *     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     kind: "Office365",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_connector = azure_native.securityinsights.DataConnector("dataConnector",
+ *     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     kind="Office365",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates an Threat Intelligence Platform data connector.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataConnector = new AzureNative.SecurityInsights.DataConnector("dataConnector", new AzureNative.SecurityInsights.DataConnectorArgs
+ *         {
+ *             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             Kind = "ThreatIntelligence",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewDataConnector(ctx, "dataConnector", &securityinsights.DataConnectorArgs{
+ * 			DataConnectorId:   pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			Kind:              pulumi.String("ThreatIntelligence"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataConnector = new azure_native.securityinsights.DataConnector("dataConnector", {
+ *     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     kind: "ThreatIntelligence",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_connector = azure_native.securityinsights.DataConnector("dataConnector",
+ *     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     kind="ThreatIntelligence",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,63 +179,54 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector.
- * 
  */
 @Deprecated /* Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector. */
 @ResourceType(type="azure-native:securityinsights:DataConnector")
 public class DataConnector extends io.pulumi.resources.CustomResource {
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The data connector kind
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The data connector kind
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

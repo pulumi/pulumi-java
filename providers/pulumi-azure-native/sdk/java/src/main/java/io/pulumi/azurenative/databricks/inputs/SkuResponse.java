@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU for the resource.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SKU name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SKU tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

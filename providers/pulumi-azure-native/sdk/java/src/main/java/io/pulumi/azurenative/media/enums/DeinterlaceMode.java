@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The deinterlacing mode. Defaults to AutoPixelAdaptive.
-     * 
      */
     @EnumType
     public enum DeinterlaceMode {
         /**
          * Disables de-interlacing of the source video.
-         * 
          */
         Off("Off"),
         /**
          * Apply automatic pixel adaptive de-interlacing on each frame in the input video.
-         * 
          */
         AutoPixelAdaptive("AutoPixelAdaptive");
 

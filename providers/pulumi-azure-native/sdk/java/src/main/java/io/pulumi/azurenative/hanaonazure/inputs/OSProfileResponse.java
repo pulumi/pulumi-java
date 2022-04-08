@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the operating system settings for the HANA instance.
- * 
  */
 public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the host OS name of the HANA instance.
-     * 
      */
     @Import(name="computerName")
       private final @Nullable String computerName;
@@ -31,7 +29,6 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This property allows you to specify the type of the OS.
-     * 
      */
     @Import(name="osType", required=true)
       private final String osType;
@@ -42,7 +39,6 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the SSH public key used to access the operating system.
-     * 
      */
     @Import(name="sshPublicKey")
       private final @Nullable String sshPublicKey;
@@ -53,7 +49,6 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies version of operating system.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

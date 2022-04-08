@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Database, Server or Elastic Pool Advisor.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update database advisor
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var databaseAdvisor = new AzureNative.Sql.DatabaseAdvisor("databaseAdvisor", new AzureNative.Sql.DatabaseAdvisorArgs
+ *         {
+ *             AdvisorName = "CreateIndex",
+ *             AutoExecuteStatus = "Disabled",
+ *             DatabaseName = "IndexAdvisor_test_3",
+ *             ResourceGroupName = "workloadinsight-demos",
+ *             ServerName = "misosisvr",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewDatabaseAdvisor(ctx, "databaseAdvisor", &sql.DatabaseAdvisorArgs{
+ * 			AdvisorName:       pulumi.String("CreateIndex"),
+ * 			AutoExecuteStatus: "Disabled",
+ * 			DatabaseName:      pulumi.String("IndexAdvisor_test_3"),
+ * 			ResourceGroupName: pulumi.String("workloadinsight-demos"),
+ * 			ServerName:        pulumi.String("misosisvr"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const databaseAdvisor = new azure_native.sql.DatabaseAdvisor("databaseAdvisor", {
+ *     advisorName: "CreateIndex",
+ *     autoExecuteStatus: "Disabled",
+ *     databaseName: "IndexAdvisor_test_3",
+ *     resourceGroupName: "workloadinsight-demos",
+ *     serverName: "misosisvr",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * database_advisor = azure_native.sql.DatabaseAdvisor("databaseAdvisor",
+ *     advisor_name="CreateIndex",
+ *     auto_execute_status="Disabled",
+ *     database_name="IndexAdvisor_test_3",
+ *     resource_group_name="workloadinsight-demos",
+ *     server_name="misosisvr")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,140 +113,120 @@ import javax.annotation.Nullable;
 public class DatabaseAdvisor extends io.pulumi.resources.CustomResource {
     /**
      * Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
-     * 
      */
     @Export(name="advisorStatus", type=String.class, parameters={})
     private Output<String> advisorStatus;
 
     /**
      * @return Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
-     * 
      */
     public Output<String> getAdvisorStatus() {
         return this.advisorStatus;
     }
     /**
      * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
-     * 
      */
     @Export(name="autoExecuteStatus", type=String.class, parameters={})
     private Output<String> autoExecuteStatus;
 
     /**
      * @return Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
-     * 
      */
     public Output<String> getAutoExecuteStatus() {
         return this.autoExecuteStatus;
     }
     /**
      * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
-     * 
      */
     @Export(name="autoExecuteStatusInheritedFrom", type=String.class, parameters={})
     private Output<String> autoExecuteStatusInheritedFrom;
 
     /**
      * @return Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
-     * 
      */
     public Output<String> getAutoExecuteStatusInheritedFrom() {
         return this.autoExecuteStatusInheritedFrom;
     }
     /**
      * Resource kind.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Resource kind.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Gets the time when the current resource was analyzed for recommendations by this advisor.
-     * 
      */
     @Export(name="lastChecked", type=String.class, parameters={})
     private Output<String> lastChecked;
 
     /**
      * @return Gets the time when the current resource was analyzed for recommendations by this advisor.
-     * 
      */
     public Output<String> getLastChecked() {
         return this.lastChecked;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
-     * 
      */
     @Export(name="recommendationsStatus", type=String.class, parameters={})
     private Output<String> recommendationsStatus;
 
     /**
      * @return Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
-     * 
      */
     public Output<String> getRecommendationsStatus() {
         return this.recommendationsStatus;
     }
     /**
      * Gets the recommended actions for this advisor.
-     * 
      */
     @Export(name="recommendedActions", type=List.class, parameters={RecommendedActionResponse.class})
     private Output<List<RecommendedActionResponse>> recommendedActions;
 
     /**
      * @return Gets the recommended actions for this advisor.
-     * 
      */
     public Output<List<RecommendedActionResponse>> getRecommendedActions() {
         return this.recommendedActions;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

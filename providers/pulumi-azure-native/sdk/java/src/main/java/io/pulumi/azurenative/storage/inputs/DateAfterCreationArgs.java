@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Object to define the number of days after creation.
- * 
  */
 public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Value indicating the age in days after creation
-     * 
      */
     @Import(name="daysAfterCreationGreaterThan", required=true)
       private final Output<Double> daysAfterCreationGreaterThan;

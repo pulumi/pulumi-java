@@ -14,7 +14,6 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the node type.
-     * 
      */
     @Import(name="nodeTypeName", required=true)
       private final String nodeTypeName;
@@ -36,7 +34,6 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

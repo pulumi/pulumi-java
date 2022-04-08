@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ManagedIdentityConfigurationResponse {
     /**
      * The objectId of the Managed Identity that is linked to the Managed Storage account.
-     * 
      */
     private final String principalId;
     /**
      * The tenant Id where the Managed Identity is created.
-     * 
      */
     private final String tenantId;
     /**
      * The type of Identity created. It can be either SystemAssigned or UserAssigned.
-     * 
      */
     private final String type;
 
@@ -37,21 +34,18 @@ public final class ManagedIdentityConfigurationResponse {
 
     /**
      * The objectId of the Managed Identity that is linked to the Managed Storage account.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant Id where the Managed Identity is created.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of Identity created. It can be either SystemAssigned or UserAssigned.
-     * 
     */
     public String getType() {
         return this.type;

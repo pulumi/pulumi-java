@@ -33,168 +33,144 @@ import javax.annotation.Nullable;
 public class JitRequest extends io.pulumi.resources.CustomResource {
     /**
      * The parent application id.
-     * 
      */
     @Export(name="applicationResourceId", type=String.class, parameters={})
     private Output<String> applicationResourceId;
 
     /**
      * @return The parent application id.
-     * 
      */
     public Output<String> getApplicationResourceId() {
         return this.applicationResourceId;
     }
     /**
      * The client entity that created the JIT request.
-     * 
      */
     @Export(name="createdBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> createdBy;
 
     /**
      * @return The client entity that created the JIT request.
-     * 
      */
     public Output<ApplicationClientDetailsResponse> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The JIT authorization policies.
-     * 
      */
     @Export(name="jitAuthorizationPolicies", type=List.class, parameters={JitAuthorizationPoliciesResponse.class})
     private Output<List<JitAuthorizationPoliciesResponse>> jitAuthorizationPolicies;
 
     /**
      * @return The JIT authorization policies.
-     * 
      */
     public Output<List<JitAuthorizationPoliciesResponse>> getJitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
     /**
      * The JIT request state.
-     * 
      */
     @Export(name="jitRequestState", type=String.class, parameters={})
     private Output<String> jitRequestState;
 
     /**
      * @return The JIT request state.
-     * 
      */
     public Output<String> getJitRequestState() {
         return this.jitRequestState;
     }
     /**
      * The JIT request properties.
-     * 
      */
     @Export(name="jitSchedulingPolicy", type=JitSchedulingPolicyResponse.class, parameters={})
     private Output<JitSchedulingPolicyResponse> jitSchedulingPolicy;
 
     /**
      * @return The JIT request properties.
-     * 
      */
     public Output<JitSchedulingPolicyResponse> getJitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The JIT request provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The JIT request provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publisher tenant id.
-     * 
      */
     @Export(name="publisherTenantId", type=String.class, parameters={})
     private Output<String> publisherTenantId;
 
     /**
      * @return The publisher tenant id.
-     * 
      */
     public Output<String> getPublisherTenantId() {
         return this.publisherTenantId;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The client entity that last updated the JIT request.
-     * 
      */
     @Export(name="updatedBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> updatedBy;
 
     /**
      * @return The client entity that last updated the JIT request.
-     * 
      */
     public Output<ApplicationClientDetailsResponse> getUpdatedBy() {
         return this.updatedBy;

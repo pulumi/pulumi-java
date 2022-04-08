@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Key Vault linked service.
- * 
  */
 public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -37,7 +35,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="baseUrl", required=true)
       private final Object baseUrl;
@@ -48,7 +45,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -59,7 +55,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
@@ -70,7 +65,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -81,7 +75,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -93,7 +86,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
     /**
      * Type of linked service.
      * Expected value is 'AzureKeyVault'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

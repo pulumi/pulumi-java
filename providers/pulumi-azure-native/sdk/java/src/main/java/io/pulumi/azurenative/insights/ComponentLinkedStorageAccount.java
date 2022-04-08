@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * An Application Insights component linked storage accounts
  * API Version: 2020-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ComponentLinkedStorageAccountsCreateAndUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var componentLinkedStorageAccount = new AzureNative.Insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureNative.Insights.ComponentLinkedStorageAccountArgs
+ *         {
+ *             LinkedStorageAccount = "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
+ *             ResourceGroupName = "someResourceGroupName",
+ *             ResourceName = "myComponent",
+ *             StorageType = "ServiceProfiler",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewComponentLinkedStorageAccount(ctx, "componentLinkedStorageAccount", &insights.ComponentLinkedStorageAccountArgs{
+ * 			LinkedStorageAccount: pulumi.String("/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname"),
+ * 			ResourceGroupName:    pulumi.String("someResourceGroupName"),
+ * 			ResourceName:         pulumi.String("myComponent"),
+ * 			StorageType:          pulumi.String("ServiceProfiler"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const componentLinkedStorageAccount = new azure_native.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
+ *     linkedStorageAccount: "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
+ *     resourceGroupName: "someResourceGroupName",
+ *     resourceName: "myComponent",
+ *     storageType: "ServiceProfiler",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * component_linked_storage_account = azure_native.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
+ *     linked_storage_account="/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
+ *     resource_group_name="someResourceGroupName",
+ *     resource_name="myComponent",
+ *     storage_type="ServiceProfiler")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +108,36 @@ import javax.annotation.Nullable;
 public class ComponentLinkedStorageAccount extends io.pulumi.resources.CustomResource {
     /**
      * Linked storage account resource ID
-     * 
      */
     @Export(name="linkedStorageAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedStorageAccount;
 
     /**
      * @return Linked storage account resource ID
-     * 
      */
     public Output</* @Nullable */ String> getLinkedStorageAccount() {
         return this.linkedStorageAccount;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

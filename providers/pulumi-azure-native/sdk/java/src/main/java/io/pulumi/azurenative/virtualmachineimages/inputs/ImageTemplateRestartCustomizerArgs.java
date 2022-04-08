@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Reboots a VM and waits for it to come back online (Windows). Corresponds to Packer windows-restart provisioner
- * 
  */
 public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
 
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
 
     /**
      * Command to check if restart succeeded [Default: '']
-     * 
      */
     @Import(name="restartCheckCommand")
       private final @Nullable Output<String> restartCheckCommand;
@@ -42,7 +39,6 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
 
     /**
      * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
-     * 
      */
     @Import(name="restartCommand")
       private final @Nullable Output<String> restartCommand;
@@ -53,7 +49,6 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
 
     /**
      * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
-     * 
      */
     @Import(name="restartTimeout")
       private final @Nullable Output<String> restartTimeout;
@@ -65,7 +60,6 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'WindowsRestart'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

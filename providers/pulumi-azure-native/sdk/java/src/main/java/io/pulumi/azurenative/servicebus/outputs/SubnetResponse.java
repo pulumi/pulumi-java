@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SubnetResponse {
     /**
      * Resource ID of Virtual Network Subnet
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class SubnetResponse {
 
     /**
      * Resource ID of Virtual Network Subnet
-     * 
     */
     public String getId() {
         return this.id;

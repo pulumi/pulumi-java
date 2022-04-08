@@ -14,7 +14,6 @@ public final class GetNetworkWatcherArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the network watcher.
-     * 
      */
     @Import(name="networkWatcherName", required=true)
       private final String networkWatcherName;
@@ -25,7 +24,6 @@ public final class GetNetworkWatcherArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

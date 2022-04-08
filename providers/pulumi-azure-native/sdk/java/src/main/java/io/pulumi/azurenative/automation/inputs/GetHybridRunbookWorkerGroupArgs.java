@@ -14,7 +14,6 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
 
     /**
      * The hybrid runbook worker group name
-     * 
      */
     @Import(name="hybridRunbookWorkerGroupName", required=true)
       private final String hybridRunbookWorkerGroupName;
@@ -36,7 +34,6 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

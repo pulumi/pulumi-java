@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Blob container storage information.
- * 
  */
 public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SAS URI of Azure Storage Account Container.
-     * 
      */
     @Import(name="sasUri", required=true)
       private final Output<String> sasUri;

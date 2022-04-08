@@ -18,7 +18,6 @@ public final class ApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     * 
      */
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
@@ -29,7 +28,6 @@ public final class ApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Format of the policyContent.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<Either<String,PolicyContentFormat>> format;
@@ -40,7 +38,6 @@ public final class ApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the Policy.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -51,7 +48,6 @@ public final class ApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class ApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -73,7 +68,6 @@ public final class ApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contents of the Policy as defined by the format.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

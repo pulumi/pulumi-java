@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class NatGatewaySkuResponse {
     /**
      * Name of Nat Gateway SKU.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class NatGatewaySkuResponse {
 
     /**
      * Name of Nat Gateway SKU.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

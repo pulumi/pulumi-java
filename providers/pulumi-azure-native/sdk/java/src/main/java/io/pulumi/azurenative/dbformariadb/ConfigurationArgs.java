@@ -16,7 +16,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server configuration.
-     * 
      */
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
@@ -27,7 +26,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -49,7 +46,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source of the configuration.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;
@@ -60,7 +56,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value of the configuration.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

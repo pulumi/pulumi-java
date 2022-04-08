@@ -17,7 +17,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
 
     /**
      * Public Certificate byte array
-     * 
      */
     @Import(name="blob")
       private final @Nullable Output<String> blob;
@@ -28,7 +27,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -39,7 +37,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -50,7 +47,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
 
     /**
      * Public Certificate Location
-     * 
      */
     @Import(name="publicCertificateLocation")
       private final @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
@@ -61,7 +57,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
 
     /**
      * Public certificate name.
-     * 
      */
     @Import(name="publicCertificateName")
       private final @Nullable Output<String> publicCertificateName;
@@ -72,7 +67,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API will create a binding for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;

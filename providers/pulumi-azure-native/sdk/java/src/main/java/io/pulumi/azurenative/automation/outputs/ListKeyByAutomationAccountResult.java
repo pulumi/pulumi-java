@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListKeyByAutomationAccountResult {
     /**
      * Lists the automation keys.
-     * 
      */
     private final @Nullable List<KeyResponse> keys;
 
@@ -24,7 +23,6 @@ public final class ListKeyByAutomationAccountResult {
 
     /**
      * Lists the automation keys.
-     * 
     */
     public List<KeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;

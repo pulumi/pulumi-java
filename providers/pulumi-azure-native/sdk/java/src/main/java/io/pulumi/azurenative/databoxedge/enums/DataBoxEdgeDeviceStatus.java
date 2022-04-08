@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the Data Box Edge/Gateway device.
-     * 
      */
     @EnumType
     public enum DataBoxEdgeDeviceStatus {

@@ -11,13 +11,11 @@ import java.util.Objects;
 public final class ImageTemplateSharedImageVersionSourceResponse {
     /**
      * ARM resource id of the image version in the shared image gallery
-     * 
      */
     private final String imageVersionId;
     /**
      * Specifies the type of source image you want to start with.
      * Expected value is 'SharedImageVersion'.
-     * 
      */
     private final String type;
 
@@ -31,7 +29,6 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
 
     /**
      * ARM resource id of the image version in the shared image gallery
-     * 
     */
     public String getImageVersionId() {
         return this.imageVersionId;
@@ -39,7 +36,6 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
     /**
      * Specifies the type of source image you want to start with.
      * Expected value is 'SharedImageVersion'.
-     * 
     */
     public String getType() {
         return this.type;

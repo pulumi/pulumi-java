@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class IdentityPropertiesResponse {
     /**
      * Managed service identity type.
-     * 
      */
     private final @Nullable String type;
     /**
      * User assigned identity properties.
-     * 
      */
     private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
@@ -33,14 +31,12 @@ public final class IdentityPropertiesResponse {
 
     /**
      * Managed service identity type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * User assigned identity properties.
-     * 
     */
     public Optional<UserAssignedPropertiesResponse> getUserAssigned() {
         return Optional.ofNullable(this.userAssigned);

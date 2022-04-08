@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that collects user tables for the given list of databases
- * 
  */
 public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
 
     /**
      * List of source database names to collect tables for
-     * 
      */
     @Import(name="selectedSourceDatabases", required=true)
       private final List<String> selectedSourceDatabases;
@@ -31,7 +29,6 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
 
     /**
      * List of target database names to collect tables for
-     * 
      */
     @Import(name="selectedTargetDatabases", required=true)
       private final List<String> selectedTargetDatabases;
@@ -42,7 +39,6 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
 
     /**
      * Connection information for SQL Server
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
@@ -53,7 +49,6 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
 
     /**
      * Connection information for SQL DB
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;

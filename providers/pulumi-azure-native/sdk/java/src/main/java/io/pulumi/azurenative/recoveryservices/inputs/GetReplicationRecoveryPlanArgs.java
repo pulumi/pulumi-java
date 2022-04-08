@@ -14,7 +14,6 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
 
     /**
      * Name of the recovery plan.
-     * 
      */
     @Import(name="recoveryPlanName", required=true)
       private final String recoveryPlanName;
@@ -25,7 +24,6 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

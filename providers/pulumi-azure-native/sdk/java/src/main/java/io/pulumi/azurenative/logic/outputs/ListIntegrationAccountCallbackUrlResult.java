@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListIntegrationAccountCallbackUrlResult {
     /**
      * The URL value.
-     * 
      */
     private final @Nullable String value;
 
@@ -24,7 +23,6 @@ public final class ListIntegrationAccountCallbackUrlResult {
 
     /**
      * The URL value.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

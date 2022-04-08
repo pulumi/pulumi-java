@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database specific information for SQL to Azure SQL DB sync migration task inputs
- * 
  */
 public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Unique identifier for database
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Migration settings which tune the migration behavior
-     * 
      */
     @Import(name="migrationSetting")
       private final @Nullable Map<String,String> migrationSetting;
@@ -43,7 +40,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Name of database
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Schema name to be migrated
-     * 
      */
     @Import(name="schemaName")
       private final @Nullable String schemaName;
@@ -65,7 +60,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Source settings to tune source endpoint migration behavior
-     * 
      */
     @Import(name="sourceSetting")
       private final @Nullable Map<String,String> sourceSetting;
@@ -76,7 +70,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Mapping of source to target tables
-     * 
      */
     @Import(name="tableMap")
       private final @Nullable Map<String,String> tableMap;
@@ -87,7 +80,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Target database name
-     * 
      */
     @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
@@ -98,7 +90,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
 
     /**
      * Target settings to tune target endpoint migration behavior
-     * 
      */
     @Import(name="targetSetting")
       private final @Nullable Map<String,String> targetSetting;

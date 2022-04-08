@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ApplicationNotificationPolicyResponse {
     /**
      * The managed application notification endpoint.
-     * 
      */
     private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
@@ -23,7 +22,6 @@ public final class ApplicationNotificationPolicyResponse {
 
     /**
      * The managed application notification endpoint.
-     * 
     */
     public List<ApplicationNotificationEndpointResponse> getNotificationEndpoints() {
         return this.notificationEndpoints;

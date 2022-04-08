@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Edifact agreement content.
- * 
  */
 public final class EdifactAgreementContentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
 
     /**
      * The EDIFACT one-way receive agreement.
-     * 
      */
     @Import(name="receiveAgreement", required=true)
       private final EdifactOneWayAgreementResponse receiveAgreement;
@@ -29,7 +27,6 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
 
     /**
      * The EDIFACT one-way send agreement.
-     * 
      */
     @Import(name="sendAgreement", required=true)
       private final EdifactOneWayAgreementResponse sendAgreement;

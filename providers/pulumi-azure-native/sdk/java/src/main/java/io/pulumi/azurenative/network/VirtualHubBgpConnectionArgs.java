@@ -17,7 +17,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the connection.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -28,7 +27,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -39,7 +37,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the connection.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * Peer ASN.
-     * 
      */
     @Import(name="peerAsn")
       private final @Nullable Output<Double> peerAsn;
@@ -61,7 +57,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * Peer IP.
-     * 
      */
     @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
@@ -72,7 +67,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource group name of the VirtualHub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;

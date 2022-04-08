@@ -20,7 +20,123 @@ import javax.annotation.Nullable;
  * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Origins_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var origin = new AzureNative.Cdn.Origin("origin", new AzureNative.Cdn.OriginArgs
+ *         {
+ *             Enabled = true,
+ *             EndpointName = "endpoint1",
+ *             HostName = "www.someDomain.net",
+ *             HttpPort = 80,
+ *             HttpsPort = 443,
+ *             OriginHostHeader = "www.someDomain.net",
+ *             OriginName = "www-someDomain-net",
+ *             Priority = 1,
+ *             PrivateLinkApprovalMessage = "Please approve the connection request for this Private Link",
+ *             PrivateLinkLocation = "eastus",
+ *             PrivateLinkResourceId = "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *             Weight = 50,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cdn.NewOrigin(ctx, "origin", &cdn.OriginArgs{
+ * 			Enabled:                    pulumi.Bool(true),
+ * 			EndpointName:               pulumi.String("endpoint1"),
+ * 			HostName:                   pulumi.String("www.someDomain.net"),
+ * 			HttpPort:                   pulumi.Int(80),
+ * 			HttpsPort:                  pulumi.Int(443),
+ * 			OriginHostHeader:           pulumi.String("www.someDomain.net"),
+ * 			OriginName:                 pulumi.String("www-someDomain-net"),
+ * 			Priority:                   pulumi.Int(1),
+ * 			PrivateLinkApprovalMessage: pulumi.String("Please approve the connection request for this Private Link"),
+ * 			PrivateLinkLocation:        pulumi.String("eastus"),
+ * 			PrivateLinkResourceId:      pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1"),
+ * 			ProfileName:                pulumi.String("profile1"),
+ * 			ResourceGroupName:          pulumi.String("RG"),
+ * 			Weight:                     pulumi.Int(50),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const origin = new azure_native.cdn.Origin("origin", {
+ *     enabled: true,
+ *     endpointName: "endpoint1",
+ *     hostName: "www.someDomain.net",
+ *     httpPort: 80,
+ *     httpsPort: 443,
+ *     originHostHeader: "www.someDomain.net",
+ *     originName: "www-someDomain-net",
+ *     priority: 1,
+ *     privateLinkApprovalMessage: "Please approve the connection request for this Private Link",
+ *     privateLinkLocation: "eastus",
+ *     privateLinkResourceId: "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ *     weight: 50,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * origin = azure_native.cdn.Origin("origin",
+ *     enabled=True,
+ *     endpoint_name="endpoint1",
+ *     host_name="www.someDomain.net",
+ *     http_port=80,
+ *     https_port=443,
+ *     origin_host_header="www.someDomain.net",
+ *     origin_name="www-someDomain-net",
+ *     priority=1,
+ *     private_link_approval_message="Please approve the connection request for this Private Link",
+ *     private_link_location="eastus",
+ *     private_link_resource_id="/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+ *     profile_name="profile1",
+ *     resource_group_name="RG",
+ *     weight=50)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,238 +151,204 @@ import javax.annotation.Nullable;
 public class Origin extends io.pulumi.resources.CustomResource {
     /**
      * Origin is enabled for load balancing or not
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Origin is enabled for load balancing or not
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
     }
     /**
      * The value of the HTTP port. Must be between 1 and 65535.
-     * 
      */
     @Export(name="httpPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpPort;
 
     /**
      * @return The value of the HTTP port. Must be between 1 and 65535.
-     * 
      */
     public Output</* @Nullable */ Integer> getHttpPort() {
         return this.httpPort;
     }
     /**
      * The value of the HTTPS port. Must be between 1 and 65535.
-     * 
      */
     @Export(name="httpsPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpsPort;
 
     /**
      * @return The value of the HTTPS port. Must be between 1 and 65535.
-     * 
      */
     public Output</* @Nullable */ Integer> getHttpsPort() {
         return this.httpsPort;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
-     * 
      */
     @Export(name="originHostHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> originHostHeader;
 
     /**
      * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
-     * 
      */
     public Output</* @Nullable */ String> getOriginHostHeader() {
         return this.originHostHeader;
     }
     /**
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
-     * 
      */
     @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
      * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
-     * 
      */
     public Output</* @Nullable */ Integer> getPriority() {
         return this.priority;
     }
     /**
      * The approval status for the connection to the Private Link
-     * 
      */
     @Export(name="privateEndpointStatus", type=String.class, parameters={})
     private Output<String> privateEndpointStatus;
 
     /**
      * @return The approval status for the connection to the Private Link
-     * 
      */
     public Output<String> getPrivateEndpointStatus() {
         return this.privateEndpointStatus;
     }
     /**
      * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
-     * 
      */
     @Export(name="privateLinkAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkAlias;
 
     /**
      * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
-     * 
      */
     public Output</* @Nullable */ String> getPrivateLinkAlias() {
         return this.privateLinkAlias;
     }
     /**
      * A custom message to be included in the approval request to connect to the Private Link.
-     * 
      */
     @Export(name="privateLinkApprovalMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkApprovalMessage;
 
     /**
      * @return A custom message to be included in the approval request to connect to the Private Link.
-     * 
      */
     public Output</* @Nullable */ String> getPrivateLinkApprovalMessage() {
         return this.privateLinkApprovalMessage;
     }
     /**
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
-     * 
      */
     @Export(name="privateLinkLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkLocation;
 
     /**
      * @return The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
-     * 
      */
     public Output</* @Nullable */ String> getPrivateLinkLocation() {
         return this.privateLinkLocation;
     }
     /**
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-     * 
      */
     @Export(name="privateLinkResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkResourceId;
 
     /**
      * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-     * 
      */
     public Output</* @Nullable */ String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
      * Provisioning status of the origin.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status of the origin.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the origin.
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return Resource status of the origin.
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
-     * 
      */
     @Export(name="weight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weight;
 
     /**
      * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
-     * 
      */
     public Output</* @Nullable */ Integer> getWeight() {
         return this.weight;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyTransportSecurityResponse {
     /**
      * The CA used for intermediate CA generation.
-     * 
      */
     private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 
@@ -24,7 +23,6 @@ public final class FirewallPolicyTransportSecurityResponse {
 
     /**
      * The CA used for intermediate CA generation.
-     * 
     */
     public Optional<FirewallPolicyCertificateAuthorityResponse> getCertificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);

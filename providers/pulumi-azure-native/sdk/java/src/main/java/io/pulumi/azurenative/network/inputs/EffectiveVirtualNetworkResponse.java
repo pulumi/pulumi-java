@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Effective Virtual Network
- * 
  */
 public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
 
     /**
      * Effective vnet Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
 
     /**
      * Location of vnet.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -42,7 +39,6 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
 
     /**
      * Membership Type.
-     * 
      */
     @Import(name="membershipType")
       private final @Nullable String membershipType;

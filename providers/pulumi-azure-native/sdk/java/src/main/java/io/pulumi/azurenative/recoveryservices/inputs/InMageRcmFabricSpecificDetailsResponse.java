@@ -18,7 +18,6 @@ import java.util.Objects;
 
 /**
  * InMageRcm fabric specific details.
- * 
  */
 public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The list of agent details.
-     * 
      */
     @Import(name="agentDetails", required=true)
       private final List<AgentDetailsResponse> agentDetails;
@@ -37,7 +35,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The control plane Uri.
-     * 
      */
     @Import(name="controlPlaneUri", required=true)
       private final String controlPlaneUri;
@@ -48,7 +45,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The data plane Uri.
-     * 
      */
     @Import(name="dataPlaneUri", required=true)
       private final String dataPlaneUri;
@@ -59,7 +55,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The list of DRAs.
-     * 
      */
     @Import(name="dras", required=true)
       private final List<DraDetailsResponse> dras;
@@ -71,7 +66,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'InMageRcm'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -82,7 +76,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The ARM Id of the physical site.
-     * 
      */
     @Import(name="physicalSiteId", required=true)
       private final String physicalSiteId;
@@ -93,7 +86,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The list of process servers.
-     * 
      */
     @Import(name="processServers", required=true)
       private final List<ProcessServerDetailsResponse> processServers;
@@ -104,7 +96,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The list of push installers.
-     * 
      */
     @Import(name="pushInstallers", required=true)
       private final List<PushInstallerDetailsResponse> pushInstallers;
@@ -115,7 +106,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The list of RCM proxies.
-     * 
      */
     @Import(name="rcmProxies", required=true)
       private final List<RcmProxyDetailsResponse> rcmProxies;
@@ -126,7 +116,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The list of replication agents.
-     * 
      */
     @Import(name="replicationAgents", required=true)
       private final List<ReplicationAgentDetailsResponse> replicationAgents;
@@ -137,7 +126,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The list of reprotect agents.
-     * 
      */
     @Import(name="reprotectAgents", required=true)
       private final List<ReprotectAgentDetailsResponse> reprotectAgents;
@@ -148,7 +136,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The service container Id.
-     * 
      */
     @Import(name="serviceContainerId", required=true)
       private final String serviceContainerId;
@@ -159,7 +146,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The service endpoint.
-     * 
      */
     @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
@@ -170,7 +156,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The service resource Id.
-     * 
      */
     @Import(name="serviceResourceId", required=true)
       private final String serviceResourceId;
@@ -181,7 +166,6 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
 
     /**
      * The ARM Id of the VMware site.
-     * 
      */
     @Import(name="vmwareSiteId", required=true)
       private final String vmwareSiteId;

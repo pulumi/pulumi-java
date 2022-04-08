@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * Description of a namespace resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RelayNamespaceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @namespace = new AzureNative.Relay.Namespace("namespace", new AzureNative.Relay.NamespaceArgs
+ *         {
+ *             Location = "West US",
+ *             NamespaceName = "example-RelayNamespace-01",
+ *             ResourceGroupName = "resourcegroup",
+ *             Sku = new AzureNative.Relay.Inputs.SkuArgs
+ *             {
+ *                 Name = "Standard",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := relay.NewNamespace(ctx, "namespace", &relay.NamespaceArgs{
+ * 			Location:          pulumi.String("West US"),
+ * 			NamespaceName:     pulumi.String("example-RelayNamespace-01"),
+ * 			ResourceGroupName: pulumi.String("resourcegroup"),
+ * 			Sku: &relay.SkuArgs{
+ * 				Name: "Standard",
+ * 				Tier: "Standard",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const namespace = new azure_native.relay.Namespace("namespace", {
+ *     location: "West US",
+ *     namespaceName: "example-RelayNamespace-01",
+ *     resourceGroupName: "resourcegroup",
+ *     sku: {
+ *         name: "Standard",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * namespace = azure_native.relay.Namespace("namespace",
+ *     location="West US",
+ *     namespace_name="example-RelayNamespace-01",
+ *     resource_group_name="resourcegroup",
+ *     sku=azure_native.relay.SkuArgs(
+ *         name="Standard",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +140,48 @@ import javax.annotation.Nullable;
 public class Namespace extends io.pulumi.resources.CustomResource {
     /**
      * The time the namespace was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time the namespace was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Identifier for Azure Insights metrics.
-     * 
      */
     @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
      * @return Identifier for Azure Insights metrics.
-     * 
      */
     public Output<String> getMetricId() {
         return this.metricId;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -96,70 +194,60 @@ public class Namespace extends io.pulumi.resources.CustomResource {
     }
     /**
      * Endpoint you can use to perform Service Bus operations.
-     * 
      */
     @Export(name="serviceBusEndpoint", type=String.class, parameters={})
     private Output<String> serviceBusEndpoint;
 
     /**
      * @return Endpoint you can use to perform Service Bus operations.
-     * 
      */
     public Output<String> getServiceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
      * SKU of the namespace.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return SKU of the namespace.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The time the namespace was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;

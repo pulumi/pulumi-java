@@ -18,7 +18,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the database to store job metadata in.
-     * 
      */
     @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
@@ -29,7 +28,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job agent to be created or updated.
-     * 
      */
     @Import(name="jobAgentName")
       private final @Nullable Output<String> jobAgentName;
@@ -40,7 +38,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -73,7 +68,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name and tier of the SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -84,7 +78,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

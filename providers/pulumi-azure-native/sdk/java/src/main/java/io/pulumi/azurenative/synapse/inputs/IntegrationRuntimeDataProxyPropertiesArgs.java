@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data proxy properties for a managed dedicated integration runtime.
- * 
  */
 public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
 
     /**
      * The self-hosted integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<EntityReferenceArgs> connectVia;
@@ -32,7 +30,6 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
 
     /**
      * The path to contain the staged data in the Blob storage.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -43,7 +40,6 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
 
     /**
      * The staging linked service reference.
-     * 
      */
     @Import(name="stagingLinkedService")
       private final @Nullable Output<EntityReferenceArgs> stagingLinkedService;

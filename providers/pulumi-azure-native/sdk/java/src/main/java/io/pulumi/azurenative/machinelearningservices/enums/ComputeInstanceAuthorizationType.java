@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Compute Instance Authorization type. Available values are personal (default).
-     * 
      */
     @EnumType
     public enum ComputeInstanceAuthorizationType {

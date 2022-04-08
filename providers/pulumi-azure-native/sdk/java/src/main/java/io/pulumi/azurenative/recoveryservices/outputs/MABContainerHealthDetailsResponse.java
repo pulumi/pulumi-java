@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class MABContainerHealthDetailsResponse {
     /**
      * Health Code
-     * 
      */
     private final @Nullable Integer code;
     /**
      * Health Message
-     * 
      */
     private final @Nullable String message;
     /**
      * Health Recommended Actions
-     * 
      */
     private final @Nullable List<String> recommendations;
     /**
      * Health Title
-     * 
      */
     private final @Nullable String title;
 
@@ -48,28 +44,24 @@ public final class MABContainerHealthDetailsResponse {
 
     /**
      * Health Code
-     * 
     */
     public Optional<Integer> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Health Message
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Health Recommended Actions
-     * 
     */
     public List<String> getRecommendations() {
         return this.recommendations == null ? List.of() : this.recommendations;
     }
     /**
      * Health Title
-     * 
     */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The blob service properties for blob restore policy
- * 
  */
 public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
-     * 
      */
     @Import(name="days")
       private final @Nullable Integer days;
@@ -33,7 +31,6 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * Blob restore is enabled if set to true.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;
@@ -44,7 +41,6 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * Deprecated in favor of minRestoreTime property.
-     * 
      */
     @Import(name="lastEnabledTime", required=true)
       private final String lastEnabledTime;
@@ -55,7 +51,6 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * Returns the minimum date and time that the restore can be started.
-     * 
      */
     @Import(name="minRestoreTime", required=true)
       private final String minRestoreTime;

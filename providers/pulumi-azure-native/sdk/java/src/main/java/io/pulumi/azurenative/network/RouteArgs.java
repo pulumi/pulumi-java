@@ -19,7 +19,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination CIDR to which the route applies.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
@@ -30,7 +29,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
-     * 
      */
     @Import(name="hasBgpOverride")
       private final @Nullable Output<Boolean> hasBgpOverride;
@@ -41,7 +39,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -52,7 +49,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-     * 
      */
     @Import(name="nextHopIpAddress")
       private final @Nullable Output<String> nextHopIpAddress;
@@ -74,7 +69,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of Azure hop the packet should be sent to.
-     * 
      */
     @Import(name="nextHopType", required=true)
       private final Output<Either<String,RouteNextHopType>> nextHopType;
@@ -85,7 +79,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +89,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the route.
-     * 
      */
     @Import(name="routeName")
       private final @Nullable Output<String> routeName;
@@ -107,7 +99,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the route table.
-     * 
      */
     @Import(name="routeTableName", required=true)
       private final Output<String> routeTableName;
@@ -118,7 +109,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

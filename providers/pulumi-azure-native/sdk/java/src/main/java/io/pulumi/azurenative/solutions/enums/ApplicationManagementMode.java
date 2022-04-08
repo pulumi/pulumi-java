@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The managed application management mode.
-     * 
      */
     @EnumType
     public enum ApplicationManagementMode {

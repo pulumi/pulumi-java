@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Part of Management Group diagnostic setting. Specifies the settings for a particular log.
- * 
  */
 public final class ManagementGroupLogSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ManagementGroupLogSettingsResponse extends io.pulumi.resource
 
     /**
      * Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
-     * 
      */
     @Import(name="category", required=true)
       private final String category;
@@ -30,7 +28,6 @@ public final class ManagementGroupLogSettingsResponse extends io.pulumi.resource
 
     /**
      * a value indicating whether this log is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

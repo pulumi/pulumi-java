@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
-     * 
      */
     @EnumType
     public enum ResourceIdentityType {

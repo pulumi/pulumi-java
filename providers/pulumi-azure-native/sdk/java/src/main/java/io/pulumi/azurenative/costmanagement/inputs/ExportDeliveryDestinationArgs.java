@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The destination information for the delivery of the export. To allow access to a storage account, you must register the account's subscription with the Microsoft.CostManagementExports resource provider. This is required once per subscription. When creating an export in the Azure portal, it is done automatically, however API users need to register the subscription. For more information see https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services .
- * 
  */
 public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the container where exports will be uploaded.
-     * 
      */
     @Import(name="container", required=true)
       private final Output<String> container;
@@ -31,7 +29,6 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
 
     /**
      * The resource id of the storage account where exports will be delivered.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
@@ -42,7 +39,6 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the directory where exports will be uploaded.
-     * 
      */
     @Import(name="rootFolderPath")
       private final @Nullable Output<String> rootFolderPath;

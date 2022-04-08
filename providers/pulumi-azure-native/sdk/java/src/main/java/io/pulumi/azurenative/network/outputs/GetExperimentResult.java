@@ -15,62 +15,50 @@ import javax.annotation.Nullable;
 public final class GetExperimentResult {
     /**
      * The description of the details or intents of the Experiment
-     * 
      */
     private final @Nullable String description;
     /**
      * The state of the Experiment
-     * 
      */
     private final @Nullable String enabledState;
     /**
      * The endpoint A of an experiment
-     * 
      */
     private final @Nullable ExperimentEndpointResponse endpointA;
     /**
      * The endpoint B of an experiment
-     * 
      */
     private final @Nullable ExperimentEndpointResponse endpointB;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource status.
-     * 
      */
     private final String resourceState;
     /**
      * The uri to the Script used in the Experiment
-     * 
      */
     private final String scriptFileUri;
     /**
      * The description of Experiment status from the server side
-     * 
      */
     private final String status;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -104,84 +92,72 @@ public final class GetExperimentResult {
 
     /**
      * The description of the details or intents of the Experiment
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The state of the Experiment
-     * 
     */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * The endpoint A of an experiment
-     * 
     */
     public Optional<ExperimentEndpointResponse> getEndpointA() {
         return Optional.ofNullable(this.endpointA);
     }
     /**
      * The endpoint B of an experiment
-     * 
     */
     public Optional<ExperimentEndpointResponse> getEndpointB() {
         return Optional.ofNullable(this.endpointB);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource status.
-     * 
     */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * The uri to the Script used in the Experiment
-     * 
     */
     public String getScriptFileUri() {
         return this.scriptFileUri;
     }
     /**
      * The description of Experiment status from the server side
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

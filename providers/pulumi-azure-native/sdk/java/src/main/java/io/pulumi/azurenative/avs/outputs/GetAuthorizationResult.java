@@ -11,32 +11,26 @@ import java.util.Objects;
 public final class GetAuthorizationResult {
     /**
      * The ID of the ExpressRoute Circuit Authorization
-     * 
      */
     private final String expressRouteAuthorizationId;
     /**
      * The key of the ExpressRoute Circuit Authorization
-     * 
      */
     private final String expressRouteAuthorizationKey;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning
-     * 
      */
     private final String provisioningState;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -58,42 +52,36 @@ public final class GetAuthorizationResult {
 
     /**
      * The ID of the ExpressRoute Circuit Authorization
-     * 
     */
     public String getExpressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
     /**
      * The key of the ExpressRoute Circuit Authorization
-     * 
     */
     public String getExpressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

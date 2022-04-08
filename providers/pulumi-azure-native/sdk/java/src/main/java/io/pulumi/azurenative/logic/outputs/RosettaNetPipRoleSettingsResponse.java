@@ -14,37 +14,30 @@ import javax.annotation.Nullable;
 public final class RosettaNetPipRoleSettingsResponse {
     /**
      * The action name.
-     * 
      */
     private final String action;
     /**
      * The RosettaNet ProcessConfiguration business document.
-     * 
      */
     private final RosettaNetPipBusinessDocumentResponse businessDocument;
     /**
      * The description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The role name.
-     * 
      */
     private final String role;
     /**
      * The RosettaNet ProcessConfiguration role type.
-     * 
      */
     private final String roleType;
     /**
      * The service name.
-     * 
      */
     private final String service;
     /**
      * The service classification name.
-     * 
      */
     private final String serviceClassification;
 
@@ -68,49 +61,42 @@ public final class RosettaNetPipRoleSettingsResponse {
 
     /**
      * The action name.
-     * 
     */
     public String getAction() {
         return this.action;
     }
     /**
      * The RosettaNet ProcessConfiguration business document.
-     * 
     */
     public RosettaNetPipBusinessDocumentResponse getBusinessDocument() {
         return this.businessDocument;
     }
     /**
      * The description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The role name.
-     * 
     */
     public String getRole() {
         return this.role;
     }
     /**
      * The RosettaNet ProcessConfiguration role type.
-     * 
     */
     public String getRoleType() {
         return this.roleType;
     }
     /**
      * The service name.
-     * 
     */
     public String getService() {
         return this.service;
     }
     /**
      * The service classification name.
-     * 
     */
     public String getServiceClassification() {
         return this.serviceClassification;

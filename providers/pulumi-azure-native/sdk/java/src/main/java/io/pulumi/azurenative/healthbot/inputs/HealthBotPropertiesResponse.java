@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The properties of a HealthBot. The Health Bot Service is a cloud platform that empowers developers in Healthcare organizations to build and deploy their compliant, AI-powered virtual health assistants and health bots, that help them improve processes and reduce costs.
- * 
  */
 public final class HealthBotPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HealthBotPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * The link.
-     * 
      */
     @Import(name="botManagementPortalLink", required=true)
       private final String botManagementPortalLink;
@@ -29,7 +27,6 @@ public final class HealthBotPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * The provisioning state of the Healthbot resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

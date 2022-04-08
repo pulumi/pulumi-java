@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The group header date format.
-     * 
      */
     @EnumType
     public enum X12DateFormat {

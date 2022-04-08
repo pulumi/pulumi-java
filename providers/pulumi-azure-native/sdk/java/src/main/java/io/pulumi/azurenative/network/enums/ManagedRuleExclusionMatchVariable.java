@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The variable type to be excluded.
-     * 
      */
     @EnumType
     public enum ManagedRuleExclusionMatchVariable {

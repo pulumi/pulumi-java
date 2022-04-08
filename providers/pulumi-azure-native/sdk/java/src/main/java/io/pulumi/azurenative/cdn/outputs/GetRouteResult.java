@@ -17,88 +17,71 @@ import javax.annotation.Nullable;
 public final class GetRouteResult {
     /**
      * compression settings.
-     * 
      */
     private final @Nullable CompressionSettingsResponse compressionSettings;
     /**
      * Domains referenced by this endpoint.
-     * 
      */
     private final @Nullable List<ResourceReferenceResponse> customDomains;
     private final String deploymentStatus;
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     private final @Nullable String enabledState;
     /**
      * Protocol this rule will use when forwarding traffic to backends.
-     * 
      */
     private final @Nullable String forwardingProtocol;
     /**
      * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
-     * 
      */
     private final @Nullable String httpsRedirect;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * whether this route will be linked to the default endpoint domain.
-     * 
      */
     private final @Nullable String linkToDefaultDomain;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * A reference to the origin group.
-     * 
      */
     private final ResourceReferenceResponse originGroup;
     /**
      * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
-     * 
      */
     private final @Nullable String originPath;
     /**
      * The route patterns of the rule.
-     * 
      */
     private final @Nullable List<String> patternsToMatch;
     /**
      * Provisioning status
-     * 
      */
     private final String provisioningState;
     /**
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
-     * 
      */
     private final @Nullable String queryStringCachingBehavior;
     /**
      * rule sets referenced by this endpoint.
-     * 
      */
     private final @Nullable List<ResourceReferenceResponse> ruleSets;
     /**
      * List of supported protocols for this route.
-     * 
      */
     private final @Nullable List<String> supportedProtocols;
     /**
      * Read only system data
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -144,14 +127,12 @@ public final class GetRouteResult {
 
     /**
      * compression settings.
-     * 
     */
     public Optional<CompressionSettingsResponse> getCompressionSettings() {
         return Optional.ofNullable(this.compressionSettings);
     }
     /**
      * Domains referenced by this endpoint.
-     * 
     */
     public List<ResourceReferenceResponse> getCustomDomains() {
         return this.customDomains == null ? List.of() : this.customDomains;
@@ -161,105 +142,90 @@ public final class GetRouteResult {
     }
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-     * 
     */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Protocol this rule will use when forwarding traffic to backends.
-     * 
     */
     public Optional<String> getForwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
     /**
      * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
-     * 
     */
     public Optional<String> getHttpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * whether this route will be linked to the default endpoint domain.
-     * 
     */
     public Optional<String> getLinkToDefaultDomain() {
         return Optional.ofNullable(this.linkToDefaultDomain);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * A reference to the origin group.
-     * 
     */
     public ResourceReferenceResponse getOriginGroup() {
         return this.originGroup;
     }
     /**
      * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
-     * 
     */
     public Optional<String> getOriginPath() {
         return Optional.ofNullable(this.originPath);
     }
     /**
      * The route patterns of the rule.
-     * 
     */
     public List<String> getPatternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
     /**
      * Provisioning status
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
-     * 
     */
     public Optional<String> getQueryStringCachingBehavior() {
         return Optional.ofNullable(this.queryStringCachingBehavior);
     }
     /**
      * rule sets referenced by this endpoint.
-     * 
     */
     public List<ResourceReferenceResponse> getRuleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }
     /**
      * List of supported protocols for this route.
-     * 
     */
     public List<String> getSupportedProtocols() {
         return this.supportedProtocols == null ? List.of() : this.supportedProtocols;
     }
     /**
      * Read only system data
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

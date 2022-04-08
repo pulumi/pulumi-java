@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class ScheduleTriggerRecurrenceResponse {
     /**
      * The end time.
-     * 
      */
     private final @Nullable String endTime;
     /**
      * The frequency.
-     * 
      */
     private final @Nullable String frequency;
     /**
      * The interval.
-     * 
      */
     private final @Nullable Integer interval;
     /**
      * The recurrence schedule.
-     * 
      */
     private final @Nullable RecurrenceScheduleResponse schedule;
     /**
      * The start time.
-     * 
      */
     private final @Nullable String startTime;
     /**
      * The time zone.
-     * 
      */
     private final @Nullable String timeZone;
 
@@ -62,42 +56,36 @@ public final class ScheduleTriggerRecurrenceResponse {
 
     /**
      * The end time.
-     * 
     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The frequency.
-     * 
     */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * The interval.
-     * 
     */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * The recurrence schedule.
-     * 
     */
     public Optional<RecurrenceScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The start time.
-     * 
     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The time zone.
-     * 
     */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);

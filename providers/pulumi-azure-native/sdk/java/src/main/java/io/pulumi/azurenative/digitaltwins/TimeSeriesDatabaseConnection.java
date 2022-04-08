@@ -19,7 +19,86 @@ import javax.annotation.Nullable;
  * Describes a time series database connection resource.
  * API Version: 2021-06-30-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or replace a time series database connection for a DigitalTwins instance.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var timeSeriesDatabaseConnection = new AzureNative.DigitalTwins.TimeSeriesDatabaseConnection("timeSeriesDatabaseConnection", new AzureNative.DigitalTwins.TimeSeriesDatabaseConnectionArgs
+ *         {
+ *             Properties = new AzureNative.DigitalTwins.Inputs.AzureDataExplorerConnectionPropertiesArgs
+ *             {
+ *                 AdxDatabaseName = "myDatabase",
+ *                 AdxEndpointUri = "https://mycluster.kusto.windows.net",
+ *                 AdxResourceId = "/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mycluster",
+ *                 AdxTableName = "myTable",
+ *                 ConnectionType = "AzureDataExplorer",
+ *                 EventHubEndpointUri = "sb://myeh.servicebus.windows.net/",
+ *                 EventHubEntityPath = "myeh",
+ *                 EventHubNamespaceResourceId = "/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.EventHub/namespaces/myeh",
+ *             },
+ *             ResourceGroupName = "resRg",
+ *             ResourceName = "myDigitalTwinsService",
+ *             TimeSeriesDatabaseConnectionName = "myConnection",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const timeSeriesDatabaseConnection = new azure_native.digitaltwins.TimeSeriesDatabaseConnection("timeSeriesDatabaseConnection", {
+ *     properties: {
+ *         adxDatabaseName: "myDatabase",
+ *         adxEndpointUri: "https://mycluster.kusto.windows.net",
+ *         adxResourceId: "/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mycluster",
+ *         adxTableName: "myTable",
+ *         connectionType: "AzureDataExplorer",
+ *         eventHubEndpointUri: "sb://myeh.servicebus.windows.net/",
+ *         eventHubEntityPath: "myeh",
+ *         eventHubNamespaceResourceId: "/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.EventHub/namespaces/myeh",
+ *     },
+ *     resourceGroupName: "resRg",
+ *     resourceName: "myDigitalTwinsService",
+ *     timeSeriesDatabaseConnectionName: "myConnection",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * time_series_database_connection = azure_native.digitaltwins.TimeSeriesDatabaseConnection("timeSeriesDatabaseConnection",
+ *     properties={
+ *         "adxDatabaseName": "myDatabase",
+ *         "adxEndpointUri": "https://mycluster.kusto.windows.net",
+ *         "adxResourceId": "/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mycluster",
+ *         "adxTableName": "myTable",
+ *         "connectionType": "AzureDataExplorer",
+ *         "eventHubEndpointUri": "sb://myeh.servicebus.windows.net/",
+ *         "eventHubEntityPath": "myeh",
+ *         "eventHubNamespaceResourceId": "/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.EventHub/namespaces/myeh",
+ *     },
+ *     resource_group_name="resRg",
+ *     resource_name="myDigitalTwinsService",
+ *     time_series_database_connection_name="myConnection")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +113,48 @@ import javax.annotation.Nullable;
 public class TimeSeriesDatabaseConnection extends io.pulumi.resources.CustomResource {
     /**
      * Extension resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Extension resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of a specific time series database connection.
-     * 
      */
     @Export(name="properties", type=AzureDataExplorerConnectionPropertiesResponse.class, parameters={})
     private Output<AzureDataExplorerConnectionPropertiesResponse> properties;
 
     /**
      * @return Properties of a specific time series database connection.
-     * 
      */
     public Output<AzureDataExplorerConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

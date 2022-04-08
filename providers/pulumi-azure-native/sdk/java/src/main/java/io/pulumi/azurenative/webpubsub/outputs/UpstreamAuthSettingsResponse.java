@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class UpstreamAuthSettingsResponse {
     /**
      * Managed identity settings for upstream.
-     * 
      */
     private final @Nullable ManagedIdentitySettingsResponse managedIdentity;
     /**
      * Upstream auth type enum.
-     * 
      */
     private final @Nullable String type;
 
@@ -33,14 +31,12 @@ public final class UpstreamAuthSettingsResponse {
 
     /**
      * Managed identity settings for upstream.
-     * 
     */
     public Optional<ManagedIdentitySettingsResponse> getManagedIdentity() {
         return Optional.ofNullable(this.managedIdentity);
     }
     /**
      * Upstream auth type enum.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

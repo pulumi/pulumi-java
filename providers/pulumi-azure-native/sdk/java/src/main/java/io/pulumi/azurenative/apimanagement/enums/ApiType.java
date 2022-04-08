@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of API.
-     * 
      */
     @EnumType
     public enum ApiType {

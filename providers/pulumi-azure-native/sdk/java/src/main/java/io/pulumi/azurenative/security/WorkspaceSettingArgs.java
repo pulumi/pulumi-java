@@ -16,7 +16,6 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -27,7 +26,6 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The full Azure ID of the workspace to save the data in
-     * 
      */
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
@@ -38,7 +36,6 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the security setting
-     * 
      */
     @Import(name="workspaceSettingName")
       private final @Nullable Output<String> workspaceSettingName;

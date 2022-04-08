@@ -16,7 +16,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the dataSet.
-     * 
      */
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
@@ -38,7 +36,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * The file system name.
-     * 
      */
     @Import(name="fileSystem", required=true)
       private final Output<String> fileSystem;
@@ -50,7 +47,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
     /**
      * Kind of data set.
      * Expected value is 'AdlsGen2FileSystem'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -61,7 +57,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * Resource group of storage account
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -72,7 +67,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the share to add the data set to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -94,7 +87,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * Storage account name of the source data set
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
@@ -105,7 +97,6 @@ public final class ADLSGen2FileSystemDataSetArgs extends io.pulumi.resources.Res
 
     /**
      * Subscription id of storage account
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;

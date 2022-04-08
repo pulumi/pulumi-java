@@ -16,7 +16,6 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
 
     /**
      * Resource ID of the virtual machine that is linked to this policy
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -27,7 +26,6 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
 
     /**
      * The ports that were opened for the virtual machine
-     * 
      */
     @Import(name="ports", required=true)
       private final List<JitNetworkAccessRequestPortResponse> ports;

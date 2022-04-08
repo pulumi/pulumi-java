@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the UrlFileExtension condition for the delivery rule.
- * 
  */
 public final class DeliveryRuleUrlFileExtensionConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse extends io.pulu
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'UrlFileExtension'.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse extends io.pulu
 
     /**
      * Defines the parameters for the condition.
-     * 
      */
     @Import(name="parameters", required=true)
       private final UrlFileExtensionMatchConditionParametersResponse parameters;

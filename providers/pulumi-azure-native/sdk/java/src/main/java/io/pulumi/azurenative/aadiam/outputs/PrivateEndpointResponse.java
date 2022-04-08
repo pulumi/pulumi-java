@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PrivateEndpointResponse {
     /**
      * Full identifier of the private endpoint resource.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class PrivateEndpointResponse {
 
     /**
      * Full identifier of the private endpoint resource.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

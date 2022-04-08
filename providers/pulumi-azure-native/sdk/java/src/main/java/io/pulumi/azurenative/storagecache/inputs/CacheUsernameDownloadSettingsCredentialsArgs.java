@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * When present, these are the credentials for the secure LDAP connection.
- * 
  */
 public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
 
     /**
      * The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
-     * 
      */
     @Import(name="bindDn")
       private final @Nullable Output<String> bindDn;
@@ -31,7 +29,6 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
 
     /**
      * The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
-     * 
      */
     @Import(name="bindPassword")
       private final @Nullable Output<String> bindPassword;

@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class FrontDoorManagedRuleGroupOverrideResponse {
     /**
      * Describes the exclusions that are applied to all rules in the group.
-     * 
      */
     private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
     /**
      * Describes the managed rule group to override.
-     * 
      */
     private final String ruleGroupName;
     /**
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
-     * 
      */
     private final @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
 
@@ -41,21 +38,18 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
 
     /**
      * Describes the exclusions that are applied to all rules in the group.
-     * 
     */
     public List<ManagedRuleExclusionResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Describes the managed rule group to override.
-     * 
     */
     public String getRuleGroupName() {
         return this.ruleGroupName;
     }
     /**
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
-     * 
     */
     public List<FrontDoorManagedRuleOverrideResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;

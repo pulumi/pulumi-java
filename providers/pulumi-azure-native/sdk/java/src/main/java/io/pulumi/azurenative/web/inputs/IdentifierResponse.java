@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A domain specific resource identifier.
- * 
  */
 public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -31,7 +29,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -42,7 +39,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -53,7 +49,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -64,7 +59,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String representation of the identity.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

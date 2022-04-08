@@ -19,7 +19,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The feature approval type.
-     * 
      */
     @Import(name="approvalType", required=true)
       private final String approvalType;
@@ -30,7 +29,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * Authorization Profile
-     * 
      */
     @Import(name="authorizationProfile")
       private final @Nullable AuthorizationProfileResponse authorizationProfile;
@@ -41,7 +39,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The feature description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -52,7 +49,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The featureDisplayName.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -63,7 +59,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The feature documentation link.
-     * 
      */
     @Import(name="documentationLink", required=true)
       private final String documentationLink;
@@ -74,7 +69,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The featureName.
-     * 
      */
     @Import(name="featureName", required=true)
       private final String featureName;
@@ -85,7 +79,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * Key-value pairs for meta data.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
@@ -96,7 +89,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The providerNamespace.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
@@ -107,7 +99,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The feature registration date.
-     * 
      */
     @Import(name="registrationDate", required=true)
       private final String registrationDate;
@@ -118,7 +109,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The feature release date.
-     * 
      */
     @Import(name="releaseDate", required=true)
       private final String releaseDate;
@@ -129,7 +119,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * Indicates whether feature should be displayed in Portal.
-     * 
      */
     @Import(name="shouldFeatureDisplayInPortal")
       private final @Nullable Boolean shouldFeatureDisplayInPortal;
@@ -140,7 +129,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The state.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;
@@ -151,7 +139,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The subscriptionId.
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
@@ -162,7 +149,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
 
     /**
      * The tenantId.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;

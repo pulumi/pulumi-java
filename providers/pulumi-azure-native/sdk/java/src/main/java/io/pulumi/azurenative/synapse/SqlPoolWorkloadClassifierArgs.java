@@ -16,7 +16,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The workload classifier context.
-     * 
      */
     @Import(name="context")
       private final @Nullable Output<String> context;
@@ -27,7 +26,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The workload classifier end time for classification.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -38,7 +36,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The workload classifier importance.
-     * 
      */
     @Import(name="importance")
       private final @Nullable Output<String> importance;
@@ -49,7 +46,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The workload classifier label.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -60,7 +56,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The workload classifier member name.
-     * 
      */
     @Import(name="memberName", required=true)
       private final Output<String> memberName;
@@ -71,7 +66,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -82,7 +76,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * SQL pool name
-     * 
      */
     @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
@@ -93,7 +86,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The workload classifier start time for classification.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -104,7 +96,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the workload classifier.
-     * 
      */
     @Import(name="workloadClassifierName")
       private final @Nullable Output<String> workloadClassifierName;
@@ -115,7 +106,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the workload group.
-     * 
      */
     @Import(name="workloadGroupName", required=true)
       private final Output<String> workloadGroupName;
@@ -126,7 +116,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

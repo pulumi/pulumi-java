@@ -30,7 +30,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom rdp property of HostPool.
-     * 
      */
     @Import(name="customRdpProperty")
       private final @Nullable Output<String> customRdpProperty;
@@ -41,7 +40,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of HostPool.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -52,7 +50,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Friendly name of HostPool.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -63,7 +60,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the host pool within the specified resource group
-     * 
      */
     @Import(name="hostPoolName")
       private final @Nullable Output<String> hostPoolName;
@@ -74,7 +70,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HostPool type for desktop.
-     * 
      */
     @Import(name="hostPoolType", required=true)
       private final Output<Either<String,HostPoolType>> hostPoolType;
@@ -92,7 +87,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -103,7 +97,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the load balancer.
-     * 
      */
     @Import(name="loadBalancerType", required=true)
       private final Output<Either<String,LoadBalancerType>> loadBalancerType;
@@ -114,7 +107,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -125,7 +117,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-     * 
      */
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
@@ -136,7 +127,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The max session limit of HostPool.
-     * 
      */
     @Import(name="maxSessionLimit")
       private final @Nullable Output<Integer> maxSessionLimit;
@@ -147,7 +137,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The registration info of HostPool.
-     * 
      */
     @Import(name="migrationRequest")
       private final @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
@@ -158,7 +147,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PersonalDesktopAssignment type for HostPool.
-     * 
      */
     @Import(name="personalDesktopAssignmentType")
       private final @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
@@ -176,7 +164,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of preferred application group type, default to Desktop Application Group
-     * 
      */
     @Import(name="preferredAppGroupType", required=true)
       private final Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
@@ -187,7 +174,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The registration info of HostPool.
-     * 
      */
     @Import(name="registrationInfo")
       private final @Nullable Output<RegistrationInfoArgs> registrationInfo;
@@ -198,7 +184,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -209,7 +194,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ring number of HostPool.
-     * 
      */
     @Import(name="ring")
       private final @Nullable Output<Integer> ring;
@@ -227,7 +211,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ClientId for the registered Relying Party used to issue WVD SSO certificates.
-     * 
      */
     @Import(name="ssoClientId")
       private final @Nullable Output<String> ssoClientId;
@@ -238,7 +221,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path to Azure KeyVault storing the secret used for communication to ADFS.
-     * 
      */
     @Import(name="ssoClientSecretKeyVaultPath")
       private final @Nullable Output<String> ssoClientSecretKeyVaultPath;
@@ -249,7 +231,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of single sign on Secret Type.
-     * 
      */
     @Import(name="ssoSecretType")
       private final @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
@@ -260,7 +241,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URL to customer ADFS server for signing WVD SSO certificates.
-     * 
      */
     @Import(name="ssoadfsAuthority")
       private final @Nullable Output<String> ssoadfsAuthority;
@@ -271,7 +251,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The flag to turn on/off StartVMOnConnect feature.
-     * 
      */
     @Import(name="startVMOnConnect")
       private final @Nullable Output<Boolean> startVMOnConnect;
@@ -282,7 +261,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -293,7 +271,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Is validation environment.
-     * 
      */
     @Import(name="validationEnvironment")
       private final @Nullable Output<Boolean> validationEnvironment;
@@ -304,7 +281,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VM template for sessionhosts configuration within hostpool.
-     * 
      */
     @Import(name="vmTemplate")
       private final @Nullable Output<String> vmTemplate;

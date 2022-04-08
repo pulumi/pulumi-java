@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AuthenticationResponse {
     /**
      * Symmetric key for authentication.
-     * 
      */
     private final @Nullable SymmetricKeyResponse symmetricKey;
 
@@ -24,7 +23,6 @@ public final class AuthenticationResponse {
 
     /**
      * Symmetric key for authentication.
-     * 
     */
     public Optional<SymmetricKeyResponse> getSymmetricKey() {
         return Optional.ofNullable(this.symmetricKey);

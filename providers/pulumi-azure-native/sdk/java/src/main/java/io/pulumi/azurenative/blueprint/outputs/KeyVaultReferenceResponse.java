@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class KeyVaultReferenceResponse {
     /**
      * Azure resource ID of the Key Vault.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class KeyVaultReferenceResponse {
 
     /**
      * Azure resource ID of the Key Vault.
-     * 
     */
     public String getId() {
         return this.id;

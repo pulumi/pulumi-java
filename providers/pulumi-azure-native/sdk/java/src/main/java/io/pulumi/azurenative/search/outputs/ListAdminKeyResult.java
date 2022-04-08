@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ListAdminKeyResult {
     /**
      * The primary admin API key of the search service.
-     * 
      */
     private final String primaryKey;
     /**
      * The secondary admin API key of the search service.
-     * 
      */
     private final String secondaryKey;
 
@@ -30,14 +28,12 @@ public final class ListAdminKeyResult {
 
     /**
      * The primary admin API key of the search service.
-     * 
     */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The secondary admin API key of the search service.
-     * 
     */
     public String getSecondaryKey() {
         return this.secondaryKey;

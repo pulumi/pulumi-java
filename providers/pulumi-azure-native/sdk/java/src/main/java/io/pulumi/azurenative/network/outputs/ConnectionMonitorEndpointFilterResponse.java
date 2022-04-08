@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorEndpointFilterResponse {
     /**
      * List of items in the filter.
-     * 
      */
     private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
     /**
      * The behavior of the endpoint filter. Currently only 'Include' is supported.
-     * 
      */
     private final @Nullable String type;
 
@@ -34,14 +32,12 @@ public final class ConnectionMonitorEndpointFilterResponse {
 
     /**
      * List of items in the filter.
-     * 
     */
     public List<ConnectionMonitorEndpointFilterItemResponse> getItems() {
         return this.items == null ? List.of() : this.items;
     }
     /**
      * The behavior of the endpoint filter. Currently only 'Include' is supported.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

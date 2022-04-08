@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A management event rule condition.
- * 
  */
 public final class ManagementEventRuleConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ManagementEventRuleConditionResponse extends io.pulumi.resour
 
     /**
      * How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
-     * 
      */
     @Import(name="aggregation")
       private final @Nullable ManagementEventAggregationConditionResponse aggregation;
@@ -35,7 +33,6 @@ public final class ManagementEventRuleConditionResponse extends io.pulumi.resour
 
     /**
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
-     * 
      */
     @Import(name="dataSource")
       private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
@@ -47,7 +44,6 @@ public final class ManagementEventRuleConditionResponse extends io.pulumi.resour
     /**
      * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

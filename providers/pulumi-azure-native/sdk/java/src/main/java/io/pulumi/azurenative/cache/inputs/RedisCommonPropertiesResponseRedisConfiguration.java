@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
- * 
  */
 public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * First storage account connection string
-     * 
      */
     @Import(name="aofStorageConnectionString0")
       private final @Nullable String aofStorageConnectionString0;
@@ -31,7 +29,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * Second storage account connection string
-     * 
      */
     @Import(name="aofStorageConnectionString1")
       private final @Nullable String aofStorageConnectionString1;
@@ -42,7 +39,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * The max clients config
-     * 
      */
     @Import(name="maxclients", required=true)
       private final String maxclients;
@@ -53,7 +49,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * Value in megabytes reserved for fragmentation per shard
-     * 
      */
     @Import(name="maxfragmentationmemoryReserved")
       private final @Nullable String maxfragmentationmemoryReserved;
@@ -64,7 +59,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
-     * 
      */
     @Import(name="maxmemoryDelta")
       private final @Nullable String maxmemoryDelta;
@@ -75,7 +69,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * The eviction strategy used when your data won't fit within its memory limit.
-     * 
      */
     @Import(name="maxmemoryPolicy")
       private final @Nullable String maxmemoryPolicy;
@@ -86,7 +79,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
-     * 
      */
     @Import(name="maxmemoryReserved")
       private final @Nullable String maxmemoryReserved;
@@ -97,7 +89,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * Specifies whether the rdb backup is enabled
-     * 
      */
     @Import(name="rdbBackupEnabled")
       private final @Nullable String rdbBackupEnabled;
@@ -108,7 +99,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * Specifies the frequency for creating rdb backup
-     * 
      */
     @Import(name="rdbBackupFrequency")
       private final @Nullable String rdbBackupFrequency;
@@ -119,7 +109,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * Specifies the maximum number of snapshots for rdb backup
-     * 
      */
     @Import(name="rdbBackupMaxSnapshotCount")
       private final @Nullable String rdbBackupMaxSnapshotCount;
@@ -130,7 +119,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
 
     /**
      * The storage account connection string for storing rdb file
-     * 
      */
     @Import(name="rdbStorageConnectionString")
       private final @Nullable String rdbStorageConnectionString;

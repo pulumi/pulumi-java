@@ -16,7 +16,6 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
 
     /**
      * The expand expression to apply on the operation.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
 
     /**
      * The instance ID of the virtual machine.
-     * 
      */
     @Import(name="instanceId", required=true)
       private final String instanceId;
@@ -38,7 +36,6 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -49,7 +46,6 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
 
     /**
      * The name of the virtual machine run command.
-     * 
      */
     @Import(name="runCommandName", required=true)
       private final String runCommandName;
@@ -60,7 +56,6 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
 
     /**
      * The name of the VM scale set.
-     * 
      */
     @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;

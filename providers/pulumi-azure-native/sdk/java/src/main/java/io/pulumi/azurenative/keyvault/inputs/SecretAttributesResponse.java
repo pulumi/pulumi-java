@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The secret management attributes.
- * 
  */
 public final class SecretAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Creation time in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="created", required=true)
       private final Integer created;
@@ -32,7 +30,6 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Determines whether the object is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -43,7 +40,6 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="expires")
       private final @Nullable Integer expires;
@@ -54,7 +50,6 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Not before date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="notBefore")
       private final @Nullable Integer notBefore;
@@ -65,7 +60,6 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="updated", required=true)
       private final Integer updated;

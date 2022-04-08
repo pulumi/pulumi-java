@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Recovery Services Vault specific protection intent item.
- * 
  */
 public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -34,7 +32,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
 
     /**
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
-     * 
      */
     @Import(name="itemId")
       private final @Nullable Output<String> itemId;
@@ -45,7 +42,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -57,7 +53,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
     /**
      * backup protectionIntent type.
      * Expected value is 'RecoveryServiceVaultItem'.
-     * 
      */
     @Import(name="protectionIntentItemType", required=true)
       private final Output<String> protectionIntentItemType;
@@ -68,7 +63,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
@@ -79,7 +73,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;

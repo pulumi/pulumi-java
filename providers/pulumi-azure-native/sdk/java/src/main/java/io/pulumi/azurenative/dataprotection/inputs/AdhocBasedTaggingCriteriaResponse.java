@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Adhoc backup tagging criteria
- * 
  */
 public final class AdhocBasedTaggingCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AdhocBasedTaggingCriteriaResponse extends io.pulumi.resources
 
     /**
      * Retention tag information
-     * 
      */
     @Import(name="tagInfo")
       private final @Nullable RetentionTagResponse tagInfo;

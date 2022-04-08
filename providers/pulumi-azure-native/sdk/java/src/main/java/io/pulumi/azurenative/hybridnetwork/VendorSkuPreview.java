@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * Customer subscription which can use a sku.
  * API Version: 2020-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update preview subscription of vendor sku sub resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vendorSkuPreview = new AzureNative.HybridNetwork.VendorSkuPreview("vendorSkuPreview", new AzureNative.HybridNetwork.VendorSkuPreviewArgs
+ *         {
+ *             PreviewSubscription = "previewSub",
+ *             SkuName = "TestSku",
+ *             VendorName = "TestVendor",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridnetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridnetwork"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridnetwork.NewVendorSkuPreview(ctx, "vendorSkuPreview", &hybridnetwork.VendorSkuPreviewArgs{
+ * 			PreviewSubscription: pulumi.String("previewSub"),
+ * 			SkuName:             pulumi.String("TestSku"),
+ * 			VendorName:          pulumi.String("TestVendor"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const vendorSkuPreview = new azure_native.hybridnetwork.VendorSkuPreview("vendorSkuPreview", {
+ *     previewSubscription: "previewSub",
+ *     skuName: "TestSku",
+ *     vendorName: "TestVendor",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * vendor_sku_preview = azure_native.hybridnetwork.VendorSkuPreview("vendorSkuPreview",
+ *     preview_subscription="previewSub",
+ *     sku_name="TestSku",
+ *     vendor_name="TestVendor")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,28 +104,24 @@ import javax.annotation.Nullable;
 public class VendorSkuPreview extends io.pulumi.resources.CustomResource {
     /**
      * The preview subscription ID.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The preview subscription ID.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

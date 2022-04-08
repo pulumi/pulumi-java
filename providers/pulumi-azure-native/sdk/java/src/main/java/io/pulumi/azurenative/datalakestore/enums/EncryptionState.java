@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The current state of encryption for this Data Lake Store account.
-     * 
      */
     @EnumType
     public enum EncryptionState {

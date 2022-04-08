@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The group by expression to be used in the report.
- * 
  */
 public final class ReportConfigGroupingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ReportConfigGroupingResponse extends io.pulumi.resources.Invo
 
     /**
      * The name of the column to group. This version supports subscription lowest possible grain.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ReportConfigGroupingResponse extends io.pulumi.resources.Invo
 
     /**
      * Has type of the column to group.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

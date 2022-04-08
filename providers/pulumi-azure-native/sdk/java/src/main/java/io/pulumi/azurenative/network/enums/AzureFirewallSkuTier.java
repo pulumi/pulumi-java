@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Tier of an Azure Firewall.
-     * 
      */
     @EnumType
     public enum AzureFirewallSkuTier {

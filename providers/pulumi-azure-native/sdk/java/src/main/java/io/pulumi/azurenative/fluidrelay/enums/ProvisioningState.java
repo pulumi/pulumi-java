@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Provision states for FluidRelay RP
-     * 
      */
     @EnumType
     public enum ProvisioningState {

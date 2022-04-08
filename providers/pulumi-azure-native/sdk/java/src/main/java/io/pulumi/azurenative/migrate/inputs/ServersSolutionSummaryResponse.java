@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class representing the servers solution summary.
- * 
  */
 public final class ServersSolutionSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the count of servers assessed.
-     * 
      */
     @Import(name="assessedCount")
       private final @Nullable Integer assessedCount;
@@ -32,7 +30,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the count of servers discovered.
-     * 
      */
     @Import(name="discoveredCount")
       private final @Nullable Integer discoveredCount;
@@ -44,7 +41,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
     /**
      * Gets the Instance type.
      * Expected value is 'Servers'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -55,7 +51,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the count of servers migrated.
-     * 
      */
     @Import(name="migratedCount")
       private final @Nullable Integer migratedCount;
@@ -66,7 +61,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the count of servers being replicated.
-     * 
      */
     @Import(name="replicatingCount")
       private final @Nullable Integer replicatingCount;
@@ -77,7 +71,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the count of servers test migrated.
-     * 
      */
     @Import(name="testMigratedCount")
       private final @Nullable Integer testMigratedCount;

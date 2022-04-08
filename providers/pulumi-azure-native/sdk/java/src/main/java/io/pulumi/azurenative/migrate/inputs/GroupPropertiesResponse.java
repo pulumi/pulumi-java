@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of group resource.
- * 
  */
 public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * If the assessments are in running state.
-     * 
      */
     @Import(name="areAssessmentsRunning", required=true)
       private final Boolean areAssessmentsRunning;
@@ -34,7 +32,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of References to Assessments created on this group.
-     * 
      */
     @Import(name="assessments", required=true)
       private final List<String> assessments;
@@ -45,7 +42,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Time when this group was created. Date-Time represented in ISO-8601 format.
-     * 
      */
     @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
@@ -56,7 +52,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Whether the group has been created and is valid.
-     * 
      */
     @Import(name="groupStatus", required=true)
       private final String groupStatus;
@@ -67,7 +62,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of group.
-     * 
      */
     @Import(name="groupType")
       private final @Nullable String groupType;
@@ -78,7 +72,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Number of machines part of this group.
-     * 
      */
     @Import(name="machineCount", required=true)
       private final Integer machineCount;
@@ -89,7 +82,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Time when this group was last updated. Date-Time represented in ISO-8601 format.
-     * 
      */
     @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;

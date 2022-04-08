@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Minimum and maximum number of scale units to deploy.
- * 
  */
 public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
 
     /**
      * Maximum number of scale units deployed for ExpressRoute gateway.
-     * 
      */
     @Import(name="max")
       private final @Nullable Output<Integer> max;
@@ -31,7 +29,6 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
 
     /**
      * Minimum number of scale units deployed for ExpressRoute gateway.
-     * 
      */
     @Import(name="min")
       private final @Nullable Output<Integer> min;

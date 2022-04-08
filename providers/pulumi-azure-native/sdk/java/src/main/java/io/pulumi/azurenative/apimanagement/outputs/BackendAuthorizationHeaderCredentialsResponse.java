@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class BackendAuthorizationHeaderCredentialsResponse {
     /**
      * Authentication Parameter value.
-     * 
      */
     private final String parameter;
     /**
      * Authentication Scheme name.
-     * 
      */
     private final String scheme;
 
@@ -30,14 +28,12 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
 
     /**
      * Authentication Parameter value.
-     * 
     */
     public String getParameter() {
         return this.parameter;
     }
     /**
      * Authentication Scheme name.
-     * 
     */
     public String getScheme() {
         return this.scheme;

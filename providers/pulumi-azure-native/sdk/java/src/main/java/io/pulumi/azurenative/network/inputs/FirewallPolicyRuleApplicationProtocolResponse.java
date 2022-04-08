@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the application rule protocol.
- * 
  */
 public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulu
 
     /**
      * Port number for the protocol, cannot be greater than 64000.
-     * 
      */
     @Import(name="port")
       private final @Nullable Integer port;
@@ -32,7 +30,6 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulu
 
     /**
      * Protocol type.
-     * 
      */
     @Import(name="protocolType")
       private final @Nullable String protocolType;

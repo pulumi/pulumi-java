@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Mapping Properties.
- * 
  */
 public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The fabric specific settings.
-     * 
      */
     @Import(name="fabricSpecificSettings")
       private final @Nullable Object fabricSpecificSettings;
@@ -35,7 +33,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The primary fabric friendly name.
-     * 
      */
     @Import(name="primaryFabricFriendlyName")
       private final @Nullable String primaryFabricFriendlyName;
@@ -46,7 +43,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The primary network friendly name.
-     * 
      */
     @Import(name="primaryNetworkFriendlyName")
       private final @Nullable String primaryNetworkFriendlyName;
@@ -57,7 +53,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The primary network id for network mapping.
-     * 
      */
     @Import(name="primaryNetworkId")
       private final @Nullable String primaryNetworkId;
@@ -68,7 +63,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The recovery fabric ARM id.
-     * 
      */
     @Import(name="recoveryFabricArmId")
       private final @Nullable String recoveryFabricArmId;
@@ -79,7 +73,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The recovery fabric friendly name.
-     * 
      */
     @Import(name="recoveryFabricFriendlyName")
       private final @Nullable String recoveryFabricFriendlyName;
@@ -90,7 +83,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The recovery network friendly name.
-     * 
      */
     @Import(name="recoveryNetworkFriendlyName")
       private final @Nullable String recoveryNetworkFriendlyName;
@@ -101,7 +93,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The recovery network id for network mapping.
-     * 
      */
     @Import(name="recoveryNetworkId")
       private final @Nullable String recoveryNetworkId;
@@ -112,7 +103,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The pairing state for network mapping.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

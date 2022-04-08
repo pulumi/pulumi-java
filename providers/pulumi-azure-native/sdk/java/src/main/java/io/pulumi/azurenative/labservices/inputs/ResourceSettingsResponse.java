@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents resource specific settings
- * 
  */
 public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The translated compute cores of the virtual machine
-     * 
      */
     @Import(name="cores", required=true)
       private final Integer cores;
@@ -33,7 +31,6 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource id of the gallery image used for creating the virtual machine
-     * 
      */
     @Import(name="galleryImageResourceId")
       private final @Nullable String galleryImageResourceId;
@@ -44,7 +41,6 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The unique id of the resource setting
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -55,7 +51,6 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the image used to created the environment setting
-     * 
      */
     @Import(name="imageName", required=true)
       private final String imageName;
@@ -66,7 +61,6 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Details specific to Reference Vm
-     * 
      */
     @Import(name="referenceVm", required=true)
       private final ReferenceVmResponse referenceVm;
@@ -77,7 +71,6 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The size of the virtual machine
-     * 
      */
     @Import(name="size")
       private final @Nullable String size;

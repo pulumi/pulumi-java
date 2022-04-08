@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Facebook channel definition
- * 
  */
 public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * The channel name
      * Expected value is 'FacebookChannel'.
-     * 
      */
     @Import(name="channelName", required=true)
       private final Output<String> channelName;
@@ -33,7 +31,6 @@ public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Entity Tag of the resource
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -44,7 +41,6 @@ public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +51,6 @@ public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The set of properties specific to bot facebook channel
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<FacebookChannelPropertiesArgs> properties;

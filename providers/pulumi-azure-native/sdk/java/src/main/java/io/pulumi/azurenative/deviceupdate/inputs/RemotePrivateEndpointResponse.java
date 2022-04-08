@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Remote private endpoint details.
- * 
  */
 public final class RemotePrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
 
     /**
      * List of connection details.
-     * 
      */
     @Import(name="connectionDetails")
       private final @Nullable List<ConnectionDetailsResponse> connectionDetails;
@@ -35,7 +33,6 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
 
     /**
      * Remote endpoint resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -46,7 +43,6 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
 
     /**
      * List of private link service connections that need manual approval.
-     * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
@@ -57,7 +53,6 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
 
     /**
      * List of automatically approved private link service connections.
-     * 
      */
     @Import(name="privateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
@@ -68,7 +63,6 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
 
     /**
      * List of private link service proxies.
-     * 
      */
     @Import(name="privateLinkServiceProxies")
       private final @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
@@ -79,7 +73,6 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
 
     /**
      * Virtual network traffic tag.
-     * 
      */
     @Import(name="vnetTrafficTag", required=true)
       private final String vnetTrafficTag;

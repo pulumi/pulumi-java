@@ -18,17 +18,14 @@ public final class GetWebAppRelayServiceConnectionResult {
     private final @Nullable String hostname;
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     private final @Nullable Integer port;
@@ -36,7 +33,6 @@ public final class GetWebAppRelayServiceConnectionResult {
     private final @Nullable String resourceType;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -80,21 +76,18 @@ public final class GetWebAppRelayServiceConnectionResult {
     }
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -110,7 +103,6 @@ public final class GetWebAppRelayServiceConnectionResult {
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

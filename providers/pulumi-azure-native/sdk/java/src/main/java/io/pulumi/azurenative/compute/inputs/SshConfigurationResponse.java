@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSH configuration for Linux based VMs running on Azure
- * 
  */
 public final class SshConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SshConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The list of SSH public keys used to authenticate with linux based VMs.
-     * 
      */
     @Import(name="publicKeys")
       private final @Nullable List<SshPublicKeyResponse> publicKeys;

@@ -13,32 +13,26 @@ import java.util.Objects;
 public final class PrivateEndpointConnectionResponse {
     /**
      * private endpoint connection Id
-     * 
      */
     private final String id;
     /**
      * private endpoint connection name
-     * 
      */
     private final String name;
     /**
      * The resource of private end point.
-     * 
      */
     private final PrivateEndpointResponse privateEndpoint;
     /**
      * A collection of information about the state of the connection between DiskAccess and Virtual Network.
-     * 
      */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     private final String provisioningState;
     /**
      * private endpoint connection type
-     * 
      */
     private final String type;
 
@@ -60,42 +54,36 @@ public final class PrivateEndpointConnectionResponse {
 
     /**
      * private endpoint connection Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * private endpoint connection name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
     */
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between DiskAccess and Virtual Network.
-     * 
     */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * private endpoint connection type
-     * 
     */
     public String getType() {
         return this.type;

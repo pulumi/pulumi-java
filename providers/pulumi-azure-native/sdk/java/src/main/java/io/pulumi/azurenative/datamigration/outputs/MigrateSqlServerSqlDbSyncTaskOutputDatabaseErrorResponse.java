@@ -15,23 +15,19 @@ import javax.annotation.Nullable;
 public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse {
     /**
      * Error message
-     * 
      */
     private final @Nullable String errorMessage;
     /**
      * List of error events.
-     * 
      */
     private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
     /**
      * Result identifier
-     * 
      */
     private final String id;
     /**
      * Result type
      * Expected value is 'DatabaseLevelErrorOutput'.
-     * 
      */
     private final String resultType;
 
@@ -49,21 +45,18 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse {
 
     /**
      * Error message
-     * 
     */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * List of error events.
-     * 
     */
     public List<SyncMigrationDatabaseErrorEventResponse> getEvents() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;
@@ -71,7 +64,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse {
     /**
      * Result type
      * Expected value is 'DatabaseLevelErrorOutput'.
-     * 
     */
     public String getResultType() {
         return this.resultType;

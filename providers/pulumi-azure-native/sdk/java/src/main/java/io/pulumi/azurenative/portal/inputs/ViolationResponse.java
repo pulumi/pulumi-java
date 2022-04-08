@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Violation information.
- * 
  */
 public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error message.
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -29,7 +27,6 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the item that violates tenant configuration.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -40,7 +37,6 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the user who owns violated item.
-     * 
      */
     @Import(name="userId", required=true)
       private final String userId;

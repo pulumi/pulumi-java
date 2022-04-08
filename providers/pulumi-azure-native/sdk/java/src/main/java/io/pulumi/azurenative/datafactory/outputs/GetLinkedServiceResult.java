@@ -114,27 +114,22 @@ import java.util.Objects;
 public final class GetLinkedServiceResult {
     /**
      * Etag identifies change in the resource.
-     * 
      */
     private final String etag;
     /**
      * The resource identifier.
-     * 
      */
     private final String id;
     /**
      * The resource name.
-     * 
      */
     private final String name;
     /**
      * Properties of linked service.
-     * 
      */
     private final Object properties;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -154,35 +149,30 @@ public final class GetLinkedServiceResult {
 
     /**
      * Etag identifies change in the resource.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of linked service.
-     * 
     */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

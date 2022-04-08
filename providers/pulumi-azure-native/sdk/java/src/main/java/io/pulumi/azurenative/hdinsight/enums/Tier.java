@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The cluster tier.
-     * 
      */
     @EnumType
     public enum Tier {

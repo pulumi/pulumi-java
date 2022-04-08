@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contact Details.
- * 
  */
 public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Contact name of the person.
-     * 
      */
     @Import(name="contactName", required=true)
       private final String contactName;
@@ -33,7 +31,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of Email-ids to be notified about job progress.
-     * 
      */
     @Import(name="emailList", required=true)
       private final List<String> emailList;
@@ -44,7 +41,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Mobile number of the contact person.
-     * 
      */
     @Import(name="mobile")
       private final @Nullable String mobile;
@@ -55,7 +51,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Notification preference for a job stage.
-     * 
      */
     @Import(name="notificationPreference")
       private final @Nullable List<NotificationPreferenceResponse> notificationPreference;
@@ -66,7 +61,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Phone number of the contact person.
-     * 
      */
     @Import(name="phone", required=true)
       private final String phone;
@@ -77,7 +71,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Phone extension number of the contact person.
-     * 
      */
     @Import(name="phoneExtension")
       private final @Nullable String phoneExtension;

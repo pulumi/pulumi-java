@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * The rental and lease key type.
-     * 
      */
     @EnumType
     public enum ContentKeyPolicyFairPlayRentalAndLeaseKeyType {
         /**
          * Represents a ContentKeyPolicyFairPlayRentalAndLeaseKeyType that is unavailable in current API version.
-         * 
          */
         Unknown("Unknown"),
         /**
          * Key duration is not specified.
-         * 
          */
         Undefined("Undefined"),
         /**
          * Dual expiry for offline rental.
-         * 
          */
         DualExpiry("DualExpiry"),
         /**
          * Content key can be persisted with an unlimited duration
-         * 
          */
         PersistentUnlimited("PersistentUnlimited"),
         /**
          * Content key can be persisted and the valid duration is limited by the Rental Duration value
-         * 
          */
         PersistentLimited("PersistentLimited");
 

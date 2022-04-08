@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trusted client certificates of an application gateway.
- * 
  */
 public final class ApplicationGatewayTrustedClientCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayTrustedClientCertificateResponse extends io
 
     /**
      * Certificate public data.
-     * 
      */
     @Import(name="data")
       private final @Nullable String data;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayTrustedClientCertificateResponse extends io
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -42,7 +39,6 @@ public final class ApplicationGatewayTrustedClientCertificateResponse extends io
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -53,7 +49,6 @@ public final class ApplicationGatewayTrustedClientCertificateResponse extends io
 
     /**
      * Name of the trusted client certificate that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -64,7 +59,6 @@ public final class ApplicationGatewayTrustedClientCertificateResponse extends io
 
     /**
      * The provisioning state of the trusted client certificate resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -75,7 +69,6 @@ public final class ApplicationGatewayTrustedClientCertificateResponse extends io
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

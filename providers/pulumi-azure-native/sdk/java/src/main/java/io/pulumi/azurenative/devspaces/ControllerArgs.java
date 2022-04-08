@@ -18,7 +18,6 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Region where the Azure resource is located.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Model representing SKU for Azure Dev Spaces Controller.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -62,7 +58,6 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags for the Azure resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -73,7 +68,6 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Credentials of the target container host (base64).
-     * 
      */
     @Import(name="targetContainerHostCredentialsBase64", required=true)
       private final Output<String> targetContainerHostCredentialsBase64;
@@ -84,7 +78,6 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the target container host
-     * 
      */
     @Import(name="targetContainerHostResourceId", required=true)
       private final Output<String> targetContainerHostResourceId;

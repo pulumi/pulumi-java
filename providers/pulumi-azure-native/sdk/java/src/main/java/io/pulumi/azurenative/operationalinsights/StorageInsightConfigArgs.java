@@ -19,7 +19,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The names of the blob containers that the workspace should read
-     * 
      */
     @Import(name="containers")
       private final @Nullable Output<List<String>> containers;
@@ -30,7 +29,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The ETag of the storage insight.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -41,7 +39,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The storage account connection details
-     * 
      */
     @Import(name="storageAccount", required=true)
       private final Output<StorageAccountArgs> storageAccount;
@@ -63,7 +59,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the storageInsightsConfigs resource
-     * 
      */
     @Import(name="storageInsightName")
       private final @Nullable Output<String> storageInsightName;
@@ -74,7 +69,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The names of the Azure tables that the workspace should read
-     * 
      */
     @Import(name="tables")
       private final @Nullable Output<List<String>> tables;
@@ -85,7 +79,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -96,7 +89,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

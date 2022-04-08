@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the storage of the tokens if a file system is used.
- * 
  */
 public final class FileSystemTokenStoreArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
 
     /**
      * The directory in which the tokens will be stored.
-     * 
      */
     @Import(name="directory")
       private final @Nullable Output<String> directory;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines contents of rate limit rules
- * 
  */
 public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of rules
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<RateLimitRuleArgs>> rules;

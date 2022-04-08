@@ -14,7 +14,6 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
 
     /**
      * Name of the custom entity store assignment. Generated name is GUID.
-     * 
      */
     @Import(name="customEntityStoreAssignmentName", required=true)
       private final String customEntityStoreAssignmentName;
@@ -25,7 +24,6 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

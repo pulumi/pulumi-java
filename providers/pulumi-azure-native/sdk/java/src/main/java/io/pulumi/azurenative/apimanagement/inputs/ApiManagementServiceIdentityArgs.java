@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity properties of the Api Management service resource.
- * 
  */
 public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
 
     /**
      * The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ApimIdentityType>> type;
@@ -34,11 +32,10 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
     }
 
     /**
-     * The list of user identities associated with the resource. The user identity
-     * dictionary key references will be ARM resource ids in the form:
+     * The list of user identities associated with the resource. The user identity 
+     * dictionary key references will be ARM resource ids in the form: 
      * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;

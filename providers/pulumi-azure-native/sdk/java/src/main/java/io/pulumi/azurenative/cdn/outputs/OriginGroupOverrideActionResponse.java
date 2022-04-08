@@ -13,12 +13,10 @@ public final class OriginGroupOverrideActionResponse {
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'OriginGroupOverride'.
-     * 
      */
     private final String name;
     /**
      * Defines the parameters for the action.
-     * 
      */
     private final OriginGroupOverrideActionParametersResponse parameters;
 
@@ -33,14 +31,12 @@ public final class OriginGroupOverrideActionResponse {
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'OriginGroupOverride'.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
-     * 
     */
     public OriginGroupOverrideActionParametersResponse getParameters() {
         return this.parameters;

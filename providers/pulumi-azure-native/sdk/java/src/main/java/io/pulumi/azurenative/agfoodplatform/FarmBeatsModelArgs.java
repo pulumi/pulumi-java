@@ -17,7 +17,6 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FarmBeats resource name.
-     * 
      */
     @Import(name="farmBeatsResourceName")
       private final @Nullable Output<String> farmBeatsResourceName;
@@ -28,7 +27,6 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

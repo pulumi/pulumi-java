@@ -14,7 +14,6 @@ public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The security automation name.
-     * 
      */
     @Import(name="automationName", required=true)
       private final String automationName;
@@ -25,7 +24,6 @@ public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

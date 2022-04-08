@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * Execute power query activity.
- * 
  */
 public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -32,7 +31,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Compute properties for data flow activity.
-     * 
      */
     @Import(name="compute")
       private final @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
@@ -43,7 +41,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
-     * 
      */
     @Import(name="continueOnError")
       private final @Nullable Output<Object> continueOnError;
@@ -54,7 +51,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Data flow reference.
-     * 
      */
     @Import(name="dataFlow", required=true)
       private final Output<DataFlowReferenceArgs> dataFlow;
@@ -65,7 +61,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -76,7 +71,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -87,7 +81,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="integrationRuntime")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime;
@@ -98,7 +91,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -109,7 +101,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -120,7 +111,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * List of mapping for Power Query mashup query to sink dataset(s).
-     * 
      */
     @Import(name="queries")
       private final @Nullable Output<List<PowerQuerySinkMappingArgs>> queries;
@@ -131,7 +121,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
-     * 
      */
     @Import(name="runConcurrently")
       private final @Nullable Output<Object> runConcurrently;
@@ -142,7 +131,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
-     * 
      */
     @Import(name="sinks")
       private final @Nullable Output<Map<String,PowerQuerySinkArgs>> sinks;
@@ -153,7 +141,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Staging info for execute data flow activity.
-     * 
      */
     @Import(name="staging")
       private final @Nullable Output<DataFlowStagingInfoArgs> staging;
@@ -164,7 +151,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="traceLevel")
       private final @Nullable Output<Object> traceLevel;
@@ -176,7 +162,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     /**
      * Type of activity.
      * Expected value is 'ExecuteWranglingDataflow'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -187,7 +172,6 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

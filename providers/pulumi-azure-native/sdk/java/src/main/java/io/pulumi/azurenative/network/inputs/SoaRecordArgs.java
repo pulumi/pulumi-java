@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An SOA record.
- * 
  */
 public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email contact for this SOA record.
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;
@@ -32,7 +30,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The expire time for this SOA record.
-     * 
      */
     @Import(name="expireTime")
       private final @Nullable Output<Double> expireTime;
@@ -43,7 +40,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain name of the authoritative name server for this SOA record.
-     * 
      */
     @Import(name="host")
       private final @Nullable Output<String> host;
@@ -54,7 +50,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
-     * 
      */
     @Import(name="minimumTtl")
       private final @Nullable Output<Double> minimumTtl;
@@ -65,7 +60,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The refresh value for this SOA record.
-     * 
      */
     @Import(name="refreshTime")
       private final @Nullable Output<Double> refreshTime;
@@ -76,7 +70,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The retry time for this SOA record.
-     * 
      */
     @Import(name="retryTime")
       private final @Nullable Output<Double> retryTime;
@@ -87,7 +80,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The serial number for this SOA record.
-     * 
      */
     @Import(name="serialNumber")
       private final @Nullable Output<Double> serialNumber;

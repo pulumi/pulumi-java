@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class ServiceRegistryResourceRequestsResponse {
     /**
      * Cpu allocated to each Service Registry instance
-     * 
      */
     private final String cpu;
     /**
      * Instance count of the Service Registry
-     * 
      */
     private final Integer instanceCount;
     /**
      * Memory allocated to each Service Registry instance
-     * 
      */
     private final String memory;
 
@@ -38,21 +35,18 @@ public final class ServiceRegistryResourceRequestsResponse {
 
     /**
      * Cpu allocated to each Service Registry instance
-     * 
     */
     public String getCpu() {
         return this.cpu;
     }
     /**
      * Instance count of the Service Registry
-     * 
     */
     public Integer getInstanceCount() {
         return this.instanceCount;
     }
     /**
      * Memory allocated to each Service Registry instance
-     * 
     */
     public String getMemory() {
         return this.memory;

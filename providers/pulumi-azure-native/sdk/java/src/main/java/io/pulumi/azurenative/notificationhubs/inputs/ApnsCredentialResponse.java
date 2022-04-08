@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a NotificationHub ApnsCredential.
- * 
  */
 public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The APNS certificate. Specify if using Certificate Authentication Mode.
-     * 
      */
     @Import(name="apnsCertificate")
       private final @Nullable String apnsCertificate;
@@ -31,7 +29,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
      */
     @Import(name="appId")
       private final @Nullable String appId;
@@ -42,7 +39,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the application or BundleId. Specify if using Token Authentication Mode.
-     * 
      */
     @Import(name="appName")
       private final @Nullable String appName;
@@ -53,7 +49,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The APNS certificate password if it exists.
-     * 
      */
     @Import(name="certificateKey")
       private final @Nullable String certificateKey;
@@ -64,7 +59,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable String endpoint;
@@ -75,7 +69,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
      */
     @Import(name="keyId")
       private final @Nullable String keyId;
@@ -86,7 +79,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
@@ -97,7 +89,6 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
-     * 
      */
     @Import(name="token")
       private final @Nullable String token;

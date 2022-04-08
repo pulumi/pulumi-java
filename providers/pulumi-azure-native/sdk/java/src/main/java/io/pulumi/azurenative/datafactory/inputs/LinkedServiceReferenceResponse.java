@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service reference type.
- * 
  */
 public final class LinkedServiceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
 
     /**
      * Arguments for LinkedService.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
@@ -33,7 +31,6 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
 
     /**
      * Reference LinkedService name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final String referenceName;
@@ -44,7 +41,6 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
 
     /**
      * Linked service reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

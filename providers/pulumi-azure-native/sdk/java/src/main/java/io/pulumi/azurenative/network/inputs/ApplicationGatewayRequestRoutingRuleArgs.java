@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Request routing rule of an application gateway.
- * 
  */
 public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Backend address pool resource of the application gateway.
-     * 
      */
     @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
@@ -35,7 +33,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Backend http settings resource of the application gateway.
-     * 
      */
     @Import(name="backendHttpSettings")
       private final @Nullable Output<SubResourceArgs> backendHttpSettings;
@@ -46,7 +43,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Http listener resource of the application gateway.
-     * 
      */
     @Import(name="httpListener")
       private final @Nullable Output<SubResourceArgs> httpListener;
@@ -57,7 +53,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -68,7 +63,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Name of the request routing rule that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -79,7 +73,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Priority of the request routing rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -90,7 +83,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Redirect configuration resource of the application gateway.
-     * 
      */
     @Import(name="redirectConfiguration")
       private final @Nullable Output<SubResourceArgs> redirectConfiguration;
@@ -101,7 +93,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Rewrite Rule Set resource in Basic rule of the application gateway.
-     * 
      */
     @Import(name="rewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
@@ -112,7 +103,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * Rule type.
-     * 
      */
     @Import(name="ruleType")
       private final @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
@@ -123,7 +113,6 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
 
     /**
      * URL path map resource of the application gateway.
-     * 
      */
     @Import(name="urlPathMap")
       private final @Nullable Output<SubResourceArgs> urlPathMap;

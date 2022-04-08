@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the connection monitor endpoint filter item.
- * 
  */
 public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
 
     /**
      * The address of the filter item.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;
@@ -31,7 +29,6 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
 
     /**
      * The type of item included in the filter. Currently only 'AgentAddress' is supported.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

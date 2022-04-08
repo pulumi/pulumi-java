@@ -26,42 +26,36 @@ import javax.annotation.Nullable;
 public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResource {
     /**
      * The name of the container to upload blobs to.
-     * 
      */
     @Export(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
     /**
      * @return The name of the container to upload blobs to.
-     * 
      */
     public Output<String> getContainerName() {
         return this.containerName;
     }
     /**
      * The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-     * 
      */
     @Export(name="error404Document", type=String.class, parameters={})
     private Output</* @Nullable */ String> error404Document;
 
     /**
      * @return The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-     * 
      */
     public Output</* @Nullable */ String> getError404Document() {
         return this.error404Document;
     }
     /**
      * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
-     * 
      */
     @Export(name="indexDocument", type=String.class, parameters={})
     private Output</* @Nullable */ String> indexDocument;
 
     /**
      * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
-     * 
      */
     public Output</* @Nullable */ String> getIndexDocument() {
         return this.indexDocument;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class PermissionResponse {
     /**
      * An array of data actions that are allowed.
-     * 
      */
     private final @Nullable List<String> dataActions;
     /**
      * An array of data actions that are denied.
-     * 
      */
     private final @Nullable List<String> notDataActions;
 
@@ -32,14 +30,12 @@ public final class PermissionResponse {
 
     /**
      * An array of data actions that are allowed.
-     * 
     */
     public List<String> getDataActions() {
         return this.dataActions == null ? List.of() : this.dataActions;
     }
     /**
      * An array of data actions that are denied.
-     * 
     */
     public List<String> getNotDataActions() {
         return this.notDataActions == null ? List.of() : this.notDataActions;

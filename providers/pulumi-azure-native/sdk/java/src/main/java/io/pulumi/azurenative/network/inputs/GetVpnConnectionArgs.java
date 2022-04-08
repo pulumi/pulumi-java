@@ -14,7 +14,6 @@ public final class GetVpnConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the vpn connection.
-     * 
      */
     @Import(name="connectionName", required=true)
       private final String connectionName;
@@ -25,7 +24,6 @@ public final class GetVpnConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the gateway.
-     * 
      */
     @Import(name="gatewayName", required=true)
       private final String gatewayName;
@@ -36,7 +34,6 @@ public final class GetVpnConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name of the VpnGateway.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.
- * 
  */
 public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from 'version', only if the value specified in 'version' field is 'latest'.
-     * 
      */
     @Import(name="exactVersion", required=true)
       private final String exactVersion;
@@ -31,7 +29,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -42,7 +39,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the offer of the platform image or marketplace image used to create the virtual machine.
-     * 
      */
     @Import(name="offer")
       private final @Nullable String offer;
@@ -53,7 +49,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The image publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;
@@ -64,7 +59,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The image SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable String sku;
@@ -75,7 +69,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

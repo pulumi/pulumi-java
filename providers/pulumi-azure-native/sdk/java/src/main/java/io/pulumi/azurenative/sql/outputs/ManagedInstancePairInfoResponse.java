@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ManagedInstancePairInfoResponse {
     /**
      * Id of Partner Managed Instance in pair.
-     * 
      */
     private final @Nullable String partnerManagedInstanceId;
     /**
      * Id of Primary Managed Instance in pair.
-     * 
      */
     private final @Nullable String primaryManagedInstanceId;
 
@@ -32,14 +30,12 @@ public final class ManagedInstancePairInfoResponse {
 
     /**
      * Id of Partner Managed Instance in pair.
-     * 
     */
     public Optional<String> getPartnerManagedInstanceId() {
         return Optional.ofNullable(this.partnerManagedInstanceId);
     }
     /**
      * Id of Primary Managed Instance in pair.
-     * 
     */
     public Optional<String> getPrimaryManagedInstanceId() {
         return Optional.ofNullable(this.primaryManagedInstanceId);

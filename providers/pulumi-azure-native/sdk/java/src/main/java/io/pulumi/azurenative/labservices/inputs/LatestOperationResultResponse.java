@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the status of an operation.
- * 
  */
 public final class LatestOperationResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Error code on failure.
-     * 
      */
     @Import(name="errorCode", required=true)
       private final String errorCode;
@@ -29,7 +27,6 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
 
     /**
      * The error message.
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -40,7 +37,6 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
 
     /**
      * The HttpMethod - PUT/POST/DELETE for the operation.
-     * 
      */
     @Import(name="httpMethod", required=true)
       private final String httpMethod;
@@ -51,7 +47,6 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
 
     /**
      * The URL to use to check long-running operation status
-     * 
      */
     @Import(name="operationUrl", required=true)
       private final String operationUrl;
@@ -62,7 +57,6 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Request URI of the operation.
-     * 
      */
     @Import(name="requestUri", required=true)
       private final String requestUri;
@@ -73,7 +67,6 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
 
     /**
      * The current status of the operation.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

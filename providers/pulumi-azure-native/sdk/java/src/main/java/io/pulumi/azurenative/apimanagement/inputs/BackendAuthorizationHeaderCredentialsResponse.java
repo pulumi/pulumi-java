@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Authorization header information.
- * 
  */
 public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
 
     /**
      * Authentication Parameter value.
-     * 
      */
     @Import(name="parameter", required=true)
       private final String parameter;
@@ -29,7 +27,6 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
 
     /**
      * Authentication Scheme name.
-     * 
      */
     @Import(name="scheme", required=true)
       private final String scheme;

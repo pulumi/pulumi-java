@@ -18,7 +18,6 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identifier associated with the device subscription.
-     * 
      */
     @Import(name="linkedSubscriptionId", required=true)
       private final Output<String> linkedSubscriptionId;
@@ -29,7 +28,6 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the Linked Subscription resource.
-     * 
      */
     @Import(name="linkedSubscriptionName")
       private final @Nullable Output<String> linkedSubscriptionName;
@@ -40,7 +38,6 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<Either<String,Location>> location;
@@ -51,7 +48,6 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identifier associated with the device registration.
-     * 
      */
     @Import(name="registrationResourceId", required=true)
       private final Output<String> registrationResourceId;
@@ -62,7 +58,6 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;

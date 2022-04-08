@@ -18,7 +18,183 @@ import javax.annotation.Nullable;
  * Represents threat intelligence data connector.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an Office365 data connector.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tiDataConnector = new AzureNative.SecurityInsights.TIDataConnector("tiDataConnector", new AzureNative.SecurityInsights.TIDataConnectorArgs
+ *         {
+ *             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewTIDataConnector(ctx, "tiDataConnector", &securityinsights.TIDataConnectorArgs{
+ * 			DataConnectorId:   pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const tiDataConnector = new azure_native.securityinsights.TIDataConnector("tiDataConnector", {
+ *     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * ti_data_connector = azure_native.securityinsights.TIDataConnector("tiDataConnector",
+ *     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates an Threat Intelligence Platform data connector.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tiDataConnector = new AzureNative.SecurityInsights.TIDataConnector("tiDataConnector", new AzureNative.SecurityInsights.TIDataConnectorArgs
+ *         {
+ *             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             DataTypes = new AzureNative.SecurityInsights.Inputs.TIDataConnectorDataTypesArgs
+ *             {
+ *                 Indicators = new AzureNative.SecurityInsights.Inputs.TIDataConnectorDataTypesIndicatorsArgs
+ *                 {
+ *                     State = "Enabled",
+ *                 },
+ *             },
+ *             Kind = "ThreatIntelligence",
+ *             ResourceGroupName = "myRg",
+ *             TenantId = "06b3ccb8-1384-4bcc-aec7-852f6d57161b",
+ *             TipLookbackPeriod = "2020-01-01T13:00:30.123Z",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewTIDataConnector(ctx, "tiDataConnector", &securityinsights.TIDataConnectorArgs{
+ * 			DataConnectorId: pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			DataTypes: &securityinsights.TIDataConnectorDataTypesArgs{
+ * 				Indicators: &securityinsights.TIDataConnectorDataTypesIndicatorsArgs{
+ * 					State: pulumi.String("Enabled"),
+ * 				},
+ * 			},
+ * 			Kind:              pulumi.String("ThreatIntelligence"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			TenantId:          pulumi.String("06b3ccb8-1384-4bcc-aec7-852f6d57161b"),
+ * 			TipLookbackPeriod: pulumi.String("2020-01-01T13:00:30.123Z"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const tiDataConnector = new azure_native.securityinsights.TIDataConnector("tiDataConnector", {
+ *     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     dataTypes: {
+ *         indicators: {
+ *             state: "Enabled",
+ *         },
+ *     },
+ *     kind: "ThreatIntelligence",
+ *     resourceGroupName: "myRg",
+ *     tenantId: "06b3ccb8-1384-4bcc-aec7-852f6d57161b",
+ *     tipLookbackPeriod: "2020-01-01T13:00:30.123Z",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * ti_data_connector = azure_native.securityinsights.TIDataConnector("tiDataConnector",
+ *     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     data_types=azure_native.securityinsights.TIDataConnectorDataTypesArgs(
+ *         indicators=azure_native.securityinsights.TIDataConnectorDataTypesIndicatorsArgs(
+ *             state="Enabled",
+ *         ),
+ *     ),
+ *     kind="ThreatIntelligence",
+ *     resource_group_name="myRg",
+ *     tenant_id="06b3ccb8-1384-4bcc-aec7-852f6d57161b",
+ *     tip_lookback_period="2020-01-01T13:00:30.123Z",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,28 +209,24 @@ import javax.annotation.Nullable;
 public class TIDataConnector extends io.pulumi.resources.CustomResource {
     /**
      * The available data types for the connector.
-     * 
      */
     @Export(name="dataTypes", type=TIDataConnectorDataTypesResponse.class, parameters={})
     private Output</* @Nullable */ TIDataConnectorDataTypesResponse> dataTypes;
 
     /**
      * @return The available data types for the connector.
-     * 
      */
     public Output</* @Nullable */ TIDataConnectorDataTypesResponse> getDataTypes() {
         return this.dataTypes;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
@@ -62,7 +234,6 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
     /**
      * The kind of the data connector
      * Expected value is 'ThreatIntelligence'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -70,63 +241,54 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
     /**
      * @return The kind of the data connector
      * Expected value is 'ThreatIntelligence'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The tenant id to connect to, and get the data from.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return The tenant id to connect to, and get the data from.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The lookback period for the feed to be imported.
-     * 
      */
     @Export(name="tipLookbackPeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> tipLookbackPeriod;
 
     /**
      * @return The lookback period for the feed to be imported.
-     * 
      */
     public Output</* @Nullable */ String> getTipLookbackPeriod() {
         return this.tipLookbackPeriod;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

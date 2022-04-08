@@ -20,7 +20,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
 
     /**
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
-     * 
      */
     @Import(name="ascLocation", required=true)
       private final Output<String> ascLocation;
@@ -31,7 +30,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
 
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     @Import(name="enforcementMode")
       private final @Nullable Output<String> enforcementMode;
@@ -42,7 +40,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
 
     /**
      * Name of an application control machine group
-     * 
      */
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
@@ -60,7 +57,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
 
     /**
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-     * 
      */
     @Import(name="protectionMode")
       private final @Nullable Output<ProtectionModeArgs> protectionMode;

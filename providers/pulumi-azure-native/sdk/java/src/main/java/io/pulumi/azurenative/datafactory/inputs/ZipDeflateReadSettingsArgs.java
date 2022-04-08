@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The ZipDeflate compression read settings.
- * 
  */
 public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="preserveZipFileNameAsFolder")
       private final @Nullable Output<Object> preserveZipFileNameAsFolder;
@@ -33,7 +31,6 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
     /**
      * The Compression setting type.
      * Expected value is 'ZipDeflateReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

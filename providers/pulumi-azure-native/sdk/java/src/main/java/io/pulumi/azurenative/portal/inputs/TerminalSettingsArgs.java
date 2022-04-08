@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for terminal appearance.
- * 
  */
 public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Size of terminal font.
-     * 
      */
     @Import(name="fontSize")
       private final @Nullable Output<Either<String,FontSize>> fontSize;
@@ -34,7 +32,6 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Style of terminal font.
-     * 
      */
     @Import(name="fontStyle")
       private final @Nullable Output<Either<String,FontStyle>> fontStyle;

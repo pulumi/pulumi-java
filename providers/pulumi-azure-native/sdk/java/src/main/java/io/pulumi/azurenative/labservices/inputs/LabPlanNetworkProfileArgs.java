@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Profile for how to handle networking for Lab Plans.
- * 
  */
 public final class LabPlanNetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LabPlanNetworkProfileArgs extends io.pulumi.resources.Resourc
 
     /**
      * The external subnet resource id
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;

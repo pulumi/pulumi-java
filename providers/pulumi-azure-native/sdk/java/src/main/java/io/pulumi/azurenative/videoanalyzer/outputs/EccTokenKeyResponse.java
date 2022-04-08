@@ -11,28 +11,23 @@ import java.util.Objects;
 public final class EccTokenKeyResponse {
     /**
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
-     * 
      */
     private final String alg;
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
-     * 
      */
     private final String kid;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
-     * 
      */
     private final String type;
     /**
      * X coordinate.
-     * 
      */
     private final String x;
     /**
      * Y coordinate.
-     * 
      */
     private final String y;
 
@@ -52,14 +47,12 @@ public final class EccTokenKeyResponse {
 
     /**
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
-     * 
     */
     public String getAlg() {
         return this.alg;
     }
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
-     * 
     */
     public String getKid() {
         return this.kid;
@@ -67,21 +60,18 @@ public final class EccTokenKeyResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * X coordinate.
-     * 
     */
     public String getX() {
         return this.x;
     }
     /**
      * Y coordinate.
-     * 
     */
     public String getY() {
         return this.y;

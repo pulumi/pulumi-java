@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Azure NetApp Files volume from Microsoft.NetApp provider
- * 
  */
 public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * File path through which the NFS volume is exposed by the provider
-     * 
      */
     @Import(name="nfsFilePath")
       private final @Nullable Output<String> nfsFilePath;
@@ -31,7 +29,6 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP address of the NFS provider
-     * 
      */
     @Import(name="nfsProviderIp")
       private final @Nullable Output<String> nfsProviderIp;

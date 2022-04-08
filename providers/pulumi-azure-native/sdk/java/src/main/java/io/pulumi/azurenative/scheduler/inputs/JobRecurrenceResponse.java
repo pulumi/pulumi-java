@@ -18,7 +18,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the maximum number of times that the job should run.
-     * 
      */
     @Import(name="count")
       private final @Nullable Integer count;
@@ -29,7 +28,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the time at which the job will complete.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -40,7 +38,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
-     * 
      */
     @Import(name="frequency")
       private final @Nullable String frequency;
@@ -51,7 +48,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the interval between retries.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Integer interval;

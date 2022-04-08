@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class LinkedServicePropsResponse {
     /**
      * The creation time of the linked service.
-     * 
      */
     private final @Nullable String createdTime;
     /**
      * Type of the link target.
-     * 
      */
     private final @Nullable String linkType;
     /**
      * ResourceId of the link target of the linked service.
-     * 
      */
     private final String linkedServiceResourceId;
     /**
      * The last modified time of the linked service.
-     * 
      */
     private final @Nullable String modifiedTime;
 
@@ -46,28 +42,24 @@ public final class LinkedServicePropsResponse {
 
     /**
      * The creation time of the linked service.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Type of the link target.
-     * 
     */
     public Optional<String> getLinkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
      * ResourceId of the link target of the linked service.
-     * 
     */
     public String getLinkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
     /**
      * The last modified time of the linked service.
-     * 
     */
     public Optional<String> getModifiedTime() {
         return Optional.ofNullable(this.modifiedTime);

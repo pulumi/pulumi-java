@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Fields for tracking refresh job on the share or container.
- * 
  */
 public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
-     * 
      */
     @Import(name="errorManifestFile")
       private final @Nullable String errorManifestFile;
@@ -31,7 +29,6 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
-     * 
      */
     @Import(name="inProgressRefreshJobId")
       private final @Nullable String inProgressRefreshJobId;
@@ -42,7 +39,6 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
-     * 
      */
     @Import(name="lastCompletedRefreshJobTimeInUTC")
       private final @Nullable String lastCompletedRefreshJobTimeInUTC;
@@ -53,7 +49,6 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
-     * 
      */
     @Import(name="lastJob")
       private final @Nullable String lastJob;

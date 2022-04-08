@@ -19,7 +19,104 @@ import javax.annotation.Nullable;
  * Remote Private Endpoint Connection ARM resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Approves or rejects a private endpoint connection for a site.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webAppPrivateEndpointConnectionSlot = new AzureNative.Web.WebAppPrivateEndpointConnectionSlot("webAppPrivateEndpointConnectionSlot", new AzureNative.Web.WebAppPrivateEndpointConnectionSlotArgs
+ *         {
+ *             Name = "testSite",
+ *             PrivateEndpointConnectionName = "connection",
+ *             PrivateLinkServiceConnectionState = new AzureNative.Web.Inputs.PrivateLinkConnectionStateArgs
+ *             {
+ *                 ActionsRequired = "",
+ *                 Description = "Approved by admin.",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "rg",
+ *             Slot = "stage",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewWebAppPrivateEndpointConnectionSlot(ctx, "webAppPrivateEndpointConnectionSlot", &web.WebAppPrivateEndpointConnectionSlotArgs{
+ * 			Name:                          pulumi.String("testSite"),
+ * 			PrivateEndpointConnectionName: pulumi.String("connection"),
+ * 			PrivateLinkServiceConnectionState: &web.PrivateLinkConnectionStateArgs{
+ * 				ActionsRequired: pulumi.String(""),
+ * 				Description:     pulumi.String("Approved by admin."),
+ * 				Status:          pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			Slot:              pulumi.String("stage"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webAppPrivateEndpointConnectionSlot = new azure_native.web.WebAppPrivateEndpointConnectionSlot("webAppPrivateEndpointConnectionSlot", {
+ *     name: "testSite",
+ *     privateEndpointConnectionName: "connection",
+ *     privateLinkServiceConnectionState: {
+ *         actionsRequired: "",
+ *         description: "Approved by admin.",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "rg",
+ *     slot: "stage",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * web_app_private_endpoint_connection_slot = azure_native.web.WebAppPrivateEndpointConnectionSlot("webAppPrivateEndpointConnectionSlot",
+ *     name="testSite",
+ *     private_endpoint_connection_name="connection",
+ *     private_link_service_connection_state=azure_native.web.PrivateLinkConnectionStateArgs(
+ *         actions_required="",
+ *         description="Approved by admin.",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="rg",
+ *     slot="stage")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +131,60 @@ import javax.annotation.Nullable;
 public class WebAppPrivateEndpointConnectionSlot extends io.pulumi.resources.CustomResource {
     /**
      * Private IPAddresses mapped to the remote private endpoint
-     * 
      */
     @Export(name="ipAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipAddresses;
 
     /**
      * @return Private IPAddresses mapped to the remote private endpoint
-     * 
      */
     public Output</* @Nullable */ List<String>> getIpAddresses() {
         return this.ipAddresses;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * PrivateEndpoint of a remote private endpoint connection
-     * 
      */
     @Export(name="privateEndpoint", type=ArmIdWrapperResponse.class, parameters={})
     private Output</* @Nullable */ ArmIdWrapperResponse> privateEndpoint;
 
     /**
      * @return PrivateEndpoint of a remote private endpoint connection
-     * 
      */
     public Output</* @Nullable */ ArmIdWrapperResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * The state of a private link connection
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return The state of a private link connection
-     * 
      */
     public Output</* @Nullable */ PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -110,14 +197,12 @@ public class WebAppPrivateEndpointConnectionSlot extends io.pulumi.resources.Cus
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

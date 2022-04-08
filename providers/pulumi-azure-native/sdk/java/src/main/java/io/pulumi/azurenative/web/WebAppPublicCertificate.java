@@ -29,84 +29,72 @@ import javax.annotation.Nullable;
 public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource {
     /**
      * Public Certificate byte array
-     * 
      */
     @Export(name="blob", type=String.class, parameters={})
     private Output</* @Nullable */ String> blob;
 
     /**
      * @return Public Certificate byte array
-     * 
      */
     public Output</* @Nullable */ String> getBlob() {
         return this.blob;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Public Certificate Location
-     * 
      */
     @Export(name="publicCertificateLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicCertificateLocation;
 
     /**
      * @return Public Certificate Location
-     * 
      */
     public Output</* @Nullable */ String> getPublicCertificateLocation() {
         return this.publicCertificateLocation;
     }
     /**
      * Certificate Thumbprint
-     * 
      */
     @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
      * @return Certificate Thumbprint
-     * 
      */
     public Output<String> getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

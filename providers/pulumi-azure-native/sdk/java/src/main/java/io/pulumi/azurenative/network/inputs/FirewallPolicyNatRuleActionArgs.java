@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the FirewallPolicyNatRuleAction.
- * 
  */
 public final class FirewallPolicyNatRuleActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FirewallPolicyNatRuleActionArgs extends io.pulumi.resources.R
 
     /**
      * The type of action.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type;

@@ -30,7 +30,7335 @@ import javax.annotation.Nullable;
  * Describes a Virtual Machine Scale Set.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a custom-image scale set from an unmanaged generalized os image.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         Image = new AzureNative.Compute.Inputs.VirtualHardDiskArgs
+ *                         {
+ *                             Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
+ *                         },
+ *                         Name = "osDisk",
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						Image: &compute.VirtualHardDiskArgs{
+ * 							Uri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd"),
+ * 						},
+ * 						Name: pulumi.String("osDisk"),
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 image: {
+ *                     uri: "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
+ *                 },
+ *                 name: "osDisk",
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 image=azure_native.compute.VirtualHardDiskArgs(
+ *                     uri="http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
+ *                 ),
+ *                 name="osDisk",
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a platform-image scale set with unmanaged os disks.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         Name = "osDisk",
+ *                         VhdContainers = 
+ *                         {
+ *                             "http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer",
+ *                             "http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer",
+ *                             "http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer",
+ *                             "http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer",
+ *                             "http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						Name:         pulumi.String("osDisk"),
+ * 						VhdContainers: pulumi.StringArray{
+ * 							pulumi.String("http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer"),
+ * 							pulumi.String("http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer"),
+ * 							pulumi.String("http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer"),
+ * 							pulumi.String("http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer"),
+ * 							pulumi.String("http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 name: "osDisk",
+ *                 vhdContainers: [
+ *                     "http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer",
+ *                 ],
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 name="osDisk",
+ *                 vhd_containers=[
+ *                     "http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer",
+ *                     "http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer",
+ *                 ],
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set from a custom image.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set from a generalized shared image.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set from a specialized shared image.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with DiskEncryptionSet resource in os disk and data disk.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_DS1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     DataDisks = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+ *                         {
+ *                             Caching = "ReadWrite",
+ *                             CreateOption = "Empty",
+ *                             DiskSizeGB = 1023,
+ *                             Lun = 0,
+ *                             ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                             {
+ *                                 DiskEncryptionSet = new AzureNative.Compute.Inputs.DiskEncryptionSetParametersArgs
+ *                                 {
+ *                                     Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                                 },
+ *                                 StorageAccountType = "Standard_LRS",
+ *                             },
+ *                         },
+ *                     },
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             DiskEncryptionSet = new AzureNative.Compute.Inputs.DiskEncryptionSetParametersArgs
+ *                             {
+ *                                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                             },
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_DS1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					DataDisks: compute.VirtualMachineScaleSetDataDiskArray{
+ * 						&compute.VirtualMachineScaleSetDataDiskArgs{
+ * 							Caching:      "ReadWrite",
+ * 							CreateOption: pulumi.String("Empty"),
+ * 							DiskSizeGB:   pulumi.Int(1023),
+ * 							Lun:          pulumi.Int(0),
+ * 							ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 								DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+ * 									Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+ * 								},
+ * 								StorageAccountType: pulumi.String("Standard_LRS"),
+ * 							},
+ * 						},
+ * 					},
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+ * 								Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+ * 							},
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_DS1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             dataDisks: [{
+ *                 caching: "ReadWrite",
+ *                 createOption: "Empty",
+ *                 diskSizeGB: 1023,
+ *                 lun: 0,
+ *                 managedDisk: {
+ *                     diskEncryptionSet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                     },
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             }],
+ *             imageReference: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     diskEncryptionSet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                     },
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_DS1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             data_disks=[azure_native.compute.VirtualMachineScaleSetDataDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="Empty",
+ *                 disk_size_gb=1023,
+ *                 lun=0,
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     disk_encryption_set=azure_native.compute.DiskEncryptionSetParametersArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                     ),
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             )],
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     disk_encryption_set=azure_native.compute.DiskEncryptionSetParametersArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                     ),
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with Fpga Network Interfaces.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableAcceleratedNetworking = false,
+ *                             EnableFpga = true,
+ *                             EnableIPForwarding = false,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{fpgaNic-Name}",
+ *                                     Primary = true,
+ *                                     PrivateIPAddressVersion = "IPv4",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{fpgaNic-Name}",
+ *                             Primary = false,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableAcceleratedNetworking: pulumi.Bool(false),
+ * 							EnableFpga:                  pulumi.Bool(true),
+ * 							EnableIPForwarding:          pulumi.Bool(false),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name:                    pulumi.String("{fpgaNic-Name}"),
+ * 									Primary:                 pulumi.Bool(true),
+ * 									PrivateIPAddressVersion: pulumi.String("IPv4"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{fpgaNic-Name}"),
+ * 							Primary: pulumi.Bool(false),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [
+ *                 {
+ *                     enableIPForwarding: true,
+ *                     ipConfigurations: [{
+ *                         name: "{vmss-name}",
+ *                         subnet: {
+ *                             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                         },
+ *                     }],
+ *                     name: "{vmss-name}",
+ *                     primary: true,
+ *                 },
+ *                 {
+ *                     enableAcceleratedNetworking: false,
+ *                     enableFpga: true,
+ *                     enableIPForwarding: false,
+ *                     ipConfigurations: [{
+ *                         name: "{fpgaNic-Name}",
+ *                         primary: true,
+ *                         privateIPAddressVersion: "IPv4",
+ *                         subnet: {
+ *                             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}",
+ *                         },
+ *                     }],
+ *                     name: "{fpgaNic-Name}",
+ *                     primary: false,
+ *                 },
+ *             ],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[
+ *                 azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                     enable_ip_forwarding=True,
+ *                     ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                         name="{vmss-name}",
+ *                         subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                         ),
+ *                     )],
+ *                     name="{vmss-name}",
+ *                     primary=True,
+ *                 ),
+ *                 azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                     enable_accelerated_networking=False,
+ *                     enable_fpga=True,
+ *                     enable_ip_forwarding=False,
+ *                     ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                         name="{fpgaNic-Name}",
+ *                         primary=True,
+ *                         private_ip_address_version="IPv4",
+ *                         subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}",
+ *                         ),
+ *                     )],
+ *                     name="{fpgaNic-Name}",
+ *                     primary=False,
+ *                 ),
+ *             ],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with Host Encryption using encryptionAtHost property.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             Plan = new AzureNative.Compute.Inputs.PlanArgs
+ *             {
+ *                 Name = "windows2016",
+ *                 Product = "windows-data-science-vm",
+ *                 Publisher = "microsoft-ads",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_DS1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 SecurityProfile = new AzureNative.Compute.Inputs.SecurityProfileArgs
+ *                 {
+ *                     EncryptionAtHost = true,
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "windows-data-science-vm",
+ *                         Publisher = "microsoft-ads",
+ *                         Sku = "windows2016",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadOnly",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:      pulumi.String("westus"),
+ * 			Overprovision: pulumi.Bool(true),
+ * 			Plan: &compute.PlanArgs{
+ * 				Name:      pulumi.String("windows2016"),
+ * 				Product:   pulumi.String("windows-data-science-vm"),
+ * 				Publisher: pulumi.String("microsoft-ads"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_DS1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				SecurityProfile: &compute.SecurityProfileArgs{
+ * 					EncryptionAtHost: pulumi.Bool(true),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("windows-data-science-vm"),
+ * 						Publisher: pulumi.String("microsoft-ads"),
+ * 						Sku:       pulumi.String("windows2016"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadOnly",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     plan: {
+ *         name: "windows2016",
+ *         product: "windows-data-science-vm",
+ *         publisher: "microsoft-ads",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_DS1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         securityProfile: {
+ *             encryptionAtHost: true,
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "windows-data-science-vm",
+ *                 publisher: "microsoft-ads",
+ *                 sku: "windows2016",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadOnly",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     plan=azure_native.compute.PlanArgs(
+ *         name="windows2016",
+ *         product="windows-data-science-vm",
+ *         publisher="microsoft-ads",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_DS1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         security_profile=azure_native.compute.SecurityProfileArgs(
+ *             encryption_at_host=True,
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="windows-data-science-vm",
+ *                 publisher="microsoft-ads",
+ *                 sku="windows2016",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadOnly",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with Uefi Settings of secureBoot and vTPM.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D2s_v3",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 SecurityProfile = new AzureNative.Compute.Inputs.SecurityProfileArgs
+ *                 {
+ *                     SecurityType = "TrustedLaunch",
+ *                     UefiSettings = new AzureNative.Compute.Inputs.UefiSettingsArgs
+ *                     {
+ *                         SecureBootEnabled = true,
+ *                         VTpmEnabled = true,
+ *                     },
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "windowsserver-gen2preview-preview",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "windows10-tvm",
+ *                         Version = "18363.592.2001092016",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadOnly",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "StandardSSD_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D2s_v3"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				SecurityProfile: &compute.SecurityProfileArgs{
+ * 					SecurityType: pulumi.String("TrustedLaunch"),
+ * 					UefiSettings: &compute.UefiSettingsArgs{
+ * 						SecureBootEnabled: pulumi.Bool(true),
+ * 						VTpmEnabled:       pulumi.Bool(true),
+ * 					},
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("windowsserver-gen2preview-preview"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("windows10-tvm"),
+ * 						Version:   pulumi.String("18363.592.2001092016"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadOnly",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("StandardSSD_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D2s_v3",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         securityProfile: {
+ *             securityType: "TrustedLaunch",
+ *             uefiSettings: {
+ *                 secureBootEnabled: true,
+ *                 vTpmEnabled: true,
+ *             },
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "windowsserver-gen2preview-preview",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "windows10-tvm",
+ *                 version: "18363.592.2001092016",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadOnly",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "StandardSSD_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D2s_v3",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         security_profile=azure_native.compute.SecurityProfileArgs(
+ *             security_type="TrustedLaunch",
+ *             uefi_settings=azure_native.compute.UefiSettingsArgs(
+ *                 secure_boot_enabled=True,
+ *                 v_tpm_enabled=True,
+ *             ),
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="windowsserver-gen2preview-preview",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="windows10-tvm",
+ *                 version="18363.592.2001092016",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadOnly",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="StandardSSD_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with a marketplace image plan.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             Plan = new AzureNative.Compute.Inputs.PlanArgs
+ *             {
+ *                 Name = "windows2016",
+ *                 Product = "windows-data-science-vm",
+ *                 Publisher = "microsoft-ads",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "windows-data-science-vm",
+ *                         Publisher = "microsoft-ads",
+ *                         Sku = "windows2016",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:      pulumi.String("westus"),
+ * 			Overprovision: pulumi.Bool(true),
+ * 			Plan: &compute.PlanArgs{
+ * 				Name:      pulumi.String("windows2016"),
+ * 				Product:   pulumi.String("windows-data-science-vm"),
+ * 				Publisher: pulumi.String("microsoft-ads"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("windows-data-science-vm"),
+ * 						Publisher: pulumi.String("microsoft-ads"),
+ * 						Sku:       pulumi.String("windows2016"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     plan: {
+ *         name: "windows2016",
+ *         product: "windows-data-science-vm",
+ *         publisher: "microsoft-ads",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "windows-data-science-vm",
+ *                 publisher: "microsoft-ads",
+ *                 sku: "windows2016",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     plan=azure_native.compute.PlanArgs(
+ *         name="windows2016",
+ *         product="windows-data-science-vm",
+ *         publisher="microsoft-ads",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="windows-data-science-vm",
+ *                 publisher="microsoft-ads",
+ *                 sku="windows2016",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with an azure application gateway.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     ApplicationGatewayBackendAddressPools = 
+ *                                     {
+ *                                         new AzureNative.Compute.Inputs.SubResourceArgs
+ *                                         {
+ *                                             Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
+ *                                         },
+ *                                     },
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									ApplicationGatewayBackendAddressPools: compute.SubResourceArray{
+ * 										&compute.SubResourceArgs{
+ * 											Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}"),
+ * 										},
+ * 									},
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     applicationGatewayBackendAddressPools: [{
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
+ *                     }],
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     application_gateway_backend_address_pools=[azure_native.compute.SubResourceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
+ *                     )],
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with an azure load balancer.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     LoadBalancerBackendAddressPools = 
+ *                                     {
+ *                                         new AzureNative.Compute.Inputs.SubResourceArgs
+ *                                         {
+ *                                             Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
+ *                                         },
+ *                                     },
+ *                                     LoadBalancerInboundNatPools = 
+ *                                     {
+ *                                         new AzureNative.Compute.Inputs.SubResourceArgs
+ *                                         {
+ *                                             Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
+ *                                         },
+ *                                     },
+ *                                     Name = "{vmss-name}",
+ *                                     PublicIPAddressConfiguration = new AzureNative.Compute.Inputs.VirtualMachineScaleSetPublicIPAddressConfigurationArgs
+ *                                     {
+ *                                         Name = "{vmss-name}",
+ *                                         PublicIPAddressVersion = "IPv4",
+ *                                     },
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									LoadBalancerBackendAddressPools: compute.SubResourceArray{
+ * 										&compute.SubResourceArgs{
+ * 											Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}"),
+ * 										},
+ * 									},
+ * 									LoadBalancerInboundNatPools: compute.SubResourceArray{
+ * 										&compute.SubResourceArgs{
+ * 											Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}"),
+ * 										},
+ * 									},
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									PublicIPAddressConfiguration: &compute.VirtualMachineScaleSetPublicIPAddressConfigurationArgs{
+ * 										Name:                   pulumi.String("{vmss-name}"),
+ * 										PublicIPAddressVersion: pulumi.String("IPv4"),
+ * 									},
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     loadBalancerBackendAddressPools: [{
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
+ *                     }],
+ *                     loadBalancerInboundNatPools: [{
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
+ *                     }],
+ *                     name: "{vmss-name}",
+ *                     publicIPAddressConfiguration: {
+ *                         name: "{vmss-name}",
+ *                         publicIPAddressVersion: "IPv4",
+ *                     },
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     load_balancer_backend_address_pools=[azure_native.compute.SubResourceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
+ *                     )],
+ *                     load_balancer_inbound_nat_pools=[azure_native.compute.SubResourceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
+ *                     )],
+ *                     name="{vmss-name}",
+ *                     public_ip_address_configuration=azure_native.compute.VirtualMachineScaleSetPublicIPAddressConfigurationArgs(
+ *                         name="{vmss-name}",
+ *                         public_ip_address_version="IPv4",
+ *                     ),
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with automatic repairs enabled
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             AutomaticRepairsPolicy = new AzureNative.Compute.Inputs.AutomaticRepairsPolicyArgs
+ *             {
+ *                 Enabled = true,
+ *                 GracePeriod = "PT30M",
+ *             },
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			AutomaticRepairsPolicy: &compute.AutomaticRepairsPolicyArgs{
+ * 				Enabled:     pulumi.Bool(true),
+ * 				GracePeriod: pulumi.String("PT30M"),
+ * 			},
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     automaticRepairsPolicy: {
+ *         enabled: true,
+ *         gracePeriod: "PT30M",
+ *     },
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     automatic_repairs_policy=azure_native.compute.AutomaticRepairsPolicyArgs(
+ *         enabled=True,
+ *         grace_period="PT30M",
+ *     ),
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with boot diagnostics.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 DiagnosticsProfile = new AzureNative.Compute.Inputs.DiagnosticsProfileArgs
+ *                 {
+ *                     BootDiagnostics = new AzureNative.Compute.Inputs.BootDiagnosticsArgs
+ *                     {
+ *                         Enabled = true,
+ *                         StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
+ *                     },
+ *                 },
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+ * 					BootDiagnostics: &compute.BootDiagnosticsArgs{
+ * 						Enabled:    pulumi.Bool(true),
+ * 						StorageUri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net"),
+ * 					},
+ * 				},
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         diagnosticsProfile: {
+ *             bootDiagnostics: {
+ *                 enabled: true,
+ *                 storageUri: "http://{existing-storage-account-name}.blob.core.windows.net",
+ *             },
+ *         },
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         diagnostics_profile=azure_native.compute.DiagnosticsProfileArgs(
+ *             boot_diagnostics=azure_native.compute.BootDiagnosticsArgs(
+ *                 enabled=True,
+ *                 storage_uri="http://{existing-storage-account-name}.blob.core.windows.net",
+ *             ),
+ *         ),
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with empty data disks on each vm.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D2_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     DataDisks = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+ *                         {
+ *                             CreateOption = "Empty",
+ *                             DiskSizeGB = 1023,
+ *                             Lun = 0,
+ *                         },
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+ *                         {
+ *                             CreateOption = "Empty",
+ *                             DiskSizeGB = 1023,
+ *                             Lun = 1,
+ *                         },
+ *                     },
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         DiskSizeGB = 512,
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D2_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					DataDisks: compute.VirtualMachineScaleSetDataDiskArray{
+ * 						&compute.VirtualMachineScaleSetDataDiskArgs{
+ * 							CreateOption: pulumi.String("Empty"),
+ * 							DiskSizeGB:   pulumi.Int(1023),
+ * 							Lun:          pulumi.Int(0),
+ * 						},
+ * 						&compute.VirtualMachineScaleSetDataDiskArgs{
+ * 							CreateOption: pulumi.String("Empty"),
+ * 							DiskSizeGB:   pulumi.Int(1023),
+ * 							Lun:          pulumi.Int(1),
+ * 						},
+ * 					},
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						DiskSizeGB:   pulumi.Int(512),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D2_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             dataDisks: [
+ *                 {
+ *                     createOption: "Empty",
+ *                     diskSizeGB: 1023,
+ *                     lun: 0,
+ *                 },
+ *                 {
+ *                     createOption: "Empty",
+ *                     diskSizeGB: 1023,
+ *                     lun: 1,
+ *                 },
+ *             ],
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 diskSizeGB: 512,
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D2_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             data_disks=[
+ *                 azure_native.compute.VirtualMachineScaleSetDataDiskArgs(
+ *                     create_option="Empty",
+ *                     disk_size_gb=1023,
+ *                     lun=0,
+ *                 ),
+ *                 azure_native.compute.VirtualMachineScaleSetDataDiskArgs(
+ *                     create_option="Empty",
+ *                     disk_size_gb=1023,
+ *                     lun=1,
+ *                 ),
+ *             ],
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 disk_size_gb=512,
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with ephemeral os disks using placement property.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             Plan = new AzureNative.Compute.Inputs.PlanArgs
+ *             {
+ *                 Name = "windows2016",
+ *                 Product = "windows-data-science-vm",
+ *                 Publisher = "microsoft-ads",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_DS1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "windows-data-science-vm",
+ *                         Publisher = "microsoft-ads",
+ *                         Sku = "windows2016",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadOnly",
+ *                         CreateOption = "FromImage",
+ *                         DiffDiskSettings = new AzureNative.Compute.Inputs.DiffDiskSettingsArgs
+ *                         {
+ *                             Option = "Local",
+ *                             Placement = "ResourceDisk",
+ *                         },
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:      pulumi.String("westus"),
+ * 			Overprovision: pulumi.Bool(true),
+ * 			Plan: &compute.PlanArgs{
+ * 				Name:      pulumi.String("windows2016"),
+ * 				Product:   pulumi.String("windows-data-science-vm"),
+ * 				Publisher: pulumi.String("microsoft-ads"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_DS1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("windows-data-science-vm"),
+ * 						Publisher: pulumi.String("microsoft-ads"),
+ * 						Sku:       pulumi.String("windows2016"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadOnly",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						DiffDiskSettings: &compute.DiffDiskSettingsArgs{
+ * 							Option:    pulumi.String("Local"),
+ * 							Placement: pulumi.String("ResourceDisk"),
+ * 						},
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     plan: {
+ *         name: "windows2016",
+ *         product: "windows-data-science-vm",
+ *         publisher: "microsoft-ads",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_DS1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "windows-data-science-vm",
+ *                 publisher: "microsoft-ads",
+ *                 sku: "windows2016",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadOnly",
+ *                 createOption: "FromImage",
+ *                 diffDiskSettings: {
+ *                     option: "Local",
+ *                     placement: "ResourceDisk",
+ *                 },
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     plan=azure_native.compute.PlanArgs(
+ *         name="windows2016",
+ *         product="windows-data-science-vm",
+ *         publisher="microsoft-ads",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_DS1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="windows-data-science-vm",
+ *                 publisher="microsoft-ads",
+ *                 sku="windows2016",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadOnly",
+ *                 create_option="FromImage",
+ *                 diff_disk_settings=azure_native.compute.DiffDiskSettingsArgs(
+ *                     option="Local",
+ *                     placement="ResourceDisk",
+ *                 ),
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with ephemeral os disks.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             Plan = new AzureNative.Compute.Inputs.PlanArgs
+ *             {
+ *                 Name = "windows2016",
+ *                 Product = "windows-data-science-vm",
+ *                 Publisher = "microsoft-ads",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_DS1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "windows-data-science-vm",
+ *                         Publisher = "microsoft-ads",
+ *                         Sku = "windows2016",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadOnly",
+ *                         CreateOption = "FromImage",
+ *                         DiffDiskSettings = new AzureNative.Compute.Inputs.DiffDiskSettingsArgs
+ *                         {
+ *                             Option = "Local",
+ *                         },
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:      pulumi.String("westus"),
+ * 			Overprovision: pulumi.Bool(true),
+ * 			Plan: &compute.PlanArgs{
+ * 				Name:      pulumi.String("windows2016"),
+ * 				Product:   pulumi.String("windows-data-science-vm"),
+ * 				Publisher: pulumi.String("microsoft-ads"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_DS1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("windows-data-science-vm"),
+ * 						Publisher: pulumi.String("microsoft-ads"),
+ * 						Sku:       pulumi.String("windows2016"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadOnly",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						DiffDiskSettings: &compute.DiffDiskSettingsArgs{
+ * 							Option: pulumi.String("Local"),
+ * 						},
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     plan: {
+ *         name: "windows2016",
+ *         product: "windows-data-science-vm",
+ *         publisher: "microsoft-ads",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_DS1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "windows-data-science-vm",
+ *                 publisher: "microsoft-ads",
+ *                 sku: "windows2016",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadOnly",
+ *                 createOption: "FromImage",
+ *                 diffDiskSettings: {
+ *                     option: "Local",
+ *                 },
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     plan=azure_native.compute.PlanArgs(
+ *         name="windows2016",
+ *         product="windows-data-science-vm",
+ *         publisher="microsoft-ads",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_DS1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="windows-data-science-vm",
+ *                 publisher="microsoft-ads",
+ *                 sku="windows2016",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadOnly",
+ *                 create_option="FromImage",
+ *                 diff_disk_settings=azure_native.compute.DiffDiskSettingsArgs(
+ *                     option="Local",
+ *                 ),
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with extension time budget.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 DiagnosticsProfile = new AzureNative.Compute.Inputs.DiagnosticsProfileArgs
+ *                 {
+ *                     BootDiagnostics = new AzureNative.Compute.Inputs.BootDiagnosticsArgs
+ *                     {
+ *                         Enabled = true,
+ *                         StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
+ *                     },
+ *                 },
+ *                 ExtensionProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetExtensionProfileArgs
+ *                 {
+ *                     Extensions = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetExtensionArgs
+ *                         {
+ *                             AutoUpgradeMinorVersion = false,
+ *                             Name = "{extension-name}",
+ *                             Publisher = "{extension-Publisher}",
+ *                             Settings = ,
+ *                             Type = "{extension-Type}",
+ *                             TypeHandlerVersion = "{handler-version}",
+ *                         },
+ *                     },
+ *                     ExtensionsTimeBudget = "PT1H20M",
+ *                 },
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+ * 					BootDiagnostics: &compute.BootDiagnosticsArgs{
+ * 						Enabled:    pulumi.Bool(true),
+ * 						StorageUri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net"),
+ * 					},
+ * 				},
+ * 				ExtensionProfile: &compute.VirtualMachineScaleSetExtensionProfileArgs{
+ * 					Extensions: compute.VirtualMachineScaleSetExtensionArray{
+ * 						&compute.VirtualMachineScaleSetExtensionArgs{
+ * 							AutoUpgradeMinorVersion: pulumi.Bool(false),
+ * 							Name:                    pulumi.String("{extension-name}"),
+ * 							Publisher:               pulumi.String("{extension-Publisher}"),
+ * 							Settings:                nil,
+ * 							Type:                    pulumi.String("{extension-Type}"),
+ * 							TypeHandlerVersion:      pulumi.String("{handler-version}"),
+ * 						},
+ * 					},
+ * 					ExtensionsTimeBudget: pulumi.String("PT1H20M"),
+ * 				},
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         diagnosticsProfile: {
+ *             bootDiagnostics: {
+ *                 enabled: true,
+ *                 storageUri: "http://{existing-storage-account-name}.blob.core.windows.net",
+ *             },
+ *         },
+ *         extensionProfile: {
+ *             extensions: [{
+ *                 autoUpgradeMinorVersion: false,
+ *                 name: "{extension-name}",
+ *                 publisher: "{extension-Publisher}",
+ *                 settings: {},
+ *                 type: "{extension-Type}",
+ *                 typeHandlerVersion: "{handler-version}",
+ *             }],
+ *             extensionsTimeBudget: "PT1H20M",
+ *         },
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         diagnostics_profile=azure_native.compute.DiagnosticsProfileArgs(
+ *             boot_diagnostics=azure_native.compute.BootDiagnosticsArgs(
+ *                 enabled=True,
+ *                 storage_uri="http://{existing-storage-account-name}.blob.core.windows.net",
+ *             ),
+ *         ),
+ *         extension_profile=azure_native.compute.VirtualMachineScaleSetExtensionProfileArgs(
+ *             extensions=[azure_native.compute.VirtualMachineScaleSetExtensionArgs(
+ *                 auto_upgrade_minor_version=False,
+ *                 name="{extension-name}",
+ *                 publisher="{extension-Publisher}",
+ *                 settings={},
+ *                 type="{extension-Type}",
+ *                 type_handler_version="{handler-version}",
+ *             )],
+ *             extensions_time_budget="PT1H20M",
+ *         ),
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with managed boot diagnostics.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 DiagnosticsProfile = new AzureNative.Compute.Inputs.DiagnosticsProfileArgs
+ *                 {
+ *                     BootDiagnostics = new AzureNative.Compute.Inputs.BootDiagnosticsArgs
+ *                     {
+ *                         Enabled = true,
+ *                     },
+ *                 },
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
+ * 					BootDiagnostics: &compute.BootDiagnosticsArgs{
+ * 						Enabled: pulumi.Bool(true),
+ * 					},
+ * 				},
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         diagnosticsProfile: {
+ *             bootDiagnostics: {
+ *                 enabled: true,
+ *             },
+ *         },
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         diagnostics_profile=azure_native.compute.DiagnosticsProfileArgs(
+ *             boot_diagnostics=azure_native.compute.BootDiagnosticsArgs(
+ *                 enabled=True,
+ *             ),
+ *         ),
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with password authentication.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with premium storage.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Premium_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Premium_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Premium_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Premium_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with ssh authentication.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                     LinuxConfiguration = new AzureNative.Compute.Inputs.LinuxConfigurationArgs
+ *                     {
+ *                         DisablePasswordAuthentication = true,
+ *                         Ssh = new AzureNative.Compute.Inputs.SshConfigurationArgs
+ *                         {
+ *                             PublicKeys = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.SshPublicKeyArgs
+ *                                 {
+ *                                     KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
+ *                                     Path = "/home/{your-username}/.ssh/authorized_keys",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 					LinuxConfiguration: &compute.LinuxConfigurationArgs{
+ * 						DisablePasswordAuthentication: pulumi.Bool(true),
+ * 						Ssh: &compute.SshConfigurationArgs{
+ * 							PublicKeys: compute.SshPublicKeyArray{
+ * 								&compute.SshPublicKeyArgs{
+ * 									KeyData: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1"),
+ * 									Path:    pulumi.String("/home/{your-username}/.ssh/authorized_keys"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *             linuxConfiguration: {
+ *                 disablePasswordAuthentication: true,
+ *                 ssh: {
+ *                     publicKeys: [{
+ *                         keyData: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
+ *                         path: "/home/{your-username}/.ssh/authorized_keys",
+ *                     }],
+ *                 },
+ *             },
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *             linux_configuration=azure_native.compute.LinuxConfigurationArgs(
+ *                 disable_password_authentication=True,
+ *                 ssh=azure_native.compute.SshConfigurationArgs(
+ *                     public_keys=[azure_native.compute.SshPublicKeyArgs(
+ *                         key_data="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
+ *                         path="/home/{your-username}/.ssh/authorized_keys",
+ *                     )],
+ *                 ),
+ *             ),
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with terminate scheduled events enabled.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 ScheduledEventsProfile = new AzureNative.Compute.Inputs.ScheduledEventsProfileArgs
+ *                 {
+ *                     TerminateNotificationProfile = new AzureNative.Compute.Inputs.TerminateNotificationProfileArgs
+ *                     {
+ *                         Enable = true,
+ *                         NotBeforeTimeout = "PT5M",
+ *                     },
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				ScheduledEventsProfile: &compute.ScheduledEventsProfileArgs{
+ * 					TerminateNotificationProfile: &compute.TerminateNotificationProfileArgs{
+ * 						Enable:           pulumi.Bool(true),
+ * 						NotBeforeTimeout: pulumi.String("PT5M"),
+ * 					},
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         scheduledEventsProfile: {
+ *             terminateNotificationProfile: {
+ *                 enable: true,
+ *                 notBeforeTimeout: "PT5M",
+ *             },
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         scheduled_events_profile=azure_native.compute.ScheduledEventsProfileArgs(
+ *             terminate_notification_profile=azure_native.compute.TerminateNotificationProfileArgs(
+ *                 enable=True,
+ *                 not_before_timeout="PT5M",
+ *             ),
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with userData.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "westus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 3,
+ *                 Name = "Standard_D1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Manual",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *                 UserData = "RXhhbXBsZSBVc2VyRGF0YQ==",
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(3),
+ * 				Name:     pulumi.String("Standard_D1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Manual",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 				UserData: pulumi.String("RXhhbXBsZSBVc2VyRGF0YQ=="),
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "westus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 3,
+ *         name: "Standard_D1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Manual",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *         userData: "RXhhbXBsZSBVc2VyRGF0YQ==",
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="westus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=3,
+ *         name="Standard_D1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Manual",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *         user_data="RXhhbXBsZSBVc2VyRGF0YQ==",
+ *     ),
+ *     vm_scale_set_name="{vmss-name}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a scale set with virtual machines in different zones.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSet = new AzureNative.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNative.Compute.VirtualMachineScaleSetArgs
+ *         {
+ *             Location = "centralus",
+ *             Overprovision = true,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 2,
+ *                 Name = "Standard_A1_v2",
+ *                 Tier = "Standard",
+ *             },
+ *             UpgradePolicy = new AzureNative.Compute.Inputs.UpgradePolicyArgs
+ *             {
+ *                 Mode = "Automatic",
+ *             },
+ *             VirtualMachineProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+ *                 {
+ *                     NetworkInterfaceConfigurations = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+ *                         {
+ *                             EnableIPForwarding = true,
+ *                             IpConfigurations = 
+ *                             {
+ *                                 new AzureNative.Compute.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+ *                                 {
+ *                                     Name = "{vmss-name}",
+ *                                     Subnet = new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                                     {
+ *                                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             Name = "{vmss-name}",
+ *                             Primary = true,
+ *                         },
+ *                     },
+ *                 },
+ *                 OsProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+ *                 {
+ *                     AdminPassword = "{your-password}",
+ *                     AdminUsername = "{your-username}",
+ *                     ComputerNamePrefix = "{vmss-name}",
+ *                 },
+ *                 StorageProfile = new AzureNative.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+ *                 {
+ *                     DataDisks = 
+ *                     {
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+ *                         {
+ *                             CreateOption = "Empty",
+ *                             DiskSizeGB = 1023,
+ *                             Lun = 0,
+ *                         },
+ *                         new AzureNative.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+ *                         {
+ *                             CreateOption = "Empty",
+ *                             DiskSizeGB = 1023,
+ *                             Lun = 1,
+ *                         },
+ *                     },
+ *                     ImageReference = new AzureNative.Compute.Inputs.ImageReferenceArgs
+ *                     {
+ *                         Offer = "WindowsServer",
+ *                         Publisher = "MicrosoftWindowsServer",
+ *                         Sku = "2016-Datacenter",
+ *                         Version = "latest",
+ *                     },
+ *                     OsDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+ *                     {
+ *                         Caching = "ReadWrite",
+ *                         CreateOption = "FromImage",
+ *                         DiskSizeGB = 512,
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+ *                         {
+ *                             StorageAccountType = "Standard_LRS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             VmScaleSetName = "{vmss-name}",
+ *             Zones = 
+ *             {
+ *                 "1",
+ *                 "3",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+ * 			Location:          pulumi.String("centralus"),
+ * 			Overprovision:     pulumi.Bool(true),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Capacity: pulumi.Float64(2),
+ * 				Name:     pulumi.String("Standard_A1_v2"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			UpgradePolicy: &compute.UpgradePolicyArgs{
+ * 				Mode: "Automatic",
+ * 			},
+ * 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+ * 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+ * 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+ * 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+ * 							EnableIPForwarding: pulumi.Bool(true),
+ * 							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+ * 								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+ * 									Name: pulumi.String("{vmss-name}"),
+ * 									Subnet: &compute.ApiEntityReferenceArgs{
+ * 										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+ * 									},
+ * 								},
+ * 							},
+ * 							Name:    pulumi.String("{vmss-name}"),
+ * 							Primary: pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+ * 					AdminPassword:      pulumi.String("{your-password}"),
+ * 					AdminUsername:      pulumi.String("{your-username}"),
+ * 					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+ * 				},
+ * 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+ * 					DataDisks: compute.VirtualMachineScaleSetDataDiskArray{
+ * 						&compute.VirtualMachineScaleSetDataDiskArgs{
+ * 							CreateOption: pulumi.String("Empty"),
+ * 							DiskSizeGB:   pulumi.Int(1023),
+ * 							Lun:          pulumi.Int(0),
+ * 						},
+ * 						&compute.VirtualMachineScaleSetDataDiskArgs{
+ * 							CreateOption: pulumi.String("Empty"),
+ * 							DiskSizeGB:   pulumi.Int(1023),
+ * 							Lun:          pulumi.Int(1),
+ * 						},
+ * 					},
+ * 					ImageReference: &compute.ImageReferenceArgs{
+ * 						Offer:     pulumi.String("WindowsServer"),
+ * 						Publisher: pulumi.String("MicrosoftWindowsServer"),
+ * 						Sku:       pulumi.String("2016-Datacenter"),
+ * 						Version:   pulumi.String("latest"),
+ * 					},
+ * 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+ * 						Caching:      "ReadWrite",
+ * 						CreateOption: pulumi.String("FromImage"),
+ * 						DiskSizeGB:   pulumi.Int(512),
+ * 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+ * 							StorageAccountType: pulumi.String("Standard_LRS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			VmScaleSetName: pulumi.String("{vmss-name}"),
+ * 			Zones: pulumi.StringArray{
+ * 				pulumi.String("1"),
+ * 				pulumi.String("3"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSet = new azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+ *     location: "centralus",
+ *     overprovision: true,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         capacity: 2,
+ *         name: "Standard_A1_v2",
+ *         tier: "Standard",
+ *     },
+ *     upgradePolicy: {
+ *         mode: "Automatic",
+ *     },
+ *     virtualMachineProfile: {
+ *         networkProfile: {
+ *             networkInterfaceConfigurations: [{
+ *                 enableIPForwarding: true,
+ *                 ipConfigurations: [{
+ *                     name: "{vmss-name}",
+ *                     subnet: {
+ *                         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     },
+ *                 }],
+ *                 name: "{vmss-name}",
+ *                 primary: true,
+ *             }],
+ *         },
+ *         osProfile: {
+ *             adminPassword: "{your-password}",
+ *             adminUsername: "{your-username}",
+ *             computerNamePrefix: "{vmss-name}",
+ *         },
+ *         storageProfile: {
+ *             dataDisks: [
+ *                 {
+ *                     createOption: "Empty",
+ *                     diskSizeGB: 1023,
+ *                     lun: 0,
+ *                 },
+ *                 {
+ *                     createOption: "Empty",
+ *                     diskSizeGB: 1023,
+ *                     lun: 1,
+ *                 },
+ *             ],
+ *             imageReference: {
+ *                 offer: "WindowsServer",
+ *                 publisher: "MicrosoftWindowsServer",
+ *                 sku: "2016-Datacenter",
+ *                 version: "latest",
+ *             },
+ *             osDisk: {
+ *                 caching: "ReadWrite",
+ *                 createOption: "FromImage",
+ *                 diskSizeGB: 512,
+ *                 managedDisk: {
+ *                     storageAccountType: "Standard_LRS",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     vmScaleSetName: "{vmss-name}",
+ *     zones: [
+ *         "1",
+ *         "3",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set = azure_native.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+ *     location="centralus",
+ *     overprovision=True,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         capacity=2,
+ *         name="Standard_A1_v2",
+ *         tier="Standard",
+ *     ),
+ *     upgrade_policy=azure_native.compute.UpgradePolicyArgs(
+ *         mode="Automatic",
+ *     ),
+ *     virtual_machine_profile=azure_native.compute.VirtualMachineScaleSetVMProfileArgs(
+ *         network_profile=azure_native.compute.VirtualMachineScaleSetNetworkProfileArgs(
+ *             network_interface_configurations=[azure_native.compute.VirtualMachineScaleSetNetworkConfigurationArgs(
+ *                 enable_ip_forwarding=True,
+ *                 ip_configurations=[azure_native.compute.VirtualMachineScaleSetIPConfigurationArgs(
+ *                     name="{vmss-name}",
+ *                     subnet=azure_native.compute.ApiEntityReferenceArgs(
+ *                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+ *                     ),
+ *                 )],
+ *                 name="{vmss-name}",
+ *                 primary=True,
+ *             )],
+ *         ),
+ *         os_profile=azure_native.compute.VirtualMachineScaleSetOSProfileArgs(
+ *             admin_password="{your-password}",
+ *             admin_username="{your-username}",
+ *             computer_name_prefix="{vmss-name}",
+ *         ),
+ *         storage_profile=azure_native.compute.VirtualMachineScaleSetStorageProfileArgs(
+ *             data_disks=[
+ *                 azure_native.compute.VirtualMachineScaleSetDataDiskArgs(
+ *                     create_option="Empty",
+ *                     disk_size_gb=1023,
+ *                     lun=0,
+ *                 ),
+ *                 azure_native.compute.VirtualMachineScaleSetDataDiskArgs(
+ *                     create_option="Empty",
+ *                     disk_size_gb=1023,
+ *                     lun=1,
+ *                 ),
+ *             ],
+ *             image_reference=azure_native.compute.ImageReferenceArgs(
+ *                 offer="WindowsServer",
+ *                 publisher="MicrosoftWindowsServer",
+ *                 sku="2016-Datacenter",
+ *                 version="latest",
+ *             ),
+ *             os_disk=azure_native.compute.VirtualMachineScaleSetOSDiskArgs(
+ *                 caching="ReadWrite",
+ *                 create_option="FromImage",
+ *                 disk_size_gb=512,
+ *                 managed_disk=azure_native.compute.VirtualMachineScaleSetManagedDiskParametersArgs(
+ *                     storage_account_type="Standard_LRS",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     vm_scale_set_name="{vmss-name}",
+ *     zones=[
+ *         "1",
+ *         "3",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -45,336 +7373,288 @@ import javax.annotation.Nullable;
 public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
     /**
      * Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
-     * 
      */
     @Export(name="additionalCapabilities", type=AdditionalCapabilitiesResponse.class, parameters={})
     private Output</* @Nullable */ AdditionalCapabilitiesResponse> additionalCapabilities;
 
     /**
      * @return Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
-     * 
      */
     public Output</* @Nullable */ AdditionalCapabilitiesResponse> getAdditionalCapabilities() {
         return this.additionalCapabilities;
     }
     /**
      * Policy for automatic repairs.
-     * 
      */
     @Export(name="automaticRepairsPolicy", type=AutomaticRepairsPolicyResponse.class, parameters={})
     private Output</* @Nullable */ AutomaticRepairsPolicyResponse> automaticRepairsPolicy;
 
     /**
      * @return Policy for automatic repairs.
-     * 
      */
     public Output</* @Nullable */ AutomaticRepairsPolicyResponse> getAutomaticRepairsPolicy() {
         return this.automaticRepairsPolicy;
     }
     /**
      * When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
-     * 
      */
     @Export(name="doNotRunExtensionsOnOverprovisionedVMs", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> doNotRunExtensionsOnOverprovisionedVMs;
 
     /**
      * @return When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDoNotRunExtensionsOnOverprovisionedVMs() {
         return this.doNotRunExtensionsOnOverprovisionedVMs;
     }
     /**
      * The extended location of the Virtual Machine Scale Set.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extended location of the Virtual Machine Scale Set.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
-     * 
      */
     @Export(name="hostGroup", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> hostGroup;
 
     /**
      * @return Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getHostGroup() {
         return this.hostGroup;
     }
     /**
      * The identity of the virtual machine scale set, if configured.
-     * 
      */
     @Export(name="identity", type=VirtualMachineScaleSetIdentityResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineScaleSetIdentityResponse> identity;
 
     /**
      * @return The identity of the virtual machine scale set, if configured.
-     * 
      */
     public Output</* @Nullable */ VirtualMachineScaleSetIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the orchestration mode for the virtual machine scale set.
-     * 
      */
     @Export(name="orchestrationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> orchestrationMode;
 
     /**
      * @return Specifies the orchestration mode for the virtual machine scale set.
-     * 
      */
     public Output</* @Nullable */ String> getOrchestrationMode() {
         return this.orchestrationMode;
     }
     /**
      * Specifies whether the Virtual Machine Scale Set should be overprovisioned.
-     * 
      */
     @Export(name="overprovision", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> overprovision;
 
     /**
      * @return Specifies whether the Virtual Machine Scale Set should be overprovisioned.
-     * 
      */
     public Output</* @Nullable */ Boolean> getOverprovision() {
         return this.overprovision;
     }
     /**
      * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
-     * 
      */
     @Export(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
     /**
      * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
-     * 
      */
     public Output</* @Nullable */ PlanResponse> getPlan() {
         return this.plan;
     }
     /**
      * Fault Domain count for each placement group.
-     * 
      */
     @Export(name="platformFaultDomainCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> platformFaultDomainCount;
 
     /**
      * @return Fault Domain count for each placement group.
-     * 
      */
     public Output</* @Nullable */ Integer> getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
-     * 
      */
     @Export(name="proximityPlacementGroup", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup;
 
     /**
      * @return Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getProximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
     /**
      * Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
-     * 
      */
     @Export(name="scaleInPolicy", type=ScaleInPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ScaleInPolicyResponse> scaleInPolicy;
 
     /**
      * @return Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
-     * 
      */
     public Output</* @Nullable */ ScaleInPolicyResponse> getScaleInPolicy() {
         return this.scaleInPolicy;
     }
     /**
      * When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
-     * 
      */
     @Export(name="singlePlacementGroup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> singlePlacementGroup;
 
     /**
      * @return When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSinglePlacementGroup() {
         return this.singlePlacementGroup;
     }
     /**
      * The virtual machine scale set sku.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The virtual machine scale set sku.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Specifies the ID which uniquely identifies a Virtual Machine Scale Set.
-     * 
      */
     @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**
      * @return Specifies the ID which uniquely identifies a Virtual Machine Scale Set.
-     * 
      */
     public Output<String> getUniqueId() {
         return this.uniqueId;
     }
     /**
      * The upgrade policy.
-     * 
      */
     @Export(name="upgradePolicy", type=UpgradePolicyResponse.class, parameters={})
     private Output</* @Nullable */ UpgradePolicyResponse> upgradePolicy;
 
     /**
      * @return The upgrade policy.
-     * 
      */
     public Output</* @Nullable */ UpgradePolicyResponse> getUpgradePolicy() {
         return this.upgradePolicy;
     }
     /**
      * The virtual machine profile.
-     * 
      */
     @Export(name="virtualMachineProfile", type=VirtualMachineScaleSetVMProfileResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineScaleSetVMProfileResponse> virtualMachineProfile;
 
     /**
      * @return The virtual machine profile.
-     * 
      */
     public Output</* @Nullable */ VirtualMachineScaleSetVMProfileResponse> getVirtualMachineProfile() {
         return this.virtualMachineProfile;
     }
     /**
      * Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
-     * 
      */
     @Export(name="zoneBalance", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> zoneBalance;
 
     /**
      * @return Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
-     * 
      */
     public Output</* @Nullable */ Boolean> getZoneBalance() {
         return this.zoneBalance;
     }
     /**
      * The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
-     * 
      */
     @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**
      * @return The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
-     * 
      */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;

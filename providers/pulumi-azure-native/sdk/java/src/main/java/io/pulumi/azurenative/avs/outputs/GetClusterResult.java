@@ -14,42 +14,34 @@ import java.util.Objects;
 public final class GetClusterResult {
     /**
      * The identity
-     * 
      */
     private final Integer clusterId;
     /**
      * The cluster size
-     * 
      */
     private final Integer clusterSize;
     /**
      * The hosts
-     * 
      */
     private final List<String> hosts;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The state of the cluster provisioning
-     * 
      */
     private final String provisioningState;
     /**
      * The cluster SKU
-     * 
      */
     private final SkuResponse sku;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -75,56 +67,48 @@ public final class GetClusterResult {
 
     /**
      * The identity
-     * 
     */
     public Integer getClusterId() {
         return this.clusterId;
     }
     /**
      * The cluster size
-     * 
     */
     public Integer getClusterSize() {
         return this.clusterSize;
     }
     /**
      * The hosts
-     * 
     */
     public List<String> getHosts() {
         return this.hosts;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the cluster provisioning
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The cluster SKU
-     * 
     */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class EdifactOneWayAgreementResponse {
     /**
      * The EDIFACT protocol settings.
-     * 
      */
     private final EdifactProtocolSettingsResponse protocolSettings;
     /**
      * The receiver business identity
-     * 
      */
     private final BusinessIdentityResponse receiverBusinessIdentity;
     /**
      * The sender business identity
-     * 
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
@@ -38,21 +35,18 @@ public final class EdifactOneWayAgreementResponse {
 
     /**
      * The EDIFACT protocol settings.
-     * 
     */
     public EdifactProtocolSettingsResponse getProtocolSettings() {
         return this.protocolSettings;
     }
     /**
      * The receiver business identity
-     * 
     */
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
     /**
      * The sender business identity
-     * 
     */
     public BusinessIdentityResponse getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * A container instance.
- * 
  */
 public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The commands to execute within the container instance in exec form.
-     * 
      */
     @Import(name="command")
       private final @Nullable List<String> command;
@@ -38,7 +36,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The environment variables to set in the container instance.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
@@ -49,7 +46,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the image used to create the container instance.
-     * 
      */
     @Import(name="image", required=true)
       private final String image;
@@ -60,7 +56,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The instance view of the container instance. Only valid in response.
-     * 
      */
     @Import(name="instanceView", required=true)
       private final ContainerPropertiesResponseInstanceView instanceView;
@@ -71,7 +66,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The liveness probe.
-     * 
      */
     @Import(name="livenessProbe")
       private final @Nullable ContainerProbeResponse livenessProbe;
@@ -82,7 +76,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The user-provided name of the container instance.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -93,7 +86,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The exposed ports on the container instance.
-     * 
      */
     @Import(name="ports")
       private final @Nullable List<ContainerPortResponse> ports;
@@ -104,7 +96,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The readiness probe.
-     * 
      */
     @Import(name="readinessProbe")
       private final @Nullable ContainerProbeResponse readinessProbe;
@@ -115,7 +106,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource requirements of the container instance.
-     * 
      */
     @Import(name="resources", required=true)
       private final ResourceRequirementsResponse resources;
@@ -126,7 +116,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The volume mounts available to the container instance.
-     * 
      */
     @Import(name="volumeMounts")
       private final @Nullable List<VolumeMountResponse> volumeMounts;

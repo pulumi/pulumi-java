@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The mapping between a particular user and the access type on the SMB share.
- * 
  */
 public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Type of access to be allowed for the user.
-     * 
      */
     @Import(name="accessType", required=true)
       private final Output<Either<String,ShareAccessType>> accessType;
@@ -32,7 +30,6 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * User ID (already existing in the device).
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;

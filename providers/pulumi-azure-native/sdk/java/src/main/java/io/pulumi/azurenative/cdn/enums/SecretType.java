@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the Secret to create.
-     * 
      */
     @EnumType
     public enum SecretType {

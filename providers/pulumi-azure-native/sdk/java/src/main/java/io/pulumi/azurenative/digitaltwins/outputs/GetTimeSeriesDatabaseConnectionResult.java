@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetTimeSeriesDatabaseConnectionResult {
     /**
      * The resource identifier.
-     * 
      */
     private final String id;
     /**
      * Extension resource name.
-     * 
      */
     private final String name;
     /**
      * Properties of a specific time series database connection.
-     * 
      */
     private final AzureDataExplorerConnectionPropertiesResponse properties;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetTimeSeriesDatabaseConnectionResult {
 
     /**
      * The resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Extension resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a specific time series database connection.
-     * 
     */
     public AzureDataExplorerConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

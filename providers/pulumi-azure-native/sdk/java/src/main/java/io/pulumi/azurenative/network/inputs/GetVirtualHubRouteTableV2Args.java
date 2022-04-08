@@ -14,7 +14,6 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
 
     /**
      * The resource group name of the VirtualHubRouteTableV2.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
 
     /**
      * The name of the VirtualHubRouteTableV2.
-     * 
      */
     @Import(name="routeTableName", required=true)
       private final String routeTableName;
@@ -36,7 +34,6 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;

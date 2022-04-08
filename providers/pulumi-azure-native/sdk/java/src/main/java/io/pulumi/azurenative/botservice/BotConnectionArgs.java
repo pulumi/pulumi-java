@@ -21,7 +21,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Bot Service Connection Setting resource.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -32,7 +31,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required. Gets or sets the Kind of the resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
@@ -43,7 +41,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of properties specific to bot channel resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ConnectionSettingPropertiesArgs> properties;
@@ -65,7 +61,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Bot resource group in the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Bot resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -87,7 +81,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the SKU of the resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -98,7 +91,6 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

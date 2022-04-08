@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
     /**
      * List of gateway routes.
-     * 
      */
     private final @Nullable List<GatewayRouteResponse> value;
 
@@ -24,7 +23,6 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
 
     /**
      * List of gateway routes.
-     * 
     */
     public List<GatewayRouteResponse> getValue() {
         return this.value == null ? List.of() : this.value;

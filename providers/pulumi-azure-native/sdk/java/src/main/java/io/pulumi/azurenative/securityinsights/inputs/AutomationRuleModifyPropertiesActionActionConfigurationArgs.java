@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of the modify properties automation rule action
- * 
  */
 public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
     /**
      * The reason the incident was closed
-     * 
      */
     @Import(name="classification")
       private final @Nullable Output<Either<String,IncidentClassification>> classification;
@@ -39,7 +37,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
     /**
      * Describes the reason the incident was closed
-     * 
      */
     @Import(name="classificationComment")
       private final @Nullable Output<String> classificationComment;
@@ -50,7 +47,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
     /**
      * The classification reason to close the incident with
-     * 
      */
     @Import(name="classificationReason")
       private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
@@ -61,7 +57,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
     /**
      * List of labels to add to the incident
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<IncidentLabelArgs>> labels;
@@ -72,7 +67,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
     /**
      * Describes a user that the incident is assigned to
-     * 
      */
     @Import(name="owner")
       private final @Nullable Output<IncidentOwnerInfoArgs> owner;
@@ -83,7 +77,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
     /**
      * The severity of the incident
-     * 
      */
     @Import(name="severity")
       private final @Nullable Output<Either<String,IncidentSeverity>> severity;
@@ -94,7 +87,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
 
     /**
      * The status of the incident
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,IncidentStatus>> status;

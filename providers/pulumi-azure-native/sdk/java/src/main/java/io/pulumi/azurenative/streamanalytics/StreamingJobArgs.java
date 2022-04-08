@@ -29,7 +29,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Controls certain runtime behaviors of the streaming job.
-     * 
      */
     @Import(name="compatibilityLevel")
       private final @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel;
@@ -40,7 +39,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
-     * 
      */
     @Import(name="dataLocale")
       private final @Nullable Output<String> dataLocale;
@@ -51,7 +49,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.
-     * 
      */
     @Import(name="eventsLateArrivalMaxDelayInSeconds")
       private final @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds;
@@ -62,7 +59,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
-     * 
      */
     @Import(name="eventsOutOfOrderMaxDelayInSeconds")
       private final @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds;
@@ -73,7 +69,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the policy to apply to events that arrive out of order in the input event stream.
-     * 
      */
     @Import(name="eventsOutOfOrderPolicy")
       private final @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
@@ -84,7 +79,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
-     * 
      */
     @Import(name="functions")
       private final @Nullable Output<List<FunctionArgs>> functions;
@@ -95,7 +89,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable Output<List<InputArgs>> inputs;
@@ -106,7 +99,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the streaming job.
-     * 
      */
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
@@ -117,7 +109,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -128,7 +119,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
-     * 
      */
     @Import(name="outputErrorPolicy")
       private final @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy;
@@ -139,7 +129,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
-     * 
      */
     @Import(name="outputStartMode")
       private final @Nullable Output<Either<String,OutputStartMode>> outputStartMode;
@@ -150,7 +139,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
-     * 
      */
     @Import(name="outputStartTime")
       private final @Nullable Output<String> outputStartTime;
@@ -161,7 +149,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
-     * 
      */
     @Import(name="outputs")
       private final @Nullable Output<List<OutputArgs>> outputs;
@@ -172,7 +159,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -183,7 +169,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -194,7 +179,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -205,7 +189,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
-     * 
      */
     @Import(name="transformation")
       private final @Nullable Output<TransformationArgs> transformation;

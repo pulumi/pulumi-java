@@ -14,7 +14,6 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of connection.
-     * 
      */
     @Import(name="connectionName", required=true)
       private final String connectionName;
@@ -36,7 +34,6 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

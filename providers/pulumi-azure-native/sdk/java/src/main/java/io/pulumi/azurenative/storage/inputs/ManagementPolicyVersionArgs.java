@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Management policy action for blob version.
- * 
  */
 public final class ManagementPolicyVersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
 
     /**
      * The function to delete the blob version
-     * 
      */
     @Import(name="delete")
       private final @Nullable Output<DateAfterCreationArgs> delete;
@@ -31,7 +29,6 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
 
     /**
      * The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
-     * 
      */
     @Import(name="tierToArchive")
       private final @Nullable Output<DateAfterCreationArgs> tierToArchive;
@@ -42,7 +39,6 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
 
     /**
      * The function to tier blob version to cool storage. Support blob version currently at Hot tier
-     * 
      */
     @Import(name="tierToCool")
       private final @Nullable Output<DateAfterCreationArgs> tierToCool;

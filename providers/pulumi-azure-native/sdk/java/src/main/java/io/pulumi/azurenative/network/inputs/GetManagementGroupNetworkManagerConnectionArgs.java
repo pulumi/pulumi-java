@@ -14,7 +14,6 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
 
     /**
      * The management group Id which uniquely identify the Microsoft Azure management group.
-     * 
      */
     @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
@@ -25,7 +24,6 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
 
     /**
      * Name for the network manager connection.
-     * 
      */
     @Import(name="networkManagerConnectionName", required=true)
       private final String networkManagerConnectionName;

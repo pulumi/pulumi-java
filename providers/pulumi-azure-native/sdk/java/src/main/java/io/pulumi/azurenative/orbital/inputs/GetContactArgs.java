@@ -14,7 +14,6 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Contact Name
-     * 
      */
     @Import(name="contactName", required=true)
       private final String contactName;
@@ -25,7 +24,6 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Spacecraft ID
-     * 
      */
     @Import(name="spacecraftName", required=true)
       private final String spacecraftName;

@@ -17,7 +17,6 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The configuration name. Value must be 'default'
-     * 
      */
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
@@ -28,7 +27,6 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
-     * 
      */
     @Import(name="enforcePrivateMarkdownStorage")
       private final @Nullable Output<Boolean> enforcePrivateMarkdownStorage;

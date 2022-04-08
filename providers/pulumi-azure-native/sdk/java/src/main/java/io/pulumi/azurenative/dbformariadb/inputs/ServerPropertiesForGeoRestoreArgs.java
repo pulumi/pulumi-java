@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties used to create a new server by restoring to a different region from a geo replicated backup.
- * 
  */
 public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     /**
      * The mode to create a new server.
      * Expected value is 'GeoRestore'.
-     * 
      */
     @Import(name="createMode", required=true)
       private final Output<String> createMode;
@@ -38,7 +36,6 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
 
     /**
      * Enforce a minimal Tls version for the server.
-     * 
      */
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
@@ -49,7 +46,6 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
 
     /**
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
@@ -60,7 +56,6 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
 
     /**
      * The source server id to restore from.
-     * 
      */
     @Import(name="sourceServerId", required=true)
       private final Output<String> sourceServerId;
@@ -71,7 +66,6 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
 
     /**
      * Enable ssl enforcement or not when connect to server.
-     * 
      */
     @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
@@ -82,7 +76,6 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
 
     /**
      * Storage profile of a server.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -93,7 +86,6 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
 
     /**
      * Server version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;

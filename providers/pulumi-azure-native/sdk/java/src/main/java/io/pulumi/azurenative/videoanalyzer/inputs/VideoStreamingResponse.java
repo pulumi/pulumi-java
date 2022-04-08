@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Video streaming holds information about video streaming URLs.
- * 
  */
 public final class VideoStreamingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class VideoStreamingResponse extends io.pulumi.resources.InvokeArgs
      *   - DASH CMAF: /manifest(format=mpd-time-cmaf)
      * 
      * Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
-     * 
      */
     @Import(name="archiveBaseUrl")
       private final @Nullable String archiveBaseUrl;

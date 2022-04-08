@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subnet information.
- * 
  */
 public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
-     * 
      */
     @Import(name="allowPublicIp")
       private final @Nullable Output<Either<String,UsagePermissionType>> allowPublicIp;
@@ -33,7 +31,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the subnet as seen in the lab.
-     * 
      */
     @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
@@ -44,7 +41,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the subnet.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

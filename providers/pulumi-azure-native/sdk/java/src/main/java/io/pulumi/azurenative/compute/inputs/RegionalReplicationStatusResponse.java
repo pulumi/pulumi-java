@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * This is the regional replication status.
- * 
  */
 public final class RegionalReplicationStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
 
     /**
      * The details of the replication status.
-     * 
      */
     @Import(name="details", required=true)
       private final String details;
@@ -30,7 +28,6 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
 
     /**
      * It indicates progress of the replication job.
-     * 
      */
     @Import(name="progress", required=true)
       private final Integer progress;
@@ -41,7 +38,6 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
 
     /**
      * The region to which the gallery image version is being replicated to.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;
@@ -52,7 +48,6 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
 
     /**
      * This is the regional replication state.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

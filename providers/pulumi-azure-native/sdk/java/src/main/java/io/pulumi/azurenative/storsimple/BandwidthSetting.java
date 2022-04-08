@@ -19,7 +19,156 @@ import javax.annotation.Nullable;
  * The bandwidth setting.
  * API Version: 2017-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BandwidthSettingsCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bandwidthSetting = new AzureNative.StorSimple.BandwidthSetting("bandwidthSetting", new AzureNative.StorSimple.BandwidthSettingArgs
+ *         {
+ *             BandwidthSettingName = "BWSForTest",
+ *             ManagerName = "ManagerForSDKTest1",
+ *             ResourceGroupName = "ResourceGroupForSDKTest",
+ *             Schedules = 
+ *             {
+ *                 new AzureNative.StorSimple.Inputs.BandwidthScheduleArgs
+ *                 {
+ *                     Days = 
+ *                     {
+ *                         "Saturday",
+ *                         "Sunday",
+ *                     },
+ *                     RateInMbps = 10,
+ *                     Start = new AzureNative.StorSimple.Inputs.TimeArgs
+ *                     {
+ *                         Hours = 10,
+ *                         Minutes = 0,
+ *                         Seconds = 0,
+ *                     },
+ *                     Stop = new AzureNative.StorSimple.Inputs.TimeArgs
+ *                     {
+ *                         Hours = 20,
+ *                         Minutes = 0,
+ *                         Seconds = 0,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storsimple.NewBandwidthSetting(ctx, "bandwidthSetting", &storsimple.BandwidthSettingArgs{
+ * 			BandwidthSettingName: pulumi.String("BWSForTest"),
+ * 			ManagerName:          pulumi.String("ManagerForSDKTest1"),
+ * 			ResourceGroupName:    pulumi.String("ResourceGroupForSDKTest"),
+ * 			Schedules: storsimple.BandwidthScheduleArray{
+ * 				&storsimple.BandwidthScheduleArgs{
+ * 					Days: storsimple.DayOfWeekArray{
+ * 						"Saturday",
+ * 						"Sunday",
+ * 					},
+ * 					RateInMbps: pulumi.Int(10),
+ * 					Start: &storsimple.TimeArgs{
+ * 						Hours:   pulumi.Int(10),
+ * 						Minutes: pulumi.Int(0),
+ * 						Seconds: pulumi.Int(0),
+ * 					},
+ * 					Stop: &storsimple.TimeArgs{
+ * 						Hours:   pulumi.Int(20),
+ * 						Minutes: pulumi.Int(0),
+ * 						Seconds: pulumi.Int(0),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const bandwidthSetting = new azure_native.storsimple.BandwidthSetting("bandwidthSetting", {
+ *     bandwidthSettingName: "BWSForTest",
+ *     managerName: "ManagerForSDKTest1",
+ *     resourceGroupName: "ResourceGroupForSDKTest",
+ *     schedules: [{
+ *         days: [
+ *             "Saturday",
+ *             "Sunday",
+ *         ],
+ *         rateInMbps: 10,
+ *         start: {
+ *             hours: 10,
+ *             minutes: 0,
+ *             seconds: 0,
+ *         },
+ *         stop: {
+ *             hours: 20,
+ *             minutes: 0,
+ *             seconds: 0,
+ *         },
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * bandwidth_setting = azure_native.storsimple.BandwidthSetting("bandwidthSetting",
+ *     bandwidth_setting_name="BWSForTest",
+ *     manager_name="ManagerForSDKTest1",
+ *     resource_group_name="ResourceGroupForSDKTest",
+ *     schedules=[azure_native.storsimple.BandwidthScheduleArgs(
+ *         days=[
+ *             "Saturday",
+ *             "Sunday",
+ *         ],
+ *         rate_in_mbps=10,
+ *         start=azure_native.storsimple.TimeArgs(
+ *             hours=10,
+ *             minutes=0,
+ *             seconds=0,
+ *         ),
+ *         stop=azure_native.storsimple.TimeArgs(
+ *             hours=20,
+ *             minutes=0,
+ *             seconds=0,
+ *         ),
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +183,60 @@ import javax.annotation.Nullable;
 public class BandwidthSetting extends io.pulumi.resources.CustomResource {
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The name of the object.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the object.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The schedules.
-     * 
      */
     @Export(name="schedules", type=List.class, parameters={BandwidthScheduleResponse.class})
     private Output<List<BandwidthScheduleResponse>> schedules;
 
     /**
      * @return The schedules.
-     * 
      */
     public Output<List<BandwidthScheduleResponse>> getSchedules() {
         return this.schedules;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The number of volumes that uses the bandwidth setting.
-     * 
      */
     @Export(name="volumeCount", type=Integer.class, parameters={})
     private Output<Integer> volumeCount;
 
     /**
      * @return The number of volumes that uses the bandwidth setting.
-     * 
      */
     public Output<Integer> getVolumeCount() {
         return this.volumeCount;

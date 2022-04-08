@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The reference to the transport protocol used by the load balancing rule.
-     * 
      */
     @EnumType
     public enum TransportProtocol {

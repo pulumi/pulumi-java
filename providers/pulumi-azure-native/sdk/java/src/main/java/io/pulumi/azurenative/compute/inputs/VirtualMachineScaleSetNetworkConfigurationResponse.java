@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine scale set network profile's network configurations.
- * 
  */
 public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * Specify what happens to the network interface when the VM is deleted
-     * 
      */
     @Import(name="deleteOption")
       private final @Nullable String deleteOption;
@@ -36,7 +34,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * The dns settings to be applied on the network interfaces.
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings;
@@ -47,7 +44,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * Specifies whether the network interface is accelerated networking-enabled.
-     * 
      */
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Boolean enableAcceleratedNetworking;
@@ -58,7 +54,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * Specifies whether the network interface is FPGA networking-enabled.
-     * 
      */
     @Import(name="enableFpga")
       private final @Nullable Boolean enableFpga;
@@ -69,7 +64,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * Whether IP forwarding enabled on this NIC.
-     * 
      */
     @Import(name="enableIPForwarding")
       private final @Nullable Boolean enableIPForwarding;
@@ -80,7 +74,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -91,7 +84,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * Specifies the IP configurations of the network interface.
-     * 
      */
     @Import(name="ipConfigurations", required=true)
       private final List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations;
@@ -102,7 +94,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * The network configuration name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -113,7 +104,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * The network security group.
-     * 
      */
     @Import(name="networkSecurityGroup")
       private final @Nullable SubResourceResponse networkSecurityGroup;
@@ -124,7 +114,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends io
 
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Boolean primary;

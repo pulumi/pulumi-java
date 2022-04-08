@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Copy activity sources of tabular type.
- * 
  */
 public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -32,7 +30,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -54,7 +50,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -65,7 +60,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -76,7 +70,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -88,7 +81,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
     /**
      * Copy source type.
      * Expected value is 'TabularSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

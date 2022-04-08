@@ -21,7 +21,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The list of the ACR token resource IDs used to authenticate clients to the connected registry.
-     * 
      */
     @Import(name="clientTokenIds")
       private final @Nullable Output<List<String>> clientTokenIds;
@@ -32,7 +31,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the connected registry.
-     * 
      */
     @Import(name="connectedRegistryName")
       private final @Nullable Output<String> connectedRegistryName;
@@ -43,7 +41,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The logging properties of the connected registry.
-     * 
      */
     @Import(name="logging")
       private final @Nullable Output<LoggingPropertiesArgs> logging;
@@ -54,7 +51,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The mode of the connected registry resource that indicates the permissions of the registry.
-     * 
      */
     @Import(name="mode", required=true)
       private final Output<Either<String,ConnectedRegistryMode>> mode;
@@ -65,7 +61,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The parent of the connected registry.
-     * 
      */
     @Import(name="parent", required=true)
       private final Output<ParentPropertiesArgs> parent;
@@ -76,7 +71,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -87,7 +81,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class ListSignalRKeysResult {
     /**
      * SignalR connection string constructed via the primaryKey
-     * 
      */
     private final @Nullable String primaryConnectionString;
     /**
      * The primary access key.
-     * 
      */
     private final @Nullable String primaryKey;
     /**
      * SignalR connection string constructed via the secondaryKey
-     * 
      */
     private final @Nullable String secondaryConnectionString;
     /**
      * The secondary access key.
-     * 
      */
     private final @Nullable String secondaryKey;
 
@@ -46,28 +42,24 @@ public final class ListSignalRKeysResult {
 
     /**
      * SignalR connection string constructed via the primaryKey
-     * 
     */
     public Optional<String> getPrimaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
      * The primary access key.
-     * 
     */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * SignalR connection string constructed via the secondaryKey
-     * 
     */
     public Optional<String> getSecondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
      * The secondary access key.
-     * 
     */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);

@@ -22,7 +22,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
 
     /**
      * The Dataset name.
-     * 
      */
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
@@ -33,7 +32,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies dataset type.
-     * 
      */
     @Import(name="datasetType", required=true)
       private final Output<Either<String,DatasetType>> datasetType;
@@ -58,7 +56,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -69,7 +66,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
 
     /**
      * Skip validation that ensures data can be loaded from the dataset before registration.
-     * 
      */
     @Import(name="skipValidation")
       private final @Nullable Output<Boolean> skipValidation;
@@ -87,7 +83,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

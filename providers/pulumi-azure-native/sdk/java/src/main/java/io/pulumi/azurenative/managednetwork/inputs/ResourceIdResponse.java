@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Generic pointer to a resource
- * 
  */
 public final class ResourceIdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

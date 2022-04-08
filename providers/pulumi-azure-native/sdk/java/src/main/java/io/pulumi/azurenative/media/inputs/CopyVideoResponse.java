@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A codec flag, which tells the encoder to copy the input video bitstream without re-encoding.
- * 
  */
 public final class CopyVideoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CopyVideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -32,7 +30,6 @@ public final class CopyVideoResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.CopyVideo'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

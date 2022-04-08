@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Automanage configuration profile VM Backup preferences.
- * 
  */
 public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
 
     /**
      * Instant RP retention policy range in days
-     * 
      */
     @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Integer instantRpRetentionRangeInDays;
@@ -32,7 +30,6 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
 
     /**
      * Retention policy with the details on backup copy retention ranges.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable String retentionPolicy;
@@ -43,7 +40,6 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
 
     /**
      * Backup schedule specified as part of backup policy.
-     * 
      */
     @Import(name="schedulePolicy")
       private final @Nullable String schedulePolicy;
@@ -54,7 +50,6 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
 
     /**
      * TimeZone optional input as string. For example: Pacific Standard Time
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable String timeZone;

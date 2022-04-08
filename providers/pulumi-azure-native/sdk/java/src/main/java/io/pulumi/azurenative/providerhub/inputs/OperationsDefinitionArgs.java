@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an Operation.
- * 
  */
 public final class OperationsDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
 
     /**
      * Display information of the operation.
-     * 
      */
     @Import(name="display", required=true)
       private final Output<OperationsDefinitionDisplayArgs> display;
@@ -41,7 +39,6 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
 
     /**
      * Indicates whether the operation applies to data-plane.
-     * 
      */
     @Import(name="isDataAction")
       private final @Nullable Output<Boolean> isDataAction;
@@ -52,7 +49,6 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the operation.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Describes a section in the fabric settings of the cluster.
- * 
  */
 public final class SettingsSectionDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
 
     /**
      * The section name of the fabric settings.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
 
     /**
      * The collection of parameters in the section.
-     * 
      */
     @Import(name="parameters", required=true)
       private final List<SettingsParameterDescriptionResponse> parameters;

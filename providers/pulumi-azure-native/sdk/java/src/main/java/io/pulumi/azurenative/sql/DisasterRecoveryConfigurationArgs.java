@@ -16,7 +16,6 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the disaster recovery configuration to be created/updated.
-     * 
      */
     @Import(name="disasterRecoveryConfigurationName")
       private final @Nullable Output<String> disasterRecoveryConfigurationName;
@@ -27,7 +26,6 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;

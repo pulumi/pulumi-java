@@ -14,53 +14,43 @@ import java.util.Objects;
 public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     /**
      * Name of the database
-     * 
      */
     private final String databaseName;
     /**
      * Migration end time
-     * 
      */
     private final String endedOn;
     /**
      * Migration exceptions and warnings
-     * 
      */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
     /**
      * Result identifier
-     * 
      */
     private final String id;
     /**
      * Migration progress message
-     * 
      */
     private final String message;
     /**
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
-     * 
      */
     private final String resultType;
     /**
      * Size of the database in megabytes
-     * 
      */
     private final Double sizeMB;
     /**
      * Current stage of migration
-     * 
      */
     private final String stage;
     /**
      * Migration start time
-     * 
      */
     private final String startedOn;
     /**
      * Current state of migration
-     * 
      */
     private final String state;
 
@@ -90,35 +80,30 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
 
     /**
      * Name of the database
-     * 
     */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Migration end time
-     * 
     */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Migration exceptions and warnings
-     * 
     */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Migration progress message
-     * 
     */
     public String getMessage() {
         return this.message;
@@ -126,35 +111,30 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     /**
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
-     * 
     */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Size of the database in megabytes
-     * 
     */
     public Double getSizeMB() {
         return this.sizeMB;
     }
     /**
      * Current stage of migration
-     * 
     */
     public String getStage() {
         return this.stage;
     }
     /**
      * Migration start time
-     * 
     */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
-     * 
     */
     public String getState() {
         return this.state;

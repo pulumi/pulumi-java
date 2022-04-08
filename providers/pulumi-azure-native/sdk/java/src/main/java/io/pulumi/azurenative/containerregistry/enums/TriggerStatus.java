@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The current status of trigger.
-     * 
      */
     @EnumType
     public enum TriggerStatus {

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * User assigned identity properties.
- * 
  */
 public final class UserAssignedPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserAssignedPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Arm resource id for user assigned identity to be used to fetch MSI token.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

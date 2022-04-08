@@ -16,7 +16,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the product.
-     * 
      */
     @Import(name="customerSubscriptionName")
       private final @Nullable Output<String> customerSubscriptionName;
@@ -27,7 +26,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the Azure Stack registration.
-     * 
      */
     @Import(name="registrationName", required=true)
       private final Output<String> registrationName;
@@ -38,7 +36,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -49,7 +46,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
 
     /**
      * Tenant Id.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

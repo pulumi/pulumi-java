@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The media services details
- * 
  */
 public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
 
     /**
      * The media services resource id
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -31,7 +29,6 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
 
     /**
      * The user assigned identity to be used to grant permissions
-     * 
      */
     @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;

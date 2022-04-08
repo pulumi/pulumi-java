@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pipeline reference type.
- * 
  */
 public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Reference name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Reference pipeline name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final String referenceName;
@@ -42,7 +39,6 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Pipeline reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

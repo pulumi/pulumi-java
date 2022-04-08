@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The database project summary class.
- * 
  */
 public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the extended summary.
-     * 
      */
     @Import(name="extendedSummary")
       private final @Nullable Map<String,String> extendedSummary;
@@ -33,7 +31,6 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
     /**
      * Gets the Instance type.
      * Expected value is 'Databases'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -44,7 +41,6 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the time when summary was last refreshed.
-     * 
      */
     @Import(name="lastSummaryRefreshedTime")
       private final @Nullable String lastSummaryRefreshedTime;
@@ -55,7 +51,6 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the state of refresh summary.
-     * 
      */
     @Import(name="refreshSummaryState")
       private final @Nullable String refreshSummaryState;

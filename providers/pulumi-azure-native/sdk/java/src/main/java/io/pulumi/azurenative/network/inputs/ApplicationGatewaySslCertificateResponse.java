@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSL certificates of an application gateway.
- * 
  */
 public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * Base-64 encoded pfx certificate. Only applicable in PUT Request.
-     * 
      */
     @Import(name="data")
       private final @Nullable String data;
@@ -31,7 +29,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -42,7 +39,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -53,7 +49,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
-     * 
      */
     @Import(name="keyVaultSecretId")
       private final @Nullable String keyVaultSecretId;
@@ -64,7 +59,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * Name of the SSL certificate that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -75,7 +69,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * Password for the pfx file specified in data. Only applicable in PUT request.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -86,7 +79,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * The provisioning state of the SSL certificate resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -97,7 +89,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
-     * 
      */
     @Import(name="publicCertData", required=true)
       private final String publicCertData;
@@ -108,7 +99,6 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

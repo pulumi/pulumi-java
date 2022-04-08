@@ -18,7 +18,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
 
     /**
      * Gateway which to connect segment to.
-     * 
      */
     @Import(name="connectedGateway")
       private final @Nullable Output<String> connectedGateway;
@@ -29,7 +28,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
 
     /**
      * Display name of the segment.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -40,7 +38,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -51,7 +48,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
 
     /**
      * NSX revision number.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
@@ -73,7 +68,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
 
     /**
      * NSX Segment identifier. Generally the same as the Segment's display name
-     * 
      */
     @Import(name="segmentId")
       private final @Nullable Output<String> segmentId;
@@ -84,7 +78,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
 
     /**
      * Subnet which to connect segment to.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;

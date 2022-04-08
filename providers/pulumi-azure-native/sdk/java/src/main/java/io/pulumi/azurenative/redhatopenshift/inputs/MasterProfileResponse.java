@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * MasterProfile represents a master profile.
- * 
  */
 public final class MasterProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MasterProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Azure resource ID of the master subnet (immutable).
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable String subnetId;
@@ -31,7 +29,6 @@ public final class MasterProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The size of the master VMs (immutable).
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable String vmSize;

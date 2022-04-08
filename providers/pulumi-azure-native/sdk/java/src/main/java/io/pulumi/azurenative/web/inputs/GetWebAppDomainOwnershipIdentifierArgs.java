@@ -14,7 +14,6 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
 
     /**
      * Name of domain ownership identifier.
-     * 
      */
     @Import(name="domainOwnershipIdentifierName", required=true)
       private final String domainOwnershipIdentifierName;
@@ -25,7 +24,6 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

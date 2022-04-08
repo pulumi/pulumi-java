@@ -14,7 +14,6 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * API identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="apiId", required=true)
       private final String apiId;
@@ -25,7 +24,6 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Release identifier within an API. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="releaseId", required=true)
       private final String releaseId;
@@ -36,7 +34,6 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

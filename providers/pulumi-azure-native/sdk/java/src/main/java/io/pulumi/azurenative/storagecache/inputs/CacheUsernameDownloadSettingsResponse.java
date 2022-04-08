@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for Extended Groups username and group download.
- * 
  */
 public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
-     * 
      */
     @Import(name="autoDownloadCertificate")
       private final @Nullable Boolean autoDownloadCertificate;
@@ -33,7 +31,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
-     * 
      */
     @Import(name="caCertificateURI")
       private final @Nullable String caCertificateURI;
@@ -44,7 +41,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * When present, these are the credentials for the secure LDAP connection.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials;
@@ -55,7 +51,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * Whether or not the LDAP connection should be encrypted.
-     * 
      */
     @Import(name="encryptLdapConnection")
       private final @Nullable Boolean encryptLdapConnection;
@@ -66,7 +61,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * Whether or not Extended Groups is enabled.
-     * 
      */
     @Import(name="extendedGroups")
       private final @Nullable Boolean extendedGroups;
@@ -77,7 +71,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
-     * 
      */
     @Import(name="groupFileURI")
       private final @Nullable String groupFileURI;
@@ -88,7 +81,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * The base distinguished name for the LDAP domain.
-     * 
      */
     @Import(name="ldapBaseDN")
       private final @Nullable String ldapBaseDN;
@@ -99,7 +91,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * The fully qualified domain name or IP address of the LDAP server to use.
-     * 
      */
     @Import(name="ldapServer")
       private final @Nullable String ldapServer;
@@ -110,7 +101,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
-     * 
      */
     @Import(name="requireValidCertificate")
       private final @Nullable Boolean requireValidCertificate;
@@ -121,7 +111,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
-     * 
      */
     @Import(name="userFileURI")
       private final @Nullable String userFileURI;
@@ -132,7 +121,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * Indicates whether or not the HPC Cache has performed the username download successfully.
-     * 
      */
     @Import(name="usernameDownloaded", required=true)
       private final String usernameDownloaded;
@@ -143,7 +131,6 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
 
     /**
      * This setting determines how the cache gets username and group names for clients.
-     * 
      */
     @Import(name="usernameSource")
       private final @Nullable String usernameSource;

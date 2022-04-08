@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The conflict resolution policy for the container.
- * 
  */
 public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
 
     /**
      * The conflict resolution path in the case of LastWriterWins mode.
-     * 
      */
     @Import(name="conflictResolutionPath")
       private final @Nullable String conflictResolutionPath;
@@ -31,7 +29,6 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
 
     /**
      * The procedure to resolve conflicts in the case of custom mode.
-     * 
      */
     @Import(name="conflictResolutionProcedure")
       private final @Nullable String conflictResolutionProcedure;
@@ -42,7 +39,6 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
 
     /**
      * Indicates the conflict resolution mode.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;

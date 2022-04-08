@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Public network access for the DigitalTwinsInstance.
-     * 
      */
     @EnumType
     public enum PublicNetworkAccess {

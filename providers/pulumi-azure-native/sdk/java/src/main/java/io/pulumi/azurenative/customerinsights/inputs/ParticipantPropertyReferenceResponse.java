@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The participant property reference.
- * 
  */
 public final class ParticipantPropertyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
 
     /**
      * The source property that maps to the target property.
-     * 
      */
     @Import(name="sourcePropertyName", required=true)
       private final String sourcePropertyName;
@@ -29,7 +27,6 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
 
     /**
      * The target property that maps to the source property.
-     * 
      */
     @Import(name="targetPropertyName", required=true)
       private final String targetPropertyName;

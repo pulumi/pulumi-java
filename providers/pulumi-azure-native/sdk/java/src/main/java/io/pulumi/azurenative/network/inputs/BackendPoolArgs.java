@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A backend pool is a collection of backends that can be routed to.
- * 
  */
 public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of backends for this pool
-     * 
      */
     @Import(name="backends")
       private final @Nullable Output<List<BackendArgs>> backends;
@@ -34,7 +32,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * L7 health probe settings for a backend pool
-     * 
      */
     @Import(name="healthProbeSettings")
       private final @Nullable Output<SubResourceArgs> healthProbeSettings;
@@ -45,7 +42,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -56,7 +52,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Load balancing settings for a backend pool
-     * 
      */
     @Import(name="loadBalancingSettings")
       private final @Nullable Output<SubResourceArgs> loadBalancingSettings;
@@ -67,7 +62,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

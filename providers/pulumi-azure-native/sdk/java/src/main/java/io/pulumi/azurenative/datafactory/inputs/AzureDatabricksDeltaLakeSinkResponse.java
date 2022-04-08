@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure Databricks Delta Lake sink.
- * 
  */
 public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -33,7 +31,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * Azure Databricks Delta Lake import settings.
-     * 
      */
     @Import(name="importSettings")
       private final @Nullable AzureDatabricksDeltaLakeImportCommandResponse importSettings;
@@ -44,7 +41,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * SQL pre-copy script. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="preCopyScript")
       private final @Nullable Object preCopyScript;
@@ -66,7 +61,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
@@ -77,7 +71,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
@@ -89,7 +82,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     /**
      * Copy sink type.
      * Expected value is 'AzureDatabricksDeltaLakeSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -100,7 +92,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
@@ -111,7 +102,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;

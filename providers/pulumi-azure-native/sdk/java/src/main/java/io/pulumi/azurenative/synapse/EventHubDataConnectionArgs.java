@@ -20,7 +20,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The event hub messages compression type
-     * 
      */
     @Import(name="compression")
       private final @Nullable Output<Either<String,Compression>> compression;
@@ -31,7 +30,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The event hub consumer group.
-     * 
      */
     @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
@@ -42,7 +40,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the data connection.
-     * 
      */
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
@@ -53,7 +50,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The data format of the message. Optionally the data format can be added to each message.
-     * 
      */
     @Import(name="dataFormat")
       private final @Nullable Output<Either<String,EventHubDataFormat>> dataFormat;
@@ -64,7 +60,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the database in the Kusto pool.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -75,7 +70,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The resource ID of the event hub to be used to create a data connection.
-     * 
      */
     @Import(name="eventHubResourceId", required=true)
       private final Output<String> eventHubResourceId;
@@ -86,7 +80,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * System properties of the event hub
-     * 
      */
     @Import(name="eventSystemProperties")
       private final @Nullable Output<List<String>> eventSystemProperties;
@@ -98,7 +91,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     /**
      * Kind of the endpoint for the data connection
      * Expected value is 'EventHub'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -109,7 +101,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
@@ -120,7 +111,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -131,7 +121,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
      */
     @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
@@ -142,7 +131,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -153,7 +141,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
@@ -164,7 +151,6 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

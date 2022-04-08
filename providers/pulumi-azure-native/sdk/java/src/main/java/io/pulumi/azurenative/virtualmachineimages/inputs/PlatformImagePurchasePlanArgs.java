@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Purchase plan configuration for platform image.
- * 
  */
 public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the purchase plan.
-     * 
      */
     @Import(name="planName", required=true)
       private final Output<String> planName;
@@ -30,7 +28,6 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
 
     /**
      * Product of the purchase plan.
-     * 
      */
     @Import(name="planProduct", required=true)
       private final Output<String> planProduct;
@@ -41,7 +38,6 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
 
     /**
      * Publisher of the purchase plan.
-     * 
      */
     @Import(name="planPublisher", required=true)
       private final Output<String> planPublisher;

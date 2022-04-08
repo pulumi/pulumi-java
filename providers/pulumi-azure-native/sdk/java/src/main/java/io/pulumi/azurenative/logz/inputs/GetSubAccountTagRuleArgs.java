@@ -14,7 +14,6 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -25,7 +24,6 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -43,7 +41,6 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Sub Account resource name
-     * 
      */
     @Import(name="subAccountName", required=true)
       private final String subAccountName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of source for the import pipeline.
-     * 
      */
     @EnumType
     public enum PipelineSourceType {

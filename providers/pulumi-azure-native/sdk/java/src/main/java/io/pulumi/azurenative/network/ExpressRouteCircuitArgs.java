@@ -27,7 +27,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Allow classic operations.
-     * 
      */
     @Import(name="allowClassicOperations")
       private final @Nullable Output<Boolean> allowClassicOperations;
@@ -38,7 +37,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The list of authorizations.
-     * 
      */
     @Import(name="authorizations")
       private final @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
@@ -49,7 +47,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
-     * 
      */
     @Import(name="bandwidthInGbps")
       private final @Nullable Output<Double> bandwidthInGbps;
@@ -60,7 +57,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the circuit.
-     * 
      */
     @Import(name="circuitName")
       private final @Nullable Output<String> circuitName;
@@ -71,7 +67,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The CircuitProvisioningState state of the resource.
-     * 
      */
     @Import(name="circuitProvisioningState")
       private final @Nullable Output<String> circuitProvisioningState;
@@ -82,7 +77,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
-     * 
      */
     @Import(name="expressRoutePort")
       private final @Nullable Output<SubResourceArgs> expressRoutePort;
@@ -93,7 +87,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The GatewayManager Etag.
-     * 
      */
     @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
@@ -104,7 +97,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Flag denoting global reach status.
-     * 
      */
     @Import(name="globalReachEnabled")
       private final @Nullable Output<Boolean> globalReachEnabled;
@@ -115,7 +107,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -126,7 +117,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -137,7 +127,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The list of peerings.
-     * 
      */
     @Import(name="peerings")
       private final @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
@@ -148,7 +137,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -159,7 +147,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ServiceKey.
-     * 
      */
     @Import(name="serviceKey")
       private final @Nullable Output<String> serviceKey;
@@ -170,7 +157,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ServiceProviderNotes.
-     * 
      */
     @Import(name="serviceProviderNotes")
       private final @Nullable Output<String> serviceProviderNotes;
@@ -181,7 +167,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ServiceProviderProperties.
-     * 
      */
     @Import(name="serviceProviderProperties")
       private final @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
@@ -192,7 +177,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ServiceProviderProvisioningState state of the resource.
-     * 
      */
     @Import(name="serviceProviderProvisioningState")
       private final @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
@@ -203,7 +187,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
@@ -214,7 +197,6 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

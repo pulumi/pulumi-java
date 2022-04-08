@@ -18,7 +18,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -29,7 +28,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role type.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,RoleTypes>> kind;
@@ -40,7 +38,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -51,7 +48,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

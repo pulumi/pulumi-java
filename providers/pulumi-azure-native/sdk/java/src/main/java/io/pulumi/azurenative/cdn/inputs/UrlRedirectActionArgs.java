@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the url redirect action for the delivery rule.
- * 
  */
 public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArg
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'UrlRedirect'.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Defines the parameters for the action.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<UrlRedirectActionParametersArgs> parameters;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a VHD in the lab.
- * 
  */
 public final class LabVhdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LabVhdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URI to the VHD.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

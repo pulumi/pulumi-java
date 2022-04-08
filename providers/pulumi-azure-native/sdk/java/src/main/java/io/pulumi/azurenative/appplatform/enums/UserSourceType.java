@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the source uploaded
-     * 
      */
     @EnumType
     public enum UserSourceType {

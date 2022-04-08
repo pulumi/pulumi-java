@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Describes an automation rule action to modify an object's properties
- * 
  */
 public final class AutomationRuleModifyPropertiesActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
 
     /**
      * The configuration of the modify properties automation rule action
-     * 
      */
     @Import(name="actionConfiguration", required=true)
       private final AutomationRuleModifyPropertiesActionResponseActionConfiguration actionConfiguration;
@@ -32,7 +30,6 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
     /**
      * The type of the automation rule action
      * Expected value is 'ModifyProperties'.
-     * 
      */
     @Import(name="actionType", required=true)
       private final String actionType;
@@ -43,7 +40,6 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
 
     /**
      * The order of execution of the automation rule action
-     * 
      */
     @Import(name="order", required=true)
       private final Integer order;

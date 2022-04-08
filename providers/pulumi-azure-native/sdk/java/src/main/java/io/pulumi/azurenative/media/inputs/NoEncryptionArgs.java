@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for NoEncryption scheme
- * 
  */
 public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Representing supported protocols
-     * 
      */
     @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;

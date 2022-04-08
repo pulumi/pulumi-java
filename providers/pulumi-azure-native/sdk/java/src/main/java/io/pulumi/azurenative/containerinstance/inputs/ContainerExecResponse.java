@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The container execution command, for liveness or readiness probe
- * 
  */
 public final class ContainerExecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerExecResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The commands to execute within the container.
-     * 
      */
     @Import(name="command")
       private final @Nullable List<String> command;

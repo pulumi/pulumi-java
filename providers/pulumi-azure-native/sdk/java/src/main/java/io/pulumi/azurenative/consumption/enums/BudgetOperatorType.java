@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operator to use for comparison.
-     * 
      */
     @EnumType
     public enum BudgetOperatorType {

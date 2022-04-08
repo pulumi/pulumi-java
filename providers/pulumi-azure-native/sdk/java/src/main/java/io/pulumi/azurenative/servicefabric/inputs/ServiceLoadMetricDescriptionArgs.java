@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies a metric to load balance a service during runtime.
- * 
  */
 public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
 
     /**
      * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
-     * 
      */
     @Import(name="defaultLoad")
       private final @Nullable Output<Integer> defaultLoad;
@@ -34,7 +32,6 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
 
     /**
      * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -45,7 +42,6 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
 
     /**
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
-     * 
      */
     @Import(name="primaryDefaultLoad")
       private final @Nullable Output<Integer> primaryDefaultLoad;
@@ -56,7 +52,6 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
 
     /**
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-     * 
      */
     @Import(name="secondaryDefaultLoad")
       private final @Nullable Output<Integer> secondaryDefaultLoad;
@@ -67,7 +62,6 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
 
     /**
      * The service load metric relative weight, compared to other metrics configured for this service, as a number.
-     * 
      */
     @Import(name="weight")
       private final @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight;

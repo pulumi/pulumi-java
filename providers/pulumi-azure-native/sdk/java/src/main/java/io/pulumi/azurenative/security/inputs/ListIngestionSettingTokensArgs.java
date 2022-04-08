@@ -14,7 +14,6 @@ public final class ListIngestionSettingTokensArgs extends io.pulumi.resources.In
 
     /**
      * Name of the ingestion setting
-     * 
      */
     @Import(name="ingestionSettingName", required=true)
       private final String ingestionSettingName;

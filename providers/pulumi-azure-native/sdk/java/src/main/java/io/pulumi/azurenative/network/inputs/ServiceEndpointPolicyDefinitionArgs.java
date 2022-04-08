@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service Endpoint policy definitions.
- * 
  */
 public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +30,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +40,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +50,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * Service endpoint name.
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<String> service;
@@ -65,7 +60,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * A list of service resources.
-     * 
      */
     @Import(name="serviceResources")
       private final @Nullable Output<List<String>> serviceResources;

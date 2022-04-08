@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ContentSourceResponse {
     /**
      * Gets or sets the hash.
-     * 
      */
     private final @Nullable ContentHashResponse hash;
     /**
      * Gets or sets the content source type.
-     * 
      */
     private final @Nullable String type;
     /**
      * Gets or sets the value of the content. This is based on the content source type.
-     * 
      */
     private final @Nullable String value;
     /**
      * Gets or sets the version of the content.
-     * 
      */
     private final @Nullable String version;
 
@@ -47,28 +43,24 @@ public final class ContentSourceResponse {
 
     /**
      * Gets or sets the hash.
-     * 
     */
     public Optional<ContentHashResponse> getHash() {
         return Optional.ofNullable(this.hash);
     }
     /**
      * Gets or sets the content source type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Gets or sets the value of the content. This is based on the content source type.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Gets or sets the version of the content.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

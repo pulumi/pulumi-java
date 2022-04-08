@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * SSIS execution parameter.
- * 
  */
 public final class SSISExecutionParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
 
     /**
      * SSIS package execution parameter value. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="value", required=true)
       private final Output<Object> value;

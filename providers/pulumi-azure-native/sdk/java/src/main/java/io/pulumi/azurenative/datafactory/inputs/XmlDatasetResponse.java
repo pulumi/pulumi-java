@@ -32,7 +32,6 @@ import javax.annotation.Nullable;
 
 /**
  * Xml dataset.
- * 
  */
 public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -40,7 +39,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -51,7 +49,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data compression method used for the json dataset.
-     * 
      */
     @Import(name="compression")
       private final @Nullable DatasetCompressionResponse compression;
@@ -62,7 +59,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -73,7 +69,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encodingName")
       private final @Nullable Object encodingName;
@@ -84,7 +79,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
@@ -95,7 +89,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -106,7 +99,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location of the json data storage.
-     * 
      */
     @Import(name="location", required=true)
       private final Object location;
@@ -117,7 +109,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The null value string. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="nullValue")
       private final @Nullable Object nullValue;
@@ -128,7 +119,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -139,7 +129,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Object schema;
@@ -150,7 +139,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Object structure;
@@ -162,7 +150,6 @@ public final class XmlDatasetResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of dataset.
      * Expected value is 'Xml'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

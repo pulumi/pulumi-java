@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Staging info for execute data flow activity.
- * 
  */
 public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Folder path for staging blob. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
@@ -32,7 +30,6 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Staging linked service reference.
-     * 
      */
     @Import(name="linkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;

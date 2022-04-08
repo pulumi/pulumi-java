@@ -14,7 +14,6 @@ public final class GetSettingArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the setting. Allowed values: myscope
-     * 
      */
     @Import(name="settingName", required=true)
       private final String settingName;

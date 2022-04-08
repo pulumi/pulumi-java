@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hub Item.
- * 
  */
 public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -31,7 +29,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Type.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;

@@ -20,7 +20,173 @@ import javax.annotation.Nullable;
  * Network default admin rule.
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a default admin rule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultAdminRule = new AzureNative.Network.DefaultAdminRule("defaultAdminRule", new AzureNative.Network.DefaultAdminRuleArgs
+ *         {
+ *             ConfigurationName = "myTestSecurityConfig",
+ *             Flag = "AllowVnetInbound",
+ *             Kind = "Default",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "rg1",
+ *             RuleCollectionName = "testRuleCollection",
+ *             RuleName = "SampleDefaultAdminRule",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewDefaultAdminRule(ctx, "defaultAdminRule", &network.DefaultAdminRuleArgs{
+ * 			ConfigurationName:  pulumi.String("myTestSecurityConfig"),
+ * 			Flag:               pulumi.String("AllowVnetInbound"),
+ * 			Kind:               pulumi.String("Default"),
+ * 			NetworkManagerName: pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			RuleCollectionName: pulumi.String("testRuleCollection"),
+ * 			RuleName:           pulumi.String("SampleDefaultAdminRule"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const defaultAdminRule = new azure_native.network.DefaultAdminRule("defaultAdminRule", {
+ *     configurationName: "myTestSecurityConfig",
+ *     flag: "AllowVnetInbound",
+ *     kind: "Default",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "rg1",
+ *     ruleCollectionName: "testRuleCollection",
+ *     ruleName: "SampleDefaultAdminRule",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * default_admin_rule = azure_native.network.DefaultAdminRule("defaultAdminRule",
+ *     configuration_name="myTestSecurityConfig",
+ *     flag="AllowVnetInbound",
+ *     kind="Default",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="rg1",
+ *     rule_collection_name="testRuleCollection",
+ *     rule_name="SampleDefaultAdminRule")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create an admin rule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultAdminRule = new AzureNative.Network.DefaultAdminRule("defaultAdminRule", new AzureNative.Network.DefaultAdminRuleArgs
+ *         {
+ *             ConfigurationName = "myTestSecurityConfig",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "rg1",
+ *             RuleCollectionName = "testRuleCollection",
+ *             RuleName = "SampleAdminRule",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewDefaultAdminRule(ctx, "defaultAdminRule", &network.DefaultAdminRuleArgs{
+ * 			ConfigurationName:  pulumi.String("myTestSecurityConfig"),
+ * 			NetworkManagerName: pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			RuleCollectionName: pulumi.String("testRuleCollection"),
+ * 			RuleName:           pulumi.String("SampleAdminRule"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const defaultAdminRule = new azure_native.network.DefaultAdminRule("defaultAdminRule", {
+ *     configurationName: "myTestSecurityConfig",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "rg1",
+ *     ruleCollectionName: "testRuleCollection",
+ *     ruleName: "SampleAdminRule",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * default_admin_rule = azure_native.network.DefaultAdminRule("defaultAdminRule",
+ *     configuration_name="myTestSecurityConfig",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="rg1",
+ *     rule_collection_name="testRuleCollection",
+ *     rule_name="SampleAdminRule")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +201,96 @@ import javax.annotation.Nullable;
 public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
     /**
      * Indicates the access allowed for this particular rule
-     * 
      */
     @Export(name="access", type=String.class, parameters={})
     private Output<String> access;
 
     /**
      * @return Indicates the access allowed for this particular rule
-     * 
      */
     public Output<String> getAccess() {
         return this.access;
     }
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description for this rule. Restricted to 140 chars.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The destination port ranges.
-     * 
      */
     @Export(name="destinationPortRanges", type=List.class, parameters={String.class})
     private Output<List<String>> destinationPortRanges;
 
     /**
      * @return The destination port ranges.
-     * 
      */
     public Output<List<String>> getDestinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     @Export(name="destinations", type=List.class, parameters={AddressPrefixItemResponse.class})
     private Output<List<AddressPrefixItemResponse>> destinations;
 
     /**
      * @return The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     public Output<List<AddressPrefixItemResponse>> getDestinations() {
         return this.destinations;
     }
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
-     * 
      */
     @Export(name="direction", type=String.class, parameters={})
     private Output<String> direction;
 
     /**
      * @return Indicates if the traffic matched against the rule in inbound or outbound.
-     * 
      */
     public Output<String> getDirection() {
         return this.direction;
     }
     /**
      * A friendly name for the rule.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return A friendly name for the rule.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Default rule flag.
-     * 
      */
     @Export(name="flag", type=String.class, parameters={})
     private Output</* @Nullable */ String> flag;
 
     /**
      * @return Default rule flag.
-     * 
      */
     public Output</* @Nullable */ String> getFlag() {
         return this.flag;
@@ -148,7 +298,6 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
     /**
      * Whether the rule is custom or default.
      * Expected value is 'Default'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -156,119 +305,102 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
     /**
      * @return Whether the rule is custom or default.
      * Expected value is 'Default'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     * 
      */
     @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
      * @return The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     * 
      */
     public Output<Integer> getPriority() {
         return this.priority;
     }
     /**
      * Network protocol this rule applies to.
-     * 
      */
     @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
      * @return Network protocol this rule applies to.
-     * 
      */
     public Output<String> getProtocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The source port ranges.
-     * 
      */
     @Export(name="sourcePortRanges", type=List.class, parameters={String.class})
     private Output<List<String>> sourcePortRanges;
 
     /**
      * @return The source port ranges.
-     * 
      */
     public Output<List<String>> getSourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
      * The CIDR or source IP ranges.
-     * 
      */
     @Export(name="sources", type=List.class, parameters={AddressPrefixItemResponse.class})
     private Output<List<AddressPrefixItemResponse>> sources;
 
     /**
      * @return The CIDR or source IP ranges.
-     * 
      */
     public Output<List<AddressPrefixItemResponse>> getSources() {
         return this.sources;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

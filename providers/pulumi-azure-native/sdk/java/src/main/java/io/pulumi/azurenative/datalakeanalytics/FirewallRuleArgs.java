@@ -16,7 +16,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Data Lake Analytics account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
@@ -38,7 +36,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the firewall rule to create or update.
-     * 
      */
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
@@ -49,7 +46,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;

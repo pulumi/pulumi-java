@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The complex type of the extended location.
- * 
  */
 public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the extended location.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The type of the extended location.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

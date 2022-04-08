@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * KPack Builder properties payload
- * 
  */
 public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Builder buildpack groups.
-     * 
      */
     @Import(name="buildpackGroups")
       private final @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
@@ -33,7 +31,6 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Builder cluster stack property.
-     * 
      */
     @Import(name="stack")
       private final @Nullable Output<StackPropertiesArgs> stack;

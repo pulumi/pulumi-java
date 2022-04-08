@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The blob service properties for blob restore policy
- * 
  */
 public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
-     * 
      */
     @Import(name="days")
       private final @Nullable Output<Integer> days;
@@ -32,7 +30,6 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * Blob restore is enabled if set to true.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;

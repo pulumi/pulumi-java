@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for event handler in webpubsub service
- * 
  */
 public final class EventHandlerSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
-     * 
      */
     @Import(name="items")
       private final @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;

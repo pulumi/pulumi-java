@@ -29,84 +29,72 @@ import javax.annotation.Nullable;
 public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomResource {
     /**
      * List of application settings names.
-     * 
      */
     @Export(name="appSettingNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> appSettingNames;
 
     /**
      * @return List of application settings names.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAppSettingNames() {
         return this.appSettingNames;
     }
     /**
      * List of external Azure storage account identifiers.
-     * 
      */
     @Export(name="azureStorageConfigNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> azureStorageConfigNames;
 
     /**
      * @return List of external Azure storage account identifiers.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAzureStorageConfigNames() {
         return this.azureStorageConfigNames;
     }
     /**
      * List of connection string names.
-     * 
      */
     @Export(name="connectionStringNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> connectionStringNames;
 
     /**
      * @return List of connection string names.
-     * 
      */
     public Output</* @Nullable */ List<String>> getConnectionStringNames() {
         return this.connectionStringNames;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

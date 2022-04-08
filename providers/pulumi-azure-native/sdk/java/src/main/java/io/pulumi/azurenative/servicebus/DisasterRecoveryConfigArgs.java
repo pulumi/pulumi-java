@@ -16,7 +16,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * The Disaster Recovery configuration name
-     * 
      */
     @Import(name="alias")
       private final @Nullable Output<String> alias;
@@ -27,7 +26,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     * 
      */
     @Import(name="alternateName")
       private final @Nullable Output<String> alternateName;
@@ -38,7 +36,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -49,7 +46,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     * 
      */
     @Import(name="partnerNamespace")
       private final @Nullable Output<String> partnerNamespace;
@@ -60,7 +56,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

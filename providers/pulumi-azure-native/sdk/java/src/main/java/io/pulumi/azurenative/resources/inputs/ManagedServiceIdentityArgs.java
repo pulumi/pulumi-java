@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed identity generic object.
- * 
  */
 public final class ManagedServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
 
     /**
      * Type of the managed identity.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
@@ -35,7 +33,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
 
     /**
      * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;

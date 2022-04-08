@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters in Policy
- * 
  */
 public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the DataStore Parameters
-     * 
      */
     @Import(name="dataStoreParametersList")
       private final @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;

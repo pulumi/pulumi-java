@@ -21,7 +21,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Auto track configuration.
-     * 
      */
     @Import(name="autoTrackingConfiguration")
       private final @Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration;
@@ -32,7 +31,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contact Profile Name
-     * 
      */
     @Import(name="contactProfileName")
       private final @Nullable Output<String> contactProfileName;
@@ -43,7 +41,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of the Event Hub used for telemetry
-     * 
      */
     @Import(name="eventHubUri")
       private final @Nullable Output<String> eventHubUri;
@@ -54,7 +51,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Links of the Contact Profile
-     * 
      */
     @Import(name="links", required=true)
       private final Output<List<ContactProfileLinkArgs>> links;
@@ -65,7 +61,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -76,7 +71,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum viable elevation for the contact in decimal degrees.
-     * 
      */
     @Import(name="minimumElevationDegrees")
       private final @Nullable Output<Double> minimumElevationDegrees;
@@ -87,7 +81,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum viable contact duration in ISO 8601 format.
-     * 
      */
     @Import(name="minimumViableContactDuration")
       private final @Nullable Output<String> minimumViableContactDuration;
@@ -98,7 +91,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -109,7 +101,6 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

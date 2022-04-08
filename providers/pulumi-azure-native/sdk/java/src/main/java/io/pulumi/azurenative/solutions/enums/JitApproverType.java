@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The approver type.
-     * 
      */
     @EnumType
     public enum JitApproverType {

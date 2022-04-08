@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the Security policy to create.
-     * 
      */
     @EnumType
     public enum SecurityPolicyType {

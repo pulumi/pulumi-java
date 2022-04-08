@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Server endpoint recall status object.
- * 
  */
 public final class ServerEndpointRecallStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
 
     /**
      * Last updated timestamp
-     * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
@@ -32,7 +30,6 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
 
     /**
      * Array of recall errors
-     * 
      */
     @Import(name="recallErrors", required=true)
       private final List<ServerEndpointRecallErrorResponse> recallErrors;
@@ -43,7 +40,6 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
 
     /**
      * Total count of recall errors.
-     * 
      */
     @Import(name="totalRecallErrorsCount", required=true)
       private final Double totalRecallErrorsCount;

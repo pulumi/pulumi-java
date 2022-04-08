@@ -14,7 +14,6 @@ public final class GetCapacityDetailsArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="dedicatedCapacityName", required=true)
       private final String dedicatedCapacityName;
@@ -25,7 +24,6 @@ public final class GetCapacityDetailsArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

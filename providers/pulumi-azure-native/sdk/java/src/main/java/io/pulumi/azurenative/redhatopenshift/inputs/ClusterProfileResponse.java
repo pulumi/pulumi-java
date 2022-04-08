@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ClusterProfile represents a cluster profile.
- * 
  */
 public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The domain for the cluster (immutable).
-     * 
      */
     @Import(name="domain")
       private final @Nullable String domain;
@@ -31,7 +29,6 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The pull secret for the cluster (immutable).
-     * 
      */
     @Import(name="pullSecret")
       private final @Nullable String pullSecret;
@@ -42,7 +39,6 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The ID of the cluster resource group (immutable).
-     * 
      */
     @Import(name="resourceGroupId")
       private final @Nullable String resourceGroupId;
@@ -53,7 +49,6 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The version of the cluster (immutable).
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

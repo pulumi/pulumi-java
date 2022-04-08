@@ -16,7 +16,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
@@ -27,7 +26,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * Managed private endpoint name
-     * 
      */
     @Import(name="managedPrivateEndpointName")
       private final @Nullable Output<String> managedPrivateEndpointName;
@@ -38,7 +36,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * Managed virtual network name
-     * 
      */
     @Import(name="managedVirtualNetworkName", required=true)
       private final Output<String> managedVirtualNetworkName;
@@ -49,7 +46,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * Managed private endpoint properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
@@ -60,7 +56,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

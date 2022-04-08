@@ -19,7 +19,6 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -30,7 +29,6 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the route filter.
-     * 
      */
     @Import(name="routeFilterName")
       private final @Nullable Output<String> routeFilterName;
@@ -63,7 +59,6 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of RouteFilterRules contained within a route filter.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<RouteFilterRuleArgs>> rules;
@@ -74,7 +69,6 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

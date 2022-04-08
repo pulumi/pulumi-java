@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The family of the peering SKU.
-     * 
      */
     @EnumType
     public enum Family {

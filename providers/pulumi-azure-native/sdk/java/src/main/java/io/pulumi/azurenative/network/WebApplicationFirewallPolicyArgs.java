@@ -21,7 +21,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * The custom rules inside the policy.
-     * 
      */
     @Import(name="customRules")
       private final @Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules;
@@ -32,7 +31,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +41,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * Describes the managedRules structure.
-     * 
      */
     @Import(name="managedRules", required=true)
       private final Output<ManagedRulesDefinitionArgs> managedRules;
@@ -65,7 +61,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * The name of the policy.
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -76,7 +71,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * The PolicySettings for policy.
-     * 
      */
     @Import(name="policySettings")
       private final @Nullable Output<PolicySettingsArgs> policySettings;
@@ -87,7 +81,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

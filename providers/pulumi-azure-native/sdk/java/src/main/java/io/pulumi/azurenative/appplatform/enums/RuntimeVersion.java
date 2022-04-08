@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Runtime version
-     * 
      */
     @EnumType
     public enum RuntimeVersion {

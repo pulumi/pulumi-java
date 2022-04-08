@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration setting of LCM (Local Configuration Manager).
- * 
  */
 public final class ConfigurationSettingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
-     * 
      */
     @Import(name="actionAfterReboot")
       private final @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot;
@@ -36,7 +34,6 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
 
     /**
      * If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
-     * 
      */
     @Import(name="allowModuleOverwrite")
       private final @Nullable Output<Boolean> allowModuleOverwrite;
@@ -47,7 +44,6 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
-     * 
      */
     @Import(name="configurationMode")
       private final @Nullable Output<Either<String,ConfigurationMode>> configurationMode;
@@ -58,7 +54,6 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
 
     /**
      * How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
-     * 
      */
     @Import(name="configurationModeFrequencyMins")
       private final @Nullable Output<Double> configurationModeFrequencyMins;
@@ -69,7 +64,6 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
 
     /**
      * Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
-     * 
      */
     @Import(name="rebootIfNeeded")
       private final @Nullable Output<Boolean> rebootIfNeeded;
@@ -80,7 +74,6 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
 
     /**
      * The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
-     * 
      */
     @Import(name="refreshFrequencyMins")
       private final @Nullable Output<Double> refreshFrequencyMins;

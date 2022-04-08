@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Private endpoint object properties.
- * 
  */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Full identifier of the private endpoint resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

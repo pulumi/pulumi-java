@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class GetDeploymentResult {
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * Properties of the Deployment resource
-     * 
      */
     private final DeploymentResourcePropertiesResponse properties;
     /**
      * Sku of the Deployment resource
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -55,35 +50,30 @@ public final class GetDeploymentResult {
 
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the Deployment resource
-     * 
     */
     public DeploymentResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Deployment resource
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

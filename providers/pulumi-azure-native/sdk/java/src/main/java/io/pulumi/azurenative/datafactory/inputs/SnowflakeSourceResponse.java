@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity snowflake source.
- * 
  */
 public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -33,7 +31,6 @@ public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Snowflake export settings.
-     * 
      */
     @Import(name="exportSettings")
       private final @Nullable SnowflakeExportCopyCommandResponse exportSettings;
@@ -44,7 +41,6 @@ public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Snowflake Sql query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Object query;
@@ -66,7 +61,6 @@ public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -77,7 +71,6 @@ public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -89,7 +82,6 @@ public final class SnowflakeSourceResponse extends io.pulumi.resources.InvokeArg
     /**
      * Copy source type.
      * Expected value is 'SnowflakeSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

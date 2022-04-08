@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Wait statistics gathered during query batch execution
- * 
  */
 public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Total no. of waits
-     * 
      */
     @Import(name="waitCount", required=true)
       private final Double waitCount;
@@ -30,7 +28,6 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Total wait time in millisecond(s)
-     * 
      */
     @Import(name="waitTimeMs", required=true)
       private final Double waitTimeMs;
@@ -41,7 +38,6 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Type of the Wait
-     * 
      */
     @Import(name="waitType", required=true)
       private final String waitType;

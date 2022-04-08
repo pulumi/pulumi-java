@@ -18,7 +18,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
@@ -29,7 +28,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the identifier of the subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable ApiEntityReferenceResponse subnet;

@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class StreamingLocatorContentKeyResponse {
     /**
      * ID of Content Key
-     * 
      */
     private final String id;
     /**
      * Label of Content Key as specified in the Streaming Policy
-     * 
      */
     private final @Nullable String labelReferenceInStreamingPolicy;
     /**
      * ContentKeyPolicy used by Content Key
-     * 
      */
     private final String policyName;
     /**
      * Tracks which use this Content Key
-     * 
      */
     private final List<TrackSelectionResponse> tracks;
     /**
      * Encryption type of Content Key
-     * 
      */
     private final String type;
     /**
      * Value of Content Key
-     * 
      */
     private final @Nullable String value;
 
@@ -62,42 +56,36 @@ public final class StreamingLocatorContentKeyResponse {
 
     /**
      * ID of Content Key
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Label of Content Key as specified in the Streaming Policy
-     * 
     */
     public Optional<String> getLabelReferenceInStreamingPolicy() {
         return Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
     /**
      * ContentKeyPolicy used by Content Key
-     * 
     */
     public String getPolicyName() {
         return this.policyName;
     }
     /**
      * Tracks which use this Content Key
-     * 
     */
     public List<TrackSelectionResponse> getTracks() {
         return this.tracks;
     }
     /**
      * Encryption type of Content Key
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Value of Content Key
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

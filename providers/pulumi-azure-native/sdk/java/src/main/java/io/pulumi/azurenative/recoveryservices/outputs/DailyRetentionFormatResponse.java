@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DailyRetentionFormatResponse {
     /**
      * List of days of the month.
-     * 
      */
     private final @Nullable List<DayResponse> daysOfTheMonth;
 
@@ -24,7 +23,6 @@ public final class DailyRetentionFormatResponse {
 
     /**
      * List of days of the month.
-     * 
     */
     public List<DayResponse> getDaysOfTheMonth() {
         return this.daysOfTheMonth == null ? List.of() : this.daysOfTheMonth;

@@ -17,7 +17,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -28,7 +27,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Email of the user who created the synchronization
-     * 
      */
     @Import(name="consumerEmail")
       private final @Nullable String consumerEmail;
@@ -39,7 +37,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Name of the user who created the synchronization
-     * 
      */
     @Import(name="consumerName")
       private final @Nullable String consumerName;
@@ -50,7 +47,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Tenant name of the consumer who created the synchronization
-     * 
      */
     @Import(name="consumerTenantName")
       private final @Nullable String consumerTenantName;
@@ -61,7 +57,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * synchronization duration
-     * 
      */
     @Import(name="durationMs")
       private final @Nullable Integer durationMs;
@@ -72,7 +67,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * End time of synchronization
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -83,7 +77,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Filters the results using OData syntax.
-     * 
      */
     @Import(name="filter")
       private final @Nullable String filter;
@@ -94,7 +87,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * message of synchronization
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -105,7 +97,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Sorts the results using OData syntax.
-     * 
      */
     @Import(name="orderby")
       private final @Nullable String orderby;
@@ -116,7 +107,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -127,7 +117,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * The name of the share.
-     * 
      */
     @Import(name="shareName", required=true)
       private final String shareName;
@@ -138,7 +127,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Continuation token
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;
@@ -149,7 +137,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * start time of synchronization
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -160,7 +147,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Raw Status
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -171,7 +157,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
 
     /**
      * Synchronization id
-     * 
      */
     @Import(name="synchronizationId")
       private final @Nullable String synchronizationId;

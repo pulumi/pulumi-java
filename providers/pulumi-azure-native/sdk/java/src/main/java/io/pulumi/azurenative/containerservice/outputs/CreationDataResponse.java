@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CreationDataResponse {
     /**
      * This is the ARM ID of the source object to be used to create the target object.
-     * 
      */
     private final @Nullable String sourceResourceId;
 
@@ -24,7 +23,6 @@ public final class CreationDataResponse {
 
     /**
      * This is the ARM ID of the source object to be used to create the target object.
-     * 
     */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);

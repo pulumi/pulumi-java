@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cross-Origin Resource Sharing property
- * 
  */
 public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
-     * 
      */
     @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
@@ -34,7 +32,6 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
-     * 
      */
     @Import(name="allowedHeaders")
       private final @Nullable Output<List<String>> allowedHeaders;
@@ -45,7 +42,6 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
-     * 
      */
     @Import(name="allowedMethods")
       private final @Nullable Output<List<String>> allowedMethods;
@@ -56,7 +52,6 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Allowed origins to make cross-site requests. The special value `*` allows all domains.
-     * 
      */
     @Import(name="allowedOrigins")
       private final @Nullable Output<List<String>> allowedOrigins;
@@ -67,7 +62,6 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * HTTP response headers to expose for cross-site requests.
-     * 
      */
     @Import(name="exposedHeaders")
       private final @Nullable Output<List<String>> exposedHeaders;
@@ -78,7 +72,6 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * How long, in seconds, the response from a pre-flight request can be cached by clients.
-     * 
      */
     @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;

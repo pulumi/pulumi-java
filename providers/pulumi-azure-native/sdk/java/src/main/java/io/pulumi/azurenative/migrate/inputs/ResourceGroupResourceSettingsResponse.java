@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines the resource group resource settings.
- * 
  */
 public final class ResourceGroupResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ResourceGroupResourceSettingsResponse extends io.pulumi.resou
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'resourceGroups'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;
@@ -30,7 +28,6 @@ public final class ResourceGroupResourceSettingsResponse extends io.pulumi.resou
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final String targetResourceName;

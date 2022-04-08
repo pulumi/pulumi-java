@@ -16,9 +16,111 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2019-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ControllersCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var controller = new AzureNative.DevSpaces.Controller("controller", new AzureNative.DevSpaces.ControllerArgs
+ *         {
+ *             Location = "eastus",
+ *             Name = "myControllerResource",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.DevSpaces.Inputs.SkuArgs
+ *             {
+ *                 Name = "S1",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = ,
+ *             TargetContainerHostCredentialsBase64 = "QmFzZTY0IEVuY29kZWQgVmFsdWUK",
+ *             TargetContainerHostResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devspaces "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devspaces"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devspaces.NewController(ctx, "controller", &devspaces.ControllerArgs{
+ * 			Location:          pulumi.String("eastus"),
+ * 			Name:              pulumi.String("myControllerResource"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Sku: &devspaces.SkuArgs{
+ * 				Name: pulumi.String("S1"),
+ * 				Tier: pulumi.String("Standard"),
+ * 			},
+ * 			Tags:                                 nil,
+ * 			TargetContainerHostCredentialsBase64: pulumi.String("QmFzZTY0IEVuY29kZWQgVmFsdWUK"),
+ * 			TargetContainerHostResourceId:        pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const controller = new azure_native.devspaces.Controller("controller", {
+ *     location: "eastus",
+ *     name: "myControllerResource",
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         name: "S1",
+ *         tier: "Standard",
+ *     },
+ *     tags: {},
+ *     targetContainerHostCredentialsBase64: "QmFzZTY0IEVuY29kZWQgVmFsdWUK",
+ *     targetContainerHostResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * controller = azure_native.devspaces.Controller("controller",
+ *     location="eastus",
+ *     name="myControllerResource",
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.devspaces.SkuArgs(
+ *         name="S1",
+ *         tier="Standard",
+ *     ),
+ *     tags={},
+ *     target_container_host_credentials_base64="QmFzZTY0IEVuY29kZWQgVmFsdWUK",
+ *     target_container_host_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,140 +135,120 @@ import javax.annotation.Nullable;
 public class Controller extends io.pulumi.resources.CustomResource {
     /**
      * DNS name for accessing DataPlane services
-     * 
      */
     @Export(name="dataPlaneFqdn", type=String.class, parameters={})
     private Output<String> dataPlaneFqdn;
 
     /**
      * @return DNS name for accessing DataPlane services
-     * 
      */
     public Output<String> getDataPlaneFqdn() {
         return this.dataPlaneFqdn;
     }
     /**
      * DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
-     * 
      */
     @Export(name="hostSuffix", type=String.class, parameters={})
     private Output<String> hostSuffix;
 
     /**
      * @return DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
-     * 
      */
     public Output<String> getHostSuffix() {
         return this.hostSuffix;
     }
     /**
      * Region where the Azure resource is located.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Region where the Azure resource is located.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Azure Dev Spaces Controller.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the Azure Dev Spaces Controller.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Model representing SKU for Azure Dev Spaces Controller.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return Model representing SKU for Azure Dev Spaces Controller.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Tags for the Azure resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags for the Azure resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * DNS of the target container host's API server
-     * 
      */
     @Export(name="targetContainerHostApiServerFqdn", type=String.class, parameters={})
     private Output<String> targetContainerHostApiServerFqdn;
 
     /**
      * @return DNS of the target container host's API server
-     * 
      */
     public Output<String> getTargetContainerHostApiServerFqdn() {
         return this.targetContainerHostApiServerFqdn;
     }
     /**
      * Resource ID of the target container host
-     * 
      */
     @Export(name="targetContainerHostResourceId", type=String.class, parameters={})
     private Output<String> targetContainerHostResourceId;
 
     /**
      * @return Resource ID of the target container host
-     * 
      */
     public Output<String> getTargetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

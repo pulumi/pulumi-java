@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class HardwareProfileResponse {
     /**
      * Specifies the HANA instance SKU.
-     * 
      */
     private final String hanaInstanceSize;
     /**
      * Name of the hardware type (vendor and/or their product name)
-     * 
      */
     private final String hardwareType;
 
@@ -30,14 +28,12 @@ public final class HardwareProfileResponse {
 
     /**
      * Specifies the HANA instance SKU.
-     * 
     */
     public String getHanaInstanceSize() {
         return this.hanaInstanceSize;
     }
     /**
      * Name of the hardware type (vendor and/or their product name)
-     * 
     */
     public String getHardwareType() {
         return this.hardwareType;

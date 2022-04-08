@@ -19,7 +19,6 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the MSI properties of the Move Collection.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -30,7 +29,6 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Move Collection Name.
-     * 
      */
     @Import(name="moveCollectionName")
       private final @Nullable Output<String> moveCollectionName;
@@ -52,7 +49,6 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the move collection properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MoveCollectionPropertiesArgs> properties;
@@ -63,7 +59,6 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

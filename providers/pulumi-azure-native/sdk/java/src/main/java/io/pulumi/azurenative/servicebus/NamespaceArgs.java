@@ -18,7 +18,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace name.
-     * 
      */
     @Import(name="namespaceName")
       private final @Nullable Output<String> namespaceName;
@@ -40,7 +38,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of Sku
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SBSkuArgs> sku;
@@ -62,7 +58,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

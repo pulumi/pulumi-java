@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of which streams are sent to which destinations.
- * 
  */
 public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of destinations for this data flow.
-     * 
      */
     @Import(name="destinations")
       private final @Nullable List<String> destinations;
@@ -32,7 +30,6 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of streams for this data flow.
-     * 
      */
     @Import(name="streams")
       private final @Nullable List<String> streams;

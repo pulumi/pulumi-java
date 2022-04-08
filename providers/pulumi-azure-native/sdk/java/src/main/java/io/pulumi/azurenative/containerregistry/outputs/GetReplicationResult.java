@@ -14,37 +14,30 @@ import javax.annotation.Nullable;
 public final class GetReplicationResult {
     /**
      * The resource ID.
-     * 
      */
     private final String id;
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     private final String location;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The provisioning state of the replication at the time the operation was called.
-     * 
      */
     private final String provisioningState;
     /**
      * The status of the replication at the time the operation was called.
-     * 
      */
     private final StatusResponse status;
     /**
      * The tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -68,49 +61,42 @@ public final class GetReplicationResult {
 
     /**
      * The resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the replication at the time the operation was called.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the replication at the time the operation was called.
-     * 
     */
     public StatusResponse getStatus() {
         return this.status;
     }
     /**
      * The tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

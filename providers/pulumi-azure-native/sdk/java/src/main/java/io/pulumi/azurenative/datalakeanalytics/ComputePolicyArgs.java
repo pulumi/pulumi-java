@@ -19,7 +19,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Data Lake Analytics account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -30,7 +29,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the compute policy to create or update.
-     * 
      */
     @Import(name="computePolicyName")
       private final @Nullable Output<String> computePolicyName;
@@ -41,7 +39,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
-     * 
      */
     @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
@@ -52,7 +49,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
-     * 
      */
     @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
@@ -63,7 +59,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AAD object identifier for the entity to create a policy for.
-     * 
      */
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
@@ -74,7 +69,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of AAD object the object identifier refers to.
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<Either<String,AADObjectType>> objectType;
@@ -85,7 +79,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

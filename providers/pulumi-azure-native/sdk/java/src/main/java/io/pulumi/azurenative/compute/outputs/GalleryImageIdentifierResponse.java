@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GalleryImageIdentifierResponse {
     /**
      * The name of the gallery image definition offer.
-     * 
      */
     private final String offer;
     /**
      * The name of the gallery image definition publisher.
-     * 
      */
     private final String publisher;
     /**
      * The name of the gallery image definition SKU.
-     * 
      */
     private final String sku;
 
@@ -37,21 +34,18 @@ public final class GalleryImageIdentifierResponse {
 
     /**
      * The name of the gallery image definition offer.
-     * 
     */
     public String getOffer() {
         return this.offer;
     }
     /**
      * The name of the gallery image definition publisher.
-     * 
     */
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * The name of the gallery image definition SKU.
-     * 
     */
     public String getSku() {
         return this.sku;

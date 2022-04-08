@@ -23,7 +23,365 @@ import javax.annotation.Nullable;
  * The Test Base Package resource.
  * API Version: 2020-12-16-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PackageCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var package = new AzureNative.TestBase.Package("package", new AzureNative.TestBase.PackageArgs
+ *         {
+ *             ApplicationName = "contoso-package2",
+ *             BlobPath = "storageAccountPath/package.zip",
+ *             FlightingRing = "Insider Beta Channel",
+ *             Location = "westus",
+ *             PackageName = "contoso-package2",
+ *             ResourceGroupName = "contoso-rg1",
+ *             Tags = ,
+ *             TargetOSList = 
+ *             {
+ *                 new AzureNative.TestBase.Inputs.TargetOSInfoArgs
+ *                 {
+ *                     OsUpdateType = "Security updates",
+ *                     TargetOSs = 
+ *                     {
+ *                         "Windows 10 2004",
+ *                         "Windows 10 1903",
+ *                     },
+ *                 },
+ *             },
+ *             TestBaseAccountName = "contoso-testBaseAccount1",
+ *             Tests = 
+ *             {
+ *                 new AzureNative.TestBase.Inputs.TestArgs
+ *                 {
+ *                     Commands = 
+ *                     {
+ *                         new AzureNative.TestBase.Inputs.CommandArgs
+ *                         {
+ *                             Action = "Install",
+ *                             AlwaysRun = true,
+ *                             ApplyUpdateBefore = false,
+ *                             Content = "app/scripts/install/job.ps1",
+ *                             ContentType = "Path",
+ *                             MaxRunTime = 1800,
+ *                             Name = "Install",
+ *                             RestartAfter = true,
+ *                             RunAsInteractive = true,
+ *                             RunElevated = true,
+ *                         },
+ *                         new AzureNative.TestBase.Inputs.CommandArgs
+ *                         {
+ *                             Action = "Launch",
+ *                             AlwaysRun = false,
+ *                             ApplyUpdateBefore = true,
+ *                             Content = "app/scripts/launch/job.ps1",
+ *                             ContentType = "Path",
+ *                             MaxRunTime = 1800,
+ *                             Name = "Launch",
+ *                             RestartAfter = false,
+ *                             RunAsInteractive = true,
+ *                             RunElevated = true,
+ *                         },
+ *                         new AzureNative.TestBase.Inputs.CommandArgs
+ *                         {
+ *                             Action = "Close",
+ *                             AlwaysRun = false,
+ *                             ApplyUpdateBefore = false,
+ *                             Content = "app/scripts/close/job.ps1",
+ *                             ContentType = "Path",
+ *                             MaxRunTime = 1800,
+ *                             Name = "Close",
+ *                             RestartAfter = false,
+ *                             RunAsInteractive = true,
+ *                             RunElevated = true,
+ *                         },
+ *                         new AzureNative.TestBase.Inputs.CommandArgs
+ *                         {
+ *                             Action = "Uninstall",
+ *                             AlwaysRun = true,
+ *                             ApplyUpdateBefore = false,
+ *                             Content = "app/scripts/uninstall/job.ps1",
+ *                             ContentType = "Path",
+ *                             MaxRunTime = 1800,
+ *                             Name = "Uninstall",
+ *                             RestartAfter = false,
+ *                             RunAsInteractive = true,
+ *                             RunElevated = true,
+ *                         },
+ *                     },
+ *                     IsActive = true,
+ *                     TestType = "OutOfBoxTest",
+ *                 },
+ *             },
+ *             Version = "1.0.0",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	testbase "github.com/pulumi/pulumi-azure-native/sdk/go/azure/testbase"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := testbase.NewPackage(ctx, "package", &testbase.PackageArgs{
+ * 			ApplicationName:   pulumi.String("contoso-package2"),
+ * 			BlobPath:          pulumi.String("storageAccountPath/package.zip"),
+ * 			FlightingRing:     pulumi.String("Insider Beta Channel"),
+ * 			Location:          pulumi.String("westus"),
+ * 			PackageName:       pulumi.String("contoso-package2"),
+ * 			ResourceGroupName: pulumi.String("contoso-rg1"),
+ * 			Tags:              nil,
+ * 			TargetOSList: testbase.TargetOSInfoArray{
+ * 				&testbase.TargetOSInfoArgs{
+ * 					OsUpdateType: pulumi.String("Security updates"),
+ * 					TargetOSs: pulumi.StringArray{
+ * 						pulumi.String("Windows 10 2004"),
+ * 						pulumi.String("Windows 10 1903"),
+ * 					},
+ * 				},
+ * 			},
+ * 			TestBaseAccountName: pulumi.String("contoso-testBaseAccount1"),
+ * 			Tests: testbase.TestArray{
+ * 				&testbase.TestArgs{
+ * 					Commands: testbase.CommandArray{
+ * 						&testbase.CommandArgs{
+ * 							Action:            pulumi.String("Install"),
+ * 							AlwaysRun:         pulumi.Bool(true),
+ * 							ApplyUpdateBefore: pulumi.Bool(false),
+ * 							Content:           pulumi.String("app/scripts/install/job.ps1"),
+ * 							ContentType:       pulumi.String("Path"),
+ * 							MaxRunTime:        pulumi.Int(1800),
+ * 							Name:              pulumi.String("Install"),
+ * 							RestartAfter:      pulumi.Bool(true),
+ * 							RunAsInteractive:  pulumi.Bool(true),
+ * 							RunElevated:       pulumi.Bool(true),
+ * 						},
+ * 						&testbase.CommandArgs{
+ * 							Action:            pulumi.String("Launch"),
+ * 							AlwaysRun:         pulumi.Bool(false),
+ * 							ApplyUpdateBefore: pulumi.Bool(true),
+ * 							Content:           pulumi.String("app/scripts/launch/job.ps1"),
+ * 							ContentType:       pulumi.String("Path"),
+ * 							MaxRunTime:        pulumi.Int(1800),
+ * 							Name:              pulumi.String("Launch"),
+ * 							RestartAfter:      pulumi.Bool(false),
+ * 							RunAsInteractive:  pulumi.Bool(true),
+ * 							RunElevated:       pulumi.Bool(true),
+ * 						},
+ * 						&testbase.CommandArgs{
+ * 							Action:            pulumi.String("Close"),
+ * 							AlwaysRun:         pulumi.Bool(false),
+ * 							ApplyUpdateBefore: pulumi.Bool(false),
+ * 							Content:           pulumi.String("app/scripts/close/job.ps1"),
+ * 							ContentType:       pulumi.String("Path"),
+ * 							MaxRunTime:        pulumi.Int(1800),
+ * 							Name:              pulumi.String("Close"),
+ * 							RestartAfter:      pulumi.Bool(false),
+ * 							RunAsInteractive:  pulumi.Bool(true),
+ * 							RunElevated:       pulumi.Bool(true),
+ * 						},
+ * 						&testbase.CommandArgs{
+ * 							Action:            pulumi.String("Uninstall"),
+ * 							AlwaysRun:         pulumi.Bool(true),
+ * 							ApplyUpdateBefore: pulumi.Bool(false),
+ * 							Content:           pulumi.String("app/scripts/uninstall/job.ps1"),
+ * 							ContentType:       pulumi.String("Path"),
+ * 							MaxRunTime:        pulumi.Int(1800),
+ * 							Name:              pulumi.String("Uninstall"),
+ * 							RestartAfter:      pulumi.Bool(false),
+ * 							RunAsInteractive:  pulumi.Bool(true),
+ * 							RunElevated:       pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 					IsActive: pulumi.Bool(true),
+ * 					TestType: pulumi.String("OutOfBoxTest"),
+ * 				},
+ * 			},
+ * 			Version: pulumi.String("1.0.0"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const _package = new azure_native.testbase.Package("package", {
+ *     applicationName: "contoso-package2",
+ *     blobPath: "storageAccountPath/package.zip",
+ *     flightingRing: "Insider Beta Channel",
+ *     location: "westus",
+ *     packageName: "contoso-package2",
+ *     resourceGroupName: "contoso-rg1",
+ *     tags: {},
+ *     targetOSList: [{
+ *         osUpdateType: "Security updates",
+ *         targetOSs: [
+ *             "Windows 10 2004",
+ *             "Windows 10 1903",
+ *         ],
+ *     }],
+ *     testBaseAccountName: "contoso-testBaseAccount1",
+ *     tests: [{
+ *         commands: [
+ *             {
+ *                 action: "Install",
+ *                 alwaysRun: true,
+ *                 applyUpdateBefore: false,
+ *                 content: "app/scripts/install/job.ps1",
+ *                 contentType: "Path",
+ *                 maxRunTime: 1800,
+ *                 name: "Install",
+ *                 restartAfter: true,
+ *                 runAsInteractive: true,
+ *                 runElevated: true,
+ *             },
+ *             {
+ *                 action: "Launch",
+ *                 alwaysRun: false,
+ *                 applyUpdateBefore: true,
+ *                 content: "app/scripts/launch/job.ps1",
+ *                 contentType: "Path",
+ *                 maxRunTime: 1800,
+ *                 name: "Launch",
+ *                 restartAfter: false,
+ *                 runAsInteractive: true,
+ *                 runElevated: true,
+ *             },
+ *             {
+ *                 action: "Close",
+ *                 alwaysRun: false,
+ *                 applyUpdateBefore: false,
+ *                 content: "app/scripts/close/job.ps1",
+ *                 contentType: "Path",
+ *                 maxRunTime: 1800,
+ *                 name: "Close",
+ *                 restartAfter: false,
+ *                 runAsInteractive: true,
+ *                 runElevated: true,
+ *             },
+ *             {
+ *                 action: "Uninstall",
+ *                 alwaysRun: true,
+ *                 applyUpdateBefore: false,
+ *                 content: "app/scripts/uninstall/job.ps1",
+ *                 contentType: "Path",
+ *                 maxRunTime: 1800,
+ *                 name: "Uninstall",
+ *                 restartAfter: false,
+ *                 runAsInteractive: true,
+ *                 runElevated: true,
+ *             },
+ *         ],
+ *         isActive: true,
+ *         testType: "OutOfBoxTest",
+ *     }],
+ *     version: "1.0.0",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * package = azure_native.testbase.Package("package",
+ *     application_name="contoso-package2",
+ *     blob_path="storageAccountPath/package.zip",
+ *     flighting_ring="Insider Beta Channel",
+ *     location="westus",
+ *     package_name="contoso-package2",
+ *     resource_group_name="contoso-rg1",
+ *     tags={},
+ *     target_os_list=[azure_native.testbase.TargetOSInfoArgs(
+ *         os_update_type="Security updates",
+ *         target_oss=[
+ *             "Windows 10 2004",
+ *             "Windows 10 1903",
+ *         ],
+ *     )],
+ *     test_base_account_name="contoso-testBaseAccount1",
+ *     tests=[azure_native.testbase.TestArgs(
+ *         commands=[
+ *             azure_native.testbase.CommandArgs(
+ *                 action="Install",
+ *                 always_run=True,
+ *                 apply_update_before=False,
+ *                 content="app/scripts/install/job.ps1",
+ *                 content_type="Path",
+ *                 max_run_time=1800,
+ *                 name="Install",
+ *                 restart_after=True,
+ *                 run_as_interactive=True,
+ *                 run_elevated=True,
+ *             ),
+ *             azure_native.testbase.CommandArgs(
+ *                 action="Launch",
+ *                 always_run=False,
+ *                 apply_update_before=True,
+ *                 content="app/scripts/launch/job.ps1",
+ *                 content_type="Path",
+ *                 max_run_time=1800,
+ *                 name="Launch",
+ *                 restart_after=False,
+ *                 run_as_interactive=True,
+ *                 run_elevated=True,
+ *             ),
+ *             azure_native.testbase.CommandArgs(
+ *                 action="Close",
+ *                 always_run=False,
+ *                 apply_update_before=False,
+ *                 content="app/scripts/close/job.ps1",
+ *                 content_type="Path",
+ *                 max_run_time=1800,
+ *                 name="Close",
+ *                 restart_after=False,
+ *                 run_as_interactive=True,
+ *                 run_elevated=True,
+ *             ),
+ *             azure_native.testbase.CommandArgs(
+ *                 action="Uninstall",
+ *                 always_run=True,
+ *                 apply_update_before=False,
+ *                 content="app/scripts/uninstall/job.ps1",
+ *                 content_type="Path",
+ *                 max_run_time=1800,
+ *                 name="Uninstall",
+ *                 restart_after=False,
+ *                 run_as_interactive=True,
+ *                 run_elevated=True,
+ *             ),
+ *         ],
+ *         is_active=True,
+ *         test_type="OutOfBoxTest",
+ *     )],
+ *     version="1.0.0")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,252 +396,216 @@ import javax.annotation.Nullable;
 public class Package extends io.pulumi.resources.CustomResource {
     /**
      * Application name
-     * 
      */
     @Export(name="applicationName", type=String.class, parameters={})
     private Output<String> applicationName;
 
     /**
      * @return Application name
-     * 
      */
     public Output<String> getApplicationName() {
         return this.applicationName;
     }
     /**
      * The file path of the package.
-     * 
      */
     @Export(name="blobPath", type=String.class, parameters={})
     private Output<String> blobPath;
 
     /**
      * @return The file path of the package.
-     * 
      */
     public Output<String> getBlobPath() {
         return this.blobPath;
     }
     /**
      * Resource Etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource Etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The flighting ring for feature update.
-     * 
      */
     @Export(name="flightingRing", type=String.class, parameters={})
     private Output<String> flightingRing;
 
     /**
      * @return The flighting ring for feature update.
-     * 
      */
     public Output<String> getFlightingRing() {
         return this.flightingRing;
     }
     /**
      * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
-     * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
     /**
      * @return Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
-     * 
      */
     public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The UTC timestamp when the package was last modified.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return The UTC timestamp when the package was last modified.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The status of the package.
-     * 
      */
     @Export(name="packageStatus", type=String.class, parameters={})
     private Output<String> packageStatus;
 
     /**
      * @return The status of the package.
-     * 
      */
     public Output<String> getPackageStatus() {
         return this.packageStatus;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the target OSs of specific OS Update types.
-     * 
      */
     @Export(name="targetOSList", type=List.class, parameters={TargetOSInfoResponse.class})
     private Output<List<TargetOSInfoResponse>> targetOSList;
 
     /**
      * @return Specifies the target OSs of specific OS Update types.
-     * 
      */
     public Output<List<TargetOSInfoResponse>> getTargetOSList() {
         return this.targetOSList;
     }
     /**
      * OOB, functional or both. Mapped to the data in 'tests' property.
-     * 
      */
     @Export(name="testTypes", type=List.class, parameters={String.class})
     private Output<List<String>> testTypes;
 
     /**
      * @return OOB, functional or both. Mapped to the data in 'tests' property.
-     * 
      */
     public Output<List<String>> getTestTypes() {
         return this.testTypes;
     }
     /**
      * The detailed test information.
-     * 
      */
     @Export(name="tests", type=List.class, parameters={TestResponse.class})
     private Output<List<TestResponse>> tests;
 
     /**
      * @return The detailed test information.
-     * 
      */
     public Output<List<TestResponse>> getTests() {
         return this.tests;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The validation results. There's validation on package when it's created or updated.
-     * 
      */
     @Export(name="validationResults", type=List.class, parameters={PackageValidationResultResponse.class})
     private Output<List<PackageValidationResultResponse>> validationResults;
 
     /**
      * @return The validation results. There's validation on package when it's created or updated.
-     * 
      */
     public Output<List<PackageValidationResultResponse>> getValidationResults() {
         return this.validationResults;
     }
     /**
      * Application version
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Application version
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

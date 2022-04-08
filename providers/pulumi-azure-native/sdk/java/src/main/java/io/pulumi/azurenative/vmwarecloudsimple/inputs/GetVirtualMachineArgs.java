@@ -14,7 +14,6 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * virtual machine name
-     * 
      */
     @Import(name="virtualMachineName", required=true)
       private final String virtualMachineName;

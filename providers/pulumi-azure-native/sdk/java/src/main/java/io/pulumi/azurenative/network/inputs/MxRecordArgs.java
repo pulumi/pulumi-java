@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An MX record.
- * 
  */
 public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain name of the mail host for this MX record.
-     * 
      */
     @Import(name="exchange")
       private final @Nullable Output<String> exchange;
@@ -32,7 +30,6 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The preference value for this MX record.
-     * 
      */
     @Import(name="preference")
       private final @Nullable Output<Integer> preference;

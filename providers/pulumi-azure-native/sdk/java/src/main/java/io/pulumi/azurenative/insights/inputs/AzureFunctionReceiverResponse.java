@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An azure function receiver.
- * 
  */
 public final class AzureFunctionReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
 
     /**
      * The azure resource id of the function app.
-     * 
      */
     @Import(name="functionAppResourceId", required=true)
       private final String functionAppResourceId;
@@ -32,7 +30,6 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
 
     /**
      * The function name in the function app.
-     * 
      */
     @Import(name="functionName", required=true)
       private final String functionName;
@@ -43,7 +40,6 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
 
     /**
      * The http trigger url where http request sent to.
-     * 
      */
     @Import(name="httpTriggerUrl", required=true)
       private final String httpTriggerUrl;
@@ -54,7 +50,6 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
 
     /**
      * The name of the azure function receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -65,7 +60,6 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
 
     /**
      * Indicates whether to use common alert schema.
-     * 
      */
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;

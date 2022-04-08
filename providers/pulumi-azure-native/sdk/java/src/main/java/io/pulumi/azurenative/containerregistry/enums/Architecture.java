@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The OS architecture.
-     * 
      */
     @EnumType
     public enum Architecture {

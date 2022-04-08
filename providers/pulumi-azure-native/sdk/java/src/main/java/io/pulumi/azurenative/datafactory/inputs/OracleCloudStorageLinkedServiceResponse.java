@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Oracle Cloud Storage.
- * 
  */
 public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="accessKeyId")
       private final @Nullable Object accessKeyId;
@@ -39,7 +37,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -50,7 +47,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -61,7 +57,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -83,7 +77,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -94,7 +87,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.
-     * 
      */
     @Import(name="secretAccessKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
@@ -105,7 +97,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
 
     /**
      * This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="serviceUrl")
       private final @Nullable Object serviceUrl;
@@ -117,7 +108,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
     /**
      * Type of linked service.
      * Expected value is 'OracleCloudStorage'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -18,7 +18,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the backup policy to be created/updated.
-     * 
      */
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
@@ -29,7 +28,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -40,7 +38,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
@@ -51,7 +48,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
@@ -62,7 +58,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path IDs of the volumes which are part of the backup policy.
-     * 
      */
     @Import(name="volumeIds", required=true)
       private final Output<List<String>> volumeIds;

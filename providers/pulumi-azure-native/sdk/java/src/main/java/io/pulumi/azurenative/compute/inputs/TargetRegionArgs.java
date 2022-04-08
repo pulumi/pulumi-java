@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the target region information.
- * 
  */
 public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<EncryptionImagesArgs> encryption;
@@ -35,7 +33,6 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the region.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -46,7 +43,6 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of replicas of the Image Version to be created per region. This property is updatable.
-     * 
      */
     @Import(name="regionalReplicaCount")
       private final @Nullable Output<Integer> regionalReplicaCount;
@@ -57,7 +53,6 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;

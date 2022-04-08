@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of single sign on Secret Type.
-     * 
      */
     @EnumType
     public enum SSOSecretType {

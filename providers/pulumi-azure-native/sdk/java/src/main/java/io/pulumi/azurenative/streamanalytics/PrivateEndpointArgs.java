@@ -17,7 +17,6 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -28,7 +27,6 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the private endpoint.
-     * 
      */
     @Import(name="privateEndpointName")
       private final @Nullable Output<String> privateEndpointName;
@@ -39,7 +37,6 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The properties associated with a private endpoint.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<PrivateEndpointPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

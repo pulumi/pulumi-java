@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * Properties of the PrivateEndpointConnection.
  * API Version: 2018-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NameSpacePrivateEndPointConnectionCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.ServiceBus.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.ServiceBus.PrivateEndpointConnectionArgs
+ *         {
+ *             NamespaceName = "sdk-Namespace-2924",
+ *             PrivateEndpoint = new AzureNative.ServiceBus.Inputs.PrivateEndpointArgs
+ *             {
+ *                 Id = "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
+ *             },
+ *             PrivateEndpointConnectionName = "privateEndpointConnectionName",
+ *             PrivateLinkServiceConnectionState = new AzureNative.ServiceBus.Inputs.ConnectionStateArgs
+ *             {
+ *                 Description = "testing",
+ *                 Status = "Rejected",
+ *             },
+ *             ProvisioningState = "Succeeded",
+ *             ResourceGroupName = "ArunMonocle",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &servicebus.PrivateEndpointConnectionArgs{
+ * 			NamespaceName: pulumi.String("sdk-Namespace-2924"),
+ * 			PrivateEndpoint: &servicebus.PrivateEndpointArgs{
+ * 				Id: pulumi.String("/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847"),
+ * 			},
+ * 			PrivateEndpointConnectionName: pulumi.String("privateEndpointConnectionName"),
+ * 			PrivateLinkServiceConnectionState: &servicebus.ConnectionStateArgs{
+ * 				Description: pulumi.String("testing"),
+ * 				Status:      pulumi.String("Rejected"),
+ * 			},
+ * 			ProvisioningState: pulumi.String("Succeeded"),
+ * 			ResourceGroupName: pulumi.String("ArunMonocle"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.servicebus.PrivateEndpointConnection("privateEndpointConnection", {
+ *     namespaceName: "sdk-Namespace-2924",
+ *     privateEndpoint: {
+ *         id: "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
+ *     },
+ *     privateEndpointConnectionName: "privateEndpointConnectionName",
+ *     privateLinkServiceConnectionState: {
+ *         description: "testing",
+ *         status: "Rejected",
+ *     },
+ *     provisioningState: "Succeeded",
+ *     resourceGroupName: "ArunMonocle",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.servicebus.PrivateEndpointConnection("privateEndpointConnection",
+ *     namespace_name="sdk-Namespace-2924",
+ *     private_endpoint=azure_native.servicebus.PrivateEndpointArgs(
+ *         id="/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
+ *     ),
+ *     private_endpoint_connection_name="privateEndpointConnectionName",
+ *     private_link_service_connection_state=azure_native.servicebus.ConnectionStateArgs(
+ *         description="testing",
+ *         status="Rejected",
+ *     ),
+ *     provisioning_state="Succeeded",
+ *     resource_group_name="ArunMonocle")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +140,60 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Private Endpoint resource for this Connection.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The Private Endpoint resource for this Connection.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Details about the state of the connection.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=ConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Details about the state of the connection.
-     * 
      */
     public Output</* @Nullable */ ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Provisioning state of the Private Endpoint Connection.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

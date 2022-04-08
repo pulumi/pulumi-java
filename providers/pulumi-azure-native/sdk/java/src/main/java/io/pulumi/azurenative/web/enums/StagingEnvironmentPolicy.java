@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * State indicating whether staging environments are allowed or not allowed for a static web app.
-     * 
      */
     @EnumType
     public enum StagingEnvironmentPolicy {

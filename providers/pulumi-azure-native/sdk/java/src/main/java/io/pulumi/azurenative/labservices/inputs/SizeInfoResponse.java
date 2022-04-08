@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains detailed information about a size
- * 
  */
 public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Represents the actual compute size, e.g. Standard_A2_v2.
-     * 
      */
     @Import(name="computeSize")
       private final @Nullable String computeSize;
@@ -33,7 +31,6 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The amount of memory available (in GB).
-     * 
      */
     @Import(name="memory")
       private final @Nullable Double memory;
@@ -44,7 +41,6 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of cores a VM of this size has.
-     * 
      */
     @Import(name="numberOfCores")
       private final @Nullable Integer numberOfCores;
@@ -55,7 +51,6 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
-     * 
      */
     @Import(name="price")
       private final @Nullable Double price;

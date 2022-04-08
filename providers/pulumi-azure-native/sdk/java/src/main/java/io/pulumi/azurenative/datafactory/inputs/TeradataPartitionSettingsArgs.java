@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings that will be leveraged for teradata source partitioning.
- * 
  */
 public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
@@ -31,7 +29,6 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionLowerBound")
       private final @Nullable Output<Object> partitionLowerBound;
@@ -42,7 +39,6 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionUpperBound")
       private final @Nullable Output<Object> partitionUpperBound;

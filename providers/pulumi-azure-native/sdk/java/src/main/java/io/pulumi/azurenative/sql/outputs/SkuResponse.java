@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class SkuResponse {
     /**
      * Capacity of the particular SKU.
-     * 
      */
     private final @Nullable Integer capacity;
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
-     * 
      */
     private final @Nullable String family;
     /**
      * The name of the SKU, typically, a letter + Number code, e.g. P3.
-     * 
      */
     private final String name;
     /**
      * Size of the particular SKU
-     * 
      */
     private final @Nullable String size;
     /**
      * The tier or edition of the particular SKU, e.g. Basic, Premium.
-     * 
      */
     private final @Nullable String tier;
 
@@ -54,35 +49,30 @@ public final class SkuResponse {
 
     /**
      * Capacity of the particular SKU.
-     * 
     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
-     * 
     */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The name of the SKU, typically, a letter + Number code, e.g. P3.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Size of the particular SKU
-     * 
     */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The tier or edition of the particular SKU, e.g. Basic, Premium.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a setting for the container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
- * 
  */
 public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the setting.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the setting.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

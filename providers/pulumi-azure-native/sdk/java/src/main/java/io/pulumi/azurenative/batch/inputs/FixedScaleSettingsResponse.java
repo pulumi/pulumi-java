@@ -17,7 +17,6 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * If omitted, the default value is Requeue.
-     * 
      */
     @Import(name="nodeDeallocationOption")
       private final @Nullable String nodeDeallocationOption;
@@ -28,7 +27,6 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
-     * 
      */
     @Import(name="resizeTimeout")
       private final @Nullable String resizeTimeout;
@@ -39,7 +37,6 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
-     * 
      */
     @Import(name="targetDedicatedNodes")
       private final @Nullable Integer targetDedicatedNodes;
@@ -50,7 +47,6 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
-     * 
      */
     @Import(name="targetLowPriorityNodes")
       private final @Nullable Integer targetLowPriorityNodes;

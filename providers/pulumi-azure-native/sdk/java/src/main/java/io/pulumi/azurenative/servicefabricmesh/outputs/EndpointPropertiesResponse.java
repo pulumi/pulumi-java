@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class EndpointPropertiesResponse {
     /**
      * The name of the endpoint.
-     * 
      */
     private final String name;
     /**
      * Port used by the container.
-     * 
      */
     private final @Nullable Integer port;
 
@@ -33,14 +31,12 @@ public final class EndpointPropertiesResponse {
 
     /**
      * The name of the endpoint.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Port used by the container.
-     * 
     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);

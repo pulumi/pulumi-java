@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ListFirewallPolicyIdpsSignatureResult {
     /**
      * Number of total records matching the query.
-     * 
      */
     private final @Nullable Double matchingRecordsCount;
     /**
      * Array containing the results of the query
-     * 
      */
     private final @Nullable List<SingleQueryResultResponse> signatures;
 
@@ -34,14 +32,12 @@ public final class ListFirewallPolicyIdpsSignatureResult {
 
     /**
      * Number of total records matching the query.
-     * 
     */
     public Optional<Double> getMatchingRecordsCount() {
         return Optional.ofNullable(this.matchingRecordsCount);
     }
     /**
      * Array containing the results of the query
-     * 
     */
     public List<SingleQueryResultResponse> getSignatures() {
         return this.signatures == null ? List.of() : this.signatures;

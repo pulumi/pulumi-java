@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ResourceProviderDetailsResponse {
     /**
      * Resource provider namespace
-     * 
      */
     private final String resourceProviderNamespace;
 
@@ -22,7 +21,6 @@ public final class ResourceProviderDetailsResponse {
 
     /**
      * Resource provider namespace
-     * 
     */
     public String getResourceProviderNamespace() {
         return this.resourceProviderNamespace;

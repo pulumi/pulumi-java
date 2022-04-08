@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of the notification hub sku
-     * 
      */
     @EnumType
     public enum SkuName {

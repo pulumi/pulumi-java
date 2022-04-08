@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class VpnClientRootCertificateResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * The provisioning state of the VPN client root certificate resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The certificate public data.
-     * 
      */
     private final String publicCertData;
 
@@ -53,35 +48,30 @@ public final class VpnClientRootCertificateResponse {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the VPN client root certificate resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The certificate public data.
-     * 
     */
     public String getPublicCertData() {
         return this.publicCertData;

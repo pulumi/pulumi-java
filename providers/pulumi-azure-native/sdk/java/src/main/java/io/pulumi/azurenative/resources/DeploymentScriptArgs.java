@@ -20,7 +20,6 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -31,7 +30,6 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of the script.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,ScriptType>> kind;
@@ -42,7 +40,6 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The location of the ACI and the storage account for the deployment script.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the deployment script.
-     * 
      */
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
@@ -75,7 +70,6 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

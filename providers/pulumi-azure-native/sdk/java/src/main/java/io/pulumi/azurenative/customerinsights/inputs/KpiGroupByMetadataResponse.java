@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The KPI GroupBy field metadata.
- * 
  */
 public final class KpiGroupByMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
 
     /**
      * The display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Map<String,String> displayName;
@@ -32,7 +30,6 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the field.
-     * 
      */
     @Import(name="fieldName")
       private final @Nullable String fieldName;
@@ -43,7 +40,6 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
 
     /**
      * The type of the field.
-     * 
      */
     @Import(name="fieldType")
       private final @Nullable String fieldType;

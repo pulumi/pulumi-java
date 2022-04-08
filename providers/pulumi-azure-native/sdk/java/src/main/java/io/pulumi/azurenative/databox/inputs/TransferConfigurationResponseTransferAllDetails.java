@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
- * 
  */
 public final class TransferConfigurationResponseTransferAllDetails extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TransferConfigurationResponseTransferAllDetails extends io.pu
 
     /**
      * Details to transfer all data.
-     * 
      */
     @Import(name="include")
       private final @Nullable TransferAllDetailsResponse include;

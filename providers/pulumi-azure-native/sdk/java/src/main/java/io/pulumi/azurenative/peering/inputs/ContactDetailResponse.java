@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The contact detail class.
- * 
  */
 public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The e-mail address of the contact.
-     * 
      */
     @Import(name="email")
       private final @Nullable String email;
@@ -31,7 +29,6 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The phone number of the contact.
-     * 
      */
     @Import(name="phone")
       private final @Nullable String phone;
@@ -42,7 +39,6 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The role of the contact.
-     * 
      */
     @Import(name="role")
       private final @Nullable String role;

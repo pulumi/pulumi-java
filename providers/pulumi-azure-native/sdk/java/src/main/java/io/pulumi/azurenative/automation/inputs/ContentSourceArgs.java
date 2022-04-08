@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the content source.
- * 
  */
 public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the hash.
-     * 
      */
     @Import(name="hash")
       private final @Nullable Output<ContentHashArgs> hash;
@@ -34,7 +32,6 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the content source type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ContentSourceType>> type;
@@ -45,7 +42,6 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the value of the content. This is based on the content source type.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;
@@ -56,7 +52,6 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the version of the content.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

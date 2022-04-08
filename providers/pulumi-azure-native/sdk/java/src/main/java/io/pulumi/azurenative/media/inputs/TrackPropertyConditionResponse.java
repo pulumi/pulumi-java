@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to specify one track property condition
- * 
  */
 public final class TrackPropertyConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
 
     /**
      * Track property condition operation
-     * 
      */
     @Import(name="operation", required=true)
       private final String operation;
@@ -31,7 +29,6 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
 
     /**
      * Track property type
-     * 
      */
     @Import(name="property", required=true)
       private final String property;
@@ -42,7 +39,6 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
 
     /**
      * Track property value
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

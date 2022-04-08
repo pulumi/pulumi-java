@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Partner server information for the failover group.
- * 
  */
 public final class PartnerInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PartnerInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource identifier of the partner server.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

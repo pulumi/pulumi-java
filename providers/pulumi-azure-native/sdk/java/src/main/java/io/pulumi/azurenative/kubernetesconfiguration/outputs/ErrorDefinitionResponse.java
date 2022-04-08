@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ErrorDefinitionResponse {
     /**
      * Service specific error code which serves as the substatus for the HTTP error code.
-     * 
      */
     private final String code;
     /**
      * Description of the error.
-     * 
      */
     private final String message;
 
@@ -30,14 +28,12 @@ public final class ErrorDefinitionResponse {
 
     /**
      * Service specific error code which serves as the substatus for the HTTP error code.
-     * 
     */
     public String getCode() {
         return this.code;
     }
     /**
      * Description of the error.
-     * 
     */
     public String getMessage() {
         return this.message;

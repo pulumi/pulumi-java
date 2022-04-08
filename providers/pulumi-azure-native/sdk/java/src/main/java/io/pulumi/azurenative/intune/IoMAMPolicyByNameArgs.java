@@ -102,7 +102,6 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Location hostName for the tenant
-     * 
      */
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
@@ -113,7 +112,6 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource Location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -152,7 +150,6 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Unique name for the policy
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -163,7 +160,6 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource Tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

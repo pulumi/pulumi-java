@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the flow of the ingestion.
-     * 
      */
     @EnumType
     public enum IngestionMode {

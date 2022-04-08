@@ -22,7 +22,129 @@ import javax.annotation.Nullable;
  * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AFDOriginGroups_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var afdOriginGroup = new AzureNative.Cdn.AFDOriginGroup("afdOriginGroup", new AzureNative.Cdn.AFDOriginGroupArgs
+ *         {
+ *             HealthProbeSettings = new AzureNative.Cdn.Inputs.HealthProbeParametersArgs
+ *             {
+ *                 ProbeIntervalInSeconds = 10,
+ *                 ProbePath = "/path2",
+ *                 ProbeProtocol = "NotSet",
+ *                 ProbeRequestType = "NotSet",
+ *             },
+ *             LoadBalancingSettings = new AzureNative.Cdn.Inputs.LoadBalancingSettingsParametersArgs
+ *             {
+ *                 AdditionalLatencyInMilliseconds = 1000,
+ *                 SampleSize = 3,
+ *                 SuccessfulSamplesRequired = 3,
+ *             },
+ *             OriginGroupName = "origingroup1",
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *             TrafficRestorationTimeToHealedOrNewEndpointsInMinutes = 5,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cdn.NewAFDOriginGroup(ctx, "afdOriginGroup", &cdn.AFDOriginGroupArgs{
+ * 			HealthProbeSettings: &cdn.HealthProbeParametersArgs{
+ * 				ProbeIntervalInSeconds: pulumi.Int(10),
+ * 				ProbePath:              pulumi.String("/path2"),
+ * 				ProbeProtocol:          "NotSet",
+ * 				ProbeRequestType:       "NotSet",
+ * 			},
+ * 			LoadBalancingSettings: &cdn.LoadBalancingSettingsParametersArgs{
+ * 				AdditionalLatencyInMilliseconds: pulumi.Int(1000),
+ * 				SampleSize:                      pulumi.Int(3),
+ * 				SuccessfulSamplesRequired:       pulumi.Int(3),
+ * 			},
+ * 			OriginGroupName:   pulumi.String("origingroup1"),
+ * 			ProfileName:       pulumi.String("profile1"),
+ * 			ResourceGroupName: pulumi.String("RG"),
+ * 			TrafficRestorationTimeToHealedOrNewEndpointsInMinutes: pulumi.Int(5),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const afdOriginGroup = new azure_native.cdn.AFDOriginGroup("afdOriginGroup", {
+ *     healthProbeSettings: {
+ *         probeIntervalInSeconds: 10,
+ *         probePath: "/path2",
+ *         probeProtocol: "NotSet",
+ *         probeRequestType: "NotSet",
+ *     },
+ *     loadBalancingSettings: {
+ *         additionalLatencyInMilliseconds: 1000,
+ *         sampleSize: 3,
+ *         successfulSamplesRequired: 3,
+ *     },
+ *     originGroupName: "origingroup1",
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ *     trafficRestorationTimeToHealedOrNewEndpointsInMinutes: 5,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * afd_origin_group = azure_native.cdn.AFDOriginGroup("afdOriginGroup",
+ *     health_probe_settings=azure_native.cdn.HealthProbeParametersArgs(
+ *         probe_interval_in_seconds=10,
+ *         probe_path="/path2",
+ *         probe_protocol="NotSet",
+ *         probe_request_type="NotSet",
+ *     ),
+ *     load_balancing_settings=azure_native.cdn.LoadBalancingSettingsParametersArgs(
+ *         additional_latency_in_milliseconds=1000,
+ *         sample_size=3,
+ *         successful_samples_required=3,
+ *     ),
+ *     origin_group_name="origingroup1",
+ *     profile_name="profile1",
+ *     resource_group_name="RG",
+ *     traffic_restoration_time_to_healed_or_new_endpoints_in_minutes=5)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -43,126 +165,108 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
-     * 
      */
     @Export(name="healthProbeSettings", type=HealthProbeParametersResponse.class, parameters={})
     private Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings;
 
     /**
      * @return Health probe settings to the origin that is used to determine the health of the origin.
-     * 
      */
     public Output</* @Nullable */ HealthProbeParametersResponse> getHealthProbeSettings() {
         return this.healthProbeSettings;
     }
     /**
      * Load balancing settings for a backend pool
-     * 
      */
     @Export(name="loadBalancingSettings", type=LoadBalancingSettingsParametersResponse.class, parameters={})
     private Output</* @Nullable */ LoadBalancingSettingsParametersResponse> loadBalancingSettings;
 
     /**
      * @return Load balancing settings for a backend pool
-     * 
      */
     public Output</* @Nullable */ LoadBalancingSettingsParametersResponse> getLoadBalancingSettings() {
         return this.loadBalancingSettings;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning status
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
-     * 
      */
     @Export(name="responseBasedAfdOriginErrorDetectionSettings", type=ResponseBasedOriginErrorDetectionParametersResponse.class, parameters={})
     private Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedAfdOriginErrorDetectionSettings;
 
     /**
      * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
-     * 
      */
     public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedAfdOriginErrorDetectionSettings() {
         return this.responseBasedAfdOriginErrorDetectionSettings;
     }
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
-     * 
      */
     @Export(name="sessionAffinityState", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionAffinityState;
 
     /**
      * @return Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
-     * 
      */
     public Output</* @Nullable */ String> getSessionAffinityState() {
         return this.sessionAffinityState;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
-     * 
      */
     @Export(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     /**
      * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
-     * 
      */
     public Output</* @Nullable */ Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

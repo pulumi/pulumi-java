@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cache identity properties.
- * 
  */
 public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity used for the cache
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<CacheIdentityType> type;

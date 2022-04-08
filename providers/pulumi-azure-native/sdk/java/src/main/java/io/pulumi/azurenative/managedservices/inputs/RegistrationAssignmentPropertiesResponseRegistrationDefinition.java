@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Registration definition inside registration assignment.
- * 
  */
 public final class RegistrationAssignmentPropertiesResponseRegistrationDefinition extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
 
     /**
      * Fully qualified path of the registration definition.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -33,7 +31,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
 
     /**
      * Name of the registration definition.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -44,7 +41,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
 
     /**
      * Plan details for the managed services.
-     * 
      */
     @Import(name="plan")
       private final @Nullable PlanResponse plan;
@@ -55,7 +51,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
 
     /**
      * Properties of registration definition inside registration assignment.
-     * 
      */
     @Import(name="properties")
       private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
@@ -66,7 +61,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
 
     /**
      * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

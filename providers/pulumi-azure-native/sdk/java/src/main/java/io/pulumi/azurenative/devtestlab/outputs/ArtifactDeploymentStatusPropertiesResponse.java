@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ArtifactDeploymentStatusPropertiesResponse {
     /**
      * The total count of the artifacts that were successfully applied.
-     * 
      */
     private final @Nullable Integer artifactsApplied;
     /**
      * The deployment status of the artifact.
-     * 
      */
     private final @Nullable String deploymentStatus;
     /**
      * The total count of the artifacts that were tentatively applied.
-     * 
      */
     private final @Nullable Integer totalArtifacts;
 
@@ -40,21 +37,18 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
 
     /**
      * The total count of the artifacts that were successfully applied.
-     * 
     */
     public Optional<Integer> getArtifactsApplied() {
         return Optional.ofNullable(this.artifactsApplied);
     }
     /**
      * The deployment status of the artifact.
-     * 
     */
     public Optional<String> getDeploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
     /**
      * The total count of the artifacts that were tentatively applied.
-     * 
     */
     public Optional<Integer> getTotalArtifacts() {
         return Optional.ofNullable(this.totalArtifacts);

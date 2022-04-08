@@ -16,7 +16,6 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
 
     /**
      * The custom file name of the uploaded blob.
-     * 
      */
     @Import(name="blobName")
       private final @Nullable String blobName;
@@ -27,7 +26,6 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;

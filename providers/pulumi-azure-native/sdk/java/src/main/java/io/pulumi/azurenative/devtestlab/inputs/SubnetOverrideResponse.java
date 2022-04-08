@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Property overrides on a subnet of a virtual network.
- * 
  */
 public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name given to the subnet within the lab.
-     * 
      */
     @Import(name="labSubnetName")
       private final @Nullable String labSubnetName;
@@ -32,7 +30,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource ID of the subnet.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;
@@ -43,7 +40,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Properties that virtual machines on this subnet will share.
-     * 
      */
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
@@ -54,7 +50,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
-     * 
      */
     @Import(name="useInVmCreationPermission")
       private final @Nullable String useInVmCreationPermission;
@@ -65,7 +60,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
-     * 
      */
     @Import(name="usePublicIpAddressPermission")
       private final @Nullable String usePublicIpAddressPermission;
@@ -76,7 +70,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The virtual network pool associated with this subnet.
-     * 
      */
     @Import(name="virtualNetworkPoolName")
       private final @Nullable String virtualNetworkPoolName;

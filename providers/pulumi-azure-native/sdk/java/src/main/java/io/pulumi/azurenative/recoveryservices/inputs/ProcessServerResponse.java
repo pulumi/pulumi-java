@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the Process Server.
- * 
  */
 public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Agent expiry date.
-     * 
      */
     @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
@@ -37,7 +35,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The version of the scout component on the server.
-     * 
      */
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
@@ -48,7 +45,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The agent version details.
-     * 
      */
     @Import(name="agentVersionDetails")
       private final @Nullable VersionDetailsResponse agentVersionDetails;
@@ -59,7 +55,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The available memory.
-     * 
      */
     @Import(name="availableMemoryInBytes")
       private final @Nullable Double availableMemoryInBytes;
@@ -70,7 +65,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The available space.
-     * 
      */
     @Import(name="availableSpaceInBytes")
       private final @Nullable Double availableSpaceInBytes;
@@ -81,7 +75,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The percentage of the CPU load.
-     * 
      */
     @Import(name="cpuLoad")
       private final @Nullable String cpuLoad;
@@ -92,7 +85,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The CPU load status.
-     * 
      */
     @Import(name="cpuLoadStatus")
       private final @Nullable String cpuLoadStatus;
@@ -103,7 +95,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Process Server's friendly name.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -114,7 +105,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The health of Process Server.
-     * 
      */
     @Import(name="health", required=true)
       private final String health;
@@ -125,7 +115,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Health errors.
-     * 
      */
     @Import(name="healthErrors")
       private final @Nullable List<HealthErrorResponse> healthErrors;
@@ -136,7 +125,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The agent generated Id.
-     * 
      */
     @Import(name="hostId")
       private final @Nullable String hostId;
@@ -147,7 +135,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Process Server Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -158,7 +145,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The IP address of the server.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -169,7 +155,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The last heartbeat received from the server.
-     * 
      */
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
@@ -180,7 +165,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The servers configured with this PS.
-     * 
      */
     @Import(name="machineCount")
       private final @Nullable String machineCount;
@@ -191,7 +175,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The MARS communication status.
-     * 
      */
     @Import(name="marsCommunicationStatus", required=true)
       private final String marsCommunicationStatus;
@@ -202,7 +185,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The MARS registration status.
-     * 
      */
     @Import(name="marsRegistrationStatus", required=true)
       private final String marsRegistrationStatus;
@@ -213,7 +195,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The memory usage status.
-     * 
      */
     @Import(name="memoryUsageStatus")
       private final @Nullable String memoryUsageStatus;
@@ -224,7 +205,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The list of the mobility service updates available on the Process Server.
-     * 
      */
     @Import(name="mobilityServiceUpdates")
       private final @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates;
@@ -235,7 +215,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The OS type of the server.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -246,7 +225,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
-     * 
      */
     @Import(name="osVersion")
       private final @Nullable String osVersion;
@@ -257,7 +235,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The PS service status.
-     * 
      */
     @Import(name="psServiceStatus")
       private final @Nullable String psServiceStatus;
@@ -268,7 +245,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The process server stats refresh time.
-     * 
      */
     @Import(name="psStatsRefreshTime", required=true)
       private final String psStatsRefreshTime;
@@ -279,7 +255,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of replication pairs configured in this PS.
-     * 
      */
     @Import(name="replicationPairCount")
       private final @Nullable String replicationPairCount;
@@ -290,7 +265,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The space usage status.
-     * 
      */
     @Import(name="spaceUsageStatus")
       private final @Nullable String spaceUsageStatus;
@@ -301,7 +275,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The PS SSL cert expiry date.
-     * 
      */
     @Import(name="sslCertExpiryDate")
       private final @Nullable String sslCertExpiryDate;
@@ -312,7 +285,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * CS SSL cert expiry date.
-     * 
      */
     @Import(name="sslCertExpiryRemainingDays")
       private final @Nullable Integer sslCertExpiryRemainingDays;
@@ -323,7 +295,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The percentage of the system load.
-     * 
      */
     @Import(name="systemLoad")
       private final @Nullable String systemLoad;
@@ -334,7 +305,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The system load status.
-     * 
      */
     @Import(name="systemLoadStatus")
       private final @Nullable String systemLoadStatus;
@@ -345,7 +315,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The throughput in bytes.
-     * 
      */
     @Import(name="throughputInBytes", required=true)
       private final Double throughputInBytes;
@@ -356,7 +325,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The throughput in MBps.
-     * 
      */
     @Import(name="throughputInMBps", required=true)
       private final Double throughputInMBps;
@@ -367,7 +335,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The throughput status.
-     * 
      */
     @Import(name="throughputStatus", required=true)
       private final String throughputStatus;
@@ -378,7 +345,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The uploading pending data in bytes.
-     * 
      */
     @Import(name="throughputUploadPendingDataInBytes", required=true)
       private final Double throughputUploadPendingDataInBytes;
@@ -389,7 +355,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The total memory.
-     * 
      */
     @Import(name="totalMemoryInBytes")
       private final @Nullable Double totalMemoryInBytes;
@@ -400,7 +365,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The total space.
-     * 
      */
     @Import(name="totalSpaceInBytes")
       private final @Nullable Double totalSpaceInBytes;
@@ -411,7 +375,6 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Version status
-     * 
      */
     @Import(name="versionStatus")
       private final @Nullable String versionStatus;

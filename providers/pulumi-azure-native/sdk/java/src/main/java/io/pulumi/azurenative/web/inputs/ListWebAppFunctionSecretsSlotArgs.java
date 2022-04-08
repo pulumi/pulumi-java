@@ -14,7 +14,6 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
 
     /**
      * Function name.
-     * 
      */
     @Import(name="functionName", required=true)
       private final String functionName;
@@ -25,7 +24,6 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
 
     /**
      * Site name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the deployment slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final String slot;

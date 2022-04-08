@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Automation key which is used to register a DSC Node
- * 
  */
 public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Automation key name.
-     * 
      */
     @Import(name="keyName", required=true)
       private final String keyName;
@@ -29,7 +27,6 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Automation key permissions.
-     * 
      */
     @Import(name="permissions", required=true)
       private final String permissions;
@@ -40,7 +37,6 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value of the Automation Key used for registration.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

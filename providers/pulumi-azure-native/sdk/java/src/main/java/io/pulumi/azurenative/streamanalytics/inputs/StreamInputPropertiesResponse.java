@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that are associated with an input containing stream data.
- * 
  */
 public final class StreamInputPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="datasource")
       private final @Nullable Object datasource;
@@ -39,7 +37,6 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
-     * 
      */
     @Import(name="diagnostics", required=true)
       private final DiagnosticsResponse diagnostics;
@@ -50,7 +47,6 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -61,7 +57,6 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serialization")
       private final @Nullable Object serialization;
@@ -73,7 +68,6 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
     /**
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Stream'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

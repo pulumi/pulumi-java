@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The HDInsight cluster application GET response.
- * 
  */
 public final class ApplicationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The application type.
-     * 
      */
     @Import(name="applicationType")
       private final @Nullable Output<String> applicationType;
@@ -37,7 +35,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of roles in the cluster.
-     * 
      */
     @Import(name="computeProfile")
       private final @Nullable Output<ComputeProfileArgs> computeProfile;
@@ -48,7 +45,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of errors.
-     * 
      */
     @Import(name="errors")
       private final @Nullable Output<List<ErrorsArgs>> errors;
@@ -59,7 +55,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of application HTTPS endpoints.
-     * 
      */
     @Import(name="httpsEndpoints")
       private final @Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
@@ -70,7 +65,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of install script actions.
-     * 
      */
     @Import(name="installScriptActions")
       private final @Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions;
@@ -81,7 +75,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of application SSH endpoints.
-     * 
      */
     @Import(name="sshEndpoints")
       private final @Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints;
@@ -92,7 +85,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of uninstall script actions.
-     * 
      */
     @Import(name="uninstallScriptActions")
       private final @Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions;

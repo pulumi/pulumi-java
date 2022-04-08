@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Azure SKU instance
- * 
  */
 public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The capacity of the SKU, if it supports scaling
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -32,7 +30,6 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU family, used when the service has multiple performance classes within a tier, such as 'A', 'D', etc. for virtual machines
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -43,7 +40,6 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the SKU, such as 'P3'
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +50,6 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. 'A1' for virtual machines
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -65,7 +60,6 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

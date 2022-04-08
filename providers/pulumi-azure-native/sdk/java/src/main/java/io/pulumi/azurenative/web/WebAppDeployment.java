@@ -31,168 +31,144 @@ import javax.annotation.Nullable;
 public class WebAppDeployment extends io.pulumi.resources.CustomResource {
     /**
      * True if deployment is currently active, false if completed and null if not started.
-     * 
      */
     @Export(name="active", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> active;
 
     /**
      * @return True if deployment is currently active, false if completed and null if not started.
-     * 
      */
     public Output</* @Nullable */ Boolean> getActive() {
         return this.active;
     }
     /**
      * Who authored the deployment.
-     * 
      */
     @Export(name="author", type=String.class, parameters={})
     private Output</* @Nullable */ String> author;
 
     /**
      * @return Who authored the deployment.
-     * 
      */
     public Output</* @Nullable */ String> getAuthor() {
         return this.author;
     }
     /**
      * Author email.
-     * 
      */
     @Export(name="authorEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorEmail;
 
     /**
      * @return Author email.
-     * 
      */
     public Output</* @Nullable */ String> getAuthorEmail() {
         return this.authorEmail;
     }
     /**
      * Who performed the deployment.
-     * 
      */
     @Export(name="deployer", type=String.class, parameters={})
     private Output</* @Nullable */ String> deployer;
 
     /**
      * @return Who performed the deployment.
-     * 
      */
     public Output</* @Nullable */ String> getDeployer() {
         return this.deployer;
     }
     /**
      * Details on deployment.
-     * 
      */
     @Export(name="details", type=String.class, parameters={})
     private Output</* @Nullable */ String> details;
 
     /**
      * @return Details on deployment.
-     * 
      */
     public Output</* @Nullable */ String> getDetails() {
         return this.details;
     }
     /**
      * End time.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
      * @return End time.
-     * 
      */
     public Output</* @Nullable */ String> getEndTime() {
         return this.endTime;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Details about deployment status.
-     * 
      */
     @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**
      * @return Details about deployment status.
-     * 
      */
     public Output</* @Nullable */ String> getMessage() {
         return this.message;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Start time.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
      * @return Start time.
-     * 
      */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
     /**
      * Deployment status.
-     * 
      */
     @Export(name="status", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> status;
 
     /**
      * @return Deployment status.
-     * 
      */
     public Output</* @Nullable */ Integer> getStatus() {
         return this.status;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

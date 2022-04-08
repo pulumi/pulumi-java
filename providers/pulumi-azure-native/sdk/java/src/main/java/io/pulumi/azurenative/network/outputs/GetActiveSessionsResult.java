@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class GetActiveSessionsResult {
     /**
      * The URL to get the next set of results.
-     * 
      */
     private final @Nullable String nextLink;
     /**
      * List of active sessions on the bastion.
-     * 
      */
     private final @Nullable List<BastionActiveSessionResponse> value;
 
@@ -34,14 +32,12 @@ public final class GetActiveSessionsResult {
 
     /**
      * The URL to get the next set of results.
-     * 
     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of active sessions on the bastion.
-     * 
     */
     public List<BastionActiveSessionResponse> getValue() {
         return this.value == null ? List.of() : this.value;

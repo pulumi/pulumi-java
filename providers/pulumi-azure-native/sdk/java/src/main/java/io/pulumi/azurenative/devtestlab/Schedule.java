@@ -22,7 +22,201 @@ import javax.annotation.Nullable;
  * A schedule.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Schedules_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var schedule = new AzureNative.DevTestLab.Schedule("schedule", new AzureNative.DevTestLab.ScheduleArgs
+ *         {
+ *             DailyRecurrence = new AzureNative.DevTestLab.Inputs.DayDetailsArgs
+ *             {
+ *                 Time = "{timeOfTheDayTheScheduleWillOccurEveryDay}",
+ *             },
+ *             HourlyRecurrence = new AzureNative.DevTestLab.Inputs.HourDetailsArgs
+ *             {
+ *                 Minute = 30,
+ *             },
+ *             LabName = "{labName}",
+ *             Location = "{location}",
+ *             Name = "{scheduleName}",
+ *             NotificationSettings = new AzureNative.DevTestLab.Inputs.NotificationSettingsArgs
+ *             {
+ *                 EmailRecipient = "{email}",
+ *                 NotificationLocale = "EN",
+ *                 Status = "{Enabled|Disabled}",
+ *                 TimeInMinutes = 15,
+ *                 WebhookUrl = "{webhookUrl}",
+ *             },
+ *             ResourceGroupName = "resourceGroupName",
+ *             Status = "{Enabled|Disabled}",
+ *             Tags = 
+ *             {
+ *                 { "tagName1", "tagValue1" },
+ *             },
+ *             TargetResourceId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
+ *             TaskType = "{myLabVmTaskType}",
+ *             TimeZoneId = "Pacific Standard Time",
+ *             WeeklyRecurrence = new AzureNative.DevTestLab.Inputs.WeekDetailsArgs
+ *             {
+ *                 Time = "{timeOfTheDayTheScheduleWillOccurOnThoseDays}",
+ *                 Weekdays = 
+ *                 {
+ *                     "Monday",
+ *                     "Wednesday",
+ *                     "Friday",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewSchedule(ctx, "schedule", &devtestlab.ScheduleArgs{
+ * 			DailyRecurrence: &devtestlab.DayDetailsArgs{
+ * 				Time: pulumi.String("{timeOfTheDayTheScheduleWillOccurEveryDay}"),
+ * 			},
+ * 			HourlyRecurrence: &devtestlab.HourDetailsArgs{
+ * 				Minute: pulumi.Int(30),
+ * 			},
+ * 			LabName:  pulumi.String("{labName}"),
+ * 			Location: pulumi.String("{location}"),
+ * 			Name:     pulumi.String("{scheduleName}"),
+ * 			NotificationSettings: &devtestlab.NotificationSettingsArgs{
+ * 				EmailRecipient:     pulumi.String("{email}"),
+ * 				NotificationLocale: pulumi.String("EN"),
+ * 				Status:             pulumi.String("{Enabled|Disabled}"),
+ * 				TimeInMinutes:      pulumi.Int(15),
+ * 				WebhookUrl:         pulumi.String("{webhookUrl}"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			Status:            pulumi.String("{Enabled|Disabled}"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagName1": pulumi.String("tagValue1"),
+ * 			},
+ * 			TargetResourceId: pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}"),
+ * 			TaskType:         pulumi.String("{myLabVmTaskType}"),
+ * 			TimeZoneId:       pulumi.String("Pacific Standard Time"),
+ * 			WeeklyRecurrence: &devtestlab.WeekDetailsArgs{
+ * 				Time: pulumi.String("{timeOfTheDayTheScheduleWillOccurOnThoseDays}"),
+ * 				Weekdays: pulumi.StringArray{
+ * 					pulumi.String("Monday"),
+ * 					pulumi.String("Wednesday"),
+ * 					pulumi.String("Friday"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const schedule = new azure_native.devtestlab.Schedule("schedule", {
+ *     dailyRecurrence: {
+ *         time: "{timeOfTheDayTheScheduleWillOccurEveryDay}",
+ *     },
+ *     hourlyRecurrence: {
+ *         minute: 30,
+ *     },
+ *     labName: "{labName}",
+ *     location: "{location}",
+ *     name: "{scheduleName}",
+ *     notificationSettings: {
+ *         emailRecipient: "{email}",
+ *         notificationLocale: "EN",
+ *         status: "{Enabled|Disabled}",
+ *         timeInMinutes: 15,
+ *         webhookUrl: "{webhookUrl}",
+ *     },
+ *     resourceGroupName: "resourceGroupName",
+ *     status: "{Enabled|Disabled}",
+ *     tags: {
+ *         tagName1: "tagValue1",
+ *     },
+ *     targetResourceId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
+ *     taskType: "{myLabVmTaskType}",
+ *     timeZoneId: "Pacific Standard Time",
+ *     weeklyRecurrence: {
+ *         time: "{timeOfTheDayTheScheduleWillOccurOnThoseDays}",
+ *         weekdays: [
+ *             "Monday",
+ *             "Wednesday",
+ *             "Friday",
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * schedule = azure_native.devtestlab.Schedule("schedule",
+ *     daily_recurrence=azure_native.devtestlab.DayDetailsArgs(
+ *         time="{timeOfTheDayTheScheduleWillOccurEveryDay}",
+ *     ),
+ *     hourly_recurrence=azure_native.devtestlab.HourDetailsArgs(
+ *         minute=30,
+ *     ),
+ *     lab_name="{labName}",
+ *     location="{location}",
+ *     name="{scheduleName}",
+ *     notification_settings=azure_native.devtestlab.NotificationSettingsArgs(
+ *         email_recipient="{email}",
+ *         notification_locale="EN",
+ *         status="{Enabled|Disabled}",
+ *         time_in_minutes=15,
+ *         webhook_url="{webhookUrl}",
+ *     ),
+ *     resource_group_name="resourceGroupName",
+ *     status="{Enabled|Disabled}",
+ *     tags={
+ *         "tagName1": "tagValue1",
+ *     },
+ *     target_resource_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
+ *     task_type="{myLabVmTaskType}",
+ *     time_zone_id="Pacific Standard Time",
+ *     weekly_recurrence=azure_native.devtestlab.WeekDetailsArgs(
+ *         time="{timeOfTheDayTheScheduleWillOccurOnThoseDays}",
+ *         weekdays=[
+ *             "Monday",
+ *             "Wednesday",
+ *             "Friday",
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,210 +231,180 @@ import javax.annotation.Nullable;
 public class Schedule extends io.pulumi.resources.CustomResource {
     /**
      * The creation date of the schedule.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The creation date of the schedule.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     @Export(name="dailyRecurrence", type=DayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DayDetailsResponse> dailyRecurrence;
 
     /**
      * @return If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     public Output</* @Nullable */ DayDetailsResponse> getDailyRecurrence() {
         return this.dailyRecurrence;
     }
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     @Export(name="hourlyRecurrence", type=HourDetailsResponse.class, parameters={})
     private Output</* @Nullable */ HourDetailsResponse> hourlyRecurrence;
 
     /**
      * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     public Output</* @Nullable */ HourDetailsResponse> getHourlyRecurrence() {
         return this.hourlyRecurrence;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Notification settings.
-     * 
      */
     @Export(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NotificationSettingsResponse> notificationSettings;
 
     /**
      * @return Notification settings.
-     * 
      */
     public Output</* @Nullable */ NotificationSettingsResponse> getNotificationSettings() {
         return this.notificationSettings;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The resource ID to which the schedule belongs
-     * 
      */
     @Export(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
     /**
      * @return The resource ID to which the schedule belongs
-     * 
      */
     public Output</* @Nullable */ String> getTargetResourceId() {
         return this.targetResourceId;
     }
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     @Export(name="taskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskType;
 
     /**
      * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     public Output</* @Nullable */ String> getTaskType() {
         return this.taskType;
     }
     /**
      * The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     @Export(name="timeZoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZoneId;
 
     /**
      * @return The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     public Output</* @Nullable */ String> getTimeZoneId() {
         return this.timeZoneId;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     @Export(name="weeklyRecurrence", type=WeekDetailsResponse.class, parameters={})
     private Output</* @Nullable */ WeekDetailsResponse> weeklyRecurrence;
 
     /**
      * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     public Output</* @Nullable */ WeekDetailsResponse> getWeeklyRecurrence() {
         return this.weeklyRecurrence;

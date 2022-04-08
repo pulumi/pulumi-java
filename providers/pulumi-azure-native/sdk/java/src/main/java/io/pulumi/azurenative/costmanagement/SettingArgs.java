@@ -18,7 +18,6 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of scopes with additional details used by Cost Management in the Azure portal.
-     * 
      */
     @Import(name="cache")
       private final @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
@@ -29,7 +28,6 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -40,7 +38,6 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the setting. Allowed values: myscope
-     * 
      */
     @Import(name="settingName")
       private final @Nullable Output<String> settingName;
@@ -51,7 +48,6 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
-     * 
      */
     @Import(name="startOn")
       private final @Nullable Output<String> startOn;

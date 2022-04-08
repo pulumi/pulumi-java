@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The API deployment parameter metadata.
- * 
  */
 public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
 
     /**
      * The display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -43,7 +40,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
 
     /**
      * Indicates whether its required.
-     * 
      */
     @Import(name="isRequired")
       private final @Nullable Boolean isRequired;
@@ -54,7 +50,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
 
     /**
      * The type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -65,7 +60,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
 
     /**
      * The visibility.
-     * 
      */
     @Import(name="visibility")
       private final @Nullable String visibility;

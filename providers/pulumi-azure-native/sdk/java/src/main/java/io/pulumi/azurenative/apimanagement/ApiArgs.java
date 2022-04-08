@@ -27,7 +27,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     * 
      */
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
@@ -38,7 +37,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the Revision of the Api. If no value is provided, default revision 1 is created
-     * 
      */
     @Import(name="apiRevision")
       private final @Nullable Output<String> apiRevision;
@@ -49,7 +47,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the Api Revision.
-     * 
      */
     @Import(name="apiRevisionDescription")
       private final @Nullable Output<String> apiRevisionDescription;
@@ -60,7 +57,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of API.
-     * 
      */
     @Import(name="apiType")
       private final @Nullable Output<Either<String,ApiType>> apiType;
@@ -71,7 +67,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the Version identifier of the API if the API is versioned
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -82,7 +77,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the Api Version.
-     * 
      */
     @Import(name="apiVersionDescription")
       private final @Nullable Output<String> apiVersionDescription;
@@ -93,7 +87,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Version set details
-     * 
      */
     @Import(name="apiVersionSet")
       private final @Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet;
@@ -104,7 +97,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A resource identifier for the related ApiVersionSet.
-     * 
      */
     @Import(name="apiVersionSetId")
       private final @Nullable Output<String> apiVersionSetId;
@@ -115,7 +107,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of authentication settings included into this API.
-     * 
      */
     @Import(name="authenticationSettings")
       private final @Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings;
@@ -126,7 +117,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the API. May include HTML formatting tags.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -137,7 +127,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API name. Must be 1 to 300 characters long.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -148,7 +137,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Format of the Content in which the API is getting imported.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<Either<String,ContentFormat>> format;
@@ -159,7 +147,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if API revision is current api revision.
-     * 
      */
     @Import(name="isCurrent")
       private final @Nullable Output<Boolean> isCurrent;
@@ -170,7 +157,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-     * 
      */
     @Import(name="path", required=true)
       private final Output<String> path;
@@ -181,7 +167,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes on which protocols the operations in this API can be invoked.
-     * 
      */
     @Import(name="protocols")
       private final @Nullable Output<List<Protocol>> protocols;
@@ -192,7 +177,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -203,7 +187,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -214,7 +197,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-     * 
      */
     @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;
@@ -224,10 +206,9 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Type of Api to create.
-     *  * `http` creates a SOAP to REST API
+     * Type of Api to create. 
+     *  * `http` creates a SOAP to REST API 
      *  * `soap` creates a SOAP pass-through API .
-     * 
      */
     @Import(name="soapApiType")
       private final @Nullable Output<Either<String,SoapApiType>> soapApiType;
@@ -238,7 +219,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API identifier of the source API.
-     * 
      */
     @Import(name="sourceApiId")
       private final @Nullable Output<String> sourceApiId;
@@ -249,7 +229,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Protocols over which API is made available.
-     * 
      */
     @Import(name="subscriptionKeyParameterNames")
       private final @Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
@@ -260,7 +239,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether an API or Product subscription is required for accessing the API.
-     * 
      */
     @Import(name="subscriptionRequired")
       private final @Nullable Output<Boolean> subscriptionRequired;
@@ -271,7 +249,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content value when Importing an API.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;
@@ -282,7 +259,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Criteria to limit import of WSDL to a subset of the document.
-     * 
      */
     @Import(name="wsdlSelector")
       private final @Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;

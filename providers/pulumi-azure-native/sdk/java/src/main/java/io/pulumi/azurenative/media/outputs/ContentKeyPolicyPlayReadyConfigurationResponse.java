@@ -15,18 +15,15 @@ import javax.annotation.Nullable;
 public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     /**
      * The PlayReady licenses.
-     * 
      */
     private final List<ContentKeyPolicyPlayReadyLicenseResponse> licenses;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
-     * 
      */
     private final String odataType;
     /**
      * The custom response data.
-     * 
      */
     private final @Nullable String responseCustomData;
 
@@ -42,7 +39,6 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
 
     /**
      * The PlayReady licenses.
-     * 
     */
     public List<ContentKeyPolicyPlayReadyLicenseResponse> getLicenses() {
         return this.licenses;
@@ -50,14 +46,12 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The custom response data.
-     * 
     */
     public Optional<String> getResponseCustomData() {
         return Optional.ofNullable(this.responseCustomData);

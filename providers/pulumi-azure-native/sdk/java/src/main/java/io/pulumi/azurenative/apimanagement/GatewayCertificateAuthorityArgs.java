@@ -17,7 +17,6 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
 
     /**
      * Identifier of the certificate entity. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
@@ -28,7 +27,6 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
 
     /**
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
-     * 
      */
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
@@ -39,7 +37,6 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
 
     /**
      * Determines whether certificate authority is trusted.
-     * 
      */
     @Import(name="isTrusted")
       private final @Nullable Output<Boolean> isTrusted;
@@ -50,7 +47,6 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

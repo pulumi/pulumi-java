@@ -17,7 +17,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -28,7 +27,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the geo backup policy.
-     * 
      */
     @Import(name="geoBackupPolicyName")
       private final @Nullable Output<String> geoBackupPolicyName;
@@ -39,7 +37,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -61,7 +57,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The state of the geo backup policy.
-     * 
      */
     @Import(name="state", required=true)
       private final Output<GeoBackupPolicyState> state;

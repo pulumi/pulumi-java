@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A private endpoint connection for a project.
- * 
  */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * For optimistic concurrency control.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable String eTag;
@@ -32,7 +30,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -43,7 +40,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Name of the private endpoint endpoint connection.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -54,7 +50,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Properties of the private endpoint endpoint connection.
-     * 
      */
     @Import(name="properties", required=true)
       private final PrivateEndpointConnectionPropertiesResponse properties;
@@ -65,7 +60,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

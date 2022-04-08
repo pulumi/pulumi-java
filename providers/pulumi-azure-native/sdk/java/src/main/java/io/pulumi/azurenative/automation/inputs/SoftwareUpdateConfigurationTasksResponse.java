@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Task properties of the software update configuration.
- * 
  */
 public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
 
     /**
      * Post task properties.
-     * 
      */
     @Import(name="postTask")
       private final @Nullable TaskPropertiesResponse postTask;
@@ -31,7 +29,6 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
 
     /**
      * Pre task properties.
-     * 
      */
     @Import(name="preTask")
       private final @Nullable TaskPropertiesResponse preTask;

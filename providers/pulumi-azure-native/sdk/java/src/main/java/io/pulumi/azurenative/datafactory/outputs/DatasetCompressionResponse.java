@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class DatasetCompressionResponse {
     /**
      * The dataset compression level. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object level;
     /**
      * Type of dataset compression. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object type;
 
@@ -32,14 +30,12 @@ public final class DatasetCompressionResponse {
 
     /**
      * The dataset compression level. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getLevel() {
         return Optional.ofNullable(this.level);
     }
     /**
      * Type of dataset compression. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getType() {
         return this.type;

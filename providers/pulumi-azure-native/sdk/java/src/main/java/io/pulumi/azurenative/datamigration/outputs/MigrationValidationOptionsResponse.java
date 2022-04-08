@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class MigrationValidationOptionsResponse {
     /**
      * Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
-     * 
      */
     private final @Nullable Boolean enableDataIntegrityValidation;
     /**
      * Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
-     * 
      */
     private final @Nullable Boolean enableQueryAnalysisValidation;
     /**
      * Allows to compare the schema information between source and target.
-     * 
      */
     private final @Nullable Boolean enableSchemaValidation;
 
@@ -39,21 +36,18 @@ public final class MigrationValidationOptionsResponse {
 
     /**
      * Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
-     * 
     */
     public Optional<Boolean> getEnableDataIntegrityValidation() {
         return Optional.ofNullable(this.enableDataIntegrityValidation);
     }
     /**
      * Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
-     * 
     */
     public Optional<Boolean> getEnableQueryAnalysisValidation() {
         return Optional.ofNullable(this.enableQueryAnalysisValidation);
     }
     /**
      * Allows to compare the schema information between source and target.
-     * 
     */
     public Optional<Boolean> getEnableSchemaValidation() {
         return Optional.ofNullable(this.enableSchemaValidation);

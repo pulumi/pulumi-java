@@ -19,7 +19,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the Service Bus authentication.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable ServiceBusAuthenticationResponse authentication;
@@ -30,7 +29,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the brokered message properties.
-     * 
      */
     @Import(name="brokeredMessageProperties")
       private final @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
@@ -41,7 +39,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the custom message properties.
-     * 
      */
     @Import(name="customMessageProperties")
       private final @Nullable Map<String,String> customMessageProperties;
@@ -52,7 +49,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -63,7 +59,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the namespace.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable String namespace;
@@ -74,7 +69,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the queue name.
-     * 
      */
     @Import(name="queueName")
       private final @Nullable String queueName;
@@ -85,7 +79,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the transport type.
-     * 
      */
     @Import(name="transportType")
       private final @Nullable String transportType;

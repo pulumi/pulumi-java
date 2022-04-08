@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of the shared access key.
- * 
  */
 public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 
     /**
      * Name of the key.
-     * 
      */
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
@@ -33,7 +31,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 
     /**
      * Primary SAS key value.
-     * 
      */
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
@@ -44,7 +41,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 
     /**
      * Rights that this key has.
-     * 
      */
     @Import(name="rights", required=true)
       private final Output<Either<String,AccessRightsDescription>> rights;
@@ -55,7 +51,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 
     /**
      * Secondary SAS key value.
-     * 
      */
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;

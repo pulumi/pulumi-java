@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance online scenario.
- * 
  */
 public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
 
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
-     * 
      */
     @Import(name="azureApp", required=true)
       private final AzureActiveDirectoryAppResponse azureApp;
@@ -37,7 +35,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
 
     /**
      * Backup file share information for all selected databases.
-     * 
      */
     @Import(name="backupFileShare")
       private final @Nullable FileShareResponse backupFileShare;
@@ -48,7 +45,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
 
     /**
      * Databases to migrate
-     * 
      */
     @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
@@ -59,7 +55,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
 
     /**
      * Connection information for source SQL Server
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
@@ -70,7 +65,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
 
     /**
      * Fully qualified resourceId of storage
-     * 
      */
     @Import(name="storageResourceId", required=true)
       private final String storageResourceId;
@@ -81,7 +75,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
 
     /**
      * Connection information for Azure SQL Database Managed Instance
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final MiSqlConnectionInfoResponse targetConnectionInfo;

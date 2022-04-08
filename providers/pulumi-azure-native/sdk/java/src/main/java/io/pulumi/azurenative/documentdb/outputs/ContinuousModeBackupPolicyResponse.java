@@ -12,7 +12,6 @@ public final class ContinuousModeBackupPolicyResponse {
     /**
      * Describes the mode of backups.
      * Expected value is 'Continuous'.
-     * 
      */
     private final String type;
 
@@ -24,7 +23,6 @@ public final class ContinuousModeBackupPolicyResponse {
     /**
      * Describes the mode of backups.
      * Expected value is 'Continuous'.
-     * 
     */
     public String getType() {
         return this.type;

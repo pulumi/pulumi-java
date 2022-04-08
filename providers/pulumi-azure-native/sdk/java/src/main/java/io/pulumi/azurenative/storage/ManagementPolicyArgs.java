@@ -17,7 +17,6 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -28,7 +27,6 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Storage Account Management Policy. It should always be 'default'
-     * 
      */
     @Import(name="managementPolicyName")
       private final @Nullable Output<String> managementPolicyName;
@@ -39,7 +37,6 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
-     * 
      */
     @Import(name="policy", required=true)
       private final Output<ManagementPolicySchemaArgs> policy;
@@ -50,7 +47,6 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

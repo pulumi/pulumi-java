@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for an HTTP file.
- * 
  */
 public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -32,7 +30,6 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the timeout for a HTTP client to get HTTP response from HTTP server. The default value is equivalent to System.Net.HttpWebRequest.Timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="httpRequestTimeout")
       private final @Nullable Output<Object> httpRequestTimeout;
@@ -43,7 +40,6 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -54,7 +50,6 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -65,7 +60,6 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -77,7 +71,6 @@ public final class HttpSourceArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Copy source type.
      * Expected value is 'HttpSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

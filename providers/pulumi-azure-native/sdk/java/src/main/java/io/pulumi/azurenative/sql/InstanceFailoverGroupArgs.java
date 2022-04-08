@@ -21,7 +21,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the failover group.
-     * 
      */
     @Import(name="failoverGroupName")
       private final @Nullable Output<String> failoverGroupName;
@@ -32,7 +31,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the region where the resource is located.
-     * 
      */
     @Import(name="locationName", required=true)
       private final Output<String> locationName;
@@ -43,7 +41,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of managed instance pairs in the failover group.
-     * 
      */
     @Import(name="managedInstancePairs", required=true)
       private final Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
@@ -54,7 +51,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * Partner region information for the failover group.
-     * 
      */
     @Import(name="partnerRegions", required=true)
       private final Output<List<PartnerRegionInfoArgs>> partnerRegions;
@@ -65,7 +61,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * Read-only endpoint of the failover group instance.
-     * 
      */
     @Import(name="readOnlyEndpoint")
       private final @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
@@ -76,7 +71,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * Read-write endpoint of the failover group instance.
-     * 
      */
     @Import(name="readWriteEndpoint", required=true)
       private final Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
@@ -87,7 +81,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

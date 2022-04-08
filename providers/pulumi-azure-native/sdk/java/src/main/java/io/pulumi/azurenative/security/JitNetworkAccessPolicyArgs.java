@@ -19,7 +19,6 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
 
     /**
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
-     * 
      */
     @Import(name="ascLocation", required=true)
       private final Output<String> ascLocation;
@@ -30,7 +29,6 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of a Just-in-Time access configuration policy.
-     * 
      */
     @Import(name="jitNetworkAccessPolicyName")
       private final @Nullable Output<String> jitNetworkAccessPolicyName;
@@ -41,7 +39,6 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
 
     /**
      * Kind of the resource
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -59,7 +56,6 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -70,7 +66,6 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
 
     /**
      * Configurations for Microsoft.Compute/virtualMachines resource type.
-     * 
      */
     @Import(name="virtualMachines", required=true)
       private final Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;

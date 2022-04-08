@@ -12,22 +12,18 @@ public final class DataBoxDiskCopyLogDetailsResponse {
     /**
      * Indicates the type of job details.
      * Expected value is 'DataBoxDisk'.
-     * 
      */
     private final String copyLogDetailsType;
     /**
      * Disk Serial Number.
-     * 
      */
     private final String diskSerialNumber;
     /**
      * Link for copy error logs.
-     * 
      */
     private final String errorLogLink;
     /**
      * Link for copy verbose logs.
-     * 
      */
     private final String verboseLogLink;
 
@@ -46,28 +42,24 @@ public final class DataBoxDiskCopyLogDetailsResponse {
     /**
      * Indicates the type of job details.
      * Expected value is 'DataBoxDisk'.
-     * 
     */
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
      * Disk Serial Number.
-     * 
     */
     public String getDiskSerialNumber() {
         return this.diskSerialNumber;
     }
     /**
      * Link for copy error logs.
-     * 
     */
     public String getErrorLogLink() {
         return this.errorLogLink;
     }
     /**
      * Link for copy verbose logs.
-     * 
     */
     public String getVerboseLogLink() {
         return this.verboseLogLink;

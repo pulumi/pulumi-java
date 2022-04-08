@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings that will be leveraged for SAP table source partitioning.
- * 
  */
 public final class SapTablePartitionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
 
     /**
      * The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
-     * 
      */
     @Import(name="maxPartitionsNumber")
       private final @Nullable Object maxPartitionsNumber;
@@ -31,7 +29,6 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
 
     /**
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionColumnName")
       private final @Nullable Object partitionColumnName;
@@ -42,7 +39,6 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
 
     /**
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionLowerBound")
       private final @Nullable Object partitionLowerBound;
@@ -53,7 +49,6 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
 
     /**
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionUpperBound")
       private final @Nullable Object partitionUpperBound;

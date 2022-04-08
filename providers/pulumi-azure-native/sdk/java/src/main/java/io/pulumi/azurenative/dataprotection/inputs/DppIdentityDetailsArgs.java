@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity details
- * 
  */
 public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identityType which can be either SystemAssigned or None
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

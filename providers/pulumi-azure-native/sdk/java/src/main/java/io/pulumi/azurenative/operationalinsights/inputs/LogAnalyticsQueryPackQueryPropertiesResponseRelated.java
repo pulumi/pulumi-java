@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The related metadata items for the function.
- * 
  */
 public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
 
     /**
      * The related categories for the function.
-     * 
      */
     @Import(name="categories")
       private final @Nullable List<String> categories;
@@ -32,7 +30,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
 
     /**
      * The related resource types for the function.
-     * 
      */
     @Import(name="resourceTypes")
       private final @Nullable List<String> resourceTypes;
@@ -43,7 +40,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
 
     /**
      * The related Log Analytics solutions for the function.
-     * 
      */
     @Import(name="solutions")
       private final @Nullable List<String> solutions;

@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Gateway certificate authority details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateGatewayCertificateAuthority
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var gatewayCertificateAuthority = new AzureNative.ApiManagement.GatewayCertificateAuthority("gatewayCertificateAuthority", new AzureNative.ApiManagement.GatewayCertificateAuthorityArgs
+ *         {
+ *             CertificateId = "cert1",
+ *             GatewayId = "gw1",
+ *             IsTrusted = false,
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewGatewayCertificateAuthority(ctx, "gatewayCertificateAuthority", &apimanagement.GatewayCertificateAuthorityArgs{
+ * 			CertificateId:     pulumi.String("cert1"),
+ * 			GatewayId:         pulumi.String("gw1"),
+ * 			IsTrusted:         pulumi.Bool(false),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const gatewayCertificateAuthority = new azure_native.apimanagement.GatewayCertificateAuthority("gatewayCertificateAuthority", {
+ *     certificateId: "cert1",
+ *     gatewayId: "gw1",
+ *     isTrusted: false,
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * gateway_certificate_authority = azure_native.apimanagement.GatewayCertificateAuthority("gatewayCertificateAuthority",
+ *     certificate_id="cert1",
+ *     gateway_id="gw1",
+ *     is_trusted=False,
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +113,36 @@ import javax.annotation.Nullable;
 public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResource {
     /**
      * Determines whether certificate authority is trusted.
-     * 
      */
     @Export(name="isTrusted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isTrusted;
 
     /**
      * @return Determines whether certificate authority is trusted.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsTrusted() {
         return this.isTrusted;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

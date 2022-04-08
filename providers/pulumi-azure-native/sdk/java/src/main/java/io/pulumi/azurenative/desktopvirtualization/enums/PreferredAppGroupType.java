@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of preferred application group type, default to Desktop Application Group
-     * 
      */
     @EnumType
     public enum PreferredAppGroupType {

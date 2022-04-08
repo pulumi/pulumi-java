@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * Batch inference settings per deployment.
- * 
  */
 public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -34,7 +33,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Code configuration for the endpoint deployment.
-     * 
      */
     @Import(name="codeConfiguration")
       private final @Nullable Output<CodeConfigurationArgs> codeConfiguration;
@@ -45,7 +43,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Configuration for compute binding.
-     * 
      */
     @Import(name="compute")
       private final @Nullable Output<ComputeConfigurationArgs> compute;
@@ -56,7 +53,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Description of the endpoint deployment.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -67,7 +63,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
@@ -78,7 +73,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Environment variables configuration for the deployment.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
@@ -93,7 +87,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * For FileDataset, this value is the count of file failures.
      * For TabularDataset, this value is the count of record failures.
      * If set to -1 (the lower bound), all failures during batch inference will be ignored.
-     * 
      */
     @Import(name="errorThreshold")
       private final @Nullable Output<Integer> errorThreshold;
@@ -104,7 +97,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Logging level for batch inference operation.
-     * 
      */
     @Import(name="loggingLevel")
       private final @Nullable Output<Either<String,BatchLoggingLevel>> loggingLevel;
@@ -117,7 +109,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Size of the mini-batch passed to each batch invocation.
      * For FileDataset, this is the number of files per mini-batch.
      * For TabularDataset, this is the size of the records in bytes, per mini-batch.
-     * 
      */
     @Import(name="miniBatchSize")
       private final @Nullable Output<Double> miniBatchSize;
@@ -128,7 +119,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Reference to the model asset for the endpoint deployment.
-     * 
      */
     @Import(name="model")
       private final @Nullable Output<Object> model;
@@ -139,7 +129,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Output configuration for the batch inference operation.
-     * 
      */
     @Import(name="outputConfiguration")
       private final @Nullable Output<BatchOutputConfigurationArgs> outputConfiguration;
@@ -150,7 +139,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Partition keys list used for Named partitioning.
-     * 
      */
     @Import(name="partitionKeys")
       private final @Nullable Output<List<String>> partitionKeys;
@@ -161,7 +149,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -172,7 +159,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Retry Settings for the batch inference operation.
-     * 
      */
     @Import(name="retrySettings")
       private final @Nullable Output<BatchRetrySettingsArgs> retrySettings;

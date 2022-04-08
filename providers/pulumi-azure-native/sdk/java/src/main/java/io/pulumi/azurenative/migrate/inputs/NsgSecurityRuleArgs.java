@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Security Rule data model for Network Security Groups.
- * 
  */
 public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Gets or sets whether network traffic is allowed or denied.
      * Possible values are “Allow” and “Deny”.
-     * 
      */
     @Import(name="access")
       private final @Nullable Output<String> access;
@@ -33,7 +31,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets a description for this rule. Restricted to 140 chars.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +43,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets destination address prefix. CIDR or source IP range.
      *  A “*” can also be used to match all source IPs. Default tags such
      * as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
-     * 
      */
     @Import(name="destinationAddressPrefix")
       private final @Nullable Output<String> destinationAddressPrefix;
@@ -58,7 +54,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Gets or sets Destination Port or Range. Integer or range between
      * 0 and 65535. A “*” can also be used to match all ports.
-     * 
      */
     @Import(name="destinationPortRange")
       private final @Nullable Output<String> destinationPortRange;
@@ -70,7 +65,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Gets or sets the direction of the rule.InBound or Outbound. The
      * direction specifies if rule will be evaluated on incoming or outgoing traffic.
-     * 
      */
     @Import(name="direction")
       private final @Nullable Output<String> direction;
@@ -81,7 +75,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the Security rule name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -94,7 +87,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the priority of the rule. The value can be between
      * 100 and 4096. The priority number must be unique for each rule in the collection.
      * The lower the priority number, the higher the priority of the rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -105,7 +97,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
@@ -119,7 +110,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
      * ‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
      * rule, specifies where network traffic originates from.
-     * 
      */
     @Import(name="sourceAddressPrefix")
       private final @Nullable Output<String> sourceAddressPrefix;
@@ -131,7 +121,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Gets or sets Source Port or Range. Integer or range between 0 and
      * 65535. A “*” can also be used to match all ports.
-     * 
      */
     @Import(name="sourcePortRange")
       private final @Nullable Output<String> sourcePortRange;

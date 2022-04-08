@@ -14,23 +14,19 @@ import javax.annotation.Nullable;
 public final class AudioAnalyzerPresetResponse {
     /**
      * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
-     * 
      */
     private final @Nullable String audioLanguage;
     /**
      * Dictionary containing key value pairs for parameters not exposed in the preset itself
-     * 
      */
     private final @Nullable Map<String,String> experimentalOptions;
     /**
      * Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
-     * 
      */
     private final @Nullable String mode;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AudioAnalyzerPreset'.
-     * 
      */
     private final String odataType;
 
@@ -48,21 +44,18 @@ public final class AudioAnalyzerPresetResponse {
 
     /**
      * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
-     * 
     */
     public Optional<String> getAudioLanguage() {
         return Optional.ofNullable(this.audioLanguage);
     }
     /**
      * Dictionary containing key value pairs for parameters not exposed in the preset itself
-     * 
     */
     public Map<String,String> getExperimentalOptions() {
         return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
     }
     /**
      * Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
-     * 
     */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
@@ -70,7 +63,6 @@ public final class AudioAnalyzerPresetResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AudioAnalyzerPreset'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

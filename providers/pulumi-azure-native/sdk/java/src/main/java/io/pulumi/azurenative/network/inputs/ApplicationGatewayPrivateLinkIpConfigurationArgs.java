@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The application gateway private link ip configuration.
- * 
  */
 public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -35,7 +33,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
 
     /**
      * The name of application gateway private link ip configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -46,7 +43,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
 
     /**
      * Whether the ip configuration is primary or not.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
@@ -57,7 +53,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
@@ -68,7 +63,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -79,7 +73,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
 
     /**
      * Reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * List of routes that control routing from VirtualHub into a virtual network connection.
- * 
  */
 public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of all Static Routes.
-     * 
      */
     @Import(name="staticRoutes")
       private final @Nullable Output<List<StaticRouteArgs>> staticRoutes;

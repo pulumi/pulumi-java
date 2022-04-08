@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class TokenBodyParameterContractResponse {
     /**
      * body parameter name.
-     * 
      */
     private final String name;
     /**
      * body parameter value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class TokenBodyParameterContractResponse {
 
     /**
      * body parameter name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * body parameter value.
-     * 
     */
     public String getValue() {
         return this.value;

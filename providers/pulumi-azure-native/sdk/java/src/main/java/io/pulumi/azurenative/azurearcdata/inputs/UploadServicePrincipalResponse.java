@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service principal for uploading billing, metrics and logs.
- * 
  */
 public final class UploadServicePrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
 
     /**
      * Authority for the service principal. Example: https://login.microsoftonline.com/
-     * 
      */
     @Import(name="authority")
       private final @Nullable String authority;
@@ -31,7 +29,6 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
 
     /**
      * Client ID of the service principal for uploading data.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -42,7 +39,6 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
 
     /**
      * Tenant ID of the service principal.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

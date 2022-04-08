@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Pricing tier for Size evaluation.
-     * 
      */
     @EnumType
     public enum AzurePricingTier {

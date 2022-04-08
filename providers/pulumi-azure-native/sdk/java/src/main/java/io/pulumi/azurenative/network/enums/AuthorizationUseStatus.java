@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authorization use status.
-     * 
      */
     @EnumType
     public enum AuthorizationUseStatus {

@@ -19,48 +19,39 @@ import javax.annotation.Nullable;
 public final class MappingDataFlowResponse {
     /**
      * List of tags that can be used for describing the data flow.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * The description of the data flow.
-     * 
      */
     private final @Nullable String description;
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
-     * 
      */
     private final @Nullable DataFlowResponseFolder folder;
     /**
      * DataFlow script.
-     * 
      */
     private final @Nullable String script;
     /**
      * Data flow script lines.
-     * 
      */
     private final @Nullable List<String> scriptLines;
     /**
      * List of sinks in data flow.
-     * 
      */
     private final @Nullable List<DataFlowSinkResponse> sinks;
     /**
      * List of sources in data flow.
-     * 
      */
     private final @Nullable List<DataFlowSourceResponse> sources;
     /**
      * List of transformations in data flow.
-     * 
      */
     private final @Nullable List<TransformationResponse> transformations;
     /**
      * Type of data flow.
      * Expected value is 'MappingDataFlow'.
-     * 
      */
     private final String type;
 
@@ -88,56 +79,48 @@ public final class MappingDataFlowResponse {
 
     /**
      * List of tags that can be used for describing the data flow.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The description of the data flow.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
-     * 
     */
     public Optional<DataFlowResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * DataFlow script.
-     * 
     */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
     /**
      * Data flow script lines.
-     * 
     */
     public List<String> getScriptLines() {
         return this.scriptLines == null ? List.of() : this.scriptLines;
     }
     /**
      * List of sinks in data flow.
-     * 
     */
     public List<DataFlowSinkResponse> getSinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }
     /**
      * List of sources in data flow.
-     * 
     */
     public List<DataFlowSourceResponse> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
      * List of transformations in data flow.
-     * 
     */
     public List<TransformationResponse> getTransformations() {
         return this.transformations == null ? List.of() : this.transformations;
@@ -145,7 +128,6 @@ public final class MappingDataFlowResponse {
     /**
      * Type of data flow.
      * Expected value is 'MappingDataFlow'.
-     * 
     */
     public String getType() {
         return this.type;

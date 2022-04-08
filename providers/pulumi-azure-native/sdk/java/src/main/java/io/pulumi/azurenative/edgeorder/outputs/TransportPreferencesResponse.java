@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class TransportPreferencesResponse {
     /**
      * Indicates Shipment Logistics type that the customer preferred.
-     * 
      */
     private final String preferredShipmentType;
 
@@ -22,7 +21,6 @@ public final class TransportPreferencesResponse {
 
     /**
      * Indicates Shipment Logistics type that the customer preferred.
-     * 
     */
     public String getPreferredShipmentType() {
         return this.preferredShipmentType;

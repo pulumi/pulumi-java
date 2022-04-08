@@ -18,7 +18,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Authorization type of the workspace connection.
-     * 
      */
     @Import(name="authType")
       private final @Nullable Output<String> authType;
@@ -29,7 +28,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Category of the workspace connection.
-     * 
      */
     @Import(name="category")
       private final @Nullable Output<String> category;
@@ -40,7 +38,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Friendly name of the workspace connection
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -51,7 +48,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Friendly name of the workspace connection
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -62,7 +58,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Target of the workspace connection.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;
@@ -84,7 +78,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Value details of the workspace connection.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;
@@ -95,7 +88,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * format for the workspace connection value
-     * 
      */
     @Import(name="valueFormat")
       private final @Nullable Output<Either<String,ValueFormat>> valueFormat;
@@ -106,7 +98,6 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

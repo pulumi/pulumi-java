@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an Azure resource group in a blueprint definition.
- * 
  */
 public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * Artifacts which need to be deployed before this resource group.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
@@ -33,7 +31,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * Description of this parameter/resourceGroup.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +41,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * DisplayName of this parameter/resourceGroup.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -55,7 +51,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -66,7 +61,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -77,7 +71,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
-     * 
      */
     @Import(name="strongType")
       private final @Nullable Output<String> strongType;
@@ -88,7 +81,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * Tags to be assigned to this resource group.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

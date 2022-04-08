@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The API resource policies.
- * 
  */
 public final class ApiResourcePoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
 
     /**
      * The API level only policies XML as embedded content.
-     * 
      */
     @Import(name="content")
       private final @Nullable String content;
@@ -31,7 +29,6 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
 
     /**
      * The content link to the policies.
-     * 
      */
     @Import(name="contentLink")
       private final @Nullable String contentLink;

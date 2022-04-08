@@ -19,7 +19,6 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The filters that will be applied to determine which resources to remediate.
-     * 
      */
     @Import(name="filters")
       private final @Nullable Output<RemediationFiltersArgs> filters;
@@ -30,7 +29,6 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The resource ID of the policy assignment that should be remediated.
-     * 
      */
     @Import(name="policyAssignmentId")
       private final @Nullable Output<String> policyAssignmentId;
@@ -41,7 +39,6 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
-     * 
      */
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
@@ -52,7 +49,6 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName")
       private final @Nullable Output<String> remediationName;
@@ -63,7 +59,6 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
-     * 
      */
     @Import(name="resourceDiscoveryMode")
       private final @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;

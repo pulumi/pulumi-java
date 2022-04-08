@@ -14,7 +14,6 @@ public final class ListSubAccountVMHostsArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -25,7 +24,6 @@ public final class ListSubAccountVMHostsArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListSubAccountVMHostsArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Sub Account resource name
-     * 
      */
     @Import(name="subAccountName", required=true)
       private final String subAccountName;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * DataStoreInfo base
- * 
  */
 public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * type of datastore; Operational/Vault/Archive
-     * 
      */
     @Import(name="dataStoreType", required=true)
       private final Output<Either<String,DataStoreTypes>> dataStoreType;
@@ -32,7 +30,6 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Type of Datasource object, used to initialize the right inherited type
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<String> objectType;

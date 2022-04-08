@@ -14,7 +14,6 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The peer ASN name.
-     * 
      */
     @Import(name="peerAsnName", required=true)
       private final String peerAsnName;

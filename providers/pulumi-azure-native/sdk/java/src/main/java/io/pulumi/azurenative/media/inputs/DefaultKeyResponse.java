@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to specify properties of default content key for each encryption scheme
- * 
  */
 public final class DefaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DefaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -31,7 +29,6 @@ public final class DefaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Policy used by Default Key
-     * 
      */
     @Import(name="policyName")
       private final @Nullable String policyName;

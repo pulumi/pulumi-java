@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class OpenIdConnectClientCredentialResponse {
     /**
      * The app setting that contains the client secret for the custom Open ID Connect provider.
-     * 
      */
     private final @Nullable String clientSecretSettingName;
     /**
      * The method that should be used to authenticate the user.
-     * 
      */
     private final @Nullable String method;
 
@@ -32,14 +30,12 @@ public final class OpenIdConnectClientCredentialResponse {
 
     /**
      * The app setting that contains the client secret for the custom Open ID Connect provider.
-     * 
     */
     public Optional<String> getClientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
     /**
      * The method that should be used to authenticate the user.
-     * 
     */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);

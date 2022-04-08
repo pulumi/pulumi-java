@@ -17,7 +17,6 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the Resource Group to which the identity belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the identity resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -50,7 +47,6 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

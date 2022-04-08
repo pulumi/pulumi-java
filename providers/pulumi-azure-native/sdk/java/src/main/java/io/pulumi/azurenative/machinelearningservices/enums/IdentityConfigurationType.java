@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the type of identity framework.
-     * 
      */
     @EnumType
     public enum IdentityConfigurationType {

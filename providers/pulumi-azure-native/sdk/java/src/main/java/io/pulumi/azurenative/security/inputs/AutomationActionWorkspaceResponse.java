@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Log Analytics Workspace to which event data will be exported. Security alerts data will reside in the 'SecurityAlert' table and the assessments data will reside in the 'SecurityRecommendation' table (under the 'Security'/'SecurityCenterFree' solutions). Note that in order to view the data in the workspace, the Security Center Log Analytics free/standard solution needs to be enabled on that workspace. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
- * 
  */
 public final class AutomationActionWorkspaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutomationActionWorkspaceResponse extends io.pulumi.resources
     /**
      * The type of the action that will be triggered by the Automation
      * Expected value is 'Workspace'.
-     * 
      */
     @Import(name="actionType", required=true)
       private final String actionType;
@@ -32,7 +30,6 @@ public final class AutomationActionWorkspaceResponse extends io.pulumi.resources
 
     /**
      * The fully qualified Log Analytics Workspace Azure Resource ID.
-     * 
      */
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;

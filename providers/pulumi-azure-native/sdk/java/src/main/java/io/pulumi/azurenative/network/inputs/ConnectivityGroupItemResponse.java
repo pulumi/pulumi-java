@@ -16,7 +16,6 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
 
     /**
      * Group connectivity type.
-     * 
      */
     @Import(name="groupConnectivity")
       private final @Nullable String groupConnectivity;
@@ -27,7 +26,6 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
 
     /**
      * Flag if global is supported.
-     * 
      */
     @Import(name="isGlobal")
       private final @Nullable String isGlobal;
@@ -38,7 +36,6 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
 
     /**
      * Network group Id.
-     * 
      */
     @Import(name="networkGroupId")
       private final @Nullable String networkGroupId;
@@ -49,7 +46,6 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
 
     /**
      * Flag if need to use hub gateway.
-     * 
      */
     @Import(name="useHubGateway")
       private final @Nullable String useHubGateway;

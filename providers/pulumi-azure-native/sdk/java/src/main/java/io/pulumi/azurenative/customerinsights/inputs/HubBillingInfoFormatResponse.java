@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hub billing info.
- * 
  */
 public final class HubBillingInfoFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
 
     /**
      * The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
-     * 
      */
     @Import(name="maxUnits")
       private final @Nullable Integer maxUnits;
@@ -32,7 +30,6 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
 
     /**
      * The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
-     * 
      */
     @Import(name="minUnits")
       private final @Nullable Integer minUnits;
@@ -43,7 +40,6 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
 
     /**
      * The sku name.
-     * 
      */
     @Import(name="skuName")
       private final @Nullable String skuName;

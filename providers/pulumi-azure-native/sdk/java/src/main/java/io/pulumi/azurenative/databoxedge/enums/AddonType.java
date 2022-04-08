@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Addon type.
-     * 
      */
     @EnumType
     public enum AddonType {

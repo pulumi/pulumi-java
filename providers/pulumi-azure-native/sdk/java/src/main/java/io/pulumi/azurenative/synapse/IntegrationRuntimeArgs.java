@@ -19,7 +19,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Integration runtime name
-     * 
      */
     @Import(name="integrationRuntimeName")
       private final @Nullable Output<String> integrationRuntimeName;
@@ -30,7 +29,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Integration runtime properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
@@ -41,7 +39,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

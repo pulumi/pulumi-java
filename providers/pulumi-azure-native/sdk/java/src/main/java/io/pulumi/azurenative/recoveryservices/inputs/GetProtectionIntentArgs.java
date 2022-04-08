@@ -14,7 +14,6 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Fabric name associated with the backed up item.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final String fabricName;
@@ -25,7 +24,6 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Backed up item name whose details are to be fetched.
-     * 
      */
     @Import(name="intentObjectName", required=true)
       private final String intentObjectName;
@@ -36,7 +34,6 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

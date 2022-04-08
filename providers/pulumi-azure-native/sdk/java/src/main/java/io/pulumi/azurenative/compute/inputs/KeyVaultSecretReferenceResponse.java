@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes a reference to Key Vault Secret
- * 
  */
 public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.I
 
     /**
      * The URL referencing a secret in a Key Vault.
-     * 
      */
     @Import(name="secretUrl", required=true)
       private final String secretUrl;
@@ -30,7 +28,6 @@ public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.I
 
     /**
      * The relative URL of the Key Vault containing the secret.
-     * 
      */
     @Import(name="sourceVault", required=true)
       private final SubResourceResponse sourceVault;

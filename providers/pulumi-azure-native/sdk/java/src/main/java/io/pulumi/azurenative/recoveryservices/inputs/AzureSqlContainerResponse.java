@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Sql workload-specific container.
- * 
  */
 public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -35,7 +33,6 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'AzureSqlContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final String containerType;
@@ -46,7 +43,6 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -57,7 +53,6 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -68,7 +63,6 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;

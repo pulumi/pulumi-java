@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Azure IaaS VM workload-specific Health Details.
- * 
  */
 public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
 
     /**
      * Health Code
-     * 
      */
     @Import(name="code", required=true)
       private final Integer code;
@@ -31,7 +29,6 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
 
     /**
      * Health Message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -42,7 +39,6 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
 
     /**
      * Health Recommended Actions
-     * 
      */
     @Import(name="recommendations", required=true)
       private final List<String> recommendations;
@@ -53,7 +49,6 @@ public final class AzureIaaSVMHealthDetailsResponse extends io.pulumi.resources.
 
     /**
      * Health Title
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

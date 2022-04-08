@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information for connecting to PostgreSQL server
- * 
  */
 public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -32,7 +30,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Password credential.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -43,7 +40,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Port for Server
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;
@@ -54,7 +50,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the server
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -66,7 +61,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     /**
      * Type of connection info
      * Expected value is 'PostgreSqlConnectionInfo'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -77,7 +71,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * User name
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

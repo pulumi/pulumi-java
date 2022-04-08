@@ -16,7 +16,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path for the route.
-     * 
      */
     @Import(name="path", required=true)
       private final Output<String> path;
@@ -27,7 +26,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port for the route.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;

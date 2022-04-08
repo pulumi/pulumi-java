@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Sku description for a namespace
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The capacity of the resource
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -34,7 +32,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Sku Family
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -45,7 +42,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the notification hub sku
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
@@ -56,7 +52,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Sku size
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -67,7 +62,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tier of particular sku
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

@@ -29,7 +29,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of add-on features to enable in the cluster.
-     * 
      */
     @Import(name="addOnFeatures")
       private final @Nullable Output<List<String>> addOnFeatures;
@@ -40,7 +39,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The policy used to clean up unused versions.
-     * 
      */
     @Import(name="applicationTypeVersionsCleanupPolicy")
       private final @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
@@ -51,7 +49,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AAD authentication settings of the cluster.
-     * 
      */
     @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
@@ -62,7 +59,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable Output<CertificateDescriptionArgs> certificate;
@@ -73,7 +69,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
-     * 
      */
     @Import(name="certificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
@@ -84,7 +79,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of client certificates referenced by common name that are allowed to manage the cluster.
-     * 
      */
     @Import(name="clientCertificateCommonNames")
       private final @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
@@ -95,7 +89,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
-     * 
      */
     @Import(name="clientCertificateThumbprints")
       private final @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
@@ -106,7 +99,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
-     * 
      */
     @Import(name="clusterCodeVersion")
       private final @Nullable Output<String> clusterCodeVersion;
@@ -117,7 +109,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -128,7 +119,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The storage account information for storing Service Fabric diagnostic logs.
-     * 
      */
     @Import(name="diagnosticsStorageAccountConfig")
       private final @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
@@ -139,7 +129,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if the event store service is enabled.
-     * 
      */
     @Import(name="eventStoreServiceEnabled")
       private final @Nullable Output<Boolean> eventStoreServiceEnabled;
@@ -150,7 +139,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of custom fabric settings to configure the cluster.
-     * 
      */
     @Import(name="fabricSettings")
       private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
@@ -161,7 +149,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -172,7 +159,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The http management endpoint of the cluster.
-     * 
      */
     @Import(name="managementEndpoint", required=true)
       private final Output<String> managementEndpoint;
@@ -183,7 +169,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of node types in the cluster.
-     * 
      */
     @Import(name="nodeTypes", required=true)
       private final Output<List<NodeTypeDescriptionArgs>> nodeTypes;
@@ -211,7 +196,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -222,7 +206,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The server certificate used by reverse proxy.
-     * 
      */
     @Import(name="reverseProxyCertificate")
       private final @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
@@ -233,7 +216,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
-     * 
      */
     @Import(name="reverseProxyCertificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
@@ -244,7 +226,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -255,7 +236,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The policy to use when upgrading the cluster.
-     * 
      */
     @Import(name="upgradeDescription")
       private final @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
@@ -280,7 +260,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
-     * 
      */
     @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;

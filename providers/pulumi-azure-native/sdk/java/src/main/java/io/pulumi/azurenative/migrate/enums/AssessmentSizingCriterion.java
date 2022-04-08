@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Assessment sizing criterion.
-     * 
      */
     @EnumType
     public enum AssessmentSizingCriterion {

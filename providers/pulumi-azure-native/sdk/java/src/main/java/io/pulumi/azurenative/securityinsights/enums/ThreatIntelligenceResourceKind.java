@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * The kind of the entity.
-     * 
      */
     @EnumType
     public enum ThreatIntelligenceResourceKind {
         /**
          * Entity represents threat intelligence indicator in the system.
-         * 
          */
         Indicator("indicator");
 

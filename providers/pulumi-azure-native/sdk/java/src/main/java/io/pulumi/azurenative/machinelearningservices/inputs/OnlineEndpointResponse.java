@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Online endpoint configuration
- * 
  */
 public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Inference endpoint authentication mode type
-     * 
      */
     @Import(name="authMode", required=true)
       private final String authMode;
@@ -33,7 +31,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Description of the inference endpoint.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -44,7 +41,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -55,7 +51,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * State of endpoint provisioning.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -66,7 +61,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Endpoint URI.
-     * 
      */
     @Import(name="scoringUri", required=true)
       private final String scoringUri;
@@ -77,7 +71,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Endpoint Swagger URI.
-     * 
      */
     @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
@@ -89,7 +82,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
     /**
      * ARM resource ID of the compute if it exists.
      * optional
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;
@@ -100,7 +92,6 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Traffic rules on how the traffic will be routed across deployments.
-     * 
      */
     @Import(name="traffic")
       private final @Nullable Map<String,Integer> traffic;

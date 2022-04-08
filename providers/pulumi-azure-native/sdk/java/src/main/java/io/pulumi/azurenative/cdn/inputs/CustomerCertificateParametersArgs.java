@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Customer Certificate used for https
- * 
  */
 public final class CustomerCertificateParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
 
     /**
      * Certificate issuing authority.
-     * 
      */
     @Import(name="certificateAuthority")
       private final @Nullable Output<String> certificateAuthority;
@@ -34,7 +32,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
 
     /**
      * Resource reference to the KV secret
-     * 
      */
     @Import(name="secretSource", required=true)
       private final Output<ResourceReferenceArgs> secretSource;
@@ -45,7 +42,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
 
     /**
      * Version of the secret to be used
-     * 
      */
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
@@ -56,7 +52,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
 
     /**
      * The list of SANs.
-     * 
      */
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
@@ -68,7 +63,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
     /**
      * The type of the Secret to create.
      * Expected value is 'CustomerCertificate'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -79,7 +73,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
 
     /**
      * Whether to use the latest version for the certificate
-     * 
      */
     @Import(name="useLatestVersion")
       private final @Nullable Output<Boolean> useLatestVersion;

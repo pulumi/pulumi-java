@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ListSqlMigrationServiceMonitoringDataResult {
     /**
      * The name of Integration Runtime.
-     * 
      */
     private final String name;
     /**
      * Integration Runtime node monitoring data.
-     * 
      */
     private final List<NodeMonitoringDataResponse> nodes;
 
@@ -32,14 +30,12 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
 
     /**
      * The name of Integration Runtime.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Integration Runtime node monitoring data.
-     * 
     */
     public List<NodeMonitoringDataResponse> getNodes() {
         return this.nodes;

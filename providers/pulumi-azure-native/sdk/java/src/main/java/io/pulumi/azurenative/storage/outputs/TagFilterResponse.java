@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class TagFilterResponse {
     /**
      * This is the filter tag name, it can have 1 - 128 characters
-     * 
      */
     private final String name;
     /**
      * This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
-     * 
      */
     private final String op;
     /**
      * This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
-     * 
      */
     private final String value;
 
@@ -37,21 +34,18 @@ public final class TagFilterResponse {
 
     /**
      * This is the filter tag name, it can have 1 - 128 characters
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
-     * 
     */
     public String getOp() {
         return this.op;
     }
     /**
      * This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
-     * 
     */
     public String getValue() {
         return this.value;

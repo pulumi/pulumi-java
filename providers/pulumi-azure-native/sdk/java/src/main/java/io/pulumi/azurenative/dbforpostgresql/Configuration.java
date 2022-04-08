@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Represents a Configuration.
  * API Version: 2017-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ConfigurationCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var configuration = new AzureNative.DBforPostgreSQL.Configuration("configuration", new AzureNative.DBforPostgreSQL.ConfigurationArgs
+ *         {
+ *             ConfigurationName = "array_nulls",
+ *             ResourceGroupName = "TestGroup",
+ *             ServerName = "testserver",
+ *             Source = "user-override",
+ *             Value = "off",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dbforpostgresql.NewConfiguration(ctx, "configuration", &dbforpostgresql.ConfigurationArgs{
+ * 			ConfigurationName: pulumi.String("array_nulls"),
+ * 			ResourceGroupName: pulumi.String("TestGroup"),
+ * 			ServerName:        pulumi.String("testserver"),
+ * 			Source:            pulumi.String("user-override"),
+ * 			Value:             pulumi.String("off"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const configuration = new azure_native.dbforpostgresql.Configuration("configuration", {
+ *     configurationName: "array_nulls",
+ *     resourceGroupName: "TestGroup",
+ *     serverName: "testserver",
+ *     source: "user-override",
+ *     value: "off",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * configuration = azure_native.dbforpostgresql.Configuration("configuration",
+ *     configuration_name="array_nulls",
+ *     resource_group_name="TestGroup",
+ *     server_name="testserver",
+ *     source="user-override",
+ *     value="off")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,112 +112,96 @@ import javax.annotation.Nullable;
 public class Configuration extends io.pulumi.resources.CustomResource {
     /**
      * Allowed values of the configuration.
-     * 
      */
     @Export(name="allowedValues", type=String.class, parameters={})
     private Output<String> allowedValues;
 
     /**
      * @return Allowed values of the configuration.
-     * 
      */
     public Output<String> getAllowedValues() {
         return this.allowedValues;
     }
     /**
      * Data type of the configuration.
-     * 
      */
     @Export(name="dataType", type=String.class, parameters={})
     private Output<String> dataType;
 
     /**
      * @return Data type of the configuration.
-     * 
      */
     public Output<String> getDataType() {
         return this.dataType;
     }
     /**
      * Default value of the configuration.
-     * 
      */
     @Export(name="defaultValue", type=String.class, parameters={})
     private Output<String> defaultValue;
 
     /**
      * @return Default value of the configuration.
-     * 
      */
     public Output<String> getDefaultValue() {
         return this.defaultValue;
     }
     /**
      * Description of the configuration.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Description of the configuration.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Source of the configuration.
-     * 
      */
     @Export(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
     /**
      * @return Source of the configuration.
-     * 
      */
     public Output</* @Nullable */ String> getSource() {
         return this.source;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Value of the configuration.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
      * @return Value of the configuration.
-     * 
      */
     public Output</* @Nullable */ String> getValue() {
         return this.value;

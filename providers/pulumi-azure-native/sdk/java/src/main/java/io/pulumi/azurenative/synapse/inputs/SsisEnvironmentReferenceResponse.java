@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ssis environment reference.
- * 
  */
 public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
 
     /**
      * Environment folder name.
-     * 
      */
     @Import(name="environmentFolderName")
       private final @Nullable String environmentFolderName;
@@ -32,7 +30,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
 
     /**
      * Environment name.
-     * 
      */
     @Import(name="environmentName")
       private final @Nullable String environmentName;
@@ -43,7 +40,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
 
     /**
      * Environment reference id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Double id;
@@ -54,7 +50,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
 
     /**
      * Reference type
-     * 
      */
     @Import(name="referenceType")
       private final @Nullable String referenceType;

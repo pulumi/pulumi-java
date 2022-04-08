@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * User property.
- * 
  */
 public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User property name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -31,7 +29,6 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User property value. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="value", required=true)
       private final Output<Object> value;

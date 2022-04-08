@@ -22,7 +22,166 @@ import javax.annotation.Nullable;
  * The prediction resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Predictions_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var prediction = new AzureNative.CustomerInsights.Prediction("prediction", new AzureNative.CustomerInsights.PredictionArgs
+ *         {
+ *             AutoAnalyze = true,
+ *             Description = 
+ *             {
+ *                 { "en-us", "sdktest" },
+ *             },
+ *             DisplayName = 
+ *             {
+ *                 { "en-us", "sdktest" },
+ *             },
+ *             Grades = {},
+ *             HubName = "sdkTestHub",
+ *             InvolvedInteractionTypes = {},
+ *             InvolvedKpiTypes = {},
+ *             InvolvedRelationships = {},
+ *             Mappings = new AzureNative.CustomerInsights.Inputs.PredictionMappingsArgs
+ *             {
+ *                 Grade = "sdktest_Grade",
+ *                 Reason = "sdktest_Reason",
+ *                 Score = "sdktest_Score",
+ *             },
+ *             NegativeOutcomeExpression = "Customers.FirstName = 'Mike'",
+ *             PositiveOutcomeExpression = "Customers.FirstName = 'David'",
+ *             PredictionName = "sdktest",
+ *             PrimaryProfileType = "Customers",
+ *             ResourceGroupName = "TestHubRG",
+ *             ScopeExpression = "*",
+ *             ScoreLabel = "score label",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewPrediction(ctx, "prediction", &customerinsights.PredictionArgs{
+ * 			AutoAnalyze: pulumi.Bool(true),
+ * 			Description: pulumi.StringMap{
+ * 				"en-us": pulumi.String("sdktest"),
+ * 			},
+ * 			DisplayName: pulumi.StringMap{
+ * 				"en-us": pulumi.String("sdktest"),
+ * 			},
+ * 			Grades:                   customerinsights.PredictionGradesArray{},
+ * 			HubName:                  pulumi.String("sdkTestHub"),
+ * 			InvolvedInteractionTypes: pulumi.StringArray{},
+ * 			InvolvedKpiTypes:         pulumi.StringArray{},
+ * 			InvolvedRelationships:    pulumi.StringArray{},
+ * 			Mappings: &customerinsights.PredictionMappingsArgs{
+ * 				Grade:  pulumi.String("sdktest_Grade"),
+ * 				Reason: pulumi.String("sdktest_Reason"),
+ * 				Score:  pulumi.String("sdktest_Score"),
+ * 			},
+ * 			NegativeOutcomeExpression: pulumi.String("Customers.FirstName = 'Mike'"),
+ * 			PositiveOutcomeExpression: pulumi.String("Customers.FirstName = 'David'"),
+ * 			PredictionName:            pulumi.String("sdktest"),
+ * 			PrimaryProfileType:        pulumi.String("Customers"),
+ * 			ResourceGroupName:         pulumi.String("TestHubRG"),
+ * 			ScopeExpression:           pulumi.String("*"),
+ * 			ScoreLabel:                pulumi.String("score label"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const prediction = new azure_native.customerinsights.Prediction("prediction", {
+ *     autoAnalyze: true,
+ *     description: {
+ *         "en-us": "sdktest",
+ *     },
+ *     displayName: {
+ *         "en-us": "sdktest",
+ *     },
+ *     grades: [],
+ *     hubName: "sdkTestHub",
+ *     involvedInteractionTypes: [],
+ *     involvedKpiTypes: [],
+ *     involvedRelationships: [],
+ *     mappings: {
+ *         grade: "sdktest_Grade",
+ *         reason: "sdktest_Reason",
+ *         score: "sdktest_Score",
+ *     },
+ *     negativeOutcomeExpression: "Customers.FirstName = 'Mike'",
+ *     positiveOutcomeExpression: "Customers.FirstName = 'David'",
+ *     predictionName: "sdktest",
+ *     primaryProfileType: "Customers",
+ *     resourceGroupName: "TestHubRG",
+ *     scopeExpression: "*",
+ *     scoreLabel: "score label",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * prediction = azure_native.customerinsights.Prediction("prediction",
+ *     auto_analyze=True,
+ *     description={
+ *         "en-us": "sdktest",
+ *     },
+ *     display_name={
+ *         "en-us": "sdktest",
+ *     },
+ *     grades=[],
+ *     hub_name="sdkTestHub",
+ *     involved_interaction_types=[],
+ *     involved_kpi_types=[],
+ *     involved_relationships=[],
+ *     mappings=azure_native.customerinsights.PredictionMappingsArgs(
+ *         grade="sdktest_Grade",
+ *         reason="sdktest_Reason",
+ *         score="sdktest_Score",
+ *     ),
+ *     negative_outcome_expression="Customers.FirstName = 'Mike'",
+ *     positive_outcome_expression="Customers.FirstName = 'David'",
+ *     prediction_name="sdktest",
+ *     primary_profile_type="Customers",
+ *     resource_group_name="TestHubRG",
+ *     scope_expression="*",
+ *     score_label="score label")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,266 +196,228 @@ import javax.annotation.Nullable;
 public class Prediction extends io.pulumi.resources.CustomResource {
     /**
      * Whether do auto analyze.
-     * 
      */
     @Export(name="autoAnalyze", type=Boolean.class, parameters={})
     private Output<Boolean> autoAnalyze;
 
     /**
      * @return Whether do auto analyze.
-     * 
      */
     public Output<Boolean> getAutoAnalyze() {
         return this.autoAnalyze;
     }
     /**
      * Description of the prediction.
-     * 
      */
     @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
      * @return Description of the prediction.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
     /**
      * Display name of the prediction.
-     * 
      */
     @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
      * @return Display name of the prediction.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
     /**
      * The prediction grades.
-     * 
      */
     @Export(name="grades", type=List.class, parameters={PredictionResponseGrades.class})
     private Output</* @Nullable */ List<PredictionResponseGrades>> grades;
 
     /**
      * @return The prediction grades.
-     * 
      */
     public Output</* @Nullable */ List<PredictionResponseGrades>> getGrades() {
         return this.grades;
     }
     /**
      * Interaction types involved in the prediction.
-     * 
      */
     @Export(name="involvedInteractionTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedInteractionTypes;
 
     /**
      * @return Interaction types involved in the prediction.
-     * 
      */
     public Output</* @Nullable */ List<String>> getInvolvedInteractionTypes() {
         return this.involvedInteractionTypes;
     }
     /**
      * KPI types involved in the prediction.
-     * 
      */
     @Export(name="involvedKpiTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedKpiTypes;
 
     /**
      * @return KPI types involved in the prediction.
-     * 
      */
     public Output</* @Nullable */ List<String>> getInvolvedKpiTypes() {
         return this.involvedKpiTypes;
     }
     /**
      * Relationships involved in the prediction.
-     * 
      */
     @Export(name="involvedRelationships", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedRelationships;
 
     /**
      * @return Relationships involved in the prediction.
-     * 
      */
     public Output</* @Nullable */ List<String>> getInvolvedRelationships() {
         return this.involvedRelationships;
     }
     /**
      * Definition of the link mapping of prediction.
-     * 
      */
     @Export(name="mappings", type=PredictionResponseMappings.class, parameters={})
     private Output<PredictionResponseMappings> mappings;
 
     /**
      * @return Definition of the link mapping of prediction.
-     * 
      */
     public Output<PredictionResponseMappings> getMappings() {
         return this.mappings;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Negative outcome expression.
-     * 
      */
     @Export(name="negativeOutcomeExpression", type=String.class, parameters={})
     private Output<String> negativeOutcomeExpression;
 
     /**
      * @return Negative outcome expression.
-     * 
      */
     public Output<String> getNegativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
     /**
      * Positive outcome expression.
-     * 
      */
     @Export(name="positiveOutcomeExpression", type=String.class, parameters={})
     private Output<String> positiveOutcomeExpression;
 
     /**
      * @return Positive outcome expression.
-     * 
      */
     public Output<String> getPositiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
     /**
      * Name of the prediction.
-     * 
      */
     @Export(name="predictionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> predictionName;
 
     /**
      * @return Name of the prediction.
-     * 
      */
     public Output</* @Nullable */ String> getPredictionName() {
         return this.predictionName;
     }
     /**
      * Primary profile type.
-     * 
      */
     @Export(name="primaryProfileType", type=String.class, parameters={})
     private Output<String> primaryProfileType;
 
     /**
      * @return Primary profile type.
-     * 
      */
     public Output<String> getPrimaryProfileType() {
         return this.primaryProfileType;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Scope expression.
-     * 
      */
     @Export(name="scopeExpression", type=String.class, parameters={})
     private Output<String> scopeExpression;
 
     /**
      * @return Scope expression.
-     * 
      */
     public Output<String> getScopeExpression() {
         return this.scopeExpression;
     }
     /**
      * Score label.
-     * 
      */
     @Export(name="scoreLabel", type=String.class, parameters={})
     private Output<String> scoreLabel;
 
     /**
      * @return Score label.
-     * 
      */
     public Output<String> getScoreLabel() {
         return this.scoreLabel;
     }
     /**
      * System generated entities.
-     * 
      */
     @Export(name="systemGeneratedEntities", type=PredictionResponseSystemGeneratedEntities.class, parameters={})
     private Output<PredictionResponseSystemGeneratedEntities> systemGeneratedEntities;
 
     /**
      * @return System generated entities.
-     * 
      */
     public Output<PredictionResponseSystemGeneratedEntities> getSystemGeneratedEntities() {
         return this.systemGeneratedEntities;
     }
     /**
      * The hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

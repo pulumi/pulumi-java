@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of a secret object value.
- * 
  */
 public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The type of the secret object which determines how the value of the secret object has to be
      * interpreted.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,SecretObjectType>> type;
@@ -36,7 +34,6 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the secret. The format of this value will be determined
      * based on the type of the secret object. If the type is Opaque, the value will be
      * used as is without any modification.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

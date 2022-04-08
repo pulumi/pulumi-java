@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The parameters for the wait step.
- * 
  */
 public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The duration in ISO 8601 format of how long the wait should be.
-     * 
      */
     @Import(name="duration", required=true)
       private final Output<String> duration;

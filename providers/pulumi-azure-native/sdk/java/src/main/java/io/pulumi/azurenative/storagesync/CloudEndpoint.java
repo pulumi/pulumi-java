@@ -17,7 +17,99 @@ import javax.annotation.Nullable;
  * Cloud Endpoint object.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CloudEndpoints_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudEndpoint = new AzureNative.StorageSync.CloudEndpoint("cloudEndpoint", new AzureNative.StorageSync.CloudEndpointArgs
+ *         {
+ *             AzureFileShareName = "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
+ *             CloudEndpointName = "SampleCloudEndpoint_1",
+ *             FriendlyName = "ankushbsubscriptionmgmtmab",
+ *             ResourceGroupName = "SampleResourceGroup_1",
+ *             StorageAccountResourceId = "/subscriptions/744f4d70-6d17-4921-8970-a765d14f763f/resourceGroups/tminienv59svc/providers/Microsoft.Storage/storageAccounts/tminienv59storage",
+ *             StorageAccountTenantId = "\"72f988bf-86f1-41af-91ab-2d7cd011db47\"",
+ *             StorageSyncServiceName = "SampleStorageSyncService_1",
+ *             SyncGroupName = "SampleSyncGroup_1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storagesync "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagesync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagesync.NewCloudEndpoint(ctx, "cloudEndpoint", &storagesync.CloudEndpointArgs{
+ * 			AzureFileShareName:       pulumi.String("cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4"),
+ * 			CloudEndpointName:        pulumi.String("SampleCloudEndpoint_1"),
+ * 			FriendlyName:             pulumi.String("ankushbsubscriptionmgmtmab"),
+ * 			ResourceGroupName:        pulumi.String("SampleResourceGroup_1"),
+ * 			StorageAccountResourceId: pulumi.String("/subscriptions/744f4d70-6d17-4921-8970-a765d14f763f/resourceGroups/tminienv59svc/providers/Microsoft.Storage/storageAccounts/tminienv59storage"),
+ * 			StorageAccountTenantId:   pulumi.String("\"72f988bf-86f1-41af-91ab-2d7cd011db47\""),
+ * 			StorageSyncServiceName:   pulumi.String("SampleStorageSyncService_1"),
+ * 			SyncGroupName:            pulumi.String("SampleSyncGroup_1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cloudEndpoint = new azure_native.storagesync.CloudEndpoint("cloudEndpoint", {
+ *     azureFileShareName: "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
+ *     cloudEndpointName: "SampleCloudEndpoint_1",
+ *     friendlyName: "ankushbsubscriptionmgmtmab",
+ *     resourceGroupName: "SampleResourceGroup_1",
+ *     storageAccountResourceId: "/subscriptions/744f4d70-6d17-4921-8970-a765d14f763f/resourceGroups/tminienv59svc/providers/Microsoft.Storage/storageAccounts/tminienv59storage",
+ *     storageAccountTenantId: "\"72f988bf-86f1-41af-91ab-2d7cd011db47\"",
+ *     storageSyncServiceName: "SampleStorageSyncService_1",
+ *     syncGroupName: "SampleSyncGroup_1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cloud_endpoint = azure_native.storagesync.CloudEndpoint("cloudEndpoint",
+ *     azure_file_share_name="cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
+ *     cloud_endpoint_name="SampleCloudEndpoint_1",
+ *     friendly_name="ankushbsubscriptionmgmtmab",
+ *     resource_group_name="SampleResourceGroup_1",
+ *     storage_account_resource_id="/subscriptions/744f4d70-6d17-4921-8970-a765d14f763f/resourceGroups/tminienv59svc/providers/Microsoft.Storage/storageAccounts/tminienv59storage",
+ *     storage_account_tenant_id="\"72f988bf-86f1-41af-91ab-2d7cd011db47\"",
+ *     storage_sync_service_name="SampleStorageSyncService_1",
+ *     sync_group_name="SampleSyncGroup_1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,154 +124,132 @@ import javax.annotation.Nullable;
 public class CloudEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * Azure file share name
-     * 
      */
     @Export(name="azureFileShareName", type=String.class, parameters={})
     private Output</* @Nullable */ String> azureFileShareName;
 
     /**
      * @return Azure file share name
-     * 
      */
     public Output</* @Nullable */ String> getAzureFileShareName() {
         return this.azureFileShareName;
     }
     /**
      * Backup Enabled
-     * 
      */
     @Export(name="backupEnabled", type=String.class, parameters={})
     private Output<String> backupEnabled;
 
     /**
      * @return Backup Enabled
-     * 
      */
     public Output<String> getBackupEnabled() {
         return this.backupEnabled;
     }
     /**
      * Friendly Name
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
      * @return Friendly Name
-     * 
      */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * Resource Last Operation Name
-     * 
      */
     @Export(name="lastOperationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastOperationName;
 
     /**
      * @return Resource Last Operation Name
-     * 
      */
     public Output</* @Nullable */ String> getLastOperationName() {
         return this.lastOperationName;
     }
     /**
      * CloudEndpoint lastWorkflowId
-     * 
      */
     @Export(name="lastWorkflowId", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastWorkflowId;
 
     /**
      * @return CloudEndpoint lastWorkflowId
-     * 
      */
     public Output</* @Nullable */ String> getLastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Partnership Id
-     * 
      */
     @Export(name="partnershipId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnershipId;
 
     /**
      * @return Partnership Id
-     * 
      */
     public Output</* @Nullable */ String> getPartnershipId() {
         return this.partnershipId;
     }
     /**
      * CloudEndpoint Provisioning State
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return CloudEndpoint Provisioning State
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Storage Account Resource Id
-     * 
      */
     @Export(name="storageAccountResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountResourceId;
 
     /**
      * @return Storage Account Resource Id
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountResourceId() {
         return this.storageAccountResourceId;
     }
     /**
      * Storage Account Tenant Id
-     * 
      */
     @Export(name="storageAccountTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountTenantId;
 
     /**
      * @return Storage Account Tenant Id
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountTenantId() {
         return this.storageAccountTenantId;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Storage Configurations for SQL Data, Log and TempDb.
- * 
  */
 public final class StorageConfigurationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
 
     /**
      * Disk configuration to apply to SQL Server.
-     * 
      */
     @Import(name="diskConfigurationType")
       private final @Nullable String diskConfigurationType;
@@ -32,7 +30,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
 
     /**
      * SQL Server Data Storage Settings.
-     * 
      */
     @Import(name="sqlDataSettings")
       private final @Nullable SQLStorageSettingsResponse sqlDataSettings;
@@ -43,7 +40,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
 
     /**
      * SQL Server Log Storage Settings.
-     * 
      */
     @Import(name="sqlLogSettings")
       private final @Nullable SQLStorageSettingsResponse sqlLogSettings;
@@ -54,7 +50,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
 
     /**
      * SQL Server TempDb Storage Settings.
-     * 
      */
     @Import(name="sqlTempDbSettings")
       private final @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
@@ -65,7 +60,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
 
     /**
      * Storage workload type.
-     * 
      */
     @Import(name="storageWorkloadType")
       private final @Nullable String storageWorkloadType;

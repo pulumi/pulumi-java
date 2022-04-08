@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
-     * 
      */
     @EnumType
     public enum SyncKerberosPasswords {

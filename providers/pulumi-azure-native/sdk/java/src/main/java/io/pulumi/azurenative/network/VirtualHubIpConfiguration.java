@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * IpConfigurations.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VirtualHubIpConfigurationPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualHubIpConfiguration = new AzureNative.Network.VirtualHubIpConfiguration("virtualHubIpConfiguration", new AzureNative.Network.VirtualHubIpConfigurationArgs
+ *         {
+ *             IpConfigName = "ipconfig1",
+ *             ResourceGroupName = "rg1",
+ *             Subnet = new AzureNative.Network.Inputs.SubnetArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+ *             },
+ *             VirtualHubName = "hub1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualHubIpConfiguration(ctx, "virtualHubIpConfiguration", &network.VirtualHubIpConfigurationArgs{
+ * 			IpConfigName:      pulumi.String("ipconfig1"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Subnet: &network.SubnetArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
+ * 			},
+ * 			VirtualHubName: pulumi.String("hub1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualHubIpConfiguration = new azure_native.network.VirtualHubIpConfiguration("virtualHubIpConfiguration", {
+ *     ipConfigName: "ipconfig1",
+ *     resourceGroupName: "rg1",
+ *     subnet: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+ *     },
+ *     virtualHubName: "hub1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_hub_ip_configuration = azure_native.network.VirtualHubIpConfiguration("virtualHubIpConfiguration",
+ *     ip_config_name="ipconfig1",
+ *     resource_group_name="rg1",
+ *     subnet=azure_native.network.SubnetArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+ *     ),
+ *     virtual_hub_name="hub1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +119,96 @@ import javax.annotation.Nullable;
 public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Name of the Ip Configuration.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the Ip Configuration.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Export(name="privateIPAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateIPAddress;
 
     /**
      * @return The private IP address of the IP configuration.
-     * 
      */
     public Output</* @Nullable */ String> getPrivateIPAddress() {
         return this.privateIPAddress;
     }
     /**
      * The private IP address allocation method.
-     * 
      */
     @Export(name="privateIPAllocationMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateIPAllocationMethod;
 
     /**
      * @return The private IP address allocation method.
-     * 
      */
     public Output</* @Nullable */ String> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod;
     }
     /**
      * The provisioning state of the IP configuration resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the IP configuration resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The reference to the public IP resource.
-     * 
      */
     @Export(name="publicIPAddress", type=PublicIPAddressResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressResponse> publicIPAddress;
 
     /**
      * @return The reference to the public IP resource.
-     * 
      */
     public Output</* @Nullable */ PublicIPAddressResponse> getPublicIPAddress() {
         return this.publicIPAddress;
     }
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Export(name="subnet", type=SubnetResponse.class, parameters={})
     private Output</* @Nullable */ SubnetResponse> subnet;
 
     /**
      * @return The reference to the subnet resource.
-     * 
      */
     public Output</* @Nullable */ SubnetResponse> getSubnet() {
         return this.subnet;
     }
     /**
      * Ipconfiguration type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Ipconfiguration type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

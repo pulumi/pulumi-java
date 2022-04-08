@@ -14,7 +14,6 @@ public final class GetProviderRegistrationArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource provider hosted within ProviderHub.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;

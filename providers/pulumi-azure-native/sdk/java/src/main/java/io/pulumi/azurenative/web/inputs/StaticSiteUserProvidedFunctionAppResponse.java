@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A static site user provided function.
- * 
  */
 public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
 
     /**
      * The date and time on which the function app was registered with the static site.
-     * 
      */
     @Import(name="createdOn", required=true)
       private final String createdOn;
@@ -31,7 +29,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
 
     /**
      * The region of the function app registered with the static site
-     * 
      */
     @Import(name="functionAppRegion")
       private final @Nullable String functionAppRegion;
@@ -42,7 +39,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
 
     /**
      * The resource id of the function app registered with the static site
-     * 
      */
     @Import(name="functionAppResourceId")
       private final @Nullable String functionAppResourceId;
@@ -53,7 +49,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -64,7 +59,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -75,7 +69,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
 
     /**
      * Resource Name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -86,7 +79,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

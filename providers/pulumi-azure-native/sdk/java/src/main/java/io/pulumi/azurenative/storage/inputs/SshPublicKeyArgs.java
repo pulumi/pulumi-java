@@ -16,7 +16,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. It is used to store the function/usage of the key
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;

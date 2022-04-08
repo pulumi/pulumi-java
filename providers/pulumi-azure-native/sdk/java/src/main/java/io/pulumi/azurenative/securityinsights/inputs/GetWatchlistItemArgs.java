@@ -14,7 +14,6 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
@@ -25,7 +24,6 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Watchlist Alias
-     * 
      */
     @Import(name="watchlistAlias", required=true)
       private final String watchlistAlias;
@@ -47,7 +44,6 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Watchlist Item Id (GUID)
-     * 
      */
     @Import(name="watchlistItemId", required=true)
       private final String watchlistItemId;
@@ -58,7 +54,6 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

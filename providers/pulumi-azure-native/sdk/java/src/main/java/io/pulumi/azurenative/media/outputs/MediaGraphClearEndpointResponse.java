@@ -14,18 +14,15 @@ import javax.annotation.Nullable;
 public final class MediaGraphClearEndpointResponse {
     /**
      * Polymorphic credentials to present to the endpoint.
-     * 
      */
     private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
-     * 
      */
     private final String odataType;
     /**
      * Url for the endpoint.
-     * 
      */
     private final String url;
 
@@ -41,7 +38,6 @@ public final class MediaGraphClearEndpointResponse {
 
     /**
      * Polymorphic credentials to present to the endpoint.
-     * 
     */
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
@@ -49,14 +45,12 @@ public final class MediaGraphClearEndpointResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Url for the endpoint.
-     * 
     */
     public String getUrl() {
         return this.url;

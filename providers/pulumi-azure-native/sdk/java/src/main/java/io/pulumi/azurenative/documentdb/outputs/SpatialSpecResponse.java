@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class SpatialSpecResponse {
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     * 
      */
     private final @Nullable String path;
     /**
      * List of path's spatial type
-     * 
      */
     private final @Nullable List<String> types;
 
@@ -33,14 +31,12 @@ public final class SpatialSpecResponse {
 
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     * 
     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * List of path's spatial type
-     * 
     */
     public List<String> getTypes() {
         return this.types == null ? List.of() : this.types;

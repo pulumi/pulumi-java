@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class NWRuleSetIpRulesResponse {
     /**
      * The IP Filter Action
-     * 
      */
     private final @Nullable String action;
     /**
      * IP Mask
-     * 
      */
     private final @Nullable String ipMask;
 
@@ -32,14 +30,12 @@ public final class NWRuleSetIpRulesResponse {
 
     /**
      * The IP Filter Action
-     * 
     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Mask
-     * 
     */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);

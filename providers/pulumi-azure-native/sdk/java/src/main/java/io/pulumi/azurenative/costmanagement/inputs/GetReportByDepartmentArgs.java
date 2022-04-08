@@ -14,7 +14,6 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Department ID
-     * 
      */
     @Import(name="departmentId", required=true)
       private final String departmentId;
@@ -25,7 +24,6 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Report Name.
-     * 
      */
     @Import(name="reportName", required=true)
       private final String reportName;

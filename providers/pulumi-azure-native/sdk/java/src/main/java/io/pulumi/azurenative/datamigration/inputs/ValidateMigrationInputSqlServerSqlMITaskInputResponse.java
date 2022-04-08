@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for task that validates migration input for SQL to Azure SQL Managed Instance
- * 
  */
 public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
 
     /**
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
-     * 
      */
     @Import(name="backupBlobShare", required=true)
       private final BlobShareResponse backupBlobShare;
@@ -36,7 +34,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
 
     /**
      * Backup file share information for all selected databases.
-     * 
      */
     @Import(name="backupFileShare")
       private final @Nullable FileShareResponse backupFileShare;
@@ -47,7 +44,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
 
     /**
      * Backup Mode to specify whether to use existing backup or create new backup.
-     * 
      */
     @Import(name="backupMode")
       private final @Nullable String backupMode;
@@ -58,7 +54,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
 
     /**
      * Databases to migrate
-     * 
      */
     @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
@@ -69,7 +64,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
 
     /**
      * Logins to migrate
-     * 
      */
     @Import(name="selectedLogins")
       private final @Nullable List<String> selectedLogins;
@@ -80,7 +74,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
 
     /**
      * Information for connecting to source
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
@@ -91,7 +84,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
 
     /**
      * Information for connecting to target
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;

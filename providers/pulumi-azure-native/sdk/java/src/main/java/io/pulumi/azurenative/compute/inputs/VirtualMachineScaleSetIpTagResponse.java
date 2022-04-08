@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains the IP tag associated with the public IP address.
- * 
  */
 public final class VirtualMachineScaleSetIpTagResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualMachineScaleSetIpTagResponse extends io.pulumi.resourc
 
     /**
      * IP tag type. Example: FirstPartyUsage.
-     * 
      */
     @Import(name="ipTagType")
       private final @Nullable String ipTagType;
@@ -31,7 +29,6 @@ public final class VirtualMachineScaleSetIpTagResponse extends io.pulumi.resourc
 
     /**
      * IP tag associated with the public IP. Example: SQL, Storage etc.
-     * 
      */
     @Import(name="tag")
       private final @Nullable String tag;

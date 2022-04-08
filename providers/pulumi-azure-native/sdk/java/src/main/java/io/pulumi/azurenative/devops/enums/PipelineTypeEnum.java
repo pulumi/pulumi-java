@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-     * 
      */
     @EnumType
     public enum PipelineTypeEnum {

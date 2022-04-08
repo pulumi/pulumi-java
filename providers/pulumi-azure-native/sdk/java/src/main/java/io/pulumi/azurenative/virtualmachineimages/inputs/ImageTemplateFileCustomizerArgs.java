@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Uploads files to VMs (Linux, Windows). Corresponds to Packer file provisioner
- * 
  */
 public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
 
     /**
      * The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<String> destination;
@@ -31,7 +29,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
 
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
 
     /**
      * SHA256 checksum of the file provided in the sourceUri field above
-     * 
      */
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
@@ -53,7 +49,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
 
     /**
      * The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
-     * 
      */
     @Import(name="sourceUri")
       private final @Nullable Output<String> sourceUri;
@@ -65,7 +60,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'File'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

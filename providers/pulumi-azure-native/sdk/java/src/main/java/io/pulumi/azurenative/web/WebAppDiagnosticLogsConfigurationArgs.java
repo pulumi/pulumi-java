@@ -19,7 +19,6 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
 
     /**
      * Application logs configuration.
-     * 
      */
     @Import(name="applicationLogs")
       private final @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
@@ -30,7 +29,6 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
 
     /**
      * Detailed error messages configuration.
-     * 
      */
     @Import(name="detailedErrorMessages")
       private final @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
@@ -41,7 +39,6 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
 
     /**
      * Failed requests tracing configuration.
-     * 
      */
     @Import(name="failedRequestsTracing")
       private final @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
@@ -52,7 +49,6 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
 
     /**
      * HTTP logs configuration.
-     * 
      */
     @Import(name="httpLogs")
       private final @Nullable Output<HttpLogsConfigArgs> httpLogs;
@@ -63,7 +59,6 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -74,7 +69,6 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -85,7 +79,6 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

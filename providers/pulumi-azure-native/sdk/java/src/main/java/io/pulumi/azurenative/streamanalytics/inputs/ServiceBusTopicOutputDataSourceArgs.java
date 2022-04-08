@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Service Bus Topic output data source.
- * 
  */
 public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
 
     /**
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
-     * 
      */
     @Import(name="propertyColumns")
       private final @Nullable Output<List<String>> propertyColumns;
@@ -32,7 +30,6 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
 
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
@@ -43,7 +40,6 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
 
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
@@ -54,7 +50,6 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
 
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
@@ -65,7 +60,6 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
 
     /**
      * The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="topicName")
       private final @Nullable Output<String> topicName;
@@ -77,7 +71,6 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.ServiceBus/Topic'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

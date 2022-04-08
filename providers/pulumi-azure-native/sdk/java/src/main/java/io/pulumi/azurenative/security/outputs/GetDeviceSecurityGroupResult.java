@@ -17,37 +17,30 @@ import javax.annotation.Nullable;
 public final class GetDeviceSecurityGroupResult {
     /**
      * The allow-list custom alert rules.
-     * 
      */
     private final @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules;
     /**
      * The deny-list custom alert rules.
-     * 
      */
     private final @Nullable List<DenylistCustomAlertRuleResponse> denylistRules;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * The list of custom alert threshold rules.
-     * 
      */
     private final @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules;
     /**
      * The list of custom alert time-window rules.
-     * 
      */
     private final @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -71,49 +64,42 @@ public final class GetDeviceSecurityGroupResult {
 
     /**
      * The allow-list custom alert rules.
-     * 
     */
     public List<AllowlistCustomAlertRuleResponse> getAllowlistRules() {
         return this.allowlistRules == null ? List.of() : this.allowlistRules;
     }
     /**
      * The deny-list custom alert rules.
-     * 
     */
     public List<DenylistCustomAlertRuleResponse> getDenylistRules() {
         return this.denylistRules == null ? List.of() : this.denylistRules;
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The list of custom alert threshold rules.
-     * 
     */
     public List<ThresholdCustomAlertRuleResponse> getThresholdRules() {
         return this.thresholdRules == null ? List.of() : this.thresholdRules;
     }
     /**
      * The list of custom alert time-window rules.
-     * 
     */
     public List<TimeWindowCustomAlertRuleResponse> getTimeWindowRules() {
         return this.timeWindowRules == null ? List.of() : this.timeWindowRules;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

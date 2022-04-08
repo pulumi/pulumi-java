@@ -16,7 +16,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The alternate ID of the Asset.
-     * 
      */
     @Import(name="alternateId")
       private final @Nullable Output<String> alternateId;
@@ -38,7 +36,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Asset name.
-     * 
      */
     @Import(name="assetName")
       private final @Nullable Output<String> assetName;
@@ -49,7 +46,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the asset blob container.
-     * 
      */
     @Import(name="container")
       private final @Nullable Output<String> container;
@@ -60,7 +56,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Asset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -71,7 +66,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -82,7 +76,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the storage account.
-     * 
      */
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;

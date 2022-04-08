@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class GetServiceRunnerResult {
     /**
      * The identifier of the resource.
-     * 
      */
     private final String id;
     /**
      * The identity of the resource.
-     * 
      */
     private final @Nullable IdentityPropertiesResponse identity;
     /**
      * The location of the resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -62,42 +56,36 @@ public final class GetServiceRunnerResult {
 
     /**
      * The identifier of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
-     * 
     */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

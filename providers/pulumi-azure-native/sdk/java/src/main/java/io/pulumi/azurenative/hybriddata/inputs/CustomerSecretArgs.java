@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The pair of customer secret.
- * 
  */
 public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The encryption algorithm used to encrypt data.
-     * 
      */
     @Import(name="algorithm", required=true)
       private final Output<SupportedAlgorithm> algorithm;
@@ -31,7 +29,6 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier to the data service input object which this secret corresponds to.
-     * 
      */
     @Import(name="keyIdentifier", required=true)
       private final Output<String> keyIdentifier;
@@ -42,7 +39,6 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * It contains the encrypted customer secret.
-     * 
      */
     @Import(name="keyValue", required=true)
       private final Output<String> keyValue;

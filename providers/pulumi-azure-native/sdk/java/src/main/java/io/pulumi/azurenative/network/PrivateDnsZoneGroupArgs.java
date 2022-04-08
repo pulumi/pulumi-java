@@ -18,7 +18,6 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -29,7 +28,6 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A collection of private dns zone configurations of the private dns zone group.
-     * 
      */
     @Import(name="privateDnsZoneConfigs")
       private final @Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs;
@@ -51,7 +48,6 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the private dns zone group.
-     * 
      */
     @Import(name="privateDnsZoneGroupName")
       private final @Nullable Output<String> privateDnsZoneGroupName;
@@ -62,7 +58,6 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the private endpoint.
-     * 
      */
     @Import(name="privateEndpointName", required=true)
       private final Output<String> privateEndpointName;
@@ -73,7 +68,6 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

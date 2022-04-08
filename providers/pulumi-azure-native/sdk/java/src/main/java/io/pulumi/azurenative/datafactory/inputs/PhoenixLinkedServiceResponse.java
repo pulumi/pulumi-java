@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Phoenix server linked service.
- * 
  */
 public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-     * 
      */
     @Import(name="allowHostNameCNMismatch")
       private final @Nullable Object allowHostNameCNMismatch;
@@ -39,7 +37,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
-     * 
      */
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Object allowSelfSignedServerCert;
@@ -50,7 +47,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -61,7 +57,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The authentication mechanism used to connect to the Phoenix server.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -72,7 +67,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -83,7 +77,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -94,7 +87,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-     * 
      */
     @Import(name="enableSsl")
       private final @Nullable Object enableSsl;
@@ -105,7 +97,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -116,7 +107,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The IP address or host name of the Phoenix server. (i.e. 192.168.222.160)
-     * 
      */
     @Import(name="host", required=true)
       private final Object host;
@@ -127,7 +117,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The partial URL corresponding to the Phoenix server. (i.e. /gateway/sandbox/phoenix/version). The default value is hbasephoenix if using WindowsAzureHDInsightService.
-     * 
      */
     @Import(name="httpPath")
       private final @Nullable Object httpPath;
@@ -138,7 +127,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -149,7 +137,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The password corresponding to the user name.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -160,7 +147,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The TCP port that the Phoenix server uses to listen for client connections. The default value is 8765.
-     * 
      */
     @Import(name="port")
       private final @Nullable Object port;
@@ -171,7 +157,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-     * 
      */
     @Import(name="trustedCertPath")
       private final @Nullable Object trustedCertPath;
@@ -183,7 +168,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
     /**
      * Type of linked service.
      * Expected value is 'Phoenix'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -194,7 +178,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
-     * 
      */
     @Import(name="useSystemTrustStore")
       private final @Nullable Object useSystemTrustStore;
@@ -205,7 +188,6 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The user name used to connect to the Phoenix server.
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

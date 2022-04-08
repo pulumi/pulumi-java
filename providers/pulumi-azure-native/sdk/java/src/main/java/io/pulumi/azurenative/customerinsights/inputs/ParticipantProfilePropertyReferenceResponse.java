@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The participant profile property reference.
- * 
  */
 public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
 
     /**
      * The source interaction property that maps to the target profile property.
-     * 
      */
     @Import(name="interactionPropertyName", required=true)
       private final String interactionPropertyName;
@@ -29,7 +27,6 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
 
     /**
      * The target profile property that maps to the source interaction property.
-     * 
      */
     @Import(name="profilePropertyName", required=true)
       private final String profilePropertyName;

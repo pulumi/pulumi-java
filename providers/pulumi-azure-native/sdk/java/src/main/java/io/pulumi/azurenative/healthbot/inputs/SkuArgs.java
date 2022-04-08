@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The resource model definition representing SKU
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the HealthBot SKU
-     * 
      */
     @Import(name="name", required=true)
       private final Output<SkuName> name;

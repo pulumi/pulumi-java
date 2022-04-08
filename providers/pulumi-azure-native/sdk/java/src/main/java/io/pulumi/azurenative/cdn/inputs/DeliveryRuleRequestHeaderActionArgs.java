@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the request header action for the delivery rule.
- * 
  */
 public final class DeliveryRuleRequestHeaderActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeliveryRuleRequestHeaderActionArgs extends io.pulumi.resourc
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'ModifyRequestHeader'.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class DeliveryRuleRequestHeaderActionArgs extends io.pulumi.resourc
 
     /**
      * Defines the parameters for the action.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<HeaderActionParametersArgs> parameters;

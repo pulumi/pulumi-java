@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SQL Server Management type.
-     * 
      */
     @EnumType
     public enum SqlManagementMode {

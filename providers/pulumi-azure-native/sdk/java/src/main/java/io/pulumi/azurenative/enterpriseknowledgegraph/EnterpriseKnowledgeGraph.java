@@ -20,7 +20,100 @@ import javax.annotation.Nullable;
  * EnterpriseKnowledgeGraph resource definition
  * API Version: 2018-12-03.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create EnterpriseKnowledgeGraph
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var enterpriseKnowledgeGraph = new AzureNative.EnterpriseKnowledgeGraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureNative.EnterpriseKnowledgeGraph.EnterpriseKnowledgeGraphArgs
+ *         {
+ *             Location = "West US",
+ *             Properties = ,
+ *             ResourceGroupName = "OneResourceGroupName",
+ *             ResourceName = "sampleekgname",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	enterpriseknowledgegraph "github.com/pulumi/pulumi-azure-native/sdk/go/azure/enterpriseknowledgegraph"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := enterpriseknowledgegraph.NewEnterpriseKnowledgeGraph(ctx, "enterpriseKnowledgeGraph", &enterpriseknowledgegraph.EnterpriseKnowledgeGraphArgs{
+ * 			Location:          pulumi.String("West US"),
+ * 			Properties:        nil,
+ * 			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+ * 			ResourceName:      pulumi.String("sampleekgname"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const enterpriseKnowledgeGraph = new azure_native.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
+ *     location: "West US",
+ *     properties: {},
+ *     resourceGroupName: "OneResourceGroupName",
+ *     resourceName: "sampleekgname",
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * enterprise_knowledge_graph = azure_native.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
+ *     location="West US",
+ *     properties=azure_native.enterpriseknowledgegraph.EnterpriseKnowledgeGraphPropertiesArgs(),
+ *     resource_group_name="OneResourceGroupName",
+ *     resource_name="sampleekgname",
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +128,72 @@ import javax.annotation.Nullable;
 public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Specifies the location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies the name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The set of properties specific to EnterpriseKnowledgeGraph resource
-     * 
      */
     @Export(name="properties", type=EnterpriseKnowledgeGraphPropertiesResponse.class, parameters={})
     private Output<EnterpriseKnowledgeGraphPropertiesResponse> properties;
 
     /**
      * @return The set of properties specific to EnterpriseKnowledgeGraph resource
-     * 
      */
     public Output<EnterpriseKnowledgeGraphPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the SKU of the resource.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Gets or sets the SKU of the resource.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Contains resource tags defined as key/value pairs.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

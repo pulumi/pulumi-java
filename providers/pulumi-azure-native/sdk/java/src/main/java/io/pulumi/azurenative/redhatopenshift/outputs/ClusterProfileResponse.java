@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class ClusterProfileResponse {
     /**
      * The domain for the cluster (immutable).
-     * 
      */
     private final @Nullable String domain;
     /**
      * The pull secret for the cluster (immutable).
-     * 
      */
     private final @Nullable String pullSecret;
     /**
      * The ID of the cluster resource group (immutable).
-     * 
      */
     private final @Nullable String resourceGroupId;
     /**
      * The version of the cluster (immutable).
-     * 
      */
     private final @Nullable String version;
 
@@ -46,28 +42,24 @@ public final class ClusterProfileResponse {
 
     /**
      * The domain for the cluster (immutable).
-     * 
     */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The pull secret for the cluster (immutable).
-     * 
     */
     public Optional<String> getPullSecret() {
         return Optional.ofNullable(this.pullSecret);
     }
     /**
      * The ID of the cluster resource group (immutable).
-     * 
     */
     public Optional<String> getResourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
     /**
      * The version of the cluster (immutable).
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

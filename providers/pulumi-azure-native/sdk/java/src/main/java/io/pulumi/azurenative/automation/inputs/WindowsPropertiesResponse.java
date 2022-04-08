@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Windows specific update configuration.
- * 
  */
 public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * KB numbers excluded from the software update configuration.
-     * 
      */
     @Import(name="excludedKbNumbers")
       private final @Nullable List<String> excludedKbNumbers;
@@ -32,7 +30,6 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * KB numbers included from the software update configuration.
-     * 
      */
     @Import(name="includedKbNumbers")
       private final @Nullable List<String> includedKbNumbers;
@@ -43,7 +40,6 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Update classification included in the software update configuration. A comma separated string with required values
-     * 
      */
     @Import(name="includedUpdateClassifications")
       private final @Nullable String includedUpdateClassifications;
@@ -54,7 +50,6 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Reboot setting for the software update configuration.
-     * 
      */
     @Import(name="rebootSetting")
       private final @Nullable String rebootSetting;

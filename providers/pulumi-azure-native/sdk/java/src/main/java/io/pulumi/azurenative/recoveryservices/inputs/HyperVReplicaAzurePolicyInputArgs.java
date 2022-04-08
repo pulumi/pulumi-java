@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hyper-V Replica Azure specific input for creating a protection profile.
- * 
  */
 public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
 
     /**
      * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
-     * 
      */
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
@@ -34,7 +32,6 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
     /**
      * The class type.
      * Expected value is 'HyperVReplicaAzure'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -45,7 +42,6 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
 
     /**
      * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
-     * 
      */
     @Import(name="onlineReplicationStartTime")
       private final @Nullable Output<String> onlineReplicationStartTime;
@@ -56,7 +52,6 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
 
     /**
      * The duration (in hours) to which point the recovery history needs to be maintained.
-     * 
      */
     @Import(name="recoveryPointHistoryDuration")
       private final @Nullable Output<Integer> recoveryPointHistoryDuration;
@@ -67,7 +62,6 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
 
     /**
      * The replication interval.
-     * 
      */
     @Import(name="replicationInterval")
       private final @Nullable Output<Integer> replicationInterval;
@@ -78,7 +72,6 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
 
     /**
      * The list of storage accounts to which the VMs in the primary cloud can replicate to.
-     * 
      */
     @Import(name="storageAccounts")
       private final @Nullable Output<List<String>> storageAccounts;

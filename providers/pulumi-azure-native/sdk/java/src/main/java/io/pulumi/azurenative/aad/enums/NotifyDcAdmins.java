@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Should domain controller admins be notified
-     * 
      */
     @EnumType
     public enum NotifyDcAdmins {

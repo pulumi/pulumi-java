@@ -14,7 +14,6 @@ public final class GetUserSettingsArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the user settings
-     * 
      */
     @Import(name="userSettingsName", required=true)
       private final String userSettingsName;

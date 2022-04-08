@@ -22,7 +22,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flag to note if this instance participates in auto upgrade of minor version, or not.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -33,7 +32,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the kubernetes cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -44,7 +42,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
-     * 
      */
     @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
@@ -55,7 +52,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
-     * 
      */
     @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
@@ -66,7 +62,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
-     * 
      */
     @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
@@ -77,7 +72,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration settings, as name-value pairs for configuring this instance of the extension.
-     * 
      */
     @Import(name="configurationSettings")
       private final @Nullable Output<Map<String,String>> configurationSettings;
@@ -88,7 +82,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an instance of the Extension.
-     * 
      */
     @Import(name="extensionInstanceName")
       private final @Nullable Output<String> extensionInstanceName;
@@ -99,7 +92,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
-     * 
      */
     @Import(name="extensionType")
       private final @Nullable Output<String> extensionType;
@@ -110,7 +102,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the configuration.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ConfigurationIdentityArgs> identity;
@@ -121,7 +112,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
-     * 
      */
     @Import(name="releaseTrain")
       private final @Nullable Output<String> releaseTrain;
@@ -132,7 +122,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -143,7 +132,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope at which the extension instance is installed.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
@@ -154,7 +142,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status from this instance of the extension.
-     * 
      */
     @Import(name="statuses")
       private final @Nullable Output<List<ExtensionStatusArgs>> statuses;
@@ -165,7 +152,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

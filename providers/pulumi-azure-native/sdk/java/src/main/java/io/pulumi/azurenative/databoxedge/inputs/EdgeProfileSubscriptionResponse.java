@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subscription details for the Edge Profile
- * 
  */
 public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
 
     /**
      * ARM ID of the subscription
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -61,7 +59,6 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
 
     /**
      * Edge Subscription Registration ID
-     * 
      */
     @Import(name="registrationId")
       private final @Nullable String registrationId;

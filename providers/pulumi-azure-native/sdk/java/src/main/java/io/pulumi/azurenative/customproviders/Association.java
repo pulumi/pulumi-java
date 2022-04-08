@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * The resource definition of this association.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update an association
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var association = new AzureNative.CustomProviders.Association("association", new AzureNative.CustomProviders.AssociationArgs
+ *         {
+ *             AssociationName = "associationName",
+ *             Scope = "scope",
+ *             TargetResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customproviders "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customproviders"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customproviders.NewAssociation(ctx, "association", &customproviders.AssociationArgs{
+ * 			AssociationName:  pulumi.String("associationName"),
+ * 			Scope:            pulumi.String("scope"),
+ * 			TargetResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const association = new azure_native.customproviders.Association("association", {
+ *     associationName: "associationName",
+ *     scope: "scope",
+ *     targetResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * association = azure_native.customproviders.Association("association",
+ *     association_name="associationName",
+ *     scope="scope",
+ *     target_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +104,48 @@ import javax.annotation.Nullable;
 public class Association extends io.pulumi.resources.CustomResource {
     /**
      * The association name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The association name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the association.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the association.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The REST resource instance of the target resource for this association.
-     * 
      */
     @Export(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
     /**
      * @return The REST resource instance of the target resource for this association.
-     * 
      */
     public Output</* @Nullable */ String> getTargetResourceId() {
         return this.targetResourceId;
     }
     /**
      * The association type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The association type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

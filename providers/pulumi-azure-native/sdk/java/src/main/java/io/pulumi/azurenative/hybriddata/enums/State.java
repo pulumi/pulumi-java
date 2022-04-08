@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * State of the job definition.
-     * 
      */
     @EnumType
     public enum State {

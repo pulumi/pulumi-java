@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The integration service environment access endpoint.
- * 
  */
 public final class IntegrationServiceEnvironmentAccessEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends io.pu
 
     /**
      * The access endpoint type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type;

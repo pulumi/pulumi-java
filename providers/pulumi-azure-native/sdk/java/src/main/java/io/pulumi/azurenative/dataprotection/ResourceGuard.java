@@ -18,9 +18,95 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2021-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create ResourceGuard
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceGuard = new AzureNative.DataProtection.ResourceGuard("resourceGuard", new AzureNative.DataProtection.ResourceGuardArgs
+ *         {
+ *             Location = "WestUS",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ResourceGuardsName = "swaggerExample",
+ *             Tags = 
+ *             {
+ *                 { "key1", "val1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dataprotection "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dataprotection"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataprotection.NewResourceGuard(ctx, "resourceGuard", &dataprotection.ResourceGuardArgs{
+ * 			Location:           pulumi.String("WestUS"),
+ * 			ResourceGroupName:  pulumi.String("SampleResourceGroup"),
+ * 			ResourceGuardsName: pulumi.String("swaggerExample"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("val1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const resourceGuard = new azure_native.dataprotection.ResourceGuard("resourceGuard", {
+ *     location: "WestUS",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     resourceGuardsName: "swaggerExample",
+ *     tags: {
+ *         key1: "val1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * resource_guard = azure_native.dataprotection.ResourceGuard("resourceGuard",
+ *     location="WestUS",
+ *     resource_group_name="SampleResourceGroup",
+ *     resource_guards_name="swaggerExample",
+ *     tags={
+ *         "key1": "val1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +121,96 @@ import javax.annotation.Nullable;
 public class ResourceGuard extends io.pulumi.resources.CustomResource {
     /**
      * Optional ETag.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return Optional ETag.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * Input Managed Identity Details
-     * 
      */
     @Export(name="identity", type=DppIdentityDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DppIdentityDetailsResponse> identity;
 
     /**
      * @return Input Managed Identity Details
-     * 
      */
     public Output</* @Nullable */ DppIdentityDetailsResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name associated with the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name associated with the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * ResourceGuardResource properties
-     * 
      */
     @Export(name="properties", type=ResourceGuardResponse.class, parameters={})
     private Output<ResourceGuardResponse> properties;
 
     /**
      * @return ResourceGuardResource properties
-     * 
      */
     public Output<ResourceGuardResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     public Output<String> getType() {
         return this.type;

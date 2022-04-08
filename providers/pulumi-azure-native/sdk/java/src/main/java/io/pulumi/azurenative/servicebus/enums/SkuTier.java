@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The billing tier of this particular SKU.
-     * 
      */
     @EnumType
     public enum SkuTier {

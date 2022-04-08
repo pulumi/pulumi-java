@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the move collection errors.
- * 
  */
 public final class MoveCollectionPropertiesResponseErrors extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MoveCollectionPropertiesResponseErrors extends io.pulumi.reso
 
     /**
      * The move resource error body.
-     * 
      */
     @Import(name="properties")
       private final @Nullable MoveResourceErrorBodyResponse properties;

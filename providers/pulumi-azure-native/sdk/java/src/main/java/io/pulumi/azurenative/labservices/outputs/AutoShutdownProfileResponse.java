@@ -13,32 +13,26 @@ import javax.annotation.Nullable;
 public final class AutoShutdownProfileResponse {
     /**
      * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
-     * 
      */
     private final @Nullable String disconnectDelay;
     /**
      * The amount of time a VM will idle before it is shutdown if this behavior is enabled.
-     * 
      */
     private final @Nullable String idleDelay;
     /**
      * The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
-     * 
      */
     private final @Nullable String noConnectDelay;
     /**
      * Whether shutdown on disconnect is enabled
-     * 
      */
     private final @Nullable String shutdownOnDisconnect;
     /**
      * Whether a VM will get shutdown when it has idled for a period of time.
-     * 
      */
     private final @Nullable String shutdownOnIdle;
     /**
      * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
-     * 
      */
     private final @Nullable String shutdownWhenNotConnected;
 
@@ -60,42 +54,36 @@ public final class AutoShutdownProfileResponse {
 
     /**
      * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
-     * 
     */
     public Optional<String> getDisconnectDelay() {
         return Optional.ofNullable(this.disconnectDelay);
     }
     /**
      * The amount of time a VM will idle before it is shutdown if this behavior is enabled.
-     * 
     */
     public Optional<String> getIdleDelay() {
         return Optional.ofNullable(this.idleDelay);
     }
     /**
      * The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
-     * 
     */
     public Optional<String> getNoConnectDelay() {
         return Optional.ofNullable(this.noConnectDelay);
     }
     /**
      * Whether shutdown on disconnect is enabled
-     * 
     */
     public Optional<String> getShutdownOnDisconnect() {
         return Optional.ofNullable(this.shutdownOnDisconnect);
     }
     /**
      * Whether a VM will get shutdown when it has idled for a period of time.
-     * 
     */
     public Optional<String> getShutdownOnIdle() {
         return Optional.ofNullable(this.shutdownOnIdle);
     }
     /**
      * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
-     * 
     */
     public Optional<String> getShutdownWhenNotConnected() {
         return Optional.ofNullable(this.shutdownWhenNotConnected);

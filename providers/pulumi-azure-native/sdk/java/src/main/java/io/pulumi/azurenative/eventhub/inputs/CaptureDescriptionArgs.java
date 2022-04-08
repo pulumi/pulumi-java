@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties to configure capture description for eventhub
- * 
  */
 public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Properties of Destination where capture will be stored. (Storage Account, Blob Names)
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<DestinationArgs> destination;
@@ -33,8 +31,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     /**
-     * A value that indicates whether capture description is enabled.
-     * 
+     * A value that indicates whether capture description is enabled. 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -45,7 +42,6 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
-     * 
      */
     @Import(name="encoding")
       private final @Nullable Output<EncodingCaptureDescription> encoding;
@@ -56,7 +52,6 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
-     * 
      */
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
@@ -67,7 +62,6 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
-     * 
      */
     @Import(name="sizeLimitInBytes")
       private final @Nullable Output<Integer> sizeLimitInBytes;
@@ -78,7 +72,6 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A value that indicates whether to Skip Empty Archives
-     * 
      */
     @Import(name="skipEmptyArchives")
       private final @Nullable Output<Boolean> skipEmptyArchives;

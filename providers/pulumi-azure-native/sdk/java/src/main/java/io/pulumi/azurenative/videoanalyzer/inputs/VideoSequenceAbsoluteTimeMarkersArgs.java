@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A sequence of absolute datetime ranges as a string. The datetime values should follow IS08601, and the sum of the ranges should add up to 24 hours or less. Currently, there can be only one range specified in the sequence.
- * 
  */
 public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
 
     /**
      * The sequence of datetime ranges. Example: '[["2021-10-05T03:30:00Z", "2021-10-05T03:40:00Z"]]'.
-     * 
      */
     @Import(name="ranges", required=true)
       private final Output<String> ranges;
@@ -31,7 +29,6 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

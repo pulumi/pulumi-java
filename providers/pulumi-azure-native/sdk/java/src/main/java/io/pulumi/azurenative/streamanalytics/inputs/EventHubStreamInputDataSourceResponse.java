@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an Event Hub input data source that contains stream data.
- * 
  */
 public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
 
     /**
      * The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
-     * 
      */
     @Import(name="consumerGroupName")
       private final @Nullable String consumerGroupName;
@@ -31,7 +29,6 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
 
     /**
      * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="eventHubName")
       private final @Nullable String eventHubName;
@@ -42,7 +39,6 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
 
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serviceBusNamespace")
       private final @Nullable String serviceBusNamespace;
@@ -53,7 +49,6 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
 
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable String sharedAccessPolicyKey;
@@ -64,7 +59,6 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
 
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="sharedAccessPolicyName")
       private final @Nullable String sharedAccessPolicyName;
@@ -76,7 +70,6 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
     /**
      * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.ServiceBus/EventHub'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

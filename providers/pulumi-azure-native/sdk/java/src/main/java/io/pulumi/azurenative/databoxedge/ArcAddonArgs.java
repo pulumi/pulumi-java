@@ -16,7 +16,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The addon name.
-     * 
      */
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
@@ -27,7 +26,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -39,7 +37,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Addon type.
      * Expected value is 'ArcForKubernetes'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -50,7 +47,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Arc resource location
-     * 
      */
     @Import(name="resourceLocation", required=true)
       private final Output<String> resourceLocation;
@@ -72,7 +67,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Arc resource Name
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -83,7 +77,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="roleName", required=true)
       private final Output<String> roleName;
@@ -94,7 +87,6 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Arc resource subscription Id
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * upgrade channel for auto upgrade.
-     * 
      */
     @EnumType
     public enum UpgradeChannel {

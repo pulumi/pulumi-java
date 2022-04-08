@@ -19,7 +19,95 @@ import javax.annotation.Nullable;
  * Represents a Storage Account on the  Data Box Edge/Gateway device.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### StorageAccountPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var storageAccount = new AzureNative.DataBoxEdge.StorageAccount("storageAccount", new AzureNative.DataBoxEdge.StorageAccountArgs
+ *         {
+ *             DataPolicy = "Cloud",
+ *             Description = "It's an awesome storage account",
+ *             DeviceName = "testedgedevice",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *             StorageAccountCredentialId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt",
+ *             StorageAccountName = "blobstorageaccount1",
+ *             StorageAccountStatus = "OK",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewStorageAccount(ctx, "storageAccount", &databoxedge.StorageAccountArgs{
+ * 			DataPolicy:                 pulumi.String("Cloud"),
+ * 			Description:                pulumi.String("It's an awesome storage account"),
+ * 			DeviceName:                 pulumi.String("testedgedevice"),
+ * 			ResourceGroupName:          pulumi.String("GroupForEdgeAutomation"),
+ * 			StorageAccountCredentialId: pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt"),
+ * 			StorageAccountName:         pulumi.String("blobstorageaccount1"),
+ * 			StorageAccountStatus:       pulumi.String("OK"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const storageAccount = new azure_native.databoxedge.StorageAccount("storageAccount", {
+ *     dataPolicy: "Cloud",
+ *     description: "It's an awesome storage account",
+ *     deviceName: "testedgedevice",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ *     storageAccountCredentialId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt",
+ *     storageAccountName: "blobstorageaccount1",
+ *     storageAccountStatus: "OK",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * storage_account = azure_native.databoxedge.StorageAccount("storageAccount",
+ *     data_policy="Cloud",
+ *     description="It's an awesome storage account",
+ *     device_name="testedgedevice",
+ *     resource_group_name="GroupForEdgeAutomation",
+ *     storage_account_credential_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt",
+ *     storage_account_name="blobstorageaccount1",
+ *     storage_account_status="OK")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +122,108 @@ import javax.annotation.Nullable;
 public class StorageAccount extends io.pulumi.resources.CustomResource {
     /**
      * BlobEndpoint of Storage Account
-     * 
      */
     @Export(name="blobEndpoint", type=String.class, parameters={})
     private Output<String> blobEndpoint;
 
     /**
      * @return BlobEndpoint of Storage Account
-     * 
      */
     public Output<String> getBlobEndpoint() {
         return this.blobEndpoint;
     }
     /**
      * The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
-     * 
      */
     @Export(name="containerCount", type=Integer.class, parameters={})
     private Output<Integer> containerCount;
 
     /**
      * @return The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
-     * 
      */
     public Output<Integer> getContainerCount() {
         return this.containerCount;
     }
     /**
      * Data policy of the storage Account.
-     * 
      */
     @Export(name="dataPolicy", type=String.class, parameters={})
     private Output<String> dataPolicy;
 
     /**
      * @return Data policy of the storage Account.
-     * 
      */
     public Output<String> getDataPolicy() {
         return this.dataPolicy;
     }
     /**
      * Description for the storage Account.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description for the storage Account.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Storage Account Credential Id
-     * 
      */
     @Export(name="storageAccountCredentialId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountCredentialId;
 
     /**
      * @return Storage Account Credential Id
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
     /**
      * Current status of the storage account
-     * 
      */
     @Export(name="storageAccountStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountStatus;
 
     /**
      * @return Current status of the storage account
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountStatus() {
         return this.storageAccountStatus;
     }
     /**
      * StorageAccount object on ASE device
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return StorageAccount object on ASE device
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -17,7 +17,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Name of the alert rule template used to create this rule.
-     * 
      */
     @Import(name="alertRuleTemplateName", required=true)
       private final Output<String> alertRuleTemplateName;
@@ -28,7 +27,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Determines whether this alert rule is enabled or disabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -40,7 +38,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * The kind of the alert rule
      * Expected value is 'Fusion'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -51,7 +48,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Alert rule ID
-     * 
      */
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
@@ -73,7 +68,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

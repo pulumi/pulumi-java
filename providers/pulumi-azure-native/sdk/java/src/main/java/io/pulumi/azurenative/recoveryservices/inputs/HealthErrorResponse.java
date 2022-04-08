@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Health Error
- * 
  */
 public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error creation time (UTC)
-     * 
      */
     @Import(name="creationTimeUtc")
       private final @Nullable String creationTimeUtc;
@@ -33,7 +31,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value indicating whether the health error is customer resolvable.
-     * 
      */
     @Import(name="customerResolvability")
       private final @Nullable String customerResolvability;
@@ -44,7 +41,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ID of the entity.
-     * 
      */
     @Import(name="entityId")
       private final @Nullable String entityId;
@@ -55,7 +51,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Category of error.
-     * 
      */
     @Import(name="errorCategory")
       private final @Nullable String errorCategory;
@@ -66,7 +61,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error code.
-     * 
      */
     @Import(name="errorCode")
       private final @Nullable String errorCode;
@@ -77,7 +71,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The health error unique id.
-     * 
      */
     @Import(name="errorId")
       private final @Nullable String errorId;
@@ -88,7 +81,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Level of error.
-     * 
      */
     @Import(name="errorLevel")
       private final @Nullable String errorLevel;
@@ -99,7 +91,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error message.
-     * 
      */
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
@@ -110,7 +101,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source of error.
-     * 
      */
     @Import(name="errorSource")
       private final @Nullable String errorSource;
@@ -121,7 +111,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of error.
-     * 
      */
     @Import(name="errorType")
       private final @Nullable String errorType;
@@ -132,7 +121,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
-     * 
      */
     @Import(name="innerHealthErrors")
       private final @Nullable List<InnerHealthErrorResponse> innerHealthErrors;
@@ -143,7 +131,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Possible causes of error.
-     * 
      */
     @Import(name="possibleCauses")
       private final @Nullable String possibleCauses;
@@ -154,7 +141,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recommended action to resolve error.
-     * 
      */
     @Import(name="recommendedAction")
       private final @Nullable String recommendedAction;
@@ -165,7 +151,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * DRA error message.
-     * 
      */
     @Import(name="recoveryProviderErrorMessage")
       private final @Nullable String recoveryProviderErrorMessage;
@@ -176,7 +161,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Summary message of the entity.
-     * 
      */
     @Import(name="summaryMessage")
       private final @Nullable String summaryMessage;

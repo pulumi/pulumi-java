@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class WnsCredentialResponse {
     /**
      * The package ID for this credential.
-     * 
      */
     private final @Nullable String packageSid;
     /**
      * The secret key.
-     * 
      */
     private final @Nullable String secretKey;
     /**
      * The Windows Live endpoint.
-     * 
      */
     private final @Nullable String windowsLiveEndpoint;
 
@@ -39,21 +36,18 @@ public final class WnsCredentialResponse {
 
     /**
      * The package ID for this credential.
-     * 
     */
     public Optional<String> getPackageSid() {
         return Optional.ofNullable(this.packageSid);
     }
     /**
      * The secret key.
-     * 
     */
     public Optional<String> getSecretKey() {
         return Optional.ofNullable(this.secretKey);
     }
     /**
      * The Windows Live endpoint.
-     * 
     */
     public Optional<String> getWindowsLiveEndpoint() {
         return Optional.ofNullable(this.windowsLiveEndpoint);

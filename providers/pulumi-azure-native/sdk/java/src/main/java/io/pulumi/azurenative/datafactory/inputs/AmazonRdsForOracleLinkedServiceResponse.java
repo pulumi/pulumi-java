@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * AmazonRdsForOracle database.
- * 
  */
 public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -50,7 +47,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final Object connectionString;
@@ -61,7 +57,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -83,7 +77,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -94,7 +87,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The Azure key vault secret reference of password in connection string.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -106,7 +98,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
     /**
      * Type of linked service.
      * Expected value is 'AmazonRdsForOracle'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

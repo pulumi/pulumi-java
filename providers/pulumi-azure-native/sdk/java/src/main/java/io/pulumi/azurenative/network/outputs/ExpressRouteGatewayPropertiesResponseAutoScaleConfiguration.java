@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
     /**
      * Minimum and maximum number of scale units to deploy.
-     * 
      */
     private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
@@ -24,7 +23,6 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
 
     /**
      * Minimum and maximum number of scale units to deploy.
-     * 
     */
     public Optional<ExpressRouteGatewayPropertiesResponseBounds> getBounds() {
         return Optional.ofNullable(this.bounds);

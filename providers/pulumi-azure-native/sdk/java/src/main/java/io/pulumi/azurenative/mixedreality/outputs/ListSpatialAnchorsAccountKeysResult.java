@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ListSpatialAnchorsAccountKeysResult {
     /**
      * value of primary key.
-     * 
      */
     private final String primaryKey;
     /**
      * value of secondary key.
-     * 
      */
     private final String secondaryKey;
 
@@ -30,14 +28,12 @@ public final class ListSpatialAnchorsAccountKeysResult {
 
     /**
      * value of primary key.
-     * 
     */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * value of secondary key.
-     * 
     */
     public String getSecondaryKey() {
         return this.secondaryKey;

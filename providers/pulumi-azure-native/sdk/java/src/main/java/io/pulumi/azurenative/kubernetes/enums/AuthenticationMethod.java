@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The mode of client authentication.
-     * 
      */
     @EnumType
     public enum AuthenticationMethod {

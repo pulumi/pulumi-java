@@ -19,7 +19,180 @@ import javax.annotation.Nullable;
  * The Customer Notification Event resource.
  * API Version: 2020-12-16-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CustomerEventCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customerEvent = new AzureNative.TestBase.CustomerEvent("customerEvent", new AzureNative.TestBase.CustomerEventArgs
+ *         {
+ *             CustomerEventName = "WeeklySummary",
+ *             EventName = "WeeklySummary",
+ *             Receivers = 
+ *             {
+ *                 new AzureNative.TestBase.Inputs.NotificationEventReceiverArgs
+ *                 {
+ *                     ReceiverType = "UserObjects",
+ *                     ReceiverValue = new AzureNative.TestBase.Inputs.NotificationReceiverValueArgs
+ *                     {
+ *                         UserObjectReceiverValue = new AzureNative.TestBase.Inputs.UserObjectReceiverValueArgs
+ *                         {
+ *                             UserObjectIds = 
+ *                             {
+ *                                 "245245245245325",
+ *                                 "365365365363565",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new AzureNative.TestBase.Inputs.NotificationEventReceiverArgs
+ *                 {
+ *                     ReceiverType = "DistributionGroup",
+ *                     ReceiverValue = new AzureNative.TestBase.Inputs.NotificationReceiverValueArgs
+ *                     {
+ *                         DistributionGroupListReceiverValue = new AzureNative.TestBase.Inputs.DistributionGroupListReceiverValueArgs
+ *                         {
+ *                             DistributionGroups = 
+ *                             {
+ *                                 "test@microsoft.com",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "contoso-rg1",
+ *             TestBaseAccountName = "contoso-testBaseAccount1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	testbase "github.com/pulumi/pulumi-azure-native/sdk/go/azure/testbase"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := testbase.NewCustomerEvent(ctx, "customerEvent", &testbase.CustomerEventArgs{
+ * 			CustomerEventName: pulumi.String("WeeklySummary"),
+ * 			EventName:         pulumi.String("WeeklySummary"),
+ * 			Receivers: testbase.NotificationEventReceiverArray{
+ * 				&testbase.NotificationEventReceiverArgs{
+ * 					ReceiverType: pulumi.String("UserObjects"),
+ * 					ReceiverValue: &testbase.NotificationReceiverValueArgs{
+ * 						UserObjectReceiverValue: &testbase.UserObjectReceiverValueArgs{
+ * 							UserObjectIds: pulumi.StringArray{
+ * 								pulumi.String("245245245245325"),
+ * 								pulumi.String("365365365363565"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&testbase.NotificationEventReceiverArgs{
+ * 					ReceiverType: pulumi.String("DistributionGroup"),
+ * 					ReceiverValue: &testbase.NotificationReceiverValueArgs{
+ * 						DistributionGroupListReceiverValue: &testbase.DistributionGroupListReceiverValueArgs{
+ * 							DistributionGroups: pulumi.StringArray{
+ * 								pulumi.String("test@microsoft.com"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName:   pulumi.String("contoso-rg1"),
+ * 			TestBaseAccountName: pulumi.String("contoso-testBaseAccount1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const customerEvent = new azure_native.testbase.CustomerEvent("customerEvent", {
+ *     customerEventName: "WeeklySummary",
+ *     eventName: "WeeklySummary",
+ *     receivers: [
+ *         {
+ *             receiverType: "UserObjects",
+ *             receiverValue: {
+ *                 userObjectReceiverValue: {
+ *                     userObjectIds: [
+ *                         "245245245245325",
+ *                         "365365365363565",
+ *                     ],
+ *                 },
+ *             },
+ *         },
+ *         {
+ *             receiverType: "DistributionGroup",
+ *             receiverValue: {
+ *                 distributionGroupListReceiverValue: {
+ *                     distributionGroups: ["test@microsoft.com"],
+ *                 },
+ *             },
+ *         },
+ *     ],
+ *     resourceGroupName: "contoso-rg1",
+ *     testBaseAccountName: "contoso-testBaseAccount1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * customer_event = azure_native.testbase.CustomerEvent("customerEvent",
+ *     customer_event_name="WeeklySummary",
+ *     event_name="WeeklySummary",
+ *     receivers=[
+ *         azure_native.testbase.NotificationEventReceiverArgs(
+ *             receiver_type="UserObjects",
+ *             receiver_value=azure_native.testbase.NotificationReceiverValueArgs(
+ *                 user_object_receiver_value=azure_native.testbase.UserObjectReceiverValueArgs(
+ *                     user_object_ids=[
+ *                         "245245245245325",
+ *                         "365365365363565",
+ *                     ],
+ *                 ),
+ *             ),
+ *         ),
+ *         azure_native.testbase.NotificationEventReceiverArgs(
+ *             receiver_type="DistributionGroup",
+ *             receiver_value=azure_native.testbase.NotificationReceiverValueArgs(
+ *                 distribution_group_list_receiver_value=azure_native.testbase.DistributionGroupListReceiverValueArgs(
+ *                     distribution_groups=["test@microsoft.com"],
+ *                 ),
+ *             ),
+ *         ),
+ *     ],
+ *     resource_group_name="contoso-rg1",
+ *     test_base_account_name="contoso-testBaseAccount1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +207,60 @@ import javax.annotation.Nullable;
 public class CustomerEvent extends io.pulumi.resources.CustomResource {
     /**
      * The name of the event subscribed to.
-     * 
      */
     @Export(name="eventName", type=String.class, parameters={})
     private Output<String> eventName;
 
     /**
      * @return The name of the event subscribed to.
-     * 
      */
     public Output<String> getEventName() {
         return this.eventName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The notification event receivers.
-     * 
      */
     @Export(name="receivers", type=List.class, parameters={NotificationEventReceiverResponse.class})
     private Output<List<NotificationEventReceiverResponse>> receivers;
 
     /**
      * @return The notification event receivers.
-     * 
      */
     public Output<List<NotificationEventReceiverResponse>> getReceivers() {
         return this.receivers;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

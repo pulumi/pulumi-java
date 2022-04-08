@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * The response for an AKS service.
- * 
  */
 public final class AKSServiceResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -34,7 +33,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether or not AAD authentication is enabled.
-     * 
      */
     @Import(name="aadAuthEnabled")
       private final @Nullable Boolean aadAuthEnabled;
@@ -45,7 +43,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether or not Application Insights is enabled.
-     * 
      */
     @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
@@ -56,7 +53,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether or not authentication is enabled.
-     * 
      */
     @Import(name="authEnabled")
       private final @Nullable Boolean authEnabled;
@@ -67,7 +63,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The auto scaler properties.
-     * 
      */
     @Import(name="autoScaler")
       private final @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
@@ -78,7 +73,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the compute resource.
-     * 
      */
     @Import(name="computeName")
       private final @Nullable String computeName;
@@ -90,7 +84,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
     /**
      * The compute environment type for the service.
      * Expected value is 'AKS'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final String computeType;
@@ -101,7 +94,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The container resource requirements.
-     * 
      */
     @Import(name="containerResourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
@@ -112,7 +104,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Details of the data collection options specified.
-     * 
      */
     @Import(name="dataCollection")
       private final @Nullable AKSServiceResponseResponseDataCollection dataCollection;
@@ -123,7 +114,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The deployment status.
-     * 
      */
     @Import(name="deploymentStatus", required=true)
       private final AKSServiceResponseResponseDeploymentStatus deploymentStatus;
@@ -134,7 +124,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The deployment type for the service.
-     * 
      */
     @Import(name="deploymentType")
       private final @Nullable String deploymentType;
@@ -145,7 +134,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -156,7 +144,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Environment, models and assets used for inferencing.
-     * 
      */
     @Import(name="environmentImageRequest")
       private final @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
@@ -167,7 +154,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The error details.
-     * 
      */
     @Import(name="error", required=true)
       private final ServiceResponseBaseResponseError error;
@@ -178,7 +164,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Is this the default variant.
-     * 
      */
     @Import(name="isDefault")
       private final @Nullable Boolean isDefault;
@@ -189,7 +174,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service tag dictionary. Tags are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
@@ -200,7 +184,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The liveness probe requirements.
-     * 
      */
     @Import(name="livenessProbeRequirements")
       private final @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
@@ -211,7 +194,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The maximum number of concurrent requests per container.
-     * 
      */
     @Import(name="maxConcurrentRequestsPerContainer")
       private final @Nullable Integer maxConcurrentRequestsPerContainer;
@@ -222,7 +204,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
-     * 
      */
     @Import(name="maxQueueWaitMs")
       private final @Nullable Integer maxQueueWaitMs;
@@ -233,7 +214,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Details on the models and configurations.
-     * 
      */
     @Import(name="modelConfigMap", required=true)
       private final Map<String,Object> modelConfigMap;
@@ -244,7 +224,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of models.
-     * 
      */
     @Import(name="models")
       private final @Nullable List<ModelResponse> models;
@@ -255,7 +234,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Kubernetes namespace of the deployment.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable String namespace;
@@ -266,7 +244,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The number of replicas on the cluster.
-     * 
      */
     @Import(name="numReplicas")
       private final @Nullable Integer numReplicas;
@@ -277,7 +254,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service property dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -288,7 +264,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The scoring timeout in milliseconds.
-     * 
      */
     @Import(name="scoringTimeoutMs")
       private final @Nullable Integer scoringTimeoutMs;
@@ -299,7 +274,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Uri for sending scoring requests.
-     * 
      */
     @Import(name="scoringUri", required=true)
       private final String scoringUri;
@@ -310,7 +284,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The current state of the service.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -321,7 +294,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Uri for sending swagger requests.
-     * 
      */
     @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
@@ -332,7 +304,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The amount of traffic variant receives.
-     * 
      */
     @Import(name="trafficPercentile")
       private final @Nullable Double trafficPercentile;
@@ -343,7 +314,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The type of the variant.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

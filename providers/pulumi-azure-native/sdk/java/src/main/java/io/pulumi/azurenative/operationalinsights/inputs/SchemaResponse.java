@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Table's schema.
- * 
  */
 public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table category.
-     * 
      */
     @Import(name="categories", required=true)
       private final List<String> categories;
@@ -35,7 +33,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of table custom columns.
-     * 
      */
     @Import(name="columns")
       private final @Nullable List<ColumnResponse> columns;
@@ -46,7 +43,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -57,7 +53,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -68,7 +63,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table labels.
-     * 
      */
     @Import(name="labels", required=true)
       private final List<String> labels;
@@ -79,7 +73,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -90,7 +83,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters of the restore operation that initiated this table.
-     * 
      */
     @Import(name="restoredLogs", required=true)
       private final RestoredLogsResponse restoredLogs;
@@ -101,7 +93,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters of the search job that initiated this table.
-     * 
      */
     @Import(name="searchResults", required=true)
       private final SearchResultsResponse searchResults;
@@ -112,7 +103,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of solutions the table is affiliated with
-     * 
      */
     @Import(name="solutions", required=true)
       private final List<String> solutions;
@@ -123,7 +113,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table's creator.
-     * 
      */
     @Import(name="source", required=true)
       private final String source;
@@ -134,7 +123,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of table standard columns.
-     * 
      */
     @Import(name="standardColumns", required=true)
       private final List<ColumnResponse> standardColumns;
@@ -145,7 +133,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The subtype describes what APIs can be used to interact with the table, and what features are available against it.
-     * 
      */
     @Import(name="tableSubType", required=true)
       private final String tableSubType;
@@ -156,7 +143,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table's creator.
-     * 
      */
     @Import(name="tableType", required=true)
       private final String tableType;

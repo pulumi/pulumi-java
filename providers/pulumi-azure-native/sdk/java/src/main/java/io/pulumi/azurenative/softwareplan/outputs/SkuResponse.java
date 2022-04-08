@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class SkuResponse {
     /**
      * Name of the SKU to be applied
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class SkuResponse {
 
     /**
      * Name of the SKU to be applied
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

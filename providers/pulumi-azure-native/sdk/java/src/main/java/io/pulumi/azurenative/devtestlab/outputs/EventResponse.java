@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EventResponse {
     /**
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
-     * 
      */
     private final @Nullable String eventName;
 
@@ -24,7 +23,6 @@ public final class EventResponse {
 
     /**
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
-     * 
     */
     public Optional<String> getEventName() {
         return Optional.ofNullable(this.eventName);

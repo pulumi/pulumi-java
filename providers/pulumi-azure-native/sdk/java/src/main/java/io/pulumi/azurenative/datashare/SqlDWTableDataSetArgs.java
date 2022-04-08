@@ -16,7 +16,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the dataSet.
-     * 
      */
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
@@ -38,7 +36,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * DataWarehouse name of the source data set
-     * 
      */
     @Import(name="dataWarehouseName", required=true)
       private final Output<String> dataWarehouseName;
@@ -50,7 +47,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     /**
      * Kind of data set.
      * Expected value is 'SqlDWTable'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -61,7 +57,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Schema of the table. Default value is dbo.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
@@ -83,7 +77,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the share to add the data set to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -94,7 +87,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource id of SQL server
-     * 
      */
     @Import(name="sqlServerResourceId", required=true)
       private final Output<String> sqlServerResourceId;
@@ -105,7 +97,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * SQL DW table name.
-     * 
      */
     @Import(name="tableName", required=true)
       private final Output<String> tableName;

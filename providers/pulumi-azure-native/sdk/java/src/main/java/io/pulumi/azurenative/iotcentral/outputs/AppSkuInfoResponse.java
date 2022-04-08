@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AppSkuInfoResponse {
     /**
      * The name of the SKU.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class AppSkuInfoResponse {
 
     /**
      * The name of the SKU.
-     * 
     */
     public String getName() {
         return this.name;

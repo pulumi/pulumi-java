@@ -19,7 +19,125 @@ import javax.annotation.Nullable;
  * Value object for saved search results.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SavedSearchCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var savedSearch = new AzureNative.OperationalInsights.SavedSearch("savedSearch", new AzureNative.OperationalInsights.SavedSearchArgs
+ *         {
+ *             Category = "Saved Search Test Category",
+ *             DisplayName = "Create or Update Saved Search Test",
+ *             FunctionAlias = "heartbeat_func",
+ *             FunctionParameters = "a:int=1",
+ *             Query = "Heartbeat | summarize Count() by Computer | take a",
+ *             ResourceGroupName = "TestRG",
+ *             SavedSearchId = "00000000-0000-0000-0000-00000000000",
+ *             Tags = 
+ *             {
+ *                 new AzureNative.OperationalInsights.Inputs.TagArgs
+ *                 {
+ *                     Name = "Group",
+ *                     Value = "Computer",
+ *                 },
+ *             },
+ *             Version = 2,
+ *             WorkspaceName = "TestWS",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewSavedSearch(ctx, "savedSearch", &operationalinsights.SavedSearchArgs{
+ * 			Category:           pulumi.String("Saved Search Test Category"),
+ * 			DisplayName:        pulumi.String("Create or Update Saved Search Test"),
+ * 			FunctionAlias:      pulumi.String("heartbeat_func"),
+ * 			FunctionParameters: pulumi.String("a:int=1"),
+ * 			Query:              pulumi.String("Heartbeat | summarize Count() by Computer | take a"),
+ * 			ResourceGroupName:  pulumi.String("TestRG"),
+ * 			SavedSearchId:      pulumi.String("00000000-0000-0000-0000-00000000000"),
+ * 			Tags: []operationalinsights.TagArgs{
+ * 				&operationalinsights.TagArgs{
+ * 					Name:  pulumi.String("Group"),
+ * 					Value: pulumi.String("Computer"),
+ * 				},
+ * 			},
+ * 			Version:       pulumi.Float64(2),
+ * 			WorkspaceName: pulumi.String("TestWS"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const savedSearch = new azure_native.operationalinsights.SavedSearch("savedSearch", {
+ *     category: "Saved Search Test Category",
+ *     displayName: "Create or Update Saved Search Test",
+ *     functionAlias: "heartbeat_func",
+ *     functionParameters: "a:int=1",
+ *     query: "Heartbeat | summarize Count() by Computer | take a",
+ *     resourceGroupName: "TestRG",
+ *     savedSearchId: "00000000-0000-0000-0000-00000000000",
+ *     tags: [{
+ *         name: "Group",
+ *         value: "Computer",
+ *     }],
+ *     version: 2,
+ *     workspaceName: "TestWS",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * saved_search = azure_native.operationalinsights.SavedSearch("savedSearch",
+ *     category="Saved Search Test Category",
+ *     display_name="Create or Update Saved Search Test",
+ *     function_alias="heartbeat_func",
+ *     function_parameters="a:int=1",
+ *     query="Heartbeat | summarize Count() by Computer | take a",
+ *     resource_group_name="TestRG",
+ *     saved_search_id="00000000-0000-0000-0000-00000000000",
+ *     tags=[azure_native.operationalinsights.TagArgs(
+ *         name="Group",
+ *         value="Computer",
+ *     )],
+ *     version=2,
+ *     workspace_name="TestWS")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,141 +151,121 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:operationalinsights:SavedSearch")
 public class SavedSearch extends io.pulumi.resources.CustomResource {
     /**
-     * The category of the saved search. This helps the user to find a saved search faster.
-     * 
+     * The category of the saved search. This helps the user to find a saved search faster. 
      */
     @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
-     * @return The category of the saved search. This helps the user to find a saved search faster.
-     * 
+     * @return The category of the saved search. This helps the user to find a saved search faster. 
      */
     public Output<String> getCategory() {
         return this.category;
     }
     /**
      * Saved search display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Saved search display name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The function alias if query serves as a function.
-     * 
      */
     @Export(name="functionAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAlias;
 
     /**
      * @return The function alias if query serves as a function.
-     * 
      */
     public Output</* @Nullable */ String> getFunctionAlias() {
         return this.functionAlias;
     }
     /**
      * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
-     * 
      */
     @Export(name="functionParameters", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionParameters;
 
     /**
      * @return The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
-     * 
      */
     public Output</* @Nullable */ String> getFunctionParameters() {
         return this.functionParameters;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The query expression for the saved search.
-     * 
      */
     @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
      * @return The query expression for the saved search.
-     * 
      */
     public Output<String> getQuery() {
         return this.query;
     }
     /**
      * The tags attached to the saved search.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TagResponse.class})
     private Output</* @Nullable */ List<TagResponse>> tags;
 
     /**
      * @return The tags attached to the saved search.
-     * 
      */
     public Output</* @Nullable */ List<TagResponse>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The version number of the query language. The current version is 2 and is the default.
-     * 
      */
     @Export(name="version", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> version;
 
     /**
      * @return The version number of the query language. The current version is 2 and is the default.
-     * 
      */
     public Output</* @Nullable */ Double> getVersion() {
         return this.version;

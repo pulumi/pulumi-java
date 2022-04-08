@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure VM workload-specific protected item representing SAP ASE Database.
- * 
  */
 public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -36,7 +34,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable String backupSetName;
@@ -47,7 +44,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable String containerName;
@@ -58,7 +54,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable String createMode;
@@ -69,7 +64,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable String deferredDeleteTimeInUTC;
@@ -80,7 +74,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable String deferredDeleteTimeRemaining;
@@ -91,7 +84,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Additional information for this backup item.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
@@ -102,7 +94,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Friendly name of the DB represented by this backup item.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -113,7 +104,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
@@ -124,7 +114,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Boolean isRehydrate;
@@ -135,7 +124,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Boolean isScheduledForDeferredDelete;
@@ -146,7 +134,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Health details of different KPIs
-     * 
      */
     @Import(name="kpisHealths")
       private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
@@ -157,7 +144,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Error details in last backup
-     * 
      */
     @Import(name="lastBackupErrorDetail")
       private final @Nullable ErrorDetailResponse lastBackupErrorDetail;
@@ -168,7 +154,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Last backup operation status. Possible values: Healthy, Unhealthy.
-     * 
      */
     @Import(name="lastBackupStatus")
       private final @Nullable String lastBackupStatus;
@@ -179,7 +164,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Timestamp of the last backup operation on this backup item.
-     * 
      */
     @Import(name="lastBackupTime")
       private final @Nullable String lastBackupTime;
@@ -190,7 +174,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable String lastRecoveryPoint;
@@ -201,7 +184,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Parent name of the DB such as Instance or Availability Group.
-     * 
      */
     @Import(name="parentName")
       private final @Nullable String parentName;
@@ -212,7 +194,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Parent type of protected item, example: for a DB, standalone server or distributed
-     * 
      */
     @Import(name="parentType")
       private final @Nullable String parentType;
@@ -223,7 +204,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable String policyId;
@@ -234,7 +214,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Data ID of the protected item.
-     * 
      */
     @Import(name="protectedItemDataSourceId")
       private final @Nullable String protectedItemDataSourceId;
@@ -245,7 +224,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Health status of the backup item, evaluated based on last heartbeat received
-     * 
      */
     @Import(name="protectedItemHealthStatus")
       private final @Nullable String protectedItemHealthStatus;
@@ -257,7 +235,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
     /**
      * backup item type.
      * Expected value is 'AzureVmWorkloadSAPAseDatabase'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final String protectedItemType;
@@ -268,7 +245,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable String protectionState;
@@ -279,7 +255,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Backup status of this backup item.
-     * 
      */
     @Import(name="protectionStatus")
       private final @Nullable String protectionStatus;
@@ -290,7 +265,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Host/Cluster Name for instance or AG
-     * 
      */
     @Import(name="serverName")
       private final @Nullable String serverName;
@@ -301,7 +275,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
@@ -312,7 +285,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable String workloadType;

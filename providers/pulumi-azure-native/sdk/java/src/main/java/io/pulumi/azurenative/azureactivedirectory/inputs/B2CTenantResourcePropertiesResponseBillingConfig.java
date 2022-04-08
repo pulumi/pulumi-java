@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The billing configuration for the tenant.
- * 
  */
 public final class B2CTenantResourcePropertiesResponseBillingConfig extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends io.p
 
     /**
      * The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
-     * 
      */
     @Import(name="billingType")
       private final @Nullable String billingType;
@@ -31,7 +29,6 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends io.p
 
     /**
      * The data from which the billing type took effect
-     * 
      */
     @Import(name="effectiveStartDateUtc", required=true)
       private final String effectiveStartDateUtc;

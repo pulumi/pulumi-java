@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A2A container mapping input.
- * 
  */
 public final class A2AContainerMappingInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
 
     /**
      * A value indicating whether the auto update is enabled.
-     * 
      */
     @Import(name="agentAutoUpdateStatus")
       private final @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
@@ -33,7 +31,6 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The automation account arm id.
-     * 
      */
     @Import(name="automationAccountArmId")
       private final @Nullable Output<String> automationAccountArmId;
@@ -45,7 +42,6 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     /**
      * The class type.
      * Expected value is 'A2A'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;

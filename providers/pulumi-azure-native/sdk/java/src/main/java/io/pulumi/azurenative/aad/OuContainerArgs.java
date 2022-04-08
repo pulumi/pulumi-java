@@ -16,7 +16,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account name
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -27,7 +26,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the domain service.
-     * 
      */
     @Import(name="domainServiceName", required=true)
       private final Output<String> domainServiceName;
@@ -38,7 +36,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the OuContainer.
-     * 
      */
     @Import(name="ouContainerName")
       private final @Nullable Output<String> ouContainerName;
@@ -49,7 +46,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account password
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -60,7 +56,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account spn
-     * 
      */
     @Import(name="spn")
       private final @Nullable Output<String> spn;

@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class NodeInfoResponse {
     /**
      * IP Configuration of the Kubernetes node.
-     * 
      */
     private final @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
     /**
      * Node name.
-     * 
      */
     private final String name;
     /**
      * Node type - Master/Worker
-     * 
      */
     private final String type;
 
@@ -40,21 +37,18 @@ public final class NodeInfoResponse {
 
     /**
      * IP Configuration of the Kubernetes node.
-     * 
     */
     public List<KubernetesIPConfigurationResponse> getIpConfiguration() {
         return this.ipConfiguration == null ? List.of() : this.ipConfiguration;
     }
     /**
      * Node name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Node type - Master/Worker
-     * 
     */
     public String getType() {
         return this.type;

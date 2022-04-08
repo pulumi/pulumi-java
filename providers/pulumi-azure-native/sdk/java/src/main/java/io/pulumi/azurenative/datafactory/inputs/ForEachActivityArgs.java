@@ -56,7 +56,6 @@ import javax.annotation.Nullable;
 
 /**
  * This activity is used for iterating over a collection and execute given activities.
- * 
  */
 public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -64,7 +63,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of activities to execute .
-     * 
      */
     @Import(name="activities", required=true)
       private final Output<List<Object>> activities;
@@ -75,7 +73,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
-     * 
      */
     @Import(name="batchCount")
       private final @Nullable Output<Integer> batchCount;
@@ -86,7 +83,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -97,7 +93,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -108,7 +103,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Should the loop be executed in sequence or in parallel (max 50)
-     * 
      */
     @Import(name="isSequential")
       private final @Nullable Output<Boolean> isSequential;
@@ -119,7 +113,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Collection to iterate.
-     * 
      */
     @Import(name="items", required=true)
       private final Output<ExpressionArgs> items;
@@ -130,7 +123,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -142,7 +134,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Type of activity.
      * Expected value is 'ForEach'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -153,7 +144,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

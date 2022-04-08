@@ -19,7 +19,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * Destination VM Group.
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<String> destination;
@@ -30,7 +29,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * Direction of port mirroring profile.
-     * 
      */
     @Import(name="direction")
       private final @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
@@ -41,7 +39,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * Display name of the port mirroring profile.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -52,7 +49,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * NSX Port Mirroring identifier. Generally the same as the Port Mirroring display name
-     * 
      */
     @Import(name="portMirroringId")
       private final @Nullable Output<String> portMirroringId;
@@ -63,7 +59,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -74,7 +69,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * NSX revision number.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
@@ -96,7 +89,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
 
     /**
      * Source VM Group.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;

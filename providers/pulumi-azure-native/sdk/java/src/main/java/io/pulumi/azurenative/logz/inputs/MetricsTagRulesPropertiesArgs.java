@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the properties for a TagRules resource.
- * 
  */
 public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
-     * 
      */
     @Import(name="sendMetrics")
       private final @Nullable Output<Boolean> sendMetrics;

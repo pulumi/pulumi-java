@@ -55,7 +55,6 @@ import javax.annotation.Nullable;
 
 /**
  * This activity evaluates an expression and executes activities under the cases property that correspond to the expression evaluation expected in the equals property.
- * 
  */
 public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -63,7 +62,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
-     * 
      */
     @Import(name="cases")
       private final @Nullable Output<List<SwitchCaseArgs>> cases;
@@ -74,7 +72,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
-     * 
      */
     @Import(name="defaultActivities")
       private final @Nullable Output<List<Object>> defaultActivities;
@@ -85,7 +82,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -96,7 +92,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -107,7 +102,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -118,7 +112,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
-     * 
      */
     @Import(name="on", required=true)
       private final Output<ExpressionArgs> on;
@@ -130,7 +123,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of activity.
      * Expected value is 'Switch'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -141,7 +133,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

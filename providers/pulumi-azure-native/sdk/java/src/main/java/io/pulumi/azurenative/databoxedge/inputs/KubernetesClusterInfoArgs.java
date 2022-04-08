@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Kubernetes cluster configuration
- * 
  */
 public final class KubernetesClusterInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class KubernetesClusterInfoArgs extends io.pulumi.resources.Resourc
 
     /**
      * Kubernetes cluster version
-     * 
      */
     @Import(name="version", required=true)
       private final Output<String> version;

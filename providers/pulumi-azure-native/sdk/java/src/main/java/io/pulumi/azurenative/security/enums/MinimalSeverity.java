@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Defines the minimal alert severity which will be sent as email notifications
-     * 
      */
     @EnumType
     public enum MinimalSeverity {
         /**
          * Get notifications on new alerts with High severity
-         * 
          */
         High("High"),
         /**
          * Get notifications on new alerts with medium or high severity
-         * 
          */
         Medium("Medium"),
         /**
          * Don't get notifications on new alerts with low, medium or high severity
-         * 
          */
         Low("Low");
 

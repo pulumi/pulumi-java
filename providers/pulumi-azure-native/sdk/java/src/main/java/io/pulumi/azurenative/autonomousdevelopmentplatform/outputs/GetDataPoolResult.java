@@ -14,37 +14,30 @@ import java.util.Objects;
 public final class GetDataPoolResult {
     /**
      * The Data Pool's data-plane ID
-     * 
      */
     private final String dataPoolId;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * Gets or sets the collection of locations where Data Pool resources should be created
-     * 
      */
     private final List<DataPoolLocationResponse> locations;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Gets the status of the data pool at the time the operation was called
-     * 
      */
     private final String provisioningState;
     /**
      * The system meta data relating to this resource
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -68,49 +61,42 @@ public final class GetDataPoolResult {
 
     /**
      * The Data Pool's data-plane ID
-     * 
     */
     public String getDataPoolId() {
         return this.dataPoolId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the collection of locations where Data Pool resources should be created
-     * 
     */
     public List<DataPoolLocationResponse> getLocations() {
         return this.locations;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the status of the data pool at the time the operation was called
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A reference to an Azure resource.
- * 
  */
 public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The fully qualified Azure resource id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Collection of instances belong to the Application Configuration Service
- * 
  */
 public final class ConfigurationServiceInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
 
     /**
      * Name of the Application Configuration Service instance
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
 
     /**
      * Status of the Application Configuration Service instance
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class GroupConnectivityInformationResponse {
     /**
      * List of customer visible FQDNs.
-     * 
      */
     private final @Nullable List<String> customerVisibleFqdns;
     /**
      * Group ID.
-     * 
      */
     private final String groupId;
     /**
      * Internal FQDN.
-     * 
      */
     private final String internalFqdn;
     /**
      * Member name.
-     * 
      */
     private final String memberName;
     /**
      * PrivateLinkService ARM region.
-     * 
      */
     private final @Nullable String privateLinkServiceArmRegion;
     /**
      * Redirect map ID.
-     * 
      */
     private final @Nullable String redirectMapId;
 
@@ -61,42 +55,36 @@ public final class GroupConnectivityInformationResponse {
 
     /**
      * List of customer visible FQDNs.
-     * 
     */
     public List<String> getCustomerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
     }
     /**
      * Group ID.
-     * 
     */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Internal FQDN.
-     * 
     */
     public String getInternalFqdn() {
         return this.internalFqdn;
     }
     /**
      * Member name.
-     * 
     */
     public String getMemberName() {
         return this.memberName;
     }
     /**
      * PrivateLinkService ARM region.
-     * 
     */
     public Optional<String> getPrivateLinkServiceArmRegion() {
         return Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
     /**
      * Redirect map ID.
-     * 
     */
     public Optional<String> getRedirectMapId() {
         return Optional.ofNullable(this.redirectMapId);

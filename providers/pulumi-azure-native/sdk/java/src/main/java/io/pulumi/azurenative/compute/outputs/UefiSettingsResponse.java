@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class UefiSettingsResponse {
     /**
      * Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
-     * 
      */
     private final @Nullable Boolean secureBootEnabled;
     /**
      * Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
-     * 
      */
     private final @Nullable Boolean vTpmEnabled;
 
@@ -32,14 +30,12 @@ public final class UefiSettingsResponse {
 
     /**
      * Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
-     * 
     */
     public Optional<Boolean> getSecureBootEnabled() {
         return Optional.ofNullable(this.secureBootEnabled);
     }
     /**
      * Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
-     * 
     */
     public Optional<Boolean> getVTpmEnabled() {
         return Optional.ofNullable(this.vTpmEnabled);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Customer Managed Identity
- * 
  */
 public final class MyWorkbookManagedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MyWorkbookManagedIdentityArgs extends io.pulumi.resources.Res
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

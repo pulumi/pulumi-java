@@ -21,7 +21,86 @@ import javax.annotation.Nullable;
  * Represents a Watchlist item in Azure Security Insights.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a watchlist item.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var watchlistItem = new AzureNative.SecurityInsights.WatchlistItem("watchlistItem", new AzureNative.SecurityInsights.WatchlistItemArgs
+ *         {
+ *             ItemsKeyValue = 
+ *             {
+ *                 { "Business tier", "10.0.2.0/24" },
+ *                 { "Data tier", "10.0.2.0/24" },
+ *                 { "Gateway subnet", "10.0.255.224/27" },
+ *                 { "Private DMZ in", "10.0.0.0/27" },
+ *                 { "Public DMZ out", "10.0.0.96/27" },
+ *                 { "Web Tier", "10.0.1.0/24" },
+ *             },
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+ *             ResourceGroupName = "myRg",
+ *             WatchlistAlias = "highValueAsset",
+ *             WatchlistItemId = "82ba292c-dc97-4dfc-969d-d4dd9e666842",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlistItem", {
+ *     itemsKeyValue: {
+ *         "Business tier": "10.0.2.0/24",
+ *         "Data tier": "10.0.2.0/24",
+ *         "Gateway subnet": "10.0.255.224/27",
+ *         "Private DMZ in": "10.0.0.0/27",
+ *         "Public DMZ out": "10.0.0.96/27",
+ *         "Web Tier": "10.0.1.0/24",
+ *     },
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+ *     resourceGroupName: "myRg",
+ *     watchlistAlias: "highValueAsset",
+ *     watchlistItemId: "82ba292c-dc97-4dfc-969d-d4dd9e666842",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * watchlist_item = azure_native.securityinsights.WatchlistItem("watchlistItem",
+ *     items_key_value={
+ *         "Business tier": "10.0.2.0/24",
+ *         "Data tier": "10.0.2.0/24",
+ *         "Gateway subnet": "10.0.255.224/27",
+ *         "Private DMZ in": "10.0.0.0/27",
+ *         "Public DMZ out": "10.0.0.96/27",
+ *         "Web Tier": "10.0.1.0/24",
+ *     },
+ *     operational_insights_resource_provider="Microsoft.OperationalInsights",
+ *     resource_group_name="myRg",
+ *     watchlist_alias="highValueAsset",
+ *     watchlist_item_id="82ba292c-dc97-4dfc-969d-d4dd9e666842",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,196 +115,168 @@ import javax.annotation.Nullable;
 public class WatchlistItem extends io.pulumi.resources.CustomResource {
     /**
      * The time the watchlist item was created
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output</* @Nullable */ String> created;
 
     /**
      * @return The time the watchlist item was created
-     * 
      */
     public Output</* @Nullable */ String> getCreated() {
         return this.created;
     }
     /**
      * Describes a user that created the watchlist item
-     * 
      */
     @Export(name="createdBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> createdBy;
 
     /**
      * @return Describes a user that created the watchlist item
-     * 
      */
     public Output</* @Nullable */ WatchlistUserInfoResponse> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * key-value pairs for a watchlist item entity mapping
-     * 
      */
     @Export(name="entityMapping", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> entityMapping;
 
     /**
      * @return key-value pairs for a watchlist item entity mapping
-     * 
      */
     public Output</* @Nullable */ Object> getEntityMapping() {
         return this.entityMapping;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * A flag that indicates if the watchlist item is deleted or not
-     * 
      */
     @Export(name="isDeleted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDeleted;
 
     /**
      * @return A flag that indicates if the watchlist item is deleted or not
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsDeleted() {
         return this.isDeleted;
     }
     /**
      * key-value pairs for a watchlist item
-     * 
      */
     @Export(name="itemsKeyValue", type=Object.class, parameters={})
     private Output<Object> itemsKeyValue;
 
     /**
      * @return key-value pairs for a watchlist item
-     * 
      */
     public Output<Object> getItemsKeyValue() {
         return this.itemsKeyValue;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The tenantId to which the watchlist item belongs to
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return The tenantId to which the watchlist item belongs to
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The last time the watchlist item was updated
-     * 
      */
     @Export(name="updated", type=String.class, parameters={})
     private Output</* @Nullable */ String> updated;
 
     /**
      * @return The last time the watchlist item was updated
-     * 
      */
     public Output</* @Nullable */ String> getUpdated() {
         return this.updated;
     }
     /**
      * Describes a user that updated the watchlist item
-     * 
      */
     @Export(name="updatedBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy;
 
     /**
      * @return Describes a user that updated the watchlist item
-     * 
      */
     public Output</* @Nullable */ WatchlistUserInfoResponse> getUpdatedBy() {
         return this.updatedBy;
     }
     /**
      * The id (a Guid) of the watchlist item
-     * 
      */
     @Export(name="watchlistItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistItemId;
 
     /**
      * @return The id (a Guid) of the watchlist item
-     * 
      */
     public Output</* @Nullable */ String> getWatchlistItemId() {
         return this.watchlistItemId;
     }
     /**
      * The type of the watchlist item
-     * 
      */
     @Export(name="watchlistItemType", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistItemType;
 
     /**
      * @return The type of the watchlist item
-     * 
      */
     public Output</* @Nullable */ String> getWatchlistItemType() {
         return this.watchlistItemType;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Json write settings.
- * 
  */
 public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
-     * 
      */
     @Import(name="filePattern")
       private final @Nullable Output<Object> filePattern;
@@ -33,7 +31,6 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     /**
      * The write setting type.
      * Expected value is 'JsonWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network access control rules for the endpoints.
- * 
  */
 public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
 
     /**
      * The configuration to set whether network access from public internet to the endpoints are allowed.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;

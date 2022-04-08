@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class DaprComponentResponse {
     /**
      * Component metadata
-     * 
      */
     private final @Nullable List<DaprMetadataResponse> metadata;
     /**
      * Component name
-     * 
      */
     private final @Nullable String name;
     /**
      * Component type
-     * 
      */
     private final @Nullable String type;
     /**
      * Component version
-     * 
      */
     private final @Nullable String version;
 
@@ -48,28 +44,24 @@ public final class DaprComponentResponse {
 
     /**
      * Component metadata
-     * 
     */
     public List<DaprMetadataResponse> getMetadata() {
         return this.metadata == null ? List.of() : this.metadata;
     }
     /**
      * Component name
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Component type
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Component version
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSIS package location.
- * 
  */
 public final class SSISPackageLocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The package access credential.
-     * 
      */
     @Import(name="accessCredential")
       private final @Nullable SSISAccessCredentialResponse accessCredential;
@@ -38,7 +36,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The embedded child package list.
-     * 
      */
     @Import(name="childPackages")
       private final @Nullable List<SSISChildPackageResponse> childPackages;
@@ -49,7 +46,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The configuration file access credential.
-     * 
      */
     @Import(name="configurationAccessCredential")
       private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
@@ -60,7 +56,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The configuration file of the package execution. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="configurationPath")
       private final @Nullable Object configurationPath;
@@ -71,7 +66,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The embedded package content. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="packageContent")
       private final @Nullable Object packageContent;
@@ -82,7 +76,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The embedded package last modified date.
-     * 
      */
     @Import(name="packageLastModifiedDate")
       private final @Nullable String packageLastModifiedDate;
@@ -93,7 +86,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The package name.
-     * 
      */
     @Import(name="packageName")
       private final @Nullable String packageName;
@@ -104,7 +96,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * Password of the package.
-     * 
      */
     @Import(name="packagePassword")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
@@ -115,7 +106,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The SSIS package path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="packagePath")
       private final @Nullable Object packagePath;
@@ -126,7 +116,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
 
     /**
      * The type of SSIS package location.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

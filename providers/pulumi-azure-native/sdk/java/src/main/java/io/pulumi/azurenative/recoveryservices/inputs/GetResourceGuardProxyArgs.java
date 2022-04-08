@@ -14,7 +14,6 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -32,7 +31,6 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

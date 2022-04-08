@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class AuthorizationResponse {
     /**
      * The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
-     * 
      */
     private final @Nullable List<String> delegatedRoleDefinitionIds;
     /**
      * Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
-     * 
      */
     private final String principalId;
     /**
      * Display name of the principal Id.
-     * 
      */
     private final @Nullable String principalIdDisplayName;
     /**
      * The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
-     * 
      */
     private final String roleDefinitionId;
 
@@ -47,28 +43,24 @@ public final class AuthorizationResponse {
 
     /**
      * The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
-     * 
     */
     public List<String> getDelegatedRoleDefinitionIds() {
         return this.delegatedRoleDefinitionIds == null ? List.of() : this.delegatedRoleDefinitionIds;
     }
     /**
      * Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Display name of the principal Id.
-     * 
     */
     public Optional<String> getPrincipalIdDisplayName() {
         return Optional.ofNullable(this.principalIdDisplayName);
     }
     /**
      * The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
-     * 
     */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;

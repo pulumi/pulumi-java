@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Cosmos DB Cassandra view resource object
- * 
  */
 public final class CassandraViewResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the Cosmos DB Cassandra view
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -30,7 +28,6 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
 
     /**
      * View Definition of the Cosmos DB Cassandra view
-     * 
      */
     @Import(name="viewDefinition", required=true)
       private final Output<String> viewDefinition;

@@ -14,7 +14,6 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the association.
-     * 
      */
     @Import(name="associationName", required=true)
       private final String associationName;
@@ -25,7 +24,6 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The scope of the association.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

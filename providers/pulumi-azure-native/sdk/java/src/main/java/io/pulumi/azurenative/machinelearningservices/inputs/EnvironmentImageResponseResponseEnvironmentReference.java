@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The unique identifying details of the AZURE ML environment.
- * 
  */
 public final class EnvironmentImageResponseResponseEnvironmentReference extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
 
     /**
      * Name of the environment.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
 
     /**
      * Version of the environment.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

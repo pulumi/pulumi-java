@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication type to use.
-     * 
      */
     @EnumType
     public enum ImpalaAuthenticationType {

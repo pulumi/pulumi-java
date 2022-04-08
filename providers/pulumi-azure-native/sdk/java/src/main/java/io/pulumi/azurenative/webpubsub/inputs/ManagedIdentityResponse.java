@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A class represent managed identities used for request and response
- * 
  */
 public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
     /**
      * Get the principal id for the system assigned identity.
      * Only be used in response.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -35,7 +33,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
     /**
      * Get the tenant id for the system assigned identity.
      * Only be used in response
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -46,7 +43,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Represent the identity type: systemAssigned, userAssigned, None
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -57,7 +53,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Get or set the user assigned identities
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities;

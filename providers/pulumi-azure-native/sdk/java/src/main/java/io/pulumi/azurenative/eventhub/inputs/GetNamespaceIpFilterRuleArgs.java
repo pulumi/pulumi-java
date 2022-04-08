@@ -14,7 +14,6 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
 
     /**
      * The IP Filter Rule name.
-     * 
      */
     @Import(name="ipFilterRuleName", required=true)
       private final String ipFilterRuleName;
@@ -25,7 +24,6 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

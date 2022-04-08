@@ -21,7 +21,215 @@ import javax.annotation.Nullable;
  * Data controller resource
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Data Controller.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataController = new AzureNative.AzureArcData.DataController("dataController", new AzureNative.AzureArcData.DataControllerArgs
+ *         {
+ *             DataControllerName = "testdataController",
+ *             ExtendedLocation = new AzureNative.AzureArcData.Inputs.ExtendedLocationArgs
+ *             {
+ *                 Name = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation",
+ *                 Type = "CustomLocation",
+ *             },
+ *             Location = "northeurope",
+ *             Properties = new AzureNative.AzureArcData.Inputs.DataControllerPropertiesArgs
+ *             {
+ *                 BasicLoginInformation = new AzureNative.AzureArcData.Inputs.BasicLoginInformationArgs
+ *                 {
+ *                     Password = "********",
+ *                     Username = "username",
+ *                 },
+ *                 LogAnalyticsWorkspaceConfig = new AzureNative.AzureArcData.Inputs.LogAnalyticsWorkspaceConfigArgs
+ *                 {
+ *                     PrimaryKey = "********",
+ *                     WorkspaceId = "00000000-1111-2222-3333-444444444444",
+ *                 },
+ *                 OnPremiseProperty = new AzureNative.AzureArcData.Inputs.OnPremisePropertyArgs
+ *                 {
+ *                     Id = "12345678-1234-1234-ab12-1a2b3c4d5e6f",
+ *                     PublicSigningKey = "publicOnPremSigningKey",
+ *                 },
+ *                 UploadServicePrincipal = new AzureNative.AzureArcData.Inputs.UploadServicePrincipalArgs
+ *                 {
+ *                     Authority = "https://login.microsoftonline.com/",
+ *                     ClientId = "00000000-1111-2222-3333-444444444444",
+ *                     ClientSecret = "********",
+ *                     TenantId = "00000000-1111-2222-3333-444444444444",
+ *                 },
+ *                 UploadWatermark = new AzureNative.AzureArcData.Inputs.UploadWatermarkArgs
+ *                 {
+ *                     Logs = "2020-01-01T17:18:19.1234567Z",
+ *                     Metrics = "2020-01-01T17:18:19.1234567Z",
+ *                     Usages = "2020-01-01T17:18:19.1234567Z",
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg",
+ *             Tags = 
+ *             {
+ *                 { "mytag", "myval" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azurearcdata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurearcdata"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azurearcdata.NewDataController(ctx, "dataController", &azurearcdata.DataControllerArgs{
+ * 			DataControllerName: pulumi.String("testdataController"),
+ * 			ExtendedLocation: &azurearcdata.ExtendedLocationArgs{
+ * 				Name: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation"),
+ * 				Type: pulumi.String("CustomLocation"),
+ * 			},
+ * 			Location: pulumi.String("northeurope"),
+ * 			Properties: &azurearcdata.DataControllerPropertiesArgs{
+ * 				BasicLoginInformation: &azurearcdata.BasicLoginInformationArgs{
+ * 					Password: pulumi.String("********"),
+ * 					Username: pulumi.String("username"),
+ * 				},
+ * 				LogAnalyticsWorkspaceConfig: &azurearcdata.LogAnalyticsWorkspaceConfigArgs{
+ * 					PrimaryKey:  pulumi.String("********"),
+ * 					WorkspaceId: pulumi.String("00000000-1111-2222-3333-444444444444"),
+ * 				},
+ * 				OnPremiseProperty: &azurearcdata.OnPremisePropertyArgs{
+ * 					Id:               pulumi.String("12345678-1234-1234-ab12-1a2b3c4d5e6f"),
+ * 					PublicSigningKey: pulumi.String("publicOnPremSigningKey"),
+ * 				},
+ * 				UploadServicePrincipal: &azurearcdata.UploadServicePrincipalArgs{
+ * 					Authority:    pulumi.String("https://login.microsoftonline.com/"),
+ * 					ClientId:     pulumi.String("00000000-1111-2222-3333-444444444444"),
+ * 					ClientSecret: pulumi.String("********"),
+ * 					TenantId:     pulumi.String("00000000-1111-2222-3333-444444444444"),
+ * 				},
+ * 				UploadWatermark: &azurearcdata.UploadWatermarkArgs{
+ * 					Logs:    pulumi.String("2020-01-01T17:18:19.1234567Z"),
+ * 					Metrics: pulumi.String("2020-01-01T17:18:19.1234567Z"),
+ * 					Usages:  pulumi.String("2020-01-01T17:18:19.1234567Z"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 			Tags: pulumi.StringMap{
+ * 				"mytag": pulumi.String("myval"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataController = new azure_native.azurearcdata.DataController("dataController", {
+ *     dataControllerName: "testdataController",
+ *     extendedLocation: {
+ *         name: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation",
+ *         type: "CustomLocation",
+ *     },
+ *     location: "northeurope",
+ *     properties: {
+ *         basicLoginInformation: {
+ *             password: "********",
+ *             username: "username",
+ *         },
+ *         logAnalyticsWorkspaceConfig: {
+ *             primaryKey: "********",
+ *             workspaceId: "00000000-1111-2222-3333-444444444444",
+ *         },
+ *         onPremiseProperty: {
+ *             id: "12345678-1234-1234-ab12-1a2b3c4d5e6f",
+ *             publicSigningKey: "publicOnPremSigningKey",
+ *         },
+ *         uploadServicePrincipal: {
+ *             authority: "https://login.microsoftonline.com/",
+ *             clientId: "00000000-1111-2222-3333-444444444444",
+ *             clientSecret: "********",
+ *             tenantId: "00000000-1111-2222-3333-444444444444",
+ *         },
+ *         uploadWatermark: {
+ *             logs: "2020-01-01T17:18:19.1234567Z",
+ *             metrics: "2020-01-01T17:18:19.1234567Z",
+ *             usages: "2020-01-01T17:18:19.1234567Z",
+ *         },
+ *     },
+ *     resourceGroupName: "testrg",
+ *     tags: {
+ *         mytag: "myval",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_controller = azure_native.azurearcdata.DataController("dataController",
+ *     data_controller_name="testdataController",
+ *     extended_location=azure_native.azurearcdata.ExtendedLocationArgs(
+ *         name="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation",
+ *         type="CustomLocation",
+ *     ),
+ *     location="northeurope",
+ *     properties=azure_native.azurearcdata.DataControllerPropertiesArgs(
+ *         basic_login_information=azure_native.azurearcdata.BasicLoginInformationArgs(
+ *             password="********",
+ *             username="username",
+ *         ),
+ *         log_analytics_workspace_config=azure_native.azurearcdata.LogAnalyticsWorkspaceConfigArgs(
+ *             primary_key="********",
+ *             workspace_id="00000000-1111-2222-3333-444444444444",
+ *         ),
+ *         on_premise_property=azure_native.azurearcdata.OnPremisePropertyArgs(
+ *             id="12345678-1234-1234-ab12-1a2b3c4d5e6f",
+ *             public_signing_key="publicOnPremSigningKey",
+ *         ),
+ *         upload_service_principal=azure_native.azurearcdata.UploadServicePrincipalArgs(
+ *             authority="https://login.microsoftonline.com/",
+ *             client_id="00000000-1111-2222-3333-444444444444",
+ *             client_secret="********",
+ *             tenant_id="00000000-1111-2222-3333-444444444444",
+ *         ),
+ *         upload_watermark=azure_native.azurearcdata.UploadWatermarkArgs(
+ *             logs="2020-01-01T17:18:19.1234567Z",
+ *             metrics="2020-01-01T17:18:19.1234567Z",
+ *             usages="2020-01-01T17:18:19.1234567Z",
+ *         ),
+ *     ),
+ *     resource_group_name="testrg",
+ *     tags={
+ *         "mytag": "myval",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,98 +244,84 @@ import javax.annotation.Nullable;
 public class DataController extends io.pulumi.resources.CustomResource {
     /**
      * The extendedLocation of the resource.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extendedLocation of the resource.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The data controller's properties
-     * 
      */
     @Export(name="properties", type=DataControllerPropertiesResponse.class, parameters={})
     private Output<DataControllerPropertiesResponse> properties;
 
     /**
      * @return The data controller's properties
-     * 
      */
     public Output<DataControllerPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

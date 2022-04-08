@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The service load metric relative weight, compared to other metrics configured for this service, as a number.
-     * 
      */
     @EnumType
     public enum ServiceLoadMetricWeight {
         /**
          * Disables resource balancing for this metric. This value is zero.
-         * 
          */
         Zero("Zero"),
         /**
          * Specifies the metric weight of the service load as Low. The value is 1.
-         * 
          */
         Low("Low"),
         /**
          * Specifies the metric weight of the service load as Medium. The value is 2.
-         * 
          */
         Medium("Medium"),
         /**
          * Specifies the metric weight of the service load as High. The value is 3.
-         * 
          */
         High("High");
 

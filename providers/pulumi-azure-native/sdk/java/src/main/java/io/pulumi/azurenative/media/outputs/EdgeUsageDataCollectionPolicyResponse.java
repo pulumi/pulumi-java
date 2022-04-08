@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class EdgeUsageDataCollectionPolicyResponse {
     /**
      * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-     * 
      */
     private final @Nullable String dataCollectionFrequency;
     /**
      * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-     * 
      */
     private final @Nullable String dataReportingFrequency;
     /**
      * Details of Event Hub where the usage will be reported.
-     * 
      */
     private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
     /**
      * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
-     * 
      */
     private final @Nullable String maxAllowedUnreportedUsageDuration;
 
@@ -47,28 +43,24 @@ public final class EdgeUsageDataCollectionPolicyResponse {
 
     /**
      * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-     * 
     */
     public Optional<String> getDataCollectionFrequency() {
         return Optional.ofNullable(this.dataCollectionFrequency);
     }
     /**
      * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-     * 
     */
     public Optional<String> getDataReportingFrequency() {
         return Optional.ofNullable(this.dataReportingFrequency);
     }
     /**
      * Details of Event Hub where the usage will be reported.
-     * 
     */
     public Optional<EdgeUsageDataEventHubResponse> getEventHubDetails() {
         return Optional.ofNullable(this.eventHubDetails);
     }
     /**
      * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
-     * 
     */
     public Optional<String> getMaxAllowedUnreportedUsageDuration() {
         return Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);

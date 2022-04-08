@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the connection monitor endpoint filter.
- * 
  */
 public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
 
     /**
      * List of items in the filter.
-     * 
      */
     @Import(name="items")
       private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
@@ -33,7 +31,6 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
 
     /**
      * The behavior of the endpoint filter. Currently only 'Include' is supported.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

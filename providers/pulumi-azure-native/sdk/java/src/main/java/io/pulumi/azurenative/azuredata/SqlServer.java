@@ -18,7 +18,99 @@ import javax.annotation.Nullable;
  * A SQL server.
  * API Version: 2019-07-24-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a SQL Server in a Registration group.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlServer = new AzureNative.AzureData.SqlServer("sqlServer", new AzureNative.AzureData.SqlServerArgs
+ *         {
+ *             Cores = 8,
+ *             Edition = "Latin",
+ *             PropertyBag = "",
+ *             RegistrationID = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+ *             ResourceGroupName = "testrg",
+ *             SqlServerName = "testsqlserver",
+ *             SqlServerRegistrationName = "testsqlregistration",
+ *             Version = "2008",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azuredata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azuredata"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azuredata.NewSqlServer(ctx, "sqlServer", &azuredata.SqlServerArgs{
+ * 			Cores:                     pulumi.Int(8),
+ * 			Edition:                   pulumi.String("Latin"),
+ * 			PropertyBag:               pulumi.String(""),
+ * 			RegistrationID:            pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration"),
+ * 			ResourceGroupName:         pulumi.String("testrg"),
+ * 			SqlServerName:             pulumi.String("testsqlserver"),
+ * 			SqlServerRegistrationName: pulumi.String("testsqlregistration"),
+ * 			Version:                   pulumi.String("2008"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlServer = new azure_native.azuredata.SqlServer("sqlServer", {
+ *     cores: 8,
+ *     edition: "Latin",
+ *     propertyBag: "",
+ *     registrationID: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+ *     resourceGroupName: "testrg",
+ *     sqlServerName: "testsqlserver",
+ *     sqlServerRegistrationName: "testsqlregistration",
+ *     version: "2008",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_server = azure_native.azuredata.SqlServer("sqlServer",
+ *     cores=8,
+ *     edition="Latin",
+ *     property_bag="",
+ *     registration_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+ *     resource_group_name="testrg",
+ *     sql_server_name="testsqlserver",
+ *     sql_server_registration_name="testsqlregistration",
+ *     version="2008")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +125,84 @@ import javax.annotation.Nullable;
 public class SqlServer extends io.pulumi.resources.CustomResource {
     /**
      * Cores of the Sql Server.
-     * 
      */
     @Export(name="cores", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cores;
 
     /**
      * @return Cores of the Sql Server.
-     * 
      */
     public Output</* @Nullable */ Integer> getCores() {
         return this.cores;
     }
     /**
      * Sql Server Edition.
-     * 
      */
     @Export(name="edition", type=String.class, parameters={})
     private Output</* @Nullable */ String> edition;
 
     /**
      * @return Sql Server Edition.
-     * 
      */
     public Output</* @Nullable */ String> getEdition() {
         return this.edition;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Sql Server Json Property Bag.
-     * 
      */
     @Export(name="propertyBag", type=String.class, parameters={})
     private Output</* @Nullable */ String> propertyBag;
 
     /**
      * @return Sql Server Json Property Bag.
-     * 
      */
     public Output</* @Nullable */ String> getPropertyBag() {
         return this.propertyBag;
     }
     /**
      * ID for Parent Sql Server Registration.
-     * 
      */
     @Export(name="registrationID", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationID;
 
     /**
      * @return ID for Parent Sql Server Registration.
-     * 
      */
     public Output</* @Nullable */ String> getRegistrationID() {
         return this.registrationID;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version of the Sql Server.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
      * @return Version of the Sql Server.
-     * 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state.
-     * 
      */
     @EnumType
     public enum SubscriptionFeatureRegistrationState {

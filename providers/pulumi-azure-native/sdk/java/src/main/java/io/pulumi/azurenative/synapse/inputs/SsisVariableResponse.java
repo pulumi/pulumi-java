@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ssis variable.
- * 
  */
 public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Variable type.
-     * 
      */
     @Import(name="dataType")
       private final @Nullable String dataType;
@@ -33,7 +31,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Variable description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -44,7 +41,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Variable id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Double id;
@@ -55,7 +51,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Variable name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -66,7 +61,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether variable is sensitive.
-     * 
      */
     @Import(name="sensitive")
       private final @Nullable Boolean sensitive;
@@ -77,7 +71,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Variable sensitive value.
-     * 
      */
     @Import(name="sensitiveValue")
       private final @Nullable String sensitiveValue;
@@ -88,7 +81,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Variable value.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Initial replication details.
- * 
  */
 public final class InitialReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class InitialReplicationDetailsResponse extends io.pulumi.resources
 
     /**
      * The initial replication progress percentage.
-     * 
      */
     @Import(name="initialReplicationProgressPercentage")
       private final @Nullable String initialReplicationProgressPercentage;
@@ -31,7 +29,6 @@ public final class InitialReplicationDetailsResponse extends io.pulumi.resources
 
     /**
      * Initial replication type.
-     * 
      */
     @Import(name="initialReplicationType")
       private final @Nullable String initialReplicationType;

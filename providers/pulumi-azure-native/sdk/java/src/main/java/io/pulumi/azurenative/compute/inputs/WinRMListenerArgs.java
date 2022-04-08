@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes Protocol and thumbprint of Windows Remote Management listener
- * 
  */
 public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br> "data":"<Base64-encoded-certificate>",<br> "dataType":"pfx",<br> "password":"<pfx-file-password>"<br>} <br> To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
-     * 
      */
     @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
@@ -32,7 +30,6 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<ProtocolTypes> protocol;

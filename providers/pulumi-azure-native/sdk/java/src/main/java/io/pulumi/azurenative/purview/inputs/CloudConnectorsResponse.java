@@ -15,7 +15,6 @@ public final class CloudConnectorsResponse extends io.pulumi.resources.InvokeArg
     /**
      * AWS external identifier.
      * Configured in AWS to allow use of the role arn used for scanning
-     * 
      */
     @Import(name="awsExternalId", required=true)
       private final String awsExternalId;

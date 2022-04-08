@@ -19,7 +19,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the job action.
-     * 
      */
     @Import(name="action")
       private final @Nullable JobActionResponse action;
@@ -30,7 +29,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the job recurrence.
-     * 
      */
     @Import(name="recurrence")
       private final @Nullable JobRecurrenceResponse recurrence;
@@ -41,7 +39,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the job start time.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -52,7 +49,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or set the job state.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;
@@ -63,7 +59,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Gets the job status.
-     * 
      */
     @Import(name="status", required=true)
       private final JobStatusResponse status;

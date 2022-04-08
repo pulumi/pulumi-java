@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * Datasources under OMS Workspace.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataSourcesCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataSource = new AzureNative.OperationalInsights.DataSource("dataSource", new AzureNative.OperationalInsights.DataSourceArgs
+ *         {
+ *             DataSourceName = "AzTestDS774",
+ *             Kind = "AzureActivityLog",
+ *             Properties = 
+ *             {
+ *                 { "LinkedResourceId", "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management" },
+ *             },
+ *             ResourceGroupName = "OIAutoRest5123",
+ *             WorkspaceName = "AzTest9724",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewDataSource(ctx, "dataSource", &operationalinsights.DataSourceArgs{
+ * 			DataSourceName: pulumi.String("AzTestDS774"),
+ * 			Kind:           pulumi.String("AzureActivityLog"),
+ * 			Properties: pulumi.Any{
+ * 				LinkedResourceId: "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("OIAutoRest5123"),
+ * 			WorkspaceName:     pulumi.String("AzTest9724"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataSource = new azure_native.operationalinsights.DataSource("dataSource", {
+ *     dataSourceName: "AzTestDS774",
+ *     kind: "AzureActivityLog",
+ *     properties: {
+ *         LinkedResourceId: "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management",
+ *     },
+ *     resourceGroupName: "OIAutoRest5123",
+ *     workspaceName: "AzTest9724",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_source = azure_native.operationalinsights.DataSource("dataSource",
+ *     data_source_name="AzTestDS774",
+ *     kind="AzureActivityLog",
+ *     properties={
+ *         "LinkedResourceId": "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management",
+ *     },
+ *     resource_group_name="OIAutoRest5123",
+ *     workspace_name="AzTest9724")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +123,72 @@ import javax.annotation.Nullable;
 public class DataSource extends io.pulumi.resources.CustomResource {
     /**
      * The ETag of the data source.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The ETag of the data source.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The kind of the DataSource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of the DataSource.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The data source properties in raw json format, each kind of data source have it's own schema.
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return The data source properties in raw json format, each kind of data source have it's own schema.
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

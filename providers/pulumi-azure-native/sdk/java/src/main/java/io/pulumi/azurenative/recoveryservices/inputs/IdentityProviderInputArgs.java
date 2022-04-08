@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Identity provider input.
- * 
  */
 public final class IdentityProviderInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
 
     /**
      * The base authority for Azure Active Directory authentication.
-     * 
      */
     @Import(name="aadAuthority", required=true)
       private final Output<String> aadAuthority;
@@ -30,7 +28,6 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
 
     /**
      * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
@@ -41,7 +38,6 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
 
     /**
      * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="audience", required=true)
       private final Output<String> audience;
@@ -52,7 +48,6 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
 
     /**
      * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
@@ -63,7 +58,6 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
 
     /**
      * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;

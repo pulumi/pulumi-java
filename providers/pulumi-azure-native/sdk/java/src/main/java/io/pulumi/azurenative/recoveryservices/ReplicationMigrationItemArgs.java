@@ -17,7 +17,6 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
 
     /**
      * Fabric name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
@@ -28,7 +27,6 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
 
     /**
      * Migration item name.
-     * 
      */
     @Import(name="migrationItemName")
       private final @Nullable Output<String> migrationItemName;
@@ -39,7 +37,6 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
 
     /**
      * Enable migration input properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<EnableMigrationInputPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
 
     /**
      * Protection container name.
-     * 
      */
     @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
@@ -61,7 +57,6 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The detector information. By default this is not populated, unless it's specified in expandDetector
- * 
  */
 public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The detector id.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -45,7 +42,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="imagePaths")
       private final @Nullable Output<List<String>> imagePaths;
@@ -56,7 +52,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +62,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The detector's parameters.'
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
@@ -78,7 +72,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
-     * 
      */
     @Import(name="supportedResourceTypes")
       private final @Nullable Output<List<String>> supportedResourceTypes;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * vCenter Single Sign On Identity Source
- * 
  */
 public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The domain's NetBIOS name
-     * 
      */
     @Import(name="alias")
       private final @Nullable String alias;
@@ -31,7 +29,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The base distinguished name for groups
-     * 
      */
     @Import(name="baseGroupDN")
       private final @Nullable String baseGroupDN;
@@ -42,7 +39,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The base distinguished name for users
-     * 
      */
     @Import(name="baseUserDN")
       private final @Nullable String baseUserDN;
@@ -53,7 +49,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The domain's dns name
-     * 
      */
     @Import(name="domain")
       private final @Nullable String domain;
@@ -64,7 +59,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the identity source
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -75,7 +69,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -86,7 +79,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Primary server URL
-     * 
      */
     @Import(name="primaryServer")
       private final @Nullable String primaryServer;
@@ -97,7 +89,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Secondary server URL
-     * 
      */
     @Import(name="secondaryServer")
       private final @Nullable String secondaryServer;
@@ -108,7 +99,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Protect LDAP communication using SSL certificate (LDAPS)
-     * 
      */
     @Import(name="ssl")
       private final @Nullable String ssl;
@@ -119,7 +109,6 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

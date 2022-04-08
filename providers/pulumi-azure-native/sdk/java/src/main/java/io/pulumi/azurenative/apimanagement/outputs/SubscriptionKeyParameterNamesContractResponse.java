@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class SubscriptionKeyParameterNamesContractResponse {
     /**
      * Subscription key header name.
-     * 
      */
     private final @Nullable String header;
     /**
      * Subscription key query string parameter name.
-     * 
      */
     private final @Nullable String query;
 
@@ -32,14 +30,12 @@ public final class SubscriptionKeyParameterNamesContractResponse {
 
     /**
      * Subscription key header name.
-     * 
     */
     public Optional<String> getHeader() {
         return Optional.ofNullable(this.header);
     }
     /**
      * Subscription key query string parameter name.
-     * 
     */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);

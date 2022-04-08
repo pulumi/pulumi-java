@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption settings on the storage account.
- * 
  */
 public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity to be used with service-side encryption at rest.
-     * 
      */
     @Import(name="encryptionIdentity")
       private final @Nullable EncryptionIdentityResponse encryptionIdentity;
@@ -35,7 +33,6 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
-     * 
      */
     @Import(name="keySource", required=true)
       private final String keySource;
@@ -46,7 +43,6 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Properties provided by key vault.
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
@@ -57,7 +53,6 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
-     * 
      */
     @Import(name="requireInfrastructureEncryption")
       private final @Nullable Boolean requireInfrastructureEncryption;
@@ -68,7 +63,6 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of services which support encryption.
-     * 
      */
     @Import(name="services")
       private final @Nullable EncryptionServicesResponse services;

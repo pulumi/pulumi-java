@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * DiskExclusionInput when doing enable protection of virtual machine in InMage provider.
- * 
  */
 public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The guest disk signature based option for disk exclusion.
-     * 
      */
     @Import(name="diskSignatureOptions")
       private final @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
@@ -33,7 +31,6 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The volume label based option for disk exclusion.
-     * 
      */
     @Import(name="volumeOptions")
       private final @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;

@@ -14,7 +14,6 @@ public final class GetControllerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetControllerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

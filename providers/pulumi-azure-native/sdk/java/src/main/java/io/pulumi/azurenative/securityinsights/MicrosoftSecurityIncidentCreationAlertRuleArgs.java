@@ -21,7 +21,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * The Name of the alert rule template used to create this rule.
-     * 
      */
     @Import(name="alertRuleTemplateName")
       private final @Nullable Output<String> alertRuleTemplateName;
@@ -32,7 +31,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * The description of the alert rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * The display name for alerts created by this alert rule.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -54,7 +51,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * the alerts' displayNames on which the cases will not be generated
-     * 
      */
     @Import(name="displayNamesExcludeFilter")
       private final @Nullable Output<List<String>> displayNamesExcludeFilter;
@@ -65,7 +61,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * the alerts' displayNames on which the cases will be generated
-     * 
      */
     @Import(name="displayNamesFilter")
       private final @Nullable Output<List<String>> displayNamesFilter;
@@ -76,7 +71,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * Determines whether this alert rule is enabled or disabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -88,7 +82,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     /**
      * The kind of the alert rule
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -99,7 +92,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * The alerts' productName on which the cases will be generated
-     * 
      */
     @Import(name="productFilter", required=true)
       private final Output<Either<String,MicrosoftSecurityProductName>> productFilter;
@@ -110,7 +102,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -121,7 +112,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * Alert rule ID
-     * 
      */
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
@@ -132,7 +122,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * the alerts' severities on which the cases will be generated
-     * 
      */
     @Import(name="severitiesFilter")
       private final @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
@@ -143,7 +132,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The TLS properties of the connected registry login server.
- * 
  */
 public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The certificate used to configure HTTPS for the login server.
-     * 
      */
     @Import(name="certificate", required=true)
       private final TlsCertificatePropertiesResponse certificate;
@@ -30,7 +28,6 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates whether HTTPS is enabled for the login server.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

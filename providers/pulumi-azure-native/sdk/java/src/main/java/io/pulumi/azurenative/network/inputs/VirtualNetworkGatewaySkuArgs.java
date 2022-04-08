@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * VirtualNetworkGatewaySku details.
- * 
  */
 public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
 
     /**
      * Gateway SKU name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
@@ -34,7 +32,6 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
 
     /**
      * Gateway SKU tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;

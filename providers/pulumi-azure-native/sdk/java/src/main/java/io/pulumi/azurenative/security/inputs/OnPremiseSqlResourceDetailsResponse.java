@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the On Premise Sql resource that was assessed
- * 
  */
 public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
 
     /**
      * The Sql database name installed on the machine
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -29,7 +27,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
 
     /**
      * The name of the machine
-     * 
      */
     @Import(name="machineName", required=true)
       private final String machineName;
@@ -40,7 +37,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
 
     /**
      * The Sql server name installed on the machine
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;
@@ -52,7 +48,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
     /**
      * The platform where the assessed resource resides
      * Expected value is 'OnPremiseSql'.
-     * 
      */
     @Import(name="source", required=true)
       private final String source;
@@ -63,7 +58,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
 
     /**
      * The oms agent Id installed on the machine
-     * 
      */
     @Import(name="sourceComputerId", required=true)
       private final String sourceComputerId;
@@ -74,7 +68,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
 
     /**
      * The unique Id of the machine
-     * 
      */
     @Import(name="vmuuid", required=true)
       private final String vmuuid;
@@ -85,7 +78,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
 
     /**
      * Azure resource Id of the workspace the machine is attached to
-     * 
      */
     @Import(name="workspaceId", required=true)
       private final String workspaceId;

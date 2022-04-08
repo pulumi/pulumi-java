@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameter definition for a module asset.
- * 
  */
 public final class ModuleAssetParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
 
     /**
      * Definitions for nested interface parameters if this is a complex module parameter.
-     * 
      */
     @Import(name="modeValuesInfo")
       private final @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
@@ -33,7 +31,6 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
 
     /**
      * Parameter name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -44,7 +41,6 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
 
     /**
      * Parameter type.
-     * 
      */
     @Import(name="parameterType")
       private final @Nullable Output<String> parameterType;

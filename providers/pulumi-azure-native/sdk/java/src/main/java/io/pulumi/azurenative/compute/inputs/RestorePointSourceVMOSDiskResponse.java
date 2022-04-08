@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an Operating System disk.
- * 
  */
 public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
 
     /**
      * Gets the caching type.
-     * 
      */
     @Import(name="caching")
       private final @Nullable String caching;
@@ -35,7 +33,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
 
     /**
      * Gets the disk restore point Id.
-     * 
      */
     @Import(name="diskRestorePoint")
       private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
@@ -46,7 +43,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
 
     /**
      * Gets the disk size in GB.
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
@@ -57,7 +53,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
 
     /**
      * Gets the disk encryption settings.
-     * 
      */
     @Import(name="encryptionSettings")
       private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
@@ -68,7 +63,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
 
     /**
      * Gets the managed disk details
-     * 
      */
     @Import(name="managedDisk")
       private final @Nullable ManagedDiskParametersResponse managedDisk;
@@ -79,7 +73,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
 
     /**
      * Gets the disk name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -90,7 +83,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
 
     /**
      * Gets the Operating System type.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;

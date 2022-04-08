@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Allows to disable rules within a rule group or an entire rule group.
- * 
  */
 public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
 
     /**
      * The name of the rule group that will be disabled.
-     * 
      */
     @Import(name="ruleGroupName", required=true)
       private final Output<String> ruleGroupName;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
 
     /**
      * The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<Integer>> rules;

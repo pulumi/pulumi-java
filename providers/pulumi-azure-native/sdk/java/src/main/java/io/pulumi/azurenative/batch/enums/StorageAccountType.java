@@ -13,18 +13,15 @@ import java.util.StringJoiner;
      * 
      *  Standard_LRS - The data disk should use standard locally redundant storage.
      *  Premium_LRS - The data disk should use premium locally redundant storage.
-     * 
      */
     @EnumType
     public enum StorageAccountType {
         /**
          * The data disk should use standard locally redundant storage.
-         * 
          */
         Standard_LRS("Standard_LRS"),
         /**
          * The data disk should use premium locally redundant storage.
-         * 
          */
         Premium_LRS("Premium_LRS");
 

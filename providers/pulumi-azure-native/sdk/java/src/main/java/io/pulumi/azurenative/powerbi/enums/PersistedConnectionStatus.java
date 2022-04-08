@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Status of the connection.
-     * 
      */
     @EnumType
     public enum PersistedConnectionStatus {

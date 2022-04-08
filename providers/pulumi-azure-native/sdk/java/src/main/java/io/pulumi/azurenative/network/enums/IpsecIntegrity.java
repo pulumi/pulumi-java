@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The IPSec integrity algorithm (IKE phase 1).
-     * 
      */
     @EnumType
     public enum IpsecIntegrity {

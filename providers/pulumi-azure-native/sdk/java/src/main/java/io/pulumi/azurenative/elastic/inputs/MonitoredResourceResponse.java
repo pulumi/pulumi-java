@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a resource currently being monitored by the Elastic monitor resource.
- * 
  */
 public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ARM id of the resource.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
-     * 
      */
     @Import(name="reasonForLogsStatus")
       private final @Nullable String reasonForLogsStatus;
@@ -42,7 +39,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag indicating the status of the resource for sending logs operation to Elastic.
-     * 
      */
     @Import(name="sendingLogs")
       private final @Nullable String sendingLogs;

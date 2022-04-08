@@ -18,7 +18,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the Test Base Customer event.
-     * 
      */
     @Import(name="customerEventName")
       private final @Nullable Output<String> customerEventName;
@@ -29,7 +28,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the event subscribed to.
-     * 
      */
     @Import(name="eventName", required=true)
       private final Output<String> eventName;
@@ -40,7 +38,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The notification event receivers.
-     * 
      */
     @Import(name="receivers", required=true)
       private final Output<List<NotificationEventReceiverArgs>> receivers;
@@ -51,7 +48,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;

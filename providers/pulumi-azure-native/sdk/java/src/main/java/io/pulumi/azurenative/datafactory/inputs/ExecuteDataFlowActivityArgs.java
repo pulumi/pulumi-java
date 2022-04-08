@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Execute data flow activity.
- * 
  */
 public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Compute properties for data flow activity.
-     * 
      */
     @Import(name="compute")
       private final @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
@@ -41,7 +39,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
-     * 
      */
     @Import(name="continueOnError")
       private final @Nullable Output<Object> continueOnError;
@@ -52,7 +49,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Data flow reference.
-     * 
      */
     @Import(name="dataFlow", required=true)
       private final Output<DataFlowReferenceArgs> dataFlow;
@@ -63,7 +59,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -74,7 +69,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -85,7 +79,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="integrationRuntime")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime;
@@ -96,7 +89,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -107,7 +99,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -118,7 +109,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -129,7 +119,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
-     * 
      */
     @Import(name="runConcurrently")
       private final @Nullable Output<Object> runConcurrently;
@@ -140,7 +129,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Staging info for execute data flow activity.
-     * 
      */
     @Import(name="staging")
       private final @Nullable Output<DataFlowStagingInfoArgs> staging;
@@ -151,7 +139,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="traceLevel")
       private final @Nullable Output<Object> traceLevel;
@@ -163,7 +150,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
     /**
      * Type of activity.
      * Expected value is 'ExecuteDataFlow'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -174,7 +160,6 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

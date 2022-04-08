@@ -18,7 +18,418 @@ import javax.annotation.Nullable;
  * The cost allocation rule model definition
  * API Version: 2020-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CostAllocationRulesCreateResourceGroup
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var costAllocationRule = new AzureNative.CostManagement.CostAllocationRule("costAllocationRule", new AzureNative.CostManagement.CostAllocationRuleArgs
+ *         {
+ *             BillingAccountId = "100",
+ *             Properties = new AzureNative.CostManagement.Inputs.CostAllocationRulePropertiesArgs
+ *             {
+ *                 Description = "This is a testRule",
+ *                 Details = new AzureNative.CostManagement.Inputs.CostAllocationRuleDetailsArgs
+ *                 {
+ *                     SourceResources = 
+ *                     {
+ *                         new AzureNative.CostManagement.Inputs.SourceCostAllocationResourceArgs
+ *                         {
+ *                             Name = "ResourceGroupName",
+ *                             ResourceType = "Dimension",
+ *                             Values = 
+ *                             {
+ *                                 "sampleRG",
+ *                                 "secondRG",
+ *                             },
+ *                         },
+ *                     },
+ *                     TargetResources = 
+ *                     {
+ *                         new AzureNative.CostManagement.Inputs.TargetCostAllocationResourceArgs
+ *                         {
+ *                             Name = "ResourceGroupName",
+ *                             PolicyType = "FixedProportion",
+ *                             ResourceType = "Dimension",
+ *                             Values = 
+ *                             {
+ *                                 new AzureNative.CostManagement.Inputs.CostAllocationProportionArgs
+ *                                 {
+ *                                     Name = "destinationRG",
+ *                                     Percentage = 45,
+ *                                 },
+ *                                 new AzureNative.CostManagement.Inputs.CostAllocationProportionArgs
+ *                                 {
+ *                                     Name = "destinationRG2",
+ *                                     Percentage = 54,
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 Status = "Active",
+ *             },
+ *             RuleName = "testRule",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	costmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/costmanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := costmanagement.NewCostAllocationRule(ctx, "costAllocationRule", &costmanagement.CostAllocationRuleArgs{
+ * 			BillingAccountId: pulumi.String("100"),
+ * 			Properties: &costmanagement.CostAllocationRulePropertiesArgs{
+ * 				Description: pulumi.String("This is a testRule"),
+ * 				Details: &costmanagement.CostAllocationRuleDetailsArgs{
+ * 					SourceResources: costmanagement.SourceCostAllocationResourceArray{
+ * 						&costmanagement.SourceCostAllocationResourceArgs{
+ * 							Name:         pulumi.String("ResourceGroupName"),
+ * 							ResourceType: pulumi.String("Dimension"),
+ * 							Values: pulumi.StringArray{
+ * 								pulumi.String("sampleRG"),
+ * 								pulumi.String("secondRG"),
+ * 							},
+ * 						},
+ * 					},
+ * 					TargetResources: costmanagement.TargetCostAllocationResourceArray{
+ * 						&costmanagement.TargetCostAllocationResourceArgs{
+ * 							Name:         pulumi.String("ResourceGroupName"),
+ * 							PolicyType:   pulumi.String("FixedProportion"),
+ * 							ResourceType: pulumi.String("Dimension"),
+ * 							Values: costmanagement.CostAllocationProportionArray{
+ * 								&costmanagement.CostAllocationProportionArgs{
+ * 									Name:       pulumi.String("destinationRG"),
+ * 									Percentage: pulumi.Float64(45),
+ * 								},
+ * 								&costmanagement.CostAllocationProportionArgs{
+ * 									Name:       pulumi.String("destinationRG2"),
+ * 									Percentage: pulumi.Float64(54),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				Status: pulumi.String("Active"),
+ * 			},
+ * 			RuleName: pulumi.String("testRule"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("costAllocationRule", {
+ *     billingAccountId: "100",
+ *     properties: {
+ *         description: "This is a testRule",
+ *         details: {
+ *             sourceResources: [{
+ *                 name: "ResourceGroupName",
+ *                 resourceType: "Dimension",
+ *                 values: [
+ *                     "sampleRG",
+ *                     "secondRG",
+ *                 ],
+ *             }],
+ *             targetResources: [{
+ *                 name: "ResourceGroupName",
+ *                 policyType: "FixedProportion",
+ *                 resourceType: "Dimension",
+ *                 values: [
+ *                     {
+ *                         name: "destinationRG",
+ *                         percentage: 45,
+ *                     },
+ *                     {
+ *                         name: "destinationRG2",
+ *                         percentage: 54,
+ *                     },
+ *                 ],
+ *             }],
+ *         },
+ *         status: "Active",
+ *     },
+ *     ruleName: "testRule",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cost_allocation_rule = azure_native.costmanagement.CostAllocationRule("costAllocationRule",
+ *     billing_account_id="100",
+ *     properties=azure_native.costmanagement.CostAllocationRulePropertiesArgs(
+ *         description="This is a testRule",
+ *         details=azure_native.costmanagement.CostAllocationRuleDetailsArgs(
+ *             source_resources=[azure_native.costmanagement.SourceCostAllocationResourceArgs(
+ *                 name="ResourceGroupName",
+ *                 resource_type="Dimension",
+ *                 values=[
+ *                     "sampleRG",
+ *                     "secondRG",
+ *                 ],
+ *             )],
+ *             target_resources=[azure_native.costmanagement.TargetCostAllocationResourceArgs(
+ *                 name="ResourceGroupName",
+ *                 policy_type="FixedProportion",
+ *                 resource_type="Dimension",
+ *                 values=[
+ *                     azure_native.costmanagement.CostAllocationProportionArgs(
+ *                         name="destinationRG",
+ *                         percentage=45,
+ *                     ),
+ *                     azure_native.costmanagement.CostAllocationProportionArgs(
+ *                         name="destinationRG2",
+ *                         percentage=54,
+ *                     ),
+ *                 ],
+ *             )],
+ *         ),
+ *         status="Active",
+ *     ),
+ *     rule_name="testRule")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### CostAllocationRulesCreateTag
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var costAllocationRule = new AzureNative.CostManagement.CostAllocationRule("costAllocationRule", new AzureNative.CostManagement.CostAllocationRuleArgs
+ *         {
+ *             BillingAccountId = "100",
+ *             Properties = new AzureNative.CostManagement.Inputs.CostAllocationRulePropertiesArgs
+ *             {
+ *                 Description = "This is a testRule",
+ *                 Details = new AzureNative.CostManagement.Inputs.CostAllocationRuleDetailsArgs
+ *                 {
+ *                     SourceResources = 
+ *                     {
+ *                         new AzureNative.CostManagement.Inputs.SourceCostAllocationResourceArgs
+ *                         {
+ *                             Name = "category",
+ *                             ResourceType = "Tag",
+ *                             Values = 
+ *                             {
+ *                                 "devops",
+ *                             },
+ *                         },
+ *                     },
+ *                     TargetResources = 
+ *                     {
+ *                         new AzureNative.CostManagement.Inputs.TargetCostAllocationResourceArgs
+ *                         {
+ *                             Name = "ResourceGroupName",
+ *                             PolicyType = "FixedProportion",
+ *                             ResourceType = "Dimension",
+ *                             Values = 
+ *                             {
+ *                                 new AzureNative.CostManagement.Inputs.CostAllocationProportionArgs
+ *                                 {
+ *                                     Name = "destinationRG",
+ *                                     Percentage = 33.33,
+ *                                 },
+ *                                 new AzureNative.CostManagement.Inputs.CostAllocationProportionArgs
+ *                                 {
+ *                                     Name = "destinationRG2",
+ *                                     Percentage = 33.33,
+ *                                 },
+ *                                 new AzureNative.CostManagement.Inputs.CostAllocationProportionArgs
+ *                                 {
+ *                                     Name = "destinationRG3",
+ *                                     Percentage = 33.34,
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 Status = "Active",
+ *             },
+ *             RuleName = "testRule",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	costmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/costmanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := costmanagement.NewCostAllocationRule(ctx, "costAllocationRule", &costmanagement.CostAllocationRuleArgs{
+ * 			BillingAccountId: pulumi.String("100"),
+ * 			Properties: &costmanagement.CostAllocationRulePropertiesArgs{
+ * 				Description: pulumi.String("This is a testRule"),
+ * 				Details: &costmanagement.CostAllocationRuleDetailsArgs{
+ * 					SourceResources: costmanagement.SourceCostAllocationResourceArray{
+ * 						&costmanagement.SourceCostAllocationResourceArgs{
+ * 							Name:         pulumi.String("category"),
+ * 							ResourceType: pulumi.String("Tag"),
+ * 							Values: pulumi.StringArray{
+ * 								pulumi.String("devops"),
+ * 							},
+ * 						},
+ * 					},
+ * 					TargetResources: costmanagement.TargetCostAllocationResourceArray{
+ * 						&costmanagement.TargetCostAllocationResourceArgs{
+ * 							Name:         pulumi.String("ResourceGroupName"),
+ * 							PolicyType:   pulumi.String("FixedProportion"),
+ * 							ResourceType: pulumi.String("Dimension"),
+ * 							Values: costmanagement.CostAllocationProportionArray{
+ * 								&costmanagement.CostAllocationProportionArgs{
+ * 									Name:       pulumi.String("destinationRG"),
+ * 									Percentage: pulumi.Float64(33.33),
+ * 								},
+ * 								&costmanagement.CostAllocationProportionArgs{
+ * 									Name:       pulumi.String("destinationRG2"),
+ * 									Percentage: pulumi.Float64(33.33),
+ * 								},
+ * 								&costmanagement.CostAllocationProportionArgs{
+ * 									Name:       pulumi.String("destinationRG3"),
+ * 									Percentage: pulumi.Float64(33.34),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				Status: pulumi.String("Active"),
+ * 			},
+ * 			RuleName: pulumi.String("testRule"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("costAllocationRule", {
+ *     billingAccountId: "100",
+ *     properties: {
+ *         description: "This is a testRule",
+ *         details: {
+ *             sourceResources: [{
+ *                 name: "category",
+ *                 resourceType: "Tag",
+ *                 values: ["devops"],
+ *             }],
+ *             targetResources: [{
+ *                 name: "ResourceGroupName",
+ *                 policyType: "FixedProportion",
+ *                 resourceType: "Dimension",
+ *                 values: [
+ *                     {
+ *                         name: "destinationRG",
+ *                         percentage: 33.33,
+ *                     },
+ *                     {
+ *                         name: "destinationRG2",
+ *                         percentage: 33.33,
+ *                     },
+ *                     {
+ *                         name: "destinationRG3",
+ *                         percentage: 33.34,
+ *                     },
+ *                 ],
+ *             }],
+ *         },
+ *         status: "Active",
+ *     },
+ *     ruleName: "testRule",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cost_allocation_rule = azure_native.costmanagement.CostAllocationRule("costAllocationRule",
+ *     billing_account_id="100",
+ *     properties=azure_native.costmanagement.CostAllocationRulePropertiesArgs(
+ *         description="This is a testRule",
+ *         details=azure_native.costmanagement.CostAllocationRuleDetailsArgs(
+ *             source_resources=[azure_native.costmanagement.SourceCostAllocationResourceArgs(
+ *                 name="category",
+ *                 resource_type="Tag",
+ *                 values=["devops"],
+ *             )],
+ *             target_resources=[azure_native.costmanagement.TargetCostAllocationResourceArgs(
+ *                 name="ResourceGroupName",
+ *                 policy_type="FixedProportion",
+ *                 resource_type="Dimension",
+ *                 values=[
+ *                     azure_native.costmanagement.CostAllocationProportionArgs(
+ *                         name="destinationRG",
+ *                         percentage=33.33,
+ *                     ),
+ *                     azure_native.costmanagement.CostAllocationProportionArgs(
+ *                         name="destinationRG2",
+ *                         percentage=33.33,
+ *                     ),
+ *                     azure_native.costmanagement.CostAllocationProportionArgs(
+ *                         name="destinationRG3",
+ *                         percentage=33.34,
+ *                     ),
+ *                 ],
+ *             )],
+ *         ),
+ *         status="Active",
+ *     ),
+ *     rule_name="testRule")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +444,36 @@ import javax.annotation.Nullable;
 public class CostAllocationRule extends io.pulumi.resources.CustomResource {
     /**
      * Name of the rule. This is a read only value.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the rule. This is a read only value.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Cost allocation rule properties
-     * 
      */
     @Export(name="properties", type=CostAllocationRulePropertiesResponse.class, parameters={})
     private Output<CostAllocationRulePropertiesResponse> properties;
 
     /**
      * @return Cost allocation rule properties
-     * 
      */
     public Output<CostAllocationRulePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.
-     * 
      */
     public Output<String> getType() {
         return this.type;

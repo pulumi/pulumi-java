@@ -18,7 +18,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the dataSet.
-     * 
      */
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
@@ -40,7 +38,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of data set.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,DataSetKind>> kind;
@@ -51,7 +48,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share to add the data set to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;

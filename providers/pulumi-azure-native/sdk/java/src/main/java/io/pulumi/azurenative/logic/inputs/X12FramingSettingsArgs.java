@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * The X12 agreement framing settings.
- * 
  */
 public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The X12 character set.
-     * 
      */
     @Import(name="characterSet", required=true)
       private final Output<Either<String,X12CharacterSet>> characterSet;
@@ -35,7 +33,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The component separator.
-     * 
      */
     @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
@@ -46,7 +43,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The data element separator.
-     * 
      */
     @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
@@ -57,7 +53,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The replacement character.
-     * 
      */
     @Import(name="replaceCharacter", required=true)
       private final Output<Integer> replaceCharacter;
@@ -68,7 +63,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The value indicating whether to replace separators in payload.
-     * 
      */
     @Import(name="replaceSeparatorsInPayload", required=true)
       private final Output<Boolean> replaceSeparatorsInPayload;
@@ -79,7 +73,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The segment terminator.
-     * 
      */
     @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
@@ -90,7 +83,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The segment terminator suffix.
-     * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;

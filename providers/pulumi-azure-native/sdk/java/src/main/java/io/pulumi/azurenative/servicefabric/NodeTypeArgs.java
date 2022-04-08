@@ -23,7 +23,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The range of ports from which cluster assigned port to Service Fabric applications.
-     * 
      */
     @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
@@ -34,7 +33,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-     * 
      */
     @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
@@ -45,7 +43,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -56,7 +53,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Disk size for each vm in the node type in GBs.
-     * 
      */
     @Import(name="dataDiskSizeGB", required=true)
       private final Output<Integer> dataDiskSizeGB;
@@ -67,7 +63,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The range of ephemeral ports that nodes in this node type should be configured with.
-     * 
      */
     @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
@@ -78,7 +73,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
-     * 
      */
     @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
@@ -89,7 +83,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the node type.
-     * 
      */
     @Import(name="nodeTypeName")
       private final @Nullable Output<String> nodeTypeName;
@@ -100,7 +93,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-     * 
      */
     @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
@@ -111,7 +103,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -122,7 +113,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -133,7 +123,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set of extensions that should be installed onto the virtual machines.
-     * 
      */
     @Import(name="vmExtensions")
       private final @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
@@ -144,7 +133,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
-     * 
      */
     @Import(name="vmImageOffer")
       private final @Nullable Output<String> vmImageOffer;
@@ -155,7 +143,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
-     * 
      */
     @Import(name="vmImagePublisher")
       private final @Nullable Output<String> vmImagePublisher;
@@ -166,7 +153,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
-     * 
      */
     @Import(name="vmImageSku")
       private final @Nullable Output<String> vmImageSku;
@@ -177,7 +163,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-     * 
      */
     @Import(name="vmImageVersion")
       private final @Nullable Output<String> vmImageVersion;
@@ -188,7 +173,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of nodes in the node type.
-     * 
      */
     @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;
@@ -199,7 +183,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secrets to install in the virtual machines.
-     * 
      */
     @Import(name="vmSecrets")
       private final @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
@@ -210,7 +193,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;

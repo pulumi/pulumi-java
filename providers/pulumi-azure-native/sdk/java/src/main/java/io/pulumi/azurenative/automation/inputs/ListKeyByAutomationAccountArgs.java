@@ -14,7 +14,6 @@ public final class ListKeyByAutomationAccountArgs extends io.pulumi.resources.In
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class ListKeyByAutomationAccountArgs extends io.pulumi.resources.In
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Defines the action to take when a managed rule set score threshold is met.
-     * 
      */
     @EnumType
     public enum ManagedRuleSetActionType {

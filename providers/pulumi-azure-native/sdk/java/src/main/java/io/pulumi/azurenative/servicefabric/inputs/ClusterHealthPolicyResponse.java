@@ -23,7 +23,6 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
 
     /**
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
-     * 
      */
     @Import(name="applicationHealthPolicies")
       private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines contents of a web application rule.
- * 
  */
 public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
 
     /**
      * Type of Actions.
-     * 
      */
     @Import(name="action", required=true)
       private final Output<Either<String,WebApplicationFirewallAction>> action;
@@ -37,7 +35,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
 
     /**
      * List of match conditions.
-     * 
      */
     @Import(name="matchConditions", required=true)
       private final Output<List<MatchConditionArgs>> matchConditions;
@@ -48,7 +45,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
 
     /**
      * The name of the resource that is unique within a policy. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -59,7 +55,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
 
     /**
      * Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-     * 
      */
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
@@ -70,7 +65,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
 
     /**
      * The rule type.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final Output<Either<String,WebApplicationFirewallRuleType>> ruleType;

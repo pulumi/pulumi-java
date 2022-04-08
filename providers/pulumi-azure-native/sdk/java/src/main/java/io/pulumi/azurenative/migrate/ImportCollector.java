@@ -15,9 +15,82 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2019-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ImportCollectors_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var importCollector = new AzureNative.Migrate.ImportCollector("importCollector", new AzureNative.Migrate.ImportCollectorArgs
+ *         {
+ *             ImportCollectorName = "importCollector2952",
+ *             ProjectName = "rajoshCCY9671project",
+ *             ResourceGroupName = "markusavstestrg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := migrate.NewImportCollector(ctx, "importCollector", &migrate.ImportCollectorArgs{
+ * 			ImportCollectorName: pulumi.String("importCollector2952"),
+ * 			ProjectName:         pulumi.String("rajoshCCY9671project"),
+ * 			ResourceGroupName:   pulumi.String("markusavstestrg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const importCollector = new azure_native.migrate.ImportCollector("importCollector", {
+ *     importCollectorName: "importCollector2952",
+ *     projectName: "rajoshCCY9671project",
+ *     resourceGroupName: "markusavstestrg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * import_collector = azure_native.migrate.ImportCollector("importCollector",
+ *     import_collector_name="importCollector2952",
+ *     project_name="rajoshCCY9671project",
+ *     resource_group_name="markusavstestrg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Edifact message identifier.
- * 
  */
 public final class EdifactMessageIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EdifactMessageIdentifierResponse extends io.pulumi.resources.
 
     /**
      * The message id on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="messageId", required=true)
       private final String messageId;

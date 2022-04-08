@@ -19,7 +19,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
 
     /**
      * The URI of the backend
-     * 
      */
     @Import(name="backendUri")
       private final @Nullable Output<String> backendUri;
@@ -30,7 +29,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
 
     /**
      * The gateway installation reference
-     * 
      */
     @Import(name="connectionGatewayInstallation")
       private final @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
@@ -41,7 +39,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
 
     /**
      * The gateway admin
-     * 
      */
     @Import(name="contactInformation")
       private final @Nullable Output<List<String>> contactInformation;
@@ -52,7 +49,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
 
     /**
      * The gateway description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -63,7 +59,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
 
     /**
      * The gateway display name
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -74,7 +69,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
 
     /**
      * The machine name of the gateway
-     * 
      */
     @Import(name="machineName")
       private final @Nullable Output<String> machineName;
@@ -85,7 +79,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
 
     /**
      * The gateway status
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Object> status;

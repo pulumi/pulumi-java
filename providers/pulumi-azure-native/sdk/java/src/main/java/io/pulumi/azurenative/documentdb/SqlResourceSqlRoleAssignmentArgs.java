@@ -16,7 +16,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
-     * 
      */
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
@@ -38,7 +36,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The GUID for the Role Assignment.
-     * 
      */
     @Import(name="roleAssignmentId")
       private final @Nullable Output<String> roleAssignmentId;
@@ -60,7 +56,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The unique identifier for the associated Role Definition.
-     * 
      */
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
@@ -71,7 +66,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The data plane resource path for which access is being granted through this Role Assignment.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<String> scope;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class TimeSeriesIdPropertyResponse {
     /**
      * The name of the property.
-     * 
      */
     private final @Nullable String name;
     /**
      * The type of the property.
-     * 
      */
     private final @Nullable String type;
 
@@ -32,14 +30,12 @@ public final class TimeSeriesIdPropertyResponse {
 
     /**
      * The name of the property.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the property.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Suppression logic for a given action rule
- * 
  */
 public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specifies when the suppression should be applied
-     * 
      */
     @Import(name="recurrenceType", required=true)
       private final Output<Either<String,SuppressionType>> recurrenceType;
@@ -34,7 +32,6 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * suppression schedule configuration
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<SuppressionScheduleArgs> schedule;

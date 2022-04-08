@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Compute role against which events will be raised.
- * 
  */
 public final class RoleSinkInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RoleSinkInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Compute role ID.
-     * 
      */
     @Import(name="roleId", required=true)
       private final String roleId;

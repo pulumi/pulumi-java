@@ -14,7 +14,6 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the Linked Subscription resource.
-     * 
      */
     @Import(name="linkedSubscriptionName", required=true)
       private final String linkedSubscriptionName;
@@ -25,7 +24,6 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;

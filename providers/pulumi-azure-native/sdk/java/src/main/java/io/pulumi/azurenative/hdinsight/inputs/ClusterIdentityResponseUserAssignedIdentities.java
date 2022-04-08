@@ -16,7 +16,6 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
 
     /**
      * The client id of user assigned identity.
-     * 
      */
     @Import(name="clientId", required=true)
       private final String clientId;
@@ -27,7 +26,6 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
 
     /**
      * The principal id of user assigned identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -38,7 +36,6 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
 
     /**
      * The tenant id of user assigned identity.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SharedAccessAuthorizationRule properties.
- * 
  */
 public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
 
     /**
      * The rights associated with the rule.
-     * 
      */
     @Import(name="rights")
       private final @Nullable Output<List<AccessRights>> rights;

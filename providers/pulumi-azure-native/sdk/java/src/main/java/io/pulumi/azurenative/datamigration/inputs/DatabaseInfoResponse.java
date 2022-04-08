@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Project Database Details
- * 
  */
 public final class DatabaseInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DatabaseInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;

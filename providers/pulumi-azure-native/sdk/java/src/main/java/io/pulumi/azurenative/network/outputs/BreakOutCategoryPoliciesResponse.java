@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class BreakOutCategoryPoliciesResponse {
     /**
      * Flag to control breakout of o365 allow category.
-     * 
      */
     private final @Nullable Boolean allow;
     /**
      * Flag to control breakout of o365 default category.
-     * 
      */
     private final @Nullable Boolean default_;
     /**
      * Flag to control breakout of o365 optimize category.
-     * 
      */
     private final @Nullable Boolean optimize;
 
@@ -39,21 +36,18 @@ public final class BreakOutCategoryPoliciesResponse {
 
     /**
      * Flag to control breakout of o365 allow category.
-     * 
     */
     public Optional<Boolean> getAllow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Flag to control breakout of o365 default category.
-     * 
     */
     public Optional<Boolean> getDefault_() {
         return Optional.ofNullable(this.default_);
     }
     /**
      * Flag to control breakout of o365 optimize category.
-     * 
     */
     public Optional<Boolean> getOptimize() {
         return Optional.ofNullable(this.optimize);

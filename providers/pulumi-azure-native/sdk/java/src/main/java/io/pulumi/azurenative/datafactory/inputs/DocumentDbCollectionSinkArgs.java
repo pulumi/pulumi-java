@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Document Database Collection sink.
- * 
  */
 public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -32,7 +30,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -43,7 +40,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * Nested properties separator. Default is . (dot). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="nestingSeparator")
       private final @Nullable Output<Object> nestingSeparator;
@@ -54,7 +50,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -65,7 +60,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -77,7 +71,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
     /**
      * Copy sink type.
      * Expected value is 'DocumentDbCollectionSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -88,7 +81,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -99,7 +91,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
@@ -110,7 +101,6 @@ public final class DocumentDbCollectionSinkArgs extends io.pulumi.resources.Reso
 
     /**
      * Describes how to write data to Azure Cosmos DB. Type: string (or Expression with resultType string). Allowed values: insert and upsert.
-     * 
      */
     @Import(name="writeBehavior")
       private final @Nullable Output<Object> writeBehavior;

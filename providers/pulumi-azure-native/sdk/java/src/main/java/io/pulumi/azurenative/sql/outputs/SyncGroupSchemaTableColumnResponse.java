@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class SyncGroupSchemaTableColumnResponse {
     /**
      * Data size of the column.
-     * 
      */
     private final @Nullable String dataSize;
     /**
      * Data type of the column.
-     * 
      */
     private final @Nullable String dataType;
     /**
      * Quoted name of sync group table column.
-     * 
      */
     private final @Nullable String quotedName;
 
@@ -39,21 +36,18 @@ public final class SyncGroupSchemaTableColumnResponse {
 
     /**
      * Data size of the column.
-     * 
     */
     public Optional<String> getDataSize() {
         return Optional.ofNullable(this.dataSize);
     }
     /**
      * Data type of the column.
-     * 
     */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Quoted name of sync group table column.
-     * 
     */
     public Optional<String> getQuotedName() {
         return Optional.ofNullable(this.quotedName);

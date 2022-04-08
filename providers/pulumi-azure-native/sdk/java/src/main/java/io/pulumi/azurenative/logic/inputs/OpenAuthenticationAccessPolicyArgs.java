@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Open authentication access policy defined by user.
- * 
  */
 public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
 
     /**
      * The access policy claims.
-     * 
      */
     @Import(name="claims")
       private final @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
@@ -35,7 +33,6 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
 
     /**
      * Type of provider for OAuth.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;

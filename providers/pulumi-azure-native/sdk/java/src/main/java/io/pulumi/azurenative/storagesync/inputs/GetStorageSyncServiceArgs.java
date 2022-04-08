@@ -14,7 +14,6 @@ public final class GetStorageSyncServiceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetStorageSyncServiceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of Storage Sync Service resource.
-     * 
      */
     @Import(name="storageSyncServiceName", required=true)
       private final String storageSyncServiceName;

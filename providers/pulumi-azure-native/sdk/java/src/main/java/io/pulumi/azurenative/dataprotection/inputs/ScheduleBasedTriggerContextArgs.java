@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Schedule based trigger context
- * 
  */
 public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'ScheduleBasedTriggerContext'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
@@ -34,7 +32,6 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
 
     /**
      * Schedule for this backup
-     * 
      */
     @Import(name="schedule", required=true)
       private final Output<BackupScheduleArgs> schedule;
@@ -45,7 +42,6 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
 
     /**
      * List of tags that can be applicable for given schedule.
-     * 
      */
     @Import(name="taggingCriteria", required=true)
       private final Output<List<TaggingCriteriaArgs>> taggingCriteria;

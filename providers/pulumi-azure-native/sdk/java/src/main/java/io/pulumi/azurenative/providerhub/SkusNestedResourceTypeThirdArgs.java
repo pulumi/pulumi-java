@@ -17,7 +17,6 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
 
     /**
      * The first child resource type.
-     * 
      */
     @Import(name="nestedResourceTypeFirst", required=true)
       private final Output<String> nestedResourceTypeFirst;
@@ -28,7 +27,6 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
 
     /**
      * The second child resource type.
-     * 
      */
     @Import(name="nestedResourceTypeSecond", required=true)
       private final Output<String> nestedResourceTypeSecond;
@@ -39,7 +37,6 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
 
     /**
      * The third child resource type.
-     * 
      */
     @Import(name="nestedResourceTypeThird", required=true)
       private final Output<String> nestedResourceTypeThird;
@@ -57,7 +54,6 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource provider hosted within ProviderHub.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
@@ -68,7 +64,6 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -79,7 +74,6 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
 
     /**
      * The SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;

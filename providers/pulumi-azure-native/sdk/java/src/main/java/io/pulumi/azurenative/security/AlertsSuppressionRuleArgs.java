@@ -19,7 +19,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Type of the alert to automatically suppress. For all alert types, use '*'
-     * 
      */
     @Import(name="alertType", required=true)
       private final Output<String> alertType;
@@ -30,7 +29,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The unique name of the suppression alert rule
-     * 
      */
     @Import(name="alertsSuppressionRuleName")
       private final @Nullable Output<String> alertsSuppressionRuleName;
@@ -41,7 +39,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Any comment regarding the rule
-     * 
      */
     @Import(name="comment")
       private final @Nullable Output<String> comment;
@@ -52,7 +49,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
-     * 
      */
     @Import(name="expirationDateUtc")
       private final @Nullable Output<String> expirationDateUtc;
@@ -63,7 +59,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The reason for dismissing the alert
-     * 
      */
     @Import(name="reason", required=true)
       private final Output<String> reason;
@@ -74,7 +69,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Possible states of the rule
-     * 
      */
     @Import(name="state", required=true)
       private final Output<Either<String,RuleState>> state;
@@ -85,7 +79,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The suppression conditions
-     * 
      */
     @Import(name="suppressionAlertsScope")
       private final @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;

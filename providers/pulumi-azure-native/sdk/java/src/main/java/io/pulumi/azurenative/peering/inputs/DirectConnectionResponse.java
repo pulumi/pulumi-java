@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that define a direct connection.
- * 
  */
 public final class DirectConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The bandwidth of the connection.
-     * 
      */
     @Import(name="bandwidthInMbps")
       private final @Nullable Integer bandwidthInMbps;
@@ -34,7 +32,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The BGP session associated with the connection.
-     * 
      */
     @Import(name="bgpSession")
       private final @Nullable BgpSessionResponse bgpSession;
@@ -45,7 +42,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The unique identifier (GUID) for the connection.
-     * 
      */
     @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
@@ -56,7 +52,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The state of the connection.
-     * 
      */
     @Import(name="connectionState", required=true)
       private final String connectionState;
@@ -67,7 +62,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The error message related to the connection state, if any.
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -78,7 +72,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The ID used within Microsoft's peering provisioning system to track the connection
-     * 
      */
     @Import(name="microsoftTrackingId", required=true)
       private final String microsoftTrackingId;
@@ -89,7 +82,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
-     * 
      */
     @Import(name="peeringDBFacilityId")
       private final @Nullable Integer peeringDBFacilityId;
@@ -100,7 +92,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The bandwidth that is actually provisioned.
-     * 
      */
     @Import(name="provisionedBandwidthInMbps", required=true)
       private final Integer provisionedBandwidthInMbps;
@@ -111,7 +102,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The field indicating if Microsoft provides session ip addresses.
-     * 
      */
     @Import(name="sessionAddressProvider")
       private final @Nullable String sessionAddressProvider;
@@ -122,7 +112,6 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The flag that indicates whether or not the connection is used for peering service.
-     * 
      */
     @Import(name="useForPeeringService")
       private final @Nullable Boolean useForPeeringService;

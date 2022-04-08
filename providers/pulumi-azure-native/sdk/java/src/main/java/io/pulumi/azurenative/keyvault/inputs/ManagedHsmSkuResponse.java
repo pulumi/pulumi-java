@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SKU details
- * 
  */
 public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * SKU Family of the managed HSM Pool
-     * 
      */
     @Import(name="family", required=true)
       private final String family;
@@ -29,7 +27,6 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * SKU of the managed HSM Pool
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The transport protocol to use in the Thrift layer.
-     * 
      */
     @EnumType
     public enum HiveThriftTransportProtocol {

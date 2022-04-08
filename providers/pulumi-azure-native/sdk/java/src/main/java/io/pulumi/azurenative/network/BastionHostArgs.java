@@ -19,7 +19,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Bastion Host.
-     * 
      */
     @Import(name="bastionHostName")
       private final @Nullable Output<String> bastionHostName;
@@ -30,7 +29,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FQDN for the endpoint on which bastion host is accessible.
-     * 
      */
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
@@ -41,7 +39,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -52,7 +49,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP configuration of the Bastion Host resource.
-     * 
      */
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
@@ -63,7 +59,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -74,7 +69,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

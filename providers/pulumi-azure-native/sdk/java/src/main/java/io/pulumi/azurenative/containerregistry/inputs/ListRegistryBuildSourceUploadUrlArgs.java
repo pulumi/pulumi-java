@@ -14,7 +14,6 @@ public final class ListRegistryBuildSourceUploadUrlArgs extends io.pulumi.resour
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final String registryName;
@@ -25,7 +24,6 @@ public final class ListRegistryBuildSourceUploadUrlArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

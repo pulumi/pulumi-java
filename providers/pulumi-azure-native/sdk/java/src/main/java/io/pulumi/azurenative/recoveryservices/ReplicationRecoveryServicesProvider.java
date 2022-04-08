@@ -18,7 +18,154 @@ import javax.annotation.Nullable;
  * Provider details.
  * API Version: 2018-07-10.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Adds a recovery services provider.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replicationRecoveryServicesProvider = new AzureNative.RecoveryServices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureNative.RecoveryServices.ReplicationRecoveryServicesProviderArgs
+ *         {
+ *             FabricName = "vmwarefabric1",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.AddRecoveryServicesProviderInputPropertiesArgs
+ *             {
+ *                 AuthenticationIdentityInput = new AzureNative.RecoveryServices.Inputs.IdentityProviderInputArgs
+ *                 {
+ *                     AadAuthority = "https://login.microsoftonline.com",
+ *                     ApplicationId = "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
+ *                     Audience = "https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
+ *                     ObjectId = "141360b8-5686-4240-a027-5e24e6affeba",
+ *                     TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                 },
+ *                 MachineName = "vmwareprovider1",
+ *                 ResourceAccessIdentityInput = new AzureNative.RecoveryServices.Inputs.IdentityProviderInputArgs
+ *                 {
+ *                     AadAuthority = "https://login.microsoftonline.com",
+ *                     ApplicationId = "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
+ *                     Audience = "https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
+ *                     ObjectId = "141360b8-5686-4240-a027-5e24e6affeba",
+ *                     TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                 },
+ *             },
+ *             ProviderName = "vmwareprovider1",
+ *             ResourceGroupName = "resourcegroup1",
+ *             ResourceName = "migrationvault",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recoveryservices.NewReplicationRecoveryServicesProvider(ctx, "replicationRecoveryServicesProvider", &recoveryservices.ReplicationRecoveryServicesProviderArgs{
+ * 			FabricName: pulumi.String("vmwarefabric1"),
+ * 			Properties: &recoveryservices.AddRecoveryServicesProviderInputPropertiesArgs{
+ * 				AuthenticationIdentityInput: &recoveryservices.IdentityProviderInputArgs{
+ * 					AadAuthority:  pulumi.String("https://login.microsoftonline.com"),
+ * 					ApplicationId: pulumi.String("f66fce08-c0c6-47a1-beeb-0ede5ea94f90"),
+ * 					Audience:      pulumi.String("https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874"),
+ * 					ObjectId:      pulumi.String("141360b8-5686-4240-a027-5e24e6affeba"),
+ * 					TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+ * 				},
+ * 				MachineName: pulumi.String("vmwareprovider1"),
+ * 				ResourceAccessIdentityInput: &recoveryservices.IdentityProviderInputArgs{
+ * 					AadAuthority:  pulumi.String("https://login.microsoftonline.com"),
+ * 					ApplicationId: pulumi.String("f66fce08-c0c6-47a1-beeb-0ede5ea94f90"),
+ * 					Audience:      pulumi.String("https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874"),
+ * 					ObjectId:      pulumi.String("141360b8-5686-4240-a027-5e24e6affeba"),
+ * 					TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+ * 				},
+ * 			},
+ * 			ProviderName:      pulumi.String("vmwareprovider1"),
+ * 			ResourceGroupName: pulumi.String("resourcegroup1"),
+ * 			ResourceName:      pulumi.String("migrationvault"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replicationRecoveryServicesProvider = new azure_native.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
+ *     fabricName: "vmwarefabric1",
+ *     properties: {
+ *         authenticationIdentityInput: {
+ *             aadAuthority: "https://login.microsoftonline.com",
+ *             applicationId: "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
+ *             audience: "https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
+ *             objectId: "141360b8-5686-4240-a027-5e24e6affeba",
+ *             tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *         },
+ *         machineName: "vmwareprovider1",
+ *         resourceAccessIdentityInput: {
+ *             aadAuthority: "https://login.microsoftonline.com",
+ *             applicationId: "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
+ *             audience: "https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
+ *             objectId: "141360b8-5686-4240-a027-5e24e6affeba",
+ *             tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *         },
+ *     },
+ *     providerName: "vmwareprovider1",
+ *     resourceGroupName: "resourcegroup1",
+ *     resourceName: "migrationvault",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication_recovery_services_provider = azure_native.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
+ *     fabric_name="vmwarefabric1",
+ *     properties=azure_native.recoveryservices.AddRecoveryServicesProviderInputPropertiesArgs(
+ *         authentication_identity_input=azure_native.recoveryservices.IdentityProviderInputArgs(
+ *             aad_authority="https://login.microsoftonline.com",
+ *             application_id="f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
+ *             audience="https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
+ *             object_id="141360b8-5686-4240-a027-5e24e6affeba",
+ *             tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *         ),
+ *         machine_name="vmwareprovider1",
+ *         resource_access_identity_input=azure_native.recoveryservices.IdentityProviderInputArgs(
+ *             aad_authority="https://login.microsoftonline.com",
+ *             application_id="f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
+ *             audience="https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
+ *             object_id="141360b8-5686-4240-a027-5e24e6affeba",
+ *             tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *         ),
+ *     ),
+ *     provider_name="vmwareprovider1",
+ *     resource_group_name="resourcegroup1",
+ *     resource_name="migrationvault")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +180,48 @@ import javax.annotation.Nullable;
 public class ReplicationRecoveryServicesProvider extends io.pulumi.resources.CustomResource {
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provider properties.
-     * 
      */
     @Export(name="properties", type=RecoveryServicesProviderPropertiesResponse.class, parameters={})
     private Output<RecoveryServicesProviderPropertiesResponse> properties;
 
     /**
      * @return Provider properties.
-     * 
      */
     public Output<RecoveryServicesProviderPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource Type
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -18,7 +18,6 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
 
     /**
      * The access token.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
@@ -29,7 +28,6 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
 
     /**
      * The refresh token.
-     * 
      */
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
@@ -40,7 +38,6 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
 
     /**
      * The token type. Must be either PersonalAccessToken or Oauth.
-     * 
      */
     @Import(name="tokenType")
       private final @Nullable Output<Either<String,TokenType>> tokenType;

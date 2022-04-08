@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database specific information for PostgreSQL to Azure Database for PostgreSQL migration task inputs
- * 
  */
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
 
     /**
      * Migration settings which tune the migration behavior
-     * 
      */
     @Import(name="migrationSetting")
       private final @Nullable Output<Map<String,String>> migrationSetting;
@@ -32,7 +30,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
 
     /**
      * Source settings to tune source endpoint migration behavior
-     * 
      */
     @Import(name="sourceSetting")
       private final @Nullable Output<Map<String,String>> sourceSetting;
@@ -54,7 +50,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
 
     /**
      * Name of target database. Note: Target database will be truncated before starting migration.
-     * 
      */
     @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
@@ -65,7 +60,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
 
     /**
      * Target settings to tune target endpoint migration behavior
-     * 
      */
     @Import(name="targetSetting")
       private final @Nullable Output<Map<String,String>> targetSetting;

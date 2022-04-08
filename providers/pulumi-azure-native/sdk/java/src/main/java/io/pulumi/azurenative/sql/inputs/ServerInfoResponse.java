@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Server info for the server trust group.
- * 
  */
 public final class ServerInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ServerInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Server Id.
-     * 
      */
     @Import(name="serverId", required=true)
       private final String serverId;

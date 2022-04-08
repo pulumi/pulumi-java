@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * the service specific properties of a provisioning service, including keys, linked iot hubs, current state, and system generated properties such as hostname and idScope
- * 
  */
 public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * Allocation policy to be used by this provisioning service.
-     * 
      */
     @Import(name="allocationPolicy")
       private final @Nullable Output<Either<String,AllocationPolicy>> allocationPolicy;
@@ -40,7 +38,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * List of authorization keys for a provisioning service.
-     * 
      */
     @Import(name="authorizationPolicies")
       private final @Nullable Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies;
@@ -51,7 +48,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * List of IoT hubs associated with this provisioning service.
-     * 
      */
     @Import(name="iotHubs")
       private final @Nullable Output<List<IotHubDefinitionDescriptionArgs>> iotHubs;
@@ -62,7 +58,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * The IP filter rules.
-     * 
      */
     @Import(name="ipFilterRules")
       private final @Nullable Output<List<TargetIpFilterRuleArgs>> ipFilterRules;
@@ -73,7 +68,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * Private endpoint connections created on this IotHub
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
@@ -84,7 +78,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * The ARM provisioning state of the provisioning service.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -95,7 +88,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * Whether requests from Public Network are allowed
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -106,7 +98,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
 
     /**
      * Current state of the provisioning service.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;

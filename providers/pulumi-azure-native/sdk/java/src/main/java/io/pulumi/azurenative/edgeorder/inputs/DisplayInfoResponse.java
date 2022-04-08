@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes product display information
- * 
  */
 public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration display name
-     * 
      */
     @Import(name="configurationDisplayName", required=true)
       private final String configurationDisplayName;
@@ -29,7 +27,6 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Product family display name
-     * 
      */
     @Import(name="productFamilyDisplayName", required=true)
       private final String productFamilyDisplayName;

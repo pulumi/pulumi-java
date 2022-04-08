@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options for controlling the validation of TLS endpoints.
- * 
  */
 public final class TlsValidationOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
 
     /**
      * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
-     * 
      */
     @Import(name="ignoreHostname")
       private final @Nullable Output<String> ignoreHostname;
@@ -31,7 +29,6 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
 
     /**
      * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
-     * 
      */
     @Import(name="ignoreSignature")
       private final @Nullable Output<String> ignoreSignature;

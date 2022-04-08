@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional error info.
- * 
  */
 public final class AdditionalErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
 
     /**
      * Additional error info.
-     * 
      */
     @Import(name="info")
       private final @Nullable Object info;
@@ -32,7 +30,6 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
 
     /**
      * Additional error type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

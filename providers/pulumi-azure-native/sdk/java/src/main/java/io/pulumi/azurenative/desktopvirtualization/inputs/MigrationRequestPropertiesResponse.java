@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for arm migration.
- * 
  */
 public final class MigrationRequestPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
 
     /**
      * The path to the legacy object to migrate.
-     * 
      */
     @Import(name="migrationPath")
       private final @Nullable String migrationPath;
@@ -31,7 +29,6 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
 
     /**
      * The type of operation for migration.
-     * 
      */
     @Import(name="operation")
       private final @Nullable String operation;

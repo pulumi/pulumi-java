@@ -16,7 +16,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of of the certificate to upload.
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -27,7 +26,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
@@ -38,7 +36,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
 
     /**
      * The certificate public blob
-     * 
      */
     @Import(name="publicBlob")
       private final @Nullable Output<String> publicBlob;
@@ -49,7 +46,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -21,7 +21,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
-     * 
      */
     @Import(name="apiServerEndpoint")
       private final @Nullable Output<String> apiServerEndpoint;
@@ -32,7 +31,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * RootCA certificate of kubernetes cluster base64 encoded
-     * 
      */
     @Import(name="clusterRootCA")
       private final @Nullable Output<String> clusterRootCA;
@@ -43,7 +41,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * Properties of the controller.
-     * 
      */
     @Import(name="controllerDetails", required=true)
       private final Output<ControllerDetailsArgs> controllerDetails;
@@ -54,7 +51,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * The identity of the orchestrator
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<OrchestratorIdentityArgs> identity;
@@ -65,7 +61,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * The kind of workbook. Choices are user and shared.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,OrchestratorKind>> kind;
@@ -76,7 +71,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * AAD ID used with apiserver
-     * 
      */
     @Import(name="orchestratorAppId")
       private final @Nullable Output<String> orchestratorAppId;
@@ -98,7 +91,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * TenantID of server App ID
-     * 
      */
     @Import(name="orchestratorTenantId")
       private final @Nullable Output<String> orchestratorTenantId;
@@ -109,7 +101,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
-     * 
      */
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
@@ -120,7 +111,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -131,7 +121,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -142,7 +131,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

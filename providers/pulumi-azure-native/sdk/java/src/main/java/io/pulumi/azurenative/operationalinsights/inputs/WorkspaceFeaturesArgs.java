@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Workspace features.
- * 
  */
 public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Dedicated LA cluster resourceId that is linked to the workspaces.
-     * 
      */
     @Import(name="clusterResourceId")
       private final @Nullable Output<String> clusterResourceId;
@@ -32,7 +30,6 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Disable Non-AAD based Auth.
-     * 
      */
     @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
@@ -43,7 +40,6 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Flag that indicate if data should be exported.
-     * 
      */
     @Import(name="enableDataExport")
       private final @Nullable Output<Boolean> enableDataExport;
@@ -54,7 +50,6 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Flag that indicate which permission to use - resource or workspace or both.
-     * 
      */
     @Import(name="enableLogAccessUsingOnlyResourcePermissions")
       private final @Nullable Output<Boolean> enableLogAccessUsingOnlyResourcePermissions;
@@ -65,7 +60,6 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Flag that describes if we want to remove the data after 30 days.
-     * 
      */
     @Import(name="immediatePurgeDataOn30Days")
       private final @Nullable Output<Boolean> immediatePurgeDataOn30Days;

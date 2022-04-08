@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSIS package execution log location
- * 
  */
 public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The package execution log access credential.
-     * 
      */
     @Import(name="accessCredential")
       private final @Nullable SSISAccessCredentialResponse accessCredential;
@@ -33,7 +31,6 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The SSIS package execution log path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="logPath", required=true)
       private final Object logPath;
@@ -44,7 +41,6 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="logRefreshInterval")
       private final @Nullable Object logRefreshInterval;
@@ -55,7 +51,6 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of SSIS log location.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

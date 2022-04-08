@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schema for MSIX Package Application properties.
- * 
  */
 public final class MsixPackageApplicationsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
 
     /**
      * Package Application Id, found in appxmanifest.xml.
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -31,7 +29,6 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
 
     /**
      * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
-     * 
      */
     @Import(name="appUserModelID")
       private final @Nullable Output<String> appUserModelID;
@@ -42,7 +39,6 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
 
     /**
      * Description of Package Application.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +49,6 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
 
     /**
      * User friendly name.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -64,7 +59,6 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
 
     /**
      * User friendly name.
-     * 
      */
     @Import(name="iconImageName")
       private final @Nullable Output<String> iconImageName;
@@ -75,7 +69,6 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
 
     /**
      * the icon a 64 bit string as a byte array.
-     * 
      */
     @Import(name="rawIcon")
       private final @Nullable Output<String> rawIcon;
@@ -86,7 +79,6 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
 
     /**
      * the icon a 64 bit string as a byte array.
-     * 
      */
     @Import(name="rawPng")
       private final @Nullable Output<String> rawPng;

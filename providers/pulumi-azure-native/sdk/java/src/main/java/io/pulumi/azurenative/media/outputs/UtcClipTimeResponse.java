@@ -12,12 +12,10 @@ public final class UtcClipTimeResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.UtcClipTime'.
-     * 
      */
     private final String odataType;
     /**
      * The time position on the timeline of the input media based on Utc time.
-     * 
      */
     private final String time;
 
@@ -32,14 +30,12 @@ public final class UtcClipTimeResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.UtcClipTime'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The time position on the timeline of the input media based on Utc time.
-     * 
     */
     public String getTime() {
         return this.time;

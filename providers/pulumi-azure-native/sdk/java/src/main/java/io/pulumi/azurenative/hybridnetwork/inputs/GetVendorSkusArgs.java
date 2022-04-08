@@ -14,7 +14,6 @@ public final class GetVendorSkusArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the sku.
-     * 
      */
     @Import(name="skuName", required=true)
       private final String skuName;
@@ -25,7 +24,6 @@ public final class GetVendorSkusArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the vendor.
-     * 
      */
     @Import(name="vendorName", required=true)
       private final String vendorName;

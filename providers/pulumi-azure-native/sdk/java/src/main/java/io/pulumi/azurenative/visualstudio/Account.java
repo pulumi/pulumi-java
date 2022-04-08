@@ -18,7 +18,95 @@ import javax.annotation.Nullable;
  * The response to an account resource GET request.
  * API Version: 2014-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an account resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new AzureNative.VisualStudio.Account("account", new AzureNative.VisualStudio.AccountArgs
+ *         {
+ *             AccountName = "Example",
+ *             Location = "Central US",
+ *             OperationType = "create",
+ *             Properties = ,
+ *             ResourceGroupName = "VS-Example-Group",
+ *             ResourceName = "Example",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	visualstudio "github.com/pulumi/pulumi-azure-native/sdk/go/azure/visualstudio"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := visualstudio.NewAccount(ctx, "account", &visualstudio.AccountArgs{
+ * 			AccountName:       pulumi.String("Example"),
+ * 			Location:          pulumi.String("Central US"),
+ * 			OperationType:     pulumi.String("create"),
+ * 			Properties:        nil,
+ * 			ResourceGroupName: pulumi.String("VS-Example-Group"),
+ * 			ResourceName:      pulumi.String("Example"),
+ * 			Tags:              nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const account = new azure_native.visualstudio.Account("account", {
+ *     accountName: "Example",
+ *     location: "Central US",
+ *     operationType: "create",
+ *     properties: {},
+ *     resourceGroupName: "VS-Example-Group",
+ *     resourceName: "Example",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * account = azure_native.visualstudio.Account("account",
+ *     account_name="Example",
+ *     location="Central US",
+ *     operation_type="create",
+ *     properties={},
+ *     resource_group_name="VS-Example-Group",
+ *     resource_name="Example",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +121,60 @@ import javax.annotation.Nullable;
 public class Account extends io.pulumi.resources.CustomResource {
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource properties.
-     * 
      */
     @Export(name="properties", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> properties;
 
     /**
      * @return Resource properties.
-     * 
      */
     public Output<Map<String,String>> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

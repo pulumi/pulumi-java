@@ -16,7 +16,6 @@ public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource id of the private endpoint.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

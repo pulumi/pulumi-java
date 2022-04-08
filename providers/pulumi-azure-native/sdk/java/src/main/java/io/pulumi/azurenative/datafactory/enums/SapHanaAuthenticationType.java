@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication type to be used to connect to the SAP HANA server.
-     * 
      */
     @EnumType
     public enum SapHanaAuthenticationType {

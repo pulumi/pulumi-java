@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subnet information as returned by the Microsoft.Network API.
- * 
  */
 public final class ExternalSubnetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ExternalSubnetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the identifier.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class ExternalSubnetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

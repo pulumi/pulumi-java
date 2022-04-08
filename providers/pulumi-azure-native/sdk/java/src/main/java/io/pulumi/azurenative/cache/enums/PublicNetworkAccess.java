@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
-     * 
      */
     @EnumType
     public enum PublicNetworkAccess {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Additional format information for the data type.
-     * 
      */
     @EnumType
     public enum ColumnFormat {

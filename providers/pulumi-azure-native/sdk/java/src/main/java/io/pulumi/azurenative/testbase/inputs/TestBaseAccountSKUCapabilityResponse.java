@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Properties of the Test Base Account SKU Capability.
- * 
  */
 public final class TestBaseAccountSKUCapabilityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TestBaseAccountSKUCapabilityResponse extends io.pulumi.resour
 
     /**
      * An invariant to describe the feature, such as 'SLA'.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class TestBaseAccountSKUCapabilityResponse extends io.pulumi.resour
 
     /**
      * An invariant if the feature is measured by quantity, such as 99.9%.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

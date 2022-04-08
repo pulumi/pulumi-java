@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Schedule
-     * 
      */
     @EnumType
     public enum ReplicationSchedule {

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties specific to the monitor resource.
- * 
  */
 public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -33,7 +32,6 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-     * 
      */
     @Import(name="marketplaceSubscriptionStatus")
       private final @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
@@ -44,7 +42,6 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
-     * 
      */
     @Import(name="monitoringStatus")
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;

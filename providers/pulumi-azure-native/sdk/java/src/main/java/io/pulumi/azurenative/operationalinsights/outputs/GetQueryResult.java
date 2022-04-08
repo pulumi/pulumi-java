@@ -18,67 +18,54 @@ import javax.annotation.Nullable;
 public final class GetQueryResult {
     /**
      * Object Id of user creating the query.
-     * 
      */
     private final String author;
     /**
      * Body of the query.
-     * 
      */
     private final String body;
     /**
      * Description of the query.
-     * 
      */
     private final @Nullable String description;
     /**
      * Unique display name for your query within the Query Pack.
-     * 
      */
     private final String displayName;
     /**
      * Azure resource Id
-     * 
      */
     private final String id;
     /**
      * Azure resource name
-     * 
      */
     private final String name;
     /**
      * Additional properties that can be set for the query.
-     * 
      */
     private final Object properties;
     /**
      * The related metadata items for the function.
-     * 
      */
     private final @Nullable LogAnalyticsQueryPackQueryPropertiesResponseRelated related;
     /**
      * Read only system data
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Tags associated with the query.
-     * 
      */
     private final @Nullable Map<String,List<String>> tags;
     /**
      * Creation Date for the Log Analytics Query, in ISO 8601 format.
-     * 
      */
     private final String timeCreated;
     /**
      * Last modified date of the Log Analytics Query, in ISO 8601 format.
-     * 
      */
     private final String timeModified;
     /**
      * Azure resource type
-     * 
      */
     private final String type;
 
@@ -114,91 +101,78 @@ public final class GetQueryResult {
 
     /**
      * Object Id of user creating the query.
-     * 
     */
     public String getAuthor() {
         return this.author;
     }
     /**
      * Body of the query.
-     * 
     */
     public String getBody() {
         return this.body;
     }
     /**
      * Description of the query.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Unique display name for your query within the Query Pack.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Azure resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Azure resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Additional properties that can be set for the query.
-     * 
     */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The related metadata items for the function.
-     * 
     */
     public Optional<LogAnalyticsQueryPackQueryPropertiesResponseRelated> getRelated() {
         return Optional.ofNullable(this.related);
     }
     /**
      * Read only system data
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Tags associated with the query.
-     * 
     */
     public Map<String,List<String>> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Creation Date for the Log Analytics Query, in ISO 8601 format.
-     * 
     */
     public String getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Last modified date of the Log Analytics Query, in ISO 8601 format.
-     * 
     */
     public String getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
-     * 
     */
     public String getType() {
         return this.type;

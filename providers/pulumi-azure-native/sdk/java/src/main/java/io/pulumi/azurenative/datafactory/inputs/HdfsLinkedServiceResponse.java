@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hadoop Distributed File System (HDFS) linked service.
- * 
  */
 public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Object authenticationType;
@@ -50,7 +47,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -61,7 +57,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -83,7 +77,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -94,7 +87,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Password for Windows authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -106,7 +98,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
     /**
      * Type of linked service.
      * Expected value is 'Hdfs'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -117,7 +108,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Object url;
@@ -128,7 +118,6 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * User name for Windows authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userName")
       private final @Nullable Object userName;

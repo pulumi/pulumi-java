@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Presto server linked service.
- * 
  */
 public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-     * 
      */
     @Import(name="allowHostNameCNMismatch")
       private final @Nullable Output<Object> allowHostNameCNMismatch;
@@ -40,7 +38,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
-     * 
      */
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Output<Object> allowSelfSignedServerCert;
@@ -51,7 +48,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -62,7 +58,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The authentication mechanism used to connect to the Presto server.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,PrestoAuthenticationType>> authenticationType;
@@ -73,7 +68,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The catalog context for all request against the server.
-     * 
      */
     @Import(name="catalog", required=true)
       private final Output<Object> catalog;
@@ -84,7 +78,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -95,7 +88,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -106,7 +98,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-     * 
      */
     @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
@@ -117,7 +108,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -128,7 +118,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The IP address or host name of the Presto server. (i.e. 192.168.222.160)
-     * 
      */
     @Import(name="host", required=true)
       private final Output<Object> host;
@@ -139,7 +128,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -150,7 +138,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The password corresponding to the user name.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -161,7 +148,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Object> port;
@@ -172,7 +158,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The version of the Presto server. (i.e. 0.148-t)
-     * 
      */
     @Import(name="serverVersion", required=true)
       private final Output<Object> serverVersion;
@@ -183,7 +168,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
-     * 
      */
     @Import(name="timeZoneID")
       private final @Nullable Output<Object> timeZoneID;
@@ -194,7 +178,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-     * 
      */
     @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
@@ -206,7 +189,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
     /**
      * Type of linked service.
      * Expected value is 'Presto'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -217,7 +199,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
-     * 
      */
     @Import(name="useSystemTrustStore")
       private final @Nullable Output<Object> useSystemTrustStore;
@@ -228,7 +209,6 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The user name used to connect to the Presto server.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<Object> username;

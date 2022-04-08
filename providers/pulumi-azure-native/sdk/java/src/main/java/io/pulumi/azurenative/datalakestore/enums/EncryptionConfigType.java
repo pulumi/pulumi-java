@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
-     * 
      */
     @EnumType
     public enum EncryptionConfigType {

@@ -19,7 +19,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The bandwidth setting name.
-     * 
      */
     @Import(name="bandwidthSettingName")
       private final @Nullable Output<String> bandwidthSettingName;
@@ -30,7 +29,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
@@ -41,7 +39,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
@@ -52,7 +49,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The schedules.
-     * 
      */
     @Import(name="schedules", required=true)
       private final Output<List<BandwidthScheduleArgs>> schedules;

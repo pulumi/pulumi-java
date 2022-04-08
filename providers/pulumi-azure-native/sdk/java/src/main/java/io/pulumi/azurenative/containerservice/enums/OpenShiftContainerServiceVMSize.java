@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Size of agent VMs.
-     * 
      */
     @EnumType
     public enum OpenShiftContainerServiceVMSize {

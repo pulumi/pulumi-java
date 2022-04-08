@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines an early termination policy based on slack criteria, and a frequency and delay interval for evaluation.
- * 
  */
 public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of intervals by which to delay the first evaluation.
-     * 
      */
     @Import(name="delayEvaluation")
       private final @Nullable Integer delayEvaluation;
@@ -33,7 +31,6 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Interval (number of runs) between policy evaluations.
-     * 
      */
     @Import(name="evaluationInterval")
       private final @Nullable Integer evaluationInterval;
@@ -43,8 +40,8 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Expected value is 'Bandit'.
      * 
+     * Expected value is 'Bandit'.
      */
     @Import(name="policyType", required=true)
       private final String policyType;
@@ -55,7 +52,6 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Absolute distance allowed from the best performing run.
-     * 
      */
     @Import(name="slackAmount")
       private final @Nullable Double slackAmount;
@@ -66,7 +62,6 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Ratio of the allowed distance from the best performing run.
-     * 
      */
     @Import(name="slackFactor")
       private final @Nullable Double slackFactor;

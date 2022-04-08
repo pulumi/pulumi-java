@@ -18,7 +18,6 @@ public final class DatadogHostMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The agent version.
-     * 
      */
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;

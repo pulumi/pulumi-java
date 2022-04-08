@@ -16,7 +16,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the suppression.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -27,7 +26,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The recommendation ID.
-     * 
      */
     @Import(name="recommendationId", required=true)
       private final Output<String> recommendationId;
@@ -38,7 +36,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
@@ -49,7 +46,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The GUID of the suppression.
-     * 
      */
     @Import(name="suppressionId")
       private final @Nullable Output<String> suppressionId;
@@ -60,7 +56,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The duration for which the suppression is valid.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;

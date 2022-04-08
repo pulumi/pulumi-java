@@ -19,7 +19,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Plan for solution object supported by the OperationsManagement resource provider.
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<SolutionPlanArgs> plan;
@@ -41,7 +39,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties for solution object supported by the OperationsManagement resource provider.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<SolutionPropertiesArgs> properties;
@@ -52,7 +49,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to get. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User Solution Name.
-     * 
      */
     @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;
@@ -74,7 +69,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

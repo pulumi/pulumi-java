@@ -17,47 +17,38 @@ import javax.annotation.Nullable;
 public final class VirtualMachineScaleSetDataDiskResponse {
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
      */
     private final @Nullable String caching;
     /**
      * The create option.
-     * 
      */
     private final String createOption;
     /**
      * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
      */
     private final @Nullable Double diskIOPSReadWrite;
     /**
      * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
      */
     private final @Nullable Double diskMBpsReadWrite;
     /**
      * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     * 
      */
     private final @Nullable Integer diskSizeGB;
     /**
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-     * 
      */
     private final Integer lun;
     /**
      * The managed disk parameters.
-     * 
      */
     private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
     /**
      * The disk name.
-     * 
      */
     private final @Nullable String name;
     /**
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
-     * 
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
@@ -85,63 +76,54 @@ public final class VirtualMachineScaleSetDataDiskResponse {
 
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
     */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
     /**
      * The create option.
-     * 
     */
     public String getCreateOption() {
         return this.createOption;
     }
     /**
      * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
     */
     public Optional<Double> getDiskIOPSReadWrite() {
         return Optional.ofNullable(this.diskIOPSReadWrite);
     }
     /**
      * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
     */
     public Optional<Double> getDiskMBpsReadWrite() {
         return Optional.ofNullable(this.diskMBpsReadWrite);
     }
     /**
      * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     * 
     */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-     * 
     */
     public Integer getLun() {
         return this.lun;
     }
     /**
      * The managed disk parameters.
-     * 
     */
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> getManagedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
      * The disk name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
-     * 
     */
     public Optional<Boolean> getWriteAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);

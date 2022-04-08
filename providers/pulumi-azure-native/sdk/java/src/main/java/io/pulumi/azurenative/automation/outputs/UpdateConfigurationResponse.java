@@ -17,37 +17,30 @@ import javax.annotation.Nullable;
 public final class UpdateConfigurationResponse {
     /**
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-     * 
      */
     private final @Nullable List<String> azureVirtualMachines;
     /**
      * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-     * 
      */
     private final @Nullable String duration;
     /**
      * Linux specific update configuration.
-     * 
      */
     private final @Nullable LinuxPropertiesResponse linux;
     /**
      * List of names of non-azure machines targeted by the software update configuration.
-     * 
      */
     private final @Nullable List<String> nonAzureComputerNames;
     /**
      * operating system of target machines
-     * 
      */
     private final String operatingSystem;
     /**
      * Group targets for the software update configuration.
-     * 
      */
     private final @Nullable TargetPropertiesResponse targets;
     /**
      * Windows specific update configuration.
-     * 
      */
     private final @Nullable WindowsPropertiesResponse windows;
 
@@ -71,49 +64,42 @@ public final class UpdateConfigurationResponse {
 
     /**
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-     * 
     */
     public List<String> getAzureVirtualMachines() {
         return this.azureVirtualMachines == null ? List.of() : this.azureVirtualMachines;
     }
     /**
      * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-     * 
     */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
     }
     /**
      * Linux specific update configuration.
-     * 
     */
     public Optional<LinuxPropertiesResponse> getLinux() {
         return Optional.ofNullable(this.linux);
     }
     /**
      * List of names of non-azure machines targeted by the software update configuration.
-     * 
     */
     public List<String> getNonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? List.of() : this.nonAzureComputerNames;
     }
     /**
      * operating system of target machines
-     * 
     */
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
     /**
      * Group targets for the software update configuration.
-     * 
     */
     public Optional<TargetPropertiesResponse> getTargets() {
         return Optional.ofNullable(this.targets);
     }
     /**
      * Windows specific update configuration.
-     * 
     */
     public Optional<WindowsPropertiesResponse> getWindows() {
         return Optional.ofNullable(this.windows);

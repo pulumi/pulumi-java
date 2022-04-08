@@ -16,7 +16,6 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
-     * 
      */
     @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
@@ -27,7 +26,6 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP firewall rule name
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
@@ -49,7 +46,6 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The start IP address of the firewall rule. Must be IPv4 format
-     * 
      */
     @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
@@ -60,7 +56,6 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListDatabasePrincipalsResult {
     /**
      * The list of Kusto database principals.
-     * 
      */
     private final @Nullable List<DatabasePrincipalResponse> value;
 
@@ -24,7 +23,6 @@ public final class ListDatabasePrincipalsResult {
 
     /**
      * The list of Kusto database principals.
-     * 
     */
     public List<DatabasePrincipalResponse> getValue() {
         return this.value == null ? List.of() : this.value;

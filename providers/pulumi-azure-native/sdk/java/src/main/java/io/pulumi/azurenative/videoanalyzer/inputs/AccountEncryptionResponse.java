@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines how the Video Analyzer account is (optionally) encrypted.
- * 
  */
 public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The Key Vault identity.
-     * 
      */
     @Import(name="identity")
       private final @Nullable ResourceIdentityResponse identity;
@@ -33,7 +31,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The properties of the key used to encrypt the account.
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
@@ -44,7 +41,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The current status of the Key Vault mapping.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -55,7 +51,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The type of key used to encrypt the Account Key.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

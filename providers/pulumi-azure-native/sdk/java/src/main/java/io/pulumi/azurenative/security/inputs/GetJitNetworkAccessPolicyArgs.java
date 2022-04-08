@@ -14,7 +14,6 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
 
     /**
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
-     * 
      */
     @Import(name="ascLocation", required=true)
       private final String ascLocation;
@@ -25,7 +24,6 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of a Just-in-Time access configuration policy.
-     * 
      */
     @Import(name="jitNetworkAccessPolicyName", required=true)
       private final String jitNetworkAccessPolicyName;
@@ -36,7 +34,6 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

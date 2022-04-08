@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the encryption associated with the workspace
- * 
  */
 public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Customer Managed Key Details
-     * 
      */
     @Import(name="cmk")
       private final @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;

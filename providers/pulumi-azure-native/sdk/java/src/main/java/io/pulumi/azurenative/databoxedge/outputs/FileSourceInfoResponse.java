@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class FileSourceInfoResponse {
     /**
      * File share ID.
-     * 
      */
     private final String shareId;
 
@@ -22,7 +21,6 @@ public final class FileSourceInfoResponse {
 
     /**
      * File share ID.
-     * 
     */
     public String getShareId() {
         return this.shareId;

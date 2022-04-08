@@ -17,7 +17,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of a graph query.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KQL query that will be graph.
-     * 
      */
     @Import(name="query", required=true)
       private final Output<String> query;
@@ -50,7 +47,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Graph Query resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -72,7 +67,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

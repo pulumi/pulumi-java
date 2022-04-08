@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The live event input.
- * 
  */
 public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Access control for live event input.
-     * 
      */
     @Import(name="accessControl")
       private final @Nullable LiveEventInputAccessControlResponse accessControl;
@@ -34,7 +32,6 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable String accessToken;
@@ -45,7 +42,6 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The input endpoints for the live event.
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable List<LiveEventEndpointResponse> endpoints;
@@ -56,7 +52,6 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
-     * 
      */
     @Import(name="keyFrameIntervalDuration")
       private final @Nullable String keyFrameIntervalDuration;
@@ -67,7 +62,6 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The input protocol for the live event. This is specified at creation time and cannot be updated.
-     * 
      */
     @Import(name="streamingProtocol", required=true)
       private final String streamingProtocol;

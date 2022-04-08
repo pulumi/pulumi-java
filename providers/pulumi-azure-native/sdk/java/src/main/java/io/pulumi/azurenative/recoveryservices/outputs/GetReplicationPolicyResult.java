@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class GetReplicationPolicyResult {
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource Location
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource Name
-     * 
      */
     private final String name;
     /**
      * The custom data.
-     * 
      */
     private final PolicyPropertiesResponse properties;
     /**
      * Resource Type
-     * 
      */
     private final String type;
 
@@ -54,35 +49,30 @@ public final class GetReplicationPolicyResult {
 
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource Location
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The custom data.
-     * 
     */
     public PolicyPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
     */
     public String getType() {
         return this.type;

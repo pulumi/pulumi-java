@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the dependency of the move resource.
- * 
  */
 public final class MoveResourceDependencyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
 
     /**
      * Defines the properties for automatic resolution.
-     * 
      */
     @Import(name="automaticResolution")
       private final @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
@@ -33,7 +31,6 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
 
     /**
      * Defines the dependency type.
-     * 
      */
     @Import(name="dependencyType")
       private final @Nullable String dependencyType;
@@ -44,7 +41,6 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
 
     /**
      * Gets the source ARM ID of the dependent resource.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -55,7 +51,6 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets a value indicating whether the dependency is optional.
-     * 
      */
     @Import(name="isOptional")
       private final @Nullable String isOptional;
@@ -66,7 +61,6 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
 
     /**
      * Defines the properties for manual resolution.
-     * 
      */
     @Import(name="manualResolution")
       private final @Nullable ManualResolutionPropertiesResponse manualResolution;
@@ -77,7 +71,6 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
 
     /**
      * Gets the dependency resolution status.
-     * 
      */
     @Import(name="resolutionStatus")
       private final @Nullable String resolutionStatus;
@@ -88,7 +81,6 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
 
     /**
      * Defines the resolution type.
-     * 
      */
     @Import(name="resolutionType")
       private final @Nullable String resolutionType;

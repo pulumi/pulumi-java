@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PrePostStepResponse {
     /**
      * The resource Id of the step to be run.
-     * 
      */
     private final String stepId;
 
@@ -22,7 +21,6 @@ public final class PrePostStepResponse {
 
     /**
      * The resource Id of the step to be run.
-     * 
     */
     public String getStepId() {
         return this.stepId;

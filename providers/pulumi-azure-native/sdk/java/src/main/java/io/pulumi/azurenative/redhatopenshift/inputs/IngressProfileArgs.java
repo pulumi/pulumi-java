@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IngressProfile represents an ingress profile.
- * 
  */
 public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP of the ingress (immutable).
-     * 
      */
     @Import(name="ip")
       private final @Nullable Output<String> ip;
@@ -31,7 +29,6 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ingress profile name.  Must be "default" (immutable).
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Ingress visibility (immutable).
-     * 
      */
     @Import(name="visibility")
       private final @Nullable Output<String> visibility;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The set of data plane operations permitted through this Role Definition.
- * 
  */
 public final class PrivilegeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivilegeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of actions that are allowed.
-     * 
      */
     @Import(name="actions")
       private final @Nullable List<String> actions;
@@ -33,7 +31,6 @@ public final class PrivilegeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An Azure Cosmos DB Mongo DB Resource.
-     * 
      */
     @Import(name="resource")
       private final @Nullable PrivilegeResponseResource resource;

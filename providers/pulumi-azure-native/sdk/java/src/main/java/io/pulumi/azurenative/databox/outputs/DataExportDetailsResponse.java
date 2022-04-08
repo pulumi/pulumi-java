@@ -17,17 +17,14 @@ import javax.annotation.Nullable;
 public final class DataExportDetailsResponse {
     /**
      * Account details of the data to be transferred
-     * 
      */
     private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
     /**
      * Level of the logs to be collected.
-     * 
      */
     private final @Nullable String logCollectionLevel;
     /**
      * Configuration for the data transfer.
-     * 
      */
     private final TransferConfigurationResponse transferConfiguration;
 
@@ -43,21 +40,18 @@ public final class DataExportDetailsResponse {
 
     /**
      * Account details of the data to be transferred
-     * 
     */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {
         return this.accountDetails;
     }
     /**
      * Level of the logs to be collected.
-     * 
     */
     public Optional<String> getLogCollectionLevel() {
         return Optional.ofNullable(this.logCollectionLevel);
     }
     /**
      * Configuration for the data transfer.
-     * 
     */
     public TransferConfigurationResponse getTransferConfiguration() {
         return this.transferConfiguration;

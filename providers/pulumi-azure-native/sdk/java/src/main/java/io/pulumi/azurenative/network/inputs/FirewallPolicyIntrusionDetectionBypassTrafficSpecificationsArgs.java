@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Intrusion detection bypass traffic specification.
- * 
  */
 public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * Description of the bypass traffic rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * List of destination IP addresses or ranges for this rule.
-     * 
      */
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
@@ -45,7 +42,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * List of destination IpGroups for this rule.
-     * 
      */
     @Import(name="destinationIpGroups")
       private final @Nullable Output<List<String>> destinationIpGroups;
@@ -56,7 +52,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * List of destination ports or ranges.
-     * 
      */
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
@@ -67,7 +62,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * Name of the bypass traffic rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +72,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * The rule bypass protocol.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol;
@@ -89,7 +82,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * List of source IP addresses or ranges for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
@@ -100,7 +92,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;

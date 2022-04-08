@@ -21,7 +21,144 @@ import javax.annotation.Nullable;
  * A failover group.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create failover group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var failoverGroup = new AzureNative.Sql.FailoverGroup("failoverGroup", new AzureNative.Sql.FailoverGroupArgs
+ *         {
+ *             Databases = 
+ *             {
+ *                 "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
+ *                 "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
+ *             },
+ *             FailoverGroupName = "failover-group-test-3",
+ *             PartnerServers = 
+ *             {
+ *                 new AzureNative.Sql.Inputs.PartnerInfoArgs
+ *                 {
+ *                     Id = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
+ *                 },
+ *             },
+ *             ReadOnlyEndpoint = new AzureNative.Sql.Inputs.FailoverGroupReadOnlyEndpointArgs
+ *             {
+ *                 FailoverPolicy = "Disabled",
+ *             },
+ *             ReadWriteEndpoint = new AzureNative.Sql.Inputs.FailoverGroupReadWriteEndpointArgs
+ *             {
+ *                 FailoverPolicy = "Automatic",
+ *                 FailoverWithDataLossGracePeriodMinutes = 480,
+ *             },
+ *             ResourceGroupName = "Default",
+ *             ServerName = "failover-group-primary-server",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewFailoverGroup(ctx, "failoverGroup", &sql.FailoverGroupArgs{
+ * 			Databases: pulumi.StringArray{
+ * 				pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1"),
+ * 				pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2"),
+ * 			},
+ * 			FailoverGroupName: pulumi.String("failover-group-test-3"),
+ * 			PartnerServers: sql.PartnerInfoArray{
+ * 				&sql.PartnerInfoArgs{
+ * 					Id: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server"),
+ * 				},
+ * 			},
+ * 			ReadOnlyEndpoint: &sql.FailoverGroupReadOnlyEndpointArgs{
+ * 				FailoverPolicy: pulumi.String("Disabled"),
+ * 			},
+ * 			ReadWriteEndpoint: &sql.FailoverGroupReadWriteEndpointArgs{
+ * 				FailoverPolicy:                         pulumi.String("Automatic"),
+ * 				FailoverWithDataLossGracePeriodMinutes: pulumi.Int(480),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("Default"),
+ * 			ServerName:        pulumi.String("failover-group-primary-server"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const failoverGroup = new azure_native.sql.FailoverGroup("failoverGroup", {
+ *     databases: [
+ *         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
+ *         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
+ *     ],
+ *     failoverGroupName: "failover-group-test-3",
+ *     partnerServers: [{
+ *         id: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
+ *     }],
+ *     readOnlyEndpoint: {
+ *         failoverPolicy: "Disabled",
+ *     },
+ *     readWriteEndpoint: {
+ *         failoverPolicy: "Automatic",
+ *         failoverWithDataLossGracePeriodMinutes: 480,
+ *     },
+ *     resourceGroupName: "Default",
+ *     serverName: "failover-group-primary-server",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * failover_group = azure_native.sql.FailoverGroup("failoverGroup",
+ *     databases=[
+ *         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
+ *         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
+ *     ],
+ *     failover_group_name="failover-group-test-3",
+ *     partner_servers=[azure_native.sql.PartnerInfoArgs(
+ *         id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
+ *     )],
+ *     read_only_endpoint=azure_native.sql.FailoverGroupReadOnlyEndpointArgs(
+ *         failover_policy="Disabled",
+ *     ),
+ *     read_write_endpoint=azure_native.sql.FailoverGroupReadWriteEndpointArgs(
+ *         failover_policy="Automatic",
+ *         failover_with_data_loss_grace_period_minutes=480,
+ *     ),
+ *     resource_group_name="Default",
+ *     server_name="failover-group-primary-server")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,140 +173,120 @@ import javax.annotation.Nullable;
 public class FailoverGroup extends io.pulumi.resources.CustomResource {
     /**
      * List of databases in the failover group.
-     * 
      */
     @Export(name="databases", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> databases;
 
     /**
      * @return List of databases in the failover group.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDatabases() {
         return this.databases;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of partner server information for the failover group.
-     * 
      */
     @Export(name="partnerServers", type=List.class, parameters={PartnerInfoResponse.class})
     private Output<List<PartnerInfoResponse>> partnerServers;
 
     /**
      * @return List of partner server information for the failover group.
-     * 
      */
     public Output<List<PartnerInfoResponse>> getPartnerServers() {
         return this.partnerServers;
     }
     /**
      * Read-only endpoint of the failover group instance.
-     * 
      */
     @Export(name="readOnlyEndpoint", type=FailoverGroupReadOnlyEndpointResponse.class, parameters={})
     private Output</* @Nullable */ FailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint;
 
     /**
      * @return Read-only endpoint of the failover group instance.
-     * 
      */
     public Output</* @Nullable */ FailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
         return this.readOnlyEndpoint;
     }
     /**
      * Read-write endpoint of the failover group instance.
-     * 
      */
     @Export(name="readWriteEndpoint", type=FailoverGroupReadWriteEndpointResponse.class, parameters={})
     private Output<FailoverGroupReadWriteEndpointResponse> readWriteEndpoint;
 
     /**
      * @return Read-write endpoint of the failover group instance.
-     * 
      */
     public Output<FailoverGroupReadWriteEndpointResponse> getReadWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
      * Local replication role of the failover group instance.
-     * 
      */
     @Export(name="replicationRole", type=String.class, parameters={})
     private Output<String> replicationRole;
 
     /**
      * @return Local replication role of the failover group instance.
-     * 
      */
     public Output<String> getReplicationRole() {
         return this.replicationRole;
     }
     /**
      * Replication state of the failover group instance.
-     * 
      */
     @Export(name="replicationState", type=String.class, parameters={})
     private Output<String> replicationState;
 
     /**
      * @return Replication state of the failover group instance.
-     * 
      */
     public Output<String> getReplicationState() {
         return this.replicationState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

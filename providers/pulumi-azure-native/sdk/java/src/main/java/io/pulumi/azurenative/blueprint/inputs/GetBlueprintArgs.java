@@ -14,7 +14,6 @@ public final class GetBlueprintArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the blueprint definition.
-     * 
      */
     @Import(name="blueprintName", required=true)
       private final String blueprintName;
@@ -25,7 +24,6 @@ public final class GetBlueprintArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final String resourceScope;

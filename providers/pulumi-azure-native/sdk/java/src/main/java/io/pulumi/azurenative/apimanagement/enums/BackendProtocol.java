@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Backend communication protocol.
-     * 
      */
     @EnumType
     public enum BackendProtocol {
         /**
          * The Backend is a RESTful service.
-         * 
          */
         Http("http"),
         /**
          * The Backend is a SOAP service.
-         * 
          */
         Soap("soap");
 

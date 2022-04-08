@@ -17,7 +17,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customer's ASN from which traffic originates.
-     * 
      */
     @Import(name="asn")
       private final @Nullable Output<Integer> asn;
@@ -28,7 +27,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringName", required=true)
       private final Output<String> peeringName;
@@ -39,7 +37,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the ASN.
-     * 
      */
     @Import(name="registeredAsnName")
       private final @Nullable Output<String> registeredAsnName;
@@ -50,7 +47,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

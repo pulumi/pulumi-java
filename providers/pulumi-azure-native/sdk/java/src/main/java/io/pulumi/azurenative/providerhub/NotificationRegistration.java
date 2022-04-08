@@ -18,7 +18,170 @@ import javax.annotation.Nullable;
  * The notification registration definition.
  * API Version: 2020-11-20.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NotificationRegistrations_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notificationRegistration = new AzureNative.ProviderHub.NotificationRegistration("notificationRegistration", new AzureNative.ProviderHub.NotificationRegistrationArgs
+ *         {
+ *             NotificationRegistrationName = "fooNotificationRegistration",
+ *             Properties = new AzureNative.ProviderHub.Inputs.NotificationRegistrationPropertiesArgs
+ *             {
+ *                 IncludedEvents = 
+ *                 {
+ *                     "*{@literal /}write",
+ *                     "Microsoft.Contoso/employees/delete",
+ *                 },
+ *                 MessageScope = "RegisteredSubscriptions",
+ *                 NotificationEndpoints = 
+ *                 {
+ *                     new AzureNative.ProviderHub.Inputs.NotificationEndpointArgs
+ *                     {
+ *                         Locations = 
+ *                         {
+ *                             "",
+ *                             "East US",
+ *                         },
+ *                         NotificationDestination = "/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-eastus/providers/Microsoft.EventHub/namespaces/unitedstates-mgmtexpint/eventhubs/armlinkednotifications",
+ *                     },
+ *                     new AzureNative.ProviderHub.Inputs.NotificationEndpointArgs
+ *                     {
+ *                         Locations = 
+ *                         {
+ *                             "North Europe",
+ *                         },
+ *                         NotificationDestination = "/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-northeurope/providers/Microsoft.EventHub/namespaces/europe-mgmtexpint/eventhubs/armlinkednotifications",
+ *                     },
+ *                 },
+ *                 NotificationMode = "EventHub",
+ *             },
+ *             ProviderNamespace = "Microsoft.Contoso",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providerhub.NewNotificationRegistration(ctx, "notificationRegistration", &providerhub.NotificationRegistrationArgs{
+ * 			NotificationRegistrationName: pulumi.String("fooNotificationRegistration"),
+ * 			Properties: &providerhub.NotificationRegistrationPropertiesArgs{
+ * 				IncludedEvents: pulumi.StringArray{
+ * 					pulumi.String("*{@literal /}write"),
+ * 					pulumi.String("Microsoft.Contoso/employees/delete"),
+ * 				},
+ * 				MessageScope: pulumi.String("RegisteredSubscriptions"),
+ * 				NotificationEndpoints: providerhub.NotificationEndpointArray{
+ * 					&providerhub.NotificationEndpointArgs{
+ * 						Locations: pulumi.StringArray{
+ * 							pulumi.String(""),
+ * 							pulumi.String("East US"),
+ * 						},
+ * 						NotificationDestination: pulumi.String("/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-eastus/providers/Microsoft.EventHub/namespaces/unitedstates-mgmtexpint/eventhubs/armlinkednotifications"),
+ * 					},
+ * 					&providerhub.NotificationEndpointArgs{
+ * 						Locations: pulumi.StringArray{
+ * 							pulumi.String("North Europe"),
+ * 						},
+ * 						NotificationDestination: pulumi.String("/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-northeurope/providers/Microsoft.EventHub/namespaces/europe-mgmtexpint/eventhubs/armlinkednotifications"),
+ * 					},
+ * 				},
+ * 				NotificationMode: pulumi.String("EventHub"),
+ * 			},
+ * 			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notificationRegistration = new azure_native.providerhub.NotificationRegistration("notificationRegistration", {
+ *     notificationRegistrationName: "fooNotificationRegistration",
+ *     properties: {
+ *         includedEvents: [
+ *             "*{@literal /}write",
+ *             "Microsoft.Contoso/employees/delete",
+ *         ],
+ *         messageScope: "RegisteredSubscriptions",
+ *         notificationEndpoints: [
+ *             {
+ *                 locations: [
+ *                     "",
+ *                     "East US",
+ *                 ],
+ *                 notificationDestination: "/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-eastus/providers/Microsoft.EventHub/namespaces/unitedstates-mgmtexpint/eventhubs/armlinkednotifications",
+ *             },
+ *             {
+ *                 locations: ["North Europe"],
+ *                 notificationDestination: "/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-northeurope/providers/Microsoft.EventHub/namespaces/europe-mgmtexpint/eventhubs/armlinkednotifications",
+ *             },
+ *         ],
+ *         notificationMode: "EventHub",
+ *     },
+ *     providerNamespace: "Microsoft.Contoso",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notification_registration = azure_native.providerhub.NotificationRegistration("notificationRegistration",
+ *     notification_registration_name="fooNotificationRegistration",
+ *     properties=azure_native.providerhub.NotificationRegistrationPropertiesArgs(
+ *         included_events=[
+ *             "*{@literal /}write",
+ *             "Microsoft.Contoso/employees/delete",
+ *         ],
+ *         message_scope="RegisteredSubscriptions",
+ *         notification_endpoints=[
+ *             azure_native.providerhub.NotificationEndpointArgs(
+ *                 locations=[
+ *                     "",
+ *                     "East US",
+ *                 ],
+ *                 notification_destination="/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-eastus/providers/Microsoft.EventHub/namespaces/unitedstates-mgmtexpint/eventhubs/armlinkednotifications",
+ *             ),
+ *             azure_native.providerhub.NotificationEndpointArgs(
+ *                 locations=["North Europe"],
+ *                 notification_destination="/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-northeurope/providers/Microsoft.EventHub/namespaces/europe-mgmtexpint/eventhubs/armlinkednotifications",
+ *             ),
+ *         ],
+ *         notification_mode="EventHub",
+ *     ),
+ *     provider_namespace="Microsoft.Contoso")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +196,12 @@ import javax.annotation.Nullable;
 public class NotificationRegistration extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -53,14 +214,12 @@ public class NotificationRegistration extends io.pulumi.resources.CustomResource
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

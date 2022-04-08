@@ -17,47 +17,38 @@ import javax.annotation.Nullable;
 public final class GetJobStepResult {
     /**
      * The action payload of the job step.
-     * 
      */
     private final JobStepActionResponse action;
     /**
      * The resource ID of the job credential that will be used to connect to the targets.
-     * 
      */
     private final String credential;
     /**
      * Execution options for the job step.
-     * 
      */
     private final @Nullable JobStepExecutionOptionsResponse executionOptions;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Output destination properties of the job step.
-     * 
      */
     private final @Nullable JobStepOutputResponse output;
     /**
      * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
-     * 
      */
     private final @Nullable Integer stepId;
     /**
      * The resource ID of the target group that the job step will be executed on.
-     * 
      */
     private final String targetGroup;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -85,63 +76,54 @@ public final class GetJobStepResult {
 
     /**
      * The action payload of the job step.
-     * 
     */
     public JobStepActionResponse getAction() {
         return this.action;
     }
     /**
      * The resource ID of the job credential that will be used to connect to the targets.
-     * 
     */
     public String getCredential() {
         return this.credential;
     }
     /**
      * Execution options for the job step.
-     * 
     */
     public Optional<JobStepExecutionOptionsResponse> getExecutionOptions() {
         return Optional.ofNullable(this.executionOptions);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Output destination properties of the job step.
-     * 
     */
     public Optional<JobStepOutputResponse> getOutput() {
         return Optional.ofNullable(this.output);
     }
     /**
      * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
-     * 
     */
     public Optional<Integer> getStepId() {
         return Optional.ofNullable(this.stepId);
     }
     /**
      * The resource ID of the target group that the job step will be executed on.
-     * 
     */
     public String getTargetGroup() {
         return this.targetGroup;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -19,7 +19,83 @@ import javax.annotation.Nullable;
  * The remediation definition.
  * API Version: 2019-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create remediation at management group scope
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var remediationAtManagementGroup = new AzureNative.PolicyInsights.RemediationAtManagementGroup("remediationAtManagementGroup", new AzureNative.PolicyInsights.RemediationAtManagementGroupArgs
+ *         {
+ *             ManagementGroupId = "financeMg",
+ *             ManagementGroupsNamespace = "Microsoft.Management",
+ *             PolicyAssignmentId = "/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *             RemediationName = "storageRemediation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	policyinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/policyinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := policyinsights.NewRemediationAtManagementGroup(ctx, "remediationAtManagementGroup", &policyinsights.RemediationAtManagementGroupArgs{
+ * 			ManagementGroupId:         pulumi.String("financeMg"),
+ * 			ManagementGroupsNamespace: pulumi.String("Microsoft.Management"),
+ * 			PolicyAssignmentId:        pulumi.String("/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
+ * 			RemediationName:           pulumi.String("storageRemediation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const remediationAtManagementGroup = new azure_native.policyinsights.RemediationAtManagementGroup("remediationAtManagementGroup", {
+ *     managementGroupId: "financeMg",
+ *     managementGroupsNamespace: "Microsoft.Management",
+ *     policyAssignmentId: "/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     remediationName: "storageRemediation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * remediation_at_management_group = azure_native.policyinsights.RemediationAtManagementGroup("remediationAtManagementGroup",
+ *     management_group_id="financeMg",
+ *     management_groups_namespace="Microsoft.Management",
+ *     policy_assignment_id="/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     remediation_name="storageRemediation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +110,120 @@ import javax.annotation.Nullable;
 public class RemediationAtManagementGroup extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the remediation was created.
-     * 
      */
     @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
      * @return The time at which the remediation was created.
-     * 
      */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
     /**
      * The deployment status summary for all deployments created by the remediation.
-     * 
      */
     @Export(name="deploymentStatus", type=RemediationDeploymentSummaryResponse.class, parameters={})
     private Output<RemediationDeploymentSummaryResponse> deploymentStatus;
 
     /**
      * @return The deployment status summary for all deployments created by the remediation.
-     * 
      */
     public Output<RemediationDeploymentSummaryResponse> getDeploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * The filters that will be applied to determine which resources to remediate.
-     * 
      */
     @Export(name="filters", type=RemediationFiltersResponse.class, parameters={})
     private Output</* @Nullable */ RemediationFiltersResponse> filters;
 
     /**
      * @return The filters that will be applied to determine which resources to remediate.
-     * 
      */
     public Output</* @Nullable */ RemediationFiltersResponse> getFilters() {
         return this.filters;
     }
     /**
      * The time at which the remediation was last updated.
-     * 
      */
     @Export(name="lastUpdatedOn", type=String.class, parameters={})
     private Output<String> lastUpdatedOn;
 
     /**
      * @return The time at which the remediation was last updated.
-     * 
      */
     public Output<String> getLastUpdatedOn() {
         return this.lastUpdatedOn;
     }
     /**
      * The name of the remediation.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the remediation.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource ID of the policy assignment that should be remediated.
-     * 
      */
     @Export(name="policyAssignmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyAssignmentId;
 
     /**
      * @return The resource ID of the policy assignment that should be remediated.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
      * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
-     * 
      */
     @Export(name="policyDefinitionReferenceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDefinitionReferenceId;
 
     /**
      * @return The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId;
     }
     /**
      * The status of the remediation.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The status of the remediation.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
-     * 
      */
     @Export(name="resourceDiscoveryMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceDiscoveryMode;
 
     /**
      * @return The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
-     * 
      */
     public Output</* @Nullable */ String> getResourceDiscoveryMode() {
         return this.resourceDiscoveryMode;
     }
     /**
      * The type of the remediation.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the remediation.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -19,7 +19,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the maintenance configuration.
-     * 
      */
     @Import(name="configName")
       private final @Nullable Output<String> configName;
@@ -30,7 +29,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Time slots on which upgrade is not allowed.
-     * 
      */
     @Import(name="notAllowedTime")
       private final @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
@@ -41,7 +39,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the managed cluster resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -63,7 +59,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Weekday time slots allowed to upgrade.
-     * 
      */
     @Import(name="timeInWeek")
       private final @Nullable Output<List<TimeInWeekArgs>> timeInWeek;

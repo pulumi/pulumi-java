@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Kind of the database
-     * 
      */
     @EnumType
     public enum Kind {

@@ -28,7 +28,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Timestamp of last connection change
-     * 
      */
     @Import(name="changedTime")
       private final @Nullable String changedTime;
@@ -39,7 +38,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Timestamp of the connection creation
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable String createdTime;
@@ -50,7 +48,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Dictionary of custom parameter values
-     * 
      */
     @Import(name="customParameterValues")
       private final @Nullable Map<String,String> customParameterValues;
@@ -61,7 +58,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Display name
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -72,7 +68,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Dictionary of nonsecret parameter values
-     * 
      */
     @Import(name="nonSecretParameterValues")
       private final @Nullable Map<String,String> nonSecretParameterValues;
@@ -83,7 +78,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Dictionary of parameter values
-     * 
      */
     @Import(name="parameterValues")
       private final @Nullable Map<String,String> parameterValues;
@@ -94,7 +88,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Status of the connection
-     * 
      */
     @Import(name="statuses")
       private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
@@ -105,7 +98,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     /**
      * Links to test the API connection
-     * 
      */
     @Import(name="testLinks")
       private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;

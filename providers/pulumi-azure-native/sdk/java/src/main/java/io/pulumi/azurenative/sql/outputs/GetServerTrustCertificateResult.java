@@ -13,32 +13,26 @@ import javax.annotation.Nullable;
 public final class GetServerTrustCertificateResult {
     /**
      * The certificate name
-     * 
      */
     private final String certificateName;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The certificate public blob
-     * 
      */
     private final @Nullable String publicBlob;
     /**
      * The certificate thumbprint
-     * 
      */
     private final String thumbprint;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -60,42 +54,36 @@ public final class GetServerTrustCertificateResult {
 
     /**
      * The certificate name
-     * 
     */
     public String getCertificateName() {
         return this.certificateName;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The certificate public blob
-     * 
     */
     public Optional<String> getPublicBlob() {
         return Optional.ofNullable(this.publicBlob);
     }
     /**
      * The certificate thumbprint
-     * 
     */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -17,7 +17,6 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the application type name resource.
-     * 
      */
     @Import(name="applicationTypeName")
       private final @Nullable Output<String> applicationTypeName;
@@ -28,7 +27,6 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -39,7 +37,6 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -50,7 +47,6 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Azure resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

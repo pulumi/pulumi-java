@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The publishing profile of a gallery image Version.
- * 
  */
 public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
 
     /**
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
-     * 
      */
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
@@ -37,7 +35,6 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
 
     /**
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
-     * 
      */
     @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
@@ -48,7 +45,6 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
 
     /**
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
-     * 
      */
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
@@ -59,7 +55,6 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
 
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
@@ -70,7 +65,6 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
 
     /**
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
-     * 
      */
     @Import(name="targetRegions")
       private final @Nullable Output<List<TargetRegionArgs>> targetRegions;

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class DiagnosticsRefResponse {
     /**
      * Status of whether or not sinks are enabled.
-     * 
      */
     private final @Nullable Boolean enabled;
     /**
      * List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
-     * 
      */
     private final @Nullable List<String> sinkRefs;
 
@@ -34,14 +32,12 @@ public final class DiagnosticsRefResponse {
 
     /**
      * Status of whether or not sinks are enabled.
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
-     * 
     */
     public List<String> getSinkRefs() {
         return this.sinkRefs == null ? List.of() : this.sinkRefs;

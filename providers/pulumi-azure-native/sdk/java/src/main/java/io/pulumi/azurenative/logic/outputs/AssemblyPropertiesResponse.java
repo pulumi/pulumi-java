@@ -15,43 +15,35 @@ import javax.annotation.Nullable;
 public final class AssemblyPropertiesResponse {
     /**
      * The assembly culture.
-     * 
      */
     private final @Nullable String assemblyCulture;
     /**
      * The assembly name.
-     * 
      */
     private final String assemblyName;
     /**
      * The assembly public key token.
-     * 
      */
     private final @Nullable String assemblyPublicKeyToken;
     /**
      * The assembly version.
-     * 
      */
     private final @Nullable String assemblyVersion;
     /**
      * The artifact changed time.
-     * 
      */
     private final @Nullable String changedTime;
     private final @Nullable Object content;
     /**
      * The content link.
-     * 
      */
     private final @Nullable ContentLinkResponse contentLink;
     /**
      * The content type.
-     * 
      */
     private final @Nullable String contentType;
     /**
      * The artifact creation time.
-     * 
      */
     private final @Nullable String createdTime;
     private final @Nullable Object metadata;
@@ -82,35 +74,30 @@ public final class AssemblyPropertiesResponse {
 
     /**
      * The assembly culture.
-     * 
     */
     public Optional<String> getAssemblyCulture() {
         return Optional.ofNullable(this.assemblyCulture);
     }
     /**
      * The assembly name.
-     * 
     */
     public String getAssemblyName() {
         return this.assemblyName;
     }
     /**
      * The assembly public key token.
-     * 
     */
     public Optional<String> getAssemblyPublicKeyToken() {
         return Optional.ofNullable(this.assemblyPublicKeyToken);
     }
     /**
      * The assembly version.
-     * 
     */
     public Optional<String> getAssemblyVersion() {
         return Optional.ofNullable(this.assemblyVersion);
     }
     /**
      * The artifact changed time.
-     * 
     */
     public Optional<String> getChangedTime() {
         return Optional.ofNullable(this.changedTime);
@@ -120,21 +107,18 @@ public final class AssemblyPropertiesResponse {
     }
     /**
      * The content link.
-     * 
     */
     public Optional<ContentLinkResponse> getContentLink() {
         return Optional.ofNullable(this.contentLink);
     }
     /**
      * The content type.
-     * 
     */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The artifact creation time.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
- * 
  */
 public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The plan ID.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -31,7 +29,6 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
-     * 
      */
     @Import(name="product", required=true)
       private final Output<String> product;
@@ -42,7 +39,6 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Offer Promotion Code.
-     * 
      */
     @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
@@ -53,7 +49,6 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The publisher ID.
-     * 
      */
     @Import(name="publisher", required=true)
       private final Output<String> publisher;

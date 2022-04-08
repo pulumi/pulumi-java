@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The common properties of the export.
- * 
  */
 public final class CommonExportPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Has the definition for the export.
-     * 
      */
     @Import(name="definition", required=true)
       private final ExportDefinitionResponse definition;
@@ -34,7 +32,6 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Has delivery information for the export.
-     * 
      */
     @Import(name="deliveryInfo", required=true)
       private final ExportDeliveryInfoResponse deliveryInfo;
@@ -45,7 +42,6 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The format of the export being delivered. Currently only 'Csv' is supported.
-     * 
      */
     @Import(name="format")
       private final @Nullable String format;
@@ -56,7 +52,6 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * If the export has an active schedule, provides an estimate of the next execution time.
-     * 
      */
     @Import(name="nextRunTimeEstimate", required=true)
       private final String nextRunTimeEstimate;
@@ -67,7 +62,6 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * If requested, has the most recent execution history for the export.
-     * 
      */
     @Import(name="runHistory")
       private final @Nullable ExportExecutionListResultResponse runHistory;

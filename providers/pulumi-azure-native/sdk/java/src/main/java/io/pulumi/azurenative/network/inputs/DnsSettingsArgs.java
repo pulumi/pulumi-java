@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * DNS Proxy Settings in Firewall Policy.
- * 
  */
 public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
-     * 
      */
     @Import(name="enableProxy")
       private final @Nullable Output<Boolean> enableProxy;
@@ -33,7 +31,6 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FQDNs in Network Rules are supported when set to true.
-     * 
      */
     @Import(name="requireProxyForNetworkRules")
       private final @Nullable Output<Boolean> requireProxyForNetworkRules;
@@ -44,7 +41,6 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Custom DNS Servers.
-     * 
      */
     @Import(name="servers")
       private final @Nullable Output<List<String>> servers;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The integration service environment sku.
- * 
  */
 public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
 
     /**
      * The sku capacity.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -34,7 +32,6 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
 
     /**
      * The sku name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name;

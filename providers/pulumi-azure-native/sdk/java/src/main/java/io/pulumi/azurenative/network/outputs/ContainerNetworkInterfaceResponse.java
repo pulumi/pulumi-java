@@ -17,42 +17,34 @@ import javax.annotation.Nullable;
 public final class ContainerNetworkInterfaceResponse {
     /**
      * Reference to the container to which this container network interface is attached.
-     * 
      */
     private final @Nullable ContainerResponse container;
     /**
      * Container network interface configuration from which this container network interface is created.
-     * 
      */
     private final ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Reference to the ip configuration on this container nic.
-     * 
      */
     private final List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations;
     /**
      * The name of the resource. This name can be used to access the resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * The provisioning state of the container network interface resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Sub Resource type.
-     * 
      */
     private final String type;
 
@@ -78,56 +70,48 @@ public final class ContainerNetworkInterfaceResponse {
 
     /**
      * Reference to the container to which this container network interface is attached.
-     * 
     */
     public Optional<ContainerResponse> getContainer() {
         return Optional.ofNullable(this.container);
     }
     /**
      * Container network interface configuration from which this container network interface is created.
-     * 
     */
     public ContainerNetworkInterfaceConfigurationResponse getContainerNetworkInterfaceConfiguration() {
         return this.containerNetworkInterfaceConfiguration;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reference to the ip configuration on this container nic.
-     * 
     */
     public List<ContainerNetworkInterfaceIpConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * The name of the resource. This name can be used to access the resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the container network interface resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
-     * 
     */
     public String getType() {
         return this.type;

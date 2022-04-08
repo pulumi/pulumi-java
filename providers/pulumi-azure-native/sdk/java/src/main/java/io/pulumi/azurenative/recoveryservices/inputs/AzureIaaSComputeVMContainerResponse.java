@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IaaS VM workload-specific backup item representing an Azure Resource Manager virtual machine.
- * 
  */
 public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -35,7 +33,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'Microsoft.Compute/virtualMachines'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final String containerType;
@@ -46,7 +43,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -57,7 +53,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -68,7 +63,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
@@ -79,7 +73,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
 
     /**
      * Resource group name of Recovery Services Vault.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
@@ -90,7 +83,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
 
     /**
      * Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
-     * 
      */
     @Import(name="virtualMachineId")
       private final @Nullable String virtualMachineId;
@@ -101,7 +93,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
 
     /**
      * Specifies whether the container represents a Classic or an Azure Resource Manager VM.
-     * 
      */
     @Import(name="virtualMachineVersion")
       private final @Nullable String virtualMachineVersion;

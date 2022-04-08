@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class BodyDiagnosticSettingsResponse {
     /**
      * Number of request body bytes to log.
-     * 
      */
     private final @Nullable Integer bytes;
 
@@ -24,7 +23,6 @@ public final class BodyDiagnosticSettingsResponse {
 
     /**
      * Number of request body bytes to log.
-     * 
     */
     public Optional<Integer> getBytes() {
         return Optional.ofNullable(this.bytes);

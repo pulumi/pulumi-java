@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ApplicationTypeVersionsCleanupPolicyResponse {
     /**
      * Number of unused versions per application type to keep.
-     * 
      */
     private final Double maxUnusedVersionsToKeep;
 
@@ -22,7 +21,6 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse {
 
     /**
      * Number of unused versions per application type to keep.
-     * 
     */
     public Double getMaxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Azure Machine Learning Model.
- * 
  */
 public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model creation time (UTC).
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
@@ -37,7 +35,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of datasets associated with the model.
-     * 
      */
     @Import(name="datasets")
       private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
@@ -48,7 +45,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Models derived from this model
-     * 
      */
     @Import(name="derivedModelIds")
       private final @Nullable Output<List<String>> derivedModelIds;
@@ -59,7 +55,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -70,7 +65,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the experiment where this model was created.
-     * 
      */
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
@@ -81,7 +75,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model framework.
-     * 
      */
     @Import(name="framework")
       private final @Nullable Output<String> framework;
@@ -92,7 +85,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model framework version.
-     * 
      */
     @Import(name="frameworkVersion")
       private final @Nullable Output<String> frameworkVersion;
@@ -103,7 +95,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -114,7 +105,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model tag dictionary. Items are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
@@ -125,7 +115,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
-     * 
      */
     @Import(name="mimeType", required=true)
       private final Output<String> mimeType;
@@ -136,7 +125,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model last modified time (UTC).
-     * 
      */
     @Import(name="modifiedTime")
       private final @Nullable Output<String> modifiedTime;
@@ -147,7 +135,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -158,7 +145,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Parent Model Id.
-     * 
      */
     @Import(name="parentModelId")
       private final @Nullable Output<String> parentModelId;
@@ -169,7 +155,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model property dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -180,7 +165,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource requirements for the model
-     * 
      */
     @Import(name="resourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements;
@@ -191,7 +175,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The RunId that created this model.
-     * 
      */
     @Import(name="runId")
       private final @Nullable Output<String> runId;
@@ -202,7 +185,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-     * 
      */
     @Import(name="sampleInputData")
       private final @Nullable Output<String> sampleInputData;
@@ -213,7 +195,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-     * 
      */
     @Import(name="sampleOutputData")
       private final @Nullable Output<String> sampleOutputData;
@@ -224,7 +205,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether we need to unpack the Model during docker Image creation.
-     * 
      */
     @Import(name="unpack")
       private final @Nullable Output<Boolean> unpack;
@@ -235,7 +215,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URL of the Model. Usually a SAS URL.
-     * 
      */
     @Import(name="url", required=true)
       private final Output<String> url;
@@ -246,7 +225,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Model version assigned by Model Management Service.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Double> version;

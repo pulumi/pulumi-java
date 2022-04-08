@@ -19,7 +19,95 @@ import javax.annotation.Nullable;
  * The Connection Monitor Test class.
  * API Version: 2021-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update Connection Monitor Test
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connectionMonitorTest = new AzureNative.Peering.ConnectionMonitorTest("connectionMonitorTest", new AzureNative.Peering.ConnectionMonitorTestArgs
+ *         {
+ *             ConnectionMonitorTestName = "connectionMonitorTestName",
+ *             Destination = "Example Destination",
+ *             DestinationPort = 443,
+ *             PeeringServiceName = "peeringServiceName",
+ *             ResourceGroupName = "rgName",
+ *             SourceAgent = "Example Source Agent",
+ *             TestFrequencyInSec = 30,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := peering.NewConnectionMonitorTest(ctx, "connectionMonitorTest", &peering.ConnectionMonitorTestArgs{
+ * 			ConnectionMonitorTestName: pulumi.String("connectionMonitorTestName"),
+ * 			Destination:               pulumi.String("Example Destination"),
+ * 			DestinationPort:           pulumi.Int(443),
+ * 			PeeringServiceName:        pulumi.String("peeringServiceName"),
+ * 			ResourceGroupName:         pulumi.String("rgName"),
+ * 			SourceAgent:               pulumi.String("Example Source Agent"),
+ * 			TestFrequencyInSec:        pulumi.Int(30),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connectionMonitorTest = new azure_native.peering.ConnectionMonitorTest("connectionMonitorTest", {
+ *     connectionMonitorTestName: "connectionMonitorTestName",
+ *     destination: "Example Destination",
+ *     destinationPort: 443,
+ *     peeringServiceName: "peeringServiceName",
+ *     resourceGroupName: "rgName",
+ *     sourceAgent: "Example Source Agent",
+ *     testFrequencyInSec: 30,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connection_monitor_test = azure_native.peering.ConnectionMonitorTest("connectionMonitorTest",
+ *     connection_monitor_test_name="connectionMonitorTestName",
+ *     destination="Example Destination",
+ *     destination_port=443,
+ *     peering_service_name="peeringServiceName",
+ *     resource_group_name="rgName",
+ *     source_agent="Example Source Agent",
+ *     test_frequency_in_sec=30)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +122,108 @@ import javax.annotation.Nullable;
 public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
     /**
      * The Connection Monitor test destination
-     * 
      */
     @Export(name="destination", type=String.class, parameters={})
     private Output</* @Nullable */ String> destination;
 
     /**
      * @return The Connection Monitor test destination
-     * 
      */
     public Output</* @Nullable */ String> getDestination() {
         return this.destination;
     }
     /**
      * The Connection Monitor test destination port
-     * 
      */
     @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destinationPort;
 
     /**
      * @return The Connection Monitor test destination port
-     * 
      */
     public Output</* @Nullable */ Integer> getDestinationPort() {
         return this.destinationPort;
     }
     /**
      * The flag that indicates if the Connection Monitor test is successful or not.
-     * 
      */
     @Export(name="isTestSuccessful", type=Boolean.class, parameters={})
     private Output<Boolean> isTestSuccessful;
 
     /**
      * @return The flag that indicates if the Connection Monitor test is successful or not.
-     * 
      */
     public Output<Boolean> getIsTestSuccessful() {
         return this.isTestSuccessful;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The path representing the Connection Monitor test.
-     * 
      */
     @Export(name="path", type=List.class, parameters={String.class})
     private Output<List<String>> path;
 
     /**
      * @return The path representing the Connection Monitor test.
-     * 
      */
     public Output<List<String>> getPath() {
         return this.path;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Connection Monitor test source agent
-     * 
      */
     @Export(name="sourceAgent", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceAgent;
 
     /**
      * @return The Connection Monitor test source agent
-     * 
      */
     public Output</* @Nullable */ String> getSourceAgent() {
         return this.sourceAgent;
     }
     /**
      * The Connection Monitor test frequency in seconds
-     * 
      */
     @Export(name="testFrequencyInSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> testFrequencyInSec;
 
     /**
      * @return The Connection Monitor test frequency in seconds
-     * 
      */
     public Output</* @Nullable */ Integer> getTestFrequencyInSec() {
         return this.testFrequencyInSec;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

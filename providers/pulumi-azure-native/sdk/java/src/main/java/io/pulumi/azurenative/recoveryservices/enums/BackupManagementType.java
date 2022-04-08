@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @EnumType
     public enum BackupManagementType {

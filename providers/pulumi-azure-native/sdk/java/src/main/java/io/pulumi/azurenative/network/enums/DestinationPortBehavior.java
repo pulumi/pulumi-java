@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Destination port behavior.
-     * 
      */
     @EnumType
     public enum DestinationPortBehavior {

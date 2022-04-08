@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class WorkspaceResponseProperties {
     /**
      * The provisioning state.
-     * 
      */
     private final String provisioningState;
 
@@ -22,7 +21,6 @@ public final class WorkspaceResponseProperties {
 
     /**
      * The provisioning state.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

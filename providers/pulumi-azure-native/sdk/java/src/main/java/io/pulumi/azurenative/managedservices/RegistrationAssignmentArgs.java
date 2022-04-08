@@ -17,7 +17,6 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
 
     /**
      * Properties of a registration assignment.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
@@ -28,7 +27,6 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
 
     /**
      * Guid of the registration assignment.
-     * 
      */
     @Import(name="registrationAssignmentId")
       private final @Nullable Output<String> registrationAssignmentId;
@@ -39,7 +37,6 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
 
     /**
      * Scope of the resource.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

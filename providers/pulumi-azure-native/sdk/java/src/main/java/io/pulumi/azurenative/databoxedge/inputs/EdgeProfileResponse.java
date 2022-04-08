@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details about Edge Profile for the resource
- * 
  */
 public final class EdgeProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EdgeProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Edge Profile Subscription
-     * 
      */
     @Import(name="subscription")
       private final @Nullable EdgeProfileSubscriptionResponse subscription;

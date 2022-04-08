@@ -24,7 +24,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Configuration of OpenShift cluster VMs.
-     * 
      */
     @Import(name="agentPoolProfiles")
       private final @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
@@ -35,7 +34,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Configures OpenShift authentication.
-     * 
      */
     @Import(name="authProfile")
       private final @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile;
@@ -46,7 +44,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -57,7 +54,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Configuration for OpenShift master VMs.
-     * 
      */
     @Import(name="masterPoolProfile")
       private final @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
@@ -68,7 +64,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Configuration for OpenShift networking.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
@@ -79,7 +74,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Version of OpenShift specified when creating the cluster.
-     * 
      */
     @Import(name="openShiftVersion", required=true)
       private final Output<String> openShiftVersion;
@@ -90,7 +84,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Define the resource plan as required by ARM for billing purposes
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<PurchasePlanArgs> plan;
@@ -101,7 +94,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -112,7 +104,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the OpenShift managed cluster resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -123,7 +114,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Configuration for OpenShift router(s).
-     * 
      */
     @Import(name="routerProfiles")
       private final @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles;
@@ -134,7 +124,6 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

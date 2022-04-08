@@ -27,7 +27,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
-     * 
      */
     @Import(name="clientAffinityEnabled")
       private final @Nullable Output<Boolean> clientAffinityEnabled;
@@ -38,7 +37,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
-     * 
      */
     @Import(name="clientCertEnabled")
       private final @Nullable Output<Boolean> clientCertEnabled;
@@ -49,7 +47,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * client certificate authentication comma-separated exclusion paths
-     * 
      */
     @Import(name="clientCertExclusionPaths")
       private final @Nullable Output<String> clientCertExclusionPaths;
@@ -63,7 +60,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
      * - ClientCertEnabled: false means ClientCert is ignored.
      * - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-     * 
      */
     @Import(name="clientCertMode")
       private final @Nullable Output<ClientCertMode> clientCertMode;
@@ -74,7 +70,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If specified during app creation, the app is cloned from a source app.
-     * 
      */
     @Import(name="cloningInfo")
       private final @Nullable Output<CloningInfoArgs> cloningInfo;
@@ -85,7 +80,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the function container.
-     * 
      */
     @Import(name="containerSize")
       private final @Nullable Output<Integer> containerSize;
@@ -96,7 +90,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
-     * 
      */
     @Import(name="customDomainVerificationId")
       private final @Nullable Output<String> customDomainVerificationId;
@@ -107,7 +100,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
-     * 
      */
     @Import(name="dailyMemoryTimeQuota")
       private final @Nullable Output<Integer> dailyMemoryTimeQuota;
@@ -118,7 +110,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -129,7 +120,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
-     * 
      */
     @Import(name="hostNameSslStates")
       private final @Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates;
@@ -141,7 +131,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
      *  If <code>true</code>, the app is only accessible via API management process.
-     * 
      */
     @Import(name="hostNamesDisabled")
       private final @Nullable Output<Boolean> hostNamesDisabled;
@@ -152,7 +141,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * App Service Environment to use for the app.
-     * 
      */
     @Import(name="hostingEnvironmentProfile")
       private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
@@ -164,7 +152,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * HttpsOnly: configures a web site to accept only https requests. Issues redirect for
      * http requests
-     * 
      */
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
@@ -175,7 +162,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hyper-V sandbox.
-     * 
      */
     @Import(name="hyperV")
       private final @Nullable Output<Boolean> hyperV;
@@ -186,7 +172,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Managed service identity.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -197,7 +182,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Obsolete: Hyper-V sandbox.
-     * 
      */
     @Import(name="isXenon")
       private final @Nullable Output<Boolean> isXenon;
@@ -208,7 +192,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity to use for Key Vault Reference authentication.
-     * 
      */
     @Import(name="keyVaultReferenceIdentity")
       private final @Nullable Output<String> keyVaultReferenceIdentity;
@@ -219,7 +202,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -230,7 +212,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -241,7 +222,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -252,7 +232,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Site redundancy mode
-     * 
      */
     @Import(name="redundancyMode")
       private final @Nullable Output<RedundancyMode> redundancyMode;
@@ -263,7 +242,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> if reserved; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
@@ -274,7 +252,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -285,7 +262,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
-     * 
      */
     @Import(name="scmSiteAlsoStopped")
       private final @Nullable Output<Boolean> scmSiteAlsoStopped;
@@ -296,7 +272,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-     * 
      */
     @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
@@ -307,7 +282,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration of the app.
-     * 
      */
     @Import(name="siteConfig")
       private final @Nullable Output<SiteConfigArgs> siteConfig;
@@ -318,7 +292,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the deployment slot to create or update. The name 'production' is reserved.
-     * 
      */
     @Import(name="slot")
       private final @Nullable Output<String> slot;
@@ -329,7 +302,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Checks if Customer provided storage account is required
-     * 
      */
     @Import(name="storageAccountRequired")
       private final @Nullable Output<Boolean> storageAccountRequired;
@@ -340,7 +312,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -352,7 +323,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
-     * 
      */
     @Import(name="virtualNetworkSubnetId")
       private final @Nullable Output<String> virtualNetworkSubnetId;

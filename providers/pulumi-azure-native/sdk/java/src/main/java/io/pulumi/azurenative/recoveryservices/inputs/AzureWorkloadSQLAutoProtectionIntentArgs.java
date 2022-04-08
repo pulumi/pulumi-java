@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Workload SQL Auto Protection intent item.
- * 
  */
 public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -35,7 +33,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
 
     /**
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
-     * 
      */
     @Import(name="itemId")
       private final @Nullable Output<String> itemId;
@@ -46,7 +43,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -58,7 +54,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
     /**
      * backup protectionIntent type.
      * Expected value is 'AzureWorkloadSQLAutoProtectionIntent'.
-     * 
      */
     @Import(name="protectionIntentItemType", required=true)
       private final Output<String> protectionIntentItemType;
@@ -69,7 +64,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
@@ -80,7 +74,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -91,7 +84,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
 
     /**
      * Workload item type of the item for which intent is to be set
-     * 
      */
     @Import(name="workloadItemType")
       private final @Nullable Output<Either<String,WorkloadItemType>> workloadItemType;

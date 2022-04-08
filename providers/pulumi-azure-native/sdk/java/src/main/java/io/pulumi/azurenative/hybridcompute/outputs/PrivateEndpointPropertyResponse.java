@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PrivateEndpointPropertyResponse {
     /**
      * Resource id of the private endpoint.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class PrivateEndpointPropertyResponse {
 
     /**
      * Resource id of the private endpoint.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

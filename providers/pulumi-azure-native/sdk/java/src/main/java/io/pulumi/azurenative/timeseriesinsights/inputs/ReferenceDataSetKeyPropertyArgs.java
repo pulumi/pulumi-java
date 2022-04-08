@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A key property for the reference data set. A reference data set can have multiple key properties.
- * 
  */
 public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.R
 
     /**
      * The name of the key property.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -33,7 +31,6 @@ public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.R
 
     /**
      * The type of the key property.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ReferenceDataKeyPropertyType>> type;

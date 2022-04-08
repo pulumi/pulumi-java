@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Periodic timer event source.
- * 
  */
 public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
 
     /**
      * Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
-     * 
      */
     @Import(name="schedule", required=true)
       private final String schedule;
@@ -31,7 +29,6 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
 
     /**
      * The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -42,7 +39,6 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
 
     /**
      * Topic where periodic events are published to IoT device.
-     * 
      */
     @Import(name="topic")
       private final @Nullable String topic;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource request payload of Spring Cloud Gateway.
- * 
  */
 public final class GatewayResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
 
     /**
      * Cpu allocated to each Spring Cloud Gateway instance.
-     * 
      */
     @Import(name="cpu")
       private final @Nullable String cpu;
@@ -31,7 +29,6 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
 
     /**
      * Memory allocated to each Spring Cloud Gateway instance.
-     * 
      */
     @Import(name="memory")
       private final @Nullable String memory;

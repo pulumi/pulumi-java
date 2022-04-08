@@ -14,7 +14,6 @@ public final class GetManagerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final String managerName;
@@ -25,7 +24,6 @@ public final class GetManagerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

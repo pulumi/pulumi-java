@@ -14,7 +14,6 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the global reach connection in the private cloud
-     * 
      */
     @Import(name="globalReachConnectionName", required=true)
       private final String globalReachConnectionName;
@@ -25,7 +24,6 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
@@ -36,7 +34,6 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

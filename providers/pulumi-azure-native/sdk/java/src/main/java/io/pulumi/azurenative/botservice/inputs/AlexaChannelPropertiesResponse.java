@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The parameters to provide for the Alexa channel.
- * 
  */
 public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The Alexa skill Id
-     * 
      */
     @Import(name="alexaSkillId", required=true)
       private final String alexaSkillId;
@@ -30,7 +28,6 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -41,7 +38,6 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Full Uri used to configured the skill in Alexa
-     * 
      */
     @Import(name="serviceEndpointUri", required=true)
       private final String serviceEndpointUri;
@@ -52,7 +48,6 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Url fragment used in part of the Uri configured in Alexa
-     * 
      */
     @Import(name="urlFragment", required=true)
       private final String urlFragment;

@@ -30,70 +30,60 @@ import javax.annotation.Nullable;
 public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
-     * 
      */
     @Export(name="dynamicTagsJson", type=String.class, parameters={})
     private Output</* @Nullable */ String> dynamicTagsJson;
 
     /**
      * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
-     * 
      */
     public Output</* @Nullable */ String> getDynamicTagsJson() {
         return this.dynamicTagsJson;
     }
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
-     * 
      */
     @Export(name="isPushEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isPushEnabled;
 
     /**
      * @return Gets or sets a flag indicating whether the Push endpoint is enabled.
-     * 
      */
     public Output<Boolean> getIsPushEnabled() {
         return this.isPushEnabled;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
-     * 
      */
     @Export(name="tagWhitelistJson", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagWhitelistJson;
 
     /**
      * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
-     * 
      */
     public Output</* @Nullable */ String> getTagWhitelistJson() {
         return this.tagWhitelistJson;
@@ -101,9 +91,8 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * '_', '@', '#', '.', ':', '-'. 
      * Validation should be performed at the PushRequestHandler.
-     * 
      */
     @Export(name="tagsRequiringAuth", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagsRequiringAuth;
@@ -111,23 +100,20 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
     /**
      * @return Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * '_', '@', '#', '.', ':', '-'. 
      * Validation should be performed at the PushRequestHandler.
-     * 
      */
     public Output</* @Nullable */ String> getTagsRequiringAuth() {
         return this.tagsRequiringAuth;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

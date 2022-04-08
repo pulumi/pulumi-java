@@ -14,7 +14,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the proxy resource holding details of HCI ArcSetting information.
-     * 
      */
     @Import(name="arcSettingName", required=true)
       private final String arcSettingName;
@@ -25,7 +24,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -36,7 +34,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the machine extension.
-     * 
      */
     @Import(name="extensionName", required=true)
       private final String extensionName;
@@ -47,7 +44,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

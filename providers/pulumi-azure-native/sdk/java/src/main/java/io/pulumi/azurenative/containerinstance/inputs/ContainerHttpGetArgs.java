@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The container Http Get settings, for liveness or readiness probe
- * 
  */
 public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The HTTP headers.
-     * 
      */
     @Import(name="httpHeaders")
       private final @Nullable Output<HttpHeadersArgs> httpHeaders;
@@ -35,7 +33,6 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The path to probe.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -46,7 +43,6 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The port number to probe.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;
@@ -57,7 +53,6 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The scheme.
-     * 
      */
     @Import(name="scheme")
       private final @Nullable Output<Either<String,Scheme>> scheme;

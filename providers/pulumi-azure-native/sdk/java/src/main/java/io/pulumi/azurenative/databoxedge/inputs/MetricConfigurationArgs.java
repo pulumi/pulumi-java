@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metric configuration.
- * 
  */
 public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Host name for the IoT hub associated to the device.
-     * 
      */
     @Import(name="counterSets", required=true)
       private final Output<List<MetricCounterSetArgs>> counterSets;
@@ -33,7 +31,6 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The MDM account to which the counters should be pushed.
-     * 
      */
     @Import(name="mdmAccount")
       private final @Nullable Output<String> mdmAccount;
@@ -44,7 +41,6 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
-     * 
      */
     @Import(name="metricNameSpace")
       private final @Nullable Output<String> metricNameSpace;
@@ -55,7 +51,6 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Resource ID on which the metrics should be pushed.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;

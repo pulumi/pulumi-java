@@ -18,7 +18,6 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the ServerVersion of an a MongoDB account.
-     * 
      */
     @Import(name="serverVersion")
       private final @Nullable Output<Either<String,ServerVersion>> serverVersion;

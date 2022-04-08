@@ -14,27 +14,22 @@ public final class VirtualMachineResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Compute/virtualMachines'.
-     * 
      */
     private final String resourceType;
     /**
      * Gets or sets the target availability set id for virtual machines not in an availability set at source.
-     * 
      */
     private final @Nullable String targetAvailabilitySetId;
     /**
      * Gets or sets the target availability zone.
-     * 
      */
     private final @Nullable String targetAvailabilityZone;
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     private final String targetResourceName;
     /**
      * Gets or sets the target virtual machine size.
-     * 
      */
     private final @Nullable String targetVmSize;
 
@@ -55,35 +50,30 @@ public final class VirtualMachineResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Compute/virtualMachines'.
-     * 
     */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target availability set id for virtual machines not in an availability set at source.
-     * 
     */
     public Optional<String> getTargetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
     /**
      * Gets or sets the target availability zone.
-     * 
     */
     public Optional<String> getTargetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
     /**
      * Gets or sets the target Resource name.
-     * 
     */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
     /**
      * Gets or sets the target virtual machine size.
-     * 
     */
     public Optional<String> getTargetVmSize() {
         return Optional.ofNullable(this.targetVmSize);

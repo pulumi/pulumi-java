@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * Migration level result for Sql server to Azure Sql DB migration.
- * 
  */
 public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Summary of database results in the migration
-     * 
      */
     @Import(name="databaseSummary", required=true)
       private final Map<String,DatabaseSummaryResultResponse> databaseSummary;
@@ -35,7 +33,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Selected databases as a map from database name to database id
-     * 
      */
     @Import(name="databases", required=true)
       private final Map<String,String> databases;
@@ -46,7 +43,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Duration of task execution in seconds.
-     * 
      */
     @Import(name="durationInSeconds", required=true)
       private final Double durationInSeconds;
@@ -57,7 +53,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -68,7 +63,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Migration exceptions and warnings.
-     * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
@@ -79,7 +73,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -90,7 +83,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Migration progress message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -101,7 +93,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Migration Report Result, provides unique url for downloading your migration report.
-     * 
      */
     @Import(name="migrationReport", required=true)
       private final MigrationReportResultResponse migrationReport;
@@ -113,7 +104,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     /**
      * Result type
      * Expected value is 'MigrationLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -124,7 +114,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Source server brand version
-     * 
      */
     @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
@@ -135,7 +124,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Source server version
-     * 
      */
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
@@ -146,7 +134,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -157,7 +144,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Current status of migration
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -168,7 +154,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Migration status message
-     * 
      */
     @Import(name="statusMessage", required=true)
       private final String statusMessage;
@@ -179,7 +164,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Target server brand version
-     * 
      */
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
@@ -190,7 +174,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Target server version
-     * 
      */
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;

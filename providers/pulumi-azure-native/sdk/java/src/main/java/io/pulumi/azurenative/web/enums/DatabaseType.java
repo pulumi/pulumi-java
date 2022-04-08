@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Database type (e.g. SqlAzure / MySql).
-     * 
      */
     @EnumType
     public enum DatabaseType {

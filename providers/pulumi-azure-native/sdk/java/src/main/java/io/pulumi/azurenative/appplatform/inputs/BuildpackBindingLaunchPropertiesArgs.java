@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Buildpack Binding Launch Properties
- * 
  */
 public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
 
     /**
      * Non-sensitive properties for launchProperties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -32,7 +30,6 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
 
     /**
      * Sensitive properties for launchProperties
-     * 
      */
     @Import(name="secrets")
       private final @Nullable Output<Map<String,String>> secrets;

@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class OSDiskDetailsResponse {
     /**
      * The type of the OS on the VM.
-     * 
      */
     private final @Nullable String osType;
     /**
      * The id of the disk containing the OS.
-     * 
      */
     private final @Nullable String osVhdId;
     /**
      * The OS disk VHD name.
-     * 
      */
     private final @Nullable String vhdName;
 
@@ -39,21 +36,18 @@ public final class OSDiskDetailsResponse {
 
     /**
      * The type of the OS on the VM.
-     * 
     */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The id of the disk containing the OS.
-     * 
     */
     public Optional<String> getOsVhdId() {
         return Optional.ofNullable(this.osVhdId);
     }
     /**
      * The OS disk VHD name.
-     * 
     */
     public Optional<String> getVhdName() {
         return Optional.ofNullable(this.vhdName);

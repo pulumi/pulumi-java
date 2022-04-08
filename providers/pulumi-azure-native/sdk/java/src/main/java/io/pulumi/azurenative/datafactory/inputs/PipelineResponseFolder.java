@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
- * 
  */
 public final class PipelineResponseFolder extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PipelineResponseFolder extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the folder that this Pipeline is in.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

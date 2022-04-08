@@ -17,9 +17,116 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2020-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Updates status of private endpoint connection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.PowerBI.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.PowerBI.PrivateEndpointConnectionArgs
+ *         {
+ *             AzureResourceName = "azureResourceName",
+ *             PrivateEndpoint = new AzureNative.PowerBI.Inputs.PrivateEndpointArgs
+ *             {
+ *                 Id = "/subscriptions/a0020869-4d28-422a-89f4-c2413130d73c/resourceGroups/resourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpointName",
+ *             },
+ *             PrivateEndpointName = "myPrivateEndpointName",
+ *             PrivateLinkServiceConnectionState = new AzureNative.PowerBI.Inputs.ConnectionStateArgs
+ *             {
+ *                 ActionsRequired = "None",
+ *                 Description = "",
+ *                 Status = "Approved ",
+ *             },
+ *             ResourceGroupName = "resourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	powerbi "github.com/pulumi/pulumi-azure-native/sdk/go/azure/powerbi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := powerbi.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &powerbi.PrivateEndpointConnectionArgs{
+ * 			AzureResourceName: pulumi.String("azureResourceName"),
+ * 			PrivateEndpoint: &powerbi.PrivateEndpointArgs{
+ * 				Id: pulumi.String("/subscriptions/a0020869-4d28-422a-89f4-c2413130d73c/resourceGroups/resourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpointName"),
+ * 			},
+ * 			PrivateEndpointName: pulumi.String("myPrivateEndpointName"),
+ * 			PrivateLinkServiceConnectionState: &powerbi.ConnectionStateArgs{
+ * 				ActionsRequired: pulumi.String("None"),
+ * 				Description:     pulumi.String(""),
+ * 				Status:          pulumi.String("Approved "),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.powerbi.PrivateEndpointConnection("privateEndpointConnection", {
+ *     azureResourceName: "azureResourceName",
+ *     privateEndpoint: {
+ *         id: "/subscriptions/a0020869-4d28-422a-89f4-c2413130d73c/resourceGroups/resourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpointName",
+ *     },
+ *     privateEndpointName: "myPrivateEndpointName",
+ *     privateLinkServiceConnectionState: {
+ *         actionsRequired: "None",
+ *         description: "",
+ *         status: "Approved ",
+ *     },
+ *     resourceGroupName: "resourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.powerbi.PrivateEndpointConnection("privateEndpointConnection",
+ *     azure_resource_name="azureResourceName",
+ *     private_endpoint=azure_native.powerbi.PrivateEndpointArgs(
+ *         id="/subscriptions/a0020869-4d28-422a-89f4-c2413130d73c/resourceGroups/resourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpointName",
+ *     ),
+ *     private_endpoint_name="myPrivateEndpointName",
+ *     private_link_service_connection_state=azure_native.powerbi.ConnectionStateArgs(
+ *         actions_required="None",
+ *         description="",
+ *         status="Approved ",
+ *     ),
+ *     resource_group_name="resourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +141,72 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies the name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the private endpoint.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return Specifies the private endpoint.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Specifies the connection state.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=ConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Specifies the connection state.
-     * 
      */
     public Output</* @Nullable */ ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Provisioning state of the Private Endpoint Connection.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system meta data relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

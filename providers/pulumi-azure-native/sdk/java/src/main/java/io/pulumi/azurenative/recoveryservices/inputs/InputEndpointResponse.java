@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure VM input endpoint details.
- * 
  */
 public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The input endpoint name.
-     * 
      */
     @Import(name="endpointName")
       private final @Nullable String endpointName;
@@ -32,7 +30,6 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The input endpoint private port.
-     * 
      */
     @Import(name="privatePort")
       private final @Nullable Integer privatePort;
@@ -43,7 +40,6 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The input endpoint protocol.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;
@@ -54,7 +50,6 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The input endpoint public port.
-     * 
      */
     @Import(name="publicPort")
       private final @Nullable Integer publicPort;

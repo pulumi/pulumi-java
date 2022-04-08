@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define match conditions
- * 
  */
 public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of possible match values.
-     * 
      */
     @Import(name="matchValue", required=true)
       private final Output<List<String>> matchValue;
@@ -37,7 +35,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Match variable to compare against.
-     * 
      */
     @Import(name="matchVariable", required=true)
       private final Output<Either<String,MatchVariable>> matchVariable;
@@ -48,7 +45,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes if the result of this condition should be negated.
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
@@ -59,7 +55,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes operator to be matched
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
@@ -70,7 +65,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;
@@ -81,7 +75,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of transforms.
-     * 
      */
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,TransformType>>> transforms;

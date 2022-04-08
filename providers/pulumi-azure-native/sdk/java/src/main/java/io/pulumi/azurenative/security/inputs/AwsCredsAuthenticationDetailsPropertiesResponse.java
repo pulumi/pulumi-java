@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * AWS cloud account connector based credentials, the credentials is composed of access key ID and secret key, for more details, refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html">Creating an IAM User in Your AWS Account (write only)</a>
- * 
  */
 public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
 
     /**
      * The ID of the cloud account
-     * 
      */
     @Import(name="accountId", required=true)
       private final String accountId;
@@ -30,7 +28,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
 
     /**
      * State of the multi-cloud connector
-     * 
      */
     @Import(name="authenticationProvisioningState", required=true)
       private final String authenticationProvisioningState;
@@ -42,7 +39,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is 'awsCreds'.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -53,7 +49,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
 
     /**
      * Public key element of the AWS credential object (write only)
-     * 
      */
     @Import(name="awsAccessKeyId", required=true)
       private final String awsAccessKeyId;
@@ -64,7 +59,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
 
     /**
      * Secret key element of the AWS credential object (write only)
-     * 
      */
     @Import(name="awsSecretAccessKey", required=true)
       private final String awsSecretAccessKey;
@@ -75,7 +69,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
 
     /**
      * The permissions detected in the cloud account.
-     * 
      */
     @Import(name="grantedPermissions", required=true)
       private final List<String> grantedPermissions;

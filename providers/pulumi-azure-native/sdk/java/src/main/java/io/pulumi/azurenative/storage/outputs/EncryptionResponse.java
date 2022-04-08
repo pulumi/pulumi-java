@@ -17,27 +17,22 @@ import javax.annotation.Nullable;
 public final class EncryptionResponse {
     /**
      * The identity to be used with service-side encryption at rest.
-     * 
      */
     private final @Nullable EncryptionIdentityResponse encryptionIdentity;
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
-     * 
      */
     private final String keySource;
     /**
      * Properties provided by key vault.
-     * 
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
     /**
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
-     * 
      */
     private final @Nullable Boolean requireInfrastructureEncryption;
     /**
      * List of services which support encryption.
-     * 
      */
     private final @Nullable EncryptionServicesResponse services;
 
@@ -57,35 +52,30 @@ public final class EncryptionResponse {
 
     /**
      * The identity to be used with service-side encryption at rest.
-     * 
     */
     public Optional<EncryptionIdentityResponse> getEncryptionIdentity() {
         return Optional.ofNullable(this.encryptionIdentity);
     }
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
-     * 
     */
     public String getKeySource() {
         return this.keySource;
     }
     /**
      * Properties provided by key vault.
-     * 
     */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
-     * 
     */
     public Optional<Boolean> getRequireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
     /**
      * List of services which support encryption.
-     * 
     */
     public Optional<EncryptionServicesResponse> getServices() {
         return Optional.ofNullable(this.services);

@@ -18,7 +18,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the extended location.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -29,7 +28,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the host.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -40,7 +38,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the inventory Item ID for the host.
-     * 
      */
     @Import(name="inventoryItemId")
       private final @Nullable Output<String> inventoryItemId;
@@ -51,7 +48,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -62,7 +58,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -73,7 +68,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the host.
-     * 
      */
     @Import(name="moRefId")
       private final @Nullable Output<String> moRefId;
@@ -84,7 +78,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -106,7 +98,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the ARM Id of the vCenter resource in which this host resides.
-     * 
      */
     @Import(name="vCenterId")
       private final @Nullable Output<String> vCenterId;

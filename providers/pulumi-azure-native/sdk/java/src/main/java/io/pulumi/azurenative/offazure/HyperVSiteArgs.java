@@ -18,7 +18,6 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * eTag for concurrency control.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -29,7 +28,6 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure location in which Sites is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Hyper-V site.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -51,7 +48,6 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Nested properties of Hyper-V site.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<SitePropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Site name.
-     * 
      */
     @Import(name="siteName")
       private final @Nullable Output<String> siteName;

@@ -16,7 +16,6 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. 'UserData' retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the virtual machine.
-     * 
      */
     @Import(name="vmName", required=true)
       private final String vmName;

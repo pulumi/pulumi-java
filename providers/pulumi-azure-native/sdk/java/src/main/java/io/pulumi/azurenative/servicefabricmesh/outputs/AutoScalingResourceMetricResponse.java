@@ -12,12 +12,10 @@ public final class AutoScalingResourceMetricResponse {
     /**
      * Enumerates the metrics that are used for triggering auto scaling.
      * Expected value is 'Resource'.
-     * 
      */
     private final String kind;
     /**
      * Name of the resource.
-     * 
      */
     private final String name;
 
@@ -32,14 +30,12 @@ public final class AutoScalingResourceMetricResponse {
     /**
      * Enumerates the metrics that are used for triggering auto scaling.
      * Expected value is 'Resource'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the resource.
-     * 
     */
     public String getName() {
         return this.name;

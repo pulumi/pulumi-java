@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Profile for how to handle shutting down virtual machines.
- * 
  */
 public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
-     * 
      */
     @Import(name="disconnectDelay")
       private final @Nullable Output<String> disconnectDelay;
@@ -33,7 +31,6 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The amount of time a VM will idle before it is shutdown if this behavior is enabled.
-     * 
      */
     @Import(name="idleDelay")
       private final @Nullable Output<String> idleDelay;
@@ -44,7 +41,6 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
-     * 
      */
     @Import(name="noConnectDelay")
       private final @Nullable Output<String> noConnectDelay;
@@ -55,7 +51,6 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Whether shutdown on disconnect is enabled
-     * 
      */
     @Import(name="shutdownOnDisconnect")
       private final @Nullable Output<EnableState> shutdownOnDisconnect;
@@ -66,7 +61,6 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Whether a VM will get shutdown when it has idled for a period of time.
-     * 
      */
     @Import(name="shutdownOnIdle")
       private final @Nullable Output<ShutdownOnIdleMode> shutdownOnIdle;
@@ -77,7 +71,6 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
-     * 
      */
     @Import(name="shutdownWhenNotConnected")
       private final @Nullable Output<EnableState> shutdownWhenNotConnected;

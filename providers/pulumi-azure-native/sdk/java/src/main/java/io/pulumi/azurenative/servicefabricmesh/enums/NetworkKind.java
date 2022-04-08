@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * The type of a Service Fabric container network.
-     * 
      */
     @EnumType
     public enum NetworkKind {
         /**
          * Indicates a container network local to a single Service Fabric cluster. The value is 1.
-         * 
          */
         Local("Local");
 

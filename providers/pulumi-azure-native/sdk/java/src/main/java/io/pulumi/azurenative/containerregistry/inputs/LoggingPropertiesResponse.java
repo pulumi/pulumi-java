@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The logging properties of the connected registry.
- * 
  */
 public final class LoggingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LoggingPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Indicates whether audit logs are enabled on the connected registry.
-     * 
      */
     @Import(name="auditLogStatus")
       private final @Nullable String auditLogStatus;
@@ -31,7 +29,6 @@ public final class LoggingPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The verbosity of logs persisted on the connected registry.
-     * 
      */
     @Import(name="logLevel")
       private final @Nullable String logLevel;

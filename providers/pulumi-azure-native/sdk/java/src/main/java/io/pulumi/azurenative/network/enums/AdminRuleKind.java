@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether the rule is custom or default.
-     * 
      */
     @EnumType
     public enum AdminRuleKind {

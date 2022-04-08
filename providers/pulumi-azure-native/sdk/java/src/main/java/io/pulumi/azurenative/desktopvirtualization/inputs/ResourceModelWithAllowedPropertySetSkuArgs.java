@@ -18,7 +18,6 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends io.pulumi.
 
     /**
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -29,7 +28,6 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends io.pulumi.
 
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -40,7 +38,6 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends io.pulumi.
 
     /**
      * The name of the SKU. Ex - P3. It is typically a letter+number code
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -50,8 +47,7 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends io.pulumi.
     }
 
     /**
-     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
-     * 
+     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -62,7 +58,6 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends io.pulumi.
 
     /**
      * This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<SkuTier> tier;

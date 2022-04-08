@@ -16,7 +16,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or set the SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<SkuDefinition> name;

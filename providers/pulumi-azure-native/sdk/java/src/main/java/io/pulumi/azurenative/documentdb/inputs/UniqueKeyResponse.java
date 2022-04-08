@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
- * 
  */
 public final class UniqueKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class UniqueKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of paths must be unique for each document in the Azure Cosmos DB service
-     * 
      */
     @Import(name="paths")
       private final @Nullable List<String> paths;

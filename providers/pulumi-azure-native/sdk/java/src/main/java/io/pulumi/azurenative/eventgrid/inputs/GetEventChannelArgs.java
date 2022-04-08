@@ -14,7 +14,6 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the event channel.
-     * 
      */
     @Import(name="eventChannelName", required=true)
       private final String eventChannelName;
@@ -25,7 +24,6 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the partner namespace.
-     * 
      */
     @Import(name="partnerNamespaceName", required=true)
       private final String partnerNamespaceName;
@@ -36,7 +34,6 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

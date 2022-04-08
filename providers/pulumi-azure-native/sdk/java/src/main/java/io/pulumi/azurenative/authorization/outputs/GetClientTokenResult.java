@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetClientTokenResult {
     /**
      * OAuth token for Azure Management API and SDK authentication.
-     * 
      */
     private final String token;
 
@@ -22,7 +21,6 @@ public final class GetClientTokenResult {
 
     /**
      * OAuth token for Azure Management API and SDK authentication.
-     * 
     */
     public String getToken() {
         return this.token;

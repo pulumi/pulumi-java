@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom API properties
- * 
  */
 public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * API Definitions
-     * 
      */
     @Import(name="apiDefinitions")
       private final @Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions;
@@ -40,7 +38,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The API type
-     * 
      */
     @Import(name="apiType")
       private final @Nullable Output<Either<String,ApiType>> apiType;
@@ -51,7 +48,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The API backend service
-     * 
      */
     @Import(name="backendService")
       private final @Nullable Output<ApiResourceBackendServiceArgs> backendService;
@@ -62,7 +58,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * Brand color
-     * 
      */
     @Import(name="brandColor")
       private final @Nullable Output<String> brandColor;
@@ -73,7 +68,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The custom API capabilities
-     * 
      */
     @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
@@ -84,7 +78,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * Connection parameters
-     * 
      */
     @Import(name="connectionParameters")
       private final @Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters;
@@ -95,7 +88,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The custom API description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -106,7 +98,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The display name
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -117,7 +108,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The icon URI
-     * 
      */
     @Import(name="iconUri")
       private final @Nullable Output<String> iconUri;
@@ -128,7 +118,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * Runtime URLs
-     * 
      */
     @Import(name="runtimeUrls")
       private final @Nullable Output<List<String>> runtimeUrls;
@@ -139,7 +128,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The JSON representation of the swagger
-     * 
      */
     @Import(name="swagger")
       private final @Nullable Output<Object> swagger;
@@ -150,7 +138,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
 
     /**
      * The WSDL definition
-     * 
      */
     @Import(name="wsdlDefinition")
       private final @Nullable Output<WsdlDefinitionArgs> wsdlDefinition;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Active Directory settings used to join a cache to a domain.
- * 
  */
 public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
 
     /**
      * The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
-     * 
      */
     @Import(name="cacheNetBiosName", required=true)
       private final Output<String> cacheNetBiosName;
@@ -32,7 +30,6 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
 
     /**
      * Active Directory admin credentials used to join the HPC Cache to a domain.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials;
@@ -43,7 +40,6 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
 
     /**
      * The fully qualified domain name of the Active Directory domain controller.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -54,7 +50,6 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
 
     /**
      * The Active Directory domain's NetBIOS name.
-     * 
      */
     @Import(name="domainNetBiosName", required=true)
       private final Output<String> domainNetBiosName;
@@ -65,7 +60,6 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
 
     /**
      * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
-     * 
      */
     @Import(name="primaryDnsIpAddress", required=true)
       private final Output<String> primaryDnsIpAddress;
@@ -76,7 +70,6 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
 
     /**
      * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
-     * 
      */
     @Import(name="secondaryDnsIpAddress")
       private final @Nullable Output<String> secondaryDnsIpAddress;

@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * Blur type
-     * 
      */
     @EnumType
     public enum BlurType {
         /**
          * Box: debug filter, bounding box only
-         * 
          */
         Box("Box"),
         /**
          * Low: box-car blur filter
-         * 
          */
         Low("Low"),
         /**
          * Med: Gaussian blur filter
-         * 
          */
         Med("Med"),
         /**
          * High: Confuse blur filter
-         * 
          */
         High("High"),
         /**
          * Black: Black out filter
-         * 
          */
         Black("Black");
 

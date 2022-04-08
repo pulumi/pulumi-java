@@ -28,7 +28,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not AAD authentication is enabled.
-     * 
      */
     @Import(name="aadAuthEnabled")
       private final @Nullable Output<Boolean> aadAuthEnabled;
@@ -39,7 +38,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not Application Insights is enabled.
-     * 
      */
     @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
@@ -50,7 +48,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not authentication is enabled.
-     * 
      */
     @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
@@ -61,7 +58,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The auto scaler properties.
-     * 
      */
     @Import(name="autoScaler")
       private final @Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler;
@@ -72,7 +68,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the compute resource.
-     * 
      */
     @Import(name="computeName")
       private final @Nullable Output<String> computeName;
@@ -84,7 +79,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The compute environment type for the service.
      * Expected value is 'AKS'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
@@ -95,7 +89,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The container resource requirements.
-     * 
      */
     @Import(name="containerResourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
@@ -106,7 +99,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of the data collection options specified.
-     * 
      */
     @Import(name="dataCollection")
       private final @Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection;
@@ -117,7 +109,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the service.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -128,7 +119,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Environment, models and assets needed for inferencing.
-     * 
      */
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
@@ -139,7 +129,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Is this the default variant.
-     * 
      */
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
@@ -150,7 +139,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authentication keys.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
@@ -161,7 +149,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service tag dictionary. Tags are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
@@ -172,7 +159,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The liveness probe requirements.
-     * 
      */
     @Import(name="livenessProbeRequirements")
       private final @Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements;
@@ -183,7 +169,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure location/region.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -194,7 +179,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of concurrent requests per container.
-     * 
      */
     @Import(name="maxConcurrentRequestsPerContainer")
       private final @Nullable Output<Integer> maxConcurrentRequestsPerContainer;
@@ -205,7 +189,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
-     * 
      */
     @Import(name="maxQueueWaitMs")
       private final @Nullable Output<Integer> maxQueueWaitMs;
@@ -216,7 +199,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kubernetes namespace for the service.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -227,7 +209,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of replicas on the cluster.
-     * 
      */
     @Import(name="numReplicas")
       private final @Nullable Output<Integer> numReplicas;
@@ -238,7 +219,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service properties dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -249,7 +229,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -260,7 +239,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scoring timeout in milliseconds.
-     * 
      */
     @Import(name="scoringTimeoutMs")
       private final @Nullable Output<Integer> scoringTimeoutMs;
@@ -271,7 +249,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Machine Learning service.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -282,7 +259,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The amount of traffic variant receives.
-     * 
      */
     @Import(name="trafficPercentile")
       private final @Nullable Output<Double> trafficPercentile;
@@ -293,7 +269,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the variant.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,VariantType>> type;
@@ -304,7 +279,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

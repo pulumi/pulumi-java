@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Enable migration input properties.
- * 
  */
 public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
 
     /**
      * The policy Id.
-     * 
      */
     @Import(name="policyId", required=true)
       private final Output<String> policyId;
@@ -31,7 +29,6 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
 
     /**
      * The provider specific details.
-     * 
      */
     @Import(name="providerSpecificDetails", required=true)
       private final Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;

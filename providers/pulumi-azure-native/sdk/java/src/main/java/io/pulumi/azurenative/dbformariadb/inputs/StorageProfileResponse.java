@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Storage Profile properties of a server
- * 
  */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Backup retention days for the server.
-     * 
      */
     @Import(name="backupRetentionDays")
       private final @Nullable Integer backupRetentionDays;
@@ -32,7 +30,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Enable Geo-redundant or not for server backup.
-     * 
      */
     @Import(name="geoRedundantBackup")
       private final @Nullable String geoRedundantBackup;
@@ -43,7 +40,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Enable Storage Auto Grow.
-     * 
      */
     @Import(name="storageAutogrow")
       private final @Nullable String storageAutogrow;
@@ -54,7 +50,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Max storage allowed for a server.
-     * 
      */
     @Import(name="storageMB")
       private final @Nullable Integer storageMB;

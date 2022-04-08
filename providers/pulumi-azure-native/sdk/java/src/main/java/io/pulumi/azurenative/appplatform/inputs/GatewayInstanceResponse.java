@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Collection of instances belong to the Spring Cloud Gateway
- * 
  */
 public final class GatewayInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GatewayInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the Spring Cloud Gateway instance
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class GatewayInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Status of the Spring Cloud Gateway instance
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional information of the container.
- * 
  */
 public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Type of backup items associated with this container.
-     * 
      */
     @Import(name="backupItemType")
       private final @Nullable Output<Either<String,BackupItemType>> backupItemType;
@@ -34,7 +32,6 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * List of backup items associated with this container.
-     * 
      */
     @Import(name="backupItems")
       private final @Nullable Output<List<String>> backupItems;
@@ -45,7 +42,6 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Latest backup status of this container.
-     * 
      */
     @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
@@ -56,7 +52,6 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Time stamp when this container was refreshed.
-     * 
      */
     @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
@@ -67,7 +62,6 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
 
     /**
      * Backup policy associated with this container.
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;

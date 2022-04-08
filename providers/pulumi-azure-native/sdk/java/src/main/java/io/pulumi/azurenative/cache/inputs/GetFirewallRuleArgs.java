@@ -14,7 +14,6 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Redis cache.
-     * 
      */
     @Import(name="cacheName", required=true)
       private final String cacheName;
@@ -25,7 +24,6 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the firewall rule.
-     * 
      */
     @Import(name="ruleName", required=true)
       private final String ruleName;

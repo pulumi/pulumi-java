@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Application definition artifact.
- * 
  */
 public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
 
     /**
      * The managed application definition artifact name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,ApplicationDefinitionArtifactName>> name;
@@ -33,7 +31,6 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
 
     /**
      * The managed application definition artifact type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<ApplicationArtifactType> type;
@@ -44,7 +41,6 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
 
     /**
      * The managed application definition artifact blob uri.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;

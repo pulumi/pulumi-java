@@ -18,7 +18,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
-     * 
      */
     @Import(name="condition")
       private final @Nullable Output<String> condition;
@@ -29,7 +28,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Version of the condition. Currently accepted value is '2.0'
-     * 
      */
     @Import(name="conditionVersion")
       private final @Nullable Output<String> conditionVersion;
@@ -40,7 +38,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Id of the delegated managed identity resource
-     * 
      */
     @Import(name="delegatedManagedIdentityResourceId")
       private final @Nullable Output<String> delegatedManagedIdentityResourceId;
@@ -51,7 +48,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of role assignment
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -62,7 +58,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The principal ID.
-     * 
      */
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
@@ -73,7 +68,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The principal type of the assigned principal ID.
-     * 
      */
     @Import(name="principalType")
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
@@ -84,7 +78,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the role assignment. It can be any valid GUID.
-     * 
      */
     @Import(name="roleAssignmentName")
       private final @Nullable Output<String> roleAssignmentName;
@@ -95,7 +88,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role definition ID.
-     * 
      */
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
@@ -106,7 +98,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AS2 agreement security settings.
- * 
  */
 public final class AS2SecuritySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to enable NRR for inbound decoded messages.
-     * 
      */
     @Import(name="enableNRRForInboundDecodedMessages", required=true)
       private final Boolean enableNRRForInboundDecodedMessages;
@@ -32,7 +30,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to enable NRR for inbound encoded messages.
-     * 
      */
     @Import(name="enableNRRForInboundEncodedMessages", required=true)
       private final Boolean enableNRRForInboundEncodedMessages;
@@ -43,7 +40,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to enable NRR for inbound MDN.
-     * 
      */
     @Import(name="enableNRRForInboundMDN", required=true)
       private final Boolean enableNRRForInboundMDN;
@@ -54,7 +50,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to enable NRR for outbound decoded messages.
-     * 
      */
     @Import(name="enableNRRForOutboundDecodedMessages", required=true)
       private final Boolean enableNRRForOutboundDecodedMessages;
@@ -65,7 +60,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to enable NRR for outbound encoded messages.
-     * 
      */
     @Import(name="enableNRRForOutboundEncodedMessages", required=true)
       private final Boolean enableNRRForOutboundEncodedMessages;
@@ -76,7 +70,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to enable NRR for outbound MDN.
-     * 
      */
     @Import(name="enableNRRForOutboundMDN", required=true)
       private final Boolean enableNRRForOutboundMDN;
@@ -87,7 +80,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The name of the encryption certificate.
-     * 
      */
     @Import(name="encryptionCertificateName")
       private final @Nullable String encryptionCertificateName;
@@ -98,7 +90,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to send or request a MDN.
-     * 
      */
     @Import(name="overrideGroupSigningCertificate", required=true)
       private final Boolean overrideGroupSigningCertificate;
@@ -109,7 +100,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
-     * 
      */
     @Import(name="sha2AlgorithmFormat")
       private final @Nullable String sha2AlgorithmFormat;
@@ -120,7 +110,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The name of the signing certificate.
-     * 
      */
     @Import(name="signingCertificateName")
       private final @Nullable String signingCertificateName;

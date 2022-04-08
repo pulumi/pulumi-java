@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Payment channel for the SaasSubscription.
-     * 
      */
     @EnumType
     public enum PaymentChannelType {

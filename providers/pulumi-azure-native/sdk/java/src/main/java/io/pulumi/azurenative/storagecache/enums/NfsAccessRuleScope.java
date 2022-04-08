@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Scope for this rule. The scope and filter determine which clients match the rule.
-     * 
      */
     @EnumType
     public enum NfsAccessRuleScope {

@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * Configuration Assignment
  * API Version: 2021-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ConfigurationAssignments_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var configurationAssignment = new AzureNative.Maintenance.ConfigurationAssignment("configurationAssignment", new AzureNative.Maintenance.ConfigurationAssignmentArgs
+ *         {
+ *             ConfigurationAssignmentName = "workervmConfiguration",
+ *             MaintenanceConfigurationId = "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1",
+ *             ProviderName = "Microsoft.Compute",
+ *             ResourceGroupName = "examplerg",
+ *             ResourceName = "smdtest1",
+ *             ResourceType = "virtualMachineScaleSets",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	maintenance "github.com/pulumi/pulumi-azure-native/sdk/go/azure/maintenance"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := maintenance.NewConfigurationAssignment(ctx, "configurationAssignment", &maintenance.ConfigurationAssignmentArgs{
+ * 			ConfigurationAssignmentName: pulumi.String("workervmConfiguration"),
+ * 			MaintenanceConfigurationId:  pulumi.String("/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1"),
+ * 			ProviderName:                pulumi.String("Microsoft.Compute"),
+ * 			ResourceGroupName:           pulumi.String("examplerg"),
+ * 			ResourceName:                pulumi.String("smdtest1"),
+ * 			ResourceType:                pulumi.String("virtualMachineScaleSets"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const configurationAssignment = new azure_native.maintenance.ConfigurationAssignment("configurationAssignment", {
+ *     configurationAssignmentName: "workervmConfiguration",
+ *     maintenanceConfigurationId: "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1",
+ *     providerName: "Microsoft.Compute",
+ *     resourceGroupName: "examplerg",
+ *     resourceName: "smdtest1",
+ *     resourceType: "virtualMachineScaleSets",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * configuration_assignment = azure_native.maintenance.ConfigurationAssignment("configurationAssignment",
+ *     configuration_assignment_name="workervmConfiguration",
+ *     maintenance_configuration_id="/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1",
+ *     provider_name="Microsoft.Compute",
+ *     resource_group_name="examplerg",
+ *     resource_name="smdtest1",
+ *     resource_type="virtualMachineScaleSets")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +117,72 @@ import javax.annotation.Nullable;
 public class ConfigurationAssignment extends io.pulumi.resources.CustomResource {
     /**
      * Location of the resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of the resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The maintenance configuration Id
-     * 
      */
     @Export(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
     /**
      * @return The maintenance configuration Id
-     * 
      */
     public Output</* @Nullable */ String> getMaintenanceConfigurationId() {
         return this.maintenanceConfigurationId;
     }
     /**
      * Name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The unique resourceId
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return The unique resourceId
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ListShareSubscriptionSynchronizationsResult {
     /**
      * The Url of next result page.
-     * 
      */
     private final @Nullable String nextLink;
     /**
      * Collection of items of type DataTransferObjects.
-     * 
      */
     private final List<ShareSubscriptionSynchronizationResponse> value;
 
@@ -34,14 +32,12 @@ public final class ListShareSubscriptionSynchronizationsResult {
 
     /**
      * The Url of next result page.
-     * 
     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Collection of items of type DataTransferObjects.
-     * 
     */
     public List<ShareSubscriptionSynchronizationResponse> getValue() {
         return this.value;

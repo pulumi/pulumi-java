@@ -17,7 +17,75 @@ import javax.annotation.Nullable;
  * Cloud shell console
  * API Version: 2018-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutConsole
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var consoleWithLocation = new AzureNative.Portal.ConsoleWithLocation("consoleWithLocation", new AzureNative.Portal.ConsoleWithLocationArgs
+ *         {
+ *             ConsoleName = "default",
+ *             Location = "eastus",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	portal "github.com/pulumi/pulumi-azure-native/sdk/go/azure/portal"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := portal.NewConsoleWithLocation(ctx, "consoleWithLocation", &portal.ConsoleWithLocationArgs{
+ * 			ConsoleName: pulumi.String("default"),
+ * 			Location:    pulumi.String("eastus"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const consoleWithLocation = new azure_native.portal.ConsoleWithLocation("consoleWithLocation", {
+ *     consoleName: "default",
+ *     location: "eastus",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * console_with_location = azure_native.portal.ConsoleWithLocation("consoleWithLocation",
+ *     console_name="default",
+ *     location="eastus")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +100,12 @@ import javax.annotation.Nullable;
 public class ConsoleWithLocation extends io.pulumi.resources.CustomResource {
     /**
      * Cloud shell console properties.
-     * 
      */
     @Export(name="properties", type=ConsolePropertiesResponse.class, parameters={})
     private Output<ConsolePropertiesResponse> properties;
 
     /**
      * @return Cloud shell console properties.
-     * 
      */
     public Output<ConsolePropertiesResponse> getProperties() {
         return this.properties;

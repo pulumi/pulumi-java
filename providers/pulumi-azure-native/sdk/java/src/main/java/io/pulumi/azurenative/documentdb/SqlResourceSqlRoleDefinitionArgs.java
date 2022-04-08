@@ -19,7 +19,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -30,7 +29,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     /**
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
-     * 
      */
     @Import(name="assignableScopes")
       private final @Nullable Output<List<String>> assignableScopes;
@@ -41,7 +39,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     /**
      * The set of operations allowed through this Role Definition.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<PermissionArgs>> permissions;
@@ -52,7 +49,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     /**
      * The GUID for the Role Definition.
-     * 
      */
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
@@ -74,7 +69,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
-     * 
      */
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
@@ -85,7 +79,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
 
     /**
      * Indicates whether the Role Definition was built-in or user created.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<RoleDefinitionType> type;

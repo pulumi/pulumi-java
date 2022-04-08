@@ -24,7 +24,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional data regarding the assessment
-     * 
      */
     @Import(name="additionalData")
       private final @Nullable Output<Map<String,String>> additionalData;
@@ -35,7 +34,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Assessment Key - Unique key for the assessment type
-     * 
      */
     @Import(name="assessmentName")
       private final @Nullable Output<String> assessmentName;
@@ -46,7 +44,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes properties of an assessment metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
@@ -57,7 +54,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data regarding 3rd party partner integration
-     * 
      */
     @Import(name="partnersData")
       private final @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
@@ -68,7 +64,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of the resource that was assessed
-     * 
      */
     @Import(name="resourceDetails", required=true)
       private final Output<Object> resourceDetails;
@@ -79,7 +74,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
@@ -90,7 +84,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The result of the assessment
-     * 
      */
     @Import(name="status", required=true)
       private final Output<AssessmentStatusArgs> status;

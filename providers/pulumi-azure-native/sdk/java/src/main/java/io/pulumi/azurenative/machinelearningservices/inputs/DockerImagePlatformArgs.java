@@ -18,7 +18,6 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The OS type the Environment.
-     * 
      */
     @Import(name="operatingSystemType")
       private final @Nullable Output<Either<String,OperatingSystemType>> operatingSystemType;

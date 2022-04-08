@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an Azure SQL database output data source.
- * 
  */
 public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
 
     /**
      * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="database")
       private final @Nullable String database;
@@ -31,7 +29,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
 
     /**
      * The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -42,7 +39,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
 
     /**
      * The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="server")
       private final @Nullable String server;
@@ -53,7 +49,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
 
     /**
      * The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="table")
       private final @Nullable String table;
@@ -65,7 +60,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.Sql/Server/Database'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -76,7 +70,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
 
     /**
      * The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="user")
       private final @Nullable String user;

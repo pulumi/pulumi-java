@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Status of the volume free space policy
- * 
  */
 public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
 
     /**
      * Current volume free space percentage.
-     * 
      */
     @Import(name="currentVolumeFreeSpacePercent", required=true)
       private final Integer currentVolumeFreeSpacePercent;
@@ -30,7 +28,6 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
 
     /**
      * In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
-     * 
      */
     @Import(name="effectiveVolumeFreeSpacePolicy", required=true)
       private final Integer effectiveVolumeFreeSpacePolicy;
@@ -41,7 +38,6 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
 
     /**
      * Last updated timestamp
-     * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;

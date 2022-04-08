@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the application rule protocol.
- * 
  */
 public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
 
     /**
      * Port number for the protocol, cannot be greater than 64000. This field is optional.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -34,7 +32,6 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
 
     /**
      * Protocol type.
-     * 
      */
     @Import(name="protocolType")
       private final @Nullable Output<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType;

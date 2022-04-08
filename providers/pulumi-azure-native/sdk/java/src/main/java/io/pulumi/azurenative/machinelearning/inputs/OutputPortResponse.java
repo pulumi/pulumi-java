@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Asset output port
- * 
  */
 public final class OutputPortResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OutputPortResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Port data type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

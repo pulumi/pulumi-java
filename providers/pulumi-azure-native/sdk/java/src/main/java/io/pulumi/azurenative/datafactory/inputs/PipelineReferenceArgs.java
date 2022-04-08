@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pipeline reference type.
- * 
  */
 public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Reference name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Reference pipeline name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
@@ -42,7 +39,6 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Pipeline reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConfigurationProfileAssignmentComplianceResponse {
     /**
      * The state of compliance, which only appears in the response.
-     * 
      */
     private final String updateStatus;
 
@@ -22,7 +21,6 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
 
     /**
      * The state of compliance, which only appears in the response.
-     * 
     */
     public String getUpdateStatus() {
         return this.updateStatus;

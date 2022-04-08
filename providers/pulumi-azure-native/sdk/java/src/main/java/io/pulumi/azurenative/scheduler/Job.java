@@ -15,6 +15,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2016-03-01.
  * ## Import
  * 
@@ -29,42 +30,36 @@ import javax.annotation.Nullable;
 public class Job extends io.pulumi.resources.CustomResource {
     /**
      * Gets the job resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the job resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the job properties.
-     * 
      */
     @Export(name="properties", type=JobPropertiesResponse.class, parameters={})
     private Output<JobPropertiesResponse> properties;
 
     /**
      * @return Gets or sets the job properties.
-     * 
      */
     public Output<JobPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Gets the job resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the job resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

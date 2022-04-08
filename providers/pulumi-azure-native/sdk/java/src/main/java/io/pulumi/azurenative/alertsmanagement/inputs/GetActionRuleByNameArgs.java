@@ -14,7 +14,6 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of action rule that needs to be fetched
-     * 
      */
     @Import(name="actionRuleName", required=true)
       private final String actionRuleName;
@@ -25,7 +24,6 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource group name where the resource is created.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

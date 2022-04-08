@@ -20,7 +20,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -31,7 +30,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Instance count for the service.
-     * 
      */
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
@@ -42,7 +40,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Instance type for the service.
-     * 
      */
     @Import(name="instanceSize")
       private final @Nullable Output<Either<String,ServiceSize>> instanceSize;
@@ -53,7 +50,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cosmos DB service name.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -75,7 +70,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ServiceType for the service.
-     * 
      */
     @Import(name="serviceType")
       private final @Nullable Output<Either<String,ServiceType>> serviceType;

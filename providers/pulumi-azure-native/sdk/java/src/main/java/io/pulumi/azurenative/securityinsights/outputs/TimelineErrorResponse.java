@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class TimelineErrorResponse {
     /**
      * the error message
-     * 
      */
     private final String errorMessage;
     /**
      * the query kind
-     * 
      */
     private final String kind;
     /**
      * the query id
-     * 
      */
     private final @Nullable String queryId;
 
@@ -39,21 +36,18 @@ public final class TimelineErrorResponse {
 
     /**
      * the error message
-     * 
     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * the query kind
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * the query id
-     * 
     */
     public Optional<String> getQueryId() {
         return Optional.ofNullable(this.queryId);

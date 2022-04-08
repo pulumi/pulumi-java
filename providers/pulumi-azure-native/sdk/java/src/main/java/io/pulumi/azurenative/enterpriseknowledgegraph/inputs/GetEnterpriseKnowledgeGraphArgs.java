@@ -14,7 +14,6 @@ public final class GetEnterpriseKnowledgeGraphArgs extends io.pulumi.resources.I
 
     /**
      * The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetEnterpriseKnowledgeGraphArgs extends io.pulumi.resources.I
 
     /**
      * The name of the EnterpriseKnowledgeGraph resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

@@ -16,62 +16,50 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayRedirectConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Include path in the redirected url.
-     * 
      */
     private final @Nullable Boolean includePath;
     /**
      * Include query string in the redirected url.
-     * 
      */
     private final @Nullable Boolean includeQueryString;
     /**
      * Name of the redirect configuration that is unique within an Application Gateway.
-     * 
      */
     private final @Nullable String name;
     /**
      * Path rules specifying redirect configuration.
-     * 
      */
     private final @Nullable List<SubResourceResponse> pathRules;
     /**
      * HTTP redirection type.
-     * 
      */
     private final @Nullable String redirectType;
     /**
      * Request routing specifying redirect configuration.
-     * 
      */
     private final @Nullable List<SubResourceResponse> requestRoutingRules;
     /**
      * Reference to a listener to redirect the request to.
-     * 
      */
     private final @Nullable SubResourceResponse targetListener;
     /**
      * Url to redirect the request to.
-     * 
      */
     private final @Nullable String targetUrl;
     /**
      * Type of the resource.
-     * 
      */
     private final String type;
     /**
      * Url path maps specifying default redirect configuration.
-     * 
      */
     private final @Nullable List<SubResourceResponse> urlPathMaps;
 
@@ -105,84 +93,72 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Include path in the redirected url.
-     * 
     */
     public Optional<Boolean> getIncludePath() {
         return Optional.ofNullable(this.includePath);
     }
     /**
      * Include query string in the redirected url.
-     * 
     */
     public Optional<Boolean> getIncludeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
     /**
      * Name of the redirect configuration that is unique within an Application Gateway.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path rules specifying redirect configuration.
-     * 
     */
     public List<SubResourceResponse> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
      * HTTP redirection type.
-     * 
     */
     public Optional<String> getRedirectType() {
         return Optional.ofNullable(this.redirectType);
     }
     /**
      * Request routing specifying redirect configuration.
-     * 
     */
     public List<SubResourceResponse> getRequestRoutingRules() {
         return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
     }
     /**
      * Reference to a listener to redirect the request to.
-     * 
     */
     public Optional<SubResourceResponse> getTargetListener() {
         return Optional.ofNullable(this.targetListener);
     }
     /**
      * Url to redirect the request to.
-     * 
     */
     public Optional<String> getTargetUrl() {
         return Optional.ofNullable(this.targetUrl);
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Url path maps specifying default redirect configuration.
-     * 
     */
     public List<SubResourceResponse> getUrlPathMaps() {
         return this.urlPathMaps == null ? List.of() : this.urlPathMaps;

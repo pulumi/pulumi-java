@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual NIC model
- * 
  */
 public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * guest OS customization for nic
-     * 
      */
     @Import(name="customization")
       private final @Nullable GuestOSNICCustomizationResponse customization;
@@ -35,7 +33,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * NIC ip address
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
@@ -46,7 +43,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * NIC MAC address
-     * 
      */
     @Import(name="macAddress")
       private final @Nullable String macAddress;
@@ -57,7 +53,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Virtual Network
-     * 
      */
     @Import(name="network", required=true)
       private final VirtualNetworkResponse network;
@@ -68,7 +63,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * NIC type
-     * 
      */
     @Import(name="nicType", required=true)
       private final String nicType;
@@ -79,7 +73,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Is NIC powered on/off on boot
-     * 
      */
     @Import(name="powerOnBoot")
       private final @Nullable Boolean powerOnBoot;
@@ -90,7 +83,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * NIC id
-     * 
      */
     @Import(name="virtualNicId")
       private final @Nullable String virtualNicId;
@@ -101,7 +93,6 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * NIC name
-     * 
      */
     @Import(name="virtualNicName", required=true)
       private final String virtualNicName;

@@ -29,98 +29,84 @@ import javax.annotation.Nullable;
 public class Blob extends io.pulumi.resources.CustomResource {
     /**
      * The access tier of the storage blob.
-     * 
      */
     @Export(name="accessTier", type=BlobAccessTier.class, parameters={})
     private Output<BlobAccessTier> accessTier;
 
     /**
      * @return The access tier of the storage blob.
-     * 
      */
     public Output<BlobAccessTier> getAccessTier() {
         return this.accessTier;
     }
     /**
      * The MD5 sum of the blob contents.
-     * 
      */
     @Export(name="contentMd5", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentMd5;
 
     /**
      * @return The MD5 sum of the blob contents.
-     * 
      */
     public Output</* @Nullable */ String> getContentMd5() {
         return this.contentMd5;
     }
     /**
      * The content type of the storage blob.
-     * 
      */
     @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
      * @return The content type of the storage blob.
-     * 
      */
     public Output</* @Nullable */ String> getContentType() {
         return this.contentType;
     }
     /**
      * A map of custom blob metadata.
-     * 
      */
     @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
      * @return A map of custom blob metadata.
-     * 
      */
     public Output<Map<String,String>> getMetadata() {
         return this.metadata;
     }
     /**
      * The name of the storage blob.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the storage blob.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the storage blob to be created.
-     * 
      */
     @Export(name="type", type=BlobType.class, parameters={})
     private Output<BlobType> type;
 
     /**
      * @return The type of the storage blob to be created.
-     * 
      */
     public Output<BlobType> getType() {
         return this.type;
     }
     /**
      * The URL of the blob.
-     * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
      * @return The URL of the blob.
-     * 
      */
     public Output<String> getUrl() {
         return this.url;

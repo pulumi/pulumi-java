@@ -16,7 +16,6 @@ public final class GetClientTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable String endpoint;

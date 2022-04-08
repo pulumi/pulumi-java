@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure VM (Mercury) workload-specific backup policy.
- * 
  */
 public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureWorkload'.
-     * 
      */
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
@@ -37,7 +35,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
 
     /**
      * Fix the policy inconsistency
-     * 
      */
     @Import(name="makePolicyConsistent")
       private final @Nullable Boolean makePolicyConsistent;
@@ -48,7 +45,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
 
     /**
      * Number of items associated with this policy.
-     * 
      */
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
@@ -59,7 +55,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
 
     /**
      * Common settings for the backup management
-     * 
      */
     @Import(name="settings")
       private final @Nullable SettingsResponse settings;
@@ -70,7 +65,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
 
     /**
      * List of sub-protection policies which includes schedule and retention
-     * 
      */
     @Import(name="subProtectionPolicy")
       private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
@@ -81,7 +75,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
 
     /**
      * Type of workload for the backup management
-     * 
      */
     @Import(name="workLoadType")
       private final @Nullable String workLoadType;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
-     * 
      */
     @EnumType
     public enum EncryptionIdentityType {

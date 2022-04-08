@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Triggers for auto-heal.
- * 
  */
 public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A rule based on private bytes.
-     * 
      */
     @Import(name="privateBytesInKB")
       private final @Nullable Output<Integer> privateBytesInKB;
@@ -36,7 +34,6 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A rule based on total requests.
-     * 
      */
     @Import(name="requests")
       private final @Nullable Output<RequestsBasedTriggerArgs> requests;
@@ -47,7 +44,6 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A rule based on request execution time.
-     * 
      */
     @Import(name="slowRequests")
       private final @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests;
@@ -58,7 +54,6 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A rule based on multiple Slow Requests Rule with path
-     * 
      */
     @Import(name="slowRequestsWithPath")
       private final @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
@@ -69,7 +64,6 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A rule based on status codes.
-     * 
      */
     @Import(name="statusCodes")
       private final @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes;
@@ -80,7 +74,6 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A rule based on status codes ranges.
-     * 
      */
     @Import(name="statusCodesRange")
       private final @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;

@@ -19,7 +19,6 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * Windows event logs configuration.
-     * 
      */
     @Import(name="eventLogs")
       private final @Nullable List<EventLogConfigurationResponse> eventLogs;
@@ -30,7 +29,6 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * Performance counter configuration
-     * 
      */
     @Import(name="perfCounters")
       private final @Nullable List<PerformanceCounterConfigurationResponse> perfCounters;
@@ -41,7 +39,6 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * ETW providers configuration
-     * 
      */
     @Import(name="providers")
       private final @Nullable List<EtwProviderConfigurationResponse> providers;

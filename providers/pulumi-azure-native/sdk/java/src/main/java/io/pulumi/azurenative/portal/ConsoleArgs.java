@@ -17,7 +17,6 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the console
-     * 
      */
     @Import(name="consoleName")
       private final @Nullable Output<String> consoleName;
@@ -28,7 +27,6 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud shell properties for creating a console.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<ConsoleCreatePropertiesArgs> properties;

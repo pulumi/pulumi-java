@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The container state.
- * 
  */
 public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Human-readable status of this state.
-     * 
      */
     @Import(name="detailStatus")
       private final @Nullable String detailStatus;
@@ -31,7 +29,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The container exit code.
-     * 
      */
     @Import(name="exitCode")
       private final @Nullable String exitCode;
@@ -42,7 +39,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Date/time when the container state finished.
-     * 
      */
     @Import(name="finishTime")
       private final @Nullable String finishTime;
@@ -53,7 +49,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Date/time when the container state started.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -64,7 +59,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The state of this container
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

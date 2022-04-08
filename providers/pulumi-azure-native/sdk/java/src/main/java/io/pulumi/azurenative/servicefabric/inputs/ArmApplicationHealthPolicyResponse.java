@@ -24,7 +24,6 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
 
     /**
      * Indicates whether warnings are treated with the same severity as errors.
-     * 
      */
     @Import(name="considerWarningAsError")
       private final @Nullable Boolean considerWarningAsError;
@@ -35,7 +34,6 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
 
     /**
      * The health policy used by default to evaluate the health of a service type.
-     * 
      */
     @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
@@ -60,7 +58,6 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
 
     /**
      * The map with service type health policy per service type name. The map is empty by default.
-     * 
      */
     @Import(name="serviceTypeHealthPolicyMap")
       private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;

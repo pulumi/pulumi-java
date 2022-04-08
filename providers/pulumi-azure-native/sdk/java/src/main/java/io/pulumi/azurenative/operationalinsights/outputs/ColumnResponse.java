@@ -14,37 +14,30 @@ import javax.annotation.Nullable;
 public final class ColumnResponse {
     /**
      * Column data type logical hint.
-     * 
      */
     private final @Nullable String dataTypeHint;
     /**
      * Column description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Column display name.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Is displayed by default.
-     * 
      */
     private final Boolean isDefaultDisplay;
     /**
      * Is column hidden.
-     * 
      */
     private final Boolean isHidden;
     /**
      * Column name.
-     * 
      */
     private final @Nullable String name;
     /**
      * Column data type.
-     * 
      */
     private final @Nullable String type;
 
@@ -68,49 +61,42 @@ public final class ColumnResponse {
 
     /**
      * Column data type logical hint.
-     * 
     */
     public Optional<String> getDataTypeHint() {
         return Optional.ofNullable(this.dataTypeHint);
     }
     /**
      * Column description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Column display name.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Is displayed by default.
-     * 
     */
     public Boolean getIsDefaultDisplay() {
         return this.isDefaultDisplay;
     }
     /**
      * Is column hidden.
-     * 
     */
     public Boolean getIsHidden() {
         return this.isHidden;
     }
     /**
      * Column name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Column data type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

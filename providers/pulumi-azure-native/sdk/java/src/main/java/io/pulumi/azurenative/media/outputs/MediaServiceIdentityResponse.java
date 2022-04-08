@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class MediaServiceIdentityResponse {
     /**
      * The Principal ID of the identity.
-     * 
      */
     private final String principalId;
     /**
      * The Tenant ID of the identity.
-     * 
      */
     private final String tenantId;
     /**
      * The identity type.
-     * 
      */
     private final String type;
 
@@ -37,21 +34,18 @@ public final class MediaServiceIdentityResponse {
 
     /**
      * The Principal ID of the identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The Tenant ID of the identity.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
-     * 
     */
     public String getType() {
         return this.type;

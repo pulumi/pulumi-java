@@ -17,7 +17,6 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the alert rule.
-     * 
      */
     @Import(name="alertRuleName", required=true)
       private final String alertRuleName;
@@ -28,7 +27,6 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
 
     /**
      * Indicates if Smart Detector should be expanded.
-     * 
      */
     @Import(name="expandDetector")
       private final @Nullable Boolean expandDetector;
@@ -39,7 +37,6 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

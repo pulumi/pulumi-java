@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A rule that provide the triggers and parameters for the scaling action.
- * 
  */
 public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the trigger that results in a scaling action.
-     * 
      */
     @Import(name="metricTrigger", required=true)
       private final Output<MetricTriggerArgs> metricTrigger;
@@ -31,7 +29,6 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the parameters for the scaling action.
-     * 
      */
     @Import(name="scaleAction", required=true)
       private final Output<ScaleActionArgs> scaleAction;

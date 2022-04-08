@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * PrivateLinkServiceConnection resource.
- * 
  */
 public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -33,7 +31,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
@@ -44,7 +41,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -55,7 +51,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -66,7 +61,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * A collection of read-only information about the state of the connection to the remote resource.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -77,7 +71,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * The resource id of private link service.
-     * 
      */
     @Import(name="privateLinkServiceId")
       private final @Nullable String privateLinkServiceId;
@@ -88,7 +81,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * The provisioning state of the private link service connection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -99,7 +91,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;
@@ -110,7 +101,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

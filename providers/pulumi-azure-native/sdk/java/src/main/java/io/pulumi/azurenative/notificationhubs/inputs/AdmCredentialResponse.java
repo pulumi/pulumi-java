@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a NotificationHub AdmCredential.
- * 
  */
 public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The URL of the authorization token.
-     * 
      */
     @Import(name="authTokenUrl")
       private final @Nullable String authTokenUrl;
@@ -31,7 +29,6 @@ public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The client identifier.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -42,7 +39,6 @@ public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The credential secret access key.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;

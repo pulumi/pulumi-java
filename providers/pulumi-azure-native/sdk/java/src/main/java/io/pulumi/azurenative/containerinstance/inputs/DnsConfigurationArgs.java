@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * DNS configuration for the container group.
- * 
  */
 public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The DNS servers for the container group.
-     * 
      */
     @Import(name="nameServers", required=true)
       private final Output<List<String>> nameServers;
@@ -32,7 +30,6 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The DNS options for the container group.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<String> options;
@@ -43,7 +40,6 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The DNS search domains for hostname lookup in the container group.
-     * 
      */
     @Import(name="searchDomains")
       private final @Nullable Output<String> searchDomains;

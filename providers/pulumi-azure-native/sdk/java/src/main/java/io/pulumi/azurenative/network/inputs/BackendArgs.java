@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backend address of a frontDoor load balancer.
- * 
  */
 public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the backend (IP address or FQDN)
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -34,7 +32,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
-     * 
      */
     @Import(name="backendHostHeader")
       private final @Nullable Output<String> backendHostHeader;
@@ -45,7 +42,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,BackendEnabledState>> enabledState;
@@ -56,7 +52,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HTTP TCP port number. Must be between 1 and 65535.
-     * 
      */
     @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
@@ -67,7 +62,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HTTPS TCP port number. Must be between 1 and 65535.
-     * 
      */
     @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
@@ -78,7 +72,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -89,7 +82,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-     * 
      */
     @Import(name="privateLinkAlias")
       private final @Nullable Output<String> privateLinkAlias;
@@ -100,7 +92,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A custom message to be included in the approval request to connect to the Private Link
-     * 
      */
     @Import(name="privateLinkApprovalMessage")
       private final @Nullable Output<String> privateLinkApprovalMessage;
@@ -111,7 +102,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
-     * 
      */
     @Import(name="privateLinkLocation")
       private final @Nullable Output<String> privateLinkLocation;
@@ -122,7 +112,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-     * 
      */
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
@@ -133,7 +122,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Weight of this endpoint for load balancing purposes.
-     * 
      */
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;

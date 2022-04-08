@@ -23,7 +23,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     @Import(name="dailyRecurrence")
       private final @Nullable Output<DayDetailsArgs> dailyRecurrence;
@@ -34,7 +33,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     @Import(name="hourlyRecurrence")
       private final @Nullable Output<HourDetailsArgs> hourlyRecurrence;
@@ -45,7 +43,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -56,7 +53,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the schedule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +63,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Notification settings.
-     * 
      */
     @Import(name="notificationSettings")
       private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
@@ -78,7 +73,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -89,7 +83,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
@@ -100,7 +93,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -111,7 +103,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID to which the schedule belongs
-     * 
      */
     @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
@@ -122,7 +113,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     @Import(name="taskType")
       private final @Nullable Output<String> taskType;
@@ -133,7 +123,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     @Import(name="timeZoneId")
       private final @Nullable Output<String> timeZoneId;
@@ -144,7 +133,6 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     @Import(name="weeklyRecurrence")
       private final @Nullable Output<WeekDetailsArgs> weeklyRecurrence;

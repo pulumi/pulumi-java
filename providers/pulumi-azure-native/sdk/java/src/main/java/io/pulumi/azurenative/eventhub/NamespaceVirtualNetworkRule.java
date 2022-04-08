@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * Single item in a List or Get VirtualNetworkRules operation
  * API Version: 2018-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NameSpaceVirtualNetworkRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var namespaceVirtualNetworkRule = new AzureNative.EventHub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNative.EventHub.NamespaceVirtualNetworkRuleArgs
+ *         {
+ *             NamespaceName = "sdk-Namespace-6019",
+ *             ResourceGroupName = "ResourceGroup",
+ *             VirtualNetworkRuleName = "sdk-VirtualNetworkRules-9191",
+ *             VirtualNetworkSubnetId = "/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventhub.NewNamespaceVirtualNetworkRule(ctx, "namespaceVirtualNetworkRule", &eventhub.NamespaceVirtualNetworkRuleArgs{
+ * 			NamespaceName:          pulumi.String("sdk-Namespace-6019"),
+ * 			ResourceGroupName:      pulumi.String("ResourceGroup"),
+ * 			VirtualNetworkRuleName: pulumi.String("sdk-VirtualNetworkRules-9191"),
+ * 			VirtualNetworkSubnetId: pulumi.String("/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const namespaceVirtualNetworkRule = new azure_native.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
+ *     namespaceName: "sdk-Namespace-6019",
+ *     resourceGroupName: "ResourceGroup",
+ *     virtualNetworkRuleName: "sdk-VirtualNetworkRules-9191",
+ *     virtualNetworkSubnetId: "/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * namespace_virtual_network_rule = azure_native.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
+ *     namespace_name="sdk-Namespace-6019",
+ *     resource_group_name="ResourceGroup",
+ *     virtual_network_rule_name="sdk-VirtualNetworkRules-9191",
+ *     virtual_network_subnet_id="/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +108,36 @@ import javax.annotation.Nullable;
 public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * ARM ID of Virtual Network Subnet
-     * 
      */
     @Export(name="virtualNetworkSubnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualNetworkSubnetId;
 
     /**
      * @return ARM ID of Virtual Network Subnet
-     * 
      */
     public Output</* @Nullable */ String> getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 public final class ClusterUpgradeDeltaHealthPolicyResponse {
     /**
      * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
-     * 
      */
     private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
     /**
@@ -54,7 +53,6 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
 
     /**
      * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
-     * 
     */
     public Map<String,ApplicationDeltaHealthPolicyResponse> getApplicationDeltaHealthPolicies() {
         return this.applicationDeltaHealthPolicies == null ? Map.of() : this.applicationDeltaHealthPolicies;

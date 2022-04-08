@@ -18,9 +18,78 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2020-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Monitors_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var monitor = new AzureNative.Logz.Monitor("monitor", new AzureNative.Logz.MonitorArgs
+ *         {
+ *             MonitorName = "myMonitor",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logz "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logz"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logz.NewMonitor(ctx, "monitor", &logz.MonitorArgs{
+ * 			MonitorName:       pulumi.String("myMonitor"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const monitor = new azure_native.logz.Monitor("monitor", {
+ *     monitorName: "myMonitor",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * monitor = azure_native.logz.Monitor("monitor",
+ *     monitor_name="myMonitor",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,42 +116,36 @@ public class Monitor extends io.pulumi.resources.CustomResource {
     }
     /**
      * Name of the monitor resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the monitor resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties specific to the monitor resource.
-     * 
      */
     @Export(name="properties", type=MonitorPropertiesResponse.class, parameters={})
     private Output<MonitorPropertiesResponse> properties;
 
     /**
      * @return Properties specific to the monitor resource.
-     * 
      */
     public Output<MonitorPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
@@ -95,14 +158,12 @@ public class Monitor extends io.pulumi.resources.CustomResource {
     }
     /**
      * The type of the monitor resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the monitor resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

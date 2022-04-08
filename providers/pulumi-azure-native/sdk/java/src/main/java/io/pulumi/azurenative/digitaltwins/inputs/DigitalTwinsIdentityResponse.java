@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The managed identity for the DigitalTwinsInstance.
- * 
  */
 public final class DigitalTwinsIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DigitalTwinsIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class DigitalTwinsIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class DigitalTwinsIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

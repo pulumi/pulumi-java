@@ -31,56 +31,48 @@ import javax.annotation.Nullable;
 public class WebAppAzureStorageAccountsSlot extends io.pulumi.resources.CustomResource {
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure storage accounts.
-     * 
      */
     @Export(name="properties", type=Map.class, parameters={String.class, AzureStorageInfoValueResponse.class})
     private Output<Map<String,AzureStorageInfoValueResponse>> properties;
 
     /**
      * @return Azure storage accounts.
-     * 
      */
     public Output<Map<String,AzureStorageInfoValueResponse>> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

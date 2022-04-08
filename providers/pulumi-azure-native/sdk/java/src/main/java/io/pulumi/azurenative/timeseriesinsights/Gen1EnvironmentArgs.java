@@ -22,7 +22,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
-     * 
      */
     @Import(name="dataRetentionTime", required=true)
       private final Output<String> dataRetentionTime;
@@ -33,7 +32,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the environment
-     * 
      */
     @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
@@ -45,7 +43,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * The kind of the environment.
      * Expected value is 'Gen1'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -56,7 +53,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -67,7 +63,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
-     * 
      */
     @Import(name="partitionKeyProperties")
       private final @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
@@ -78,7 +73,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -89,7 +83,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -100,7 +93,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
-     * 
      */
     @Import(name="storageLimitExceededBehavior")
       private final @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
@@ -111,7 +103,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Key-value pairs of additional properties for the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

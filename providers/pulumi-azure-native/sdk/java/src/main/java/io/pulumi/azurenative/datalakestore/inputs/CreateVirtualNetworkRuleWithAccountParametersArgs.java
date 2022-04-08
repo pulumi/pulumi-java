@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The parameters used to create a new virtual network rule while creating a new Data Lake Store account.
- * 
  */
 public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
 
     /**
      * The unique name of the virtual network rule to create.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -30,7 +28,6 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
 
     /**
      * The resource identifier for the subnet.
-     * 
      */
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;

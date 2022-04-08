@@ -16,7 +16,6 @@ public final class GetAndroidMAMPolicyByNameArgs extends io.pulumi.resources.Inv
 
     /**
      * Location hostName for the tenant
-     * 
      */
     @Import(name="hostName", required=true)
       private final String hostName;
@@ -27,7 +26,6 @@ public final class GetAndroidMAMPolicyByNameArgs extends io.pulumi.resources.Inv
 
     /**
      * Unique name for the policy
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;
@@ -38,7 +36,6 @@ public final class GetAndroidMAMPolicyByNameArgs extends io.pulumi.resources.Inv
 
     /**
      * select specific fields in entity.
-     * 
      */
     @Import(name="select")
       private final @Nullable String select;

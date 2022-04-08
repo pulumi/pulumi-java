@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class HealthAlertActionResponse {
     /**
      * the id of the action group to use.
-     * 
      */
     private final @Nullable String actionGroupId;
     /**
      * The properties of a webhook object.
-     * 
      */
     private final @Nullable Map<String,String> webHookProperties;
 
@@ -33,14 +31,12 @@ public final class HealthAlertActionResponse {
 
     /**
      * the id of the action group to use.
-     * 
     */
     public Optional<String> getActionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
     /**
      * The properties of a webhook object.
-     * 
     */
     public Map<String,String> getWebHookProperties() {
         return this.webHookProperties == null ? Map.of() : this.webHookProperties;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a NotificationHub WnsCredential.
- * 
  */
 public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The package ID for this credential.
-     * 
      */
     @Import(name="packageSid")
       private final @Nullable Output<String> packageSid;
@@ -31,7 +29,6 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secret key.
-     * 
      */
     @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
@@ -42,7 +39,6 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Windows Live endpoint.
-     * 
      */
     @Import(name="windowsLiveEndpoint")
       private final @Nullable Output<String> windowsLiveEndpoint;

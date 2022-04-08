@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.
- * 
  */
 public final class AdditionalUnattendContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
 
     /**
      * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
-     * 
      */
     @Import(name="componentName")
       private final @Nullable Output<ComponentNames> componentName;
@@ -34,7 +32,6 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -45,7 +42,6 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
 
     /**
      * The pass name. Currently, the only allowable value is OobeSystem.
-     * 
      */
     @Import(name="passName")
       private final @Nullable Output<PassNames> passName;
@@ -56,7 +52,6 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
-     * 
      */
     @Import(name="settingName")
       private final @Nullable Output<SettingNames> settingName;

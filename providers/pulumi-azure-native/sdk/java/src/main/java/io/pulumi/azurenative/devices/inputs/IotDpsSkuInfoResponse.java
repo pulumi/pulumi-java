@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * List of possible provisioning service SKUs.
- * 
  */
 public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of units to provision
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Double capacity;
@@ -32,7 +30,6 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Sku name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Pricing tier name of the provisioning service.
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;

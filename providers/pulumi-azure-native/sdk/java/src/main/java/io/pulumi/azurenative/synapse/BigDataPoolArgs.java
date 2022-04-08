@@ -28,7 +28,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Auto-pausing properties
-     * 
      */
     @Import(name="autoPause")
       private final @Nullable Output<AutoPausePropertiesArgs> autoPause;
@@ -39,7 +38,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Auto-scaling properties
-     * 
      */
     @Import(name="autoScale")
       private final @Nullable Output<AutoScalePropertiesArgs> autoScale;
@@ -50,7 +48,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Big Data pool name
-     * 
      */
     @Import(name="bigDataPoolName")
       private final @Nullable Output<String> bigDataPoolName;
@@ -61,7 +58,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cache size
-     * 
      */
     @Import(name="cacheSize")
       private final @Nullable Output<Integer> cacheSize;
@@ -72,7 +68,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when the Big Data pool was created.
-     * 
      */
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
@@ -83,7 +78,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of custom libraries/packages associated with the spark pool.
-     * 
      */
     @Import(name="customLibraries")
       private final @Nullable Output<List<LibraryInfoArgs>> customLibraries;
@@ -94,7 +88,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default folder where Spark logs will be written.
-     * 
      */
     @Import(name="defaultSparkLogFolder")
       private final @Nullable Output<String> defaultSparkLogFolder;
@@ -105,7 +98,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dynamic Executor Allocation
-     * 
      */
     @Import(name="dynamicExecutorAllocation")
       private final @Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
@@ -116,7 +108,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to stop any running jobs in the Big Data pool
-     * 
      */
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
@@ -127,7 +118,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether compute isolation is required or not.
-     * 
      */
     @Import(name="isComputeIsolationEnabled")
       private final @Nullable Output<Boolean> isComputeIsolationEnabled;
@@ -138,7 +128,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Library version requirements
-     * 
      */
     @Import(name="libraryRequirements")
       private final @Nullable Output<LibraryRequirementsArgs> libraryRequirements;
@@ -149,7 +138,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -160,7 +148,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of nodes in the Big Data pool.
-     * 
      */
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
@@ -171,7 +158,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The level of compute power that each node in the Big Data pool has.
-     * 
      */
     @Import(name="nodeSize")
       private final @Nullable Output<Either<String,NodeSize>> nodeSize;
@@ -182,7 +168,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of nodes that the Big Data pool provides.
-     * 
      */
     @Import(name="nodeSizeFamily")
       private final @Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily;
@@ -193,7 +178,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of the Big Data pool.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -204,7 +188,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -215,7 +198,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether session level packages enabled.
-     * 
      */
     @Import(name="sessionLevelPackagesEnabled")
       private final @Nullable Output<Boolean> sessionLevelPackagesEnabled;
@@ -226,7 +208,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Spark configuration file to specify additional properties
-     * 
      */
     @Import(name="sparkConfigProperties")
       private final @Nullable Output<LibraryRequirementsArgs> sparkConfigProperties;
@@ -237,7 +218,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Spark events folder
-     * 
      */
     @Import(name="sparkEventsFolder")
       private final @Nullable Output<String> sparkEventsFolder;
@@ -248,7 +228,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Apache Spark version.
-     * 
      */
     @Import(name="sparkVersion")
       private final @Nullable Output<String> sparkVersion;
@@ -259,7 +238,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -270,7 +248,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

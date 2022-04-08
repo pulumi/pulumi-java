@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Git repository property payload for Application Configuration Service
- * 
  */
 public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Public sshKey of git repository.
-     * 
      */
     @Import(name="hostKey")
       private final @Nullable Output<String> hostKey;
@@ -33,7 +31,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * SshKey algorithm of git repository.
-     * 
      */
     @Import(name="hostKeyAlgorithm")
       private final @Nullable Output<String> hostKeyAlgorithm;
@@ -44,7 +41,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Label of the repository
-     * 
      */
     @Import(name="label", required=true)
       private final Output<String> label;
@@ -55,7 +51,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Name of the repository
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -66,7 +61,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Password of git repository basic auth.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -77,7 +71,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Collection of patterns of the repository
-     * 
      */
     @Import(name="patterns", required=true)
       private final Output<List<String>> patterns;
@@ -88,7 +81,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Private sshKey algorithm of git repository.
-     * 
      */
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
@@ -99,7 +91,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Searching path of the repository
-     * 
      */
     @Import(name="searchPaths")
       private final @Nullable Output<List<String>> searchPaths;
@@ -110,7 +101,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Strict host key checking or not.
-     * 
      */
     @Import(name="strictHostKeyChecking")
       private final @Nullable Output<Boolean> strictHostKeyChecking;
@@ -121,7 +111,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * URI of the repository
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;
@@ -132,7 +121,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
 
     /**
      * Username of git repository basic auth.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

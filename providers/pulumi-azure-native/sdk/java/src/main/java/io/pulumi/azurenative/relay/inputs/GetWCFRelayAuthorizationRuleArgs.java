@@ -14,7 +14,6 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * The authorization rule name.
-     * 
      */
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
@@ -25,7 +24,6 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * The relay name.
-     * 
      */
     @Import(name="relayName", required=true)
       private final String relayName;
@@ -47,7 +44,6 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

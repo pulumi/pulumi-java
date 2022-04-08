@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Store the fabric details specific to the VMware fabric.
- * 
  */
 public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of source and target servers configured to talk to this CS.
-     * 
      */
     @Import(name="agentCount")
       private final @Nullable String agentCount;
@@ -38,7 +36,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Agent expiry date.
-     * 
      */
     @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
@@ -49,7 +46,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The agent Version.
-     * 
      */
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
@@ -60,7 +56,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The agent version details.
-     * 
      */
     @Import(name="agentVersionDetails")
       private final @Nullable VersionDetailsResponse agentVersionDetails;
@@ -71,7 +66,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The available memory.
-     * 
      */
     @Import(name="availableMemoryInBytes")
       private final @Nullable Double availableMemoryInBytes;
@@ -82,7 +76,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The available space.
-     * 
      */
     @Import(name="availableSpaceInBytes")
       private final @Nullable Double availableSpaceInBytes;
@@ -93,7 +86,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The percentage of the CPU load.
-     * 
      */
     @Import(name="cpuLoad")
       private final @Nullable String cpuLoad;
@@ -104,7 +96,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The CPU load status.
-     * 
      */
     @Import(name="cpuLoadStatus")
       private final @Nullable String cpuLoadStatus;
@@ -115,7 +106,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The CS service status.
-     * 
      */
     @Import(name="csServiceStatus")
       private final @Nullable String csServiceStatus;
@@ -126,7 +116,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The database server load.
-     * 
      */
     @Import(name="databaseServerLoad")
       private final @Nullable String databaseServerLoad;
@@ -137,7 +126,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The database server load status.
-     * 
      */
     @Import(name="databaseServerLoadStatus")
       private final @Nullable String databaseServerLoadStatus;
@@ -148,7 +136,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The host name.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable String hostName;
@@ -160,7 +147,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMware'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -171,7 +157,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The IP address.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -182,7 +167,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The last heartbeat received from CS server.
-     * 
      */
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
@@ -193,7 +177,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The list of Master Target servers associated with the fabric.
-     * 
      */
     @Import(name="masterTargetServers")
       private final @Nullable List<MasterTargetServerResponse> masterTargetServers;
@@ -204,7 +187,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The memory usage status.
-     * 
      */
     @Import(name="memoryUsageStatus")
       private final @Nullable String memoryUsageStatus;
@@ -215,7 +197,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of process servers.
-     * 
      */
     @Import(name="processServerCount")
       private final @Nullable String processServerCount;
@@ -226,7 +207,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The list of Process Servers associated with the fabric.
-     * 
      */
     @Import(name="processServers")
       private final @Nullable List<ProcessServerResponse> processServers;
@@ -237,7 +217,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of protected servers.
-     * 
      */
     @Import(name="protectedServers")
       private final @Nullable String protectedServers;
@@ -248,7 +227,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * PS template version.
-     * 
      */
     @Import(name="psTemplateVersion")
       private final @Nullable String psTemplateVersion;
@@ -259,7 +237,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of replication pairs configured in this CS.
-     * 
      */
     @Import(name="replicationPairCount")
       private final @Nullable String replicationPairCount;
@@ -270,7 +247,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The list of run as accounts created on the server.
-     * 
      */
     @Import(name="runAsAccounts")
       private final @Nullable List<RunAsAccountResponse> runAsAccounts;
@@ -281,7 +257,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The space usage status.
-     * 
      */
     @Import(name="spaceUsageStatus")
       private final @Nullable String spaceUsageStatus;
@@ -292,7 +267,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * CS SSL cert expiry date.
-     * 
      */
     @Import(name="sslCertExpiryDate")
       private final @Nullable String sslCertExpiryDate;
@@ -303,7 +277,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * CS SSL cert expiry date.
-     * 
      */
     @Import(name="sslCertExpiryRemainingDays")
       private final @Nullable Integer sslCertExpiryRemainingDays;
@@ -314,7 +287,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The percentage of the system load.
-     * 
      */
     @Import(name="systemLoad")
       private final @Nullable String systemLoad;
@@ -325,7 +297,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The system load status.
-     * 
      */
     @Import(name="systemLoadStatus")
       private final @Nullable String systemLoadStatus;
@@ -336,7 +307,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The total memory.
-     * 
      */
     @Import(name="totalMemoryInBytes")
       private final @Nullable Double totalMemoryInBytes;
@@ -347,7 +317,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The total space.
-     * 
      */
     @Import(name="totalSpaceInBytes")
       private final @Nullable Double totalSpaceInBytes;
@@ -358,7 +327,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Version status
-     * 
      */
     @Import(name="versionStatus")
       private final @Nullable String versionStatus;
@@ -369,7 +337,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The web load.
-     * 
      */
     @Import(name="webLoad")
       private final @Nullable String webLoad;
@@ -380,7 +347,6 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The web load status.
-     * 
      */
     @Import(name="webLoadStatus")
       private final @Nullable String webLoadStatus;

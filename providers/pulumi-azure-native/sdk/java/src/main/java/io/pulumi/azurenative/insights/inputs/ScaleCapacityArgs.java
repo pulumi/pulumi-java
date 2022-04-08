@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The number of instances that can be used during this profile.
- * 
  */
 public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
-     * 
      */
     @Import(name="default", required=true)
       private final Output<String> default_;
@@ -30,7 +28,6 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
-     * 
      */
     @Import(name="maximum", required=true)
       private final Output<String> maximum;
@@ -41,7 +38,6 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the minimum number of instances for the resource.
-     * 
      */
     @Import(name="minimum", required=true)
       private final Output<String> minimum;

@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Definition of a single parameter for an entity.
- * 
  */
 public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
 
     /**
      * Global Parameter type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,GlobalParameterType>> type;
@@ -33,7 +31,6 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
 
     /**
      * Value of parameter.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<Object> value;

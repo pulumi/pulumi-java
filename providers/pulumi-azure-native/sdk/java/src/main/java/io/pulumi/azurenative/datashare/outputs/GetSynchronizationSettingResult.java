@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GetSynchronizationSettingResult {
     /**
      * The resource id of the azure resource
-     * 
      */
     private final String id;
     /**
      * Kind of synchronization setting.
-     * 
      */
     private final String kind;
     /**
      * Name of the azure resource
-     * 
      */
     private final String name;
     /**
      * System Data of the Azure resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Type of the azure resource
-     * 
      */
     private final String type;
 
@@ -52,35 +47,30 @@ public final class GetSynchronizationSettingResult {
 
     /**
      * The resource id of the azure resource
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of synchronization setting.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * System Data of the Azure resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
     */
     public String getType() {
         return this.type;

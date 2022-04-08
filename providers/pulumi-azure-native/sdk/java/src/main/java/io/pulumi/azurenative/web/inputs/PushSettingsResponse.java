@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Push settings for the App.
- * 
  */
 public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
-     * 
      */
     @Import(name="dynamicTagsJson")
       private final @Nullable String dynamicTagsJson;
@@ -32,7 +30,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -43,7 +40,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
-     * 
      */
     @Import(name="isPushEnabled", required=true)
       private final Boolean isPushEnabled;
@@ -54,7 +50,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -65,7 +60,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -76,7 +70,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
-     * 
      */
     @Import(name="tagWhitelistJson")
       private final @Nullable String tagWhitelistJson;
@@ -88,9 +81,8 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * '_', '@', '#', '.', ':', '-'. 
      * Validation should be performed at the PushRequestHandler.
-     * 
      */
     @Import(name="tagsRequiringAuth")
       private final @Nullable String tagsRequiringAuth;
@@ -101,7 +93,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

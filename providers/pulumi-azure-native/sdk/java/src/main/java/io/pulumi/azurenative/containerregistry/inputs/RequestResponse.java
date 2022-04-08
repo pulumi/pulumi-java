@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The request that generated the event.
- * 
  */
 public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
-     * 
      */
     @Import(name="addr")
       private final @Nullable String addr;
@@ -31,7 +29,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
-     * 
      */
     @Import(name="host")
       private final @Nullable String host;
@@ -42,7 +39,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the request that initiated the event.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -53,7 +49,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The request method that generated the event.
-     * 
      */
     @Import(name="method")
       private final @Nullable String method;
@@ -64,7 +59,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The user agent header of the request.
-     * 
      */
     @Import(name="useragent")
       private final @Nullable String useragent;

@@ -23,7 +23,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * vCenter Single Sign On Identity Sources
-     * 
      */
     @Import(name="identitySources")
       private final @Nullable Output<List<IdentitySourceArgs>> identitySources;
@@ -34,7 +33,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connectivity to internet is enabled or disabled
-     * 
      */
     @Import(name="internet")
       private final @Nullable Output<Either<String,InternetEnum>> internet;
@@ -45,7 +43,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -56,7 +53,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default cluster used for management
-     * 
      */
     @Import(name="managementCluster", required=true)
       private final Output<ManagementClusterArgs> managementCluster;
@@ -67,7 +63,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
-     * 
      */
     @Import(name="networkBlock", required=true)
       private final Output<String> networkBlock;
@@ -78,7 +73,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optionally, set the NSX-T Manager password when the private cloud is created
-     * 
      */
     @Import(name="nsxtPassword")
       private final @Nullable Output<String> nsxtPassword;
@@ -89,7 +83,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName")
       private final @Nullable Output<String> privateCloudName;
@@ -100,7 +93,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -111,7 +103,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The private cloud SKU
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -122,7 +113,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -133,7 +123,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optionally, set the vCenter admin password when the private cloud is created
-     * 
      */
     @Import(name="vcenterPassword")
       private final @Nullable Output<String> vcenterPassword;

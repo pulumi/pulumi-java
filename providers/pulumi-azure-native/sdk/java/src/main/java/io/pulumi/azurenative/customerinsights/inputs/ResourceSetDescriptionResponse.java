@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource set description.
- * 
  */
 public final class ResourceSetDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * The elements included in the set.
-     * 
      */
     @Import(name="elements")
       private final @Nullable List<String> elements;
@@ -32,7 +30,6 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
-     * 
      */
     @Import(name="exceptions")
       private final @Nullable List<String> exceptions;

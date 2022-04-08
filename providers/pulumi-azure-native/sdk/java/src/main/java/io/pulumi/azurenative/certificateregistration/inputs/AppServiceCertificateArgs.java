@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Key Vault container for a certificate that is purchased through Azure.
- * 
  */
 public final class AppServiceCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
 
     /**
      * Key Vault resource Id.
-     * 
      */
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
@@ -31,7 +29,6 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
 
     /**
      * Key Vault secret name.
-     * 
      */
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;

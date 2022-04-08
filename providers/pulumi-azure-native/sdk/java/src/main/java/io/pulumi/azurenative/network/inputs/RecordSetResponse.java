@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A collective group of information about the record set information.
- * 
  */
 public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Fqdn that resolves to private endpoint ip address.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable String fqdn;
@@ -33,7 +31,6 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The private ip address of the private endpoint.
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
@@ -44,7 +41,6 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the recordset.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -55,7 +51,6 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recordset name.
-     * 
      */
     @Import(name="recordSetName")
       private final @Nullable String recordSetName;
@@ -66,7 +61,6 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource record type.
-     * 
      */
     @Import(name="recordType")
       private final @Nullable String recordType;
@@ -77,7 +71,6 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recordset time to live.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Integer ttl;

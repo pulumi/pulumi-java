@@ -17,7 +17,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the application gateway.
-     * 
      */
     @Import(name="applicationGatewayName", required=true)
       private final Output<String> applicationGatewayName;
@@ -28,7 +27,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the application gateway private endpoint connection.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -39,7 +37,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -50,7 +47,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
 
     /**
      * Name of the private endpoint connection on an application gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -61,7 +57,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -72,7 +67,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

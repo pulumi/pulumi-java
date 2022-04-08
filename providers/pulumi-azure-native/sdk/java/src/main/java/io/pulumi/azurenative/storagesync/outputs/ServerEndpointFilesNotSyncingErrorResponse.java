@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class ServerEndpointFilesNotSyncingErrorResponse {
     /**
      * Error code (HResult)
-     * 
      */
     private final Integer errorCode;
     /**
      * Count of persistent files not syncing with the specified error code
-     * 
      */
     private final Double persistentCount;
     /**
      * Count of transient files not syncing with the specified error code
-     * 
      */
     private final Double transientCount;
 
@@ -38,21 +35,18 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
 
     /**
      * Error code (HResult)
-     * 
     */
     public Integer getErrorCode() {
         return this.errorCode;
     }
     /**
      * Count of persistent files not syncing with the specified error code
-     * 
     */
     public Double getPersistentCount() {
         return this.persistentCount;
     }
     /**
      * Count of transient files not syncing with the specified error code
-     * 
     */
     public Double getTransientCount() {
         return this.transientCount;

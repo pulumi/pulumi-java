@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Data masking mode.
-     * 
      */
     @EnumType
     public enum DataMaskingMode {
         /**
          * Mask the value of an entity.
-         * 
          */
         Mask("Mask"),
         /**
          * Hide the presence of an entity.
-         * 
          */
         Hide("Hide");
 

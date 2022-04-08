@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of event handler.
- * 
  */
 public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Upstream auth settings. If not set, no auth is used for upstream messages.
-     * 
      */
     @Import(name="auth")
       private final @Nullable UpstreamAuthSettingsResponse auth;
@@ -33,7 +31,6 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets ot sets the list of system events.
-     * 
      */
     @Import(name="systemEvents")
       private final @Nullable List<String> systemEvents;
@@ -45,7 +42,6 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
      * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
-     * 
      */
     @Import(name="urlTemplate", required=true)
       private final String urlTemplate;
@@ -60,7 +56,6 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
      *     1. "*", it to matches any event name
      *     2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
      *     3. The single event name, for example, "event1", it matches "event1"
-     * 
      */
     @Import(name="userEventPattern")
       private final @Nullable String userEventPattern;

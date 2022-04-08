@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubernetes role resources
- * 
  */
 public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
 
     /**
      * Kubernetes role compute resource
-     * 
      */
     @Import(name="compute", required=true)
       private final Output<KubernetesRoleComputeArgs> compute;
@@ -32,7 +30,6 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
 
     /**
      * Kubernetes role storage resource
-     * 
      */
     @Import(name="storage")
       private final @Nullable Output<KubernetesRoleStorageArgs> storage;

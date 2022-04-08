@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The status of the last successful slot swap operation.
- * 
  */
 public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The destination slot of the last swap operation.
-     * 
      */
     @Import(name="destinationSlotName", required=true)
       private final String destinationSlotName;
@@ -29,7 +27,6 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The source slot of the last swap operation.
-     * 
      */
     @Import(name="sourceSlotName", required=true)
       private final String sourceSlotName;
@@ -40,7 +37,6 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The time the last successful slot swap completed.
-     * 
      */
     @Import(name="timestampUtc", required=true)
       private final String timestampUtc;

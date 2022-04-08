@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Static Site User ARM resource.
- * 
  */
 public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * The display name for the static site user.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -31,7 +29,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -53,7 +49,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * Resource Name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -64,7 +59,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * The identity provider for the static site user.
-     * 
      */
     @Import(name="provider", required=true)
       private final String provider;
@@ -75,7 +69,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * The roles for the static site user, in free-form string format
-     * 
      */
     @Import(name="roles")
       private final @Nullable String roles;
@@ -86,7 +79,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -97,7 +89,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
 
     /**
      * The user id for the static site user.
-     * 
      */
     @Import(name="userId", required=true)
       private final String userId;

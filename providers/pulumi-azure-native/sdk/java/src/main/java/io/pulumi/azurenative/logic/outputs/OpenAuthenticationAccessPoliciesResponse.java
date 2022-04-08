@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class OpenAuthenticationAccessPoliciesResponse {
     /**
      * Open authentication policies.
-     * 
      */
     private final @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
 
@@ -25,7 +24,6 @@ public final class OpenAuthenticationAccessPoliciesResponse {
 
     /**
      * Open authentication policies.
-     * 
     */
     public Map<String,OpenAuthenticationAccessPolicyResponse> getPolicies() {
         return this.policies == null ? Map.of() : this.policies;

@@ -26,7 +26,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Determines if the connection monitor will start automatically once created.
-     * 
      */
     @Import(name="autoStart")
       private final @Nullable Output<Boolean> autoStart;
@@ -37,7 +36,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the connection monitor.
-     * 
      */
     @Import(name="connectionMonitorName")
       private final @Nullable Output<String> connectionMonitorName;
@@ -48,7 +46,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Describes the destination of connection monitor.
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<ConnectionMonitorDestinationArgs> destination;
@@ -59,7 +56,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of connection monitor endpoints.
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints;
@@ -70,7 +66,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Connection monitor location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -81,7 +76,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Value indicating whether connection monitor V1 should be migrated to V2 format.
-     * 
      */
     @Import(name="migrate")
       private final @Nullable Output<String> migrate;
@@ -92,7 +86,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Monitoring interval in seconds.
-     * 
      */
     @Import(name="monitoringIntervalInSeconds")
       private final @Nullable Output<Integer> monitoringIntervalInSeconds;
@@ -103,7 +96,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Network Watcher resource.
-     * 
      */
     @Import(name="networkWatcherName", required=true)
       private final Output<String> networkWatcherName;
@@ -114,7 +106,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional notes to be associated with the connection monitor.
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -125,7 +116,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of connection monitor outputs.
-     * 
      */
     @Import(name="outputs")
       private final @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs;
@@ -136,7 +126,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group containing Network Watcher.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -147,7 +136,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Describes the source of connection monitor.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<ConnectionMonitorSourceArgs> source;
@@ -158,7 +146,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Connection monitor tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -169,7 +156,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of connection monitor test configurations.
-     * 
      */
     @Import(name="testConfigurations")
       private final @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
@@ -180,7 +166,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of connection monitor test groups.
-     * 
      */
     @Import(name="testGroups")
       private final @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups;

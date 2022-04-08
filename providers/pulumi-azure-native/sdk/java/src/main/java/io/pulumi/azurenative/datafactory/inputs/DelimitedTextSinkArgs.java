@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity DelimitedText sink.
- * 
  */
 public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -39,7 +37,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * DelimitedText format settings.
-     * 
      */
     @Import(name="formatSettings")
       private final @Nullable Output<DelimitedTextWriteSettingsArgs> formatSettings;
@@ -50,7 +47,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -61,7 +57,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -72,7 +67,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -83,7 +77,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * DelimitedText store settings.
-     * 
      */
     @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
@@ -95,7 +88,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
     /**
      * Copy sink type.
      * Expected value is 'DelimitedTextSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -106,7 +98,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -117,7 +108,6 @@ public final class DelimitedTextSinkArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;

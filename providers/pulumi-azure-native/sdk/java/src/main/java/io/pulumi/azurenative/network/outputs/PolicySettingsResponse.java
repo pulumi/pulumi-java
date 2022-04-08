@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class PolicySettingsResponse {
     /**
      * Maximum file upload size in Mb for WAF.
-     * 
      */
     private final @Nullable Integer fileUploadLimitInMb;
     /**
      * Maximum request body size in Kb for WAF.
-     * 
      */
     private final @Nullable Integer maxRequestBodySizeInKb;
     /**
      * The mode of the policy.
-     * 
      */
     private final @Nullable String mode;
     /**
      * Whether to allow WAF to check request Body.
-     * 
      */
     private final @Nullable Boolean requestBodyCheck;
     /**
      * The state of the policy.
-     * 
      */
     private final @Nullable String state;
 
@@ -55,35 +50,30 @@ public final class PolicySettingsResponse {
 
     /**
      * Maximum file upload size in Mb for WAF.
-     * 
     */
     public Optional<Integer> getFileUploadLimitInMb() {
         return Optional.ofNullable(this.fileUploadLimitInMb);
     }
     /**
      * Maximum request body size in Kb for WAF.
-     * 
     */
     public Optional<Integer> getMaxRequestBodySizeInKb() {
         return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
     /**
      * The mode of the policy.
-     * 
     */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Whether to allow WAF to check request Body.
-     * 
     */
     public Optional<Boolean> getRequestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
     /**
      * The state of the policy.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

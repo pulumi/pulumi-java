@@ -18,7 +18,6 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Front Door which is globally unique.
-     * 
      */
     @Import(name="frontDoorName", required=true)
       private final Output<String> frontDoorName;
@@ -29,7 +28,6 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -40,7 +38,6 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of rules that define a particular Rules Engine Configuration.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<RulesEngineRuleArgs>> rules;
@@ -51,7 +48,6 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Rules Engine which is unique within the Front Door.
-     * 
      */
     @Import(name="rulesEngineName")
       private final @Nullable Output<String> rulesEngineName;

@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ErrorResponseResponse {
     /**
      * Error code.
-     * 
      */
     private final String code;
     /**
      * An array of error detail objects.
-     * 
      */
     private final @Nullable List<ErrorDetailResponse> details;
     /**
      * Error message.
-     * 
      */
     private final String message;
 
@@ -40,21 +37,18 @@ public final class ErrorResponseResponse {
 
     /**
      * Error code.
-     * 
     */
     public String getCode() {
         return this.code;
     }
     /**
      * An array of error detail objects.
-     * 
     */
     public List<ErrorDetailResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * Error message.
-     * 
     */
     public String getMessage() {
         return this.message;

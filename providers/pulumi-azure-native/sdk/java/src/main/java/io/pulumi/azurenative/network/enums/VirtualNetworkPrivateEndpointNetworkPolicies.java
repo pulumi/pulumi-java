@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enable or Disable apply network policies on private end point in the subnet.
-     * 
      */
     @EnumType
     public enum VirtualNetworkPrivateEndpointNetworkPolicies {

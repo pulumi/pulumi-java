@@ -13,47 +13,38 @@ import javax.annotation.Nullable;
 public final class WorkspaceRepositoryConfigurationResponse {
     /**
      * Account name
-     * 
      */
     private final @Nullable String accountName;
     /**
      * Collaboration branch
-     * 
      */
     private final @Nullable String collaborationBranch;
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
-     * 
      */
     private final @Nullable String hostName;
     /**
      * The last commit ID
-     * 
      */
     private final @Nullable String lastCommitId;
     /**
      * VSTS project name
-     * 
      */
     private final @Nullable String projectName;
     /**
      * Repository name
-     * 
      */
     private final @Nullable String repositoryName;
     /**
      * Root folder to use in the repository
-     * 
      */
     private final @Nullable String rootFolder;
     /**
      * The VSTS tenant ID
-     * 
      */
     private final @Nullable String tenantId;
     /**
      * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
-     * 
      */
     private final @Nullable String type;
 
@@ -81,63 +72,54 @@ public final class WorkspaceRepositoryConfigurationResponse {
 
     /**
      * Account name
-     * 
     */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Collaboration branch
-     * 
     */
     public Optional<String> getCollaborationBranch() {
         return Optional.ofNullable(this.collaborationBranch);
     }
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
-     * 
     */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * The last commit ID
-     * 
     */
     public Optional<String> getLastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
      * VSTS project name
-     * 
     */
     public Optional<String> getProjectName() {
         return Optional.ofNullable(this.projectName);
     }
     /**
      * Repository name
-     * 
     */
     public Optional<String> getRepositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
      * Root folder to use in the repository
-     * 
     */
     public Optional<String> getRootFolder() {
         return Optional.ofNullable(this.rootFolder);
     }
     /**
      * The VSTS tenant ID
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

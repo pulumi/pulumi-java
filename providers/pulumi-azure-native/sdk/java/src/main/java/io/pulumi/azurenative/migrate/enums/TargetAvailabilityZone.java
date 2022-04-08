@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the target availability zone.
-     * 
      */
     @EnumType
     public enum TargetAvailabilityZone {

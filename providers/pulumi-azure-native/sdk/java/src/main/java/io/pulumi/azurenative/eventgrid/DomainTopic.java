@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * Domain Topic.
  * API Version: 2020-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DomainTopics_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var domainTopic = new AzureNative.EventGrid.DomainTopic("domainTopic", new AzureNative.EventGrid.DomainTopicArgs
+ *         {
+ *             DomainName = "exampledomain1",
+ *             DomainTopicName = "exampledomaintopic1",
+ *             ResourceGroupName = "examplerg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventgrid.NewDomainTopic(ctx, "domainTopic", &eventgrid.DomainTopicArgs{
+ * 			DomainName:        pulumi.String("exampledomain1"),
+ * 			DomainTopicName:   pulumi.String("exampledomaintopic1"),
+ * 			ResourceGroupName: pulumi.String("examplerg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const domainTopic = new azure_native.eventgrid.DomainTopic("domainTopic", {
+ *     domainName: "exampledomain1",
+ *     domainTopicName: "exampledomaintopic1",
+ *     resourceGroupName: "examplerg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * domain_topic = azure_native.eventgrid.DomainTopic("domainTopic",
+ *     domain_name="exampledomain1",
+ *     domain_topic_name="exampledomaintopic1",
+ *     resource_group_name="examplerg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +105,48 @@ import javax.annotation.Nullable;
 public class DomainTopic extends io.pulumi.resources.CustomResource {
     /**
      * Name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the domain topic.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the domain topic.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata relating to Domain Topic resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to Domain Topic resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

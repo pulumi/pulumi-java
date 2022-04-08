@@ -14,7 +14,6 @@ public final class GetPredictionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final String hubName;
@@ -25,7 +24,6 @@ public final class GetPredictionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Prediction.
-     * 
      */
     @Import(name="predictionName", required=true)
       private final String predictionName;
@@ -36,7 +34,6 @@ public final class GetPredictionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

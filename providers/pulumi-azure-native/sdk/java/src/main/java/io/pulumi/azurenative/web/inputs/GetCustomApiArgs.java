@@ -16,7 +16,6 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * API name
-     * 
      */
     @Import(name="apiName", required=true)
       private final String apiName;
@@ -27,7 +26,6 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Subscription Id
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;

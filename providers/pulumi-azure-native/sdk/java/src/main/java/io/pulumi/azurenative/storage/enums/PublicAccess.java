@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether data in the container may be accessed publicly and the level of access.
-     * 
      */
     @EnumType
     public enum PublicAccess {

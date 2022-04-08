@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class HardwareProfileResponse {
     /**
      * The size of the VM
-     * 
      */
     private final @Nullable String vmSize;
 
@@ -24,7 +23,6 @@ public final class HardwareProfileResponse {
 
     /**
      * The size of the VM
-     * 
     */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);

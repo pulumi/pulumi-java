@@ -18,7 +18,6 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
 
     /**
      * The key type.
-     * 
      */
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
@@ -29,7 +28,6 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
 
     /**
      * The expiry time.
-     * 
      */
     @Import(name="notAfter")
       private final @Nullable String notAfter;
@@ -40,7 +38,6 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -51,7 +48,6 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
 
     /**
      * The workflow trigger name.
-     * 
      */
     @Import(name="triggerName", required=true)
       private final String triggerName;
@@ -62,7 +58,6 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
 
     /**
      * The workflow versionId.
-     * 
      */
     @Import(name="versionId", required=true)
       private final String versionId;
@@ -73,7 +68,6 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
 
     /**
      * The workflow name.
-     * 
      */
     @Import(name="workflowName", required=true)
       private final String workflowName;

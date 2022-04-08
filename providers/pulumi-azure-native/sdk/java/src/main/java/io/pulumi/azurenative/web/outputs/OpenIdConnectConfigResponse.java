@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class OpenIdConnectConfigResponse {
     /**
      * The endpoint to be used to make an authorization request.
-     * 
      */
     private final @Nullable String authorizationEndpoint;
     /**
      * The endpoint that provides the keys necessary to validate the token.
-     * 
      */
     private final @Nullable String certificationUri;
     /**
      * The endpoint that issues the token.
-     * 
      */
     private final @Nullable String issuer;
     /**
      * The endpoint to be used to request a token.
-     * 
      */
     private final @Nullable String tokenEndpoint;
     /**
      * The endpoint that contains all the configuration endpoints for the provider.
-     * 
      */
     private final @Nullable String wellKnownOpenIdConfiguration;
 
@@ -53,35 +48,30 @@ public final class OpenIdConnectConfigResponse {
 
     /**
      * The endpoint to be used to make an authorization request.
-     * 
     */
     public Optional<String> getAuthorizationEndpoint() {
         return Optional.ofNullable(this.authorizationEndpoint);
     }
     /**
      * The endpoint that provides the keys necessary to validate the token.
-     * 
     */
     public Optional<String> getCertificationUri() {
         return Optional.ofNullable(this.certificationUri);
     }
     /**
      * The endpoint that issues the token.
-     * 
     */
     public Optional<String> getIssuer() {
         return Optional.ofNullable(this.issuer);
     }
     /**
      * The endpoint to be used to request a token.
-     * 
     */
     public Optional<String> getTokenEndpoint() {
         return Optional.ofNullable(this.tokenEndpoint);
     }
     /**
      * The endpoint that contains all the configuration endpoints for the provider.
-     * 
     */
     public Optional<String> getWellKnownOpenIdConfiguration() {
         return Optional.ofNullable(this.wellKnownOpenIdConfiguration);

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource model definition representing SKU for Azure Managed Instance - Azure Arc
- * 
  */
 public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -33,8 +31,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
     }
 
     /**
-     * Whether dev/test is enabled. When the dev field is set to true, the resource is used for dev/test purpose.
-     * 
+     * Whether dev/test is enabled. When the dev field is set to true, the resource is used for dev/test purpose. 
      */
     @Import(name="dev")
       private final @Nullable Output<Boolean> dev;
@@ -45,7 +42,6 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -56,7 +52,6 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the SKU.  It is typically a letter+number code
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -66,8 +61,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
     }
 
     /**
-     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
-     * 
+     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -78,7 +72,6 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * This field is required to be implemented by the Resource Provider if the service has more than one tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<SqlManagedInstanceSkuTier> tier;

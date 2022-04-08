@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Instance view status.
- * 
  */
 public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
 
     /**
      * The status code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
 
     /**
      * The short localizable label for the status.
-     * 
      */
     @Import(name="displayStatus", required=true)
       private final String displayStatus;
@@ -40,7 +37,6 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
 
     /**
      * The level code.
-     * 
      */
     @Import(name="level", required=true)
       private final String level;
@@ -51,7 +47,6 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
 
     /**
      * The detailed status message, including for alerts and error messages.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -62,7 +57,6 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
 
     /**
      * The time of the status.
-     * 
      */
     @Import(name="time", required=true)
       private final String time;

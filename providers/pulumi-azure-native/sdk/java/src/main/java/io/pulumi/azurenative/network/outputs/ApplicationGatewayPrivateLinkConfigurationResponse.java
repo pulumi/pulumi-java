@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayPrivateLinkConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * An array of application gateway private link ip configurations.
-     * 
      */
     private final @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations;
     /**
      * Name of the private link configuration that is unique within an Application Gateway.
-     * 
      */
     private final @Nullable String name;
     /**
      * The provisioning state of the application gateway private link configuration.
-     * 
      */
     private final String provisioningState;
     /**
      * Type of the resource.
-     * 
      */
     private final String type;
 
@@ -62,42 +56,36 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of application gateway private link ip configurations.
-     * 
     */
     public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * Name of the private link configuration that is unique within an Application Gateway.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the application gateway private link configuration.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

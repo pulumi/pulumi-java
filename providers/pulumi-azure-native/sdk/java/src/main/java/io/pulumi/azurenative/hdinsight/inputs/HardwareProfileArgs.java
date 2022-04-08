@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The hardware profile.
- * 
  */
 public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The size of the VM
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;

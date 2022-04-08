@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A CNAME record.
- * 
  */
 public final class CnameRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CnameRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The canonical name for this CNAME record.
-     * 
      */
     @Import(name="cname")
       private final @Nullable String cname;

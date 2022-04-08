@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Unmasked IP address logging status
-     * 
      */
     @EnumType
     public enum UnmaskedIpLoggingStatus {
         /**
          * Unmasked IP logging is disabled
-         * 
          */
         Disabled("Disabled"),
         /**
          * Unmasked IP logging is enabled
-         * 
          */
         Enabled("Enabled");
 

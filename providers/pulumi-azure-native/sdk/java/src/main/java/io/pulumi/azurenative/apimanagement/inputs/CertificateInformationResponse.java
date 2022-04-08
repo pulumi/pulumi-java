@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SSL certificate information.
- * 
  */
 public final class CertificateInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
 
     /**
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
      */
     @Import(name="expiry", required=true)
       private final String expiry;
@@ -29,7 +27,6 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
 
     /**
      * Subject of the certificate.
-     * 
      */
     @Import(name="subject", required=true)
       private final String subject;
@@ -40,7 +37,6 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
 
     /**
      * Thumbprint of the certificate.
-     * 
      */
     @Import(name="thumbprint", required=true)
       private final String thumbprint;

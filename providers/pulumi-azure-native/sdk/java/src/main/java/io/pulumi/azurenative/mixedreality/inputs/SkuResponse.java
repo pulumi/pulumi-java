@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource model definition representing SKU
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
-     * 
      */
     @Import(name="family")
       private final @Nullable String family;
@@ -43,7 +40,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the SKU. Ex - P3. It is typically a letter+number code
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -53,8 +49,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
-     * 
+     * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. 
      */
     @Import(name="size")
       private final @Nullable String size;
@@ -65,7 +60,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

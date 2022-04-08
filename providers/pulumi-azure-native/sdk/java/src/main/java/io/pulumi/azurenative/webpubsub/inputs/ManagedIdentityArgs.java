@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A class represent managed identities used for request and response
- * 
  */
 public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Represent the identity type: systemAssigned, userAssigned, None
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;
@@ -35,7 +33,6 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Get or set the user assigned identities
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;

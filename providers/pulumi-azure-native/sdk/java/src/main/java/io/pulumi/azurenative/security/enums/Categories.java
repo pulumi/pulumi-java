@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The categories of resource that is at risk when the assessment is unhealthy
-     * 
      */
     @EnumType
     public enum Categories {

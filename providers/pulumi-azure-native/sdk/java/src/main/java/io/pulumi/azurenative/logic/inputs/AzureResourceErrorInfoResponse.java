@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The azure resource error info.
- * 
  */
 public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
 
     /**
      * The error code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -32,7 +30,6 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
 
     /**
      * The error details.
-     * 
      */
     @Import(name="details")
       private final @Nullable List<AzureResourceErrorInfoResponse> details;
@@ -43,7 +40,6 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
 
     /**
      * The error message.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

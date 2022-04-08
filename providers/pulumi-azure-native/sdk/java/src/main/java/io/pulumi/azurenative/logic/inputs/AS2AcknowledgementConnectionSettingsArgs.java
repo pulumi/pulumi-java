@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The AS2 agreement acknowledgement connection settings.
- * 
  */
 public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
 
     /**
      * Indicates whether to ignore mismatch in certificate name.
-     * 
      */
     @Import(name="ignoreCertificateNameMismatch", required=true)
       private final Output<Boolean> ignoreCertificateNameMismatch;
@@ -30,7 +28,6 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
 
     /**
      * Indicates whether to keep the connection alive.
-     * 
      */
     @Import(name="keepHttpConnectionAlive", required=true)
       private final Output<Boolean> keepHttpConnectionAlive;
@@ -41,7 +38,6 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
 
     /**
      * Indicates whether to support HTTP status code 'CONTINUE'.
-     * 
      */
     @Import(name="supportHttpStatusCodeContinue", required=true)
       private final Output<Boolean> supportHttpStatusCodeContinue;
@@ -52,7 +48,6 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
 
     /**
      * Indicates whether to unfold the HTTP headers.
-     * 
      */
     @Import(name="unfoldHttpHeaders", required=true)
       private final Output<Boolean> unfoldHttpHeaders;

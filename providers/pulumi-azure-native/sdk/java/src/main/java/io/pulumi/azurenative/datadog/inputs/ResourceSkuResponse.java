@@ -14,7 +14,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -18,7 +18,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connection name
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -29,7 +28,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -47,7 +45,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -58,7 +55,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Subscription Id
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -69,7 +65,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

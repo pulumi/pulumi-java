@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configure your SQL virtual machine to be able to connect to the Azure Key Vault service.
- * 
  */
 public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Azure Key Vault url.
-     * 
      */
     @Import(name="azureKeyVaultUrl")
       private final @Nullable Output<String> azureKeyVaultUrl;
@@ -32,7 +30,6 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Credential name.
-     * 
      */
     @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
@@ -43,7 +40,6 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Enable or disable key vault credential setting.
-     * 
      */
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
@@ -54,7 +50,6 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Service principal name to access key vault.
-     * 
      */
     @Import(name="servicePrincipalName")
       private final @Nullable Output<String> servicePrincipalName;
@@ -65,7 +60,6 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Service principal name secret to access key vault.
-     * 
      */
     @Import(name="servicePrincipalSecret")
       private final @Nullable Output<String> servicePrincipalSecret;

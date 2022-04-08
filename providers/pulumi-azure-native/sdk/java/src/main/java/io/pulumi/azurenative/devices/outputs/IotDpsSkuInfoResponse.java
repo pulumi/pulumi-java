@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class IotDpsSkuInfoResponse {
     /**
      * The number of units to provision
-     * 
      */
     private final @Nullable Double capacity;
     /**
      * Sku name.
-     * 
      */
     private final @Nullable String name;
     /**
      * Pricing tier name of the provisioning service.
-     * 
      */
     private final String tier;
 
@@ -40,21 +37,18 @@ public final class IotDpsSkuInfoResponse {
 
     /**
      * The number of units to provision
-     * 
     */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Sku name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Pricing tier name of the provisioning service.
-     * 
     */
     public String getTier() {
         return this.tier;

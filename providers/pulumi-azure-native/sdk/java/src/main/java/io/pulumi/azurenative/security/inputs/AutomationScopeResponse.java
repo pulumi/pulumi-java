@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A single automation scope.
- * 
  */
 public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The resources scope description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -31,7 +29,6 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
-     * 
      */
     @Import(name="scopePath")
       private final @Nullable String scopePath;

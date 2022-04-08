@@ -16,7 +16,6 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
 
     /**
      * the region to create private link association.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -27,7 +26,6 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group the template will be deployed to. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
 
     /**
      * The name of the resource management private link.
-     * 
      */
     @Import(name="rmplName")
       private final @Nullable Output<String> rmplName;

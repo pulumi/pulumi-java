@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * This activity suspends pipeline execution for the specified interval.
- * 
  */
 public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -35,7 +33,6 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -46,7 +43,6 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -58,7 +54,6 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of activity.
      * Expected value is 'Wait'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -69,7 +64,6 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
@@ -80,7 +74,6 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Duration in seconds.
-     * 
      */
     @Import(name="waitTimeInSeconds", required=true)
       private final Object waitTimeInSeconds;

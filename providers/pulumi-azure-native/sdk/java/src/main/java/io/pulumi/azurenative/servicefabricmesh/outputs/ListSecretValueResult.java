@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListSecretValueResult {
     /**
      * The actual value of the secret.
-     * 
      */
     private final @Nullable String value;
 
@@ -24,7 +23,6 @@ public final class ListSecretValueResult {
 
     /**
      * The actual value of the secret.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

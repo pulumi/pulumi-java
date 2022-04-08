@@ -13,37 +13,30 @@ import javax.annotation.Nullable;
 public final class EdifactSchemaReferenceResponse {
     /**
      * The association assigned code.
-     * 
      */
     private final @Nullable String associationAssignedCode;
     /**
      * The message id.
-     * 
      */
     private final String messageId;
     /**
      * The message release version.
-     * 
      */
     private final String messageRelease;
     /**
      * The message version.
-     * 
      */
     private final String messageVersion;
     /**
      * The schema name.
-     * 
      */
     private final String schemaName;
     /**
      * The sender application id.
-     * 
      */
     private final @Nullable String senderApplicationId;
     /**
      * The sender application qualifier.
-     * 
      */
     private final @Nullable String senderApplicationQualifier;
 
@@ -67,49 +60,42 @@ public final class EdifactSchemaReferenceResponse {
 
     /**
      * The association assigned code.
-     * 
     */
     public Optional<String> getAssociationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
     /**
      * The message id.
-     * 
     */
     public String getMessageId() {
         return this.messageId;
     }
     /**
      * The message release version.
-     * 
     */
     public String getMessageRelease() {
         return this.messageRelease;
     }
     /**
      * The message version.
-     * 
     */
     public String getMessageVersion() {
         return this.messageVersion;
     }
     /**
      * The schema name.
-     * 
     */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * The sender application id.
-     * 
     */
     public Optional<String> getSenderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
     /**
      * The sender application qualifier.
-     * 
     */
     public Optional<String> getSenderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);

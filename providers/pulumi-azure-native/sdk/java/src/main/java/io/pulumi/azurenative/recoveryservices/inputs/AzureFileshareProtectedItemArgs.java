@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure File Share workload-specific backup item.
- * 
  */
 public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -40,7 +38,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
@@ -51,7 +48,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -62,7 +58,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
@@ -73,7 +68,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
@@ -84,7 +78,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
@@ -95,7 +88,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Additional information with this backup item.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable Output<AzureFileshareProtectedItemExtendedInfoArgs> extendedInfo;
@@ -106,7 +98,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Friendly name of the fileshare represented by this backup item.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -117,7 +108,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
@@ -128,7 +118,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
@@ -139,7 +128,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
@@ -150,7 +138,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Health details of different KPIs
-     * 
      */
     @Import(name="kpisHealths")
       private final @Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
@@ -161,7 +148,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Last backup operation status. Possible values: Healthy, Unhealthy.
-     * 
      */
     @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
@@ -172,7 +158,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Timestamp of the last backup operation on this backup item.
-     * 
      */
     @Import(name="lastBackupTime")
       private final @Nullable Output<String> lastBackupTime;
@@ -183,7 +168,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
@@ -194,7 +178,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -206,7 +189,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
     /**
      * backup item type.
      * Expected value is 'AzureFileShareProtectedItem'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
@@ -217,7 +199,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
@@ -228,7 +209,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Backup status of this backup item.
-     * 
      */
     @Import(name="protectionStatus")
       private final @Nullable Output<String> protectionStatus;
@@ -239,7 +219,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -250,7 +229,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;

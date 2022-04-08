@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A frontend endpoint used for routing.
- * 
  */
 public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The host name of the frontendEndpoint. Must be a domain name.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -35,7 +33,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -46,7 +43,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -57,7 +53,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="sessionAffinityEnabledState")
       private final @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
@@ -68,7 +63,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
-     * 
      */
     @Import(name="sessionAffinityTtlSeconds")
       private final @Nullable Output<Integer> sessionAffinityTtlSeconds;
@@ -79,7 +73,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Defines the Web Application Firewall policy for each host (if applicable)
-     * 
      */
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;

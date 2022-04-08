@@ -15,53 +15,43 @@ import javax.annotation.Nullable;
 public final class MongoDbV2SourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     private final @Nullable Object additionalColumns;
     /**
      * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object batchSize;
     /**
      * Cursor methods for Mongodb query
-     * 
      */
     private final @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods;
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
      * Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object filter;
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     private final @Nullable Object queryTimeout;
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object sourceRetryCount;
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
      * Expected value is 'MongoDbV2Source'.
-     * 
      */
     private final String type;
 
@@ -91,63 +81,54 @@ public final class MongoDbV2SourceResponse {
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
     */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getBatchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * Cursor methods for Mongodb query
-     * 
     */
     public Optional<MongoDbCursorMethodsPropertiesResponse> getCursorMethods() {
         return Optional.ofNullable(this.cursorMethods);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
     */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
     */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
@@ -155,7 +136,6 @@ public final class MongoDbV2SourceResponse {
     /**
      * Copy source type.
      * Expected value is 'MongoDbV2Source'.
-     * 
     */
     public String getType() {
         return this.type;

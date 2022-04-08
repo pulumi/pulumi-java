@@ -19,7 +19,75 @@ import javax.annotation.Nullable;
  * Resource group information.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a resource group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceGroup = new AzureNative.Resources.ResourceGroup("resourceGroup", new AzureNative.Resources.ResourceGroupArgs
+ *         {
+ *             Location = "eastus",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewResourceGroup(ctx, "resourceGroup", &resources.ResourceGroupArgs{
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const resourceGroup = new azure_native.resources.ResourceGroup("resourceGroup", {
+ *     location: "eastus",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * resource_group = azure_native.resources.ResourceGroup("resourceGroup",
+ *     location="eastus",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +102,72 @@ import javax.annotation.Nullable;
 public class ResourceGroup extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The ID of the resource that manages this resource group.
-     * 
      */
     @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
      * @return The ID of the resource that manages this resource group.
-     * 
      */
     public Output</* @Nullable */ String> getManagedBy() {
         return this.managedBy;
     }
     /**
      * The name of the resource group.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource group.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource group properties.
-     * 
      */
     @Export(name="properties", type=ResourceGroupPropertiesResponse.class, parameters={})
     private Output<ResourceGroupPropertiesResponse> properties;
 
     /**
      * @return The resource group properties.
-     * 
      */
     public Output<ResourceGroupPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The tags attached to the resource group.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags attached to the resource group.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource group.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource group.
-     * 
      */
     public Output<String> getType() {
         return this.type;

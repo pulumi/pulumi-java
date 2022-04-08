@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubernetes node IP configuration
- * 
  */
 public final class KubernetesIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
 
     /**
      * IP address of the Kubernetes node.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -31,7 +29,6 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
 
     /**
      * Port of the Kubernetes node.
-     * 
      */
     @Import(name="port", required=true)
       private final String port;

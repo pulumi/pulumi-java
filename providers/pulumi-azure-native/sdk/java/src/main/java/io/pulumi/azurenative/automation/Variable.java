@@ -18,7 +18,95 @@ import javax.annotation.Nullable;
  * Definition of the variable.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a variable
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var variable = new AzureNative.Automation.Variable("variable", new AzureNative.Automation.VariableArgs
+ *         {
+ *             AutomationAccountName = "sampleAccount9",
+ *             Description = "my description",
+ *             IsEncrypted = false,
+ *             Name = "sampleVariable",
+ *             ResourceGroupName = "rg",
+ *             Value = "\"ComputerName.domain.com\"",
+ *             VariableName = "sampleVariable",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewVariable(ctx, "variable", &automation.VariableArgs{
+ * 			AutomationAccountName: pulumi.String("sampleAccount9"),
+ * 			Description:           pulumi.String("my description"),
+ * 			IsEncrypted:           pulumi.Bool(false),
+ * 			Name:                  pulumi.String("sampleVariable"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 			Value:                 pulumi.String("\"ComputerName.domain.com\""),
+ * 			VariableName:          pulumi.String("sampleVariable"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const variable = new azure_native.automation.Variable("variable", {
+ *     automationAccountName: "sampleAccount9",
+ *     description: "my description",
+ *     isEncrypted: false,
+ *     name: "sampleVariable",
+ *     resourceGroupName: "rg",
+ *     value: "\"ComputerName.domain.com\"",
+ *     variableName: "sampleVariable",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * variable = azure_native.automation.Variable("variable",
+ *     automation_account_name="sampleAccount9",
+ *     description="my description",
+ *     is_encrypted=False,
+ *     name="sampleVariable",
+ *     resource_group_name="rg",
+ *     value="\"ComputerName.domain.com\"",
+ *     variable_name="sampleVariable")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +121,84 @@ import javax.annotation.Nullable;
 public class Variable extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
      * @return Gets or sets the creation time.
-     * 
      */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets or sets the encrypted flag of the variable.
-     * 
      */
     @Export(name="isEncrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEncrypted;
 
     /**
      * @return Gets or sets the encrypted flag of the variable.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsEncrypted() {
         return this.isEncrypted;
     }
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
      * @return Gets or sets the last modified time.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets the value of the variable.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
      * @return Gets or sets the value of the variable.
-     * 
      */
     public Output</* @Nullable */ String> getValue() {
         return this.value;

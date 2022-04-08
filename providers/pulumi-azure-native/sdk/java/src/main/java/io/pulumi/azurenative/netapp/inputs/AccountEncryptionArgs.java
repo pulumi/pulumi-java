@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption settings
- * 
  */
 public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
-     * 
      */
     @Import(name="keySource")
       private final @Nullable Output<String> keySource;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Creates a particular correlation between services.
- * 
  */
 public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
 
     /**
      * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
-     * 
      */
     @Import(name="scheme", required=true)
       private final Output<Either<String,ServiceCorrelationScheme>> scheme;
@@ -32,7 +30,6 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
 
     /**
      * The name of the service that the correlation relationship is established with.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

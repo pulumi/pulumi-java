@@ -27,7 +27,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of an IoT hub.
- * 
  */
 public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -35,7 +34,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The shared access policies you can use to secure a connection to the IoT hub.
-     * 
      */
     @Import(name="authorizationPolicies")
       private final @Nullable Output<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies;
@@ -46,7 +44,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The IoT hub cloud-to-device messaging properties.
-     * 
      */
     @Import(name="cloudToDevice")
       private final @Nullable Output<CloudToDevicePropertiesArgs> cloudToDevice;
@@ -57,7 +54,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * IoT hub comments.
-     * 
      */
     @Import(name="comments")
       private final @Nullable Output<String> comments;
@@ -68,7 +64,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * If True, file upload notifications are enabled.
-     * 
      */
     @Import(name="enableFileUploadNotifications")
       private final @Nullable Output<Boolean> enableFileUploadNotifications;
@@ -79,7 +74,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
-     * 
      */
     @Import(name="eventHubEndpoints")
       private final @Nullable Output<Map<String,EventHubPropertiesArgs>> eventHubEndpoints;
@@ -90,7 +84,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The capabilities and features enabled for the IoT hub.
-     * 
      */
     @Import(name="features")
       private final @Nullable Output<Either<String,Capabilities>> features;
@@ -101,7 +94,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The IP filter rules.
-     * 
      */
     @Import(name="ipFilterRules")
       private final @Nullable Output<List<IpFilterRuleArgs>> ipFilterRules;
@@ -112,7 +104,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The messaging endpoint properties for the file upload notification queue.
-     * 
      */
     @Import(name="messagingEndpoints")
       private final @Nullable Output<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints;
@@ -123,7 +114,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.
-     * 
      */
     @Import(name="minTlsVersion")
       private final @Nullable Output<String> minTlsVersion;
@@ -134,7 +124,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Network Rule Set Properties of IotHub
-     * 
      */
     @Import(name="networkRuleSets")
       private final @Nullable Output<NetworkRuleSetPropertiesArgs> networkRuleSets;
@@ -145,7 +134,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Private endpoint connections created on this IotHub
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
@@ -156,7 +144,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Whether requests from Public Network are allowed
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -167,7 +154,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
-     * 
      */
     @Import(name="routing")
       private final @Nullable Output<RoutingPropertiesArgs> routing;
@@ -178,7 +164,6 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.
-     * 
      */
     @Import(name="storageEndpoints")
       private final @Nullable Output<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints;

@@ -17,7 +17,6 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Fixed number of instances for this deployment.
-     * 
      */
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
@@ -28,7 +27,6 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Maximum number of instances for this deployment.
-     * 
      */
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
@@ -39,7 +37,6 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Minimum number of instances for this deployment.
-     * 
      */
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
@@ -49,8 +46,8 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * Expected value is 'Manual'.
      * 
+     * Expected value is 'Manual'.
      */
     @Import(name="scaleType", required=true)
       private final Output<String> scaleType;

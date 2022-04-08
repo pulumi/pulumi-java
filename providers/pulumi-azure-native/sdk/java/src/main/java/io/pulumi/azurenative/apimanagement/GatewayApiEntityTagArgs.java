@@ -17,7 +17,6 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
 
     /**
      * API identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
@@ -28,7 +27,6 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
-     * 
      */
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
@@ -39,7 +37,6 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Provisioning state.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<ProvisioningState> provisioningState;
@@ -50,7 +47,6 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

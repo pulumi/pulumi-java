@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether the Role Definition was built-in or user created.
-     * 
      */
     @EnumType
     public enum MongoRoleDefinitionType {

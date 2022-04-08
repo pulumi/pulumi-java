@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The api resource metadata.
- * 
  */
 public final class ApiResourceMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The api type.
-     * 
      */
     @Import(name="apiType")
       private final @Nullable String apiType;
@@ -34,7 +32,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The brand color.
-     * 
      */
     @Import(name="brandColor")
       private final @Nullable String brandColor;
@@ -45,7 +42,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The connection type.
-     * 
      */
     @Import(name="connectionType")
       private final @Nullable String connectionType;
@@ -56,7 +52,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The connector deployment parameters metadata.
-     * 
      */
     @Import(name="deploymentParameters")
       private final @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
@@ -67,7 +62,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The hide key.
-     * 
      */
     @Import(name="hideKey")
       private final @Nullable String hideKey;
@@ -78,7 +72,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The provisioning state.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -89,7 +82,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The source.
-     * 
      */
     @Import(name="source")
       private final @Nullable String source;
@@ -100,7 +92,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -111,7 +102,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The WSDL import method.
-     * 
      */
     @Import(name="wsdlImportMethod")
       private final @Nullable String wsdlImportMethod;
@@ -122,7 +112,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
 
     /**
      * The WSDL service.
-     * 
      */
     @Import(name="wsdlService")
       private final @Nullable WsdlServiceResponse wsdlService;

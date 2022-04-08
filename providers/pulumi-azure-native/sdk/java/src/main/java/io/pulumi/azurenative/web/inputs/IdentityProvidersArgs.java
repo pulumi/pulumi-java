@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
- * 
  */
 public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the Apple provider.
-     * 
      */
     @Import(name="apple")
       private final @Nullable Output<AppleArgs> apple;
@@ -41,7 +39,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the Azure Active directory provider.
-     * 
      */
     @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
@@ -52,7 +49,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the Azure Static Web Apps provider.
-     * 
      */
     @Import(name="azureStaticWebApps")
       private final @Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps;
@@ -64,7 +60,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
     /**
      * The map of the name of the alias of each custom Open ID Connect provider to the
      * configuration settings of the custom Open ID Connect provider.
-     * 
      */
     @Import(name="customOpenIdConnectProviders")
       private final @Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
@@ -75,7 +70,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the Facebook provider.
-     * 
      */
     @Import(name="facebook")
       private final @Nullable Output<FacebookArgs> facebook;
@@ -86,7 +80,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the GitHub provider.
-     * 
      */
     @Import(name="gitHub")
       private final @Nullable Output<GitHubArgs> gitHub;
@@ -97,7 +90,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the Google provider.
-     * 
      */
     @Import(name="google")
       private final @Nullable Output<GoogleArgs> google;
@@ -108,7 +100,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the legacy Microsoft Account provider.
-     * 
      */
     @Import(name="legacyMicrosoftAccount")
       private final @Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
@@ -119,7 +110,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings of the Twitter provider.
-     * 
      */
     @Import(name="twitter")
       private final @Nullable Output<TwitterArgs> twitter;

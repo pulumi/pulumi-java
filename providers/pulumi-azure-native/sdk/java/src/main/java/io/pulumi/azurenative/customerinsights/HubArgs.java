@@ -19,7 +19,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Billing settings of the hub.
-     * 
      */
     @Import(name="hubBillingInfo")
       private final @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
@@ -30,7 +29,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Hub.
-     * 
      */
     @Import(name="hubName")
       private final @Nullable Output<String> hubName;
@@ -41,7 +39,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -74,7 +69,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
-     * 
      */
     @Import(name="tenantFeatures")
       private final @Nullable Output<Integer> tenantFeatures;

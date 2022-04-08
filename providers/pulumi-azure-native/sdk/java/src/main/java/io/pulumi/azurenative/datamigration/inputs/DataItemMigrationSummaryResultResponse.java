@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Basic summary of a data item migration
- * 
  */
 public final class DataItemMigrationSummaryResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -30,7 +28,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Wildcard string prefix to use for querying all errors of the item
-     * 
      */
     @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
@@ -41,7 +38,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Number of successfully completed items
-     * 
      */
     @Import(name="itemsCompletedCount", required=true)
       private final Double itemsCompletedCount;
@@ -52,7 +48,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Number of items
-     * 
      */
     @Import(name="itemsCount", required=true)
       private final Double itemsCount;
@@ -63,7 +58,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Name of the item
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -74,7 +68,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
-     * 
      */
     @Import(name="resultPrefix", required=true)
       private final String resultPrefix;
@@ -85,7 +78,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -96,7 +88,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Current state of migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -107,7 +98,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
 
     /**
      * Status message
-     * 
      */
     @Import(name="statusMessage", required=true)
       private final String statusMessage;

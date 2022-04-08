@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Immediate copy Option
- * 
  */
 public final class ImmediateCopyOptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ImmediateCopyOptionResponse extends io.pulumi.resources.Invok
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'ImmediateCopyOption'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;

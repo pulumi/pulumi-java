@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class ManagedServiceIdentityResponse {
     /**
      * The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
-     * 
      */
     private final String tenantId;
     /**
      * The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
-     * 
      */
     private final @Nullable String type;
     /**
      * The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     * 
      */
     private final @Nullable Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
@@ -48,28 +44,24 @@ public final class ManagedServiceIdentityResponse {
 
     /**
      * The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     * 
     */
     public Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

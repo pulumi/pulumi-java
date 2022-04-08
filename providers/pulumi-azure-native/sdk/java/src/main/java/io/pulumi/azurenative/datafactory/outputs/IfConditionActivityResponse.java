@@ -55,43 +55,35 @@ import javax.annotation.Nullable;
 public final class IfConditionActivityResponse {
     /**
      * Activity depends on condition.
-     * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
      * Activity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
-     * 
      */
     private final ExpressionResponse expression;
     /**
      * List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
-     * 
      */
     private final @Nullable List<Object> ifFalseActivities;
     /**
      * List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
-     * 
      */
     private final @Nullable List<Object> ifTrueActivities;
     /**
      * Activity name.
-     * 
      */
     private final String name;
     /**
      * Type of activity.
      * Expected value is 'IfCondition'.
-     * 
      */
     private final String type;
     /**
      * Activity user properties.
-     * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -117,42 +109,36 @@ public final class IfConditionActivityResponse {
 
     /**
      * Activity depends on condition.
-     * 
     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
-     * 
     */
     public ExpressionResponse getExpression() {
         return this.expression;
     }
     /**
      * List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
-     * 
     */
     public List<Object> getIfFalseActivities() {
         return this.ifFalseActivities == null ? List.of() : this.ifFalseActivities;
     }
     /**
      * List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
-     * 
     */
     public List<Object> getIfTrueActivities() {
         return this.ifTrueActivities == null ? List.of() : this.ifTrueActivities;
     }
     /**
      * Activity name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -160,14 +146,12 @@ public final class IfConditionActivityResponse {
     /**
      * Type of activity.
      * Expected value is 'IfCondition'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
-     * 
     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

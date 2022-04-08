@@ -16,7 +16,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specify the $expand query. Example: 'properties($select=displayName)'
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -38,7 +36,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the artifact source.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -49,7 +46,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

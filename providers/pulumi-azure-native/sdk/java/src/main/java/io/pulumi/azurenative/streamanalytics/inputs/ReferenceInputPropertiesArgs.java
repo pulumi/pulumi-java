@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that are associated with an input containing reference data.
- * 
  */
 public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="datasource")
       private final @Nullable Output<BlobReferenceInputDataSourceArgs> datasource;
@@ -36,7 +34,6 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
@@ -48,7 +45,6 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
     /**
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Reference'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -13,18 +13,15 @@ import javax.annotation.Nullable;
 public final class HeaderActionParametersResponse {
     /**
      * Action to perform
-     * 
      */
     private final String headerAction;
     /**
      * Name of the header to modify
-     * 
      */
     private final String headerName;
     private final String odataType;
     /**
      * Value for the specified action
-     * 
      */
     private final @Nullable String value;
 
@@ -42,14 +39,12 @@ public final class HeaderActionParametersResponse {
 
     /**
      * Action to perform
-     * 
     */
     public String getHeaderAction() {
         return this.headerAction;
     }
     /**
      * Name of the header to modify
-     * 
     */
     public String getHeaderName() {
         return this.headerName;
@@ -59,7 +54,6 @@ public final class HeaderActionParametersResponse {
     }
     /**
      * Value for the specified action
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

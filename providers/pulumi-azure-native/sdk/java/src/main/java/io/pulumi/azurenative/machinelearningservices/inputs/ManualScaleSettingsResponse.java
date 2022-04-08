@@ -17,7 +17,6 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * Fixed number of instances for this deployment.
-     * 
      */
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
@@ -28,7 +27,6 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * Maximum number of instances for this deployment.
-     * 
      */
     @Import(name="maxInstances")
       private final @Nullable Integer maxInstances;
@@ -39,7 +37,6 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * Minimum number of instances for this deployment.
-     * 
      */
     @Import(name="minInstances")
       private final @Nullable Integer minInstances;
@@ -49,8 +46,8 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
     }
 
     /**
-     * Expected value is 'Manual'.
      * 
+     * Expected value is 'Manual'.
      */
     @Import(name="scaleType", required=true)
       private final String scaleType;

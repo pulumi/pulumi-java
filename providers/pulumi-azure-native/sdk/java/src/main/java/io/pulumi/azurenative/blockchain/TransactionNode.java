@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Payload of the transaction node which is the request/response of the resource provider.
  * API Version: 2018-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TransactionNodes_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var transactionNode = new AzureNative.Blockchain.TransactionNode("transactionNode", new AzureNative.Blockchain.TransactionNodeArgs
+ *         {
+ *             BlockchainMemberName = "contosemember1",
+ *             Location = "southeastasia",
+ *             Password = "<password>",
+ *             ResourceGroupName = "mygroup",
+ *             TransactionNodeName = "txnode2",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	blockchain "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blockchain"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := blockchain.NewTransactionNode(ctx, "transactionNode", &blockchain.TransactionNodeArgs{
+ * 			BlockchainMemberName: pulumi.String("contosemember1"),
+ * 			Location:             pulumi.String("southeastasia"),
+ * 			Password:             pulumi.String("<password>"),
+ * 			ResourceGroupName:    pulumi.String("mygroup"),
+ * 			TransactionNodeName:  pulumi.String("txnode2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const transactionNode = new azure_native.blockchain.TransactionNode("transactionNode", {
+ *     blockchainMemberName: "contosemember1",
+ *     location: "southeastasia",
+ *     password: "<password>",
+ *     resourceGroupName: "mygroup",
+ *     transactionNodeName: "txnode2",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * transaction_node = azure_native.blockchain.TransactionNode("transactionNode",
+ *     blockchain_member_name="contosemember1",
+ *     location="southeastasia",
+ *     password="<password>",
+ *     resource_group_name="mygroup",
+ *     transaction_node_name="txnode2")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +113,108 @@ import javax.annotation.Nullable;
 public class TransactionNode extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the transaction node dns endpoint.
-     * 
      */
     @Export(name="dns", type=String.class, parameters={})
     private Output<String> dns;
 
     /**
      * @return Gets or sets the transaction node dns endpoint.
-     * 
      */
     public Output<String> getDns() {
         return this.dns;
     }
     /**
      * Gets or sets the firewall rules.
-     * 
      */
     @Export(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output</* @Nullable */ List<FirewallRuleResponse>> firewallRules;
 
     /**
      * @return Gets or sets the firewall rules.
-     * 
      */
     public Output</* @Nullable */ List<FirewallRuleResponse>> getFirewallRules() {
         return this.firewallRules;
     }
     /**
      * Gets or sets the transaction node location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Gets or sets the transaction node location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Sets the transaction node dns endpoint basic auth password.
-     * 
      */
     @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
      * @return Sets the transaction node dns endpoint basic auth password.
-     * 
      */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
     /**
      * Gets or sets the blockchain member provision state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the blockchain member provision state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the transaction node public key.
-     * 
      */
     @Export(name="publicKey", type=String.class, parameters={})
     private Output<String> publicKey;
 
     /**
      * @return Gets or sets the transaction node public key.
-     * 
      */
     public Output<String> getPublicKey() {
         return this.publicKey;
     }
     /**
      * The type of the service - e.g. "Microsoft.Blockchain"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the service - e.g. "Microsoft.Blockchain"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets the transaction node dns endpoint basic auth user name.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Gets or sets the transaction node dns endpoint basic auth user name.
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

@@ -14,52 +14,42 @@ import javax.annotation.Nullable;
 public final class SkypeChannelPropertiesResponse {
     /**
      * Calling web hook for Skype channel
-     * 
      */
     private final @Nullable String callingWebHook;
     /**
      * Enable calling for Skype channel
-     * 
      */
     private final @Nullable Boolean enableCalling;
     /**
      * Enable groups for Skype channel
-     * 
      */
     private final @Nullable Boolean enableGroups;
     /**
      * Enable media cards for Skype channel
-     * 
      */
     private final @Nullable Boolean enableMediaCards;
     /**
      * Enable messaging for Skype channel
-     * 
      */
     private final @Nullable Boolean enableMessaging;
     /**
      * Enable screen sharing for Skype channel
-     * 
      */
     private final @Nullable Boolean enableScreenSharing;
     /**
      * Enable video for Skype channel
-     * 
      */
     private final @Nullable Boolean enableVideo;
     /**
      * Group mode for Skype channel
-     * 
      */
     private final @Nullable String groupsMode;
     /**
      * Incoming call route for Skype channel
-     * 
      */
     private final @Nullable String incomingCallRoute;
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     private final Boolean isEnabled;
 
@@ -89,70 +79,60 @@ public final class SkypeChannelPropertiesResponse {
 
     /**
      * Calling web hook for Skype channel
-     * 
     */
     public Optional<String> getCallingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
     /**
      * Enable calling for Skype channel
-     * 
     */
     public Optional<Boolean> getEnableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
     /**
      * Enable groups for Skype channel
-     * 
     */
     public Optional<Boolean> getEnableGroups() {
         return Optional.ofNullable(this.enableGroups);
     }
     /**
      * Enable media cards for Skype channel
-     * 
     */
     public Optional<Boolean> getEnableMediaCards() {
         return Optional.ofNullable(this.enableMediaCards);
     }
     /**
      * Enable messaging for Skype channel
-     * 
     */
     public Optional<Boolean> getEnableMessaging() {
         return Optional.ofNullable(this.enableMessaging);
     }
     /**
      * Enable screen sharing for Skype channel
-     * 
     */
     public Optional<Boolean> getEnableScreenSharing() {
         return Optional.ofNullable(this.enableScreenSharing);
     }
     /**
      * Enable video for Skype channel
-     * 
     */
     public Optional<Boolean> getEnableVideo() {
         return Optional.ofNullable(this.enableVideo);
     }
     /**
      * Group mode for Skype channel
-     * 
     */
     public Optional<String> getGroupsMode() {
         return Optional.ofNullable(this.groupsMode);
     }
     /**
      * Incoming call route for Skype channel
-     * 
     */
     public Optional<String> getIncomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
     /**
      * Whether this channel is enabled for the bot
-     * 
     */
     public Boolean getIsEnabled() {
         return this.isEnabled;

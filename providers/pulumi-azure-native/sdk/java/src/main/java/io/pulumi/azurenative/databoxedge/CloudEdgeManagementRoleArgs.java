@@ -18,7 +18,6 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -30,7 +29,6 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
     /**
      * Role type.
      * Expected value is 'CloudEdgeManagement'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -41,7 +39,6 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
 
     /**
      * The role name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
 
     /**
      * Role status.
-     * 
      */
     @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines load balancer frontend IP configuration properties.
- * 
  */
 public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
 
     /**
      * Gets or sets the frontend IP configuration name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -33,7 +31,6 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
     /**
      * Gets or sets the IP address of the Load Balancer.This is only specified if a specific
      * private IP address shall be allocated from the subnet specified in subnetRef.
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
@@ -44,7 +41,6 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
 
     /**
      * Gets or sets PrivateIP allocation method (Static/Dynamic).
-     * 
      */
     @Import(name="privateIpAllocationMethod")
       private final @Nullable Output<String> privateIpAllocationMethod;
@@ -55,7 +51,6 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
 
     /**
      * Defines reference to subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetReferenceArgs> subnet;
@@ -66,7 +61,6 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
 
     /**
      * Gets or sets the csv list of zones.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<String> zones;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The SSH public key for the cluster nodes.
- * 
  */
 public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The certificate for SSH.
-     * 
      */
     @Import(name="certificateData")
       private final @Nullable String certificateData;

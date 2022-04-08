@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a resource Id to source Key Vault.
- * 
  */
 public final class KeyVaultKeyReferenceResponseSourceVault extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KeyVaultKeyReferenceResponseSourceVault extends io.pulumi.res
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

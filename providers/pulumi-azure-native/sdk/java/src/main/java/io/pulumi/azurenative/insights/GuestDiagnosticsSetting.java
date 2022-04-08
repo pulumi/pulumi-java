@@ -19,7 +19,339 @@ import javax.annotation.Nullable;
  * Virtual machine guest diagnostics settings resource.
  * API Version: 2018-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a guest diagnostic settings
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var guestDiagnosticsSetting = new AzureNative.Insights.GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureNative.Insights.GuestDiagnosticsSettingArgs
+ *         {
+ *             DataSources = 
+ *             {
+ *                 new AzureNative.Insights.Inputs.DataSourceArgs
+ *                 {
+ *                     Configuration = new AzureNative.Insights.Inputs.DataSourceConfigurationArgs
+ *                     {
+ *                         PerfCounters = 
+ *                         {
+ *                             new AzureNative.Insights.Inputs.PerformanceCounterConfigurationArgs
+ *                             {
+ *                                 Name = "\\Process(_Total)\\%Processor Time",
+ *                                 SamplingPeriod = "PT1M",
+ *                             },
+ *                             new AzureNative.Insights.Inputs.PerformanceCounterConfigurationArgs
+ *                             {
+ *                                 Name = "\\Process(_Total)\\Working Set",
+ *                                 SamplingPeriod = "PT1M",
+ *                             },
+ *                         },
+ *                     },
+ *                     Kind = "PerformanceCounter",
+ *                     Sinks = 
+ *                     {
+ *                         new AzureNative.Insights.Inputs.SinkConfigurationArgs
+ *                         {
+ *                             Kind = "LogAnalytics",
+ *                         },
+ *                     },
+ *                 },
+ *                 new AzureNative.Insights.Inputs.DataSourceArgs
+ *                 {
+ *                     Configuration = new AzureNative.Insights.Inputs.DataSourceConfigurationArgs
+ *                     {
+ *                         Providers = 
+ *                         {
+ *                             new AzureNative.Insights.Inputs.EtwProviderConfigurationArgs
+ *                             {
+ *                                 Id = "1",
+ *                             },
+ *                             new AzureNative.Insights.Inputs.EtwProviderConfigurationArgs
+ *                             {
+ *                                 Id = "2",
+ *                             },
+ *                         },
+ *                     },
+ *                     Kind = "ETWProviders",
+ *                     Sinks = 
+ *                     {
+ *                         new AzureNative.Insights.Inputs.SinkConfigurationArgs
+ *                         {
+ *                             Kind = "LogAnalytics",
+ *                         },
+ *                     },
+ *                 },
+ *                 new AzureNative.Insights.Inputs.DataSourceArgs
+ *                 {
+ *                     Configuration = new AzureNative.Insights.Inputs.DataSourceConfigurationArgs
+ *                     {
+ *                         EventLogs = 
+ *                         {
+ *                             new AzureNative.Insights.Inputs.EventLogConfigurationArgs
+ *                             {
+ *                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
+ *                                 LogName = "Application",
+ *                             },
+ *                             new AzureNative.Insights.Inputs.EventLogConfigurationArgs
+ *                             {
+ *                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
+ *                                 LogName = "Application",
+ *                             },
+ *                         },
+ *                     },
+ *                     Kind = "WindowsEventLogs",
+ *                     Sinks = 
+ *                     {
+ *                         new AzureNative.Insights.Inputs.SinkConfigurationArgs
+ *                         {
+ *                             Kind = "LogAnalytics",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             DiagnosticSettingsName = "SampleDiagSetting",
+ *             Location = "Global",
+ *             OsType = "Windows",
+ *             ResourceGroupName = "Default-ResourceGroup",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewguestDiagnosticsSetting(ctx, "guestDiagnosticsSetting", &insights.guestDiagnosticsSettingArgs{
+ * 			DataSources: []insights.DataSourceArgs{
+ * 				&insights.DataSourceArgs{
+ * 					Configuration: &insights.DataSourceConfigurationArgs{
+ * 						PerfCounters: insights.PerformanceCounterConfigurationArray{
+ * 							&insights.PerformanceCounterConfigurationArgs{
+ * 								Name:           pulumi.String(fmt.Sprintf("%v%v%v", "\\Process(_Total)\\", "%", "Processor Time")),
+ * 								SamplingPeriod: pulumi.String("PT1M"),
+ * 							},
+ * 							&insights.PerformanceCounterConfigurationArgs{
+ * 								Name:           pulumi.String("\\Process(_Total)\\Working Set"),
+ * 								SamplingPeriod: pulumi.String("PT1M"),
+ * 							},
+ * 						},
+ * 					},
+ * 					Kind: pulumi.String("PerformanceCounter"),
+ * 					Sinks: []insights.SinkConfigurationArgs{
+ * 						&insights.SinkConfigurationArgs{
+ * 							Kind: pulumi.String("LogAnalytics"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&insights.DataSourceArgs{
+ * 					Configuration: &insights.DataSourceConfigurationArgs{
+ * 						Providers: insights.EtwProviderConfigurationArray{
+ * 							&insights.EtwProviderConfigurationArgs{
+ * 								Id: pulumi.String("1"),
+ * 							},
+ * 							&insights.EtwProviderConfigurationArgs{
+ * 								Id: pulumi.String("2"),
+ * 							},
+ * 						},
+ * 					},
+ * 					Kind: pulumi.String("ETWProviders"),
+ * 					Sinks: []insights.SinkConfigurationArgs{
+ * 						&insights.SinkConfigurationArgs{
+ * 							Kind: pulumi.String("LogAnalytics"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&insights.DataSourceArgs{
+ * 					Configuration: &insights.DataSourceConfigurationArgs{
+ * 						EventLogs: insights.EventLogConfigurationArray{
+ * 							&insights.EventLogConfigurationArgs{
+ * 								Filter:  pulumi.String(fmt.Sprintf("%v%v%v", "SourceName == Xyz AND EventId = \"100\" AND  ", "$", "Xpath/Column=\"DCName\" = \"CatWoman\"")),
+ * 								LogName: pulumi.String("Application"),
+ * 							},
+ * 							&insights.EventLogConfigurationArgs{
+ * 								Filter:  pulumi.String(fmt.Sprintf("%v%v%v", "SourceName == Xyz AND EventId = \"100\" AND  ", "$", "Xpath/Column=\"DCName\" = \"BatMan\"")),
+ * 								LogName: pulumi.String("Application"),
+ * 							},
+ * 						},
+ * 					},
+ * 					Kind: pulumi.String("WindowsEventLogs"),
+ * 					Sinks: []insights.SinkConfigurationArgs{
+ * 						&insights.SinkConfigurationArgs{
+ * 							Kind: pulumi.String("LogAnalytics"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			DiagnosticSettingsName: pulumi.String("SampleDiagSetting"),
+ * 			Location:               pulumi.String("Global"),
+ * 			OsType:                 pulumi.String("Windows"),
+ * 			ResourceGroupName:      pulumi.String("Default-ResourceGroup"),
+ * 			Tags:                   nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const guestDiagnosticsSetting = new azure_native.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
+ *     dataSources: [
+ *         {
+ *             configuration: {
+ *                 perfCounters: [
+ *                     {
+ *                         name: `\Process(_Total)\%Processor Time`,
+ *                         samplingPeriod: "PT1M",
+ *                     },
+ *                     {
+ *                         name: "\\Process(_Total)\\Working Set",
+ *                         samplingPeriod: "PT1M",
+ *                     },
+ *                 ],
+ *             },
+ *             kind: "PerformanceCounter",
+ *             sinks: [{
+ *                 kind: "LogAnalytics",
+ *             }],
+ *         },
+ *         {
+ *             configuration: {
+ *                 providers: [
+ *                     {
+ *                         id: 1,
+ *                     },
+ *                     {
+ *                         id: 2,
+ *                     },
+ *                 ],
+ *             },
+ *             kind: "ETWProviders",
+ *             sinks: [{
+ *                 kind: "LogAnalytics",
+ *             }],
+ *         },
+ *         {
+ *             configuration: {
+ *                 eventLogs: [
+ *                     {
+ *                         filter: `SourceName == Xyz AND EventId = "100" AND  $Xpath/Column="DCName" = "CatWoman"`,
+ *                         logName: "Application",
+ *                     },
+ *                     {
+ *                         filter: `SourceName == Xyz AND EventId = "100" AND  $Xpath/Column="DCName" = "BatMan"`,
+ *                         logName: "Application",
+ *                     },
+ *                 ],
+ *             },
+ *             kind: "WindowsEventLogs",
+ *             sinks: [{
+ *                 kind: "LogAnalytics",
+ *             }],
+ *         },
+ *     ],
+ *     diagnosticSettingsName: "SampleDiagSetting",
+ *     location: "Global",
+ *     osType: "Windows",
+ *     resourceGroupName: "Default-ResourceGroup",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * guest_diagnostics_setting = azure_native.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting",
+ *     data_sources=[
+ *         azure_native.insights.DataSourceArgs(
+ *             configuration=azure_native.insights.DataSourceConfigurationArgs(
+ *                 perf_counters=[
+ *                     azure_native.insights.PerformanceCounterConfigurationArgs(
+ *                         name="\\Process(_Total)\\%Processor Time",
+ *                         sampling_period="PT1M",
+ *                     ),
+ *                     azure_native.insights.PerformanceCounterConfigurationArgs(
+ *                         name="\\Process(_Total)\\Working Set",
+ *                         sampling_period="PT1M",
+ *                     ),
+ *                 ],
+ *             ),
+ *             kind="PerformanceCounter",
+ *             sinks=[azure_native.insights.SinkConfigurationArgs(
+ *                 kind="LogAnalytics",
+ *             )],
+ *         ),
+ *         azure_native.insights.DataSourceArgs(
+ *             configuration=azure_native.insights.DataSourceConfigurationArgs(
+ *                 providers=[
+ *                     azure_native.insights.EtwProviderConfigurationArgs(
+ *                         id="1",
+ *                     ),
+ *                     azure_native.insights.EtwProviderConfigurationArgs(
+ *                         id="2",
+ *                     ),
+ *                 ],
+ *             ),
+ *             kind="ETWProviders",
+ *             sinks=[azure_native.insights.SinkConfigurationArgs(
+ *                 kind="LogAnalytics",
+ *             )],
+ *         ),
+ *         azure_native.insights.DataSourceArgs(
+ *             configuration=azure_native.insights.DataSourceConfigurationArgs(
+ *                 event_logs=[
+ *                     azure_native.insights.EventLogConfigurationArgs(
+ *                         filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
+ *                         log_name="Application",
+ *                     ),
+ *                     azure_native.insights.EventLogConfigurationArgs(
+ *                         filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
+ *                         log_name="Application",
+ *                     ),
+ *                 ],
+ *             ),
+ *             kind="WindowsEventLogs",
+ *             sinks=[azure_native.insights.SinkConfigurationArgs(
+ *                 kind="LogAnalytics",
+ *             )],
+ *         ),
+ *     ],
+ *     diagnostic_settings_name="SampleDiagSetting",
+ *     location="Global",
+ *     os_type="Windows",
+ *     resource_group_name="Default-ResourceGroup",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +366,48 @@ import javax.annotation.Nullable;
 public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource {
     /**
      * the array of data source object which are configured to collect and send data
-     * 
      */
     @Export(name="dataSources", type=List.class, parameters={DataSourceResponse.class})
     private Output</* @Nullable */ List<DataSourceResponse>> dataSources;
 
     /**
      * @return the array of data source object which are configured to collect and send data
-     * 
      */
     public Output</* @Nullable */ List<DataSourceResponse>> getDataSources() {
         return this.dataSources;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Operating system type for the configuration
-     * 
      */
     @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
      * @return Operating system type for the configuration
-     * 
      */
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
@@ -96,28 +420,24 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

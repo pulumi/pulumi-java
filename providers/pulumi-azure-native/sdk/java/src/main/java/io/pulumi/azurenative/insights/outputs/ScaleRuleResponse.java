@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ScaleRuleResponse {
     /**
      * the trigger that results in a scaling action.
-     * 
      */
     private final MetricTriggerResponse metricTrigger;
     /**
      * the parameters for the scaling action.
-     * 
      */
     private final ScaleActionResponse scaleAction;
 
@@ -31,14 +29,12 @@ public final class ScaleRuleResponse {
 
     /**
      * the trigger that results in a scaling action.
-     * 
     */
     public MetricTriggerResponse getMetricTrigger() {
         return this.metricTrigger;
     }
     /**
      * the parameters for the scaling action.
-     * 
     */
     public ScaleActionResponse getScaleAction() {
         return this.scaleAction;

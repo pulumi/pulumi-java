@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ApiOAuthSettingsParameterResponse {
     /**
      * Options available to this parameter
-     * 
      */
     private final @Nullable Object options;
     /**
      * UI definitions per culture as caller can specify the culture
-     * 
      */
     private final @Nullable Object uiDefinition;
     /**
      * Value of the setting
-     * 
      */
     private final @Nullable String value;
 
@@ -40,21 +37,18 @@ public final class ApiOAuthSettingsParameterResponse {
 
     /**
      * Options available to this parameter
-     * 
     */
     public Optional<Object> getOptions() {
         return Optional.ofNullable(this.options);
     }
     /**
      * UI definitions per culture as caller can specify the culture
-     * 
     */
     public Optional<Object> getUiDefinition() {
         return Optional.ofNullable(this.uiDefinition);
     }
     /**
      * Value of the setting
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

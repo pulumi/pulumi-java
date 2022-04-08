@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Guest configuration assignment properties.
- * 
  */
 public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
 
     /**
      * The source which initiated the guest configuration assignment. Ex: Azure Policy
-     * 
      */
     @Import(name="context")
       private final @Nullable Output<String> context;
@@ -32,7 +30,6 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
 
     /**
      * The guest configuration to assign.
-     * 
      */
     @Import(name="guestConfiguration")
       private final @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;

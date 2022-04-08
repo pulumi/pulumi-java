@@ -18,7 +18,6 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * Required. Destination account name.
-     * 
      */
     @Import(name="destinationAccount", required=true)
       private final Output<String> destinationAccount;
@@ -40,7 +38,6 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The ID of object replication policy or 'default' if the policy ID is unknown.
-     * 
      */
     @Import(name="objectReplicationPolicyId")
       private final @Nullable Output<String> objectReplicationPolicyId;
@@ -51,7 +48,6 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The storage account object replication rules.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules;
@@ -73,7 +68,6 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * Required. Source account name.
-     * 
      */
     @Import(name="sourceAccount", required=true)
       private final Output<String> sourceAccount;

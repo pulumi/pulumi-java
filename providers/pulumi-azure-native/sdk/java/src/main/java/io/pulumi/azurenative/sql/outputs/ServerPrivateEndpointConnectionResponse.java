@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ServerPrivateEndpointConnectionResponse {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Private endpoint connection properties
-     * 
      */
     private final PrivateEndpointConnectionPropertiesResponse properties;
 
@@ -31,14 +29,12 @@ public final class ServerPrivateEndpointConnectionResponse {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Private endpoint connection properties
-     * 
     */
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;

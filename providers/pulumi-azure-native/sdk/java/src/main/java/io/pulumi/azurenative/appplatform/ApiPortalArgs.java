@@ -18,7 +18,6 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of API portal.
-     * 
      */
     @Import(name="apiPortalName")
       private final @Nullable Output<String> apiPortalName;
@@ -29,7 +28,6 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API portal properties payload
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ApiPortalPropertiesArgs> properties;
@@ -40,7 +38,6 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -62,7 +58,6 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sku of the API portal resource
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;

@@ -19,7 +19,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The details of the storage account password.
-     * 
      */
     @Import(name="accessKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
@@ -30,7 +29,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The storage endpoint
-     * 
      */
     @Import(name="endPoint", required=true)
       private final Output<String> endPoint;
@@ -41,7 +39,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
@@ -52,7 +49,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
@@ -63,7 +59,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * Signifies whether SSL needs to be enabled or not.
-     * 
      */
     @Import(name="sslStatus", required=true)
       private final Output<SslStatus> sslStatus;
@@ -85,7 +79,6 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
 
     /**
      * The storage account credential name.
-     * 
      */
     @Import(name="storageAccountCredentialName")
       private final @Nullable Output<String> storageAccountCredentialName;

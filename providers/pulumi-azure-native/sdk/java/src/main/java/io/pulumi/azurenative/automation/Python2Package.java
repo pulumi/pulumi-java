@@ -23,7 +23,117 @@ import javax.annotation.Nullable;
  * Definition of the module type.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a python 2 package
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var python2Package = new AzureNative.Automation.Python2Package("python2Package", new AzureNative.Automation.Python2PackageArgs
+ *         {
+ *             AutomationAccountName = "myAutomationAccount33",
+ *             ContentLink = new AzureNative.Automation.Inputs.ContentLinkArgs
+ *             {
+ *                 ContentHash = new AzureNative.Automation.Inputs.ContentHashArgs
+ *                 {
+ *                     Algorithm = "sha265",
+ *                     Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+ *                 },
+ *                 Uri = "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+ *                 Version = "1.0.0.0",
+ *             },
+ *             PackageName = "OmsCompositeResources",
+ *             ResourceGroupName = "rg",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewPython2Package(ctx, "python2Package", &automation.Python2PackageArgs{
+ * 			AutomationAccountName: pulumi.String("myAutomationAccount33"),
+ * 			ContentLink: &automation.ContentLinkArgs{
+ * 				ContentHash: &automation.ContentHashArgs{
+ * 					Algorithm: pulumi.String("sha265"),
+ * 					Value:     pulumi.String("07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A"),
+ * 				},
+ * 				Uri:     pulumi.String("https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip"),
+ * 				Version: pulumi.String("1.0.0.0"),
+ * 			},
+ * 			PackageName:       pulumi.String("OmsCompositeResources"),
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			Tags:              nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const python2Package = new azure_native.automation.Python2Package("python2Package", {
+ *     automationAccountName: "myAutomationAccount33",
+ *     contentLink: {
+ *         contentHash: {
+ *             algorithm: "sha265",
+ *             value: "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+ *         },
+ *         uri: "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+ *         version: "1.0.0.0",
+ *     },
+ *     packageName: "OmsCompositeResources",
+ *     resourceGroupName: "rg",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * python2_package = azure_native.automation.Python2Package("python2Package",
+ *     automation_account_name="myAutomationAccount33",
+ *     content_link=azure_native.automation.ContentLinkArgs(
+ *         content_hash=azure_native.automation.ContentHashArgs(
+ *             algorithm="sha265",
+ *             value="07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+ *         ),
+ *         uri="https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+ *         version="1.0.0.0",
+ *     ),
+ *     package_name="OmsCompositeResources",
+ *     resource_group_name="rg",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,224 +148,192 @@ import javax.annotation.Nullable;
 public class Python2Package extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the activity count of the module.
-     * 
      */
     @Export(name="activityCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> activityCount;
 
     /**
      * @return Gets or sets the activity count of the module.
-     * 
      */
     public Output</* @Nullable */ Integer> getActivityCount() {
         return this.activityCount;
     }
     /**
      * Gets or sets the contentLink of the module.
-     * 
      */
     @Export(name="contentLink", type=ContentLinkResponse.class, parameters={})
     private Output</* @Nullable */ ContentLinkResponse> contentLink;
 
     /**
      * @return Gets or sets the contentLink of the module.
-     * 
      */
     public Output</* @Nullable */ ContentLinkResponse> getContentLink() {
         return this.contentLink;
     }
     /**
      * Gets or sets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
      * @return Gets or sets the creation time.
-     * 
      */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets or sets the error info of the module.
-     * 
      */
     @Export(name="error", type=ModuleErrorInfoResponse.class, parameters={})
     private Output</* @Nullable */ ModuleErrorInfoResponse> error;
 
     /**
      * @return Gets or sets the error info of the module.
-     * 
      */
     public Output</* @Nullable */ ModuleErrorInfoResponse> getError() {
         return this.error;
     }
     /**
      * Gets or sets the etag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Gets or sets the etag of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Gets or sets type of module, if its composite or not.
-     * 
      */
     @Export(name="isComposite", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isComposite;
 
     /**
      * @return Gets or sets type of module, if its composite or not.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsComposite() {
         return this.isComposite;
     }
     /**
      * Gets or sets the isGlobal flag of the module.
-     * 
      */
     @Export(name="isGlobal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGlobal;
 
     /**
      * @return Gets or sets the isGlobal flag of the module.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsGlobal() {
         return this.isGlobal;
     }
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
      * @return Gets or sets the last modified time.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The Azure Region where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state of the module.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state of the module.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the size in bytes of the module.
-     * 
      */
     @Export(name="sizeInBytes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> sizeInBytes;
 
     /**
      * @return Gets or sets the size in bytes of the module.
-     * 
      */
     public Output</* @Nullable */ Double> getSizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets the version of the module.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
      * @return Gets or sets the version of the module.
-     * 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;

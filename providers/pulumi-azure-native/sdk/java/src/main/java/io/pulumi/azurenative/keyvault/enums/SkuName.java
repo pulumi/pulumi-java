@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SKU name to specify whether the key vault is a standard vault or a premium vault.
-     * 
      */
     @EnumType
     public enum SkuName {

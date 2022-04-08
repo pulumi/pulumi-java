@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the network settings for the HANA instance disks.
- * 
  */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the network interfaces for the HANA instance.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<IpAddressArgs>> networkInterfaces;

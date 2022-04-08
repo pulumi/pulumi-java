@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * Description of a namespace resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NameSpaceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @namespace = new AzureNative.ServiceBus.Namespace("namespace", new AzureNative.ServiceBus.NamespaceArgs
+ *         {
+ *             Location = "South Central US",
+ *             NamespaceName = "sdk-Namespace2924",
+ *             ResourceGroupName = "ArunMonocle",
+ *             Sku = new AzureNative.ServiceBus.Inputs.SBSkuArgs
+ *             {
+ *                 Name = "Standard",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewNamespace(ctx, "namespace", &servicebus.NamespaceArgs{
+ * 			Location:          pulumi.String("South Central US"),
+ * 			NamespaceName:     pulumi.String("sdk-Namespace2924"),
+ * 			ResourceGroupName: pulumi.String("ArunMonocle"),
+ * 			Sku: &servicebus.SBSkuArgs{
+ * 				Name: "Standard",
+ * 				Tier: "Standard",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const namespace = new azure_native.servicebus.Namespace("namespace", {
+ *     location: "South Central US",
+ *     namespaceName: "sdk-Namespace2924",
+ *     resourceGroupName: "ArunMonocle",
+ *     sku: {
+ *         name: "Standard",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * namespace = azure_native.servicebus.Namespace("namespace",
+ *     location="South Central US",
+ *     namespace_name="sdk-Namespace2924",
+ *     resource_group_name="ArunMonocle",
+ *     sku=azure_native.servicebus.SBSkuArgs(
+ *         name="Standard",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +140,120 @@ import javax.annotation.Nullable;
 public class Namespace extends io.pulumi.resources.CustomResource {
     /**
      * The time the namespace was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time the namespace was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The Geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The Geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Identifier for Azure Insights metrics
-     * 
      */
     @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
      * @return Identifier for Azure Insights metrics
-     * 
      */
     public Output<String> getMetricId() {
         return this.metricId;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the namespace.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the namespace.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Endpoint you can use to perform Service Bus operations.
-     * 
      */
     @Export(name="serviceBusEndpoint", type=String.class, parameters={})
     private Output<String> serviceBusEndpoint;
 
     /**
      * @return Endpoint you can use to perform Service Bus operations.
-     * 
      */
     public Output<String> getServiceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
      * Properties of Sku
-     * 
      */
     @Export(name="sku", type=SBSkuResponse.class, parameters={})
     private Output</* @Nullable */ SBSkuResponse> sku;
 
     /**
      * @return Properties of Sku
-     * 
      */
     public Output</* @Nullable */ SBSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The time the namespace was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;

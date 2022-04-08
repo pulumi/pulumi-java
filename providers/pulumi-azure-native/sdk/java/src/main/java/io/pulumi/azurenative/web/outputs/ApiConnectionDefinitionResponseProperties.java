@@ -19,42 +19,34 @@ public final class ApiConnectionDefinitionResponseProperties {
     private final @Nullable ApiReferenceResponse api;
     /**
      * Timestamp of last connection change
-     * 
      */
     private final @Nullable String changedTime;
     /**
      * Timestamp of the connection creation
-     * 
      */
     private final @Nullable String createdTime;
     /**
      * Dictionary of custom parameter values
-     * 
      */
     private final @Nullable Map<String,String> customParameterValues;
     /**
      * Display name
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Dictionary of nonsecret parameter values
-     * 
      */
     private final @Nullable Map<String,String> nonSecretParameterValues;
     /**
      * Dictionary of parameter values
-     * 
      */
     private final @Nullable Map<String,String> parameterValues;
     /**
      * Status of the connection
-     * 
      */
     private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
     /**
      * Links to test the API connection
-     * 
      */
     private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
@@ -85,56 +77,48 @@ public final class ApiConnectionDefinitionResponseProperties {
     }
     /**
      * Timestamp of last connection change
-     * 
     */
     public Optional<String> getChangedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
      * Timestamp of the connection creation
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Dictionary of custom parameter values
-     * 
     */
     public Map<String,String> getCustomParameterValues() {
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
     }
     /**
      * Display name
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Dictionary of nonsecret parameter values
-     * 
     */
     public Map<String,String> getNonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
     }
     /**
      * Dictionary of parameter values
-     * 
     */
     public Map<String,String> getParameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
     /**
      * Status of the connection
-     * 
     */
     public List<ConnectionStatusDefinitionResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Links to test the API connection
-     * 
     */
     public List<ApiConnectionTestLinkResponse> getTestLinks() {
         return this.testLinks == null ? List.of() : this.testLinks;

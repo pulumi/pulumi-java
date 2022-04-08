@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * VMwareCbt provider specific container mapping details.
- * 
  */
 public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMwareCbt'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -30,7 +28,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
 
     /**
      * The target key vault ARM Id.
-     * 
      */
     @Import(name="keyVaultId", required=true)
       private final String keyVaultId;
@@ -41,7 +38,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
 
     /**
      * The target key vault URI.
-     * 
      */
     @Import(name="keyVaultUri", required=true)
       private final String keyVaultUri;
@@ -52,7 +48,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
 
     /**
      * The secret name of the service bus connection string.
-     * 
      */
     @Import(name="serviceBusConnectionStringSecretName", required=true)
       private final String serviceBusConnectionStringSecretName;
@@ -63,7 +58,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
 
     /**
      * The storage account ARM Id.
-     * 
      */
     @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
@@ -74,7 +68,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
 
     /**
      * The secret name of the storage account.
-     * 
      */
     @Import(name="storageAccountSasSecretName", required=true)
       private final String storageAccountSasSecretName;
@@ -85,7 +78,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
 
     /**
      * The target location.
-     * 
      */
     @Import(name="targetLocation", required=true)
       private final String targetLocation;

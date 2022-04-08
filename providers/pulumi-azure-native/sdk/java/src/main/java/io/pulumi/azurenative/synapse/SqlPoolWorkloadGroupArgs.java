@@ -18,7 +18,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The workload group importance level.
-     * 
      */
     @Import(name="importance")
       private final @Nullable Output<String> importance;
@@ -29,7 +28,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The workload group cap percentage resource.
-     * 
      */
     @Import(name="maxResourcePercent", required=true)
       private final Output<Integer> maxResourcePercent;
@@ -40,7 +38,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The workload group request maximum grant percentage.
-     * 
      */
     @Import(name="maxResourcePercentPerRequest")
       private final @Nullable Output<Double> maxResourcePercentPerRequest;
@@ -51,7 +48,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The workload group minimum percentage resource.
-     * 
      */
     @Import(name="minResourcePercent", required=true)
       private final Output<Integer> minResourcePercent;
@@ -62,7 +58,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The workload group request minimum grant percentage.
-     * 
      */
     @Import(name="minResourcePercentPerRequest", required=true)
       private final Output<Double> minResourcePercentPerRequest;
@@ -73,7 +68,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The workload group query execution timeout.
-     * 
      */
     @Import(name="queryExecutionTimeout")
       private final @Nullable Output<Integer> queryExecutionTimeout;
@@ -84,7 +78,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * SQL pool name
-     * 
      */
     @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
@@ -106,7 +98,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the workload group.
-     * 
      */
     @Import(name="workloadGroupName")
       private final @Nullable Output<String> workloadGroupName;
@@ -117,7 +108,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

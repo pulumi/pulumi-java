@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The storage profile.
- * 
  */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The list of storage accounts in the cluster.
-     * 
      */
     @Import(name="storageaccounts")
       private final @Nullable List<StorageAccountResponse> storageaccounts;

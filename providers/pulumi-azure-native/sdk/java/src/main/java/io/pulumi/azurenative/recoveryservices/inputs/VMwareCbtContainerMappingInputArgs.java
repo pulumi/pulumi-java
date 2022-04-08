@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * VMwareCbt container mapping input.
- * 
  */
 public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     /**
      * The class type.
      * Expected value is 'VMwareCbt'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -32,7 +30,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
 
     /**
      * The target key vault ARM Id.
-     * 
      */
     @Import(name="keyVaultId", required=true)
       private final Output<String> keyVaultId;
@@ -43,7 +40,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
 
     /**
      * The target key vault URL.
-     * 
      */
     @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
@@ -54,7 +50,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
 
     /**
      * The secret name of the service bus connection string.
-     * 
      */
     @Import(name="serviceBusConnectionStringSecretName", required=true)
       private final Output<String> serviceBusConnectionStringSecretName;
@@ -65,7 +60,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
 
     /**
      * The storage account ARM Id.
-     * 
      */
     @Import(name="storageAccountId", required=true)
       private final Output<String> storageAccountId;
@@ -76,7 +70,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
 
     /**
      * The secret name of the storage account.
-     * 
      */
     @Import(name="storageAccountSasSecretName", required=true)
       private final Output<String> storageAccountSasSecretName;
@@ -87,7 +80,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
 
     /**
      * The target location.
-     * 
      */
     @Import(name="targetLocation", required=true)
       private final Output<String> targetLocation;

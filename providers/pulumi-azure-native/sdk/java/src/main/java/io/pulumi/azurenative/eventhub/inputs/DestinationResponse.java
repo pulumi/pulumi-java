@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Capture storage details for capture description
- * 
  */
 public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
-     * 
      */
     @Import(name="archiveNameFormat")
       private final @Nullable String archiveNameFormat;
@@ -31,7 +29,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Blob container Name
-     * 
      */
     @Import(name="blobContainer")
       private final @Nullable String blobContainer;
@@ -42,7 +39,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name for capture destination
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -53,7 +49,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource id of the storage account to be used to create the blobs
-     * 
      */
     @Import(name="storageAccountResourceId")
       private final @Nullable String storageAccountResourceId;

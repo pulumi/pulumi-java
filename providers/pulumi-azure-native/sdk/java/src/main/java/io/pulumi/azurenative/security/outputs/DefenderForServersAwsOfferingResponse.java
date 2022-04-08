@@ -15,23 +15,19 @@ import javax.annotation.Nullable;
 public final class DefenderForServersAwsOfferingResponse {
     /**
      * The ARC autoprovisioning configuration
-     * 
      */
     private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
     /**
      * The Defender for servers connection configuration
-     * 
      */
     private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
     /**
      * The offering description.
-     * 
      */
     private final String description;
     /**
      * The type of the security offering.
      * Expected value is 'DefenderForServersAWS'.
-     * 
      */
     private final String offeringType;
 
@@ -49,21 +45,18 @@ public final class DefenderForServersAwsOfferingResponse {
 
     /**
      * The ARC autoprovisioning configuration
-     * 
     */
     public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> getArcAutoProvisioning() {
         return Optional.ofNullable(this.arcAutoProvisioning);
     }
     /**
      * The Defender for servers connection configuration
-     * 
     */
     public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> getDefenderForServers() {
         return Optional.ofNullable(this.defenderForServers);
     }
     /**
      * The offering description.
-     * 
     */
     public String getDescription() {
         return this.description;
@@ -71,7 +64,6 @@ public final class DefenderForServersAwsOfferingResponse {
     /**
      * The type of the security offering.
      * Expected value is 'DefenderForServersAWS'.
-     * 
     */
     public String getOfferingType() {
         return this.offeringType;

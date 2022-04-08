@@ -23,7 +23,113 @@ import javax.annotation.Nullable;
  * Specifies information about the Dedicated host.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a dedicated host .
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dedicatedHost = new AzureNative.Compute.DedicatedHost("dedicatedHost", new AzureNative.Compute.DedicatedHostArgs
+ *         {
+ *             HostGroupName = "myDedicatedHostGroup",
+ *             HostName = "myDedicatedHost",
+ *             Location = "westus",
+ *             PlatformFaultDomain = 1,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Sku = new AzureNative.Compute.Inputs.SkuArgs
+ *             {
+ *                 Name = "DSv3-Type1",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "department", "HR" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewDedicatedHost(ctx, "dedicatedHost", &compute.DedicatedHostArgs{
+ * 			HostGroupName:       pulumi.String("myDedicatedHostGroup"),
+ * 			HostName:            pulumi.String("myDedicatedHost"),
+ * 			Location:            pulumi.String("westus"),
+ * 			PlatformFaultDomain: pulumi.Int(1),
+ * 			ResourceGroupName:   pulumi.String("myResourceGroup"),
+ * 			Sku: &compute.SkuArgs{
+ * 				Name: pulumi.String("DSv3-Type1"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"department": pulumi.String("HR"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dedicatedHost = new azure_native.compute.DedicatedHost("dedicatedHost", {
+ *     hostGroupName: "myDedicatedHostGroup",
+ *     hostName: "myDedicatedHost",
+ *     location: "westus",
+ *     platformFaultDomain: 1,
+ *     resourceGroupName: "myResourceGroup",
+ *     sku: {
+ *         name: "DSv3-Type1",
+ *     },
+ *     tags: {
+ *         department: "HR",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dedicated_host = azure_native.compute.DedicatedHost("dedicatedHost",
+ *     host_group_name="myDedicatedHostGroup",
+ *     host_name="myDedicatedHost",
+ *     location="westus",
+ *     platform_fault_domain=1,
+ *     resource_group_name="myResourceGroup",
+ *     sku=azure_native.compute.SkuArgs(
+ *         name="DSv3-Type1",
+ *     ),
+ *     tags={
+ *         "department": "HR",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,182 +144,156 @@ import javax.annotation.Nullable;
 public class DedicatedHost extends io.pulumi.resources.CustomResource {
     /**
      * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
-     * 
      */
     @Export(name="autoReplaceOnFailure", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoReplaceOnFailure;
 
     /**
      * @return Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoReplaceOnFailure() {
         return this.autoReplaceOnFailure;
     }
     /**
      * A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.
-     * 
      */
     @Export(name="hostId", type=String.class, parameters={})
     private Output<String> hostId;
 
     /**
      * @return A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.
-     * 
      */
     public Output<String> getHostId() {
         return this.hostId;
     }
     /**
      * The dedicated host instance view.
-     * 
      */
     @Export(name="instanceView", type=DedicatedHostInstanceViewResponse.class, parameters={})
     private Output<DedicatedHostInstanceViewResponse> instanceView;
 
     /**
      * @return The dedicated host instance view.
-     * 
      */
     public Output<DedicatedHostInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
     /**
      * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
-     * 
      */
     @Export(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
     /**
      * @return Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
-     * 
      */
     public Output</* @Nullable */ String> getLicenseType() {
         return this.licenseType;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Fault domain of the dedicated host within a dedicated host group.
-     * 
      */
     @Export(name="platformFaultDomain", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> platformFaultDomain;
 
     /**
      * @return Fault domain of the dedicated host within a dedicated host group.
-     * 
      */
     public Output</* @Nullable */ Integer> getPlatformFaultDomain() {
         return this.platformFaultDomain;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The date when the host was first provisioned.
-     * 
      */
     @Export(name="provisioningTime", type=String.class, parameters={})
     private Output<String> provisioningTime;
 
     /**
      * @return The date when the host was first provisioned.
-     * 
      */
     public Output<String> getProvisioningTime() {
         return this.provisioningTime;
     }
     /**
      * SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A list of references to all virtual machines in the Dedicated Host.
-     * 
      */
     @Export(name="virtualMachines", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> virtualMachines;
 
     /**
      * @return A list of references to all virtual machines in the Dedicated Host.
-     * 
      */
     public Output<List<SubResourceReadOnlyResponse>> getVirtualMachines() {
         return this.virtualMachines;

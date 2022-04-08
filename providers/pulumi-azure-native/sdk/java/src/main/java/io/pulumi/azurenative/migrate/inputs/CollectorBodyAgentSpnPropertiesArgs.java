@@ -16,7 +16,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
@@ -27,7 +26,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Intended audience for the service principal.
-     * 
      */
     @Import(name="audience")
       private final @Nullable Output<String> audience;
@@ -38,7 +36,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
 
     /**
      * AAD Authority URL which was used to request the token for the service principal.
-     * 
      */
     @Import(name="authority")
       private final @Nullable Output<String> authority;
@@ -49,7 +46,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
@@ -60,7 +56,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

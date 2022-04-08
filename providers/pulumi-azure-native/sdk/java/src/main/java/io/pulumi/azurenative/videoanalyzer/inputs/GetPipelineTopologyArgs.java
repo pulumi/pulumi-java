@@ -14,7 +14,6 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The Azure Video Analyzer account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Pipeline topology unique identifier.
-     * 
      */
     @Import(name="pipelineTopologyName", required=true)
       private final String pipelineTopologyName;
@@ -36,7 +34,6 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class GetPrivateEndpointConnectionResult {
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * The Private Endpoint resource for this Connection.
-     * 
      */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
     /**
      * Details about the state of the connection.
-     * 
      */
     private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     private final @Nullable String provisioningState;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -62,42 +56,36 @@ public final class GetPrivateEndpointConnectionResult {
 
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The Private Endpoint resource for this Connection.
-     * 
     */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Details about the state of the connection.
-     * 
     */
     public Optional<ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

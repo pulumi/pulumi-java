@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure SQL workload-specific backup policy.
- * 
  */
 public final class AzureSqlProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class AzureSqlProtectionPolicyResponse extends io.pulumi.resources.
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureSql'.
-     * 
      */
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
@@ -36,7 +34,6 @@ public final class AzureSqlProtectionPolicyResponse extends io.pulumi.resources.
 
     /**
      * Number of items associated with this policy.
-     * 
      */
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
@@ -47,7 +44,6 @@ public final class AzureSqlProtectionPolicyResponse extends io.pulumi.resources.
 
     /**
      * Retention policy details.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;

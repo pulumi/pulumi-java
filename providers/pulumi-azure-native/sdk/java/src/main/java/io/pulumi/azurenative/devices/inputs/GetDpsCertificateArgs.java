@@ -14,7 +14,6 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the certificate to retrieve.
-     * 
      */
     @Import(name="certificateName", required=true)
       private final String certificateName;
@@ -25,7 +24,6 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the provisioning service the certificate is associated with.
-     * 
      */
     @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
@@ -36,7 +34,6 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Resource group identifier.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

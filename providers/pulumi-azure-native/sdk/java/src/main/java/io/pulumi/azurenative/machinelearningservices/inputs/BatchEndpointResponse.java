@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Batch endpoint configuration.
- * 
  */
 public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Enum to determine endpoint authentication mode.
-     * 
      */
     @Import(name="authMode")
       private final @Nullable String authMode;
@@ -33,7 +31,6 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Description of the inference endpoint.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -44,7 +41,6 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -55,7 +51,6 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Endpoint URI.
-     * 
      */
     @Import(name="scoringUri", required=true)
       private final String scoringUri;
@@ -66,7 +61,6 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Endpoint Swagger URI.
-     * 
      */
     @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
@@ -77,7 +71,6 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Traffic rules on how the traffic will be routed across deployments.
-     * 
      */
     @Import(name="traffic")
       private final @Nullable Map<String,Integer> traffic;

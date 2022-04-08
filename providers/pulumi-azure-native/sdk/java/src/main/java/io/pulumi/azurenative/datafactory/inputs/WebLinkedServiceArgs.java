@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Web linked service.
- * 
  */
 public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -50,7 +47,6 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -61,7 +57,6 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -73,7 +68,6 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Type of linked service.
      * Expected value is 'Web'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -84,7 +78,6 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Web linked service properties.
-     * 
      */
     @Import(name="typeProperties", required=true)
       private final Output<Object> typeProperties;

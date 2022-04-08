@@ -19,7 +19,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Azure resource.
-     * 
      */
     @Import(name="azureResourceName")
       private final @Nullable Output<String> azureResourceName;
@@ -30,7 +29,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the private endpoint connections of the resource.
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
@@ -52,7 +49,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -74,7 +69,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the tenant id of the resource.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

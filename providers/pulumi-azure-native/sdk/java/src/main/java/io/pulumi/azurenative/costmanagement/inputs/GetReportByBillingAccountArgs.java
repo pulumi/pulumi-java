@@ -14,7 +14,6 @@ public final class GetReportByBillingAccountArgs extends io.pulumi.resources.Inv
 
     /**
      * BillingAccount ID
-     * 
      */
     @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
@@ -25,7 +24,6 @@ public final class GetReportByBillingAccountArgs extends io.pulumi.resources.Inv
 
     /**
      * Report Name.
-     * 
      */
     @Import(name="reportName", required=true)
       private final String reportName;

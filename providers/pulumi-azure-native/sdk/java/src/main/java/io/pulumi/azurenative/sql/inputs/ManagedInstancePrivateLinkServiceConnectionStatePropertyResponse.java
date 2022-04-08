@@ -14,7 +14,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
 
     /**
      * The private link service connection description.
-     * 
      */
     @Import(name="actionsRequired", required=true)
       private final String actionsRequired;
@@ -25,7 +24,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
 
     /**
      * The private link service connection description.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -36,7 +34,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
 
     /**
      * The private link service connection status.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

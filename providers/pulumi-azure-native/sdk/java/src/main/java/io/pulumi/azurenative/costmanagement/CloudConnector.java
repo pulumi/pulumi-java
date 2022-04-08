@@ -19,7 +19,87 @@ import javax.annotation.Nullable;
  * The Connector model definition
  * API Version: 2019-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CloudConnector_Put
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudConnector = new AzureNative.CostManagement.CloudConnector("cloudConnector", new AzureNative.CostManagement.CloudConnectorArgs
+ *         {
+ *             ConnectorName = "aws-123456789012",
+ *             CredentialsKey = "arn:aws:iam::123456789012:role/AzureCostManagementRole",
+ *             CredentialsSecret = "external-id",
+ *             DisplayName = "AWS-Consolidated-1",
+ *             ReportId = "HourlyWithResources",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	costmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/costmanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := costmanagement.NewCloudConnector(ctx, "cloudConnector", &costmanagement.CloudConnectorArgs{
+ * 			ConnectorName:     pulumi.String("aws-123456789012"),
+ * 			CredentialsKey:    pulumi.String("arn:aws:iam::123456789012:role/AzureCostManagementRole"),
+ * 			CredentialsSecret: pulumi.String("external-id"),
+ * 			DisplayName:       pulumi.String("AWS-Consolidated-1"),
+ * 			ReportId:          pulumi.String("HourlyWithResources"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConnector", {
+ *     connectorName: "aws-123456789012",
+ *     credentialsKey: "arn:aws:iam::123456789012:role/AzureCostManagementRole",
+ *     credentialsSecret: "external-id",
+ *     displayName: "AWS-Consolidated-1",
+ *     reportId: "HourlyWithResources",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cloud_connector = azure_native.costmanagement.CloudConnector("cloudConnector",
+ *     connector_name="aws-123456789012",
+ *     credentials_key="arn:aws:iam::123456789012:role/AzureCostManagementRole",
+ *     credentials_secret="external-id",
+ *     display_name="AWS-Consolidated-1",
+ *     report_id="HourlyWithResources")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,238 +114,204 @@ import javax.annotation.Nullable;
 public class CloudConnector extends io.pulumi.resources.CustomResource {
     /**
      * Connector billing model
-     * 
      */
     @Export(name="billingModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingModel;
 
     /**
      * @return Connector billing model
-     * 
      */
     public Output</* @Nullable */ String> getBillingModel() {
         return this.billingModel;
     }
     /**
      * Collection information
-     * 
      */
     @Export(name="collectionInfo", type=ConnectorCollectionInfoResponse.class, parameters={})
     private Output<ConnectorCollectionInfoResponse> collectionInfo;
 
     /**
      * @return Collection information
-     * 
      */
     public Output<ConnectorCollectionInfoResponse> getCollectionInfo() {
         return this.collectionInfo;
     }
     /**
      * Connector definition creation datetime
-     * 
      */
     @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
      * @return Connector definition creation datetime
-     * 
      */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
     /**
      * Credentials authentication key (eg AWS ARN)
-     * 
      */
     @Export(name="credentialsKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> credentialsKey;
 
     /**
      * @return Credentials authentication key (eg AWS ARN)
-     * 
      */
     public Output</* @Nullable */ String> getCredentialsKey() {
         return this.credentialsKey;
     }
     /**
      * Number of days remaining of trial
-     * 
      */
     @Export(name="daysTrialRemaining", type=Integer.class, parameters={})
     private Output<Integer> daysTrialRemaining;
 
     /**
      * @return Number of days remaining of trial
-     * 
      */
     public Output<Integer> getDaysTrialRemaining() {
         return this.daysTrialRemaining;
     }
     /**
      * Default ManagementGroupId
-     * 
      */
     @Export(name="defaultManagementGroupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultManagementGroupId;
 
     /**
      * @return Default ManagementGroupId
-     * 
      */
     public Output</* @Nullable */ String> getDefaultManagementGroupId() {
         return this.defaultManagementGroupId;
     }
     /**
      * Connector DisplayName
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Connector DisplayName
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Associated ExternalBillingAccountId
-     * 
      */
     @Export(name="externalBillingAccountId", type=String.class, parameters={})
     private Output<String> externalBillingAccountId;
 
     /**
      * @return Associated ExternalBillingAccountId
-     * 
      */
     public Output<String> getExternalBillingAccountId() {
         return this.externalBillingAccountId;
     }
     /**
      * Connector kind (eg aws)
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Connector kind (eg aws)
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Connector last modified datetime
-     * 
      */
     @Export(name="modifiedOn", type=String.class, parameters={})
     private Output<String> modifiedOn;
 
     /**
      * @return Connector last modified datetime
-     * 
      */
     public Output<String> getModifiedOn() {
         return this.modifiedOn;
     }
     /**
      * Connector name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Connector name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The display name of the providerBillingAccountId as defined on the external provider
-     * 
      */
     @Export(name="providerBillingAccountDisplayName", type=String.class, parameters={})
     private Output<String> providerBillingAccountDisplayName;
 
     /**
      * @return The display name of the providerBillingAccountId as defined on the external provider
-     * 
      */
     public Output<String> getProviderBillingAccountDisplayName() {
         return this.providerBillingAccountDisplayName;
     }
     /**
      * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
-     * 
      */
     @Export(name="providerBillingAccountId", type=String.class, parameters={})
     private Output<String> providerBillingAccountId;
 
     /**
      * @return Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
-     * 
      */
     public Output<String> getProviderBillingAccountId() {
         return this.providerBillingAccountId;
     }
     /**
      * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-     * 
      */
     @Export(name="reportId", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportId;
 
     /**
      * @return Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-     * 
      */
     public Output</* @Nullable */ String> getReportId() {
         return this.reportId;
     }
     /**
      * Connector status
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Connector status
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Billing SubscriptionId
-     * 
      */
     @Export(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
     /**
      * @return Billing SubscriptionId
-     * 
      */
     public Output</* @Nullable */ String> getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Connector type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Connector type
-     * 
      */
     public Output<String> getType() {
         return this.type;

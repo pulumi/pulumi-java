@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Account hosting model.
-     * 
      */
     @EnumType
     public enum HostingModel {

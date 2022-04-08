@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PrivateEndpointResponse {
     /**
      * The resource identifier.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class PrivateEndpointResponse {
 
     /**
      * The resource identifier.
-     * 
     */
     public String getId() {
         return this.id;

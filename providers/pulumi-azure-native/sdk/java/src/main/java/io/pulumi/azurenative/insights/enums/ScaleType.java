@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * the type of action that should occur when the scale rule fires.
-     * 
      */
     @EnumType
     public enum ScaleType {

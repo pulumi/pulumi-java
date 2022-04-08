@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * AWS cloud account connector based assume role, the role enables delegating access to your AWS resources. The role is composed of role Amazon Resource Name (ARN) and external ID. For more details, refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html">Creating a Role to Delegate Permissions to an IAM User (write only)</a>
- * 
  */
 public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
 
     /**
      * The ID of the cloud account
-     * 
      */
     @Import(name="accountId", required=true)
       private final String accountId;
@@ -30,7 +28,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
 
     /**
      * State of the multi-cloud connector
-     * 
      */
     @Import(name="authenticationProvisioningState", required=true)
       private final String authenticationProvisioningState;
@@ -42,7 +39,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is 'awsAssumeRole'.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -53,7 +49,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
 
     /**
      * Assumed role ID is an identifier that you can use to create temporary security credentials.
-     * 
      */
     @Import(name="awsAssumeRoleArn", required=true)
       private final String awsAssumeRoleArn;
@@ -64,7 +59,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
 
     /**
      * A unique identifier that is required when you assume a role in another account.
-     * 
      */
     @Import(name="awsExternalId", required=true)
       private final String awsExternalId;
@@ -75,7 +69,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
 
     /**
      * The permissions detected in the cloud account.
-     * 
      */
     @Import(name="grantedPermissions", required=true)
       private final List<String> grantedPermissions;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class LanguageExtensionResponse {
     /**
      * The language extension name.
-     * 
      */
     private final @Nullable String languageExtensionName;
 
@@ -24,7 +23,6 @@ public final class LanguageExtensionResponse {
 
     /**
      * The language extension name.
-     * 
     */
     public Optional<String> getLanguageExtensionName() {
         return Optional.ofNullable(this.languageExtensionName);

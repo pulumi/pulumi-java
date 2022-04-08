@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the resource properties.
- * 
  */
 public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the list of virtual disks associated with the virtual machine.
-     * 
      */
     @Import(name="disks")
       private final @Nullable Output<List<VirtualDiskArgs>> disks;

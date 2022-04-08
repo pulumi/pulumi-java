@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The account SKU.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the SKU capacity.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the SKU family.
-     * 
      */
     @Import(name="family")
       private final @Nullable String family;
@@ -43,7 +40,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the SKU name of the account.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

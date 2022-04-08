@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Azure data catalog SKU.
-     * 
      */
     @EnumType
     public enum SkuType {

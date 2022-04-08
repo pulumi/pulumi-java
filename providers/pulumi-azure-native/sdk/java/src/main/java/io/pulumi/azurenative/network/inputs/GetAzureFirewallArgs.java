@@ -14,7 +14,6 @@ public final class GetAzureFirewallArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Azure Firewall.
-     * 
      */
     @Import(name="azureFirewallName", required=true)
       private final String azureFirewallName;
@@ -25,7 +24,6 @@ public final class GetAzureFirewallArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed application locking policy.
- * 
  */
 public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
 
     /**
      * The deny assignment excluded actions.
-     * 
      */
     @Import(name="allowedActions")
       private final @Nullable Output<List<String>> allowedActions;
@@ -32,7 +30,6 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
 
     /**
      * The deny assignment excluded data actions.
-     * 
      */
     @Import(name="allowedDataActions")
       private final @Nullable Output<List<String>> allowedDataActions;

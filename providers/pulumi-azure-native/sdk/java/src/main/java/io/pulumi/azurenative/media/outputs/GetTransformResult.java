@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class GetTransformResult {
     /**
      * The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     private final String created;
     /**
      * An optional verbose description of the Transform.
-     * 
      */
     private final @Nullable String description;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     private final String lastModified;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * An array of one or more TransformOutputs that the Transform should generate.
-     * 
      */
     private final List<TransformOutputResponse> outputs;
     /**
      * The system metadata relating to this resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -77,56 +69,48 @@ public final class GetTransformResult {
 
     /**
      * The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
     */
     public String getCreated() {
         return this.created;
     }
     /**
      * An optional verbose description of the Transform.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
     */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * An array of one or more TransformOutputs that the Transform should generate.
-     * 
     */
     public List<TransformOutputResponse> getOutputs() {
         return this.outputs;
     }
     /**
      * The system metadata relating to this resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

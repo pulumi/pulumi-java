@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The day of the week.
-     * 
      */
     @EnumType
     public enum DayOfWeek {

@@ -14,7 +14,6 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
 
     /**
      * The name of the deployment.
-     * 
      */
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
@@ -25,7 +24,6 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
 
     /**
      * The management group ID.
-     * 
      */
     @Import(name="groupId", required=true)
       private final String groupId;

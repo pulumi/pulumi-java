@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings concerning the virtual network.
- * 
  */
 public final class VirtualNetworkPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualNetworkPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Uri of the virtual network.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class VirtualNetworkPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Properties of a subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubnetPropertiesResponse subnet;

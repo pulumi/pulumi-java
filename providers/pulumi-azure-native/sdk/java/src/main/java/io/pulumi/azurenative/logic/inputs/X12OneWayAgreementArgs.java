@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The X12 one-way agreement.
- * 
  */
 public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The X12 protocol settings.
-     * 
      */
     @Import(name="protocolSettings", required=true)
       private final Output<X12ProtocolSettingsArgs> protocolSettings;
@@ -31,7 +29,6 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The receiver business identity
-     * 
      */
     @Import(name="receiverBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> receiverBusinessIdentity;
@@ -42,7 +39,6 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The sender business identity
-     * 
      */
     @Import(name="senderBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> senderBusinessIdentity;

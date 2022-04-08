@@ -19,7 +19,87 @@ import javax.annotation.Nullable;
  * Settings with single toggle.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update EyesOn settings.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eyesOn = new AzureNative.SecurityInsights.EyesOn("eyesOn", new AzureNative.SecurityInsights.EyesOnArgs
+ *         {
+ *             Kind = "EyesOn",
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+ *             ResourceGroupName = "myRg",
+ *             SettingsName = "EyesOn",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewEyesOn(ctx, "eyesOn", &securityinsights.EyesOnArgs{
+ * 			Kind:                                pulumi.String("EyesOn"),
+ * 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+ * 			ResourceGroupName:                   pulumi.String("myRg"),
+ * 			SettingsName:                        pulumi.String("EyesOn"),
+ * 			WorkspaceName:                       pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const eyesOn = new azure_native.securityinsights.EyesOn("eyesOn", {
+ *     kind: "EyesOn",
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+ *     resourceGroupName: "myRg",
+ *     settingsName: "EyesOn",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * eyes_on = azure_native.securityinsights.EyesOn("eyesOn",
+ *     kind="EyesOn",
+ *     operational_insights_resource_provider="Microsoft.OperationalInsights",
+ *     resource_group_name="myRg",
+ *     settings_name="EyesOn",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,28 +114,24 @@ import javax.annotation.Nullable;
 public class EyesOn extends io.pulumi.resources.CustomResource {
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Determines whether the setting is enable or disabled.
-     * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
     /**
      * @return Determines whether the setting is enable or disabled.
-     * 
      */
     public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -63,7 +139,6 @@ public class EyesOn extends io.pulumi.resources.CustomResource {
     /**
      * The kind of the setting
      * Expected value is 'EyesOn'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -71,49 +146,42 @@ public class EyesOn extends io.pulumi.resources.CustomResource {
     /**
      * @return The kind of the setting
      * Expected value is 'EyesOn'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

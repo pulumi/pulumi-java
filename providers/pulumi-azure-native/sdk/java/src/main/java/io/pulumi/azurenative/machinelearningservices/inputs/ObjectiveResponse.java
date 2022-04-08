@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Optimization objective.
- * 
  */
 public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines supported metric goals for hyperparameter tuning
-     * 
      */
     @Import(name="goal", required=true)
       private final String goal;
@@ -29,7 +27,6 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the metric to optimize.
-     * 
      */
     @Import(name="primaryMetric", required=true)
       private final String primaryMetric;

@@ -17,7 +17,6 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
 
     /**
      * Flag that indicates the status of the CMK setting
-     * 
      */
     @Import(name="customerManagedKey")
       private final @Nullable Output<Boolean> customerManagedKey;
@@ -28,7 +27,6 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -39,7 +37,6 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
 
     /**
      * The Sentinel onboarding state name. Supports - default
-     * 
      */
     @Import(name="sentinelOnboardingStateName")
       private final @Nullable Output<String> sentinelOnboardingStateName;
@@ -61,7 +57,6 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

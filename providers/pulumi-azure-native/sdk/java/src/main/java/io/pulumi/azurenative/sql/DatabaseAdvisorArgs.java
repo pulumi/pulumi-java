@@ -17,7 +17,6 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Database Advisor.
-     * 
      */
     @Import(name="advisorName")
       private final @Nullable Output<String> advisorName;
@@ -28,7 +27,6 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
-     * 
      */
     @Import(name="autoExecuteStatus", required=true)
       private final Output<AutoExecuteStatus> autoExecuteStatus;
@@ -39,7 +37,6 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -50,7 +47,6 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;

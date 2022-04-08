@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define match variables.
- * 
  */
 public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The selector of match variable.
-     * 
      */
     @Import(name="selector")
       private final @Nullable String selector;
@@ -31,7 +29,6 @@ public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Match Variable.
-     * 
      */
     @Import(name="variableName", required=true)
       private final String variableName;

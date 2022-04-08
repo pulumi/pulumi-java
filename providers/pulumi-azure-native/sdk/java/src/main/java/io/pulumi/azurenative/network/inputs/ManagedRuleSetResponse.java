@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a managed rule set.
- * 
  */
 public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Defines the rule group overrides to apply to the rule set.
-     * 
      */
     @Import(name="ruleGroupOverrides")
       private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
@@ -33,7 +31,6 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Defines the rule set type to use.
-     * 
      */
     @Import(name="ruleSetType", required=true)
       private final String ruleSetType;
@@ -44,7 +41,6 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Defines the version of the rule set to use.
-     * 
      */
     @Import(name="ruleSetVersion", required=true)
       private final String ruleSetVersion;

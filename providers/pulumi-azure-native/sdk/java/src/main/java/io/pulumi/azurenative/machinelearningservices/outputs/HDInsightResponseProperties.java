@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class HDInsightResponseProperties {
     /**
      * Public IP address of the master node of the cluster.
-     * 
      */
     private final @Nullable String address;
     /**
      * Admin credentials for master node of the cluster
-     * 
      */
     private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
     /**
      * Port open for ssh connections on the master node of the cluster.
-     * 
      */
     private final @Nullable Integer sshPort;
 
@@ -41,21 +38,18 @@ public final class HDInsightResponseProperties {
 
     /**
      * Public IP address of the master node of the cluster.
-     * 
     */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Admin credentials for master node of the cluster
-     * 
     */
     public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
     /**
      * Port open for ssh connections on the master node of the cluster.
-     * 
     */
     public Optional<Integer> getSshPort() {
         return Optional.ofNullable(this.sshPort);

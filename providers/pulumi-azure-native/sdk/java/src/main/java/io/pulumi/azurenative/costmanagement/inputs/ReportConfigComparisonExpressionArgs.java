@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The comparison expression to be used in the report.
- * 
  */
 public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
 
     /**
      * The name of the column to use in comparison.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -33,7 +31,6 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
 
     /**
      * The operator to use for comparison.
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,OperatorType>> operator;
@@ -44,7 +41,6 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
 
     /**
      * Array of values to use for comparison
-     * 
      */
     @Import(name="values", required=true)
       private final Output<List<String>> values;

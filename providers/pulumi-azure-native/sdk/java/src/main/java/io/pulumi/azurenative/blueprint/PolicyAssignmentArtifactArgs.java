@@ -19,7 +19,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the blueprint artifact.
-     * 
      */
     @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
@@ -30,7 +29,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the blueprint definition.
-     * 
      */
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
@@ -41,7 +39,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * Artifacts which need to be deployed before the specified artifact.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
@@ -52,7 +49,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * Multi-line explain this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -63,7 +59,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * One-liner string explain this resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -75,7 +70,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
     /**
      * Specifies the kind of blueprint artifact.
      * Expected value is 'policyAssignment'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -86,7 +80,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * Parameter values for the policy definition.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
@@ -97,7 +90,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * Azure resource ID of the policy definition.
-     * 
      */
     @Import(name="policyDefinitionId", required=true)
       private final Output<String> policyDefinitionId;
@@ -108,7 +100,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the resource group placeholder to which the policy will be assigned.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -119,7 +110,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;

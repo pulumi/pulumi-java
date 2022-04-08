@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol of the destination to where the traffic is redirected
-     * 
      */
     @EnumType
     public enum FrontDoorRedirectProtocol {

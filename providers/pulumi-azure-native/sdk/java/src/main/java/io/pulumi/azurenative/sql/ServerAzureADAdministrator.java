@@ -18,7 +18,95 @@ import javax.annotation.Nullable;
  * Azure Active Directory administrator.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an existing Azure Active Directory administrator.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverAzureADAdministrator = new AzureNative.Sql.ServerAzureADAdministrator("serverAzureADAdministrator", new AzureNative.Sql.ServerAzureADAdministratorArgs
+ *         {
+ *             AdministratorName = "ActiveDirectory",
+ *             AdministratorType = "ActiveDirectory",
+ *             Login = "bob@contoso.com",
+ *             ResourceGroupName = "sqlcrudtest-4799",
+ *             ServerName = "sqlcrudtest-6440",
+ *             Sid = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *             TenantId = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerAzureADAdministrator(ctx, "serverAzureADAdministrator", &sql.ServerAzureADAdministratorArgs{
+ * 			AdministratorName: pulumi.String("ActiveDirectory"),
+ * 			AdministratorType: pulumi.String("ActiveDirectory"),
+ * 			Login:             pulumi.String("bob@contoso.com"),
+ * 			ResourceGroupName: pulumi.String("sqlcrudtest-4799"),
+ * 			ServerName:        pulumi.String("sqlcrudtest-6440"),
+ * 			Sid:               pulumi.String("c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c"),
+ * 			TenantId:          pulumi.String("c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverAzureADAdministrator = new azure_native.sql.ServerAzureADAdministrator("serverAzureADAdministrator", {
+ *     administratorName: "ActiveDirectory",
+ *     administratorType: "ActiveDirectory",
+ *     login: "bob@contoso.com",
+ *     resourceGroupName: "sqlcrudtest-4799",
+ *     serverName: "sqlcrudtest-6440",
+ *     sid: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *     tenantId: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_azure_ad_administrator = azure_native.sql.ServerAzureADAdministrator("serverAzureADAdministrator",
+ *     administrator_name="ActiveDirectory",
+ *     administrator_type="ActiveDirectory",
+ *     login="bob@contoso.com",
+ *     resource_group_name="sqlcrudtest-4799",
+ *     server_name="sqlcrudtest-6440",
+ *     sid="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+ *     tenant_id="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +121,84 @@ import javax.annotation.Nullable;
 public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResource {
     /**
      * Type of the sever administrator.
-     * 
      */
     @Export(name="administratorType", type=String.class, parameters={})
     private Output<String> administratorType;
 
     /**
      * @return Type of the sever administrator.
-     * 
      */
     public Output<String> getAdministratorType() {
         return this.administratorType;
     }
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
      */
     @Export(name="azureADOnlyAuthentication", type=Boolean.class, parameters={})
     private Output<Boolean> azureADOnlyAuthentication;
 
     /**
      * @return Azure Active Directory only Authentication enabled.
-     * 
      */
     public Output<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Login name of the server administrator.
-     * 
      */
     @Export(name="login", type=String.class, parameters={})
     private Output<String> login;
 
     /**
      * @return Login name of the server administrator.
-     * 
      */
     public Output<String> getLogin() {
         return this.login;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * SID (object ID) of the server administrator.
-     * 
      */
     @Export(name="sid", type=String.class, parameters={})
     private Output<String> sid;
 
     /**
      * @return SID (object ID) of the server administrator.
-     * 
      */
     public Output<String> getSid() {
         return this.sid;
     }
     /**
      * Tenant ID of the administrator.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return Tenant ID of the administrator.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

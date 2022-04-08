@@ -14,7 +14,6 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
 
     /**
      * Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
 
     /**
      * Power BI Embedded Workspace Collection name
-     * 
      */
     @Import(name="workspaceCollectionName", required=true)
       private final String workspaceCollectionName;

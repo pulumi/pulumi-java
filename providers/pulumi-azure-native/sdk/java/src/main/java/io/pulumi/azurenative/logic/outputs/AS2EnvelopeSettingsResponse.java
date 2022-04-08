@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class AS2EnvelopeSettingsResponse {
     /**
      * The value indicating whether to auto generate file name.
-     * 
      */
     private final Boolean autogenerateFileName;
     /**
      * The template for file name.
-     * 
      */
     private final String fileNameTemplate;
     /**
      * The message content type.
-     * 
      */
     private final String messageContentType;
     /**
      * The value indicating whether to suspend message on file name generation error.
-     * 
      */
     private final Boolean suspendMessageOnFileNameGenerationError;
     /**
      * The value indicating whether to transmit file name in mime header.
-     * 
      */
     private final Boolean transmitFileNameInMimeHeader;
 
@@ -52,35 +47,30 @@ public final class AS2EnvelopeSettingsResponse {
 
     /**
      * The value indicating whether to auto generate file name.
-     * 
     */
     public Boolean getAutogenerateFileName() {
         return this.autogenerateFileName;
     }
     /**
      * The template for file name.
-     * 
     */
     public String getFileNameTemplate() {
         return this.fileNameTemplate;
     }
     /**
      * The message content type.
-     * 
     */
     public String getMessageContentType() {
         return this.messageContentType;
     }
     /**
      * The value indicating whether to suspend message on file name generation error.
-     * 
     */
     public Boolean getSuspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
     }
     /**
      * The value indicating whether to transmit file name in mime header.
-     * 
     */
     public Boolean getTransmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;

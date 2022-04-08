@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Output of the task that collects user tables for the given list of databases
- * 
  */
 public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
 
     /**
      * Mapping from database name to list of tables
-     * 
      */
     @Import(name="databasesToTables", required=true)
       private final Map<String,List<DatabaseTableResponse>> databasesToTables;
@@ -33,7 +31,6 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -44,7 +41,6 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
 
     /**
      * Validation errors
-     * 
      */
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;

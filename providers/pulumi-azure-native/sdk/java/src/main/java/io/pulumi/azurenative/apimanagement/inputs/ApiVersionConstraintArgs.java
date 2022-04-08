@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Control Plane Apis version constraint for the API Management service.
- * 
  */
 public final class ApiVersionConstraintArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
 
     /**
      * Limit control plane API calls to API Management service with version equal to or newer than this value.
-     * 
      */
     @Import(name="minApiVersion")
       private final @Nullable Output<String> minApiVersion;

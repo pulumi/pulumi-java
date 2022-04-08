@@ -14,7 +14,6 @@ public final class GetConnectivityConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The name of the network manager connectivity configuration.
-     * 
      */
     @Import(name="configurationName", required=true)
       private final String configurationName;
@@ -25,7 +24,6 @@ public final class GetConnectivityConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -36,7 +34,6 @@ public final class GetConnectivityConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

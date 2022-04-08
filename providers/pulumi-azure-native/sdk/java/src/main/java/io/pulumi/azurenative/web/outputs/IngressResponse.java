@@ -17,28 +17,23 @@ import javax.annotation.Nullable;
 public final class IngressResponse {
     /**
      * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
-     * 
      */
     private final @Nullable Boolean allowInsecure;
     /**
      * Bool indicating if app exposes an external http endpoint
-     * 
      */
     private final @Nullable Boolean external;
     /**
      * Hostname.
-     * 
      */
     private final String fqdn;
     /**
      * Target Port in containers for traffic from ingress
-     * 
      */
     private final @Nullable Integer targetPort;
     private final @Nullable List<TrafficWeightResponse> traffic;
     /**
      * Ingress transport protocol
-     * 
      */
     private final @Nullable String transport;
 
@@ -60,28 +55,24 @@ public final class IngressResponse {
 
     /**
      * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
-     * 
     */
     public Optional<Boolean> getAllowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
     /**
      * Bool indicating if app exposes an external http endpoint
-     * 
     */
     public Optional<Boolean> getExternal() {
         return Optional.ofNullable(this.external);
     }
     /**
      * Hostname.
-     * 
     */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * Target Port in containers for traffic from ingress
-     * 
     */
     public Optional<Integer> getTargetPort() {
         return Optional.ofNullable(this.targetPort);
@@ -91,7 +82,6 @@ public final class IngressResponse {
     }
     /**
      * Ingress transport protocol
-     * 
     */
     public Optional<String> getTransport() {
         return Optional.ofNullable(this.transport);

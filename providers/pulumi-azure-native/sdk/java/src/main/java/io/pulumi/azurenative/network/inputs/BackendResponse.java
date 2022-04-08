@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backend address of a frontDoor load balancer.
- * 
  */
 public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Location of the backend (IP address or FQDN)
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;
@@ -32,7 +30,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
-     * 
      */
     @Import(name="backendHostHeader")
       private final @Nullable String backendHostHeader;
@@ -43,7 +40,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable String enabledState;
@@ -54,7 +50,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTP TCP port number. Must be between 1 and 65535.
-     * 
      */
     @Import(name="httpPort")
       private final @Nullable Integer httpPort;
@@ -65,7 +60,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTPS TCP port number. Must be between 1 and 65535.
-     * 
      */
     @Import(name="httpsPort")
       private final @Nullable Integer httpsPort;
@@ -76,7 +70,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -87,7 +80,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Approval status for the connection to the Private Link
-     * 
      */
     @Import(name="privateEndpointStatus", required=true)
       private final String privateEndpointStatus;
@@ -98,7 +90,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-     * 
      */
     @Import(name="privateLinkAlias")
       private final @Nullable String privateLinkAlias;
@@ -109,7 +100,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A custom message to be included in the approval request to connect to the Private Link
-     * 
      */
     @Import(name="privateLinkApprovalMessage")
       private final @Nullable String privateLinkApprovalMessage;
@@ -120,7 +110,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
-     * 
      */
     @Import(name="privateLinkLocation")
       private final @Nullable String privateLinkLocation;
@@ -131,7 +120,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-     * 
      */
     @Import(name="privateLinkResourceId")
       private final @Nullable String privateLinkResourceId;
@@ -142,7 +130,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Weight of this endpoint for load balancing purposes.
-     * 
      */
     @Import(name="weight")
       private final @Nullable Integer weight;

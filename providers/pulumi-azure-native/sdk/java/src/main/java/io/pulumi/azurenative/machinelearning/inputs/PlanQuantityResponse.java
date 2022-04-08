@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents the quantity a commitment plan provides of a metered resource.
- * 
  */
 public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The quantity added to the commitment plan at an interval specified by its allowance frequency.
-     * 
      */
     @Import(name="allowance", required=true)
       private final Double allowance;
@@ -30,7 +28,6 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The quantity available to the plan the last time usage was calculated.
-     * 
      */
     @Import(name="amount", required=true)
       private final Double amount;
@@ -41,7 +38,6 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Azure meter for usage against included quantities.
-     * 
      */
     @Import(name="includedQuantityMeter", required=true)
       private final String includedQuantityMeter;
@@ -52,7 +48,6 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Azure meter for usage which exceeds included quantities.
-     * 
      */
     @Import(name="overageMeter", required=true)
       private final String overageMeter;

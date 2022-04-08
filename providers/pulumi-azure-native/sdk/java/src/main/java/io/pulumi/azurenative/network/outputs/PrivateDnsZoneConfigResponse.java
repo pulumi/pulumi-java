@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class PrivateDnsZoneConfigResponse {
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * The resource id of the private dns zone.
-     * 
      */
     private final @Nullable String privateDnsZoneId;
     /**
      * A collection of information regarding a recordSet, holding information to identify private resources.
-     * 
      */
     private final List<RecordSetResponse> recordSets;
 
@@ -41,21 +38,18 @@ public final class PrivateDnsZoneConfigResponse {
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource id of the private dns zone.
-     * 
     */
     public Optional<String> getPrivateDnsZoneId() {
         return Optional.ofNullable(this.privateDnsZoneId);
     }
     /**
      * A collection of information regarding a recordSet, holding information to identify private resources.
-     * 
     */
     public List<RecordSetResponse> getRecordSets() {
         return this.recordSets;

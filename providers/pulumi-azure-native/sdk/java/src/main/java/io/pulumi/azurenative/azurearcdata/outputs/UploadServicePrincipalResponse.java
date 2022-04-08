@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class UploadServicePrincipalResponse {
     /**
      * Authority for the service principal. Example: https://login.microsoftonline.com/
-     * 
      */
     private final @Nullable String authority;
     /**
      * Client ID of the service principal for uploading data.
-     * 
      */
     private final @Nullable String clientId;
     /**
      * Tenant ID of the service principal.
-     * 
      */
     private final @Nullable String tenantId;
 
@@ -39,21 +36,18 @@ public final class UploadServicePrincipalResponse {
 
     /**
      * Authority for the service principal. Example: https://login.microsoftonline.com/
-     * 
     */
     public Optional<String> getAuthority() {
         return Optional.ofNullable(this.authority);
     }
     /**
      * Client ID of the service principal for uploading data.
-     * 
     */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Tenant ID of the service principal.
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);

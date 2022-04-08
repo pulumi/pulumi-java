@@ -14,7 +14,6 @@ public final class GetLivePipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Azure Video Analyzer account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetLivePipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Live pipeline unique identifier.
-     * 
      */
     @Import(name="livePipelineName", required=true)
       private final String livePipelineName;
@@ -36,7 +34,6 @@ public final class GetLivePipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

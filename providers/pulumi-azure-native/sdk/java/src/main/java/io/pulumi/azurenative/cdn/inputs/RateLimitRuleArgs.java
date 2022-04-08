@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a rate limiting rule that can be included in a waf policy
- * 
  */
 public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes what action to be applied when rule matches
-     * 
      */
     @Import(name="action", required=true)
       private final Output<Either<String,ActionType>> action;
@@ -37,7 +35,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
@@ -48,7 +45,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of match conditions.
-     * 
      */
     @Import(name="matchConditions", required=true)
       private final Output<List<MatchConditionArgs>> matchConditions;
@@ -59,7 +55,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the name of the custom rule
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -70,7 +65,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines in what order this rule be evaluated in the overall list of custom rules
-     * 
      */
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
@@ -81,7 +75,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines rate limit duration. Default is 1 minute.
-     * 
      */
     @Import(name="rateLimitDurationInMinutes", required=true)
       private final Output<Integer> rateLimitDurationInMinutes;
@@ -92,7 +85,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines rate limit threshold.
-     * 
      */
     @Import(name="rateLimitThreshold", required=true)
       private final Output<Integer> rateLimitThreshold;

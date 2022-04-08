@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Currency to report prices in.
-     * 
      */
     @EnumType
     public enum Currency {

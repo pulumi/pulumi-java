@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties related to ServiceBus.
- * 
  */
 public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the authentication type being used for connecting to the endpoint.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
@@ -31,7 +29,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time when the Endpoint was added to DigitalTwinsInstance.
-     * 
      */
     @Import(name="createdTime", required=true)
       private final String createdTime;
@@ -42,7 +39,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="deadLetterSecret")
       private final @Nullable String deadLetterSecret;
@@ -53,7 +49,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dead letter storage URL for identity-based authentication.
-     * 
      */
     @Import(name="deadLetterUri")
       private final @Nullable String deadLetterUri;
@@ -65,7 +60,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The type of Digital Twins endpoint
      * Expected value is 'ServiceBus'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final String endpointType;
@@ -76,7 +70,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
-     * 
      */
     @Import(name="endpointUri")
       private final @Nullable String endpointUri;
@@ -87,7 +80,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ServiceBus Topic name for identity-based authentication
-     * 
      */
     @Import(name="entityPath")
       private final @Nullable String entityPath;
@@ -98,7 +90,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="primaryConnectionString")
       private final @Nullable String primaryConnectionString;
@@ -109,7 +100,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -120,7 +110,6 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="secondaryConnectionString")
       private final @Nullable String secondaryConnectionString;

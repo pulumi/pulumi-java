@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a single parameter for an entity.
- * 
  */
 public final class ParameterSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
 
     /**
      * Default value of parameter.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
@@ -34,7 +32,6 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
 
     /**
      * Parameter type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;

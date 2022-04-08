@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * HyperVSite fabric specific details.
- * 
  */
 public final class HyperVSiteDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class HyperVSiteDetailsResponse extends io.pulumi.resources.InvokeA
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'HyperVSite'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;

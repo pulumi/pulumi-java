@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetLiveTokenResult {
     /**
      * JWT token for accessing live metrics stream data.
-     * 
      */
     private final String liveToken;
 
@@ -22,7 +21,6 @@ public final class GetLiveTokenResult {
 
     /**
      * JWT token for accessing live metrics stream data.
-     * 
     */
     public String getLiveToken() {
         return this.liveToken;

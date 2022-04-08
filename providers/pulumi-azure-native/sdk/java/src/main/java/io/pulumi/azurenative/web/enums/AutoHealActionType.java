@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Predefined action to be taken.
-     * 
      */
     @EnumType
     public enum AutoHealActionType {

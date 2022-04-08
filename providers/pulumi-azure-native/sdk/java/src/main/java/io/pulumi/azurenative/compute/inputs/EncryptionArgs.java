@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption at rest settings for disk or snapshot
- * 
  */
 public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ResourceId of the disk encryption set to use for enabling encryption at rest.
-     * 
      */
     @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
@@ -33,7 +31,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of key used to encrypt the data of the disk.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,EncryptionType>> type;

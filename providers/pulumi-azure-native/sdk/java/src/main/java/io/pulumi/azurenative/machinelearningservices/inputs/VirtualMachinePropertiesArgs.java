@@ -18,7 +18,6 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Public IP address of the virtual machine.
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -29,7 +28,6 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Admin credentials for virtual machine
-     * 
      */
     @Import(name="administratorAccount")
       private final @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
@@ -40,7 +38,6 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Port open for ssh connections.
-     * 
      */
     @Import(name="sshPort")
       private final @Nullable Output<Integer> sshPort;
@@ -51,7 +48,6 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Virtual Machine size
-     * 
      */
     @Import(name="virtualMachineSize")
       private final @Nullable Output<String> virtualMachineSize;

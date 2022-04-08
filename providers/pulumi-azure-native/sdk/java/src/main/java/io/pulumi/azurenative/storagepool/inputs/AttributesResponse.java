@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Attributes of a iSCSI target portal group.
- * 
  */
 public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates whether or not authentication is enabled on the ACL.
-     * 
      */
     @Import(name="authentication", required=true)
       private final Boolean authentication;
@@ -29,7 +27,6 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates whether or not write protect is enabled on the LUNs.
-     * 
      */
     @Import(name="prodModeWriteProtect", required=true)
       private final Boolean prodModeWriteProtect;

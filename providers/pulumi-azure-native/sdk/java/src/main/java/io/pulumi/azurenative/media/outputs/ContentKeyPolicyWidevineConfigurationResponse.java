@@ -12,12 +12,10 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'.
-     * 
      */
     private final String odataType;
     /**
      * The Widevine template.
-     * 
      */
     private final String widevineTemplate;
 
@@ -32,14 +30,12 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The Widevine template.
-     * 
     */
     public String getWidevineTemplate() {
         return this.widevineTemplate;

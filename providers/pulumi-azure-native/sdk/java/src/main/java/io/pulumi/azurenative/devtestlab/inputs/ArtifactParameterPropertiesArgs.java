@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an artifact parameter.
- * 
  */
 public final class ArtifactParameterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ArtifactParameterPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The name of the artifact parameter.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class ArtifactParameterPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The value of the artifact parameter.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

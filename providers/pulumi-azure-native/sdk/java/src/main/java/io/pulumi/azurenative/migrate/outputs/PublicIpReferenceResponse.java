@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PublicIpReferenceResponse {
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
-     * 
      */
     private final String sourceArmResourceId;
 
@@ -22,7 +21,6 @@ public final class PublicIpReferenceResponse {
 
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
-     * 
     */
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;

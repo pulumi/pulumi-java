@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The filters that will be applied to determine which resources to remediate.
- * 
  */
 public final class RemediationFiltersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RemediationFiltersResponse extends io.pulumi.resources.Invoke
 
     /**
      * The resource locations that will be remediated.
-     * 
      */
     @Import(name="locations")
       private final @Nullable List<String> locations;

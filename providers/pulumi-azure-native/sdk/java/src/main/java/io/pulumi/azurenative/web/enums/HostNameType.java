@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Hostname type.
-     * 
      */
     @EnumType
     public enum HostNameType {

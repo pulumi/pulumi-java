@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
-     * 
      */
     @EnumType
     public enum EncodingCaptureDescription {

@@ -21,7 +21,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional data about the assignment
-     * 
      */
     @Import(name="additionalData")
       private final @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
@@ -32,7 +31,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Component item with key as applied to this standard assignment over the given scope
-     * 
      */
     @Import(name="assignedComponent")
       private final @Nullable Output<AssignedComponentItemArgs> assignedComponent;
@@ -43,7 +41,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard item with key as applied to this standard assignment over the given scope
-     * 
      */
     @Import(name="assignedStandard")
       private final @Nullable Output<AssignedStandardItemArgs> assignedStandard;
@@ -54,7 +51,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The security assignment key - unique key for the standard assignment
-     * 
      */
     @Import(name="assignmentId")
       private final @Nullable Output<String> assignmentId;
@@ -65,7 +61,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * description of the standardAssignment
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -76,7 +71,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * display name of the standardAssignment
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -87,7 +81,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * expected effect of this assignment (Disable/Exempt/etc)
-     * 
      */
     @Import(name="effect")
       private final @Nullable Output<String> effect;
@@ -98,7 +91,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expiration date of this assignment as a full ISO date
-     * 
      */
     @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
@@ -109,7 +101,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of the resource
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -120,7 +111,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location where the resource is stored
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -131,7 +121,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -142,7 +131,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -153,7 +141,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<String> scope;
@@ -164,7 +151,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key value pairs that describe the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

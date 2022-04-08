@@ -21,82 +21,66 @@ import javax.annotation.Nullable;
 public final class GetOpenShiftManagedClusterResult {
     /**
      * Configuration of OpenShift cluster VMs.
-     * 
      */
     private final @Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles;
     /**
      * Configures OpenShift authentication.
-     * 
      */
     private final @Nullable OpenShiftManagedClusterAuthProfileResponse authProfile;
     /**
      * Version of OpenShift specified when creating the cluster.
-     * 
      */
     private final String clusterVersion;
     /**
      * Service generated FQDN for OpenShift API server loadbalancer internal hostname.
-     * 
      */
     private final String fqdn;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource location
-     * 
      */
     private final String location;
     /**
      * Configuration for OpenShift master VMs.
-     * 
      */
     private final @Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * Configuration for OpenShift networking.
-     * 
      */
     private final @Nullable NetworkProfileResponse networkProfile;
     /**
      * Version of OpenShift specified when creating the cluster.
-     * 
      */
     private final String openShiftVersion;
     /**
      * Define the resource plan as required by ARM for billing purposes
-     * 
      */
     private final @Nullable PurchasePlanResponse plan;
     /**
      * The current deployment or provisioning state, which only appears in the response.
-     * 
      */
     private final String provisioningState;
     /**
      * Service generated FQDN for OpenShift API server.
-     * 
      */
     private final String publicHostname;
     /**
      * Configuration for OpenShift router(s).
-     * 
      */
     private final @Nullable List<OpenShiftRouterProfileResponse> routerProfiles;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -138,112 +122,96 @@ public final class GetOpenShiftManagedClusterResult {
 
     /**
      * Configuration of OpenShift cluster VMs.
-     * 
     */
     public List<OpenShiftManagedClusterAgentPoolProfileResponse> getAgentPoolProfiles() {
         return this.agentPoolProfiles == null ? List.of() : this.agentPoolProfiles;
     }
     /**
      * Configures OpenShift authentication.
-     * 
     */
     public Optional<OpenShiftManagedClusterAuthProfileResponse> getAuthProfile() {
         return Optional.ofNullable(this.authProfile);
     }
     /**
      * Version of OpenShift specified when creating the cluster.
-     * 
     */
     public String getClusterVersion() {
         return this.clusterVersion;
     }
     /**
      * Service generated FQDN for OpenShift API server loadbalancer internal hostname.
-     * 
     */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Configuration for OpenShift master VMs.
-     * 
     */
     public Optional<OpenShiftManagedClusterMasterPoolProfileResponse> getMasterPoolProfile() {
         return Optional.ofNullable(this.masterPoolProfile);
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration for OpenShift networking.
-     * 
     */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Version of OpenShift specified when creating the cluster.
-     * 
     */
     public String getOpenShiftVersion() {
         return this.openShiftVersion;
     }
     /**
      * Define the resource plan as required by ARM for billing purposes
-     * 
     */
     public Optional<PurchasePlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Service generated FQDN for OpenShift API server.
-     * 
     */
     public String getPublicHostname() {
         return this.publicHostname;
     }
     /**
      * Configuration for OpenShift router(s).
-     * 
     */
     public List<OpenShiftRouterProfileResponse> getRouterProfiles() {
         return this.routerProfiles == null ? List.of() : this.routerProfiles;
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

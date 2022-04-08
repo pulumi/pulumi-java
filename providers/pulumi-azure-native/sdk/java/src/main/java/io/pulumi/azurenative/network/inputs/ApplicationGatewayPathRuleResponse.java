@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Path rule of URL path map of an application gateway.
- * 
  */
 public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Backend address pool resource of URL path map path rule.
-     * 
      */
     @Import(name="backendAddressPool")
       private final @Nullable SubResourceResponse backendAddressPool;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Backend http settings resource of URL path map path rule.
-     * 
      */
     @Import(name="backendHttpSettings")
       private final @Nullable SubResourceResponse backendHttpSettings;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -55,7 +51,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Reference to the FirewallPolicy resource.
-     * 
      */
     @Import(name="firewallPolicy")
       private final @Nullable SubResourceResponse firewallPolicy;
@@ -66,7 +61,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -77,7 +71,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Name of the path rule that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -88,7 +81,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Path rules of URL path map.
-     * 
      */
     @Import(name="paths")
       private final @Nullable List<String> paths;
@@ -99,7 +91,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * The provisioning state of the path rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -110,7 +101,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Redirect configuration resource of URL path map path rule.
-     * 
      */
     @Import(name="redirectConfiguration")
       private final @Nullable SubResourceResponse redirectConfiguration;
@@ -121,7 +111,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Rewrite rule set resource of URL path map path rule.
-     * 
      */
     @Import(name="rewriteRuleSet")
       private final @Nullable SubResourceResponse rewriteRuleSet;
@@ -132,7 +121,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

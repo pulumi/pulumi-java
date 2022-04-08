@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * An application package which represents a particular version of an application.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApplicationPackageCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var applicationPackage = new AzureNative.Batch.ApplicationPackage("applicationPackage", new AzureNative.Batch.ApplicationPackageArgs
+ *         {
+ *             AccountName = "sampleacct",
+ *             ApplicationName = "app1",
+ *             ResourceGroupName = "default-azurebatch-japaneast",
+ *             VersionName = "1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewApplicationPackage(ctx, "applicationPackage", &batch.ApplicationPackageArgs{
+ * 			AccountName:       pulumi.String("sampleacct"),
+ * 			ApplicationName:   pulumi.String("app1"),
+ * 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+ * 			VersionName:       pulumi.String("1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const applicationPackage = new azure_native.batch.ApplicationPackage("applicationPackage", {
+ *     accountName: "sampleacct",
+ *     applicationName: "app1",
+ *     resourceGroupName: "default-azurebatch-japaneast",
+ *     versionName: "1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application_package = azure_native.batch.ApplicationPackage("applicationPackage",
+ *     account_name="sampleacct",
+ *     application_name="app1",
+ *     resource_group_name="default-azurebatch-japaneast",
+ *     version_name="1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,112 +108,96 @@ import javax.annotation.Nullable;
 public class ApplicationPackage extends io.pulumi.resources.CustomResource {
     /**
      * The ETag of the resource, used for concurrency statements.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return The ETag of the resource, used for concurrency statements.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The format of the application package, if the package is active.
-     * 
      */
     @Export(name="format", type=String.class, parameters={})
     private Output<String> format;
 
     /**
      * @return The format of the application package, if the package is active.
-     * 
      */
     public Output<String> getFormat() {
         return this.format;
     }
     /**
      * The time at which the package was last activated, if the package is active.
-     * 
      */
     @Export(name="lastActivationTime", type=String.class, parameters={})
     private Output<String> lastActivationTime;
 
     /**
      * @return The time at which the package was last activated, if the package is active.
-     * 
      */
     public Output<String> getLastActivationTime() {
         return this.lastActivationTime;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current state of the application package.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the application package.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The URL for the application package in Azure Storage.
-     * 
      */
     @Export(name="storageUrl", type=String.class, parameters={})
     private Output<String> storageUrl;
 
     /**
      * @return The URL for the application package in Azure Storage.
-     * 
      */
     public Output<String> getStorageUrl() {
         return this.storageUrl;
     }
     /**
      * The UTC time at which the Azure Storage URL will expire.
-     * 
      */
     @Export(name="storageUrlExpiry", type=String.class, parameters={})
     private Output<String> storageUrlExpiry;
 
     /**
      * @return The UTC time at which the Azure Storage URL will expire.
-     * 
      */
     public Output<String> getStorageUrlExpiry() {
         return this.storageUrlExpiry;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

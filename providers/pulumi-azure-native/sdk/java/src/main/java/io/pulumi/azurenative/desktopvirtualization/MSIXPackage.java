@@ -20,7 +20,183 @@ import javax.annotation.Nullable;
  * Schema for MSIX Package properties.
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### MSIXPackage_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var msixPackage = new AzureNative.DesktopVirtualization.MSIXPackage("msixPackage", new AzureNative.DesktopVirtualization.MSIXPackageArgs
+ *         {
+ *             DisplayName = "displayname",
+ *             HostPoolName = "hostpool1",
+ *             ImagePath = "imagepath",
+ *             IsActive = false,
+ *             IsRegularRegistration = false,
+ *             LastUpdated = "2008-09-22T14:01:54.9571247Z",
+ *             MsixPackageFullName = "msixpackagefullname",
+ *             PackageApplications = 
+ *             {
+ *                 new AzureNative.DesktopVirtualization.Inputs.MsixPackageApplicationsArgs
+ *                 {
+ *                     AppId = "ApplicationId",
+ *                     AppUserModelID = "AppUserModelId",
+ *                     Description = "application-desc",
+ *                     FriendlyName = "friendlyname",
+ *                     IconImageName = "Apptile",
+ *                     RawIcon = "VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
+ *                     RawPng = "VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
+ *                 },
+ *             },
+ *             PackageDependencies = 
+ *             {
+ *                 new AzureNative.DesktopVirtualization.Inputs.MsixPackageDependenciesArgs
+ *                 {
+ *                     DependencyName = "MsixTest_Dependency_Name",
+ *                     MinVersion = "version",
+ *                     Publisher = "PublishedName",
+ *                 },
+ *             },
+ *             PackageFamilyName = "MsixPackage_FamilyName",
+ *             PackageName = "MsixPackage_name",
+ *             PackageRelativePath = "packagerelativepath",
+ *             ResourceGroupName = "resourceGroup1",
+ *             Version = "version",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := desktopvirtualization.NewMSIXPackage(ctx, "msixPackage", &desktopvirtualization.MSIXPackageArgs{
+ * 			DisplayName:           pulumi.String("displayname"),
+ * 			HostPoolName:          pulumi.String("hostpool1"),
+ * 			ImagePath:             pulumi.String("imagepath"),
+ * 			IsActive:              pulumi.Bool(false),
+ * 			IsRegularRegistration: pulumi.Bool(false),
+ * 			LastUpdated:           pulumi.String("2008-09-22T14:01:54.9571247Z"),
+ * 			MsixPackageFullName:   pulumi.String("msixpackagefullname"),
+ * 			PackageApplications: []desktopvirtualization.MsixPackageApplicationsArgs{
+ * 				&desktopvirtualization.MsixPackageApplicationsArgs{
+ * 					AppId:          pulumi.String("ApplicationId"),
+ * 					AppUserModelID: pulumi.String("AppUserModelId"),
+ * 					Description:    pulumi.String("application-desc"),
+ * 					FriendlyName:   pulumi.String("friendlyname"),
+ * 					IconImageName:  pulumi.String("Apptile"),
+ * 					RawIcon:        pulumi.String("VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo"),
+ * 					RawPng:         pulumi.String("VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo"),
+ * 				},
+ * 			},
+ * 			PackageDependencies: []desktopvirtualization.MsixPackageDependenciesArgs{
+ * 				&desktopvirtualization.MsixPackageDependenciesArgs{
+ * 					DependencyName: pulumi.String("MsixTest_Dependency_Name"),
+ * 					MinVersion:     pulumi.String("version"),
+ * 					Publisher:      pulumi.String("PublishedName"),
+ * 				},
+ * 			},
+ * 			PackageFamilyName:   pulumi.String("MsixPackage_FamilyName"),
+ * 			PackageName:         pulumi.String("MsixPackage_name"),
+ * 			PackageRelativePath: pulumi.String("packagerelativepath"),
+ * 			ResourceGroupName:   pulumi.String("resourceGroup1"),
+ * 			Version:             pulumi.String("version"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const msixPackage = new azure_native.desktopvirtualization.MSIXPackage("msixPackage", {
+ *     displayName: "displayname",
+ *     hostPoolName: "hostpool1",
+ *     imagePath: "imagepath",
+ *     isActive: false,
+ *     isRegularRegistration: false,
+ *     lastUpdated: "2008-09-22T14:01:54.9571247Z",
+ *     msixPackageFullName: "msixpackagefullname",
+ *     packageApplications: [{
+ *         appId: "ApplicationId",
+ *         appUserModelID: "AppUserModelId",
+ *         description: "application-desc",
+ *         friendlyName: "friendlyname",
+ *         iconImageName: "Apptile",
+ *         rawIcon: "VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
+ *         rawPng: "VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
+ *     }],
+ *     packageDependencies: [{
+ *         dependencyName: "MsixTest_Dependency_Name",
+ *         minVersion: "version",
+ *         publisher: "PublishedName",
+ *     }],
+ *     packageFamilyName: "MsixPackage_FamilyName",
+ *     packageName: "MsixPackage_name",
+ *     packageRelativePath: "packagerelativepath",
+ *     resourceGroupName: "resourceGroup1",
+ *     version: "version",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * msix_package = azure_native.desktopvirtualization.MSIXPackage("msixPackage",
+ *     display_name="displayname",
+ *     host_pool_name="hostpool1",
+ *     image_path="imagepath",
+ *     is_active=False,
+ *     is_regular_registration=False,
+ *     last_updated="2008-09-22T14:01:54.9571247Z",
+ *     msix_package_full_name="msixpackagefullname",
+ *     package_applications=[azure_native.desktopvirtualization.MsixPackageApplicationsArgs(
+ *         app_id="ApplicationId",
+ *         app_user_model_id="AppUserModelId",
+ *         description="application-desc",
+ *         friendly_name="friendlyname",
+ *         icon_image_name="Apptile",
+ *         raw_icon="VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
+ *         raw_png="VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
+ *     )],
+ *     package_dependencies=[azure_native.desktopvirtualization.MsixPackageDependenciesArgs(
+ *         dependency_name="MsixTest_Dependency_Name",
+ *         min_version="version",
+ *         publisher="PublishedName",
+ *     )],
+ *     package_family_name="MsixPackage_FamilyName",
+ *     package_name="MsixPackage_name",
+ *     package_relative_path="packagerelativepath",
+ *     resource_group_name="resourceGroup1",
+ *     version="version")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,183 +210,157 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:desktopvirtualization:MSIXPackage")
 public class MSIXPackage extends io.pulumi.resources.CustomResource {
     /**
-     * User friendly Name to be displayed in the portal.
-     * 
+     * User friendly Name to be displayed in the portal. 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
-     * @return User friendly Name to be displayed in the portal.
-     * 
+     * @return User friendly Name to be displayed in the portal. 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * VHD/CIM image path on Network Share.
-     * 
      */
     @Export(name="imagePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> imagePath;
 
     /**
      * @return VHD/CIM image path on Network Share.
-     * 
      */
     public Output</* @Nullable */ String> getImagePath() {
         return this.imagePath;
     }
     /**
-     * Make this version of the package the active one across the hostpool.
-     * 
+     * Make this version of the package the active one across the hostpool. 
      */
     @Export(name="isActive", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isActive;
 
     /**
-     * @return Make this version of the package the active one across the hostpool.
-     * 
+     * @return Make this version of the package the active one across the hostpool. 
      */
     public Output</* @Nullable */ Boolean> getIsActive() {
         return this.isActive;
     }
     /**
      * Specifies how to register Package in feed.
-     * 
      */
     @Export(name="isRegularRegistration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRegularRegistration;
 
     /**
      * @return Specifies how to register Package in feed.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsRegularRegistration() {
         return this.isRegularRegistration;
     }
     /**
-     * Date Package was last updated, found in the appxmanifest.xml.
-     * 
+     * Date Package was last updated, found in the appxmanifest.xml. 
      */
     @Export(name="lastUpdated", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUpdated;
 
     /**
-     * @return Date Package was last updated, found in the appxmanifest.xml.
-     * 
+     * @return Date Package was last updated, found in the appxmanifest.xml. 
      */
     public Output</* @Nullable */ String> getLastUpdated() {
         return this.lastUpdated;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
-     * List of package applications.
-     * 
+     * List of package applications. 
      */
     @Export(name="packageApplications", type=List.class, parameters={MsixPackageApplicationsResponse.class})
     private Output</* @Nullable */ List<MsixPackageApplicationsResponse>> packageApplications;
 
     /**
-     * @return List of package applications.
-     * 
+     * @return List of package applications. 
      */
     public Output</* @Nullable */ List<MsixPackageApplicationsResponse>> getPackageApplications() {
         return this.packageApplications;
     }
     /**
-     * List of package dependencies.
-     * 
+     * List of package dependencies. 
      */
     @Export(name="packageDependencies", type=List.class, parameters={MsixPackageDependenciesResponse.class})
     private Output</* @Nullable */ List<MsixPackageDependenciesResponse>> packageDependencies;
 
     /**
-     * @return List of package dependencies.
-     * 
+     * @return List of package dependencies. 
      */
     public Output</* @Nullable */ List<MsixPackageDependenciesResponse>> getPackageDependencies() {
         return this.packageDependencies;
     }
     /**
-     * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
-     * 
+     * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. 
      */
     @Export(name="packageFamilyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageFamilyName;
 
     /**
-     * @return Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
-     * 
+     * @return Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. 
      */
     public Output</* @Nullable */ String> getPackageFamilyName() {
         return this.packageFamilyName;
     }
     /**
-     * Package Name from appxmanifest.xml.
-     * 
+     * Package Name from appxmanifest.xml. 
      */
     @Export(name="packageName", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageName;
 
     /**
-     * @return Package Name from appxmanifest.xml.
-     * 
+     * @return Package Name from appxmanifest.xml. 
      */
     public Output</* @Nullable */ String> getPackageName() {
         return this.packageName;
     }
     /**
-     * Relative Path to the package inside the image.
-     * 
+     * Relative Path to the package inside the image. 
      */
     @Export(name="packageRelativePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageRelativePath;
 
     /**
-     * @return Relative Path to the package inside the image.
-     * 
+     * @return Relative Path to the package inside the image. 
      */
     public Output</* @Nullable */ String> getPackageRelativePath() {
         return this.packageRelativePath;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
-     * Package Version found in the appxmanifest.xml.
-     * 
+     * Package Version found in the appxmanifest.xml. 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
-     * @return Package Version found in the appxmanifest.xml.
-     * 
+     * @return Package Version found in the appxmanifest.xml. 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;

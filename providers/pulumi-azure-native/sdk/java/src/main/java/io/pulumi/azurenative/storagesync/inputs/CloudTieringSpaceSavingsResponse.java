@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Server endpoint cloud tiering status object.
- * 
  */
 public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
 
     /**
      * Cached content size on the server
-     * 
      */
     @Import(name="cachedSizeBytes", required=true)
       private final Double cachedSizeBytes;
@@ -31,7 +29,6 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
 
     /**
      * Last updated timestamp
-     * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
@@ -42,7 +39,6 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
 
     /**
      * Count of bytes saved on the server
-     * 
      */
     @Import(name="spaceSavingsBytes", required=true)
       private final Double spaceSavingsBytes;
@@ -53,7 +49,6 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
 
     /**
      * Percentage of cached size over total size
-     * 
      */
     @Import(name="spaceSavingsPercent", required=true)
       private final Integer spaceSavingsPercent;
@@ -64,7 +59,6 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
 
     /**
      * Total size of content in the azure file share
-     * 
      */
     @Import(name="totalSizeCloudBytes", required=true)
       private final Double totalSizeCloudBytes;
@@ -75,7 +69,6 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
 
     /**
      * Volume size
-     * 
      */
     @Import(name="volumeSizeBytes", required=true)
       private final Double volumeSizeBytes;

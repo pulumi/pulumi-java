@@ -18,7 +18,6 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -29,7 +28,6 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
 
     /**
      * The key type.
-     * 
      */
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
@@ -40,7 +38,6 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
 
     /**
      * The integration account map name.
-     * 
      */
     @Import(name="mapName", required=true)
       private final String mapName;
@@ -51,7 +48,6 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
 
     /**
      * The expiry time.
-     * 
      */
     @Import(name="notAfter")
       private final @Nullable String notAfter;
@@ -62,7 +58,6 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

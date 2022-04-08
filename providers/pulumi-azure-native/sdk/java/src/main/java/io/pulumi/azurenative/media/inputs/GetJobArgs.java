@@ -14,7 +14,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Job name.
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -36,7 +34,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Transform name.
-     * 
      */
     @Import(name="transformName", required=true)
       private final String transformName;

@@ -17,22 +17,18 @@ import javax.annotation.Nullable;
 public final class PreferencesResponse {
     /**
      * Preferences related to the Encryption.
-     * 
      */
     private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
     /**
      * Preferences related to the Management resource.
-     * 
      */
     private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
     /**
      * Notification preferences.
-     * 
      */
     private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
     /**
      * Preferences related to the shipment logistics of the order.
-     * 
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
@@ -50,28 +46,24 @@ public final class PreferencesResponse {
 
     /**
      * Preferences related to the Encryption.
-     * 
     */
     public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
     /**
      * Preferences related to the Management resource.
-     * 
     */
     public Optional<ManagementResourcePreferencesResponse> getManagementResourcePreferences() {
         return Optional.ofNullable(this.managementResourcePreferences);
     }
     /**
      * Notification preferences.
-     * 
     */
     public List<NotificationPreferenceResponse> getNotificationPreferences() {
         return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
     }
     /**
      * Preferences related to the shipment logistics of the order.
-     * 
     */
     public Optional<TransportPreferencesResponse> getTransportPreferences() {
         return Optional.ofNullable(this.transportPreferences);

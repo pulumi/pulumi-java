@@ -32,98 +32,84 @@ import javax.annotation.Nullable;
 public class CommitmentPlan extends io.pulumi.resources.CustomResource {
     /**
      * An entity tag used to enforce optimistic concurrency.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return An entity tag used to enforce optimistic concurrency.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The commitment plan properties.
-     * 
      */
     @Export(name="properties", type=CommitmentPlanPropertiesResponse.class, parameters={})
     private Output<CommitmentPlanPropertiesResponse> properties;
 
     /**
      * @return The commitment plan properties.
-     * 
      */
     public Output<CommitmentPlanPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The commitment plan SKU.
-     * 
      */
     @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
      * @return The commitment plan SKU.
-     * 
      */
     public Output</* @Nullable */ ResourceSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * User-defined tags for the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return User-defined tags for the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

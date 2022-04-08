@@ -20,7 +20,228 @@ import javax.annotation.Nullable;
  * An Azure SQL instance pool.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an instance pool with all properties.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instancePool = new AzureNative.Sql.InstancePool("instancePool", new AzureNative.Sql.InstancePoolArgs
+ *         {
+ *             InstancePoolName = "testIP",
+ *             LicenseType = "LicenseIncluded",
+ *             Location = "japaneast",
+ *             ResourceGroupName = "group1",
+ *             Sku = new AzureNative.Sql.Inputs.SkuArgs
+ *             {
+ *                 Family = "Gen5",
+ *                 Name = "GP_Gen5",
+ *                 Tier = "GeneralPurpose",
+ *             },
+ *             SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
+ *             Tags = 
+ *             {
+ *                 { "a", "b" },
+ *             },
+ *             VCores = 8,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewInstancePool(ctx, "instancePool", &sql.InstancePoolArgs{
+ * 			InstancePoolName:  pulumi.String("testIP"),
+ * 			LicenseType:       pulumi.String("LicenseIncluded"),
+ * 			Location:          pulumi.String("japaneast"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 			Sku: &sql.SkuArgs{
+ * 				Family: pulumi.String("Gen5"),
+ * 				Name:   pulumi.String("GP_Gen5"),
+ * 				Tier:   pulumi.String("GeneralPurpose"),
+ * 			},
+ * 			SubnetId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"a": pulumi.String("b"),
+ * 			},
+ * 			VCores: pulumi.Int(8),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const instancePool = new azure_native.sql.InstancePool("instancePool", {
+ *     instancePoolName: "testIP",
+ *     licenseType: "LicenseIncluded",
+ *     location: "japaneast",
+ *     resourceGroupName: "group1",
+ *     sku: {
+ *         family: "Gen5",
+ *         name: "GP_Gen5",
+ *         tier: "GeneralPurpose",
+ *     },
+ *     subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
+ *     tags: {
+ *         a: "b",
+ *     },
+ *     vCores: 8,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * instance_pool = azure_native.sql.InstancePool("instancePool",
+ *     instance_pool_name="testIP",
+ *     license_type="LicenseIncluded",
+ *     location="japaneast",
+ *     resource_group_name="group1",
+ *     sku=azure_native.sql.SkuArgs(
+ *         family="Gen5",
+ *         name="GP_Gen5",
+ *         tier="GeneralPurpose",
+ *     ),
+ *     subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
+ *     tags={
+ *         "a": "b",
+ *     },
+ *     v_cores=8)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create an instance pool with min properties.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instancePool = new AzureNative.Sql.InstancePool("instancePool", new AzureNative.Sql.InstancePoolArgs
+ *         {
+ *             InstancePoolName = "testIP",
+ *             LicenseType = "LicenseIncluded",
+ *             Location = "japaneast",
+ *             ResourceGroupName = "group1",
+ *             Sku = new AzureNative.Sql.Inputs.SkuArgs
+ *             {
+ *                 Family = "Gen5",
+ *                 Name = "GP_Gen5",
+ *                 Tier = "GeneralPurpose",
+ *             },
+ *             SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
+ *             VCores = 8,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewInstancePool(ctx, "instancePool", &sql.InstancePoolArgs{
+ * 			InstancePoolName:  pulumi.String("testIP"),
+ * 			LicenseType:       pulumi.String("LicenseIncluded"),
+ * 			Location:          pulumi.String("japaneast"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 			Sku: &sql.SkuArgs{
+ * 				Family: pulumi.String("Gen5"),
+ * 				Name:   pulumi.String("GP_Gen5"),
+ * 				Tier:   pulumi.String("GeneralPurpose"),
+ * 			},
+ * 			SubnetId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1"),
+ * 			VCores:   pulumi.Int(8),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const instancePool = new azure_native.sql.InstancePool("instancePool", {
+ *     instancePoolName: "testIP",
+ *     licenseType: "LicenseIncluded",
+ *     location: "japaneast",
+ *     resourceGroupName: "group1",
+ *     sku: {
+ *         family: "Gen5",
+ *         name: "GP_Gen5",
+ *         tier: "GeneralPurpose",
+ *     },
+ *     subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
+ *     vCores: 8,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * instance_pool = azure_native.sql.InstancePool("instancePool",
+ *     instance_pool_name="testIP",
+ *     license_type="LicenseIncluded",
+ *     location="japaneast",
+ *     resource_group_name="group1",
+ *     sku=azure_native.sql.SkuArgs(
+ *         family="Gen5",
+ *         name="GP_Gen5",
+ *         tier="GeneralPurpose",
+ *     ),
+ *     subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
+ *     v_cores=8)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +256,96 @@ import javax.annotation.Nullable;
 public class InstancePool extends io.pulumi.resources.CustomResource {
     /**
      * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
-     * 
      */
     @Export(name="licenseType", type=String.class, parameters={})
     private Output<String> licenseType;
 
     /**
      * @return The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
-     * 
      */
     public Output<String> getLicenseType() {
         return this.licenseType;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The name and tier of the SKU.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The name and tier of the SKU.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource ID of the subnet to place this instance pool in.
-     * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
      * @return Resource ID of the subnet to place this instance pool in.
-     * 
      */
     public Output<String> getSubnetId() {
         return this.subnetId;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Count of vCores belonging to this instance pool.
-     * 
      */
     @Export(name="vCores", type=Integer.class, parameters={})
     private Output<Integer> vCores;
 
     /**
      * @return Count of vCores belonging to this instance pool.
-     * 
      */
     public Output<Integer> getVCores() {
         return this.vCores;

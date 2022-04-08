@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information about the machine learning workspace containing the experiment that is source for the web service.
- * 
  */
 public final class MachineLearningWorkspaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MachineLearningWorkspaceResponse extends io.pulumi.resources.
 
     /**
      * Specifies the workspace ID of the machine learning workspace associated with the web service
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deployment settings payload
- * 
  */
 public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
@@ -35,7 +33,6 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Collection of environment variables
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
@@ -46,7 +43,6 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * JVM parameter
-     * 
      */
     @Import(name="jvmOptions")
       private final @Nullable Output<String> jvmOptions;
@@ -57,7 +53,6 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
-     * 
      */
     @Import(name="memoryInGB")
       private final @Nullable Output<Integer> memoryInGB;
@@ -68,7 +63,6 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The path to the .NET executable relative to zip root
-     * 
      */
     @Import(name="netCoreMainEntryPath")
       private final @Nullable Output<String> netCoreMainEntryPath;
@@ -79,7 +73,6 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Runtime version
-     * 
      */
     @Import(name="runtimeVersion")
       private final @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;

@@ -24,7 +24,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The auto-approval list of the private link service.
-     * 
      */
     @Import(name="autoApproval")
       private final @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
@@ -35,7 +34,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether the private link service is enabled for proxy protocol or not.
-     * 
      */
     @Import(name="enableProxyProtocol")
       private final @Nullable Output<Boolean> enableProxyProtocol;
@@ -46,7 +44,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The extended location of the load balancer.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -57,7 +54,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The list of Fqdn.
-     * 
      */
     @Import(name="fqdns")
       private final @Nullable Output<List<String>> fqdns;
@@ -68,7 +64,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -79,7 +74,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An array of private link service IP configurations.
-     * 
      */
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
@@ -90,7 +84,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An array of references to the load balancer IP configurations.
-     * 
      */
     @Import(name="loadBalancerFrontendIpConfigurations")
       private final @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
@@ -101,7 +94,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -112,7 +104,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -123,7 +114,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the private link service.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -134,7 +124,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -145,7 +134,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The visibility list of the private link service.
-     * 
      */
     @Import(name="visibility")
       private final @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;

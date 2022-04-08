@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * E2A Network Mapping fabric specific settings.
- * 
  */
 public final class VmmToAzureNetworkMappingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VmmToAzureNetworkMappingSettingsResponse extends io.pulumi.re
     /**
      * Gets the Instance type.
      * Expected value is 'VmmToAzure'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;

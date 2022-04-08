@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class AzureFileVolumeResponse {
     /**
      * The flag indicating whether the Azure File shared mounted as a volume is read-only.
-     * 
      */
     private final @Nullable Boolean readOnly;
     /**
      * The name of the Azure File share to be mounted as a volume.
-     * 
      */
     private final String shareName;
     /**
      * The storage account access key used to access the Azure File share.
-     * 
      */
     private final @Nullable String storageAccountKey;
     /**
      * The name of the storage account that contains the Azure File share.
-     * 
      */
     private final String storageAccountName;
 
@@ -47,28 +43,24 @@ public final class AzureFileVolumeResponse {
 
     /**
      * The flag indicating whether the Azure File shared mounted as a volume is read-only.
-     * 
     */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * The name of the Azure File share to be mounted as a volume.
-     * 
     */
     public String getShareName() {
         return this.shareName;
     }
     /**
      * The storage account access key used to access the Azure File share.
-     * 
     */
     public Optional<String> getStorageAccountKey() {
         return Optional.ofNullable(this.storageAccountKey);
     }
     /**
      * The name of the storage account that contains the Azure File share.
-     * 
     */
     public String getStorageAccountName() {
         return this.storageAccountName;

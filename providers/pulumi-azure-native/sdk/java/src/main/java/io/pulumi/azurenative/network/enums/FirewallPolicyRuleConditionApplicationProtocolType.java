@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protocol type.
-     * 
      */
     @EnumType
     public enum FirewallPolicyRuleConditionApplicationProtocolType {

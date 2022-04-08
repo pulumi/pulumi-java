@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A private endpoint connection under a server
- * 
  */
 public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * Resource ID of the Private Endpoint Connection.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -30,7 +28,6 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
 
     /**
      * Private endpoint connection properties
-     * 
      */
     @Import(name="properties", required=true)
       private final ServerPrivateEndpointConnectionPropertiesResponse properties;

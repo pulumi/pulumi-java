@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * RTSP source.
- * 
  */
 public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * RTSP endpoint of the stream being connected to.
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
@@ -34,7 +32,6 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Source name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -46,7 +43,6 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -57,7 +53,6 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
-     * 
      */
     @Import(name="transport", required=true)
       private final Output<Either<String,MediaGraphRtspTransport>> transport;

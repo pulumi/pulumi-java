@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class StreamingEndpointAccessControlResponse {
     /**
      * The access control of Akamai
-     * 
      */
     private final @Nullable AkamaiAccessControlResponse akamai;
     /**
      * The IP access control of the streaming endpoint.
-     * 
      */
     private final @Nullable IPAccessControlResponse ip;
 
@@ -33,14 +31,12 @@ public final class StreamingEndpointAccessControlResponse {
 
     /**
      * The access control of Akamai
-     * 
     */
     public Optional<AkamaiAccessControlResponse> getAkamai() {
         return Optional.ofNullable(this.akamai);
     }
     /**
      * The IP access control of the streaming endpoint.
-     * 
     */
     public Optional<IPAccessControlResponse> getIp() {
         return Optional.ofNullable(this.ip);

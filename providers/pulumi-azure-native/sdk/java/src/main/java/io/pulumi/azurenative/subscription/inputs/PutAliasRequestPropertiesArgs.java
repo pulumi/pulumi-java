@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Put subscription properties.
- * 
  */
 public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Determines whether subscription is fieldLed, partnerLed or LegacyEA
-     * 
      */
     @Import(name="billingScope")
       private final @Nullable Output<String> billingScope;
@@ -33,7 +31,6 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The friendly name of the subscription.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -44,7 +41,6 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Reseller ID, basically MPN Id
-     * 
      */
     @Import(name="resellerId")
       private final @Nullable Output<String> resellerId;
@@ -55,7 +51,6 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * This parameter can be used to create alias for existing subscription Id
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -66,7 +61,6 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The workload type of the subscription. It can be either Production or DevTest.
-     * 
      */
     @Import(name="workload")
       private final @Nullable Output<Either<String,Workload>> workload;

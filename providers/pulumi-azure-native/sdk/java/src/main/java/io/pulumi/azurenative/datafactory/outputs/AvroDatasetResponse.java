@@ -33,54 +33,44 @@ import javax.annotation.Nullable;
 public final class AvroDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * The data avroCompressionCodec. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object avroCompressionCodec;
     private final @Nullable Integer avroCompressionLevel;
     /**
      * Dataset description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     private final @Nullable DatasetResponseFolder folder;
     /**
      * Linked service reference.
-     * 
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
      * The location of the avro storage.
-     * 
      */
     private final Object location;
     /**
      * Parameters for dataset.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     private final @Nullable Object schema;
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     private final @Nullable Object structure;
     /**
      * Type of dataset.
      * Expected value is 'Avro'.
-     * 
      */
     private final String type;
 
@@ -112,14 +102,12 @@ public final class AvroDatasetResponse {
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The data avroCompressionCodec. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getAvroCompressionCodec() {
         return Optional.ofNullable(this.avroCompressionCodec);
@@ -129,49 +117,42 @@ public final class AvroDatasetResponse {
     }
     /**
      * Dataset description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
     */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
-     * 
     */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The location of the avro storage.
-     * 
     */
     public Object getLocation() {
         return this.location;
     }
     /**
      * Parameters for dataset.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
     */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
     */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
@@ -179,7 +160,6 @@ public final class AvroDatasetResponse {
     /**
      * Type of dataset.
      * Expected value is 'Avro'.
-     * 
     */
     public String getType() {
         return this.type;

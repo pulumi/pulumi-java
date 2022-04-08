@@ -20,7 +20,246 @@ import javax.annotation.Nullable;
  * The shared dashboard resource definition.
  * API Version: 2020-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Dashboard
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dashboard = new AzureNative.Portal.Dashboard("dashboard", new AzureNative.Portal.DashboardArgs
+ *         {
+ *             DashboardName = "testDashboard",
+ *             Lenses = 
+ *             {
+ *                 new AzureNative.Portal.Inputs.DashboardLensArgs
+ *                 {
+ *                     Order = 1,
+ *                     Parts = 
+ *                     {
+ *                         new AzureNative.Portal.Inputs.DashboardPartsArgs
+ *                         {
+ *                             Position = new AzureNative.Portal.Inputs.DashboardPartsPositionArgs
+ *                             {
+ *                                 ColSpan = 3,
+ *                                 RowSpan = 4,
+ *                                 X = 1,
+ *                                 Y = 2,
+ *                             },
+ *                         },
+ *                         new AzureNative.Portal.Inputs.DashboardPartsArgs
+ *                         {
+ *                             Position = new AzureNative.Portal.Inputs.DashboardPartsPositionArgs
+ *                             {
+ *                                 ColSpan = 6,
+ *                                 RowSpan = 6,
+ *                                 X = 5,
+ *                                 Y = 5,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new AzureNative.Portal.Inputs.DashboardLensArgs
+ *                 {
+ *                     Order = 2,
+ *                     Parts = {},
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             Metadata = 
+ *             {
+ *                 { "metadata", 
+ *                 {
+ *                     { "ColSpan", 2 },
+ *                     { "RowSpan", 1 },
+ *                     { "X", 4 },
+ *                     { "Y", 3 },
+ *                 } },
+ *             },
+ *             ResourceGroupName = "testRG",
+ *             Tags = 
+ *             {
+ *                 { "aKey", "aValue" },
+ *                 { "anotherKey", "anotherValue" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	portal "github.com/pulumi/pulumi-azure-native/sdk/go/azure/portal"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := portal.NewDashboard(ctx, "dashboard", &portal.DashboardArgs{
+ * 			DashboardName: pulumi.String("testDashboard"),
+ * 			Lenses: []portal.DashboardLensArgs{
+ * 				&portal.DashboardLensArgs{
+ * 					Order: pulumi.Int(1),
+ * 					Parts: []portal.DashboardPartsArgs{
+ * 						&portal.DashboardPartsArgs{
+ * 							Position: &portal.DashboardPartsPositionArgs{
+ * 								ColSpan: pulumi.Int(3),
+ * 								RowSpan: pulumi.Int(4),
+ * 								X:       pulumi.Int(1),
+ * 								Y:       pulumi.Int(2),
+ * 							},
+ * 						},
+ * 						&portal.DashboardPartsArgs{
+ * 							Position: &portal.DashboardPartsPositionArgs{
+ * 								ColSpan: pulumi.Int(6),
+ * 								RowSpan: pulumi.Int(6),
+ * 								X:       pulumi.Int(5),
+ * 								Y:       pulumi.Int(5),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&portal.DashboardLensArgs{
+ * 					Order: pulumi.Int(2),
+ * 					Parts: portal.DashboardPartsArray{},
+ * 				},
+ * 			},
+ * 			Location: pulumi.String("eastus"),
+ * 			Metadata: pulumi.AnyMap{
+ * 				"metadata": pulumi.Any{
+ * 					ColSpan: 2,
+ * 					RowSpan: 1,
+ * 					X:       4,
+ * 					Y:       3,
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testRG"),
+ * 			Tags: pulumi.StringMap{
+ * 				"aKey":       pulumi.String("aValue"),
+ * 				"anotherKey": pulumi.String("anotherValue"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dashboard = new azure_native.portal.Dashboard("dashboard", {
+ *     dashboardName: "testDashboard",
+ *     lenses: [
+ *         {
+ *             order: 1,
+ *             parts: [
+ *                 {
+ *                     position: {
+ *                         colSpan: 3,
+ *                         rowSpan: 4,
+ *                         x: 1,
+ *                         y: 2,
+ *                     },
+ *                 },
+ *                 {
+ *                     position: {
+ *                         colSpan: 6,
+ *                         rowSpan: 6,
+ *                         x: 5,
+ *                         y: 5,
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *         {
+ *             order: 2,
+ *             parts: [],
+ *         },
+ *     ],
+ *     location: "eastus",
+ *     metadata: {
+ *         metadata: {
+ *             ColSpan: 2,
+ *             RowSpan: 1,
+ *             X: 4,
+ *             Y: 3,
+ *         },
+ *     },
+ *     resourceGroupName: "testRG",
+ *     tags: {
+ *         aKey: "aValue",
+ *         anotherKey: "anotherValue",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dashboard = azure_native.portal.Dashboard("dashboard",
+ *     dashboard_name="testDashboard",
+ *     lenses=[
+ *         azure_native.portal.DashboardLensArgs(
+ *             order=1,
+ *             parts=[
+ *                 azure_native.portal.DashboardPartsArgs(
+ *                     position=azure_native.portal.DashboardPartsPositionArgs(
+ *                         col_span=3,
+ *                         row_span=4,
+ *                         x=1,
+ *                         y=2,
+ *                     ),
+ *                 ),
+ *                 azure_native.portal.DashboardPartsArgs(
+ *                     position=azure_native.portal.DashboardPartsPositionArgs(
+ *                         col_span=6,
+ *                         row_span=6,
+ *                         x=5,
+ *                         y=5,
+ *                     ),
+ *                 ),
+ *             ],
+ *         ),
+ *         azure_native.portal.DashboardLensArgs(
+ *             order=2,
+ *             parts=[],
+ *         ),
+ *     ],
+ *     location="eastus",
+ *     metadata={
+ *         "metadata": {
+ *             "ColSpan": 2,
+ *             "RowSpan": 1,
+ *             "X": 4,
+ *             "Y": 3,
+ *         },
+ *     },
+ *     resource_group_name="testRG",
+ *     tags={
+ *         "aKey": "aValue",
+ *         "anotherKey": "anotherValue",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +274,72 @@ import javax.annotation.Nullable;
 public class Dashboard extends io.pulumi.resources.CustomResource {
     /**
      * The dashboard lenses.
-     * 
      */
     @Export(name="lenses", type=List.class, parameters={DashboardLensResponse.class})
     private Output</* @Nullable */ List<DashboardLensResponse>> lenses;
 
     /**
      * @return The dashboard lenses.
-     * 
      */
     public Output</* @Nullable */ List<DashboardLensResponse>> getLenses() {
         return this.lenses;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The dashboard metadata.
-     * 
      */
     @Export(name="metadata", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> metadata;
 
     /**
      * @return The dashboard metadata.
-     * 
      */
     public Output</* @Nullable */ Map<String,Object>> getMetadata() {
         return this.metadata;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

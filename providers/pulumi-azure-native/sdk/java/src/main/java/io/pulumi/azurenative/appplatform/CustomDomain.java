@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * Custom domain resource payload.
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CustomDomains_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customDomain = new AzureNative.AppPlatform.CustomDomain("customDomain", new AzureNative.AppPlatform.CustomDomainArgs
+ *         {
+ *             AppName = "myapp",
+ *             DomainName = "mydomain.com",
+ *             Properties = new AzureNative.AppPlatform.Inputs.CustomDomainPropertiesArgs
+ *             {
+ *                 CertName = "mycert",
+ *                 Thumbprint = "934367bf1c97033f877db0f15cb1b586957d3133",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewCustomDomain(ctx, "customDomain", &appplatform.CustomDomainArgs{
+ * 			AppName:    pulumi.String("myapp"),
+ * 			DomainName: pulumi.String("mydomain.com"),
+ * 			Properties: &appplatform.CustomDomainPropertiesArgs{
+ * 				CertName:   pulumi.String("mycert"),
+ * 				Thumbprint: pulumi.String("934367bf1c97033f877db0f15cb1b586957d3133"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const customDomain = new azure_native.appplatform.CustomDomain("customDomain", {
+ *     appName: "myapp",
+ *     domainName: "mydomain.com",
+ *     properties: {
+ *         certName: "mycert",
+ *         thumbprint: "934367bf1c97033f877db0f15cb1b586957d3133",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * custom_domain = azure_native.appplatform.CustomDomain("customDomain",
+ *     app_name="myapp",
+ *     domain_name="mydomain.com",
+ *     properties=azure_native.appplatform.CustomDomainPropertiesArgs(
+ *         cert_name="mycert",
+ *         thumbprint="934367bf1c97033f877db0f15cb1b586957d3133",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +126,36 @@ import javax.annotation.Nullable;
 public class CustomDomain extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the custom domain resource.
-     * 
      */
     @Export(name="properties", type=CustomDomainPropertiesResponse.class, parameters={})
     private Output<CustomDomainPropertiesResponse> properties;
 
     /**
      * @return Properties of the custom domain resource.
-     * 
      */
     public Output<CustomDomainPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

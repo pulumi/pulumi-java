@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Email channel definition
- * 
  */
 public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The channel name
      * Expected value is 'EmailChannel'.
-     * 
      */
     @Import(name="channelName", required=true)
       private final String channelName;
@@ -33,7 +31,6 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Entity Tag of the resource
-     * 
      */
     @Import(name="etag")
       private final @Nullable String etag;
@@ -44,7 +41,6 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -55,7 +51,6 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The set of properties specific to email channel resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable EmailChannelPropertiesResponse properties;
@@ -66,7 +61,6 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Provisioning state of the resource
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

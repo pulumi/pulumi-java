@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AssignedComponentItemResponse {
     /**
      * unique key to a security assessment object
-     * 
      */
     private final @Nullable String key;
 
@@ -24,7 +23,6 @@ public final class AssignedComponentItemResponse {
 
     /**
      * unique key to a security assessment object
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);

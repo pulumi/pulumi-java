@@ -12,17 +12,14 @@ public final class UserAssignedIdentityAuthInfoResponse {
     /**
      * The authentication type.
      * Expected value is 'userAssignedIdentity'.
-     * 
      */
     private final String authType;
     /**
      * Client Id for userAssignedIdentity.
-     * 
      */
     private final String clientId;
     /**
      * Subscription id for userAssignedIdentity.
-     * 
      */
     private final String subscriptionId;
 
@@ -39,21 +36,18 @@ public final class UserAssignedIdentityAuthInfoResponse {
     /**
      * The authentication type.
      * Expected value is 'userAssignedIdentity'.
-     * 
     */
     public String getAuthType() {
         return this.authType;
     }
     /**
      * Client Id for userAssignedIdentity.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Subscription id for userAssignedIdentity.
-     * 
     */
     public String getSubscriptionId() {
         return this.subscriptionId;

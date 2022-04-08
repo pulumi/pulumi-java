@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB Cassandra table partition key
- * 
  */
 public final class CassandraPartitionKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CassandraPartitionKeyResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the Cosmos DB Cassandra table partition key
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

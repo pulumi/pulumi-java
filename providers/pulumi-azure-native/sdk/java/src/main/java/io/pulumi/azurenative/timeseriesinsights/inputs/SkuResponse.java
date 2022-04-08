@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
-     * 
      */
     @Import(name="capacity", required=true)
       private final Integer capacity;
@@ -30,7 +28,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of this SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

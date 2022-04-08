@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class AddressPrefixItemResponse {
     /**
      * Address prefix.
-     * 
      */
     private final @Nullable String addressPrefix;
     /**
      * Address prefix type.
-     * 
      */
     private final @Nullable String addressPrefixType;
 
@@ -32,14 +30,12 @@ public final class AddressPrefixItemResponse {
 
     /**
      * Address prefix.
-     * 
     */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * Address prefix type.
-     * 
     */
     public Optional<String> getAddressPrefixType() {
         return Optional.ofNullable(this.addressPrefixType);

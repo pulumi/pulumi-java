@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind (type) of Enterprise Policy.
-     * 
      */
     @EnumType
     public enum EnterprisePolicyKind {

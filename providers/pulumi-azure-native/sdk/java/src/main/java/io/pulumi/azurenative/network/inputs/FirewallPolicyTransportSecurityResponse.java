@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration needed to perform TLS termination & initiation.
- * 
  */
 public final class FirewallPolicyTransportSecurityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FirewallPolicyTransportSecurityResponse extends io.pulumi.res
 
     /**
      * The CA used for intermediate CA generation.
-     * 
      */
     @Import(name="certificateAuthority")
       private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;

@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class ManagedClusterAPIServerAccessProfileResponse {
     /**
      * Authorized IP Ranges to kubernetes API server.
-     * 
      */
     private final @Nullable List<String> authorizedIPRanges;
     /**
      * Whether to create the cluster as a private cluster or not.
-     * 
      */
     private final @Nullable Boolean enablePrivateCluster;
     /**
-     * Private dns zone mode for private cluster.
-     * 
+     * Private dns zone mode for private cluster. 
      */
     private final @Nullable String privateDNSZone;
 
@@ -41,21 +38,18 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
 
     /**
      * Authorized IP Ranges to kubernetes API server.
-     * 
     */
     public List<String> getAuthorizedIPRanges() {
         return this.authorizedIPRanges == null ? List.of() : this.authorizedIPRanges;
     }
     /**
      * Whether to create the cluster as a private cluster or not.
-     * 
     */
     public Optional<Boolean> getEnablePrivateCluster() {
         return Optional.ofNullable(this.enablePrivateCluster);
     }
     /**
-     * Private dns zone mode for private cluster.
-     * 
+     * Private dns zone mode for private cluster. 
     */
     public Optional<String> getPrivateDNSZone() {
         return Optional.ofNullable(this.privateDNSZone);

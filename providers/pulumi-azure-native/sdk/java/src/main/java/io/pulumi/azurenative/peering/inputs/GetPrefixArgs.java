@@ -16,7 +16,6 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The properties to be expanded.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the peering service.
-     * 
      */
     @Import(name="peeringServiceName", required=true)
       private final String peeringServiceName;
@@ -38,7 +36,6 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the prefix.
-     * 
      */
     @Import(name="prefixName", required=true)
       private final String prefixName;
@@ -49,7 +46,6 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

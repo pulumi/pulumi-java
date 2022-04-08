@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure VM (Mercury) workload-specific backup policy.
- * 
  */
 public final class GenericProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'GenericProtectionPolicy'.
-     * 
      */
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
@@ -35,7 +33,6 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * Name of this policy's fabric.
-     * 
      */
     @Import(name="fabricName")
       private final @Nullable String fabricName;
@@ -46,7 +43,6 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * Number of items associated with this policy.
-     * 
      */
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
@@ -57,7 +53,6 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * List of sub-protection policies which includes schedule and retention
-     * 
      */
     @Import(name="subProtectionPolicy")
       private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
@@ -68,7 +63,6 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable String timeZone;

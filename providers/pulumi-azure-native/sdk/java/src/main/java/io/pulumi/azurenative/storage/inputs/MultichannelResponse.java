@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Multichannel setting. Applies to Premium FileStorage only.
- * 
  */
 public final class MultichannelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MultichannelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates whether multichannel is enabled
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;

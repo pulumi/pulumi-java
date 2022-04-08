@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Kubernetes role compute resource
- * 
  */
 public final class KubernetesRoleComputeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
 
     /**
      * Memory in bytes
-     * 
      */
     @Import(name="memoryInBytes", required=true)
       private final Double memoryInBytes;
@@ -31,7 +29,6 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
 
     /**
      * Processor count
-     * 
      */
     @Import(name="processorCount", required=true)
       private final Integer processorCount;
@@ -42,7 +39,6 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
 
     /**
      * VM profile
-     * 
      */
     @Import(name="vmProfile", required=true)
       private final String vmProfile;

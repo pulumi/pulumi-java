@@ -20,7 +20,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of blob storage event type to process.
-     * 
      */
     @Import(name="blobStorageEventType")
       private final @Nullable Output<Either<String,BlobStorageEventType>> blobStorageEventType;
@@ -31,7 +30,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -42,7 +40,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The event hub consumer group.
-     * 
      */
     @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
@@ -53,7 +50,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the data connection.
-     * 
      */
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
@@ -64,7 +60,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The data format of the message. Optionally the data format can be added to each message.
-     * 
      */
     @Import(name="dataFormat")
       private final @Nullable Output<Either<String,EventGridDataFormat>> dataFormat;
@@ -75,7 +70,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the database in the Kusto cluster.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -86,7 +80,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource ID where the event grid is configured to send events.
-     * 
      */
     @Import(name="eventHubResourceId", required=true)
       private final Output<String> eventHubResourceId;
@@ -97,7 +90,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
-     * 
      */
     @Import(name="ignoreFirstRecord")
       private final @Nullable Output<Boolean> ignoreFirstRecord;
@@ -109,7 +101,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     /**
      * Kind of the endpoint for the data connection
      * Expected value is 'EventGrid'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -120,7 +111,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -131,7 +121,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
      */
     @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
@@ -142,7 +131,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -153,7 +141,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource ID of the storage account where the data resides.
-     * 
      */
     @Import(name="storageAccountResourceId", required=true)
       private final Output<String> storageAccountResourceId;
@@ -164,7 +151,6 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
 
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;

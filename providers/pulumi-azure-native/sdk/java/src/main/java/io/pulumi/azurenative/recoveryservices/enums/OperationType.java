@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Re-Do Operation
-     * 
      */
     @EnumType
     public enum OperationType {

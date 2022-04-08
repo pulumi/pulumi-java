@@ -14,7 +14,6 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
 
     /**
      * The resource name of the Test Base Package.
-     * 
      */
     @Import(name="packageName", required=true)
       private final String packageName;
@@ -25,7 +24,6 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
@@ -47,7 +44,6 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
 
     /**
      * The Test Result Name. It equals to {osName}-{TestResultId} string.
-     * 
      */
     @Import(name="testResultName", required=true)
       private final String testResultName;

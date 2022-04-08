@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the VM switch.
-     * 
      */
     @EnumType
     public enum VMSwitchType {

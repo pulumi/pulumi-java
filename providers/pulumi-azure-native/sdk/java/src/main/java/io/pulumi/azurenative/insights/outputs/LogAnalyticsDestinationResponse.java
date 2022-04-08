@@ -12,19 +12,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogAnalyticsDestinationResponse {
     /**
-     * A friendly name for the destination.
+     * A friendly name for the destination. 
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
-     * 
      */
     private final @Nullable String name;
     /**
      * The Customer ID of the Log Analytics workspace.
-     * 
      */
     private final String workspaceId;
     /**
      * The resource ID of the Log Analytics workspace.
-     * 
      */
     private final @Nullable String workspaceResourceId;
 
@@ -39,23 +36,20 @@ public final class LogAnalyticsDestinationResponse {
     }
 
     /**
-     * A friendly name for the destination.
+     * A friendly name for the destination. 
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Customer ID of the Log Analytics workspace.
-     * 
     */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The resource ID of the Log Analytics workspace.
-     * 
     */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);

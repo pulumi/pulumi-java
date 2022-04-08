@@ -21,7 +21,84 @@ import javax.annotation.Nullable;
  * The device security group resource
  * API Version: 2019-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a device security group for the specified IoT hub resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deviceSecurityGroup = new AzureNative.Security.DeviceSecurityGroup("deviceSecurityGroup", new AzureNative.Security.DeviceSecurityGroupArgs
+ *         {
+ *             DeviceSecurityGroupName = "samplesecuritygroup",
+ *             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
+ *             TimeWindowRules = 
+ *             {
+ *                 ,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewDeviceSecurityGroup(ctx, "deviceSecurityGroup", &security.DeviceSecurityGroupArgs{
+ * 			DeviceSecurityGroupName: pulumi.String("samplesecuritygroup"),
+ * 			ResourceId:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub"),
+ * 			TimeWindowRules: []security.TimeWindowCustomAlertRuleArgs{
+ * 				nil,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("deviceSecurityGroup", {
+ *     deviceSecurityGroupName: "samplesecuritygroup",
+ *     resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
+ *     timeWindowRules: [{}],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * device_security_group = azure_native.security.DeviceSecurityGroup("deviceSecurityGroup",
+ *     device_security_group_name="samplesecuritygroup",
+ *     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
+ *     time_window_rules=[azure_native.security.TimeWindowCustomAlertRuleArgs()])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,84 +113,72 @@ import javax.annotation.Nullable;
 public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
     /**
      * The allow-list custom alert rules.
-     * 
      */
     @Export(name="allowlistRules", type=List.class, parameters={AllowlistCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> allowlistRules;
 
     /**
      * @return The allow-list custom alert rules.
-     * 
      */
     public Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> getAllowlistRules() {
         return this.allowlistRules;
     }
     /**
      * The deny-list custom alert rules.
-     * 
      */
     @Export(name="denylistRules", type=List.class, parameters={DenylistCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> denylistRules;
 
     /**
      * @return The deny-list custom alert rules.
-     * 
      */
     public Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> getDenylistRules() {
         return this.denylistRules;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The list of custom alert threshold rules.
-     * 
      */
     @Export(name="thresholdRules", type=List.class, parameters={ThresholdCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> thresholdRules;
 
     /**
      * @return The list of custom alert threshold rules.
-     * 
      */
     public Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> getThresholdRules() {
         return this.thresholdRules;
     }
     /**
      * The list of custom alert time-window rules.
-     * 
      */
     @Export(name="timeWindowRules", type=List.class, parameters={TimeWindowCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> timeWindowRules;
 
     /**
      * @return The list of custom alert time-window rules.
-     * 
      */
     public Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> getTimeWindowRules() {
         return this.timeWindowRules;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

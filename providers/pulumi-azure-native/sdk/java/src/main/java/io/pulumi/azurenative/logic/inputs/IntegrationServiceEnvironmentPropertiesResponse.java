@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The integration service environment properties.
- * 
  */
 public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
 
     /**
      * The encryption configuration.
-     * 
      */
     @Import(name="encryptionConfiguration")
       private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
@@ -34,7 +32,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
 
     /**
      * The endpoints configuration.
-     * 
      */
     @Import(name="endpointsConfiguration")
       private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
@@ -45,7 +42,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
 
     /**
      * Gets the tracking id.
-     * 
      */
     @Import(name="integrationServiceEnvironmentId")
       private final @Nullable String integrationServiceEnvironmentId;
@@ -56,7 +52,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
 
     /**
      * The network configuration.
-     * 
      */
     @Import(name="networkConfiguration")
       private final @Nullable NetworkConfigurationResponse networkConfiguration;
@@ -67,7 +62,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
 
     /**
      * The provisioning state.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -78,7 +72,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
 
     /**
      * The integration service environment state.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

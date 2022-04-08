@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the custom Open ID Connect provider.
- * 
  */
 public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
 
     /**
      * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -33,7 +31,6 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
 
     /**
      * The configuration settings of the login flow of the custom Open ID Connect provider.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<OpenIdConnectLoginArgs> login;
@@ -44,7 +41,6 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
 
     /**
      * The configuration settings of the app registration for the custom Open ID Connect provider.
-     * 
      */
     @Import(name="registration")
       private final @Nullable Output<OpenIdConnectRegistrationArgs> registration;

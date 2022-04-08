@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * whether this route will be linked to the default endpoint domain.
-     * 
      */
     @EnumType
     public enum LinkToDefaultDomain {

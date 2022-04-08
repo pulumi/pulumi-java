@@ -16,7 +16,6 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the network manager security Configuration.
-     * 
      */
     @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
@@ -27,7 +26,6 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Default rule flag.
-     * 
      */
     @Import(name="flag")
       private final @Nullable Output<String> flag;
@@ -39,7 +37,6 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Whether the rule is custom or default.
      * Expected value is 'Default'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -50,7 +47,6 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
@@ -61,7 +57,6 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the network manager security Configuration rule collection.
-     * 
      */
     @Import(name="ruleCollectionName", required=true)
       private final Output<String> ruleCollectionName;
@@ -83,7 +77,6 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the rule.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;

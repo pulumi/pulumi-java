@@ -14,7 +14,6 @@ public final class GetPrivateStoreCollectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The collection ID
-     * 
      */
     @Import(name="collectionId", required=true)
       private final String collectionId;
@@ -25,7 +24,6 @@ public final class GetPrivateStoreCollectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The store ID - must use the tenant ID
-     * 
      */
     @Import(name="privateStoreId", required=true)
       private final String privateStoreId;

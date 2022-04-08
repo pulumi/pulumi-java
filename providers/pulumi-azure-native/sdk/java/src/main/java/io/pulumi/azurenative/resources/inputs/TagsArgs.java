@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A dictionary of name and value pairs.
- * 
  */
 public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
 

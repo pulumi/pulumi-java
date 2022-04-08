@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Certificate product type.
-     * 
      */
     @EnumType
     public enum CertificateProductType {

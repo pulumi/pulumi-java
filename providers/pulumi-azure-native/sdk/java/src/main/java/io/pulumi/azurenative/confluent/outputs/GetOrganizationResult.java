@@ -16,57 +16,46 @@ import javax.annotation.Nullable;
 public final class GetOrganizationResult {
     /**
      * The creation time of the resource.
-     * 
      */
     private final String createdTime;
     /**
      * The ARM id of the resource.
-     * 
      */
     private final String id;
     /**
      * Location of Organization resource
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * Confluent offer detail
-     * 
      */
     private final @Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail;
     /**
      * Id of the Confluent organization.
-     * 
      */
     private final String organizationId;
     /**
      * Provision states for confluent RP
-     * 
      */
     private final String provisioningState;
     /**
      * SSO url for the Confluent organization.
-     * 
      */
     private final String ssoUrl;
     /**
      * Organization resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
     /**
      * Subscriber detail
-     * 
      */
     private final @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail;
 
@@ -98,77 +87,66 @@ public final class GetOrganizationResult {
 
     /**
      * The creation time of the resource.
-     * 
     */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The ARM id of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Location of Organization resource
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Confluent offer detail
-     * 
     */
     public Optional<OrganizationResourcePropertiesResponseOfferDetail> getOfferDetail() {
         return Optional.ofNullable(this.offerDetail);
     }
     /**
      * Id of the Confluent organization.
-     * 
     */
     public String getOrganizationId() {
         return this.organizationId;
     }
     /**
      * Provision states for confluent RP
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SSO url for the Confluent organization.
-     * 
     */
     public String getSsoUrl() {
         return this.ssoUrl;
     }
     /**
      * Organization resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Subscriber detail
-     * 
     */
     public Optional<OrganizationResourcePropertiesResponseUserDetail> getUserDetail() {
         return Optional.ofNullable(this.userDetail);

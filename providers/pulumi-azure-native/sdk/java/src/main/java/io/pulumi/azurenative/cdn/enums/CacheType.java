@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The level at which the content needs to be cached.
-     * 
      */
     @EnumType
     public enum CacheType {

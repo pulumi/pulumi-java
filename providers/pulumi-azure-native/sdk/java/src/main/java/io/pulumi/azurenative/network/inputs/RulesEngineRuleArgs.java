@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains a list of match conditions, and an action on how to modify the request/response. If multiple rules match, the actions from one rule that conflict with a previous rule overwrite for a singular action, or append in the case of headers manipulation.
- * 
  */
 public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Actions to perform on the request and response if all of the match conditions are met.
-     * 
      */
     @Import(name="action", required=true)
       private final Output<RulesEngineActionArgs> action;
@@ -37,7 +35,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
-     * 
      */
     @Import(name="matchConditions")
       private final @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
@@ -48,7 +45,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
      */
     @Import(name="matchProcessingBehavior")
       private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
@@ -59,7 +55,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A name to refer to this specific rule.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -69,8 +64,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * A priority assigned to this rule.
-     * 
+     * A priority assigned to this rule. 
      */
     @Import(name="priority", required=true)
       private final Output<Integer> priority;

@@ -17,7 +17,95 @@ import javax.annotation.Nullable;
  * Cache details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateCache
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cache = new AzureNative.ApiManagement.Cache("cache", new AzureNative.ApiManagement.CacheArgs
+ *         {
+ *             CacheId = "c1",
+ *             ConnectionString = "apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False",
+ *             Description = "Redis cache instances in West India",
+ *             ResourceGroupName = "rg1",
+ *             ResourceId = "https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1",
+ *             ServiceName = "apimService1",
+ *             UseFromLocation = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewCache(ctx, "cache", &apimanagement.CacheArgs{
+ * 			CacheId:           pulumi.String("c1"),
+ * 			ConnectionString:  pulumi.String("apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False"),
+ * 			Description:       pulumi.String("Redis cache instances in West India"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ResourceId:        pulumi.String("https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			UseFromLocation:   pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cache = new azure_native.apimanagement.Cache("cache", {
+ *     cacheId: "c1",
+ *     connectionString: "apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False",
+ *     description: "Redis cache instances in West India",
+ *     resourceGroupName: "rg1",
+ *     resourceId: "https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1",
+ *     serviceName: "apimService1",
+ *     useFromLocation: "default",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cache = azure_native.apimanagement.Cache("cache",
+ *     cache_id="c1",
+ *     connection_string="apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False",
+ *     description="Redis cache instances in West India",
+ *     resource_group_name="rg1",
+ *     resource_id="https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1",
+ *     service_name="apimService1",
+ *     use_from_location="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +120,72 @@ import javax.annotation.Nullable;
 public class Cache extends io.pulumi.resources.CustomResource {
     /**
      * Runtime connection string to cache
-     * 
      */
     @Export(name="connectionString", type=String.class, parameters={})
     private Output<String> connectionString;
 
     /**
      * @return Runtime connection string to cache
-     * 
      */
     public Output<String> getConnectionString() {
         return this.connectionString;
     }
     /**
      * Cache description
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Cache description
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Original uri of entity in external system cache points to
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return Original uri of entity in external system cache points to
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
-     * 
      */
     @Export(name="useFromLocation", type=String.class, parameters={})
     private Output<String> useFromLocation;
 
     /**
      * @return Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
-     * 
      */
     public Output<String> getUseFromLocation() {
         return this.useFromLocation;

@@ -14,18 +14,15 @@ import javax.annotation.Nullable;
 public final class OrcFormatResponse {
     /**
      * Deserializer. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object deserializer;
     /**
      * Serializer. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object serializer;
     /**
      * Type of dataset storage format.
      * Expected value is 'OrcFormat'.
-     * 
      */
     private final String type;
 
@@ -41,14 +38,12 @@ public final class OrcFormatResponse {
 
     /**
      * Deserializer. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getDeserializer() {
         return Optional.ofNullable(this.deserializer);
     }
     /**
      * Serializer. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getSerializer() {
         return Optional.ofNullable(this.serializer);
@@ -56,7 +51,6 @@ public final class OrcFormatResponse {
     /**
      * Type of dataset storage format.
      * Expected value is 'OrcFormat'.
-     * 
     */
     public String getType() {
         return this.type;

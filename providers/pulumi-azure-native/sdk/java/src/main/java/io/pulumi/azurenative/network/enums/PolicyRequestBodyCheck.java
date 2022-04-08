@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes if policy managed rules will inspect the request body content.
-     * 
      */
     @EnumType
     public enum PolicyRequestBodyCheck {

@@ -16,7 +16,6 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
 
     /**
      * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
-     * 
      */
     @Import(name="channel", required=true)
       private final String channel;
@@ -27,7 +26,6 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
 
     /**
      * Resource ID used by Resource Manager to uniquely identify the scope.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -38,7 +36,6 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
 
     /**
      * Display name for the scope.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -49,7 +46,6 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
 
     /**
      * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
-     * 
      */
     @Import(name="parent")
       private final @Nullable String parent;
@@ -60,7 +56,6 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
 
     /**
      * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -71,7 +66,6 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
 
     /**
      * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
-     * 
      */
     @Import(name="subchannel", required=true)
       private final String subchannel;

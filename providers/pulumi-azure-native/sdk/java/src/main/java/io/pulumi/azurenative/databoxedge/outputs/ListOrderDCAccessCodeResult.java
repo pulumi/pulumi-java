@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListOrderDCAccessCodeResult {
     /**
      * DCAccess Code for the Self Managed shipment.
-     * 
      */
     private final @Nullable String authCode;
 
@@ -24,7 +23,6 @@ public final class ListOrderDCAccessCodeResult {
 
     /**
      * DCAccess Code for the Self Managed shipment.
-     * 
     */
     public Optional<String> getAuthCode() {
         return Optional.ofNullable(this.authCode);

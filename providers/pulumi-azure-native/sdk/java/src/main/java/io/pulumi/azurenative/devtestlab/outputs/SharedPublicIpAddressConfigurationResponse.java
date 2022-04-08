@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class SharedPublicIpAddressConfigurationResponse {
     /**
      * The incoming NAT rules
-     * 
      */
     private final @Nullable List<InboundNatRuleResponse> inboundNatRules;
 
@@ -24,7 +23,6 @@ public final class SharedPublicIpAddressConfigurationResponse {
 
     /**
      * The incoming NAT rules
-     * 
     */
     public List<InboundNatRuleResponse> getInboundNatRules() {
         return this.inboundNatRules == null ? List.of() : this.inboundNatRules;

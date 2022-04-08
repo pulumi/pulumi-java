@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Load balancer backend addresses.
- * 
  */
 public final class LoadBalancerBackendAddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
 
     /**
      * IP Address belonging to the referenced virtual network.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -32,7 +30,6 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
 
     /**
      * Reference to the frontend ip address configuration defined in regional loadbalancer.
-     * 
      */
     @Import(name="loadBalancerFrontendIPConfiguration")
       private final @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
@@ -43,7 +40,6 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
 
     /**
      * Name of the backend address.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
 
     /**
      * Reference to IP address defined in network interfaces.
-     * 
      */
     @Import(name="networkInterfaceIPConfiguration", required=true)
       private final SubResourceResponse networkInterfaceIPConfiguration;
@@ -65,7 +60,6 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
 
     /**
      * Reference to an existing subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
@@ -76,7 +70,6 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
 
     /**
      * Reference to an existing virtual network.
-     * 
      */
     @Import(name="virtualNetwork")
       private final @Nullable SubResourceResponse virtualNetwork;

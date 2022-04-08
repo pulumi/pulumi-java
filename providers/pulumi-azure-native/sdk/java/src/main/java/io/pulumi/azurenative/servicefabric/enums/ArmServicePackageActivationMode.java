@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The activation Mode of the service package
-     * 
      */
     @EnumType
     public enum ArmServicePackageActivationMode {
         /**
          * Indicates the application package activation mode will use shared process.
-         * 
          */
         SharedProcess("SharedProcess"),
         /**
          * Indicates the application package activation mode will use exclusive process.
-         * 
          */
         ExclusiveProcess("ExclusiveProcess");
 

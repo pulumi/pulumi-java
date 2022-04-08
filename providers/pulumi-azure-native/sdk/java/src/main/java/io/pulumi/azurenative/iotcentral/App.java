@@ -19,7 +19,104 @@ import javax.annotation.Nullable;
  * The IoT Central application.
  * API Version: 2018-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Apps_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new AzureNative.IoTCentral.App("app", new AzureNative.IoTCentral.AppArgs
+ *         {
+ *             DisplayName = "My IoT Central App",
+ *             Location = "westus",
+ *             ResourceGroupName = "resRg",
+ *             ResourceName = "myIoTCentralApp",
+ *             Sku = new AzureNative.IoTCentral.Inputs.AppSkuInfoArgs
+ *             {
+ *                 Name = "F1",
+ *             },
+ *             Subdomain = "my-iot-central-app",
+ *             Template = "iotc-default@1.0.0",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	iotcentral "github.com/pulumi/pulumi-azure-native/sdk/go/azure/iotcentral"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotcentral.NewApp(ctx, "app", &iotcentral.AppArgs{
+ * 			DisplayName:       pulumi.String("My IoT Central App"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("resRg"),
+ * 			ResourceName:      pulumi.String("myIoTCentralApp"),
+ * 			Sku: &iotcentral.AppSkuInfoArgs{
+ * 				Name: pulumi.String("F1"),
+ * 			},
+ * 			Subdomain: pulumi.String("my-iot-central-app"),
+ * 			Template:  pulumi.String("iotc-default@1.0.0"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const app = new azure_native.iotcentral.App("app", {
+ *     displayName: "My IoT Central App",
+ *     location: "westus",
+ *     resourceGroupName: "resRg",
+ *     resourceName: "myIoTCentralApp",
+ *     sku: {
+ *         name: "F1",
+ *     },
+ *     subdomain: "my-iot-central-app",
+ *     template: "iotc-default@1.0.0",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * app = azure_native.iotcentral.App("app",
+ *     display_name="My IoT Central App",
+ *     location="westus",
+ *     resource_group_name="resRg",
+ *     resource_name="myIoTCentralApp",
+ *     sku=azure_native.iotcentral.AppSkuInfoArgs(
+ *         name="F1",
+ *     ),
+ *     subdomain="my-iot-central-app",
+ *     template="iotc-default@1.0.0")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +131,108 @@ import javax.annotation.Nullable;
 public class App extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the application.
-     * 
      */
     @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
      * @return The ID of the application.
-     * 
      */
     public Output<String> getApplicationId() {
         return this.applicationId;
     }
     /**
      * The display name of the application.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name of the application.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The ARM resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The ARM resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A valid instance SKU.
-     * 
      */
     @Export(name="sku", type=AppSkuInfoResponse.class, parameters={})
     private Output<AppSkuInfoResponse> sku;
 
     /**
      * @return A valid instance SKU.
-     * 
      */
     public Output<AppSkuInfoResponse> getSku() {
         return this.sku;
     }
     /**
      * The subdomain of the application.
-     * 
      */
     @Export(name="subdomain", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdomain;
 
     /**
      * @return The subdomain of the application.
-     * 
      */
     public Output</* @Nullable */ String> getSubdomain() {
         return this.subdomain;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
-     * 
      */
     @Export(name="template", type=String.class, parameters={})
     private Output</* @Nullable */ String> template;
 
     /**
      * @return The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
-     * 
      */
     public Output</* @Nullable */ String> getTemplate() {
         return this.template;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

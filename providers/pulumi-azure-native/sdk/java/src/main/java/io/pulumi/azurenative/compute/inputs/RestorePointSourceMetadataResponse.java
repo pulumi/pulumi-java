@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of the Virtual Machine for which the restore point was created. The properties provided are a subset and the snapshot of the overall Virtual Machine properties captured at the time of the restore point creation.
- * 
  */
 public final class RestorePointSourceMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Gets the diagnostics profile.
-     * 
      */
     @Import(name="diagnosticsProfile")
       private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
@@ -36,7 +34,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Gets the hardware profile.
-     * 
      */
     @Import(name="hardwareProfile")
       private final @Nullable HardwareProfileResponse hardwareProfile;
@@ -47,7 +44,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Gets the license type, which is for bring your own license scenario.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable String licenseType;
@@ -58,7 +54,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Location of the VM from which the restore point was created.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -69,7 +64,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Gets the OS profile.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable OSProfileResponse osProfile;
@@ -80,7 +74,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Gets the security profile.
-     * 
      */
     @Import(name="securityProfile")
       private final @Nullable SecurityProfileResponse securityProfile;
@@ -91,7 +84,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Gets the storage profile.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
@@ -102,7 +94,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
 
     /**
      * Gets the virtual machine unique id.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable String vmId;

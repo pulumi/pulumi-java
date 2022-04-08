@@ -19,7 +19,145 @@ import javax.annotation.Nullable;
  * The backup schedule.
  * API Version: 2017-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BackupSchedulesCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var backupSchedule = new AzureNative.StorSimple.BackupSchedule("backupSchedule", new AzureNative.StorSimple.BackupScheduleArgs
+ *         {
+ *             BackupPolicyName = "BkUpPolicy01ForSDKTest",
+ *             BackupScheduleName = "schedule2",
+ *             BackupType = "CloudSnapshot",
+ *             DeviceName = "Device05ForSDKTest",
+ *             Kind = "Series8000",
+ *             ManagerName = "ManagerForSDKTest1",
+ *             ResourceGroupName = "ResourceGroupForSDKTest",
+ *             RetentionCount = 1,
+ *             ScheduleRecurrence = new AzureNative.StorSimple.Inputs.ScheduleRecurrenceArgs
+ *             {
+ *                 RecurrenceType = "Weekly",
+ *                 RecurrenceValue = 1,
+ *                 WeeklyDaysList = 
+ *                 {
+ *                     "Friday",
+ *                     "Thursday",
+ *                     "Monday",
+ *                 },
+ *             },
+ *             ScheduleStatus = "Enabled",
+ *             StartTime = "2017-06-24T01:00:00Z",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storsimple.NewBackupSchedule(ctx, "backupSchedule", &storsimple.BackupScheduleArgs{
+ * 			BackupPolicyName:   pulumi.String("BkUpPolicy01ForSDKTest"),
+ * 			BackupScheduleName: pulumi.String("schedule2"),
+ * 			BackupType:         "CloudSnapshot",
+ * 			DeviceName:         pulumi.String("Device05ForSDKTest"),
+ * 			Kind:               "Series8000",
+ * 			ManagerName:        pulumi.String("ManagerForSDKTest1"),
+ * 			ResourceGroupName:  pulumi.String("ResourceGroupForSDKTest"),
+ * 			RetentionCount:     pulumi.Float64(1),
+ * 			ScheduleRecurrence: &storsimple.ScheduleRecurrenceArgs{
+ * 				RecurrenceType:  "Weekly",
+ * 				RecurrenceValue: pulumi.Int(1),
+ * 				WeeklyDaysList: storsimple.DayOfWeekArray{
+ * 					"Friday",
+ * 					"Thursday",
+ * 					"Monday",
+ * 				},
+ * 			},
+ * 			ScheduleStatus: "Enabled",
+ * 			StartTime:      pulumi.String("2017-06-24T01:00:00Z"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedule", {
+ *     backupPolicyName: "BkUpPolicy01ForSDKTest",
+ *     backupScheduleName: "schedule2",
+ *     backupType: "CloudSnapshot",
+ *     deviceName: "Device05ForSDKTest",
+ *     kind: "Series8000",
+ *     managerName: "ManagerForSDKTest1",
+ *     resourceGroupName: "ResourceGroupForSDKTest",
+ *     retentionCount: 1,
+ *     scheduleRecurrence: {
+ *         recurrenceType: "Weekly",
+ *         recurrenceValue: 1,
+ *         weeklyDaysList: [
+ *             "Friday",
+ *             "Thursday",
+ *             "Monday",
+ *         ],
+ *     },
+ *     scheduleStatus: "Enabled",
+ *     startTime: "2017-06-24T01:00:00Z",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * backup_schedule = azure_native.storsimple.BackupSchedule("backupSchedule",
+ *     backup_policy_name="BkUpPolicy01ForSDKTest",
+ *     backup_schedule_name="schedule2",
+ *     backup_type="CloudSnapshot",
+ *     device_name="Device05ForSDKTest",
+ *     kind="Series8000",
+ *     manager_name="ManagerForSDKTest1",
+ *     resource_group_name="ResourceGroupForSDKTest",
+ *     retention_count=1,
+ *     schedule_recurrence=azure_native.storsimple.ScheduleRecurrenceArgs(
+ *         recurrence_type="Weekly",
+ *         recurrence_value=1,
+ *         weekly_days_list=[
+ *             "Friday",
+ *             "Thursday",
+ *             "Monday",
+ *         ],
+ *     ),
+ *     schedule_status="Enabled",
+ *     start_time="2017-06-24T01:00:00Z")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +172,108 @@ import javax.annotation.Nullable;
 public class BackupSchedule extends io.pulumi.resources.CustomResource {
     /**
      * The type of backup which needs to be taken.
-     * 
      */
     @Export(name="backupType", type=String.class, parameters={})
     private Output<String> backupType;
 
     /**
      * @return The type of backup which needs to be taken.
-     * 
      */
     public Output<String> getBackupType() {
         return this.backupType;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The last successful backup run which was triggered for the schedule.
-     * 
      */
     @Export(name="lastSuccessfulRun", type=String.class, parameters={})
     private Output<String> lastSuccessfulRun;
 
     /**
      * @return The last successful backup run which was triggered for the schedule.
-     * 
      */
     public Output<String> getLastSuccessfulRun() {
         return this.lastSuccessfulRun;
     }
     /**
      * The name of the object.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the object.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The number of backups to be retained.
-     * 
      */
     @Export(name="retentionCount", type=Double.class, parameters={})
     private Output<Double> retentionCount;
 
     /**
      * @return The number of backups to be retained.
-     * 
      */
     public Output<Double> getRetentionCount() {
         return this.retentionCount;
     }
     /**
      * The schedule recurrence.
-     * 
      */
     @Export(name="scheduleRecurrence", type=ScheduleRecurrenceResponse.class, parameters={})
     private Output<ScheduleRecurrenceResponse> scheduleRecurrence;
 
     /**
      * @return The schedule recurrence.
-     * 
      */
     public Output<ScheduleRecurrenceResponse> getScheduleRecurrence() {
         return this.scheduleRecurrence;
     }
     /**
      * The schedule status.
-     * 
      */
     @Export(name="scheduleStatus", type=String.class, parameters={})
     private Output<String> scheduleStatus;
 
     /**
      * @return The schedule status.
-     * 
      */
     public Output<String> getScheduleStatus() {
         return this.scheduleStatus;
     }
     /**
      * The start time of the schedule.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return The start time of the schedule.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

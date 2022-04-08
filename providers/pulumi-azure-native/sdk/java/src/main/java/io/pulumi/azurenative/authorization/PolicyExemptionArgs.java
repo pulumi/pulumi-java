@@ -20,7 +20,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The description of the policy exemption.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The display name of the policy exemption.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -42,7 +40,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The policy exemption category. Possible values are Waiver and Mitigated.
-     * 
      */
     @Import(name="exemptionCategory", required=true)
       private final Output<Either<String,ExemptionCategory>> exemptionCategory;
@@ -53,7 +50,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
-     * 
      */
     @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
@@ -64,7 +60,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -75,7 +70,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ID of the policy assignment that is being exempted.
-     * 
      */
     @Import(name="policyAssignmentId", required=true)
       private final Output<String> policyAssignmentId;
@@ -86,7 +80,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
-     * 
      */
     @Import(name="policyDefinitionReferenceIds")
       private final @Nullable Output<List<String>> policyDefinitionReferenceIds;
@@ -97,7 +90,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the policy exemption to delete.
-     * 
      */
     @Import(name="policyExemptionName")
       private final @Nullable Output<String> policyExemptionName;
@@ -108,7 +100,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

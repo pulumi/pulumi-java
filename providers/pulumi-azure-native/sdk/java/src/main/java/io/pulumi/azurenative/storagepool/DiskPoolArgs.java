@@ -21,7 +21,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of additional capabilities for a Disk pool.
-     * 
      */
     @Import(name="additionalCapabilities")
       private final @Nullable Output<List<String>> additionalCapabilities;
@@ -32,7 +31,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Logical zone for Disk pool resource; example: ["1"].
-     * 
      */
     @Import(name="availabilityZones", required=true)
       private final Output<List<String>> availabilityZones;
@@ -43,7 +41,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Disk pool.
-     * 
      */
     @Import(name="diskPoolName")
       private final @Nullable Output<String> diskPoolName;
@@ -54,7 +51,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
-     * 
      */
     @Import(name="disks")
       private final @Nullable Output<List<DiskArgs>> disks;
@@ -65,7 +61,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -76,7 +71,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure Resource ID of a Subnet for the Disk pool.
-     * 
      */
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
@@ -98,7 +91,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -109,7 +101,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines the SKU of VM deployed for Disk pool
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<Either<String,DiskPoolTier>> tier;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The recurrence type.
-     * 
      */
     @EnumType
     public enum RecurrenceType {

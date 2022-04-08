@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The current state of the IP address firewall for this Data Lake Store account.
-     * 
      */
     @EnumType
     public enum FirewallState {

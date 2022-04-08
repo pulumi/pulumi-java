@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom activity type.
- * 
  */
 public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
-     * 
      */
     @Import(name="autoUserSpecification")
       private final @Nullable Object autoUserSpecification;
@@ -39,7 +37,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Command for custom activity Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="command", required=true)
       private final Object command;
@@ -50,7 +47,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -61,7 +57,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
-     * 
      */
     @Import(name="extendedProperties")
       private final @Nullable Map<String,Object> extendedProperties;
@@ -83,7 +77,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Folder path for resource files Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Object folderPath;
@@ -94,7 +87,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -105,7 +97,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -116,7 +107,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -127,7 +117,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Reference objects
-     * 
      */
     @Import(name="referenceObjects")
       private final @Nullable CustomActivityReferenceObjectResponse referenceObjects;
@@ -138,7 +127,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource linked service reference.
-     * 
      */
     @Import(name="resourceLinkedService")
       private final @Nullable LinkedServiceReferenceResponse resourceLinkedService;
@@ -149,7 +137,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
-     * 
      */
     @Import(name="retentionTimeInDays")
       private final @Nullable Object retentionTimeInDays;
@@ -161,7 +148,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Type of activity.
      * Expected value is 'Custom'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -172,7 +158,6 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

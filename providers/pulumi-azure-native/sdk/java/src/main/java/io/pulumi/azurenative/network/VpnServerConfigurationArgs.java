@@ -28,7 +28,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The set of aad vpn authentication parameters.
-     * 
      */
     @Import(name="aadAuthenticationParameters")
       private final @Nullable Output<AadAuthenticationParametersArgs> aadAuthenticationParameters;
@@ -39,7 +38,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -50,7 +48,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -61,7 +58,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the VpnServerConfiguration that is unique within a resource group.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -72,7 +68,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Radius client root certificate of VpnServerConfiguration.
-     * 
      */
     @Import(name="radiusClientRootCertificates")
       private final @Nullable Output<List<VpnServerConfigRadiusClientRootCertificateArgs>> radiusClientRootCertificates;
@@ -83,7 +78,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
-     * 
      */
     @Import(name="radiusServerAddress")
       private final @Nullable Output<String> radiusServerAddress;
@@ -94,7 +88,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Radius Server root certificate of VpnServerConfiguration.
-     * 
      */
     @Import(name="radiusServerRootCertificates")
       private final @Nullable Output<List<VpnServerConfigRadiusServerRootCertificateArgs>> radiusServerRootCertificates;
@@ -105,7 +98,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
-     * 
      */
     @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
@@ -116,7 +108,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Multiple Radius Server configuration for VpnServerConfiguration.
-     * 
      */
     @Import(name="radiusServers")
       private final @Nullable Output<List<RadiusServerArgs>> radiusServers;
@@ -127,7 +118,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The resource group name of the VpnServerConfiguration.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -138,7 +128,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -149,7 +138,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VPN authentication types for the VpnServerConfiguration.
-     * 
      */
     @Import(name="vpnAuthenticationTypes")
       private final @Nullable Output<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes;
@@ -160,7 +148,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VpnClientIpsecPolicies for VpnServerConfiguration.
-     * 
      */
     @Import(name="vpnClientIpsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
@@ -171,7 +158,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VPN client revoked certificate of VpnServerConfiguration.
-     * 
      */
     @Import(name="vpnClientRevokedCertificates")
       private final @Nullable Output<List<VpnServerConfigVpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates;
@@ -182,7 +168,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VPN client root certificate of VpnServerConfiguration.
-     * 
      */
     @Import(name="vpnClientRootCertificates")
       private final @Nullable Output<List<VpnServerConfigVpnClientRootCertificateArgs>> vpnClientRootCertificates;
@@ -193,7 +178,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VPN protocols for the VpnServerConfiguration.
-     * 
      */
     @Import(name="vpnProtocols")
       private final @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
@@ -204,7 +188,6 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the VpnServerConfiguration being created or updated.
-     * 
      */
     @Import(name="vpnServerConfigurationName")
       private final @Nullable Output<String> vpnServerConfigurationName;

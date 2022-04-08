@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * WorkerProfile represents a worker profile.
- * 
  */
 public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of worker VMs.  Must be between 3 and 20 (immutable).
-     * 
      */
     @Import(name="count")
       private final @Nullable Integer count;
@@ -32,7 +30,6 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The disk size of the worker VMs.  Must be 128 or greater (immutable).
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
@@ -43,7 +40,6 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The worker profile name.  Must be "worker" (immutable).
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Azure resource ID of the worker subnet (immutable).
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable String subnetId;
@@ -65,7 +60,6 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The size of the worker VMs (immutable).
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable String vmSize;

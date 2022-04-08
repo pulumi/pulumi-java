@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the additional workspaces.
- * 
  */
 public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
 
     /**
      * List of data types sent to workspace
-     * 
      */
     @Import(name="dataTypes")
       private final @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
@@ -35,7 +33,6 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
 
     /**
      * Workspace type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
@@ -46,7 +43,6 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
 
     /**
      * Workspace resource id
-     * 
      */
     @Import(name="workspace")
       private final @Nullable Output<String> workspace;

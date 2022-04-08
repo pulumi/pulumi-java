@@ -17,7 +17,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
 
     /**
      * Name of the guest configuration assignment.
-     * 
      */
     @Import(name="guestConfigurationAssignmentName")
       private final @Nullable Output<String> guestConfigurationAssignmentName;
@@ -28,7 +27,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
 
     /**
      * Region where the VM is located.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
 
     /**
      * Name of the guest configuration assignment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
 
     /**
      * Properties of the Guest configuration assignment.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
@@ -61,7 +57,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The name of the virtual machine.
-     * 
      */
     @Import(name="vmName", required=true)
       private final Output<String> vmName;

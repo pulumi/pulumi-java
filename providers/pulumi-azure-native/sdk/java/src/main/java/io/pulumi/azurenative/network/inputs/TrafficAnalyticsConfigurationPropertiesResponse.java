@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters that define the configuration of traffic analytics.
- * 
  */
 public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
 
     /**
      * Flag to enable/disable traffic analytics.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -33,7 +31,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
 
     /**
      * The interval in minutes which would decide how frequently TA service should do flow analytics.
-     * 
      */
     @Import(name="trafficAnalyticsInterval")
       private final @Nullable Integer trafficAnalyticsInterval;
@@ -44,7 +41,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
 
     /**
      * The resource guid of the attached workspace.
-     * 
      */
     @Import(name="workspaceId")
       private final @Nullable String workspaceId;
@@ -55,7 +51,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
 
     /**
      * The location of the attached workspace.
-     * 
      */
     @Import(name="workspaceRegion")
       private final @Nullable String workspaceRegion;
@@ -66,7 +61,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
 
     /**
      * Resource Id of the attached workspace.
-     * 
      */
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;

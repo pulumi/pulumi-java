@@ -12,63 +12,51 @@ import java.util.Objects;
 public final class GetSqlDWTableDataSetMappingResult {
     /**
      * The id of the source data set.
-     * 
      */
     private final String dataSetId;
     /**
      * Gets the status of the data set mapping.
-     * 
      */
     private final String dataSetMappingStatus;
     /**
      * DataWarehouse name of the source data set
-     * 
      */
     private final String dataWarehouseName;
     /**
      * The resource id of the azure resource
-     * 
      */
     private final String id;
     /**
      * Kind of data set mapping.
      * Expected value is 'SqlDWTable'.
-     * 
      */
     private final String kind;
     /**
      * Name of the azure resource
-     * 
      */
     private final String name;
     /**
      * Provisioning state of the data set mapping.
-     * 
      */
     private final String provisioningState;
     /**
      * Schema of the table. Default value is dbo.
-     * 
      */
     private final String schemaName;
     /**
      * Resource id of SQL server
-     * 
      */
     private final String sqlServerResourceId;
     /**
      * System Data of the Azure resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * SQL DW table name.
-     * 
      */
     private final String tableName;
     /**
      * Type of the azure resource
-     * 
      */
     private final String type;
 
@@ -102,28 +90,24 @@ public final class GetSqlDWTableDataSetMappingResult {
 
     /**
      * The id of the source data set.
-     * 
     */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
-     * 
     */
     public String getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * DataWarehouse name of the source data set
-     * 
     */
     public String getDataWarehouseName() {
         return this.dataWarehouseName;
     }
     /**
      * The resource id of the azure resource
-     * 
     */
     public String getId() {
         return this.id;
@@ -131,56 +115,48 @@ public final class GetSqlDWTableDataSetMappingResult {
     /**
      * Kind of data set mapping.
      * Expected value is 'SqlDWTable'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the data set mapping.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Schema of the table. Default value is dbo.
-     * 
     */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * Resource id of SQL server
-     * 
     */
     public String getSqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
      * System Data of the Azure resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * SQL DW table name.
-     * 
     */
     public String getTableName() {
         return this.tableName;
     }
     /**
      * Type of the azure resource
-     * 
     */
     public String getType() {
         return this.type;

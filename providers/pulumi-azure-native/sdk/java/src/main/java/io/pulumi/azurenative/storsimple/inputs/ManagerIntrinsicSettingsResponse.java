@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Intrinsic settings which refers to the type of the StorSimple Manager.
- * 
  */
 public final class ManagerIntrinsicSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ManagerIntrinsicSettingsResponse extends io.pulumi.resources.
 
     /**
      * The type of StorSimple Manager.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -15,43 +15,35 @@ import javax.annotation.Nullable;
 public final class JobOutputAssetResponse {
     /**
      * The name of the output Asset.
-     * 
      */
     private final String assetName;
     /**
      * The UTC date and time at which this Job Output finished processing.
-     * 
      */
     private final String endTime;
     /**
      * If the JobOutput is in the Error state, it contains the details of the error.
-     * 
      */
     private final JobErrorResponse error;
     /**
      * A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
-     * 
      */
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobOutputAsset'.
-     * 
      */
     private final String odataType;
     /**
      * If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
-     * 
      */
     private final Integer progress;
     /**
      * The UTC date and time at which this Job Output began processing.
-     * 
      */
     private final String startTime;
     /**
      * Describes the state of the JobOutput.
-     * 
      */
     private final String state;
 
@@ -77,28 +69,24 @@ public final class JobOutputAssetResponse {
 
     /**
      * The name of the output Asset.
-     * 
     */
     public String getAssetName() {
         return this.assetName;
     }
     /**
      * The UTC date and time at which this Job Output finished processing.
-     * 
     */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * If the JobOutput is in the Error state, it contains the details of the error.
-     * 
     */
     public JobErrorResponse getError() {
         return this.error;
     }
     /**
      * A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
-     * 
     */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
@@ -106,28 +94,24 @@ public final class JobOutputAssetResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobOutputAsset'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
-     * 
     */
     public Integer getProgress() {
         return this.progress;
     }
     /**
      * The UTC date and time at which this Job Output began processing.
-     * 
     */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Describes the state of the JobOutput.
-     * 
     */
     public String getState() {
         return this.state;

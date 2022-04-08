@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Action Groups information, used by the alert rule.
- * 
  */
 public final class ActionGroupsInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
 
     /**
      * An optional custom email subject to use in email notifications.
-     * 
      */
     @Import(name="customEmailSubject")
       private final @Nullable String customEmailSubject;
@@ -32,7 +30,6 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
 
     /**
      * An optional custom web-hook payload to use in web-hook notifications.
-     * 
      */
     @Import(name="customWebhookPayload")
       private final @Nullable String customWebhookPayload;
@@ -43,7 +40,6 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
 
     /**
      * The Action Group resource IDs.
-     * 
      */
     @Import(name="groupIds", required=true)
       private final List<String> groupIds;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SQL Server connectivity option.
-     * 
      */
     @EnumType
     public enum ConnectivityType {

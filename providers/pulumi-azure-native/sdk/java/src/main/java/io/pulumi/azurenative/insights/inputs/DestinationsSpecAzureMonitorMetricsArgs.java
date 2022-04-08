@@ -12,16 +12,14 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Monitor Metrics destination.
- * 
  */
 public final class DestinationsSpecAzureMonitorMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DestinationsSpecAzureMonitorMetricsArgs Empty = new DestinationsSpecAzureMonitorMetricsArgs();
 
     /**
-     * A friendly name for the destination.
+     * A friendly name for the destination. 
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

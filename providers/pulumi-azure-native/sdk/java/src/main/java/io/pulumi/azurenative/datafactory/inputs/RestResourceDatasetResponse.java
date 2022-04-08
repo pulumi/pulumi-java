@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Rest service dataset.
- * 
  */
 public final class RestResourceDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="additionalHeaders")
       private final @Nullable Object additionalHeaders;
@@ -37,7 +35,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -48,7 +45,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -59,7 +55,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
@@ -70,7 +65,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -81,7 +75,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="paginationRules")
       private final @Nullable Object paginationRules;
@@ -92,7 +85,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -103,7 +95,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="relativeUrl")
       private final @Nullable Object relativeUrl;
@@ -114,7 +105,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestBody")
       private final @Nullable Object requestBody;
@@ -125,7 +115,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestMethod")
       private final @Nullable Object requestMethod;
@@ -136,7 +125,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Object schema;
@@ -147,7 +135,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Object structure;
@@ -159,7 +146,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
     /**
      * Type of dataset.
      * Expected value is 'RestResource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

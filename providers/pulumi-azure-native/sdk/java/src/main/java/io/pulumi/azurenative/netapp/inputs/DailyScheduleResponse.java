@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Daily Schedule properties
- * 
  */
 public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates which hour in UTC timezone a snapshot should be taken
-     * 
      */
     @Import(name="hour")
       private final @Nullable Integer hour;
@@ -32,7 +30,6 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates which minute snapshot should be taken
-     * 
      */
     @Import(name="minute")
       private final @Nullable Integer minute;
@@ -43,7 +40,6 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Daily snapshot count to keep
-     * 
      */
     @Import(name="snapshotsToKeep")
       private final @Nullable Integer snapshotsToKeep;
@@ -54,7 +50,6 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
-     * 
      */
     @Import(name="usedBytes")
       private final @Nullable Double usedBytes;

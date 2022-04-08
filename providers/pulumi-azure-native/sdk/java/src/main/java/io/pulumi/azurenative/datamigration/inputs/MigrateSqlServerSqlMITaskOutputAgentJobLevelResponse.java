@@ -17,7 +17,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -28,7 +27,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Migration errors and warnings per job
-     * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
@@ -39,7 +37,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -50,7 +47,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * The state of the original Agent Job.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -61,7 +57,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Migration progress message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -72,7 +67,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Agent Job name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -84,7 +78,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     /**
      * Result type
      * Expected value is 'AgentJobLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -95,7 +88,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -106,7 +98,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Current state of migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

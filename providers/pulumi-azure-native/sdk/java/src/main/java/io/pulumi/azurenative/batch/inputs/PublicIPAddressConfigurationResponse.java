@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The public IP Address configuration of the networking configuration of a Pool.
- * 
  */
 public final class PublicIPAddressConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
 
     /**
      * The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
-     * 
      */
     @Import(name="ipAddressIds")
       private final @Nullable List<String> ipAddressIds;
@@ -32,7 +30,6 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
 
     /**
      * The default value is BatchManaged
-     * 
      */
     @Import(name="provision")
       private final @Nullable String provision;

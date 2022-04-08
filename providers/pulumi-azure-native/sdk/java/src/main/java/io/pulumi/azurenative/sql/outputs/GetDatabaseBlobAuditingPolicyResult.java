@@ -72,16 +72,14 @@ public final class GetDatabaseBlobAuditingPolicyResult {
      * SELECT on SCHEMA::mySchema by public
      * 
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-     * 
      */
     private final @Nullable List<String> auditActionsAndGroups;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
-     * Specifies whether audit events are sent to Azure Monitor.
+     * Specifies whether audit events are sent to Azure Monitor. 
      * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
      * 
      * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -97,48 +95,39 @@ public final class GetDatabaseBlobAuditingPolicyResult {
     private final @Nullable Boolean isAzureMonitorTargetEnabled;
     /**
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
-     * 
      */
     private final @Nullable Boolean isStorageSecondaryKeyInUse;
     /**
      * Resource kind.
-     * 
      */
     private final String kind;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
-     * 
      */
     private final @Nullable Integer queueDelayMs;
     /**
      * Specifies the number of days to keep in the audit logs in the storage account.
-     * 
      */
     private final @Nullable Integer retentionDays;
     /**
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-     * 
      */
     private final String state;
     /**
      * Specifies the blob storage subscription Id.
-     * 
      */
     private final @Nullable String storageAccountSubscriptionId;
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
-     * 
      */
     private final @Nullable String storageEndpoint;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -228,20 +217,18 @@ public final class GetDatabaseBlobAuditingPolicyResult {
      * SELECT on SCHEMA::mySchema by public
      * 
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-     * 
     */
     public List<String> getAuditActionsAndGroups() {
         return this.auditActionsAndGroups == null ? List.of() : this.auditActionsAndGroups;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
-     * Specifies whether audit events are sent to Azure Monitor.
+     * Specifies whether audit events are sent to Azure Monitor. 
      * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
      * 
      * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -259,21 +246,18 @@ public final class GetDatabaseBlobAuditingPolicyResult {
     }
     /**
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
-     * 
     */
     public Optional<Boolean> getIsStorageSecondaryKeyInUse() {
         return Optional.ofNullable(this.isStorageSecondaryKeyInUse);
     }
     /**
      * Resource kind.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -281,42 +265,36 @@ public final class GetDatabaseBlobAuditingPolicyResult {
     /**
      * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
-     * 
     */
     public Optional<Integer> getQueueDelayMs() {
         return Optional.ofNullable(this.queueDelayMs);
     }
     /**
      * Specifies the number of days to keep in the audit logs in the storage account.
-     * 
     */
     public Optional<Integer> getRetentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Specifies the blob storage subscription Id.
-     * 
     */
     public Optional<String> getStorageAccountSubscriptionId() {
         return Optional.ofNullable(this.storageAccountSubscriptionId);
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
-     * 
     */
     public Optional<String> getStorageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

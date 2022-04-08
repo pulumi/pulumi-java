@@ -14,7 +14,6 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * The Principal ID of the identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -25,7 +24,6 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * The Tenant ID of the identity.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -36,7 +34,6 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

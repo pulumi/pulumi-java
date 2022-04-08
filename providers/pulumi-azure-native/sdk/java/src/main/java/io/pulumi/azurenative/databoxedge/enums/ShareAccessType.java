@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of access to be allowed for the user.
-     * 
      */
     @EnumType
     public enum ShareAccessType {

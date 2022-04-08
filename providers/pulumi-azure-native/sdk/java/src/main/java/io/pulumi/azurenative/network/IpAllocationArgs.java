@@ -21,7 +21,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IpAllocation tags.
-     * 
      */
     @Import(name="allocationTags")
       private final @Nullable Output<Map<String,String>> allocationTags;
@@ -32,7 +31,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +41,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the IpAllocation.
-     * 
      */
     @Import(name="ipAllocationName")
       private final @Nullable Output<String> ipAllocationName;
@@ -54,7 +51,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IPAM allocation ID.
-     * 
      */
     @Import(name="ipamAllocationId")
       private final @Nullable Output<String> ipamAllocationId;
@@ -65,7 +61,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -76,7 +71,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The address prefix for the IpAllocation.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
@@ -87,7 +81,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The address prefix length for the IpAllocation.
-     * 
      */
     @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
@@ -98,7 +91,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The address prefix Type for the IpAllocation.
-     * 
      */
     @Import(name="prefixType")
       private final @Nullable Output<Either<String,IPVersion>> prefixType;
@@ -109,7 +101,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -120,7 +111,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -131,7 +121,6 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type for the IpAllocation.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,IpAllocationType>> type;

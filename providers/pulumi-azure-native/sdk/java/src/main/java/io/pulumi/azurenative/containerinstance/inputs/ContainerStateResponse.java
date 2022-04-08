@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The container instance state.
- * 
  */
 public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The human-readable status of the container instance state.
-     * 
      */
     @Import(name="detailStatus", required=true)
       private final String detailStatus;
@@ -30,7 +28,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The container instance exit codes correspond to those from the `docker run` command.
-     * 
      */
     @Import(name="exitCode", required=true)
       private final Integer exitCode;
@@ -41,7 +38,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The date-time when the container instance state finished.
-     * 
      */
     @Import(name="finishTime", required=true)
       private final String finishTime;
@@ -52,7 +48,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The date-time when the container instance state started.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -63,7 +58,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The state of the container instance.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of endpoint.
-     * 
      */
     @EnumType
     public enum Type {

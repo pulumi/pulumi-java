@@ -12,32 +12,26 @@ import java.util.Objects;
 public final class AmlComputeNodeInformationResponse {
     /**
      * ID of the compute node.
-     * 
      */
     private final String nodeId;
     /**
      * State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
-     * 
      */
     private final String nodeState;
     /**
      * SSH port number of the node.
-     * 
      */
     private final Double port;
     /**
      * Private IP address of the compute node.
-     * 
      */
     private final String privateIpAddress;
     /**
      * Public IP address of the compute node.
-     * 
      */
     private final String publicIpAddress;
     /**
      * ID of the Experiment running on the node, if any else null.
-     * 
      */
     private final String runId;
 
@@ -59,42 +53,36 @@ public final class AmlComputeNodeInformationResponse {
 
     /**
      * ID of the compute node.
-     * 
     */
     public String getNodeId() {
         return this.nodeId;
     }
     /**
      * State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
-     * 
     */
     public String getNodeState() {
         return this.nodeState;
     }
     /**
      * SSH port number of the node.
-     * 
     */
     public Double getPort() {
         return this.port;
     }
     /**
      * Private IP address of the compute node.
-     * 
     */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Public IP address of the compute node.
-     * 
     */
     public String getPublicIpAddress() {
         return this.publicIpAddress;
     }
     /**
      * ID of the Experiment running on the node, if any else null.
-     * 
     */
     public String getRunId() {
         return this.runId;

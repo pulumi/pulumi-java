@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class UserOwnedStorageResponse {
     /**
      * Full resource id of a Microsoft.Storage resource.
-     * 
      */
     private final @Nullable String resourceId;
 
@@ -24,7 +23,6 @@ public final class UserOwnedStorageResponse {
 
     /**
      * Full resource id of a Microsoft.Storage resource.
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);

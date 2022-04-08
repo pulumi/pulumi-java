@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class LBBackendAddressPoolResourceSettingsResponse {
     /**
      * Gets or sets the backend address pool name.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class LBBackendAddressPoolResourceSettingsResponse {
 
     /**
      * Gets or sets the backend address pool name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

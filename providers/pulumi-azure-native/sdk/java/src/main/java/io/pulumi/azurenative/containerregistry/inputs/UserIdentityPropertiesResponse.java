@@ -16,7 +16,6 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The client id of user assigned identity.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -27,7 +26,6 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * The principal id of user assigned identity.
-     * 
      */
     @Import(name="principalId")
       private final @Nullable String principalId;

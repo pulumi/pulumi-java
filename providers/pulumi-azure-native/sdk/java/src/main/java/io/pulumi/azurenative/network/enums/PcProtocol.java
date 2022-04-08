@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protocol to be filtered on.
-     * 
      */
     @EnumType
     public enum PcProtocol {

@@ -16,7 +16,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * For future use - The client id of the identity which will be used to access key vault.
-     * 
      */
     @Import(name="identityClientId")
       private final @Nullable String identityClientId;
@@ -27,7 +26,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Key vault uri to access the encryption key.
-     * 
      */
     @Import(name="keyIdentifier", required=true)
       private final String keyIdentifier;
@@ -38,7 +36,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The ArmId of the keyVault where the customer owned encryption key is present.
-     * 
      */
     @Import(name="keyVaultArmId", required=true)
       private final String keyVaultArmId;

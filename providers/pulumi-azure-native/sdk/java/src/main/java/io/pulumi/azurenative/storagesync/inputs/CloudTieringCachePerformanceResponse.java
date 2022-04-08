@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Server endpoint cloud tiering status object.
- * 
  */
 public final class CloudTieringCachePerformanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
 
     /**
      * Count of bytes that were served from the local server
-     * 
      */
     @Import(name="cacheHitBytes", required=true)
       private final Double cacheHitBytes;
@@ -31,7 +29,6 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
 
     /**
      * Percentage of total bytes (hit + miss) that were served from the local server
-     * 
      */
     @Import(name="cacheHitBytesPercent", required=true)
       private final Integer cacheHitBytesPercent;
@@ -42,7 +39,6 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
 
     /**
      * Count of bytes that were served from the cloud
-     * 
      */
     @Import(name="cacheMissBytes", required=true)
       private final Double cacheMissBytes;
@@ -53,7 +49,6 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
 
     /**
      * Last updated timestamp
-     * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;

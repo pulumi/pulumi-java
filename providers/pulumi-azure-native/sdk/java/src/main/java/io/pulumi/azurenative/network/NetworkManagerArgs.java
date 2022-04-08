@@ -21,7 +21,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the network manager.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +31,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A friendly name for the network manager.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -43,7 +41,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -54,7 +51,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -65,7 +61,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName")
       private final @Nullable Output<String> networkManagerName;
@@ -76,7 +71,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope Access.
-     * 
      */
     @Import(name="networkManagerScopeAccesses")
       private final @Nullable Output<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses;
@@ -87,7 +81,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope of Network Manager.
-     * 
      */
     @Import(name="networkManagerScopes")
       private final @Nullable Output<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes;
@@ -98,7 +91,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -109,7 +101,6 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

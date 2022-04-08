@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The container group encryption properties.
- * 
  */
 public final class EncryptionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The encryption key name.
-     * 
      */
     @Import(name="keyName", required=true)
       private final String keyName;
@@ -29,7 +27,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The encryption key version.
-     * 
      */
     @Import(name="keyVersion", required=true)
       private final String keyVersion;
@@ -40,7 +37,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The keyvault base url.
-     * 
      */
     @Import(name="vaultBaseUrl", required=true)
       private final String vaultBaseUrl;

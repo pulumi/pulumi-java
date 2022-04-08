@@ -16,7 +16,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the environment.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final String environmentName;
@@ -27,7 +26,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the environment Setting.
-     * 
      */
     @Import(name="environmentSettingName", required=true)
       private final String environmentSettingName;
@@ -38,7 +36,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specify the $expand query. Example: 'properties($expand=networkInterface)'
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -49,7 +46,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the lab Account.
-     * 
      */
     @Import(name="labAccountName", required=true)
       private final String labAccountName;
@@ -60,7 +56,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -71,7 +66,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

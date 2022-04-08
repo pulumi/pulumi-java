@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Network details of the environment
- * 
  */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * PrivateIp address of the Compute VM
-     * 
      */
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
@@ -29,7 +27,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Connection information for Windows
-     * 
      */
     @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
@@ -40,7 +37,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Connection information for Linux
-     * 
      */
     @Import(name="sshAuthority", required=true)
       private final String sshAuthority;
@@ -51,7 +47,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Username of the VM
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

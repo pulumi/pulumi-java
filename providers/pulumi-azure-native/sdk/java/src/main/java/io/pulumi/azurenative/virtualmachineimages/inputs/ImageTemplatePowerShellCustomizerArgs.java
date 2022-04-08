@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Runs the specified PowerShell on the VM (Windows). Corresponds to Packer powershell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
- * 
  */
 public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
 
     /**
      * Array of PowerShell commands to execute
-     * 
      */
     @Import(name="inline")
       private final @Nullable Output<List<String>> inline;
@@ -34,7 +32,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
 
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -45,7 +42,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
 
     /**
      * If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
-     * 
      */
     @Import(name="runAsSystem")
       private final @Nullable Output<Boolean> runAsSystem;
@@ -56,7 +52,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
 
     /**
      * If specified, the PowerShell script will be run with elevated privileges
-     * 
      */
     @Import(name="runElevated")
       private final @Nullable Output<Boolean> runElevated;
@@ -67,7 +62,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
 
     /**
      * URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
-     * 
      */
     @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
@@ -78,7 +72,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
 
     /**
      * SHA256 checksum of the power shell script provided in the scriptUri field above
-     * 
      */
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
@@ -90,7 +83,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'PowerShell'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -101,7 +93,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
 
     /**
      * Valid exit codes for the PowerShell script. [Default: 0]
-     * 
      */
     @Import(name="validExitCodes")
       private final @Nullable Output<List<Integer>> validExitCodes;

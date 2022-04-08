@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * KeyPolicy assigned to the storage account.
- * 
  */
 public final class KeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key expiration period in days.
-     * 
      */
     @Import(name="keyExpirationPeriodInDays", required=true)
       private final Integer keyExpirationPeriodInDays;

@@ -18,7 +18,99 @@ import javax.annotation.Nullable;
  * A long term retention policy.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update the long term retention policy for the database.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var longTermRetentionPolicy = new AzureNative.Sql.LongTermRetentionPolicy("longTermRetentionPolicy", new AzureNative.Sql.LongTermRetentionPolicyArgs
+ *         {
+ *             DatabaseName = "testDatabase",
+ *             MonthlyRetention = "P1Y",
+ *             PolicyName = "default",
+ *             ResourceGroupName = "resourceGroup",
+ *             ServerName = "testserver",
+ *             WeekOfYear = 5,
+ *             WeeklyRetention = "P1M",
+ *             YearlyRetention = "P5Y",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewLongTermRetentionPolicy(ctx, "longTermRetentionPolicy", &sql.LongTermRetentionPolicyArgs{
+ * 			DatabaseName:      pulumi.String("testDatabase"),
+ * 			MonthlyRetention:  pulumi.String("P1Y"),
+ * 			PolicyName:        pulumi.String("default"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup"),
+ * 			ServerName:        pulumi.String("testserver"),
+ * 			WeekOfYear:        pulumi.Int(5),
+ * 			WeeklyRetention:   pulumi.String("P1M"),
+ * 			YearlyRetention:   pulumi.String("P5Y"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const longTermRetentionPolicy = new azure_native.sql.LongTermRetentionPolicy("longTermRetentionPolicy", {
+ *     databaseName: "testDatabase",
+ *     monthlyRetention: "P1Y",
+ *     policyName: "default",
+ *     resourceGroupName: "resourceGroup",
+ *     serverName: "testserver",
+ *     weekOfYear: 5,
+ *     weeklyRetention: "P1M",
+ *     yearlyRetention: "P5Y",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * long_term_retention_policy = azure_native.sql.LongTermRetentionPolicy("longTermRetentionPolicy",
+ *     database_name="testDatabase",
+ *     monthly_retention="P1Y",
+ *     policy_name="default",
+ *     resource_group_name="resourceGroup",
+ *     server_name="testserver",
+ *     week_of_year=5,
+ *     weekly_retention="P1M",
+ *     yearly_retention="P5Y")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +125,72 @@ import javax.annotation.Nullable;
 public class LongTermRetentionPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The monthly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     @Export(name="monthlyRetention", type=String.class, parameters={})
     private Output</* @Nullable */ String> monthlyRetention;
 
     /**
      * @return The monthly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     public Output</* @Nullable */ String> getMonthlyRetention() {
         return this.monthlyRetention;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The week of year to take the yearly backup in an ISO 8601 format.
-     * 
      */
     @Export(name="weekOfYear", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weekOfYear;
 
     /**
      * @return The week of year to take the yearly backup in an ISO 8601 format.
-     * 
      */
     public Output</* @Nullable */ Integer> getWeekOfYear() {
         return this.weekOfYear;
     }
     /**
      * The weekly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     @Export(name="weeklyRetention", type=String.class, parameters={})
     private Output</* @Nullable */ String> weeklyRetention;
 
     /**
      * @return The weekly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     public Output</* @Nullable */ String> getWeeklyRetention() {
         return this.weeklyRetention;
     }
     /**
      * The yearly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     @Export(name="yearlyRetention", type=String.class, parameters={})
     private Output</* @Nullable */ String> yearlyRetention;
 
     /**
      * @return The yearly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     public Output</* @Nullable */ String> getYearlyRetention() {
         return this.yearlyRetention;

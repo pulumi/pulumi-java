@@ -24,7 +24,79 @@ import javax.annotation.Nullable;
  * Factory resource type.
  * API Version: 2018-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Factories_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var factory = new AzureNative.DataFactory.Factory("factory", new AzureNative.DataFactory.FactoryArgs
+ *         {
+ *             FactoryName = "exampleFactoryName",
+ *             Location = "East US",
+ *             ResourceGroupName = "exampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datafactory.NewFactory(ctx, "factory", &datafactory.FactoryArgs{
+ * 			FactoryName:       pulumi.String("exampleFactoryName"),
+ * 			Location:          pulumi.String("East US"),
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const factory = new azure_native.datafactory.Factory("factory", {
+ *     factoryName: "exampleFactoryName",
+ *     location: "East US",
+ *     resourceGroupName: "exampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * factory = azure_native.datafactory.Factory("factory",
+ *     factory_name="exampleFactoryName",
+ *     location="East US",
+ *     resource_group_name="exampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,182 +111,156 @@ import javax.annotation.Nullable;
 public class Factory extends io.pulumi.resources.CustomResource {
     /**
      * Time the factory was created in ISO8601 format.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time the factory was created in ISO8601 format.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Etag identifies change in the resource.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
      * @return Etag identifies change in the resource.
-     * 
      */
     public Output<String> getETag() {
         return this.eTag;
     }
     /**
      * Properties to enable Customer Managed Key for the factory.
-     * 
      */
     @Export(name="encryption", type=EncryptionConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionConfigurationResponse> encryption;
 
     /**
      * @return Properties to enable Customer Managed Key for the factory.
-     * 
      */
     public Output</* @Nullable */ EncryptionConfigurationResponse> getEncryption() {
         return this.encryption;
     }
     /**
      * List of parameters for factory.
-     * 
      */
     @Export(name="globalParameters", type=Map.class, parameters={String.class, GlobalParameterSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,GlobalParameterSpecificationResponse>> globalParameters;
 
     /**
      * @return List of parameters for factory.
-     * 
      */
     public Output</* @Nullable */ Map<String,GlobalParameterSpecificationResponse>> getGlobalParameters() {
         return this.globalParameters;
     }
     /**
      * Managed service identity of the factory.
-     * 
      */
     @Export(name="identity", type=FactoryIdentityResponse.class, parameters={})
     private Output</* @Nullable */ FactoryIdentityResponse> identity;
 
     /**
      * @return Managed service identity of the factory.
-     * 
      */
     public Output</* @Nullable */ FactoryIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Factory provisioning state, example Succeeded.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Factory provisioning state, example Succeeded.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether or not public network access is allowed for the data factory.
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
      * @return Whether or not public network access is allowed for the data factory.
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * Git repo information of the factory.
-     * 
      */
     @Export(name="repoConfiguration", type=Either.class, parameters={FactoryGitHubConfigurationResponse.class, FactoryVSTSConfigurationResponse.class})
     private Output</* @Nullable */ Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> repoConfiguration;
 
     /**
      * @return Git repo information of the factory.
-     * 
      */
     public Output</* @Nullable */ Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> getRepoConfiguration() {
         return this.repoConfiguration;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version of the factory.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Version of the factory.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

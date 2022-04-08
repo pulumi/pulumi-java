@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An application security group in a resource group.
- * 
  */
 public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -32,7 +30,6 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +40,6 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

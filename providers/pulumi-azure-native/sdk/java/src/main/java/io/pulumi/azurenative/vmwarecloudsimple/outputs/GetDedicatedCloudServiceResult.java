@@ -14,47 +14,38 @@ import javax.annotation.Nullable;
 public final class GetDedicatedCloudServiceResult {
     /**
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
-     * 
      */
     private final String gatewaySubnet;
     /**
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
-     * 
      */
     private final String id;
     /**
      * indicates whether account onboarded or not in a given region
-     * 
      */
     private final String isAccountOnboarded;
     /**
      * Azure region
-     * 
      */
     private final String location;
     /**
      * {dedicatedCloudServiceName}
-     * 
      */
     private final String name;
     /**
      * total nodes purchased
-     * 
      */
     private final Integer nodes;
     /**
      * link to a service management web portal
-     * 
      */
     private final String serviceURL;
     /**
      * The list of tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     private final String type;
 
@@ -82,63 +73,54 @@ public final class GetDedicatedCloudServiceResult {
 
     /**
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
-     * 
     */
     public String getGatewaySubnet() {
         return this.gatewaySubnet;
     }
     /**
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * indicates whether account onboarded or not in a given region
-     * 
     */
     public String getIsAccountOnboarded() {
         return this.isAccountOnboarded;
     }
     /**
      * Azure region
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * {dedicatedCloudServiceName}
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * total nodes purchased
-     * 
     */
     public Integer getNodes() {
         return this.nodes;
     }
     /**
      * link to a service management web portal
-     * 
     */
     public String getServiceURL() {
         return this.serviceURL;
     }
     /**
      * The list of tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
     */
     public String getType() {
         return this.type;

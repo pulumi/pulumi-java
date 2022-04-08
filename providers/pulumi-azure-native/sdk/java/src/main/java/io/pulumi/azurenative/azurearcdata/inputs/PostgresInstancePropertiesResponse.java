@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Postgres Instance properties.
- * 
  */
 public final class PostgresInstancePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
 
     /**
      * The instance admin
-     * 
      */
     @Import(name="admin")
       private final @Nullable String admin;
@@ -33,7 +31,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
 
     /**
      * Username and password for basic authentication.
-     * 
      */
     @Import(name="basicLoginInformation")
       private final @Nullable BasicLoginInformationResponse basicLoginInformation;
@@ -44,7 +41,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
 
     /**
      * The data controller id
-     * 
      */
     @Import(name="dataControllerId")
       private final @Nullable String dataControllerId;
@@ -55,7 +51,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
 
     /**
      * The raw kubernetes information
-     * 
      */
     @Import(name="k8sRaw")
       private final @Nullable Object k8sRaw;
@@ -66,7 +61,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
 
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
      */
     @Import(name="lastUploadedDate")
       private final @Nullable String lastUploadedDate;

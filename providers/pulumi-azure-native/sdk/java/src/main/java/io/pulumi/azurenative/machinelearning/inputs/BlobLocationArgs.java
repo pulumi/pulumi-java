@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the access location for a blob.
- * 
  */
 public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<String> credentials;
@@ -31,7 +29,6 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;

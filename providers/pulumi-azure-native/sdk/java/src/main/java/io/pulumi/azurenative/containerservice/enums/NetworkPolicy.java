@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Network policy used for building Kubernetes network.
-     * 
      */
     @EnumType
     public enum NetworkPolicy {

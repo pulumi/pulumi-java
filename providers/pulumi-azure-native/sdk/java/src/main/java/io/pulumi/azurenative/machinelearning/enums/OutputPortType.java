@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Port data type.
-     * 
      */
     @EnumType
     public enum OutputPortType {

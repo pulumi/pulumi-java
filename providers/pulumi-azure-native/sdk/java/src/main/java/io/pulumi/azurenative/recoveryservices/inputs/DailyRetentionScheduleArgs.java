@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Daily retention schedule.
- * 
  */
 public final class DailyRetentionScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
 
     /**
      * Retention duration of retention Policy.
-     * 
      */
     @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
@@ -33,7 +31,6 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
 
     /**
      * Retention times of retention policy.
-     * 
      */
     @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;

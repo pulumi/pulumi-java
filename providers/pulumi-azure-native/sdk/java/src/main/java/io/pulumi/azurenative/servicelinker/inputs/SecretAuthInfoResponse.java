@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The authentication info when authType is secret
- * 
  */
 public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs
     /**
      * The authentication type.
      * Expected value is 'secret'.
-     * 
      */
     @Import(name="authType", required=true)
       private final String authType;
@@ -32,7 +30,6 @@ public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Username or account name for secret auth.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Password or account key for secret auth.
-     * 
      */
     @Import(name="secret")
       private final @Nullable String secret;

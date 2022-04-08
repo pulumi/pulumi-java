@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volume Export Policy Rule
- * 
  */
 public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
-     * 
      */
     @Import(name="allowedClients")
       private final @Nullable Output<String> allowedClients;
@@ -33,7 +31,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Allows CIFS protocol
-     * 
      */
     @Import(name="cifs")
       private final @Nullable Output<Boolean> cifs;
@@ -44,7 +41,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Has root access to volume
-     * 
      */
     @Import(name="hasRootAccess")
       private final @Nullable Output<Boolean> hasRootAccess;
@@ -55,7 +51,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
-     * 
      */
     @Import(name="kerberos5ReadOnly")
       private final @Nullable Output<Boolean> kerberos5ReadOnly;
@@ -66,7 +61,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
-     * 
      */
     @Import(name="kerberos5ReadWrite")
       private final @Nullable Output<Boolean> kerberos5ReadWrite;
@@ -77,7 +71,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
-     * 
      */
     @Import(name="kerberos5iReadOnly")
       private final @Nullable Output<Boolean> kerberos5iReadOnly;
@@ -88,7 +81,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
-     * 
      */
     @Import(name="kerberos5iReadWrite")
       private final @Nullable Output<Boolean> kerberos5iReadWrite;
@@ -99,7 +91,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
-     * 
      */
     @Import(name="kerberos5pReadOnly")
       private final @Nullable Output<Boolean> kerberos5pReadOnly;
@@ -110,7 +101,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
-     * 
      */
     @Import(name="kerberos5pReadWrite")
       private final @Nullable Output<Boolean> kerberos5pReadWrite;
@@ -121,7 +111,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Allows NFSv3 protocol. Enable only for NFSv3 type volumes
-     * 
      */
     @Import(name="nfsv3")
       private final @Nullable Output<Boolean> nfsv3;
@@ -132,7 +121,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
-     * 
      */
     @Import(name="nfsv41")
       private final @Nullable Output<Boolean> nfsv41;
@@ -143,7 +131,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Order index
-     * 
      */
     @Import(name="ruleIndex")
       private final @Nullable Output<Integer> ruleIndex;
@@ -154,7 +141,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Read only access
-     * 
      */
     @Import(name="unixReadOnly")
       private final @Nullable Output<Boolean> unixReadOnly;
@@ -165,7 +151,6 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Read and write access
-     * 
      */
     @Import(name="unixReadWrite")
       private final @Nullable Output<Boolean> unixReadWrite;

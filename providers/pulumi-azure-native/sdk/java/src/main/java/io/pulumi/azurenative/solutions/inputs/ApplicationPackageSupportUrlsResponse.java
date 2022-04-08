@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The appliance package support URLs.
- * 
  */
 public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resou
 
     /**
      * The government cloud support URL.
-     * 
      */
     @Import(name="governmentCloud")
       private final @Nullable String governmentCloud;
@@ -31,7 +29,6 @@ public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resou
 
     /**
      * The public azure support URL.
-     * 
      */
     @Import(name="publicAzure")
       private final @Nullable String publicAzure;

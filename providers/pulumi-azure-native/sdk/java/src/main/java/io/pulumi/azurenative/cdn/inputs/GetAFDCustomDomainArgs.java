@@ -14,7 +14,6 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the domain under the profile which is unique globally.
-     * 
      */
     @Import(name="customDomainName", required=true)
       private final String customDomainName;
@@ -25,7 +24,6 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -36,7 +34,6 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

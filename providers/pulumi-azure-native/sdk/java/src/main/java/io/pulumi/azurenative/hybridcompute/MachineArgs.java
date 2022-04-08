@@ -19,7 +19,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Public Key that the client provides to be used during initial resource onboarding
-     * 
      */
     @Import(name="clientPublicKey")
       private final @Nullable Output<String> clientPublicKey;
@@ -37,7 +36,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -48,7 +46,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata pertaining to the geographic location of the resource.
-     * 
      */
     @Import(name="locationData")
       private final @Nullable Output<LocationDataArgs> locationData;
@@ -59,7 +56,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hybrid machine.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -70,7 +66,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -81,7 +76,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -92,7 +86,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the hybrid machine unique ID.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;

@@ -19,7 +19,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the user.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<UserIdentityArgs> identity;
@@ -30,7 +29,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -41,7 +39,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the user profile.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secret store of the user.
-     * 
      */
     @Import(name="secretStore")
       private final @Nullable Output<UserSecretStoreArgs> secretStore;
@@ -85,7 +79,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

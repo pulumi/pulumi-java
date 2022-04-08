@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The time.
- * 
  */
 public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hour.
-     * 
      */
     @Import(name="hours", required=true)
       private final Output<Integer> hours;
@@ -30,7 +28,6 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minute.
-     * 
      */
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
@@ -41,7 +38,6 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The second.
-     * 
      */
     @Import(name="seconds", required=true)
       private final Output<Integer> seconds;

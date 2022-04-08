@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class PackageShippingDetailsResponse {
     /**
      * Name of the carrier.
-     * 
      */
     private final String carrierName;
     /**
      * Tracking Id of shipment.
-     * 
      */
     private final String trackingId;
     /**
      * Url where shipment can be tracked.
-     * 
      */
     private final String trackingUrl;
 
@@ -37,21 +34,18 @@ public final class PackageShippingDetailsResponse {
 
     /**
      * Name of the carrier.
-     * 
     */
     public String getCarrierName() {
         return this.carrierName;
     }
     /**
      * Tracking Id of shipment.
-     * 
     */
     public String getTrackingId() {
         return this.trackingId;
     }
     /**
      * Url where shipment can be tracked.
-     * 
     */
     public String getTrackingUrl() {
         return this.trackingUrl;

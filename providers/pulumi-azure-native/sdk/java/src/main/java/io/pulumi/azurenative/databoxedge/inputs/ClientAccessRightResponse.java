@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The mapping between a particular client IP and the type of access client has on the NFS share.
- * 
  */
 public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Type of access to be allowed for the client.
-     * 
      */
     @Import(name="accessPermission", required=true)
       private final String accessPermission;
@@ -29,7 +27,6 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
 
     /**
      * IP of the client.
-     * 
      */
     @Import(name="client", required=true)
       private final String client;

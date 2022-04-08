@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines top-level WebApplicationFirewallPolicy configuration settings.
- * 
  */
 public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
 
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-     * 
      */
     @Import(name="customBlockResponseBody")
       private final @Nullable String customBlockResponseBody;
@@ -32,7 +30,6 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
 
     /**
      * If the action type is block, customer can override the response status code.
-     * 
      */
     @Import(name="customBlockResponseStatusCode")
       private final @Nullable Integer customBlockResponseStatusCode;
@@ -43,7 +40,6 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
 
     /**
      * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable String enabledState;
@@ -54,7 +50,6 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
 
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;
@@ -65,7 +60,6 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
 
     /**
      * If action type is redirect, this field represents redirect URL for the client.
-     * 
      */
     @Import(name="redirectUrl")
       private final @Nullable String redirectUrl;
@@ -76,7 +70,6 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
 
     /**
      * Describes if policy managed rules will inspect the request body content.
-     * 
      */
     @Import(name="requestBodyCheck")
       private final @Nullable String requestBodyCheck;

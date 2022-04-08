@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Storage Account workload-specific container.
- * 
  */
 public final class AzureStorageContainerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -38,7 +36,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'StorageContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
@@ -49,7 +46,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -60,7 +56,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
@@ -71,7 +66,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Number of items backed up in this container.
-     * 
      */
     @Import(name="protectedItemCount")
       private final @Nullable Output<Double> protectedItemCount;
@@ -82,7 +76,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
@@ -93,7 +86,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource group name of Recovery Services Vault.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -104,7 +96,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Fully qualified ARM url.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -115,7 +106,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
 
     /**
      * Storage account version.
-     * 
      */
     @Import(name="storageAccountVersion")
       private final @Nullable Output<String> storageAccountVersion;

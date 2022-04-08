@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * the operator used to compare the data and the threshold.
-     * 
      */
     @EnumType
     public enum ConditionOperator {

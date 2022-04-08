@@ -17,7 +17,6 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -28,7 +27,6 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * GitHub access code.
-     * 
      */
     @Import(name="gitHubAccessCode", required=true)
       private final String gitHubAccessCode;
@@ -39,7 +37,6 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * GitHub access token base URL.
-     * 
      */
     @Import(name="gitHubAccessTokenBaseUrl", required=true)
       private final String gitHubAccessTokenBaseUrl;
@@ -50,7 +47,6 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * GitHub application client ID.
-     * 
      */
     @Import(name="gitHubClientId")
       private final @Nullable String gitHubClientId;
@@ -61,7 +57,6 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * GitHub bring your own app client secret information.
-     * 
      */
     @Import(name="gitHubClientSecret")
       private final @Nullable GitHubClientSecret gitHubClientSecret;
@@ -72,7 +67,6 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

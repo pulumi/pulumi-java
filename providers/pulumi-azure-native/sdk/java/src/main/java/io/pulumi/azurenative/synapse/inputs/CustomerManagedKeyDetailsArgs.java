@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the customer managed key associated with the workspace
- * 
  */
 public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
 
     /**
      * The key object of the workspace
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<WorkspaceKeyDetailsArgs> key;

@@ -19,7 +19,108 @@ import javax.annotation.Nullable;
  * The bandwidth schedule details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BandwidthSchedulePut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bandwidthSchedule = new AzureNative.DataBoxEdge.BandwidthSchedule("bandwidthSchedule", new AzureNative.DataBoxEdge.BandwidthScheduleArgs
+ *         {
+ *             Days = 
+ *             {
+ *                 "Sunday",
+ *                 "Monday",
+ *             },
+ *             DeviceName = "testedgedevice",
+ *             Name = "bandwidth-1",
+ *             RateInMbps = 100,
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *             Start = "0:0:0",
+ *             Stop = "13:59:0",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewBandwidthSchedule(ctx, "bandwidthSchedule", &databoxedge.BandwidthScheduleArgs{
+ * 			Days: pulumi.StringArray{
+ * 				pulumi.String("Sunday"),
+ * 				pulumi.String("Monday"),
+ * 			},
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Name:              pulumi.String("bandwidth-1"),
+ * 			RateInMbps:        pulumi.Int(100),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 			Start:             pulumi.String("0:0:0"),
+ * 			Stop:              pulumi.String("13:59:0"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const bandwidthSchedule = new azure_native.databoxedge.BandwidthSchedule("bandwidthSchedule", {
+ *     days: [
+ *         "Sunday",
+ *         "Monday",
+ *     ],
+ *     deviceName: "testedgedevice",
+ *     name: "bandwidth-1",
+ *     rateInMbps: 100,
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ *     start: "0:0:0",
+ *     stop: "13:59:0",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * bandwidth_schedule = azure_native.databoxedge.BandwidthSchedule("bandwidthSchedule",
+ *     days=[
+ *         "Sunday",
+ *         "Monday",
+ *     ],
+ *     device_name="testedgedevice",
+ *     name="bandwidth-1",
+ *     rate_in_mbps=100,
+ *     resource_group_name="GroupForEdgeAutomation",
+ *     start="0:0:0",
+ *     stop="13:59:0")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +135,84 @@ import javax.annotation.Nullable;
 public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
     /**
      * The days of the week when this schedule is applicable.
-     * 
      */
     @Export(name="days", type=List.class, parameters={String.class})
     private Output<List<String>> days;
 
     /**
      * @return The days of the week when this schedule is applicable.
-     * 
      */
     public Output<List<String>> getDays() {
         return this.days;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The bandwidth rate in Mbps.
-     * 
      */
     @Export(name="rateInMbps", type=Integer.class, parameters={})
     private Output<Integer> rateInMbps;
 
     /**
      * @return The bandwidth rate in Mbps.
-     * 
      */
     public Output<Integer> getRateInMbps() {
         return this.rateInMbps;
     }
     /**
      * The start time of the schedule in UTC.
-     * 
      */
     @Export(name="start", type=String.class, parameters={})
     private Output<String> start;
 
     /**
      * @return The start time of the schedule in UTC.
-     * 
      */
     public Output<String> getStart() {
         return this.start;
     }
     /**
      * The stop time of the schedule in UTC.
-     * 
      */
     @Export(name="stop", type=String.class, parameters={})
     private Output<String> stop;
 
     /**
      * @return The stop time of the schedule in UTC.
-     * 
      */
     public Output<String> getStop() {
         return this.stop;
     }
     /**
      * Bandwidth object related to ASE resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Bandwidth object related to ASE resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

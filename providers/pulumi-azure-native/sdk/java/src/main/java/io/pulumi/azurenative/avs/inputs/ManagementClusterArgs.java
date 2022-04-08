@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The properties of a default cluster
- * 
  */
 public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The cluster size
-     * 
      */
     @Import(name="clusterSize", required=true)
       private final Output<Integer> clusterSize;

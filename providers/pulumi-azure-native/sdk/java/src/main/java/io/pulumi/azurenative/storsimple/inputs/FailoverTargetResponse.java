@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the eligibility of a device as a failover target device.
- * 
  */
 public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The amount of free local storage available on the device in bytes.
-     * 
      */
     @Import(name="availableLocalStorageInBytes")
       private final @Nullable Double availableLocalStorageInBytes;
@@ -34,7 +32,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The amount of free tiered storage available for the device in bytes.
-     * 
      */
     @Import(name="availableTieredStorageInBytes")
       private final @Nullable Double availableTieredStorageInBytes;
@@ -45,7 +42,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The count of data containers on the device.
-     * 
      */
     @Import(name="dataContainersCount")
       private final @Nullable Integer dataContainersCount;
@@ -56,7 +52,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The path ID of the device.
-     * 
      */
     @Import(name="deviceId")
       private final @Nullable String deviceId;
@@ -67,7 +62,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The geo location (applicable only for cloud appliances) of the device.
-     * 
      */
     @Import(name="deviceLocation")
       private final @Nullable String deviceLocation;
@@ -78,7 +72,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The software version of the device.
-     * 
      */
     @Import(name="deviceSoftwareVersion")
       private final @Nullable String deviceSoftwareVersion;
@@ -89,7 +82,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The status of the device.
-     * 
      */
     @Import(name="deviceStatus")
       private final @Nullable String deviceStatus;
@@ -100,7 +92,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The eligibility result of the device, as a failover target device.
-     * 
      */
     @Import(name="eligibilityResult")
       private final @Nullable TargetEligibilityResultResponse eligibilityResult;
@@ -111,7 +102,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The friendly name for the current version of software on the device.
-     * 
      */
     @Import(name="friendlyDeviceSoftwareVersion")
       private final @Nullable String friendlyDeviceSoftwareVersion;
@@ -122,7 +112,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The model number of the device.
-     * 
      */
     @Import(name="modelDescription")
       private final @Nullable String modelDescription;
@@ -133,7 +122,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The count of volumes on the device.
-     * 
      */
     @Import(name="volumesCount")
       private final @Nullable Integer volumesCount;

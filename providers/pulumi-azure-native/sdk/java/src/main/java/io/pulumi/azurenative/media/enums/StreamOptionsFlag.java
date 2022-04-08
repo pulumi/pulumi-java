@@ -12,12 +12,10 @@ import java.util.StringJoiner;
     public enum StreamOptionsFlag {
         /**
          * Live streaming with no special latency optimizations.
-         * 
          */
         Default("Default"),
         /**
          * The live event provides lower end to end latency by reducing its internal buffers. This could result in more client buffering during playback if network bandwidth is low.
-         * 
          */
         LowLatency("LowLatency");
 

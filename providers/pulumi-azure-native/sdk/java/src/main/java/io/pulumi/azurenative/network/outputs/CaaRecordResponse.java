@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class CaaRecordResponse {
     /**
      * The flags for this CAA record as an integer between 0 and 255.
-     * 
      */
     private final @Nullable Integer flags;
     /**
      * The tag for this CAA record.
-     * 
      */
     private final @Nullable String tag;
     /**
      * The value for this CAA record.
-     * 
      */
     private final @Nullable String value;
 
@@ -40,21 +37,18 @@ public final class CaaRecordResponse {
 
     /**
      * The flags for this CAA record as an integer between 0 and 255.
-     * 
     */
     public Optional<Integer> getFlags() {
         return Optional.ofNullable(this.flags);
     }
     /**
      * The tag for this CAA record.
-     * 
     */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * The value for this CAA record.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

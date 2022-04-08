@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gateway SKU tier.
-     * 
      */
     @EnumType
     public enum VirtualNetworkGatewaySkuTier {

@@ -14,7 +14,6 @@ public final class GetRestorePointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetRestorePointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the restore point collection.
-     * 
      */
     @Import(name="restorePointCollectionName", required=true)
       private final String restorePointCollectionName;
@@ -36,7 +34,6 @@ public final class GetRestorePointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the restore point.
-     * 
      */
     @Import(name="restorePointName", required=true)
       private final String restorePointName;

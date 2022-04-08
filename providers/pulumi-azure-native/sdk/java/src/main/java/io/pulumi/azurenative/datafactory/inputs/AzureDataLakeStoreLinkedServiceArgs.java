@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Data Lake Store linked service.
- * 
  */
 public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Data Lake Store account name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<Object> accountName;
@@ -40,7 +38,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -51,7 +48,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
@@ -62,7 +58,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -73,7 +68,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
@@ -84,7 +78,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Data Lake Store service URI. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="dataLakeStoreUri", required=true)
       private final Output<Object> dataLakeStoreUri;
@@ -95,7 +88,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -106,7 +98,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -117,7 +108,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -128,7 +118,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable Output<Object> resourceGroupName;
@@ -139,7 +128,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
@@ -150,7 +138,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The Key of the application used to authenticate against the Azure Data Lake Store account.
-     * 
      */
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
@@ -161,7 +148,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<Object> subscriptionId;
@@ -172,7 +158,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
@@ -184,7 +169,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
     /**
      * Type of linked service.
      * Expected value is 'AzureDataLakeStore'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

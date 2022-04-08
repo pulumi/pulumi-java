@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Offline data transfer
-     * 
      */
     @EnumType
     public enum FeatureStatus {

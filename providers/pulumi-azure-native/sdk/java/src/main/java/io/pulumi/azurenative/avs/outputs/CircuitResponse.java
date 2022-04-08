@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class CircuitResponse {
     /**
      * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
-     * 
      */
     private final String expressRouteID;
     /**
      * ExpressRoute Circuit private peering identifier
-     * 
      */
     private final String expressRoutePrivatePeeringID;
     /**
      * CIDR of primary subnet
-     * 
      */
     private final String primarySubnet;
     /**
      * CIDR of secondary subnet
-     * 
      */
     private final String secondarySubnet;
 
@@ -44,28 +40,24 @@ public final class CircuitResponse {
 
     /**
      * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
-     * 
     */
     public String getExpressRouteID() {
         return this.expressRouteID;
     }
     /**
      * ExpressRoute Circuit private peering identifier
-     * 
     */
     public String getExpressRoutePrivatePeeringID() {
         return this.expressRoutePrivatePeeringID;
     }
     /**
      * CIDR of primary subnet
-     * 
     */
     public String getPrimarySubnet() {
         return this.primarySubnet;
     }
     /**
      * CIDR of secondary subnet
-     * 
     */
     public String getSecondarySubnet() {
         return this.secondarySubnet;

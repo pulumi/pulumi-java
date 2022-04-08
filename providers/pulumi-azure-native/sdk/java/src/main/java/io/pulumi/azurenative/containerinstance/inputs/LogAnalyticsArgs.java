@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container group log analytics information.
- * 
  */
 public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The log type to be used.
-     * 
      */
     @Import(name="logType")
       private final @Nullable Output<Either<String,LogAnalyticsLogType>> logType;
@@ -34,7 +32,6 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata for log analytics.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -45,7 +42,6 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace id for log analytics
-     * 
      */
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
@@ -56,7 +52,6 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace key for log analytics
-     * 
      */
     @Import(name="workspaceKey", required=true)
       private final Output<String> workspaceKey;
@@ -67,7 +62,6 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace resource id for log analytics
-     * 
      */
     @Import(name="workspaceResourceId")
       private final @Nullable Output<Map<String,String>> workspaceResourceId;

@@ -18,7 +18,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
@@ -29,7 +28,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the identifier of the subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<ApiEntityReferenceArgs> subnet;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The sku type.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku name. Required for data manager creation, optional for update.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku tier. This is based on the SKU name.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

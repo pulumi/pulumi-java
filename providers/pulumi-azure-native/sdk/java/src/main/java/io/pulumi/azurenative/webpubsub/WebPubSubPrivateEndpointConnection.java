@@ -20,7 +20,109 @@ import javax.annotation.Nullable;
  * A private endpoint connection to an azure resource
  * API Version: 2021-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WebPubSubPrivateEndpointConnections_Update
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webPubSubPrivateEndpointConnection = new AzureNative.WebPubSub.WebPubSubPrivateEndpointConnection("webPubSubPrivateEndpointConnection", new AzureNative.WebPubSub.WebPubSubPrivateEndpointConnectionArgs
+ *         {
+ *             PrivateEndpoint = new AzureNative.WebPubSub.Inputs.PrivateEndpointArgs
+ *             {
+ *                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
+ *             },
+ *             PrivateEndpointConnectionName = "mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *             PrivateLinkServiceConnectionState = new AzureNative.WebPubSub.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 ActionsRequired = "None",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourceName = "myWebPubSubService",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	webpubsub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/webpubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := webpubsub.NewWebPubSubPrivateEndpointConnection(ctx, "webPubSubPrivateEndpointConnection", &webpubsub.WebPubSubPrivateEndpointConnectionArgs{
+ * 			PrivateEndpoint: &webpubsub.PrivateEndpointArgs{
+ * 				Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint"),
+ * 			},
+ * 			PrivateEndpointConnectionName: pulumi.String("mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e"),
+ * 			PrivateLinkServiceConnectionState: &webpubsub.PrivateLinkServiceConnectionStateArgs{
+ * 				ActionsRequired: pulumi.String("None"),
+ * 				Status:          pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ResourceName:      pulumi.String("myWebPubSubService"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webPubSubPrivateEndpointConnection = new azure_native.webpubsub.WebPubSubPrivateEndpointConnection("webPubSubPrivateEndpointConnection", {
+ *     privateEndpoint: {
+ *         id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
+ *     },
+ *     privateEndpointConnectionName: "mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *     privateLinkServiceConnectionState: {
+ *         actionsRequired: "None",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     resourceName: "myWebPubSubService",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * web_pub_sub_private_endpoint_connection = azure_native.webpubsub.WebPubSubPrivateEndpointConnection("webPubSubPrivateEndpointConnection",
+ *     private_endpoint=azure_native.webpubsub.PrivateEndpointArgs(
+ *         id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
+ *     ),
+ *     private_endpoint_connection_name="mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *     private_link_service_connection_state=azure_native.webpubsub.PrivateLinkServiceConnectionStateArgs(
+ *         actions_required="None",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     resource_name="myWebPubSubService")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +137,72 @@ import javax.annotation.Nullable;
 public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Private endpoint associated with the private endpoint connection
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return Private endpoint associated with the private endpoint connection
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Connection state
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Connection state
-     * 
      */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the private endpoint connection
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the private endpoint connection
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     public Output<String> getType() {
         return this.type;

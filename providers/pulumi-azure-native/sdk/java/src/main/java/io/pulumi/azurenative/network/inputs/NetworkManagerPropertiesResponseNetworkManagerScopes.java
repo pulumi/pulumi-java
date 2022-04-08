@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scope of Network Manager.
- * 
  */
 public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
 
     /**
      * List of management groups.
-     * 
      */
     @Import(name="managementGroups")
       private final @Nullable List<String> managementGroups;
@@ -32,7 +30,6 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
 
     /**
      * List of subscriptions.
-     * 
      */
     @Import(name="subscriptions")
       private final @Nullable List<String> subscriptions;

@@ -14,7 +14,6 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the File
-     * 
      */
     @Import(name="fileName", required=true)
       private final String fileName;
@@ -25,7 +24,6 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group
-     * 
      */
     @Import(name="groupName", required=true)
       private final String groupName;
@@ -36,7 +34,6 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the project
-     * 
      */
     @Import(name="projectName", required=true)
       private final String projectName;
@@ -47,7 +44,6 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the service
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

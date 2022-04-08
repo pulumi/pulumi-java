@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Connection protocol used for this connection.
-     * 
      */
     @EnumType
     public enum VirtualNetworkGatewayConnectionProtocol {

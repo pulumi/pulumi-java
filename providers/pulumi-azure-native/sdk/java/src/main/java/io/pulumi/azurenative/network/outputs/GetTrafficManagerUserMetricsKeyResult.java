@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class GetTrafficManagerUserMetricsKeyResult {
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
-     * 
      */
     private final @Nullable String id;
     /**
      * The key returned by the User Metrics operation.
-     * 
      */
     private final @Nullable String key;
     /**
      * The name of the resource
-     * 
      */
     private final @Nullable String name;
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     * 
      */
     private final @Nullable String type;
 
@@ -46,28 +42,24 @@ public final class GetTrafficManagerUserMetricsKeyResult {
 
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The key returned by the User Metrics operation.
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The name of the resource
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

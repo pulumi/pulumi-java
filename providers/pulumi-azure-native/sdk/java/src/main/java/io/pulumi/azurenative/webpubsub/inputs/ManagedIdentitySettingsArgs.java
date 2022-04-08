@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed identity settings for upstream.
- * 
  */
 public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
     /**
      * The Resource indicating the App ID URI of the target resource.
      * It also appears in the aud (audience) claim of the issued token.
-     * 
      */
     @Import(name="resource")
       private final @Nullable Output<String> resource;

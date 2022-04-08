@@ -22,7 +22,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * BootStrapConfigurationBlobs storage URLs.
-     * 
      */
     @Import(name="bootStrapConfigurationBlobs")
       private final @Nullable Output<List<String>> bootStrapConfigurationBlobs;
@@ -33,7 +32,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * CloudInitConfiguration string in plain text.
-     * 
      */
     @Import(name="cloudInitConfiguration")
       private final @Nullable Output<String> cloudInitConfiguration;
@@ -44,7 +42,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * CloudInitConfigurationBlob storage URLs.
-     * 
      */
     @Import(name="cloudInitConfigurationBlobs")
       private final @Nullable Output<List<String>> cloudInitConfigurationBlobs;
@@ -55,7 +52,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -66,7 +62,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * The service principal that has read access to cloud-init and config blob.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -77,7 +72,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -88,7 +82,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of Network Virtual Appliance.
-     * 
      */
     @Import(name="networkVirtualApplianceName")
       private final @Nullable Output<String> networkVirtualApplianceName;
@@ -99,7 +92,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * Network Virtual Appliance SKU.
-     * 
      */
     @Import(name="nvaSku")
       private final @Nullable Output<VirtualApplianceSkuPropertiesArgs> nvaSku;
@@ -110,7 +102,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -121,7 +112,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -132,7 +122,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * VirtualAppliance ASN.
-     * 
      */
     @Import(name="virtualApplianceAsn")
       private final @Nullable Output<Double> virtualApplianceAsn;
@@ -143,7 +132,6 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
 
     /**
      * The Virtual Hub where Network Virtual Appliance is being deployed.
-     * 
      */
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;

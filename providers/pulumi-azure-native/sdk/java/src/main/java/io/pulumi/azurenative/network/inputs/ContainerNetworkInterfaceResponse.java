@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container network interface child resource.
- * 
  */
 public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * Reference to the container to which this container network interface is attached.
-     * 
      */
     @Import(name="container")
       private final @Nullable ContainerResponse container;
@@ -35,7 +33,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * Container network interface configuration from which this container network interface is created.
-     * 
      */
     @Import(name="containerNetworkInterfaceConfiguration", required=true)
       private final ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration;
@@ -46,7 +43,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -57,7 +53,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -68,7 +63,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * Reference to the ip configuration on this container nic.
-     * 
      */
     @Import(name="ipConfigurations", required=true)
       private final List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations;
@@ -79,7 +73,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * The name of the resource. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -90,7 +83,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * The provisioning state of the container network interface resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -101,7 +93,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
 
     /**
      * Sub Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

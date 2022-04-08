@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of Cognitive Services account deployment.
- * 
  */
 public final class DeploymentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Properties of Cognitive Services account deployment model.
-     * 
      */
     @Import(name="model")
       private final @Nullable DeploymentModelResponse model;
@@ -33,7 +31,6 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Gets the status of the resource at the time the operation was called.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -44,7 +41,6 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Properties of Cognitive Services account deployment model.
-     * 
      */
     @Import(name="scaleSettings")
       private final @Nullable DeploymentScaleSettingsResponse scaleSettings;

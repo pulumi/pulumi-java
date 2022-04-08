@@ -17,7 +17,193 @@ import javax.annotation.Nullable;
  * Workload classifier operations for a data warehouse
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a workload classifier with all properties specified.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlPoolWorkloadClassifier = new AzureNative.Synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", new AzureNative.Synapse.SqlPoolWorkloadClassifierArgs
+ *         {
+ *             Context = "test_context",
+ *             EndTime = "14:00",
+ *             Importance = "high",
+ *             Label = "test_label",
+ *             MemberName = "dbo",
+ *             ResourceGroupName = "sqlcrudtest-6852",
+ *             SqlPoolName = "sqlcrudtest-9187",
+ *             StartTime = "12:00",
+ *             WorkloadClassifierName = "wlm_workloadclassifier",
+ *             WorkloadGroupName = "wlm_workloadgroup",
+ *             WorkspaceName = "sqlcrudtest-2080",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewSqlPoolWorkloadClassifier(ctx, "sqlPoolWorkloadClassifier", &synapse.SqlPoolWorkloadClassifierArgs{
+ * 			Context:                pulumi.String("test_context"),
+ * 			EndTime:                pulumi.String("14:00"),
+ * 			Importance:             pulumi.String("high"),
+ * 			Label:                  pulumi.String("test_label"),
+ * 			MemberName:             pulumi.String("dbo"),
+ * 			ResourceGroupName:      pulumi.String("sqlcrudtest-6852"),
+ * 			SqlPoolName:            pulumi.String("sqlcrudtest-9187"),
+ * 			StartTime:              pulumi.String("12:00"),
+ * 			WorkloadClassifierName: pulumi.String("wlm_workloadclassifier"),
+ * 			WorkloadGroupName:      pulumi.String("wlm_workloadgroup"),
+ * 			WorkspaceName:          pulumi.String("sqlcrudtest-2080"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlPoolWorkloadClassifier = new azure_native.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", {
+ *     context: "test_context",
+ *     endTime: "14:00",
+ *     importance: "high",
+ *     label: "test_label",
+ *     memberName: "dbo",
+ *     resourceGroupName: "sqlcrudtest-6852",
+ *     sqlPoolName: "sqlcrudtest-9187",
+ *     startTime: "12:00",
+ *     workloadClassifierName: "wlm_workloadclassifier",
+ *     workloadGroupName: "wlm_workloadgroup",
+ *     workspaceName: "sqlcrudtest-2080",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_pool_workload_classifier = azure_native.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier",
+ *     context="test_context",
+ *     end_time="14:00",
+ *     importance="high",
+ *     label="test_label",
+ *     member_name="dbo",
+ *     resource_group_name="sqlcrudtest-6852",
+ *     sql_pool_name="sqlcrudtest-9187",
+ *     start_time="12:00",
+ *     workload_classifier_name="wlm_workloadclassifier",
+ *     workload_group_name="wlm_workloadgroup",
+ *     workspace_name="sqlcrudtest-2080")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a workload classifier with the required properties specified.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlPoolWorkloadClassifier = new AzureNative.Synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", new AzureNative.Synapse.SqlPoolWorkloadClassifierArgs
+ *         {
+ *             MemberName = "dbo",
+ *             ResourceGroupName = "sqlcrudtest-6852",
+ *             SqlPoolName = "sqlcrudtest-9187",
+ *             WorkloadClassifierName = "wlm_workloadclassifier",
+ *             WorkloadGroupName = "wlm_workloadgroup",
+ *             WorkspaceName = "sqlcrudtest-2080",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewSqlPoolWorkloadClassifier(ctx, "sqlPoolWorkloadClassifier", &synapse.SqlPoolWorkloadClassifierArgs{
+ * 			MemberName:             pulumi.String("dbo"),
+ * 			ResourceGroupName:      pulumi.String("sqlcrudtest-6852"),
+ * 			SqlPoolName:            pulumi.String("sqlcrudtest-9187"),
+ * 			WorkloadClassifierName: pulumi.String("wlm_workloadclassifier"),
+ * 			WorkloadGroupName:      pulumi.String("wlm_workloadgroup"),
+ * 			WorkspaceName:          pulumi.String("sqlcrudtest-2080"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlPoolWorkloadClassifier = new azure_native.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", {
+ *     memberName: "dbo",
+ *     resourceGroupName: "sqlcrudtest-6852",
+ *     sqlPoolName: "sqlcrudtest-9187",
+ *     workloadClassifierName: "wlm_workloadclassifier",
+ *     workloadGroupName: "wlm_workloadgroup",
+ *     workspaceName: "sqlcrudtest-2080",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_pool_workload_classifier = azure_native.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier",
+ *     member_name="dbo",
+ *     resource_group_name="sqlcrudtest-6852",
+ *     sql_pool_name="sqlcrudtest-9187",
+ *     workload_classifier_name="wlm_workloadclassifier",
+ *     workload_group_name="wlm_workloadgroup",
+ *     workspace_name="sqlcrudtest-2080")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,112 +218,96 @@ import javax.annotation.Nullable;
 public class SqlPoolWorkloadClassifier extends io.pulumi.resources.CustomResource {
     /**
      * The workload classifier context.
-     * 
      */
     @Export(name="context", type=String.class, parameters={})
     private Output</* @Nullable */ String> context;
 
     /**
      * @return The workload classifier context.
-     * 
      */
     public Output</* @Nullable */ String> getContext() {
         return this.context;
     }
     /**
      * The workload classifier end time for classification.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
      * @return The workload classifier end time for classification.
-     * 
      */
     public Output</* @Nullable */ String> getEndTime() {
         return this.endTime;
     }
     /**
      * The workload classifier importance.
-     * 
      */
     @Export(name="importance", type=String.class, parameters={})
     private Output</* @Nullable */ String> importance;
 
     /**
      * @return The workload classifier importance.
-     * 
      */
     public Output</* @Nullable */ String> getImportance() {
         return this.importance;
     }
     /**
      * The workload classifier label.
-     * 
      */
     @Export(name="label", type=String.class, parameters={})
     private Output</* @Nullable */ String> label;
 
     /**
      * @return The workload classifier label.
-     * 
      */
     public Output</* @Nullable */ String> getLabel() {
         return this.label;
     }
     /**
      * The workload classifier member name.
-     * 
      */
     @Export(name="memberName", type=String.class, parameters={})
     private Output<String> memberName;
 
     /**
      * @return The workload classifier member name.
-     * 
      */
     public Output<String> getMemberName() {
         return this.memberName;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The workload classifier start time for classification.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
      * @return The workload classifier start time for classification.
-     * 
      */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

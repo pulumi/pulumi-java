@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The X12 delimiter override settings.
- * 
  */
 public final class X12DelimiterOverridesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The component separator.
-     * 
      */
     @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
@@ -33,7 +31,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The data element separator.
-     * 
      */
     @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
@@ -44,7 +41,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The message id.
-     * 
      */
     @Import(name="messageId")
       private final @Nullable String messageId;
@@ -55,7 +51,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The protocol version.
-     * 
      */
     @Import(name="protocolVersion")
       private final @Nullable String protocolVersion;
@@ -66,7 +61,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The replacement character.
-     * 
      */
     @Import(name="replaceCharacter", required=true)
       private final Integer replaceCharacter;
@@ -77,7 +71,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to replace separators in payload.
-     * 
      */
     @Import(name="replaceSeparatorsInPayload", required=true)
       private final Boolean replaceSeparatorsInPayload;
@@ -88,7 +81,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The segment terminator.
-     * 
      */
     @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
@@ -99,7 +91,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The segment terminator suffix.
-     * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
@@ -110,7 +101,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
 
     /**
      * The target namespace on which this delimiter settings has to be applied.
-     * 
      */
     @Import(name="targetNamespace")
       private final @Nullable String targetNamespace;

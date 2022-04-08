@@ -15,7 +15,6 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
 
     /**
      * Playback duration
-     * 
      */
     @Import(name="playbackDurationSeconds", required=true)
       private final Output<Double> playbackDurationSeconds;
@@ -26,7 +25,6 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
 
     /**
      * Storage duration
-     * 
      */
     @Import(name="storageDurationSeconds", required=true)
       private final Output<Double> storageDurationSeconds;

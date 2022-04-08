@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the resource properties.
- * 
  */
 public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets memory size in MBs for the vm.
-     * 
      */
     @Import(name="memorySizeMB")
       private final @Nullable Output<Integer> memorySizeMB;
@@ -31,7 +29,6 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the number of vCPUs for the vm.
-     * 
      */
     @Import(name="numCPUs")
       private final @Nullable Output<Integer> numCPUs;
@@ -42,7 +39,6 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
-     * 
      */
     @Import(name="numCoresPerSocket")
       private final @Nullable Output<Integer> numCoresPerSocket;

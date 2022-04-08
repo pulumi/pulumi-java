@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The auto scaler properties.
- * 
  */
 public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
 
     /**
      * Option to enable/disable auto scaling.
-     * 
      */
     @Import(name="autoscaleEnabled")
       private final @Nullable Output<Boolean> autoscaleEnabled;
@@ -32,7 +30,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
 
     /**
      * The maximum number of replicas in the cluster.
-     * 
      */
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
@@ -43,7 +40,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
 
     /**
      * The minimum number of replicas to scale down to.
-     * 
      */
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
@@ -54,7 +50,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
 
     /**
      * The amount of seconds to wait between auto scale updates.
-     * 
      */
     @Import(name="refreshPeriodInSeconds")
       private final @Nullable Output<Integer> refreshPeriodInSeconds;
@@ -65,7 +60,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
 
     /**
      * The target utilization percentage to use for determining whether to scale the cluster.
-     * 
      */
     @Import(name="targetUtilization")
       private final @Nullable Output<Integer> targetUtilization;

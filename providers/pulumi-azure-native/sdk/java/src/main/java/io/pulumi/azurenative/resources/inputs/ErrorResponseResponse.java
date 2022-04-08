@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
- * 
  */
 public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The error additional info.
-     * 
      */
     @Import(name="additionalInfo", required=true)
       private final List<ErrorAdditionalInfoResponse> additionalInfo;
@@ -31,7 +29,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The error code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -42,7 +39,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The error details.
-     * 
      */
     @Import(name="details", required=true)
       private final List<ErrorResponseResponse> details;
@@ -53,7 +49,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The error message.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -64,7 +59,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The error target.
-     * 
      */
     @Import(name="target", required=true)
       private final String target;

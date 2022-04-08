@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An ExpressRoute Circuit
- * 
  */
 public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
-     * 
      */
     @Import(name="expressRouteID", required=true)
       private final String expressRouteID;
@@ -29,7 +27,6 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ExpressRoute Circuit private peering identifier
-     * 
      */
     @Import(name="expressRoutePrivatePeeringID", required=true)
       private final String expressRoutePrivatePeeringID;
@@ -40,7 +37,6 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * CIDR of primary subnet
-     * 
      */
     @Import(name="primarySubnet", required=true)
       private final String primarySubnet;
@@ -51,7 +47,6 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * CIDR of secondary subnet
-     * 
      */
     @Import(name="secondarySubnet", required=true)
       private final String secondarySubnet;

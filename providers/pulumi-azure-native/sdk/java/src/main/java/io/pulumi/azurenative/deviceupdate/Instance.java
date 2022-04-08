@@ -22,7 +22,134 @@ import javax.annotation.Nullable;
  * Device Update instance details.
  * API Version: 2020-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates Instance
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new AzureNative.DeviceUpdate.Instance("instance", new AzureNative.DeviceUpdate.InstanceArgs
+ *         {
+ *             AccountName = "contoso",
+ *             DiagnosticStorageProperties = new AzureNative.DeviceUpdate.Inputs.DiagnosticStoragePropertiesArgs
+ *             {
+ *                 AuthenticationType = "KeyBased",
+ *                 ConnectionString = "string",
+ *                 ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount",
+ *             },
+ *             EnableDiagnostics = false,
+ *             InstanceName = "blue",
+ *             IotHubs = 
+ *             {
+ *                 new AzureNative.DeviceUpdate.Inputs.IotHubSettingsArgs
+ *                 {
+ *                     EventHubConnectionString = "string",
+ *                     IoTHubConnectionString = "string",
+ *                     ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Devices/IotHubs/blue-contoso-hub",
+ *                 },
+ *             },
+ *             Location = "westus2",
+ *             ResourceGroupName = "test-rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	deviceupdate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deviceupdate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := deviceupdate.NewInstance(ctx, "instance", &deviceupdate.InstanceArgs{
+ * 			AccountName: pulumi.String("contoso"),
+ * 			DiagnosticStorageProperties: &deviceupdate.DiagnosticStoragePropertiesArgs{
+ * 				AuthenticationType: pulumi.String("KeyBased"),
+ * 				ConnectionString:   pulumi.String("string"),
+ * 				ResourceId:         pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount"),
+ * 			},
+ * 			EnableDiagnostics: pulumi.Bool(false),
+ * 			InstanceName:      pulumi.String("blue"),
+ * 			IotHubs: []deviceupdate.IotHubSettingsArgs{
+ * 				&deviceupdate.IotHubSettingsArgs{
+ * 					EventHubConnectionString: pulumi.String("string"),
+ * 					IoTHubConnectionString:   pulumi.String("string"),
+ * 					ResourceId:               pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Devices/IotHubs/blue-contoso-hub"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("westus2"),
+ * 			ResourceGroupName: pulumi.String("test-rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const instance = new azure_native.deviceupdate.Instance("instance", {
+ *     accountName: "contoso",
+ *     diagnosticStorageProperties: {
+ *         authenticationType: "KeyBased",
+ *         connectionString: "string",
+ *         resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount",
+ *     },
+ *     enableDiagnostics: false,
+ *     instanceName: "blue",
+ *     iotHubs: [{
+ *         eventHubConnectionString: "string",
+ *         ioTHubConnectionString: "string",
+ *         resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Devices/IotHubs/blue-contoso-hub",
+ *     }],
+ *     location: "westus2",
+ *     resourceGroupName: "test-rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * instance = azure_native.deviceupdate.Instance("instance",
+ *     account_name="contoso",
+ *     diagnostic_storage_properties=azure_native.deviceupdate.DiagnosticStoragePropertiesArgs(
+ *         authentication_type="KeyBased",
+ *         connection_string="string",
+ *         resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount",
+ *     ),
+ *     enable_diagnostics=False,
+ *     instance_name="blue",
+ *     iot_hubs=[azure_native.deviceupdate.IotHubSettingsArgs(
+ *         event_hub_connection_string="string",
+ *         io_t_hub_connection_string="string",
+ *         resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Devices/IotHubs/blue-contoso-hub",
+ *     )],
+ *     location="westus2",
+ *     resource_group_name="test-rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,140 +164,120 @@ import javax.annotation.Nullable;
 public class Instance extends io.pulumi.resources.CustomResource {
     /**
      * Parent Device Update Account name which Instance belongs to.
-     * 
      */
     @Export(name="accountName", type=String.class, parameters={})
     private Output<String> accountName;
 
     /**
      * @return Parent Device Update Account name which Instance belongs to.
-     * 
      */
     public Output<String> getAccountName() {
         return this.accountName;
     }
     /**
      * Customer-initiated diagnostic log collection storage properties
-     * 
      */
     @Export(name="diagnosticStorageProperties", type=DiagnosticStoragePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ DiagnosticStoragePropertiesResponse> diagnosticStorageProperties;
 
     /**
      * @return Customer-initiated diagnostic log collection storage properties
-     * 
      */
     public Output</* @Nullable */ DiagnosticStoragePropertiesResponse> getDiagnosticStorageProperties() {
         return this.diagnosticStorageProperties;
     }
     /**
      * Enables or Disables the diagnostic logs collection
-     * 
      */
     @Export(name="enableDiagnostics", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDiagnostics;
 
     /**
      * @return Enables or Disables the diagnostic logs collection
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableDiagnostics() {
         return this.enableDiagnostics;
     }
     /**
      * List of IoT Hubs associated with the account.
-     * 
      */
     @Export(name="iotHubs", type=List.class, parameters={IotHubSettingsResponse.class})
     private Output</* @Nullable */ List<IotHubSettingsResponse>> iotHubs;
 
     /**
      * @return List of IoT Hubs associated with the account.
-     * 
      */
     public Output</* @Nullable */ List<IotHubSettingsResponse>> getIotHubs() {
         return this.iotHubs;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

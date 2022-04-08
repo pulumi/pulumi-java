@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ServiceManagedResourcesSettingsResponse {
     /**
      * The settings for the service managed cosmosdb account.
-     * 
      */
     private final @Nullable CosmosDbSettingsResponse cosmosDb;
 
@@ -24,7 +23,6 @@ public final class ServiceManagedResourcesSettingsResponse {
 
     /**
      * The settings for the service managed cosmosdb account.
-     * 
     */
     public Optional<CosmosDbSettingsResponse> getCosmosDb() {
         return Optional.ofNullable(this.cosmosDb);

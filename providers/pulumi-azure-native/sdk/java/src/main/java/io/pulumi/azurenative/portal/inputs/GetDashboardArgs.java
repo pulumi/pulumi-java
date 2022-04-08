@@ -14,7 +14,6 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the dashboard.
-     * 
      */
     @Import(name="dashboardName", required=true)
       private final String dashboardName;
@@ -25,7 +24,6 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

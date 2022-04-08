@@ -17,7 +17,6 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * The provider location
-     * 
      */
     @Import(name="location", required=true)
       private final Output<String> location;
@@ -28,7 +27,6 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * The cloud shell user settings properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<UserPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the user settings
-     * 
      */
     @Import(name="userSettingsName")
       private final @Nullable Output<String> userSettingsName;

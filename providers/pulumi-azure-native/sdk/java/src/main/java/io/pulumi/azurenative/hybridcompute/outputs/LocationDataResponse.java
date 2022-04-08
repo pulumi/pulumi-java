@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class LocationDataResponse {
     /**
      * The city or locality where the resource is located.
-     * 
      */
     private final @Nullable String city;
     /**
      * The country or region where the resource is located
-     * 
      */
     private final @Nullable String countryOrRegion;
     /**
      * The district, state, or province where the resource is located.
-     * 
      */
     private final @Nullable String district;
     /**
      * A canonical name for the geographic or physical location.
-     * 
      */
     private final String name;
 
@@ -46,28 +42,24 @@ public final class LocationDataResponse {
 
     /**
      * The city or locality where the resource is located.
-     * 
     */
     public Optional<String> getCity() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country or region where the resource is located
-     * 
     */
     public Optional<String> getCountryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
     /**
      * The district, state, or province where the resource is located.
-     * 
     */
     public Optional<String> getDistrict() {
         return Optional.ofNullable(this.district);
     }
     /**
      * A canonical name for the geographic or physical location.
-     * 
     */
     public String getName() {
         return this.name;

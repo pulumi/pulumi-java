@@ -14,7 +14,6 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends io.pulumi.resou
 
     /**
      * The name of the backend address pool.
-     * 
      */
     @Import(name="backendAddressPoolName", required=true)
       private final String backendAddressPoolName;
@@ -25,7 +24,6 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends io.pulumi.resou
 
     /**
      * The name of the load balancer.
-     * 
      */
     @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;
@@ -36,7 +34,6 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

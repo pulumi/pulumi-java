@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Server platform type for connection
-     * 
      */
     @EnumType
     public enum SqlSourcePlatform {

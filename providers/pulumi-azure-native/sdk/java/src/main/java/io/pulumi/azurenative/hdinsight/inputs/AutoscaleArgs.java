@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The autoscale request parameters
- * 
  */
 public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters for load-based autoscale
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<AutoscaleCapacityArgs> capacity;
@@ -32,7 +30,6 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters for schedule-based autoscale
-     * 
      */
     @Import(name="recurrence")
       private final @Nullable Output<AutoscaleRecurrenceArgs> recurrence;

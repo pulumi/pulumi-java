@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about a Linux OS.
- * 
  */
 public final class LinuxOsInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LinuxOsInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
-     * 
      */
     @Import(name="linuxOsState")
       private final @Nullable String linuxOsState;

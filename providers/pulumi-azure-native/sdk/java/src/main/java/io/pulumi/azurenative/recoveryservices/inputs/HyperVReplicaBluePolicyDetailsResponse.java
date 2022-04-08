@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hyper-V Replica Blue specific protection profile details.
- * 
  */
 public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the authentication type.
-     * 
      */
     @Import(name="allowedAuthenticationType")
       private final @Nullable Integer allowedAuthenticationType;
@@ -32,7 +30,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the application consistent frequency.
-     * 
      */
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
@@ -43,7 +40,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating whether compression has to be enabled.
-     * 
      */
     @Import(name="compression")
       private final @Nullable String compression;
@@ -54,7 +50,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating whether IR is online.
-     * 
      */
     @Import(name="initialReplicationMethod")
       private final @Nullable String initialReplicationMethod;
@@ -66,7 +61,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'HyperVReplica2012R2'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -77,7 +71,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the offline IR export path.
-     * 
      */
     @Import(name="offlineReplicationExportPath")
       private final @Nullable String offlineReplicationExportPath;
@@ -88,7 +81,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the offline IR import path.
-     * 
      */
     @Import(name="offlineReplicationImportPath")
       private final @Nullable String offlineReplicationImportPath;
@@ -99,7 +91,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the online IR start time.
-     * 
      */
     @Import(name="onlineReplicationStartTime")
       private final @Nullable String onlineReplicationStartTime;
@@ -110,7 +101,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the number of recovery points.
-     * 
      */
     @Import(name="recoveryPoints")
       private final @Nullable Integer recoveryPoints;
@@ -121,7 +111,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
-     * 
      */
     @Import(name="replicaDeletionOption")
       private final @Nullable String replicaDeletionOption;
@@ -132,7 +121,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the replication interval.
-     * 
      */
     @Import(name="replicationFrequencyInSeconds")
       private final @Nullable Integer replicationFrequencyInSeconds;
@@ -143,7 +131,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating the recovery HTTPS port.
-     * 
      */
     @Import(name="replicationPort")
       private final @Nullable Integer replicationPort;

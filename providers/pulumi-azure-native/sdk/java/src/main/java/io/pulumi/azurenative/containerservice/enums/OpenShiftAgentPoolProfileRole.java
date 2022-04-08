@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Define the role of the AgentPoolProfile.
-     * 
      */
     @EnumType
     public enum OpenShiftAgentPoolProfileRole {

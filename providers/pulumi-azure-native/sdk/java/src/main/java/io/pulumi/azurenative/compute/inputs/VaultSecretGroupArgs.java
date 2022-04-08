@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a set of certificates which are all in the same Key Vault.
- * 
  */
 public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
-     * 
      */
     @Import(name="sourceVault")
       private final @Nullable Output<SubResourceArgs> sourceVault;
@@ -33,7 +31,6 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The list of key vault references in SourceVault which contain certificates.
-     * 
      */
     @Import(name="vaultCertificates")
       private final @Nullable Output<List<VaultCertificateArgs>> vaultCertificates;

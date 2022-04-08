@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dc access security code
- * 
  */
 public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
 
     /**
      * Forward Dc access security code.
-     * 
      */
     @Import(name="forwardDCAccessCode")
       private final @Nullable String forwardDCAccessCode;
@@ -31,7 +29,6 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
 
     /**
      * Reverse Dc access security code.
-     * 
      */
     @Import(name="reverseDCAccessCode")
       private final @Nullable String reverseDCAccessCode;

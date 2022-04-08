@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Criterion to filter metrics.
- * 
  */
 public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Specifies the type of threshold criteria
      * Expected value is 'StaticThresholdCriterion'.
-     * 
      */
     @Import(name="criterionType", required=true)
       private final Output<String> criterionType;
@@ -39,7 +37,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of dimension conditions.
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
@@ -50,7 +47,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the metric.
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -61,7 +57,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Namespace of the metric.
-     * 
      */
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
@@ -72,7 +67,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the criteria.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -83,7 +77,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the criteria operator.
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
@@ -94,7 +87,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
-     * 
      */
     @Import(name="skipMetricValidation")
       private final @Nullable Output<Boolean> skipMetricValidation;
@@ -105,7 +97,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the criteria threshold value that activates the alert.
-     * 
      */
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
@@ -116,7 +107,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the criteria time aggregation types.
-     * 
      */
     @Import(name="timeAggregation", required=true)
       private final Output<Either<String,AggregationTypeEnum>> timeAggregation;

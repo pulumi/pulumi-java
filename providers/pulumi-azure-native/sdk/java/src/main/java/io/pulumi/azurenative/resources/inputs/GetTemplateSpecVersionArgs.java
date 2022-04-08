@@ -14,7 +14,6 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of the Template Spec.
-     * 
      */
     @Import(name="templateSpecName", required=true)
       private final String templateSpecName;
@@ -36,7 +34,6 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
 
     /**
      * The version of the Template Spec.
-     * 
      */
     @Import(name="templateSpecVersion", required=true)
       private final String templateSpecVersion;

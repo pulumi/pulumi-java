@@ -16,7 +16,6 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the Time Series Insights environment associated with the specified resource group.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final String environmentName;
@@ -27,7 +26,6 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -38,7 +36,6 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

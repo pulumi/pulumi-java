@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex dependencies.
- * 
  */
 public final class MetadataDependenciesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
 
     /**
      * Id of the content item we depend on
-     * 
      */
     @Import(name="contentId")
       private final @Nullable Output<String> contentId;
@@ -35,7 +33,6 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
 
     /**
      * This is the list of dependencies we must fulfill, according to the AND/OR operator
-     * 
      */
     @Import(name="criteria")
       private final @Nullable Output<List<MetadataDependenciesArgs>> criteria;
@@ -46,7 +43,6 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
 
     /**
      * Type of the content item we depend on
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
@@ -57,7 +53,6 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the content item
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -68,7 +63,6 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
 
     /**
      * Operator used for list of dependencies in criteria array.
-     * 
      */
     @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
@@ -79,7 +73,6 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
 
     /**
      * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value indicating whether the auto update is enabled.
-     * 
      */
     @EnumType
     public enum AgentAutoUpdateStatus {

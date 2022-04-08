@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container for SQL workloads under Azure Virtual Machines.
- * 
  */
 public final class AzureVMAppContainerProtectionContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -36,7 +34,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'VMAppContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final String containerType;
@@ -47,7 +44,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Additional details of a workload container.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
@@ -58,7 +54,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -69,7 +64,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -80,7 +74,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Time stamp when this container was updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
@@ -91,7 +84,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Re-Do Operation
-     * 
      */
     @Import(name="operationType")
       private final @Nullable String operationType;
@@ -102,7 +94,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
@@ -113,7 +104,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * ARM ID of the virtual machine represented by this Azure Workload Container
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
@@ -124,7 +114,6 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
 
     /**
      * Workload type for which registration was sent.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable String workloadType;

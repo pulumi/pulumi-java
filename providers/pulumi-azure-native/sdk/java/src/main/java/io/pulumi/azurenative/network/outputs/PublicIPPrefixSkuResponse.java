@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class PublicIPPrefixSkuResponse {
     /**
      * Name of a public IP prefix SKU.
-     * 
      */
     private final @Nullable String name;
     /**
      * Tier of a public IP prefix SKU.
-     * 
      */
     private final @Nullable String tier;
 
@@ -32,14 +30,12 @@ public final class PublicIPPrefixSkuResponse {
 
     /**
      * Name of a public IP prefix SKU.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tier of a public IP prefix SKU.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class SqlDWUpsertSettingsResponse {
     /**
      * Schema name for interim table. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object interimSchemaName;
     /**
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
-     * 
      */
     private final @Nullable Object keys;
 
@@ -32,14 +30,12 @@ public final class SqlDWUpsertSettingsResponse {
 
     /**
      * Schema name for interim table. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getInterimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
     /**
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
-     * 
     */
     public Optional<Object> getKeys() {
         return Optional.ofNullable(this.keys);

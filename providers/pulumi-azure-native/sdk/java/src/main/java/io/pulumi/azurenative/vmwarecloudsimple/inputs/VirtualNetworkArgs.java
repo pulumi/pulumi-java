@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Virtual network model
- * 
  */
 public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * virtual network id (privateCloudId:vsphereId)
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

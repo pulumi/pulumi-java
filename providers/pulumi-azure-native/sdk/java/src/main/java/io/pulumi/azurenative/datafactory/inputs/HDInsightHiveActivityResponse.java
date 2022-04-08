@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * HDInsight Hive activity type.
- * 
  */
 public final class HDInsightHiveActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * User specified arguments to HDInsightActivity.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable List<Object> arguments;
@@ -39,7 +37,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Allows user to specify defines for Hive job request.
-     * 
      */
     @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
@@ -50,7 +47,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -61,7 +57,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Debug info option.
-     * 
      */
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
@@ -83,7 +77,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -94,7 +87,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -105,7 +97,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -116,7 +107,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Integer queryTimeout;
@@ -127,7 +117,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Script linked service reference.
-     * 
      */
     @Import(name="scriptLinkedService")
       private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
@@ -138,7 +127,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Script path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="scriptPath")
       private final @Nullable Object scriptPath;
@@ -149,7 +137,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Storage linked service references.
-     * 
      */
     @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
@@ -161,7 +148,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
     /**
      * Type of activity.
      * Expected value is 'HDInsightHive'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -172,7 +158,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
@@ -183,7 +168,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * User specified arguments under hivevar namespace.
-     * 
      */
     @Import(name="variables")
       private final @Nullable List<Object> variables;

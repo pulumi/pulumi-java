@@ -26,7 +26,185 @@ import javax.annotation.Nullable;
  * Domain service.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Domain Service
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var domainService = new AzureNative.Aad.DomainService("domainService", new AzureNative.Aad.DomainServiceArgs
+ *         {
+ *             DomainName = "TestDomainService.com",
+ *             DomainSecuritySettings = new AzureNative.Aad.Inputs.DomainSecuritySettingsArgs
+ *             {
+ *                 NtlmV1 = "Enabled",
+ *                 SyncNtlmPasswords = "Enabled",
+ *                 TlsV1 = "Disabled",
+ *             },
+ *             DomainServiceName = "TestDomainService.com",
+ *             FilteredSync = "Enabled",
+ *             LdapsSettings = new AzureNative.Aad.Inputs.LdapsSettingsArgs
+ *             {
+ *                 ExternalAccess = "Enabled",
+ *                 Ldaps = "Enabled",
+ *                 PfxCertificate = "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
+ *                 PfxCertificatePassword = "<pfxCertificatePassword>",
+ *             },
+ *             NotificationSettings = new AzureNative.Aad.Inputs.NotificationSettingsArgs
+ *             {
+ *                 AdditionalRecipients = 
+ *                 {
+ *                     "jicha@microsoft.com",
+ *                     "caalmont@microsoft.com",
+ *                 },
+ *                 NotifyDcAdmins = "Enabled",
+ *                 NotifyGlobalAdmins = "Enabled",
+ *             },
+ *             ReplicaSets = 
+ *             {
+ *                 new AzureNative.Aad.Inputs.ReplicaSetArgs
+ *                 {
+ *                     Location = "West US",
+ *                     SubnetId = "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
+ *                 },
+ *             },
+ *             ResourceGroupName = "TestResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	aad "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aad"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := aad.NewDomainService(ctx, "domainService", &aad.DomainServiceArgs{
+ * 			DomainName: pulumi.String("TestDomainService.com"),
+ * 			DomainSecuritySettings: &aad.DomainSecuritySettingsArgs{
+ * 				NtlmV1:            pulumi.String("Enabled"),
+ * 				SyncNtlmPasswords: pulumi.String("Enabled"),
+ * 				TlsV1:             pulumi.String("Disabled"),
+ * 			},
+ * 			DomainServiceName: pulumi.String("TestDomainService.com"),
+ * 			FilteredSync:      pulumi.String("Enabled"),
+ * 			LdapsSettings: &aad.LdapsSettingsArgs{
+ * 				ExternalAccess:         pulumi.String("Enabled"),
+ * 				Ldaps:                  pulumi.String("Enabled"),
+ * 				PfxCertificate:         pulumi.String("MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w..."),
+ * 				PfxCertificatePassword: pulumi.String("<pfxCertificatePassword>"),
+ * 			},
+ * 			NotificationSettings: &aad.NotificationSettingsArgs{
+ * 				AdditionalRecipients: pulumi.StringArray{
+ * 					pulumi.String("jicha@microsoft.com"),
+ * 					pulumi.String("caalmont@microsoft.com"),
+ * 				},
+ * 				NotifyDcAdmins:     pulumi.String("Enabled"),
+ * 				NotifyGlobalAdmins: pulumi.String("Enabled"),
+ * 			},
+ * 			ReplicaSets: []aad.ReplicaSetArgs{
+ * 				&aad.ReplicaSetArgs{
+ * 					Location: pulumi.String("West US"),
+ * 					SubnetId: pulumi.String("/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("TestResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const domainService = new azure_native.aad.DomainService("domainService", {
+ *     domainName: "TestDomainService.com",
+ *     domainSecuritySettings: {
+ *         ntlmV1: "Enabled",
+ *         syncNtlmPasswords: "Enabled",
+ *         tlsV1: "Disabled",
+ *     },
+ *     domainServiceName: "TestDomainService.com",
+ *     filteredSync: "Enabled",
+ *     ldapsSettings: {
+ *         externalAccess: "Enabled",
+ *         ldaps: "Enabled",
+ *         pfxCertificate: "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
+ *         pfxCertificatePassword: "<pfxCertificatePassword>",
+ *     },
+ *     notificationSettings: {
+ *         additionalRecipients: [
+ *             "jicha@microsoft.com",
+ *             "caalmont@microsoft.com",
+ *         ],
+ *         notifyDcAdmins: "Enabled",
+ *         notifyGlobalAdmins: "Enabled",
+ *     },
+ *     replicaSets: [{
+ *         location: "West US",
+ *         subnetId: "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
+ *     }],
+ *     resourceGroupName: "TestResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * domain_service = azure_native.aad.DomainService("domainService",
+ *     domain_name="TestDomainService.com",
+ *     domain_security_settings=azure_native.aad.DomainSecuritySettingsArgs(
+ *         ntlm_v1="Enabled",
+ *         sync_ntlm_passwords="Enabled",
+ *         tls_v1="Disabled",
+ *     ),
+ *     domain_service_name="TestDomainService.com",
+ *     filtered_sync="Enabled",
+ *     ldaps_settings=azure_native.aad.LdapsSettingsArgs(
+ *         external_access="Enabled",
+ *         ldaps="Enabled",
+ *         pfx_certificate="MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
+ *         pfx_certificate_password="<pfxCertificatePassword>",
+ *     ),
+ *     notification_settings=azure_native.aad.NotificationSettingsArgs(
+ *         additional_recipients=[
+ *             "jicha@microsoft.com",
+ *             "caalmont@microsoft.com",
+ *         ],
+ *         notify_dc_admins="Enabled",
+ *         notify_global_admins="Enabled",
+ *     ),
+ *     replica_sets=[azure_native.aad.ReplicaSetArgs(
+ *         location="West US",
+ *         subnet_id="/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
+ *     )],
+ *     resource_group_name="TestResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,294 +219,252 @@ import javax.annotation.Nullable;
 public class DomainService extends io.pulumi.resources.CustomResource {
     /**
      * Deployment Id
-     * 
      */
     @Export(name="deploymentId", type=String.class, parameters={})
     private Output<String> deploymentId;
 
     /**
      * @return Deployment Id
-     * 
      */
     public Output<String> getDeploymentId() {
         return this.deploymentId;
     }
     /**
      * Domain Configuration Type
-     * 
      */
     @Export(name="domainConfigurationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainConfigurationType;
 
     /**
      * @return Domain Configuration Type
-     * 
      */
     public Output</* @Nullable */ String> getDomainConfigurationType() {
         return this.domainConfigurationType;
     }
     /**
      * The name of the Azure domain that the user would like to deploy Domain Services to.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
     /**
      * @return The name of the Azure domain that the user would like to deploy Domain Services to.
-     * 
      */
     public Output</* @Nullable */ String> getDomainName() {
         return this.domainName;
     }
     /**
      * DomainSecurity Settings
-     * 
      */
     @Export(name="domainSecuritySettings", type=DomainSecuritySettingsResponse.class, parameters={})
     private Output</* @Nullable */ DomainSecuritySettingsResponse> domainSecuritySettings;
 
     /**
      * @return DomainSecurity Settings
-     * 
      */
     public Output</* @Nullable */ DomainSecuritySettingsResponse> getDomainSecuritySettings() {
         return this.domainSecuritySettings;
     }
     /**
      * Resource etag
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Resource etag
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Enabled or Disabled flag to turn on Group-based filtered sync
-     * 
      */
     @Export(name="filteredSync", type=String.class, parameters={})
     private Output</* @Nullable */ String> filteredSync;
 
     /**
      * @return Enabled or Disabled flag to turn on Group-based filtered sync
-     * 
      */
     public Output</* @Nullable */ String> getFilteredSync() {
         return this.filteredSync;
     }
     /**
      * Secure LDAP Settings
-     * 
      */
     @Export(name="ldapsSettings", type=LdapsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ LdapsSettingsResponse> ldapsSettings;
 
     /**
      * @return Secure LDAP Settings
-     * 
      */
     public Output</* @Nullable */ LdapsSettingsResponse> getLdapsSettings() {
         return this.ldapsSettings;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Migration Properties
-     * 
      */
     @Export(name="migrationProperties", type=MigrationPropertiesResponse.class, parameters={})
     private Output<MigrationPropertiesResponse> migrationProperties;
 
     /**
      * @return Migration Properties
-     * 
      */
     public Output<MigrationPropertiesResponse> getMigrationProperties() {
         return this.migrationProperties;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Notification Settings
-     * 
      */
     @Export(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NotificationSettingsResponse> notificationSettings;
 
     /**
      * @return Notification Settings
-     * 
      */
     public Output</* @Nullable */ NotificationSettingsResponse> getNotificationSettings() {
         return this.notificationSettings;
     }
     /**
      * the current deployment or provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return the current deployment or provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * List of ReplicaSets
-     * 
      */
     @Export(name="replicaSets", type=List.class, parameters={ReplicaSetResponse.class})
     private Output</* @Nullable */ List<ReplicaSetResponse>> replicaSets;
 
     /**
      * @return List of ReplicaSets
-     * 
      */
     public Output</* @Nullable */ List<ReplicaSetResponse>> getReplicaSets() {
         return this.replicaSets;
     }
     /**
      * Resource Forest Settings
-     * 
      */
     @Export(name="resourceForestSettings", type=ResourceForestSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ResourceForestSettingsResponse> resourceForestSettings;
 
     /**
      * @return Resource Forest Settings
-     * 
      */
     public Output</* @Nullable */ ResourceForestSettingsResponse> getResourceForestSettings() {
         return this.resourceForestSettings;
     }
     /**
      * Sku Type
-     * 
      */
     @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
      * @return Sku Type
-     * 
      */
     public Output</* @Nullable */ String> getSku() {
         return this.sku;
     }
     /**
      * SyncOwner ReplicaSet Id
-     * 
      */
     @Export(name="syncOwner", type=String.class, parameters={})
     private Output<String> syncOwner;
 
     /**
      * @return SyncOwner ReplicaSet Id
-     * 
      */
     public Output<String> getSyncOwner() {
         return this.syncOwner;
     }
     /**
      * The system meta data relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system meta data relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure Active Directory Tenant Id
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return Azure Active Directory Tenant Id
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Data Model Version
-     * 
      */
     @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**
      * @return Data Model Version
-     * 
      */
     public Output<Integer> getVersion() {
         return this.version;

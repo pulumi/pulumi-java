@@ -19,28 +19,23 @@ import javax.annotation.Nullable;
 public final class ScalarFunctionPropertiesResponse {
     /**
      * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
-     * 
      */
     private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
     /**
      * The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     private final String etag;
     /**
      * A list of inputs describing the parameters of the function.
-     * 
      */
     private final @Nullable List<FunctionInputResponse> inputs;
     /**
      * The output of the function.
-     * 
      */
     private final @Nullable FunctionOutputResponse output;
     /**
      * Indicates the type of function.
      * Expected value is 'Scalar'.
-     * 
      */
     private final String type;
 
@@ -60,28 +55,24 @@ public final class ScalarFunctionPropertiesResponse {
 
     /**
      * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
-     * 
     */
     public Optional<Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse>> getBinding() {
         return Optional.ofNullable(this.binding);
     }
     /**
      * The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * A list of inputs describing the parameters of the function.
-     * 
     */
     public List<FunctionInputResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
      * The output of the function.
-     * 
     */
     public Optional<FunctionOutputResponse> getOutput() {
         return Optional.ofNullable(this.output);
@@ -89,7 +80,6 @@ public final class ScalarFunctionPropertiesResponse {
     /**
      * Indicates the type of function.
      * Expected value is 'Scalar'.
-     * 
     */
     public String getType() {
         return this.type;

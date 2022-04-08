@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Rule type.
-     * 
      */
     @EnumType
     public enum ApplicationGatewayRequestRoutingRuleType {

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a managed rule group override setting.
- * 
  */
 public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
 
     /**
      * Describes the exclusions that are applied to all rules in the group.
-     * 
      */
     @Import(name="exclusions")
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
@@ -34,7 +32,6 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
 
     /**
      * Describes the managed rule group to override.
-     * 
      */
     @Import(name="ruleGroupName", required=true)
       private final Output<String> ruleGroupName;
@@ -45,7 +42,6 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
 
     /**
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules;

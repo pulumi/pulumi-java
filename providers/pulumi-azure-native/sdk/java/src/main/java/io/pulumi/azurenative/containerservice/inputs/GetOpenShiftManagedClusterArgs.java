@@ -14,7 +14,6 @@ public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.In
 
     /**
      * The name of the OpenShift managed cluster resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

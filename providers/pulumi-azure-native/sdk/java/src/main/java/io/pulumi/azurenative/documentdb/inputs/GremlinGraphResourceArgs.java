@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB Gremlin graph resource object
- * 
  */
 public final class GremlinGraphResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The conflict resolution policy for the graph.
-     * 
      */
     @Import(name="conflictResolutionPolicy")
       private final @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
@@ -36,7 +34,6 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Default time to live
-     * 
      */
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
@@ -47,7 +44,6 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the Cosmos DB Gremlin graph
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -58,7 +54,6 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
-     * 
      */
     @Import(name="indexingPolicy")
       private final @Nullable Output<IndexingPolicyArgs> indexingPolicy;
@@ -69,7 +64,6 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The configuration of the partition key to be used for partitioning data into multiple partitions
-     * 
      */
     @Import(name="partitionKey")
       private final @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
@@ -80,7 +74,6 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
-     * 
      */
     @Import(name="uniqueKeyPolicy")
       private final @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;

@@ -30,7 +30,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the container to be registered.
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -41,7 +40,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional ETag.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -52,7 +50,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Fabric name associated with the container.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
@@ -63,7 +60,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -74,7 +70,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * ProtectionContainerResource properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
@@ -85,7 +80,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +90,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -107,7 +100,6 @@ public final class ProtectionContainerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;

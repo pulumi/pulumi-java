@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of storage accessed on the storage account.
-     * 
      */
     @EnumType
     public enum AccountType {

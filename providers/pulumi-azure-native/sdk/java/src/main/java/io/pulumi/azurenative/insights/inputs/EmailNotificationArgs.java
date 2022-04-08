@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Email notification of an autoscale event.
- * 
  */
 public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
-     * 
      */
     @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
@@ -33,7 +31,6 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * a value indicating whether to send email to subscription administrator.
-     * 
      */
     @Import(name="sendToSubscriptionAdministrator")
       private final @Nullable Output<Boolean> sendToSubscriptionAdministrator;
@@ -44,7 +41,6 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * a value indicating whether to send email to subscription co-administrators.
-     * 
      */
     @Import(name="sendToSubscriptionCoAdministrators")
       private final @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;

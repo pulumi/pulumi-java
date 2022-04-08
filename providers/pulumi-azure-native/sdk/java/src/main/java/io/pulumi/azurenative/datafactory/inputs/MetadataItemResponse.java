@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specify the name and value of custom metadata item.
- * 
  */
 public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata item key name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="name")
       private final @Nullable Object name;
@@ -31,7 +29,6 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata item value. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="value")
       private final @Nullable Object value;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse {
     /**
      * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
-     * 
      */
     private final String domainNameLabel;
 
@@ -22,7 +21,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
 
     /**
      * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
-     * 
     */
     public String getDomainNameLabel() {
         return this.domainNameLabel;

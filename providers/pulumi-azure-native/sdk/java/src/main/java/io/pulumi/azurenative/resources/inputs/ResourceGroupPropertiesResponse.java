@@ -10,15 +10,13 @@ import java.util.Objects;
 
 /**
  * The resource group properties.
- * 
  */
 public final class ResourceGroupPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceGroupPropertiesResponse Empty = new ResourceGroupPropertiesResponse();
 
     /**
-     * The provisioning state.
-     * 
+     * The provisioning state. 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

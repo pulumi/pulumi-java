@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity attributes of a lab user.
- * 
  */
 public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set to the app Id of the client JWT making the request.
-     * 
      */
     @Import(name="appId")
       private final @Nullable String appId;
@@ -31,7 +29,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -42,7 +39,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
-     * 
      */
     @Import(name="principalId")
       private final @Nullable String principalId;
@@ -53,7 +49,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set to the principal name / UPN of the client JWT making the request.
-     * 
      */
     @Import(name="principalName")
       private final @Nullable String principalName;
@@ -64,7 +59,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set to the tenant ID of the client JWT making the request.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

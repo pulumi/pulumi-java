@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Factory's VSTS repo information.
- * 
  */
 public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -31,7 +29,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Collaboration branch.
-     * 
      */
     @Import(name="collaborationBranch", required=true)
       private final String collaborationBranch;
@@ -42,7 +39,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Last commit id.
-     * 
      */
     @Import(name="lastCommitId")
       private final @Nullable String lastCommitId;
@@ -53,7 +49,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
 
     /**
      * VSTS project name.
-     * 
      */
     @Import(name="projectName", required=true)
       private final String projectName;
@@ -64,7 +59,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Repository name.
-     * 
      */
     @Import(name="repositoryName", required=true)
       private final String repositoryName;
@@ -75,7 +69,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Root folder.
-     * 
      */
     @Import(name="rootFolder", required=true)
       private final String rootFolder;
@@ -86,7 +79,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
 
     /**
      * VSTS tenant id.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;
@@ -98,7 +90,6 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
     /**
      * Type of repo configuration.
      * Expected value is 'FactoryVSTSConfiguration'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -18,7 +18,99 @@ import javax.annotation.Nullable;
  * Registered Server resource.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RegisteredServers_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registeredServer = new AzureNative.StorageSync.RegisteredServer("registeredServer", new AzureNative.StorageSync.RegisteredServerArgs
+ *         {
+ *             AgentVersion = "1.0.277.0",
+ *             LastHeartBeat = "\"2017-08-08T18:29:06.470652Z\"",
+ *             ResourceGroupName = "SampleResourceGroup_1",
+ *             ServerCertificate = "\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\"",
+ *             ServerId = "\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\"",
+ *             ServerOSVersion = "10.0.14393.0",
+ *             ServerRole = "Standalone",
+ *             StorageSyncServiceName = "SampleStorageSyncService_1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storagesync "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagesync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagesync.NewRegisteredServer(ctx, "registeredServer", &storagesync.RegisteredServerArgs{
+ * 			AgentVersion:           pulumi.String("1.0.277.0"),
+ * 			LastHeartBeat:          pulumi.String("\"2017-08-08T18:29:06.470652Z\""),
+ * 			ResourceGroupName:      pulumi.String("SampleResourceGroup_1"),
+ * 			ServerCertificate:      pulumi.String("\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\""),
+ * 			ServerId:               pulumi.String("\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\""),
+ * 			ServerOSVersion:        pulumi.String("10.0.14393.0"),
+ * 			ServerRole:             pulumi.String("Standalone"),
+ * 			StorageSyncServiceName: pulumi.String("SampleStorageSyncService_1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const registeredServer = new azure_native.storagesync.RegisteredServer("registeredServer", {
+ *     agentVersion: "1.0.277.0",
+ *     lastHeartBeat: "\"2017-08-08T18:29:06.470652Z\"",
+ *     resourceGroupName: "SampleResourceGroup_1",
+ *     serverCertificate: "\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\"",
+ *     serverId: "\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\"",
+ *     serverOSVersion: "10.0.14393.0",
+ *     serverRole: "Standalone",
+ *     storageSyncServiceName: "SampleStorageSyncService_1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * registered_server = azure_native.storagesync.RegisteredServer("registeredServer",
+ *     agent_version="1.0.277.0",
+ *     last_heart_beat="\"2017-08-08T18:29:06.470652Z\"",
+ *     resource_group_name="SampleResourceGroup_1",
+ *     server_certificate="\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\"",
+ *     server_id="\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\"",
+ *     server_os_version="10.0.14393.0",
+ *     server_role="Standalone",
+ *     storage_sync_service_name="SampleStorageSyncService_1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,336 +125,288 @@ import javax.annotation.Nullable;
 public class RegisteredServer extends io.pulumi.resources.CustomResource {
     /**
      * Registered Server Agent Version
-     * 
      */
     @Export(name="agentVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentVersion;
 
     /**
      * @return Registered Server Agent Version
-     * 
      */
     public Output</* @Nullable */ String> getAgentVersion() {
         return this.agentVersion;
     }
     /**
      * Registered Server Agent Version Expiration Date
-     * 
      */
     @Export(name="agentVersionExpirationDate", type=String.class, parameters={})
     private Output<String> agentVersionExpirationDate;
 
     /**
      * @return Registered Server Agent Version Expiration Date
-     * 
      */
     public Output<String> getAgentVersionExpirationDate() {
         return this.agentVersionExpirationDate;
     }
     /**
      * Registered Server Agent Version Status
-     * 
      */
     @Export(name="agentVersionStatus", type=String.class, parameters={})
     private Output<String> agentVersionStatus;
 
     /**
      * @return Registered Server Agent Version Status
-     * 
      */
     public Output<String> getAgentVersionStatus() {
         return this.agentVersionStatus;
     }
     /**
      * Registered Server clusterId
-     * 
      */
     @Export(name="clusterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterId;
 
     /**
      * @return Registered Server clusterId
-     * 
      */
     public Output</* @Nullable */ String> getClusterId() {
         return this.clusterId;
     }
     /**
      * Registered Server clusterName
-     * 
      */
     @Export(name="clusterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterName;
 
     /**
      * @return Registered Server clusterName
-     * 
      */
     public Output</* @Nullable */ String> getClusterName() {
         return this.clusterName;
     }
     /**
      * Resource discoveryEndpointUri
-     * 
      */
     @Export(name="discoveryEndpointUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> discoveryEndpointUri;
 
     /**
      * @return Resource discoveryEndpointUri
-     * 
      */
     public Output</* @Nullable */ String> getDiscoveryEndpointUri() {
         return this.discoveryEndpointUri;
     }
     /**
      * Friendly Name
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
      * @return Friendly Name
-     * 
      */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * Registered Server last heart beat
-     * 
      */
     @Export(name="lastHeartBeat", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastHeartBeat;
 
     /**
      * @return Registered Server last heart beat
-     * 
      */
     public Output</* @Nullable */ String> getLastHeartBeat() {
         return this.lastHeartBeat;
     }
     /**
      * Resource Last Operation Name
-     * 
      */
     @Export(name="lastOperationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastOperationName;
 
     /**
      * @return Resource Last Operation Name
-     * 
      */
     public Output</* @Nullable */ String> getLastOperationName() {
         return this.lastOperationName;
     }
     /**
      * Registered Server lastWorkflowId
-     * 
      */
     @Export(name="lastWorkflowId", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastWorkflowId;
 
     /**
      * @return Registered Server lastWorkflowId
-     * 
      */
     public Output</* @Nullable */ String> getLastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
      * Management Endpoint Uri
-     * 
      */
     @Export(name="managementEndpointUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> managementEndpointUri;
 
     /**
      * @return Management Endpoint Uri
-     * 
      */
     public Output</* @Nullable */ String> getManagementEndpointUri() {
         return this.managementEndpointUri;
     }
     /**
      * Monitoring Configuration
-     * 
      */
     @Export(name="monitoringConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitoringConfiguration;
 
     /**
      * @return Monitoring Configuration
-     * 
      */
     public Output</* @Nullable */ String> getMonitoringConfiguration() {
         return this.monitoringConfiguration;
     }
     /**
      * Telemetry Endpoint Uri
-     * 
      */
     @Export(name="monitoringEndpointUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitoringEndpointUri;
 
     /**
      * @return Telemetry Endpoint Uri
-     * 
      */
     public Output</* @Nullable */ String> getMonitoringEndpointUri() {
         return this.monitoringEndpointUri;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Registered Server Provisioning State
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Registered Server Provisioning State
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource Location
-     * 
      */
     @Export(name="resourceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceLocation;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getResourceLocation() {
         return this.resourceLocation;
     }
     /**
      * Registered Server Certificate
-     * 
      */
     @Export(name="serverCertificate", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverCertificate;
 
     /**
      * @return Registered Server Certificate
-     * 
      */
     public Output</* @Nullable */ String> getServerCertificate() {
         return this.serverCertificate;
     }
     /**
      * Registered Server serverId
-     * 
      */
     @Export(name="serverId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverId;
 
     /**
      * @return Registered Server serverId
-     * 
      */
     public Output</* @Nullable */ String> getServerId() {
         return this.serverId;
     }
     /**
      * Registered Server Management Error Code
-     * 
      */
     @Export(name="serverManagementErrorCode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> serverManagementErrorCode;
 
     /**
      * @return Registered Server Management Error Code
-     * 
      */
     public Output</* @Nullable */ Integer> getServerManagementErrorCode() {
         return this.serverManagementErrorCode;
     }
     /**
      * Registered Server OS Version
-     * 
      */
     @Export(name="serverOSVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverOSVersion;
 
     /**
      * @return Registered Server OS Version
-     * 
      */
     public Output</* @Nullable */ String> getServerOSVersion() {
         return this.serverOSVersion;
     }
     /**
      * Registered Server serverRole
-     * 
      */
     @Export(name="serverRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverRole;
 
     /**
      * @return Registered Server serverRole
-     * 
      */
     public Output</* @Nullable */ String> getServerRole() {
         return this.serverRole;
     }
     /**
      * Service Location
-     * 
      */
     @Export(name="serviceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceLocation;
 
     /**
      * @return Service Location
-     * 
      */
     public Output</* @Nullable */ String> getServiceLocation() {
         return this.serviceLocation;
     }
     /**
      * Registered Server storageSyncServiceUid
-     * 
      */
     @Export(name="storageSyncServiceUid", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageSyncServiceUid;
 
     /**
      * @return Registered Server storageSyncServiceUid
-     * 
      */
     public Output</* @Nullable */ String> getStorageSyncServiceUid() {
         return this.storageSyncServiceUid;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

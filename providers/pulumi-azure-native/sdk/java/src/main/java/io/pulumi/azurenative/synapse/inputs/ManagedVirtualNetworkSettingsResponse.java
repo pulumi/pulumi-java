@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed Virtual Network Settings
- * 
  */
 public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
 
     /**
      * Allowed Aad Tenant Ids For Linking
-     * 
      */
     @Import(name="allowedAadTenantIdsForLinking")
       private final @Nullable List<String> allowedAadTenantIdsForLinking;
@@ -33,7 +31,6 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
 
     /**
      * Linked Access Check On Target Resource
-     * 
      */
     @Import(name="linkedAccessCheckOnTargetResource")
       private final @Nullable Boolean linkedAccessCheckOnTargetResource;
@@ -44,7 +41,6 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
 
     /**
      * Prevent Data Exfiltration
-     * 
      */
     @Import(name="preventDataExfiltration")
       private final @Nullable Boolean preventDataExfiltration;

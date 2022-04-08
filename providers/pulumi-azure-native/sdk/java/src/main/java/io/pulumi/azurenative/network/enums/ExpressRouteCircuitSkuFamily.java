@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The family of the SKU.
-     * 
      */
     @EnumType
     public enum ExpressRouteCircuitSkuFamily {

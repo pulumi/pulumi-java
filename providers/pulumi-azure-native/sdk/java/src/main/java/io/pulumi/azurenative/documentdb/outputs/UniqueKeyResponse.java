@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class UniqueKeyResponse {
     /**
      * List of paths must be unique for each document in the Azure Cosmos DB service
-     * 
      */
     private final @Nullable List<String> paths;
 
@@ -24,7 +23,6 @@ public final class UniqueKeyResponse {
 
     /**
      * List of paths must be unique for each document in the Azure Cosmos DB service
-     * 
     */
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;

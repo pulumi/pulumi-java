@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata pertaining to the geographic location of the resource.
- * 
  */
 public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The city or locality where the resource is located.
-     * 
      */
     @Import(name="city")
       private final @Nullable String city;
@@ -31,7 +29,6 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The country or region where the resource is located
-     * 
      */
     @Import(name="countryOrRegion")
       private final @Nullable String countryOrRegion;
@@ -42,7 +39,6 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The district, state, or province where the resource is located.
-     * 
      */
     @Import(name="district")
       private final @Nullable String district;
@@ -53,7 +49,6 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A canonical name for the geographic or physical location.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

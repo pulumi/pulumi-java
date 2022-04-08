@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The SKU name of the container registry. Required for registry creation.
-     * 
      */
     @EnumType
     public enum SkuName {

@@ -17,7 +17,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -28,7 +27,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -39,7 +37,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API will add or update connections for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;
@@ -61,7 +57,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
 
     /**
      * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
-     * 
      */
     @Import(name="subnetResourceId")
       private final @Nullable Output<String> subnetResourceId;
@@ -72,7 +67,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
 
     /**
      * A flag that specifies if the scale unit this Web App is on supports Swift integration.
-     * 
      */
     @Import(name="swiftSupported")
       private final @Nullable Output<Boolean> swiftSupported;

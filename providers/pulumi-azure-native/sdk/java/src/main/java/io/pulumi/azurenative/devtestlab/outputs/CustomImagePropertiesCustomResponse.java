@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class CustomImagePropertiesCustomResponse {
     /**
      * The image name.
-     * 
      */
     private final @Nullable String imageName;
     /**
      * The OS type of the custom image (i.e. Windows, Linux)
-     * 
      */
     private final String osType;
     /**
      * Indicates whether sysprep has been run on the VHD.
-     * 
      */
     private final @Nullable Boolean sysPrep;
 
@@ -40,21 +37,18 @@ public final class CustomImagePropertiesCustomResponse {
 
     /**
      * The image name.
-     * 
     */
     public Optional<String> getImageName() {
         return Optional.ofNullable(this.imageName);
     }
     /**
      * The OS type of the custom image (i.e. Windows, Linux)
-     * 
     */
     public String getOsType() {
         return this.osType;
     }
     /**
      * Indicates whether sysprep has been run on the VHD.
-     * 
     */
     public Optional<Boolean> getSysPrep() {
         return Optional.ofNullable(this.sysPrep);

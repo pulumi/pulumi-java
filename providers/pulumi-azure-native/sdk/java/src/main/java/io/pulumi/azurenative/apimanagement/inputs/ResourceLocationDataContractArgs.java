@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource location data properties.
- * 
  */
 public final class ResourceLocationDataContractArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
 
     /**
      * The city or locality where the resource is located.
-     * 
      */
     @Import(name="city")
       private final @Nullable Output<String> city;
@@ -31,7 +29,6 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
 
     /**
      * The country or region where the resource is located.
-     * 
      */
     @Import(name="countryOrRegion")
       private final @Nullable Output<String> countryOrRegion;
@@ -42,7 +39,6 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
 
     /**
      * The district, state, or province where the resource is located.
-     * 
      */
     @Import(name="district")
       private final @Nullable Output<String> district;
@@ -53,7 +49,6 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
 
     /**
      * A canonical name for the geographic or physical location.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

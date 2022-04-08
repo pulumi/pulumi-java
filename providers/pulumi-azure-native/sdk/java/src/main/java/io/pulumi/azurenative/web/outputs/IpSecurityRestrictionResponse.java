@@ -16,22 +16,20 @@ import javax.annotation.Nullable;
 public final class IpSecurityRestrictionResponse {
     /**
      * Allow or Deny access for this IP range.
-     * 
      */
     private final @Nullable String action;
     /**
      * IP restriction rule description.
-     * 
      */
     private final @Nullable String description;
     /**
      * IP restriction rule headers.
-     * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+     * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
      * The matching logic is ..
      * - If the property is null or empty (default), all hosts(or lack of) are allowed.
      * - A value is compared using ordinal-ignore-case (excluding port number).
      * - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com
-     *    but not the root domain contoso.com or multi-level foo.bar.contoso.com
+     *  but not the root domain contoso.com or multi-level foo.bar.contoso.com
      * - Unicode host names are allowed but are converted to Punycode for matching.
      * 
      * X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
@@ -41,7 +39,6 @@ public final class IpSecurityRestrictionResponse {
      * 
      * X-Azure-FDID and X-FD-HealthProbe.
      * The matching logic is exact match.
-     * 
      */
     private final @Nullable Map<String,List<String>> headers;
     /**
@@ -49,42 +46,34 @@ public final class IpSecurityRestrictionResponse {
      * It can be in form of pure ipv4 address (required SubnetMask property) or
      * CIDR notation such as ipv4/mask (leading bit match). For CIDR,
      * SubnetMask property must not be specified.
-     * 
      */
     private final @Nullable String ipAddress;
     /**
      * IP restriction rule name.
-     * 
      */
     private final @Nullable String name;
     /**
      * Priority of IP restriction rule.
-     * 
      */
     private final @Nullable Integer priority;
     /**
      * Subnet mask for the range of IP addresses the restriction is valid for.
-     * 
      */
     private final @Nullable String subnetMask;
     /**
      * (internal) Subnet traffic tag
-     * 
      */
     private final @Nullable Integer subnetTrafficTag;
     /**
      * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
-     * 
      */
     private final @Nullable String tag;
     /**
      * Virtual network resource id
-     * 
      */
     private final @Nullable String vnetSubnetResourceId;
     /**
      * (internal) Vnet traffic tag
-     * 
      */
     private final @Nullable Integer vnetTrafficTag;
 
@@ -116,26 +105,24 @@ public final class IpSecurityRestrictionResponse {
 
     /**
      * Allow or Deny access for this IP range.
-     * 
     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP restriction rule description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * IP restriction rule headers.
-     * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+     * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
      * The matching logic is ..
      * - If the property is null or empty (default), all hosts(or lack of) are allowed.
      * - A value is compared using ordinal-ignore-case (excluding port number).
      * - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com
-     *    but not the root domain contoso.com or multi-level foo.bar.contoso.com
+     *  but not the root domain contoso.com or multi-level foo.bar.contoso.com
      * - Unicode host names are allowed but are converted to Punycode for matching.
      * 
      * X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
@@ -145,7 +132,6 @@ public final class IpSecurityRestrictionResponse {
      * 
      * X-Azure-FDID and X-FD-HealthProbe.
      * The matching logic is exact match.
-     * 
     */
     public Map<String,List<String>> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
@@ -155,56 +141,48 @@ public final class IpSecurityRestrictionResponse {
      * It can be in form of pure ipv4 address (required SubnetMask property) or
      * CIDR notation such as ipv4/mask (leading bit match). For CIDR,
      * SubnetMask property must not be specified.
-     * 
     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * IP restriction rule name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of IP restriction rule.
-     * 
     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Subnet mask for the range of IP addresses the restriction is valid for.
-     * 
     */
     public Optional<String> getSubnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
     /**
      * (internal) Subnet traffic tag
-     * 
     */
     public Optional<Integer> getSubnetTrafficTag() {
         return Optional.ofNullable(this.subnetTrafficTag);
     }
     /**
      * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
-     * 
     */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * Virtual network resource id
-     * 
     */
     public Optional<String> getVnetSubnetResourceId() {
         return Optional.ofNullable(this.vnetSubnetResourceId);
     }
     /**
      * (internal) Vnet traffic tag
-     * 
     */
     public Optional<Integer> getVnetTrafficTag() {
         return Optional.ofNullable(this.vnetTrafficTag);

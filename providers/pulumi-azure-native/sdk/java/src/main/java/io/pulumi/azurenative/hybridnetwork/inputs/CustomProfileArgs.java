@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the custom settings for the virtual machine.
- * 
  */
 public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path for metadata configuration.
-     * 
      */
     @Import(name="metadataConfigurationPath")
       private final @Nullable Output<String> metadataConfigurationPath;

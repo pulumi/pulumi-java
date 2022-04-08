@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Storage account keys creation time.
- * 
  */
 public final class KeyCreationTimeResponse extends io.pulumi.resources.InvokeArgs {
 

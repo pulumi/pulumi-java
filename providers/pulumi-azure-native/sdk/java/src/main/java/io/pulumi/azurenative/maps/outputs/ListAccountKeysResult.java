@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ListAccountKeysResult {
     /**
      * The full Azure resource identifier of the Maps Account.
-     * 
      */
     private final String id;
     /**
      * The primary key for accessing the Maps REST APIs.
-     * 
      */
     private final String primaryKey;
     /**
      * The secondary key for accessing the Maps REST APIs.
-     * 
      */
     private final String secondaryKey;
 
@@ -37,21 +34,18 @@ public final class ListAccountKeysResult {
 
     /**
      * The full Azure resource identifier of the Maps Account.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The primary key for accessing the Maps REST APIs.
-     * 
     */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The secondary key for accessing the Maps REST APIs.
-     * 
     */
     public String getSecondaryKey() {
         return this.secondaryKey;

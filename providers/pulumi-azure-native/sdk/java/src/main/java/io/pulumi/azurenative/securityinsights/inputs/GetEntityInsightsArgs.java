@@ -18,7 +18,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates if query time range should be extended with default time range of the query. Default value is false
-     * 
      */
     @Import(name="addDefaultExtendedTimeRange")
       private final @Nullable Boolean addDefaultExtendedTimeRange;
@@ -29,7 +28,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The end timeline date, so the results returned are before this date.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -40,7 +38,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * entity ID
-     * 
      */
     @Import(name="entityId", required=true)
       private final String entityId;
@@ -51,7 +48,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * List of Insights Query Id. If empty, default value is all insights of this entity
-     * 
      */
     @Import(name="insightQueryIds")
       private final @Nullable List<String> insightQueryIds;
@@ -62,7 +58,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
@@ -73,7 +68,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -84,7 +78,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The start timeline date, so the results returned are after this date.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -95,7 +88,6 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

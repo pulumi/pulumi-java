@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a Managed Network Peering Policy
- * 
  */
 public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -33,7 +31,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
 
     /**
      * Gets or sets the hub virtual network ID
-     * 
      */
     @Import(name="hub")
       private final @Nullable ResourceIdResponse hub;
@@ -44,7 +41,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
 
     /**
      * Gets or sets the mesh group IDs
-     * 
      */
     @Import(name="mesh")
       private final @Nullable List<ResourceIdResponse> mesh;
@@ -55,7 +51,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
 
     /**
      * Provisioning state of the ManagedNetwork resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -66,7 +61,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
 
     /**
      * Gets or sets the spokes group IDs
-     * 
      */
     @Import(name="spokes")
       private final @Nullable List<ResourceIdResponse> spokes;
@@ -77,7 +71,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
 
     /**
      * Gets or sets the connectivity type of a network structure policy
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

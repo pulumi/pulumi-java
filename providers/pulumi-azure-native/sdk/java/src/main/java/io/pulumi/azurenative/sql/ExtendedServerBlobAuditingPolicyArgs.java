@@ -76,7 +76,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * SELECT on SCHEMA::mySchema by public
      * 
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-     * 
      */
     @Import(name="auditActionsAndGroups")
       private final @Nullable Output<List<String>> auditActionsAndGroups;
@@ -87,7 +86,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * The name of the blob auditing policy.
-     * 
      */
     @Import(name="blobAuditingPolicyName")
       private final @Nullable Output<String> blobAuditingPolicyName;
@@ -97,7 +95,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
     }
 
     /**
-     * Specifies whether audit events are sent to Azure Monitor.
+     * Specifies whether audit events are sent to Azure Monitor. 
      * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
      * 
      * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -139,7 +137,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
-     * 
      */
     @Import(name="isStorageSecondaryKeyInUse")
       private final @Nullable Output<Boolean> isStorageSecondaryKeyInUse;
@@ -150,7 +147,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * Specifies condition of where clause when creating an audit.
-     * 
      */
     @Import(name="predicateExpression")
       private final @Nullable Output<String> predicateExpression;
@@ -162,7 +158,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
     /**
      * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
-     * 
      */
     @Import(name="queueDelayMs")
       private final @Nullable Output<Integer> queueDelayMs;
@@ -173,7 +168,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -184,7 +178,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * Specifies the number of days to keep in the audit logs in the storage account.
-     * 
      */
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
@@ -195,7 +188,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -206,7 +198,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-     * 
      */
     @Import(name="state", required=true)
       private final Output<BlobAuditingPolicyState> state;
@@ -216,13 +207,12 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
     }
 
     /**
-     * Specifies the identifier key of the auditing storage account.
+     * Specifies the identifier key of the auditing storage account. 
      * If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
      * Prerequisites for using managed identity authentication:
      * 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
      * 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
-     *    For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-     * 
+     * For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
      */
     @Import(name="storageAccountAccessKey")
       private final @Nullable Output<String> storageAccountAccessKey;
@@ -233,7 +223,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * Specifies the blob storage subscription Id.
-     * 
      */
     @Import(name="storageAccountSubscriptionId")
       private final @Nullable Output<String> storageAccountSubscriptionId;
@@ -244,7 +233,6 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
 
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
-     * 
      */
     @Import(name="storageEndpoint")
       private final @Nullable Output<String> storageEndpoint;

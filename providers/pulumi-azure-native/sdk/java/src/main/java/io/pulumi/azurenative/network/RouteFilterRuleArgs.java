@@ -20,7 +20,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The access type of the rule.
-     * 
      */
     @Import(name="access", required=true)
       private final Output<Either<String,Access>> access;
@@ -31,7 +30,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
-     * 
      */
     @Import(name="communities", required=true)
       private final Output<List<String>> communities;
@@ -42,7 +40,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -53,7 +50,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -64,7 +60,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -75,7 +70,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the route filter.
-     * 
      */
     @Import(name="routeFilterName", required=true)
       private final Output<String> routeFilterName;
@@ -97,7 +90,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The rule type of the rule.
-     * 
      */
     @Import(name="routeFilterRuleType", required=true)
       private final Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
@@ -108,7 +100,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the route filter rule.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;

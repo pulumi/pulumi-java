@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Admin credentials for virtual machine
- * 
  */
 public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
 
     /**
      * Password of admin account
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -31,7 +29,6 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
 
     /**
      * Private key data
-     * 
      */
     @Import(name="privateKeyData")
       private final @Nullable String privateKeyData;
@@ -42,7 +39,6 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
 
     /**
      * Public key data
-     * 
      */
     @Import(name="publicKeyData")
       private final @Nullable String publicKeyData;
@@ -53,7 +49,6 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
 
     /**
      * Username of admin account
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * BGP settings details for a link.
- * 
  */
 public final class VpnLinkBgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VpnLinkBgpSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The BGP speaker's ASN.
-     * 
      */
     @Import(name="asn")
       private final @Nullable Double asn;
@@ -32,7 +30,6 @@ public final class VpnLinkBgpSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The BGP peering address and BGP identifier of this BGP speaker.
-     * 
      */
     @Import(name="bgpPeeringAddress")
       private final @Nullable String bgpPeeringAddress;

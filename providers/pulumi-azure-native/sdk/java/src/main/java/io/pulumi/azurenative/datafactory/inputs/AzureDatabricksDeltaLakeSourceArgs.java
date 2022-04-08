@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure Databricks Delta Lake source.
- * 
  */
 public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -33,7 +31,6 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
 
     /**
      * Azure Databricks Delta Lake export settings.
-     * 
      */
     @Import(name="exportSettings")
       private final @Nullable Output<AzureDatabricksDeltaLakeExportCommandArgs> exportSettings;
@@ -44,7 +41,6 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
 
     /**
      * Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<Object> query;
@@ -66,7 +61,6 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -77,7 +71,6 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -89,7 +82,6 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
     /**
      * Copy source type.
      * Expected value is 'AzureDatabricksDeltaLakeSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class SkuResponse {
     /**
      * The name.
-     * 
      */
     private final String name;
     /**
      * The reference to plan.
-     * 
      */
     private final @Nullable ResourceReferenceResponse plan;
 
@@ -33,14 +31,12 @@ public final class SkuResponse {
 
     /**
      * The name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The reference to plan.
-     * 
     */
     public Optional<ResourceReferenceResponse> getPlan() {
         return Optional.ofNullable(this.plan);

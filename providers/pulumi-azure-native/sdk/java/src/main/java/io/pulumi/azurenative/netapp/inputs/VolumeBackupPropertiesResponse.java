@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volume Backup Properties
- * 
  */
 public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Backup Enabled
-     * 
      */
     @Import(name="backupEnabled")
       private final @Nullable Boolean backupEnabled;
@@ -32,7 +30,6 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Backup Policy Resource ID
-     * 
      */
     @Import(name="backupPolicyId")
       private final @Nullable String backupPolicyId;
@@ -43,7 +40,6 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Policy Enforced
-     * 
      */
     @Import(name="policyEnforced")
       private final @Nullable Boolean policyEnforced;
@@ -54,7 +50,6 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
 
     /**
      * Vault Resource ID
-     * 
      */
     @Import(name="vaultId")
       private final @Nullable String vaultId;

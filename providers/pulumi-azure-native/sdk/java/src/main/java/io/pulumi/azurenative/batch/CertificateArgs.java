@@ -17,7 +17,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Batch account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -28,7 +27,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -39,7 +37,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum size is 10KB.
-     * 
      */
     @Import(name="data", required=true)
       private final Output<String> data;
@@ -50,7 +47,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<CertificateFormat> format;
@@ -61,7 +57,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This must not be specified if the certificate format is Cer.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -72,7 +67,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the Batch account.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This must match the thumbprint from the name.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
@@ -94,7 +87,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
-     * 
      */
     @Import(name="thumbprintAlgorithm")
       private final @Nullable Output<String> thumbprintAlgorithm;

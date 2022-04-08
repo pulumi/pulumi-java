@@ -17,7 +17,99 @@ import javax.annotation.Nullable;
  * Class representing a database principal assignment.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### KustoDatabasePrincipalAssignmentsCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var databasePrincipalAssignment = new AzureNative.Kusto.DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureNative.Kusto.DatabasePrincipalAssignmentArgs
+ *         {
+ *             ClusterName = "kustoclusterrptest4",
+ *             DatabaseName = "Kustodatabase8",
+ *             PrincipalAssignmentName = "kustoprincipal1",
+ *             PrincipalId = "87654321-1234-1234-1234-123456789123",
+ *             PrincipalType = "App",
+ *             ResourceGroupName = "kustorptest",
+ *             Role = "Admin",
+ *             TenantId = "12345678-1234-1234-1234-123456789123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kusto.NewDatabasePrincipalAssignment(ctx, "databasePrincipalAssignment", &kusto.DatabasePrincipalAssignmentArgs{
+ * 			ClusterName:             pulumi.String("kustoclusterrptest4"),
+ * 			DatabaseName:            pulumi.String("Kustodatabase8"),
+ * 			PrincipalAssignmentName: pulumi.String("kustoprincipal1"),
+ * 			PrincipalId:             pulumi.String("87654321-1234-1234-1234-123456789123"),
+ * 			PrincipalType:           pulumi.String("App"),
+ * 			ResourceGroupName:       pulumi.String("kustorptest"),
+ * 			Role:                    pulumi.String("Admin"),
+ * 			TenantId:                pulumi.String("12345678-1234-1234-1234-123456789123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const databasePrincipalAssignment = new azure_native.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment", {
+ *     clusterName: "kustoclusterrptest4",
+ *     databaseName: "Kustodatabase8",
+ *     principalAssignmentName: "kustoprincipal1",
+ *     principalId: "87654321-1234-1234-1234-123456789123",
+ *     principalType: "App",
+ *     resourceGroupName: "kustorptest",
+ *     role: "Admin",
+ *     tenantId: "12345678-1234-1234-1234-123456789123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * database_principal_assignment = azure_native.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment",
+ *     cluster_name="kustoclusterrptest4",
+ *     database_name="Kustodatabase8",
+ *     principal_assignment_name="kustoprincipal1",
+ *     principal_id="87654321-1234-1234-1234-123456789123",
+ *     principal_type="App",
+ *     resource_group_name="kustorptest",
+ *     role="Admin",
+ *     tenant_id="12345678-1234-1234-1234-123456789123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,126 +124,108 @@ import javax.annotation.Nullable;
 public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
-     * 
      */
     @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
      * @return The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
-     * 
      */
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
     /**
      * The principal name
-     * 
      */
     @Export(name="principalName", type=String.class, parameters={})
     private Output<String> principalName;
 
     /**
      * @return The principal name
-     * 
      */
     public Output<String> getPrincipalName() {
         return this.principalName;
     }
     /**
      * Principal type.
-     * 
      */
     @Export(name="principalType", type=String.class, parameters={})
     private Output<String> principalType;
 
     /**
      * @return Principal type.
-     * 
      */
     public Output<String> getPrincipalType() {
         return this.principalType;
     }
     /**
      * The provisioned state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioned state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Database principal role.
-     * 
      */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
      * @return Database principal role.
-     * 
      */
     public Output<String> getRole() {
         return this.role;
     }
     /**
      * The tenant id of the principal
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return The tenant id of the principal
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The tenant name of the principal
-     * 
      */
     @Export(name="tenantName", type=String.class, parameters={})
     private Output<String> tenantName;
 
     /**
      * @return The tenant name of the principal
-     * 
      */
     public Output<String> getTenantName() {
         return this.tenantName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

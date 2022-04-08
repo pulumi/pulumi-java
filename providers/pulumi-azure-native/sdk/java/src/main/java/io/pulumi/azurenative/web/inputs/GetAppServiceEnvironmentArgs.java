@@ -14,7 +14,6 @@ public final class GetAppServiceEnvironmentArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the App Service Environment.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetAppServiceEnvironmentArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

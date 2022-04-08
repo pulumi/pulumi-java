@@ -31,126 +31,108 @@ import javax.annotation.Nullable;
 public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.CustomResource {
     /**
      * Key Vault resource Id.
-     * 
      */
     @Export(name="keyVaultId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultId;
 
     /**
      * @return Key Vault resource Id.
-     * 
      */
     public Output</* @Nullable */ String> getKeyVaultId() {
         return this.keyVaultId;
     }
     /**
      * Key Vault secret name.
-     * 
      */
     @Export(name="keyVaultSecretName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultSecretName;
 
     /**
      * @return Key Vault secret name.
-     * 
      */
     public Output</* @Nullable */ String> getKeyVaultSecretName() {
         return this.keyVaultSecretName;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Status of the Key Vault secret.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Status of the Key Vault secret.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

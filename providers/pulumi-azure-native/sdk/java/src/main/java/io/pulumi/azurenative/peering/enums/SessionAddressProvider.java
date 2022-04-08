@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The field indicating if Microsoft provides session ip addresses.
-     * 
      */
     @EnumType
     public enum SessionAddressProvider {

@@ -14,7 +14,6 @@ public final class GetReportArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Report Name.
-     * 
      */
     @Import(name="reportName", required=true)
       private final String reportName;

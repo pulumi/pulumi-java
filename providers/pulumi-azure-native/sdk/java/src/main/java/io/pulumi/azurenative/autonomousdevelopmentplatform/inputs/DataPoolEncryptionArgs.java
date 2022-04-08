@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption properties of a Data Pool
- * 
  */
 public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of Key Vault key
-     * 
      */
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
@@ -31,7 +29,6 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
-     * 
      */
     @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
@@ -42,7 +39,6 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The version of Key Vault key
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
@@ -53,7 +49,6 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
-     * 
      */
     @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * DataStoreInfo base
- * 
  */
 public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeA
 
     /**
      * type of datastore; Operational/Vault/Archive
-     * 
      */
     @Import(name="dataStoreType", required=true)
       private final String dataStoreType;
@@ -29,7 +27,6 @@ public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Type of Datasource object, used to initialize the right inherited type
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;

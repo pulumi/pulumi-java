@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * UrlPathMaps give a url path to the backend mapping information for PathBasedRouting.
- * 
  */
 public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
 
     /**
      * Default backend address pool resource of URL path map.
-     * 
      */
     @Import(name="defaultBackendAddressPool")
       private final @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
@@ -34,7 +32,6 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
 
     /**
      * Default backend http settings resource of URL path map.
-     * 
      */
     @Import(name="defaultBackendHttpSettings")
       private final @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
@@ -45,7 +42,6 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
 
     /**
      * Default redirect configuration resource of URL path map.
-     * 
      */
     @Import(name="defaultRedirectConfiguration")
       private final @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
@@ -56,7 +52,6 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
 
     /**
      * Default Rewrite rule set resource of URL path map.
-     * 
      */
     @Import(name="defaultRewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
@@ -67,7 +62,6 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -78,7 +72,6 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
 
     /**
      * Name of the URL path map that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -89,7 +82,6 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
 
     /**
      * Path rule of URL path map resource.
-     * 
      */
     @Import(name="pathRules")
       private final @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;

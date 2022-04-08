@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for Azure Files identity based authentication.
- * 
  */
 public final class AzureFilesIdentityBasedAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends io.pulu
 
     /**
      * Required if choose AD.
-     * 
      */
     @Import(name="activeDirectoryProperties")
       private final @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
@@ -32,7 +30,6 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends io.pulu
 
     /**
      * Indicates the directory service used.
-     * 
      */
     @Import(name="directoryServiceOptions", required=true)
       private final String directoryServiceOptions;

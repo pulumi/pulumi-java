@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ServiceAuthConfigurationResponse {
     /**
      * The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
-     * 
      */
     private final String primaryAuthKeyHash;
     /**
      * The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
-     * 
      */
     private final String secondaryAuthKeyHash;
 
@@ -30,14 +28,12 @@ public final class ServiceAuthConfigurationResponse {
 
     /**
      * The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
-     * 
     */
     public String getPrimaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
     }
     /**
      * The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
-     * 
     */
     public String getSecondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volume details using the backup policy
- * 
  */
 public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Total count of backups for volume
-     * 
      */
     @Import(name="backupsCount")
       private final @Nullable Integer backupsCount;
@@ -33,7 +31,6 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Policy enabled
-     * 
      */
     @Import(name="policyEnabled")
       private final @Nullable Boolean policyEnabled;
@@ -44,7 +41,6 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Volume name
-     * 
      */
     @Import(name="volumeName")
       private final @Nullable String volumeName;

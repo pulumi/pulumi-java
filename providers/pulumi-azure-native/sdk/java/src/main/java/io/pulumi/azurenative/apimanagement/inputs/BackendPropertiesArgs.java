@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties specific to the Backend Type.
- * 
  */
 public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Backend Service Fabric Cluster Properties
-     * 
      */
     @Import(name="serviceFabricCluster")
       private final @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ExpressRouteConnectionIdResponse {
     /**
      * The ID of the ExpressRouteConnection.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class ExpressRouteConnectionIdResponse {
 
     /**
      * The ID of the ExpressRouteConnection.
-     * 
     */
     public String getId() {
         return this.id;

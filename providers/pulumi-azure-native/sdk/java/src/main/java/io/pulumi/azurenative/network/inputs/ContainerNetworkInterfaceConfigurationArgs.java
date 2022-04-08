@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container network interface configuration child resource.
- * 
  */
 public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
 
     /**
      * A list of container network interfaces created from this container network interface configuration.
-     * 
      */
     @Import(name="containerNetworkInterfaces")
       private final @Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces;
@@ -34,7 +32,6 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -45,7 +42,6 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
 
     /**
      * A list of ip configurations of the container network interface configuration.
-     * 
      */
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations;
@@ -56,7 +52,6 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
 
     /**
      * The name of the resource. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class X12MessageFilterResponse {
     /**
      * The message filter type.
-     * 
      */
     private final String messageFilterType;
 
@@ -22,7 +21,6 @@ public final class X12MessageFilterResponse {
 
     /**
      * The message filter type.
-     * 
     */
     public String getMessageFilterType() {
         return this.messageFilterType;

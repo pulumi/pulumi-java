@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Role type.
-     * 
      */
     @EnumType
     public enum RoleTypes {

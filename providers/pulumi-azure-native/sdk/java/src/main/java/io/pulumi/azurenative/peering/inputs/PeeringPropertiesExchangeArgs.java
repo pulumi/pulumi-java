@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that define an exchange peering.
- * 
  */
 public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
 
     /**
      * The set of connections that constitute an exchange peering.
-     * 
      */
     @Import(name="connections")
       private final @Nullable Output<List<ExchangeConnectionArgs>> connections;
@@ -33,7 +31,6 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
 
     /**
      * The reference of the peer ASN.
-     * 
      */
     @Import(name="peerAsn")
       private final @Nullable Output<SubResourceArgs> peerAsn;

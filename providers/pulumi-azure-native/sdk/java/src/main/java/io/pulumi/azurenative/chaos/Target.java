@@ -19,7 +19,118 @@ import javax.annotation.Nullable;
  * Model that represents a Target resource.
  * API Version: 2021-09-15-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create/update a Target that extends a virtual machine resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var target = new AzureNative.Chaos.Target("target", new AzureNative.Chaos.TargetArgs
+ *         {
+ *             ParentProviderNamespace = "Microsoft.Compute",
+ *             ParentResourceName = "exampleVM",
+ *             ParentResourceType = "virtualMachines",
+ *             Properties = 
+ *             {
+ *                 { "identities", 
+ *                 {
+ *                     
+ *                     {
+ *                         { "subject", "CN=example.subject" },
+ *                         { "type", "CertificateSubjectIssuer" },
+ *                     },
+ *                 } },
+ *             },
+ *             ResourceGroupName = "exampleRG",
+ *             TargetName = "Microsoft-Agent",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	chaos "github.com/pulumi/pulumi-azure-native/sdk/go/azure/chaos"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := chaos.NewTarget(ctx, "target", &chaos.TargetArgs{
+ * 			ParentProviderNamespace: pulumi.String("Microsoft.Compute"),
+ * 			ParentResourceName:      pulumi.String("exampleVM"),
+ * 			ParentResourceType:      pulumi.String("virtualMachines"),
+ * 			Properties: pulumi.Any{
+ * 				Identities: []map[string]interface{}{
+ * 					map[string]interface{}{
+ * 						"subject": "CN=example.subject",
+ * 						"type":    "CertificateSubjectIssuer",
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("exampleRG"),
+ * 			TargetName:        pulumi.String("Microsoft-Agent"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const target = new azure_native.chaos.Target("target", {
+ *     parentProviderNamespace: "Microsoft.Compute",
+ *     parentResourceName: "exampleVM",
+ *     parentResourceType: "virtualMachines",
+ *     properties: {
+ *         identities: [{
+ *             subject: "CN=example.subject",
+ *             type: "CertificateSubjectIssuer",
+ *         }],
+ *     },
+ *     resourceGroupName: "exampleRG",
+ *     targetName: "Microsoft-Agent",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * target = azure_native.chaos.Target("target",
+ *     parent_provider_namespace="Microsoft.Compute",
+ *     parent_resource_name="exampleVM",
+ *     parent_resource_type="virtualMachines",
+ *     properties={
+ *         "identities": [{
+ *             "subject": "CN=example.subject",
+ *             "type": "CertificateSubjectIssuer",
+ *         }],
+ *     },
+ *     resource_group_name="exampleRG",
+ *     target_name="Microsoft-Agent")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +145,60 @@ import javax.annotation.Nullable;
 public class Target extends io.pulumi.resources.CustomResource {
     /**
      * Location of the target resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of the target resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties of the target resource.
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return The properties of the target resource.
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * The system metadata of the target resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata of the target resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

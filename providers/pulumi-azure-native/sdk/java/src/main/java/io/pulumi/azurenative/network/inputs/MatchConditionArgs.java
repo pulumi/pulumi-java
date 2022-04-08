@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define match conditions.
- * 
  */
 public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Match value.
-     * 
      */
     @Import(name="matchValues", required=true)
       private final Output<List<String>> matchValues;
@@ -37,7 +35,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of match variables.
-     * 
      */
     @Import(name="matchVariables", required=true)
       private final Output<List<MatchVariableArgs>> matchVariables;
@@ -48,7 +45,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this is negate condition or not.
-     * 
      */
     @Import(name="negationConditon")
       private final @Nullable Output<Boolean> negationConditon;
@@ -59,7 +55,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The operator to be matched.
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,WebApplicationFirewallOperator>> operator;
@@ -70,7 +65,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of transforms.
-     * 
      */
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;

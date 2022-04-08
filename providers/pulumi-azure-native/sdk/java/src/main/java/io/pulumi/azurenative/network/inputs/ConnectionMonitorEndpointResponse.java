@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the connection monitor endpoint.
- * 
  */
 public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
 
     /**
      * Address of the connection monitor endpoint (IP or domain name).
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;
@@ -33,7 +31,6 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
 
     /**
      * Test coverage for the endpoint.
-     * 
      */
     @Import(name="coverageLevel")
       private final @Nullable String coverageLevel;
@@ -44,7 +41,6 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
 
     /**
      * Filter for sub-items within the endpoint.
-     * 
      */
     @Import(name="filter")
       private final @Nullable ConnectionMonitorEndpointFilterResponse filter;
@@ -55,7 +51,6 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
 
     /**
      * The name of the connection monitor endpoint.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -66,7 +61,6 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
 
     /**
      * Resource ID of the connection monitor endpoint.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;
@@ -77,7 +71,6 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
 
     /**
      * Endpoint scope.
-     * 
      */
     @Import(name="scope")
       private final @Nullable ConnectionMonitorEndpointScopeResponse scope;
@@ -88,7 +81,6 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
 
     /**
      * The endpoint type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

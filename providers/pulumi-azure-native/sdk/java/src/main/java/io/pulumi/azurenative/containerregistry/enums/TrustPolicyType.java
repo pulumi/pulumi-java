@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of trust policy.
-     * 
      */
     @EnumType
     public enum TrustPolicyType {

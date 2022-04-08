@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class DeviceDetailsResponse {
     /**
      * Management Resource Id
-     * 
      */
     private final String managementResourceId;
     /**
      * Management Resource Tenant ID
-     * 
      */
     private final String managementResourceTenantId;
     /**
      * device serial number
-     * 
      */
     private final String serialNumber;
 
@@ -37,21 +34,18 @@ public final class DeviceDetailsResponse {
 
     /**
      * Management Resource Id
-     * 
     */
     public String getManagementResourceId() {
         return this.managementResourceId;
     }
     /**
      * Management Resource Tenant ID
-     * 
     */
     public String getManagementResourceTenantId() {
         return this.managementResourceTenantId;
     }
     /**
      * device serial number
-     * 
     */
     public String getSerialNumber() {
         return this.serialNumber;

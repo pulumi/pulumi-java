@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
- * 
  */
 public final class SnapshotSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SnapshotSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class SnapshotSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku tier.
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;

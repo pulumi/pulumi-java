@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A ShareSynchronization data transfer object.
- * 
  */
 public final class ShareSynchronizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * Email of the user who created the synchronization
-     * 
      */
     @Import(name="consumerEmail")
       private final @Nullable String consumerEmail;
@@ -32,7 +30,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of the user who created the synchronization
-     * 
      */
     @Import(name="consumerName")
       private final @Nullable String consumerName;
@@ -43,7 +40,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * Tenant name of the consumer who created the synchronization
-     * 
      */
     @Import(name="consumerTenantName")
       private final @Nullable String consumerTenantName;
@@ -54,7 +50,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * synchronization duration
-     * 
      */
     @Import(name="durationMs")
       private final @Nullable Integer durationMs;
@@ -65,7 +60,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * End time of synchronization
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -76,7 +70,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * message of synchronization
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -87,7 +80,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * start time of synchronization
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -98,7 +90,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * Raw Status
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -109,7 +100,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * Synchronization id
-     * 
      */
     @Import(name="synchronizationId")
       private final @Nullable String synchronizationId;
@@ -120,7 +110,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
 
     /**
      * Synchronization mode
-     * 
      */
     @Import(name="synchronizationMode", required=true)
       private final String synchronizationMode;

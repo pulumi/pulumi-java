@@ -12,8 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HealthAlertCriteriaResponse {
     /**
-     * The list of metric criteria for this 'all of' operation.
-     * 
+     * The list of metric criteria for this 'all of' operation. 
      */
     private final @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
 
@@ -23,8 +22,7 @@ public final class HealthAlertCriteriaResponse {
     }
 
     /**
-     * The list of metric criteria for this 'all of' operation.
-     * 
+     * The list of metric criteria for this 'all of' operation. 
     */
     public List<VmGuestHealthAlertCriterionResponse> getAllOf() {
         return this.allOf == null ? List.of() : this.allOf;

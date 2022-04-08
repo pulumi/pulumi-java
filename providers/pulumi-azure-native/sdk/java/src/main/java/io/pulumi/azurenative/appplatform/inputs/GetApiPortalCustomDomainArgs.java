@@ -14,7 +14,6 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of API portal.
-     * 
      */
     @Import(name="apiPortalName", required=true)
       private final String apiPortalName;
@@ -25,7 +24,6 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the API portal custom domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -36,7 +34,6 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

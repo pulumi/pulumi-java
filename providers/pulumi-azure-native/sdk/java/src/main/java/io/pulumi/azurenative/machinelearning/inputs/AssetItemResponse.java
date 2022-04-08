@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about an asset associated with the web service.
- * 
  */
 public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Asset's Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -37,7 +35,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Information about the asset's input ports.
-     * 
      */
     @Import(name="inputPorts")
       private final @Nullable Map<String,InputPortResponse> inputPorts;
@@ -48,7 +45,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Access information for the asset.
-     * 
      */
     @Import(name="locationInfo", required=true)
       private final BlobLocationResponse locationInfo;
@@ -59,7 +55,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the asset is a custom module, this holds the module's metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
@@ -70,7 +65,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Asset's friendly name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -81,7 +75,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Information about the asset's output ports.
-     * 
      */
     @Import(name="outputPorts")
       private final @Nullable Map<String,OutputPortResponse> outputPorts;
@@ -92,7 +85,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the asset is a custom module, this holds the module's parameters.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ModuleAssetParameterResponse> parameters;
@@ -103,7 +95,6 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Asset's type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

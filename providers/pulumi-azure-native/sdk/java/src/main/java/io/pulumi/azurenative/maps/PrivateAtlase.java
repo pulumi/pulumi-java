@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * An Azure resource which represents which will provision the ability to create private location data.
  * API Version: 2020-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreatePrivateAtlas
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateAtlase = new AzureNative.Maps.PrivateAtlase("privateAtlase", new AzureNative.Maps.PrivateAtlaseArgs
+ *         {
+ *             AccountName = "myMapsAccount",
+ *             Location = "unitedstates",
+ *             PrivateAtlasName = "myPrivateAtlas",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "test", "true" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	maps "github.com/pulumi/pulumi-azure-native/sdk/go/azure/maps"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := maps.NewPrivateAtlase(ctx, "privateAtlase", &maps.PrivateAtlaseArgs{
+ * 			AccountName:       pulumi.String("myMapsAccount"),
+ * 			Location:          pulumi.String("unitedstates"),
+ * 			PrivateAtlasName:  pulumi.String("myPrivateAtlas"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"test": pulumi.String("true"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateAtlase = new azure_native.maps.PrivateAtlase("privateAtlase", {
+ *     accountName: "myMapsAccount",
+ *     location: "unitedstates",
+ *     privateAtlasName: "myPrivateAtlas",
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         test: "true",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_atlase = azure_native.maps.PrivateAtlase("privateAtlase",
+ *     account_name="myMapsAccount",
+ *     location="unitedstates",
+ *     private_atlas_name="myPrivateAtlas",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "test": "true",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +123,60 @@ import javax.annotation.Nullable;
 public class PrivateAtlase extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Private Atlas resource properties.
-     * 
      */
     @Export(name="properties", type=PrivateAtlasPropertiesResponse.class, parameters={})
     private Output<PrivateAtlasPropertiesResponse> properties;
 
     /**
      * @return The Private Atlas resource properties.
-     * 
      */
     public Output<PrivateAtlasPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

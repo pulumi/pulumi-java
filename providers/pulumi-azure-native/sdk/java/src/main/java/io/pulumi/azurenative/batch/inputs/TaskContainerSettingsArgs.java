@@ -18,7 +18,6 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
-     * 
      */
     @Import(name="containerRunOptions")
       private final @Nullable Output<String> containerRunOptions;
@@ -29,7 +28,6 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
-     * 
      */
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
@@ -40,7 +38,6 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * This setting can be omitted if was already provided at pool creation.
-     * 
      */
     @Import(name="registry")
       private final @Nullable Output<ContainerRegistryArgs> registry;

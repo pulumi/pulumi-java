@@ -14,7 +14,6 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
 
     /**
      * Fabric name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final String fabricName;
@@ -25,7 +24,6 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
 
     /**
      * Recovery services provider name
-     * 
      */
     @Import(name="providerName", required=true)
       private final String providerName;
@@ -36,7 +34,6 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

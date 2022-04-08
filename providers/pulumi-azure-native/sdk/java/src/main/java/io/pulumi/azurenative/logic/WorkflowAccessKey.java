@@ -14,6 +14,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2015-02-01-preview.
  * ## Import
  * 
@@ -28,56 +29,48 @@ import javax.annotation.Nullable;
 public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
     /**
      * Gets the workflow access key name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the workflow access key name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the not-after time.
-     * 
      */
     @Export(name="notAfter", type=String.class, parameters={})
     private Output</* @Nullable */ String> notAfter;
 
     /**
      * @return Gets or sets the not-after time.
-     * 
      */
     public Output</* @Nullable */ String> getNotAfter() {
         return this.notAfter;
     }
     /**
      * Gets or sets the not-before time.
-     * 
      */
     @Export(name="notBefore", type=String.class, parameters={})
     private Output</* @Nullable */ String> notBefore;
 
     /**
      * @return Gets or sets the not-before time.
-     * 
      */
     public Output</* @Nullable */ String> getNotBefore() {
         return this.notBefore;
     }
     /**
      * Gets the workflow access key type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the workflow access key type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -20,87 +20,70 @@ import javax.annotation.Nullable;
 public final class GetCustomImageResult {
     /**
      * The author of the custom image.
-     * 
      */
     private final @Nullable String author;
     /**
      * The creation date of the custom image.
-     * 
      */
     private final String creationDate;
     /**
      * Storage information about the plan related to this custom image
-     * 
      */
     private final @Nullable CustomImagePropertiesFromPlanResponse customImagePlan;
     /**
      * Storage information about the data disks present in the custom image
-     * 
      */
     private final @Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo;
     /**
      * The description of the custom image.
-     * 
      */
     private final @Nullable String description;
     /**
      * The identifier of the resource.
-     * 
      */
     private final String id;
     /**
      * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
-     * 
      */
     private final @Nullable Boolean isPlanAuthorized;
     /**
      * The location of the resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * The Managed Image Id backing the custom image.
-     * 
      */
     private final @Nullable String managedImageId;
     /**
      * The Managed Snapshot Id backing the custom image.
-     * 
      */
     private final @Nullable String managedSnapshotId;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The provisioning status of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     private final String uniqueIdentifier;
     /**
      * The VHD from which the image is to be created.
-     * 
      */
     private final @Nullable CustomImagePropertiesCustomResponse vhd;
     /**
      * The virtual machine from which the image is to be created.
-     * 
      */
     private final @Nullable CustomImagePropertiesFromVmResponse vm;
 
@@ -144,119 +127,102 @@ public final class GetCustomImageResult {
 
     /**
      * The author of the custom image.
-     * 
     */
     public Optional<String> getAuthor() {
         return Optional.ofNullable(this.author);
     }
     /**
      * The creation date of the custom image.
-     * 
     */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Storage information about the plan related to this custom image
-     * 
     */
     public Optional<CustomImagePropertiesFromPlanResponse> getCustomImagePlan() {
         return Optional.ofNullable(this.customImagePlan);
     }
     /**
      * Storage information about the data disks present in the custom image
-     * 
     */
     public List<DataDiskStorageTypeInfoResponse> getDataDiskStorageInfo() {
         return this.dataDiskStorageInfo == null ? List.of() : this.dataDiskStorageInfo;
     }
     /**
      * The description of the custom image.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The identifier of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
-     * 
     */
     public Optional<Boolean> getIsPlanAuthorized() {
         return Optional.ofNullable(this.isPlanAuthorized);
     }
     /**
      * The location of the resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The Managed Image Id backing the custom image.
-     * 
     */
     public Optional<String> getManagedImageId() {
         return Optional.ofNullable(this.managedImageId);
     }
     /**
      * The Managed Snapshot Id backing the custom image.
-     * 
     */
     public Optional<String> getManagedSnapshotId() {
         return Optional.ofNullable(this.managedSnapshotId);
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
     */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The VHD from which the image is to be created.
-     * 
     */
     public Optional<CustomImagePropertiesCustomResponse> getVhd() {
         return Optional.ofNullable(this.vhd);
     }
     /**
      * The virtual machine from which the image is to be created.
-     * 
     */
     public Optional<CustomImagePropertiesFromVmResponse> getVm() {
         return Optional.ofNullable(this.vm);

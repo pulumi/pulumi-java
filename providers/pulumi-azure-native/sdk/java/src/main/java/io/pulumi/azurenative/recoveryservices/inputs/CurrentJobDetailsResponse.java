@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Current job details of the migration item.
- * 
  */
 public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ARM Id of the job being executed.
-     * 
      */
     @Import(name="jobId")
       private final @Nullable String jobId;
@@ -31,7 +29,6 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The job name.
-     * 
      */
     @Import(name="jobName")
       private final @Nullable String jobName;
@@ -42,7 +39,6 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The start time of the job.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;

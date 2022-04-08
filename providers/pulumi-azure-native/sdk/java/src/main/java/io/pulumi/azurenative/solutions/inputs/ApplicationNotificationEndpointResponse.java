@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Managed application notification endpoint.
- * 
  */
 public final class ApplicationNotificationEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApplicationNotificationEndpointResponse extends io.pulumi.res
 
     /**
      * The managed application notification endpoint uri.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

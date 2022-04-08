@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * Defines the access level granted by this policy.
-     * 
      */
     @EnumType
     public enum AccessPolicyRole {
         /**
          * Reader role allows for read-only operations to be performed through the client APIs.
-         * 
          */
         Reader("Reader");
 

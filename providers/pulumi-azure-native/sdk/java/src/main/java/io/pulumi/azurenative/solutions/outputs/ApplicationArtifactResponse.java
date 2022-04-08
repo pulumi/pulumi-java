@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ApplicationArtifactResponse {
     /**
      * The managed application artifact name.
-     * 
      */
     private final String name;
     /**
      * The managed application artifact type.
-     * 
      */
     private final String type;
     /**
      * The managed application artifact blob uri.
-     * 
      */
     private final String uri;
 
@@ -37,21 +34,18 @@ public final class ApplicationArtifactResponse {
 
     /**
      * The managed application artifact name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The managed application artifact type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The managed application artifact blob uri.
-     * 
     */
     public String getUri() {
         return this.uri;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Rule Set Properties of IotHub
- * 
  */
 public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
-     * 
      */
     @Import(name="applyToBuiltInEventHubEndpoint", required=true)
       private final Output<Boolean> applyToBuiltInEventHubEndpoint;
@@ -36,7 +34,6 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Default Action for Network Rule Set
-     * 
      */
     @Import(name="defaultAction")
       private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
@@ -47,7 +44,6 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * List of IP Rules
-     * 
      */
     @Import(name="ipRules", required=true)
       private final Output<List<NetworkRuleSetIpRuleArgs>> ipRules;

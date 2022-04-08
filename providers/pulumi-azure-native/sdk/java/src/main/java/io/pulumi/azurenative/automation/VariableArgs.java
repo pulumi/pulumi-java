@@ -17,7 +17,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -28,7 +27,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the description of the variable.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -39,7 +37,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the encrypted flag of the variable.
-     * 
      */
     @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
@@ -50,7 +47,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the variable.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -61,7 +57,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the value of the variable.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;
@@ -83,7 +77,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The variable name.
-     * 
      */
     @Import(name="variableName")
       private final @Nullable Output<String> variableName;

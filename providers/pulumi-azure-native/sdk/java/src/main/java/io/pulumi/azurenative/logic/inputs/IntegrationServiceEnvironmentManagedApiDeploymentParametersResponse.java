@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The integration service environment managed api deployment parameters.
- * 
  */
 public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
 
     /**
      * The integration service environment managed api content link for deployment.
-     * 
      */
     @Import(name="contentLinkDefinition")
       private final @Nullable ContentLinkResponse contentLinkDefinition;

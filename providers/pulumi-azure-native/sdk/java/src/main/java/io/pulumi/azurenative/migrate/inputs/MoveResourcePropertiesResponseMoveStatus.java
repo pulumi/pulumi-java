@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the move resource status.
- * 
  */
 public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
 
     /**
      * An error response from the azure resource mover service.
-     * 
      */
     @Import(name="errors")
       private final @Nullable MoveResourceErrorResponse errors;
@@ -33,7 +31,6 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
 
     /**
      * Defines the job status.
-     * 
      */
     @Import(name="jobStatus")
       private final @Nullable JobStatusResponse jobStatus;
@@ -44,7 +41,6 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
 
     /**
      * Defines the MoveResource states.
-     * 
      */
     @Import(name="moveState", required=true)
       private final String moveState;

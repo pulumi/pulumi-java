@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a NotificationHub BaiduCredential.
- * 
  */
 public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Baidu Api Key.
-     * 
      */
     @Import(name="baiduApiKey")
       private final @Nullable String baiduApiKey;
@@ -31,7 +29,6 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Baidu Endpoint.
-     * 
      */
     @Import(name="baiduEndPoint")
       private final @Nullable String baiduEndPoint;
@@ -42,7 +39,6 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Baidu Secret Key
-     * 
      */
     @Import(name="baiduSecretKey")
       private final @Nullable String baiduSecretKey;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The key vault properties.
- * 
  */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the key associated with the Log Analytics cluster.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable String keyName;
@@ -32,7 +30,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Selected key minimum required size.
-     * 
      */
     @Import(name="keyRsaSize")
       private final @Nullable Integer keyRsaSize;
@@ -43,7 +40,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Key Vault uri which holds they key associated with the Log Analytics cluster.
-     * 
      */
     @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
@@ -54,7 +50,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The version of the key associated with the Log Analytics cluster.
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;

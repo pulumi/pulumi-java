@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Target resources for cost allocation.
- * 
  */
 public final class TargetCostAllocationResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TargetCostAllocationResourceResponse extends io.pulumi.resour
 
     /**
      * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class TargetCostAllocationResourceResponse extends io.pulumi.resour
 
     /**
      * Method of cost allocation for the rule
-     * 
      */
     @Import(name="policyType", required=true)
       private final String policyType;
@@ -42,7 +39,6 @@ public final class TargetCostAllocationResourceResponse extends io.pulumi.resour
 
     /**
      * Type of resources contained in this cost allocation rule
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;
@@ -53,7 +49,6 @@ public final class TargetCostAllocationResourceResponse extends io.pulumi.resour
 
     /**
      * Target resources for cost allocation. This list cannot contain more than 25 values.
-     * 
      */
     @Import(name="values", required=true)
       private final List<CostAllocationProportionResponse> values;

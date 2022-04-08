@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The direction for the resource provider connection.
-     * 
      */
     @EnumType
     public enum ResourceProviderConnection {

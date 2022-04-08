@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The instance view of the container group. Only valid in response.
- * 
  */
 public final class ContainerGroupResponseInstanceView extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
 
     /**
      * The events of this container group.
-     * 
      */
     @Import(name="events", required=true)
       private final List<EventResponse> events;
@@ -31,7 +29,6 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
 
     /**
      * The state of the container group. Only valid in response.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

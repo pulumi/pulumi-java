@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class RedirectIncompatibleRowSettingsResponse {
     /**
      * Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object linkedServiceName;
     /**
      * The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object path;
 
@@ -32,14 +30,12 @@ public final class RedirectIncompatibleRowSettingsResponse {
 
     /**
      * Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);

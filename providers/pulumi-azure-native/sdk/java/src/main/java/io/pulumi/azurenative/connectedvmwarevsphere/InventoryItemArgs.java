@@ -18,7 +18,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the inventoryItem.
-     * 
      */
     @Import(name="inventoryItemName")
       private final @Nullable Output<String> inventoryItemName;
@@ -29,7 +28,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * They inventory type.
-     * 
      */
     @Import(name="inventoryType", required=true)
       private final Output<Either<String,InventoryType>> inventoryType;
@@ -40,7 +38,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -51,7 +48,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the tracked resource id corresponding to the inventory resource.
-     * 
      */
     @Import(name="managedResourceId")
       private final @Nullable Output<String> managedResourceId;
@@ -62,7 +58,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the vCenter Managed Object name for the inventory item.
-     * 
      */
     @Import(name="moName")
       private final @Nullable Output<String> moName;
@@ -73,7 +68,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
-     * 
      */
     @Import(name="moRefId")
       private final @Nullable Output<String> moRefId;
@@ -84,7 +78,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the vCenter.
-     * 
      */
     @Import(name="vcenterName", required=true)
       private final Output<String> vcenterName;

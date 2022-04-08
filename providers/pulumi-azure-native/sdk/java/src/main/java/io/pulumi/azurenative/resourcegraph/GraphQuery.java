@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Graph Query entity definition.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Graph Query
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var graphQuery = new AzureNative.ResourceGraph.GraphQuery("graphQuery", new AzureNative.ResourceGraph.GraphQueryArgs
+ *         {
+ *             Description = "Docker VMs in PROD",
+ *             Query = "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
+ *             ResourceGroupName = "my-resource-group",
+ *             ResourceName = "MyDockerVMs",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resourcegraph "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resourcegraph"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resourcegraph.NewGraphQuery(ctx, "graphQuery", &resourcegraph.GraphQueryArgs{
+ * 			Description:       pulumi.String("Docker VMs in PROD"),
+ * 			Query:             pulumi.String("where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ResourceName:      pulumi.String("MyDockerVMs"),
+ * 			Tags:              nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const graphQuery = new azure_native.resourcegraph.GraphQuery("graphQuery", {
+ *     description: "Docker VMs in PROD",
+ *     query: "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
+ *     resourceGroupName: "my-resource-group",
+ *     resourceName: "MyDockerVMs",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * graph_query = azure_native.resourcegraph.GraphQuery("graphQuery",
+ *     description="Docker VMs in PROD",
+ *     query="where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
+ *     resource_group_name="my-resource-group",
+ *     resource_name="MyDockerVMs",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +113,108 @@ import javax.annotation.Nullable;
 public class GraphQuery extends io.pulumi.resources.CustomResource {
     /**
      * The description of a graph query.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of a graph query.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The location of the resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name. This is GUID value. The display name should be assigned within properties field.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name. This is GUID value. The display name should be assigned within properties field.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * KQL query that will be graph.
-     * 
      */
     @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
      * @return KQL query that will be graph.
-     * 
      */
     public Output<String> getQuery() {
         return this.query;
     }
     /**
      * Enum indicating a type of graph query.
-     * 
      */
     @Export(name="resultKind", type=String.class, parameters={})
     private Output<String> resultKind;
 
     /**
      * @return Enum indicating a type of graph query.
-     * 
      */
     public Output<String> getResultKind() {
         return this.resultKind;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Date and time in UTC of the last modification that was made to this graph query definition.
-     * 
      */
     @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
      * @return Date and time in UTC of the last modification that was made to this graph query definition.
-     * 
      */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

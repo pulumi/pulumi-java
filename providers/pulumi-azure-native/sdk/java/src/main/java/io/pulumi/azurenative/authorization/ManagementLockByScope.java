@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * The lock information.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create management lock at scope
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementLockByScope = new AzureNative.Authorization.ManagementLockByScope("managementLockByScope", new AzureNative.Authorization.ManagementLockByScopeArgs
+ *         {
+ *             Level = "ReadOnly",
+ *             LockName = "testlock",
+ *             Scope = "subscriptions/subscriptionId",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewManagementLockByScope(ctx, "managementLockByScope", &authorization.ManagementLockByScopeArgs{
+ * 			Level:    pulumi.String("ReadOnly"),
+ * 			LockName: pulumi.String("testlock"),
+ * 			Scope:    pulumi.String("subscriptions/subscriptionId"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementLockByScope = new azure_native.authorization.ManagementLockByScope("managementLockByScope", {
+ *     level: "ReadOnly",
+ *     lockName: "testlock",
+ *     scope: "subscriptions/subscriptionId",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_lock_by_scope = azure_native.authorization.ManagementLockByScope("managementLockByScope",
+ *     level="ReadOnly",
+ *     lock_name="testlock",
+ *     scope="subscriptions/subscriptionId")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +105,60 @@ import javax.annotation.Nullable;
 public class ManagementLockByScope extends io.pulumi.resources.CustomResource {
     /**
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
-     * 
      */
     @Export(name="level", type=String.class, parameters={})
     private Output<String> level;
 
     /**
      * @return The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
-     * 
      */
     public Output<String> getLevel() {
         return this.level;
     }
     /**
      * The name of the lock.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the lock.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Notes about the lock. Maximum of 512 characters.
-     * 
      */
     @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
      * @return Notes about the lock. Maximum of 512 characters.
-     * 
      */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
     /**
      * The owners of the lock.
-     * 
      */
     @Export(name="owners", type=List.class, parameters={ManagementLockOwnerResponse.class})
     private Output</* @Nullable */ List<ManagementLockOwnerResponse>> owners;
 
     /**
      * @return The owners of the lock.
-     * 
      */
     public Output</* @Nullable */ List<ManagementLockOwnerResponse>> getOwners() {
         return this.owners;
     }
     /**
      * The resource type of the lock - Microsoft.Authorization/locks.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type of the lock - Microsoft.Authorization/locks.
-     * 
      */
     public Output<String> getType() {
         return this.type;

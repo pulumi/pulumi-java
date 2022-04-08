@@ -18,7 +18,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -29,7 +28,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The event hub consumer group.
-     * 
      */
     @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
@@ -40,7 +38,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The data format of the message. Optionally the data format can be added to each message.
-     * 
      */
     @Import(name="dataFormat")
       private final @Nullable Output<Either<String,DataFormat>> dataFormat;
@@ -51,7 +48,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the database in the Kusto cluster.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -62,7 +58,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the event hub connection.
-     * 
      */
     @Import(name="eventHubConnectionName")
       private final @Nullable Output<String> eventHubConnectionName;
@@ -73,7 +68,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The resource ID of the event hub to be used to create a data connection.
-     * 
      */
     @Import(name="eventHubResourceId", required=true)
       private final Output<String> eventHubResourceId;
@@ -84,7 +78,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -95,7 +88,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
      */
     @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
@@ -106,7 +98,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -117,7 +108,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;

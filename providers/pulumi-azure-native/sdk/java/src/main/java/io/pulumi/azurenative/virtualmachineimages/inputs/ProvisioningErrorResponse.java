@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the error happened when create or update an image template
- * 
  */
 public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Verbose error message about the provisioning failure
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -31,7 +29,6 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Error code of the provisioning failure
-     * 
      */
     @Import(name="provisioningErrorCode")
       private final @Nullable String provisioningErrorCode;

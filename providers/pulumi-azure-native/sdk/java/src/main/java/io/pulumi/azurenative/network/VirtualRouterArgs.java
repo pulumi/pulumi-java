@@ -20,7 +20,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Gateway on which VirtualRouter is hosted.
-     * 
      */
     @Import(name="hostedGateway")
       private final @Nullable Output<SubResourceArgs> hostedGateway;
@@ -31,7 +30,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Subnet on which VirtualRouter is hosted.
-     * 
      */
     @Import(name="hostedSubnet")
       private final @Nullable Output<SubResourceArgs> hostedSubnet;
@@ -42,7 +40,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -53,7 +50,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -64,7 +60,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -86,7 +80,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VirtualRouter ASN.
-     * 
      */
     @Import(name="virtualRouterAsn")
       private final @Nullable Output<Double> virtualRouterAsn;
@@ -97,7 +90,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VirtualRouter IPs.
-     * 
      */
     @Import(name="virtualRouterIps")
       private final @Nullable Output<List<String>> virtualRouterIps;
@@ -108,7 +100,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Virtual Router.
-     * 
      */
     @Import(name="virtualRouterName")
       private final @Nullable Output<String> virtualRouterName;

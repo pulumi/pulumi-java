@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Security Type.
-     * 
      */
     @EnumType
     public enum SecurityType {

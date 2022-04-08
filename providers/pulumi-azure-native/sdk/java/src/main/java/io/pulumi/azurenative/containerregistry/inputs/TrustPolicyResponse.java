@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content trust policy for a container registry.
- * 
  */
 public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value that indicates whether the policy is enabled or not.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -31,7 +29,6 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of trust policy.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

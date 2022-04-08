@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * A notification.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NotificationChannels_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notificationChannel = new AzureNative.DevTestLab.NotificationChannel("notificationChannel", new AzureNative.DevTestLab.NotificationChannelArgs
+ *         {
+ *             Description = "Integration configured for auto-shutdown",
+ *             EmailRecipient = "{email}",
+ *             Events = 
+ *             {
+ *                 new AzureNative.DevTestLab.Inputs.EventArgs
+ *                 {
+ *                     EventName = "AutoShutdown",
+ *                 },
+ *             },
+ *             LabName = "{labName}",
+ *             Name = "{notificationChannelName}",
+ *             NotificationLocale = "en",
+ *             ResourceGroupName = "resourceGroupName",
+ *             WebHookUrl = "{webhookUrl}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewNotificationChannel(ctx, "notificationChannel", &devtestlab.NotificationChannelArgs{
+ * 			Description:    pulumi.String("Integration configured for auto-shutdown"),
+ * 			EmailRecipient: pulumi.String("{email}"),
+ * 			Events: []devtestlab.EventArgs{
+ * 				&devtestlab.EventArgs{
+ * 					EventName: pulumi.String("AutoShutdown"),
+ * 				},
+ * 			},
+ * 			LabName:            pulumi.String("{labName}"),
+ * 			Name:               pulumi.String("{notificationChannelName}"),
+ * 			NotificationLocale: pulumi.String("en"),
+ * 			ResourceGroupName:  pulumi.String("resourceGroupName"),
+ * 			WebHookUrl:         pulumi.String("{webhookUrl}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notificationChannel = new azure_native.devtestlab.NotificationChannel("notificationChannel", {
+ *     description: "Integration configured for auto-shutdown",
+ *     emailRecipient: "{email}",
+ *     events: [{
+ *         eventName: "AutoShutdown",
+ *     }],
+ *     labName: "{labName}",
+ *     name: "{notificationChannelName}",
+ *     notificationLocale: "en",
+ *     resourceGroupName: "resourceGroupName",
+ *     webHookUrl: "{webhookUrl}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notification_channel = azure_native.devtestlab.NotificationChannel("notificationChannel",
+ *     description="Integration configured for auto-shutdown",
+ *     email_recipient="{email}",
+ *     events=[azure_native.devtestlab.EventArgs(
+ *         event_name="AutoShutdown",
+ *     )],
+ *     lab_name="{labName}",
+ *     name="{notificationChannelName}",
+ *     notification_locale="en",
+ *     resource_group_name="resourceGroupName",
+ *     web_hook_url="{webhookUrl}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,168 +140,144 @@ import javax.annotation.Nullable;
 public class NotificationChannel extends io.pulumi.resources.CustomResource {
     /**
      * The creation date of the notification channel.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The creation date of the notification channel.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * Description of notification.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of notification.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     * 
      */
     @Export(name="emailRecipient", type=String.class, parameters={})
     private Output</* @Nullable */ String> emailRecipient;
 
     /**
      * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     * 
      */
     public Output</* @Nullable */ String> getEmailRecipient() {
         return this.emailRecipient;
     }
     /**
      * The list of event for which this notification is enabled.
-     * 
      */
     @Export(name="events", type=List.class, parameters={EventResponse.class})
     private Output</* @Nullable */ List<EventResponse>> events;
 
     /**
      * @return The list of event for which this notification is enabled.
-     * 
      */
     public Output</* @Nullable */ List<EventResponse>> getEvents() {
         return this.events;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     * 
      */
     @Export(name="notificationLocale", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationLocale;
 
     /**
      * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
-     * 
      */
     public Output</* @Nullable */ String> getNotificationLocale() {
         return this.notificationLocale;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The webhook URL to send notifications to.
-     * 
      */
     @Export(name="webHookUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> webHookUrl;
 
     /**
      * @return The webhook URL to send notifications to.
-     * 
      */
     public Output</* @Nullable */ String> getWebHookUrl() {
         return this.webHookUrl;

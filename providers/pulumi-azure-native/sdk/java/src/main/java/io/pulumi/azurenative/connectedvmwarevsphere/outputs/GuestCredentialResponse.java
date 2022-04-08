@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GuestCredentialResponse {
     /**
      * Gets or sets username to connect with the guest.
-     * 
      */
     private final @Nullable String username;
 
@@ -24,7 +23,6 @@ public final class GuestCredentialResponse {
 
     /**
      * Gets or sets username to connect with the guest.
-     * 
     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);

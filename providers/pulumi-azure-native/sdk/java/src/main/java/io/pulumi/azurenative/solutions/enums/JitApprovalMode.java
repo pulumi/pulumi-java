@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * JIT approval mode.
-     * 
      */
     @EnumType
     public enum JitApprovalMode {

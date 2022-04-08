@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An ARM Resource SKU.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Capacity of the particular SKU.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -32,7 +30,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -43,7 +40,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SKU, typically, a letter + Number code, e.g. P3.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -54,7 +50,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the particular SKU
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -65,7 +60,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tier or edition of the particular SKU, e.g. Basic, Premium.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

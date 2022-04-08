@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the kind of blueprint artifact.
-     * 
      */
     @EnumType
     public enum ArtifactKind {

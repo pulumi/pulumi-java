@@ -20,7 +20,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The content.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -31,7 +30,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The content type.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -42,7 +40,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The document name.
-     * 
      */
     @Import(name="documentName")
       private final @Nullable Output<String> documentName;
@@ -53,7 +50,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The file name.
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
@@ -64,7 +60,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -75,7 +70,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -86,7 +80,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -97,7 +90,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The integration account schema name.
-     * 
      */
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
@@ -119,7 +110,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The schema type.
-     * 
      */
     @Import(name="schemaType", required=true)
       private final Output<Either<String,SchemaType>> schemaType;
@@ -130,7 +120,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -141,7 +130,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
 
     /**
      * The target namespace of the schema.
-     * 
      */
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;

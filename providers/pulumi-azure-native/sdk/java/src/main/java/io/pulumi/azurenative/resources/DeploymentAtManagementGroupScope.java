@@ -19,7 +19,109 @@ import javax.annotation.Nullable;
  * Deployment information.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create deployment at management group scope.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deploymentAtManagementGroupScope = new AzureNative.Resources.DeploymentAtManagementGroupScope("deploymentAtManagementGroupScope", new AzureNative.Resources.DeploymentAtManagementGroupScopeArgs
+ *         {
+ *             DeploymentName = "my-deployment",
+ *             GroupId = "my-management-group-id",
+ *             Location = "eastus",
+ *             Properties = new AzureNative.Resources.Inputs.DeploymentPropertiesArgs
+ *             {
+ *                 Mode = "Incremental",
+ *                 Parameters = ,
+ *                 TemplateLink = new AzureNative.Resources.Inputs.TemplateLinkArgs
+ *                 {
+ *                     Uri = "https://example.com/exampleTemplate.json",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewDeploymentAtManagementGroupScope(ctx, "deploymentAtManagementGroupScope", &resources.DeploymentAtManagementGroupScopeArgs{
+ * 			DeploymentName: pulumi.String("my-deployment"),
+ * 			GroupId:        pulumi.String("my-management-group-id"),
+ * 			Location:       pulumi.String("eastus"),
+ * 			Properties: &resources.DeploymentPropertiesArgs{
+ * 				Mode:       "Incremental",
+ * 				Parameters: nil,
+ * 				TemplateLink: &resources.TemplateLinkArgs{
+ * 					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deploymentAtManagementGroupScope = new azure_native.resources.DeploymentAtManagementGroupScope("deploymentAtManagementGroupScope", {
+ *     deploymentName: "my-deployment",
+ *     groupId: "my-management-group-id",
+ *     location: "eastus",
+ *     properties: {
+ *         mode: "Incremental",
+ *         parameters: {},
+ *         templateLink: {
+ *             uri: "https://example.com/exampleTemplate.json",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment_at_management_group_scope = azure_native.resources.DeploymentAtManagementGroupScope("deploymentAtManagementGroupScope",
+ *     deployment_name="my-deployment",
+ *     group_id="my-management-group-id",
+ *     location="eastus",
+ *     properties=azure_native.resources.DeploymentPropertiesArgs(
+ *         mode="Incremental",
+ *         parameters={},
+ *         template_link=azure_native.resources.TemplateLinkArgs(
+ *             uri="https://example.com/exampleTemplate.json",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +136,60 @@ import javax.annotation.Nullable;
 public class DeploymentAtManagementGroupScope extends io.pulumi.resources.CustomResource {
     /**
      * the location of the deployment.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return the location of the deployment.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the deployment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the deployment.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Deployment properties.
-     * 
      */
     @Export(name="properties", type=DeploymentPropertiesExtendedResponse.class, parameters={})
     private Output<DeploymentPropertiesExtendedResponse> properties;
 
     /**
      * @return Deployment properties.
-     * 
      */
     public Output<DeploymentPropertiesExtendedResponse> getProperties() {
         return this.properties;
     }
     /**
      * Deployment tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Deployment tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the deployment.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the deployment.
-     * 
      */
     public Output<String> getType() {
         return this.type;

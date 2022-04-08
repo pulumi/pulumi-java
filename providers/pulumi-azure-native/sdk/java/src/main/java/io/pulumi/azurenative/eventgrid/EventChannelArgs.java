@@ -19,7 +19,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Represents the destination of an event channel.
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<EventChannelDestinationArgs> destination;
@@ -30,7 +29,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the event channel.
-     * 
      */
     @Import(name="eventChannelName")
       private final @Nullable Output<String> eventChannelName;
@@ -42,7 +40,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
      * the event channel and corresponding partner topic are deleted.
-     * 
      */
     @Import(name="expirationTimeIfNotActivatedUtc")
       private final @Nullable Output<String> expirationTimeIfNotActivatedUtc;
@@ -53,7 +50,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information about the filter for the event channel.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<EventChannelFilterArgs> filter;
@@ -64,7 +60,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the partner namespace.
-     * 
      */
     @Import(name="partnerNamespaceName", required=true)
       private final Output<String> partnerNamespaceName;
@@ -76,7 +71,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
      * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
-     * 
      */
     @Import(name="partnerTopicFriendlyDescription")
       private final @Nullable Output<String> partnerTopicFriendlyDescription;
@@ -87,7 +81,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source of the event channel. This represents a unique resource in the partner's resource model.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<EventChannelSourceArgs> source;

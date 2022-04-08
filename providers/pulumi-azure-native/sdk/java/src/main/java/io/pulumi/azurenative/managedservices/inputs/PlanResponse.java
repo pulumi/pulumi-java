@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Plan details for the managed services.
- * 
  */
 public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The plan name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The product code.
-     * 
      */
     @Import(name="product", required=true)
       private final String product;
@@ -40,7 +37,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The publisher ID.
-     * 
      */
     @Import(name="publisher", required=true)
       private final String publisher;
@@ -51,7 +47,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The plan's version.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

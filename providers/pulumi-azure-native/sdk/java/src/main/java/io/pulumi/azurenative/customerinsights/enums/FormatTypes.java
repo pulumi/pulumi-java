@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type mapping format.
-     * 
      */
     @EnumType
     public enum FormatTypes {

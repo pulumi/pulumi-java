@@ -20,7 +20,286 @@ import javax.annotation.Nullable;
  * Description of Rule Resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RulesCreateCorrelationFilter
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var rule = new AzureNative.ServiceBus.Rule("rule", new AzureNative.ServiceBus.RuleArgs
+ *         {
+ *             CorrelationFilter = new AzureNative.ServiceBus.Inputs.CorrelationFilterArgs
+ *             {
+ *                 Properties = 
+ *                 {
+ *                     { "topicHint", "Crop" },
+ *                 },
+ *             },
+ *             FilterType = "CorrelationFilter",
+ *             NamespaceName = "sdk-Namespace-1319",
+ *             ResourceGroupName = "resourceGroupName",
+ *             RuleName = "sdk-Rules-6571",
+ *             SubscriptionName = "sdk-Subscriptions-8691",
+ *             TopicName = "sdk-Topics-2081",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewRule(ctx, "rule", &servicebus.RuleArgs{
+ * 			CorrelationFilter: &servicebus.CorrelationFilterArgs{
+ * 				Properties: pulumi.StringMap{
+ * 					"topicHint": pulumi.String("Crop"),
+ * 				},
+ * 			},
+ * 			FilterType:        "CorrelationFilter",
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			RuleName:          pulumi.String("sdk-Rules-6571"),
+ * 			SubscriptionName:  pulumi.String("sdk-Subscriptions-8691"),
+ * 			TopicName:         pulumi.String("sdk-Topics-2081"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const rule = new azure_native.servicebus.Rule("rule", {
+ *     correlationFilter: {
+ *         properties: {
+ *             topicHint: "Crop",
+ *         },
+ *     },
+ *     filterType: "CorrelationFilter",
+ *     namespaceName: "sdk-Namespace-1319",
+ *     resourceGroupName: "resourceGroupName",
+ *     ruleName: "sdk-Rules-6571",
+ *     subscriptionName: "sdk-Subscriptions-8691",
+ *     topicName: "sdk-Topics-2081",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * rule = azure_native.servicebus.Rule("rule",
+ *     correlation_filter=azure_native.servicebus.CorrelationFilterArgs(
+ *         properties={
+ *             "topicHint": "Crop",
+ *         },
+ *     ),
+ *     filter_type="CorrelationFilter",
+ *     namespace_name="sdk-Namespace-1319",
+ *     resource_group_name="resourceGroupName",
+ *     rule_name="sdk-Rules-6571",
+ *     subscription_name="sdk-Subscriptions-8691",
+ *     topic_name="sdk-Topics-2081")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### RulesCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var rule = new AzureNative.ServiceBus.Rule("rule", new AzureNative.ServiceBus.RuleArgs
+ *         {
+ *             NamespaceName = "sdk-Namespace-1319",
+ *             ResourceGroupName = "resourceGroupName",
+ *             RuleName = "sdk-Rules-6571",
+ *             SubscriptionName = "sdk-Subscriptions-8691",
+ *             TopicName = "sdk-Topics-2081",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewRule(ctx, "rule", &servicebus.RuleArgs{
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			RuleName:          pulumi.String("sdk-Rules-6571"),
+ * 			SubscriptionName:  pulumi.String("sdk-Subscriptions-8691"),
+ * 			TopicName:         pulumi.String("sdk-Topics-2081"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const rule = new azure_native.servicebus.Rule("rule", {
+ *     namespaceName: "sdk-Namespace-1319",
+ *     resourceGroupName: "resourceGroupName",
+ *     ruleName: "sdk-Rules-6571",
+ *     subscriptionName: "sdk-Subscriptions-8691",
+ *     topicName: "sdk-Topics-2081",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * rule = azure_native.servicebus.Rule("rule",
+ *     namespace_name="sdk-Namespace-1319",
+ *     resource_group_name="resourceGroupName",
+ *     rule_name="sdk-Rules-6571",
+ *     subscription_name="sdk-Subscriptions-8691",
+ *     topic_name="sdk-Topics-2081")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### RulesCreateSqlFilter
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var rule = new AzureNative.ServiceBus.Rule("rule", new AzureNative.ServiceBus.RuleArgs
+ *         {
+ *             FilterType = "SqlFilter",
+ *             NamespaceName = "sdk-Namespace-1319",
+ *             ResourceGroupName = "resourceGroupName",
+ *             RuleName = "sdk-Rules-6571",
+ *             SqlFilter = new AzureNative.ServiceBus.Inputs.SqlFilterArgs
+ *             {
+ *                 SqlExpression = "myproperty=test",
+ *             },
+ *             SubscriptionName = "sdk-Subscriptions-8691",
+ *             TopicName = "sdk-Topics-2081",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewRule(ctx, "rule", &servicebus.RuleArgs{
+ * 			FilterType:        "SqlFilter",
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			RuleName:          pulumi.String("sdk-Rules-6571"),
+ * 			SqlFilter: &servicebus.SqlFilterArgs{
+ * 				SqlExpression: pulumi.String("myproperty=test"),
+ * 			},
+ * 			SubscriptionName: pulumi.String("sdk-Subscriptions-8691"),
+ * 			TopicName:        pulumi.String("sdk-Topics-2081"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const rule = new azure_native.servicebus.Rule("rule", {
+ *     filterType: "SqlFilter",
+ *     namespaceName: "sdk-Namespace-1319",
+ *     resourceGroupName: "resourceGroupName",
+ *     ruleName: "sdk-Rules-6571",
+ *     sqlFilter: {
+ *         sqlExpression: "myproperty=test",
+ *     },
+ *     subscriptionName: "sdk-Subscriptions-8691",
+ *     topicName: "sdk-Topics-2081",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * rule = azure_native.servicebus.Rule("rule",
+ *     filter_type="SqlFilter",
+ *     namespace_name="sdk-Namespace-1319",
+ *     resource_group_name="resourceGroupName",
+ *     rule_name="sdk-Rules-6571",
+ *     sql_filter=azure_native.servicebus.SqlFilterArgs(
+ *         sql_expression="myproperty=test",
+ *     ),
+ *     subscription_name="sdk-Subscriptions-8691",
+ *     topic_name="sdk-Topics-2081")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +314,72 @@ import javax.annotation.Nullable;
 public class Rule extends io.pulumi.resources.CustomResource {
     /**
      * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
-     * 
      */
     @Export(name="action", type=ActionResponse.class, parameters={})
     private Output</* @Nullable */ ActionResponse> action;
 
     /**
      * @return Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
-     * 
      */
     public Output</* @Nullable */ ActionResponse> getAction() {
         return this.action;
     }
     /**
      * Properties of correlationFilter
-     * 
      */
     @Export(name="correlationFilter", type=CorrelationFilterResponse.class, parameters={})
     private Output</* @Nullable */ CorrelationFilterResponse> correlationFilter;
 
     /**
      * @return Properties of correlationFilter
-     * 
      */
     public Output</* @Nullable */ CorrelationFilterResponse> getCorrelationFilter() {
         return this.correlationFilter;
     }
     /**
      * Filter type that is evaluated against a BrokeredMessage.
-     * 
      */
     @Export(name="filterType", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterType;
 
     /**
      * @return Filter type that is evaluated against a BrokeredMessage.
-     * 
      */
     public Output</* @Nullable */ String> getFilterType() {
         return this.filterType;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of sqlFilter
-     * 
      */
     @Export(name="sqlFilter", type=SqlFilterResponse.class, parameters={})
     private Output</* @Nullable */ SqlFilterResponse> sqlFilter;
 
     /**
      * @return Properties of sqlFilter
-     * 
      */
     public Output</* @Nullable */ SqlFilterResponse> getSqlFilter() {
         return this.sqlFilter;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

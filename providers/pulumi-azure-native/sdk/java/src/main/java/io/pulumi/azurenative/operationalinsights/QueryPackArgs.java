@@ -17,7 +17,6 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Log Analytics QueryPack resource.
-     * 
      */
     @Import(name="queryPackName")
       private final @Nullable Output<String> queryPackName;
@@ -39,7 +37,6 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

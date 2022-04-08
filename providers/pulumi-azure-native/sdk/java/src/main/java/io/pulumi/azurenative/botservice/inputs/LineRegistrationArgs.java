@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties corresponding to a line channel registration
- * 
  */
 public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Access token for the line channel registration
-     * 
      */
     @Import(name="channelAccessToken")
       private final @Nullable Output<String> channelAccessToken;
@@ -31,7 +29,6 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Secret for the line channel registration
-     * 
      */
     @Import(name="channelSecret")
       private final @Nullable Output<String> channelSecret;

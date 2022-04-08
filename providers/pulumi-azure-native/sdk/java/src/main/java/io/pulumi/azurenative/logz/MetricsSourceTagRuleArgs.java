@@ -17,7 +17,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * Metrics Account resource name
-     * 
      */
     @Import(name="metricsSourceName", required=true)
       private final Output<String> metricsSourceName;
@@ -28,7 +27,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
@@ -39,7 +37,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * Definition of the properties for a TagRules resource.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

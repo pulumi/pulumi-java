@@ -20,7 +20,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -31,7 +30,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     /**
      * Details of provisioning error
-     * 
      */
     @Import(name="error")
       private final @Nullable Output<ErrorResponseArgs> error;
@@ -42,7 +40,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -53,7 +50,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     /**
      * Schedule information for the Software update configuration
-     * 
      */
     @Import(name="scheduleInfo", required=true)
       private final Output<SUCSchedulePropertiesArgs> scheduleInfo;
@@ -64,7 +60,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     /**
      * The name of the software update configuration to be created.
-     * 
      */
     @Import(name="softwareUpdateConfigurationName")
       private final @Nullable Output<String> softwareUpdateConfigurationName;
@@ -75,7 +70,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     /**
      * Tasks information for the Software update configuration.
-     * 
      */
     @Import(name="tasks")
       private final @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
@@ -86,7 +80,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     /**
      * update specific properties for the Software update configuration
-     * 
      */
     @Import(name="updateConfiguration", required=true)
       private final Output<UpdateConfigurationArgs> updateConfiguration;

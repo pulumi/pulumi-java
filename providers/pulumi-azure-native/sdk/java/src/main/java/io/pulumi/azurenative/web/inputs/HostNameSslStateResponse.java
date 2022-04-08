@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSL-enabled hostname.
- * 
  */
 public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Indicates whether the hostname is a standard or repository hostname.
-     * 
      */
     @Import(name="hostType")
       private final @Nullable String hostType;
@@ -32,7 +30,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Hostname.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * SSL type.
-     * 
      */
     @Import(name="sslState")
       private final @Nullable String sslState;
@@ -54,7 +50,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * SSL certificate thumbprint.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
@@ -65,7 +60,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Set to <code>true</code> to update existing hostname.
-     * 
      */
     @Import(name="toUpdate")
       private final @Nullable Boolean toUpdate;
@@ -76,7 +70,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
-     * 
      */
     @Import(name="virtualIP")
       private final @Nullable String virtualIP;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Non Azure query for the update configuration.
- * 
  */
 public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * Log Analytics Saved Search name.
-     * 
      */
     @Import(name="functionAlias")
       private final @Nullable String functionAlias;
@@ -31,7 +29,6 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
 
     /**
      * Workspace Id for Log Analytics in which the saved Search is resided.
-     * 
      */
     @Import(name="workspaceId")
       private final @Nullable String workspaceId;

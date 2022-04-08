@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of Azure Container Registry.
- * 
  */
 public final class ContainerRegistryPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerRegistryPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

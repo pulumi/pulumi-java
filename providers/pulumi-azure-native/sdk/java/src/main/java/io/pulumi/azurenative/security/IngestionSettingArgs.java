@@ -16,7 +16,6 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the ingestion setting
-     * 
      */
     @Import(name="ingestionSettingName")
       private final @Nullable Output<String> ingestionSettingName;

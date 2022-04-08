@@ -18,7 +18,68 @@ import javax.annotation.Nullable;
  * this is the management partner operations response
  * API Version: 2018-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutPartnerDetails
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var partner = new AzureNative.ManagementPartner.Partner("partner", new AzureNative.ManagementPartner.PartnerArgs
+ *         {
+ *             PartnerId = "123456",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	managementpartner "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managementpartner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := managementpartner.NewPartner(ctx, "partner", &managementpartner.PartnerArgs{
+ * 			PartnerId: pulumi.String("123456"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const partner = new azure_native.managementpartner.Partner("partner", {partnerId: "123456"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * partner = azure_native.managementpartner.Partner("partner", partner_id="123456")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,140 +94,120 @@ import javax.annotation.Nullable;
 public class Partner extends io.pulumi.resources.CustomResource {
     /**
      * This is the DateTime when the partner was created.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdTime;
 
     /**
      * @return This is the DateTime when the partner was created.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Type of the partner
-     * 
      */
     @Export(name="etag", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> etag;
 
     /**
      * @return Type of the partner
-     * 
      */
     public Output</* @Nullable */ Integer> getEtag() {
         return this.etag;
     }
     /**
      * Name of the partner
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the partner
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * This is the object id.
-     * 
      */
     @Export(name="objectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectId;
 
     /**
      * @return This is the object id.
-     * 
      */
     public Output</* @Nullable */ String> getObjectId() {
         return this.objectId;
     }
     /**
      * This is the partner id
-     * 
      */
     @Export(name="partnerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerId;
 
     /**
      * @return This is the partner id
-     * 
      */
     public Output</* @Nullable */ String> getPartnerId() {
         return this.partnerId;
     }
     /**
      * This is the partner name
-     * 
      */
     @Export(name="partnerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerName;
 
     /**
      * @return This is the partner name
-     * 
      */
     public Output</* @Nullable */ String> getPartnerName() {
         return this.partnerName;
     }
     /**
      * This is the tenant id.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return This is the tenant id.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Type of resource. "Microsoft.ManagementPartner/partners"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of resource. "Microsoft.ManagementPartner/partners"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * This is the DateTime when the partner was updated.
-     * 
      */
     @Export(name="updatedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> updatedTime;
 
     /**
      * @return This is the DateTime when the partner was updated.
-     * 
      */
     public Output</* @Nullable */ String> getUpdatedTime() {
         return this.updatedTime;
     }
     /**
      * This is the version.
-     * 
      */
     @Export(name="version", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> version;
 
     /**
      * @return This is the version.
-     * 
      */
     public Output</* @Nullable */ Integer> getVersion() {
         return this.version;

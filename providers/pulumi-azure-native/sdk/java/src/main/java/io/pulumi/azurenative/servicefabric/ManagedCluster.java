@@ -25,7 +25,370 @@ import javax.annotation.Nullable;
  * 
  * API Version: 2020-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Put a cluster with maximum parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedCluster = new AzureNative.ServiceFabric.ManagedCluster("managedCluster", new AzureNative.ServiceFabric.ManagedClusterArgs
+ *         {
+ *             AdminPassword = "{vm-password}",
+ *             AdminUserName = "vmadmin",
+ *             ClientConnectionPort = 19000,
+ *             ClusterCodeVersion = "7.1.168.9494",
+ *             ClusterName = "myCluster",
+ *             DnsName = "myCluster",
+ *             FabricSettings = 
+ *             {
+ *                 new AzureNative.ServiceFabric.Inputs.SettingsSectionDescriptionArgs
+ *                 {
+ *                     Name = "ManagedIdentityTokenService",
+ *                     Parameters = 
+ *                     {
+ *                         new AzureNative.ServiceFabric.Inputs.SettingsParameterDescriptionArgs
+ *                         {
+ *                             Name = "IsEnabled",
+ *                             Value = "true",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             HttpGatewayConnectionPort = 19080,
+ *             LoadBalancingRules = 
+ *             {
+ *                 new AzureNative.ServiceFabric.Inputs.LoadBalancingRuleArgs
+ *                 {
+ *                     BackendPort = 80,
+ *                     FrontendPort = 80,
+ *                     ProbeProtocol = "http",
+ *                     Protocol = "http",
+ *                 },
+ *                 new AzureNative.ServiceFabric.Inputs.LoadBalancingRuleArgs
+ *                 {
+ *                     BackendPort = 443,
+ *                     FrontendPort = 443,
+ *                     ProbeProtocol = "http",
+ *                     Protocol = "http",
+ *                 },
+ *                 new AzureNative.ServiceFabric.Inputs.LoadBalancingRuleArgs
+ *                 {
+ *                     BackendPort = 10000,
+ *                     FrontendPort = 10000,
+ *                     ProbeProtocol = "http",
+ *                     Protocol = "tcp",
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "resRg",
+ *             Sku = new AzureNative.ServiceFabric.Inputs.SkuArgs
+ *             {
+ *                 Name = "Basic",
+ *             },
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabric.NewManagedCluster(ctx, "managedCluster", &servicefabric.ManagedClusterArgs{
+ * 			AdminPassword:        pulumi.String("{vm-password}"),
+ * 			AdminUserName:        pulumi.String("vmadmin"),
+ * 			ClientConnectionPort: pulumi.Int(19000),
+ * 			ClusterCodeVersion:   pulumi.String("7.1.168.9494"),
+ * 			ClusterName:          pulumi.String("myCluster"),
+ * 			DnsName:              pulumi.String("myCluster"),
+ * 			FabricSettings: []servicefabric.SettingsSectionDescriptionArgs{
+ * 				&servicefabric.SettingsSectionDescriptionArgs{
+ * 					Name: pulumi.String("ManagedIdentityTokenService"),
+ * 					Parameters: []servicefabric.SettingsParameterDescriptionArgs{
+ * 						&servicefabric.SettingsParameterDescriptionArgs{
+ * 							Name:  pulumi.String("IsEnabled"),
+ * 							Value: pulumi.String("true"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			HttpGatewayConnectionPort: pulumi.Int(19080),
+ * 			LoadBalancingRules: []servicefabric.LoadBalancingRuleArgs{
+ * 				&servicefabric.LoadBalancingRuleArgs{
+ * 					BackendPort:   pulumi.Int(80),
+ * 					FrontendPort:  pulumi.Int(80),
+ * 					ProbeProtocol: pulumi.String("http"),
+ * 					Protocol:      pulumi.String("http"),
+ * 				},
+ * 				&servicefabric.LoadBalancingRuleArgs{
+ * 					BackendPort:   pulumi.Int(443),
+ * 					FrontendPort:  pulumi.Int(443),
+ * 					ProbeProtocol: pulumi.String("http"),
+ * 					Protocol:      pulumi.String("http"),
+ * 				},
+ * 				&servicefabric.LoadBalancingRuleArgs{
+ * 					BackendPort:   pulumi.Int(10000),
+ * 					FrontendPort:  pulumi.Int(10000),
+ * 					ProbeProtocol: pulumi.String("http"),
+ * 					Protocol:      pulumi.String("tcp"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("resRg"),
+ * 			Sku: &servicefabric.SkuArgs{
+ * 				Name: pulumi.String("Basic"),
+ * 			},
+ * 			Tags: nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedCluster = new azure_native.servicefabric.ManagedCluster("managedCluster", {
+ *     adminPassword: "{vm-password}",
+ *     adminUserName: "vmadmin",
+ *     clientConnectionPort: 19000,
+ *     clusterCodeVersion: "7.1.168.9494",
+ *     clusterName: "myCluster",
+ *     dnsName: "myCluster",
+ *     fabricSettings: [{
+ *         name: "ManagedIdentityTokenService",
+ *         parameters: [{
+ *             name: "IsEnabled",
+ *             value: "true",
+ *         }],
+ *     }],
+ *     httpGatewayConnectionPort: 19080,
+ *     loadBalancingRules: [
+ *         {
+ *             backendPort: 80,
+ *             frontendPort: 80,
+ *             probeProtocol: "http",
+ *             protocol: "http",
+ *         },
+ *         {
+ *             backendPort: 443,
+ *             frontendPort: 443,
+ *             probeProtocol: "http",
+ *             protocol: "http",
+ *         },
+ *         {
+ *             backendPort: 10000,
+ *             frontendPort: 10000,
+ *             probeProtocol: "http",
+ *             protocol: "tcp",
+ *         },
+ *     ],
+ *     location: "eastus",
+ *     resourceGroupName: "resRg",
+ *     sku: {
+ *         name: "Basic",
+ *     },
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_cluster = azure_native.servicefabric.ManagedCluster("managedCluster",
+ *     admin_password="{vm-password}",
+ *     admin_user_name="vmadmin",
+ *     client_connection_port=19000,
+ *     cluster_code_version="7.1.168.9494",
+ *     cluster_name="myCluster",
+ *     dns_name="myCluster",
+ *     fabric_settings=[azure_native.servicefabric.SettingsSectionDescriptionArgs(
+ *         name="ManagedIdentityTokenService",
+ *         parameters=[azure_native.servicefabric.SettingsParameterDescriptionArgs(
+ *             name="IsEnabled",
+ *             value="true",
+ *         )],
+ *     )],
+ *     http_gateway_connection_port=19080,
+ *     load_balancing_rules=[
+ *         azure_native.servicefabric.LoadBalancingRuleArgs(
+ *             backend_port=80,
+ *             frontend_port=80,
+ *             probe_protocol="http",
+ *             protocol="http",
+ *         ),
+ *         azure_native.servicefabric.LoadBalancingRuleArgs(
+ *             backend_port=443,
+ *             frontend_port=443,
+ *             probe_protocol="http",
+ *             protocol="http",
+ *         ),
+ *         azure_native.servicefabric.LoadBalancingRuleArgs(
+ *             backend_port=10000,
+ *             frontend_port=10000,
+ *             probe_protocol="http",
+ *             protocol="tcp",
+ *         ),
+ *     ],
+ *     location="eastus",
+ *     resource_group_name="resRg",
+ *     sku=azure_native.servicefabric.SkuArgs(
+ *         name="Basic",
+ *     ),
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Put a cluster with minimum parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedCluster = new AzureNative.ServiceFabric.ManagedCluster("managedCluster", new AzureNative.ServiceFabric.ManagedClusterArgs
+ *         {
+ *             AdminPassword = "{vm-password}",
+ *             AdminUserName = "vmadmin",
+ *             ClusterCodeVersion = "7.1.168.9494",
+ *             ClusterName = "myCluster",
+ *             DnsName = "myCluster",
+ *             FabricSettings = 
+ *             {
+ *                 new AzureNative.ServiceFabric.Inputs.SettingsSectionDescriptionArgs
+ *                 {
+ *                     Name = "ManagedIdentityTokenService",
+ *                     Parameters = 
+ *                     {
+ *                         new AzureNative.ServiceFabric.Inputs.SettingsParameterDescriptionArgs
+ *                         {
+ *                             Name = "IsEnabled",
+ *                             Value = "true",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "resRg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabric.NewManagedCluster(ctx, "managedCluster", &servicefabric.ManagedClusterArgs{
+ * 			AdminPassword:      pulumi.String("{vm-password}"),
+ * 			AdminUserName:      pulumi.String("vmadmin"),
+ * 			ClusterCodeVersion: pulumi.String("7.1.168.9494"),
+ * 			ClusterName:        pulumi.String("myCluster"),
+ * 			DnsName:            pulumi.String("myCluster"),
+ * 			FabricSettings: []servicefabric.SettingsSectionDescriptionArgs{
+ * 				&servicefabric.SettingsSectionDescriptionArgs{
+ * 					Name: pulumi.String("ManagedIdentityTokenService"),
+ * 					Parameters: []servicefabric.SettingsParameterDescriptionArgs{
+ * 						&servicefabric.SettingsParameterDescriptionArgs{
+ * 							Name:  pulumi.String("IsEnabled"),
+ * 							Value: pulumi.String("true"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("resRg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedCluster = new azure_native.servicefabric.ManagedCluster("managedCluster", {
+ *     adminPassword: "{vm-password}",
+ *     adminUserName: "vmadmin",
+ *     clusterCodeVersion: "7.1.168.9494",
+ *     clusterName: "myCluster",
+ *     dnsName: "myCluster",
+ *     fabricSettings: [{
+ *         name: "ManagedIdentityTokenService",
+ *         parameters: [{
+ *             name: "IsEnabled",
+ *             value: "true",
+ *         }],
+ *     }],
+ *     location: "eastus",
+ *     resourceGroupName: "resRg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_cluster = azure_native.servicefabric.ManagedCluster("managedCluster",
+ *     admin_password="{vm-password}",
+ *     admin_user_name="vmadmin",
+ *     cluster_code_version="7.1.168.9494",
+ *     cluster_name="myCluster",
+ *     dns_name="myCluster",
+ *     fabric_settings=[azure_native.servicefabric.SettingsSectionDescriptionArgs(
+ *         name="ManagedIdentityTokenService",
+ *         parameters=[azure_native.servicefabric.SettingsParameterDescriptionArgs(
+ *             name="IsEnabled",
+ *             value="true",
+ *         )],
+ *     )],
+ *     location="eastus",
+ *     resource_group_name="resRg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,308 +403,264 @@ import javax.annotation.Nullable;
 public class ManagedCluster extends io.pulumi.resources.CustomResource {
     /**
      * client certificates for the cluster.
-     * 
      */
     @Export(name="addonFeatures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addonFeatures;
 
     /**
      * @return client certificates for the cluster.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAddonFeatures() {
         return this.addonFeatures;
     }
     /**
      * vm admin user password.
-     * 
      */
     @Export(name="adminPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> adminPassword;
 
     /**
      * @return vm admin user password.
-     * 
      */
     public Output</* @Nullable */ String> getAdminPassword() {
         return this.adminPassword;
     }
     /**
      * vm admin user name.
-     * 
      */
     @Export(name="adminUserName", type=String.class, parameters={})
     private Output<String> adminUserName;
 
     /**
      * @return vm admin user name.
-     * 
      */
     public Output<String> getAdminUserName() {
         return this.adminUserName;
     }
     /**
      * Azure active directory.
-     * 
      */
     @Export(name="azureActiveDirectory", type=AzureActiveDirectoryResponse.class, parameters={})
     private Output</* @Nullable */ AzureActiveDirectoryResponse> azureActiveDirectory;
 
     /**
      * @return Azure active directory.
-     * 
      */
     public Output</* @Nullable */ AzureActiveDirectoryResponse> getAzureActiveDirectory() {
         return this.azureActiveDirectory;
     }
     /**
      * The port used for client connections to the cluster.
-     * 
      */
     @Export(name="clientConnectionPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> clientConnectionPort;
 
     /**
      * @return The port used for client connections to the cluster.
-     * 
      */
     public Output</* @Nullable */ Integer> getClientConnectionPort() {
         return this.clientConnectionPort;
     }
     /**
      * client certificates for the cluster.
-     * 
      */
     @Export(name="clients", type=List.class, parameters={ClientCertificateResponse.class})
     private Output</* @Nullable */ List<ClientCertificateResponse>> clients;
 
     /**
      * @return client certificates for the cluster.
-     * 
      */
     public Output</* @Nullable */ List<ClientCertificateResponse>> getClients() {
         return this.clients;
     }
     /**
      * The cluster certificate thumbprint used node to node communication.
-     * 
      */
     @Export(name="clusterCertificateThumbprint", type=String.class, parameters={})
     private Output<String> clusterCertificateThumbprint;
 
     /**
      * @return The cluster certificate thumbprint used node to node communication.
-     * 
      */
     public Output<String> getClusterCertificateThumbprint() {
         return this.clusterCertificateThumbprint;
     }
     /**
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
-     * 
      */
     @Export(name="clusterCodeVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterCodeVersion;
 
     /**
      * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
-     * 
      */
     public Output</* @Nullable */ String> getClusterCodeVersion() {
         return this.clusterCodeVersion;
     }
     /**
      * A service generated unique identifier for the cluster resource.
-     * 
      */
     @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
      * @return A service generated unique identifier for the cluster resource.
-     * 
      */
     public Output<String> getClusterId() {
         return this.clusterId;
     }
     /**
      * The current state of the cluster.
-     * 
      */
     @Export(name="clusterState", type=String.class, parameters={})
     private Output<String> clusterState;
 
     /**
      * @return The current state of the cluster.
-     * 
      */
     public Output<String> getClusterState() {
         return this.clusterState;
     }
     /**
      * The cluster dns name.
-     * 
      */
     @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
      * @return The cluster dns name.
-     * 
      */
     public Output<String> getDnsName() {
         return this.dnsName;
     }
     /**
      * Azure resource etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Azure resource etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The list of custom fabric settings to configure the cluster.
-     * 
      */
     @Export(name="fabricSettings", type=List.class, parameters={SettingsSectionDescriptionResponse.class})
     private Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> fabricSettings;
 
     /**
      * @return The list of custom fabric settings to configure the cluster.
-     * 
      */
     public Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> getFabricSettings() {
         return this.fabricSettings;
     }
     /**
      * the cluster Fully qualified domain name.
-     * 
      */
     @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
      * @return the cluster Fully qualified domain name.
-     * 
      */
     public Output<String> getFqdn() {
         return this.fqdn;
     }
     /**
      * The port used for http connections to the cluster.
-     * 
      */
     @Export(name="httpGatewayConnectionPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpGatewayConnectionPort;
 
     /**
      * @return The port used for http connections to the cluster.
-     * 
      */
     public Output</* @Nullable */ Integer> getHttpGatewayConnectionPort() {
         return this.httpGatewayConnectionPort;
     }
     /**
      * Describes load balancing rules.
-     * 
      */
     @Export(name="loadBalancingRules", type=List.class, parameters={LoadBalancingRuleResponse.class})
     private Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules;
 
     /**
      * @return Describes load balancing rules.
-     * 
      */
     public Output</* @Nullable */ List<LoadBalancingRuleResponse>> getLoadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
      * Azure resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Azure resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the managed cluster resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the managed cluster resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku of the managed cluster
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku of the managed cluster
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Azure resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Azure resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

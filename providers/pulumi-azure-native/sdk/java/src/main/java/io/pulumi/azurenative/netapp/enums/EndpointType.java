@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether the local volume is the source or destination for the Volume Replication
-     * 
      */
     @EnumType
     public enum EndpointType {

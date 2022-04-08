@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Storage Redundancy type offered by Azure.
-     * 
      */
     @EnumType
     public enum AzureStorageRedundancy {

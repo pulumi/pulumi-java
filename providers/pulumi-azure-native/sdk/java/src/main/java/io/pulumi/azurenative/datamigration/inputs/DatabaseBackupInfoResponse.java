@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Information about backup files when existing backup mode is used.
- * 
  */
 public final class DatabaseBackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of backup files for the current database.
-     * 
      */
     @Import(name="backupFiles", required=true)
       private final List<String> backupFiles;
@@ -32,7 +30,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Date and time when the backup operation finished.
-     * 
      */
     @Import(name="backupFinishDate", required=true)
       private final String backupFinishDate;
@@ -43,7 +40,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Backup Type.
-     * 
      */
     @Import(name="backupType", required=true)
       private final String backupType;
@@ -54,7 +50,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Database name.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -65,7 +60,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Number of files in the backup set.
-     * 
      */
     @Import(name="familyCount", required=true)
       private final Integer familyCount;
@@ -76,7 +70,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether the backup set is compressed
-     * 
      */
     @Import(name="isCompressed", required=true)
       private final Boolean isCompressed;
@@ -87,7 +80,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
-     * 
      */
     @Import(name="isDamaged", required=true)
       private final Boolean isDamaged;
@@ -98,7 +90,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Position of current database backup in the file.
-     * 
      */
     @Import(name="position", required=true)
       private final Integer position;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Object to define the number of days after creation.
- * 
  */
 public final class DateAfterCreationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DateAfterCreationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Value indicating the age in days after creation
-     * 
      */
     @Import(name="daysAfterCreationGreaterThan", required=true)
       private final Double daysAfterCreationGreaterThan;

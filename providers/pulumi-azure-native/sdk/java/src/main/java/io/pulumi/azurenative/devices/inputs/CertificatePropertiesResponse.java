@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The description of an X509 CA Certificate.
- * 
  */
 public final class CertificatePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * base-64 representation of X509 certificate .cer file or just .pem file content.
-     * 
      */
     @Import(name="certificate", required=true)
       private final String certificate;
@@ -30,7 +28,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The certificate's creation date and time.
-     * 
      */
     @Import(name="created", required=true)
       private final String created;
@@ -41,7 +38,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The certificate's expiration date and time.
-     * 
      */
     @Import(name="expiry", required=true)
       private final String expiry;
@@ -52,7 +48,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Determines whether certificate has been verified.
-     * 
      */
     @Import(name="isVerified", required=true)
       private final Boolean isVerified;
@@ -63,7 +58,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The certificate's subject name.
-     * 
      */
     @Import(name="subject", required=true)
       private final String subject;
@@ -74,7 +68,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The certificate's thumbprint.
-     * 
      */
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
@@ -85,7 +78,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The certificate's last update date and time.
-     * 
      */
     @Import(name="updated", required=true)
       private final String updated;

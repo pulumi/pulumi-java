@@ -17,7 +17,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Group description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Group name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -39,7 +37,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-     * 
      */
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
@@ -50,7 +47,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Group identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
@@ -61,7 +57,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -83,7 +77,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Group type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<GroupType> type;

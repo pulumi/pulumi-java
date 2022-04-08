@@ -20,7 +20,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The supported Azure location where the dedicated HSM should be created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -31,7 +30,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the dedicated Hsm
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +40,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the network interfaces of the dedicated hsm.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
@@ -53,7 +50,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Resource Group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU details
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -75,7 +70,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field will be used when RP does not support Availability zones.
-     * 
      */
     @Import(name="stampId")
       private final @Nullable Output<String> stampId;
@@ -86,7 +80,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -97,7 +90,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Dedicated Hsm zones.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

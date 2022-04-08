@@ -14,7 +14,6 @@ public final class GetWebApplicationFirewallPolicyArgs extends io.pulumi.resourc
 
     /**
      * The name of the policy.
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;
@@ -25,7 +24,6 @@ public final class GetWebApplicationFirewallPolicyArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The log type to be used.
-     * 
      */
     @EnumType
     public enum LogAnalyticsLogType {

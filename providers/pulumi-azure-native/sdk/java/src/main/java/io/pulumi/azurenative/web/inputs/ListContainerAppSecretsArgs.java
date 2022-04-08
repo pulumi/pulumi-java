@@ -14,7 +14,6 @@ public final class ListContainerAppSecretsArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of the Container App.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

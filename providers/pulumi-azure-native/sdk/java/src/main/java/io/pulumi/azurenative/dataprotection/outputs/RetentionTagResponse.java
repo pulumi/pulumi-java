@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class RetentionTagResponse {
     /**
      * Retention Tag version.
-     * 
      */
     private final String eTag;
     /**
      * Retention Tag version.
-     * 
      */
     private final String id;
     /**
      * Retention Tag Name to relate it to retention rule.
-     * 
      */
     private final String tagName;
 
@@ -37,21 +34,18 @@ public final class RetentionTagResponse {
 
     /**
      * Retention Tag version.
-     * 
     */
     public String getETag() {
         return this.eTag;
     }
     /**
      * Retention Tag version.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Retention Tag Name to relate it to retention rule.
-     * 
     */
     public String getTagName() {
         return this.tagName;

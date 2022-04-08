@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters that define the configuration of traffic analytics.
- * 
  */
 public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
 
     /**
      * Parameters that define the configuration of traffic analytics.
-     * 
      */
     @Import(name="networkWatcherFlowAnalyticsConfiguration")
       private final @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;

@@ -21,7 +21,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of actions that trigger the webhook to post notifications.
-     * 
      */
     @Import(name="actions", required=true)
       private final Output<List<Either<String,WebhookAction>>> actions;
@@ -32,7 +31,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom headers that will be added to the webhook notifications.
-     * 
      */
     @Import(name="customHeaders")
       private final @Nullable Output<Map<String,String>> customHeaders;
@@ -43,7 +41,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the webhook. This cannot be changed after the resource is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -65,7 +61,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<String> scope;
@@ -87,7 +81,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service URI for the webhook to post notifications.
-     * 
      */
     @Import(name="serviceUri", required=true)
       private final Output<String> serviceUri;
@@ -98,7 +91,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the webhook at the time the operation was called.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,WebhookStatus>> status;
@@ -109,7 +101,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags for the webhook.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -120,7 +111,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the webhook.
-     * 
      */
     @Import(name="webhookName")
       private final @Nullable Output<String> webhookName;

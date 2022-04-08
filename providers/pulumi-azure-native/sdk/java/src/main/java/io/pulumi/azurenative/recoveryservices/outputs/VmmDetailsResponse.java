@@ -12,7 +12,6 @@ public final class VmmDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMM'.
-     * 
      */
     private final String instanceType;
 
@@ -24,7 +23,6 @@ public final class VmmDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMM'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;

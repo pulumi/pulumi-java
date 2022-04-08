@@ -19,7 +19,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Links of the Spacecraft
-     * 
      */
     @Import(name="links")
       private final @Nullable Output<List<SpacecraftLinkArgs>> links;
@@ -30,7 +29,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NORAD ID of the spacecraft.
-     * 
      */
     @Import(name="noradId", required=true)
       private final Output<String> noradId;
@@ -52,7 +49,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Spacecraft ID
-     * 
      */
     @Import(name="spacecraftName")
       private final @Nullable Output<String> spacecraftName;
@@ -74,7 +69,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -85,7 +79,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Title line of Two Line Element (TLE).
-     * 
      */
     @Import(name="titleLine")
       private final @Nullable Output<String> titleLine;
@@ -96,7 +89,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Line 1 of Two Line Element (TLE).
-     * 
      */
     @Import(name="tleLine1")
       private final @Nullable Output<String> tleLine1;
@@ -107,7 +99,6 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Line 2 of Two Line Element (TLE).
-     * 
      */
     @Import(name="tleLine2")
       private final @Nullable Output<String> tleLine2;

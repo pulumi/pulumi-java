@@ -18,7 +18,6 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the capacity reservation group.
-     * 
      */
     @Import(name="capacityReservationGroupName")
       private final @Nullable Output<String> capacityReservationGroupName;
@@ -29,7 +28,6 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -62,7 +58,6 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

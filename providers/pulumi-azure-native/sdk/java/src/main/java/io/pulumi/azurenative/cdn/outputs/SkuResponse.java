@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class SkuResponse {
     /**
      * Name of the pricing tier.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class SkuResponse {
 
     /**
      * Name of the pricing tier.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

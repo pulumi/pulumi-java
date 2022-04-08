@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content link.
- * 
  */
 public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content link URI.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

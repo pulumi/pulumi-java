@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The private endpoint connection of an IotHub
- * 
  */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The properties of a private endpoint connection
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<PrivateEndpointConnectionPropertiesArgs> properties;

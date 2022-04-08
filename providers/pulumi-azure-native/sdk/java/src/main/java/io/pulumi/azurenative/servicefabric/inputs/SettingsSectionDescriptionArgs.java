@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Describes a section in the fabric settings of the cluster.
- * 
  */
 public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The section name of the fabric settings.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The collection of parameters in the section.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<List<SettingsParameterDescriptionArgs>> parameters;

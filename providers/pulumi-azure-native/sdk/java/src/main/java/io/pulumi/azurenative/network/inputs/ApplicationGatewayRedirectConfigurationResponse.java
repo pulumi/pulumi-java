@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Redirect configuration of an application gateway.
- * 
  */
 public final class ApplicationGatewayRedirectConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -34,7 +32,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -45,7 +42,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Include path in the redirected url.
-     * 
      */
     @Import(name="includePath")
       private final @Nullable Boolean includePath;
@@ -56,7 +52,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Include query string in the redirected url.
-     * 
      */
     @Import(name="includeQueryString")
       private final @Nullable Boolean includeQueryString;
@@ -67,7 +62,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Name of the redirect configuration that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -78,7 +72,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Path rules specifying redirect configuration.
-     * 
      */
     @Import(name="pathRules")
       private final @Nullable List<SubResourceResponse> pathRules;
@@ -89,7 +82,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * HTTP redirection type.
-     * 
      */
     @Import(name="redirectType")
       private final @Nullable String redirectType;
@@ -100,7 +92,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Request routing specifying redirect configuration.
-     * 
      */
     @Import(name="requestRoutingRules")
       private final @Nullable List<SubResourceResponse> requestRoutingRules;
@@ -111,7 +102,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Reference to a listener to redirect the request to.
-     * 
      */
     @Import(name="targetListener")
       private final @Nullable SubResourceResponse targetListener;
@@ -122,7 +112,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Url to redirect the request to.
-     * 
      */
     @Import(name="targetUrl")
       private final @Nullable String targetUrl;
@@ -133,7 +122,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -144,7 +132,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
 
     /**
      * Url path maps specifying default redirect configuration.
-     * 
      */
     @Import(name="urlPathMaps")
       private final @Nullable List<SubResourceResponse> urlPathMaps;

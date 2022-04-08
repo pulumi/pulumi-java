@@ -18,7 +18,6 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Identity type
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityTypes>> type;

@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class ListWebAppAzureStorageAccountsResult {
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * Azure storage accounts.
-     * 
      */
     private final Map<String,AzureStorageInfoValueResponse> properties;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -55,35 +50,30 @@ public final class ListWebAppAzureStorageAccountsResult {
 
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Azure storage accounts.
-     * 
     */
     public Map<String,AzureStorageInfoValueResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

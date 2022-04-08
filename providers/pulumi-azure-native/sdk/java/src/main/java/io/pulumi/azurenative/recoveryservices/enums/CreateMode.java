@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @EnumType
     public enum CreateMode {

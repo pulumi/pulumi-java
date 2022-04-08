@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Set value to 'ResultCount' .
-     * 
      */
     @EnumType
     public enum QueryType {

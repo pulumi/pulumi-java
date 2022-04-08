@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The instance view of the VM Agent running on the virtual machine.
- * 
  */
 public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
 
     /**
      * The virtual machine extension handler instance view.
-     * 
      */
     @Import(name="extensionHandlers")
       private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
@@ -34,7 +32,6 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
 
     /**
      * The resource status information.
-     * 
      */
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
@@ -45,7 +42,6 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
 
     /**
      * The VM Agent full version.
-     * 
      */
     @Import(name="vmAgentVersion")
       private final @Nullable String vmAgentVersion;

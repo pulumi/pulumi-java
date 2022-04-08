@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Web Service Parameter object for node and global parameter
- * 
  */
 public final class WebServiceParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WebServiceParameterResponse extends io.pulumi.resources.Invok
 
     /**
      * If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
-     * 
      */
     @Import(name="certificateThumbprint")
       private final @Nullable String certificateThumbprint;
@@ -32,7 +30,6 @@ public final class WebServiceParameterResponse extends io.pulumi.resources.Invok
 
     /**
      * The parameter value
-     * 
      */
     @Import(name="value")
       private final @Nullable Object value;

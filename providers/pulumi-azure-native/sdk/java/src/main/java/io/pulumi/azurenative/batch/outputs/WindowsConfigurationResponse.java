@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class WindowsConfigurationResponse {
     /**
      * If omitted, the default value is true.
-     * 
      */
     private final @Nullable Boolean enableAutomaticUpdates;
 
@@ -24,7 +23,6 @@ public final class WindowsConfigurationResponse {
 
     /**
      * If omitted, the default value is true.
-     * 
     */
     public Optional<Boolean> getEnableAutomaticUpdates() {
         return Optional.ofNullable(this.enableAutomaticUpdates);

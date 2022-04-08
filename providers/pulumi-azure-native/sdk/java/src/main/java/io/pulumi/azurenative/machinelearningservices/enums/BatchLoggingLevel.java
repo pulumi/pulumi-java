@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Logging level for batch inference operation.
-     * 
      */
     @EnumType
     public enum BatchLoggingLevel {

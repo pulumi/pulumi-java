@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents product details
- * 
  */
 public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hierarchy of the product which uniquely identifies the product
-     * 
      */
     @Import(name="hierarchyInformation", required=true)
       private final Output<HierarchyInformationArgs> hierarchyInformation;

@@ -14,7 +14,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Windows IoT Device Service.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -25,7 +24,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the Windows IoT Device Service.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

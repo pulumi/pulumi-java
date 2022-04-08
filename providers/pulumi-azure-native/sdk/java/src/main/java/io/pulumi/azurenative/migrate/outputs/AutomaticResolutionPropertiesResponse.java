@@ -14,7 +14,6 @@ public final class AutomaticResolutionPropertiesResponse {
     /**
      * Gets the MoveResource ARM ID of
      * the dependent resource if the resolution type is Automatic.
-     * 
      */
     private final @Nullable String moveResourceId;
 
@@ -26,7 +25,6 @@ public final class AutomaticResolutionPropertiesResponse {
     /**
      * Gets the MoveResource ARM ID of
      * the dependent resource if the resolution type is Automatic.
-     * 
     */
     public Optional<String> getMoveResourceId() {
         return Optional.ofNullable(this.moveResourceId);

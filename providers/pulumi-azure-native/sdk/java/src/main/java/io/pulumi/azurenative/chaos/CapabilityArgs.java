@@ -16,7 +16,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a Capability resource name.
-     * 
      */
     @Import(name="capabilityName")
       private final @Nullable Output<String> capabilityName;
@@ -27,7 +26,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a resource provider namespace.
-     * 
      */
     @Import(name="parentProviderNamespace", required=true)
       private final Output<String> parentProviderNamespace;
@@ -38,7 +36,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a resource name.
-     * 
      */
     @Import(name="parentResourceName", required=true)
       private final Output<String> parentResourceName;
@@ -49,7 +46,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a resource type.
-     * 
      */
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
@@ -60,7 +56,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a Target resource name.
-     * 
      */
     @Import(name="targetName", required=true)
       private final Output<String> targetName;

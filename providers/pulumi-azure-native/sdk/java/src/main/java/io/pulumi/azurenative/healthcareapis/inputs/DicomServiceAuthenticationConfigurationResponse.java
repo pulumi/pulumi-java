@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Authentication configuration information
- * 
  */
 public final class DicomServiceAuthenticationConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
 
     /**
      * The audiences for the service
-     * 
      */
     @Import(name="audiences", required=true)
       private final List<String> audiences;
@@ -30,7 +28,6 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
 
     /**
      * The authority url for the service
-     * 
      */
     @Import(name="authority", required=true)
       private final String authority;

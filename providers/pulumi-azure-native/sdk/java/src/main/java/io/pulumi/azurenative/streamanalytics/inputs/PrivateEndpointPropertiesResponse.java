@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties associated with a private endpoint.
- * 
  */
 public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
 
     /**
      * The date when this private endpoint was created.
-     * 
      */
     @Import(name="createdDate", required=true)
       private final String createdDate;
@@ -33,7 +31,6 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
 
     /**
      * A list of connections to the remote resource. Immutable after it is set.
-     * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;

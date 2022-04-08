@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies the link to a Key Vault.
- * 
  */
 public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Azure resource ID of the Key Vault.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
-     * 
      */
     @EnumType
     public enum SharedPrivateLinkResourceStatus {

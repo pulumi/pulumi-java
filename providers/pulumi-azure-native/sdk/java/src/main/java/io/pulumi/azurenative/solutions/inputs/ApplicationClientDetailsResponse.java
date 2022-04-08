@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The application client details to track the entity creating/updating the managed app resource.
- * 
  */
 public final class ApplicationClientDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
 
     /**
      * The client application Id.
-     * 
      */
     @Import(name="applicationId")
       private final @Nullable String applicationId;
@@ -31,7 +29,6 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
 
     /**
      * The client Oid.
-     * 
      */
     @Import(name="oid")
       private final @Nullable String oid;
@@ -42,7 +39,6 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
 
     /**
      * The client Puid
-     * 
      */
     @Import(name="puid")
       private final @Nullable String puid;

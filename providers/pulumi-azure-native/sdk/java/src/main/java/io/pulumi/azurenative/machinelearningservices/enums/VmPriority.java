@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Virtual Machine priority
-     * 
      */
     @EnumType
     public enum VmPriority {

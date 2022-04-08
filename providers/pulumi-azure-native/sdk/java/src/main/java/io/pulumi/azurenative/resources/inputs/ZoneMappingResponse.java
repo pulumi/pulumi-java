@@ -17,7 +17,6 @@ public final class ZoneMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location of the zone mapping.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;

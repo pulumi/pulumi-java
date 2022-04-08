@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the properties for automatic resolution.
- * 
  */
 public final class AutomaticResolutionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutomaticResolutionPropertiesResponse extends io.pulumi.resou
     /**
      * Gets the MoveResource ARM ID of
      * the dependent resource if the resolution type is Automatic.
-     * 
      */
     @Import(name="moveResourceId")
       private final @Nullable String moveResourceId;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of a secret resource.
- * 
  */
 public final class SecretResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
 
     /**
      * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable String contentType;
@@ -31,7 +29,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
 
     /**
      * User readable description of the secret.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -43,7 +40,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
     /**
      * Describes the kind of secret.
      * Expected value is 'SecretResourceProperties'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -54,7 +50,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
 
     /**
      * State of the resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -65,7 +60,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
 
     /**
      * Status of the resource.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -76,7 +70,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
 
     /**
      * Gives additional information about the current status of the secret.
-     * 
      */
     @Import(name="statusDetails", required=true)
       private final String statusDetails;

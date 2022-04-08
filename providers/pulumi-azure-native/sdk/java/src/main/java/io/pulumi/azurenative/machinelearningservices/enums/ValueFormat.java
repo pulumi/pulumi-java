@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * format for the workspace connection value
-     * 
      */
     @EnumType
     public enum ValueFormat {

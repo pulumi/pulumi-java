@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The swagger 2.0 schema describing a single service input or output. See Swagger specification: http://swagger.io/specification/
- * 
  */
 public final class TableSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Swagger schema description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -33,7 +31,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The format, if 'type' is not 'object'
-     * 
      */
     @Import(name="format")
       private final @Nullable String format;
@@ -44,7 +41,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The set of columns within the data table.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,ColumnSpecificationResponse> properties;
@@ -55,7 +51,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Swagger schema title.
-     * 
      */
     @Import(name="title")
       private final @Nullable String title;
@@ -66,7 +61,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The type of the entity described in swagger.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

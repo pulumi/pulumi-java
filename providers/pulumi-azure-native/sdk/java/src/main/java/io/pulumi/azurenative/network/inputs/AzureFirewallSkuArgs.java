@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of an Azure Firewall.
- * 
  */
 public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of an Azure Firewall SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,AzureFirewallSkuName>> name;
@@ -34,7 +32,6 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Tier of an Azure Firewall.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,AzureFirewallSkuTier>> tier;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents an incident label
- * 
  */
 public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the label
-     * 
      */
     @Import(name="labelName", required=true)
       private final String labelName;
@@ -29,7 +27,6 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The type of the label
-     * 
      */
     @Import(name="labelType", required=true)
       private final String labelType;

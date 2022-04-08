@@ -21,7 +21,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
-     * 
      */
     @Import(name="globalValidation")
       private final @Nullable Output<GlobalValidationArgs> globalValidation;
@@ -32,7 +31,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
-     * 
      */
     @Import(name="httpSettings")
       private final @Nullable Output<HttpSettingsArgs> httpSettings;
@@ -43,7 +41,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
-     * 
      */
     @Import(name="identityProviders")
       private final @Nullable Output<IdentityProvidersArgs> identityProviders;
@@ -54,7 +51,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -65,7 +61,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * The configuration settings of the login flow of users using App Service Authentication/Authorization.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<LoginArgs> login;
@@ -76,7 +71,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of web app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -87,7 +81,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * The configuration settings of the platform of App Service Authentication/Authorization.
-     * 
      */
     @Import(name="platform")
       private final @Nullable Output<AuthPlatformArgs> platform;
@@ -98,7 +91,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -109,7 +101,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of web app slot. If not specified then will default to production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;

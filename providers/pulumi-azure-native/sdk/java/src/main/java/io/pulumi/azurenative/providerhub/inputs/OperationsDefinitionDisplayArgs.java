@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Display information of the operation.
- * 
  */
 public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.ResourceArgs {
 

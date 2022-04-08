@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
- * 
  */
 public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timestamp of resource creation (UTC)
-     * 
      */
     @Import(name="createdAt", required=true)
       private final String createdAt;
@@ -29,7 +27,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A string identifier for the identity that created the resource
-     * 
      */
     @Import(name="createdBy", required=true)
       private final String createdBy;
@@ -40,7 +37,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of identity that created the resource: user, application, managedIdentity, key
-     * 
      */
     @Import(name="createdByType", required=true)
       private final String createdByType;
@@ -51,7 +47,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
@@ -62,7 +57,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A string identifier for the identity that last modified the resource
-     * 
      */
     @Import(name="lastModifiedBy", required=true)
       private final String lastModifiedBy;
@@ -73,7 +67,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of identity that last modified the resource: user, application, managedIdentity, key
-     * 
      */
     @Import(name="lastModifiedByType", required=true)
       private final String lastModifiedByType;

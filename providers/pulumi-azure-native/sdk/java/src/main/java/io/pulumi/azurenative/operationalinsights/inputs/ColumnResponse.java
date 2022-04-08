@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Table column.
- * 
  */
 public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column data type logical hint.
-     * 
      */
     @Import(name="dataTypeHint")
       private final @Nullable String dataTypeHint;
@@ -32,7 +30,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -43,7 +40,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -54,7 +50,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Is displayed by default.
-     * 
      */
     @Import(name="isDefaultDisplay", required=true)
       private final Boolean isDefaultDisplay;
@@ -65,7 +60,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Is column hidden.
-     * 
      */
     @Import(name="isHidden", required=true)
       private final Boolean isHidden;
@@ -76,7 +70,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -87,7 +80,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column data type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

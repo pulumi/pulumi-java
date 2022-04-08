@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ViolationResponse {
     /**
      * Error message.
-     * 
      */
     private final String errorMessage;
     /**
      * Id of the item that violates tenant configuration.
-     * 
      */
     private final String id;
     /**
      * Id of the user who owns violated item.
-     * 
      */
     private final String userId;
 
@@ -37,21 +34,18 @@ public final class ViolationResponse {
 
     /**
      * Error message.
-     * 
     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Id of the item that violates tenant configuration.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Id of the user who owns violated item.
-     * 
     */
     public String getUserId() {
         return this.userId;

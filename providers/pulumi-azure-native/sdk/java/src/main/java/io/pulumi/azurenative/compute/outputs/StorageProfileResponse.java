@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class StorageProfileResponse {
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
-     * 
      */
     private final @Nullable List<DataDiskResponse> dataDisks;
     /**
      * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
-     * 
      */
     private final @Nullable ImageReferenceResponse imageReference;
     /**
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
-     * 
      */
     private final @Nullable OSDiskResponse osDisk;
 
@@ -42,21 +39,18 @@ public final class StorageProfileResponse {
 
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
-     * 
     */
     public List<DataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
-     * 
     */
     public Optional<ImageReferenceResponse> getImageReference() {
         return Optional.ofNullable(this.imageReference);
     }
     /**
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
-     * 
     */
     public Optional<OSDiskResponse> getOsDisk() {
         return Optional.ofNullable(this.osDisk);

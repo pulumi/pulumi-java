@@ -14,7 +14,6 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
 
     /**
      * The configuration profile assignment name.
-     * 
      */
     @Import(name="configurationProfileAssignmentName", required=true)
       private final String configurationProfileAssignmentName;
@@ -25,7 +24,6 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
 
     /**
      * The name of the virtual machine.
-     * 
      */
     @Import(name="vmName", required=true)
       private final String vmName;

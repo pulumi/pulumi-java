@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A private IP address bound to the availability group listener.
- * 
  */
 public final class PrivateIPAddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateIPAddressResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Private IP address bound to the availability group listener.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -31,7 +29,6 @@ public final class PrivateIPAddressResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Subnet used to include private IP.
-     * 
      */
     @Import(name="subnetResourceId")
       private final @Nullable String subnetResourceId;

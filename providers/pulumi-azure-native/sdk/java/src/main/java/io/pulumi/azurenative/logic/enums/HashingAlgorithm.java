@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The signing or hashing algorithm.
-     * 
      */
     @EnumType
     public enum HashingAlgorithm {

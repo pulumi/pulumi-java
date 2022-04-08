@@ -17,7 +17,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -28,7 +27,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The monthly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     @Import(name="monthlyRetention")
       private final @Nullable Output<String> monthlyRetention;
@@ -39,7 +37,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The policy name. Should always be Default.
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -50,7 +47,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -72,7 +67,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The week of year to take the yearly backup in an ISO 8601 format.
-     * 
      */
     @Import(name="weekOfYear")
       private final @Nullable Output<Integer> weekOfYear;
@@ -83,7 +77,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The weekly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     @Import(name="weeklyRetention")
       private final @Nullable Output<String> weeklyRetention;
@@ -94,7 +87,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
 
     /**
      * The yearly retention policy for an LTR backup in an ISO 8601 format.
-     * 
      */
     @Import(name="yearlyRetention")
       private final @Nullable Output<String> yearlyRetention;

@@ -19,7 +19,104 @@ import javax.annotation.Nullable;
  * Azure Migrate Project.
  * API Version: 2019-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Projects_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = new AzureNative.Migrate.Project("project", new AzureNative.Migrate.ProjectArgs
+ *         {
+ *             ETag = "",
+ *             Location = "West Europe",
+ *             ProjectName = "abGoyalProject2",
+ *             Properties = new AzureNative.Migrate.Inputs.ProjectPropertiesArgs
+ *             {
+ *                 AssessmentSolutionId = "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
+ *                 ProjectStatus = "Active",
+ *             },
+ *             ResourceGroupName = "abgoyal-westEurope",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := migrate.NewProject(ctx, "project", &migrate.ProjectArgs{
+ * 			ETag:        pulumi.String(""),
+ * 			Location:    pulumi.String("West Europe"),
+ * 			ProjectName: pulumi.String("abGoyalProject2"),
+ * 			Properties: &migrate.ProjectPropertiesArgs{
+ * 				AssessmentSolutionId: pulumi.String("/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment"),
+ * 				ProjectStatus:        pulumi.String("Active"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("abgoyal-westEurope"),
+ * 			Tags:              nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const project = new azure_native.migrate.Project("project", {
+ *     eTag: "",
+ *     location: "West Europe",
+ *     projectName: "abGoyalProject2",
+ *     properties: {
+ *         assessmentSolutionId: "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
+ *         projectStatus: "Active",
+ *     },
+ *     resourceGroupName: "abgoyal-westEurope",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * project = azure_native.migrate.Project("project",
+ *     e_tag="",
+ *     location="West Europe",
+ *     project_name="abGoyalProject2",
+ *     properties=azure_native.migrate.ProjectPropertiesArgs(
+ *         assessment_solution_id="/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
+ *         project_status="Active",
+ *     ),
+ *     resource_group_name="abgoyal-westEurope",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +131,72 @@ import javax.annotation.Nullable;
 public class Project extends io.pulumi.resources.CustomResource {
     /**
      * For optimistic concurrency control.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return For optimistic concurrency control.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * Azure location in which project is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Azure location in which project is created.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Name of the project.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the project.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the project.
-     * 
      */
     @Export(name="properties", type=ProjectPropertiesResponse.class, parameters={})
     private Output<ProjectPropertiesResponse> properties;
 
     /**
      * @return Properties of the project.
-     * 
      */
     public Output<ProjectPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Tags provided by Azure Tagging service.
-     * 
      */
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
      * @return Tags provided by Azure Tagging service.
-     * 
      */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects].
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the object = [Microsoft.Migrate/assessmentProjects].
-     * 
      */
     public Output<String> getType() {
         return this.type;

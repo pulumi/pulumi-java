@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * StringNotContains Advanced Filter.
- * 
  */
 public final class StringNotContainsAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StringNotContainsAdvancedFilterArgs extends io.pulumi.resourc
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -33,7 +31,6 @@ public final class StringNotContainsAdvancedFilterArgs extends io.pulumi.resourc
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'StringNotContains'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
@@ -44,7 +41,6 @@ public final class StringNotContainsAdvancedFilterArgs extends io.pulumi.resourc
 
     /**
      * The set of filter values.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

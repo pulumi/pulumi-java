@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class MigrationPropertiesResponse {
     /**
      * Migration Progress
-     * 
      */
     private final MigrationProgressResponse migrationProgress;
     /**
      * Old Subnet Id
-     * 
      */
     private final String oldSubnetId;
     /**
      * Old Vnet Site Id
-     * 
      */
     private final String oldVnetSiteId;
 
@@ -38,21 +35,18 @@ public final class MigrationPropertiesResponse {
 
     /**
      * Migration Progress
-     * 
     */
     public MigrationProgressResponse getMigrationProgress() {
         return this.migrationProgress;
     }
     /**
      * Old Subnet Id
-     * 
     */
     public String getOldSubnetId() {
         return this.oldSubnetId;
     }
     /**
      * Old Vnet Site Id
-     * 
     */
     public String getOldVnetSiteId() {
         return this.oldVnetSiteId;

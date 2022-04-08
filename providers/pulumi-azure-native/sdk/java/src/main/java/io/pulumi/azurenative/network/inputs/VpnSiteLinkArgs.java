@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * VpnSiteLink Resource.
- * 
  */
 public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of bgp properties.
-     * 
      */
     @Import(name="bgpProperties")
       private final @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
@@ -33,7 +31,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FQDN of vpn-site-link.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
@@ -44,7 +41,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -55,7 +51,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ip-address for the vpn-site-link.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
@@ -66,7 +61,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The link provider properties.
-     * 
      */
     @Import(name="linkProperties")
       private final @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
@@ -77,7 +71,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

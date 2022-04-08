@@ -24,7 +24,6 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource provider hosted within ProviderHub.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
@@ -35,7 +34,6 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -46,7 +44,6 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;

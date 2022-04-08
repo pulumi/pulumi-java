@@ -20,7 +20,109 @@ import javax.annotation.Nullable;
  * Define the move collection.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### MoveCollections_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var moveCollection = new AzureNative.Migrate.MoveCollection("moveCollection", new AzureNative.Migrate.MoveCollectionArgs
+ *         {
+ *             Identity = new AzureNative.Migrate.Inputs.IdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "eastus2",
+ *             MoveCollectionName = "movecollection1",
+ *             Properties = new AzureNative.Migrate.Inputs.MoveCollectionPropertiesArgs
+ *             {
+ *                 SourceRegion = "eastus",
+ *                 TargetRegion = "westus",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := migrate.NewMoveCollection(ctx, "moveCollection", &migrate.MoveCollectionArgs{
+ * 			Identity: &migrate.IdentityArgs{
+ * 				Type: pulumi.String("SystemAssigned"),
+ * 			},
+ * 			Location:           pulumi.String("eastus2"),
+ * 			MoveCollectionName: pulumi.String("movecollection1"),
+ * 			Properties: &migrate.MoveCollectionPropertiesArgs{
+ * 				SourceRegion: pulumi.String("eastus"),
+ * 				TargetRegion: pulumi.String("westus"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const moveCollection = new azure_native.migrate.MoveCollection("moveCollection", {
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "eastus2",
+ *     moveCollectionName: "movecollection1",
+ *     properties: {
+ *         sourceRegion: "eastus",
+ *         targetRegion: "westus",
+ *     },
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * move_collection = azure_native.migrate.MoveCollection("moveCollection",
+ *     identity=azure_native.migrate.IdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="eastus2",
+ *     move_collection_name="movecollection1",
+ *     properties=azure_native.migrate.MoveCollectionPropertiesArgs(
+ *         source_region="eastus",
+ *         target_region="westus",
+ *     ),
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +137,84 @@ import javax.annotation.Nullable;
 public class MoveCollection extends io.pulumi.resources.CustomResource {
     /**
      * The etag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return The etag of the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Defines the MSI properties of the Move Collection.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return Defines the MSI properties of the Move Collection.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The geo-location where the resource lives.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The geo-location where the resource lives.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Defines the move collection properties.
-     * 
      */
     @Export(name="properties", type=MoveCollectionPropertiesResponse.class, parameters={})
     private Output<MoveCollectionPropertiesResponse> properties;
 
     /**
      * @return Defines the move collection properties.
-     * 
      */
     public Output<MoveCollectionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Cosmos DB Graph resource object
- * 
  */
 public final class GraphResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GraphResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Cosmos DB Graph
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

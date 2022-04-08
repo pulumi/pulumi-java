@@ -18,7 +18,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
@@ -29,7 +28,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
 
     /**
      * Private endpoint which the connection belongs to.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
@@ -47,7 +45,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
 
     /**
      * Connection State of the Private Endpoint Connection.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
@@ -58,7 +55,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

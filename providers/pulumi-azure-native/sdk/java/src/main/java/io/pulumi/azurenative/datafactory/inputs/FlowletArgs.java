@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data flow flowlet
- * 
  */
 public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of tags that can be used for describing the data flow.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -37,7 +35,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the data flow.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -48,7 +45,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
@@ -59,7 +55,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flowlet script.
-     * 
      */
     @Import(name="script")
       private final @Nullable Output<String> script;
@@ -70,7 +65,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flowlet script lines.
-     * 
      */
     @Import(name="scriptLines")
       private final @Nullable Output<List<String>> scriptLines;
@@ -81,7 +75,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of sinks in Flowlet.
-     * 
      */
     @Import(name="sinks")
       private final @Nullable Output<List<DataFlowSinkArgs>> sinks;
@@ -92,7 +85,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of sources in Flowlet.
-     * 
      */
     @Import(name="sources")
       private final @Nullable Output<List<DataFlowSourceArgs>> sources;
@@ -103,7 +95,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of transformations in Flowlet.
-     * 
      */
     @Import(name="transformations")
       private final @Nullable Output<List<TransformationArgs>> transformations;
@@ -115,7 +106,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of data flow.
      * Expected value is 'Flowlet'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class WsdlDefinitionResponse {
     /**
      * The WSDL content
-     * 
      */
     private final @Nullable String content;
     /**
      * The WSDL import method
-     * 
      */
     private final @Nullable String importMethod;
     /**
      * The service with name and endpoint names
-     * 
      */
     private final @Nullable WsdlServiceResponse service;
     /**
      * The WSDL URL
-     * 
      */
     private final @Nullable String url;
 
@@ -47,28 +43,24 @@ public final class WsdlDefinitionResponse {
 
     /**
      * The WSDL content
-     * 
     */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The WSDL import method
-     * 
     */
     public Optional<String> getImportMethod() {
         return Optional.ofNullable(this.importMethod);
     }
     /**
      * The service with name and endpoint names
-     * 
     */
     public Optional<WsdlServiceResponse> getService() {
         return Optional.ofNullable(this.service);
     }
     /**
      * The WSDL URL
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

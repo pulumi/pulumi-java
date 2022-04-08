@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the action that will be triggered by the Automation
-     * 
      */
     @EnumType
     public enum ActionType {

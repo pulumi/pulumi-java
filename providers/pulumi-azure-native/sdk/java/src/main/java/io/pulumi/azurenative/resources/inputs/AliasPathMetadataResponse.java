@@ -14,7 +14,6 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The attributes of the token that the alias path is referring to.
-     * 
      */
     @Import(name="attributes", required=true)
       private final String attributes;
@@ -25,7 +24,6 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The type of the token that the alias path is referring to.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

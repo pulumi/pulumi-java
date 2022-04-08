@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an application rule.
- * 
  */
 public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
 
     /**
      * Description of the rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -33,7 +31,6 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
 
     /**
      * List of FQDN Tags for this rule.
-     * 
      */
     @Import(name="fqdnTags")
       private final @Nullable List<String> fqdnTags;
@@ -44,7 +41,6 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
 
     /**
      * Name of the application rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -55,7 +51,6 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
 
     /**
      * Array of ApplicationRuleProtocols.
-     * 
      */
     @Import(name="protocols")
       private final @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols;
@@ -66,7 +61,6 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
@@ -77,7 +71,6 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
@@ -88,7 +81,6 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
 
     /**
      * List of FQDNs for this rule.
-     * 
      */
     @Import(name="targetFqdns")
       private final @Nullable List<String> targetFqdns;

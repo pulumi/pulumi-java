@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that determine the run agent configuration.
- * 
  */
 public final class AgentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AgentPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The CPU configuration in terms of number of cores required for the run.
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Integer cpu;

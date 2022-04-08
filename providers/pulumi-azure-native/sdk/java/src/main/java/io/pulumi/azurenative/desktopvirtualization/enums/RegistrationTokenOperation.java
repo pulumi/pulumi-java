@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of resetting the token.
-     * 
      */
     @EnumType
     public enum RegistrationTokenOperation {

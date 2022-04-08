@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
     /**
      * List of databases on source server
-     * 
      */
     private final List<String> databases;
     /**
      * Result identifier
-     * 
      */
     private final String id;
     /**
      * Source server brand version
-     * 
      */
     private final String sourceServerBrandVersion;
     /**
      * Version of the source server
-     * 
      */
     private final String sourceServerVersion;
     /**
      * Validation errors associated with the task
-     * 
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
@@ -53,35 +48,30 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
 
     /**
      * List of databases on source server
-     * 
     */
     public List<String> getDatabases() {
         return this.databases;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Source server brand version
-     * 
     */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Version of the source server
-     * 
     */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Validation errors associated with the task
-     * 
     */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;

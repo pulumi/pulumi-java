@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of the namespace.
- * 
  */
 public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -33,7 +31,6 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of this SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<SkuName> name;
@@ -44,7 +41,6 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The billing tier of this particular SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<SkuTier> tier;

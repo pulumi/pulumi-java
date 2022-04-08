@@ -14,7 +14,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     /**
      * The name of the column.
-     * 
      */
     @Import(name="columnName", required=true)
       private final String columnName;
@@ -25,7 +24,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     /**
      * The name of the schema.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final String schemaName;
@@ -47,7 +44,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     /**
      * The source of the sensitivity label.
-     * 
      */
     @Import(name="sensitivityLabelSource", required=true)
       private final String sensitivityLabelSource;
@@ -58,7 +54,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     /**
      * SQL pool name
-     * 
      */
     @Import(name="sqlPoolName", required=true)
       private final String sqlPoolName;
@@ -69,7 +64,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     /**
      * The name of the table.
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;
@@ -80,7 +74,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

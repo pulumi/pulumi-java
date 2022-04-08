@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Logs data type.
- * 
  */
 public final class AwsCloudTrailDataConnectorDataTypesResponseLogs extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AwsCloudTrailDataConnectorDataTypesResponseLogs extends io.pu
 
     /**
      * Describe whether this data type connection is enabled or not.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class ReportComparisonExpressionResponse {
     /**
      * The name of the column to use in comparison.
-     * 
      */
     private final String name;
     /**
      * The operator to use for comparison.
-     * 
      */
     private final String operator;
     /**
      * Array of values to use for comparison
-     * 
      */
     private final List<String> values;
 
@@ -38,21 +35,18 @@ public final class ReportComparisonExpressionResponse {
 
     /**
      * The name of the column to use in comparison.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The operator to use for comparison.
-     * 
     */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Array of values to use for comparison
-     * 
     */
     public List<String> getValues() {
         return this.values;

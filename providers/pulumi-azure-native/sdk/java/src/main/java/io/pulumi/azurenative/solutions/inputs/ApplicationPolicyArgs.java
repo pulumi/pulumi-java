@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed application policy.
- * 
  */
 public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The policy name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The policy parameters.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
@@ -42,7 +39,6 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The policy definition Id.
-     * 
      */
     @Import(name="policyDefinitionId")
       private final @Nullable Output<String> policyDefinitionId;

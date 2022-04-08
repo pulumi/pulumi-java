@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a global parameter in the graph.
- * 
  */
 public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Description of this graph parameter.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -33,7 +31,6 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Association links for this parameter to nodes in the graph.
-     * 
      */
     @Import(name="links", required=true)
       private final List<GraphParameterLinkResponse> links;
@@ -44,7 +41,6 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Graph parameter's type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

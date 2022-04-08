@@ -16,60 +16,49 @@ public final class GetKeyValueResult {
     /**
      * The content type of the key-value's value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
-     * 
      */
     private final @Nullable String contentType;
     /**
      * An ETag indicating the state of a key-value within a configuration store.
-     * 
      */
     private final String eTag;
     /**
      * The resource ID.
-     * 
      */
     private final String id;
     /**
      * The primary identifier of a key-value.
      * The key is used in unison with the label to uniquely identify a key-value.
-     * 
      */
     private final String key;
     /**
      * A value used to group key-values.
      * The label is used in unison with the key to uniquely identify a key-value.
-     * 
      */
     private final String label;
     /**
      * The last time a modifying operation was performed on the given key-value.
-     * 
      */
     private final String lastModified;
     /**
      * A value indicating whether the key-value is locked.
      * A locked key-value may not be modified until it is unlocked.
-     * 
      */
     private final Boolean locked;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * A dictionary of tags that can help identify what a key-value may be applicable for.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
     /**
      * The value of the key-value.
-     * 
      */
     private final @Nullable String value;
 
@@ -102,21 +91,18 @@ public final class GetKeyValueResult {
     /**
      * The content type of the key-value's value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
-     * 
     */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * An ETag indicating the state of a key-value within a configuration store.
-     * 
     */
     public String getETag() {
         return this.eTag;
     }
     /**
      * The resource ID.
-     * 
     */
     public String getId() {
         return this.id;
@@ -124,7 +110,6 @@ public final class GetKeyValueResult {
     /**
      * The primary identifier of a key-value.
      * The key is used in unison with the label to uniquely identify a key-value.
-     * 
     */
     public String getKey() {
         return this.key;
@@ -132,14 +117,12 @@ public final class GetKeyValueResult {
     /**
      * A value used to group key-values.
      * The label is used in unison with the key to uniquely identify a key-value.
-     * 
     */
     public String getLabel() {
         return this.label;
     }
     /**
      * The last time a modifying operation was performed on the given key-value.
-     * 
     */
     public String getLastModified() {
         return this.lastModified;
@@ -147,35 +130,30 @@ public final class GetKeyValueResult {
     /**
      * A value indicating whether the key-value is locked.
      * A locked key-value may not be modified until it is unlocked.
-     * 
     */
     public Boolean getLocked() {
         return this.locked;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * A dictionary of tags that can help identify what a key-value may be applicable for.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The value of the key-value.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

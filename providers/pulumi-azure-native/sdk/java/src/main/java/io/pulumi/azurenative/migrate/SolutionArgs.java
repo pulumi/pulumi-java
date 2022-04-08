@@ -17,7 +17,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Migrate project.
-     * 
      */
     @Import(name="migrateProjectName", required=true)
       private final Output<String> migrateProjectName;
@@ -28,7 +27,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the properties of the solution.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<SolutionPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Resource Group that migrate project is part of.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of a migration solution within a migrate project.
-     * 
      */
     @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;

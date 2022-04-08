@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SharePoint data type connection.
- * 
  */
 public final class OfficeDataConnectorDataTypesResponseSharePoint extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OfficeDataConnectorDataTypesResponseSharePoint extends io.pul
 
     /**
      * Describe whether this data type connection is enabled or not.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

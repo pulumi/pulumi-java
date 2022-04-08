@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the vault.
- * 
  */
 public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Customer Managed Key details of the resource.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable VaultPropertiesResponseEncryption encryption;
@@ -35,7 +33,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
@@ -46,7 +43,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Private endpoint state for backup.
-     * 
      */
     @Import(name="privateEndpointStateForBackup", required=true)
       private final String privateEndpointStateForBackup;
@@ -57,7 +53,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Private endpoint state for site recovery.
-     * 
      */
     @Import(name="privateEndpointStateForSiteRecovery", required=true)
       private final String privateEndpointStateForSiteRecovery;
@@ -68,7 +63,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Provisioning State.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -79,7 +73,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Details for upgrading vault.
-     * 
      */
     @Import(name="upgradeDetails")
       private final @Nullable UpgradeDetailsResponse upgradeDetails;

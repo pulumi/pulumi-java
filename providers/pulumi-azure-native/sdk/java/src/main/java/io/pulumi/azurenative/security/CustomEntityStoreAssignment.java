@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * Custom entity store assignment
  * API Version: 2021-07-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a custom entity store assignment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customEntityStoreAssignment = new AzureNative.Security.CustomEntityStoreAssignment("customEntityStoreAssignment", new AzureNative.Security.CustomEntityStoreAssignmentArgs
+ *         {
+ *             CustomEntityStoreAssignmentName = "33e7cc6e-a139-4723-a0e5-76993aee0771",
+ *             Principal = "aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *             ResourceGroupName = "TestResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewCustomEntityStoreAssignment(ctx, "customEntityStoreAssignment", &security.CustomEntityStoreAssignmentArgs{
+ * 			CustomEntityStoreAssignmentName: pulumi.String("33e7cc6e-a139-4723-a0e5-76993aee0771"),
+ * 			Principal:                       pulumi.String("aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47"),
+ * 			ResourceGroupName:               pulumi.String("TestResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const customEntityStoreAssignment = new azure_native.security.CustomEntityStoreAssignment("customEntityStoreAssignment", {
+ *     customEntityStoreAssignmentName: "33e7cc6e-a139-4723-a0e5-76993aee0771",
+ *     principal: "aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *     resourceGroupName: "TestResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * custom_entity_store_assignment = azure_native.security.CustomEntityStoreAssignment("customEntityStoreAssignment",
+ *     custom_entity_store_assignment_name="33e7cc6e-a139-4723-a0e5-76993aee0771",
+ *     principal="aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *     resource_group_name="TestResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +105,60 @@ import javax.annotation.Nullable;
 public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResource {
     /**
      * The link to entity store database.
-     * 
      */
     @Export(name="entityStoreDatabaseLink", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityStoreDatabaseLink;
 
     /**
      * @return The link to entity store database.
-     * 
      */
     public Output</* @Nullable */ String> getEntityStoreDatabaseLink() {
         return this.entityStoreDatabaseLink;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
-     * 
      */
     @Export(name="principal", type=String.class, parameters={})
     private Output</* @Nullable */ String> principal;
 
     /**
      * @return The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
-     * 
      */
     public Output</* @Nullable */ String> getPrincipal() {
         return this.principal;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

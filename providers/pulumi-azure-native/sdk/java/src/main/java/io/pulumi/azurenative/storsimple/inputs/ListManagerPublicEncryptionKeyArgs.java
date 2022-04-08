@@ -14,7 +14,6 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final String managerName;
@@ -25,7 +24,6 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

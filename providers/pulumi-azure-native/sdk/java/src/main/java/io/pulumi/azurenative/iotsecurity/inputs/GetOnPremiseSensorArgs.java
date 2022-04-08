@@ -14,7 +14,6 @@ public final class GetOnPremiseSensorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the on-premise IoT sensor
-     * 
      */
     @Import(name="onPremiseSensorName", required=true)
       private final String onPremiseSensorName;

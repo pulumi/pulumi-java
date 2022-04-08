@@ -14,23 +14,19 @@ import javax.annotation.Nullable;
 public final class TumblingWindowTriggerDependencyReferenceResponse {
     /**
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
-     * 
      */
     private final @Nullable String offset;
     /**
      * Referenced trigger.
-     * 
      */
     private final TriggerReferenceResponse referenceTrigger;
     /**
      * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
-     * 
      */
     private final @Nullable String size;
     /**
      * The type of dependency reference.
      * Expected value is 'TumblingWindowTriggerDependencyReference'.
-     * 
      */
     private final String type;
 
@@ -48,21 +44,18 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
 
     /**
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
-     * 
     */
     public Optional<String> getOffset() {
         return Optional.ofNullable(this.offset);
     }
     /**
      * Referenced trigger.
-     * 
     */
     public TriggerReferenceResponse getReferenceTrigger() {
         return this.referenceTrigger;
     }
     /**
      * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
-     * 
     */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
@@ -70,7 +63,6 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
     /**
      * The type of dependency reference.
      * Expected value is 'TumblingWindowTriggerDependencyReference'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * AKS properties
- * 
  */
 public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of agents
-     * 
      */
     @Import(name="agentCount")
       private final @Nullable Output<Integer> agentCount;
@@ -36,7 +34,6 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Agent virtual machine size
-     * 
      */
     @Import(name="agentVmSize")
       private final @Nullable Output<String> agentVmSize;
@@ -47,7 +44,6 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AKS networking configuration for vnet
-     * 
      */
     @Import(name="aksNetworkingConfiguration")
       private final @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
@@ -58,7 +54,6 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cluster full qualified domain name
-     * 
      */
     @Import(name="clusterFqdn")
       private final @Nullable Output<String> clusterFqdn;
@@ -69,7 +64,6 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Intended usage of the cluster
-     * 
      */
     @Import(name="clusterPurpose")
       private final @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
@@ -80,7 +74,6 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SSL configuration
-     * 
      */
     @Import(name="sslConfiguration")
       private final @Nullable Output<SslConfigurationArgs> sslConfiguration;

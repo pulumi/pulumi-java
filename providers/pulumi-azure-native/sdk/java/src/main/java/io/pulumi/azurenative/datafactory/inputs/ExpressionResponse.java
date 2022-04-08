@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Azure Data Factory expression definition.
- * 
  */
 public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Expression type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -29,7 +27,6 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Expression value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

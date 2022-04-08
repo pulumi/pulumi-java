@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional information on Azure IaaS VM specific backup item.
- * 
  */
 public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulum
 
     /**
      * The oldest backup copy available for this backup item.
-     * 
      */
     @Import(name="oldestRecoveryPoint")
       private final @Nullable String oldestRecoveryPoint;
@@ -33,7 +31,6 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulum
 
     /**
      * Specifies if backup policy associated with the backup item is inconsistent.
-     * 
      */
     @Import(name="policyInconsistent")
       private final @Nullable Boolean policyInconsistent;
@@ -44,7 +41,6 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulum
 
     /**
      * Number of backup copies available for this backup item.
-     * 
      */
     @Import(name="recoveryPointCount")
       private final @Nullable Integer recoveryPointCount;

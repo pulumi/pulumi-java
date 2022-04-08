@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data used when creating a disk.
- * 
  */
 public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This enumerates the possible sources of a disk's creation.
-     * 
      */
     @Import(name="createOption", required=true)
       private final String createOption;
@@ -34,7 +32,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
-     * 
      */
     @Import(name="galleryImageReference")
       private final @Nullable ImageDiskReferenceResponse galleryImageReference;
@@ -45,7 +42,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disk source information.
-     * 
      */
     @Import(name="imageReference")
       private final @Nullable ImageDiskReferenceResponse imageReference;
@@ -56,7 +52,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
-     * 
      */
     @Import(name="logicalSectorSize")
       private final @Nullable Integer logicalSectorSize;
@@ -67,7 +62,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If createOption is Copy, this is the ARM id of the source snapshot or disk.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
@@ -78,7 +72,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If this field is set, this is the unique id identifying the source of this resource.
-     * 
      */
     @Import(name="sourceUniqueId", required=true)
       private final String sourceUniqueId;
@@ -89,7 +82,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If createOption is Import, this is the URI of a blob to be imported into a managed disk.
-     * 
      */
     @Import(name="sourceUri")
       private final @Nullable String sourceUri;
@@ -100,7 +92,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
-     * 
      */
     @Import(name="storageAccountId")
       private final @Nullable String storageAccountId;
@@ -111,7 +102,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
-     * 
      */
     @Import(name="uploadSizeBytes")
       private final @Nullable Double uploadSizeBytes;

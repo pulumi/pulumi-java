@@ -14,7 +14,6 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
 
     /**
      * The workflow action name.
-     * 
      */
     @Import(name="actionName", required=true)
       private final String actionName;
@@ -25,7 +24,6 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
 
     /**
      * The workflow repetition.
-     * 
      */
     @Import(name="repetitionName", required=true)
       private final String repetitionName;
@@ -36,7 +34,6 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
 
     /**
      * The workflow run name.
-     * 
      */
     @Import(name="runName", required=true)
       private final String runName;
@@ -58,7 +54,6 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
 
     /**
      * The workflow name.
-     * 
      */
     @Import(name="workflowName", required=true)
       private final String workflowName;

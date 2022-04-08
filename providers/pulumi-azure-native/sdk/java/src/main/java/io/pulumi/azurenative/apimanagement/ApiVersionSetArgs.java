@@ -18,7 +18,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of API Version Set.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of API Version Set
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -40,7 +38,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -62,7 +58,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-     * 
      */
     @Import(name="versionHeaderName")
       private final @Nullable Output<String> versionHeaderName;
@@ -73,7 +68,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
-     * 
      */
     @Import(name="versionQueryName")
       private final @Nullable Output<String> versionQueryName;
@@ -84,7 +78,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Api Version Set identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="versionSetId")
       private final @Nullable Output<String> versionSetId;
@@ -95,7 +88,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An value that determines where the API Version identifier will be located in a HTTP request.
-     * 
      */
     @Import(name="versioningScheme", required=true)
       private final Output<Either<String,VersioningScheme>> versioningScheme;

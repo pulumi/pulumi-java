@@ -12,7 +12,6 @@ import java.util.StringJoiner;
     public enum DataSource {
         /**
          * Devices twin data
-         * 
          */
         TwinData("TwinData");
 

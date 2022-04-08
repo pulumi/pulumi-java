@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Batch service does not assign any meaning to this metadata; it is solely for the use of user code.
- * 
  */
 public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
 

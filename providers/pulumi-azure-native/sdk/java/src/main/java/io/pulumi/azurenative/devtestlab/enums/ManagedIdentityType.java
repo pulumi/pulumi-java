@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Managed identity.
-     * 
      */
     @EnumType
     public enum ManagedIdentityType {

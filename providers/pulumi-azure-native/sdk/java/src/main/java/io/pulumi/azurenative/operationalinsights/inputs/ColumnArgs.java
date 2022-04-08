@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Table column.
- * 
  */
 public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Column data type logical hint.
-     * 
      */
     @Import(name="dataTypeHint")
       private final @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
@@ -34,7 +32,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Column description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Column display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -56,7 +52,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Column name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +62,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Column data type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ColumnTypeEnum>> type;

@@ -16,7 +16,6 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * If omitted, the default value is 15 minutes (PT15M).
-     * 
      */
     @Import(name="evaluationInterval")
       private final @Nullable String evaluationInterval;

@@ -19,7 +19,342 @@ import javax.annotation.Nullable;
  * The Media Graph.
  * API Version: 2020-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Media Graph with a clear RTSP Source
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mediaGraph = new AzureNative.Media.MediaGraph("mediaGraph", new AzureNative.Media.MediaGraphArgs
+ *         {
+ *             AccountName = "contosomedia",
+ *             Description = "updated description",
+ *             MediaGraphName = "SampleMediaGraph",
+ *             ResourceGroupName = "contoso",
+ *             Sinks = 
+ *             {
+ *                 new AzureNative.Media.Inputs.MediaGraphAssetSinkArgs
+ *                 {
+ *                     AssetName = "SampleAsset",
+ *                     Inputs = 
+ *                     {
+ *                         "rtspSource",
+ *                     },
+ *                     Name = "AssetSink",
+ *                     OdataType = "#Microsoft.Media.MediaGraphAssetSink",
+ *                 },
+ *             },
+ *             Sources = 
+ *             {
+ *                 new AzureNative.Media.Inputs.MediaGraphRtspSourceArgs
+ *                 {
+ *                     Endpoint = new AzureNative.Media.Inputs.MediaGraphClearEndpointArgs
+ *                     {
+ *                         Credentials = new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+ *                         {
+ *                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+ *                             Password = "examplepassword",
+ *                             Username = "exampleusername",
+ *                         },
+ *                         OdataType = "#Microsoft.Media.MediaGraphClearEndpoint",
+ *                         Url = "rtsp://contoso.com:554/stream1",
+ *                     },
+ *                     Name = "rtspSource",
+ *                     OdataType = "#Microsoft.Media.MediaGraphRtspSource",
+ *                     Transport = "Http",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const mediaGraph = new azure_native.media.MediaGraph("mediaGraph", {
+ *     accountName: "contosomedia",
+ *     description: "updated description",
+ *     mediaGraphName: "SampleMediaGraph",
+ *     resourceGroupName: "contoso",
+ *     sinks: [{
+ *         assetName: "SampleAsset",
+ *         inputs: ["rtspSource"],
+ *         name: "AssetSink",
+ *         odataType: "#Microsoft.Media.MediaGraphAssetSink",
+ *     }],
+ *     sources: [{
+ *         endpoint: {
+ *             credentials: {
+ *                 odataType: "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+ *                 password: "examplepassword",
+ *                 username: "exampleusername",
+ *             },
+ *             odataType: "#Microsoft.Media.MediaGraphClearEndpoint",
+ *             url: "rtsp://contoso.com:554/stream1",
+ *         },
+ *         name: "rtspSource",
+ *         odataType: "#Microsoft.Media.MediaGraphRtspSource",
+ *         transport: "Http",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * media_graph = azure_native.media.MediaGraph("mediaGraph",
+ *     account_name="contosomedia",
+ *     description="updated description",
+ *     media_graph_name="SampleMediaGraph",
+ *     resource_group_name="contoso",
+ *     sinks=[{
+ *         "assetName": "SampleAsset",
+ *         "inputs": ["rtspSource"],
+ *         "name": "AssetSink",
+ *         "odataType": "#Microsoft.Media.MediaGraphAssetSink",
+ *     }],
+ *     sources=[{
+ *         "endpoint": azure_native.media.MediaGraphClearEndpointArgs(
+ *             credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
+ *                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+ *                 password="examplepassword",
+ *                 username="exampleusername",
+ *             ),
+ *             odata_type="#Microsoft.Media.MediaGraphClearEndpoint",
+ *             url="rtsp://contoso.com:554/stream1",
+ *         ),
+ *         "name": "rtspSource",
+ *         "odataType": "#Microsoft.Media.MediaGraphRtspSource",
+ *         "transport": "Http",
+ *     }])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create or update a Media Graph with an encrypted RTSP Source
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mediaGraph = new AzureNative.Media.MediaGraph("mediaGraph", new AzureNative.Media.MediaGraphArgs
+ *         {
+ *             AccountName = "contosomedia",
+ *             Description = "updated description",
+ *             MediaGraphName = "SampleMediaGraph",
+ *             ResourceGroupName = "contoso",
+ *             Sinks = 
+ *             {
+ *                 new AzureNative.Media.Inputs.MediaGraphAssetSinkArgs
+ *                 {
+ *                     AssetName = "SampleAsset",
+ *                     Inputs = 
+ *                     {
+ *                         "rtspSource",
+ *                     },
+ *                     Name = "AssetSink",
+ *                     OdataType = "#Microsoft.Media.MediaGraphAssetSink",
+ *                 },
+ *             },
+ *             Sources = 
+ *             {
+ *                 new AzureNative.Media.Inputs.MediaGraphRtspSourceArgs
+ *                 {
+ *                     Endpoint = new AzureNative.Media.Inputs.MediaGraphTlsEndpointArgs
+ *                     {
+ *                         Credentials = new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+ *                         {
+ *                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+ *                             Password = "examplepassword",
+ *                             Username = "exampleusername",
+ *                         },
+ *                         OdataType = "#Microsoft.Media.MediaGraphTlsEndpoint",
+ *                         TrustedCertificates = new AzureNative.Media.Inputs.MediaGraphPemCertificateListArgs
+ *                         {
+ *                             Certificates = 
+ *                             {
+ *                                 @"-----BEGIN CERTIFICATE-----
+ * MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
+ * BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
+ * MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
+ * MTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw
+ * EgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD
+ * ZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff
+ * 7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf
+ * uol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru
+ * f8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo
+ * 9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH
+ * qMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa
+ * JMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn
+ * /wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF
+ * MAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s
+ * Z1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB
+ * 99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7
+ * PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
+ * oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
+ * nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
+ * -----END CERTIFICATE-----",
+ *                             },
+ *                             OdataType = "#Microsoft.Media.MediaGraphPemCertificateList",
+ *                         },
+ *                         Url = "rtsps://contoso.com:443/stream1",
+ *                         ValidationOptions = new AzureNative.Media.Inputs.MediaGraphTlsValidationOptionsArgs
+ *                         {
+ *                             IgnoreHostname = true,
+ *                             IgnoreSignature = false,
+ *                         },
+ *                     },
+ *                     Name = "rtspSource",
+ *                     OdataType = "#Microsoft.Media.MediaGraphRtspSource",
+ *                     Transport = "Http",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const mediaGraph = new azure_native.media.MediaGraph("mediaGraph", {
+ *     accountName: "contosomedia",
+ *     description: "updated description",
+ *     mediaGraphName: "SampleMediaGraph",
+ *     resourceGroupName: "contoso",
+ *     sinks: [{
+ *         assetName: "SampleAsset",
+ *         inputs: ["rtspSource"],
+ *         name: "AssetSink",
+ *         odataType: "#Microsoft.Media.MediaGraphAssetSink",
+ *     }],
+ *     sources: [{
+ *         endpoint: {
+ *             credentials: {
+ *                 odataType: "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+ *                 password: "examplepassword",
+ *                 username: "exampleusername",
+ *             },
+ *             odataType: "#Microsoft.Media.MediaGraphTlsEndpoint",
+ *             trustedCertificates: {
+ *                 certificates: [`-----BEGIN CERTIFICATE-----
+ * MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
+ * BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
+ * MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
+ * MTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw
+ * EgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD
+ * ZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff
+ * 7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf
+ * uol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru
+ * f8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo
+ * 9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH
+ * qMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa
+ * JMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn
+ * /wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF
+ * MAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s
+ * Z1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB
+ * 99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7
+ * PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
+ * oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
+ * nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
+ * -----END CERTIFICATE-----`],
+ *                 odataType: "#Microsoft.Media.MediaGraphPemCertificateList",
+ *             },
+ *             url: "rtsps://contoso.com:443/stream1",
+ *             validationOptions: {
+ *                 ignoreHostname: true,
+ *                 ignoreSignature: false,
+ *             },
+ *         },
+ *         name: "rtspSource",
+ *         odataType: "#Microsoft.Media.MediaGraphRtspSource",
+ *         transport: "Http",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * media_graph = azure_native.media.MediaGraph("mediaGraph",
+ *     account_name="contosomedia",
+ *     description="updated description",
+ *     media_graph_name="SampleMediaGraph",
+ *     resource_group_name="contoso",
+ *     sinks=[{
+ *         "assetName": "SampleAsset",
+ *         "inputs": ["rtspSource"],
+ *         "name": "AssetSink",
+ *         "odataType": "#Microsoft.Media.MediaGraphAssetSink",
+ *     }],
+ *     sources=[{
+ *         "endpoint": azure_native.media.MediaGraphTlsEndpointArgs(
+ *             credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
+ *                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+ *                 password="examplepassword",
+ *                 username="exampleusername",
+ *             ),
+ *             odata_type="#Microsoft.Media.MediaGraphTlsEndpoint",
+ *             trusted_certificates=azure_native.media.MediaGraphPemCertificateListArgs(
+ *                 certificates=["""-----BEGIN CERTIFICATE-----
+ * MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
+ * BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
+ * MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
+ * MTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw
+ * EgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD
+ * ZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff
+ * 7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf
+ * uol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru
+ * f8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo
+ * 9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH
+ * qMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa
+ * JMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn
+ * /wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF
+ * MAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s
+ * Z1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB
+ * 99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7
+ * PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
+ * oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
+ * nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
+ * -----END CERTIFICATE-----"""],
+ *                 odata_type="#Microsoft.Media.MediaGraphPemCertificateList",
+ *             ),
+ *             url="rtsps://contoso.com:443/stream1",
+ *             validation_options=azure_native.media.MediaGraphTlsValidationOptionsArgs(
+ *                 ignore_hostname=True,
+ *                 ignore_signature=False,
+ *             ),
+ *         ),
+ *         "name": "rtspSource",
+ *         "odataType": "#Microsoft.Media.MediaGraphRtspSource",
+ *         "transport": "Http",
+ *     }])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +369,96 @@ import javax.annotation.Nullable;
 public class MediaGraph extends io.pulumi.resources.CustomResource {
     /**
      * Date the Media Graph was created.
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return Date the Media Graph was created.
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * Media Graph description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Media Graph description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Date the Media Graph was last modified.
-     * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
      * @return Date the Media Graph was last modified.
-     * 
      */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Media Graph sinks.
-     * 
      */
     @Export(name="sinks", type=List.class, parameters={MediaGraphAssetSinkResponse.class})
     private Output<List<MediaGraphAssetSinkResponse>> sinks;
 
     /**
      * @return Media Graph sinks.
-     * 
      */
     public Output<List<MediaGraphAssetSinkResponse>> getSinks() {
         return this.sinks;
     }
     /**
      * Media Graph sources.
-     * 
      */
     @Export(name="sources", type=List.class, parameters={MediaGraphRtspSourceResponse.class})
     private Output<List<MediaGraphRtspSourceResponse>> sources;
 
     /**
      * @return Media Graph sources.
-     * 
      */
     public Output<List<MediaGraphRtspSourceResponse>> getSources() {
         return this.sources;
     }
     /**
      * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Media Graph state which indicates the resource allocation status for running the media graph pipeline.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

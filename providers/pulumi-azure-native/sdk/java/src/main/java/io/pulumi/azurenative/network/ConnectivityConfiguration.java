@@ -20,7 +20,151 @@ import javax.annotation.Nullable;
  * The network manager connectivity configuration resource
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ConnectivityConfigurationsPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connectivityConfiguration = new AzureNative.Network.ConnectivityConfiguration("connectivityConfiguration", new AzureNative.Network.ConnectivityConfigurationArgs
+ *         {
+ *             AppliesToGroups = 
+ *             {
+ *                 new AzureNative.Network.Inputs.ConnectivityGroupItemArgs
+ *                 {
+ *                     GroupConnectivity = "None",
+ *                     IsGlobal = "False",
+ *                     NetworkGroupId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1",
+ *                     UseHubGateway = "True",
+ *                 },
+ *             },
+ *             ConfigurationName = "myTestConnectivityConfig",
+ *             ConnectivityTopology = "HubAndSpoke",
+ *             DeleteExistingPeering = "True",
+ *             Description = "Sample Configuration",
+ *             DisplayName = "myTestConnectivityConfig",
+ *             Hubs = 
+ *             {
+ *                 new AzureNative.Network.Inputs.HubArgs
+ *                 {
+ *                     ResourceId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+ *                     ResourceType = "Microsoft.Network/virtualNetworks",
+ *                 },
+ *             },
+ *             IsGlobal = "True",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewConnectivityConfiguration(ctx, "connectivityConfiguration", &network.ConnectivityConfigurationArgs{
+ * 			AppliesToGroups: []network.ConnectivityGroupItemArgs{
+ * 				&network.ConnectivityGroupItemArgs{
+ * 					GroupConnectivity: pulumi.String("None"),
+ * 					IsGlobal:          pulumi.String("False"),
+ * 					NetworkGroupId:    pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1"),
+ * 					UseHubGateway:     pulumi.String("True"),
+ * 				},
+ * 			},
+ * 			ConfigurationName:     pulumi.String("myTestConnectivityConfig"),
+ * 			ConnectivityTopology:  pulumi.String("HubAndSpoke"),
+ * 			DeleteExistingPeering: pulumi.String("True"),
+ * 			Description:           pulumi.String("Sample Configuration"),
+ * 			DisplayName:           pulumi.String("myTestConnectivityConfig"),
+ * 			Hubs: []network.HubArgs{
+ * 				&network.HubArgs{
+ * 					ResourceId:   pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig"),
+ * 					ResourceType: pulumi.String("Microsoft.Network/virtualNetworks"),
+ * 				},
+ * 			},
+ * 			IsGlobal:           pulumi.String("True"),
+ * 			NetworkManagerName: pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:  pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connectivityConfiguration = new azure_native.network.ConnectivityConfiguration("connectivityConfiguration", {
+ *     appliesToGroups: [{
+ *         groupConnectivity: "None",
+ *         isGlobal: "False",
+ *         networkGroupId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1",
+ *         useHubGateway: "True",
+ *     }],
+ *     configurationName: "myTestConnectivityConfig",
+ *     connectivityTopology: "HubAndSpoke",
+ *     deleteExistingPeering: "True",
+ *     description: "Sample Configuration",
+ *     displayName: "myTestConnectivityConfig",
+ *     hubs: [{
+ *         resourceId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+ *         resourceType: "Microsoft.Network/virtualNetworks",
+ *     }],
+ *     isGlobal: "True",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connectivity_configuration = azure_native.network.ConnectivityConfiguration("connectivityConfiguration",
+ *     applies_to_groups=[azure_native.network.ConnectivityGroupItemArgs(
+ *         group_connectivity="None",
+ *         is_global="False",
+ *         network_group_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1",
+ *         use_hub_gateway="True",
+ *     )],
+ *     configuration_name="myTestConnectivityConfig",
+ *     connectivity_topology="HubAndSpoke",
+ *     delete_existing_peering="True",
+ *     description="Sample Configuration",
+ *     display_name="myTestConnectivityConfig",
+ *     hubs=[azure_native.network.HubArgs(
+ *         resource_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
+ *         resource_type="Microsoft.Network/virtualNetworks",
+ *     )],
+ *     is_global="True",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +179,144 @@ import javax.annotation.Nullable;
 public class ConnectivityConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Groups for configuration
-     * 
      */
     @Export(name="appliesToGroups", type=List.class, parameters={ConnectivityGroupItemResponse.class})
     private Output</* @Nullable */ List<ConnectivityGroupItemResponse>> appliesToGroups;
 
     /**
      * @return Groups for configuration
-     * 
      */
     public Output</* @Nullable */ List<ConnectivityGroupItemResponse>> getAppliesToGroups() {
         return this.appliesToGroups;
     }
     /**
      * Connectivity topology type.
-     * 
      */
     @Export(name="connectivityTopology", type=String.class, parameters={})
     private Output<String> connectivityTopology;
 
     /**
      * @return Connectivity topology type.
-     * 
      */
     public Output<String> getConnectivityTopology() {
         return this.connectivityTopology;
     }
     /**
      * Flag if need to remove current existing peerings.
-     * 
      */
     @Export(name="deleteExistingPeering", type=String.class, parameters={})
     private Output</* @Nullable */ String> deleteExistingPeering;
 
     /**
      * @return Flag if need to remove current existing peerings.
-     * 
      */
     public Output</* @Nullable */ String> getDeleteExistingPeering() {
         return this.deleteExistingPeering;
     }
     /**
      * A description of the connectivity configuration.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the connectivity configuration.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A friendly name for the resource.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A friendly name for the resource.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * List of hubItems
-     * 
      */
     @Export(name="hubs", type=List.class, parameters={HubResponse.class})
     private Output</* @Nullable */ List<HubResponse>> hubs;
 
     /**
      * @return List of hubItems
-     * 
      */
     public Output</* @Nullable */ List<HubResponse>> getHubs() {
         return this.hubs;
     }
     /**
      * Flag if global mesh is supported.
-     * 
      */
     @Export(name="isGlobal", type=String.class, parameters={})
     private Output</* @Nullable */ String> isGlobal;
 
     /**
      * @return Flag if global mesh is supported.
-     * 
      */
     public Output</* @Nullable */ String> getIsGlobal() {
         return this.isGlobal;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the connectivity configuration resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the connectivity configuration resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

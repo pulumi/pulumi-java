@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
-     * 
      */
     @EnumType
     public enum PrivateEndpointServiceConnectionStatus {

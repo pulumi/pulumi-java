@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP Configuration of a VPN Gateway Resource.
- * 
  */
 public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
 
     /**
      * The identifier of the IP configuration for a VPN Gateway.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
 
     /**
      * The private IP address of this IP configuration.
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
@@ -42,7 +39,6 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
 
     /**
      * The public IP address of this IP configuration.
-     * 
      */
     @Import(name="publicIpAddress")
       private final @Nullable String publicIpAddress;

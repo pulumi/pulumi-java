@@ -19,7 +19,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -36,8 +35,7 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
@@ -48,7 +46,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of extension names after which this extension needs to be provisioned.
-     * 
      */
     @Import(name="provisionAfterExtensions")
       private final @Nullable Output<List<String>> provisionAfterExtensions;

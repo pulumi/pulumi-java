@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ConnectionStatePropertiesResponse {
     /**
      * The actions required on the managed private endpoint
-     * 
      */
     private final String actionsRequired;
     /**
      * The managed private endpoint description
-     * 
      */
     private final String description;
     /**
      * The approval status
-     * 
      */
     private final String status;
 
@@ -37,21 +34,18 @@ public final class ConnectionStatePropertiesResponse {
 
     /**
      * The actions required on the managed private endpoint
-     * 
     */
     public String getActionsRequired() {
         return this.actionsRequired;
     }
     /**
      * The managed private endpoint description
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The approval status
-     * 
     */
     public String getStatus() {
         return this.status;

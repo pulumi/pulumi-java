@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine scale set network profile's IP configuration.
- * 
  */
 public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.
-     * 
      */
     @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
@@ -36,7 +34,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Specifies an array of references to application security group.
-     * 
      */
     @Import(name="applicationSecurityGroups")
       private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
@@ -47,7 +44,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -58,7 +54,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.
-     * 
      */
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
@@ -69,7 +64,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.
-     * 
      */
     @Import(name="loadBalancerInboundNatPools")
       private final @Nullable List<SubResourceResponse> loadBalancerInboundNatPools;
@@ -80,7 +74,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * The IP configuration name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -91,7 +84,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Boolean primary;
@@ -102,7 +94,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
-     * 
      */
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
@@ -113,7 +104,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * The publicIPAddressConfiguration.
-     * 
      */
     @Import(name="publicIPAddressConfiguration")
       private final @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration;
@@ -124,7 +114,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
 
     /**
      * Specifies the identifier of the subnet.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable ApiEntityReferenceResponse subnet;

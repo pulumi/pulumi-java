@@ -14,7 +14,6 @@ public final class GetMoveResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Move Collection Name.
-     * 
      */
     @Import(name="moveCollectionName", required=true)
       private final String moveCollectionName;
@@ -25,7 +24,6 @@ public final class GetMoveResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Move Resource Name.
-     * 
      */
     @Import(name="moveResourceName", required=true)
       private final String moveResourceName;
@@ -36,7 +34,6 @@ public final class GetMoveResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

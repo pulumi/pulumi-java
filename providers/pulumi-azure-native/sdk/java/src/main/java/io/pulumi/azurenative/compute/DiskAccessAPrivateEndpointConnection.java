@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * The Private Endpoint Connection resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Approve a Private Endpoint Connection under a disk access resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var diskAccessAPrivateEndpointConnection = new AzureNative.Compute.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection", new AzureNative.Compute.DiskAccessAPrivateEndpointConnectionArgs
+ *         {
+ *             DiskAccessName = "myDiskAccess",
+ *             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
+ *             PrivateLinkServiceConnectionState = new AzureNative.Compute.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "Approving myPrivateEndpointConnection",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewDiskAccessAPrivateEndpointConnection(ctx, "diskAccessAPrivateEndpointConnection", &compute.DiskAccessAPrivateEndpointConnectionArgs{
+ * 			DiskAccessName:                pulumi.String("myDiskAccess"),
+ * 			PrivateEndpointConnectionName: pulumi.String("myPrivateEndpointConnection"),
+ * 			PrivateLinkServiceConnectionState: &compute.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("Approving myPrivateEndpointConnection"),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const diskAccessAPrivateEndpointConnection = new azure_native.compute.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection", {
+ *     diskAccessName: "myDiskAccess",
+ *     privateEndpointConnectionName: "myPrivateEndpointConnection",
+ *     privateLinkServiceConnectionState: {
+ *         description: "Approving myPrivateEndpointConnection",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * disk_access_a_private_endpoint_connection = azure_native.compute.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection",
+ *     disk_access_name="myDiskAccess",
+ *     private_endpoint_connection_name="myPrivateEndpointConnection",
+ *     private_link_service_connection_state=azure_native.compute.PrivateLinkServiceConnectionStateArgs(
+ *         description="Approving myPrivateEndpointConnection",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +123,60 @@ import javax.annotation.Nullable;
 public class DiskAccessAPrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * private endpoint connection name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return private endpoint connection name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output<PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The resource of private end point.
-     * 
      */
     public Output<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between DiskAccess and Virtual Network.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return A collection of information about the state of the connection between DiskAccess and Virtual Network.
-     * 
      */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private endpoint connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * private endpoint connection type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return private endpoint connection type
-     * 
      */
     public Output<String> getType() {
         return this.type;

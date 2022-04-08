@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a script action on role on the cluster.
- * 
  */
 public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the script action.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The parameters for the script provided.
-     * 
      */
     @Import(name="parameters", required=true)
       private final String parameters;
@@ -40,7 +37,6 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URI to the script.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

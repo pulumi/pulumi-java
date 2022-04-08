@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Azure ML WebService Input/Output file
- * 
  */
 public final class AzureMLWebServiceFileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AzureMLWebServiceFileResponse extends io.pulumi.resources.Inv
 
     /**
      * The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="filePath", required=true)
       private final Object filePath;
@@ -30,7 +28,6 @@ public final class AzureMLWebServiceFileResponse extends io.pulumi.resources.Inv
 
     /**
      * Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;

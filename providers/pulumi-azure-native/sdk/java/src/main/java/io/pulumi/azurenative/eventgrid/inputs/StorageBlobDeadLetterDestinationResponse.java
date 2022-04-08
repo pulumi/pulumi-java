@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the storage blob based dead letter destination.
- * 
  */
 public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
 
     /**
      * The name of the Storage blob container that is the destination of the deadletter events
-     * 
      */
     @Import(name="blobContainerName")
       private final @Nullable String blobContainerName;
@@ -32,7 +30,6 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
     /**
      * Type of the endpoint for the dead letter destination
      * Expected value is 'StorageBlob'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final String endpointType;
@@ -43,7 +40,6 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
 
     /**
      * The Azure Resource ID of the storage account that is the destination of the deadletter events
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

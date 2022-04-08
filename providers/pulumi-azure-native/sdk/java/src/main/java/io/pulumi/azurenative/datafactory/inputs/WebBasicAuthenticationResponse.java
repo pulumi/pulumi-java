@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * A WebLinkedService that uses basic authentication to communicate with an HTTP endpoint.
- * 
  */
 public final class WebBasicAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
     /**
      * Type of authentication used to connect to the web table source.
      * Expected value is 'Basic'.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -34,7 +32,6 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
 
     /**
      * The password for Basic authentication.
-     * 
      */
     @Import(name="password", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -45,7 +42,6 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
 
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Object url;
@@ -56,7 +52,6 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
 
     /**
      * User name for Basic authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username", required=true)
       private final Object username;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of support for content item
-     * 
      */
     @EnumType
     public enum SupportTier {

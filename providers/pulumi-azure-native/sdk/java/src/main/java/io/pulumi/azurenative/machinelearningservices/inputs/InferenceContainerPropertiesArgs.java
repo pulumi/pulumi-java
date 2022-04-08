@@ -16,7 +16,6 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The route to check the liveness of the inference server container.
-     * 
      */
     @Import(name="livenessRoute")
       private final @Nullable Output<RouteArgs> livenessRoute;
@@ -27,7 +26,6 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The route to check the readiness of the inference server container.
-     * 
      */
     @Import(name="readinessRoute")
       private final @Nullable Output<RouteArgs> readinessRoute;
@@ -38,7 +36,6 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The port to send the scoring requests to, within the inference server container.
-     * 
      */
     @Import(name="scoringRoute")
       private final @Nullable Output<RouteArgs> scoringRoute;

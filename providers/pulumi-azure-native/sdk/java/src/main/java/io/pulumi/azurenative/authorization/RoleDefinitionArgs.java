@@ -18,7 +18,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role definition assignable scopes.
-     * 
      */
     @Import(name="assignableScopes")
       private final @Nullable Output<List<String>> assignableScopes;
@@ -29,7 +28,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role definition description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role definition permissions.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<PermissionArgs>> permissions;
@@ -51,7 +48,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the role definition.
-     * 
      */
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
@@ -62,7 +58,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
@@ -73,7 +68,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role type.
-     * 
      */
     @Import(name="roleType")
       private final @Nullable Output<String> roleType;
@@ -84,7 +78,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope of the role definition.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

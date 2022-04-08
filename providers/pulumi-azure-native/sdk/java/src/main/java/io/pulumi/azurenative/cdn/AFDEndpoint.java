@@ -20,7 +20,95 @@ import javax.annotation.Nullable;
  * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AFDEndpoints_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var afdEndpoint = new AzureNative.Cdn.AFDEndpoint("afdEndpoint", new AzureNative.Cdn.AFDEndpointArgs
+ *         {
+ *             EnabledState = "Enabled",
+ *             EndpointName = "endpoint1",
+ *             Location = "CentralUs",
+ *             OriginResponseTimeoutSeconds = 30,
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cdn.NewAFDEndpoint(ctx, "afdEndpoint", &cdn.AFDEndpointArgs{
+ * 			EnabledState:                 pulumi.String("Enabled"),
+ * 			EndpointName:                 pulumi.String("endpoint1"),
+ * 			Location:                     pulumi.String("CentralUs"),
+ * 			OriginResponseTimeoutSeconds: pulumi.Int(30),
+ * 			ProfileName:                  pulumi.String("profile1"),
+ * 			ResourceGroupName:            pulumi.String("RG"),
+ * 			Tags:                         nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const afdEndpoint = new azure_native.cdn.AFDEndpoint("afdEndpoint", {
+ *     enabledState: "Enabled",
+ *     endpointName: "endpoint1",
+ *     location: "CentralUs",
+ *     originResponseTimeoutSeconds: 30,
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * afd_endpoint = azure_native.cdn.AFDEndpoint("afdEndpoint",
+ *     enabled_state="Enabled",
+ *     endpoint_name="endpoint1",
+ *     location="CentralUs",
+ *     origin_response_timeout_seconds=30,
+ *     profile_name="profile1",
+ *     resource_group_name="RG",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,126 +129,108 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
     }
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
      * @return Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     public Output</* @Nullable */ String> getEnabledState() {
         return this.enabledState;
     }
     /**
      * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
-     * 
      */
     @Export(name="originResponseTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> originResponseTimeoutSeconds;
 
     /**
      * @return Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
-     * 
      */
     public Output</* @Nullable */ Integer> getOriginResponseTimeoutSeconds() {
         return this.originResponseTimeoutSeconds;
     }
     /**
      * Provisioning status
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

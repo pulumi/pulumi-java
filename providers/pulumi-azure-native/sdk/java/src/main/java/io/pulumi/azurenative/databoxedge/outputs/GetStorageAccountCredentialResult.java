@@ -15,62 +15,50 @@ import javax.annotation.Nullable;
 public final class GetStorageAccountCredentialResult {
     /**
      * Encrypted storage key.
-     * 
      */
     private final @Nullable AsymmetricEncryptedSecretResponse accountKey;
     /**
      * Type of storage accessed on the storage account.
-     * 
      */
     private final String accountType;
     /**
      * Alias for the storage account.
-     * 
      */
     private final String alias;
     /**
      * Blob end point for private clouds.
-     * 
      */
     private final @Nullable String blobDomainName;
     /**
      * Connection string for the storage account. Use this string if username and account key are not specified.
-     * 
      */
     private final @Nullable String connectionString;
     /**
      * The path ID that uniquely identifies the object.
-     * 
      */
     private final String id;
     /**
      * The object name.
-     * 
      */
     private final String name;
     /**
      * Signifies whether SSL needs to be enabled or not.
-     * 
      */
     private final String sslStatus;
     /**
      * Id of the storage account.
-     * 
      */
     private final @Nullable String storageAccountId;
     /**
      * StorageAccountCredential object
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The hierarchical type of the object.
-     * 
      */
     private final String type;
     /**
      * Username for the storage account.
-     * 
      */
     private final @Nullable String userName;
 
@@ -104,84 +92,72 @@ public final class GetStorageAccountCredentialResult {
 
     /**
      * Encrypted storage key.
-     * 
     */
     public Optional<AsymmetricEncryptedSecretResponse> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * Type of storage accessed on the storage account.
-     * 
     */
     public String getAccountType() {
         return this.accountType;
     }
     /**
      * Alias for the storage account.
-     * 
     */
     public String getAlias() {
         return this.alias;
     }
     /**
      * Blob end point for private clouds.
-     * 
     */
     public Optional<String> getBlobDomainName() {
         return Optional.ofNullable(this.blobDomainName);
     }
     /**
      * Connection string for the storage account. Use this string if username and account key are not specified.
-     * 
     */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The path ID that uniquely identifies the object.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Signifies whether SSL needs to be enabled or not.
-     * 
     */
     public String getSslStatus() {
         return this.sslStatus;
     }
     /**
      * Id of the storage account.
-     * 
     */
     public Optional<String> getStorageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
      * StorageAccountCredential object
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Username for the storage account.
-     * 
     */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for the url rewrite action.
- * 
  */
 public final class UrlRewriteActionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
 
     /**
      * Define the relative URL to which the above requests will be rewritten by.
-     * 
      */
     @Import(name="destination", required=true)
       private final String destination;
@@ -39,7 +37,6 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
 
     /**
      * Whether to preserve unmatched path. Default value is true.
-     * 
      */
     @Import(name="preserveUnmatchedPath")
       private final @Nullable Boolean preserveUnmatchedPath;
@@ -50,7 +47,6 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
 
     /**
      * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
-     * 
      */
     @Import(name="sourcePattern", required=true)
       private final String sourcePattern;

@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The kind of DiagnosticsSink.
-     * 
      */
     @EnumType
     public enum DiagnosticsSinkKind {
         /**
          * Indicates an invalid sink kind. All Service Fabric enumerations have the invalid type.
-         * 
          */
         Invalid("Invalid"),
         /**
          * Diagnostics settings for Geneva.
-         * 
          */
         AzureInternalMonitoringPipeline("AzureInternalMonitoringPipeline");
 

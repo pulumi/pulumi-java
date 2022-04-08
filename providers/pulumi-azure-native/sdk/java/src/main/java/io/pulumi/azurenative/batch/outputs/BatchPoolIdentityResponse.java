@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class BatchPoolIdentityResponse {
     /**
      * The type of identity used for the Batch Pool.
-     * 
      */
     private final String type;
     /**
      * The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     * 
      */
     private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
@@ -33,14 +31,12 @@ public final class BatchPoolIdentityResponse {
 
     /**
      * The type of identity used for the Batch Pool.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     * 
     */
     public Map<String,BatchPoolIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

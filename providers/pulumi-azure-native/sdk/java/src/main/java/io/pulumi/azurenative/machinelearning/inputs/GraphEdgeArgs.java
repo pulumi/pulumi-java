@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines an edge within the web service's graph.
- * 
  */
 public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source graph node's identifier.
-     * 
      */
     @Import(name="sourceNodeId")
       private final @Nullable Output<String> sourceNodeId;
@@ -31,7 +29,6 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the source node's port that the edge connects from.
-     * 
      */
     @Import(name="sourcePortId")
       private final @Nullable Output<String> sourcePortId;
@@ -42,7 +39,6 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination graph node's identifier.
-     * 
      */
     @Import(name="targetNodeId")
       private final @Nullable Output<String> targetNodeId;
@@ -53,7 +49,6 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the destination node's port that the edge connects into.
-     * 
      */
     @Import(name="targetPortId")
       private final @Nullable Output<String> targetPortId;

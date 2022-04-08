@@ -18,7 +18,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * The resource Id for the event hub authorization rule.
-     * 
      */
     @Import(name="eventHubAuthorizationRuleId")
       private final @Nullable Output<String> eventHubAuthorizationRuleId;
@@ -29,7 +28,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * The name of the event hub. If none is specified, the default event hub will be selected.
-     * 
      */
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
@@ -40,7 +38,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * Location of the resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * The list of logs settings.
-     * 
      */
     @Import(name="logs")
       private final @Nullable Output<List<SubscriptionLogSettingsArgs>> logs;
@@ -62,7 +58,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * The name of the diagnostic setting.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +68,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     * 
      */
     @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
@@ -84,7 +78,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     * 
      */
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
@@ -95,7 +88,6 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
 
     /**
      * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     * 
      */
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;

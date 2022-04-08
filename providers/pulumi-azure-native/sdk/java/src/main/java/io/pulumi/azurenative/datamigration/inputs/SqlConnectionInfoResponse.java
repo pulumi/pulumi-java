@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information for connecting to SQL database server
- * 
  */
 public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Additional connection settings
-     * 
      */
     @Import(name="additionalSettings")
       private final @Nullable String additionalSettings;
@@ -32,7 +30,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Authentication type to use for connection
-     * 
      */
     @Import(name="authentication")
       private final @Nullable String authentication;
@@ -43,7 +40,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
-     * 
      */
     @Import(name="dataSource", required=true)
       private final String dataSource;
@@ -54,7 +50,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Whether to encrypt the connection
-     * 
      */
     @Import(name="encryptConnection")
       private final @Nullable Boolean encryptConnection;
@@ -65,7 +60,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Password credential.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -76,7 +70,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Server platform type for connection
-     * 
      */
     @Import(name="platform")
       private final @Nullable String platform;
@@ -87,7 +80,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Whether to trust the server certificate
-     * 
      */
     @Import(name="trustServerCertificate")
       private final @Nullable Boolean trustServerCertificate;
@@ -99,7 +91,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
     /**
      * Type of connection info
      * Expected value is 'SqlConnectionInfo'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -110,7 +101,6 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * User name
-     * 
      */
     @Import(name="userName")
       private final @Nullable String userName;

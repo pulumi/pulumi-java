@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the PrivateEndpointConnectProperties.
- * 
  */
 public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
 
     /**
      * The private link resource group ids.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
@@ -34,7 +32,6 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
 
     /**
      * The resource of private end point.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
@@ -45,7 +42,6 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;

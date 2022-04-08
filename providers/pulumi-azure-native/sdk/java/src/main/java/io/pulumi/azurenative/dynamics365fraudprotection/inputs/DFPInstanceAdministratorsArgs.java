@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An array of administrator user identities
- * 
  */
 public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
 
     /**
      * An array of administrator user identities.
-     * 
      */
     @Import(name="members")
       private final @Nullable Output<List<String>> members;

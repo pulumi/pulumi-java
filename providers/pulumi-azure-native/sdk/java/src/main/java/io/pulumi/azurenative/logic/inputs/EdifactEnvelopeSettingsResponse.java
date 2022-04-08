@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Edifact agreement envelope settings.
- * 
  */
 public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The application reference id.
-     * 
      */
     @Import(name="applicationReferenceId")
       private final @Nullable String applicationReferenceId;
@@ -33,7 +31,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether to apply delimiter string advice.
-     * 
      */
     @Import(name="applyDelimiterStringAdvice", required=true)
       private final Boolean applyDelimiterStringAdvice;
@@ -44,7 +41,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The communication agreement id.
-     * 
      */
     @Import(name="communicationAgreementId")
       private final @Nullable String communicationAgreementId;
@@ -55,7 +51,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether to create grouping segments.
-     * 
      */
     @Import(name="createGroupingSegments", required=true)
       private final Boolean createGroupingSegments;
@@ -66,7 +61,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether to enable default group headers.
-     * 
      */
     @Import(name="enableDefaultGroupHeaders", required=true)
       private final Boolean enableDefaultGroupHeaders;
@@ -77,7 +71,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The functional group id.
-     * 
      */
     @Import(name="functionalGroupId")
       private final @Nullable String functionalGroupId;
@@ -88,7 +81,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group application password.
-     * 
      */
     @Import(name="groupApplicationPassword")
       private final @Nullable String groupApplicationPassword;
@@ -99,7 +91,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group application receiver id.
-     * 
      */
     @Import(name="groupApplicationReceiverId")
       private final @Nullable String groupApplicationReceiverId;
@@ -110,7 +101,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group application receiver qualifier.
-     * 
      */
     @Import(name="groupApplicationReceiverQualifier")
       private final @Nullable String groupApplicationReceiverQualifier;
@@ -121,7 +111,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group application sender id.
-     * 
      */
     @Import(name="groupApplicationSenderId")
       private final @Nullable String groupApplicationSenderId;
@@ -132,7 +121,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group application sender qualifier.
-     * 
      */
     @Import(name="groupApplicationSenderQualifier")
       private final @Nullable String groupApplicationSenderQualifier;
@@ -143,7 +131,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group association assigned code.
-     * 
      */
     @Import(name="groupAssociationAssignedCode")
       private final @Nullable String groupAssociationAssignedCode;
@@ -154,7 +141,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group control number lower bound.
-     * 
      */
     @Import(name="groupControlNumberLowerBound", required=true)
       private final Double groupControlNumberLowerBound;
@@ -165,7 +151,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group control number prefix.
-     * 
      */
     @Import(name="groupControlNumberPrefix")
       private final @Nullable String groupControlNumberPrefix;
@@ -176,7 +161,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group control number suffix.
-     * 
      */
     @Import(name="groupControlNumberSuffix")
       private final @Nullable String groupControlNumberSuffix;
@@ -187,7 +171,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group control number upper bound.
-     * 
      */
     @Import(name="groupControlNumberUpperBound", required=true)
       private final Double groupControlNumberUpperBound;
@@ -198,7 +181,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group controlling agency code.
-     * 
      */
     @Import(name="groupControllingAgencyCode")
       private final @Nullable String groupControllingAgencyCode;
@@ -209,7 +191,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group message release.
-     * 
      */
     @Import(name="groupMessageRelease")
       private final @Nullable String groupMessageRelease;
@@ -220,7 +201,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The group message version.
-     * 
      */
     @Import(name="groupMessageVersion")
       private final @Nullable String groupMessageVersion;
@@ -231,7 +211,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The interchange control number lower bound.
-     * 
      */
     @Import(name="interchangeControlNumberLowerBound", required=true)
       private final Double interchangeControlNumberLowerBound;
@@ -242,7 +221,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The interchange control number prefix.
-     * 
      */
     @Import(name="interchangeControlNumberPrefix")
       private final @Nullable String interchangeControlNumberPrefix;
@@ -253,7 +231,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The interchange control number suffix.
-     * 
      */
     @Import(name="interchangeControlNumberSuffix")
       private final @Nullable String interchangeControlNumberSuffix;
@@ -264,7 +241,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The interchange control number upper bound.
-     * 
      */
     @Import(name="interchangeControlNumberUpperBound", required=true)
       private final Double interchangeControlNumberUpperBound;
@@ -275,7 +251,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether the message is a test interchange.
-     * 
      */
     @Import(name="isTestInterchange", required=true)
       private final Boolean isTestInterchange;
@@ -286,7 +261,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether to overwrite existing transaction set control number.
-     * 
      */
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
       private final Boolean overwriteExistingTransactionSetControlNumber;
@@ -297,7 +271,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The processing priority code.
-     * 
      */
     @Import(name="processingPriorityCode")
       private final @Nullable String processingPriorityCode;
@@ -308,7 +281,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The receiver internal identification.
-     * 
      */
     @Import(name="receiverInternalIdentification")
       private final @Nullable String receiverInternalIdentification;
@@ -319,7 +291,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The receiver internal sub identification.
-     * 
      */
     @Import(name="receiverInternalSubIdentification")
       private final @Nullable String receiverInternalSubIdentification;
@@ -330,7 +301,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The receiver reverse routing address.
-     * 
      */
     @Import(name="receiverReverseRoutingAddress")
       private final @Nullable String receiverReverseRoutingAddress;
@@ -341,7 +311,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The recipient reference password qualifier.
-     * 
      */
     @Import(name="recipientReferencePasswordQualifier")
       private final @Nullable String recipientReferencePasswordQualifier;
@@ -352,7 +321,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The recipient reference password value.
-     * 
      */
     @Import(name="recipientReferencePasswordValue")
       private final @Nullable String recipientReferencePasswordValue;
@@ -363,7 +331,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether to rollover group control number.
-     * 
      */
     @Import(name="rolloverGroupControlNumber", required=true)
       private final Boolean rolloverGroupControlNumber;
@@ -374,7 +341,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether to rollover interchange control number.
-     * 
      */
     @Import(name="rolloverInterchangeControlNumber", required=true)
       private final Boolean rolloverInterchangeControlNumber;
@@ -385,7 +351,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The value indicating whether to rollover transaction set control number.
-     * 
      */
     @Import(name="rolloverTransactionSetControlNumber", required=true)
       private final Boolean rolloverTransactionSetControlNumber;
@@ -396,7 +361,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The sender internal identification.
-     * 
      */
     @Import(name="senderInternalIdentification")
       private final @Nullable String senderInternalIdentification;
@@ -407,7 +371,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The sender internal sub identification.
-     * 
      */
     @Import(name="senderInternalSubIdentification")
       private final @Nullable String senderInternalSubIdentification;
@@ -418,7 +381,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The sender reverse routing address.
-     * 
      */
     @Import(name="senderReverseRoutingAddress")
       private final @Nullable String senderReverseRoutingAddress;
@@ -429,7 +391,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The transaction set control number lower bound.
-     * 
      */
     @Import(name="transactionSetControlNumberLowerBound", required=true)
       private final Double transactionSetControlNumberLowerBound;
@@ -440,7 +401,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The transaction set control number prefix.
-     * 
      */
     @Import(name="transactionSetControlNumberPrefix")
       private final @Nullable String transactionSetControlNumberPrefix;
@@ -451,7 +411,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The transaction set control number suffix.
-     * 
      */
     @Import(name="transactionSetControlNumberSuffix")
       private final @Nullable String transactionSetControlNumberSuffix;
@@ -462,7 +421,6 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
 
     /**
      * The transaction set control number upper bound.
-     * 
      */
     @Import(name="transactionSetControlNumberUpperBound", required=true)
       private final Double transactionSetControlNumberUpperBound;

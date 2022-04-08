@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Nat Gateway resource.
- * 
  */
 public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -36,7 +34,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The idle timeout of the nat gateway.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
@@ -47,7 +44,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -58,7 +54,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of public ip addresses associated with the nat gateway resource.
-     * 
      */
     @Import(name="publicIpAddresses")
       private final @Nullable Output<List<SubResourceArgs>> publicIpAddresses;
@@ -69,7 +64,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of public ip prefixes associated with the nat gateway resource.
-     * 
      */
     @Import(name="publicIpPrefixes")
       private final @Nullable Output<List<SubResourceArgs>> publicIpPrefixes;
@@ -80,7 +74,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The nat gateway SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<NatGatewaySkuArgs> sku;
@@ -91,7 +84,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -102,7 +94,6 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of RunAs credential to use for hybrid worker.
- * 
  */
 public final class RunAsCredentialAssociationPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RunAsCredentialAssociationPropertyArgs extends io.pulumi.reso
 
     /**
      * Gets or sets the name of the credential.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

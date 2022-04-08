@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifying this parameter adds support for reliable collections
- * 
  */
 public final class ReliableCollectionsRefResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ReliableCollectionsRefResponse extends io.pulumi.resources.In
 
     /**
      * False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
-     * 
      */
     @Import(name="doNotPersistState")
       private final @Nullable Boolean doNotPersistState;
@@ -32,7 +30,6 @@ public final class ReliableCollectionsRefResponse extends io.pulumi.resources.In
 
     /**
      * Name of ReliableCollection resource. Right now it's not used and you can use any string.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information about the VM.
- * 
  */
 public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure resource Id of the VM.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * UUID(Universally Unique Identifier) of the VM.
-     * 
      */
     @Import(name="uuid", required=true)
       private final String uuid;

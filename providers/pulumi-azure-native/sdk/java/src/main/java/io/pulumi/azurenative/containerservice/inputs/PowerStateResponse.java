@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the Power State of the cluster
- * 
  */
 public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tells whether the cluster is Running or Stopped
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;

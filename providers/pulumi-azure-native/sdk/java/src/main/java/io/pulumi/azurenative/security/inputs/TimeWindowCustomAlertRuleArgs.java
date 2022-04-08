@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A custom alert rule that checks if the number of activities (depends on the custom alert type) in a time window is within the given range.
- * 
  */
 public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
 
     /**
      * Status of the custom alert.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -32,7 +30,6 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
 
     /**
      * The maximum threshold.
-     * 
      */
     @Import(name="maxThreshold", required=true)
       private final Output<Integer> maxThreshold;
@@ -43,7 +40,6 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
 
     /**
      * The minimum threshold.
-     * 
      */
     @Import(name="minThreshold", required=true)
       private final Output<Integer> minThreshold;
@@ -55,7 +51,6 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
     /**
      * The type of the custom alert rule.
      * Expected value is 'TimeWindowCustomAlertRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
@@ -66,7 +61,6 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
 
     /**
      * The time window size in iso8601 format.
-     * 
      */
     @Import(name="timeWindowSize", required=true)
       private final Output<String> timeWindowSize;

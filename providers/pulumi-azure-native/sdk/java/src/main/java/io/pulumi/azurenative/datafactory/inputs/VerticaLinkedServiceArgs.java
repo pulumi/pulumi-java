@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Vertica linked service.
- * 
  */
 public final class VerticaLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -37,7 +35,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -48,7 +45,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
@@ -59,7 +55,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -70,7 +65,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -81,7 +75,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -92,7 +85,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The Azure key vault secret reference of password in connection string.
-     * 
      */
     @Import(name="pwd")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> pwd;
@@ -104,7 +96,6 @@ public final class VerticaLinkedServiceArgs extends io.pulumi.resources.Resource
     /**
      * Type of linked service.
      * Expected value is 'Vertica'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The IP Filter Action
-     * 
      */
     @EnumType
     public enum IPAction {

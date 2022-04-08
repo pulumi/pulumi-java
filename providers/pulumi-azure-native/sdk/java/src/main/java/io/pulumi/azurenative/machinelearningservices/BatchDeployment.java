@@ -18,9 +18,352 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Batch Deployment.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batchDeployment = new AzureNative.MachineLearningServices.BatchDeployment("batchDeployment", new AzureNative.MachineLearningServices.BatchDeploymentArgs
+ *         {
+ *             DeploymentName = "testBatchDeployment",
+ *             EndpointName = "testBatchEndpoint",
+ *             Identity = new AzureNative.MachineLearningServices.Inputs.ResourceIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity", new AzureNative.MachineLearningServices.Inputs.UserAssignedIdentityMetaArgs
+ *                     {
+ *                         ClientId = "string",
+ *                         PrincipalId = "string",
+ *                     } },
+ *                 },
+ *             },
+ *             Kind = "string",
+ *             Location = "string",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.BatchDeploymentArgs
+ *             {
+ *                 CodeConfiguration = new AzureNative.MachineLearningServices.Inputs.CodeConfigurationArgs
+ *                 {
+ *                     CodeId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/testcode/versions/1",
+ *                     ScoringScript = "score.py",
+ *                 },
+ *                 Compute = new AzureNative.MachineLearningServices.Inputs.ComputeConfigurationArgs
+ *                 {
+ *                     InstanceCount = 0,
+ *                     InstanceType = "string",
+ *                     IsLocal = false,
+ *                     Location = "string",
+ *                     Properties = 
+ *                     {
+ *                         { "additionalProp1", "string" },
+ *                         { "additionalProp2", "string" },
+ *                         { "additionalProp3", "string" },
+ *                     },
+ *                     Target = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/testcompute",
+ *                 },
+ *                 Description = "string",
+ *                 EnvironmentId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/myenv",
+ *                 EnvironmentVariables = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 ErrorThreshold = 0,
+ *                 LoggingLevel = "Info",
+ *                 MiniBatchSize = 0,
+ *                 Model = new AzureNative.MachineLearningServices.Inputs.IdAssetReferenceArgs
+ *                 {
+ *                     AssetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/testmodel/versions/1",
+ *                     ReferenceType = "Id",
+ *                 },
+ *                 OutputConfiguration = new AzureNative.MachineLearningServices.Inputs.BatchOutputConfigurationArgs
+ *                 {
+ *                     AppendRowFileName = "string",
+ *                     OutputAction = "SummaryOnly",
+ *                 },
+ *                 PartitionKeys = 
+ *                 {
+ *                     "string",
+ *                 },
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 RetrySettings = new AzureNative.MachineLearningServices.Inputs.BatchRetrySettingsArgs
+ *                 {
+ *                     MaxRetries = 0,
+ *                     Timeout = "string",
+ *                 },
+ *             },
+ *             ResourceGroupName = "resourceGroup-1234",
+ *             Tags = 
+ *             {
+ *                 { "additionalProp1", "string" },
+ *                 { "additionalProp2", "string" },
+ *                 { "additionalProp3", "string" },
+ *             },
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewBatchDeployment(ctx, "batchDeployment", &machinelearningservices.BatchDeploymentArgs{
+ * 			DeploymentName: pulumi.String("testBatchDeployment"),
+ * 			EndpointName:   pulumi.String("testBatchEndpoint"),
+ * 			Identity: &machinelearningservices.ResourceIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+ * 					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+ * 						ClientId:    pulumi.String("string"),
+ * 						PrincipalId: pulumi.String("string"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Kind:     pulumi.String("string"),
+ * 			Location: pulumi.String("string"),
+ * 			Properties: &machinelearningservices.BatchDeploymentArgs{
+ * 				CodeConfiguration: &machinelearningservices.CodeConfigurationArgs{
+ * 					CodeId:        pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/testcode/versions/1"),
+ * 					ScoringScript: pulumi.String("score.py"),
+ * 				},
+ * 				Compute: &machinelearningservices.ComputeConfigurationArgs{
+ * 					InstanceCount: pulumi.Int(0),
+ * 					InstanceType:  pulumi.String("string"),
+ * 					IsLocal:       pulumi.Bool(false),
+ * 					Location:      pulumi.String("string"),
+ * 					Properties: pulumi.StringMap{
+ * 						"additionalProp1": pulumi.String("string"),
+ * 						"additionalProp2": pulumi.String("string"),
+ * 						"additionalProp3": pulumi.String("string"),
+ * 					},
+ * 					Target: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/testcompute"),
+ * 				},
+ * 				Description:   pulumi.String("string"),
+ * 				EnvironmentId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/myenv"),
+ * 				EnvironmentVariables: pulumi.StringMap{
+ * 					"additionalProp1": pulumi.String("string"),
+ * 					"additionalProp2": pulumi.String("string"),
+ * 					"additionalProp3": pulumi.String("string"),
+ * 				},
+ * 				ErrorThreshold: pulumi.Int(0),
+ * 				LoggingLevel:   pulumi.String("Info"),
+ * 				MiniBatchSize:  pulumi.Float64(0),
+ * 				Model: machinelearningservices.IdAssetReference{
+ * 					AssetId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/testmodel/versions/1",
+ * 					ReferenceType: "Id",
+ * 				},
+ * 				OutputConfiguration: &machinelearningservices.BatchOutputConfigurationArgs{
+ * 					AppendRowFileName: pulumi.String("string"),
+ * 					OutputAction:      pulumi.String("SummaryOnly"),
+ * 				},
+ * 				PartitionKeys: pulumi.StringArray{
+ * 					pulumi.String("string"),
+ * 				},
+ * 				Properties: pulumi.StringMap{
+ * 					"additionalProp1": pulumi.String("string"),
+ * 					"additionalProp2": pulumi.String("string"),
+ * 					"additionalProp3": pulumi.String("string"),
+ * 				},
+ * 				RetrySettings: &machinelearningservices.BatchRetrySettingsArgs{
+ * 					MaxRetries: pulumi.Int(0),
+ * 					Timeout:    pulumi.String("string"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroup-1234"),
+ * 			Tags: pulumi.StringMap{
+ * 				"additionalProp1": pulumi.String("string"),
+ * 				"additionalProp2": pulumi.String("string"),
+ * 				"additionalProp3": pulumi.String("string"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("testworkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const batchDeployment = new azure_native.machinelearningservices.BatchDeployment("batchDeployment", {
+ *     deploymentName: "testBatchDeployment",
+ *     endpointName: "testBatchEndpoint",
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": {
+ *                 clientId: "string",
+ *                 principalId: "string",
+ *             },
+ *         },
+ *     },
+ *     kind: "string",
+ *     location: "string",
+ *     properties: {
+ *         codeConfiguration: {
+ *             codeId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/testcode/versions/1",
+ *             scoringScript: "score.py",
+ *         },
+ *         compute: {
+ *             instanceCount: 0,
+ *             instanceType: "string",
+ *             isLocal: false,
+ *             location: "string",
+ *             properties: {
+ *                 additionalProp1: "string",
+ *                 additionalProp2: "string",
+ *                 additionalProp3: "string",
+ *             },
+ *             target: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/testcompute",
+ *         },
+ *         description: "string",
+ *         environmentId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/myenv",
+ *         environmentVariables: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         errorThreshold: 0,
+ *         loggingLevel: "Info",
+ *         miniBatchSize: 0,
+ *         model: {
+ *             assetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/testmodel/versions/1",
+ *             referenceType: "Id",
+ *         },
+ *         outputConfiguration: {
+ *             appendRowFileName: "string",
+ *             outputAction: "SummaryOnly",
+ *         },
+ *         partitionKeys: ["string"],
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         retrySettings: {
+ *             maxRetries: 0,
+ *             timeout: "string",
+ *         },
+ *     },
+ *     resourceGroupName: "resourceGroup-1234",
+ *     tags: {
+ *         additionalProp1: "string",
+ *         additionalProp2: "string",
+ *         additionalProp3: "string",
+ *     },
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * batch_deployment = azure_native.machinelearningservices.BatchDeployment("batchDeployment",
+ *     deployment_name="testBatchDeployment",
+ *     endpoint_name="testBatchEndpoint",
+ *     identity=azure_native.machinelearningservices.ResourceIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": azure_native.machinelearningservices.UserAssignedIdentityMetaArgs(
+ *                 client_id="string",
+ *                 principal_id="string",
+ *             ),
+ *         },
+ *     ),
+ *     kind="string",
+ *     location="string",
+ *     properties=azure_native.machinelearningservices.BatchDeploymentArgs(
+ *         code_configuration=azure_native.machinelearningservices.CodeConfigurationArgs(
+ *             code_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/testcode/versions/1",
+ *             scoring_script="score.py",
+ *         ),
+ *         compute=azure_native.machinelearningservices.ComputeConfigurationArgs(
+ *             instance_count=0,
+ *             instance_type="string",
+ *             is_local=False,
+ *             location="string",
+ *             properties={
+ *                 "additionalProp1": "string",
+ *                 "additionalProp2": "string",
+ *                 "additionalProp3": "string",
+ *             },
+ *             target="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/testcompute",
+ *         ),
+ *         description="string",
+ *         environment_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/myenv",
+ *         environment_variables={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         error_threshold=0,
+ *         logging_level="Info",
+ *         mini_batch_size=0,
+ *         model=azure_native.machinelearningservices.IdAssetReferenceArgs(
+ *             asset_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/testmodel/versions/1",
+ *             reference_type="Id",
+ *         ),
+ *         output_configuration=azure_native.machinelearningservices.BatchOutputConfigurationArgs(
+ *             append_row_file_name="string",
+ *             output_action="SummaryOnly",
+ *         ),
+ *         partition_keys=["string"],
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         retry_settings=azure_native.machinelearningservices.BatchRetrySettingsArgs(
+ *             max_retries=0,
+ *             timeout="string",
+ *         ),
+ *     ),
+ *     resource_group_name="resourceGroup-1234",
+ *     tags={
+ *         "additionalProp1": "string",
+ *         "additionalProp2": "string",
+ *         "additionalProp3": "string",
+ *     },
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +378,96 @@ import javax.annotation.Nullable;
 public class BatchDeployment extends io.pulumi.resources.CustomResource {
     /**
      * Service identity associated with a resource.
-     * 
      */
     @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
      * @return Service identity associated with a resource.
-     * 
      */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=BatchDeploymentResponse.class, parameters={})
     private Output<BatchDeploymentResponse> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<BatchDeploymentResponse> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -28,7 +28,6 @@ import java.util.Objects;
 
 /**
  * Properties of an assessment.
- * 
  */
 public final class AssessmentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -36,7 +35,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Storage type selected for this disk.
-     * 
      */
     @Import(name="azureDiskType", required=true)
       private final Output<Either<String,AzureDiskType>> azureDiskType;
@@ -47,7 +45,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * AHUB discount on windows virtual machines.
-     * 
      */
     @Import(name="azureHybridUseBenefit", required=true)
       private final Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
@@ -58,7 +55,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
-     * 
      */
     @Import(name="azureLocation", required=true)
       private final Output<Either<String,AzureLocation>> azureLocation;
@@ -69,7 +65,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Offer code according to which cost estimation is done.
-     * 
      */
     @Import(name="azureOfferCode", required=true)
       private final Output<Either<String,AzureOfferCode>> azureOfferCode;
@@ -80,7 +75,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Pricing tier for Size evaluation.
-     * 
      */
     @Import(name="azurePricingTier", required=true)
       private final Output<Either<String,AzurePricingTier>> azurePricingTier;
@@ -91,7 +85,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Storage Redundancy type offered by Azure.
-     * 
      */
     @Import(name="azureStorageRedundancy", required=true)
       private final Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
@@ -102,7 +95,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * List of azure VM families.
-     * 
      */
     @Import(name="azureVmFamilies", required=true)
       private final Output<List<Either<String,AzureVmFamily>>> azureVmFamilies;
@@ -113,7 +105,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Currency to report prices in.
-     * 
      */
     @Import(name="currency", required=true)
       private final Output<Either<String,Currency>> currency;
@@ -124,7 +115,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
-     * 
      */
     @Import(name="discountPercentage", required=true)
       private final Output<Double> discountPercentage;
@@ -135,7 +125,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Percentile of performance data used to recommend Azure size.
-     * 
      */
     @Import(name="percentile", required=true)
       private final Output<Either<String,Percentile>> percentile;
@@ -146,7 +135,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Azure reserved instance.
-     * 
      */
     @Import(name="reservedInstance", required=true)
       private final Output<Either<String,ReservedInstance>> reservedInstance;
@@ -157,7 +145,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
-     * 
      */
     @Import(name="scalingFactor", required=true)
       private final Output<Double> scalingFactor;
@@ -168,7 +155,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Assessment sizing criterion.
-     * 
      */
     @Import(name="sizingCriterion", required=true)
       private final Output<Either<String,AssessmentSizingCriterion>> sizingCriterion;
@@ -179,7 +165,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * User configurable setting that describes the status of the assessment.
-     * 
      */
     @Import(name="stage", required=true)
       private final Output<Either<String,AssessmentStage>> stage;
@@ -190,7 +175,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Time range of performance data used to recommend a size.
-     * 
      */
     @Import(name="timeRange", required=true)
       private final Output<Either<String,TimeRange>> timeRange;
@@ -201,7 +185,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Specify the duration for which the VMs are up in the on-premises environment.
-     * 
      */
     @Import(name="vmUptime", required=true)
       private final Output<VmUptimeArgs> vmUptime;

@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class EffectiveVirtualNetworkResponse {
     /**
      * Effective vnet Id.
-     * 
      */
     private final @Nullable String id;
     /**
      * Location of vnet.
-     * 
      */
     private final @Nullable String location;
     /**
      * Membership Type.
-     * 
      */
     private final @Nullable String membershipType;
 
@@ -39,21 +36,18 @@ public final class EffectiveVirtualNetworkResponse {
 
     /**
      * Effective vnet Id.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Location of vnet.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Membership Type.
-     * 
     */
     public Optional<String> getMembershipType() {
         return Optional.ofNullable(this.membershipType);

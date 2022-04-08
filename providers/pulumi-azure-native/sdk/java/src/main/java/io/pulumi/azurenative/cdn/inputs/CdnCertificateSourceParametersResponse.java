@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines the parameters for using CDN managed certificate for securing custom domain.
- * 
  */
 public final class CdnCertificateSourceParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CdnCertificateSourceParametersResponse extends io.pulumi.reso
 
     /**
      * Type of certificate used
-     * 
      */
     @Import(name="certificateType", required=true)
       private final String certificateType;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for a Python environment.
- * 
  */
 public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
 
     /**
      * A JObject containing Conda dependencies.
-     * 
      */
     @Import(name="condaDependencies")
       private final @Nullable Output<Object> condaDependencies;
@@ -40,7 +38,6 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
 
     /**
      * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
-     * 
      */
     @Import(name="interpreterPath")
       private final @Nullable Output<String> interpreterPath;
@@ -51,7 +48,6 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
 
     /**
      * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
-     * 
      */
     @Import(name="userManagedDependencies")
       private final @Nullable Output<Boolean> userManagedDependencies;

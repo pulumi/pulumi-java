@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The event response message received from the service URI.
- * 
  */
 public final class EventResponseMessageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
 
     /**
      * The content of the event response message.
-     * 
      */
     @Import(name="content")
       private final @Nullable String content;
@@ -32,7 +30,6 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
 
     /**
      * The headers of the event response message.
-     * 
      */
     @Import(name="headers")
       private final @Nullable Map<String,String> headers;
@@ -43,7 +40,6 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
 
     /**
      * The reason phrase of the event response message.
-     * 
      */
     @Import(name="reasonPhrase")
       private final @Nullable String reasonPhrase;
@@ -54,7 +50,6 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
 
     /**
      * The status code of the event response message.
-     * 
      */
     @Import(name="statusCode")
       private final @Nullable String statusCode;
@@ -65,7 +60,6 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
 
     /**
      * The HTTP message version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

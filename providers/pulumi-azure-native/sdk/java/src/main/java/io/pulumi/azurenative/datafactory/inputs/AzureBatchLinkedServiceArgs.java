@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Batch linked service.
- * 
  */
 public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The Azure Batch account access key.
-     * 
      */
     @Import(name="accessKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
@@ -41,7 +39,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The Azure Batch account name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<Object> accountName;
@@ -52,7 +49,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -63,7 +59,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The Azure Batch URI. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="batchUri", required=true)
       private final Output<Object> batchUri;
@@ -74,7 +69,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -85,7 +79,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
@@ -96,7 +89,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -107,7 +99,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -118,7 +109,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The Azure Storage linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -129,7 +119,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -140,7 +129,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The Azure Batch pool name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="poolName", required=true)
       private final Output<Object> poolName;
@@ -152,7 +140,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
     /**
      * Type of linked service.
      * Expected value is 'AzureBatch'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

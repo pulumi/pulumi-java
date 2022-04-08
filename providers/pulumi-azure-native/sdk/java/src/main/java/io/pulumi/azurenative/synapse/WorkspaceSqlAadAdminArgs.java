@@ -16,7 +16,6 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
 
     /**
      * Workspace active directory administrator type
-     * 
      */
     @Import(name="administratorType")
       private final @Nullable Output<String> administratorType;
@@ -27,7 +26,6 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
 
     /**
      * Login of the workspace active directory administrator
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<String> login;
@@ -38,7 +36,6 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
 
     /**
      * Object ID of the workspace active directory administrator
-     * 
      */
     @Import(name="sid")
       private final @Nullable Output<String> sid;
@@ -60,7 +56,6 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
 
     /**
      * Tenant ID of the workspace active directory administrator
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -71,7 +66,6 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

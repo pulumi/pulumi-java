@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The HTTP header.
- * 
  */
 public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name in HTTP header.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value in HTTP header.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

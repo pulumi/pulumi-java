@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * Integration runtime resource type.
  * API Version: 2018-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### IntegrationRuntimes_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integrationRuntime = new AzureNative.DataFactory.IntegrationRuntime("integrationRuntime", new AzureNative.DataFactory.IntegrationRuntimeArgs
+ *         {
+ *             FactoryName = "exampleFactoryName",
+ *             IntegrationRuntimeName = "exampleIntegrationRuntime",
+ *             Properties = new AzureNative.DataFactory.Inputs.SelfHostedIntegrationRuntimeArgs
+ *             {
+ *                 Description = "A selfhosted integration runtime",
+ *                 Type = "SelfHosted",
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datafactory.NewIntegrationRuntime(ctx, "integrationRuntime", &datafactory.IntegrationRuntimeArgs{
+ * 			FactoryName:            pulumi.String("exampleFactoryName"),
+ * 			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
+ * 			Properties: datafactory.SelfHostedIntegrationRuntime{
+ * 				Description: "A selfhosted integration runtime",
+ * 				Type:        "SelfHosted",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const integrationRuntime = new azure_native.datafactory.IntegrationRuntime("integrationRuntime", {
+ *     factoryName: "exampleFactoryName",
+ *     integrationRuntimeName: "exampleIntegrationRuntime",
+ *     properties: {
+ *         description: "A selfhosted integration runtime",
+ *         type: "SelfHosted",
+ *     },
+ *     resourceGroupName: "exampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * integration_runtime = azure_native.datafactory.IntegrationRuntime("integrationRuntime",
+ *     factory_name="exampleFactoryName",
+ *     integration_runtime_name="exampleIntegrationRuntime",
+ *     properties=azure_native.datafactory.SelfHostedIntegrationRuntimeArgs(
+ *         description="A selfhosted integration runtime",
+ *         type="SelfHosted",
+ *     ),
+ *     resource_group_name="exampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,56 +124,48 @@ import javax.annotation.Nullable;
 public class IntegrationRuntime extends io.pulumi.resources.CustomResource {
     /**
      * Etag identifies change in the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Etag identifies change in the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Integration runtime properties.
-     * 
      */
     @Export(name="properties", type=Either.class, parameters={ManagedIntegrationRuntimeResponse.class, SelfHostedIntegrationRuntimeResponse.class})
     private Output<Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse>> properties;
 
     /**
      * @return Integration runtime properties.
-     * 
      */
     public Output<Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse>> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

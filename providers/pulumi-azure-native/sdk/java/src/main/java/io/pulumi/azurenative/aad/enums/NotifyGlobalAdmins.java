@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Should global admins be notified
-     * 
      */
     @EnumType
     public enum NotifyGlobalAdmins {

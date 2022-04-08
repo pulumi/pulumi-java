@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the customer managed key associated with the workspace
- * 
  */
 public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
 
     /**
      * The key object of the workspace
-     * 
      */
     @Import(name="key")
       private final @Nullable WorkspaceKeyDetailsResponse key;
@@ -32,7 +30,6 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
 
     /**
      * The customer managed key status on the workspace
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Disk's independence mode type
-     * 
      */
     @EnumType
     public enum DiskIndependenceMode {

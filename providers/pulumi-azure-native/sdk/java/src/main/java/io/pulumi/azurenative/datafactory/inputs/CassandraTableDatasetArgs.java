@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Cassandra database dataset.
- * 
  */
 public final class CassandraTableDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -37,7 +35,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -48,7 +45,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
@@ -59,7 +55,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * The keyspace of the Cassandra database. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="keyspace")
       private final @Nullable Output<Object> keyspace;
@@ -70,7 +65,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -81,7 +75,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -92,7 +85,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
@@ -103,7 +95,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
@@ -114,7 +105,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
 
     /**
      * The table name of the Cassandra database. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<Object> tableName;
@@ -126,7 +116,6 @@ public final class CassandraTableDatasetArgs extends io.pulumi.resources.Resourc
     /**
      * Type of dataset.
      * Expected value is 'CassandraTable'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

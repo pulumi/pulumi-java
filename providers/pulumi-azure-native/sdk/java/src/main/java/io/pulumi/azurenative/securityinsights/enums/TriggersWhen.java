@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * The type of event the automation rule triggers on
-     * 
      */
     @EnumType
     public enum TriggersWhen {
         /**
          * Trigger on created objects
-         * 
          */
         Created("Created");
 

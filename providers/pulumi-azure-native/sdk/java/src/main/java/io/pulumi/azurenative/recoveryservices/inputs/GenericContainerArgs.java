@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for generic container of backup items
- * 
  */
 public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -38,7 +36,6 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'GenericContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
@@ -49,7 +46,6 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Extended information (not returned in List container API calls)
-     * 
      */
     @Import(name="extendedInformation")
       private final @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
@@ -60,7 +56,6 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the container's fabric
-     * 
      */
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
@@ -71,7 +66,6 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -82,7 +76,6 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
@@ -93,7 +86,6 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;

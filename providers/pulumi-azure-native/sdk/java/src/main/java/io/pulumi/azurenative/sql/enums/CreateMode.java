@@ -26,7 +26,6 @@ import java.util.StringJoiner;
      * RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
      * 
      * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
-     * 
      */
     @EnumType
     public enum CreateMode {

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes a reference to Key Vault Key.
- * 
  */
 public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The URL referencing a key encryption key in Key Vault.
-     * 
      */
     @Import(name="keyUrl", required=true)
       private final String keyUrl;
@@ -30,7 +28,6 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
 
     /**
      * Describes a resource Id to source Key Vault.
-     * 
      */
     @Import(name="sourceVault", required=true)
       private final KeyVaultKeyReferenceResponseSourceVault sourceVault;

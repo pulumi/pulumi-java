@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class SharingProfileResponse {
     /**
      * A list of sharing profile groups.
-     * 
      */
     private final List<SharingProfileGroupResponse> groups;
     /**
      * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
-     * 
      */
     private final @Nullable String permissions;
 
@@ -34,14 +32,12 @@ public final class SharingProfileResponse {
 
     /**
      * A list of sharing profile groups.
-     * 
     */
     public List<SharingProfileGroupResponse> getGroups() {
         return this.groups;
     }
     /**
      * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
-     * 
     */
     public Optional<String> getPermissions() {
         return Optional.ofNullable(this.permissions);

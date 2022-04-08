@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata of IoT device/IoT Edge device to be configured.
- * 
  */
 public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encrypted IoT device/IoT edge device connection string.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Output<AuthenticationArgs> authentication;
@@ -32,7 +30,6 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the IoT device/edge device.
-     * 
      */
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
@@ -43,7 +40,6 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Host name for the IoT hub associated to the device.
-     * 
      */
     @Import(name="ioTHostHub", required=true)
       private final Output<String> ioTHostHub;
@@ -54,7 +50,6 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Id for the IoT hub associated to the device.
-     * 
      */
     @Import(name="ioTHostHubId")
       private final @Nullable Output<String> ioTHostHubId;

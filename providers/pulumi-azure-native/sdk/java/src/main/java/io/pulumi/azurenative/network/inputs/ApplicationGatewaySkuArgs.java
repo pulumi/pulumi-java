@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of an application gateway.
- * 
  */
 public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * Capacity (instance count) of an application gateway.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -35,7 +33,6 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of an application gateway SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,ApplicationGatewaySkuName>> name;
@@ -46,7 +43,6 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * Tier of an application gateway.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,ApplicationGatewayTier>> tier;

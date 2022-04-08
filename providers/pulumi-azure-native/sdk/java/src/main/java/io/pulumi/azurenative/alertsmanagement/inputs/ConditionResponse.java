@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * condition to trigger an action rule
- * 
  */
 public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * operator for a given condition
-     * 
      */
     @Import(name="operator")
       private final @Nullable String operator;
@@ -32,7 +30,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * list of values to match for a given condition.
-     * 
      */
     @Import(name="values")
       private final @Nullable List<String> values;

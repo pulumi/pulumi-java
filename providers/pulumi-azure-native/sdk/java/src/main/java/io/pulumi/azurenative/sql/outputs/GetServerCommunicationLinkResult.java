@@ -11,37 +11,30 @@ import java.util.Objects;
 public final class GetServerCommunicationLinkResult {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Communication link kind.  This property is used for Azure Portal metadata.
-     * 
      */
     private final String kind;
     /**
      * Communication link location.
-     * 
      */
     private final String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The name of the partner server.
-     * 
      */
     private final String partnerServer;
     /**
      * The state.
-     * 
      */
     private final String state;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -65,49 +58,42 @@ public final class GetServerCommunicationLinkResult {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Communication link kind.  This property is used for Azure Portal metadata.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Communication link location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the partner server.
-     * 
     */
     public String getPartnerServer() {
         return this.partnerServer;
     }
     /**
      * The state.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

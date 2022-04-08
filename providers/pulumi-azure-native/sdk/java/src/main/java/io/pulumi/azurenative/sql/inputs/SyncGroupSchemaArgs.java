@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of sync group schema.
- * 
  */
 public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of master sync member where the schema is from.
-     * 
      */
     @Import(name="masterSyncMemberName")
       private final @Nullable Output<String> masterSyncMemberName;
@@ -33,7 +31,6 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of tables in sync group schema.
-     * 
      */
     @Import(name="tables")
       private final @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;

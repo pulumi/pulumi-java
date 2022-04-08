@@ -20,7 +20,168 @@ import javax.annotation.Nullable;
  * Describes a database on the RedisEnterprise cluster
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RedisEnterpriseDatabasesCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var database = new AzureNative.Cache.Database("database", new AzureNative.Cache.DatabaseArgs
+ *         {
+ *             ClientProtocol = "Encrypted",
+ *             ClusterName = "cache1",
+ *             ClusteringPolicy = "EnterpriseCluster",
+ *             DatabaseName = "default",
+ *             EvictionPolicy = "AllKeysLRU",
+ *             Modules = 
+ *             {
+ *                 new AzureNative.Cache.Inputs.ModuleArgs
+ *                 {
+ *                     Args = "ERROR_RATE 0.00 INITIAL_SIZE 400",
+ *                     Name = "RedisBloom",
+ *                 },
+ *                 new AzureNative.Cache.Inputs.ModuleArgs
+ *                 {
+ *                     Args = "RETENTION_POLICY 20",
+ *                     Name = "RedisTimeSeries",
+ *                 },
+ *                 new AzureNative.Cache.Inputs.ModuleArgs
+ *                 {
+ *                     Name = "RediSearch",
+ *                 },
+ *             },
+ *             Persistence = new AzureNative.Cache.Inputs.PersistenceArgs
+ *             {
+ *                 AofEnabled = true,
+ *                 AofFrequency = "1s",
+ *             },
+ *             Port = 10000,
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cache.NewDatabase(ctx, "database", &cache.DatabaseArgs{
+ * 			ClientProtocol:   pulumi.String("Encrypted"),
+ * 			ClusterName:      pulumi.String("cache1"),
+ * 			ClusteringPolicy: pulumi.String("EnterpriseCluster"),
+ * 			DatabaseName:     pulumi.String("default"),
+ * 			EvictionPolicy:   pulumi.String("AllKeysLRU"),
+ * 			Modules: []cache.ModuleArgs{
+ * 				&cache.ModuleArgs{
+ * 					Args: pulumi.String("ERROR_RATE 0.00 INITIAL_SIZE 400"),
+ * 					Name: pulumi.String("RedisBloom"),
+ * 				},
+ * 				&cache.ModuleArgs{
+ * 					Args: pulumi.String("RETENTION_POLICY 20"),
+ * 					Name: pulumi.String("RedisTimeSeries"),
+ * 				},
+ * 				&cache.ModuleArgs{
+ * 					Name: pulumi.String("RediSearch"),
+ * 				},
+ * 			},
+ * 			Persistence: &cache.PersistenceArgs{
+ * 				AofEnabled:   pulumi.Bool(true),
+ * 				AofFrequency: pulumi.String("1s"),
+ * 			},
+ * 			Port:              pulumi.Int(10000),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const database = new azure_native.cache.Database("database", {
+ *     clientProtocol: "Encrypted",
+ *     clusterName: "cache1",
+ *     clusteringPolicy: "EnterpriseCluster",
+ *     databaseName: "default",
+ *     evictionPolicy: "AllKeysLRU",
+ *     modules: [
+ *         {
+ *             args: "ERROR_RATE 0.00 INITIAL_SIZE 400",
+ *             name: "RedisBloom",
+ *         },
+ *         {
+ *             args: "RETENTION_POLICY 20",
+ *             name: "RedisTimeSeries",
+ *         },
+ *         {
+ *             name: "RediSearch",
+ *         },
+ *     ],
+ *     persistence: {
+ *         aofEnabled: true,
+ *         aofFrequency: "1s",
+ *     },
+ *     port: 10000,
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * database = azure_native.cache.Database("database",
+ *     client_protocol="Encrypted",
+ *     cluster_name="cache1",
+ *     clustering_policy="EnterpriseCluster",
+ *     database_name="default",
+ *     eviction_policy="AllKeysLRU",
+ *     modules=[
+ *         azure_native.cache.ModuleArgs(
+ *             args="ERROR_RATE 0.00 INITIAL_SIZE 400",
+ *             name="RedisBloom",
+ *         ),
+ *         azure_native.cache.ModuleArgs(
+ *             args="RETENTION_POLICY 20",
+ *             name="RedisTimeSeries",
+ *         ),
+ *         azure_native.cache.ModuleArgs(
+ *             name="RediSearch",
+ *         ),
+ *     ],
+ *     persistence=azure_native.cache.PersistenceArgs(
+ *         aof_enabled=True,
+ *         aof_frequency="1s",
+ *     ),
+ *     port=10000,
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,140 +196,120 @@ import javax.annotation.Nullable;
 public class Database extends io.pulumi.resources.CustomResource {
     /**
      * Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
-     * 
      */
     @Export(name="clientProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientProtocol;
 
     /**
      * @return Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
-     * 
      */
     public Output</* @Nullable */ String> getClientProtocol() {
         return this.clientProtocol;
     }
     /**
      * Clustering policy - default is OSSCluster. Specified at create time.
-     * 
      */
     @Export(name="clusteringPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusteringPolicy;
 
     /**
      * @return Clustering policy - default is OSSCluster. Specified at create time.
-     * 
      */
     public Output</* @Nullable */ String> getClusteringPolicy() {
         return this.clusteringPolicy;
     }
     /**
      * Redis eviction policy - default is VolatileLRU
-     * 
      */
     @Export(name="evictionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> evictionPolicy;
 
     /**
      * @return Redis eviction policy - default is VolatileLRU
-     * 
      */
     public Output</* @Nullable */ String> getEvictionPolicy() {
         return this.evictionPolicy;
     }
     /**
      * Optional set of redis modules to enable in this database - modules can only be added at creation time.
-     * 
      */
     @Export(name="modules", type=List.class, parameters={ModuleResponse.class})
     private Output</* @Nullable */ List<ModuleResponse>> modules;
 
     /**
      * @return Optional set of redis modules to enable in this database - modules can only be added at creation time.
-     * 
      */
     public Output</* @Nullable */ List<ModuleResponse>> getModules() {
         return this.modules;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Persistence settings
-     * 
      */
     @Export(name="persistence", type=PersistenceResponse.class, parameters={})
     private Output</* @Nullable */ PersistenceResponse> persistence;
 
     /**
      * @return Persistence settings
-     * 
      */
     public Output</* @Nullable */ PersistenceResponse> getPersistence() {
         return this.persistence;
     }
     /**
      * TCP port of the database endpoint. Specified at create time. Defaults to an available port.
-     * 
      */
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
      * @return TCP port of the database endpoint. Specified at create time. Defaults to an available port.
-     * 
      */
     public Output</* @Nullable */ Integer> getPort() {
         return this.port;
     }
     /**
      * Current provisioning status of the database
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current provisioning status of the database
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Current resource status of the database
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return Current resource status of the database
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

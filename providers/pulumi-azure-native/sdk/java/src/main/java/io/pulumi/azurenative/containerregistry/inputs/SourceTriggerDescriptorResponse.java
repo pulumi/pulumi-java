@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The source trigger that caused a run.
- * 
  */
 public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
 
     /**
      * The branch name in the repository.
-     * 
      */
     @Import(name="branchName")
       private final @Nullable String branchName;
@@ -31,7 +29,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
 
     /**
      * The unique ID that identifies a commit.
-     * 
      */
     @Import(name="commitId")
       private final @Nullable String commitId;
@@ -42,7 +39,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
 
     /**
      * The event type of the trigger.
-     * 
      */
     @Import(name="eventType")
       private final @Nullable String eventType;
@@ -53,7 +49,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
 
     /**
      * The unique ID of the trigger.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -64,7 +59,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
 
     /**
      * The source control provider type.
-     * 
      */
     @Import(name="providerType")
       private final @Nullable String providerType;
@@ -75,7 +69,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
 
     /**
      * The unique ID that identifies pull request.
-     * 
      */
     @Import(name="pullRequestId")
       private final @Nullable String pullRequestId;
@@ -86,7 +79,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
 
     /**
      * The repository URL.
-     * 
      */
     @Import(name="repositoryUrl")
       private final @Nullable String repositoryUrl;

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Whether a VM will get shutdown when it has idled for a period of time.
-     * 
      */
     @EnumType
     public enum ShutdownOnIdleMode {
         /**
          * The VM won't be shut down when it is idle.
-         * 
          */
         None("None"),
         /**
          * The VM will be considered as idle when there is no keyboard or mouse input.
-         * 
          */
         UserAbsence("UserAbsence"),
         /**
          * The VM will be considered as idle when user is absent and the resource (CPU and disk) consumption is low.
-         * 
          */
         LowUsage("LowUsage");
 

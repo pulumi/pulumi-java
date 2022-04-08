@@ -15,18 +15,15 @@ import javax.annotation.Nullable;
 public final class EncoderCustomPresetResponse {
     /**
      * Describes a custom preset for encoding audio.
-     * 
      */
     private final @Nullable AudioEncoderAacResponse audioEncoder;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
-     * 
      */
     private final String type;
     /**
      * Describes a custom preset for encoding video.
-     * 
      */
     private final @Nullable VideoEncoderH264Response videoEncoder;
 
@@ -42,7 +39,6 @@ public final class EncoderCustomPresetResponse {
 
     /**
      * Describes a custom preset for encoding audio.
-     * 
     */
     public Optional<AudioEncoderAacResponse> getAudioEncoder() {
         return Optional.ofNullable(this.audioEncoder);
@@ -50,14 +46,12 @@ public final class EncoderCustomPresetResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Describes a custom preset for encoding video.
-     * 
     */
     public Optional<VideoEncoderH264Response> getVideoEncoder() {
         return Optional.ofNullable(this.videoEncoder);

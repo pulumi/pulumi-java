@@ -16,7 +16,6 @@ public final class ContentTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content type identifier.
-     * 
      */
     @Import(name="contentTypeId")
       private final @Nullable Output<String> contentTypeId;
@@ -27,7 +26,6 @@ public final class ContentTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class ContentTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

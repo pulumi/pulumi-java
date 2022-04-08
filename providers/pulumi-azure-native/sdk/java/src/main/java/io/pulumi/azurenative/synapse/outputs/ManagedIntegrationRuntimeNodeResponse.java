@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ManagedIntegrationRuntimeNodeResponse {
     /**
      * The errors that occurred on this integration runtime node.
-     * 
      */
     private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
     /**
      * The managed integration runtime node id.
-     * 
      */
     private final String nodeId;
     /**
      * The managed integration runtime node status.
-     * 
      */
     private final String status;
 
@@ -40,21 +37,18 @@ public final class ManagedIntegrationRuntimeNodeResponse {
 
     /**
      * The errors that occurred on this integration runtime node.
-     * 
     */
     public List<ManagedIntegrationRuntimeErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The managed integration runtime node id.
-     * 
     */
     public String getNodeId() {
         return this.nodeId;
     }
     /**
      * The managed integration runtime node status.
-     * 
     */
     public String getStatus() {
         return this.status;

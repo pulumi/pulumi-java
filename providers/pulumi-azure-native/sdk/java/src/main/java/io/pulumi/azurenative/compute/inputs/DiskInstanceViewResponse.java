@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The instance view of the disk.
- * 
  */
 public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
-     * 
      */
     @Import(name="encryptionSettings")
       private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
@@ -34,7 +32,6 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -45,7 +42,6 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource status information.
-     * 
      */
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;

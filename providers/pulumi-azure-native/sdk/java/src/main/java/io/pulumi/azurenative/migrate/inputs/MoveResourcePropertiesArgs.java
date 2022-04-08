@@ -28,7 +28,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the move resource properties.
- * 
  */
 public final class MoveResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -36,7 +35,6 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the move resource dependencies overrides.
-     * 
      */
     @Import(name="dependsOnOverrides")
       private final @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
@@ -47,7 +45,6 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the existing target ARM Id of the resource.
-     * 
      */
     @Import(name="existingTargetId")
       private final @Nullable Output<String> existingTargetId;
@@ -58,7 +55,6 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the resource settings.
-     * 
      */
     @Import(name="resourceSettings")
       private final @Nullable Output<Object> resourceSettings;
@@ -69,7 +65,6 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the Source ARM Id of the resource.
-     * 
      */
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;

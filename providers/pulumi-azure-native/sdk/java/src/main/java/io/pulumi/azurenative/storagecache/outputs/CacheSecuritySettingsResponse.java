@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CacheSecuritySettingsResponse {
     /**
      * NFS access policies defined for this cache.
-     * 
      */
     private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 
@@ -24,7 +23,6 @@ public final class CacheSecuritySettingsResponse {
 
     /**
      * NFS access policies defined for this cache.
-     * 
     */
     public List<NfsAccessPolicyResponse> getAccessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;

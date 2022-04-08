@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Edifact agreement protocol settings.
- * 
  */
 public final class EdifactProcessingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
 
     /**
      * The value indicating whether to create empty xml tags for trailing separators.
-     * 
      */
     @Import(name="createEmptyXmlTagsForTrailingSeparators", required=true)
       private final Boolean createEmptyXmlTagsForTrailingSeparators;
@@ -29,7 +27,6 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
 
     /**
      * The value indicating whether to mask security information.
-     * 
      */
     @Import(name="maskSecurityInfo", required=true)
       private final Boolean maskSecurityInfo;
@@ -40,7 +37,6 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
 
     /**
      * The value indicating whether to preserve interchange.
-     * 
      */
     @Import(name="preserveInterchange", required=true)
       private final Boolean preserveInterchange;
@@ -51,7 +47,6 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
 
     /**
      * The value indicating whether to suspend interchange on error.
-     * 
      */
     @Import(name="suspendInterchangeOnError", required=true)
       private final Boolean suspendInterchangeOnError;
@@ -62,7 +57,6 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
 
     /**
      * The value indicating whether to use dot as decimal separator.
-     * 
      */
     @Import(name="useDotAsDecimalSeparator", required=true)
       private final Boolean useDotAsDecimalSeparator;

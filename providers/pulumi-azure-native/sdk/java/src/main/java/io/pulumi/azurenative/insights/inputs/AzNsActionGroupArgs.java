@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure action group
- * 
  */
 public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Azure Action Group reference.
-     * 
      */
     @Import(name="actionGroup")
       private final @Nullable Output<List<String>> actionGroup;
@@ -32,7 +30,6 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Custom payload to be sent for all webhook URI in Azure action group
-     * 
      */
     @Import(name="customWebhookPayload")
       private final @Nullable Output<String> customWebhookPayload;
@@ -43,7 +40,6 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Custom subject override for all email ids in Azure action group
-     * 
      */
     @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;

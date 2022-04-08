@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * System generated entities.
- * 
  */
 public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
 
     /**
      * Generated interaction types.
-     * 
      */
     @Import(name="generatedInteractionTypes")
       private final @Nullable List<String> generatedInteractionTypes;
@@ -33,7 +31,6 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
 
     /**
      * Generated KPIs.
-     * 
      */
     @Import(name="generatedKpis")
       private final @Nullable Map<String,String> generatedKpis;
@@ -44,7 +41,6 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
 
     /**
      * Generated links.
-     * 
      */
     @Import(name="generatedLinks")
       private final @Nullable List<String> generatedLinks;

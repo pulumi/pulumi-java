@@ -17,7 +17,91 @@ import javax.annotation.Nullable;
  * Single item in a List or Get IpFilterRules operation
  * API Version: 2018-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NameSpaceIpFilterRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var namespaceIpFilterRule = new AzureNative.ServiceBus.NamespaceIpFilterRule("namespaceIpFilterRule", new AzureNative.ServiceBus.NamespaceIpFilterRuleArgs
+ *         {
+ *             Action = "Accept",
+ *             FilterName = "sdk-IPFilterRules-7337",
+ *             IpFilterRuleName = "sdk-IPFilterRules-7337",
+ *             IpMask = "13.78.143.246/32",
+ *             NamespaceName = "sdk-Namespace-5232",
+ *             ResourceGroupName = "ResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewNamespaceIpFilterRule(ctx, "namespaceIpFilterRule", &servicebus.NamespaceIpFilterRuleArgs{
+ * 			Action:            pulumi.String("Accept"),
+ * 			FilterName:        pulumi.String("sdk-IPFilterRules-7337"),
+ * 			IpFilterRuleName:  pulumi.String("sdk-IPFilterRules-7337"),
+ * 			IpMask:            pulumi.String("13.78.143.246/32"),
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-5232"),
+ * 			ResourceGroupName: pulumi.String("ResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const namespaceIpFilterRule = new azure_native.servicebus.NamespaceIpFilterRule("namespaceIpFilterRule", {
+ *     action: "Accept",
+ *     filterName: "sdk-IPFilterRules-7337",
+ *     ipFilterRuleName: "sdk-IPFilterRules-7337",
+ *     ipMask: "13.78.143.246/32",
+ *     namespaceName: "sdk-Namespace-5232",
+ *     resourceGroupName: "ResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * namespace_ip_filter_rule = azure_native.servicebus.NamespaceIpFilterRule("namespaceIpFilterRule",
+ *     action="Accept",
+ *     filter_name="sdk-IPFilterRules-7337",
+ *     ip_filter_rule_name="sdk-IPFilterRules-7337",
+ *     ip_mask="13.78.143.246/32",
+ *     namespace_name="sdk-Namespace-5232",
+ *     resource_group_name="ResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +116,60 @@ import javax.annotation.Nullable;
 public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
     /**
      * The IP Filter Action
-     * 
      */
     @Export(name="action", type=String.class, parameters={})
     private Output</* @Nullable */ String> action;
 
     /**
      * @return The IP Filter Action
-     * 
      */
     public Output</* @Nullable */ String> getAction() {
         return this.action;
     }
     /**
      * IP Filter name
-     * 
      */
     @Export(name="filterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterName;
 
     /**
      * @return IP Filter name
-     * 
      */
     public Output</* @Nullable */ String> getFilterName() {
         return this.filterName;
     }
     /**
      * IP Mask
-     * 
      */
     @Export(name="ipMask", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipMask;
 
     /**
      * @return IP Mask
-     * 
      */
     public Output</* @Nullable */ String> getIpMask() {
         return this.ipMask;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the App resource.
-     * 
      */
     @Import(name="appName", required=true)
       private final String appName;
@@ -25,7 +24,6 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the Deployment resource.
-     * 
      */
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
@@ -36,7 +34,6 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

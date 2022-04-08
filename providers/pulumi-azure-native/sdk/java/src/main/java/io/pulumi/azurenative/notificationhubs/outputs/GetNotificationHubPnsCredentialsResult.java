@@ -21,62 +21,50 @@ import javax.annotation.Nullable;
 public final class GetNotificationHubPnsCredentialsResult {
     /**
      * The AdmCredential of the created NotificationHub
-     * 
      */
     private final @Nullable AdmCredentialResponse admCredential;
     /**
      * The ApnsCredential of the created NotificationHub
-     * 
      */
     private final @Nullable ApnsCredentialResponse apnsCredential;
     /**
      * The BaiduCredential of the created NotificationHub
-     * 
      */
     private final @Nullable BaiduCredentialResponse baiduCredential;
     /**
      * The GcmCredential of the created NotificationHub
-     * 
      */
     private final @Nullable GcmCredentialResponse gcmCredential;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource location
-     * 
      */
     private final @Nullable String location;
     /**
      * The MpnsCredential of the created NotificationHub
-     * 
      */
     private final @Nullable MpnsCredentialResponse mpnsCredential;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * The sku of the created namespace
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
     /**
      * The WnsCredential of the created NotificationHub
-     * 
      */
     private final @Nullable WnsCredentialResponse wnsCredential;
 
@@ -110,84 +98,72 @@ public final class GetNotificationHubPnsCredentialsResult {
 
     /**
      * The AdmCredential of the created NotificationHub
-     * 
     */
     public Optional<AdmCredentialResponse> getAdmCredential() {
         return Optional.ofNullable(this.admCredential);
     }
     /**
      * The ApnsCredential of the created NotificationHub
-     * 
     */
     public Optional<ApnsCredentialResponse> getApnsCredential() {
         return Optional.ofNullable(this.apnsCredential);
     }
     /**
      * The BaiduCredential of the created NotificationHub
-     * 
     */
     public Optional<BaiduCredentialResponse> getBaiduCredential() {
         return Optional.ofNullable(this.baiduCredential);
     }
     /**
      * The GcmCredential of the created NotificationHub
-     * 
     */
     public Optional<GcmCredentialResponse> getGcmCredential() {
         return Optional.ofNullable(this.gcmCredential);
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The MpnsCredential of the created NotificationHub
-     * 
     */
     public Optional<MpnsCredentialResponse> getMpnsCredential() {
         return Optional.ofNullable(this.mpnsCredential);
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The sku of the created namespace
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The WnsCredential of the created NotificationHub
-     * 
     */
     public Optional<WnsCredentialResponse> getWnsCredential() {
         return Optional.ofNullable(this.wnsCredential);

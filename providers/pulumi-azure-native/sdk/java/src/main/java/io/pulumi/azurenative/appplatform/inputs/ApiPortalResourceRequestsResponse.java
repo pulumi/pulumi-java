@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Resource requests of the API portal
- * 
  */
 public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
 
     /**
      * Cpu allocated to each API portal instance
-     * 
      */
     @Import(name="cpu", required=true)
       private final String cpu;
@@ -29,7 +27,6 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
 
     /**
      * Memory allocated to each API portal instance
-     * 
      */
     @Import(name="memory", required=true)
       private final String memory;

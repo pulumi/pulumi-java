@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deployment resource properties payload
- * 
  */
 public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
 
     /**
      * Deployment settings of the Deployment
-     * 
      */
     @Import(name="deploymentSettings")
       private final @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
@@ -32,7 +30,6 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
 
     /**
      * Uploaded source information of the deployment.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<UserSourceInfoArgs> source;

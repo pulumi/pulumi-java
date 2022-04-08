@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The custom setup of running cmdkey commands.
- * 
  */
 public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The password of data source access.
-     * 
      */
     @Import(name="password", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -33,7 +31,6 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The server name of data source access.
-     * 
      */
     @Import(name="targetName", required=true)
       private final Object targetName;
@@ -45,7 +42,6 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The type of custom setup.
      * Expected value is 'CmdkeySetup'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -56,7 +52,6 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The user name of data source access.
-     * 
      */
     @Import(name="userName", required=true)
       private final Object userName;

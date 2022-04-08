@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object via a microsoft routing endpoint.
- * 
  */
 public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
 
     /**
      * Gets the blob endpoint.
-     * 
      */
     @Import(name="blob", required=true)
       private final String blob;
@@ -29,7 +27,6 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
 
     /**
      * Gets the dfs endpoint.
-     * 
      */
     @Import(name="dfs", required=true)
       private final String dfs;
@@ -40,7 +37,6 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
 
     /**
      * Gets the file endpoint.
-     * 
      */
     @Import(name="file", required=true)
       private final String file;
@@ -51,7 +47,6 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
 
     /**
      * Gets the queue endpoint.
-     * 
      */
     @Import(name="queue", required=true)
       private final String queue;
@@ -62,7 +57,6 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
 
     /**
      * Gets the table endpoint.
-     * 
      */
     @Import(name="table", required=true)
       private final String table;
@@ -73,7 +67,6 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
 
     /**
      * Gets the web endpoint.
-     * 
      */
     @Import(name="web", required=true)
       private final String web;

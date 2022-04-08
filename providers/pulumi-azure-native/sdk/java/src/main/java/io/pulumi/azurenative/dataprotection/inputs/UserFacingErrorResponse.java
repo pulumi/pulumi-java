@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Error object used by layers that have access to localized content, and propagate that to user
- * 
  */
 public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Unique code for this error
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -35,7 +33,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Additional related Errors
-     * 
      */
     @Import(name="details")
       private final @Nullable List<UserFacingErrorResponse> details;
@@ -46,7 +43,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Inner Error
-     * 
      */
     @Import(name="innerError")
       private final @Nullable InnerErrorResponse innerError;
@@ -57,7 +53,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Whether the operation will be retryable or not
-     * 
      */
     @Import(name="isRetryable")
       private final @Nullable Boolean isRetryable;
@@ -68,7 +63,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Whether the operation is due to a user error or service error
-     * 
      */
     @Import(name="isUserError")
       private final @Nullable Boolean isUserError;
@@ -86,7 +80,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Any key value pairs that can be injected inside error object
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -97,7 +90,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * RecommendedAction � localized.
-     * 
      */
     @Import(name="recommendedAction")
       private final @Nullable List<String> recommendedAction;
@@ -108,7 +100,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Target of the error.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

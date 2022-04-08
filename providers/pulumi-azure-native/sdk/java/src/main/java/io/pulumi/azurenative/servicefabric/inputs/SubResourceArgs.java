@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure resource identifier.
- * 
  */
 public final class SubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource identifier.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

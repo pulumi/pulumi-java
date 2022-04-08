@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ssis project.
- * 
  */
 public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -35,7 +33,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Environment reference in project
-     * 
      */
     @Import(name="environmentRefs")
       private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
@@ -46,7 +43,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Folder id which contains project.
-     * 
      */
     @Import(name="folderId")
       private final @Nullable Double folderId;
@@ -57,7 +53,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Double id;
@@ -68,7 +63,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -79,7 +73,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters in project
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<SsisParameterResponse> parameters;
@@ -91,7 +84,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The type of SSIS object metadata.
      * Expected value is 'Project'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -102,7 +94,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Project version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Double version;

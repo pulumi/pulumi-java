@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Plan for the resource.
- * 
  */
 public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The plan ID.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The offer ID.
-     * 
      */
     @Import(name="product")
       private final @Nullable String product;
@@ -42,7 +39,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The promotion code.
-     * 
      */
     @Import(name="promotionCode")
       private final @Nullable String promotionCode;
@@ -53,7 +49,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The publisher ID.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;
@@ -64,7 +59,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The plan's version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

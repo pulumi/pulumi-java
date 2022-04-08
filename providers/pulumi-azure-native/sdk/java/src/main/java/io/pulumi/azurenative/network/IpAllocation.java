@@ -20,7 +20,100 @@ import javax.annotation.Nullable;
  * IpAllocation resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create IpAllocation
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ipAllocation = new AzureNative.Network.IpAllocation("ipAllocation", new AzureNative.Network.IpAllocationArgs
+ *         {
+ *             AllocationTags = 
+ *             {
+ *                 { "VNetID", "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1" },
+ *             },
+ *             IpAllocationName = "test-ipallocation",
+ *             Location = "centraluseuap",
+ *             Prefix = "3.2.5.0/24",
+ *             ResourceGroupName = "rg1",
+ *             Type = "Hypernet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewIpAllocation(ctx, "ipAllocation", &network.IpAllocationArgs{
+ * 			AllocationTags: pulumi.StringMap{
+ * 				"VNetID": pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1"),
+ * 			},
+ * 			IpAllocationName:  pulumi.String("test-ipallocation"),
+ * 			Location:          pulumi.String("centraluseuap"),
+ * 			Prefix:            pulumi.String("3.2.5.0/24"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Type:              pulumi.String("Hypernet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const ipAllocation = new azure_native.network.IpAllocation("ipAllocation", {
+ *     allocationTags: {
+ *         VNetID: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
+ *     },
+ *     ipAllocationName: "test-ipallocation",
+ *     location: "centraluseuap",
+ *     prefix: "3.2.5.0/24",
+ *     resourceGroupName: "rg1",
+ *     type: "Hypernet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * ip_allocation = azure_native.network.IpAllocation("ipAllocation",
+ *     allocation_tags={
+ *         "VNetID": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
+ *     },
+ *     ip_allocation_name="test-ipallocation",
+ *     location="centraluseuap",
+ *     prefix="3.2.5.0/24",
+ *     resource_group_name="rg1",
+ *     type="Hypernet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +128,144 @@ import javax.annotation.Nullable;
 public class IpAllocation extends io.pulumi.resources.CustomResource {
     /**
      * IpAllocation tags.
-     * 
      */
     @Export(name="allocationTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> allocationTags;
 
     /**
      * @return IpAllocation tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getAllocationTags() {
         return this.allocationTags;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The IPAM allocation ID.
-     * 
      */
     @Export(name="ipamAllocationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipamAllocationId;
 
     /**
      * @return The IPAM allocation ID.
-     * 
      */
     public Output</* @Nullable */ String> getIpamAllocationId() {
         return this.ipamAllocationId;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The address prefix for the IpAllocation.
-     * 
      */
     @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**
      * @return The address prefix for the IpAllocation.
-     * 
      */
     public Output</* @Nullable */ String> getPrefix() {
         return this.prefix;
     }
     /**
      * The address prefix length for the IpAllocation.
-     * 
      */
     @Export(name="prefixLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> prefixLength;
 
     /**
      * @return The address prefix length for the IpAllocation.
-     * 
      */
     public Output</* @Nullable */ Integer> getPrefixLength() {
         return this.prefixLength;
     }
     /**
      * The address prefix Type for the IpAllocation.
-     * 
      */
     @Export(name="prefixType", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefixType;
 
     /**
      * @return The address prefix Type for the IpAllocation.
-     * 
      */
     public Output</* @Nullable */ String> getPrefixType() {
         return this.prefixType;
     }
     /**
      * The Subnet that using the prefix of this IpAllocation resource.
-     * 
      */
     @Export(name="subnet", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> subnet;
 
     /**
      * @return The Subnet that using the prefix of this IpAllocation resource.
-     * 
      */
     public Output<SubResourceResponse> getSubnet() {
         return this.subnet;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The VirtualNetwork that using the prefix of this IpAllocation resource.
-     * 
      */
     @Export(name="virtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> virtualNetwork;
 
     /**
      * @return The VirtualNetwork that using the prefix of this IpAllocation resource.
-     * 
      */
     public Output<SubResourceResponse> getVirtualNetwork() {
         return this.virtualNetwork;

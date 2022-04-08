@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * The customer's prefix that is registered by the peering service provider.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a registered prefix for the peering
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registeredPrefix = new AzureNative.Peering.RegisteredPrefix("registeredPrefix", new AzureNative.Peering.RegisteredPrefixArgs
+ *         {
+ *             PeeringName = "peeringName",
+ *             Prefix = "10.22.20.0/24",
+ *             RegisteredPrefixName = "registeredPrefixName",
+ *             ResourceGroupName = "rgName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := peering.NewRegisteredPrefix(ctx, "registeredPrefix", &peering.RegisteredPrefixArgs{
+ * 			PeeringName:          pulumi.String("peeringName"),
+ * 			Prefix:               pulumi.String("10.22.20.0/24"),
+ * 			RegisteredPrefixName: pulumi.String("registeredPrefixName"),
+ * 			ResourceGroupName:    pulumi.String("rgName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const registeredPrefix = new azure_native.peering.RegisteredPrefix("registeredPrefix", {
+ *     peeringName: "peeringName",
+ *     prefix: "10.22.20.0/24",
+ *     registeredPrefixName: "registeredPrefixName",
+ *     resourceGroupName: "rgName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * registered_prefix = azure_native.peering.RegisteredPrefix("registeredPrefix",
+ *     peering_name="peeringName",
+ *     prefix="10.22.20.0/24",
+ *     registered_prefix_name="registeredPrefixName",
+ *     resource_group_name="rgName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,98 +108,84 @@ import javax.annotation.Nullable;
 public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
     /**
      * The error message associated with the validation state, if any.
-     * 
      */
     @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
      * @return The error message associated with the validation state, if any.
-     * 
      */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The peering service prefix key that is to be shared with the customer.
-     * 
      */
     @Export(name="peeringServicePrefixKey", type=String.class, parameters={})
     private Output<String> peeringServicePrefixKey;
 
     /**
      * @return The peering service prefix key that is to be shared with the customer.
-     * 
      */
     public Output<String> getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
      * The customer's prefix from which traffic originates.
-     * 
      */
     @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**
      * @return The customer's prefix from which traffic originates.
-     * 
      */
     public Output</* @Nullable */ String> getPrefix() {
         return this.prefix;
     }
     /**
      * The prefix validation state.
-     * 
      */
     @Export(name="prefixValidationState", type=String.class, parameters={})
     private Output<String> prefixValidationState;
 
     /**
      * @return The prefix validation state.
-     * 
      */
     public Output<String> getPrefixValidationState() {
         return this.prefixValidationState;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

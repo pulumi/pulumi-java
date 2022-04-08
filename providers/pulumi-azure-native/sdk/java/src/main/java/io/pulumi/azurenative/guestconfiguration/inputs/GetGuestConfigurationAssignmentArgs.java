@@ -14,7 +14,6 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The guest configuration assignment name.
-     * 
      */
     @Import(name="guestConfigurationAssignmentName", required=true)
       private final String guestConfigurationAssignmentName;
@@ -25,7 +24,6 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The name of the virtual machine.
-     * 
      */
     @Import(name="vmName", required=true)
       private final String vmName;

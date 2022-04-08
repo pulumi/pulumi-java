@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Blob restore status.
- * 
  */
 public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Failure reason when blob restore is failed.
-     * 
      */
     @Import(name="failureReason", required=true)
       private final String failureReason;
@@ -30,7 +28,6 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Blob restore request parameters.
-     * 
      */
     @Import(name="parameters", required=true)
       private final BlobRestoreParametersResponse parameters;
@@ -41,7 +38,6 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Id for tracking blob restore request.
-     * 
      */
     @Import(name="restoreId", required=true)
       private final String restoreId;
@@ -52,7 +48,6 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

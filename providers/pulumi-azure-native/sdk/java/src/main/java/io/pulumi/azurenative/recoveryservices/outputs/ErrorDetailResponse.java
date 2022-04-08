@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class ErrorDetailResponse {
     /**
      * Error code.
-     * 
      */
     private final String code;
     /**
      * Error Message related to the Code.
-     * 
      */
     private final String message;
     /**
      * List of recommendation strings.
-     * 
      */
     private final List<String> recommendations;
 
@@ -38,21 +35,18 @@ public final class ErrorDetailResponse {
 
     /**
      * Error code.
-     * 
     */
     public String getCode() {
         return this.code;
     }
     /**
      * Error Message related to the Code.
-     * 
     */
     public String getMessage() {
         return this.message;
     }
     /**
      * List of recommendation strings.
-     * 
     */
     public List<String> getRecommendations() {
         return this.recommendations;

@@ -14,7 +14,6 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
 
     /**
      * The ID of the private endpoint connection proxy object.
-     * 
      */
     @Import(name="privateEndpointConnectionProxyId", required=true)
       private final String privateEndpointConnectionProxyId;
@@ -36,7 +34,6 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

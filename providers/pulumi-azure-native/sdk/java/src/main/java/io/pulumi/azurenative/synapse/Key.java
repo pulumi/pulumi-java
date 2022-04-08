@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * A workspace key
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a workspace key
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var key = new AzureNative.Synapse.Key("key", new AzureNative.Synapse.KeyArgs
+ *         {
+ *             IsActiveCMK = true,
+ *             KeyName = "somekey",
+ *             KeyVaultUrl = "https://vault.azure.net/keys/somesecret",
+ *             ResourceGroupName = "ExampleResourceGroup",
+ *             WorkspaceName = "ExampleWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewKey(ctx, "key", &synapse.KeyArgs{
+ * 			IsActiveCMK:       pulumi.Bool(true),
+ * 			KeyName:           pulumi.String("somekey"),
+ * 			KeyVaultUrl:       pulumi.String("https://vault.azure.net/keys/somesecret"),
+ * 			ResourceGroupName: pulumi.String("ExampleResourceGroup"),
+ * 			WorkspaceName:     pulumi.String("ExampleWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const key = new azure_native.synapse.Key("key", {
+ *     isActiveCMK: true,
+ *     keyName: "somekey",
+ *     keyVaultUrl: "https://vault.azure.net/keys/somesecret",
+ *     resourceGroupName: "ExampleResourceGroup",
+ *     workspaceName: "ExampleWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * key = azure_native.synapse.Key("key",
+ *     is_active_cmk=True,
+ *     key_name="somekey",
+ *     key_vault_url="https://vault.azure.net/keys/somesecret",
+ *     resource_group_name="ExampleResourceGroup",
+ *     workspace_name="ExampleWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +113,48 @@ import javax.annotation.Nullable;
 public class Key extends io.pulumi.resources.CustomResource {
     /**
      * Used to activate the workspace after a customer managed key is provided.
-     * 
      */
     @Export(name="isActiveCMK", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isActiveCMK;
 
     /**
      * @return Used to activate the workspace after a customer managed key is provided.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsActiveCMK() {
         return this.isActiveCMK;
     }
     /**
      * The Key Vault Url of the workspace key.
-     * 
      */
     @Export(name="keyVaultUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultUrl;
 
     /**
      * @return The Key Vault Url of the workspace key.
-     * 
      */
     public Output</* @Nullable */ String> getKeyVaultUrl() {
         return this.keyVaultUrl;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

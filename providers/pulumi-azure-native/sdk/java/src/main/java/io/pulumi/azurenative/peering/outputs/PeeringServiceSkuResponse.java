@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PeeringServiceSkuResponse {
     /**
      * The name of the peering service SKU.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class PeeringServiceSkuResponse {
 
     /**
      * The name of the peering service SKU.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

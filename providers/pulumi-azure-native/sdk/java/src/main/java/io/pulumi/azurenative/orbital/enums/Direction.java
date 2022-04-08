@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Direction (uplink or downlink)
-     * 
      */
     @EnumType
     public enum Direction {

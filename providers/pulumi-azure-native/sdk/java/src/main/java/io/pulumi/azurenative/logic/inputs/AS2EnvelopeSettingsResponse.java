@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The AS2 agreement envelope settings.
- * 
  */
 public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to auto generate file name.
-     * 
      */
     @Import(name="autogenerateFileName", required=true)
       private final Boolean autogenerateFileName;
@@ -30,7 +28,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The template for file name.
-     * 
      */
     @Import(name="fileNameTemplate", required=true)
       private final String fileNameTemplate;
@@ -41,7 +38,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The message content type.
-     * 
      */
     @Import(name="messageContentType", required=true)
       private final String messageContentType;
@@ -52,7 +48,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to suspend message on file name generation error.
-     * 
      */
     @Import(name="suspendMessageOnFileNameGenerationError", required=true)
       private final Boolean suspendMessageOnFileNameGenerationError;
@@ -63,7 +58,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to transmit file name in mime header.
-     * 
      */
     @Import(name="transmitFileNameInMimeHeader", required=true)
       private final Boolean transmitFileNameInMimeHeader;

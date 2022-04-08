@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The service endpoint properties.
- * 
  */
 public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
 
     /**
      * A list of locations.
-     * 
      */
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
@@ -32,7 +30,6 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
 
     /**
      * The type of the endpoint service.
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<String> service;

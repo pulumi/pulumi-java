@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The start and end date for pulling data for the report.
- * 
  */
 public final class ReportConfigTimePeriodResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ReportConfigTimePeriodResponse extends io.pulumi.resources.In
 
     /**
      * The start date to pull data from.
-     * 
      */
     @Import(name="from", required=true)
       private final String from;
@@ -29,7 +27,6 @@ public final class ReportConfigTimePeriodResponse extends io.pulumi.resources.In
 
     /**
      * The end date to pull data to.
-     * 
      */
     @Import(name="to", required=true)
       private final String to;

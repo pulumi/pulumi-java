@@ -16,7 +16,6 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The connection gateway name
-     * 
      */
     @Import(name="connectionGatewayName", required=true)
       private final String connectionGatewayName;
@@ -27,7 +26,6 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Subscription Id
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;

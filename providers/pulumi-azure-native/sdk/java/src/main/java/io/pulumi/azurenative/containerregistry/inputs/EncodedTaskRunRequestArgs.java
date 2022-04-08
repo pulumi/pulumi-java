@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters for a quick task run request.
- * 
  */
 public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The machine configuration of the run agent.
-     * 
      */
     @Import(name="agentConfiguration")
       private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
@@ -38,7 +36,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The dedicated agent pool for the run.
-     * 
      */
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
@@ -49,7 +46,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The properties that describes a set of credentials that will be used when this run is invoked.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<CredentialsArgs> credentials;
@@ -60,7 +56,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * Base64 encoded value of the template/definition file content.
-     * 
      */
     @Import(name="encodedTaskContent", required=true)
       private final Output<String> encodedTaskContent;
@@ -71,7 +66,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * Base64 encoded value of the parameters/values file content.
-     * 
      */
     @Import(name="encodedValuesContent")
       private final @Nullable Output<String> encodedValuesContent;
@@ -82,7 +76,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value that indicates whether archiving is enabled for the run or not.
-     * 
      */
     @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
@@ -93,7 +86,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The template that describes the repository and tag information for run log artifact.
-     * 
      */
     @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
@@ -104,7 +96,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The platform properties against which the run has to happen.
-     * 
      */
     @Import(name="platform", required=true)
       private final Output<PlatformPropertiesArgs> platform;
@@ -116,7 +107,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     /**
      * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-     * 
      */
     @Import(name="sourceLocation")
       private final @Nullable Output<String> sourceLocation;
@@ -127,7 +117,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * Run timeout in seconds.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
@@ -139,7 +128,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     /**
      * The type of the run request.
      * Expected value is 'EncodedTaskRunRequest'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -150,7 +138,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The collection of overridable values that can be passed when running a task.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;

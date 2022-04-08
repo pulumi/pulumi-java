@@ -16,7 +16,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
 
     /**
      * A user defined name of the 3rd Party Artifact that is being procured.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -26,8 +25,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
     }
 
     /**
-     * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
-     * 
+     * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. 
      */
     @Import(name="product", required=true)
       private final Output<String> product;
@@ -38,7 +36,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
 
     /**
      * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
-     * 
      */
     @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
@@ -49,7 +46,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
 
     /**
      * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
-     * 
      */
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
@@ -60,7 +56,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
 
     /**
      * The version of the desired product/artifact.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

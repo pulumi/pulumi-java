@@ -21,7 +21,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the instance pool to be created or updated.
-     * 
      */
     @Import(name="instancePoolName")
       private final @Nullable Output<String> instancePoolName;
@@ -32,7 +31,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
-     * 
      */
     @Import(name="licenseType", required=true)
       private final Output<Either<String,InstancePoolLicenseType>> licenseType;
@@ -43,7 +41,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -65,7 +61,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name and tier of the SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -76,7 +71,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the subnet to place this instance pool in.
-     * 
      */
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
@@ -87,7 +81,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -98,7 +91,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Count of vCores belonging to this instance pool.
-     * 
      */
     @Import(name="vCores", required=true)
       private final Output<Integer> vCores;

@@ -16,7 +16,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringName", required=true)
       private final Output<String> peeringName;
@@ -27,7 +26,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The customer's prefix from which traffic originates.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
@@ -38,7 +36,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the registered prefix.
-     * 
      */
     @Import(name="registeredPrefixName")
       private final @Nullable Output<String> registeredPrefixName;
@@ -49,7 +46,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

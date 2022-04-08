@@ -18,7 +18,6 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -29,7 +28,6 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
 
     /**
      * The key type.
-     * 
      */
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
@@ -40,7 +38,6 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
 
     /**
      * The expiry time.
-     * 
      */
     @Import(name="notAfter")
       private final @Nullable String notAfter;
@@ -51,7 +48,6 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -62,7 +58,6 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
 
     /**
      * The integration account schema name.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final String schemaName;

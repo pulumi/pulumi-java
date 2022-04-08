@@ -20,7 +20,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the SAP HANA on Azure instance.
-     * 
      */
     @Import(name="hanaInstanceName")
       private final @Nullable Output<String> hanaInstanceName;
@@ -31,7 +30,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the network settings for the HANA instance.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
@@ -53,7 +50,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the operating system settings for the HANA instance.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
@@ -64,7 +60,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM ID of another HanaInstance that will share a network with this HanaInstance
-     * 
      */
     @Import(name="partnerNodeId")
       private final @Nullable Output<String> partnerNodeId;
@@ -75,7 +70,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the storage settings for the HANA instance disks.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -97,7 +90,6 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

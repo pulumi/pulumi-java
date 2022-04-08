@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Valid enum values in case of an enum property.
- * 
  */
 public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
 
     /**
      * Localized names of the enum member.
-     * 
      */
     @Import(name="localizedValueNames")
       private final @Nullable Map<String,String> localizedValueNames;
@@ -33,7 +31,6 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
 
     /**
      * The integer value of the enum member.
-     * 
      */
     @Import(name="value")
       private final @Nullable Integer value;

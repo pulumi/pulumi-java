@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subscription key parameter names details.
- * 
  */
 public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
 
     /**
      * Subscription key header name.
-     * 
      */
     @Import(name="header")
       private final @Nullable Output<String> header;
@@ -31,7 +29,6 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
 
     /**
      * Subscription key query string parameter name.
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
-     * 
      */
     @EnumType
     public enum SecondaryType {

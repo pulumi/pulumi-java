@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Map Power Query mashup query to sink dataset(s).
- * 
  */
 public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of sinks mapped to Power Query mashup query.
-     * 
      */
     @Import(name="dataflowSinks")
       private final @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
@@ -33,7 +31,6 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the query in Power Query mashup document.
-     * 
      */
     @Import(name="queryName")
       private final @Nullable Output<String> queryName;

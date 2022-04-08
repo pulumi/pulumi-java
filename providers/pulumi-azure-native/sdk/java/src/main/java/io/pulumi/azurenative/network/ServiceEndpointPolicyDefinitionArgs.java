@@ -17,7 +17,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -39,7 +37,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * Service endpoint name.
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<String> service;
@@ -72,7 +67,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * The name of the service endpoint policy definition name.
-     * 
      */
     @Import(name="serviceEndpointPolicyDefinitionName")
       private final @Nullable Output<String> serviceEndpointPolicyDefinitionName;
@@ -83,7 +77,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * The name of the service endpoint policy.
-     * 
      */
     @Import(name="serviceEndpointPolicyName", required=true)
       private final Output<String> serviceEndpointPolicyName;
@@ -94,7 +87,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
 
     /**
      * A list of service resources.
-     * 
      */
     @Import(name="serviceResources")
       private final @Nullable Output<List<String>> serviceResources;

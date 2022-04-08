@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Zoho server linked service.
- * 
  */
 public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The access token for Zoho authentication.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
@@ -39,7 +37,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -50,7 +47,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -61,7 +57,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Properties used to connect to Zoho. It is mutually exclusive with any other properties in the linked service. Type: object.
-     * 
      */
     @Import(name="connectionProperties")
       private final @Nullable Object connectionProperties;
@@ -72,7 +67,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -83,7 +77,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -94,7 +87,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The endpoint of the Zoho server. (i.e. crm.zoho.com/crm/private)
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable Object endpoint;
@@ -105,7 +97,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -117,7 +108,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
     /**
      * Type of linked service.
      * Expected value is 'Zoho'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -128,7 +118,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
@@ -139,7 +128,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
@@ -150,7 +138,6 @@ public final class ZohoLinkedServiceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;

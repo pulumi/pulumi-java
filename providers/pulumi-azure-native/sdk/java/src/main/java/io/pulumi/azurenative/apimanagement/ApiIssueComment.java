@@ -17,7 +17,99 @@ import javax.annotation.Nullable;
  * Issue Comment Contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateApiIssueComment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apiIssueComment = new AzureNative.ApiManagement.ApiIssueComment("apiIssueComment", new AzureNative.ApiManagement.ApiIssueCommentArgs
+ *         {
+ *             ApiId = "57d1f7558aa04f15146d9d8a",
+ *             CommentId = "599e29ab193c3c0bd0b3e2fb",
+ *             CreatedDate = "2018-02-01T22:21:20.467Z",
+ *             IssueId = "57d2ef278aa04f0ad01d6cdc",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Text = "Issue comment.",
+ *             UserId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApiIssueComment(ctx, "apiIssueComment", &apimanagement.ApiIssueCommentArgs{
+ * 			ApiId:             pulumi.String("57d1f7558aa04f15146d9d8a"),
+ * 			CommentId:         pulumi.String("599e29ab193c3c0bd0b3e2fb"),
+ * 			CreatedDate:       pulumi.String("2018-02-01T22:21:20.467Z"),
+ * 			IssueId:           pulumi.String("57d2ef278aa04f0ad01d6cdc"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Text:              pulumi.String("Issue comment."),
+ * 			UserId:            pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const apiIssueComment = new azure_native.apimanagement.ApiIssueComment("apiIssueComment", {
+ *     apiId: "57d1f7558aa04f15146d9d8a",
+ *     commentId: "599e29ab193c3c0bd0b3e2fb",
+ *     createdDate: "2018-02-01T22:21:20.467Z",
+ *     issueId: "57d2ef278aa04f0ad01d6cdc",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     text: "Issue comment.",
+ *     userId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api_issue_comment = azure_native.apimanagement.ApiIssueComment("apiIssueComment",
+ *     api_id="57d1f7558aa04f15146d9d8a",
+ *     comment_id="599e29ab193c3c0bd0b3e2fb",
+ *     created_date="2018-02-01T22:21:20.467Z",
+ *     issue_id="57d2ef278aa04f0ad01d6cdc",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     text="Issue comment.",
+ *     user_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +124,60 @@ import javax.annotation.Nullable;
 public class ApiIssueComment extends io.pulumi.resources.CustomResource {
     /**
      * Date and time when the comment was created.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
     /**
      * @return Date and time when the comment was created.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Comment text.
-     * 
      */
     @Export(name="text", type=String.class, parameters={})
     private Output<String> text;
 
     /**
      * @return Comment text.
-     * 
      */
     public Output<String> getText() {
         return this.text;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A resource identifier for the user who left the comment.
-     * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
      * @return A resource identifier for the user who left the comment.
-     * 
      */
     public Output<String> getUserId() {
         return this.userId;

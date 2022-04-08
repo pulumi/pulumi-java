@@ -24,7 +24,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The creator of the content item.
-     * 
      */
     @Import(name="author")
       private final @Nullable Output<MetadataAuthorArgs> author;
@@ -35,7 +34,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Categories for the solution content item
-     * 
      */
     @Import(name="categories")
       private final @Nullable Output<MetadataCategoriesArgs> categories;
@@ -46,7 +44,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
-     * 
      */
     @Import(name="contentId")
       private final @Nullable Output<String> contentId;
@@ -57,7 +54,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
-     * 
      */
     @Import(name="dependencies")
       private final @Nullable Output<MetadataDependenciesArgs> dependencies;
@@ -68,7 +64,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * first publish date solution content item
-     * 
      */
     @Import(name="firstPublishDate")
       private final @Nullable Output<String> firstPublishDate;
@@ -79,7 +74,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of content the metadata is for.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
@@ -90,7 +84,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * last publish date for the solution content item
-     * 
      */
     @Import(name="lastPublishDate")
       private final @Nullable Output<String> lastPublishDate;
@@ -101,7 +94,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Metadata name.
-     * 
      */
     @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
@@ -112,7 +104,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -123,7 +114,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
-     * 
      */
     @Import(name="parentId", required=true)
       private final Output<String> parentId;
@@ -134,7 +124,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Providers for the solution content item
-     * 
      */
     @Import(name="providers")
       private final @Nullable Output<List<String>> providers;
@@ -145,7 +134,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -156,7 +144,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source of the content.  This is where/how it was created.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<MetadataSourceArgs> source;
@@ -167,7 +154,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Support information for the metadata - type, name, contact information
-     * 
      */
     @Import(name="support")
       private final @Nullable Output<MetadataSupportArgs> support;
@@ -178,7 +164,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;
@@ -189,7 +174,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -16,7 +16,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of applied changes
-     * 
      */
     @Import(name="appliedChanges", required=true)
       private final Double appliedChanges;
@@ -27,7 +26,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of cdc deletes
-     * 
      */
     @Import(name="cdcDeleteCounter", required=true)
       private final Double cdcDeleteCounter;
@@ -38,7 +36,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of cdc inserts
-     * 
      */
     @Import(name="cdcInsertCounter", required=true)
       private final Double cdcInsertCounter;
@@ -49,7 +46,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of cdc updates
-     * 
      */
     @Import(name="cdcUpdateCounter", required=true)
       private final Double cdcUpdateCounter;
@@ -60,7 +56,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -71,7 +66,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -82,7 +76,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of tables completed in full load
-     * 
      */
     @Import(name="fullLoadCompletedTables", required=true)
       private final Double fullLoadCompletedTables;
@@ -93,7 +86,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of tables errored in full load
-     * 
      */
     @Import(name="fullLoadErroredTables", required=true)
       private final Double fullLoadErroredTables;
@@ -104,7 +96,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of tables loading in full load
-     * 
      */
     @Import(name="fullLoadLoadingTables", required=true)
       private final Double fullLoadLoadingTables;
@@ -115,7 +106,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of tables queued in full load
-     * 
      */
     @Import(name="fullLoadQueuedTables", required=true)
       private final Double fullLoadQueuedTables;
@@ -126,7 +116,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -137,7 +126,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Number of incoming changes
-     * 
      */
     @Import(name="incomingChanges", required=true)
       private final Double incomingChanges;
@@ -148,7 +136,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Indicates if initial load (full load) has been completed
-     * 
      */
     @Import(name="initializationCompleted", required=true)
       private final Boolean initializationCompleted;
@@ -159,7 +146,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * CDC apply latency
-     * 
      */
     @Import(name="latency", required=true)
       private final Double latency;
@@ -170,7 +156,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Migration state that this database is in
-     * 
      */
     @Import(name="migrationState", required=true)
       private final String migrationState;
@@ -182,7 +167,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
     /**
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -193,7 +177,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;

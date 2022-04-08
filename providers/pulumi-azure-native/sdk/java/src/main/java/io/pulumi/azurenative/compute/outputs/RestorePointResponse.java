@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class RestorePointResponse {
     /**
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-     * 
      */
     private final String consistencyMode;
     /**
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-     * 
      */
     private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * Gets the provisioning state of the restore point.
-     * 
      */
     private final String provisioningState;
     /**
      * Gets the details of the VM captured at the time of the restore point creation.
-     * 
      */
     private final RestorePointSourceMetadataResponse sourceMetadata;
     /**
      * Gets the creation time of the restore point.
-     * 
      */
     private final @Nullable String timeCreated;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -77,56 +69,48 @@ public final class RestorePointResponse {
 
     /**
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-     * 
     */
     public String getConsistencyMode() {
         return this.consistencyMode;
     }
     /**
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-     * 
     */
     public List<ApiEntityReferenceResponse> getExcludeDisks() {
         return this.excludeDisks == null ? List.of() : this.excludeDisks;
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the provisioning state of the restore point.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets the details of the VM captured at the time of the restore point creation.
-     * 
     */
     public RestorePointSourceMetadataResponse getSourceMetadata() {
         return this.sourceMetadata;
     }
     /**
      * Gets the creation time of the restore point.
-     * 
     */
     public Optional<String> getTimeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

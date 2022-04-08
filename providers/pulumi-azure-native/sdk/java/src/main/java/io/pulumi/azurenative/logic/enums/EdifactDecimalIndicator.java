@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The EDIFACT frame setting decimal indicator.
-     * 
      */
     @EnumType
     public enum EdifactDecimalIndicator {

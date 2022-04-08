@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enables or disables Real Time Protection
-     * 
      */
     @EnumType
     public enum EnableRealTimeProtection {

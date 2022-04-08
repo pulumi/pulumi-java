@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes a parameter in fabric settings of the cluster.
- * 
  */
 public final class SettingsParameterDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SettingsParameterDescriptionArgs extends io.pulumi.resources.
 
     /**
      * The parameter name of fabric setting.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -30,7 +28,6 @@ public final class SettingsParameterDescriptionArgs extends io.pulumi.resources.
 
     /**
      * The parameter value of fabric setting.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

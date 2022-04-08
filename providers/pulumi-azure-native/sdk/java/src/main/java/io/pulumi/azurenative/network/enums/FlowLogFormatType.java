@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The file type of flow log.
-     * 
      */
     @EnumType
     public enum FlowLogFormatType {

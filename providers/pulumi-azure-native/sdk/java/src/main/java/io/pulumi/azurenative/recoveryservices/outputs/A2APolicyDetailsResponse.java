@@ -14,33 +14,27 @@ import javax.annotation.Nullable;
 public final class A2APolicyDetailsResponse {
     /**
      * The app consistent snapshot frequency in minutes.
-     * 
      */
     private final @Nullable Integer appConsistentFrequencyInMinutes;
     /**
      * The crash consistent snapshot frequency in minutes.
-     * 
      */
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'A2A'.
-     * 
      */
     private final String instanceType;
     /**
      * A value indicating whether multi-VM sync has to be enabled.
-     * 
      */
     private final @Nullable String multiVmSyncStatus;
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
      */
     private final @Nullable Integer recoveryPointHistory;
     /**
      * The recovery point threshold in minutes.
-     * 
      */
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 
@@ -62,14 +56,12 @@ public final class A2APolicyDetailsResponse {
 
     /**
      * The app consistent snapshot frequency in minutes.
-     * 
     */
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
     /**
      * The crash consistent snapshot frequency in minutes.
-     * 
     */
     public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
@@ -77,28 +69,24 @@ public final class A2APolicyDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'A2A'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * A value indicating whether multi-VM sync has to be enabled.
-     * 
     */
     public Optional<String> getMultiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
     */
     public Optional<Integer> getRecoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
     /**
      * The recovery point threshold in minutes.
-     * 
     */
     public Optional<Integer> getRecoveryPointThresholdInMinutes() {
         return Optional.ofNullable(this.recoveryPointThresholdInMinutes);

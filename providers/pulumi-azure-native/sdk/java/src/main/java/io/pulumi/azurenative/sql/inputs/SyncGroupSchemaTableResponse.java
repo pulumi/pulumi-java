@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of table in sync group schema.
- * 
  */
 public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.Invo
 
     /**
      * List of columns in sync group schema.
-     * 
      */
     @Import(name="columns")
       private final @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
@@ -33,7 +31,6 @@ public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.Invo
 
     /**
      * Quoted name of sync group schema table.
-     * 
      */
     @Import(name="quotedName")
       private final @Nullable String quotedName;

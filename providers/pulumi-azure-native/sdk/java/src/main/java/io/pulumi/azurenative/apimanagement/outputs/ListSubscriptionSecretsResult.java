@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ListSubscriptionSecretsResult {
     /**
      * Subscription primary key.
-     * 
      */
     private final @Nullable String primaryKey;
     /**
      * Subscription secondary key.
-     * 
      */
     private final @Nullable String secondaryKey;
 
@@ -32,14 +30,12 @@ public final class ListSubscriptionSecretsResult {
 
     /**
      * Subscription primary key.
-     * 
     */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Subscription secondary key.
-     * 
     */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);

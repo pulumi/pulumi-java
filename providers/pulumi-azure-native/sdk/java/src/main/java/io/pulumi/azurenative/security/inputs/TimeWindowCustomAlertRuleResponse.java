@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A custom alert rule that checks if the number of activities (depends on the custom alert type) in a time window is within the given range.
- * 
  */
 public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
 
     /**
      * The description of the custom alert.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -31,7 +29,6 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
 
     /**
      * The display name of the custom alert.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -42,7 +39,6 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
 
     /**
      * Status of the custom alert.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -53,7 +49,6 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
 
     /**
      * The maximum threshold.
-     * 
      */
     @Import(name="maxThreshold", required=true)
       private final Integer maxThreshold;
@@ -64,7 +59,6 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
 
     /**
      * The minimum threshold.
-     * 
      */
     @Import(name="minThreshold", required=true)
       private final Integer minThreshold;
@@ -76,7 +70,6 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
     /**
      * The type of the custom alert rule.
      * Expected value is 'TimeWindowCustomAlertRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final String ruleType;
@@ -87,7 +80,6 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
 
     /**
      * The time window size in iso8601 format.
-     * 
      */
     @Import(name="timeWindowSize", required=true)
       private final String timeWindowSize;

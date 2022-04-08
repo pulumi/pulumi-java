@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The route definition for a resource implemented by the custom resource provider.
- * 
  */
 public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
 
     /**
      * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
@@ -33,7 +31,6 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
 
     /**
      * The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -44,7 +41,6 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
 
     /**
      * The routing types that are supported for resource requests.
-     * 
      */
     @Import(name="routingType")
       private final @Nullable Output<Either<String,ResourceTypeRouting>> routingType;

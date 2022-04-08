@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * This is the gallery image definition identifier.
- * 
  */
 public final class GalleryImageIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
 
     /**
      * The name of the gallery image definition offer.
-     * 
      */
     @Import(name="offer", required=true)
       private final String offer;
@@ -29,7 +27,6 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
 
     /**
      * The name of the gallery image definition publisher.
-     * 
      */
     @Import(name="publisher", required=true)
       private final String publisher;
@@ -40,7 +37,6 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
 
     /**
      * The name of the gallery image definition SKU.
-     * 
      */
     @Import(name="sku", required=true)
       private final String sku;

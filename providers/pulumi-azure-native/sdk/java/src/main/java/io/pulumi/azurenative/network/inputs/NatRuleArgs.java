@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule of type nat.
- * 
  */
 public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of destination IP addresses or Service Tags.
-     * 
      */
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
@@ -45,7 +42,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of destination ports.
-     * 
      */
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
@@ -56,7 +52,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of FirewallPolicyRuleNetworkProtocols.
-     * 
      */
     @Import(name="ipProtocols")
       private final @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
@@ -67,7 +62,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -79,7 +73,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Rule Type.
      * Expected value is 'NatRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
@@ -90,7 +83,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
@@ -101,7 +93,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
@@ -112,7 +103,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The translated address for this NAT rule.
-     * 
      */
     @Import(name="translatedAddress")
       private final @Nullable Output<String> translatedAddress;
@@ -123,7 +113,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The translated FQDN for this NAT rule.
-     * 
      */
     @Import(name="translatedFqdn")
       private final @Nullable Output<String> translatedFqdn;
@@ -134,7 +123,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The translated port for this NAT rule.
-     * 
      */
     @Import(name="translatedPort")
       private final @Nullable Output<String> translatedPort;

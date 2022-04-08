@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Simple policy schedule.
- * 
  */
 public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'SimpleSchedulePolicy'.
-     * 
      */
     @Import(name="schedulePolicyType", required=true)
       private final String schedulePolicyType;
@@ -34,7 +32,6 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
 
     /**
      * List of days of week this schedule has to be run.
-     * 
      */
     @Import(name="scheduleRunDays")
       private final @Nullable List<String> scheduleRunDays;
@@ -45,7 +42,6 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
 
     /**
      * Frequency of the schedule operation of this policy.
-     * 
      */
     @Import(name="scheduleRunFrequency")
       private final @Nullable String scheduleRunFrequency;
@@ -56,7 +52,6 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
 
     /**
      * List of times of day this schedule has to be run.
-     * 
      */
     @Import(name="scheduleRunTimes")
       private final @Nullable List<String> scheduleRunTimes;
@@ -67,7 +62,6 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
 
     /**
      * At every number weeks this schedule has to be run.
-     * 
      */
     @Import(name="scheduleWeeklyFrequency")
       private final @Nullable Integer scheduleWeeklyFrequency;

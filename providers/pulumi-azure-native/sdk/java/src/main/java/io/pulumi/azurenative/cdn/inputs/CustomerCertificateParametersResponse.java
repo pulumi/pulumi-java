@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Customer Certificate used for https
- * 
  */
 public final class CustomerCertificateParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
 
     /**
      * Certificate issuing authority.
-     * 
      */
     @Import(name="certificateAuthority")
       private final @Nullable String certificateAuthority;
@@ -34,7 +32,6 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
 
     /**
      * Resource reference to the KV secret
-     * 
      */
     @Import(name="secretSource", required=true)
       private final ResourceReferenceResponse secretSource;
@@ -45,7 +42,6 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
 
     /**
      * Version of the secret to be used
-     * 
      */
     @Import(name="secretVersion")
       private final @Nullable String secretVersion;
@@ -56,7 +52,6 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
 
     /**
      * The list of SANs.
-     * 
      */
     @Import(name="subjectAlternativeNames")
       private final @Nullable List<String> subjectAlternativeNames;
@@ -68,7 +63,6 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
     /**
      * The type of the Secret to create.
      * Expected value is 'CustomerCertificate'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -79,7 +73,6 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
 
     /**
      * Whether to use the latest version for the certificate
-     * 
      */
     @Import(name="useLatestVersion")
       private final @Nullable Boolean useLatestVersion;

@@ -19,7 +19,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a Experiment resource name.
-     * 
      */
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
@@ -30,7 +29,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the experiment resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -41,7 +39,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of the experiment resource.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<ExperimentPropertiesArgs> properties;
@@ -63,7 +59,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

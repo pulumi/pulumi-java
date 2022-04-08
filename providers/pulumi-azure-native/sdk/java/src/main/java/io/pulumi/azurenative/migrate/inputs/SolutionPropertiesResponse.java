@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for solution properties.
- * 
  */
 public final class SolutionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets or sets the cleanup state of the solution.
-     * 
      */
     @Import(name="cleanupState")
       private final @Nullable String cleanupState;
@@ -35,7 +33,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets or sets the details of the solution.
-     * 
      */
     @Import(name="details")
       private final @Nullable SolutionDetailsResponse details;
@@ -46,7 +43,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets or sets the goal of the solution.
-     * 
      */
     @Import(name="goal")
       private final @Nullable String goal;
@@ -57,7 +53,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets or sets the purpose of the solution.
-     * 
      */
     @Import(name="purpose")
       private final @Nullable String purpose;
@@ -68,7 +63,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets or sets the current status of the solution.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -79,7 +73,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets or sets the summary of the solution.
-     * 
      */
     @Import(name="summary")
       private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
@@ -90,7 +83,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets or sets the tool being used in the solution.
-     * 
      */
     @Import(name="tool")
       private final @Nullable String tool;

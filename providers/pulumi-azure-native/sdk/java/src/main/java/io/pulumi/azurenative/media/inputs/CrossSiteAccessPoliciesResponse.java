@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The client access policy.
- * 
  */
 public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.I
 
     /**
      * The content of clientaccesspolicy.xml used by Silverlight.
-     * 
      */
     @Import(name="clientAccessPolicy")
       private final @Nullable String clientAccessPolicy;
@@ -31,7 +29,6 @@ public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.I
 
     /**
      * The content of crossdomain.xml used by Silverlight.
-     * 
      */
     @Import(name="crossDomainPolicy")
       private final @Nullable String crossDomainPolicy;

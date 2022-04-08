@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A webhook receiver.
- * 
  */
 public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Indicates the identifier uri for aad auth.
-     * 
      */
     @Import(name="identifierUri")
       private final @Nullable Output<String> identifierUri;
@@ -32,7 +30,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the webhook receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -43,7 +40,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Indicates the webhook app object Id for aad auth.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
@@ -54,7 +50,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The URI where webhooks should be sent.
-     * 
      */
     @Import(name="serviceUri", required=true)
       private final Output<String> serviceUri;
@@ -65,7 +60,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Indicates the tenant id for aad auth.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -76,7 +70,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Indicates whether or not use AAD authentication.
-     * 
      */
     @Import(name="useAadAuth")
       private final @Nullable Output<Boolean> useAadAuth;
@@ -87,7 +80,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Indicates whether to use common alert schema.
-     * 
      */
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;

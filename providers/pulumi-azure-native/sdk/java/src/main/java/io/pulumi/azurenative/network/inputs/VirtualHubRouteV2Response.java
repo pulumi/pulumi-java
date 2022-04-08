@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VirtualHubRouteTableV2 route.
- * 
  */
 public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
 
     /**
      * The type of destinations.
-     * 
      */
     @Import(name="destinationType")
       private final @Nullable String destinationType;
@@ -32,7 +30,6 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
 
     /**
      * List of all destinations.
-     * 
      */
     @Import(name="destinations")
       private final @Nullable List<String> destinations;
@@ -43,7 +40,6 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
 
     /**
      * The type of next hops.
-     * 
      */
     @Import(name="nextHopType")
       private final @Nullable String nextHopType;
@@ -54,7 +50,6 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
 
     /**
      * NextHops ip address.
-     * 
      */
     @Import(name="nextHops")
       private final @Nullable List<String> nextHops;

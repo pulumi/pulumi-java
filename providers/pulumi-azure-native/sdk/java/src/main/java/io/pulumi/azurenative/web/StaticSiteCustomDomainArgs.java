@@ -16,7 +16,6 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
 
     /**
      * The custom domain to create.
-     * 
      */
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
@@ -27,7 +26,6 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -38,7 +36,6 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the static site.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -49,7 +46,6 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
 
     /**
      * Validation method for adding a custom domain
-     * 
      */
     @Import(name="validationMethod")
       private final @Nullable Output<String> validationMethod;

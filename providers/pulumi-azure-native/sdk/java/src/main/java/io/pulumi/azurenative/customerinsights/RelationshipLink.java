@@ -20,7 +20,157 @@ import javax.annotation.Nullable;
  * The relationship link resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RelationshipLinks_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var relationshipLink = new AzureNative.CustomerInsights.RelationshipLink("relationshipLink", new AzureNative.CustomerInsights.RelationshipLinkArgs
+ *         {
+ *             Description = 
+ *             {
+ *                 { "en-us", "Link Description" },
+ *             },
+ *             DisplayName = 
+ *             {
+ *                 { "en-us", "Link DisplayName" },
+ *             },
+ *             HubName = "sdkTestHub",
+ *             InteractionType = "testInteraction4332",
+ *             ProfilePropertyReferences = 
+ *             {
+ *                 new AzureNative.CustomerInsights.Inputs.ParticipantProfilePropertyReferenceArgs
+ *                 {
+ *                     InteractionPropertyName = "profile1",
+ *                     ProfilePropertyName = "ProfileId",
+ *                 },
+ *             },
+ *             RelatedProfilePropertyReferences = 
+ *             {
+ *                 new AzureNative.CustomerInsights.Inputs.ParticipantProfilePropertyReferenceArgs
+ *                 {
+ *                     InteractionPropertyName = "profile1",
+ *                     ProfilePropertyName = "ProfileId",
+ *                 },
+ *             },
+ *             RelationshipLinkName = "Somelink",
+ *             RelationshipName = "testProfile2326994",
+ *             ResourceGroupName = "TestHubRG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewRelationshipLink(ctx, "relationshipLink", &customerinsights.RelationshipLinkArgs{
+ * 			Description: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Link Description"),
+ * 			},
+ * 			DisplayName: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Link DisplayName"),
+ * 			},
+ * 			HubName:         pulumi.String("sdkTestHub"),
+ * 			InteractionType: pulumi.String("testInteraction4332"),
+ * 			ProfilePropertyReferences: customerinsights.ParticipantProfilePropertyReferenceArray{
+ * 				&customerinsights.ParticipantProfilePropertyReferenceArgs{
+ * 					InteractionPropertyName: pulumi.String("profile1"),
+ * 					ProfilePropertyName:     pulumi.String("ProfileId"),
+ * 				},
+ * 			},
+ * 			RelatedProfilePropertyReferences: customerinsights.ParticipantProfilePropertyReferenceArray{
+ * 				&customerinsights.ParticipantProfilePropertyReferenceArgs{
+ * 					InteractionPropertyName: pulumi.String("profile1"),
+ * 					ProfilePropertyName:     pulumi.String("ProfileId"),
+ * 				},
+ * 			},
+ * 			RelationshipLinkName: pulumi.String("Somelink"),
+ * 			RelationshipName:     pulumi.String("testProfile2326994"),
+ * 			ResourceGroupName:    pulumi.String("TestHubRG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const relationshipLink = new azure_native.customerinsights.RelationshipLink("relationshipLink", {
+ *     description: {
+ *         "en-us": "Link Description",
+ *     },
+ *     displayName: {
+ *         "en-us": "Link DisplayName",
+ *     },
+ *     hubName: "sdkTestHub",
+ *     interactionType: "testInteraction4332",
+ *     profilePropertyReferences: [{
+ *         interactionPropertyName: "profile1",
+ *         profilePropertyName: "ProfileId",
+ *     }],
+ *     relatedProfilePropertyReferences: [{
+ *         interactionPropertyName: "profile1",
+ *         profilePropertyName: "ProfileId",
+ *     }],
+ *     relationshipLinkName: "Somelink",
+ *     relationshipName: "testProfile2326994",
+ *     resourceGroupName: "TestHubRG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * relationship_link = azure_native.customerinsights.RelationshipLink("relationshipLink",
+ *     description={
+ *         "en-us": "Link Description",
+ *     },
+ *     display_name={
+ *         "en-us": "Link DisplayName",
+ *     },
+ *     hub_name="sdkTestHub",
+ *     interaction_type="testInteraction4332",
+ *     profile_property_references=[azure_native.customerinsights.ParticipantProfilePropertyReferenceArgs(
+ *         interaction_property_name="profile1",
+ *         profile_property_name="ProfileId",
+ *     )],
+ *     related_profile_property_references=[azure_native.customerinsights.ParticipantProfilePropertyReferenceArgs(
+ *         interaction_property_name="profile1",
+ *         profile_property_name="ProfileId",
+ *     )],
+ *     relationship_link_name="Somelink",
+ *     relationship_name="testProfile2326994",
+ *     resource_group_name="TestHubRG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,182 +185,156 @@ import javax.annotation.Nullable;
 public class RelationshipLink extends io.pulumi.resources.CustomResource {
     /**
      * Localized descriptions for the Relationship Link.
-     * 
      */
     @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
      * @return Localized descriptions for the Relationship Link.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
     /**
      * Localized display name for the Relationship Link.
-     * 
      */
     @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
      * @return Localized display name for the Relationship Link.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
     /**
      * The InteractionType associated with the Relationship Link.
-     * 
      */
     @Export(name="interactionType", type=String.class, parameters={})
     private Output<String> interactionType;
 
     /**
      * @return The InteractionType associated with the Relationship Link.
-     * 
      */
     public Output<String> getInteractionType() {
         return this.interactionType;
     }
     /**
      * The name of the Relationship Link.
-     * 
      */
     @Export(name="linkName", type=String.class, parameters={})
     private Output<String> linkName;
 
     /**
      * @return The name of the Relationship Link.
-     * 
      */
     public Output<String> getLinkName() {
         return this.linkName;
     }
     /**
      * The mappings between Interaction and Relationship fields.
-     * 
      */
     @Export(name="mappings", type=List.class, parameters={RelationshipLinkFieldMappingResponse.class})
     private Output</* @Nullable */ List<RelationshipLinkFieldMappingResponse>> mappings;
 
     /**
      * @return The mappings between Interaction and Relationship fields.
-     * 
      */
     public Output</* @Nullable */ List<RelationshipLinkFieldMappingResponse>> getMappings() {
         return this.mappings;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The property references for the Profile of the Relationship.
-     * 
      */
     @Export(name="profilePropertyReferences", type=List.class, parameters={ParticipantProfilePropertyReferenceResponse.class})
     private Output<List<ParticipantProfilePropertyReferenceResponse>> profilePropertyReferences;
 
     /**
      * @return The property references for the Profile of the Relationship.
-     * 
      */
     public Output<List<ParticipantProfilePropertyReferenceResponse>> getProfilePropertyReferences() {
         return this.profilePropertyReferences;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The property references for the Related Profile of the Relationship.
-     * 
      */
     @Export(name="relatedProfilePropertyReferences", type=List.class, parameters={ParticipantProfilePropertyReferenceResponse.class})
     private Output<List<ParticipantProfilePropertyReferenceResponse>> relatedProfilePropertyReferences;
 
     /**
      * @return The property references for the Related Profile of the Relationship.
-     * 
      */
     public Output<List<ParticipantProfilePropertyReferenceResponse>> getRelatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
     }
     /**
      * The relationship guid id.
-     * 
      */
     @Export(name="relationshipGuidId", type=String.class, parameters={})
     private Output<String> relationshipGuidId;
 
     /**
      * @return The relationship guid id.
-     * 
      */
     public Output<String> getRelationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
      * The Relationship associated with the Link.
-     * 
      */
     @Export(name="relationshipName", type=String.class, parameters={})
     private Output<String> relationshipName;
 
     /**
      * @return The Relationship associated with the Link.
-     * 
      */
     public Output<String> getRelationshipName() {
         return this.relationshipName;
     }
     /**
      * The hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

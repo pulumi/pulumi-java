@@ -16,7 +16,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
 
     /**
      * Site name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -27,7 +26,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
 
     /**
      * Site extension name.
-     * 
      */
     @Import(name="siteExtensionId")
       private final @Nullable Output<String> siteExtensionId;
@@ -49,7 +46,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API uses the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;

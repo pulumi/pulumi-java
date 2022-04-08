@@ -14,7 +14,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName", required=true)
       private final String kustoPoolName;
@@ -25,7 +24,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The name of the Kusto principalAssignment.
-     * 
      */
     @Import(name="principalAssignmentName", required=true)
       private final String principalAssignmentName;
@@ -36,7 +34,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

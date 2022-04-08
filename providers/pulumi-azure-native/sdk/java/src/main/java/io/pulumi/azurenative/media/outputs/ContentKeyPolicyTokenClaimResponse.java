@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ContentKeyPolicyTokenClaimResponse {
     /**
      * Token claim type.
-     * 
      */
     private final @Nullable String claimType;
     /**
      * Token claim value.
-     * 
      */
     private final @Nullable String claimValue;
 
@@ -32,14 +30,12 @@ public final class ContentKeyPolicyTokenClaimResponse {
 
     /**
      * Token claim type.
-     * 
     */
     public Optional<String> getClaimType() {
         return Optional.ofNullable(this.claimType);
     }
     /**
      * Token claim value.
-     * 
     */
     public Optional<String> getClaimValue() {
         return Optional.ofNullable(this.claimValue);

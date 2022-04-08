@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Fabric Specific Details.
- * 
  */
 public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
 
     /**
      * The container Ids for the Azure fabric.
-     * 
      */
     @Import(name="containerIds")
       private final @Nullable List<String> containerIds;
@@ -33,7 +31,6 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'Azure'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -44,7 +41,6 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
 
     /**
      * The Location for the Azure fabric.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;

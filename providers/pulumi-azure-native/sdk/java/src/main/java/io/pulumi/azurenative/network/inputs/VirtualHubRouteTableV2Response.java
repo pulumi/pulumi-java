@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * VirtualHubRouteTableV2 Resource.
- * 
  */
 public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
 
     /**
      * List of all connections attached to this route table v2.
-     * 
      */
     @Import(name="attachedConnections")
       private final @Nullable List<String> attachedConnections;
@@ -33,7 +31,6 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -44,7 +41,6 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -55,7 +51,6 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -66,7 +61,6 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
 
     /**
      * The provisioning state of the virtual hub route table v2 resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -77,7 +71,6 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
 
     /**
      * List of all routes.
-     * 
      */
     @Import(name="routes")
       private final @Nullable List<VirtualHubRouteV2Response> routes;

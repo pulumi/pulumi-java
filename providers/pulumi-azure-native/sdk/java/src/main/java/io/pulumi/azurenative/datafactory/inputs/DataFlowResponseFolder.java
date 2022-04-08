@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
- * 
  */
 public final class DataFlowResponseFolder extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DataFlowResponseFolder extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the folder that this data flow is in.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

@@ -12,37 +12,30 @@ import java.util.Objects;
 public final class ServiceProviderParameterResponse {
     /**
      * Default Name for the Service Provider
-     * 
      */
     private final String default_;
     /**
      * Description of the Service Provider
-     * 
      */
     private final String description;
     /**
      * Display Name of the Service Provider
-     * 
      */
     private final String displayName;
     /**
      * Help Url for the  Service Provider
-     * 
      */
     private final String helpUrl;
     /**
      * Meta data for the Service Provider
-     * 
      */
     private final ServiceProviderParameterResponseMetadata metadata;
     /**
      * Name of the Service Provider
-     * 
      */
     private final String name;
     /**
      * Type of the Service Provider
-     * 
      */
     private final String type;
 
@@ -66,49 +59,42 @@ public final class ServiceProviderParameterResponse {
 
     /**
      * Default Name for the Service Provider
-     * 
     */
     public String getDefault_() {
         return this.default_;
     }
     /**
      * Description of the Service Provider
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display Name of the Service Provider
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Help Url for the  Service Provider
-     * 
     */
     public String getHelpUrl() {
         return this.helpUrl;
     }
     /**
      * Meta data for the Service Provider
-     * 
     */
     public ServiceProviderParameterResponseMetadata getMetadata() {
         return this.metadata;
     }
     /**
      * Name of the Service Provider
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Type of the Service Provider
-     * 
     */
     public String getType() {
         return this.type;

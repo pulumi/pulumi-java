@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class FileSystemTokenStoreResponse {
     /**
      * The directory in which the tokens will be stored.
-     * 
      */
     private final @Nullable String directory;
 
@@ -24,7 +23,6 @@ public final class FileSystemTokenStoreResponse {
 
     /**
      * The directory in which the tokens will be stored.
-     * 
     */
     public Optional<String> getDirectory() {
         return Optional.ofNullable(this.directory);

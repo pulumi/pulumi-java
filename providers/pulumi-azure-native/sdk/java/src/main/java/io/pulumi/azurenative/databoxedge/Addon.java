@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Role Addon
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutAddOns
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var addon = new AzureNative.DataBoxEdge.Addon("addon", new AzureNative.DataBoxEdge.AddonArgs
+ *         {
+ *             AddonName = "arcName",
+ *             DeviceName = "testedgedevice",
+ *             Kind = "ArcForKubernetes",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *             RoleName = "KubernetesRole",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewAddon(ctx, "addon", &databoxedge.AddonArgs{
+ * 			AddonName:         pulumi.String("arcName"),
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Kind:              pulumi.String("ArcForKubernetes"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 			RoleName:          pulumi.String("KubernetesRole"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const addon = new azure_native.databoxedge.Addon("addon", {
+ *     addonName: "arcName",
+ *     deviceName: "testedgedevice",
+ *     kind: "ArcForKubernetes",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ *     roleName: "KubernetesRole",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * addon = azure_native.databoxedge.Addon("addon",
+ *     addon_name="arcName",
+ *     device_name="testedgedevice",
+ *     kind="ArcForKubernetes",
+ *     resource_group_name="GroupForEdgeAutomation",
+ *     role_name="KubernetesRole")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,63 +110,54 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: ArcAddon, IoTAddon.
- * 
  */
 @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
 @ResourceType(type="azure-native:databoxedge:Addon")
 public class Addon extends io.pulumi.resources.CustomResource {
     /**
      * Addon type.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Addon type.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Addon type
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Addon type
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

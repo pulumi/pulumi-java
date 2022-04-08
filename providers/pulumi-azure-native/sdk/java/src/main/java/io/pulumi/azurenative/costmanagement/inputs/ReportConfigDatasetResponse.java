@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of data present in the report.
- * 
  */
 public final class ReportConfigDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-     * 
      */
     @Import(name="aggregation")
       private final @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
@@ -38,7 +36,6 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable ReportConfigDatasetConfigurationResponse configuration;
@@ -49,7 +46,6 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Has filter expression to use in the report.
-     * 
      */
     @Import(name="filter")
       private final @Nullable ReportConfigFilterResponse filter;
@@ -60,7 +56,6 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * The granularity of rows in the report.
-     * 
      */
     @Import(name="granularity")
       private final @Nullable String granularity;
@@ -71,7 +66,6 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
-     * 
      */
     @Import(name="grouping")
       private final @Nullable List<ReportConfigGroupingResponse> grouping;
@@ -82,7 +76,6 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
 
     /**
      * Array of order by expression to use in the report.
-     * 
      */
     @Import(name="sorting")
       private final @Nullable List<ReportConfigSortingResponse> sorting;

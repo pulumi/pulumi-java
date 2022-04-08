@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * IaaS VM workload-specific backup policy.
- * 
  */
 public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureIaasVM'.
-     * 
      */
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
@@ -48,7 +46,6 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Instant RP retention policy range in days
-     * 
      */
     @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Output<Integer> instantRpRetentionRangeInDays;
@@ -59,7 +56,6 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Number of items associated with this policy.
-     * 
      */
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
@@ -70,7 +66,6 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Retention policy with the details on backup copy retention ranges.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
@@ -81,7 +76,6 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Backup schedule specified as part of backup policy.
-     * 
      */
     @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
@@ -92,7 +86,6 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
 
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

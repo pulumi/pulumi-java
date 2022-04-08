@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource requirements for the container (cpu and memory).
- * 
  */
 public final class ContainerResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     /**
      * The minimum amount of CPU cores to be used by the container. More info:
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
@@ -34,7 +32,6 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     /**
      * The maximum amount of CPU cores allowed to be used by the container. More info:
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     * 
      */
     @Import(name="cpuLimit")
       private final @Nullable Output<Double> cpuLimit;
@@ -45,7 +42,6 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
 
     /**
      * The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
-     * 
      */
     @Import(name="fpga")
       private final @Nullable Output<Integer> fpga;
@@ -56,7 +52,6 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
 
     /**
      * The number of GPU cores in the container.
-     * 
      */
     @Import(name="gpu")
       private final @Nullable Output<Integer> gpu;
@@ -68,7 +63,6 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     /**
      * The minimum amount of memory (in GB) to be used by the container. More info:
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     * 
      */
     @Import(name="memoryInGB")
       private final @Nullable Output<Double> memoryInGB;
@@ -80,7 +74,6 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     /**
      * The maximum amount of memory (in GB) allowed to be used by the container. More info:
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     * 
      */
     @Import(name="memoryInGBLimit")
       private final @Nullable Output<Double> memoryInGBLimit;

@@ -61,174 +61,149 @@ import javax.annotation.Nullable;
 /**
  * Pipeline resource type.
  * API Version: 2018-06-01.
- * 
  */
 @ResourceType(type="azure-native:datafactory:Pipeline")
 public class Pipeline extends io.pulumi.resources.CustomResource {
     /**
      * List of activities in pipeline.
-     * 
      */
     @Export(name="activities", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> activities;
 
     /**
      * @return List of activities in pipeline.
-     * 
      */
     public Output</* @Nullable */ List<Object>> getActivities() {
         return this.activities;
     }
     /**
      * List of tags that can be used for describing the Pipeline.
-     * 
      */
     @Export(name="annotations", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> annotations;
 
     /**
      * @return List of tags that can be used for describing the Pipeline.
-     * 
      */
     public Output</* @Nullable */ List<Object>> getAnnotations() {
         return this.annotations;
     }
     /**
      * The max number of concurrent runs for the pipeline.
-     * 
      */
     @Export(name="concurrency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> concurrency;
 
     /**
      * @return The max number of concurrent runs for the pipeline.
-     * 
      */
     public Output</* @Nullable */ Integer> getConcurrency() {
         return this.concurrency;
     }
     /**
      * The description of the pipeline.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the pipeline.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Etag identifies change in the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Etag identifies change in the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
-     * 
      */
     @Export(name="folder", type=PipelineResponseFolder.class, parameters={})
     private Output</* @Nullable */ PipelineResponseFolder> folder;
 
     /**
      * @return The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
-     * 
      */
     public Output</* @Nullable */ PipelineResponseFolder> getFolder() {
         return this.folder;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of parameters for pipeline.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, ParameterSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> parameters;
 
     /**
      * @return List of parameters for pipeline.
-     * 
      */
     public Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * Pipeline Policy.
-     * 
      */
     @Export(name="policy", type=PipelinePolicyResponse.class, parameters={})
     private Output</* @Nullable */ PipelinePolicyResponse> policy;
 
     /**
      * @return Pipeline Policy.
-     * 
      */
     public Output</* @Nullable */ PipelinePolicyResponse> getPolicy() {
         return this.policy;
     }
     /**
      * Dimensions emitted by Pipeline.
-     * 
      */
     @Export(name="runDimensions", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> runDimensions;
 
     /**
      * @return Dimensions emitted by Pipeline.
-     * 
      */
     public Output</* @Nullable */ Map<String,Object>> getRunDimensions() {
         return this.runDimensions;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * List of variables for pipeline.
-     * 
      */
     @Export(name="variables", type=Map.class, parameters={String.class, VariableSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,VariableSpecificationResponse>> variables;
 
     /**
      * @return List of variables for pipeline.
-     * 
      */
     public Output</* @Nullable */ Map<String,VariableSpecificationResponse>> getVariables() {
         return this.variables;

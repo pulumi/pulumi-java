@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Jira Service linked service.
- * 
  */
 public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -50,7 +47,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -61,7 +57,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -72,7 +67,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The IP address or host name of the Jira service. (e.g. jira.example.com)
-     * 
      */
     @Import(name="host", required=true)
       private final Output<Object> host;
@@ -83,7 +77,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -94,7 +87,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The password corresponding to the user name that you provided in the username field.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -105,7 +97,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The TCP port that the Jira server uses to listen for client connections. The default value is 443 if connecting through HTTPS, or 8080 if connecting through HTTP.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Object> port;
@@ -117,7 +108,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     /**
      * Type of linked service.
      * Expected value is 'Jira'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -128,7 +118,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
@@ -139,7 +128,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
@@ -150,7 +138,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;
@@ -161,7 +148,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The user name that you use to access Jira Service.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<Object> username;

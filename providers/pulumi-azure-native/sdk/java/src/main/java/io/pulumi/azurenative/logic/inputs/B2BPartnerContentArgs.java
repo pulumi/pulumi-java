@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The B2B partner content.
- * 
  */
 public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The list of partner business identities.
-     * 
      */
     @Import(name="businessIdentities")
       private final @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;

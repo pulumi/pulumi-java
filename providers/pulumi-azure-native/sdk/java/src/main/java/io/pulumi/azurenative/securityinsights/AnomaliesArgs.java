@@ -17,7 +17,6 @@ public final class AnomaliesArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The kind of the setting
      * Expected value is 'Anomalies'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -28,7 +27,6 @@ public final class AnomaliesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -39,7 +37,6 @@ public final class AnomaliesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class AnomaliesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
-     * 
      */
     @Import(name="settingsName")
       private final @Nullable Output<String> settingsName;
@@ -61,7 +57,6 @@ public final class AnomaliesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

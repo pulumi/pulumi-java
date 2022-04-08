@@ -27,7 +27,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -38,7 +37,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A boolean value that indicates if the cluster's disks are encrypted.
-     * 
      */
     @Import(name="enableDiskEncryption")
       private final @Nullable Output<Boolean> enableDiskEncryption;
@@ -49,7 +47,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A boolean value that indicates if double encryption is enabled.
-     * 
      */
     @Import(name="enableDoubleEncryption")
       private final @Nullable Output<Boolean> enableDoubleEncryption;
@@ -60,7 +57,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A boolean value that indicates if the purge operations are enabled.
-     * 
      */
     @Import(name="enablePurge")
       private final @Nullable Output<Boolean> enablePurge;
@@ -71,7 +67,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A boolean value that indicates if the streaming ingest is enabled.
-     * 
      */
     @Import(name="enableStreamingIngest")
       private final @Nullable Output<Boolean> enableStreamingIngest;
@@ -82,7 +77,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The engine type
-     * 
      */
     @Import(name="engineType")
       private final @Nullable Output<Either<String,EngineType>> engineType;
@@ -93,7 +87,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the cluster, if configured.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -104,7 +97,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KeyVault properties for the cluster encryption.
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
@@ -115,7 +107,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -126,7 +117,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optimized auto scale definition.
-     * 
      */
     @Import(name="optimizedAutoscale")
       private final @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale;
@@ -137,7 +127,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -148,7 +137,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the cluster.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<AzureSkuArgs> sku;
@@ -159,7 +147,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -170,7 +157,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cluster's external tenants.
-     * 
      */
     @Import(name="trustedExternalTenants")
       private final @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants;
@@ -181,7 +167,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual network definition.
-     * 
      */
     @Import(name="virtualNetworkConfiguration")
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
@@ -192,7 +177,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The availability zones of the cluster.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

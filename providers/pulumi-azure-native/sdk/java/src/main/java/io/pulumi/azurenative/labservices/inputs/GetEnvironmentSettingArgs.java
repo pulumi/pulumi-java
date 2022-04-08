@@ -16,7 +16,6 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the environment Setting.
-     * 
      */
     @Import(name="environmentSettingName", required=true)
       private final String environmentSettingName;
@@ -27,7 +26,6 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Specify the $expand query. Example: 'properties($select=publishingState)'
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -38,7 +36,6 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the lab Account.
-     * 
      */
     @Import(name="labAccountName", required=true)
       private final String labAccountName;
@@ -49,7 +46,6 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -60,7 +56,6 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
