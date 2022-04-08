@@ -135,7 +135,6 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      * @Deprecated
      * version is not useful as a configurable field, and will be removed in the future.
-     * 
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     @Import(name="version")

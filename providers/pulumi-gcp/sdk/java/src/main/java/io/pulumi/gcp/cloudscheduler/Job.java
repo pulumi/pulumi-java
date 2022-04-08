@@ -24,13 +24,359 @@ import javax.annotation.Nullable;
  * that is located in one of the supported regions. If your project
  * does not have an App Engine app, you must create one.
  * 
+ * 
  * To get more information about Job, see:
  * 
  * * [API documentation](https://cloud.google.com/scheduler/docs/reference/rest/)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/scheduler/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Scheduler Job App Engine
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const job = new gcp.cloudscheduler.Job("job", {
+ *     appEngineHttpTarget: {
+ *         appEngineRouting: {
+ *             instance: "my-instance-001",
+ *             service: "web",
+ *             version: "prod",
+ *         },
+ *         httpMethod: "POST",
+ *         relativeUri: "/ping",
+ *     },
+ *     attemptDeadline: "320s",
+ *     description: "test app engine job",
+ *     retryConfig: {
+ *         maxDoublings: 2,
+ *         maxRetryDuration: "10s",
+ *         minBackoffDuration: "1s",
+ *         retryCount: 3,
+ *     },
+ *     schedule: "*{@literal /}4 * * * *",
+ *     timeZone: "Europe/London",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * job = gcp.cloudscheduler.Job("job",
+ *     app_engine_http_target=gcp.cloudscheduler.JobAppEngineHttpTargetArgs(
+ *         app_engine_routing=gcp.cloudscheduler.JobAppEngineHttpTargetAppEngineRoutingArgs(
+ *             instance="my-instance-001",
+ *             service="web",
+ *             version="prod",
+ *         ),
+ *         http_method="POST",
+ *         relative_uri="/ping",
+ *     ),
+ *     attempt_deadline="320s",
+ *     description="test app engine job",
+ *     retry_config=gcp.cloudscheduler.JobRetryConfigArgs(
+ *         max_doublings=2,
+ *         max_retry_duration="10s",
+ *         min_backoff_duration="1s",
+ *         retry_count=3,
+ *     ),
+ *     schedule="*{@literal /}4 * * * *",
+ *     time_zone="Europe/London")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var job = new Gcp.CloudScheduler.Job("job", new Gcp.CloudScheduler.JobArgs
+ *         {
+ *             AppEngineHttpTarget = new Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetArgs
+ *             {
+ *                 AppEngineRouting = new Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetAppEngineRoutingArgs
+ *                 {
+ *                     Instance = "my-instance-001",
+ *                     Service = "web",
+ *                     Version = "prod",
+ *                 },
+ *                 HttpMethod = "POST",
+ *                 RelativeUri = "/ping",
+ *             },
+ *             AttemptDeadline = "320s",
+ *             Description = "test app engine job",
+ *             RetryConfig = new Gcp.CloudScheduler.Inputs.JobRetryConfigArgs
+ *             {
+ *                 MaxDoublings = 2,
+ *                 MaxRetryDuration = "10s",
+ *                 MinBackoffDuration = "1s",
+ *                 RetryCount = 3,
+ *             },
+ *             Schedule = "*{@literal /}4 * * * *",
+ *             TimeZone = "Europe/London",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudscheduler"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudscheduler.NewJob(ctx, "job", &cloudscheduler.JobArgs{
+ * 			AppEngineHttpTarget: &cloudscheduler.JobAppEngineHttpTargetArgs{
+ * 				AppEngineRouting: &cloudscheduler.JobAppEngineHttpTargetAppEngineRoutingArgs{
+ * 					Instance: pulumi.String("my-instance-001"),
+ * 					Service:  pulumi.String("web"),
+ * 					Version:  pulumi.String("prod"),
+ * 				},
+ * 				HttpMethod:  pulumi.String("POST"),
+ * 				RelativeUri: pulumi.String("/ping"),
+ * 			},
+ * 			AttemptDeadline: pulumi.String("320s"),
+ * 			Description:     pulumi.String("test app engine job"),
+ * 			RetryConfig: &cloudscheduler.JobRetryConfigArgs{
+ * 				MaxDoublings:       pulumi.Int(2),
+ * 				MaxRetryDuration:   pulumi.String("10s"),
+ * 				MinBackoffDuration: pulumi.String("1s"),
+ * 				RetryCount:         pulumi.Int(3),
+ * 			},
+ * 			Schedule: pulumi.String("*{@literal /}4 * * * *"),
+ * 			TimeZone: pulumi.String("Europe/London"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Scheduler Job Oauth
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const default = gcp.compute.getDefaultServiceAccount({});
+ * const job = new gcp.cloudscheduler.Job("job", {
+ *     description: "test http job",
+ *     schedule: "*{@literal /}8 * * * *",
+ *     timeZone: "America/New_York",
+ *     attemptDeadline: "320s",
+ *     httpTarget: {
+ *         httpMethod: "GET",
+ *         uri: "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
+ *         oauthToken: {
+ *             serviceAccountEmail: _default.then(_default => _default.email),
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.get_default_service_account()
+ * job = gcp.cloudscheduler.Job("job",
+ *     description="test http job",
+ *     schedule="*{@literal /}8 * * * *",
+ *     time_zone="America/New_York",
+ *     attempt_deadline="320s",
+ *     http_target=gcp.cloudscheduler.JobHttpTargetArgs(
+ *         http_method="GET",
+ *         uri="https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
+ *         oauth_token=gcp.cloudscheduler.JobHttpTargetOauthTokenArgs(
+ *             service_account_email=default.email,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = Output.Create(Gcp.Compute.GetDefaultServiceAccount.InvokeAsync());
+ *         var job = new Gcp.CloudScheduler.Job("job", new Gcp.CloudScheduler.JobArgs
+ *         {
+ *             Description = "test http job",
+ *             Schedule = "*{@literal /}8 * * * *",
+ *             TimeZone = "America/New_York",
+ *             AttemptDeadline = "320s",
+ *             HttpTarget = new Gcp.CloudScheduler.Inputs.JobHttpTargetArgs
+ *             {
+ *                 HttpMethod = "GET",
+ *                 Uri = "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
+ *                 OauthToken = new Gcp.CloudScheduler.Inputs.JobHttpTargetOauthTokenArgs
+ *                 {
+ *                     ServiceAccountEmail = @default.Apply(@default => @default.Email),
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudscheduler"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_default, err := compute.GetDefaultServiceAccount(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudscheduler.NewJob(ctx, "job", &cloudscheduler.JobArgs{
+ * 			Description:     pulumi.String("test http job"),
+ * 			Schedule:        pulumi.String("*{@literal /}8 * * * *"),
+ * 			TimeZone:        pulumi.String("America/New_York"),
+ * 			AttemptDeadline: pulumi.String("320s"),
+ * 			HttpTarget: &cloudscheduler.JobHttpTargetArgs{
+ * 				HttpMethod: pulumi.String("GET"),
+ * 				Uri:        pulumi.String("https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs"),
+ * 				OauthToken: &cloudscheduler.JobHttpTargetOauthTokenArgs{
+ * 					ServiceAccountEmail: pulumi.String(_default.Email),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Scheduler Job Oidc
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const default = gcp.compute.getDefaultServiceAccount({});
+ * const job = new gcp.cloudscheduler.Job("job", {
+ *     description: "test http job",
+ *     schedule: "*{@literal /}8 * * * *",
+ *     timeZone: "America/New_York",
+ *     attemptDeadline: "320s",
+ *     httpTarget: {
+ *         httpMethod: "GET",
+ *         uri: "https://example.com/ping",
+ *         oidcToken: {
+ *             serviceAccountEmail: _default.then(_default => _default.email),
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.get_default_service_account()
+ * job = gcp.cloudscheduler.Job("job",
+ *     description="test http job",
+ *     schedule="*{@literal /}8 * * * *",
+ *     time_zone="America/New_York",
+ *     attempt_deadline="320s",
+ *     http_target=gcp.cloudscheduler.JobHttpTargetArgs(
+ *         http_method="GET",
+ *         uri="https://example.com/ping",
+ *         oidc_token=gcp.cloudscheduler.JobHttpTargetOidcTokenArgs(
+ *             service_account_email=default.email,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = Output.Create(Gcp.Compute.GetDefaultServiceAccount.InvokeAsync());
+ *         var job = new Gcp.CloudScheduler.Job("job", new Gcp.CloudScheduler.JobArgs
+ *         {
+ *             Description = "test http job",
+ *             Schedule = "*{@literal /}8 * * * *",
+ *             TimeZone = "America/New_York",
+ *             AttemptDeadline = "320s",
+ *             HttpTarget = new Gcp.CloudScheduler.Inputs.JobHttpTargetArgs
+ *             {
+ *                 HttpMethod = "GET",
+ *                 Uri = "https://example.com/ping",
+ *                 OidcToken = new Gcp.CloudScheduler.Inputs.JobHttpTargetOidcTokenArgs
+ *                 {
+ *                     ServiceAccountEmail = @default.Apply(@default => @default.Email),
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudscheduler"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_default, err := compute.GetDefaultServiceAccount(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudscheduler.NewJob(ctx, "job", &cloudscheduler.JobArgs{
+ * 			Description:     pulumi.String("test http job"),
+ * 			Schedule:        pulumi.String("*{@literal /}8 * * * *"),
+ * 			TimeZone:        pulumi.String("America/New_York"),
+ * 			AttemptDeadline: pulumi.String("320s"),
+ * 			HttpTarget: &cloudscheduler.JobHttpTargetArgs{
+ * 				HttpMethod: pulumi.String("GET"),
+ * 				Uri:        pulumi.String("https://example.com/ping"),
+ * 				OidcToken: &cloudscheduler.JobHttpTargetOidcTokenArgs{
+ * 					ServiceAccountEmail: pulumi.String(_default.Email),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,18 +386,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:cloudscheduler/job:Job default projects/{{project}}/locations/{{region}}/jobs/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:cloudscheduler/job:Job default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:cloudscheduler/job:Job default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:cloudscheduler/job:Job default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:cloudscheduler/job:Job")
 public class Job extends io.pulumi.resources.CustomResource {
@@ -83,7 +436,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * * For HTTP targets, between 15 seconds and 30 minutes.
      * * For App Engine HTTP targets, between 15 seconds and 24 hours.
      * * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
-     *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
     @Export(name="attemptDeadline", type=String.class, parameters={})
@@ -97,7 +450,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * * For HTTP targets, between 15 seconds and 30 minutes.
      * * For App Engine HTTP targets, between 15 seconds and 24 hours.
      * * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
-     *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
     public Output</* @Nullable */ String> getAttemptDeadline() {

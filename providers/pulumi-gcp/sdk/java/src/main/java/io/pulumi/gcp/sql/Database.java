@@ -16,7 +16,100 @@ import javax.annotation.Nullable;
  * Represents a SQL database inside the Cloud SQL instance, hosted in
  * Google's cloud.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Sql Database Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instance = new gcp.sql.DatabaseInstance("instance", {
+ *     region: "us-central1",
+ *     databaseVersion: "MYSQL_5_7",
+ *     settings: {
+ *         tier: "db-f1-micro",
+ *     },
+ *     deletionProtection: "true",
+ * });
+ * const database = new gcp.sql.Database("database", {instance: instance.name});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance = gcp.sql.DatabaseInstance("instance",
+ *     region="us-central1",
+ *     database_version="MYSQL_5_7",
+ *     settings=gcp.sql.DatabaseInstanceSettingsArgs(
+ *         tier="db-f1-micro",
+ *     ),
+ *     deletion_protection=True)
+ * database = gcp.sql.Database("database", instance=instance.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+ *         {
+ *             Region = "us-central1",
+ *             DatabaseVersion = "MYSQL_5_7",
+ *             Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+ *             {
+ *                 Tier = "db-f1-micro",
+ *             },
+ *             DeletionProtection = true,
+ *         });
+ *         var database = new Gcp.Sql.Database("database", new Gcp.Sql.DatabaseArgs
+ *         {
+ *             Instance = instance.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+ * 			Region:          pulumi.String("us-central1"),
+ * 			DatabaseVersion: pulumi.String("MYSQL_5_7"),
+ * 			Settings: &sql.DatabaseInstanceSettingsArgs{
+ * 				Tier: pulumi.String("db-f1-micro"),
+ * 			},
+ * 			DeletionProtection: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+ * 			Instance: instance.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,22 +119,31 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:sql/database:Database default projects/{{project}}/instances/{{instance}}/databases/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:sql/database:Database default instances/{{instance}}/databases/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:sql/database:Database default {{project}}/{{instance}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:sql/database:Database default {{instance}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:sql/database:Database default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:sql/database:Database")
 public class Database extends io.pulumi.resources.CustomResource {

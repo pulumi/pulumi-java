@@ -15,7 +15,241 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Example creating a SQL User.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * as random from "@pulumi/random";
+ * 
+ * const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+ * const master = new gcp.sql.DatabaseInstance("master", {
+ *     databaseVersion: "MYSQL_5_7",
+ *     settings: {
+ *         tier: "db-f1-micro",
+ *     },
+ * });
+ * const users = new gcp.sql.User("users", {
+ *     instance: master.name,
+ *     host: "me.com",
+ *     password: "changeme",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * import pulumi_random as random
+ * 
+ * db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+ * master = gcp.sql.DatabaseInstance("master",
+ *     database_version="MYSQL_5_7",
+ *     settings=gcp.sql.DatabaseInstanceSettingsArgs(
+ *         tier="db-f1-micro",
+ *     ))
+ * users = gcp.sql.User("users",
+ *     instance=master.name,
+ *     host="me.com",
+ *     password="changeme")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dbNameSuffix = new Random.RandomId("dbNameSuffix", new Random.RandomIdArgs
+ *         {
+ *             ByteLength = 4,
+ *         });
+ *         var master = new Gcp.Sql.DatabaseInstance("master", new Gcp.Sql.DatabaseInstanceArgs
+ *         {
+ *             DatabaseVersion = "MYSQL_5_7",
+ *             Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+ *             {
+ *                 Tier = "db-f1-micro",
+ *             },
+ *         });
+ *         var users = new Gcp.Sql.User("users", new Gcp.Sql.UserArgs
+ *         {
+ *             Instance = master.Name,
+ *             Host = "me.com",
+ *             Password = "changeme",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sql"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := random.NewRandomId(ctx, "dbNameSuffix", &random.RandomIdArgs{
+ * 			ByteLength: pulumi.Int(4),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		master, err := sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
+ * 			DatabaseVersion: pulumi.String("MYSQL_5_7"),
+ * 			Settings: &sql.DatabaseInstanceSettingsArgs{
+ * 				Tier: pulumi.String("db-f1-micro"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sql.NewUser(ctx, "users", &sql.UserArgs{
+ * 			Instance: master.Name,
+ * 			Host:     pulumi.String("me.com"),
+ * 			Password: pulumi.String("changeme"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Example creating a Cloud IAM User. (For MySQL, specify `cloudsql_iam_authentication`)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * as random from "@pulumi/random";
+ * 
+ * const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+ * const master = new gcp.sql.DatabaseInstance("master", {
+ *     databaseVersion: "POSTGRES_9_6",
+ *     settings: {
+ *         tier: "db-f1-micro",
+ *         databaseFlags: [{
+ *             name: "cloudsql.iam_authentication",
+ *             value: "on",
+ *         }],
+ *     },
+ * });
+ * const users = new gcp.sql.User("users", {
+ *     instance: master.name,
+ *     type: "CLOUD_IAM_USER",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * import pulumi_random as random
+ * 
+ * db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+ * master = gcp.sql.DatabaseInstance("master",
+ *     database_version="POSTGRES_9_6",
+ *     settings=gcp.sql.DatabaseInstanceSettingsArgs(
+ *         tier="db-f1-micro",
+ *         database_flags=[gcp.sql.DatabaseInstanceSettingsDatabaseFlagArgs(
+ *             name="cloudsql.iam_authentication",
+ *             value="on",
+ *         )],
+ *     ))
+ * users = gcp.sql.User("users",
+ *     instance=master.name,
+ *     type="CLOUD_IAM_USER")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dbNameSuffix = new Random.RandomId("dbNameSuffix", new Random.RandomIdArgs
+ *         {
+ *             ByteLength = 4,
+ *         });
+ *         var master = new Gcp.Sql.DatabaseInstance("master", new Gcp.Sql.DatabaseInstanceArgs
+ *         {
+ *             DatabaseVersion = "POSTGRES_9_6",
+ *             Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+ *             {
+ *                 Tier = "db-f1-micro",
+ *                 DatabaseFlags = 
+ *                 {
+ *                     new Gcp.Sql.Inputs.DatabaseInstanceSettingsDatabaseFlagArgs
+ *                     {
+ *                         Name = "cloudsql.iam_authentication",
+ *                         Value = "on",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var users = new Gcp.Sql.User("users", new Gcp.Sql.UserArgs
+ *         {
+ *             Instance = master.Name,
+ *             Type = "CLOUD_IAM_USER",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sql"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := random.NewRandomId(ctx, "dbNameSuffix", &random.RandomIdArgs{
+ * 			ByteLength: pulumi.Int(4),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		master, err := sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
+ * 			DatabaseVersion: pulumi.String("POSTGRES_9_6"),
+ * 			Settings: &sql.DatabaseInstanceSettingsArgs{
+ * 				Tier: pulumi.String("db-f1-micro"),
+ * 				DatabaseFlags: sql.DatabaseInstanceSettingsDatabaseFlagArray{
+ * 					&sql.DatabaseInstanceSettingsDatabaseFlagArgs{
+ * 						Name:  pulumi.String("cloudsql.iam_authentication"),
+ * 						Value: pulumi.String("on"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sql.NewUser(ctx, "users", &sql.UserArgs{
+ * 			Instance: master.Name,
+ * 			Type:     pulumi.String("CLOUD_IAM_USER"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +265,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:sql/user:User users my-project/master-instance/me
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:sql/user:User")
 public class User extends io.pulumi.resources.CustomResource {

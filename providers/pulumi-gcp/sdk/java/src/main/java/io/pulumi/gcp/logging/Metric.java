@@ -20,13 +20,384 @@ import javax.annotation.Nullable;
  * of the values. The distribution records the statistics of the extracted values along with
  * an optional histogram of the values as specified by the bucket options.
  * 
+ * 
  * To get more information about Metric, see:
  * 
  * * [API documentation](https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics/create)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/logging/docs/apis)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Logging Metric Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const loggingMetric = new gcp.logging.Metric("logging_metric", {
+ *     bucketOptions: {
+ *         linearBuckets: {
+ *             numFiniteBuckets: 3,
+ *             offset: 1,
+ *             width: 1,
+ *         },
+ *     },
+ *     filter: "resource.type=gae_app AND severity>=ERROR",
+ *     labelExtractors: {
+ *         mass: "EXTRACT(jsonPayload.request)",
+ *         sku: "EXTRACT(jsonPayload.id)",
+ *     },
+ *     metricDescriptor: {
+ *         displayName: "My metric",
+ *         labels: [
+ *             {
+ *                 description: "amount of matter",
+ *                 key: "mass",
+ *                 valueType: "STRING",
+ *             },
+ *             {
+ *                 description: "Identifying number for item",
+ *                 key: "sku",
+ *                 valueType: "INT64",
+ *             },
+ *         ],
+ *         metricKind: "DELTA",
+ *         unit: "1",
+ *         valueType: "DISTRIBUTION",
+ *     },
+ *     valueExtractor: "EXTRACT(jsonPayload.request)",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * logging_metric = gcp.logging.Metric("loggingMetric",
+ *     bucket_options=gcp.logging.MetricBucketOptionsArgs(
+ *         linear_buckets=gcp.logging.MetricBucketOptionsLinearBucketsArgs(
+ *             num_finite_buckets=3,
+ *             offset=1,
+ *             width=1,
+ *         ),
+ *     ),
+ *     filter="resource.type=gae_app AND severity>=ERROR",
+ *     label_extractors={
+ *         "mass": "EXTRACT(jsonPayload.request)",
+ *         "sku": "EXTRACT(jsonPayload.id)",
+ *     },
+ *     metric_descriptor=gcp.logging.MetricMetricDescriptorArgs(
+ *         display_name="My metric",
+ *         labels=[
+ *             gcp.logging.MetricMetricDescriptorLabelArgs(
+ *                 description="amount of matter",
+ *                 key="mass",
+ *                 value_type="STRING",
+ *             ),
+ *             gcp.logging.MetricMetricDescriptorLabelArgs(
+ *                 description="Identifying number for item",
+ *                 key="sku",
+ *                 value_type="INT64",
+ *             ),
+ *         ],
+ *         metric_kind="DELTA",
+ *         unit="1",
+ *         value_type="DISTRIBUTION",
+ *     ),
+ *     value_extractor="EXTRACT(jsonPayload.request)")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
+ *         {
+ *             BucketOptions = new Gcp.Logging.Inputs.MetricBucketOptionsArgs
+ *             {
+ *                 LinearBuckets = new Gcp.Logging.Inputs.MetricBucketOptionsLinearBucketsArgs
+ *                 {
+ *                     NumFiniteBuckets = 3,
+ *                     Offset = 1,
+ *                     Width = 1,
+ *                 },
+ *             },
+ *             Filter = "resource.type=gae_app AND severity>=ERROR",
+ *             LabelExtractors = 
+ *             {
+ *                 { "mass", "EXTRACT(jsonPayload.request)" },
+ *                 { "sku", "EXTRACT(jsonPayload.id)" },
+ *             },
+ *             MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+ *             {
+ *                 DisplayName = "My metric",
+ *                 Labels = 
+ *                 {
+ *                     new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+ *                     {
+ *                         Description = "amount of matter",
+ *                         Key = "mass",
+ *                         ValueType = "STRING",
+ *                     },
+ *                     new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+ *                     {
+ *                         Description = "Identifying number for item",
+ *                         Key = "sku",
+ *                         ValueType = "INT64",
+ *                     },
+ *                 },
+ *                 MetricKind = "DELTA",
+ *                 Unit = "1",
+ *                 ValueType = "DISTRIBUTION",
+ *             },
+ *             ValueExtractor = "EXTRACT(jsonPayload.request)",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
+ * 			BucketOptions: &logging.MetricBucketOptionsArgs{
+ * 				LinearBuckets: &logging.MetricBucketOptionsLinearBucketsArgs{
+ * 					NumFiniteBuckets: pulumi.Int(3),
+ * 					Offset:           pulumi.Float64(1),
+ * 					Width:            pulumi.Float64(1),
+ * 				},
+ * 			},
+ * 			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
+ * 			LabelExtractors: pulumi.StringMap{
+ * 				"mass": pulumi.String("EXTRACT(jsonPayload.request)"),
+ * 				"sku":  pulumi.String("EXTRACT(jsonPayload.id)"),
+ * 			},
+ * 			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
+ * 				DisplayName: pulumi.String("My metric"),
+ * 				Labels: logging.MetricMetricDescriptorLabelArray{
+ * 					&logging.MetricMetricDescriptorLabelArgs{
+ * 						Description: pulumi.String("amount of matter"),
+ * 						Key:         pulumi.String("mass"),
+ * 						ValueType:   pulumi.String("STRING"),
+ * 					},
+ * 					&logging.MetricMetricDescriptorLabelArgs{
+ * 						Description: pulumi.String("Identifying number for item"),
+ * 						Key:         pulumi.String("sku"),
+ * 						ValueType:   pulumi.String("INT64"),
+ * 					},
+ * 				},
+ * 				MetricKind: pulumi.String("DELTA"),
+ * 				Unit:       pulumi.String("1"),
+ * 				ValueType:  pulumi.String("DISTRIBUTION"),
+ * 			},
+ * 			ValueExtractor: pulumi.String("EXTRACT(jsonPayload.request)"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Logging Metric Counter Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const loggingMetric = new gcp.logging.Metric("logging_metric", {
+ *     filter: "resource.type=gae_app AND severity>=ERROR",
+ *     metricDescriptor: {
+ *         metricKind: "DELTA",
+ *         valueType: "INT64",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * logging_metric = gcp.logging.Metric("loggingMetric",
+ *     filter="resource.type=gae_app AND severity>=ERROR",
+ *     metric_descriptor=gcp.logging.MetricMetricDescriptorArgs(
+ *         metric_kind="DELTA",
+ *         value_type="INT64",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
+ *         {
+ *             Filter = "resource.type=gae_app AND severity>=ERROR",
+ *             MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+ *             {
+ *                 MetricKind = "DELTA",
+ *                 ValueType = "INT64",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
+ * 			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
+ * 			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
+ * 				MetricKind: pulumi.String("DELTA"),
+ * 				ValueType:  pulumi.String("INT64"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Logging Metric Counter Labels
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const loggingMetric = new gcp.logging.Metric("logging_metric", {
+ *     filter: "resource.type=gae_app AND severity>=ERROR",
+ *     labelExtractors: {
+ *         mass: "EXTRACT(jsonPayload.request)",
+ *     },
+ *     metricDescriptor: {
+ *         labels: [{
+ *             description: "amount of matter",
+ *             key: "mass",
+ *             valueType: "STRING",
+ *         }],
+ *         metricKind: "DELTA",
+ *         valueType: "INT64",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * logging_metric = gcp.logging.Metric("loggingMetric",
+ *     filter="resource.type=gae_app AND severity>=ERROR",
+ *     label_extractors={
+ *         "mass": "EXTRACT(jsonPayload.request)",
+ *     },
+ *     metric_descriptor=gcp.logging.MetricMetricDescriptorArgs(
+ *         labels=[gcp.logging.MetricMetricDescriptorLabelArgs(
+ *             description="amount of matter",
+ *             key="mass",
+ *             value_type="STRING",
+ *         )],
+ *         metric_kind="DELTA",
+ *         value_type="INT64",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
+ *         {
+ *             Filter = "resource.type=gae_app AND severity>=ERROR",
+ *             LabelExtractors = 
+ *             {
+ *                 { "mass", "EXTRACT(jsonPayload.request)" },
+ *             },
+ *             MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+ *             {
+ *                 Labels = 
+ *                 {
+ *                     new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+ *                     {
+ *                         Description = "amount of matter",
+ *                         Key = "mass",
+ *                         ValueType = "STRING",
+ *                     },
+ *                 },
+ *                 MetricKind = "DELTA",
+ *                 ValueType = "INT64",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
+ * 			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
+ * 			LabelExtractors: pulumi.StringMap{
+ * 				"mass": pulumi.String("EXTRACT(jsonPayload.request)"),
+ * 			},
+ * 			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
+ * 				Labels: logging.MetricMetricDescriptorLabelArray{
+ * 					&logging.MetricMetricDescriptorLabelArgs{
+ * 						Description: pulumi.String("amount of matter"),
+ * 						Key:         pulumi.String("mass"),
+ * 						ValueType:   pulumi.String("STRING"),
+ * 					},
+ * 				},
+ * 				MetricKind: pulumi.String("DELTA"),
+ * 				ValueType:  pulumi.String("INT64"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,10 +407,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/metric:Metric default {{project}} {{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:logging/metric:Metric default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/metric:Metric")
 public class Metric extends io.pulumi.resources.CustomResource {

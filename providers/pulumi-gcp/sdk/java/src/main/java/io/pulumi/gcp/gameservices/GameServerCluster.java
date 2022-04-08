@@ -23,7 +23,36 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/game-servers/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Game Service Cluster Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultGameServerCluster = new gcp.gameservices.GameServerCluster("default", {
+ *     clusterId: "",
+ *     "google_game_services_realm.default.realm_id": [{
+ *         connectionInfo: [{
+ *             gkeClusterReference: [{
+ *                 cluster: "locations/us-west1/clusters/%{agones_cluster}",
+ *             }],
+ *             namespace: "default",
+ *         }],
+ *     }],
+ *     realmId: "",
+ * });
+ * const defaultRealm = new gcp.gameservices.Realm("default", {
+ *     description: "Test Game Realm",
+ *     realmId: "realm",
+ *     timeZone: "PST8PDT",
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +62,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default projects/{{project}}/locations/{{location}}/realms/{{realm_id}}/gameServerClusters/{{cluster_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default {{project}}/{{location}}/{{realm_id}}/{{cluster_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default {{location}}/{{realm_id}}/{{cluster_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:gameservices/gameServerCluster:GameServerCluster")
 public class GameServerCluster extends io.pulumi.resources.CustomResource {

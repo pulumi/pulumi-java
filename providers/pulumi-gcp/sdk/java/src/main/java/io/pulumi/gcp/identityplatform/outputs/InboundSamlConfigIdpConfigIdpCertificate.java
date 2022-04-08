@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InboundSamlConfigIdpConfigIdpCertificate {
     /**
-     * - 
+     * -
      * The x509 certificate
      * 
      */
@@ -24,7 +24,7 @@ public final class InboundSamlConfigIdpConfigIdpCertificate {
     }
 
     /**
-     * - 
+     * -
      * The x509 certificate
      * 
     */

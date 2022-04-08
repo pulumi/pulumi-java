@@ -26,8 +26,99 @@ import javax.annotation.Nullable;
  *  after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
  *  made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
  *  by the provider, and new roles cannot share that name.
- * 
+ *  
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * This snippet creates a customized IAM organization role.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
+ *     description: "A description",
+ *     orgId: "123456789",
+ *     permissions: [
+ *         "iam.roles.list",
+ *         "iam.roles.create",
+ *         "iam.roles.delete",
+ *     ],
+ *     roleId: "myCustomRole",
+ *     title: "My Custom Role",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_custom_role = gcp.organizations.IAMCustomRole("my-custom-role",
+ *     description="A description",
+ *     org_id="123456789",
+ *     permissions=[
+ *         "iam.roles.list",
+ *         "iam.roles.create",
+ *         "iam.roles.delete",
+ *     ],
+ *     role_id="myCustomRole",
+ *     title="My Custom Role")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var my_custom_role = new Gcp.Organizations.IAMCustomRole("my-custom-role", new Gcp.Organizations.IAMCustomRoleArgs
+ *         {
+ *             Description = "A description",
+ *             OrgId = "123456789",
+ *             Permissions = 
+ *             {
+ *                 "iam.roles.list",
+ *                 "iam.roles.create",
+ *                 "iam.roles.delete",
+ *             },
+ *             RoleId = "myCustomRole",
+ *             Title = "My Custom Role",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewIAMCustomRole(ctx, "my-custom-role", &organizations.IAMCustomRoleArgs{
+ * 			Description: pulumi.String("A description"),
+ * 			OrgId:       pulumi.String("123456789"),
+ * 			Permissions: pulumi.StringArray{
+ * 				pulumi.String("iam.roles.list"),
+ * 				pulumi.String("iam.roles.create"),
+ * 				pulumi.String("iam.roles.delete"),
+ * 			},
+ * 			RoleId: pulumi.String("myCustomRole"),
+ * 			Title:  pulumi.String("My Custom Role"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,6 +128,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:organizations/iAMCustomRole:IAMCustomRole my-custom-role organizations/123456789/roles/myCustomRole
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:organizations/iAMCustomRole:IAMCustomRole")
 public class IAMCustomRole extends io.pulumi.resources.CustomResource {

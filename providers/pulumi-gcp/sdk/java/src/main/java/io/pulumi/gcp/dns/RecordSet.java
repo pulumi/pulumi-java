@@ -15,6 +15,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * DNS record sets can be imported using either of these accepted formats
@@ -23,16 +26,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:dns/recordSet:RecordSet frontend projects/{{project}}/managedZones/{{zone}}/rrsets/{{name}}/{{type}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:dns/recordSet:RecordSet frontend {{project}}/{{zone}}/{{name}}/{{type}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:dns/recordSet:RecordSet frontend {{zone}}/{{name}}/{{type}}
  * ```
  * 
- *  NoteThe record name must include the trailing dot at the end.
- * 
+ *  NoteThe record name must include the trailing dot at the end. 
  */
 @ResourceType(type="gcp:dns/recordSet:RecordSet")
 public class RecordSet extends io.pulumi.resources.CustomResource {

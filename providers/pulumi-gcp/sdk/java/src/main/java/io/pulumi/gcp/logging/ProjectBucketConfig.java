@@ -20,7 +20,161 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are "_Default" and "_Required".
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.organizations.Project("default", {
+ *     projectId: "your-project-id",
+ *     orgId: "123456789",
+ * });
+ * const basic = new gcp.logging.ProjectBucketConfig("basic", {
+ *     project: _default.id,
+ *     location: "global",
+ *     retentionDays: 30,
+ *     bucketId: "_Default",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.organizations.Project("default",
+ *     project_id="your-project-id",
+ *     org_id="123456789")
+ * basic = gcp.logging.ProjectBucketConfig("basic",
+ *     project=default.id,
+ *     location="global",
+ *     retention_days=30,
+ *     bucket_id="_Default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Organizations.Project("default", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             ProjectId = "your-project-id",
+ *             OrgId = "123456789",
+ *         });
+ *         var basic = new Gcp.Logging.ProjectBucketConfig("basic", new Gcp.Logging.ProjectBucketConfigArgs
+ *         {
+ *             Project = @default.Id,
+ *             Location = "global",
+ *             RetentionDays = 30,
+ *             BucketId = "_Default",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewProject(ctx, "default", &organizations.ProjectArgs{
+ * 			ProjectId: pulumi.String("your-project-id"),
+ * 			OrgId:     pulumi.String("123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = logging.NewProjectBucketConfig(ctx, "basic", &logging.ProjectBucketConfigArgs{
+ * 			Project:       _default.ID(),
+ * 			Location:      pulumi.String("global"),
+ * 			RetentionDays: pulumi.Int(30),
+ * 			BucketId:      pulumi.String("_Default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Create logging bucket with customId
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.logging.ProjectBucketConfig("basic", {
+ *     bucketId: "custom-bucket",
+ *     location: "global",
+ *     project: "project_id",
+ *     retentionDays: 30,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.logging.ProjectBucketConfig("basic",
+ *     bucket_id="custom-bucket",
+ *     location="global",
+ *     project="project_id",
+ *     retention_days=30)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.Logging.ProjectBucketConfig("basic", new Gcp.Logging.ProjectBucketConfigArgs
+ *         {
+ *             BucketId = "custom-bucket",
+ *             Location = "global",
+ *             Project = "project_id",
+ *             RetentionDays = 30,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logging.NewProjectBucketConfig(ctx, "basic", &logging.ProjectBucketConfigArgs{
+ * 			BucketId:      pulumi.String("custom-bucket"),
+ * 			Location:      pulumi.String("global"),
+ * 			Project:       pulumi.String("project_id"),
+ * 			RetentionDays: pulumi.Int(30),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +184,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/projectBucketConfig:ProjectBucketConfig default projects/{{project}}/locations/{{location}}/buckets/{{bucket_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/projectBucketConfig:ProjectBucketConfig")
 public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {

@@ -18,11 +18,126 @@ import javax.annotation.Nullable;
 /**
  * Access Approval enables you to require your explicit approval whenever Google support and engineering need to access your customer content.
  * 
+ * 
  * To get more information about OrganizationSettings, see:
  * 
  * * [API documentation](https://cloud.google.com/access-approval/docs/reference/rest/v1/organizations)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Organization Access Approval Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const organizationAccessApproval = new gcp.organizations.AccessApprovalSettings("organization_access_approval", {
+ *     enrolledServices: [
+ *         {
+ *             cloudProduct: "appengine.googleapis.com",
+ *         },
+ *         {
+ *             cloudProduct: "dataflow.googleapis.com",
+ *             enrollmentLevel: "BLOCK_ALL",
+ *         },
+ *     ],
+ *     notificationEmails: [
+ *         "testuser@example.com",
+ *         "example.user@example.com",
+ *     ],
+ *     organizationId: "123456789",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * organization_access_approval = gcp.organizations.AccessApprovalSettings("organizationAccessApproval",
+ *     enrolled_services=[
+ *         gcp.organizations.AccessApprovalSettingsEnrolledServiceArgs(
+ *             cloud_product="appengine.googleapis.com",
+ *         ),
+ *         gcp.organizations.AccessApprovalSettingsEnrolledServiceArgs(
+ *             cloud_product="dataflow.googleapis.com",
+ *             enrollment_level="BLOCK_ALL",
+ *         ),
+ *     ],
+ *     notification_emails=[
+ *         "testuser@example.com",
+ *         "example.user@example.com",
+ *     ],
+ *     organization_id="123456789")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var organizationAccessApproval = new Gcp.Organizations.AccessApprovalSettings("organizationAccessApproval", new Gcp.Organizations.AccessApprovalSettingsArgs
+ *         {
+ *             EnrolledServices = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.AccessApprovalSettingsEnrolledServiceArgs
+ *                 {
+ *                     CloudProduct = "appengine.googleapis.com",
+ *                 },
+ *                 new Gcp.Organizations.Inputs.AccessApprovalSettingsEnrolledServiceArgs
+ *                 {
+ *                     CloudProduct = "dataflow.googleapis.com",
+ *                     EnrollmentLevel = "BLOCK_ALL",
+ *                 },
+ *             },
+ *             NotificationEmails = 
+ *             {
+ *                 "testuser@example.com",
+ *                 "example.user@example.com",
+ *             },
+ *             OrganizationId = "123456789",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewAccessApprovalSettings(ctx, "organizationAccessApproval", &organizations.AccessApprovalSettingsArgs{
+ * 			EnrolledServices: organizations.AccessApprovalSettingsEnrolledServiceArray{
+ * 				&organizations.AccessApprovalSettingsEnrolledServiceArgs{
+ * 					CloudProduct: pulumi.String("appengine.googleapis.com"),
+ * 				},
+ * 				&organizations.AccessApprovalSettingsEnrolledServiceArgs{
+ * 					CloudProduct:    pulumi.String("dataflow.googleapis.com"),
+ * 					EnrollmentLevel: pulumi.String("BLOCK_ALL"),
+ * 				},
+ * 			},
+ * 			NotificationEmails: pulumi.StringArray{
+ * 				pulumi.String("testuser@example.com"),
+ * 				pulumi.String("example.user@example.com"),
+ * 			},
+ * 			OrganizationId: pulumi.String("123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,10 +147,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:organizations/accessApprovalSettings:AccessApprovalSettings default organizations/{{organization_id}}/accessApprovalSettings
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:organizations/accessApprovalSettings:AccessApprovalSettings default {{organization_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:organizations/accessApprovalSettings:AccessApprovalSettings")
 public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {

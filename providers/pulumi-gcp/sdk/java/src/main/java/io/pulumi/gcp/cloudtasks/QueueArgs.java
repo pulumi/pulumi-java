@@ -71,9 +71,9 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * * Number of tasks in the queue
      * * User-specified throttling: rateLimits, retryConfig, and the queue's state.
      * * System throttling due to 429 (Too Many Requests) or 503 (Service
-     *   Unavailable) responses from the worker, high error rates, or to
-     *   smooth sudden large traffic spikes.
-     *   Structure is documented below.
+     * Unavailable) responses from the worker, high error rates, or to
+     * smooth sudden large traffic spikes.
+     * Structure is documented below.
      * 
      */
     @Import(name="rateLimits")

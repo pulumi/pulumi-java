@@ -15,11 +15,14 @@ import javax.annotation.Nullable;
 /**
  * Restricts access to Cloud Console and Google Cloud APIs for a set of users using Context-Aware Access.
  * 
+ * 
  * To get more information about GcpUserAccessBinding, see:
  * 
  * * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/organizations.gcpUserAccessBindings)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +32,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding")
 public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {

@@ -20,13 +20,91 @@ import javax.annotation.Nullable;
 /**
  * A Cloud TPU instance.
  * 
+ * 
  * To get more information about Node, see:
  * 
  * * [API documentation](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.nodes)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/tpu/docs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TPU Node Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const available = gcp.tpu.getTensorflowVersions({});
+ * const tpu = new gcp.tpu.Node("tpu", {
+ *     zone: "us-central1-b",
+ *     acceleratorType: "v3-8",
+ *     tensorflowVersion: available.then(available => available.versions?[0]),
+ *     cidrBlock: "10.2.0.0/29",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * available = gcp.tpu.get_tensorflow_versions()
+ * tpu = gcp.tpu.Node("tpu",
+ *     zone="us-central1-b",
+ *     accelerator_type="v3-8",
+ *     tensorflow_version=available.versions[0],
+ *     cidr_block="10.2.0.0/29")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
+ *         var tpu = new Gcp.Tpu.Node("tpu", new Gcp.Tpu.NodeArgs
+ *         {
+ *             Zone = "us-central1-b",
+ *             AcceleratorType = "v3-8",
+ *             TensorflowVersion = available.Apply(available => available.Versions?[0]),
+ *             CidrBlock = "10.2.0.0/29",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/tpu"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		available, err := tpu.GetTensorflowVersions(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = tpu.NewNode(ctx, "tpu", &tpu.NodeArgs{
+ * 			Zone:              pulumi.String("us-central1-b"),
+ * 			AcceleratorType:   pulumi.String("v3-8"),
+ * 			TensorflowVersion: pulumi.String(available.Versions[0]),
+ * 			CidrBlock:         pulumi.String("10.2.0.0/29"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,18 +114,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:tpu/node:Node default projects/{{project}}/locations/{{zone}}/nodes/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:tpu/node:Node default {{project}}/{{zone}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:tpu/node:Node default {{zone}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:tpu/node:Node default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:tpu/node:Node")
 public class Node extends io.pulumi.resources.CustomResource {

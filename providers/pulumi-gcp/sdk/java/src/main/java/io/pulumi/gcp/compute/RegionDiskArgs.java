@@ -56,7 +56,6 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
-     * 
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @Import(name="interface")

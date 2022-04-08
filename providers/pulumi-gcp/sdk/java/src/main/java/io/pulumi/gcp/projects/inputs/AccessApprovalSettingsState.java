@@ -69,13 +69,12 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     }
 
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * Deprecated in favor of `project_id`
      * 
      * @Deprecated
      * Deprecated in favor of `project_id`
-     * 
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @Import(name="project")

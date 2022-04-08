@@ -19,13 +19,162 @@ import javax.annotation.Nullable;
 /**
  * Resource to hold the state and status of a user's domain mapping.
  * 
+ * 
  * To get more information about DomainMapping, see:
  * 
  * * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations.domainmappings)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cloud Run Domain Mapping Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultService = new gcp.cloudrun.Service("defaultService", {
+ *     location: "us-central1",
+ *     metadata: {
+ *         namespace: "my-project-name",
+ *     },
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "us-docker.pkg.dev/cloudrun/container/hello",
+ *             }],
+ *         },
+ *     },
+ * });
+ * const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMapping", {
+ *     location: "us-central1",
+ *     metadata: {
+ *         namespace: "my-project-name",
+ *     },
+ *     spec: {
+ *         routeName: defaultService.name,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_service = gcp.cloudrun.Service("defaultService",
+ *     location="us-central1",
+ *     metadata=gcp.cloudrun.ServiceMetadataArgs(
+ *         namespace="my-project-name",
+ *     ),
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="us-docker.pkg.dev/cloudrun/container/hello",
+ *             )],
+ *         ),
+ *     ))
+ * default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
+ *     location="us-central1",
+ *     metadata=gcp.cloudrun.DomainMappingMetadataArgs(
+ *         namespace="my-project-name",
+ *     ),
+ *     spec=gcp.cloudrun.DomainMappingSpecArgs(
+ *         route_name=default_service.name,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultService = new Gcp.CloudRun.Service("defaultService", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+ *             {
+ *                 Namespace = "my-project-name",
+ *             },
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "us-docker.pkg.dev/cloudrun/container/hello",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var defaultDomainMapping = new Gcp.CloudRun.DomainMapping("defaultDomainMapping", new Gcp.CloudRun.DomainMappingArgs
+ *         {
+ *             Location = "us-central1",
+ *             Metadata = new Gcp.CloudRun.Inputs.DomainMappingMetadataArgs
+ *             {
+ *                 Namespace = "my-project-name",
+ *             },
+ *             Spec = new Gcp.CloudRun.Inputs.DomainMappingSpecArgs
+ *             {
+ *                 RouteName = defaultService.Name,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultService, err := cloudrun.NewService(ctx, "defaultService", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Metadata: &cloudrun.ServiceMetadataArgs{
+ * 				Namespace: pulumi.String("my-project-name"),
+ * 			},
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudrun.NewDomainMapping(ctx, "defaultDomainMapping", &cloudrun.DomainMappingArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Metadata: &cloudrun.DomainMappingMetadataArgs{
+ * 				Namespace: pulumi.String("my-project-name"),
+ * 			},
+ * 			Spec: &cloudrun.DomainMappingSpecArgs{
+ * 				RouteName: defaultService.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +184,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default locations/{{location}}/namespaces/{{project}}/domainmappings/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:cloudrun/domainMapping:DomainMapping")
 public class DomainMapping extends io.pulumi.resources.CustomResource {

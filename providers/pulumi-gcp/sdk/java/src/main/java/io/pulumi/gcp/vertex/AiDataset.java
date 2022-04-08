@@ -17,18 +17,84 @@ import javax.annotation.Nullable;
 /**
  * A collection of DataItems and Annotations on them.
  * 
+ * 
  * To get more information about Dataset, see:
  * 
  * * [API documentation](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.datasets)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/vertex-ai/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Vertex Ai Dataset
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dataset = new gcp.vertex.AiDataset("dataset", {
+ *     displayName: "terraform",
+ *     metadataSchemaUri: "gs://google-cloud-aiplatform/schema/dataset/metadata/image_1.0.0.yaml",
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dataset = gcp.vertex.AiDataset("dataset",
+ *     display_name="terraform",
+ *     metadata_schema_uri="gs://google-cloud-aiplatform/schema/dataset/metadata/image_1.0.0.yaml",
+ *     region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new Gcp.Vertex.AiDataset("dataset", new Gcp.Vertex.AiDatasetArgs
+ *         {
+ *             DisplayName = "terraform",
+ *             MetadataSchemaUri = "gs://google-cloud-aiplatform/schema/dataset/metadata/image_1.0.0.yaml",
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/vertex"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := vertex.NewAiDataset(ctx, "dataset", &vertex.AiDatasetArgs{
+ * 			DisplayName:       pulumi.String("terraform"),
+ * 			MetadataSchemaUri: pulumi.String("gs://google-cloud-aiplatform/schema/dataset/metadata/image_1.0.0.yaml"),
+ * 			Region:            pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:vertex/aiDataset:AiDataset")
 public class AiDataset extends io.pulumi.resources.CustomResource {

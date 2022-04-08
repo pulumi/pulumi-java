@@ -15,13 +15,417 @@ import javax.annotation.Nullable;
 /**
  * An `Organization` is the top-level container in Apigee.
  * 
+ * 
  * To get more information about Organization, see:
  * 
  * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations)
  * * How-to Guides
  *     * [Creating an API organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Apigee Organization Cloud Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const current = gcp.organizations.getClientConfig({});
+ * const apigeeNetwork = new gcp.compute.Network("apigeeNetwork", {});
+ * const apigeeRange = new gcp.compute.GlobalAddress("apigeeRange", {
+ *     purpose: "VPC_PEERING",
+ *     addressType: "INTERNAL",
+ *     prefixLength: 16,
+ *     network: apigeeNetwork.id,
+ * });
+ * const apigeeVpcConnection = new gcp.servicenetworking.Connection("apigeeVpcConnection", {
+ *     network: apigeeNetwork.id,
+ *     service: "servicenetworking.googleapis.com",
+ *     reservedPeeringRanges: [apigeeRange.name],
+ * });
+ * const org = new gcp.apigee.Organization("org", {
+ *     analyticsRegion: "us-central1",
+ *     projectId: current.then(current => current.project),
+ *     authorizedNetwork: apigeeNetwork.id,
+ * }, {
+ *     dependsOn: [apigeeVpcConnection],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * current = gcp.organizations.get_client_config()
+ * apigee_network = gcp.compute.Network("apigeeNetwork")
+ * apigee_range = gcp.compute.GlobalAddress("apigeeRange",
+ *     purpose="VPC_PEERING",
+ *     address_type="INTERNAL",
+ *     prefix_length=16,
+ *     network=apigee_network.id)
+ * apigee_vpc_connection = gcp.servicenetworking.Connection("apigeeVpcConnection",
+ *     network=apigee_network.id,
+ *     service="servicenetworking.googleapis.com",
+ *     reserved_peering_ranges=[apigee_range.name])
+ * org = gcp.apigee.Organization("org",
+ *     analytics_region="us-central1",
+ *     project_id=current.project,
+ *     authorized_network=apigee_network.id,
+ *     opts=pulumi.ResourceOptions(depends_on=[apigee_vpc_connection]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Gcp.Organizations.GetClientConfig.InvokeAsync());
+ *         var apigeeNetwork = new Gcp.Compute.Network("apigeeNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *         });
+ *         var apigeeRange = new Gcp.Compute.GlobalAddress("apigeeRange", new Gcp.Compute.GlobalAddressArgs
+ *         {
+ *             Purpose = "VPC_PEERING",
+ *             AddressType = "INTERNAL",
+ *             PrefixLength = 16,
+ *             Network = apigeeNetwork.Id,
+ *         });
+ *         var apigeeVpcConnection = new Gcp.ServiceNetworking.Connection("apigeeVpcConnection", new Gcp.ServiceNetworking.ConnectionArgs
+ *         {
+ *             Network = apigeeNetwork.Id,
+ *             Service = "servicenetworking.googleapis.com",
+ *             ReservedPeeringRanges = 
+ *             {
+ *                 apigeeRange.Name,
+ *             },
+ *         });
+ *         var org = new Gcp.Apigee.Organization("org", new Gcp.Apigee.OrganizationArgs
+ *         {
+ *             AnalyticsRegion = "us-central1",
+ *             ProjectId = current.Apply(current => current.Project),
+ *             AuthorizedNetwork = apigeeNetwork.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 apigeeVpcConnection,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/apigee"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicenetworking"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := organizations.GetClientConfig(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeNetwork, err := compute.NewNetwork(ctx, "apigeeNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeRange, err := compute.NewGlobalAddress(ctx, "apigeeRange", &compute.GlobalAddressArgs{
+ * 			Purpose:      pulumi.String("VPC_PEERING"),
+ * 			AddressType:  pulumi.String("INTERNAL"),
+ * 			PrefixLength: pulumi.Int(16),
+ * 			Network:      apigeeNetwork.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeVpcConnection, err := servicenetworking.NewConnection(ctx, "apigeeVpcConnection", &servicenetworking.ConnectionArgs{
+ * 			Network: apigeeNetwork.ID(),
+ * 			Service: pulumi.String("servicenetworking.googleapis.com"),
+ * 			ReservedPeeringRanges: pulumi.StringArray{
+ * 				apigeeRange.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigee.NewOrganization(ctx, "org", &apigee.OrganizationArgs{
+ * 			AnalyticsRegion:   pulumi.String("us-central1"),
+ * 			ProjectId:         pulumi.String(current.Project),
+ * 			AuthorizedNetwork: apigeeNetwork.ID(),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			apigeeVpcConnection,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Apigee Organization Cloud Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const current = gcp.organizations.getClientConfig({});
+ * const apigeeNetwork = new gcp.compute.Network("apigeeNetwork", {});
+ * const apigeeRange = new gcp.compute.GlobalAddress("apigeeRange", {
+ *     purpose: "VPC_PEERING",
+ *     addressType: "INTERNAL",
+ *     prefixLength: 16,
+ *     network: apigeeNetwork.id,
+ * });
+ * const apigeeVpcConnection = new gcp.servicenetworking.Connection("apigeeVpcConnection", {
+ *     network: apigeeNetwork.id,
+ *     service: "servicenetworking.googleapis.com",
+ *     reservedPeeringRanges: [apigeeRange.name],
+ * });
+ * const apigeeKeyring = new gcp.kms.KeyRing("apigeeKeyring", {location: "us-central1"});
+ * const apigeeKey = new gcp.kms.CryptoKey("apigeeKey", {keyRing: apigeeKeyring.id});
+ * const apigeeSa = new gcp.projects.ServiceIdentity("apigeeSa", {
+ *     project: google_project.project.project_id,
+ *     service: google_project_service.apigee.service,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const apigeeSaKeyuser = new gcp.kms.CryptoKeyIAMBinding("apigeeSaKeyuser", {
+ *     cryptoKeyId: apigeeKey.id,
+ *     role: "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+ *     members: [pulumi.interpolate`serviceAccount:${apigeeSa.email}`],
+ * });
+ * const org = new gcp.apigee.Organization("org", {
+ *     analyticsRegion: "us-central1",
+ *     displayName: "apigee-org",
+ *     description: "Auto-provisioned Apigee Org.",
+ *     projectId: current.then(current => current.project),
+ *     authorizedNetwork: apigeeNetwork.id,
+ *     runtimeDatabaseEncryptionKeyName: apigeeKey.id,
+ * }, {
+ *     dependsOn: [
+ *         apigeeVpcConnection,
+ *         apigeeSaKeyuser,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * current = gcp.organizations.get_client_config()
+ * apigee_network = gcp.compute.Network("apigeeNetwork")
+ * apigee_range = gcp.compute.GlobalAddress("apigeeRange",
+ *     purpose="VPC_PEERING",
+ *     address_type="INTERNAL",
+ *     prefix_length=16,
+ *     network=apigee_network.id)
+ * apigee_vpc_connection = gcp.servicenetworking.Connection("apigeeVpcConnection",
+ *     network=apigee_network.id,
+ *     service="servicenetworking.googleapis.com",
+ *     reserved_peering_ranges=[apigee_range.name])
+ * apigee_keyring = gcp.kms.KeyRing("apigeeKeyring", location="us-central1")
+ * apigee_key = gcp.kms.CryptoKey("apigeeKey", key_ring=apigee_keyring.id)
+ * apigee_sa = gcp.projects.ServiceIdentity("apigeeSa",
+ *     project=google_project["project"]["project_id"],
+ *     service=google_project_service["apigee"]["service"],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * apigee_sa_keyuser = gcp.kms.CryptoKeyIAMBinding("apigeeSaKeyuser",
+ *     crypto_key_id=apigee_key.id,
+ *     role="roles/cloudkms.cryptoKeyEncrypterDecrypter",
+ *     members=[apigee_sa.email.apply(lambda email: f"serviceAccount:{email}")])
+ * org = gcp.apigee.Organization("org",
+ *     analytics_region="us-central1",
+ *     display_name="apigee-org",
+ *     description="Auto-provisioned Apigee Org.",
+ *     project_id=current.project,
+ *     authorized_network=apigee_network.id,
+ *     runtime_database_encryption_key_name=apigee_key.id,
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             apigee_vpc_connection,
+ *             apigee_sa_keyuser,
+ *         ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Gcp.Organizations.GetClientConfig.InvokeAsync());
+ *         var apigeeNetwork = new Gcp.Compute.Network("apigeeNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *         });
+ *         var apigeeRange = new Gcp.Compute.GlobalAddress("apigeeRange", new Gcp.Compute.GlobalAddressArgs
+ *         {
+ *             Purpose = "VPC_PEERING",
+ *             AddressType = "INTERNAL",
+ *             PrefixLength = 16,
+ *             Network = apigeeNetwork.Id,
+ *         });
+ *         var apigeeVpcConnection = new Gcp.ServiceNetworking.Connection("apigeeVpcConnection", new Gcp.ServiceNetworking.ConnectionArgs
+ *         {
+ *             Network = apigeeNetwork.Id,
+ *             Service = "servicenetworking.googleapis.com",
+ *             ReservedPeeringRanges = 
+ *             {
+ *                 apigeeRange.Name,
+ *             },
+ *         });
+ *         var apigeeKeyring = new Gcp.Kms.KeyRing("apigeeKeyring", new Gcp.Kms.KeyRingArgs
+ *         {
+ *             Location = "us-central1",
+ *         });
+ *         var apigeeKey = new Gcp.Kms.CryptoKey("apigeeKey", new Gcp.Kms.CryptoKeyArgs
+ *         {
+ *             KeyRing = apigeeKeyring.Id,
+ *         });
+ *         var apigeeSa = new Gcp.Projects.ServiceIdentity("apigeeSa", new Gcp.Projects.ServiceIdentityArgs
+ *         {
+ *             Project = google_project.Project.Project_id,
+ *             Service = google_project_service.Apigee.Service,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var apigeeSaKeyuser = new Gcp.Kms.CryptoKeyIAMBinding("apigeeSaKeyuser", new Gcp.Kms.CryptoKeyIAMBindingArgs
+ *         {
+ *             CryptoKeyId = apigeeKey.Id,
+ *             Role = "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+ *             Members = 
+ *             {
+ *                 apigeeSa.Email.Apply(email => $"serviceAccount:{email}"),
+ *             },
+ *         });
+ *         var org = new Gcp.Apigee.Organization("org", new Gcp.Apigee.OrganizationArgs
+ *         {
+ *             AnalyticsRegion = "us-central1",
+ *             DisplayName = "apigee-org",
+ *             Description = "Auto-provisioned Apigee Org.",
+ *             ProjectId = current.Apply(current => current.Project),
+ *             AuthorizedNetwork = apigeeNetwork.Id,
+ *             RuntimeDatabaseEncryptionKeyName = apigeeKey.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 apigeeVpcConnection,
+ *                 apigeeSaKeyuser,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/apigee"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/kms"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicenetworking"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := organizations.GetClientConfig(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeNetwork, err := compute.NewNetwork(ctx, "apigeeNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeRange, err := compute.NewGlobalAddress(ctx, "apigeeRange", &compute.GlobalAddressArgs{
+ * 			Purpose:      pulumi.String("VPC_PEERING"),
+ * 			AddressType:  pulumi.String("INTERNAL"),
+ * 			PrefixLength: pulumi.Int(16),
+ * 			Network:      apigeeNetwork.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeVpcConnection, err := servicenetworking.NewConnection(ctx, "apigeeVpcConnection", &servicenetworking.ConnectionArgs{
+ * 			Network: apigeeNetwork.ID(),
+ * 			Service: pulumi.String("servicenetworking.googleapis.com"),
+ * 			ReservedPeeringRanges: pulumi.StringArray{
+ * 				apigeeRange.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeKeyring, err := kms.NewKeyRing(ctx, "apigeeKeyring", &kms.KeyRingArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeKey, err := kms.NewCryptoKey(ctx, "apigeeKey", &kms.CryptoKeyArgs{
+ * 			KeyRing: apigeeKeyring.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeSa, err := projects.NewServiceIdentity(ctx, "apigeeSa", &projects.ServiceIdentityArgs{
+ * 			Project: pulumi.Any(google_project.Project.Project_id),
+ * 			Service: pulumi.Any(google_project_service.Apigee.Service),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		apigeeSaKeyuser, err := kms.NewCryptoKeyIAMBinding(ctx, "apigeeSaKeyuser", &kms.CryptoKeyIAMBindingArgs{
+ * 			CryptoKeyId: apigeeKey.ID(),
+ * 			Role:        pulumi.String("roles/cloudkms.cryptoKeyEncrypterDecrypter"),
+ * 			Members: pulumi.StringArray{
+ * 				apigeeSa.Email.ApplyT(func(email string) (string, error) {
+ * 					return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+ * 				}).(pulumi.StringOutput),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigee.NewOrganization(ctx, "org", &apigee.OrganizationArgs{
+ * 			AnalyticsRegion:                  pulumi.String("us-central1"),
+ * 			DisplayName:                      pulumi.String("apigee-org"),
+ * 			Description:                      pulumi.String("Auto-provisioned Apigee Org."),
+ * 			ProjectId:                        pulumi.String(current.Project),
+ * 			AuthorizedNetwork:                apigeeNetwork.ID(),
+ * 			RuntimeDatabaseEncryptionKeyName: apigeeKey.ID(),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			apigeeVpcConnection,
+ * 			apigeeSaKeyuser,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +435,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:apigee/organization:Organization default organizations/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:apigee/organization:Organization default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:apigee/organization:Organization")
 public class Organization extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,271 @@ import javax.annotation.Nullable;
  * Represents an InterconnectAttachment (VLAN attachment) resource. For more
  * information, see Creating VLAN Attachments.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Interconnect Attachment Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const foobarNetwork = new gcp.compute.Network("foobarNetwork", {autoCreateSubnetworks: false});
+ * const foobarRouter = new gcp.compute.Router("foobarRouter", {
+ *     network: foobarNetwork.name,
+ *     bgp: {
+ *         asn: 16550,
+ *     },
+ * });
+ * const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
+ *     edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
+ *     type: "PARTNER",
+ *     router: foobarRouter.id,
+ *     mtu: 1500,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * foobar_network = gcp.compute.Network("foobarNetwork", auto_create_subnetworks=False)
+ * foobar_router = gcp.compute.Router("foobarRouter",
+ *     network=foobar_network.name,
+ *     bgp=gcp.compute.RouterBgpArgs(
+ *         asn=16550,
+ *     ))
+ * on_prem = gcp.compute.InterconnectAttachment("onPrem",
+ *     edge_availability_domain="AVAILABILITY_DOMAIN_1",
+ *     type="PARTNER",
+ *     router=foobar_router.id,
+ *     mtu="1500")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foobarNetwork = new Gcp.Compute.Network("foobarNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var foobarRouter = new Gcp.Compute.Router("foobarRouter", new Gcp.Compute.RouterArgs
+ *         {
+ *             Network = foobarNetwork.Name,
+ *             Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+ *             {
+ *                 Asn = 16550,
+ *             },
+ *         });
+ *         var onPrem = new Gcp.Compute.InterconnectAttachment("onPrem", new Gcp.Compute.InterconnectAttachmentArgs
+ *         {
+ *             EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_1",
+ *             Type = "PARTNER",
+ *             Router = foobarRouter.Id,
+ *             Mtu = "1500",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		foobarNetwork, err := compute.NewNetwork(ctx, "foobarNetwork", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foobarRouter, err := compute.NewRouter(ctx, "foobarRouter", &compute.RouterArgs{
+ * 			Network: foobarNetwork.Name,
+ * 			Bgp: &compute.RouterBgpArgs{
+ * 				Asn: pulumi.Int(16550),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInterconnectAttachment(ctx, "onPrem", &compute.InterconnectAttachmentArgs{
+ * 			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_1"),
+ * 			Type:                   pulumi.String("PARTNER"),
+ * 			Router:                 foobarRouter.ID(),
+ * 			Mtu:                    pulumi.String("1500"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Compute Interconnect Attachment Ipsec Encryption
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
+ * const address = new gcp.compute.Address("address", {
+ *     addressType: "INTERNAL",
+ *     purpose: "IPSEC_INTERCONNECT",
+ *     address: "192.168.1.0",
+ *     prefixLength: 29,
+ *     network: network.selfLink,
+ * });
+ * const router = new gcp.compute.Router("router", {
+ *     network: network.name,
+ *     encryptedInterconnectRouter: true,
+ *     bgp: {
+ *         asn: 16550,
+ *     },
+ * });
+ * const ipsec_encrypted_interconnect_attachment = new gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", {
+ *     edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
+ *     type: "PARTNER",
+ *     router: router.id,
+ *     encryption: "IPSEC",
+ *     ipsecInternalAddresses: [address.selfLink],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * network = gcp.compute.Network("network", auto_create_subnetworks=False)
+ * address = gcp.compute.Address("address",
+ *     address_type="INTERNAL",
+ *     purpose="IPSEC_INTERCONNECT",
+ *     address="192.168.1.0",
+ *     prefix_length=29,
+ *     network=network.self_link)
+ * router = gcp.compute.Router("router",
+ *     network=network.name,
+ *     encrypted_interconnect_router=True,
+ *     bgp=gcp.compute.RouterBgpArgs(
+ *         asn=16550,
+ *     ))
+ * ipsec_encrypted_interconnect_attachment = gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment",
+ *     edge_availability_domain="AVAILABILITY_DOMAIN_1",
+ *     type="PARTNER",
+ *     router=router.id,
+ *     encryption="IPSEC",
+ *     ipsec_internal_addresses=[address.self_link])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var address = new Gcp.Compute.Address("address", new Gcp.Compute.AddressArgs
+ *         {
+ *             AddressType = "INTERNAL",
+ *             Purpose = "IPSEC_INTERCONNECT",
+ *             Address = "192.168.1.0",
+ *             PrefixLength = 29,
+ *             Network = network.SelfLink,
+ *         });
+ *         var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
+ *         {
+ *             Network = network.Name,
+ *             EncryptedInterconnectRouter = true,
+ *             Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+ *             {
+ *                 Asn = 16550,
+ *             },
+ *         });
+ *         var ipsec_encrypted_interconnect_attachment = new Gcp.Compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", new Gcp.Compute.InterconnectAttachmentArgs
+ *         {
+ *             EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_1",
+ *             Type = "PARTNER",
+ *             Router = router.Id,
+ *             Encryption = "IPSEC",
+ *             IpsecInternalAddresses = 
+ *             {
+ *                 address.SelfLink,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		address, err := compute.NewAddress(ctx, "address", &compute.AddressArgs{
+ * 			AddressType:  pulumi.String("INTERNAL"),
+ * 			Purpose:      pulumi.String("IPSEC_INTERCONNECT"),
+ * 			Address:      pulumi.String("192.168.1.0"),
+ * 			PrefixLength: pulumi.Int(29),
+ * 			Network:      network.SelfLink,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		router, err := compute.NewRouter(ctx, "router", &compute.RouterArgs{
+ * 			Network:                     network.Name,
+ * 			EncryptedInterconnectRouter: pulumi.Bool(true),
+ * 			Bgp: &compute.RouterBgpArgs{
+ * 				Asn: pulumi.Int(16550),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInterconnectAttachment(ctx, "ipsec-encrypted-interconnect-attachment", &compute.InterconnectAttachmentArgs{
+ * 			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_1"),
+ * 			Type:                   pulumi.String("PARTNER"),
+ * 			Router:                 router.ID(),
+ * 			Encryption:             pulumi.String("IPSEC"),
+ * 			IpsecInternalAddresses: pulumi.StringArray{
+ * 				address.SelfLink,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,18 +294,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default projects/{{project}}/regions/{{region}}/interconnectAttachments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/interconnectAttachment:InterconnectAttachment")
 public class InterconnectAttachment extends io.pulumi.resources.CustomResource {

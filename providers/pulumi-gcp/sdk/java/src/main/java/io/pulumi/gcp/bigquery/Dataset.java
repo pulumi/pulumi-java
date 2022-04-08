@@ -19,6 +19,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Dataset can be imported using any of these accepted formats
@@ -27,14 +30,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigquery/dataset:Dataset default projects/{{project}}/datasets/{{dataset_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:bigquery/dataset:Dataset default {{project}}/{{dataset_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:bigquery/dataset:Dataset default {{dataset_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:bigquery/dataset:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {

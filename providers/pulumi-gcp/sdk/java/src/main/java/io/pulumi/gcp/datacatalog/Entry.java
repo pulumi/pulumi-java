@@ -24,13 +24,396 @@ import javax.annotation.Nullable;
  * An Entry resource contains resource details, such as its schema. An Entry can also be used to attach
  * flexible metadata, such as a Tag.
  * 
+ * 
  * To get more information about Entry, see:
  * 
  * * [API documentation](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Data Catalog Entry Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_group"});
+ * const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
+ *     entryGroup: entryGroup.id,
+ *     entryId: "my_entry",
+ *     userSpecifiedType: "my_custom_type",
+ *     userSpecifiedSystem: "SomethingExternal",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_group")
+ * basic_entry = gcp.datacatalog.Entry("basicEntry",
+ *     entry_group=entry_group.id,
+ *     entry_id="my_entry",
+ *     user_specified_type="my_custom_type",
+ *     user_specified_system="SomethingExternal")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
+ *         {
+ *             EntryGroupId = "my_group",
+ *         });
+ *         var basicEntry = new Gcp.DataCatalog.Entry("basicEntry", new Gcp.DataCatalog.EntryArgs
+ *         {
+ *             EntryGroup = entryGroup.Id,
+ *             EntryId = "my_entry",
+ *             UserSpecifiedType = "my_custom_type",
+ *             UserSpecifiedSystem = "SomethingExternal",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datacatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
+ * 			EntryGroupId: pulumi.String("my_group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = datacatalog.NewEntry(ctx, "basicEntry", &datacatalog.EntryArgs{
+ * 			EntryGroup:          entryGroup.ID(),
+ * 			EntryId:             pulumi.String("my_entry"),
+ * 			UserSpecifiedType:   pulumi.String("my_custom_type"),
+ * 			UserSpecifiedSystem: pulumi.String("SomethingExternal"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Data Catalog Entry Fileset
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_group"});
+ * const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
+ *     entryGroup: entryGroup.id,
+ *     entryId: "my_entry",
+ *     type: "FILESET",
+ *     gcsFilesetSpec: {
+ *         filePatterns: ["gs://fake_bucket/dir/*"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_group")
+ * basic_entry = gcp.datacatalog.Entry("basicEntry",
+ *     entry_group=entry_group.id,
+ *     entry_id="my_entry",
+ *     type="FILESET",
+ *     gcs_fileset_spec=gcp.datacatalog.EntryGcsFilesetSpecArgs(
+ *         file_patterns=["gs://fake_bucket/dir/*"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
+ *         {
+ *             EntryGroupId = "my_group",
+ *         });
+ *         var basicEntry = new Gcp.DataCatalog.Entry("basicEntry", new Gcp.DataCatalog.EntryArgs
+ *         {
+ *             EntryGroup = entryGroup.Id,
+ *             EntryId = "my_entry",
+ *             Type = "FILESET",
+ *             GcsFilesetSpec = new Gcp.DataCatalog.Inputs.EntryGcsFilesetSpecArgs
+ *             {
+ *                 FilePatterns = 
+ *                 {
+ *                     "gs://fake_bucket/dir/*",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datacatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
+ * 			EntryGroupId: pulumi.String("my_group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = datacatalog.NewEntry(ctx, "basicEntry", &datacatalog.EntryArgs{
+ * 			EntryGroup: entryGroup.ID(),
+ * 			EntryId:    pulumi.String("my_entry"),
+ * 			Type:       pulumi.String("FILESET"),
+ * 			GcsFilesetSpec: &datacatalog.EntryGcsFilesetSpecArgs{
+ * 				FilePatterns: pulumi.StringArray{
+ * 					pulumi.String("gs://fake_bucket/dir/*"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Data Catalog Entry Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_group"});
+ * const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
+ *     entryGroup: entryGroup.id,
+ *     entryId: "my_entry",
+ *     userSpecifiedType: "my_user_specified_type",
+ *     userSpecifiedSystem: "Something_custom",
+ *     linkedResource: "my/linked/resource",
+ *     displayName: "my custom type entry",
+ *     description: "a custom type entry for a user specified system",
+ *     schema: `{
+ *   "columns": [
+ *     {
+ *       "column": "first_name",
+ *       "description": "First name",
+ *       "mode": "REQUIRED",
+ *       "type": "STRING"
+ *     },
+ *     {
+ *       "column": "last_name",
+ *       "description": "Last name",
+ *       "mode": "REQUIRED",
+ *       "type": "STRING"
+ *     },
+ *     {
+ *       "column": "address",
+ *       "description": "Address",
+ *       "mode": "REPEATED",
+ *       "subcolumns": [
+ *         {
+ *           "column": "city",
+ *           "description": "City",
+ *           "mode": "NULLABLE",
+ *           "type": "STRING"
+ *         },
+ *         {
+ *           "column": "state",
+ *           "description": "State",
+ *           "mode": "NULLABLE",
+ *           "type": "STRING"
+ *         }
+ *       ],
+ *       "type": "RECORD"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_group")
+ * basic_entry = gcp.datacatalog.Entry("basicEntry",
+ *     entry_group=entry_group.id,
+ *     entry_id="my_entry",
+ *     user_specified_type="my_user_specified_type",
+ *     user_specified_system="Something_custom",
+ *     linked_resource="my/linked/resource",
+ *     display_name="my custom type entry",
+ *     description="a custom type entry for a user specified system",
+ *     schema="""{
+ *   "columns": [
+ *     {
+ *       "column": "first_name",
+ *       "description": "First name",
+ *       "mode": "REQUIRED",
+ *       "type": "STRING"
+ *     },
+ *     {
+ *       "column": "last_name",
+ *       "description": "Last name",
+ *       "mode": "REQUIRED",
+ *       "type": "STRING"
+ *     },
+ *     {
+ *       "column": "address",
+ *       "description": "Address",
+ *       "mode": "REPEATED",
+ *       "subcolumns": [
+ *         {
+ *           "column": "city",
+ *           "description": "City",
+ *           "mode": "NULLABLE",
+ *           "type": "STRING"
+ *         },
+ *         {
+ *           "column": "state",
+ *           "description": "State",
+ *           "mode": "NULLABLE",
+ *           "type": "STRING"
+ *         }
+ *       ],
+ *       "type": "RECORD"
+ *     }
+ *   ]
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
+ *         {
+ *             EntryGroupId = "my_group",
+ *         });
+ *         var basicEntry = new Gcp.DataCatalog.Entry("basicEntry", new Gcp.DataCatalog.EntryArgs
+ *         {
+ *             EntryGroup = entryGroup.Id,
+ *             EntryId = "my_entry",
+ *             UserSpecifiedType = "my_user_specified_type",
+ *             UserSpecifiedSystem = "Something_custom",
+ *             LinkedResource = "my/linked/resource",
+ *             DisplayName = "my custom type entry",
+ *             Description = "a custom type entry for a user specified system",
+ *             Schema = @"{
+ *   ""columns"": [
+ *     {
+ *       ""column"": ""first_name"",
+ *       ""description"": ""First name"",
+ *       ""mode"": ""REQUIRED"",
+ *       ""type"": ""STRING""
+ *     },
+ *     {
+ *       ""column"": ""last_name"",
+ *       ""description"": ""Last name"",
+ *       ""mode"": ""REQUIRED"",
+ *       ""type"": ""STRING""
+ *     },
+ *     {
+ *       ""column"": ""address"",
+ *       ""description"": ""Address"",
+ *       ""mode"": ""REPEATED"",
+ *       ""subcolumns"": [
+ *         {
+ *           ""column"": ""city"",
+ *           ""description"": ""City"",
+ *           ""mode"": ""NULLABLE"",
+ *           ""type"": ""STRING""
+ *         },
+ *         {
+ *           ""column"": ""state"",
+ *           ""description"": ""State"",
+ *           ""mode"": ""NULLABLE"",
+ *           ""type"": ""STRING""
+ *         }
+ *       ],
+ *       ""type"": ""RECORD""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datacatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
+ * 			EntryGroupId: pulumi.String("my_group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = datacatalog.NewEntry(ctx, "basicEntry", &datacatalog.EntryArgs{
+ * 			EntryGroup:          entryGroup.ID(),
+ * 			EntryId:             pulumi.String("my_entry"),
+ * 			UserSpecifiedType:   pulumi.String("my_user_specified_type"),
+ * 			UserSpecifiedSystem: pulumi.String("Something_custom"),
+ * 			LinkedResource:      pulumi.String("my/linked/resource"),
+ * 			DisplayName:         pulumi.String("my custom type entry"),
+ * 			Description:         pulumi.String("a custom type entry for a user specified system"),
+ * 			Schema:              pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"columns\": [\n", "    {\n", "      \"column\": \"first_name\",\n", "      \"description\": \"First name\",\n", "      \"mode\": \"REQUIRED\",\n", "      \"type\": \"STRING\"\n", "    },\n", "    {\n", "      \"column\": \"last_name\",\n", "      \"description\": \"Last name\",\n", "      \"mode\": \"REQUIRED\",\n", "      \"type\": \"STRING\"\n", "    },\n", "    {\n", "      \"column\": \"address\",\n", "      \"description\": \"Address\",\n", "      \"mode\": \"REPEATED\",\n", "      \"subcolumns\": [\n", "        {\n", "          \"column\": \"city\",\n", "          \"description\": \"City\",\n", "          \"mode\": \"NULLABLE\",\n", "          \"type\": \"STRING\"\n", "        },\n", "        {\n", "          \"column\": \"state\",\n", "          \"description\": \"State\",\n", "          \"mode\": \"NULLABLE\",\n", "          \"type\": \"STRING\"\n", "        }\n", "      ],\n", "      \"type\": \"RECORD\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,6 +423,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:datacatalog/entry:Entry default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:datacatalog/entry:Entry")
 public class Entry extends io.pulumi.resources.CustomResource {

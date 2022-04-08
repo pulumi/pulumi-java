@@ -21,7 +21,107 @@ import javax.annotation.Nullable;
  * [the Project API documentation](https://cloud.google.com/compute/docs/reference/latest/projects),
  * where the Shared VPC feature is referred to by its former name "XPN".
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * // A host project provides network resources to associated service projects.
+ * const host = new gcp.compute.SharedVPCHostProject("host", {project: "host-project-id"});
+ * // A service project gains access to network resources provided by its
+ * // associated host project.
+ * const service1 = new gcp.compute.SharedVPCServiceProject("service1", {
+ *     hostProject: host.project,
+ *     serviceProject: "service-project-id-1",
+ * });
+ * const service2 = new gcp.compute.SharedVPCServiceProject("service2", {
+ *     hostProject: host.project,
+ *     serviceProject: "service-project-id-2",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * # A host project provides network resources to associated service projects.
+ * host = gcp.compute.SharedVPCHostProject("host", project="host-project-id")
+ * # A service project gains access to network resources provided by its
+ * # associated host project.
+ * service1 = gcp.compute.SharedVPCServiceProject("service1",
+ *     host_project=host.project,
+ *     service_project="service-project-id-1")
+ * service2 = gcp.compute.SharedVPCServiceProject("service2",
+ *     host_project=host.project,
+ *     service_project="service-project-id-2")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // A host project provides network resources to associated service projects.
+ *         var host = new Gcp.Compute.SharedVPCHostProject("host", new Gcp.Compute.SharedVPCHostProjectArgs
+ *         {
+ *             Project = "host-project-id",
+ *         });
+ *         // A service project gains access to network resources provided by its
+ *         // associated host project.
+ *         var service1 = new Gcp.Compute.SharedVPCServiceProject("service1", new Gcp.Compute.SharedVPCServiceProjectArgs
+ *         {
+ *             HostProject = host.Project,
+ *             ServiceProject = "service-project-id-1",
+ *         });
+ *         var service2 = new Gcp.Compute.SharedVPCServiceProject("service2", new Gcp.Compute.SharedVPCServiceProjectArgs
+ *         {
+ *             HostProject = host.Project,
+ *             ServiceProject = "service-project-id-2",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		host, err := compute.NewSharedVPCHostProject(ctx, "host", &compute.SharedVPCHostProjectArgs{
+ * 			Project: pulumi.String("host-project-id"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewSharedVPCServiceProject(ctx, "service1", &compute.SharedVPCServiceProjectArgs{
+ * 			HostProject:    host.Project,
+ * 			ServiceProject: pulumi.String("service-project-id-1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewSharedVPCServiceProject(ctx, "service2", &compute.SharedVPCServiceProjectArgs{
+ * 			HostProject:    host.Project,
+ * 			ServiceProject: pulumi.String("service-project-id-2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +131,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/sharedVPCHostProject:SharedVPCHostProject host host-project-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/sharedVPCHostProject:SharedVPCHostProject")
 public class SharedVPCHostProject extends io.pulumi.resources.CustomResource {

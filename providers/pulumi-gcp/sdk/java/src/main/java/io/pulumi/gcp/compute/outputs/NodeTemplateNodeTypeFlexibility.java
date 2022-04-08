@@ -17,7 +17,7 @@ public final class NodeTemplateNodeTypeFlexibility {
      */
     private final @Nullable String cpus;
     /**
-     * - 
+     * -
      * Use local SSD
      * 
      */
@@ -46,7 +46,7 @@ public final class NodeTemplateNodeTypeFlexibility {
         return Optional.ofNullable(this.cpus);
     }
     /**
-     * - 
+     * -
      * Use local SSD
      * 
     */

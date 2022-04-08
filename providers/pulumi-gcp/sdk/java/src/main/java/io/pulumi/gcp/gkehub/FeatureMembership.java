@@ -14,6 +14,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * FeatureMembership can be imported using any of these accepted formats
@@ -22,14 +25,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:gkehub/featureMembership:FeatureMembership default projects/{{project}}/locations/{{location}}/features/{{feature}}/membershipId/{{membership}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:gkehub/featureMembership:FeatureMembership default {{project}}/{{location}}/{{feature}}/{{membership}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:gkehub/featureMembership:FeatureMembership default {{location}}/{{feature}}/{{membership}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:gkehub/featureMembership:FeatureMembership")
 public class FeatureMembership extends io.pulumi.resources.CustomResource {

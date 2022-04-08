@@ -35,7 +35,7 @@ public final class TagTemplateField {
      */
     private final @Nullable Boolean isRequired;
     /**
-     * - 
+     * -
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
      */
@@ -101,7 +101,7 @@ public final class TagTemplateField {
         return Optional.ofNullable(this.isRequired);
     }
     /**
-     * - 
+     * -
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
     */

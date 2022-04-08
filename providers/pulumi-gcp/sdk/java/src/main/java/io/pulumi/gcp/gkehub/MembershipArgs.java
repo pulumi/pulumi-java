@@ -36,7 +36,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
-     * 
      */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     @Import(name="description")

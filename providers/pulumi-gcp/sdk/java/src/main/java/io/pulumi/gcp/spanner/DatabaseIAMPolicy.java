@@ -28,9 +28,241 @@ import javax.annotation.Nullable;
  * 
  * ## google\_spanner\_database\_iam\_policy
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/editor",
+ *         members: ["user:jane@example.com"],
+ *     }],
+ * });
+ * const database = new gcp.spanner.DatabaseIAMPolicy("database", {
+ *     instance: "your-instance-name",
+ *     database: "your-database-name",
+ *     policyData: admin.then(admin => admin.policyData),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/editor",
+ *     members=["user:jane@example.com"],
+ * )])
+ * database = gcp.spanner.DatabaseIAMPolicy("database",
+ *     instance="your-instance-name",
+ *     database="your-database-name",
+ *     policy_data=admin.policy_data)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/editor",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var database = new Gcp.Spanner.DatabaseIAMPolicy("database", new Gcp.Spanner.DatabaseIAMPolicyArgs
+ *         {
+ *             Instance = "your-instance-name",
+ *             Database = "your-database-name",
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/spanner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/editor",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = spanner.NewDatabaseIAMPolicy(ctx, "database", &spanner.DatabaseIAMPolicyArgs{
+ * 			Instance:   pulumi.String("your-instance-name"),
+ * 			Database:   pulumi.String("your-database-name"),
+ * 			PolicyData: pulumi.String(admin.PolicyData),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_spanner\_database\_iam\_binding
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const database = new gcp.spanner.DatabaseIAMBinding("database", {
+ *     database: "your-database-name",
+ *     instance: "your-instance-name",
+ *     members: ["user:jane@example.com"],
+ *     role: "roles/compute.networkUser",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * database = gcp.spanner.DatabaseIAMBinding("database",
+ *     database="your-database-name",
+ *     instance="your-instance-name",
+ *     members=["user:jane@example.com"],
+ *     role="roles/compute.networkUser")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var database = new Gcp.Spanner.DatabaseIAMBinding("database", new Gcp.Spanner.DatabaseIAMBindingArgs
+ *         {
+ *             Database = "your-database-name",
+ *             Instance = "your-instance-name",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *             Role = "roles/compute.networkUser",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/spanner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := spanner.NewDatabaseIAMBinding(ctx, "database", &spanner.DatabaseIAMBindingArgs{
+ * 			Database: pulumi.String("your-database-name"),
+ * 			Instance: pulumi.String("your-instance-name"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 			Role: pulumi.String("roles/compute.networkUser"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_spanner\_database\_iam\_member
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const database = new gcp.spanner.DatabaseIAMMember("database", {
+ *     database: "your-database-name",
+ *     instance: "your-instance-name",
+ *     member: "user:jane@example.com",
+ *     role: "roles/compute.networkUser",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * database = gcp.spanner.DatabaseIAMMember("database",
+ *     database="your-database-name",
+ *     instance="your-instance-name",
+ *     member="user:jane@example.com",
+ *     role="roles/compute.networkUser")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var database = new Gcp.Spanner.DatabaseIAMMember("database", new Gcp.Spanner.DatabaseIAMMemberArgs
+ *         {
+ *             Database = "your-database-name",
+ *             Instance = "your-instance-name",
+ *             Member = "user:jane@example.com",
+ *             Role = "roles/compute.networkUser",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/spanner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := spanner.NewDatabaseIAMMember(ctx, "database", &spanner.DatabaseIAMMemberArgs{
+ * 			Database: pulumi.String("your-database-name"),
+ * 			Instance: pulumi.String("your-instance-name"),
+ * 			Member:   pulumi.String("user:jane@example.com"),
+ * 			Role:     pulumi.String("roles/compute.networkUser"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -54,8 +286,7 @@ import javax.annotation.Nullable;
  * 
  *  -> **Custom Roles:** If you're importing a IAM resource with a custom role, make sure to use the
  * 
- * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
- * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. 
  */
 @ResourceType(type="gcp:spanner/databaseIAMPolicy:DatabaseIAMPolicy")
 public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {

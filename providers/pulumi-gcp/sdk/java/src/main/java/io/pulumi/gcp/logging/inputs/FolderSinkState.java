@@ -43,7 +43,36 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
      * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */

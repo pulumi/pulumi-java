@@ -123,7 +123,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     /**
      * The config setting for metastore service with the cluster.
      * Structure defined below.
-     * ***
+     * - - -
      * 
      */
     @Import(name="metastoreConfig")
@@ -137,8 +137,8 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
      * The Google Compute Engine config settings for the additional
      * instances in a cluster. Structure defined below.
      * * **NOTE** : `preemptible_worker_config` is
-     *   an alias for the api's [secondaryWorkerConfig](https://cloud.google.com/dataproc/docs/reference/rest/v1/ClusterConfig#InstanceGroupConfig). The name doesn't necessarily mean it is preemptible and is named as
-     *   such for legacy/compatibility reasons.
+     * an alias for the api's [secondaryWorkerConfig](https://cloud.google.com/dataproc/docs/reference/rest/v1/ClusterConfig#InstanceGroupConfig). The name doesn't necessarily mean it is preemptible and is named as
+     * such for legacy/compatibility reasons.
      * 
      */
     @Import(name="preemptibleWorkerConfig")

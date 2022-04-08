@@ -25,11 +25,234 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** `gcp.certificateauthority.CaPoolIamBinding` resources **can be** used in conjunction with `gcp.certificateauthority.CaPoolIamMember` resources **only if** they do not grant privilege to the same role.
  * 
+ * 
+ * 
+ * 
  * ## google\_privateca\_ca\_pool\_iam\_policy
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/privateca.certificateManager",
+ *         members: ["user:jane@example.com"],
+ *     }],
+ * });
+ * const policy = new gcp.certificateauthority.CaPoolIamPolicy("policy", {
+ *     caPool: google_privateca_ca_pool["default"].id,
+ *     policyData: admin.then(admin => admin.policyData),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/privateca.certificateManager",
+ *     members=["user:jane@example.com"],
+ * )])
+ * policy = gcp.certificateauthority.CaPoolIamPolicy("policy",
+ *     ca_pool=google_privateca_ca_pool["default"]["id"],
+ *     policy_data=admin.policy_data)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/privateca.certificateManager",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var policy = new Gcp.CertificateAuthority.CaPoolIamPolicy("policy", new Gcp.CertificateAuthority.CaPoolIamPolicyArgs
+ *         {
+ *             CaPool = google_privateca_ca_pool.Default.Id,
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/certificateauthority"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/privateca.certificateManager",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = certificateauthority.NewCaPoolIamPolicy(ctx, "policy", &certificateauthority.CaPoolIamPolicyArgs{
+ * 			CaPool:     pulumi.Any(google_privateca_ca_pool.Default.Id),
+ * 			PolicyData: pulumi.String(admin.PolicyData),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * 
  * ## google\_privateca\_ca\_pool\_iam\_binding
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const binding = new gcp.certificateauthority.CaPoolIamBinding("binding", {
+ *     caPool: google_privateca_ca_pool["default"].id,
+ *     role: "roles/privateca.certificateManager",
+ *     members: ["user:jane@example.com"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * binding = gcp.certificateauthority.CaPoolIamBinding("binding",
+ *     ca_pool=google_privateca_ca_pool["default"]["id"],
+ *     role="roles/privateca.certificateManager",
+ *     members=["user:jane@example.com"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var binding = new Gcp.CertificateAuthority.CaPoolIamBinding("binding", new Gcp.CertificateAuthority.CaPoolIamBindingArgs
+ *         {
+ *             CaPool = google_privateca_ca_pool.Default.Id,
+ *             Role = "roles/privateca.certificateManager",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/certificateauthority"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := certificateauthority.NewCaPoolIamBinding(ctx, "binding", &certificateauthority.CaPoolIamBindingArgs{
+ * 			CaPool: pulumi.Any(google_privateca_ca_pool.Default.Id),
+ * 			Role:   pulumi.String("roles/privateca.certificateManager"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_privateca\_ca\_pool\_iam\_member
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const member = new gcp.certificateauthority.CaPoolIamMember("member", {
+ *     caPool: google_privateca_ca_pool["default"].id,
+ *     role: "roles/privateca.certificateManager",
+ *     member: "user:jane@example.com",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * member = gcp.certificateauthority.CaPoolIamMember("member",
+ *     ca_pool=google_privateca_ca_pool["default"]["id"],
+ *     role="roles/privateca.certificateManager",
+ *     member="user:jane@example.com")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var member = new Gcp.CertificateAuthority.CaPoolIamMember("member", new Gcp.CertificateAuthority.CaPoolIamMemberArgs
+ *         {
+ *             CaPool = google_privateca_ca_pool.Default.Id,
+ *             Role = "roles/privateca.certificateManager",
+ *             Member = "user:jane@example.com",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/certificateauthority"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := certificateauthority.NewCaPoolIamMember(ctx, "member", &certificateauthority.CaPoolIamMemberArgs{
+ * 			CaPool: pulumi.Any(google_privateca_ca_pool.Default.Id),
+ * 			Role:   pulumi.String("roles/privateca.certificateManager"),
+ * 			Member: pulumi.String("user:jane@example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -53,8 +276,7 @@ import javax.annotation.Nullable;
  * 
  *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
  * 
- * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
- * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. 
  */
 @ResourceType(type="gcp:certificateauthority/caPoolIamBinding:CaPoolIamBinding")
 public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {

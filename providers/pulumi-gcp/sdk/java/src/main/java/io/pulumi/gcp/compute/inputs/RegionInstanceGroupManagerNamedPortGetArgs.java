@@ -27,7 +27,7 @@ public final class RegionInstanceGroupManagerNamedPortGetArgs extends io.pulumi.
 
     /**
      * The port number.
-     * ***
+     * - - -
      * 
      */
     @Import(name="port", required=true)

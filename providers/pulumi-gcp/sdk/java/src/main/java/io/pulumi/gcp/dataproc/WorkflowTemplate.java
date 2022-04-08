@@ -21,7 +21,288 @@ import javax.annotation.Nullable;
 /**
  * A Workflow Template is a reusable workflow configuration. It defines a graph of jobs with information on where to run those jobs.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const template = new gcp.dataproc.WorkflowTemplate("template", {
+ *     jobs: [
+ *         {
+ *             sparkJob: {
+ *                 mainClass: "SomeClass",
+ *             },
+ *             stepId: "someJob",
+ *         },
+ *         {
+ *             prerequisiteStepIds: ["someJob"],
+ *             prestoJob: {
+ *                 queryFileUri: "someuri",
+ *             },
+ *             stepId: "otherJob",
+ *         },
+ *     ],
+ *     location: "us-central1",
+ *     placement: {
+ *         managedCluster: {
+ *             clusterName: "my-cluster",
+ *             config: {
+ *                 gceClusterConfig: {
+ *                     tags: [
+ *                         "foo",
+ *                         "bar",
+ *                     ],
+ *                     zone: "us-central1-a",
+ *                 },
+ *                 masterConfig: {
+ *                     diskConfig: {
+ *                         bootDiskSizeGb: 15,
+ *                         bootDiskType: "pd-ssd",
+ *                     },
+ *                     machineType: "n1-standard-1",
+ *                     numInstances: 1,
+ *                 },
+ *                 secondaryWorkerConfig: {
+ *                     numInstances: 2,
+ *                 },
+ *                 softwareConfig: {
+ *                     imageVersion: "1.3.7-deb9",
+ *                 },
+ *                 workerConfig: {
+ *                     diskConfig: {
+ *                         bootDiskSizeGb: 10,
+ *                         numLocalSsds: 2,
+ *                     },
+ *                     machineType: "n1-standard-2",
+ *                     numInstances: 3,
+ *                 },
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * template = gcp.dataproc.WorkflowTemplate("template",
+ *     jobs=[
+ *         gcp.dataproc.WorkflowTemplateJobArgs(
+ *             spark_job=gcp.dataproc.WorkflowTemplateJobSparkJobArgs(
+ *                 main_class="SomeClass",
+ *             ),
+ *             step_id="someJob",
+ *         ),
+ *         gcp.dataproc.WorkflowTemplateJobArgs(
+ *             prerequisite_step_ids=["someJob"],
+ *             presto_job=gcp.dataproc.WorkflowTemplateJobPrestoJobArgs(
+ *                 query_file_uri="someuri",
+ *             ),
+ *             step_id="otherJob",
+ *         ),
+ *     ],
+ *     location="us-central1",
+ *     placement=gcp.dataproc.WorkflowTemplatePlacementArgs(
+ *         managed_cluster=gcp.dataproc.WorkflowTemplatePlacementManagedClusterArgs(
+ *             cluster_name="my-cluster",
+ *             config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigArgs(
+ *                 gce_cluster_config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs(
+ *                     tags=[
+ *                         "foo",
+ *                         "bar",
+ *                     ],
+ *                     zone="us-central1-a",
+ *                 ),
+ *                 master_config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs(
+ *                     disk_config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs(
+ *                         boot_disk_size_gb=15,
+ *                         boot_disk_type="pd-ssd",
+ *                     ),
+ *                     machine_type="n1-standard-1",
+ *                     num_instances=1,
+ *                 ),
+ *                 secondary_worker_config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs(
+ *                     num_instances=2,
+ *                 ),
+ *                 software_config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs(
+ *                     image_version="1.3.7-deb9",
+ *                 ),
+ *                 worker_config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs(
+ *                     disk_config=gcp.dataproc.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigArgs(
+ *                         boot_disk_size_gb=10,
+ *                         num_local_ssds=2,
+ *                     ),
+ *                     machine_type="n1-standard-2",
+ *                     num_instances=3,
+ *                 ),
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var template = new Gcp.Dataproc.WorkflowTemplate("template", new Gcp.Dataproc.WorkflowTemplateArgs
+ *         {
+ *             Jobs = 
+ *             {
+ *                 new Gcp.Dataproc.Inputs.WorkflowTemplateJobArgs
+ *                 {
+ *                     SparkJob = new Gcp.Dataproc.Inputs.WorkflowTemplateJobSparkJobArgs
+ *                     {
+ *                         MainClass = "SomeClass",
+ *                     },
+ *                     StepId = "someJob",
+ *                 },
+ *                 new Gcp.Dataproc.Inputs.WorkflowTemplateJobArgs
+ *                 {
+ *                     PrerequisiteStepIds = 
+ *                     {
+ *                         "someJob",
+ *                     },
+ *                     PrestoJob = new Gcp.Dataproc.Inputs.WorkflowTemplateJobPrestoJobArgs
+ *                     {
+ *                         QueryFileUri = "someuri",
+ *                     },
+ *                     StepId = "otherJob",
+ *                 },
+ *             },
+ *             Location = "us-central1",
+ *             Placement = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementArgs
+ *             {
+ *                 ManagedCluster = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterArgs
+ *                 {
+ *                     ClusterName = "my-cluster",
+ *                     Config = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigArgs
+ *                     {
+ *                         GceClusterConfig = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs
+ *                         {
+ *                             Tags = 
+ *                             {
+ *                                 "foo",
+ *                                 "bar",
+ *                             },
+ *                             Zone = "us-central1-a",
+ *                         },
+ *                         MasterConfig = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
+ *                         {
+ *                             DiskConfig = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs
+ *                             {
+ *                                 BootDiskSizeGb = 15,
+ *                                 BootDiskType = "pd-ssd",
+ *                             },
+ *                             MachineType = "n1-standard-1",
+ *                             NumInstances = 1,
+ *                         },
+ *                         SecondaryWorkerConfig = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs
+ *                         {
+ *                             NumInstances = 2,
+ *                         },
+ *                         SoftwareConfig = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs
+ *                         {
+ *                             ImageVersion = "1.3.7-deb9",
+ *                         },
+ *                         WorkerConfig = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs
+ *                         {
+ *                             DiskConfig = new Gcp.Dataproc.Inputs.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigArgs
+ *                             {
+ *                                 BootDiskSizeGb = 10,
+ *                                 NumLocalSsds = 2,
+ *                             },
+ *                             MachineType = "n1-standard-2",
+ *                             NumInstances = 3,
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataproc.NewWorkflowTemplate(ctx, "template", &dataproc.WorkflowTemplateArgs{
+ * 			Jobs: dataproc.WorkflowTemplateJobArray{
+ * 				&dataproc.WorkflowTemplateJobArgs{
+ * 					SparkJob: &dataproc.WorkflowTemplateJobSparkJobArgs{
+ * 						MainClass: pulumi.String("SomeClass"),
+ * 					},
+ * 					StepId: pulumi.String("someJob"),
+ * 				},
+ * 				&dataproc.WorkflowTemplateJobArgs{
+ * 					PrerequisiteStepIds: pulumi.StringArray{
+ * 						pulumi.String("someJob"),
+ * 					},
+ * 					PrestoJob: &dataproc.WorkflowTemplateJobPrestoJobArgs{
+ * 						QueryFileUri: pulumi.String("someuri"),
+ * 					},
+ * 					StepId: pulumi.String("otherJob"),
+ * 				},
+ * 			},
+ * 			Location: pulumi.String("us-central1"),
+ * 			Placement: &dataproc.WorkflowTemplatePlacementArgs{
+ * 				ManagedCluster: &dataproc.WorkflowTemplatePlacementManagedClusterArgs{
+ * 					ClusterName: pulumi.String("my-cluster"),
+ * 					Config: &dataproc.WorkflowTemplatePlacementManagedClusterConfigArgs{
+ * 						GceClusterConfig: &dataproc.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs{
+ * 							Tags: pulumi.StringArray{
+ * 								pulumi.String("foo"),
+ * 								pulumi.String("bar"),
+ * 							},
+ * 							Zone: pulumi.String("us-central1-a"),
+ * 						},
+ * 						MasterConfig: &dataproc.WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs{
+ * 							DiskConfig: &dataproc.WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs{
+ * 								BootDiskSizeGb: pulumi.Int(15),
+ * 								BootDiskType:   pulumi.String("pd-ssd"),
+ * 							},
+ * 							MachineType:  pulumi.String("n1-standard-1"),
+ * 							NumInstances: pulumi.Int(1),
+ * 						},
+ * 						SecondaryWorkerConfig: &dataproc.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs{
+ * 							NumInstances: pulumi.Int(2),
+ * 						},
+ * 						SoftwareConfig: &dataproc.WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs{
+ * 							ImageVersion: pulumi.String("1.3.7-deb9"),
+ * 						},
+ * 						WorkerConfig: &dataproc.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs{
+ * 							DiskConfig: &dataproc.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigArgs{
+ * 								BootDiskSizeGb: pulumi.Int(10),
+ * 								NumLocalSsds:   pulumi.Int(2),
+ * 							},
+ * 							MachineType:  pulumi.String("n1-standard-2"),
+ * 							NumInstances: pulumi.Int(3),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,14 +312,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:dataproc/workflowTemplate:WorkflowTemplate default projects/{{project}}/locations/{{location}}/workflowTemplates/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:dataproc/workflowTemplate:WorkflowTemplate default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:dataproc/workflowTemplate:WorkflowTemplate default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:dataproc/workflowTemplate:WorkflowTemplate")
 public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
@@ -187,7 +473,6 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * version is not useful as a configurable field, and will be removed in the future.
-     * 
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     @Export(name="version", type=Integer.class, parameters={})

@@ -20,15 +20,15 @@ public final class NotificationConfigStreamingConfig {
      * map to those defined in the corresponding resource.
      * The supported operators are:
      * * = for all value types.
-     * * > , <, >=, <= for integer values.
+     * * >, <, >=, <= for integer values.
      * * :, meaning substring matching, for strings.
-     *   The supported value types are:
+     * The supported value types are:
      * * string literals in quotes.
      * * integer literals without quotes.
      * * boolean literals true and false without quotes.
-     *   See
-     *   [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
-     *   for information on how to write a filter.
+     * See
+     * [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
+     * for information on how to write a filter.
      * 
      */
     private final String filter;
@@ -49,15 +49,15 @@ public final class NotificationConfigStreamingConfig {
      * map to those defined in the corresponding resource.
      * The supported operators are:
      * * = for all value types.
-     * * > , <, >=, <= for integer values.
+     * * >, <, >=, <= for integer values.
      * * :, meaning substring matching, for strings.
-     *   The supported value types are:
+     * The supported value types are:
      * * string literals in quotes.
      * * integer literals without quotes.
      * * boolean literals true and false without quotes.
-     *   See
-     *   [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
-     *   for information on how to write a filter.
+     * See
+     * [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
+     * for information on how to write a filter.
      * 
     */
     public String getFilter() {

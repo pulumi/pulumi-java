@@ -33,7 +33,210 @@ import javax.annotation.Nullable;
  * and
  * [API](https://cloud.google.com/compute/docs/reference/latest/instances).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultAccount = new gcp.serviceaccount.Account("defaultAccount", {
+ *     accountId: "service_account_id",
+ *     displayName: "Service Account",
+ * });
+ * const defaultInstance = new gcp.compute.Instance("defaultInstance", {
+ *     machineType: "e2-medium",
+ *     zone: "us-central1-a",
+ *     tags: [
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: "debian-cloud/debian-9",
+ *         },
+ *     },
+ *     scratchDisks: [{
+ *         "interface": "SCSI",
+ *     }],
+ *     networkInterfaces: [{
+ *         network: "default",
+ *         accessConfigs: [{}],
+ *     }],
+ *     metadata: {
+ *         foo: "bar",
+ *     },
+ *     metadataStartupScript: "echo hi > /test.txt",
+ *     serviceAccount: {
+ *         email: defaultAccount.email,
+ *         scopes: ["cloud-platform"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_account = gcp.service_account.Account("defaultAccount",
+ *     account_id="service_account_id",
+ *     display_name="Service Account")
+ * default_instance = gcp.compute.Instance("defaultInstance",
+ *     machine_type="e2-medium",
+ *     zone="us-central1-a",
+ *     tags=[
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image="debian-cloud/debian-9",
+ *         ),
+ *     ),
+ *     scratch_disks=[gcp.compute.InstanceScratchDiskArgs(
+ *         interface="SCSI",
+ *     )],
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         network="default",
+ *         access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+ *     )],
+ *     metadata={
+ *         "foo": "bar",
+ *     },
+ *     metadata_startup_script="echo hi > /test.txt",
+ *     service_account=gcp.compute.InstanceServiceAccountArgs(
+ *         email=default_account.email,
+ *         scopes=["cloud-platform"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultAccount = new Gcp.ServiceAccount.Account("defaultAccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "service_account_id",
+ *             DisplayName = "Service Account",
+ *         });
+ *         var defaultInstance = new Gcp.Compute.Instance("defaultInstance", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             Zone = "us-central1-a",
+ *             Tags = 
+ *             {
+ *                 "foo",
+ *                 "bar",
+ *             },
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = "debian-cloud/debian-9",
+ *                 },
+ *             },
+ *             ScratchDisks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceScratchDiskArgs
+ *                 {
+ *                     Interface = "SCSI",
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                     AccessConfigs = 
+ *                     {
+ *                         ,
+ *                     },
+ *                 },
+ *             },
+ *             Metadata = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             MetadataStartupScript = "echo hi > /test.txt",
+ *             ServiceAccount = new Gcp.Compute.Inputs.InstanceServiceAccountArgs
+ *             {
+ *                 Email = defaultAccount.Email,
+ *                 Scopes = 
+ *                 {
+ *                     "cloud-platform",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultAccount, err := serviceAccount.NewAccount(ctx, "defaultAccount", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("service_account_id"),
+ * 			DisplayName: pulumi.String("Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInstance(ctx, "defaultInstance", &compute.InstanceArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			Zone:        pulumi.String("us-central1-a"),
+ * 			Tags: pulumi.StringArray{
+ * 				pulumi.String("foo"),
+ * 				pulumi.String("bar"),
+ * 			},
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String("debian-cloud/debian-9"),
+ * 				},
+ * 			},
+ * 			ScratchDisks: compute.InstanceScratchDiskArray{
+ * 				&compute.InstanceScratchDiskArgs{
+ * 					Interface: pulumi.String("SCSI"),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+ * 						nil,
+ * 					},
+ * 				},
+ * 			},
+ * 			Metadata: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			MetadataStartupScript: pulumi.String("echo hi > /test.txt"),
+ * 			ServiceAccount: &compute.InstanceServiceAccountArgs{
+ * 				Email: defaultAccount.Email,
+ * 				Scopes: pulumi.StringArray{
+ * 					pulumi.String("cloud-platform"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -43,16 +246,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/instance:Instance default projects/{{project}}/zones/{{zone}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/instance:Instance default {{project}}/{{zone}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/instance:Instance default {{name}}
  * ```
  * 
- *  [custom-vm-types]https://cloud.google.com/dataproc/docs/concepts/compute/custom-machine-types [network-tier]https://cloud.google.com/network-tiers/docs/overview [extended-custom-vm-type]https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#extendedmemory
- * 
+ *  [custom-vm-types]https://cloud.google.com/dataproc/docs/concepts/compute/custom-machine-types [network-tier]https://cloud.google.com/network-tiers/docs/overview [extended-custom-vm-type]https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#extendedmemory 
  */
 @ResourceType(type="gcp:compute/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {

@@ -21,6 +21,7 @@ import javax.annotation.Nullable;
 /**
  * This message configures which resources and services to monitor for availability.
  * 
+ * 
  * To get more information about UptimeCheckConfig, see:
  * 
  * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.uptimeCheckConfigs)
@@ -30,7 +31,388 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Uptime Check Config Http
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const http = new gcp.monitoring.UptimeCheckConfig("http", {
+ *     contentMatchers: [{
+ *         content: "example",
+ *     }],
+ *     displayName: "http-uptime-check",
+ *     httpCheck: {
+ *         body: "Zm9vJTI1M0RiYXI=",
+ *         contentType: "URL_ENCODED",
+ *         path: "/some-path",
+ *         port: 8010,
+ *         requestMethod: "POST",
+ *     },
+ *     monitoredResource: {
+ *         labels: {
+ *             host: "192.168.1.1",
+ *             project_id: "my-project-name",
+ *         },
+ *         type: "uptime_url",
+ *     },
+ *     timeout: "60s",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * http = gcp.monitoring.UptimeCheckConfig("http",
+ *     content_matchers=[gcp.monitoring.UptimeCheckConfigContentMatcherArgs(
+ *         content="example",
+ *     )],
+ *     display_name="http-uptime-check",
+ *     http_check=gcp.monitoring.UptimeCheckConfigHttpCheckArgs(
+ *         body="Zm9vJTI1M0RiYXI=",
+ *         content_type="URL_ENCODED",
+ *         path="/some-path",
+ *         port=8010,
+ *         request_method="POST",
+ *     ),
+ *     monitored_resource=gcp.monitoring.UptimeCheckConfigMonitoredResourceArgs(
+ *         labels={
+ *             "host": "192.168.1.1",
+ *             "projectId": "my-project-name",
+ *         },
+ *         type="uptime_url",
+ *     ),
+ *     timeout="60s")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var http = new Gcp.Monitoring.UptimeCheckConfig("http", new Gcp.Monitoring.UptimeCheckConfigArgs
+ *         {
+ *             ContentMatchers = 
+ *             {
+ *                 new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
+ *                 {
+ *                     Content = "example",
+ *                 },
+ *             },
+ *             DisplayName = "http-uptime-check",
+ *             HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
+ *             {
+ *                 Body = "Zm9vJTI1M0RiYXI=",
+ *                 ContentType = "URL_ENCODED",
+ *                 Path = "/some-path",
+ *                 Port = 8010,
+ *                 RequestMethod = "POST",
+ *             },
+ *             MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
+ *             {
+ *                 Labels = 
+ *                 {
+ *                     { "host", "192.168.1.1" },
+ *                     { "projectId", "my-project-name" },
+ *                 },
+ *                 Type = "uptime_url",
+ *             },
+ *             Timeout = "60s",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewUptimeCheckConfig(ctx, "http", &monitoring.UptimeCheckConfigArgs{
+ * 			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
+ * 				&monitoring.UptimeCheckConfigContentMatcherArgs{
+ * 					Content: pulumi.String("example"),
+ * 				},
+ * 			},
+ * 			DisplayName: pulumi.String("http-uptime-check"),
+ * 			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
+ * 				Body:          pulumi.String("Zm9vJTI1M0RiYXI="),
+ * 				ContentType:   pulumi.String("URL_ENCODED"),
+ * 				Path:          pulumi.String("/some-path"),
+ * 				Port:          pulumi.Int(8010),
+ * 				RequestMethod: pulumi.String("POST"),
+ * 			},
+ * 			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
+ * 				Labels: pulumi.StringMap{
+ * 					"host":      pulumi.String("192.168.1.1"),
+ * 					"projectId": pulumi.String("my-project-name"),
+ * 				},
+ * 				Type: pulumi.String("uptime_url"),
+ * 			},
+ * 			Timeout: pulumi.String("60s"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Uptime Check Config Https
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const https = new gcp.monitoring.UptimeCheckConfig("https", {
+ *     contentMatchers: [{
+ *         content: "example",
+ *     }],
+ *     displayName: "https-uptime-check",
+ *     httpCheck: {
+ *         path: "/some-path",
+ *         port: 443,
+ *         useSsl: true,
+ *         validateSsl: true,
+ *     },
+ *     monitoredResource: {
+ *         labels: {
+ *             host: "192.168.1.1",
+ *             project_id: "my-project-name",
+ *         },
+ *         type: "uptime_url",
+ *     },
+ *     timeout: "60s",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * https = gcp.monitoring.UptimeCheckConfig("https",
+ *     content_matchers=[gcp.monitoring.UptimeCheckConfigContentMatcherArgs(
+ *         content="example",
+ *     )],
+ *     display_name="https-uptime-check",
+ *     http_check=gcp.monitoring.UptimeCheckConfigHttpCheckArgs(
+ *         path="/some-path",
+ *         port=443,
+ *         use_ssl=True,
+ *         validate_ssl=True,
+ *     ),
+ *     monitored_resource=gcp.monitoring.UptimeCheckConfigMonitoredResourceArgs(
+ *         labels={
+ *             "host": "192.168.1.1",
+ *             "projectId": "my-project-name",
+ *         },
+ *         type="uptime_url",
+ *     ),
+ *     timeout="60s")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var https = new Gcp.Monitoring.UptimeCheckConfig("https", new Gcp.Monitoring.UptimeCheckConfigArgs
+ *         {
+ *             ContentMatchers = 
+ *             {
+ *                 new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
+ *                 {
+ *                     Content = "example",
+ *                 },
+ *             },
+ *             DisplayName = "https-uptime-check",
+ *             HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
+ *             {
+ *                 Path = "/some-path",
+ *                 Port = 443,
+ *                 UseSsl = true,
+ *                 ValidateSsl = true,
+ *             },
+ *             MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
+ *             {
+ *                 Labels = 
+ *                 {
+ *                     { "host", "192.168.1.1" },
+ *                     { "projectId", "my-project-name" },
+ *                 },
+ *                 Type = "uptime_url",
+ *             },
+ *             Timeout = "60s",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewUptimeCheckConfig(ctx, "https", &monitoring.UptimeCheckConfigArgs{
+ * 			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
+ * 				&monitoring.UptimeCheckConfigContentMatcherArgs{
+ * 					Content: pulumi.String("example"),
+ * 				},
+ * 			},
+ * 			DisplayName: pulumi.String("https-uptime-check"),
+ * 			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
+ * 				Path:        pulumi.String("/some-path"),
+ * 				Port:        pulumi.Int(443),
+ * 				UseSsl:      pulumi.Bool(true),
+ * 				ValidateSsl: pulumi.Bool(true),
+ * 			},
+ * 			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
+ * 				Labels: pulumi.StringMap{
+ * 					"host":      pulumi.String("192.168.1.1"),
+ * 					"projectId": pulumi.String("my-project-name"),
+ * 				},
+ * 				Type: pulumi.String("uptime_url"),
+ * 			},
+ * 			Timeout: pulumi.String("60s"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Uptime Check Tcp
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const check = new gcp.monitoring.Group("check", {
+ *     displayName: "uptime-check-group",
+ *     filter: "resource.metadata.name=has_substring(\"foo\")",
+ * });
+ * const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
+ *     displayName: "tcp-uptime-check",
+ *     timeout: "60s",
+ *     tcpCheck: {
+ *         port: 888,
+ *     },
+ *     resourceGroup: {
+ *         resourceType: "INSTANCE",
+ *         groupId: check.name,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * check = gcp.monitoring.Group("check",
+ *     display_name="uptime-check-group",
+ *     filter="resource.metadata.name=has_substring(\"foo\")")
+ * tcp_group = gcp.monitoring.UptimeCheckConfig("tcpGroup",
+ *     display_name="tcp-uptime-check",
+ *     timeout="60s",
+ *     tcp_check=gcp.monitoring.UptimeCheckConfigTcpCheckArgs(
+ *         port=888,
+ *     ),
+ *     resource_group=gcp.monitoring.UptimeCheckConfigResourceGroupArgs(
+ *         resource_type="INSTANCE",
+ *         group_id=check.name,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var check = new Gcp.Monitoring.Group("check", new Gcp.Monitoring.GroupArgs
+ *         {
+ *             DisplayName = "uptime-check-group",
+ *             Filter = "resource.metadata.name=has_substring(\"foo\")",
+ *         });
+ *         var tcpGroup = new Gcp.Monitoring.UptimeCheckConfig("tcpGroup", new Gcp.Monitoring.UptimeCheckConfigArgs
+ *         {
+ *             DisplayName = "tcp-uptime-check",
+ *             Timeout = "60s",
+ *             TcpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigTcpCheckArgs
+ *             {
+ *                 Port = 888,
+ *             },
+ *             ResourceGroup = new Gcp.Monitoring.Inputs.UptimeCheckConfigResourceGroupArgs
+ *             {
+ *                 ResourceType = "INSTANCE",
+ *                 GroupId = check.Name,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		check, err := monitoring.NewGroup(ctx, "check", &monitoring.GroupArgs{
+ * 			DisplayName: pulumi.String("uptime-check-group"),
+ * 			Filter:      pulumi.String("resource.metadata.name=has_substring(\"foo\")"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = monitoring.NewUptimeCheckConfig(ctx, "tcpGroup", &monitoring.UptimeCheckConfigArgs{
+ * 			DisplayName: pulumi.String("tcp-uptime-check"),
+ * 			Timeout:     pulumi.String("60s"),
+ * 			TcpCheck: &monitoring.UptimeCheckConfigTcpCheckArgs{
+ * 				Port: pulumi.Int(888),
+ * 			},
+ * 			ResourceGroup: &monitoring.UptimeCheckConfigResourceGroupArgs{
+ * 				ResourceType: pulumi.String("INSTANCE"),
+ * 				GroupId:      check.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,6 +422,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:monitoring/uptimeCheckConfig:UptimeCheckConfig default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:monitoring/uptimeCheckConfig:UptimeCheckConfig")
 public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {

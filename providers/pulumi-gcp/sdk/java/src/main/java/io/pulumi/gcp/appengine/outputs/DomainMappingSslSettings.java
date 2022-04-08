@@ -22,7 +22,7 @@ public final class DomainMappingSslSettings {
      */
     private final @Nullable String certificateId;
     /**
-     * - 
+     * -
      * ID of the managed `AuthorizedCertificate` resource currently being provisioned, if applicable. Until the new
      * managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the
      * provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
@@ -62,7 +62,7 @@ public final class DomainMappingSslSettings {
         return Optional.ofNullable(this.certificateId);
     }
     /**
-     * - 
+     * -
      * ID of the managed `AuthorizedCertificate` resource currently being provisioned, if applicable. Until the new
      * managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the
      * provisioning process completes, the `certificateId` field will reflect the new managed certificate and this

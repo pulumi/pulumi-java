@@ -15,7 +15,7 @@ public final class AwsClusterFleetArgs extends io.pulumi.resources.ResourceArgs 
     public static final AwsClusterFleetArgs Empty = new AwsClusterFleetArgs();
 
     /**
-     * - 
+     * -
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
      * 
      */

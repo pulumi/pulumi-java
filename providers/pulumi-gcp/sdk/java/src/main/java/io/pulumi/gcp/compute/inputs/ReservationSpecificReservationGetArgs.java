@@ -27,7 +27,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
     }
 
     /**
-     * - 
+     * -
      * How many instances are in use.
      * 
      */

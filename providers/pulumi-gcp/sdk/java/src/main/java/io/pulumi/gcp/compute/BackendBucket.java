@@ -24,13 +24,93 @@ import javax.annotation.Nullable;
  * static content to a Cloud Storage bucket and requests for dynamic content
  * to a virtual machine instance.
  * 
+ * 
  * To get more information about BackendBucket, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/backendBuckets)
  * * How-to Guides
  *     * [Using a Cloud Storage bucket as a load balancer backend](https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Backend Bucket Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const imageBucket = new gcp.storage.Bucket("imageBucket", {location: "EU"});
+ * const imageBackend = new gcp.compute.BackendBucket("imageBackend", {
+ *     description: "Contains beautiful images",
+ *     bucketName: imageBucket.name,
+ *     enableCdn: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * image_bucket = gcp.storage.Bucket("imageBucket", location="EU")
+ * image_backend = gcp.compute.BackendBucket("imageBackend",
+ *     description="Contains beautiful images",
+ *     bucket_name=image_bucket.name,
+ *     enable_cdn=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var imageBucket = new Gcp.Storage.Bucket("imageBucket", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "EU",
+ *         });
+ *         var imageBackend = new Gcp.Compute.BackendBucket("imageBackend", new Gcp.Compute.BackendBucketArgs
+ *         {
+ *             Description = "Contains beautiful images",
+ *             BucketName = imageBucket.Name,
+ *             EnableCdn = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		imageBucket, err := storage.NewBucket(ctx, "imageBucket", &storage.BucketArgs{
+ * 			Location: pulumi.String("EU"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewBackendBucket(ctx, "imageBackend", &compute.BackendBucketArgs{
+ * 			Description: pulumi.String("Contains beautiful images"),
+ * 			BucketName:  imageBucket.Name,
+ * 			EnableCdn:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,14 +120,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/backendBucket:BackendBucket default projects/{{project}}/global/backendBuckets/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/backendBucket:BackendBucket default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/backendBucket:BackendBucket default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/backendBucket:BackendBucket")
 public class BackendBucket extends io.pulumi.resources.CustomResource {

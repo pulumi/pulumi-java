@@ -22,7 +22,7 @@ public final class PatchDeploymentRecurringSchedule {
      */
     private final @Nullable String endTime;
     /**
-     * - 
+     * -
      * The time the last patch job ran successfully.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
@@ -35,7 +35,7 @@ public final class PatchDeploymentRecurringSchedule {
      */
     private final @Nullable PatchDeploymentRecurringScheduleMonthly monthly;
     /**
-     * - 
+     * -
      * The time the next patch job is scheduled to run.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
@@ -96,7 +96,7 @@ public final class PatchDeploymentRecurringSchedule {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * - 
+     * -
      * The time the last patch job ran successfully.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
@@ -113,7 +113,7 @@ public final class PatchDeploymentRecurringSchedule {
         return Optional.ofNullable(this.monthly);
     }
     /**
-     * - 
+     * -
      * The time the next patch job is scheduled to run.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 

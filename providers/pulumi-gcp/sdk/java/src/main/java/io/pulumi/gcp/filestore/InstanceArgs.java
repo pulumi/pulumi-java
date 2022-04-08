@@ -113,13 +113,12 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * The name of the Filestore zone of the instance.
      * 
      * @Deprecated
      * Deprecated in favor of location.
-     * 
      */
     @Deprecated /* Deprecated in favor of location. */
     @Import(name="zone")

@@ -29,10 +29,180 @@ import javax.annotation.Nullable;
  * datasource's `email_address` value, and see below for an example of enabling notifications by granting the correct IAM permission.
  * See [the notifications documentation](https://cloud.google.com/storage/docs/gsutil/commands/notification) for more details.
  * 
- * > **NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
+ * >**NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
  * making this resource dependent on those IAM resources via `depends_on`. This will safeguard against errors due to IAM race conditions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const gcsAccount = gcp.storage.getProjectServiceAccount({});
+ * const topic = new gcp.pubsub.Topic("topic", {});
+ * const binding = new gcp.pubsub.TopicIAMBinding("binding", {
+ *     topic: topic.id,
+ *     role: "roles/pubsub.publisher",
+ *     members: [gcsAccount.then(gcsAccount => `serviceAccount:${gcsAccount.emailAddress}`)],
+ * });
+ * // End enabling notifications
+ * const bucket = new gcp.storage.Bucket("bucket", {location: "US"});
+ * const notification = new gcp.storage.Notification("notification", {
+ *     bucket: bucket.name,
+ *     payloadFormat: "JSON_API_V1",
+ *     topic: topic.id,
+ *     eventTypes: [
+ *         "OBJECT_FINALIZE",
+ *         "OBJECT_METADATA_UPDATE",
+ *     ],
+ *     customAttributes: {
+ *         "new-attribute": "new-attribute-value",
+ *     },
+ * }, {
+ *     dependsOn: [binding],
+ * });
+ * // Enable notifications by giving the correct IAM permission to the unique service account.
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * gcs_account = gcp.storage.get_project_service_account()
+ * topic = gcp.pubsub.Topic("topic")
+ * binding = gcp.pubsub.TopicIAMBinding("binding",
+ *     topic=topic.id,
+ *     role="roles/pubsub.publisher",
+ *     members=[f"serviceAccount:{gcs_account.email_address}"])
+ * # End enabling notifications
+ * bucket = gcp.storage.Bucket("bucket", location="US")
+ * notification = gcp.storage.Notification("notification",
+ *     bucket=bucket.name,
+ *     payload_format="JSON_API_V1",
+ *     topic=topic.id,
+ *     event_types=[
+ *         "OBJECT_FINALIZE",
+ *         "OBJECT_METADATA_UPDATE",
+ *     ],
+ *     custom_attributes={
+ *         "new-attribute": "new-attribute-value",
+ *     },
+ *     opts=pulumi.ResourceOptions(depends_on=[binding]))
+ * # Enable notifications by giving the correct IAM permission to the unique service account.
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var gcsAccount = Output.Create(Gcp.Storage.GetProjectServiceAccount.InvokeAsync());
+ *         var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var binding = new Gcp.PubSub.TopicIAMBinding("binding", new Gcp.PubSub.TopicIAMBindingArgs
+ *         {
+ *             Topic = topic.Id,
+ *             Role = "roles/pubsub.publisher",
+ *             Members = 
+ *             {
+ *                 gcsAccount.Apply(gcsAccount => $"serviceAccount:{gcsAccount.EmailAddress}"),
+ *             },
+ *         });
+ *         // End enabling notifications
+ *         var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *         });
+ *         var notification = new Gcp.Storage.Notification("notification", new Gcp.Storage.NotificationArgs
+ *         {
+ *             Bucket = bucket.Name,
+ *             PayloadFormat = "JSON_API_V1",
+ *             Topic = topic.Id,
+ *             EventTypes = 
+ *             {
+ *                 "OBJECT_FINALIZE",
+ *                 "OBJECT_METADATA_UPDATE",
+ *             },
+ *             CustomAttributes = 
+ *             {
+ *                 { "new-attribute", "new-attribute-value" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 binding,
+ *             },
+ *         });
+ *         // Enable notifications by giving the correct IAM permission to the unique service account.
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		gcsAccount, err := storage.GetProjectServiceAccount(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		binding, err := pubsub.NewTopicIAMBinding(ctx, "binding", &pubsub.TopicIAMBindingArgs{
+ * 			Topic: topic.ID(),
+ * 			Role:  pulumi.String("roles/pubsub.publisher"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", gcsAccount.EmailAddress)),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+ * 			Location: pulumi.String("US"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storage.NewNotification(ctx, "notification", &storage.NotificationArgs{
+ * 			Bucket:        bucket.Name,
+ * 			PayloadFormat: pulumi.String("JSON_API_V1"),
+ * 			Topic:         topic.ID(),
+ * 			EventTypes: pulumi.StringArray{
+ * 				pulumi.String("OBJECT_FINALIZE"),
+ * 				pulumi.String("OBJECT_METADATA_UPDATE"),
+ * 			},
+ * 			CustomAttributes: pulumi.StringMap{
+ * 				"new-attribute": pulumi.String("new-attribute-value"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			binding,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -42,6 +212,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:storage/notification:Notification notification default_bucket/notificationConfigs/102
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:storage/notification:Notification")
 public class Notification extends io.pulumi.resources.CustomResource {

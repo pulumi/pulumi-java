@@ -119,7 +119,6 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Deprecated in favor of log_config
-     * 
      */
     @Deprecated /* Deprecated in favor of log_config */
     @Import(name="enableLogging")

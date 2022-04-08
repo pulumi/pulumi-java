@@ -27,7 +27,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     }
 
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */

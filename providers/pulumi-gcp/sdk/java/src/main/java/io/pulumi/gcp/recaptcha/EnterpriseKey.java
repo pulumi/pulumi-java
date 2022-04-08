@@ -20,7 +20,517 @@ import javax.annotation.Nullable;
 /**
  * The RecaptchaEnterprise Key resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Android_key
+ * A basic test of recaptcha enterprise key that can be used by Android apps
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.recaptcha.EnterpriseKey("primary", {
+ *     androidSettings: {
+ *         allowAllPackageNames: true,
+ *         allowedPackageNames: [],
+ *     },
+ *     displayName: "display-name-one",
+ *     labels: {
+ *         "label-one": "value-one",
+ *     },
+ *     project: "my-project-name",
+ *     testingOptions: {
+ *         testingScore: 0.8,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.recaptcha.EnterpriseKey("primary",
+ *     android_settings=gcp.recaptcha.EnterpriseKeyAndroidSettingsArgs(
+ *         allow_all_package_names=True,
+ *         allowed_package_names=[],
+ *     ),
+ *     display_name="display-name-one",
+ *     labels={
+ *         "label-one": "value-one",
+ *     },
+ *     project="my-project-name",
+ *     testing_options=gcp.recaptcha.EnterpriseKeyTestingOptionsArgs(
+ *         testing_score=0.8,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Recaptcha.EnterpriseKey("primary", new Gcp.Recaptcha.EnterpriseKeyArgs
+ *         {
+ *             AndroidSettings = new Gcp.Recaptcha.Inputs.EnterpriseKeyAndroidSettingsArgs
+ *             {
+ *                 AllowAllPackageNames = true,
+ *                 AllowedPackageNames = {},
+ *             },
+ *             DisplayName = "display-name-one",
+ *             Labels = 
+ *             {
+ *                 { "label-one", "value-one" },
+ *             },
+ *             Project = "my-project-name",
+ *             TestingOptions = new Gcp.Recaptcha.Inputs.EnterpriseKeyTestingOptionsArgs
+ *             {
+ *                 TestingScore = 0.8,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/recaptcha"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recaptcha.NewEnterpriseKey(ctx, "primary", &recaptcha.EnterpriseKeyArgs{
+ * 			AndroidSettings: &recaptcha.EnterpriseKeyAndroidSettingsArgs{
+ * 				AllowAllPackageNames: pulumi.Bool(true),
+ * 				AllowedPackageNames:  pulumi.StringArray{},
+ * 			},
+ * 			DisplayName: pulumi.String("display-name-one"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label-one": pulumi.String("value-one"),
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 			TestingOptions: &recaptcha.EnterpriseKeyTestingOptionsArgs{
+ * 				TestingScore: pulumi.Float64(0.8),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Ios_key
+ * A basic test of recaptcha enterprise key that can be used by iOS apps
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.recaptcha.EnterpriseKey("primary", {
+ *     displayName: "display-name-one",
+ *     iosSettings: {
+ *         allowAllBundleIds: true,
+ *         allowedBundleIds: [],
+ *     },
+ *     labels: {
+ *         "label-one": "value-one",
+ *     },
+ *     project: "my-project-name",
+ *     testingOptions: {
+ *         testingScore: 1,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.recaptcha.EnterpriseKey("primary",
+ *     display_name="display-name-one",
+ *     ios_settings=gcp.recaptcha.EnterpriseKeyIosSettingsArgs(
+ *         allow_all_bundle_ids=True,
+ *         allowed_bundle_ids=[],
+ *     ),
+ *     labels={
+ *         "label-one": "value-one",
+ *     },
+ *     project="my-project-name",
+ *     testing_options=gcp.recaptcha.EnterpriseKeyTestingOptionsArgs(
+ *         testing_score=1,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Recaptcha.EnterpriseKey("primary", new Gcp.Recaptcha.EnterpriseKeyArgs
+ *         {
+ *             DisplayName = "display-name-one",
+ *             IosSettings = new Gcp.Recaptcha.Inputs.EnterpriseKeyIosSettingsArgs
+ *             {
+ *                 AllowAllBundleIds = true,
+ *                 AllowedBundleIds = {},
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "label-one", "value-one" },
+ *             },
+ *             Project = "my-project-name",
+ *             TestingOptions = new Gcp.Recaptcha.Inputs.EnterpriseKeyTestingOptionsArgs
+ *             {
+ *                 TestingScore = 1,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/recaptcha"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recaptcha.NewEnterpriseKey(ctx, "primary", &recaptcha.EnterpriseKeyArgs{
+ * 			DisplayName: pulumi.String("display-name-one"),
+ * 			IosSettings: &recaptcha.EnterpriseKeyIosSettingsArgs{
+ * 				AllowAllBundleIds: pulumi.Bool(true),
+ * 				AllowedBundleIds:  pulumi.StringArray{},
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"label-one": pulumi.String("value-one"),
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 			TestingOptions: &recaptcha.EnterpriseKeyTestingOptionsArgs{
+ * 				TestingScore: pulumi.Float64(1),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Minimal_key
+ * A minimal test of recaptcha enterprise key
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.recaptcha.EnterpriseKey("primary", {
+ *     displayName: "display-name-one",
+ *     labels: {},
+ *     project: "my-project-name",
+ *     webSettings: {
+ *         allowAllDomains: true,
+ *         integrationType: "SCORE",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.recaptcha.EnterpriseKey("primary",
+ *     display_name="display-name-one",
+ *     labels={},
+ *     project="my-project-name",
+ *     web_settings=gcp.recaptcha.EnterpriseKeyWebSettingsArgs(
+ *         allow_all_domains=True,
+ *         integration_type="SCORE",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Recaptcha.EnterpriseKey("primary", new Gcp.Recaptcha.EnterpriseKeyArgs
+ *         {
+ *             DisplayName = "display-name-one",
+ *             Labels = ,
+ *             Project = "my-project-name",
+ *             WebSettings = new Gcp.Recaptcha.Inputs.EnterpriseKeyWebSettingsArgs
+ *             {
+ *                 AllowAllDomains = true,
+ *                 IntegrationType = "SCORE",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/recaptcha"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recaptcha.NewEnterpriseKey(ctx, "primary", &recaptcha.EnterpriseKeyArgs{
+ * 			DisplayName: pulumi.String("display-name-one"),
+ * 			Labels:      nil,
+ * 			Project:     pulumi.String("my-project-name"),
+ * 			WebSettings: &recaptcha.EnterpriseKeyWebSettingsArgs{
+ * 				AllowAllDomains: pulumi.Bool(true),
+ * 				IntegrationType: pulumi.String("SCORE"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Web_key
+ * A basic test of recaptcha enterprise key that can be used by websites
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.recaptcha.EnterpriseKey("primary", {
+ *     displayName: "display-name-one",
+ *     labels: {
+ *         "label-one": "value-one",
+ *     },
+ *     project: "my-project-name",
+ *     testingOptions: {
+ *         testingChallenge: "NOCAPTCHA",
+ *         testingScore: 0.5,
+ *     },
+ *     webSettings: {
+ *         allowAllDomains: true,
+ *         allowedDomains: [],
+ *         challengeSecurityPreference: "USABILITY",
+ *         integrationType: "CHECKBOX",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.recaptcha.EnterpriseKey("primary",
+ *     display_name="display-name-one",
+ *     labels={
+ *         "label-one": "value-one",
+ *     },
+ *     project="my-project-name",
+ *     testing_options=gcp.recaptcha.EnterpriseKeyTestingOptionsArgs(
+ *         testing_challenge="NOCAPTCHA",
+ *         testing_score=0.5,
+ *     ),
+ *     web_settings=gcp.recaptcha.EnterpriseKeyWebSettingsArgs(
+ *         allow_all_domains=True,
+ *         allowed_domains=[],
+ *         challenge_security_preference="USABILITY",
+ *         integration_type="CHECKBOX",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Recaptcha.EnterpriseKey("primary", new Gcp.Recaptcha.EnterpriseKeyArgs
+ *         {
+ *             DisplayName = "display-name-one",
+ *             Labels = 
+ *             {
+ *                 { "label-one", "value-one" },
+ *             },
+ *             Project = "my-project-name",
+ *             TestingOptions = new Gcp.Recaptcha.Inputs.EnterpriseKeyTestingOptionsArgs
+ *             {
+ *                 TestingChallenge = "NOCAPTCHA",
+ *                 TestingScore = 0.5,
+ *             },
+ *             WebSettings = new Gcp.Recaptcha.Inputs.EnterpriseKeyWebSettingsArgs
+ *             {
+ *                 AllowAllDomains = true,
+ *                 AllowedDomains = {},
+ *                 ChallengeSecurityPreference = "USABILITY",
+ *                 IntegrationType = "CHECKBOX",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/recaptcha"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recaptcha.NewEnterpriseKey(ctx, "primary", &recaptcha.EnterpriseKeyArgs{
+ * 			DisplayName: pulumi.String("display-name-one"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label-one": pulumi.String("value-one"),
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 			TestingOptions: &recaptcha.EnterpriseKeyTestingOptionsArgs{
+ * 				TestingChallenge: pulumi.String("NOCAPTCHA"),
+ * 				TestingScore:     pulumi.Float64(0.5),
+ * 			},
+ * 			WebSettings: &recaptcha.EnterpriseKeyWebSettingsArgs{
+ * 				AllowAllDomains:             pulumi.Bool(true),
+ * 				AllowedDomains:              pulumi.StringArray{},
+ * 				ChallengeSecurityPreference: pulumi.String("USABILITY"),
+ * 				IntegrationType:             pulumi.String("CHECKBOX"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Web_score_key
+ * A basic test of recaptcha enterprise key with score integration type that can be used by websites
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.recaptcha.EnterpriseKey("primary", {
+ *     displayName: "display-name-one",
+ *     labels: {
+ *         "label-one": "value-one",
+ *     },
+ *     project: "my-project-name",
+ *     testingOptions: {
+ *         testingScore: 0.5,
+ *     },
+ *     webSettings: {
+ *         allowAllDomains: true,
+ *         allowAmpTraffic: false,
+ *         allowedDomains: [],
+ *         integrationType: "SCORE",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.recaptcha.EnterpriseKey("primary",
+ *     display_name="display-name-one",
+ *     labels={
+ *         "label-one": "value-one",
+ *     },
+ *     project="my-project-name",
+ *     testing_options=gcp.recaptcha.EnterpriseKeyTestingOptionsArgs(
+ *         testing_score=0.5,
+ *     ),
+ *     web_settings=gcp.recaptcha.EnterpriseKeyWebSettingsArgs(
+ *         allow_all_domains=True,
+ *         allow_amp_traffic=False,
+ *         allowed_domains=[],
+ *         integration_type="SCORE",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Recaptcha.EnterpriseKey("primary", new Gcp.Recaptcha.EnterpriseKeyArgs
+ *         {
+ *             DisplayName = "display-name-one",
+ *             Labels = 
+ *             {
+ *                 { "label-one", "value-one" },
+ *             },
+ *             Project = "my-project-name",
+ *             TestingOptions = new Gcp.Recaptcha.Inputs.EnterpriseKeyTestingOptionsArgs
+ *             {
+ *                 TestingScore = 0.5,
+ *             },
+ *             WebSettings = new Gcp.Recaptcha.Inputs.EnterpriseKeyWebSettingsArgs
+ *             {
+ *                 AllowAllDomains = true,
+ *                 AllowAmpTraffic = false,
+ *                 AllowedDomains = {},
+ *                 IntegrationType = "SCORE",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/recaptcha"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recaptcha.NewEnterpriseKey(ctx, "primary", &recaptcha.EnterpriseKeyArgs{
+ * 			DisplayName: pulumi.String("display-name-one"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label-one": pulumi.String("value-one"),
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 			TestingOptions: &recaptcha.EnterpriseKeyTestingOptionsArgs{
+ * 				TestingScore: pulumi.Float64(0.5),
+ * 			},
+ * 			WebSettings: &recaptcha.EnterpriseKeyWebSettingsArgs{
+ * 				AllowAllDomains: pulumi.Bool(true),
+ * 				AllowAmpTraffic: pulumi.Bool(false),
+ * 				AllowedDomains:  pulumi.StringArray{},
+ * 				IntegrationType: pulumi.String("SCORE"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +540,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:recaptcha/enterpriseKey:EnterpriseKey default projects/{{project}}/keys/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:recaptcha/enterpriseKey:EnterpriseKey default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:recaptcha/enterpriseKey:EnterpriseKey default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:recaptcha/enterpriseKey:EnterpriseKey")
 public class EnterpriseKey extends io.pulumi.resources.CustomResource {

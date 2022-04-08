@@ -18,7 +18,232 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** This resource does not support zonal disks (`gcp.compute.Disk`). For zonal disks, please refer to the `gcp.compute.DiskResourcePolicyAttachment` resource.
  * 
+ * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Region Disk Resource Policy Attachment Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const disk = new gcp.compute.Disk("disk", {
+ *     image: "debian-cloud/debian-9",
+ *     size: 50,
+ *     type: "pd-ssd",
+ *     zone: "us-central1-a",
+ * });
+ * const snapdisk = new gcp.compute.Snapshot("snapdisk", {
+ *     sourceDisk: disk.name,
+ *     zone: "us-central1-a",
+ * });
+ * const ssd = new gcp.compute.RegionDisk("ssd", {
+ *     replicaZones: [
+ *         "us-central1-a",
+ *         "us-central1-f",
+ *     ],
+ *     snapshot: snapdisk.id,
+ *     size: 50,
+ *     type: "pd-ssd",
+ *     region: "us-central1",
+ * });
+ * const attachment = new gcp.compute.RegionDiskResourcePolicyAttachment("attachment", {
+ *     disk: ssd.name,
+ *     region: "us-central1",
+ * });
+ * const policy = new gcp.compute.ResourcePolicy("policy", {
+ *     region: "us-central1",
+ *     snapshotSchedulePolicy: {
+ *         schedule: {
+ *             dailySchedule: {
+ *                 daysInCycle: 1,
+ *                 startTime: "04:00",
+ *             },
+ *         },
+ *     },
+ * });
+ * const myImage = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * disk = gcp.compute.Disk("disk",
+ *     image="debian-cloud/debian-9",
+ *     size=50,
+ *     type="pd-ssd",
+ *     zone="us-central1-a")
+ * snapdisk = gcp.compute.Snapshot("snapdisk",
+ *     source_disk=disk.name,
+ *     zone="us-central1-a")
+ * ssd = gcp.compute.RegionDisk("ssd",
+ *     replica_zones=[
+ *         "us-central1-a",
+ *         "us-central1-f",
+ *     ],
+ *     snapshot=snapdisk.id,
+ *     size=50,
+ *     type="pd-ssd",
+ *     region="us-central1")
+ * attachment = gcp.compute.RegionDiskResourcePolicyAttachment("attachment",
+ *     disk=ssd.name,
+ *     region="us-central1")
+ * policy = gcp.compute.ResourcePolicy("policy",
+ *     region="us-central1",
+ *     snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+ *         schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+ *             daily_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs(
+ *                 days_in_cycle=1,
+ *                 start_time="04:00",
+ *             ),
+ *         ),
+ *     ))
+ * my_image = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var disk = new Gcp.Compute.Disk("disk", new Gcp.Compute.DiskArgs
+ *         {
+ *             Image = "debian-cloud/debian-9",
+ *             Size = 50,
+ *             Type = "pd-ssd",
+ *             Zone = "us-central1-a",
+ *         });
+ *         var snapdisk = new Gcp.Compute.Snapshot("snapdisk", new Gcp.Compute.SnapshotArgs
+ *         {
+ *             SourceDisk = disk.Name,
+ *             Zone = "us-central1-a",
+ *         });
+ *         var ssd = new Gcp.Compute.RegionDisk("ssd", new Gcp.Compute.RegionDiskArgs
+ *         {
+ *             ReplicaZones = 
+ *             {
+ *                 "us-central1-a",
+ *                 "us-central1-f",
+ *             },
+ *             Snapshot = snapdisk.Id,
+ *             Size = 50,
+ *             Type = "pd-ssd",
+ *             Region = "us-central1",
+ *         });
+ *         var attachment = new Gcp.Compute.RegionDiskResourcePolicyAttachment("attachment", new Gcp.Compute.RegionDiskResourcePolicyAttachmentArgs
+ *         {
+ *             Disk = ssd.Name,
+ *             Region = "us-central1",
+ *         });
+ *         var policy = new Gcp.Compute.ResourcePolicy("policy", new Gcp.Compute.ResourcePolicyArgs
+ *         {
+ *             Region = "us-central1",
+ *             SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+ *             {
+ *                 Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+ *                 {
+ *                     DailySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
+ *                     {
+ *                         DaysInCycle = 1,
+ *                         StartTime = "04:00",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var myImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		disk, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+ * 			Image: pulumi.String("debian-cloud/debian-9"),
+ * 			Size:  pulumi.Int(50),
+ * 			Type:  pulumi.String("pd-ssd"),
+ * 			Zone:  pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		snapdisk, err := compute.NewSnapshot(ctx, "snapdisk", &compute.SnapshotArgs{
+ * 			SourceDisk: disk.Name,
+ * 			Zone:       pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ssd, err := compute.NewRegionDisk(ctx, "ssd", &compute.RegionDiskArgs{
+ * 			ReplicaZones: pulumi.StringArray{
+ * 				pulumi.String("us-central1-a"),
+ * 				pulumi.String("us-central1-f"),
+ * 			},
+ * 			Snapshot: snapdisk.ID(),
+ * 			Size:     pulumi.Int(50),
+ * 			Type:     pulumi.String("pd-ssd"),
+ * 			Region:   pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionDiskResourcePolicyAttachment(ctx, "attachment", &compute.RegionDiskResourcePolicyAttachmentArgs{
+ * 			Disk:   ssd.Name,
+ * 			Region: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewResourcePolicy(ctx, "policy", &compute.ResourcePolicyArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+ * 				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+ * 					DailySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs{
+ * 						DaysInCycle: pulumi.Int(1),
+ * 						StartTime:   pulumi.String("04:00"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		_, err = compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,18 +253,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/regionDiskResourcePolicyAttachment:RegionDiskResourcePolicyAttachment default projects/{{project}}/regions/{{region}}/disks/{{disk}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionDiskResourcePolicyAttachment:RegionDiskResourcePolicyAttachment default {{project}}/{{region}}/{{disk}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/regionDiskResourcePolicyAttachment:RegionDiskResourcePolicyAttachment default {{region}}/{{disk}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionDiskResourcePolicyAttachment:RegionDiskResourcePolicyAttachment default {{disk}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/regionDiskResourcePolicyAttachment:RegionDiskResourcePolicyAttachment")
 public class RegionDiskResourcePolicyAttachment extends io.pulumi.resources.CustomResource {

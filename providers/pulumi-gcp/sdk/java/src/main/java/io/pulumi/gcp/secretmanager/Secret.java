@@ -24,7 +24,132 @@ import javax.annotation.Nullable;
  * 
  * * [API documentation](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets)
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Secret Config Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
+ *     labels: {
+ *         label: "my-label",
+ *     },
+ *     replication: {
+ *         userManaged: {
+ *             replicas: [
+ *                 {
+ *                     location: "us-central1",
+ *                 },
+ *                 {
+ *                     location: "us-east1",
+ *                 },
+ *             ],
+ *         },
+ *     },
+ *     secretId: "secret",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * secret_basic = gcp.secretmanager.Secret("secret-basic",
+ *     labels={
+ *         "label": "my-label",
+ *     },
+ *     replication=gcp.secretmanager.SecretReplicationArgs(
+ *         user_managed=gcp.secretmanager.SecretReplicationUserManagedArgs(
+ *             replicas=[
+ *                 gcp.secretmanager.SecretReplicationUserManagedReplicaArgs(
+ *                     location="us-central1",
+ *                 ),
+ *                 gcp.secretmanager.SecretReplicationUserManagedReplicaArgs(
+ *                     location="us-east1",
+ *                 ),
+ *             ],
+ *         ),
+ *     ),
+ *     secret_id="secret")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var secret_basic = new Gcp.SecretManager.Secret("secret-basic", new Gcp.SecretManager.SecretArgs
+ *         {
+ *             Labels = 
+ *             {
+ *                 { "label", "my-label" },
+ *             },
+ *             Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+ *             {
+ *                 UserManaged = new Gcp.SecretManager.Inputs.SecretReplicationUserManagedArgs
+ *                 {
+ *                     Replicas = 
+ *                     {
+ *                         new Gcp.SecretManager.Inputs.SecretReplicationUserManagedReplicaArgs
+ *                         {
+ *                             Location = "us-central1",
+ *                         },
+ *                         new Gcp.SecretManager.Inputs.SecretReplicationUserManagedReplicaArgs
+ *                         {
+ *                             Location = "us-east1",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             SecretId = "secret",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/secretmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := secretmanager.NewSecret(ctx, "secret-basic", &secretmanager.SecretArgs{
+ * 			Labels: pulumi.StringMap{
+ * 				"label": pulumi.String("my-label"),
+ * 			},
+ * 			Replication: &secretmanager.SecretReplicationArgs{
+ * 				UserManaged: &secretmanager.SecretReplicationUserManagedArgs{
+ * 					Replicas: secretmanager.SecretReplicationUserManagedReplicaArray{
+ * 						&secretmanager.SecretReplicationUserManagedReplicaArgs{
+ * 							Location: pulumi.String("us-central1"),
+ * 						},
+ * 						&secretmanager.SecretReplicationUserManagedReplicaArgs{
+ * 							Location: pulumi.String("us-east1"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			SecretId: pulumi.String("secret"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +159,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:secretmanager/secret:Secret default projects/{{project}}/secrets/{{secret_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:secretmanager/secret:Secret default {{project}}/{{secret_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:secretmanager/secret:Secret default {{secret_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:secretmanager/secret:Secret")
 public class Secret extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,166 @@ import javax.annotation.Nullable;
 /**
  * The AssuredWorkloads Workload resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic_workload
+ * A basic test of a assuredworkloads api
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.assuredworkloads.Workload("primary", {
+ *     billingAccount: "billingAccounts/000000-0000000-0000000-000000",
+ *     complianceRegime: "FEDRAMP_MODERATE",
+ *     displayName: "Workload Example",
+ *     kmsSettings: {
+ *         nextRotationTime: "9999-10-02T15:01:23Z",
+ *         rotationPeriod: "10368000s",
+ *     },
+ *     labels: {
+ *         "label-one": "value-one",
+ *     },
+ *     location: "us-west1",
+ *     organization: "123456789",
+ *     provisionedResourcesParent: "folders/519620126891",
+ *     resourceSettings: [
+ *         {
+ *             resourceType: "CONSUMER_PROJECT",
+ *         },
+ *         {
+ *             resourceType: "ENCRYPTION_KEYS_PROJECT",
+ *         },
+ *         {
+ *             resourceId: "ring",
+ *             resourceType: "KEYRING",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.assuredworkloads.Workload("primary",
+ *     billing_account="billingAccounts/000000-0000000-0000000-000000",
+ *     compliance_regime="FEDRAMP_MODERATE",
+ *     display_name="Workload Example",
+ *     kms_settings=gcp.assuredworkloads.WorkloadKmsSettingsArgs(
+ *         next_rotation_time="9999-10-02T15:01:23Z",
+ *         rotation_period="10368000s",
+ *     ),
+ *     labels={
+ *         "label-one": "value-one",
+ *     },
+ *     location="us-west1",
+ *     organization="123456789",
+ *     provisioned_resources_parent="folders/519620126891",
+ *     resource_settings=[
+ *         gcp.assuredworkloads.WorkloadResourceSettingArgs(
+ *             resource_type="CONSUMER_PROJECT",
+ *         ),
+ *         gcp.assuredworkloads.WorkloadResourceSettingArgs(
+ *             resource_type="ENCRYPTION_KEYS_PROJECT",
+ *         ),
+ *         gcp.assuredworkloads.WorkloadResourceSettingArgs(
+ *             resource_id="ring",
+ *             resource_type="KEYRING",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.AssuredWorkloads.Workload("primary", new Gcp.AssuredWorkloads.WorkloadArgs
+ *         {
+ *             BillingAccount = "billingAccounts/000000-0000000-0000000-000000",
+ *             ComplianceRegime = "FEDRAMP_MODERATE",
+ *             DisplayName = "Workload Example",
+ *             KmsSettings = new Gcp.AssuredWorkloads.Inputs.WorkloadKmsSettingsArgs
+ *             {
+ *                 NextRotationTime = "9999-10-02T15:01:23Z",
+ *                 RotationPeriod = "10368000s",
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "label-one", "value-one" },
+ *             },
+ *             Location = "us-west1",
+ *             Organization = "123456789",
+ *             ProvisionedResourcesParent = "folders/519620126891",
+ *             ResourceSettings = 
+ *             {
+ *                 new Gcp.AssuredWorkloads.Inputs.WorkloadResourceSettingArgs
+ *                 {
+ *                     ResourceType = "CONSUMER_PROJECT",
+ *                 },
+ *                 new Gcp.AssuredWorkloads.Inputs.WorkloadResourceSettingArgs
+ *                 {
+ *                     ResourceType = "ENCRYPTION_KEYS_PROJECT",
+ *                 },
+ *                 new Gcp.AssuredWorkloads.Inputs.WorkloadResourceSettingArgs
+ *                 {
+ *                     ResourceId = "ring",
+ *                     ResourceType = "KEYRING",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/assuredworkloads"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := assuredworkloads.NewWorkload(ctx, "primary", &assuredworkloads.WorkloadArgs{
+ * 			BillingAccount:   pulumi.String("billingAccounts/000000-0000000-0000000-000000"),
+ * 			ComplianceRegime: pulumi.String("FEDRAMP_MODERATE"),
+ * 			DisplayName:      pulumi.String("Workload Example"),
+ * 			KmsSettings: &assuredworkloads.WorkloadKmsSettingsArgs{
+ * 				NextRotationTime: pulumi.String("9999-10-02T15:01:23Z"),
+ * 				RotationPeriod:   pulumi.String("10368000s"),
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"label-one": pulumi.String("value-one"),
+ * 			},
+ * 			Location:                   pulumi.String("us-west1"),
+ * 			Organization:               pulumi.String("123456789"),
+ * 			ProvisionedResourcesParent: pulumi.String("folders/519620126891"),
+ * 			ResourceSettings: assuredworkloads.WorkloadResourceSettingArray{
+ * 				&assuredworkloads.WorkloadResourceSettingArgs{
+ * 					ResourceType: pulumi.String("CONSUMER_PROJECT"),
+ * 				},
+ * 				&assuredworkloads.WorkloadResourceSettingArgs{
+ * 					ResourceType: pulumi.String("ENCRYPTION_KEYS_PROJECT"),
+ * 				},
+ * 				&assuredworkloads.WorkloadResourceSettingArgs{
+ * 					ResourceId:   pulumi.String("ring"),
+ * 					ResourceType: pulumi.String("KEYRING"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,10 +189,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:assuredworkloads/workload:Workload default organizations/{{organization}}/locations/{{location}}/workloads/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:assuredworkloads/workload:Workload default {{organization}}/{{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:assuredworkloads/workload:Workload")
 public class Workload extends io.pulumi.resources.CustomResource {

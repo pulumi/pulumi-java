@@ -20,13 +20,313 @@ import javax.annotation.Nullable;
  * virtual machine instance that receives and handles traffic from the
  * corresponding forwarding rules.
  * 
+ * 
  * To get more information about TargetInstance, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/targetInstances)
  * * How-to Guides
  *     * [Using Protocol Forwarding](https://cloud.google.com/compute/docs/protocol-forwarding)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Target Instance Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const vmimage = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * const target_vm = new gcp.compute.Instance("target-vm", {
+ *     machineType: "e2-medium",
+ *     zone: "us-central1-a",
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: vmimage.then(vmimage => vmimage.selfLink),
+ *         },
+ *     },
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ * });
+ * const _default = new gcp.compute.TargetInstance("default", {instance: target_vm.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * vmimage = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * target_vm = gcp.compute.Instance("target-vm",
+ *     machine_type="e2-medium",
+ *     zone="us-central1-a",
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image=vmimage.self_link,
+ *         ),
+ *     ),
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         network="default",
+ *     )])
+ * default = gcp.compute.TargetInstance("default", instance=target_vm.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vmimage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var target_vm = new Gcp.Compute.Instance("target-vm", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             Zone = "us-central1-a",
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = vmimage.Apply(vmimage => vmimage.SelfLink),
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *         });
+ *         var @default = new Gcp.Compute.TargetInstance("default", new Gcp.Compute.TargetInstanceArgs
+ *         {
+ *             Instance = target_vm.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		vmimage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInstance(ctx, "target-vm", &compute.InstanceArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			Zone:        pulumi.String("us-central1-a"),
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String(vmimage.SelfLink),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewTargetInstance(ctx, "default", &compute.TargetInstanceArgs{
+ * 			Instance: target_vm.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Target Instance Custom Network
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const target-vmNetwork = gcp.compute.getNetwork({
+ *     name: "default",
+ * });
+ * const vmimage = gcp.compute.getImage({
+ *     family: "debian-10",
+ *     project: "debian-cloud",
+ * });
+ * const target_vmInstance = new gcp.compute.Instance("target-vmInstance", {
+ *     machineType: "e2-medium",
+ *     zone: "us-central1-a",
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: vmimage.then(vmimage => vmimage.selfLink),
+ *         },
+ *     },
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const customNetwork = new gcp.compute.TargetInstance("customNetwork", {
+ *     instance: target_vmInstance.id,
+ *     network: target_vmNetwork.then(target_vmNetwork => target_vmNetwork.selfLink),
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * target_vm_network = gcp.compute.get_network(name="default")
+ * vmimage = gcp.compute.get_image(family="debian-10",
+ *     project="debian-cloud")
+ * target_vm_instance = gcp.compute.Instance("target-vmInstance",
+ *     machine_type="e2-medium",
+ *     zone="us-central1-a",
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image=vmimage.self_link,
+ *         ),
+ *     ),
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * custom_network = gcp.compute.TargetInstance("customNetwork",
+ *     instance=target_vm_instance.id,
+ *     network=target_vm_network.self_link,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var target_vmNetwork = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+ *         {
+ *             Name = "default",
+ *         }));
+ *         var vmimage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-10",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var target_vmInstance = new Gcp.Compute.Instance("target-vmInstance", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             Zone = "us-central1-a",
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = vmimage.Apply(vmimage => vmimage.SelfLink),
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var customNetwork = new Gcp.Compute.TargetInstance("customNetwork", new Gcp.Compute.TargetInstanceArgs
+ *         {
+ *             Instance = target_vmInstance.Id,
+ *             Network = target_vmNetwork.Apply(target_vmNetwork => target_vmNetwork.SelfLink),
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		target_vmNetwork, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+ * 			Name: "default",
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		opt0 := "debian-10"
+ * 		opt1 := "debian-cloud"
+ * 		vmimage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInstance(ctx, "target-vmInstance", &compute.InstanceArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			Zone:        pulumi.String("us-central1-a"),
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String(vmimage.SelfLink),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewTargetInstance(ctx, "customNetwork", &compute.TargetInstanceArgs{
+ * 			Instance: target_vmInstance.ID(),
+ * 			Network:  pulumi.String(target_vmNetwork.SelfLink),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,18 +336,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/targetInstance:TargetInstance default projects/{{project}}/zones/{{zone}}/targetInstances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/targetInstance:TargetInstance default {{project}}/{{zone}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/targetInstance:TargetInstance default {{zone}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/targetInstance:TargetInstance default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/targetInstance:TargetInstance")
 public class TargetInstance extends io.pulumi.resources.CustomResource {

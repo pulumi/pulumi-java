@@ -18,7 +18,412 @@ import javax.annotation.Nullable;
 /**
  * A policy that can be attached to a resource to specify or schedule actions on that resource.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Resource Policy Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const foo = new gcp.compute.ResourcePolicy("foo", {
+ *     region: "us-central1",
+ *     snapshotSchedulePolicy: {
+ *         schedule: {
+ *             dailySchedule: {
+ *                 daysInCycle: 1,
+ *                 startTime: "04:00",
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * foo = gcp.compute.ResourcePolicy("foo",
+ *     region="us-central1",
+ *     snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+ *         schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+ *             daily_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs(
+ *                 days_in_cycle=1,
+ *                 start_time="04:00",
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Gcp.Compute.ResourcePolicy("foo", new Gcp.Compute.ResourcePolicyArgs
+ *         {
+ *             Region = "us-central1",
+ *             SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+ *             {
+ *                 Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+ *                 {
+ *                     DailySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
+ *                     {
+ *                         DaysInCycle = 1,
+ *                         StartTime = "04:00",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewResourcePolicy(ctx, "foo", &compute.ResourcePolicyArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+ * 				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+ * 					DailySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs{
+ * 						DaysInCycle: pulumi.Int(1),
+ * 						StartTime:   pulumi.String("04:00"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Resource Policy Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const bar = new gcp.compute.ResourcePolicy("bar", {
+ *     region: "us-central1",
+ *     snapshotSchedulePolicy: {
+ *         retentionPolicy: {
+ *             maxRetentionDays: 10,
+ *             onSourceDiskDelete: "KEEP_AUTO_SNAPSHOTS",
+ *         },
+ *         schedule: {
+ *             hourlySchedule: {
+ *                 hoursInCycle: 20,
+ *                 startTime: "23:00",
+ *             },
+ *         },
+ *         snapshotProperties: {
+ *             guestFlush: true,
+ *             labels: {
+ *                 my_label: "value",
+ *             },
+ *             storageLocations: "us",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * bar = gcp.compute.ResourcePolicy("bar",
+ *     region="us-central1",
+ *     snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+ *         retention_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(
+ *             max_retention_days=10,
+ *             on_source_disk_delete="KEEP_AUTO_SNAPSHOTS",
+ *         ),
+ *         schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+ *             hourly_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs(
+ *                 hours_in_cycle=20,
+ *                 start_time="23:00",
+ *             ),
+ *         ),
+ *         snapshot_properties=gcp.compute.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(
+ *             guest_flush=True,
+ *             labels={
+ *                 "myLabel": "value",
+ *             },
+ *             storage_locations="us",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bar = new Gcp.Compute.ResourcePolicy("bar", new Gcp.Compute.ResourcePolicyArgs
+ *         {
+ *             Region = "us-central1",
+ *             SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+ *             {
+ *                 RetentionPolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs
+ *                 {
+ *                     MaxRetentionDays = 10,
+ *                     OnSourceDiskDelete = "KEEP_AUTO_SNAPSHOTS",
+ *                 },
+ *                 Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+ *                 {
+ *                     HourlySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs
+ *                     {
+ *                         HoursInCycle = 20,
+ *                         StartTime = "23:00",
+ *                     },
+ *                 },
+ *                 SnapshotProperties = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs
+ *                 {
+ *                     GuestFlush = true,
+ *                     Labels = 
+ *                     {
+ *                         { "myLabel", "value" },
+ *                     },
+ *                     StorageLocations = "us",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewResourcePolicy(ctx, "bar", &compute.ResourcePolicyArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+ * 				RetentionPolicy: &compute.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs{
+ * 					MaxRetentionDays:   pulumi.Int(10),
+ * 					OnSourceDiskDelete: pulumi.String("KEEP_AUTO_SNAPSHOTS"),
+ * 				},
+ * 				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+ * 					HourlySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs{
+ * 						HoursInCycle: pulumi.Int(20),
+ * 						StartTime:    pulumi.String("23:00"),
+ * 					},
+ * 				},
+ * 				SnapshotProperties: &compute.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs{
+ * 					GuestFlush: pulumi.Bool(true),
+ * 					Labels: pulumi.StringMap{
+ * 						"myLabel": pulumi.String("value"),
+ * 					},
+ * 					StorageLocations: pulumi.String("us"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Resource Policy Placement Policy
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const baz = new gcp.compute.ResourcePolicy("baz", {
+ *     groupPlacementPolicy: {
+ *         collocation: "COLLOCATED",
+ *         vmCount: 2,
+ *     },
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * baz = gcp.compute.ResourcePolicy("baz",
+ *     group_placement_policy=gcp.compute.ResourcePolicyGroupPlacementPolicyArgs(
+ *         collocation="COLLOCATED",
+ *         vm_count=2,
+ *     ),
+ *     region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var baz = new Gcp.Compute.ResourcePolicy("baz", new Gcp.Compute.ResourcePolicyArgs
+ *         {
+ *             GroupPlacementPolicy = new Gcp.Compute.Inputs.ResourcePolicyGroupPlacementPolicyArgs
+ *             {
+ *                 Collocation = "COLLOCATED",
+ *                 VmCount = 2,
+ *             },
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewResourcePolicy(ctx, "baz", &compute.ResourcePolicyArgs{
+ * 			GroupPlacementPolicy: &compute.ResourcePolicyGroupPlacementPolicyArgs{
+ * 				Collocation: pulumi.String("COLLOCATED"),
+ * 				VmCount:     pulumi.Int(2),
+ * 			},
+ * 			Region: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Resource Policy Instance Schedule Policy
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const hourly = new gcp.compute.ResourcePolicy("hourly", {
+ *     description: "Start and stop instances",
+ *     instanceSchedulePolicy: {
+ *         timeZone: "US/Central",
+ *         vmStartSchedule: {
+ *             schedule: "0 * * * *",
+ *         },
+ *         vmStopSchedule: {
+ *             schedule: "15 * * * *",
+ *         },
+ *     },
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * hourly = gcp.compute.ResourcePolicy("hourly",
+ *     description="Start and stop instances",
+ *     instance_schedule_policy=gcp.compute.ResourcePolicyInstanceSchedulePolicyArgs(
+ *         time_zone="US/Central",
+ *         vm_start_schedule=gcp.compute.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs(
+ *             schedule="0 * * * *",
+ *         ),
+ *         vm_stop_schedule=gcp.compute.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(
+ *             schedule="15 * * * *",
+ *         ),
+ *     ),
+ *     region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hourly = new Gcp.Compute.ResourcePolicy("hourly", new Gcp.Compute.ResourcePolicyArgs
+ *         {
+ *             Description = "Start and stop instances",
+ *             InstanceSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicyInstanceSchedulePolicyArgs
+ *             {
+ *                 TimeZone = "US/Central",
+ *                 VmStartSchedule = new Gcp.Compute.Inputs.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs
+ *                 {
+ *                     Schedule = "0 * * * *",
+ *                 },
+ *                 VmStopSchedule = new Gcp.Compute.Inputs.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs
+ *                 {
+ *                     Schedule = "15 * * * *",
+ *                 },
+ *             },
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewResourcePolicy(ctx, "hourly", &compute.ResourcePolicyArgs{
+ * 			Description: pulumi.String("Start and stop instances"),
+ * 			InstanceSchedulePolicy: &compute.ResourcePolicyInstanceSchedulePolicyArgs{
+ * 				TimeZone: pulumi.String("US/Central"),
+ * 				VmStartSchedule: &compute.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs{
+ * 					Schedule: pulumi.String("0 * * * *"),
+ * 				},
+ * 				VmStopSchedule: &compute.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs{
+ * 					Schedule: pulumi.String("15 * * * *"),
+ * 				},
+ * 			},
+ * 			Region: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,18 +433,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default projects/{{project}}/regions/{{region}}/resourcePolicies/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/resourcePolicy:ResourcePolicy")
 public class ResourcePolicy extends io.pulumi.resources.CustomResource {

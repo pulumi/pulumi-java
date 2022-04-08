@@ -23,13 +23,273 @@ import javax.annotation.Nullable;
  * and either the interface name, IP address, or peer IP address.
  * Please refer to RFC4273.
  * 
+ * 
  * To get more information about RouterBgpPeer, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/routers)
  * * How-to Guides
  *     * [Google Cloud Router](https://cloud.google.com/router/docs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Router Peer Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const peer = new gcp.compute.RouterPeer("peer", {
+ *     advertisedRoutePriority: 100,
+ *     interface: "interface-1",
+ *     peerAsn: 65513,
+ *     peerIpAddress: "169.254.1.2",
+ *     region: "us-central1",
+ *     router: "my-router",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * peer = gcp.compute.RouterPeer("peer",
+ *     advertised_route_priority=100,
+ *     interface="interface-1",
+ *     peer_asn=65513,
+ *     peer_ip_address="169.254.1.2",
+ *     region="us-central1",
+ *     router="my-router")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peer = new Gcp.Compute.RouterPeer("peer", new Gcp.Compute.RouterPeerArgs
+ *         {
+ *             AdvertisedRoutePriority = 100,
+ *             Interface = "interface-1",
+ *             PeerAsn = 65513,
+ *             PeerIpAddress = "169.254.1.2",
+ *             Region = "us-central1",
+ *             Router = "my-router",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewRouterPeer(ctx, "peer", &compute.RouterPeerArgs{
+ * 			AdvertisedRoutePriority: pulumi.Int(100),
+ * 			Interface:               pulumi.String("interface-1"),
+ * 			PeerAsn:                 pulumi.Int(65513),
+ * 			PeerIpAddress:           pulumi.String("169.254.1.2"),
+ * 			Region:                  pulumi.String("us-central1"),
+ * 			Router:                  pulumi.String("my-router"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Router Peer Disabled
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const peer = new gcp.compute.RouterPeer("peer", {
+ *     advertisedRoutePriority: 100,
+ *     enable: false,
+ *     interface: "interface-1",
+ *     peerAsn: 65513,
+ *     peerIpAddress: "169.254.1.2",
+ *     region: "us-central1",
+ *     router: "my-router",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * peer = gcp.compute.RouterPeer("peer",
+ *     advertised_route_priority=100,
+ *     enable=False,
+ *     interface="interface-1",
+ *     peer_asn=65513,
+ *     peer_ip_address="169.254.1.2",
+ *     region="us-central1",
+ *     router="my-router")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peer = new Gcp.Compute.RouterPeer("peer", new Gcp.Compute.RouterPeerArgs
+ *         {
+ *             AdvertisedRoutePriority = 100,
+ *             Enable = false,
+ *             Interface = "interface-1",
+ *             PeerAsn = 65513,
+ *             PeerIpAddress = "169.254.1.2",
+ *             Region = "us-central1",
+ *             Router = "my-router",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewRouterPeer(ctx, "peer", &compute.RouterPeerArgs{
+ * 			AdvertisedRoutePriority: pulumi.Int(100),
+ * 			Enable:                  pulumi.Bool(false),
+ * 			Interface:               pulumi.String("interface-1"),
+ * 			PeerAsn:                 pulumi.Int(65513),
+ * 			PeerIpAddress:           pulumi.String("169.254.1.2"),
+ * 			Region:                  pulumi.String("us-central1"),
+ * 			Router:                  pulumi.String("my-router"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Router Peer Bfd
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const peer = new gcp.compute.RouterPeer("peer", {
+ *     advertisedRoutePriority: 100,
+ *     bfd: {
+ *         minReceiveInterval: 1000,
+ *         minTransmitInterval: 1000,
+ *         multiplier: 5,
+ *         sessionInitializationMode: "ACTIVE",
+ *     },
+ *     interface: "interface-1",
+ *     peerAsn: 65513,
+ *     peerIpAddress: "169.254.1.2",
+ *     region: "us-central1",
+ *     router: "my-router",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * peer = gcp.compute.RouterPeer("peer",
+ *     advertised_route_priority=100,
+ *     bfd=gcp.compute.RouterPeerBfdArgs(
+ *         min_receive_interval=1000,
+ *         min_transmit_interval=1000,
+ *         multiplier=5,
+ *         session_initialization_mode="ACTIVE",
+ *     ),
+ *     interface="interface-1",
+ *     peer_asn=65513,
+ *     peer_ip_address="169.254.1.2",
+ *     region="us-central1",
+ *     router="my-router")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peer = new Gcp.Compute.RouterPeer("peer", new Gcp.Compute.RouterPeerArgs
+ *         {
+ *             AdvertisedRoutePriority = 100,
+ *             Bfd = new Gcp.Compute.Inputs.RouterPeerBfdArgs
+ *             {
+ *                 MinReceiveInterval = 1000,
+ *                 MinTransmitInterval = 1000,
+ *                 Multiplier = 5,
+ *                 SessionInitializationMode = "ACTIVE",
+ *             },
+ *             Interface = "interface-1",
+ *             PeerAsn = 65513,
+ *             PeerIpAddress = "169.254.1.2",
+ *             Region = "us-central1",
+ *             Router = "my-router",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewRouterPeer(ctx, "peer", &compute.RouterPeerArgs{
+ * 			AdvertisedRoutePriority: pulumi.Int(100),
+ * 			Bfd: &compute.RouterPeerBfdArgs{
+ * 				MinReceiveInterval:        pulumi.Int(1000),
+ * 				MinTransmitInterval:       pulumi.Int(1000),
+ * 				Multiplier:                pulumi.Int(5),
+ * 				SessionInitializationMode: pulumi.String("ACTIVE"),
+ * 			},
+ * 			Interface:     pulumi.String("interface-1"),
+ * 			PeerAsn:       pulumi.Int(65513),
+ * 			PeerIpAddress: pulumi.String("169.254.1.2"),
+ * 			Region:        pulumi.String("us-central1"),
+ * 			Router:        pulumi.String("my-router"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,18 +299,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/routerPeer:RouterPeer default projects/{{project}}/regions/{{region}}/routers/{{router}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/routerPeer:RouterPeer default {{project}}/{{region}}/{{router}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/routerPeer:RouterPeer default {{region}}/{{router}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/routerPeer:RouterPeer default {{router}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/routerPeer:RouterPeer")
 public class RouterPeer extends io.pulumi.resources.CustomResource {

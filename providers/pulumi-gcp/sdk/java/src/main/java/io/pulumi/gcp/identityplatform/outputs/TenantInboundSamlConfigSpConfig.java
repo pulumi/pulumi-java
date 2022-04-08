@@ -18,7 +18,7 @@ public final class TenantInboundSamlConfigSpConfig {
      */
     private final String callbackUri;
     /**
-     * - 
+     * -
      * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
@@ -48,7 +48,7 @@ public final class TenantInboundSamlConfigSpConfig {
         return this.callbackUri;
     }
     /**
-     * - 
+     * -
      * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 

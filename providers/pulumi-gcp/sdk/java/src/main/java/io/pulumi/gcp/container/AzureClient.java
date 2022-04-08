@@ -17,7 +17,76 @@ import javax.annotation.Nullable;
  * 
  * For more information, see:
  * * [Multicloud overview](https://cloud.google.com/anthos/clusters/docs/multi-cloud)
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic_azure_client
+ * A basic example of a containerazure azure client
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.container.AzureClient("primary", {
+ *     applicationId: "12345678-1234-1234-1234-123456789111",
+ *     location: "us-west1",
+ *     project: "my-project-name",
+ *     tenantId: "12345678-1234-1234-1234-123456789111",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.container.AzureClient("primary",
+ *     application_id="12345678-1234-1234-1234-123456789111",
+ *     location="us-west1",
+ *     project="my-project-name",
+ *     tenant_id="12345678-1234-1234-1234-123456789111")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Container.AzureClient("primary", new Gcp.Container.AzureClientArgs
+ *         {
+ *             ApplicationId = "12345678-1234-1234-1234-123456789111",
+ *             Location = "us-west1",
+ *             Project = "my-project-name",
+ *             TenantId = "12345678-1234-1234-1234-123456789111",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := container.NewAzureClient(ctx, "primary", &container.AzureClientArgs{
+ * 			ApplicationId: pulumi.String("12345678-1234-1234-1234-123456789111"),
+ * 			Location:      pulumi.String("us-west1"),
+ * 			Project:       pulumi.String("my-project-name"),
+ * 			TenantId:      pulumi.String("12345678-1234-1234-1234-123456789111"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,14 +96,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:container/azureClient:AzureClient default projects/{{project}}/locations/{{location}}/azureClients/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:container/azureClient:AzureClient default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:container/azureClient:AzureClient default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:container/azureClient:AzureClient")
 public class AzureClient extends io.pulumi.resources.CustomResource {

@@ -18,11 +18,109 @@ import javax.annotation.Nullable;
 /**
  * Access Approval enables you to require your explicit approval whenever Google support and engineering need to access your customer content.
  * 
+ * 
  * To get more information about ProjectSettings, see:
  * 
  * * [API documentation](https://cloud.google.com/access-approval/docs/reference/rest/v1/projects)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Project Access Approval Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const projectAccessApproval = new gcp.projects.AccessApprovalSettings("project_access_approval", {
+ *     enrolledServices: [{
+ *         cloudProduct: "all",
+ *         enrollmentLevel: "BLOCK_ALL",
+ *     }],
+ *     notificationEmails: [
+ *         "testuser@example.com",
+ *         "example.user@example.com",
+ *     ],
+ *     projectId: "my-project-name",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project_access_approval = gcp.projects.AccessApprovalSettings("projectAccessApproval",
+ *     enrolled_services=[gcp.projects.AccessApprovalSettingsEnrolledServiceArgs(
+ *         cloud_product="all",
+ *         enrollment_level="BLOCK_ALL",
+ *     )],
+ *     notification_emails=[
+ *         "testuser@example.com",
+ *         "example.user@example.com",
+ *     ],
+ *     project_id="my-project-name")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var projectAccessApproval = new Gcp.Projects.AccessApprovalSettings("projectAccessApproval", new Gcp.Projects.AccessApprovalSettingsArgs
+ *         {
+ *             EnrolledServices = 
+ *             {
+ *                 new Gcp.Projects.Inputs.AccessApprovalSettingsEnrolledServiceArgs
+ *                 {
+ *                     CloudProduct = "all",
+ *                     EnrollmentLevel = "BLOCK_ALL",
+ *                 },
+ *             },
+ *             NotificationEmails = 
+ *             {
+ *                 "testuser@example.com",
+ *                 "example.user@example.com",
+ *             },
+ *             ProjectId = "my-project-name",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := projects.NewAccessApprovalSettings(ctx, "projectAccessApproval", &projects.AccessApprovalSettingsArgs{
+ * 			EnrolledServices: projects.AccessApprovalSettingsEnrolledServiceArray{
+ * 				&projects.AccessApprovalSettingsEnrolledServiceArgs{
+ * 					CloudProduct:    pulumi.String("all"),
+ * 					EnrollmentLevel: pulumi.String("BLOCK_ALL"),
+ * 				},
+ * 			},
+ * 			NotificationEmails: pulumi.StringArray{
+ * 				pulumi.String("testuser@example.com"),
+ * 				pulumi.String("example.user@example.com"),
+ * 			},
+ * 			ProjectId: pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,10 +130,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:projects/accessApprovalSettings:AccessApprovalSettings default projects/{{project_id}}/accessApprovalSettings
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:projects/accessApprovalSettings:AccessApprovalSettings default {{project_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:projects/accessApprovalSettings:AccessApprovalSettings")
 public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
@@ -110,13 +211,12 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
         return this.notificationEmails;
     }
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * Deprecated in favor of `project_id`
      * 
      * @Deprecated
      * Deprecated in favor of `project_id`
-     * 
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @Export(name="project", type=String.class, parameters={})

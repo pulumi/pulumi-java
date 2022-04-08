@@ -22,7 +22,91 @@ import javax.annotation.Nullable;
  * 
  * > You can specify exclusions for log sinks created by the provider by using the exclusions field of `gcp.logging.FolderSink`
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const my_folder = new gcp.organizations.Folder("my-folder", {
+ *     displayName: "My folder",
+ *     parent: "organizations/123456",
+ * });
+ * const my_exclusion = new gcp.logging.FolderExclusion("my-exclusion", {
+ *     folder: my_folder.name,
+ *     description: "Exclude GCE instance debug logs",
+ *     filter: "resource.type = gce_instance AND severity <= DEBUG",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_folder = gcp.organizations.Folder("my-folder",
+ *     display_name="My folder",
+ *     parent="organizations/123456")
+ * my_exclusion = gcp.logging.FolderExclusion("my-exclusion",
+ *     folder=my_folder.name,
+ *     description="Exclude GCE instance debug logs",
+ *     filter="resource.type = gce_instance AND severity <= DEBUG")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var my_folder = new Gcp.Organizations.Folder("my-folder", new Gcp.Organizations.FolderArgs
+ *         {
+ *             DisplayName = "My folder",
+ *             Parent = "organizations/123456",
+ *         });
+ *         var my_exclusion = new Gcp.Logging.FolderExclusion("my-exclusion", new Gcp.Logging.FolderExclusionArgs
+ *         {
+ *             Folder = my_folder.Name,
+ *             Description = "Exclude GCE instance debug logs",
+ *             Filter = "resource.type = gce_instance AND severity <= DEBUG",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewFolder(ctx, "my-folder", &organizations.FolderArgs{
+ * 			DisplayName: pulumi.String("My folder"),
+ * 			Parent:      pulumi.String("organizations/123456"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = logging.NewFolderExclusion(ctx, "my-exclusion", &logging.FolderExclusionArgs{
+ * 			Folder:      my_folder.Name,
+ * 			Description: pulumi.String("Exclude GCE instance debug logs"),
+ * 			Filter:      pulumi.String("resource.type = gce_instance AND severity <= DEBUG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +116,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/folderExclusion:FolderExclusion my_exclusion folders/my-folder/exclusions/my-exclusion
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/folderExclusion:FolderExclusion")
 public class FolderExclusion extends io.pulumi.resources.CustomResource {

@@ -27,7 +27,7 @@ public final class CxPageEventHandlerArgs extends io.pulumi.resources.ResourceAr
     }
 
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */

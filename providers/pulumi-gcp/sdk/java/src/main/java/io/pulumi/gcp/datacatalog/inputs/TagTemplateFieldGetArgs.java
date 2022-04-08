@@ -62,7 +62,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * - 
+     * -
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
      */

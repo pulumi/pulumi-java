@@ -18,13 +18,246 @@ import javax.annotation.Nullable;
 /**
  * Membership contains information about a member cluster.
  * 
+ * 
  * To get more information about Membership, see:
  * 
  * * [API documentation](https://cloud.google.com/anthos/multicluster-management/reference/rest/v1/projects.locations.memberships)
  * * How-to Guides
  *     * [Registering a Cluster](https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster#register_cluster)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Gkehub Membership Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.container.Cluster("primary", {
+ *     initialNodeCount: 1,
+ *     location: "us-central1-a",
+ * });
+ * const membership = new gcp.gkehub.Membership("membership", {
+ *     endpoint: {
+ *         gkeCluster: {
+ *             resourceLink: pulumi.interpolate`//container.googleapis.com/${primary.id}`,
+ *         },
+ *     },
+ *     membershipId: "basic",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.container.Cluster("primary",
+ *     initial_node_count=1,
+ *     location="us-central1-a")
+ * membership = gcp.gkehub.Membership("membership",
+ *     endpoint=gcp.gkehub.MembershipEndpointArgs(
+ *         gke_cluster=gcp.gkehub.MembershipEndpointGkeClusterArgs(
+ *             resource_link=primary.id.apply(lambda id: f"//container.googleapis.com/{id}"),
+ *         ),
+ *     ),
+ *     membership_id="basic")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+ *         {
+ *             InitialNodeCount = 1,
+ *             Location = "us-central1-a",
+ *         });
+ *         var membership = new Gcp.GkeHub.Membership("membership", new Gcp.GkeHub.MembershipArgs
+ *         {
+ *             Endpoint = new Gcp.GkeHub.Inputs.MembershipEndpointArgs
+ *             {
+ *                 GkeCluster = new Gcp.GkeHub.Inputs.MembershipEndpointGkeClusterArgs
+ *                 {
+ *                     ResourceLink = primary.Id.Apply(id => $"//container.googleapis.com/{id}"),
+ *                 },
+ *             },
+ *             MembershipId = "basic",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/gkehub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+ * 			InitialNodeCount: pulumi.Int(1),
+ * 			Location:         pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = gkehub.NewMembership(ctx, "membership", &gkehub.MembershipArgs{
+ * 			Endpoint: &gkehub.MembershipEndpointArgs{
+ * 				GkeCluster: &gkehub.MembershipEndpointGkeClusterArgs{
+ * 					ResourceLink: primary.ID().ApplyT(func(id string) (string, error) {
+ * 						return fmt.Sprintf("%v%v", "//container.googleapis.com/", id), nil
+ * 					}).(pulumi.StringOutput),
+ * 				},
+ * 			},
+ * 			MembershipId: pulumi.String("basic"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Gkehub Membership Issuer
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.container.Cluster("primary", {
+ *     location: "us-central1-a",
+ *     initialNodeCount: 1,
+ *     workloadIdentityConfig: {
+ *         workloadPool: "my-project-name.svc.id.goog",
+ *     },
+ * });
+ * const membership = new gcp.gkehub.Membership("membership", {
+ *     membershipId: "basic",
+ *     endpoint: {
+ *         gkeCluster: {
+ *             resourceLink: primary.id,
+ *         },
+ *     },
+ *     authority: {
+ *         issuer: pulumi.interpolate`https://container.googleapis.com/v1/${primary.id}`,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.container.Cluster("primary",
+ *     location="us-central1-a",
+ *     initial_node_count=1,
+ *     workload_identity_config=gcp.container.ClusterWorkloadIdentityConfigArgs(
+ *         workload_pool="my-project-name.svc.id.goog",
+ *     ))
+ * membership = gcp.gkehub.Membership("membership",
+ *     membership_id="basic",
+ *     endpoint=gcp.gkehub.MembershipEndpointArgs(
+ *         gke_cluster=gcp.gkehub.MembershipEndpointGkeClusterArgs(
+ *             resource_link=primary.id,
+ *         ),
+ *     ),
+ *     authority=gcp.gkehub.MembershipAuthorityArgs(
+ *         issuer=primary.id.apply(lambda id: f"https://container.googleapis.com/v1/{id}"),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+ *         {
+ *             Location = "us-central1-a",
+ *             InitialNodeCount = 1,
+ *             WorkloadIdentityConfig = new Gcp.Container.Inputs.ClusterWorkloadIdentityConfigArgs
+ *             {
+ *                 WorkloadPool = "my-project-name.svc.id.goog",
+ *             },
+ *         });
+ *         var membership = new Gcp.GkeHub.Membership("membership", new Gcp.GkeHub.MembershipArgs
+ *         {
+ *             MembershipId = "basic",
+ *             Endpoint = new Gcp.GkeHub.Inputs.MembershipEndpointArgs
+ *             {
+ *                 GkeCluster = new Gcp.GkeHub.Inputs.MembershipEndpointGkeClusterArgs
+ *                 {
+ *                     ResourceLink = primary.Id,
+ *                 },
+ *             },
+ *             Authority = new Gcp.GkeHub.Inputs.MembershipAuthorityArgs
+ *             {
+ *                 Issuer = primary.Id.Apply(id => $"https://container.googleapis.com/v1/{id}"),
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/gkehub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+ * 			Location:         pulumi.String("us-central1-a"),
+ * 			InitialNodeCount: pulumi.Int(1),
+ * 			WorkloadIdentityConfig: &container.ClusterWorkloadIdentityConfigArgs{
+ * 				WorkloadPool: pulumi.String("my-project-name.svc.id.goog"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = gkehub.NewMembership(ctx, "membership", &gkehub.MembershipArgs{
+ * 			MembershipId: pulumi.String("basic"),
+ * 			Endpoint: &gkehub.MembershipEndpointArgs{
+ * 				GkeCluster: &gkehub.MembershipEndpointGkeClusterArgs{
+ * 					ResourceLink: primary.ID(),
+ * 				},
+ * 			},
+ * 			Authority: &gkehub.MembershipAuthorityArgs{
+ * 				Issuer: primary.ID().ApplyT(func(id string) (string, error) {
+ * 					return fmt.Sprintf("%v%v", "https://container.googleapis.com/v1/", id), nil
+ * 				}).(pulumi.StringOutput),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +267,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:gkehub/membership:Membership default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:gkehub/membership:Membership")
 public class Membership extends io.pulumi.resources.CustomResource {
@@ -62,7 +296,6 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
-     * 
      */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     @Export(name="description", type=String.class, parameters={})

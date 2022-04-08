@@ -15,6 +15,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * FeaturestoreEntitytype can be imported using any of these accepted formats
@@ -23,6 +26,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType default {{featurestore}}/entityTypes/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType")
 public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource {

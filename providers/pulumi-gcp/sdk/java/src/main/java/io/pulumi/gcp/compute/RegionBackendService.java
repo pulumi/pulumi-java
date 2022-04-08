@@ -28,6 +28,7 @@ import javax.annotation.Nullable;
  * A Region Backend Service defines a regionally-scoped group of virtual
  * machines that will serve traffic for load balancing.
  * 
+ * 
  * To get more information about RegionBackendService, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/latest/regionBackendServices)
@@ -37,7 +38,1102 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `iap.oauth2_client_secret` and `iap.oauth2_client_secret_sha256` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Region Backend Service Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+ *     checkIntervalSec: 1,
+ *     timeoutSec: 1,
+ *     tcpHealthCheck: {
+ *         port: "80",
+ *     },
+ * });
+ * const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+ *     region: "us-central1",
+ *     healthChecks: [defaultHealthCheck.id],
+ *     connectionDrainingTimeoutSec: 10,
+ *     sessionAffinity: "CLIENT_IP",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+ *     check_interval_sec=1,
+ *     timeout_sec=1,
+ *     tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+ *         port=80,
+ *     ))
+ * default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+ *     region="us-central1",
+ *     health_checks=[default_health_check.id],
+ *     connection_draining_timeout_sec=10,
+ *     session_affinity="CLIENT_IP")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
+ *         {
+ *             CheckIntervalSec = 1,
+ *             TimeoutSec = 1,
+ *             TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+ *             {
+ *                 Port = 80,
+ *             },
+ *         });
+ *         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             Region = "us-central1",
+ *             HealthChecks = 
+ *             {
+ *                 defaultHealthCheck.Id,
+ *             },
+ *             ConnectionDrainingTimeoutSec = 10,
+ *             SessionAffinity = "CLIENT_IP",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+ * 				Port: pulumi.Int(80),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultHealthCheck.ID(),
+ * 			},
+ * 			ConnectionDrainingTimeoutSec: pulumi.Int(10),
+ * 			SessionAffinity:              pulumi.String("CLIENT_IP"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Region Backend Service Cache
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+ *     region: "us-central1",
+ *     httpHealthCheck: {
+ *         port: 80,
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+ *     region: "us-central1",
+ *     healthChecks: [defaultRegionHealthCheck.id],
+ *     enableCdn: true,
+ *     cdnPolicy: {
+ *         cacheMode: "CACHE_ALL_STATIC",
+ *         defaultTtl: 3600,
+ *         clientTtl: 7200,
+ *         maxTtl: 10800,
+ *         negativeCaching: true,
+ *         signedUrlCacheMaxAgeSec: 7200,
+ *     },
+ *     loadBalancingScheme: "EXTERNAL",
+ *     protocol: "HTTP",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+ *     region="us-central1",
+ *     http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+ *         port=80,
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+ *     region="us-central1",
+ *     health_checks=[default_region_health_check.id],
+ *     enable_cdn=True,
+ *     cdn_policy=gcp.compute.RegionBackendServiceCdnPolicyArgs(
+ *         cache_mode="CACHE_ALL_STATIC",
+ *         default_ttl=3600,
+ *         client_ttl=7200,
+ *         max_ttl=10800,
+ *         negative_caching=True,
+ *         signed_url_cache_max_age_sec=7200,
+ *     ),
+ *     load_balancing_scheme="EXTERNAL",
+ *     protocol="HTTP",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultRegionHealthCheck = new Gcp.Compute.RegionHealthCheck("defaultRegionHealthCheck", new Gcp.Compute.RegionHealthCheckArgs
+ *         {
+ *             Region = "us-central1",
+ *             HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+ *             {
+ *                 Port = 80,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             Region = "us-central1",
+ *             HealthChecks = 
+ *             {
+ *                 defaultRegionHealthCheck.Id,
+ *             },
+ *             EnableCdn = true,
+ *             CdnPolicy = new Gcp.Compute.Inputs.RegionBackendServiceCdnPolicyArgs
+ *             {
+ *                 CacheMode = "CACHE_ALL_STATIC",
+ *                 DefaultTtl = 3600,
+ *                 ClientTtl = 7200,
+ *                 MaxTtl = 10800,
+ *                 NegativeCaching = true,
+ *                 SignedUrlCacheMaxAgeSec = 7200,
+ *             },
+ *             LoadBalancingScheme = "EXTERNAL",
+ *             Protocol = "HTTP",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+ * 				Port: pulumi.Int(80),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultRegionHealthCheck.ID(),
+ * 			},
+ * 			EnableCdn: pulumi.Bool(true),
+ * 			CdnPolicy: &compute.RegionBackendServiceCdnPolicyArgs{
+ * 				CacheMode:               pulumi.String("CACHE_ALL_STATIC"),
+ * 				DefaultTtl:              pulumi.Int(3600),
+ * 				ClientTtl:               pulumi.Int(7200),
+ * 				MaxTtl:                  pulumi.Int(10800),
+ * 				NegativeCaching:         pulumi.Bool(true),
+ * 				SignedUrlCacheMaxAgeSec: pulumi.Int(7200),
+ * 			},
+ * 			LoadBalancingScheme: pulumi.String("EXTERNAL"),
+ * 			Protocol:            pulumi.String("HTTP"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Region Backend Service Ilb Round Robin
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const healthCheck = new gcp.compute.HealthCheck("healthCheck", {httpHealthCheck: {
+ *     port: 80,
+ * }});
+ * const _default = new gcp.compute.RegionBackendService("default", {
+ *     region: "us-central1",
+ *     healthChecks: [healthCheck.id],
+ *     protocol: "HTTP",
+ *     loadBalancingScheme: "INTERNAL_MANAGED",
+ *     localityLbPolicy: "ROUND_ROBIN",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * health_check = gcp.compute.HealthCheck("healthCheck", http_health_check=gcp.compute.HealthCheckHttpHealthCheckArgs(
+ *     port=80,
+ * ))
+ * default = gcp.compute.RegionBackendService("default",
+ *     region="us-central1",
+ *     health_checks=[health_check.id],
+ *     protocol="HTTP",
+ *     load_balancing_scheme="INTERNAL_MANAGED",
+ *     locality_lb_policy="ROUND_ROBIN")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var healthCheck = new Gcp.Compute.HealthCheck("healthCheck", new Gcp.Compute.HealthCheckArgs
+ *         {
+ *             HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+ *             {
+ *                 Port = 80,
+ *             },
+ *         });
+ *         var @default = new Gcp.Compute.RegionBackendService("default", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             Region = "us-central1",
+ *             HealthChecks = 
+ *             {
+ *                 healthCheck.Id,
+ *             },
+ *             Protocol = "HTTP",
+ *             LoadBalancingScheme = "INTERNAL_MANAGED",
+ *             LocalityLbPolicy = "ROUND_ROBIN",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		healthCheck, err := compute.NewHealthCheck(ctx, "healthCheck", &compute.HealthCheckArgs{
+ * 			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
+ * 				Port: pulumi.Int(80),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionBackendService(ctx, "default", &compute.RegionBackendServiceArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HealthChecks: pulumi.String{
+ * 				healthCheck.ID(),
+ * 			},
+ * 			Protocol:            pulumi.String("HTTP"),
+ * 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+ * 			LocalityLbPolicy:    pulumi.String("ROUND_ROBIN"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Region Backend Service External
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const healthCheck = new gcp.compute.RegionHealthCheck("healthCheck", {
+ *     region: "us-central1",
+ *     tcpHealthCheck: {
+ *         port: 80,
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const _default = new gcp.compute.RegionBackendService("default", {
+ *     region: "us-central1",
+ *     healthChecks: [healthCheck.id],
+ *     protocol: "TCP",
+ *     loadBalancingScheme: "EXTERNAL",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * health_check = gcp.compute.RegionHealthCheck("healthCheck",
+ *     region="us-central1",
+ *     tcp_health_check=gcp.compute.RegionHealthCheckTcpHealthCheckArgs(
+ *         port=80,
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * default = gcp.compute.RegionBackendService("default",
+ *     region="us-central1",
+ *     health_checks=[health_check.id],
+ *     protocol="TCP",
+ *     load_balancing_scheme="EXTERNAL",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var healthCheck = new Gcp.Compute.RegionHealthCheck("healthCheck", new Gcp.Compute.RegionHealthCheckArgs
+ *         {
+ *             Region = "us-central1",
+ *             TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+ *             {
+ *                 Port = 80,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var @default = new Gcp.Compute.RegionBackendService("default", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             Region = "us-central1",
+ *             HealthChecks = 
+ *             {
+ *                 healthCheck.Id,
+ *             },
+ *             Protocol = "TCP",
+ *             LoadBalancingScheme = "EXTERNAL",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		healthCheck, err := compute.NewRegionHealthCheck(ctx, "healthCheck", &compute.RegionHealthCheckArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			TcpHealthCheck: &compute.RegionHealthCheckTcpHealthCheckArgs{
+ * 				Port: pulumi.Int(80),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionBackendService(ctx, "default", &compute.RegionBackendServiceArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HealthChecks: pulumi.String{
+ * 				healthCheck.ID(),
+ * 			},
+ * 			Protocol:            pulumi.String("TCP"),
+ * 			LoadBalancingScheme: pulumi.String("EXTERNAL"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Region Backend Service Ilb Ring Hash
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const healthCheck = new gcp.compute.HealthCheck("healthCheck", {httpHealthCheck: {
+ *     port: 80,
+ * }});
+ * const _default = new gcp.compute.RegionBackendService("default", {
+ *     region: "us-central1",
+ *     healthChecks: [healthCheck.id],
+ *     loadBalancingScheme: "INTERNAL_MANAGED",
+ *     localityLbPolicy: "RING_HASH",
+ *     sessionAffinity: "HTTP_COOKIE",
+ *     protocol: "HTTP",
+ *     circuitBreakers: {
+ *         maxConnections: 10,
+ *     },
+ *     consistentHash: {
+ *         httpCookie: {
+ *             ttl: {
+ *                 seconds: 11,
+ *                 nanos: 1111,
+ *             },
+ *             name: "mycookie",
+ *         },
+ *     },
+ *     outlierDetection: {
+ *         consecutiveErrors: 2,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * health_check = gcp.compute.HealthCheck("healthCheck", http_health_check=gcp.compute.HealthCheckHttpHealthCheckArgs(
+ *     port=80,
+ * ))
+ * default = gcp.compute.RegionBackendService("default",
+ *     region="us-central1",
+ *     health_checks=[health_check.id],
+ *     load_balancing_scheme="INTERNAL_MANAGED",
+ *     locality_lb_policy="RING_HASH",
+ *     session_affinity="HTTP_COOKIE",
+ *     protocol="HTTP",
+ *     circuit_breakers=gcp.compute.RegionBackendServiceCircuitBreakersArgs(
+ *         max_connections=10,
+ *     ),
+ *     consistent_hash=gcp.compute.RegionBackendServiceConsistentHashArgs(
+ *         http_cookie=gcp.compute.RegionBackendServiceConsistentHashHttpCookieArgs(
+ *             ttl=gcp.compute.RegionBackendServiceConsistentHashHttpCookieTtlArgs(
+ *                 seconds=11,
+ *                 nanos=1111,
+ *             ),
+ *             name="mycookie",
+ *         ),
+ *     ),
+ *     outlier_detection=gcp.compute.RegionBackendServiceOutlierDetectionArgs(
+ *         consecutive_errors=2,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var healthCheck = new Gcp.Compute.HealthCheck("healthCheck", new Gcp.Compute.HealthCheckArgs
+ *         {
+ *             HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+ *             {
+ *                 Port = 80,
+ *             },
+ *         });
+ *         var @default = new Gcp.Compute.RegionBackendService("default", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             Region = "us-central1",
+ *             HealthChecks = 
+ *             {
+ *                 healthCheck.Id,
+ *             },
+ *             LoadBalancingScheme = "INTERNAL_MANAGED",
+ *             LocalityLbPolicy = "RING_HASH",
+ *             SessionAffinity = "HTTP_COOKIE",
+ *             Protocol = "HTTP",
+ *             CircuitBreakers = new Gcp.Compute.Inputs.RegionBackendServiceCircuitBreakersArgs
+ *             {
+ *                 MaxConnections = 10,
+ *             },
+ *             ConsistentHash = new Gcp.Compute.Inputs.RegionBackendServiceConsistentHashArgs
+ *             {
+ *                 HttpCookie = new Gcp.Compute.Inputs.RegionBackendServiceConsistentHashHttpCookieArgs
+ *                 {
+ *                     Ttl = new Gcp.Compute.Inputs.RegionBackendServiceConsistentHashHttpCookieTtlArgs
+ *                     {
+ *                         Seconds = 11,
+ *                         Nanos = 1111,
+ *                     },
+ *                     Name = "mycookie",
+ *                 },
+ *             },
+ *             OutlierDetection = new Gcp.Compute.Inputs.RegionBackendServiceOutlierDetectionArgs
+ *             {
+ *                 ConsecutiveErrors = 2,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		healthCheck, err := compute.NewHealthCheck(ctx, "healthCheck", &compute.HealthCheckArgs{
+ * 			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
+ * 				Port: pulumi.Int(80),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionBackendService(ctx, "default", &compute.RegionBackendServiceArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HealthChecks: pulumi.String{
+ * 				healthCheck.ID(),
+ * 			},
+ * 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+ * 			LocalityLbPolicy:    pulumi.String("RING_HASH"),
+ * 			SessionAffinity:     pulumi.String("HTTP_COOKIE"),
+ * 			Protocol:            pulumi.String("HTTP"),
+ * 			CircuitBreakers: &compute.RegionBackendServiceCircuitBreakersArgs{
+ * 				MaxConnections: pulumi.Int(10),
+ * 			},
+ * 			ConsistentHash: &compute.RegionBackendServiceConsistentHashArgs{
+ * 				HttpCookie: &compute.RegionBackendServiceConsistentHashHttpCookieArgs{
+ * 					Ttl: &compute.RegionBackendServiceConsistentHashHttpCookieTtlArgs{
+ * 						Seconds: pulumi.Int(11),
+ * 						Nanos:   pulumi.Int(1111),
+ * 					},
+ * 					Name: pulumi.String("mycookie"),
+ * 				},
+ * 			},
+ * 			OutlierDetection: &compute.RegionBackendServiceOutlierDetectionArgs{
+ * 				ConsecutiveErrors: pulumi.Int(2),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Region Backend Service Balancing Mode
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const debianImage = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * const defaultNetwork = new gcp.compute.Network("defaultNetwork", {
+ *     autoCreateSubnetworks: false,
+ *     routingMode: "REGIONAL",
+ * });
+ * const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+ *     ipCidrRange: "10.1.2.0/24",
+ *     region: "us-central1",
+ *     network: defaultNetwork.id,
+ * });
+ * const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+ *     machineType: "e2-medium",
+ *     networkInterfaces: [{
+ *         network: defaultNetwork.id,
+ *         subnetwork: defaultSubnetwork.id,
+ *     }],
+ *     disks: [{
+ *         sourceImage: debianImage.then(debianImage => debianImage.selfLink),
+ *         autoDelete: true,
+ *         boot: true,
+ *     }],
+ *     tags: [
+ *         "allow-ssh",
+ *         "load-balanced-backend",
+ *     ],
+ * });
+ * const rigm = new gcp.compute.RegionInstanceGroupManager("rigm", {
+ *     region: "us-central1",
+ *     versions: [{
+ *         instanceTemplate: instanceTemplate.id,
+ *         name: "primary",
+ *     }],
+ *     baseInstanceName: "internal-glb",
+ *     targetSize: 1,
+ * });
+ * const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+ *     region: "us-central1",
+ *     httpHealthCheck: {
+ *         portSpecification: "USE_SERVING_PORT",
+ *     },
+ * });
+ * const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+ *     loadBalancingScheme: "INTERNAL_MANAGED",
+ *     backends: [{
+ *         group: rigm.instanceGroup,
+ *         balancingMode: "UTILIZATION",
+ *         capacityScaler: 1,
+ *     }],
+ *     region: "us-central1",
+ *     protocol: "HTTP",
+ *     timeoutSec: 10,
+ *     healthChecks: [defaultRegionHealthCheck.id],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * debian_image = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * default_network = gcp.compute.Network("defaultNetwork",
+ *     auto_create_subnetworks=False,
+ *     routing_mode="REGIONAL")
+ * default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+ *     ip_cidr_range="10.1.2.0/24",
+ *     region="us-central1",
+ *     network=default_network.id)
+ * instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+ *     machine_type="e2-medium",
+ *     network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+ *         network=default_network.id,
+ *         subnetwork=default_subnetwork.id,
+ *     )],
+ *     disks=[gcp.compute.InstanceTemplateDiskArgs(
+ *         source_image=debian_image.self_link,
+ *         auto_delete=True,
+ *         boot=True,
+ *     )],
+ *     tags=[
+ *         "allow-ssh",
+ *         "load-balanced-backend",
+ *     ])
+ * rigm = gcp.compute.RegionInstanceGroupManager("rigm",
+ *     region="us-central1",
+ *     versions=[gcp.compute.RegionInstanceGroupManagerVersionArgs(
+ *         instance_template=instance_template.id,
+ *         name="primary",
+ *     )],
+ *     base_instance_name="internal-glb",
+ *     target_size=1)
+ * default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+ *     region="us-central1",
+ *     http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+ *         port_specification="USE_SERVING_PORT",
+ *     ))
+ * default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+ *     load_balancing_scheme="INTERNAL_MANAGED",
+ *     backends=[gcp.compute.RegionBackendServiceBackendArgs(
+ *         group=rigm.instance_group,
+ *         balancing_mode="UTILIZATION",
+ *         capacity_scaler=1,
+ *     )],
+ *     region="us-central1",
+ *     protocol="HTTP",
+ *     timeout_sec=10,
+ *     health_checks=[default_region_health_check.id])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var debianImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *             RoutingMode = "REGIONAL",
+ *         });
+ *         var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+ *         {
+ *             IpCidrRange = "10.1.2.0/24",
+ *             Region = "us-central1",
+ *             Network = defaultNetwork.Id,
+ *         });
+ *         var instanceTemplate = new Gcp.Compute.InstanceTemplate("instanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+ *                 {
+ *                     Network = defaultNetwork.Id,
+ *                     Subnetwork = defaultSubnetwork.Id,
+ *                 },
+ *             },
+ *             Disks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     SourceImage = debianImage.Apply(debianImage => debianImage.SelfLink),
+ *                     AutoDelete = true,
+ *                     Boot = true,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 "allow-ssh",
+ *                 "load-balanced-backend",
+ *             },
+ *         });
+ *         var rigm = new Gcp.Compute.RegionInstanceGroupManager("rigm", new Gcp.Compute.RegionInstanceGroupManagerArgs
+ *         {
+ *             Region = "us-central1",
+ *             Versions = 
+ *             {
+ *                 new Gcp.Compute.Inputs.RegionInstanceGroupManagerVersionArgs
+ *                 {
+ *                     InstanceTemplate = instanceTemplate.Id,
+ *                     Name = "primary",
+ *                 },
+ *             },
+ *             BaseInstanceName = "internal-glb",
+ *             TargetSize = 1,
+ *         });
+ *         var defaultRegionHealthCheck = new Gcp.Compute.RegionHealthCheck("defaultRegionHealthCheck", new Gcp.Compute.RegionHealthCheckArgs
+ *         {
+ *             Region = "us-central1",
+ *             HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+ *             {
+ *                 PortSpecification = "USE_SERVING_PORT",
+ *             },
+ *         });
+ *         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             LoadBalancingScheme = "INTERNAL_MANAGED",
+ *             Backends = 
+ *             {
+ *                 new Gcp.Compute.Inputs.RegionBackendServiceBackendArgs
+ *                 {
+ *                     Group = rigm.InstanceGroup,
+ *                     BalancingMode = "UTILIZATION",
+ *                     CapacityScaler = 1,
+ *                 },
+ *             },
+ *             Region = "us-central1",
+ *             Protocol = "HTTP",
+ *             TimeoutSec = 10,
+ *             HealthChecks = 
+ *             {
+ *                 defaultRegionHealthCheck.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		debianImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 			RoutingMode:           pulumi.String("REGIONAL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+ * 			IpCidrRange: pulumi.String("10.1.2.0/24"),
+ * 			Region:      pulumi.String("us-central1"),
+ * 			Network:     defaultNetwork.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		instanceTemplate, err := compute.NewInstanceTemplate(ctx, "instanceTemplate", &compute.InstanceTemplateArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+ * 				&compute.InstanceTemplateNetworkInterfaceArgs{
+ * 					Network:    defaultNetwork.ID(),
+ * 					Subnetwork: defaultSubnetwork.ID(),
+ * 				},
+ * 			},
+ * 			Disks: compute.InstanceTemplateDiskArray{
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					SourceImage: pulumi.String(debianImage.SelfLink),
+ * 					AutoDelete:  pulumi.Bool(true),
+ * 					Boot:        pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringArray{
+ * 				pulumi.String("allow-ssh"),
+ * 				pulumi.String("load-balanced-backend"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		rigm, err := compute.NewRegionInstanceGroupManager(ctx, "rigm", &compute.RegionInstanceGroupManagerArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			Versions: compute.RegionInstanceGroupManagerVersionArray{
+ * 				&compute.RegionInstanceGroupManagerVersionArgs{
+ * 					InstanceTemplate: instanceTemplate.ID(),
+ * 					Name:             pulumi.String("primary"),
+ * 				},
+ * 			},
+ * 			BaseInstanceName: pulumi.String("internal-glb"),
+ * 			TargetSize:       pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+ * 				PortSpecification: pulumi.String("USE_SERVING_PORT"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+ * 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+ * 			Backends: compute.RegionBackendServiceBackendArray{
+ * 				&compute.RegionBackendServiceBackendArgs{
+ * 					Group:          rigm.InstanceGroup,
+ * 					BalancingMode:  pulumi.String("UTILIZATION"),
+ * 					CapacityScaler: pulumi.Float64(1),
+ * 				},
+ * 			},
+ * 			Region:     pulumi.String("us-central1"),
+ * 			Protocol:   pulumi.String("HTTP"),
+ * 			TimeoutSec: pulumi.Int(10),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultRegionHealthCheck.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Region Backend Service Connection Tracking
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const healthCheck = new gcp.compute.RegionHealthCheck("healthCheck", {
+ *     region: "us-central1",
+ *     tcpHealthCheck: {
+ *         port: 22,
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const _default = new gcp.compute.RegionBackendService("default", {
+ *     region: "us-central1",
+ *     healthChecks: [healthCheck.id],
+ *     connectionDrainingTimeoutSec: 10,
+ *     sessionAffinity: "CLIENT_IP",
+ *     protocol: "TCP",
+ *     loadBalancingScheme: "EXTERNAL",
+ *     connectionTrackingPolicy: {
+ *         trackingMode: "PER_SESSION",
+ *         connectionPersistenceOnUnhealthyBackends: "NEVER_PERSIST",
+ *         idleTimeoutSec: 60,
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * health_check = gcp.compute.RegionHealthCheck("healthCheck",
+ *     region="us-central1",
+ *     tcp_health_check=gcp.compute.RegionHealthCheckTcpHealthCheckArgs(
+ *         port=22,
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * default = gcp.compute.RegionBackendService("default",
+ *     region="us-central1",
+ *     health_checks=[health_check.id],
+ *     connection_draining_timeout_sec=10,
+ *     session_affinity="CLIENT_IP",
+ *     protocol="TCP",
+ *     load_balancing_scheme="EXTERNAL",
+ *     connection_tracking_policy=gcp.compute.RegionBackendServiceConnectionTrackingPolicyArgs(
+ *         tracking_mode="PER_SESSION",
+ *         connection_persistence_on_unhealthy_backends="NEVER_PERSIST",
+ *         idle_timeout_sec=60,
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var healthCheck = new Gcp.Compute.RegionHealthCheck("healthCheck", new Gcp.Compute.RegionHealthCheckArgs
+ *         {
+ *             Region = "us-central1",
+ *             TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+ *             {
+ *                 Port = 22,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var @default = new Gcp.Compute.RegionBackendService("default", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             Region = "us-central1",
+ *             HealthChecks = 
+ *             {
+ *                 healthCheck.Id,
+ *             },
+ *             ConnectionDrainingTimeoutSec = 10,
+ *             SessionAffinity = "CLIENT_IP",
+ *             Protocol = "TCP",
+ *             LoadBalancingScheme = "EXTERNAL",
+ *             ConnectionTrackingPolicy = new Gcp.Compute.Inputs.RegionBackendServiceConnectionTrackingPolicyArgs
+ *             {
+ *                 TrackingMode = "PER_SESSION",
+ *                 ConnectionPersistenceOnUnhealthyBackends = "NEVER_PERSIST",
+ *                 IdleTimeoutSec = 60,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		healthCheck, err := compute.NewRegionHealthCheck(ctx, "healthCheck", &compute.RegionHealthCheckArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			TcpHealthCheck: &compute.RegionHealthCheckTcpHealthCheckArgs{
+ * 				Port: pulumi.Int(22),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionBackendService(ctx, "default", &compute.RegionBackendServiceArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HealthChecks: pulumi.String{
+ * 				healthCheck.ID(),
+ * 			},
+ * 			ConnectionDrainingTimeoutSec: pulumi.Int(10),
+ * 			SessionAffinity:              pulumi.String("CLIENT_IP"),
+ * 			Protocol:                     pulumi.String("TCP"),
+ * 			LoadBalancingScheme:          pulumi.String("EXTERNAL"),
+ * 			ConnectionTrackingPolicy: &compute.RegionBackendServiceConnectionTrackingPolicyArgs{
+ * 				TrackingMode:                             pulumi.String("PER_SESSION"),
+ * 				ConnectionPersistenceOnUnhealthyBackends: pulumi.String("NEVER_PERSIST"),
+ * 				IdleTimeoutSec:                           pulumi.Int(60),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,18 +1143,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/regionBackendService:RegionBackendService default projects/{{project}}/regions/{{region}}/backendServices/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionBackendService:RegionBackendService default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/regionBackendService:RegionBackendService default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionBackendService:RegionBackendService default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/regionBackendService:RegionBackendService")
 public class RegionBackendService extends io.pulumi.resources.CustomResource {
@@ -338,23 +1441,23 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * The load balancing algorithm used within the scope of the locality.
      * The possible values are:
      * * `ROUND_ROBIN`: This is a simple policy in which each healthy backend
-     *   is selected in round robin order.
+     * is selected in round robin order.
      * * `LEAST_REQUEST`: An O(1) algorithm which selects two random healthy
-     *   hosts and picks the host which has fewer active requests.
+     * hosts and picks the host which has fewer active requests.
      * * `RING_HASH`: The ring/modulo hash load balancer implements consistent
-     *   hashing to backends. The algorithm has the property that the
-     *   addition/removal of a host from a set of N hosts only affects
-     *   1/N of the requests.
+     * hashing to backends. The algorithm has the property that the
+     * addition/removal of a host from a set of N hosts only affects
+     * 1/N of the requests.
      * * `RANDOM`: The load balancer selects a random healthy host.
      * * `ORIGINAL_DESTINATION`: Backend host is selected based on the client
-     *   connection metadata, i.e., connections are opened
-     *   to the same address as the destination address of
-     *   the incoming connection before the connection
-     *   was redirected to the load balancer.
+     * connection metadata, i.e., connections are opened
+     * to the same address as the destination address of
+     * the incoming connection before the connection
+     * was redirected to the load balancer.
      * * `MAGLEV`: used as a drop in replacement for the ring hash load balancer.
-     *   Maglev is not as stable as ring hash but has faster table lookup
-     *   build times and host selection times. For more information about
-     *   Maglev, refer to https://ai.google/research/pubs/pub44824
+     * Maglev is not as stable as ring hash but has faster table lookup
+     * build times and host selection times. For more information about
+     * Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
     @Export(name="localityLbPolicy", type=String.class, parameters={})
@@ -364,23 +1467,23 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @return The load balancing algorithm used within the scope of the locality.
      * The possible values are:
      * * `ROUND_ROBIN`: This is a simple policy in which each healthy backend
-     *   is selected in round robin order.
+     * is selected in round robin order.
      * * `LEAST_REQUEST`: An O(1) algorithm which selects two random healthy
-     *   hosts and picks the host which has fewer active requests.
+     * hosts and picks the host which has fewer active requests.
      * * `RING_HASH`: The ring/modulo hash load balancer implements consistent
-     *   hashing to backends. The algorithm has the property that the
-     *   addition/removal of a host from a set of N hosts only affects
-     *   1/N of the requests.
+     * hashing to backends. The algorithm has the property that the
+     * addition/removal of a host from a set of N hosts only affects
+     * 1/N of the requests.
      * * `RANDOM`: The load balancer selects a random healthy host.
      * * `ORIGINAL_DESTINATION`: Backend host is selected based on the client
-     *   connection metadata, i.e., connections are opened
-     *   to the same address as the destination address of
-     *   the incoming connection before the connection
-     *   was redirected to the load balancer.
+     * connection metadata, i.e., connections are opened
+     * to the same address as the destination address of
+     * the incoming connection before the connection
+     * was redirected to the load balancer.
      * * `MAGLEV`: used as a drop in replacement for the ring hash load balancer.
-     *   Maglev is not as stable as ring hash but has faster table lookup
-     *   build times and host selection times. For more information about
-     *   Maglev, refer to https://ai.google/research/pubs/pub44824
+     * Maglev is not as stable as ring hash but has faster table lookup
+     * build times and host selection times. For more information about
+     * Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
     public Output</* @Nullable */ String> getLocalityLbPolicy() {

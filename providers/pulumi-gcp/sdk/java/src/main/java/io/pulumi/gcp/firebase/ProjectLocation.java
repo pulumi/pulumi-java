@@ -30,7 +30,9 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://firebase.google.com/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,10 +42,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:firebase/projectLocation:ProjectLocation default projects/{{project}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:firebase/projectLocation:ProjectLocation default {{project}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:firebase/projectLocation:ProjectLocation")
 public class ProjectLocation extends io.pulumi.resources.CustomResource {

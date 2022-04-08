@@ -30,13 +30,92 @@ import javax.annotation.Nullable;
  * For more information, see Access Control, with the caveat that this API
  * uses READER and OWNER instead of READ and FULL_CONTROL.
  * 
+ * 
  * To get more information about DefaultObjectAccessControl, see:
  * 
  * * [API documentation](https://cloud.google.com/storage/docs/json_api/v1/defaultObjectAccessControls)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Storage Default Object Access Control Public
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const bucket = new gcp.storage.Bucket("bucket", {location: "US"});
+ * const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
+ *     bucket: bucket.name,
+ *     role: "READER",
+ *     entity: "allUsers",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * bucket = gcp.storage.Bucket("bucket", location="US")
+ * public_rule = gcp.storage.DefaultObjectAccessControl("publicRule",
+ *     bucket=bucket.name,
+ *     role="READER",
+ *     entity="allUsers")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *         });
+ *         var publicRule = new Gcp.Storage.DefaultObjectAccessControl("publicRule", new Gcp.Storage.DefaultObjectAccessControlArgs
+ *         {
+ *             Bucket = bucket.Name,
+ *             Role = "READER",
+ *             Entity = "allUsers",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+ * 			Location: pulumi.String("US"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storage.NewDefaultObjectAccessControl(ctx, "publicRule", &storage.DefaultObjectAccessControlArgs{
+ * 			Bucket: bucket.Name,
+ * 			Role:   pulumi.String("READER"),
+ * 			Entity: pulumi.String("allUsers"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -46,6 +125,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:storage/defaultObjectAccessControl:DefaultObjectAccessControl default {{bucket}}/{{entity}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:storage/defaultObjectAccessControl:DefaultObjectAccessControl")
 public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResource {

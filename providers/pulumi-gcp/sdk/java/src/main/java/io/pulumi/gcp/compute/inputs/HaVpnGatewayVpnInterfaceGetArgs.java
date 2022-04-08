@@ -43,7 +43,7 @@ public final class HaVpnGatewayVpnInterfaceGetArgs extends io.pulumi.resources.R
     }
 
     /**
-     * - 
+     * -
      * The external IP address for this VPN gateway interface.
      * 
      */

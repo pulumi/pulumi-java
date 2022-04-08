@@ -17,7 +17,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
     public static final AttestorAttestationAuthorityNoteGetArgs Empty = new AttestorAttestationAuthorityNoteGetArgs();
 
     /**
-     * - 
+     * -
      * This field will contain the service account email address that
      * this Attestor will use as the principal when querying Container
      * Analysis. Attestor administrators must grant this service account

@@ -71,7 +71,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
     }
 
     /**
-     * - 
+     * -
      * The Compute Engine guest attributes. (see [Project and instance
      * guest attributes](https://cloud.google.com/compute/docs/
      * storing-retrieving-metadata#guest_attributes)).
@@ -144,15 +144,15 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * `subnet` is specified, the "default" network of the project is
      * used, if it exists. A full URL or partial URI. Examples:
      * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
-     *   regions/global/default`
+     * regions/global/default`
      * * `projects/[project_id]/regions/global/default`
-     *   Runtimes are managed resources inside Google Infrastructure.
-     *   Runtimes support the following network configurations:
+     * Runtimes are managed resources inside Google Infrastructure.
+     * Runtimes support the following network configurations:
      * * Google Managed Network (Network & subnet are empty)
      * * Consumer Project VPC (network & subnet are required). Requires
-     *   configuring Private Service Access.
+     * configuring Private Service Access.
      * * Shared VPC (network & subnet are required). Requires
-     *   configuring Private Service Access.
+     * configuring Private Service Access.
      * 
      */
     @Import(name="network")
@@ -192,7 +192,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
      * communications. Cannot be specified with network. A full URL or
      * partial URI are valid. Examples:
      * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
-     *   regions/us-east1/subnetworks/sub0`
+     * regions/us-east1/subnetworks/sub0`
      * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
      * 
      */
@@ -217,7 +217,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
     }
 
     /**
-     * - 
+     * -
      * The zone where the virtual machine is located.
      * 
      */

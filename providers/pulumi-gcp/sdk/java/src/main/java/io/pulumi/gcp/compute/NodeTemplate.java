@@ -20,13 +20,177 @@ import javax.annotation.Nullable;
  * for creating sole-tenant nodes, such as node type, vCPU and memory
  * requirements, node affinity labels, and region.
  * 
+ * 
  * To get more information about NodeTemplate, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTemplates)
  * * How-to Guides
  *     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Node Template Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const template = new gcp.compute.NodeTemplate("template", {
+ *     nodeType: "n1-node-96-624",
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * template = gcp.compute.NodeTemplate("template",
+ *     node_type="n1-node-96-624",
+ *     region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
+ *         {
+ *             NodeType = "n1-node-96-624",
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
+ * 			NodeType: pulumi.String("n1-node-96-624"),
+ * 			Region:   pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Node Template Server Binding
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const central1a = pulumi.output(gcp.compute.getNodeTypes({
+ *     zone: "us-central1-a",
+ * }));
+ * const template = new gcp.compute.NodeTemplate("template", {
+ *     nodeAffinityLabels: {
+ *         foo: "baz",
+ *     },
+ *     nodeType: "n1-node-96-624",
+ *     region: "us-central1",
+ *     serverBinding: {
+ *         type: "RESTART_NODE_ON_MINIMAL_SERVERS",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * central1a = gcp.compute.get_node_types(zone="us-central1-a")
+ * template = gcp.compute.NodeTemplate("template",
+ *     node_affinity_labels={
+ *         "foo": "baz",
+ *     },
+ *     node_type="n1-node-96-624",
+ *     region="us-central1",
+ *     server_binding=gcp.compute.NodeTemplateServerBindingArgs(
+ *         type="RESTART_NODE_ON_MINIMAL_SERVERS",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+ *         {
+ *             Zone = "us-central1-a",
+ *         }));
+ *         var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
+ *         {
+ *             NodeAffinityLabels = 
+ *             {
+ *                 { "foo", "baz" },
+ *             },
+ *             NodeType = "n1-node-96-624",
+ *             Region = "us-central1",
+ *             ServerBinding = new Gcp.Compute.Inputs.NodeTemplateServerBindingArgs
+ *             {
+ *                 Type = "RESTART_NODE_ON_MINIMAL_SERVERS",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "us-central1-a"
+ * 		_, err := compute.GetNodeTypes(ctx, &compute.GetNodeTypesArgs{
+ * 			Zone: &opt0,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
+ * 			NodeAffinityLabels: pulumi.StringMap{
+ * 				"foo": pulumi.String("baz"),
+ * 			},
+ * 			NodeType: pulumi.String("n1-node-96-624"),
+ * 			Region:   pulumi.String("us-central1"),
+ * 			ServerBinding: &compute.NodeTemplateServerBindingArgs{
+ * 				Type: pulumi.String("RESTART_NODE_ON_MINIMAL_SERVERS"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,18 +200,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default projects/{{project}}/regions/{{region}}/nodeTemplates/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/nodeTemplate:NodeTemplate")
 public class NodeTemplate extends io.pulumi.resources.CustomResource {

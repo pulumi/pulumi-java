@@ -15,10 +15,12 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:bigquery/datasetAccess:DatasetAccess")
 public class DatasetAccess extends io.pulumi.resources.CustomResource {

@@ -23,6 +23,7 @@ import javax.annotation.Nullable;
 /**
  * Configuration for an automated build in response to source repository changes.
  * 
+ * 
  * To get more information about Trigger, see:
  * 
  * * [API documentation](https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.triggers)
@@ -31,7 +32,661 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** You can retrieve the email of the Cloud Build Service Account used in jobs by using the `gcp.projects.ServiceIdentity` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cloudbuild Trigger Filename
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
+ *     filename: "cloudbuild.yaml",
+ *     substitutions: {
+ *         _BAZ: "qux",
+ *         _FOO: "bar",
+ *     },
+ *     triggerTemplate: {
+ *         branchName: "master",
+ *         repoName: "my-repo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * filename_trigger = gcp.cloudbuild.Trigger("filename-trigger",
+ *     filename="cloudbuild.yaml",
+ *     substitutions={
+ *         "_BAZ": "qux",
+ *         "_FOO": "bar",
+ *     },
+ *     trigger_template=gcp.cloudbuild.TriggerTriggerTemplateArgs(
+ *         branch_name="master",
+ *         repo_name="my-repo",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var filename_trigger = new Gcp.CloudBuild.Trigger("filename-trigger", new Gcp.CloudBuild.TriggerArgs
+ *         {
+ *             Filename = "cloudbuild.yaml",
+ *             Substitutions = 
+ *             {
+ *                 { "_BAZ", "qux" },
+ *                 { "_FOO", "bar" },
+ *             },
+ *             TriggerTemplate = new Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs
+ *             {
+ *                 BranchName = "master",
+ *                 RepoName = "my-repo",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudbuild"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudbuild.NewTrigger(ctx, "filename-trigger", &cloudbuild.TriggerArgs{
+ * 			Filename: pulumi.String("cloudbuild.yaml"),
+ * 			Substitutions: pulumi.StringMap{
+ * 				"_BAZ": pulumi.String("qux"),
+ * 				"_FOO": pulumi.String("bar"),
+ * 			},
+ * 			TriggerTemplate: &cloudbuild.TriggerTriggerTemplateArgs{
+ * 				BranchName: pulumi.String("master"),
+ * 				RepoName:   pulumi.String("my-repo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloudbuild Trigger Build
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
+ *     build: {
+ *         artifacts: {
+ *             images: ["gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA"],
+ *             objects: {
+ *                 location: "gs://bucket/path/to/somewhere/",
+ *                 paths: ["path"],
+ *             },
+ *         },
+ *         availableSecrets: {
+ *             secretManagers: [{
+ *                 env: "MY_SECRET",
+ *                 versionName: "projects/myProject/secrets/mySecret/versions/latest",
+ *             }],
+ *         },
+ *         logsBucket: "gs://mybucket/logs",
+ *         options: {
+ *             diskSizeGb: 100,
+ *             dynamicSubstitutions: true,
+ *             envs: ["ekey = evalue"],
+ *             logStreamingOption: "STREAM_OFF",
+ *             logging: "LEGACY",
+ *             machineType: "N1_HIGHCPU_8",
+ *             requestedVerifyOption: "VERIFIED",
+ *             secretEnvs: ["secretenv = svalue"],
+ *             sourceProvenanceHashes: ["MD5"],
+ *             substitutionOption: "ALLOW_LOOSE",
+ *             volumes: [{
+ *                 name: "v1",
+ *                 path: "v1",
+ *             }],
+ *             workerPool: "pool",
+ *         },
+ *         queueTtl: "20s",
+ *         secrets: [{
+ *             kmsKeyName: "projects/myProject/locations/global/keyRings/keyring-name/cryptoKeys/key-name",
+ *             secretEnv: {
+ *                 PASSWORD: "ZW5jcnlwdGVkLXBhc3N3b3JkCg==",
+ *             },
+ *         }],
+ *         source: {
+ *             storageSource: {
+ *                 bucket: "mybucket",
+ *                 object: "source_code.tar.gz",
+ *             },
+ *         },
+ *         steps: [{
+ *             args: [
+ *                 "cp",
+ *                 "gs://mybucket/remotefile.zip",
+ *                 "localfile.zip",
+ *             ],
+ *             name: "gcr.io/cloud-builders/gsutil",
+ *             secretEnvs: ["MY_SECRET"],
+ *             timeout: "120s",
+ *         }],
+ *         substitutions: {
+ *             _BAZ: "qux",
+ *             _FOO: "bar",
+ *         },
+ *         tags: [
+ *             "build",
+ *             "newFeature",
+ *         ],
+ *     },
+ *     triggerTemplate: {
+ *         branchName: "master",
+ *         repoName: "my-repo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * build_trigger = gcp.cloudbuild.Trigger("build-trigger",
+ *     build=gcp.cloudbuild.TriggerBuildArgs(
+ *         artifacts=gcp.cloudbuild.TriggerBuildArtifactsArgs(
+ *             images=["gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA"],
+ *             objects=gcp.cloudbuild.TriggerBuildArtifactsObjectsArgs(
+ *                 location="gs://bucket/path/to/somewhere/",
+ *                 paths=["path"],
+ *             ),
+ *         ),
+ *         available_secrets=gcp.cloudbuild.TriggerBuildAvailableSecretsArgs(
+ *             secret_manager=[{
+ *                 "env": "MY_SECRET",
+ *                 "versionName": "projects/myProject/secrets/mySecret/versions/latest",
+ *             }],
+ *         ),
+ *         logs_bucket="gs://mybucket/logs",
+ *         options=gcp.cloudbuild.TriggerBuildOptionsArgs(
+ *             disk_size_gb=100,
+ *             dynamic_substitutions=True,
+ *             env=["ekey = evalue"],
+ *             log_streaming_option="STREAM_OFF",
+ *             logging="LEGACY",
+ *             machine_type="N1_HIGHCPU_8",
+ *             requested_verify_option="VERIFIED",
+ *             secret_env=["secretenv = svalue"],
+ *             source_provenance_hash=["MD5"],
+ *             substitution_option="ALLOW_LOOSE",
+ *             volumes=[gcp.cloudbuild.TriggerBuildOptionsVolumeArgs(
+ *                 name="v1",
+ *                 path="v1",
+ *             )],
+ *             worker_pool="pool",
+ *         ),
+ *         queue_ttl="20s",
+ *         secrets=[gcp.cloudbuild.TriggerBuildSecretArgs(
+ *             kms_key_name="projects/myProject/locations/global/keyRings/keyring-name/cryptoKeys/key-name",
+ *             secret_env={
+ *                 "PASSWORD": "ZW5jcnlwdGVkLXBhc3N3b3JkCg==",
+ *             },
+ *         )],
+ *         source=gcp.cloudbuild.TriggerBuildSourceArgs(
+ *             storage_source=gcp.cloudbuild.TriggerBuildSourceStorageSourceArgs(
+ *                 bucket="mybucket",
+ *                 object="source_code.tar.gz",
+ *             ),
+ *         ),
+ *         steps=[gcp.cloudbuild.TriggerBuildStepArgs(
+ *             args=[
+ *                 "cp",
+ *                 "gs://mybucket/remotefile.zip",
+ *                 "localfile.zip",
+ *             ],
+ *             name="gcr.io/cloud-builders/gsutil",
+ *             secret_env=["MY_SECRET"],
+ *             timeout="120s",
+ *         )],
+ *         substitutions={
+ *             "_BAZ": "qux",
+ *             "_FOO": "bar",
+ *         },
+ *         tags=[
+ *             "build",
+ *             "newFeature",
+ *         ],
+ *     ),
+ *     trigger_template=gcp.cloudbuild.TriggerTriggerTemplateArgs(
+ *         branch_name="master",
+ *         repo_name="my-repo",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var build_trigger = new Gcp.CloudBuild.Trigger("build-trigger", new Gcp.CloudBuild.TriggerArgs
+ *         {
+ *             Build = new Gcp.CloudBuild.Inputs.TriggerBuildArgs
+ *             {
+ *                 Artifacts = new Gcp.CloudBuild.Inputs.TriggerBuildArtifactsArgs
+ *                 {
+ *                     Images = 
+ *                     {
+ *                         "gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA",
+ *                     },
+ *                     Objects = new Gcp.CloudBuild.Inputs.TriggerBuildArtifactsObjectsArgs
+ *                     {
+ *                         Location = "gs://bucket/path/to/somewhere/",
+ *                         Paths = 
+ *                         {
+ *                             "path",
+ *                         },
+ *                     },
+ *                 },
+ *                 AvailableSecrets = new Gcp.CloudBuild.Inputs.TriggerBuildAvailableSecretsArgs
+ *                 {
+ *                     SecretManager = 
+ *                     {
+ *                         
+ *                         {
+ *                             { "env", "MY_SECRET" },
+ *                             { "versionName", "projects/myProject/secrets/mySecret/versions/latest" },
+ *                         },
+ *                     },
+ *                 },
+ *                 LogsBucket = "gs://mybucket/logs",
+ *                 Options = new Gcp.CloudBuild.Inputs.TriggerBuildOptionsArgs
+ *                 {
+ *                     DiskSizeGb = 100,
+ *                     DynamicSubstitutions = true,
+ *                     Env = 
+ *                     {
+ *                         "ekey = evalue",
+ *                     },
+ *                     LogStreamingOption = "STREAM_OFF",
+ *                     Logging = "LEGACY",
+ *                     MachineType = "N1_HIGHCPU_8",
+ *                     RequestedVerifyOption = "VERIFIED",
+ *                     SecretEnv = 
+ *                     {
+ *                         "secretenv = svalue",
+ *                     },
+ *                     SourceProvenanceHash = 
+ *                     {
+ *                         "MD5",
+ *                     },
+ *                     SubstitutionOption = "ALLOW_LOOSE",
+ *                     Volumes = 
+ *                     {
+ *                         new Gcp.CloudBuild.Inputs.TriggerBuildOptionsVolumeArgs
+ *                         {
+ *                             Name = "v1",
+ *                             Path = "v1",
+ *                         },
+ *                     },
+ *                     WorkerPool = "pool",
+ *                 },
+ *                 QueueTtl = "20s",
+ *                 Secrets = 
+ *                 {
+ *                     new Gcp.CloudBuild.Inputs.TriggerBuildSecretArgs
+ *                     {
+ *                         KmsKeyName = "projects/myProject/locations/global/keyRings/keyring-name/cryptoKeys/key-name",
+ *                         SecretEnv = 
+ *                         {
+ *                             { "PASSWORD", "ZW5jcnlwdGVkLXBhc3N3b3JkCg==" },
+ *                         },
+ *                     },
+ *                 },
+ *                 Source = new Gcp.CloudBuild.Inputs.TriggerBuildSourceArgs
+ *                 {
+ *                     StorageSource = new Gcp.CloudBuild.Inputs.TriggerBuildSourceStorageSourceArgs
+ *                     {
+ *                         Bucket = "mybucket",
+ *                         Object = "source_code.tar.gz",
+ *                     },
+ *                 },
+ *                 Steps = 
+ *                 {
+ *                     new Gcp.CloudBuild.Inputs.TriggerBuildStepArgs
+ *                     {
+ *                         Args = 
+ *                         {
+ *                             "cp",
+ *                             "gs://mybucket/remotefile.zip",
+ *                             "localfile.zip",
+ *                         },
+ *                         Name = "gcr.io/cloud-builders/gsutil",
+ *                         SecretEnv = 
+ *                         {
+ *                             "MY_SECRET",
+ *                         },
+ *                         Timeout = "120s",
+ *                     },
+ *                 },
+ *                 Substitutions = 
+ *                 {
+ *                     { "_BAZ", "qux" },
+ *                     { "_FOO", "bar" },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     "build",
+ *                     "newFeature",
+ *                 },
+ *             },
+ *             TriggerTemplate = new Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs
+ *             {
+ *                 BranchName = "master",
+ *                 RepoName = "my-repo",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudbuild"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudbuild.NewTrigger(ctx, "build-trigger", &cloudbuild.TriggerArgs{
+ * 			Build: &cloudbuild.TriggerBuildArgs{
+ * 				Artifacts: &cloudbuild.TriggerBuildArtifactsArgs{
+ * 					Images: pulumi.StringArray{
+ * 						pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "gcr.io/", "$", "PROJECT_ID/", "$", "REPO_NAME:", "$", "COMMIT_SHA")),
+ * 					},
+ * 					Objects: &cloudbuild.TriggerBuildArtifactsObjectsArgs{
+ * 						Location: pulumi.String("gs://bucket/path/to/somewhere/"),
+ * 						Paths: pulumi.StringArray{
+ * 							pulumi.String("path"),
+ * 						},
+ * 					},
+ * 				},
+ * 				AvailableSecrets: &cloudbuild.TriggerBuildAvailableSecretsArgs{
+ * 					SecretManager: []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"env":         "MY_SECRET",
+ * 							"versionName": "projects/myProject/secrets/mySecret/versions/latest",
+ * 						},
+ * 					},
+ * 				},
+ * 				LogsBucket: pulumi.String("gs://mybucket/logs"),
+ * 				Options: &cloudbuild.TriggerBuildOptionsArgs{
+ * 					DiskSizeGb:           pulumi.Int(100),
+ * 					DynamicSubstitutions: pulumi.Bool(true),
+ * 					Env: []string{
+ * 						"ekey = evalue",
+ * 					},
+ * 					LogStreamingOption:    pulumi.String("STREAM_OFF"),
+ * 					Logging:               pulumi.String("LEGACY"),
+ * 					MachineType:           pulumi.String("N1_HIGHCPU_8"),
+ * 					RequestedVerifyOption: pulumi.String("VERIFIED"),
+ * 					SecretEnv: []string{
+ * 						"secretenv = svalue",
+ * 					},
+ * 					SourceProvenanceHash: []string{
+ * 						"MD5",
+ * 					},
+ * 					SubstitutionOption: pulumi.String("ALLOW_LOOSE"),
+ * 					Volumes: cloudbuild.TriggerBuildOptionsVolumeArray{
+ * 						&cloudbuild.TriggerBuildOptionsVolumeArgs{
+ * 							Name: pulumi.String("v1"),
+ * 							Path: pulumi.String("v1"),
+ * 						},
+ * 					},
+ * 					WorkerPool: pulumi.String("pool"),
+ * 				},
+ * 				QueueTtl: pulumi.String("20s"),
+ * 				Secrets: cloudbuild.TriggerBuildSecretArray{
+ * 					&cloudbuild.TriggerBuildSecretArgs{
+ * 						KmsKeyName: pulumi.String("projects/myProject/locations/global/keyRings/keyring-name/cryptoKeys/key-name"),
+ * 						SecretEnv: pulumi.StringMap{
+ * 							"PASSWORD": pulumi.String("ZW5jcnlwdGVkLXBhc3N3b3JkCg=="),
+ * 						},
+ * 					},
+ * 				},
+ * 				Source: &cloudbuild.TriggerBuildSourceArgs{
+ * 					StorageSource: &cloudbuild.TriggerBuildSourceStorageSourceArgs{
+ * 						Bucket: pulumi.String("mybucket"),
+ * 						Object: pulumi.String("source_code.tar.gz"),
+ * 					},
+ * 				},
+ * 				Steps: cloudbuild.TriggerBuildStepArray{
+ * 					&cloudbuild.TriggerBuildStepArgs{
+ * 						Args: pulumi.StringArray{
+ * 							pulumi.String("cp"),
+ * 							pulumi.String("gs://mybucket/remotefile.zip"),
+ * 							pulumi.String("localfile.zip"),
+ * 						},
+ * 						Name: pulumi.String("gcr.io/cloud-builders/gsutil"),
+ * 						SecretEnv: []string{
+ * 							"MY_SECRET",
+ * 						},
+ * 						Timeout: pulumi.String("120s"),
+ * 					},
+ * 				},
+ * 				Substitutions: pulumi.StringMap{
+ * 					"_BAZ": pulumi.String("qux"),
+ * 					"_FOO": pulumi.String("bar"),
+ * 				},
+ * 				Tags: pulumi.StringArray{
+ * 					pulumi.String("build"),
+ * 					pulumi.String("newFeature"),
+ * 				},
+ * 			},
+ * 			TriggerTemplate: &cloudbuild.TriggerTriggerTemplateArgs{
+ * 				BranchName: pulumi.String("master"),
+ * 				RepoName:   pulumi.String("my-repo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloudbuild Trigger Service Account
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = gcp.organizations.getProject({});
+ * const cloudbuildServiceAccount = new gcp.serviceaccount.Account("cloudbuildServiceAccount", {accountId: "my-service-account"});
+ * const actAs = new gcp.projects.IAMMember("actAs", {
+ *     project: project.then(project => project.projectId),
+ *     role: "roles/iam.serviceAccountUser",
+ *     member: pulumi.interpolate`serviceAccount:${cloudbuildServiceAccount.email}`,
+ * });
+ * const logsWriter = new gcp.projects.IAMMember("logsWriter", {
+ *     project: project.then(project => project.projectId),
+ *     role: "roles/logging.logWriter",
+ *     member: pulumi.interpolate`serviceAccount:${cloudbuildServiceAccount.email}`,
+ * });
+ * const service_account_trigger = new gcp.cloudbuild.Trigger("service-account-trigger", {
+ *     triggerTemplate: {
+ *         branchName: "master",
+ *         repoName: "my-repo",
+ *     },
+ *     serviceAccount: cloudbuildServiceAccount.id,
+ *     filename: "cloudbuild.yaml",
+ * }, {
+ *     dependsOn: [
+ *         actAs,
+ *         logsWriter,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.get_project()
+ * cloudbuild_service_account = gcp.service_account.Account("cloudbuildServiceAccount", account_id="my-service-account")
+ * act_as = gcp.projects.IAMMember("actAs",
+ *     project=project.project_id,
+ *     role="roles/iam.serviceAccountUser",
+ *     member=cloudbuild_service_account.email.apply(lambda email: f"serviceAccount:{email}"))
+ * logs_writer = gcp.projects.IAMMember("logsWriter",
+ *     project=project.project_id,
+ *     role="roles/logging.logWriter",
+ *     member=cloudbuild_service_account.email.apply(lambda email: f"serviceAccount:{email}"))
+ * service_account_trigger = gcp.cloudbuild.Trigger("service-account-trigger",
+ *     trigger_template=gcp.cloudbuild.TriggerTriggerTemplateArgs(
+ *         branch_name="master",
+ *         repo_name="my-repo",
+ *     ),
+ *     service_account=cloudbuild_service_account.id,
+ *     filename="cloudbuild.yaml",
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             act_as,
+ *             logs_writer,
+ *         ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var cloudbuildServiceAccount = new Gcp.ServiceAccount.Account("cloudbuildServiceAccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "my-service-account",
+ *         });
+ *         var actAs = new Gcp.Projects.IAMMember("actAs", new Gcp.Projects.IAMMemberArgs
+ *         {
+ *             Project = project.Apply(project => project.ProjectId),
+ *             Role = "roles/iam.serviceAccountUser",
+ *             Member = cloudbuildServiceAccount.Email.Apply(email => $"serviceAccount:{email}"),
+ *         });
+ *         var logsWriter = new Gcp.Projects.IAMMember("logsWriter", new Gcp.Projects.IAMMemberArgs
+ *         {
+ *             Project = project.Apply(project => project.ProjectId),
+ *             Role = "roles/logging.logWriter",
+ *             Member = cloudbuildServiceAccount.Email.Apply(email => $"serviceAccount:{email}"),
+ *         });
+ *         var service_account_trigger = new Gcp.CloudBuild.Trigger("service-account-trigger", new Gcp.CloudBuild.TriggerArgs
+ *         {
+ *             TriggerTemplate = new Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs
+ *             {
+ *                 BranchName = "master",
+ *                 RepoName = "my-repo",
+ *             },
+ *             ServiceAccount = cloudbuildServiceAccount.Id,
+ *             Filename = "cloudbuild.yaml",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 actAs,
+ *                 logsWriter,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudbuild"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cloudbuildServiceAccount, err := serviceAccount.NewAccount(ctx, "cloudbuildServiceAccount", &serviceAccount.AccountArgs{
+ * 			AccountId: pulumi.String("my-service-account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		actAs, err := projects.NewIAMMember(ctx, "actAs", &projects.IAMMemberArgs{
+ * 			Project: pulumi.String(project.ProjectId),
+ * 			Role:    pulumi.String("roles/iam.serviceAccountUser"),
+ * 			Member: cloudbuildServiceAccount.Email.ApplyT(func(email string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		logsWriter, err := projects.NewIAMMember(ctx, "logsWriter", &projects.IAMMemberArgs{
+ * 			Project: pulumi.String(project.ProjectId),
+ * 			Role:    pulumi.String("roles/logging.logWriter"),
+ * 			Member: cloudbuildServiceAccount.Email.ApplyT(func(email string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudbuild.NewTrigger(ctx, "service-account-trigger", &cloudbuild.TriggerArgs{
+ * 			TriggerTemplate: &cloudbuild.TriggerTriggerTemplateArgs{
+ * 				BranchName: pulumi.String("master"),
+ * 				RepoName:   pulumi.String("my-repo"),
+ * 			},
+ * 			ServiceAccount: cloudbuildServiceAccount.ID(),
+ * 			Filename:       pulumi.String("cloudbuild.yaml"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			actAs,
+ * 			logsWriter,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,14 +696,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:cloudbuild/trigger:Trigger default projects/{{project}}/triggers/{{trigger_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:cloudbuild/trigger:Trigger default {{project}}/{{trigger_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:cloudbuild/trigger:Trigger default {{trigger_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:cloudbuild/trigger:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {

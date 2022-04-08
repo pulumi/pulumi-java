@@ -31,7 +31,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * - 
+     * -
      * A list of IPv4 or IPv6 addresses.
      * 
      */

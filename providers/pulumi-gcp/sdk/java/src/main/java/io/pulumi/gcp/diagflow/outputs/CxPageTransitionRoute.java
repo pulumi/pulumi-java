@@ -25,7 +25,7 @@ public final class CxPageTransitionRoute {
      */
     private final @Nullable String intent;
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */
@@ -82,7 +82,7 @@ public final class CxPageTransitionRoute {
         return Optional.ofNullable(this.intent);
     }
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
     */

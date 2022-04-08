@@ -16,11 +16,201 @@ import javax.annotation.Nullable;
 /**
  * A NetworkSettings resource is a container for ingress settings for a version or service.
  * 
+ * 
  * To get more information about ServiceNetworkSettings, see:
  * 
  * * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### App Engine Service Network Settings
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const bucket = new gcp.storage.Bucket("bucket", {location: "US"});
+ * const object = new gcp.storage.BucketObject("object", {
+ *     bucket: bucket.name,
+ *     source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+ * });
+ * const liveappV1 = new gcp.appengine.StandardAppVersion("liveappV1", {
+ *     versionId: "v1",
+ *     service: "liveapp",
+ *     deleteServiceOnDestroy: true,
+ *     runtime: "nodejs10",
+ *     entrypoint: {
+ *         shell: "node ./app.js",
+ *     },
+ *     deployment: {
+ *         zip: {
+ *             sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+ *         },
+ *     },
+ *     envVariables: {
+ *         port: "8080",
+ *     },
+ * });
+ * const liveapp = new gcp.appengine.ServiceNetworkSettings("liveapp", {
+ *     service: liveappV1.service,
+ *     networkSettings: {
+ *         ingressTrafficAllowed: "INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * bucket = gcp.storage.Bucket("bucket", location="US")
+ * object = gcp.storage.BucketObject("object",
+ *     bucket=bucket.name,
+ *     source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+ * liveapp_v1 = gcp.appengine.StandardAppVersion("liveappV1",
+ *     version_id="v1",
+ *     service="liveapp",
+ *     delete_service_on_destroy=True,
+ *     runtime="nodejs10",
+ *     entrypoint=gcp.appengine.StandardAppVersionEntrypointArgs(
+ *         shell="node ./app.js",
+ *     ),
+ *     deployment=gcp.appengine.StandardAppVersionDeploymentArgs(
+ *         zip=gcp.appengine.StandardAppVersionDeploymentZipArgs(
+ *             source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+ *         ),
+ *     ),
+ *     env_variables={
+ *         "port": "8080",
+ *     })
+ * liveapp = gcp.appengine.ServiceNetworkSettings("liveapp",
+ *     service=liveapp_v1.service,
+ *     network_settings=gcp.appengine.ServiceNetworkSettingsNetworkSettingsArgs(
+ *         ingress_traffic_allowed="INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *         });
+ *         var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+ *         {
+ *             Bucket = bucket.Name,
+ *             Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+ *         });
+ *         var liveappV1 = new Gcp.AppEngine.StandardAppVersion("liveappV1", new Gcp.AppEngine.StandardAppVersionArgs
+ *         {
+ *             VersionId = "v1",
+ *             Service = "liveapp",
+ *             DeleteServiceOnDestroy = true,
+ *             Runtime = "nodejs10",
+ *             Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+ *             {
+ *                 Shell = "node ./app.js",
+ *             },
+ *             Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+ *             {
+ *                 Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+ *                 {
+ *                     SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+ *                     {
+ *                         var bucketName = values.Item1;
+ *                         var objectName = values.Item2;
+ *                         return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+ *                     }),
+ *                 },
+ *             },
+ *             EnvVariables = 
+ *             {
+ *                 { "port", "8080" },
+ *             },
+ *         });
+ *         var liveapp = new Gcp.AppEngine.ServiceNetworkSettings("liveapp", new Gcp.AppEngine.ServiceNetworkSettingsArgs
+ *         {
+ *             Service = liveappV1.Service,
+ *             NetworkSettings = new Gcp.AppEngine.Inputs.ServiceNetworkSettingsNetworkSettingsArgs
+ *             {
+ *                 IngressTrafficAllowed = "INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/appengine"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+ * 			Location: pulumi.String("US"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		object, err := storage.NewBucketObject(ctx, "object", &storage.BucketObjectArgs{
+ * 			Bucket: bucket.Name,
+ * 			Source: pulumi.NewFileAsset("./test-fixtures/appengine/hello-world.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		liveappV1, err := appengine.NewStandardAppVersion(ctx, "liveappV1", &appengine.StandardAppVersionArgs{
+ * 			VersionId:              pulumi.String("v1"),
+ * 			Service:                pulumi.String("liveapp"),
+ * 			DeleteServiceOnDestroy: pulumi.Bool(true),
+ * 			Runtime:                pulumi.String("nodejs10"),
+ * 			Entrypoint: &appengine.StandardAppVersionEntrypointArgs{
+ * 				Shell: pulumi.String("node ./app.js"),
+ * 			},
+ * 			Deployment: &appengine.StandardAppVersionDeploymentArgs{
+ * 				Zip: &appengine.StandardAppVersionDeploymentZipArgs{
+ * 					SourceUrl: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+ * 						bucketName := _args[0].(string)
+ * 						objectName := _args[1].(string)
+ * 						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", bucketName, "/", objectName), nil
+ * 					}).(pulumi.StringOutput),
+ * 				},
+ * 			},
+ * 			EnvVariables: pulumi.StringMap{
+ * 				"port": pulumi.String("8080"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appengine.NewServiceNetworkSettings(ctx, "liveapp", &appengine.ServiceNetworkSettingsArgs{
+ * 			Service: liveappV1.Service,
+ * 			NetworkSettings: &appengine.ServiceNetworkSettingsNetworkSettingsArgs{
+ * 				IngressTrafficAllowed: pulumi.String("INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +220,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings default apps/{{project}}/services/{{service}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings default {{project}}/{{service}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings default {{service}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings")
 public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {

@@ -25,11 +25,263 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** `gcp.apigateway.ApiIamBinding` resources **can be** used in conjunction with `gcp.apigateway.ApiIamMember` resources **only if** they do not grant privilege to the same role.
  * 
+ * 
+ * 
  * ## google\_api\_gateway\_api\_iam\_policy
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/apigateway.viewer",
+ *         members: ["user:jane@example.com"],
+ *     }],
+ * });
+ * const policy = new gcp.apigateway.ApiIamPolicy("policy", {
+ *     project: google_api_gateway_api.api.project,
+ *     api: google_api_gateway_api.api.api_id,
+ *     policyData: admin.then(admin => admin.policyData),
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/apigateway.viewer",
+ *     members=["user:jane@example.com"],
+ * )])
+ * policy = gcp.apigateway.ApiIamPolicy("policy",
+ *     project=google_api_gateway_api["api"]["project"],
+ *     api=google_api_gateway_api["api"]["api_id"],
+ *     policy_data=admin.policy_data,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/apigateway.viewer",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var policy = new Gcp.ApiGateway.ApiIamPolicy("policy", new Gcp.ApiGateway.ApiIamPolicyArgs
+ *         {
+ *             Project = google_api_gateway_api.Api.Project,
+ *             Api = google_api_gateway_api.Api.Api_id,
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/apigateway"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/apigateway.viewer",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewApiIamPolicy(ctx, "policy", &apigateway.ApiIamPolicyArgs{
+ * 			Project:    pulumi.Any(google_api_gateway_api.Api.Project),
+ * 			Api:        pulumi.Any(google_api_gateway_api.Api.Api_id),
+ * 			PolicyData: pulumi.String(admin.PolicyData),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * 
  * ## google\_api\_gateway\_api\_iam\_binding
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const binding = new gcp.apigateway.ApiIamBinding("binding", {
+ *     project: google_api_gateway_api.api.project,
+ *     api: google_api_gateway_api.api.api_id,
+ *     role: "roles/apigateway.viewer",
+ *     members: ["user:jane@example.com"],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * binding = gcp.apigateway.ApiIamBinding("binding",
+ *     project=google_api_gateway_api["api"]["project"],
+ *     api=google_api_gateway_api["api"]["api_id"],
+ *     role="roles/apigateway.viewer",
+ *     members=["user:jane@example.com"],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var binding = new Gcp.ApiGateway.ApiIamBinding("binding", new Gcp.ApiGateway.ApiIamBindingArgs
+ *         {
+ *             Project = google_api_gateway_api.Api.Project,
+ *             Api = google_api_gateway_api.Api.Api_id,
+ *             Role = "roles/apigateway.viewer",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigateway.NewApiIamBinding(ctx, "binding", &apigateway.ApiIamBindingArgs{
+ * 			Project: pulumi.Any(google_api_gateway_api.Api.Project),
+ * 			Api:     pulumi.Any(google_api_gateway_api.Api.Api_id),
+ * 			Role:    pulumi.String("roles/apigateway.viewer"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_api\_gateway\_api\_iam\_member
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const member = new gcp.apigateway.ApiIamMember("member", {
+ *     project: google_api_gateway_api.api.project,
+ *     api: google_api_gateway_api.api.api_id,
+ *     role: "roles/apigateway.viewer",
+ *     member: "user:jane@example.com",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * member = gcp.apigateway.ApiIamMember("member",
+ *     project=google_api_gateway_api["api"]["project"],
+ *     api=google_api_gateway_api["api"]["api_id"],
+ *     role="roles/apigateway.viewer",
+ *     member="user:jane@example.com",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var member = new Gcp.ApiGateway.ApiIamMember("member", new Gcp.ApiGateway.ApiIamMemberArgs
+ *         {
+ *             Project = google_api_gateway_api.Api.Project,
+ *             Api = google_api_gateway_api.Api.Api_id,
+ *             Role = "roles/apigateway.viewer",
+ *             Member = "user:jane@example.com",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigateway.NewApiIamMember(ctx, "member", &apigateway.ApiIamMemberArgs{
+ * 			Project: pulumi.Any(google_api_gateway_api.Api.Project),
+ * 			Api:     pulumi.Any(google_api_gateway_api.Api.Api_id),
+ * 			Role:    pulumi.String("roles/apigateway.viewer"),
+ * 			Member:  pulumi.String("user:jane@example.com"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -53,8 +305,7 @@ import javax.annotation.Nullable;
  * 
  *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
  * 
- * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
- * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. 
  */
 @ResourceType(type="gcp:apigateway/apiIamBinding:ApiIamBinding")
 public class ApiIamBinding extends io.pulumi.resources.CustomResource {

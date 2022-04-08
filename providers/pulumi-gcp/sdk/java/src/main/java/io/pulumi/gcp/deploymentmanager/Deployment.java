@@ -20,6 +20,8 @@ import javax.annotation.Nullable;
  * A collection of resources that are deployed and managed together using
  * a configuration file
  * 
+ * 
+ * 
  * > **Warning:** This resource is intended only to manage a Deployment resource,
  * and attempts to manage the Deployment's resources in the provider as well
  * will likely result in errors or unexpected behavior as the two tools
@@ -31,7 +33,117 @@ import javax.annotation.Nullable;
  * than actually deploying an in-preview deployment (i.e. `preview=true` to
  * `preview=false`).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Deployment Manager Deployment Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * const deployment = new gcp.deploymentmanager.Deployment("deployment", {
+ *     target: {
+ *         config: {
+ *             content: fs.readFileSync("path/to/config.yml"),
+ *         },
+ *     },
+ *     labels: [{
+ *         key: "foo",
+ *         value: "bar",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * deployment = gcp.deploymentmanager.Deployment("deployment",
+ *     target=gcp.deploymentmanager.DeploymentTargetArgs(
+ *         config=gcp.deploymentmanager.DeploymentTargetConfigArgs(
+ *             content=(lambda path: open(path).read())("path/to/config.yml"),
+ *         ),
+ *     ),
+ *     labels=[gcp.deploymentmanager.DeploymentLabelArgs(
+ *         key="foo",
+ *         value="bar",
+ *     )])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deployment = new Gcp.DeploymentManager.Deployment("deployment", new Gcp.DeploymentManager.DeploymentArgs
+ *         {
+ *             Target = new Gcp.DeploymentManager.Inputs.DeploymentTargetArgs
+ *             {
+ *                 Config = new Gcp.DeploymentManager.Inputs.DeploymentTargetConfigArgs
+ *                 {
+ *                     Content = File.ReadAllText("path/to/config.yml"),
+ *                 },
+ *             },
+ *             Labels = 
+ *             {
+ *                 new Gcp.DeploymentManager.Inputs.DeploymentLabelArgs
+ *                 {
+ *                     Key = "foo",
+ *                     Value = "bar",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/deploymentmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := deploymentmanager.NewDeployment(ctx, "deployment", &deploymentmanager.DeploymentArgs{
+ * 			Target: &deploymentmanager.DeploymentTargetArgs{
+ * 				Config: &deploymentmanager.DeploymentTargetConfigArgs{
+ * 					Content: readFileOrPanic("path/to/config.yml"),
+ * 				},
+ * 			},
+ * 			Labels: deploymentmanager.DeploymentLabelArray{
+ * 				&deploymentmanager.DeploymentLabelArgs{
+ * 					Key:   pulumi.String("foo"),
+ * 					Value: pulumi.String("bar"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,14 +153,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:deploymentmanager/deployment:Deployment default projects/{{project}}/deployments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:deploymentmanager/deployment:Deployment")
 public class Deployment extends io.pulumi.resources.CustomResource {

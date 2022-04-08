@@ -54,7 +54,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs
     }
 
     /**
-     * - 
+     * -
      * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
      * 
      */
@@ -66,7 +66,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs
     }
 
     /**
-     * - 
+     * -
      * Output only. Specifies that this instance group contains preemptible instances.
      * 
      */
@@ -78,7 +78,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs
     }
 
     /**
-     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
      * 
      */
     @Import(name="machineType")
@@ -89,7 +89,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs
     }
 
     /**
-     * - 
+     * -
      * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
      * 
      */

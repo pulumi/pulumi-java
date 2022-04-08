@@ -25,11 +25,234 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** `gcp.tags.TagValueIamBinding` resources **can be** used in conjunction with `gcp.tags.TagValueIamMember` resources **only if** they do not grant privilege to the same role.
  * 
+ * 
+ * 
+ * 
  * ## google\_tags\_tag\_value\_iam\_policy
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/viewer",
+ *         members: ["user:jane@example.com"],
+ *     }],
+ * });
+ * const policy = new gcp.tags.TagValueIamPolicy("policy", {
+ *     tagValue: google_tags_tag_value.value.name,
+ *     policyData: admin.then(admin => admin.policyData),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/viewer",
+ *     members=["user:jane@example.com"],
+ * )])
+ * policy = gcp.tags.TagValueIamPolicy("policy",
+ *     tag_value=google_tags_tag_value["value"]["name"],
+ *     policy_data=admin.policy_data)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/viewer",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var policy = new Gcp.Tags.TagValueIamPolicy("policy", new Gcp.Tags.TagValueIamPolicyArgs
+ *         {
+ *             TagValue = google_tags_tag_value.Value.Name,
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/tags"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/viewer",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = tags.NewTagValueIamPolicy(ctx, "policy", &tags.TagValueIamPolicyArgs{
+ * 			TagValue:   pulumi.Any(google_tags_tag_value.Value.Name),
+ * 			PolicyData: pulumi.String(admin.PolicyData),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * 
  * ## google\_tags\_tag\_value\_iam\_binding
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const binding = new gcp.tags.TagValueIamBinding("binding", {
+ *     tagValue: google_tags_tag_value.value.name,
+ *     role: "roles/viewer",
+ *     members: ["user:jane@example.com"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * binding = gcp.tags.TagValueIamBinding("binding",
+ *     tag_value=google_tags_tag_value["value"]["name"],
+ *     role="roles/viewer",
+ *     members=["user:jane@example.com"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var binding = new Gcp.Tags.TagValueIamBinding("binding", new Gcp.Tags.TagValueIamBindingArgs
+ *         {
+ *             TagValue = google_tags_tag_value.Value.Name,
+ *             Role = "roles/viewer",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/tags"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := tags.NewTagValueIamBinding(ctx, "binding", &tags.TagValueIamBindingArgs{
+ * 			TagValue: pulumi.Any(google_tags_tag_value.Value.Name),
+ * 			Role:     pulumi.String("roles/viewer"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_tags\_tag\_value\_iam\_member
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const member = new gcp.tags.TagValueIamMember("member", {
+ *     tagValue: google_tags_tag_value.value.name,
+ *     role: "roles/viewer",
+ *     member: "user:jane@example.com",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * member = gcp.tags.TagValueIamMember("member",
+ *     tag_value=google_tags_tag_value["value"]["name"],
+ *     role="roles/viewer",
+ *     member="user:jane@example.com")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var member = new Gcp.Tags.TagValueIamMember("member", new Gcp.Tags.TagValueIamMemberArgs
+ *         {
+ *             TagValue = google_tags_tag_value.Value.Name,
+ *             Role = "roles/viewer",
+ *             Member = "user:jane@example.com",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/tags"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := tags.NewTagValueIamMember(ctx, "member", &tags.TagValueIamMemberArgs{
+ * 			TagValue: pulumi.Any(google_tags_tag_value.Value.Name),
+ * 			Role:     pulumi.String("roles/viewer"),
+ * 			Member:   pulumi.String("user:jane@example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -53,8 +276,7 @@ import javax.annotation.Nullable;
  * 
  *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
  * 
- * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
- * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. 
  */
 @ResourceType(type="gcp:tags/tagValueIamBinding:TagValueIamBinding")
 public class TagValueIamBinding extends io.pulumi.resources.CustomResource {

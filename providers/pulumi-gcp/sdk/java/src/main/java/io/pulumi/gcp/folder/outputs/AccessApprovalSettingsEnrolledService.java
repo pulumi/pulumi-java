@@ -24,7 +24,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * * Cloud Pub/Sub
      * * Cloud Storage
      * * Persistent Disk
-     *   Note: These values are supported as input, but considered a legacy format:
+     * Note: These values are supported as input, but considered a legacy format:
      * * all
      * * appengine.googleapis.com
      * * bigquery.googleapis.com
@@ -67,7 +67,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * * Cloud Pub/Sub
      * * Cloud Storage
      * * Persistent Disk
-     *   Note: These values are supported as input, but considered a legacy format:
+     * Note: These values are supported as input, but considered a legacy format:
      * * all
      * * appengine.googleapis.com
      * * bigquery.googleapis.com

@@ -29,7 +29,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * - 
+     * -
      * The display name of this field
      * 
      */
@@ -75,7 +75,7 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * - 
+     * -
      * The order of this field with respect to other fields in this tag. For example, a higher value can indicate
      * a more important field. The value can be negative. Multiple fields can have the same order, and field orders
      * within a tag do not have to be sequential.

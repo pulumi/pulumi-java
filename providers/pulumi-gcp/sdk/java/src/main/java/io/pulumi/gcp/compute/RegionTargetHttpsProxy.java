@@ -24,7 +24,276 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Region Target Https Proxy Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * const defaultRegionSslCertificate = new gcp.compute.RegionSslCertificate("defaultRegionSslCertificate", {
+ *     region: "us-central1",
+ *     privateKey: fs.readFileSync("path/to/private.key"),
+ *     certificate: fs.readFileSync("path/to/certificate.crt"),
+ * });
+ * const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+ *     region: "us-central1",
+ *     httpHealthCheck: {
+ *         port: 80,
+ *     },
+ * });
+ * const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+ *     region: "us-central1",
+ *     protocol: "HTTP",
+ *     loadBalancingScheme: "INTERNAL_MANAGED",
+ *     timeoutSec: 10,
+ *     healthChecks: [defaultRegionHealthCheck.id],
+ * });
+ * const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+ *     region: "us-central1",
+ *     description: "a description",
+ *     defaultService: defaultRegionBackendService.id,
+ *     hostRules: [{
+ *         hosts: ["mysite.com"],
+ *         pathMatcher: "allpaths",
+ *     }],
+ *     pathMatchers: [{
+ *         name: "allpaths",
+ *         defaultService: defaultRegionBackendService.id,
+ *         pathRules: [{
+ *             paths: ["/*"],
+ *             service: defaultRegionBackendService.id,
+ *         }],
+ *     }],
+ * });
+ * const defaultRegionTargetHttpsProxy = new gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy", {
+ *     region: "us-central1",
+ *     urlMap: defaultRegionUrlMap.id,
+ *     sslCertificates: [defaultRegionSslCertificate.id],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_region_ssl_certificate = gcp.compute.RegionSslCertificate("defaultRegionSslCertificate",
+ *     region="us-central1",
+ *     private_key=(lambda path: open(path).read())("path/to/private.key"),
+ *     certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+ * default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+ *     region="us-central1",
+ *     http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+ *         port=80,
+ *     ))
+ * default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+ *     region="us-central1",
+ *     protocol="HTTP",
+ *     load_balancing_scheme="INTERNAL_MANAGED",
+ *     timeout_sec=10,
+ *     health_checks=[default_region_health_check.id])
+ * default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+ *     region="us-central1",
+ *     description="a description",
+ *     default_service=default_region_backend_service.id,
+ *     host_rules=[gcp.compute.RegionUrlMapHostRuleArgs(
+ *         hosts=["mysite.com"],
+ *         path_matcher="allpaths",
+ *     )],
+ *     path_matchers=[gcp.compute.RegionUrlMapPathMatcherArgs(
+ *         name="allpaths",
+ *         default_service=default_region_backend_service.id,
+ *         path_rules=[gcp.compute.RegionUrlMapPathMatcherPathRuleArgs(
+ *             paths=["/*"],
+ *             service=default_region_backend_service.id,
+ *         )],
+ *     )])
+ * default_region_target_https_proxy = gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy",
+ *     region="us-central1",
+ *     url_map=default_region_url_map.id,
+ *     ssl_certificates=[default_region_ssl_certificate.id])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultRegionSslCertificate = new Gcp.Compute.RegionSslCertificate("defaultRegionSslCertificate", new Gcp.Compute.RegionSslCertificateArgs
+ *         {
+ *             Region = "us-central1",
+ *             PrivateKey = File.ReadAllText("path/to/private.key"),
+ *             Certificate = File.ReadAllText("path/to/certificate.crt"),
+ *         });
+ *         var defaultRegionHealthCheck = new Gcp.Compute.RegionHealthCheck("defaultRegionHealthCheck", new Gcp.Compute.RegionHealthCheckArgs
+ *         {
+ *             Region = "us-central1",
+ *             HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+ *             {
+ *                 Port = 80,
+ *             },
+ *         });
+ *         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             Region = "us-central1",
+ *             Protocol = "HTTP",
+ *             LoadBalancingScheme = "INTERNAL_MANAGED",
+ *             TimeoutSec = 10,
+ *             HealthChecks = 
+ *             {
+ *                 defaultRegionHealthCheck.Id,
+ *             },
+ *         });
+ *         var defaultRegionUrlMap = new Gcp.Compute.RegionUrlMap("defaultRegionUrlMap", new Gcp.Compute.RegionUrlMapArgs
+ *         {
+ *             Region = "us-central1",
+ *             Description = "a description",
+ *             DefaultService = defaultRegionBackendService.Id,
+ *             HostRules = 
+ *             {
+ *                 new Gcp.Compute.Inputs.RegionUrlMapHostRuleArgs
+ *                 {
+ *                     Hosts = 
+ *                     {
+ *                         "mysite.com",
+ *                     },
+ *                     PathMatcher = "allpaths",
+ *                 },
+ *             },
+ *             PathMatchers = 
+ *             {
+ *                 new Gcp.Compute.Inputs.RegionUrlMapPathMatcherArgs
+ *                 {
+ *                     Name = "allpaths",
+ *                     DefaultService = defaultRegionBackendService.Id,
+ *                     PathRules = 
+ *                     {
+ *                         new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleArgs
+ *                         {
+ *                             Paths = 
+ *                             {
+ *                                 "/*",
+ *                             },
+ *                             Service = defaultRegionBackendService.Id,
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var defaultRegionTargetHttpsProxy = new Gcp.Compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy", new Gcp.Compute.RegionTargetHttpsProxyArgs
+ *         {
+ *             Region = "us-central1",
+ *             UrlMap = defaultRegionUrlMap.Id,
+ *             SslCertificates = 
+ *             {
+ *                 defaultRegionSslCertificate.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultRegionSslCertificate, err := compute.NewRegionSslCertificate(ctx, "defaultRegionSslCertificate", &compute.RegionSslCertificateArgs{
+ * 			Region:      pulumi.String("us-central1"),
+ * 			PrivateKey:  readFileOrPanic("path/to/private.key"),
+ * 			Certificate: readFileOrPanic("path/to/certificate.crt"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+ * 				Port: pulumi.Int(80),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+ * 			Region:              pulumi.String("us-central1"),
+ * 			Protocol:            pulumi.String("HTTP"),
+ * 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+ * 			TimeoutSec:          pulumi.Int(10),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultRegionHealthCheck.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultRegionUrlMap, err := compute.NewRegionUrlMap(ctx, "defaultRegionUrlMap", &compute.RegionUrlMapArgs{
+ * 			Region:         pulumi.String("us-central1"),
+ * 			Description:    pulumi.String("a description"),
+ * 			DefaultService: defaultRegionBackendService.ID(),
+ * 			HostRules: compute.RegionUrlMapHostRuleArray{
+ * 				&compute.RegionUrlMapHostRuleArgs{
+ * 					Hosts: pulumi.StringArray{
+ * 						pulumi.String("mysite.com"),
+ * 					},
+ * 					PathMatcher: pulumi.String("allpaths"),
+ * 				},
+ * 			},
+ * 			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+ * 				&compute.RegionUrlMapPathMatcherArgs{
+ * 					Name:           pulumi.String("allpaths"),
+ * 					DefaultService: defaultRegionBackendService.ID(),
+ * 					PathRules: compute.RegionUrlMapPathMatcherPathRuleArray{
+ * 						&compute.RegionUrlMapPathMatcherPathRuleArgs{
+ * 							Paths: pulumi.StringArray{
+ * 								pulumi.String("/*"),
+ * 							},
+ * 							Service: defaultRegionBackendService.ID(),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionTargetHttpsProxy(ctx, "defaultRegionTargetHttpsProxy", &compute.RegionTargetHttpsProxyArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			UrlMap: defaultRegionUrlMap.ID(),
+ * 			SslCertificates: pulumi.StringArray{
+ * 				defaultRegionSslCertificate.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,18 +303,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default projects/{{project}}/regions/{{region}}/targetHttpsProxies/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy")
 public class RegionTargetHttpsProxy extends io.pulumi.resources.CustomResource {

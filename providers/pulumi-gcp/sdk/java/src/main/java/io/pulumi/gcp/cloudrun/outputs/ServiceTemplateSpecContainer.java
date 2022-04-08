@@ -44,7 +44,7 @@ public final class ServiceTemplateSpecContainer {
      */
     private final @Nullable List<String> commands;
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * List of sources to populate environment variables in the container.
      * All invalid keys will be reported as an event when the container is starting.
@@ -55,7 +55,6 @@ public final class ServiceTemplateSpecContainer {
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
      */
         @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms;
@@ -96,7 +95,7 @@ public final class ServiceTemplateSpecContainer {
      */
     private final @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts;
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * Container's working directory.
      * If not specified, the container runtime's default will be used, which
@@ -104,7 +103,6 @@ public final class ServiceTemplateSpecContainer {
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
      */
         @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String workingDir;
@@ -162,7 +160,7 @@ public final class ServiceTemplateSpecContainer {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * List of sources to populate environment variables in the container.
      * All invalid keys will be reported as an event when the container is starting.
@@ -173,7 +171,6 @@ public final class ServiceTemplateSpecContainer {
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
     */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public List<ServiceTemplateSpecContainerEnvFrom> getEnvFroms() {
@@ -226,7 +223,7 @@ public final class ServiceTemplateSpecContainer {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * Container's working directory.
      * If not specified, the container runtime's default will be used, which
@@ -234,7 +231,6 @@ public final class ServiceTemplateSpecContainer {
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
     */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Optional<String> getWorkingDir() {

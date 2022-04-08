@@ -22,7 +22,7 @@ public final class InstanceNetwork {
      */
     private final @Nullable String connectMode;
     /**
-     * - 
+     * -
      * A list of IPv4 or IPv6 addresses.
      * 
      */
@@ -73,7 +73,7 @@ public final class InstanceNetwork {
         return Optional.ofNullable(this.connectMode);
     }
     /**
-     * - 
+     * -
      * A list of IPv4 or IPv6 addresses.
      * 
     */

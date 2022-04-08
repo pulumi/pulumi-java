@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceMemcacheParameters {
     /**
-     * - 
+     * -
      * This is a unique ID associated with this set of parameters.
      * 
      */
@@ -33,7 +33,7 @@ public final class InstanceMemcacheParameters {
     }
 
     /**
-     * - 
+     * -
      * This is a unique ID associated with this set of parameters.
      * 
     */

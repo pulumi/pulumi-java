@@ -26,7 +26,341 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Healthcare Dicom Store Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const topic = new gcp.pubsub.Topic("topic", {});
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+ * const _default = new gcp.healthcare.DicomStore("default", {
+ *     dataset: dataset.id,
+ *     notificationConfig: {
+ *         pubsubTopic: topic.id,
+ *     },
+ *     labels: {
+ *         label1: "labelvalue1",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * topic = gcp.pubsub.Topic("topic")
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+ * default = gcp.healthcare.DicomStore("default",
+ *     dataset=dataset.id,
+ *     notification_config=gcp.healthcare.DicomStoreNotificationConfigArgs(
+ *         pubsub_topic=topic.id,
+ *     ),
+ *     labels={
+ *         "label1": "labelvalue1",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         });
+ *         var @default = new Gcp.Healthcare.DicomStore("default", new Gcp.Healthcare.DicomStoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *             NotificationConfig = new Gcp.Healthcare.Inputs.DicomStoreNotificationConfigArgs
+ *             {
+ *                 PubsubTopic = topic.Id,
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "label1", "labelvalue1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewDicomStore(ctx, "default", &healthcare.DicomStoreArgs{
+ * 			Dataset: dataset.ID(),
+ * 			NotificationConfig: &healthcare.DicomStoreNotificationConfigArgs{
+ * 				PubsubTopic: topic.ID(),
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"label1": pulumi.String("labelvalue1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Healthcare Dicom Store Bq Stream
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const topic = new gcp.pubsub.Topic("topic", {}, {
+ *     provider: google_beta,
+ * });
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"}, {
+ *     provider: google_beta,
+ * });
+ * const bqDataset = new gcp.bigquery.Dataset("bqDataset", {
+ *     datasetId: "dicom_bq_ds",
+ *     friendlyName: "test",
+ *     description: "This is a test description",
+ *     location: "US",
+ *     deleteContentsOnDestroy: true,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const bqTable = new gcp.bigquery.Table("bqTable", {
+ *     deletionProtection: false,
+ *     datasetId: bqDataset.datasetId,
+ *     tableId: "dicom_bq_tb",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const _default = new gcp.healthcare.DicomStore("default", {
+ *     dataset: dataset.id,
+ *     notificationConfig: {
+ *         pubsubTopic: topic.id,
+ *     },
+ *     labels: {
+ *         label1: "labelvalue1",
+ *     },
+ *     streamConfigs: [{
+ *         bigqueryDestination: {
+ *             tableUri: pulumi.interpolate`bq://${bqDataset.project}.${bqDataset.datasetId}.${bqTable.tableId}`,
+ *         },
+ *     }],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * topic = gcp.pubsub.Topic("topic", opts=pulumi.ResourceOptions(provider=google_beta))
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1",
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * bq_dataset = gcp.bigquery.Dataset("bqDataset",
+ *     dataset_id="dicom_bq_ds",
+ *     friendly_name="test",
+ *     description="This is a test description",
+ *     location="US",
+ *     delete_contents_on_destroy=True,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * bq_table = gcp.bigquery.Table("bqTable",
+ *     deletion_protection=False,
+ *     dataset_id=bq_dataset.dataset_id,
+ *     table_id="dicom_bq_tb",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * default = gcp.healthcare.DicomStore("default",
+ *     dataset=dataset.id,
+ *     notification_config=gcp.healthcare.DicomStoreNotificationConfigArgs(
+ *         pubsub_topic=topic.id,
+ *     ),
+ *     labels={
+ *         "label1": "labelvalue1",
+ *     },
+ *     stream_configs=[gcp.healthcare.DicomStoreStreamConfigArgs(
+ *         bigquery_destination=gcp.healthcare.DicomStoreStreamConfigBigqueryDestinationArgs(
+ *             table_uri=pulumi.Output.all(bq_dataset.project, bq_dataset.dataset_id, bq_table.table_id).apply(lambda project, dataset_id, table_id: f"bq://{project}.{dataset_id}.{table_id}"),
+ *         ),
+ *     )],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var bqDataset = new Gcp.BigQuery.Dataset("bqDataset", new Gcp.BigQuery.DatasetArgs
+ *         {
+ *             DatasetId = "dicom_bq_ds",
+ *             FriendlyName = "test",
+ *             Description = "This is a test description",
+ *             Location = "US",
+ *             DeleteContentsOnDestroy = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var bqTable = new Gcp.BigQuery.Table("bqTable", new Gcp.BigQuery.TableArgs
+ *         {
+ *             DeletionProtection = false,
+ *             DatasetId = bqDataset.DatasetId,
+ *             TableId = "dicom_bq_tb",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var @default = new Gcp.Healthcare.DicomStore("default", new Gcp.Healthcare.DicomStoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *             NotificationConfig = new Gcp.Healthcare.Inputs.DicomStoreNotificationConfigArgs
+ *             {
+ *                 PubsubTopic = topic.Id,
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "label1", "labelvalue1" },
+ *             },
+ *             StreamConfigs = 
+ *             {
+ *                 new Gcp.Healthcare.Inputs.DicomStoreStreamConfigArgs
+ *                 {
+ *                     BigqueryDestination = new Gcp.Healthcare.Inputs.DicomStoreStreamConfigBigqueryDestinationArgs
+ *                     {
+ *                         TableUri = Output.Tuple(bqDataset.Project, bqDataset.DatasetId, bqTable.TableId).Apply(values =>
+ *                         {
+ *                             var project = values.Item1;
+ *                             var datasetId = values.Item2;
+ *                             var tableId = values.Item3;
+ *                             return $"bq://{project}.{datasetId}.{tableId}";
+ *                         }),
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigquery"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		topic, err := pubsub.NewTopic(ctx, "topic", nil, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bqDataset, err := bigquery.NewDataset(ctx, "bqDataset", &bigquery.DatasetArgs{
+ * 			DatasetId:               pulumi.String("dicom_bq_ds"),
+ * 			FriendlyName:            pulumi.String("test"),
+ * 			Description:             pulumi.String("This is a test description"),
+ * 			Location:                pulumi.String("US"),
+ * 			DeleteContentsOnDestroy: pulumi.Bool(true),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bqTable, err := bigquery.NewTable(ctx, "bqTable", &bigquery.TableArgs{
+ * 			DeletionProtection: pulumi.Bool(false),
+ * 			DatasetId:          bqDataset.DatasetId,
+ * 			TableId:            pulumi.String("dicom_bq_tb"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewDicomStore(ctx, "default", &healthcare.DicomStoreArgs{
+ * 			Dataset: dataset.ID(),
+ * 			NotificationConfig: &healthcare.DicomStoreNotificationConfigArgs{
+ * 				PubsubTopic: topic.ID(),
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"label1": pulumi.String("labelvalue1"),
+ * 			},
+ * 			StreamConfigs: healthcare.DicomStoreStreamConfigArray{
+ * 				&healthcare.DicomStoreStreamConfigArgs{
+ * 					BigqueryDestination: &healthcare.DicomStoreStreamConfigBigqueryDestinationArgs{
+ * 						TableUri: pulumi.All(bqDataset.Project, bqDataset.DatasetId, bqTable.TableId).ApplyT(func(_args []interface{}) (string, error) {
+ * 							project := _args[0].(string)
+ * 							datasetId := _args[1].(string)
+ * 							tableId := _args[2].(string)
+ * 							return fmt.Sprintf("%v%v%v%v%v%v", "bq://", project, ".", datasetId, ".", tableId), nil
+ * 						}).(pulumi.StringOutput),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,10 +370,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:healthcare/dicomStore:DicomStore default {{dataset}}/dicomStores/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:healthcare/dicomStore:DicomStore default {{dataset}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:healthcare/dicomStore:DicomStore")
 public class DicomStore extends io.pulumi.resources.CustomResource {

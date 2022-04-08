@@ -19,7 +19,114 @@ import javax.annotation.Nullable;
 /**
  * A managed metastore service that serves metadata queries.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dataproc Metastore Service Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.dataproc.MetastoreService("default", {
+ *     serviceId: "metastore-srv",
+ *     location: "us-central1",
+ *     port: 9080,
+ *     tier: "DEVELOPER",
+ *     maintenanceWindow: {
+ *         hourOfDay: 2,
+ *         dayOfWeek: "SUNDAY",
+ *     },
+ *     hiveMetastoreConfig: {
+ *         version: "2.3.6",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.dataproc.MetastoreService("default",
+ *     service_id="metastore-srv",
+ *     location="us-central1",
+ *     port=9080,
+ *     tier="DEVELOPER",
+ *     maintenance_window=gcp.dataproc.MetastoreServiceMaintenanceWindowArgs(
+ *         hour_of_day=2,
+ *         day_of_week="SUNDAY",
+ *     ),
+ *     hive_metastore_config=gcp.dataproc.MetastoreServiceHiveMetastoreConfigArgs(
+ *         version="2.3.6",
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Dataproc.MetastoreService("default", new Gcp.Dataproc.MetastoreServiceArgs
+ *         {
+ *             ServiceId = "metastore-srv",
+ *             Location = "us-central1",
+ *             Port = 9080,
+ *             Tier = "DEVELOPER",
+ *             MaintenanceWindow = new Gcp.Dataproc.Inputs.MetastoreServiceMaintenanceWindowArgs
+ *             {
+ *                 HourOfDay = 2,
+ *                 DayOfWeek = "SUNDAY",
+ *             },
+ *             HiveMetastoreConfig = new Gcp.Dataproc.Inputs.MetastoreServiceHiveMetastoreConfigArgs
+ *             {
+ *                 Version = "2.3.6",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataproc.NewMetastoreService(ctx, "default", &dataproc.MetastoreServiceArgs{
+ * 			ServiceId: pulumi.String("metastore-srv"),
+ * 			Location:  pulumi.String("us-central1"),
+ * 			Port:      pulumi.Int(9080),
+ * 			Tier:      pulumi.String("DEVELOPER"),
+ * 			MaintenanceWindow: &dataproc.MetastoreServiceMaintenanceWindowArgs{
+ * 				HourOfDay: pulumi.Int(2),
+ * 				DayOfWeek: pulumi.String("SUNDAY"),
+ * 			},
+ * 			HiveMetastoreConfig: &dataproc.MetastoreServiceHiveMetastoreConfigArgs{
+ * 				Version: pulumi.String("2.3.6"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,14 +136,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:dataproc/metastoreService:MetastoreService default projects/{{project}}/locations/{{location}}/services/{{service_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:dataproc/metastoreService:MetastoreService default {{project}}/{{location}}/{{service_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:dataproc/metastoreService:MetastoreService default {{location}}/{{service_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:dataproc/metastoreService:MetastoreService")
 public class MetastoreService extends io.pulumi.resources.CustomResource {

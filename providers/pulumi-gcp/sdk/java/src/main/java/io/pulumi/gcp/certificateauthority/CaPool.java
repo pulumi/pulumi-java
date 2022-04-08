@@ -20,7 +20,539 @@ import javax.annotation.Nullable;
  * issuance policies for one or more CertificateAuthority resources and to rotate CA certificates in and out of the
  * trust anchor.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Privateca Capool Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultCaPool = new gcp.certificateauthority.CaPool("default", {
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ *     location: "us-central1",
+ *     publishingOptions: {
+ *         publishCaCert: true,
+ *         publishCrl: true,
+ *     },
+ *     tier: "ENTERPRISE",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.certificateauthority.CaPool("default",
+ *     labels={
+ *         "foo": "bar",
+ *     },
+ *     location="us-central1",
+ *     publishing_options=gcp.certificateauthority.CaPoolPublishingOptionsArgs(
+ *         publish_ca_cert=True,
+ *         publish_crl=True,
+ *     ),
+ *     tier="ENTERPRISE")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.CertificateAuthority.CaPool("default", new Gcp.CertificateAuthority.CaPoolArgs
+ *         {
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             Location = "us-central1",
+ *             PublishingOptions = new Gcp.CertificateAuthority.Inputs.CaPoolPublishingOptionsArgs
+ *             {
+ *                 PublishCaCert = true,
+ *                 PublishCrl = true,
+ *             },
+ *             Tier = "ENTERPRISE",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/certificateauthority"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := certificateauthority.NewCaPool(ctx, "default", &certificateauthority.CaPoolArgs{
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			Location: pulumi.String("us-central1"),
+ * 			PublishingOptions: &certificateauthority.CaPoolPublishingOptionsArgs{
+ * 				PublishCaCert: pulumi.Bool(true),
+ * 				PublishCrl:    pulumi.Bool(true),
+ * 			},
+ * 			Tier: pulumi.String("ENTERPRISE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Privateca Capool All Fields
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultCaPool = new gcp.certificateauthority.CaPool("default", {
+ *     issuancePolicy: {
+ *         allowedIssuanceModes: {
+ *             allowConfigBasedIssuance: true,
+ *             allowCsrBasedIssuance: true,
+ *         },
+ *         allowedKeyTypes: [
+ *             {
+ *                 ellipticCurve: {
+ *                     signatureAlgorithm: "ECDSA_P256",
+ *                 },
+ *             },
+ *             {
+ *                 rsa: {
+ *                     maxModulusSize: "10",
+ *                     minModulusSize: "5",
+ *                 },
+ *             },
+ *         ],
+ *         baselineValues: {
+ *             additionalExtensions: [{
+ *                 critical: true,
+ *                 objectId: {
+ *                     objectIdPaths: [
+ *                         1,
+ *                         7,
+ *                     ],
+ *                 },
+ *                 value: "asdf",
+ *             }],
+ *             aiaOcspServers: ["example.com"],
+ *             caOptions: {
+ *                 isCa: true,
+ *                 maxIssuerPathLength: 10,
+ *             },
+ *             keyUsage: {
+ *                 baseKeyUsage: {
+ *                     certSign: false,
+ *                     contentCommitment: true,
+ *                     crlSign: true,
+ *                     dataEncipherment: true,
+ *                     decipherOnly: true,
+ *                     digitalSignature: true,
+ *                     keyAgreement: true,
+ *                     keyEncipherment: false,
+ *                 },
+ *                 extendedKeyUsage: {
+ *                     clientAuth: false,
+ *                     codeSigning: true,
+ *                     emailProtection: true,
+ *                     serverAuth: true,
+ *                     timeStamping: true,
+ *                 },
+ *             },
+ *             policyIds: [
+ *                 {
+ *                     objectIdPaths: [
+ *                         1,
+ *                         5,
+ *                     ],
+ *                 },
+ *                 {
+ *                     objectIdPaths: [
+ *                         1,
+ *                         5,
+ *                         7,
+ *                     ],
+ *                 },
+ *             ],
+ *         },
+ *         identityConstraints: {
+ *             allowSubjectAltNamesPassthrough: true,
+ *             allowSubjectPassthrough: true,
+ *             celExpression: {
+ *                 expression: "subject_alt_names.all(san, san.type == DNS || san.type == EMAIL )",
+ *                 title: "My title",
+ *             },
+ *         },
+ *         maximumLifetime: "50000s",
+ *     },
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ *     location: "us-central1",
+ *     publishingOptions: {
+ *         publishCaCert: false,
+ *         publishCrl: true,
+ *     },
+ *     tier: "ENTERPRISE",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.certificateauthority.CaPool("default",
+ *     issuance_policy=gcp.certificateauthority.CaPoolIssuancePolicyArgs(
+ *         allowed_issuance_modes=gcp.certificateauthority.CaPoolIssuancePolicyAllowedIssuanceModesArgs(
+ *             allow_config_based_issuance=True,
+ *             allow_csr_based_issuance=True,
+ *         ),
+ *         allowed_key_types=[
+ *             gcp.certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeArgs(
+ *                 elliptic_curve=gcp.certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(
+ *                     signature_algorithm="ECDSA_P256",
+ *                 ),
+ *             ),
+ *             gcp.certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeArgs(
+ *                 rsa=gcp.certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(
+ *                     max_modulus_size="10",
+ *                     min_modulus_size="5",
+ *                 ),
+ *             ),
+ *         ],
+ *         baseline_values=gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesArgs(
+ *             additional_extensions=[gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs(
+ *                 critical=True,
+ *                 object_id=gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs(
+ *                     object_id_path=[
+ *                         1,
+ *                         7,
+ *                     ],
+ *                 ),
+ *                 value="asdf",
+ *             )],
+ *             aia_ocsp_servers=["example.com"],
+ *             ca_options=gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesCaOptionsArgs(
+ *                 is_ca=True,
+ *                 max_issuer_path_length=10,
+ *             ),
+ *             key_usage=gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesKeyUsageArgs(
+ *                 base_key_usage=gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs(
+ *                     cert_sign=False,
+ *                     content_commitment=True,
+ *                     crl_sign=True,
+ *                     data_encipherment=True,
+ *                     decipher_only=True,
+ *                     digital_signature=True,
+ *                     key_agreement=True,
+ *                     key_encipherment=False,
+ *                 ),
+ *                 extended_key_usage=gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs(
+ *                     client_auth=False,
+ *                     code_signing=True,
+ *                     email_protection=True,
+ *                     server_auth=True,
+ *                     time_stamping=True,
+ *                 ),
+ *             ),
+ *             policy_ids=[
+ *                 gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs(
+ *                     object_id_path=[
+ *                         1,
+ *                         5,
+ *                     ],
+ *                 ),
+ *                 gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs(
+ *                     object_id_path=[
+ *                         1,
+ *                         5,
+ *                         7,
+ *                     ],
+ *                 ),
+ *             ],
+ *         ),
+ *         identity_constraints=gcp.certificateauthority.CaPoolIssuancePolicyIdentityConstraintsArgs(
+ *             allow_subject_alt_names_passthrough=True,
+ *             allow_subject_passthrough=True,
+ *             cel_expression=gcp.certificateauthority.CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs(
+ *                 expression="subject_alt_names.all(san, san.type == DNS || san.type == EMAIL )",
+ *                 title="My title",
+ *             ),
+ *         ),
+ *         maximum_lifetime="50000s",
+ *     ),
+ *     labels={
+ *         "foo": "bar",
+ *     },
+ *     location="us-central1",
+ *     publishing_options=gcp.certificateauthority.CaPoolPublishingOptionsArgs(
+ *         publish_ca_cert=False,
+ *         publish_crl=True,
+ *     ),
+ *     tier="ENTERPRISE")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.CertificateAuthority.CaPool("default", new Gcp.CertificateAuthority.CaPoolArgs
+ *         {
+ *             IssuancePolicy = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyArgs
+ *             {
+ *                 AllowedIssuanceModes = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyAllowedIssuanceModesArgs
+ *                 {
+ *                     AllowConfigBasedIssuance = true,
+ *                     AllowCsrBasedIssuance = true,
+ *                 },
+ *                 AllowedKeyTypes = 
+ *                 {
+ *                     new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyAllowedKeyTypeArgs
+ *                     {
+ *                         EllipticCurve = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs
+ *                         {
+ *                             SignatureAlgorithm = "ECDSA_P256",
+ *                         },
+ *                     },
+ *                     new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyAllowedKeyTypeArgs
+ *                     {
+ *                         Rsa = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs
+ *                         {
+ *                             MaxModulusSize = "10",
+ *                             MinModulusSize = "5",
+ *                         },
+ *                     },
+ *                 },
+ *                 BaselineValues = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesArgs
+ *                 {
+ *                     AdditionalExtensions = 
+ *                     {
+ *                         new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs
+ *                         {
+ *                             Critical = true,
+ *                             ObjectId = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs
+ *                             {
+ *                                 ObjectIdPath = 
+ *                                 {
+ *                                     1,
+ *                                     7,
+ *                                 },
+ *                             },
+ *                             Value = "asdf",
+ *                         },
+ *                     },
+ *                     AiaOcspServers = 
+ *                     {
+ *                         "example.com",
+ *                     },
+ *                     CaOptions = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesCaOptionsArgs
+ *                     {
+ *                         IsCa = true,
+ *                         MaxIssuerPathLength = 10,
+ *                     },
+ *                     KeyUsage = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageArgs
+ *                     {
+ *                         BaseKeyUsage = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs
+ *                         {
+ *                             CertSign = false,
+ *                             ContentCommitment = true,
+ *                             CrlSign = true,
+ *                             DataEncipherment = true,
+ *                             DecipherOnly = true,
+ *                             DigitalSignature = true,
+ *                             KeyAgreement = true,
+ *                             KeyEncipherment = false,
+ *                         },
+ *                         ExtendedKeyUsage = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs
+ *                         {
+ *                             ClientAuth = false,
+ *                             CodeSigning = true,
+ *                             EmailProtection = true,
+ *                             ServerAuth = true,
+ *                             TimeStamping = true,
+ *                         },
+ *                     },
+ *                     PolicyIds = 
+ *                     {
+ *                         new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs
+ *                         {
+ *                             ObjectIdPath = 
+ *                             {
+ *                                 1,
+ *                                 5,
+ *                             },
+ *                         },
+ *                         new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs
+ *                         {
+ *                             ObjectIdPath = 
+ *                             {
+ *                                 1,
+ *                                 5,
+ *                                 7,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 IdentityConstraints = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyIdentityConstraintsArgs
+ *                 {
+ *                     AllowSubjectAltNamesPassthrough = true,
+ *                     AllowSubjectPassthrough = true,
+ *                     CelExpression = new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs
+ *                     {
+ *                         Expression = "subject_alt_names.all(san, san.type == DNS || san.type == EMAIL )",
+ *                         Title = "My title",
+ *                     },
+ *                 },
+ *                 MaximumLifetime = "50000s",
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             Location = "us-central1",
+ *             PublishingOptions = new Gcp.CertificateAuthority.Inputs.CaPoolPublishingOptionsArgs
+ *             {
+ *                 PublishCaCert = false,
+ *                 PublishCrl = true,
+ *             },
+ *             Tier = "ENTERPRISE",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/certificateauthority"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := certificateauthority.NewCaPool(ctx, "default", &certificateauthority.CaPoolArgs{
+ * 			IssuancePolicy: &certificateauthority.CaPoolIssuancePolicyArgs{
+ * 				AllowedIssuanceModes: &certificateauthority.CaPoolIssuancePolicyAllowedIssuanceModesArgs{
+ * 					AllowConfigBasedIssuance: pulumi.Bool(true),
+ * 					AllowCsrBasedIssuance:    pulumi.Bool(true),
+ * 				},
+ * 				AllowedKeyTypes: certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeArray{
+ * 					&certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeArgs{
+ * 						EllipticCurve: &certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs{
+ * 							SignatureAlgorithm: pulumi.String("ECDSA_P256"),
+ * 						},
+ * 					},
+ * 					&certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeArgs{
+ * 						Rsa: &certificateauthority.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs{
+ * 							MaxModulusSize: pulumi.String("10"),
+ * 							MinModulusSize: pulumi.String("5"),
+ * 						},
+ * 					},
+ * 				},
+ * 				BaselineValues: &certificateauthority.CaPoolIssuancePolicyBaselineValuesArgs{
+ * 					AdditionalExtensions: certificateauthority.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArray{
+ * 						&certificateauthority.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs{
+ * 							Critical: pulumi.Bool(true),
+ * 							ObjectId: &certificateauthority.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs{
+ * 								ObjectIdPath: []float64{
+ * 									1,
+ * 									7,
+ * 								},
+ * 							},
+ * 							Value: pulumi.String("asdf"),
+ * 						},
+ * 					},
+ * 					AiaOcspServers: pulumi.StringArray{
+ * 						pulumi.String("example.com"),
+ * 					},
+ * 					CaOptions: &certificateauthority.CaPoolIssuancePolicyBaselineValuesCaOptionsArgs{
+ * 						IsCa:                pulumi.Bool(true),
+ * 						MaxIssuerPathLength: pulumi.Int(10),
+ * 					},
+ * 					KeyUsage: &certificateauthority.CaPoolIssuancePolicyBaselineValuesKeyUsageArgs{
+ * 						BaseKeyUsage: &certificateauthority.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs{
+ * 							CertSign:          pulumi.Bool(false),
+ * 							ContentCommitment: pulumi.Bool(true),
+ * 							CrlSign:           pulumi.Bool(true),
+ * 							DataEncipherment:  pulumi.Bool(true),
+ * 							DecipherOnly:      pulumi.Bool(true),
+ * 							DigitalSignature:  pulumi.Bool(true),
+ * 							KeyAgreement:      pulumi.Bool(true),
+ * 							KeyEncipherment:   pulumi.Bool(false),
+ * 						},
+ * 						ExtendedKeyUsage: &certificateauthority.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs{
+ * 							ClientAuth:      pulumi.Bool(false),
+ * 							CodeSigning:     pulumi.Bool(true),
+ * 							EmailProtection: pulumi.Bool(true),
+ * 							ServerAuth:      pulumi.Bool(true),
+ * 							TimeStamping:    pulumi.Bool(true),
+ * 						},
+ * 					},
+ * 					PolicyIds: certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArray{
+ * 						&certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs{
+ * 							ObjectIdPath: []float64{
+ * 								1,
+ * 								5,
+ * 							},
+ * 						},
+ * 						&certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs{
+ * 							ObjectIdPath: []float64{
+ * 								1,
+ * 								5,
+ * 								7,
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				IdentityConstraints: &certificateauthority.CaPoolIssuancePolicyIdentityConstraintsArgs{
+ * 					AllowSubjectAltNamesPassthrough: pulumi.Bool(true),
+ * 					AllowSubjectPassthrough:         pulumi.Bool(true),
+ * 					CelExpression: &certificateauthority.CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs{
+ * 						Expression: pulumi.String("subject_alt_names.all(san, san.type == DNS || san.type == EMAIL )"),
+ * 						Title:      pulumi.String("My title"),
+ * 					},
+ * 				},
+ * 				MaximumLifetime: pulumi.String("50000s"),
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			Location: pulumi.String("us-central1"),
+ * 			PublishingOptions: &certificateauthority.CaPoolPublishingOptionsArgs{
+ * 				PublishCaCert: pulumi.Bool(false),
+ * 				PublishCrl:    pulumi.Bool(true),
+ * 			},
+ * 			Tier: pulumi.String("ENTERPRISE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +562,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:certificateauthority/caPool:CaPool default projects/{{project}}/locations/{{location}}/caPools/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:certificateauthority/caPool:CaPool default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:certificateauthority/caPool:CaPool default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:certificateauthority/caPool:CaPool")
 public class CaPool extends io.pulumi.resources.CustomResource {

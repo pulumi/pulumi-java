@@ -44,9 +44,9 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * - OFF: Disables the autoscaler.
      * - ON: Enables scaling in and scaling out.
      * - ONLY_SCALE_OUT: Enables only scaling out.
-     *   You must use this mode if your node groups are configured to
-     *   restart their hosted VMs on minimal servers.
-     *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
+     * You must use this mode if your node groups are configured to
+     * restart their hosted VMs on minimal servers.
+     * Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
      * 
      */
     @Import(name="mode")

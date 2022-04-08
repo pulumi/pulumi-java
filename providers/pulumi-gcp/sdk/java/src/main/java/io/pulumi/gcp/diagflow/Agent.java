@@ -21,13 +21,129 @@ import javax.annotation.Nullable;
  * during a conversation to structured data that your apps and services can understand. You design and build a Dialogflow
  * agent to handle the types of conversations required for your system.
  * 
+ * 
  * To get more information about Agent, see:
  * 
  * * [API documentation](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects/agent)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflow Agent Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const fullAgent = new gcp.diagflow.Agent("full_agent", {
+ *     apiVersion: "API_VERSION_V2_BETA_1",
+ *     avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     classificationThreshold: 0.3,
+ *     defaultLanguageCode: "en",
+ *     description: "Example description.",
+ *     displayName: "dialogflow-agent",
+ *     enableLogging: true,
+ *     matchMode: "MATCH_MODE_ML_ONLY",
+ *     supportedLanguageCodes: [
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     tier: "TIER_STANDARD",
+ *     timeZone: "America/New_York",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * full_agent = gcp.diagflow.Agent("fullAgent",
+ *     api_version="API_VERSION_V2_BETA_1",
+ *     avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     classification_threshold=0.3,
+ *     default_language_code="en",
+ *     description="Example description.",
+ *     display_name="dialogflow-agent",
+ *     enable_logging=True,
+ *     match_mode="MATCH_MODE_ML_ONLY",
+ *     supported_language_codes=[
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     tier="TIER_STANDARD",
+ *     time_zone="America/New_York")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fullAgent = new Gcp.Diagflow.Agent("fullAgent", new Gcp.Diagflow.AgentArgs
+ *         {
+ *             ApiVersion = "API_VERSION_V2_BETA_1",
+ *             AvatarUri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *             ClassificationThreshold = 0.3,
+ *             DefaultLanguageCode = "en",
+ *             Description = "Example description.",
+ *             DisplayName = "dialogflow-agent",
+ *             EnableLogging = true,
+ *             MatchMode = "MATCH_MODE_ML_ONLY",
+ *             SupportedLanguageCodes = 
+ *             {
+ *                 "fr",
+ *                 "de",
+ *                 "es",
+ *             },
+ *             Tier = "TIER_STANDARD",
+ *             TimeZone = "America/New_York",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := diagflow.NewAgent(ctx, "fullAgent", &diagflow.AgentArgs{
+ * 			ApiVersion:              pulumi.String("API_VERSION_V2_BETA_1"),
+ * 			AvatarUri:               pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
+ * 			ClassificationThreshold: pulumi.Float64(0.3),
+ * 			DefaultLanguageCode:     pulumi.String("en"),
+ * 			Description:             pulumi.String("Example description."),
+ * 			DisplayName:             pulumi.String("dialogflow-agent"),
+ * 			EnableLogging:           pulumi.Bool(true),
+ * 			MatchMode:               pulumi.String("MATCH_MODE_ML_ONLY"),
+ * 			SupportedLanguageCodes: pulumi.StringArray{
+ * 				pulumi.String("fr"),
+ * 				pulumi.String("de"),
+ * 				pulumi.String("es"),
+ * 			},
+ * 			Tier:     pulumi.String("TIER_STANDARD"),
+ * 			TimeZone: pulumi.String("America/New_York"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,6 +153,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/agent:Agent default {{project}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/agent:Agent")
 public class Agent extends io.pulumi.resources.CustomResource {
@@ -47,7 +164,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * * API_VERSION_V1: Legacy V1 API.
      * * API_VERSION_V2: V2 API.
      * * API_VERSION_V2_BETA_1: V2beta1 API.
-     *   Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
+     * Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
      * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
@@ -60,7 +177,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * * API_VERSION_V1: Legacy V1 API.
      * * API_VERSION_V2: V2 API.
      * * API_VERSION_V2_BETA_1: V2beta1 API.
-     *   Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
+     * Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
      * 
      */
     public Output<String> getApiVersion() {
@@ -183,10 +300,10 @@ public class Agent extends io.pulumi.resources.CustomResource {
     /**
      * Determines how intents are detected from user queries.
      * * MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
-     *   syntax and composite entities.
+     * syntax and composite entities.
      * * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
-     *   using @sys.any or very large developer entities.
-     *   Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
+     * using @sys.any or very large developer entities.
+     * Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
      * 
      */
     @Export(name="matchMode", type=String.class, parameters={})
@@ -195,10 +312,10 @@ public class Agent extends io.pulumi.resources.CustomResource {
     /**
      * @return Determines how intents are detected from user queries.
      * * MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
-     *   syntax and composite entities.
+     * syntax and composite entities.
      * * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
-     *   using @sys.any or very large developer entities.
-     *   Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
+     * using @sys.any or very large developer entities.
+     * Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
      * 
      */
     public Output<String> getMatchMode() {
@@ -239,8 +356,8 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * * TIER_STANDARD: Standard tier.
      * * TIER_ENTERPRISE: Enterprise tier (Essentials).
      * * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
-     *   NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
-     *   the the provider state and Dialogflow if the agent tier is changed outside of the provider.
+     * NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+     * the the provider state and Dialogflow if the agent tier is changed outside of the provider.
      * 
      */
     @Export(name="tier", type=String.class, parameters={})
@@ -251,8 +368,8 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * * TIER_STANDARD: Standard tier.
      * * TIER_ENTERPRISE: Enterprise tier (Essentials).
      * * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
-     *   NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
-     *   the the provider state and Dialogflow if the agent tier is changed outside of the provider.
+     * NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+     * the the provider state and Dialogflow if the agent tier is changed outside of the provider.
      * 
      */
     public Output</* @Nullable */ String> getTier() {

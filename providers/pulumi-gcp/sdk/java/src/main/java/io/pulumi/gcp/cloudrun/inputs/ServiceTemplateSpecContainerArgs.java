@@ -59,7 +59,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     }
 
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * List of sources to populate environment variables in the container.
      * All invalid keys will be reported as an event when the container is starting.
@@ -70,7 +70,6 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @Import(name="envFroms")
@@ -148,7 +147,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     }
 
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * Container's working directory.
      * If not specified, the container runtime's default will be used, which
@@ -156,7 +155,6 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @Import(name="workingDir")

@@ -22,7 +22,88 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Data Catalog Taxonomy Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basicTaxonomy = new gcp.datacatalog.Taxonomy("basicTaxonomy", {
+ *     region: "us",
+ *     displayName: "my_display_name",
+ *     description: "A collection of policy tags",
+ *     activatedPolicyTypes: ["FINE_GRAINED_ACCESS_CONTROL"],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic_taxonomy = gcp.datacatalog.Taxonomy("basicTaxonomy",
+ *     region="us",
+ *     display_name="my_display_name",
+ *     description="A collection of policy tags",
+ *     activated_policy_types=["FINE_GRAINED_ACCESS_CONTROL"],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicTaxonomy = new Gcp.DataCatalog.Taxonomy("basicTaxonomy", new Gcp.DataCatalog.TaxonomyArgs
+ *         {
+ *             Region = "us",
+ *             DisplayName = "my_display_name",
+ *             Description = "A collection of policy tags",
+ *             ActivatedPolicyTypes = 
+ *             {
+ *                 "FINE_GRAINED_ACCESS_CONTROL",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datacatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datacatalog.NewTaxonomy(ctx, "basicTaxonomy", &datacatalog.TaxonomyArgs{
+ * 			Region:      pulumi.String("us"),
+ * 			DisplayName: pulumi.String("my_display_name"),
+ * 			Description: pulumi.String("A collection of policy tags"),
+ * 			ActivatedPolicyTypes: pulumi.StringArray{
+ * 				pulumi.String("FINE_GRAINED_ACCESS_CONTROL"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +113,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:datacatalog/taxonomy:Taxonomy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:datacatalog/taxonomy:Taxonomy")
 public class Taxonomy extends io.pulumi.resources.CustomResource {

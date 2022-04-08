@@ -23,7 +23,279 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Creating a Consent store](https://cloud.google.com/healthcare/docs/how-tos/consent)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Healthcare Consent Store Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+ * const my_consent = new gcp.healthcare.ConsentStore("my-consent", {dataset: dataset.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+ * my_consent = gcp.healthcare.ConsentStore("my-consent", dataset=dataset.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         });
+ *         var my_consent = new Gcp.Healthcare.ConsentStore("my-consent", new Gcp.Healthcare.ConsentStoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewConsentStore(ctx, "my-consent", &healthcare.ConsentStoreArgs{
+ * 			Dataset: dataset.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Healthcare Consent Store Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+ * const my_consent = new gcp.healthcare.ConsentStore("my-consent", {
+ *     dataset: dataset.id,
+ *     enableConsentCreateOnUpdate: true,
+ *     defaultConsentTtl: "90000s",
+ *     labels: {
+ *         label1: "labelvalue1",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+ * my_consent = gcp.healthcare.ConsentStore("my-consent",
+ *     dataset=dataset.id,
+ *     enable_consent_create_on_update=True,
+ *     default_consent_ttl="90000s",
+ *     labels={
+ *         "label1": "labelvalue1",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         });
+ *         var my_consent = new Gcp.Healthcare.ConsentStore("my-consent", new Gcp.Healthcare.ConsentStoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *             EnableConsentCreateOnUpdate = true,
+ *             DefaultConsentTtl = "90000s",
+ *             Labels = 
+ *             {
+ *                 { "label1", "labelvalue1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewConsentStore(ctx, "my-consent", &healthcare.ConsentStoreArgs{
+ * 			Dataset:                     dataset.ID(),
+ * 			EnableConsentCreateOnUpdate: pulumi.Bool(true),
+ * 			DefaultConsentTtl:           pulumi.String("90000s"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label1": pulumi.String("labelvalue1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Healthcare Consent Store Iam
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+ * const my_consent = new gcp.healthcare.ConsentStore("my-consent", {dataset: dataset.id});
+ * const test_account = new gcp.serviceaccount.Account("test-account", {
+ *     accountId: "my-account",
+ *     displayName: "Test Service Account",
+ * });
+ * const test_iam = new gcp.healthcare.ConsentStoreIamMember("test-iam", {
+ *     dataset: dataset.id,
+ *     consentStoreId: my_consent.name,
+ *     role: "roles/editor",
+ *     member: pulumi.interpolate`serviceAccount:${test_account.email}`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+ * my_consent = gcp.healthcare.ConsentStore("my-consent", dataset=dataset.id)
+ * test_account = gcp.service_account.Account("test-account",
+ *     account_id="my-account",
+ *     display_name="Test Service Account")
+ * test_iam = gcp.healthcare.ConsentStoreIamMember("test-iam",
+ *     dataset=dataset.id,
+ *     consent_store_id=my_consent.name,
+ *     role="roles/editor",
+ *     member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         });
+ *         var my_consent = new Gcp.Healthcare.ConsentStore("my-consent", new Gcp.Healthcare.ConsentStoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *         });
+ *         var test_account = new Gcp.ServiceAccount.Account("test-account", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "my-account",
+ *             DisplayName = "Test Service Account",
+ *         });
+ *         var test_iam = new Gcp.Healthcare.ConsentStoreIamMember("test-iam", new Gcp.Healthcare.ConsentStoreIamMemberArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *             ConsentStoreId = my_consent.Name,
+ *             Role = "roles/editor",
+ *             Member = test_account.Email.Apply(email => $"serviceAccount:{email}"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewConsentStore(ctx, "my-consent", &healthcare.ConsentStoreArgs{
+ * 			Dataset: dataset.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = serviceAccount.NewAccount(ctx, "test-account", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("my-account"),
+ * 			DisplayName: pulumi.String("Test Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewConsentStoreIamMember(ctx, "test-iam", &healthcare.ConsentStoreIamMemberArgs{
+ * 			Dataset:        dataset.ID(),
+ * 			ConsentStoreId: my_consent.Name,
+ * 			Role:           pulumi.String("roles/editor"),
+ * 			Member: test_account.Email.ApplyT(func(email string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +305,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:healthcare/consentStore:ConsentStore default {{dataset}}/consentStores/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:healthcare/consentStore:ConsentStore")
 public class ConsentStore extends io.pulumi.resources.CustomResource {

@@ -22,6 +22,7 @@ import javax.annotation.Nullable;
  * Represents a data transfer configuration. A transfer configuration
  * contains all metadata needed to perform a data transfer.
  * 
+ * 
  * To get more information about Config, see:
  * 
  * * [API documentation](https://cloud.google.com/bigquery/docs/reference/datatransfer/rest/v1/projects.locations.transferConfigs/create)
@@ -31,7 +32,185 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `sensitive_params.secret_access_key` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Bigquerydatatransfer Config Scheduled Query
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = gcp.organizations.getProject({});
+ * const permissions = new gcp.projects.IAMMember("permissions", {
+ *     project: project.then(project => project.projectId),
+ *     role: "roles/iam.serviceAccountShortTermTokenMinter",
+ *     member: project.then(project => `serviceAccount:service-${project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`),
+ * });
+ * const myDataset = new gcp.bigquery.Dataset("myDataset", {
+ *     datasetId: "my_dataset",
+ *     friendlyName: "foo",
+ *     description: "bar",
+ *     location: "asia-northeast1",
+ * }, {
+ *     dependsOn: [permissions],
+ * });
+ * const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
+ *     displayName: "my-query",
+ *     location: "asia-northeast1",
+ *     dataSourceId: "scheduled_query",
+ *     schedule: "first sunday of quarter 00:00",
+ *     destinationDatasetId: myDataset.datasetId,
+ *     params: {
+ *         destination_table_name_template: "my_table",
+ *         write_disposition: "WRITE_APPEND",
+ *         query: "SELECT name FROM tabl WHERE x = 'y'",
+ *     },
+ * }, {
+ *     dependsOn: [permissions],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.get_project()
+ * permissions = gcp.projects.IAMMember("permissions",
+ *     project=project.project_id,
+ *     role="roles/iam.serviceAccountShortTermTokenMinter",
+ *     member=f"serviceAccount:service-{project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com")
+ * my_dataset = gcp.bigquery.Dataset("myDataset",
+ *     dataset_id="my_dataset",
+ *     friendly_name="foo",
+ *     description="bar",
+ *     location="asia-northeast1",
+ *     opts=pulumi.ResourceOptions(depends_on=[permissions]))
+ * query_config = gcp.bigquery.DataTransferConfig("queryConfig",
+ *     display_name="my-query",
+ *     location="asia-northeast1",
+ *     data_source_id="scheduled_query",
+ *     schedule="first sunday of quarter 00:00",
+ *     destination_dataset_id=my_dataset.dataset_id,
+ *     params={
+ *         "destination_table_name_template": "my_table",
+ *         "write_disposition": "WRITE_APPEND",
+ *         "query": "SELECT name FROM tabl WHERE x = 'y'",
+ *     },
+ *     opts=pulumi.ResourceOptions(depends_on=[permissions]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var permissions = new Gcp.Projects.IAMMember("permissions", new Gcp.Projects.IAMMemberArgs
+ *         {
+ *             Project = project.Apply(project => project.ProjectId),
+ *             Role = "roles/iam.serviceAccountShortTermTokenMinter",
+ *             Member = project.Apply(project => $"serviceAccount:service-{project.Number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com"),
+ *         });
+ *         var myDataset = new Gcp.BigQuery.Dataset("myDataset", new Gcp.BigQuery.DatasetArgs
+ *         {
+ *             DatasetId = "my_dataset",
+ *             FriendlyName = "foo",
+ *             Description = "bar",
+ *             Location = "asia-northeast1",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 permissions,
+ *             },
+ *         });
+ *         var queryConfig = new Gcp.BigQuery.DataTransferConfig("queryConfig", new Gcp.BigQuery.DataTransferConfigArgs
+ *         {
+ *             DisplayName = "my-query",
+ *             Location = "asia-northeast1",
+ *             DataSourceId = "scheduled_query",
+ *             Schedule = "first sunday of quarter 00:00",
+ *             DestinationDatasetId = myDataset.DatasetId,
+ *             Params = 
+ *             {
+ *                 { "destination_table_name_template", "my_table" },
+ *                 { "write_disposition", "WRITE_APPEND" },
+ *                 { "query", "SELECT name FROM tabl WHERE x = 'y'" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 permissions,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigquery"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		permissions, err := projects.NewIAMMember(ctx, "permissions", &projects.IAMMemberArgs{
+ * 			Project: pulumi.String(project.ProjectId),
+ * 			Role:    pulumi.String("roles/iam.serviceAccountShortTermTokenMinter"),
+ * 			Member:  pulumi.String(fmt.Sprintf("%v%v%v", "serviceAccount:service-", project.Number, "@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		myDataset, err := bigquery.NewDataset(ctx, "myDataset", &bigquery.DatasetArgs{
+ * 			DatasetId:    pulumi.String("my_dataset"),
+ * 			FriendlyName: pulumi.String("foo"),
+ * 			Description:  pulumi.String("bar"),
+ * 			Location:     pulumi.String("asia-northeast1"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			permissions,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = bigquery.NewDataTransferConfig(ctx, "queryConfig", &bigquery.DataTransferConfigArgs{
+ * 			DisplayName:          pulumi.String("my-query"),
+ * 			Location:             pulumi.String("asia-northeast1"),
+ * 			DataSourceId:         pulumi.String("scheduled_query"),
+ * 			Schedule:             pulumi.String("first sunday of quarter 00:00"),
+ * 			DestinationDatasetId: myDataset.DatasetId,
+ * 			Params: pulumi.StringMap{
+ * 				"destination_table_name_template": pulumi.String("my_table"),
+ * 				"write_disposition":               pulumi.String("WRITE_APPEND"),
+ * 				"query":                           pulumi.String("SELECT name FROM tabl WHERE x = 'y'"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			permissions,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,6 +220,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigquery/dataTransferConfig:DataTransferConfig default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:bigquery/dataTransferConfig:DataTransferConfig")
 public class DataTransferConfig extends io.pulumi.resources.CustomResource {

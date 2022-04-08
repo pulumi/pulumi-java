@@ -15,7 +15,7 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
     public static final TriggerTransportPubsubArgs Empty = new TriggerTransportPubsubArgs();
 
     /**
-     * - 
+     * -
      * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
      * 
      */

@@ -20,9 +20,11 @@ import javax.annotation.Nullable;
 /**
  * A Cloud AI Platform Notebook runtime.
  * 
+ * 
  * > **Note:** Due to limitations of the Notebooks Runtime API, many fields
  * in this resource do not properly detect drift. These fields will also not
  * appear in state once imported.
+ * 
  * 
  * To get more information about Runtime, see:
  * 
@@ -30,7 +32,445 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Notebook Runtime Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const runtime = new gcp.notebooks.Runtime("runtime", {
+ *     accessConfig: {
+ *         accessType: "SINGLE_USER",
+ *         runtimeOwner: "admin@hashicorptest.com",
+ *     },
+ *     location: "us-central1",
+ *     virtualMachine: {
+ *         virtualMachineConfig: {
+ *             dataDisk: {
+ *                 initializeParams: {
+ *                     diskSizeGb: 100,
+ *                     diskType: "PD_STANDARD",
+ *                 },
+ *             },
+ *             machineType: "n1-standard-4",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * runtime = gcp.notebooks.Runtime("runtime",
+ *     access_config=gcp.notebooks.RuntimeAccessConfigArgs(
+ *         access_type="SINGLE_USER",
+ *         runtime_owner="admin@hashicorptest.com",
+ *     ),
+ *     location="us-central1",
+ *     virtual_machine=gcp.notebooks.RuntimeVirtualMachineArgs(
+ *         virtual_machine_config=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigArgs(
+ *             data_disk=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs(
+ *                 initialize_params=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(
+ *                     disk_size_gb=100,
+ *                     disk_type="PD_STANDARD",
+ *                 ),
+ *             ),
+ *             machine_type="n1-standard-4",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var runtime = new Gcp.Notebooks.Runtime("runtime", new Gcp.Notebooks.RuntimeArgs
+ *         {
+ *             AccessConfig = new Gcp.Notebooks.Inputs.RuntimeAccessConfigArgs
+ *             {
+ *                 AccessType = "SINGLE_USER",
+ *                 RuntimeOwner = "admin@hashicorptest.com",
+ *             },
+ *             Location = "us-central1",
+ *             VirtualMachine = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineArgs
+ *             {
+ *                 VirtualMachineConfig = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigArgs
+ *                 {
+ *                     DataDisk = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs
+ *                     {
+ *                         InitializeParams = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs
+ *                         {
+ *                             DiskSizeGb = 100,
+ *                             DiskType = "PD_STANDARD",
+ *                         },
+ *                     },
+ *                     MachineType = "n1-standard-4",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/notebooks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := notebooks.NewRuntime(ctx, "runtime", &notebooks.RuntimeArgs{
+ * 			AccessConfig: &notebooks.RuntimeAccessConfigArgs{
+ * 				AccessType:   pulumi.String("SINGLE_USER"),
+ * 				RuntimeOwner: pulumi.String("admin@hashicorptest.com"),
+ * 			},
+ * 			Location: pulumi.String("us-central1"),
+ * 			VirtualMachine: &notebooks.RuntimeVirtualMachineArgs{
+ * 				VirtualMachineConfig: &notebooks.RuntimeVirtualMachineVirtualMachineConfigArgs{
+ * 					DataDisk: &notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs{
+ * 						InitializeParams: &notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs{
+ * 							DiskSizeGb: pulumi.Int(100),
+ * 							DiskType:   pulumi.String("PD_STANDARD"),
+ * 						},
+ * 					},
+ * 					MachineType: pulumi.String("n1-standard-4"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Notebook Runtime Basic Gpu
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const runtimeGpu = new gcp.notebooks.Runtime("runtime_gpu", {
+ *     accessConfig: {
+ *         accessType: "SINGLE_USER",
+ *         runtimeOwner: "admin@hashicorptest.com",
+ *     },
+ *     location: "us-central1",
+ *     softwareConfig: {
+ *         installGpuDriver: true,
+ *     },
+ *     virtualMachine: {
+ *         virtualMachineConfig: {
+ *             acceleratorConfig: {
+ *                 coreCount: 1,
+ *                 type: "NVIDIA_TESLA_V100",
+ *             },
+ *             dataDisk: {
+ *                 initializeParams: {
+ *                     diskSizeGb: 100,
+ *                     diskType: "PD_STANDARD",
+ *                 },
+ *             },
+ *             machineType: "n1-standard-4",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * runtime_gpu = gcp.notebooks.Runtime("runtimeGpu",
+ *     access_config=gcp.notebooks.RuntimeAccessConfigArgs(
+ *         access_type="SINGLE_USER",
+ *         runtime_owner="admin@hashicorptest.com",
+ *     ),
+ *     location="us-central1",
+ *     software_config=gcp.notebooks.RuntimeSoftwareConfigArgs(
+ *         install_gpu_driver=True,
+ *     ),
+ *     virtual_machine=gcp.notebooks.RuntimeVirtualMachineArgs(
+ *         virtual_machine_config=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigArgs(
+ *             accelerator_config=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs(
+ *                 core_count=1,
+ *                 type="NVIDIA_TESLA_V100",
+ *             ),
+ *             data_disk=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs(
+ *                 initialize_params=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(
+ *                     disk_size_gb=100,
+ *                     disk_type="PD_STANDARD",
+ *                 ),
+ *             ),
+ *             machine_type="n1-standard-4",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var runtimeGpu = new Gcp.Notebooks.Runtime("runtimeGpu", new Gcp.Notebooks.RuntimeArgs
+ *         {
+ *             AccessConfig = new Gcp.Notebooks.Inputs.RuntimeAccessConfigArgs
+ *             {
+ *                 AccessType = "SINGLE_USER",
+ *                 RuntimeOwner = "admin@hashicorptest.com",
+ *             },
+ *             Location = "us-central1",
+ *             SoftwareConfig = new Gcp.Notebooks.Inputs.RuntimeSoftwareConfigArgs
+ *             {
+ *                 InstallGpuDriver = true,
+ *             },
+ *             VirtualMachine = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineArgs
+ *             {
+ *                 VirtualMachineConfig = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigArgs
+ *                 {
+ *                     AcceleratorConfig = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs
+ *                     {
+ *                         CoreCount = 1,
+ *                         Type = "NVIDIA_TESLA_V100",
+ *                     },
+ *                     DataDisk = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs
+ *                     {
+ *                         InitializeParams = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs
+ *                         {
+ *                             DiskSizeGb = 100,
+ *                             DiskType = "PD_STANDARD",
+ *                         },
+ *                     },
+ *                     MachineType = "n1-standard-4",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/notebooks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := notebooks.NewRuntime(ctx, "runtimeGpu", &notebooks.RuntimeArgs{
+ * 			AccessConfig: &notebooks.RuntimeAccessConfigArgs{
+ * 				AccessType:   pulumi.String("SINGLE_USER"),
+ * 				RuntimeOwner: pulumi.String("admin@hashicorptest.com"),
+ * 			},
+ * 			Location: pulumi.String("us-central1"),
+ * 			SoftwareConfig: &notebooks.RuntimeSoftwareConfigArgs{
+ * 				InstallGpuDriver: pulumi.Bool(true),
+ * 			},
+ * 			VirtualMachine: &notebooks.RuntimeVirtualMachineArgs{
+ * 				VirtualMachineConfig: &notebooks.RuntimeVirtualMachineVirtualMachineConfigArgs{
+ * 					AcceleratorConfig: &notebooks.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs{
+ * 						CoreCount: pulumi.Int(1),
+ * 						Type:      pulumi.String("NVIDIA_TESLA_V100"),
+ * 					},
+ * 					DataDisk: &notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs{
+ * 						InitializeParams: &notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs{
+ * 							DiskSizeGb: pulumi.Int(100),
+ * 							DiskType:   pulumi.String("PD_STANDARD"),
+ * 						},
+ * 					},
+ * 					MachineType: pulumi.String("n1-standard-4"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Notebook Runtime Basic Container
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const runtimeContainer = new gcp.notebooks.Runtime("runtime_container", {
+ *     accessConfig: {
+ *         accessType: "SINGLE_USER",
+ *         runtimeOwner: "admin@hashicorptest.com",
+ *     },
+ *     location: "us-central1",
+ *     virtualMachine: {
+ *         virtualMachineConfig: {
+ *             containerImages: [
+ *                 {
+ *                     repository: "gcr.io/deeplearning-platform-release/base-cpu",
+ *                     tag: "latest",
+ *                 },
+ *                 {
+ *                     repository: "gcr.io/deeplearning-platform-release/beam-notebooks",
+ *                     tag: "latest",
+ *                 },
+ *             ],
+ *             dataDisk: {
+ *                 initializeParams: {
+ *                     diskSizeGb: 100,
+ *                     diskType: "PD_STANDARD",
+ *                 },
+ *             },
+ *             machineType: "n1-standard-4",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * runtime_container = gcp.notebooks.Runtime("runtimeContainer",
+ *     access_config=gcp.notebooks.RuntimeAccessConfigArgs(
+ *         access_type="SINGLE_USER",
+ *         runtime_owner="admin@hashicorptest.com",
+ *     ),
+ *     location="us-central1",
+ *     virtual_machine=gcp.notebooks.RuntimeVirtualMachineArgs(
+ *         virtual_machine_config=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigArgs(
+ *             container_images=[
+ *                 gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs(
+ *                     repository="gcr.io/deeplearning-platform-release/base-cpu",
+ *                     tag="latest",
+ *                 ),
+ *                 gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs(
+ *                     repository="gcr.io/deeplearning-platform-release/beam-notebooks",
+ *                     tag="latest",
+ *                 ),
+ *             ],
+ *             data_disk=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs(
+ *                 initialize_params=gcp.notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(
+ *                     disk_size_gb=100,
+ *                     disk_type="PD_STANDARD",
+ *                 ),
+ *             ),
+ *             machine_type="n1-standard-4",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var runtimeContainer = new Gcp.Notebooks.Runtime("runtimeContainer", new Gcp.Notebooks.RuntimeArgs
+ *         {
+ *             AccessConfig = new Gcp.Notebooks.Inputs.RuntimeAccessConfigArgs
+ *             {
+ *                 AccessType = "SINGLE_USER",
+ *                 RuntimeOwner = "admin@hashicorptest.com",
+ *             },
+ *             Location = "us-central1",
+ *             VirtualMachine = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineArgs
+ *             {
+ *                 VirtualMachineConfig = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigArgs
+ *                 {
+ *                     ContainerImages = 
+ *                     {
+ *                         new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs
+ *                         {
+ *                             Repository = "gcr.io/deeplearning-platform-release/base-cpu",
+ *                             Tag = "latest",
+ *                         },
+ *                         new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs
+ *                         {
+ *                             Repository = "gcr.io/deeplearning-platform-release/beam-notebooks",
+ *                             Tag = "latest",
+ *                         },
+ *                     },
+ *                     DataDisk = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs
+ *                     {
+ *                         InitializeParams = new Gcp.Notebooks.Inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs
+ *                         {
+ *                             DiskSizeGb = 100,
+ *                             DiskType = "PD_STANDARD",
+ *                         },
+ *                     },
+ *                     MachineType = "n1-standard-4",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/notebooks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := notebooks.NewRuntime(ctx, "runtimeContainer", &notebooks.RuntimeArgs{
+ * 			AccessConfig: &notebooks.RuntimeAccessConfigArgs{
+ * 				AccessType:   pulumi.String("SINGLE_USER"),
+ * 				RuntimeOwner: pulumi.String("admin@hashicorptest.com"),
+ * 			},
+ * 			Location: pulumi.String("us-central1"),
+ * 			VirtualMachine: &notebooks.RuntimeVirtualMachineArgs{
+ * 				VirtualMachineConfig: &notebooks.RuntimeVirtualMachineVirtualMachineConfigArgs{
+ * 					ContainerImages: notebooks.RuntimeVirtualMachineVirtualMachineConfigContainerImageArray{
+ * 						&notebooks.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs{
+ * 							Repository: pulumi.String("gcr.io/deeplearning-platform-release/base-cpu"),
+ * 							Tag:        pulumi.String("latest"),
+ * 						},
+ * 						&notebooks.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs{
+ * 							Repository: pulumi.String("gcr.io/deeplearning-platform-release/beam-notebooks"),
+ * 							Tag:        pulumi.String("latest"),
+ * 						},
+ * 					},
+ * 					DataDisk: &notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs{
+ * 						InitializeParams: &notebooks.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs{
+ * 							DiskSizeGb: pulumi.Int(100),
+ * 							DiskType:   pulumi.String("PD_STANDARD"),
+ * 						},
+ * 					},
+ * 					MachineType: pulumi.String("n1-standard-4"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,14 +480,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:notebooks/runtime:Runtime default projects/{{project}}/locations/{{location}}/runtimes/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:notebooks/runtime:Runtime default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:notebooks/runtime:Runtime default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:notebooks/runtime:Runtime")
 public class Runtime extends io.pulumi.resources.CustomResource {

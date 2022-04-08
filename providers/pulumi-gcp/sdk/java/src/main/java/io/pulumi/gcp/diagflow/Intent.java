@@ -20,13 +20,103 @@ import javax.annotation.Nullable;
  * Represents a Dialogflow intent. Intents convert a number of user expressions or patterns into an action. An action
  * is an extraction of a user command or sentence semantics.
  * 
+ * 
  * To get more information about Intent, see:
  * 
  * * [API documentation](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.intents)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflow Intent Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basicAgent = new gcp.diagflow.Agent("basicAgent", {
+ *     displayName: "example_agent",
+ *     defaultLanguageCode: "en",
+ *     timeZone: "America/New_York",
+ * });
+ * const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-intent"}, {
+ *     dependsOn: [basicAgent],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic_agent = gcp.diagflow.Agent("basicAgent",
+ *     display_name="example_agent",
+ *     default_language_code="en",
+ *     time_zone="America/New_York")
+ * basic_intent = gcp.diagflow.Intent("basicIntent", display_name="basic-intent",
+ * opts=pulumi.ResourceOptions(depends_on=[basic_agent]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicAgent = new Gcp.Diagflow.Agent("basicAgent", new Gcp.Diagflow.AgentArgs
+ *         {
+ *             DisplayName = "example_agent",
+ *             DefaultLanguageCode = "en",
+ *             TimeZone = "America/New_York",
+ *         });
+ *         var basicIntent = new Gcp.Diagflow.Intent("basicIntent", new Gcp.Diagflow.IntentArgs
+ *         {
+ *             DisplayName = "basic-intent",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 basicAgent,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicAgent, err := diagflow.NewAgent(ctx, "basicAgent", &diagflow.AgentArgs{
+ * 			DisplayName:         pulumi.String("example_agent"),
+ * 			DefaultLanguageCode: pulumi.String("en"),
+ * 			TimeZone:            pulumi.String("America/New_York"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = diagflow.NewIntent(ctx, "basicIntent", &diagflow.IntentArgs{
+ * 			DisplayName: pulumi.String("basic-intent"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			basicAgent,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +126,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/intent:Intent default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/intent:Intent")
 public class Intent extends io.pulumi.resources.CustomResource {
@@ -202,7 +293,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
     /**
      * The priority of this intent. Higher numbers represent higher priorities.
      * - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
-     *   to the Normal priority in the console.
+     * to the Normal priority in the console.
      * - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
@@ -212,7 +303,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
     /**
      * @return The priority of this intent. Higher numbers represent higher priorities.
      * - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
-     *   to the Normal priority in the console.
+     * to the Normal priority in the console.
      * - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
@@ -269,8 +360,8 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Indicates whether webhooks are enabled for the intent.
      * * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
      * * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
-     *   filling prompt is forwarded to the webhook.
-     *   Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
+     * filling prompt is forwarded to the webhook.
+     * Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
      * 
      */
     @Export(name="webhookState", type=String.class, parameters={})
@@ -280,8 +371,8 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * @return Indicates whether webhooks are enabled for the intent.
      * * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
      * * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
-     *   filling prompt is forwarded to the webhook.
-     *   Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
+     * filling prompt is forwarded to the webhook.
+     * Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
      * 
      */
     public Output<String> getWebhookState() {

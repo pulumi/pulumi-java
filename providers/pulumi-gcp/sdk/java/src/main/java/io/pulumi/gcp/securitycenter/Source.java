@@ -18,13 +18,80 @@ import javax.annotation.Nullable;
  * like a container of findings that come from the same scanner, logger,
  * monitor, etc.
  * 
+ * 
  * To get more information about Source, see:
  * 
  * * [API documentation](https://cloud.google.com/security-command-center/docs/reference/rest/v1beta1/organizations.sources)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/security-command-center/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Scc Source Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const customSource = new gcp.securitycenter.Source("custom_source", {
+ *     description: "My custom Cloud Security Command Center Finding Source",
+ *     displayName: "My Source",
+ *     organization: "123456789",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * custom_source = gcp.securitycenter.Source("customSource",
+ *     description="My custom Cloud Security Command Center Finding Source",
+ *     display_name="My Source",
+ *     organization="123456789")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customSource = new Gcp.SecurityCenter.Source("customSource", new Gcp.SecurityCenter.SourceArgs
+ *         {
+ *             Description = "My custom Cloud Security Command Center Finding Source",
+ *             DisplayName = "My Source",
+ *             Organization = "123456789",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/securitycenter"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securitycenter.NewSource(ctx, "customSource", &securitycenter.SourceArgs{
+ * 			Description:  pulumi.String("My custom Cloud Security Command Center Finding Source"),
+ * 			DisplayName:  pulumi.String("My Source"),
+ * 			Organization: pulumi.String("123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,10 +101,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:securitycenter/source:Source default organizations/{{organization}}/sources/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:securitycenter/source:Source default {{organization}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:securitycenter/source:Source")
 public class Source extends io.pulumi.resources.CustomResource {

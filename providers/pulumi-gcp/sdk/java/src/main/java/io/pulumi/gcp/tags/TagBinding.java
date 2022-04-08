@@ -15,13 +15,150 @@ import javax.annotation.Nullable;
 /**
  * A TagBinding represents a connection between a TagValue and a cloud resource (currently project, folder, or organization). Once a TagBinding is created, the TagValue is applied to all the descendants of the cloud resource.
  * 
+ * 
  * To get more information about TagBinding, see:
  * 
  * * [API documentation](https://cloud.google.com/resource-manager/reference/rest/v3/tagBindings)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Tag Binding Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = new gcp.organizations.Project("project", {
+ *     orgId: "123456789",
+ *     projectId: "project_id",
+ * });
+ * const key = new gcp.tags.TagKey("key", {
+ *     description: "For keyname resources.",
+ *     parent: "organizations/123456789",
+ *     shortName: "keyname",
+ * });
+ * const value = new gcp.tags.TagValue("value", {
+ *     description: "For valuename resources.",
+ *     parent: pulumi.interpolate`tagKeys/${key.name}`,
+ *     shortName: "valuename",
+ * });
+ * const binding = new gcp.tags.TagBinding("binding", {
+ *     parent: pulumi.interpolate`//cloudresourcemanager.googleapis.com/projects/${project.number}`,
+ *     tagValue: pulumi.interpolate`tagValues/${value.name}`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.Project("project",
+ *     org_id="123456789",
+ *     project_id="project_id")
+ * key = gcp.tags.TagKey("key",
+ *     description="For keyname resources.",
+ *     parent="organizations/123456789",
+ *     short_name="keyname")
+ * value = gcp.tags.TagValue("value",
+ *     description="For valuename resources.",
+ *     parent=key.name.apply(lambda name: f"tagKeys/{name}"),
+ *     short_name="valuename")
+ * binding = gcp.tags.TagBinding("binding",
+ *     parent=project.number.apply(lambda number: f"//cloudresourcemanager.googleapis.com/projects/{number}"),
+ *     tag_value=value.name.apply(lambda name: f"tagValues/{name}"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = new Gcp.Organizations.Project("project", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             OrgId = "123456789",
+ *             ProjectId = "project_id",
+ *         });
+ *         var key = new Gcp.Tags.TagKey("key", new Gcp.Tags.TagKeyArgs
+ *         {
+ *             Description = "For keyname resources.",
+ *             Parent = "organizations/123456789",
+ *             ShortName = "keyname",
+ *         });
+ *         var @value = new Gcp.Tags.TagValue("value", new Gcp.Tags.TagValueArgs
+ *         {
+ *             Description = "For valuename resources.",
+ *             Parent = key.Name.Apply(name => $"tagKeys/{name}"),
+ *             ShortName = "valuename",
+ *         });
+ *         var binding = new Gcp.Tags.TagBinding("binding", new Gcp.Tags.TagBindingArgs
+ *         {
+ *             Parent = project.Number.Apply(number => $"//cloudresourcemanager.googleapis.com/projects/{number}"),
+ *             TagValue = @value.Name.Apply(name => $"tagValues/{name}"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/tags"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.NewProject(ctx, "project", &organizations.ProjectArgs{
+ * 			OrgId:     pulumi.String("123456789"),
+ * 			ProjectId: pulumi.String("project_id"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		key, err := tags.NewTagKey(ctx, "key", &tags.TagKeyArgs{
+ * 			Description: pulumi.String("For keyname resources."),
+ * 			Parent:      pulumi.String("organizations/123456789"),
+ * 			ShortName:   pulumi.String("keyname"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		value, err := tags.NewTagValue(ctx, "value", &tags.TagValueArgs{
+ * 			Description: pulumi.String("For valuename resources."),
+ * 			Parent: key.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "tagKeys/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			ShortName: pulumi.String("valuename"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = tags.NewTagBinding(ctx, "binding", &tags.TagBindingArgs{
+ * 			Parent: project.Number.ApplyT(func(number string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "//cloudresourcemanager.googleapis.com/projects/", number), nil
+ * 			}).(pulumi.StringOutput),
+ * 			TagValue: value.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "tagValues/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +168,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:tags/tagBinding:TagBinding default tagBindings/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:tags/tagBinding:TagBinding default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:tags/tagBinding:TagBinding")
 public class TagBinding extends io.pulumi.resources.CustomResource {

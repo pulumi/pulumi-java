@@ -19,9 +19,9 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceGetArgs ext
      * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
      * * `locations/{location}/clusters/{cluster_id}`
      * * `{cluster_id}`
-     *   If project and location are not specified, the project and location of the
-     *   GameServerCluster resource are used to generate the full name of the
-     *   GKE cluster.
+     * If project and location are not specified, the project and location of the
+     * GameServerCluster resource are used to generate the full name of the
+     * GKE cluster.
      * 
      */
     @Import(name="cluster", required=true)

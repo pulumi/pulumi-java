@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * accessed programmatically or through the api explorer at  https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list .
  * This provides the channel type and all of the required labels that must be passed.
  * 
+ * 
  * To get more information about NotificationChannel, see:
  * 
  * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels)
@@ -40,7 +41,168 @@ import javax.annotation.Nullable;
  *     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
  *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Notification Channel Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.monitoring.NotificationChannel("basic", {
+ *     displayName: "Test Notification Channel",
+ *     labels: {
+ *         email_address: "fake_email@blahblah.com",
+ *     },
+ *     type: "email",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.monitoring.NotificationChannel("basic",
+ *     display_name="Test Notification Channel",
+ *     labels={
+ *         "email_address": "fake_email@blahblah.com",
+ *     },
+ *     type="email")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.Monitoring.NotificationChannel("basic", new Gcp.Monitoring.NotificationChannelArgs
+ *         {
+ *             DisplayName = "Test Notification Channel",
+ *             Labels = 
+ *             {
+ *                 { "email_address", "fake_email@blahblah.com" },
+ *             },
+ *             Type = "email",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewNotificationChannel(ctx, "basic", &monitoring.NotificationChannelArgs{
+ * 			DisplayName: pulumi.String("Test Notification Channel"),
+ * 			Labels: pulumi.StringMap{
+ * 				"email_address": pulumi.String("fake_email@blahblah.com"),
+ * 			},
+ * 			Type: pulumi.String("email"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Notification Channel Sensitive
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultNotificationChannel = new gcp.monitoring.NotificationChannel("default", {
+ *     displayName: "Test Slack Channel",
+ *     labels: {
+ *         channel_name: "#foobar",
+ *     },
+ *     sensitiveLabels: {
+ *         authToken: "one",
+ *     },
+ *     type: "slack",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.monitoring.NotificationChannel("default",
+ *     display_name="Test Slack Channel",
+ *     labels={
+ *         "channel_name": "#foobar",
+ *     },
+ *     sensitive_labels=gcp.monitoring.NotificationChannelSensitiveLabelsArgs(
+ *         auth_token="one",
+ *     ),
+ *     type="slack")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Monitoring.NotificationChannel("default", new Gcp.Monitoring.NotificationChannelArgs
+ *         {
+ *             DisplayName = "Test Slack Channel",
+ *             Labels = 
+ *             {
+ *                 { "channel_name", "#foobar" },
+ *             },
+ *             SensitiveLabels = new Gcp.Monitoring.Inputs.NotificationChannelSensitiveLabelsArgs
+ *             {
+ *                 AuthToken = "one",
+ *             },
+ *             Type = "slack",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewNotificationChannel(ctx, "default", &monitoring.NotificationChannelArgs{
+ * 			DisplayName: pulumi.String("Test Slack Channel"),
+ * 			Labels: pulumi.StringMap{
+ * 				"channel_name": pulumi.String("#foobar"),
+ * 			},
+ * 			SensitiveLabels: &monitoring.NotificationChannelSensitiveLabelsArgs{
+ * 				AuthToken: pulumi.String("one"),
+ * 			},
+ * 			Type: pulumi.String("slack"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -50,6 +212,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:monitoring/notificationChannel:NotificationChannel default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:monitoring/notificationChannel:NotificationChannel")
 public class NotificationChannel extends io.pulumi.resources.CustomResource {

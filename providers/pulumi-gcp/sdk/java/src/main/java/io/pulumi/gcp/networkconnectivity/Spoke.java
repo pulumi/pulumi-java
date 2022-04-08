@@ -19,7 +19,268 @@ import javax.annotation.Nullable;
 /**
  * The NetworkConnectivity Spoke resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Router_appliance
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
+ * const subnetwork = new gcp.compute.Subnetwork("subnetwork", {
+ *     ipCidrRange: "10.0.0.0/28",
+ *     region: "us-west1",
+ *     network: network.selfLink,
+ * });
+ * const instance = new gcp.compute.Instance("instance", {
+ *     machineType: "e2-medium",
+ *     canIpForward: true,
+ *     zone: "us-west1-a",
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: "projects/debian-cloud/global/images/debian-10-buster-v20210817",
+ *         },
+ *     },
+ *     networkInterfaces: [{
+ *         subnetwork: subnetwork.name,
+ *         networkIp: "10.0.0.2",
+ *         accessConfigs: [{
+ *             networkTier: "PREMIUM",
+ *         }],
+ *     }],
+ * });
+ * const basicHub = new gcp.networkconnectivity.Hub("basicHub", {
+ *     description: "A sample hub",
+ *     labels: {
+ *         "label-two": "value-one",
+ *     },
+ * });
+ * const primary = new gcp.networkconnectivity.Spoke("primary", {
+ *     location: "us-west1",
+ *     description: "A sample spoke with a linked routher appliance instance",
+ *     labels: {
+ *         "label-one": "value-one",
+ *     },
+ *     hub: basicHub.id,
+ *     linkedRouterApplianceInstances: {
+ *         instances: [{
+ *             virtualMachine: instance.selfLink,
+ *             ipAddress: "10.0.0.2",
+ *         }],
+ *         siteToSiteDataTransfer: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * network = gcp.compute.Network("network", auto_create_subnetworks=False)
+ * subnetwork = gcp.compute.Subnetwork("subnetwork",
+ *     ip_cidr_range="10.0.0.0/28",
+ *     region="us-west1",
+ *     network=network.self_link)
+ * instance = gcp.compute.Instance("instance",
+ *     machine_type="e2-medium",
+ *     can_ip_forward=True,
+ *     zone="us-west1-a",
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image="projects/debian-cloud/global/images/debian-10-buster-v20210817",
+ *         ),
+ *     ),
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         subnetwork=subnetwork.name,
+ *         network_ip="10.0.0.2",
+ *         access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs(
+ *             network_tier="PREMIUM",
+ *         )],
+ *     )])
+ * basic_hub = gcp.networkconnectivity.Hub("basicHub",
+ *     description="A sample hub",
+ *     labels={
+ *         "label-two": "value-one",
+ *     })
+ * primary = gcp.networkconnectivity.Spoke("primary",
+ *     location="us-west1",
+ *     description="A sample spoke with a linked routher appliance instance",
+ *     labels={
+ *         "label-one": "value-one",
+ *     },
+ *     hub=basic_hub.id,
+ *     linked_router_appliance_instances=gcp.networkconnectivity.SpokeLinkedRouterApplianceInstancesArgs(
+ *         instances=[gcp.networkconnectivity.SpokeLinkedRouterApplianceInstancesInstanceArgs(
+ *             virtual_machine=instance.self_link,
+ *             ip_address="10.0.0.2",
+ *         )],
+ *         site_to_site_data_transfer=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var subnetwork = new Gcp.Compute.Subnetwork("subnetwork", new Gcp.Compute.SubnetworkArgs
+ *         {
+ *             IpCidrRange = "10.0.0.0/28",
+ *             Region = "us-west1",
+ *             Network = network.SelfLink,
+ *         });
+ *         var instance = new Gcp.Compute.Instance("instance", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             CanIpForward = true,
+ *             Zone = "us-west1-a",
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = "projects/debian-cloud/global/images/debian-10-buster-v20210817",
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Subnetwork = subnetwork.Name,
+ *                     NetworkIp = "10.0.0.2",
+ *                     AccessConfigs = 
+ *                     {
+ *                         new Gcp.Compute.Inputs.InstanceNetworkInterfaceAccessConfigArgs
+ *                         {
+ *                             NetworkTier = "PREMIUM",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var basicHub = new Gcp.NetworkConnectivity.Hub("basicHub", new Gcp.NetworkConnectivity.HubArgs
+ *         {
+ *             Description = "A sample hub",
+ *             Labels = 
+ *             {
+ *                 { "label-two", "value-one" },
+ *             },
+ *         });
+ *         var primary = new Gcp.NetworkConnectivity.Spoke("primary", new Gcp.NetworkConnectivity.SpokeArgs
+ *         {
+ *             Location = "us-west1",
+ *             Description = "A sample spoke with a linked routher appliance instance",
+ *             Labels = 
+ *             {
+ *                 { "label-one", "value-one" },
+ *             },
+ *             Hub = basicHub.Id,
+ *             LinkedRouterApplianceInstances = new Gcp.NetworkConnectivity.Inputs.SpokeLinkedRouterApplianceInstancesArgs
+ *             {
+ *                 Instances = 
+ *                 {
+ *                     new Gcp.NetworkConnectivity.Inputs.SpokeLinkedRouterApplianceInstancesInstanceArgs
+ *                     {
+ *                         VirtualMachine = instance.SelfLink,
+ *                         IpAddress = "10.0.0.2",
+ *                     },
+ *                 },
+ *                 SiteToSiteDataTransfer = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/networkconnectivity"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subnetwork, err := compute.NewSubnetwork(ctx, "subnetwork", &compute.SubnetworkArgs{
+ * 			IpCidrRange: pulumi.String("10.0.0.0/28"),
+ * 			Region:      pulumi.String("us-west1"),
+ * 			Network:     network.SelfLink,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		instance, err := compute.NewInstance(ctx, "instance", &compute.InstanceArgs{
+ * 			MachineType:  pulumi.String("e2-medium"),
+ * 			CanIpForward: pulumi.Bool(true),
+ * 			Zone:         pulumi.String("us-west1-a"),
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String("projects/debian-cloud/global/images/debian-10-buster-v20210817"),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Subnetwork: subnetwork.Name,
+ * 					NetworkIp:  pulumi.String("10.0.0.2"),
+ * 					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+ * 						&compute.InstanceNetworkInterfaceAccessConfigArgs{
+ * 							NetworkTier: pulumi.String("PREMIUM"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		basicHub, err := networkconnectivity.NewHub(ctx, "basicHub", &networkconnectivity.HubArgs{
+ * 			Description: pulumi.String("A sample hub"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label-two": pulumi.String("value-one"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = networkconnectivity.NewSpoke(ctx, "primary", &networkconnectivity.SpokeArgs{
+ * 			Location:    pulumi.String("us-west1"),
+ * 			Description: pulumi.String("A sample spoke with a linked routher appliance instance"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label-one": pulumi.String("value-one"),
+ * 			},
+ * 			Hub: basicHub.ID(),
+ * 			LinkedRouterApplianceInstances: &networkconnectivity.SpokeLinkedRouterApplianceInstancesArgs{
+ * 				Instances: networkconnectivity.SpokeLinkedRouterApplianceInstancesInstanceArray{
+ * 					&networkconnectivity.SpokeLinkedRouterApplianceInstancesInstanceArgs{
+ * 						VirtualMachine: instance.SelfLink,
+ * 						IpAddress:      pulumi.String("10.0.0.2"),
+ * 					},
+ * 				},
+ * 				SiteToSiteDataTransfer: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,14 +290,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:networkconnectivity/spoke:Spoke default projects/{{project}}/locations/{{location}}/spokes/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:networkconnectivity/spoke:Spoke default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:networkconnectivity/spoke:Spoke default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:networkconnectivity/spoke:Spoke")
 public class Spoke extends io.pulumi.resources.CustomResource {

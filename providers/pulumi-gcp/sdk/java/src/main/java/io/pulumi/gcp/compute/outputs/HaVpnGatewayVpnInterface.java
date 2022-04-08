@@ -28,7 +28,7 @@ public final class HaVpnGatewayVpnInterface {
      */
     private final @Nullable String interconnectAttachment;
     /**
-     * - 
+     * -
      * The external IP address for this VPN gateway interface.
      * 
      */
@@ -64,7 +64,7 @@ public final class HaVpnGatewayVpnInterface {
         return Optional.ofNullable(this.interconnectAttachment);
     }
     /**
-     * - 
+     * -
      * The external IP address for this VPN gateway interface.
      * 
     */

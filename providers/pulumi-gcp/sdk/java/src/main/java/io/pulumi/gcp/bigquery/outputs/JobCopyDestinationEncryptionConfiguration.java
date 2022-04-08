@@ -18,7 +18,7 @@ public final class JobCopyDestinationEncryptionConfiguration {
      */
     private final String kmsKeyName;
     /**
-     * - 
+     * -
      * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
      * 
      */
@@ -41,7 +41,7 @@ public final class JobCopyDestinationEncryptionConfiguration {
         return this.kmsKeyName;
     }
     /**
-     * - 
+     * -
      * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
      * 
     */

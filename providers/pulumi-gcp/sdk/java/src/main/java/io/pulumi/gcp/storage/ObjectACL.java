@@ -19,19 +19,128 @@ import javax.annotation.Nullable;
  * acl to the `private` [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl).
  * 
  * For more information see
- * [the official documentation](https://cloud.google.com/storage/docs/access-control/lists)
- * and
+ * [the official documentation](https://cloud.google.com/storage/docs/access-control/lists) 
+ * and 
  * [API](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls).
  * 
  * > Want fine-grained control over object ACLs? Use `gcp.storage.ObjectAccessControl` to control individual
  * role entity pairs.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Create an object ACL with one owner and one reader.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const image_store = new gcp.storage.Bucket("image-store", {location: "EU"});
+ * const image = new gcp.storage.BucketObject("image", {
+ *     bucket: image_store.name,
+ *     source: new pulumi.asset.FileAsset("image1.jpg"),
+ * });
+ * const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
+ *     bucket: image_store.name,
+ *     object: image.outputName,
+ *     roleEntities: [
+ *         "OWNER:user-my.email@gmail.com",
+ *         "READER:group-mygroup",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * image_store = gcp.storage.Bucket("image-store", location="EU")
+ * image = gcp.storage.BucketObject("image",
+ *     bucket=image_store.name,
+ *     source=pulumi.FileAsset("image1.jpg"))
+ * image_store_acl = gcp.storage.ObjectACL("image-store-acl",
+ *     bucket=image_store.name,
+ *     object=image.output_name,
+ *     role_entities=[
+ *         "OWNER:user-my.email@gmail.com",
+ *         "READER:group-mygroup",
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image_store = new Gcp.Storage.Bucket("image-store", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "EU",
+ *         });
+ *         var image = new Gcp.Storage.BucketObject("image", new Gcp.Storage.BucketObjectArgs
+ *         {
+ *             Bucket = image_store.Name,
+ *             Source = new FileAsset("image1.jpg"),
+ *         });
+ *         var image_store_acl = new Gcp.Storage.ObjectACL("image-store-acl", new Gcp.Storage.ObjectACLArgs
+ *         {
+ *             Bucket = image_store.Name,
+ *             Object = image.OutputName,
+ *             RoleEntities = 
+ *             {
+ *                 "OWNER:user-my.email@gmail.com",
+ *                 "READER:group-mygroup",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBucket(ctx, "image-store", &storage.BucketArgs{
+ * 			Location: pulumi.String("EU"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		image, err := storage.NewBucketObject(ctx, "image", &storage.BucketObjectArgs{
+ * 			Bucket: image_store.Name,
+ * 			Source: pulumi.NewFileAsset("image1.jpg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storage.NewObjectACL(ctx, "image-store-acl", &storage.ObjectACLArgs{
+ * 			Bucket: image_store.Name,
+ * 			Object: image.OutputName,
+ * 			RoleEntities: pulumi.StringArray{
+ * 				pulumi.String("OWNER:user-my.email@gmail.com"),
+ * 				pulumi.String("READER:group-mygroup"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:storage/objectACL:ObjectACL")
 public class ObjectACL extends io.pulumi.resources.CustomResource {

@@ -55,9 +55,9 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Indicates the kind of entity type.
      * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
      * * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
-     *   types can contain references to other entity types (with or without aliases).
+     * types can contain references to other entity types (with or without aliases).
      * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
-     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
     @Import(name="kind")

@@ -20,7 +20,296 @@ import javax.annotation.Nullable;
  * 
  * > This resource is not currently public, and requires allow-listing of projects prior to use.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const pool = new gcp.cloudbuild.WorkerPool("pool", {
+ *     location: "europe-west1",
+ *     workerConfig: {
+ *         diskSizeGb: 100,
+ *         machineType: "e2-standard-4",
+ *         noExternalIp: false,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * pool = gcp.cloudbuild.WorkerPool("pool",
+ *     location="europe-west1",
+ *     worker_config=gcp.cloudbuild.WorkerPoolWorkerConfigArgs(
+ *         disk_size_gb=100,
+ *         machine_type="e2-standard-4",
+ *         no_external_ip=False,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pool = new Gcp.CloudBuild.WorkerPool("pool", new Gcp.CloudBuild.WorkerPoolArgs
+ *         {
+ *             Location = "europe-west1",
+ *             WorkerConfig = new Gcp.CloudBuild.Inputs.WorkerPoolWorkerConfigArgs
+ *             {
+ *                 DiskSizeGb = 100,
+ *                 MachineType = "e2-standard-4",
+ *                 NoExternalIp = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudbuild"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudbuild.NewWorkerPool(ctx, "pool", &cloudbuild.WorkerPoolArgs{
+ * 			Location: pulumi.String("europe-west1"),
+ * 			WorkerConfig: &cloudbuild.WorkerPoolWorkerConfigArgs{
+ * 				DiskSizeGb:   pulumi.Int(100),
+ * 				MachineType:  pulumi.String("e2-standard-4"),
+ * 				NoExternalIp: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Network Config
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const servicenetworking = new gcp.projects.Service("servicenetworking", {
+ *     service: "servicenetworking.googleapis.com",
+ *     disableOnDestroy: false,
+ * });
+ * const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+ *     dependsOn: [servicenetworking],
+ * });
+ * const workerRange = new gcp.compute.GlobalAddress("workerRange", {
+ *     purpose: "VPC_PEERING",
+ *     addressType: "INTERNAL",
+ *     prefixLength: 16,
+ *     network: network.id,
+ * });
+ * const workerPoolConn = new gcp.servicenetworking.Connection("workerPoolConn", {
+ *     network: network.id,
+ *     service: "servicenetworking.googleapis.com",
+ *     reservedPeeringRanges: [workerRange.name],
+ * }, {
+ *     dependsOn: [servicenetworking],
+ * });
+ * const pool = new gcp.cloudbuild.WorkerPool("pool", {
+ *     location: "europe-west1",
+ *     workerConfig: {
+ *         diskSizeGb: 100,
+ *         machineType: "e2-standard-4",
+ *         noExternalIp: false,
+ *     },
+ *     networkConfig: {
+ *         peeredNetwork: network.id,
+ *     },
+ * }, {
+ *     dependsOn: [workerPoolConn],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * servicenetworking = gcp.projects.Service("servicenetworking",
+ *     service="servicenetworking.googleapis.com",
+ *     disable_on_destroy=False)
+ * network = gcp.compute.Network("network", auto_create_subnetworks=False,
+ * opts=pulumi.ResourceOptions(depends_on=[servicenetworking]))
+ * worker_range = gcp.compute.GlobalAddress("workerRange",
+ *     purpose="VPC_PEERING",
+ *     address_type="INTERNAL",
+ *     prefix_length=16,
+ *     network=network.id)
+ * worker_pool_conn = gcp.servicenetworking.Connection("workerPoolConn",
+ *     network=network.id,
+ *     service="servicenetworking.googleapis.com",
+ *     reserved_peering_ranges=[worker_range.name],
+ *     opts=pulumi.ResourceOptions(depends_on=[servicenetworking]))
+ * pool = gcp.cloudbuild.WorkerPool("pool",
+ *     location="europe-west1",
+ *     worker_config=gcp.cloudbuild.WorkerPoolWorkerConfigArgs(
+ *         disk_size_gb=100,
+ *         machine_type="e2-standard-4",
+ *         no_external_ip=False,
+ *     ),
+ *     network_config=gcp.cloudbuild.WorkerPoolNetworkConfigArgs(
+ *         peered_network=network.id,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[worker_pool_conn]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicenetworking = new Gcp.Projects.Service("servicenetworking", new Gcp.Projects.ServiceArgs
+ *         {
+ *             Service = "servicenetworking.googleapis.com",
+ *             DisableOnDestroy = false,
+ *         });
+ *         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 servicenetworking,
+ *             },
+ *         });
+ *         var workerRange = new Gcp.Compute.GlobalAddress("workerRange", new Gcp.Compute.GlobalAddressArgs
+ *         {
+ *             Purpose = "VPC_PEERING",
+ *             AddressType = "INTERNAL",
+ *             PrefixLength = 16,
+ *             Network = network.Id,
+ *         });
+ *         var workerPoolConn = new Gcp.ServiceNetworking.Connection("workerPoolConn", new Gcp.ServiceNetworking.ConnectionArgs
+ *         {
+ *             Network = network.Id,
+ *             Service = "servicenetworking.googleapis.com",
+ *             ReservedPeeringRanges = 
+ *             {
+ *                 workerRange.Name,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 servicenetworking,
+ *             },
+ *         });
+ *         var pool = new Gcp.CloudBuild.WorkerPool("pool", new Gcp.CloudBuild.WorkerPoolArgs
+ *         {
+ *             Location = "europe-west1",
+ *             WorkerConfig = new Gcp.CloudBuild.Inputs.WorkerPoolWorkerConfigArgs
+ *             {
+ *                 DiskSizeGb = 100,
+ *                 MachineType = "e2-standard-4",
+ *                 NoExternalIp = false,
+ *             },
+ *             NetworkConfig = new Gcp.CloudBuild.Inputs.WorkerPoolNetworkConfigArgs
+ *             {
+ *                 PeeredNetwork = network.Id,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 workerPoolConn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudbuild"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicenetworking"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		servicenetworking, err := projects.NewService(ctx, "servicenetworking", &projects.ServiceArgs{
+ * 			Service:          pulumi.String("servicenetworking.googleapis.com"),
+ * 			DisableOnDestroy: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			servicenetworking,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		workerRange, err := compute.NewGlobalAddress(ctx, "workerRange", &compute.GlobalAddressArgs{
+ * 			Purpose:      pulumi.String("VPC_PEERING"),
+ * 			AddressType:  pulumi.String("INTERNAL"),
+ * 			PrefixLength: pulumi.Int(16),
+ * 			Network:      network.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		workerPoolConn, err := servicenetworking.NewConnection(ctx, "workerPoolConn", &servicenetworking.ConnectionArgs{
+ * 			Network: network.ID(),
+ * 			Service: pulumi.String("servicenetworking.googleapis.com"),
+ * 			ReservedPeeringRanges: pulumi.StringArray{
+ * 				workerRange.Name,
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			servicenetworking,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudbuild.NewWorkerPool(ctx, "pool", &cloudbuild.WorkerPoolArgs{
+ * 			Location: pulumi.String("europe-west1"),
+ * 			WorkerConfig: &cloudbuild.WorkerPoolWorkerConfigArgs{
+ * 				DiskSizeGb:   pulumi.Int(100),
+ * 				MachineType:  pulumi.String("e2-standard-4"),
+ * 				NoExternalIp: pulumi.Bool(false),
+ * 			},
+ * 			NetworkConfig: &cloudbuild.WorkerPoolNetworkConfigArgs{
+ * 				PeeredNetwork: network.ID(),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			workerPoolConn,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +319,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:cloudbuild/workerPool:WorkerPool default projects/{{project}}/locations/{{location}}/workerPools/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:cloudbuild/workerPool:WorkerPool default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:cloudbuild/workerPool:WorkerPool default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:cloudbuild/workerPool:WorkerPool")
 public class WorkerPool extends io.pulumi.resources.CustomResource {

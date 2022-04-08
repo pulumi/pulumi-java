@@ -33,7 +33,7 @@ public final class DiskDiskEncryptionKey {
      */
     private final @Nullable String rawKey;
     /**
-     * - 
+     * -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 
@@ -80,7 +80,7 @@ public final class DiskDiskEncryptionKey {
         return Optional.ofNullable(this.rawKey);
     }
     /**
-     * - 
+     * -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 

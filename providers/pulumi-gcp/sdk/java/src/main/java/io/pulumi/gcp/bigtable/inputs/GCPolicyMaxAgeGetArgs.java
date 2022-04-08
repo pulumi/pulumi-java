@@ -20,7 +20,6 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
      * 
      * @Deprecated
      * Deprecated in favor of duration
-     * 
      */
     @Deprecated /* Deprecated in favor of duration */
     @Import(name="days")

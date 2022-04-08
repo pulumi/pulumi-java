@@ -18,13 +18,16 @@ import javax.annotation.Nullable;
 /**
  * Describes a Cloud Asset Inventory feed used to to listen to asset updates.
  * 
+ * 
  * To get more information about FolderFeed, see:
  * 
  * * [API documentation](https://cloud.google.com/asset-inventory/docs/reference/rest/)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/asset-inventory/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,10 +37,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:cloudasset/folderFeed:FolderFeed default folders/{{folder_id}}/feeds/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:cloudasset/folderFeed:FolderFeed default {{folder_id}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:cloudasset/folderFeed:FolderFeed")
 public class FolderFeed extends io.pulumi.resources.CustomResource {

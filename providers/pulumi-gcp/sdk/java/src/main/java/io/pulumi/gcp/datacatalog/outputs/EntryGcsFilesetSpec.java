@@ -28,7 +28,7 @@ public final class EntryGcsFilesetSpec {
      */
     private final List<String> filePatterns;
     /**
-     * - 
+     * -
      * Sample files contained in this fileset, not all files contained in this fileset are represented here.
      * Structure is documented below.
      * 
@@ -61,7 +61,7 @@ public final class EntryGcsFilesetSpec {
         return this.filePatterns;
     }
     /**
-     * - 
+     * -
      * Sample files contained in this fileset, not all files contained in this fileset are represented here.
      * Structure is documented below.
      * 

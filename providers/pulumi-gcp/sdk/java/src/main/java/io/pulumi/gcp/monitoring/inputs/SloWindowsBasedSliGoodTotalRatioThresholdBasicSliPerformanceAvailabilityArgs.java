@@ -15,7 +15,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
     public static final SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs Empty = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs();
 
     /**
-     * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
      * 
      */
     @Import(name="enabled")

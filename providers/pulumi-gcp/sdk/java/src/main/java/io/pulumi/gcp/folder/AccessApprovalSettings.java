@@ -18,11 +18,125 @@ import javax.annotation.Nullable;
 /**
  * Access Approval enables you to require your explicit approval whenever Google support and engineering need to access your customer content.
  * 
+ * 
  * To get more information about FolderSettings, see:
  * 
  * * [API documentation](https://cloud.google.com/access-approval/docs/reference/rest/v1/folders)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Folder Access Approval Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myFolder = new gcp.organizations.Folder("myFolder", {
+ *     displayName: "my-folder",
+ *     parent: "organizations/123456789",
+ * });
+ * const folderAccessApproval = new gcp.folder.AccessApprovalSettings("folderAccessApproval", {
+ *     folderId: myFolder.folderId,
+ *     notificationEmails: [
+ *         "testuser@example.com",
+ *         "example.user@example.com",
+ *     ],
+ *     enrolledServices: [{
+ *         cloudProduct: "all",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_folder = gcp.organizations.Folder("myFolder",
+ *     display_name="my-folder",
+ *     parent="organizations/123456789")
+ * folder_access_approval = gcp.folder.AccessApprovalSettings("folderAccessApproval",
+ *     folder_id=my_folder.folder_id,
+ *     notification_emails=[
+ *         "testuser@example.com",
+ *         "example.user@example.com",
+ *     ],
+ *     enrolled_services=[gcp.folder.AccessApprovalSettingsEnrolledServiceArgs(
+ *         cloud_product="all",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myFolder = new Gcp.Organizations.Folder("myFolder", new Gcp.Organizations.FolderArgs
+ *         {
+ *             DisplayName = "my-folder",
+ *             Parent = "organizations/123456789",
+ *         });
+ *         var folderAccessApproval = new Gcp.Folder.AccessApprovalSettings("folderAccessApproval", new Gcp.Folder.AccessApprovalSettingsArgs
+ *         {
+ *             FolderId = myFolder.FolderId,
+ *             NotificationEmails = 
+ *             {
+ *                 "testuser@example.com",
+ *                 "example.user@example.com",
+ *             },
+ *             EnrolledServices = 
+ *             {
+ *                 new Gcp.Folder.Inputs.AccessApprovalSettingsEnrolledServiceArgs
+ *                 {
+ *                     CloudProduct = "all",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/folder"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myFolder, err := organizations.NewFolder(ctx, "myFolder", &organizations.FolderArgs{
+ * 			DisplayName: pulumi.String("my-folder"),
+ * 			Parent:      pulumi.String("organizations/123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = folder.NewAccessApprovalSettings(ctx, "folderAccessApproval", &folder.AccessApprovalSettingsArgs{
+ * 			FolderId: myFolder.FolderId,
+ * 			NotificationEmails: pulumi.StringArray{
+ * 				pulumi.String("testuser@example.com"),
+ * 				pulumi.String("example.user@example.com"),
+ * 			},
+ * 			EnrolledServices: folder.AccessApprovalSettingsEnrolledServiceArray{
+ * 				&folder.AccessApprovalSettingsEnrolledServiceArgs{
+ * 					CloudProduct: pulumi.String("all"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,10 +146,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:folder/accessApprovalSettings:AccessApprovalSettings default folders/{{folder_id}}/accessApprovalSettings
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:folder/accessApprovalSettings:AccessApprovalSettings default {{folder_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:folder/accessApprovalSettings:AccessApprovalSettings")
 public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {

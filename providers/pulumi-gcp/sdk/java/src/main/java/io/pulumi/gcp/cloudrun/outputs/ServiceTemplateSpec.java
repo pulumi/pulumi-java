@@ -40,7 +40,7 @@ public final class ServiceTemplateSpec {
      */
     private final @Nullable String serviceAccountName;
     /**
-     * - 
+     * -
      * ServingState holds a value describing the state the resources
      * are in for this Revision.
      * It is expected
@@ -48,7 +48,6 @@ public final class ServiceTemplateSpec {
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
      */
         @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String servingState;
@@ -111,7 +110,7 @@ public final class ServiceTemplateSpec {
         return Optional.ofNullable(this.serviceAccountName);
     }
     /**
-     * - 
+     * -
      * ServingState holds a value describing the state the resources
      * are in for this Revision.
      * It is expected
@@ -119,7 +118,6 @@ public final class ServiceTemplateSpec {
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
     */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Optional<String> getServingState() {

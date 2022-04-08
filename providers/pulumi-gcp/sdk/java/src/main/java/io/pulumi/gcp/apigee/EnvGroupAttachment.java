@@ -15,13 +15,16 @@ import javax.annotation.Nullable;
 /**
  * An `Environment Group attachment` in Apigee.
  * 
+ * 
  * To get more information about EnvgroupAttachment, see:
  * 
  * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.envgroups.attachments/create)
  * * How-to Guides
  *     * [Creating an environment](https://cloud.google.com/apigee/docs/api-platform/get-started/create-environment)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +34,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:apigee/envGroupAttachment:EnvGroupAttachment default {{envgroup_id}}/attachments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:apigee/envGroupAttachment:EnvGroupAttachment default {{envgroup_id}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:apigee/envGroupAttachment:EnvGroupAttachment")
 public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {

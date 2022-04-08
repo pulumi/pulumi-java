@@ -21,13 +21,157 @@ import javax.annotation.Nullable;
  * A model can have multiple versions, each of which is a deployed, trained model
  * ready to receive prediction requests. The model itself is just a container.
  * 
+ * 
  * To get more information about Model, see:
  * 
  * * [API documentation](https://cloud.google.com/ai-platform/prediction/docs/reference/rest/v1/projects.models)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/ai-platform/prediction/docs/deploying-models)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Ml Model Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultEngineModel = new gcp.ml.EngineModel("default", {
+ *     description: "My model",
+ *     regions: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.ml.EngineModel("default",
+ *     description="My model",
+ *     regions="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
+ *         {
+ *             Description = "My model",
+ *             Regions = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/ml"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ml.NewEngineModel(ctx, "default", &ml.EngineModelArgs{
+ * 			Description: pulumi.String("My model"),
+ * 			Regions:     pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Ml Model Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultEngineModel = new gcp.ml.EngineModel("default", {
+ *     description: "My model",
+ *     labels: {
+ *         my_model: "foo",
+ *     },
+ *     onlinePredictionConsoleLogging: true,
+ *     onlinePredictionLogging: true,
+ *     regions: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.ml.EngineModel("default",
+ *     description="My model",
+ *     labels={
+ *         "my_model": "foo",
+ *     },
+ *     online_prediction_console_logging=True,
+ *     online_prediction_logging=True,
+ *     regions="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
+ *         {
+ *             Description = "My model",
+ *             Labels = 
+ *             {
+ *                 { "my_model", "foo" },
+ *             },
+ *             OnlinePredictionConsoleLogging = true,
+ *             OnlinePredictionLogging = true,
+ *             Regions = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/ml"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ml.NewEngineModel(ctx, "default", &ml.EngineModelArgs{
+ * 			Description: pulumi.String("My model"),
+ * 			Labels: pulumi.StringMap{
+ * 				"my_model": pulumi.String("foo"),
+ * 			},
+ * 			OnlinePredictionConsoleLogging: pulumi.Bool(true),
+ * 			OnlinePredictionLogging:        pulumi.Bool(true),
+ * 			Regions:                        pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,14 +181,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:ml/engineModel:EngineModel default projects/{{project}}/models/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:ml/engineModel:EngineModel default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:ml/engineModel:EngineModel default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:ml/engineModel:EngineModel")
 public class EngineModel extends io.pulumi.resources.CustomResource {

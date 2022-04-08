@@ -32,13 +32,267 @@ import javax.annotation.Nullable;
  * networks except the default network, you must create any firewall rules
  * you need.
  * 
+ * 
  * To get more information about Firewall, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/firewalls)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Firewall Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+ * const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
+ *     network: defaultNetwork.name,
+ *     allows: [
+ *         {
+ *             protocol: "icmp",
+ *         },
+ *         {
+ *             protocol: "tcp",
+ *             ports: [
+ *                 "80",
+ *                 "8080",
+ *                 "1000-2000",
+ *             ],
+ *         },
+ *     ],
+ *     sourceTags: ["web"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_network = gcp.compute.Network("defaultNetwork")
+ * default_firewall = gcp.compute.Firewall("defaultFirewall",
+ *     network=default_network.name,
+ *     allows=[
+ *         gcp.compute.FirewallAllowArgs(
+ *             protocol="icmp",
+ *         ),
+ *         gcp.compute.FirewallAllowArgs(
+ *             protocol="tcp",
+ *             ports=[
+ *                 "80",
+ *                 "8080",
+ *                 "1000-2000",
+ *             ],
+ *         ),
+ *     ],
+ *     source_tags=["web"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *         });
+ *         var defaultFirewall = new Gcp.Compute.Firewall("defaultFirewall", new Gcp.Compute.FirewallArgs
+ *         {
+ *             Network = defaultNetwork.Name,
+ *             Allows = 
+ *             {
+ *                 new Gcp.Compute.Inputs.FirewallAllowArgs
+ *                 {
+ *                     Protocol = "icmp",
+ *                 },
+ *                 new Gcp.Compute.Inputs.FirewallAllowArgs
+ *                 {
+ *                     Protocol = "tcp",
+ *                     Ports = 
+ *                     {
+ *                         "80",
+ *                         "8080",
+ *                         "1000-2000",
+ *                     },
+ *                 },
+ *             },
+ *             SourceTags = 
+ *             {
+ *                 "web",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewFirewall(ctx, "defaultFirewall", &compute.FirewallArgs{
+ * 			Network: defaultNetwork.Name,
+ * 			Allows: compute.FirewallAllowArray{
+ * 				&compute.FirewallAllowArgs{
+ * 					Protocol: pulumi.String("icmp"),
+ * 				},
+ * 				&compute.FirewallAllowArgs{
+ * 					Protocol: pulumi.String("tcp"),
+ * 					Ports: pulumi.StringArray{
+ * 						pulumi.String("80"),
+ * 						pulumi.String("8080"),
+ * 						pulumi.String("1000-2000"),
+ * 					},
+ * 				},
+ * 			},
+ * 			SourceTags: pulumi.StringArray{
+ * 				pulumi.String("web"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Firewall With Target Tags
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const rules = new gcp.compute.Firewall("rules", {
+ *     allows: [{
+ *         ports: [
+ *             "80",
+ *             "8080",
+ *             "1000-2000",
+ *         ],
+ *         protocol: "tcp",
+ *     }],
+ *     description: "Creates firewall rule targeting tagged instances",
+ *     network: "default",
+ *     project: "my-project-name",
+ *     sourceTags: ["foo"],
+ *     targetTags: ["web"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * rules = gcp.compute.Firewall("rules",
+ *     allows=[gcp.compute.FirewallAllowArgs(
+ *         ports=[
+ *             "80",
+ *             "8080",
+ *             "1000-2000",
+ *         ],
+ *         protocol="tcp",
+ *     )],
+ *     description="Creates firewall rule targeting tagged instances",
+ *     network="default",
+ *     project="my-project-name",
+ *     source_tags=["foo"],
+ *     target_tags=["web"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var rules = new Gcp.Compute.Firewall("rules", new Gcp.Compute.FirewallArgs
+ *         {
+ *             Allows = 
+ *             {
+ *                 new Gcp.Compute.Inputs.FirewallAllowArgs
+ *                 {
+ *                     Ports = 
+ *                     {
+ *                         "80",
+ *                         "8080",
+ *                         "1000-2000",
+ *                     },
+ *                     Protocol = "tcp",
+ *                 },
+ *             },
+ *             Description = "Creates firewall rule targeting tagged instances",
+ *             Network = "default",
+ *             Project = "my-project-name",
+ *             SourceTags = 
+ *             {
+ *                 "foo",
+ *             },
+ *             TargetTags = 
+ *             {
+ *                 "web",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewFirewall(ctx, "rules", &compute.FirewallArgs{
+ * 			Allows: compute.FirewallAllowArray{
+ * 				&compute.FirewallAllowArgs{
+ * 					Ports: pulumi.StringArray{
+ * 						pulumi.String("80"),
+ * 						pulumi.String("8080"),
+ * 						pulumi.String("1000-2000"),
+ * 					},
+ * 					Protocol: pulumi.String("tcp"),
+ * 				},
+ * 			},
+ * 			Description: pulumi.String("Creates firewall rule targeting tagged instances"),
+ * 			Network:     pulumi.String("default"),
+ * 			Project:     pulumi.String("my-project-name"),
+ * 			SourceTags: pulumi.StringArray{
+ * 				pulumi.String("foo"),
+ * 			},
+ * 			TargetTags: pulumi.StringArray{
+ * 				pulumi.String("web"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -48,14 +302,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/firewall:Firewall default projects/{{project}}/global/firewalls/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/firewall:Firewall default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/firewall:Firewall default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/firewall:Firewall")
 public class Firewall extends io.pulumi.resources.CustomResource {
@@ -195,7 +454,6 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Deprecated in favor of log_config
-     * 
      */
     @Deprecated /* Deprecated in favor of log_config */
     @Export(name="enableLogging", type=Boolean.class, parameters={})

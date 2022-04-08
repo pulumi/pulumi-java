@@ -18,7 +18,93 @@ import javax.annotation.Nullable;
  * For more information, see:
  * * [Understanding metrics scopes](https://cloud.google.com/monitoring/settings#concept-scope)
  * * [API notes](https://cloud.google.com/monitoring/settings/manage-api)
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic_monitored_project
+ * A basic example of a monitoring monitored project
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.monitoring.MonitoredProject("primary", {metricsScope: "existing-metrics-scope-project"}, {
+ *     provider: google_beta,
+ * });
+ * const basic = new gcp.organizations.Project("basic", {
+ *     projectId: "my-monitored-project",
+ *     orgId: "123456789",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.monitoring.MonitoredProject("primary", metrics_scope="existing-metrics-scope-project",
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * basic = gcp.organizations.Project("basic",
+ *     project_id="my-monitored-project",
+ *     org_id="123456789",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.Monitoring.MonitoredProject("primary", new Gcp.Monitoring.MonitoredProjectArgs
+ *         {
+ *             MetricsScope = "existing-metrics-scope-project",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var basic = new Gcp.Organizations.Project("basic", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             ProjectId = "my-monitored-project",
+ *             OrgId = "123456789",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewMonitoredProject(ctx, "primary", &monitoring.MonitoredProjectArgs{
+ * 			MetricsScope: pulumi.String("existing-metrics-scope-project"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = organizations.NewProject(ctx, "basic", &organizations.ProjectArgs{
+ * 			ProjectId: pulumi.String("my-monitored-project"),
+ * 			OrgId:     pulumi.String("123456789"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,10 +114,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:monitoring/monitoredProject:MonitoredProject default locations/global/metricsScopes/{{metrics_scope}}/projects/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:monitoring/monitoredProject:MonitoredProject default {{metrics_scope}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:monitoring/monitoredProject:MonitoredProject")
 public class MonitoredProject extends io.pulumi.resources.CustomResource {

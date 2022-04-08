@@ -18,6 +18,7 @@ import javax.annotation.Nullable;
 /**
  * A Cloud Spanner Database which is hosted on a Spanner instance.
  * 
+ * 
  * To get more information about Database, see:
  * 
  * * [API documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases)
@@ -26,7 +27,109 @@ import javax.annotation.Nullable;
  * 
  * > **Warning:** It is strongly recommended to set `lifecycle { prevent_destroy = true }` on databases in order to prevent accidental data loss.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Spanner Database Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const main = new gcp.spanner.Instance("main", {
+ *     config: "regional-europe-west1",
+ *     displayName: "main-instance",
+ *     numNodes: 1,
+ * });
+ * const database = new gcp.spanner.Database("database", {
+ *     instance: main.name,
+ *     ddls: [
+ *         "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+ *         "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+ *     ],
+ *     deletionProtection: false,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * main = gcp.spanner.Instance("main",
+ *     config="regional-europe-west1",
+ *     display_name="main-instance",
+ *     num_nodes=1)
+ * database = gcp.spanner.Database("database",
+ *     instance=main.name,
+ *     ddls=[
+ *         "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+ *         "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+ *     ],
+ *     deletion_protection=False)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Gcp.Spanner.Instance("main", new Gcp.Spanner.InstanceArgs
+ *         {
+ *             Config = "regional-europe-west1",
+ *             DisplayName = "main-instance",
+ *             NumNodes = 1,
+ *         });
+ *         var database = new Gcp.Spanner.Database("database", new Gcp.Spanner.DatabaseArgs
+ *         {
+ *             Instance = main.Name,
+ *             Ddls = 
+ *             {
+ *                 "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+ *                 "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+ *             },
+ *             DeletionProtection = false,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/spanner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := spanner.NewInstance(ctx, "main", &spanner.InstanceArgs{
+ * 			Config:      pulumi.String("regional-europe-west1"),
+ * 			DisplayName: pulumi.String("main-instance"),
+ * 			NumNodes:    pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = spanner.NewDatabase(ctx, "database", &spanner.DatabaseArgs{
+ * 			Instance: main.Name,
+ * 			Ddls: pulumi.StringArray{
+ * 				pulumi.String("CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)"),
+ * 				pulumi.String("CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)"),
+ * 			},
+ * 			DeletionProtection: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,18 +139,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:spanner/database:Database default projects/{{project}}/instances/{{instance}}/databases/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:spanner/database:Database default instances/{{instance}}/databases/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:spanner/database:Database default {{project}}/{{instance}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:spanner/database:Database default {{instance}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:spanner/database:Database")
 public class Database extends io.pulumi.resources.CustomResource {

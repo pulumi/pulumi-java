@@ -20,7 +20,95 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are "_Default" and "_Required".
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.organizations.Folder("default", {
+ *     displayName: "some-folder-name",
+ *     parent: "organizations/123456789",
+ * });
+ * const basic = new gcp.logging.FolderBucketConfig("basic", {
+ *     folder: _default.name,
+ *     location: "global",
+ *     retentionDays: 30,
+ *     bucketId: "_Default",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.organizations.Folder("default",
+ *     display_name="some-folder-name",
+ *     parent="organizations/123456789")
+ * basic = gcp.logging.FolderBucketConfig("basic",
+ *     folder=default.name,
+ *     location="global",
+ *     retention_days=30,
+ *     bucket_id="_Default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Organizations.Folder("default", new Gcp.Organizations.FolderArgs
+ *         {
+ *             DisplayName = "some-folder-name",
+ *             Parent = "organizations/123456789",
+ *         });
+ *         var basic = new Gcp.Logging.FolderBucketConfig("basic", new Gcp.Logging.FolderBucketConfigArgs
+ *         {
+ *             Folder = @default.Name,
+ *             Location = "global",
+ *             RetentionDays = 30,
+ *             BucketId = "_Default",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewFolder(ctx, "default", &organizations.FolderArgs{
+ * 			DisplayName: pulumi.String("some-folder-name"),
+ * 			Parent:      pulumi.String("organizations/123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = logging.NewFolderBucketConfig(ctx, "basic", &logging.FolderBucketConfigArgs{
+ * 			Folder:        _default.Name,
+ * 			Location:      pulumi.String("global"),
+ * 			RetentionDays: pulumi.Int(30),
+ * 			BucketId:      pulumi.String("_Default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +118,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/folderBucketConfig:FolderBucketConfig default folders/{{folder}}/locations/{{location}}/buckets/{{bucket_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/folderBucketConfig:FolderBucketConfig")
 public class FolderBucketConfig extends io.pulumi.resources.CustomResource {

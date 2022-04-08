@@ -19,13 +19,247 @@ import javax.annotation.Nullable;
  * An isolated set of Cloud Spanner resources on which databases can be
  * hosted.
  * 
+ * 
  * To get more information about Instance, see:
  * 
  * * [API documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/spanner/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Spanner Instance Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.spanner.Instance("example", {
+ *     config: "regional-us-central1",
+ *     displayName: "Test Spanner Instance",
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ *     numNodes: 2,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.spanner.Instance("example",
+ *     config="regional-us-central1",
+ *     display_name="Test Spanner Instance",
+ *     labels={
+ *         "foo": "bar",
+ *     },
+ *     num_nodes=2)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.Spanner.Instance("example", new Gcp.Spanner.InstanceArgs
+ *         {
+ *             Config = "regional-us-central1",
+ *             DisplayName = "Test Spanner Instance",
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             NumNodes = 2,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/spanner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := spanner.NewInstance(ctx, "example", &spanner.InstanceArgs{
+ * 			Config:      pulumi.String("regional-us-central1"),
+ * 			DisplayName: pulumi.String("Test Spanner Instance"),
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			NumNodes: pulumi.Int(2),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Spanner Instance Processing Units
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.spanner.Instance("example", {
+ *     config: "regional-us-central1",
+ *     displayName: "Test Spanner Instance",
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ *     processingUnits: 200,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.spanner.Instance("example",
+ *     config="regional-us-central1",
+ *     display_name="Test Spanner Instance",
+ *     labels={
+ *         "foo": "bar",
+ *     },
+ *     processing_units=200)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.Spanner.Instance("example", new Gcp.Spanner.InstanceArgs
+ *         {
+ *             Config = "regional-us-central1",
+ *             DisplayName = "Test Spanner Instance",
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             ProcessingUnits = 200,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/spanner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := spanner.NewInstance(ctx, "example", &spanner.InstanceArgs{
+ * 			Config:      pulumi.String("regional-us-central1"),
+ * 			DisplayName: pulumi.String("Test Spanner Instance"),
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			ProcessingUnits: pulumi.Int(200),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Spanner Instance Multi Regional
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.spanner.Instance("example", {
+ *     config: "nam-eur-asia1",
+ *     displayName: "Multi Regional Instance",
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ *     numNodes: 2,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.spanner.Instance("example",
+ *     config="nam-eur-asia1",
+ *     display_name="Multi Regional Instance",
+ *     labels={
+ *         "foo": "bar",
+ *     },
+ *     num_nodes=2)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.Spanner.Instance("example", new Gcp.Spanner.InstanceArgs
+ *         {
+ *             Config = "nam-eur-asia1",
+ *             DisplayName = "Multi Regional Instance",
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             NumNodes = 2,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/spanner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := spanner.NewInstance(ctx, "example", &spanner.InstanceArgs{
+ * 			Config:      pulumi.String("nam-eur-asia1"),
+ * 			DisplayName: pulumi.String("Multi Regional Instance"),
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			NumNodes: pulumi.Int(2),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +269,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:spanner/instance:Instance default projects/{{project}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:spanner/instance:Instance default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:spanner/instance:Instance default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:spanner/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {

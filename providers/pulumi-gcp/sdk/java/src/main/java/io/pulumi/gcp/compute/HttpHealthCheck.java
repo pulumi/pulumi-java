@@ -17,11 +17,13 @@ import javax.annotation.Nullable;
  * An HttpHealthCheck resource. This resource defines a template for how
  * individual VMs should be checked for health, via HTTP.
  * 
+ * 
  * > **Note:** gcp.compute.HttpHealthCheck is a legacy health check.
  * The newer [gcp.compute.HealthCheck](https://www.terraform.io/docs/providers/google/r/compute_health_check.html)
  * should be preferred for all uses except
  * [Network Load Balancers](https://cloud.google.com/compute/docs/load-balancing/network/)
  * which still require the legacy version.
+ * 
  * 
  * To get more information about HttpHealthCheck, see:
  * 
@@ -29,7 +31,73 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Adding Health Checks](https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Http Health Check Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("default", {
+ *     checkIntervalSec: 1,
+ *     requestPath: "/health_check",
+ *     timeoutSec: 1,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.HttpHealthCheck("default",
+ *     check_interval_sec=1,
+ *     request_path="/health_check",
+ *     timeout_sec=1)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.HttpHealthCheck("default", new Gcp.Compute.HttpHealthCheckArgs
+ *         {
+ *             CheckIntervalSec = 1,
+ *             RequestPath = "/health_check",
+ *             TimeoutSec = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewHttpHealthCheck(ctx, "default", &compute.HttpHealthCheckArgs{
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			RequestPath:      pulumi.String("/health_check"),
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,14 +107,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/httpHealthCheck:HttpHealthCheck default projects/{{project}}/global/httpHealthChecks/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/httpHealthCheck:HttpHealthCheck default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/httpHealthCheck:HttpHealthCheck default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/httpHealthCheck:HttpHealthCheck")
 public class HttpHealthCheck extends io.pulumi.resources.CustomResource {

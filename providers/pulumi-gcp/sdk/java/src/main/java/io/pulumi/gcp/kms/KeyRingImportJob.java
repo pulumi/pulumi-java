@@ -21,9 +21,11 @@ import javax.annotation.Nullable;
  * Once expired, Cloud KMS will no longer be able to import or unwrap any key material that
  * was wrapped with the `KeyRingImportJob`'s public key.
  * 
+ * 
  * > **Note:** KeyRingImportJobs cannot be deleted from Google Cloud Platform.
  * Destroying a provider-managed KeyRingImportJob will remove it from state but
  * *will not delete the resource from the project.*
+ * 
  * 
  * To get more information about KeyRingImportJob, see:
  * 
@@ -31,7 +33,9 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Importing a key](https://cloud.google.com/kms/docs/importing-a-key)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,6 +45,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:kms/keyRingImportJob:KeyRingImportJob default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:kms/keyRingImportJob:KeyRingImportJob")
 public class KeyRingImportJob extends io.pulumi.resources.CustomResource {

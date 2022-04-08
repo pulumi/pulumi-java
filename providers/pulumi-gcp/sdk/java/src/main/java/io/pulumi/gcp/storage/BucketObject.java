@@ -17,19 +17,81 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Creates a new object inside an existing bucket in Google cloud storage service (GCS).
+ * Creates a new object inside an existing bucket in Google cloud storage service (GCS). 
  * [ACLs](https://cloud.google.com/storage/docs/access-control/lists) can be applied using the `gcp.storage.ObjectACL` resource.
- *  For more information see
- * [the official documentation](https://cloud.google.com/storage/docs/key-terms#objects)
- * and
+ *  For more information see 
+ * [the official documentation](https://cloud.google.com/storage/docs/key-terms#objects) 
+ * and 
  * [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Example creating a public object in an existing `image-store` bucket.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const picture = new gcp.storage.BucketObject("picture", {
+ *     bucket: "image-store",
+ *     source: new pulumi.asset.FileAsset("/images/nature/garden-tiger-moth.jpg"),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * picture = gcp.storage.BucketObject("picture",
+ *     bucket="image-store",
+ *     source=pulumi.FileAsset("/images/nature/garden-tiger-moth.jpg"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var picture = new Gcp.Storage.BucketObject("picture", new Gcp.Storage.BucketObjectArgs
+ *         {
+ *             Bucket = "image-store",
+ *             Source = new FileAsset("/images/nature/garden-tiger-moth.jpg"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBucketObject(ctx, "picture", &storage.BucketObjectArgs{
+ * 			Bucket: pulumi.String("image-store"),
+ * 			Source: pulumi.NewFileAsset("/images/nature/garden-tiger-moth.jpg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:storage/bucketObject:BucketObject")
 public class BucketObject extends io.pulumi.resources.CustomResource {

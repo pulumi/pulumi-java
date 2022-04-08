@@ -18,16 +18,373 @@ import javax.annotation.Nullable;
 /**
  * A named resource to which messages are sent by publishers.
  * 
+ * 
  * To get more information about Topic, see:
  * 
  * * [API documentation](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics)
  * * How-to Guides
  *     * [Managing Topics](https://cloud.google.com/pubsub/docs/admin#managing_topics)
  * 
- * > **Note:** You can retrieve the email of the Google Managed Pub/Sub Service Account used for forwarding
+ * > **Note:** You can retrieve the email of the Google Managed Pub/Sub Service Account used for forwarding 
  * by using the `gcp.projects.ServiceIdentity` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Pubsub Topic Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.pubsub.Topic("example", {
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ *     messageRetentionDuration: "86600s",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.pubsub.Topic("example",
+ *     labels={
+ *         "foo": "bar",
+ *     },
+ *     message_retention_duration="86600s")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.PubSub.Topic("example", new Gcp.PubSub.TopicArgs
+ *         {
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             MessageRetentionDuration = "86600s",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			MessageRetentionDuration: pulumi.String("86600s"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Pubsub Topic Cmek
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const keyRing = new gcp.kms.KeyRing("keyRing", {location: "global"});
+ * const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
+ * const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * key_ring = gcp.kms.KeyRing("keyRing", location="global")
+ * crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
+ * example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var keyRing = new Gcp.Kms.KeyRing("keyRing", new Gcp.Kms.KeyRingArgs
+ *         {
+ *             Location = "global",
+ *         });
+ *         var cryptoKey = new Gcp.Kms.CryptoKey("cryptoKey", new Gcp.Kms.CryptoKeyArgs
+ *         {
+ *             KeyRing = keyRing.Id,
+ *         });
+ *         var example = new Gcp.PubSub.Topic("example", new Gcp.PubSub.TopicArgs
+ *         {
+ *             KmsKeyName = cryptoKey.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/kms"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		keyRing, err := kms.NewKeyRing(ctx, "keyRing", &kms.KeyRingArgs{
+ * 			Location: pulumi.String("global"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cryptoKey, err := kms.NewCryptoKey(ctx, "cryptoKey", &kms.CryptoKeyArgs{
+ * 			KeyRing: keyRing.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
+ * 			KmsKeyName: cryptoKey.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Pubsub Topic Geo Restricted
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.pubsub.Topic("example", {
+ *     messageStoragePolicy: {
+ *         allowedPersistenceRegions: ["europe-west3"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.pubsub.Topic("example", message_storage_policy=gcp.pubsub.TopicMessageStoragePolicyArgs(
+ *     allowed_persistence_regions=["europe-west3"],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.PubSub.Topic("example", new Gcp.PubSub.TopicArgs
+ *         {
+ *             MessageStoragePolicy = new Gcp.PubSub.Inputs.TopicMessageStoragePolicyArgs
+ *             {
+ *                 AllowedPersistenceRegions = 
+ *                 {
+ *                     "europe-west3",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
+ * 			MessageStoragePolicy: &pubsub.TopicMessageStoragePolicyArgs{
+ * 				AllowedPersistenceRegions: pulumi.StringArray{
+ * 					pulumi.String("europe-west3"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Pubsub Topic Schema Settings
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const exampleSchema = new gcp.pubsub.Schema("exampleSchema", {
+ *     type: "AVRO",
+ *     definition: `{
+ *   "type" : "record",
+ *   "name" : "Avro",
+ *   "fields" : [
+ *     {
+ *       "name" : "StringField",
+ *       "type" : "string"
+ *     },
+ *     {
+ *       "name" : "IntField",
+ *       "type" : "int"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {schemaSettings: {
+ *     schema: "projects/my-project-name/schemas/example",
+ *     encoding: "JSON",
+ * }}, {
+ *     dependsOn: [exampleSchema],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example_schema = gcp.pubsub.Schema("exampleSchema",
+ *     type="AVRO",
+ *     definition="""{
+ *   "type" : "record",
+ *   "name" : "Avro",
+ *   "fields" : [
+ *     {
+ *       "name" : "StringField",
+ *       "type" : "string"
+ *     },
+ *     {
+ *       "name" : "IntField",
+ *       "type" : "int"
+ *     }
+ *   ]
+ * }
+ * """)
+ * example_topic = gcp.pubsub.Topic("exampleTopic", schema_settings=gcp.pubsub.TopicSchemaSettingsArgs(
+ *     schema="projects/my-project-name/schemas/example",
+ *     encoding="JSON",
+ * ),
+ * opts=pulumi.ResourceOptions(depends_on=[example_schema]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleSchema = new Gcp.PubSub.Schema("exampleSchema", new Gcp.PubSub.SchemaArgs
+ *         {
+ *             Type = "AVRO",
+ *             Definition = @"{
+ *   ""type"" : ""record"",
+ *   ""name"" : ""Avro"",
+ *   ""fields"" : [
+ *     {
+ *       ""name"" : ""StringField"",
+ *       ""type"" : ""string""
+ *     },
+ *     {
+ *       ""name"" : ""IntField"",
+ *       ""type"" : ""int""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+ *         {
+ *             SchemaSettings = new Gcp.PubSub.Inputs.TopicSchemaSettingsArgs
+ *             {
+ *                 Schema = "projects/my-project-name/schemas/example",
+ *                 Encoding = "JSON",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleSchema,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleSchema, err := pubsub.NewSchema(ctx, "exampleSchema", &pubsub.SchemaArgs{
+ * 			Type:       pulumi.String("AVRO"),
+ * 			Definition: pulumi.String("{\n  \"type\" : \"record\",\n  \"name\" : \"Avro\",\n  \"fields\" : [\n    {\n      \"name\" : \"StringField\",\n      \"type\" : \"string\"\n    },\n    {\n      \"name\" : \"IntField\",\n      \"type\" : \"int\"\n    }\n  ]\n}\n"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pubsub.NewTopic(ctx, "exampleTopic", &pubsub.TopicArgs{
+ * 			SchemaSettings: &pubsub.TopicSchemaSettingsArgs{
+ * 				Schema:   pulumi.String("projects/my-project-name/schemas/example"),
+ * 				Encoding: pulumi.String("JSON"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleSchema,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,14 +394,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:pubsub/topic:Topic default projects/{{project}}/topics/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:pubsub/topic:Topic default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:pubsub/topic:Topic default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:pubsub/topic:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {

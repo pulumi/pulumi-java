@@ -61,7 +61,7 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * - 
+     * -
      * ServingState holds a value describing the state the resources
      * are in for this Revision.
      * It is expected
@@ -69,7 +69,6 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
      * 
      * @Deprecated
      * Not supported by Cloud Run fully managed
-     * 
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @Import(name="servingState")

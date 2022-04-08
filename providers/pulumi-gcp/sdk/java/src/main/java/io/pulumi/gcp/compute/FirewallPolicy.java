@@ -20,7 +20,71 @@ import javax.annotation.Nullable;
  * 
  * For more information see the [official documentation](https://cloud.google.com/vpc/docs/firewall-policies)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultFirewallPolicy = new gcp.compute.FirewallPolicy("default", {
+ *     description: "Example Resource",
+ *     parent: "organizations/12345",
+ *     shortName: "my-policy",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.FirewallPolicy("default",
+ *     description="Example Resource",
+ *     parent="organizations/12345",
+ *     short_name="my-policy")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.FirewallPolicy("default", new Gcp.Compute.FirewallPolicyArgs
+ *         {
+ *             Description = "Example Resource",
+ *             Parent = "organizations/12345",
+ *             ShortName = "my-policy",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewFirewallPolicy(ctx, "default", &compute.FirewallPolicyArgs{
+ * 			Description: pulumi.String("Example Resource"),
+ * 			Parent:      pulumi.String("organizations/12345"),
+ * 			ShortName:   pulumi.String("my-policy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,10 +94,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/firewallPolicy:FirewallPolicy default locations/global/firewallPolicies/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/firewallPolicy:FirewallPolicy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/firewallPolicy:FirewallPolicy")
 public class FirewallPolicy extends io.pulumi.resources.CustomResource {

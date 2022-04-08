@@ -21,13 +21,356 @@ import javax.annotation.Nullable;
 /**
  * A Google Cloud IoT Core device registry.
  * 
+ * 
  * To get more information about DeviceRegistry, see:
  * 
  * * [API documentation](https://cloud.google.com/iot/docs/reference/cloudiot/rest/)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/iot/docs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cloudiot Device Registry Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const test_registry = new gcp.iot.Registry("test-registry", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * test_registry = gcp.iot.Registry("test-registry")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewRegistry(ctx, "test-registry", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloudiot Device Registry Single Event Notification Configs
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+ * const test_registry = new gcp.iot.Registry("test-registry", {eventNotificationConfigs: [{
+ *     pubsubTopicName: default_telemetry.id,
+ *     subfolderMatches: "",
+ * }]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_telemetry = gcp.pubsub.Topic("default-telemetry")
+ * test_registry = gcp.iot.Registry("test-registry", event_notification_configs=[gcp.iot.RegistryEventNotificationConfigItemArgs(
+ *     pubsub_topic_name=default_telemetry.id,
+ *     subfolder_matches="",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var default_telemetry = new Gcp.PubSub.Topic("default-telemetry", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
+ *         {
+ *             EventNotificationConfigs = 
+ *             {
+ *                 new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
+ *                 {
+ *                     PubsubTopicName = default_telemetry.Id,
+ *                     SubfolderMatches = "",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/iot"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := pubsub.NewTopic(ctx, "default-telemetry", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iot.NewRegistry(ctx, "test-registry", &iot.RegistryArgs{
+ * 			EventNotificationConfigs: iot.RegistryEventNotificationConfigItemArray{
+ * 				&iot.RegistryEventNotificationConfigItemArgs{
+ * 					PubsubTopicName:  default_telemetry.ID(),
+ * 					SubfolderMatches: pulumi.String(""),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloudiot Device Registry Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * const default_devicestatus = new gcp.pubsub.Topic("default-devicestatus", {});
+ * const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+ * const additional_telemetry = new gcp.pubsub.Topic("additional-telemetry", {});
+ * const test_registry = new gcp.iot.Registry("test-registry", {
+ *     eventNotificationConfigs: [
+ *         {
+ *             pubsubTopicName: additional_telemetry.id,
+ *             subfolderMatches: "test/path",
+ *         },
+ *         {
+ *             pubsubTopicName: default_telemetry.id,
+ *             subfolderMatches: "",
+ *         },
+ *     ],
+ *     stateNotificationConfig: {
+ *         pubsub_topic_name: default_devicestatus.id,
+ *     },
+ *     mqttConfig: {
+ *         mqtt_enabled_state: "MQTT_ENABLED",
+ *     },
+ *     httpConfig: {
+ *         http_enabled_state: "HTTP_ENABLED",
+ *     },
+ *     logLevel: "INFO",
+ *     credentials: [{
+ *         publicKeyCertificate: {
+ *             format: "X509_CERTIFICATE_PEM",
+ *             certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+ *         },
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_devicestatus = gcp.pubsub.Topic("default-devicestatus")
+ * default_telemetry = gcp.pubsub.Topic("default-telemetry")
+ * additional_telemetry = gcp.pubsub.Topic("additional-telemetry")
+ * test_registry = gcp.iot.Registry("test-registry",
+ *     event_notification_configs=[
+ *         gcp.iot.RegistryEventNotificationConfigItemArgs(
+ *             pubsub_topic_name=additional_telemetry.id,
+ *             subfolder_matches="test/path",
+ *         ),
+ *         gcp.iot.RegistryEventNotificationConfigItemArgs(
+ *             pubsub_topic_name=default_telemetry.id,
+ *             subfolder_matches="",
+ *         ),
+ *     ],
+ *     state_notification_config={
+ *         "pubsub_topic_name": default_devicestatus.id,
+ *     },
+ *     mqtt_config={
+ *         "mqtt_enabled_state": "MQTT_ENABLED",
+ *     },
+ *     http_config={
+ *         "http_enabled_state": "HTTP_ENABLED",
+ *     },
+ *     log_level="INFO",
+ *     credentials=[gcp.iot.RegistryCredentialArgs(
+ *         public_key_certificate={
+ *             "format": "X509_CERTIFICATE_PEM",
+ *             "certificate": (lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+ *         },
+ *     )])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var default_devicestatus = new Gcp.PubSub.Topic("default-devicestatus", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var default_telemetry = new Gcp.PubSub.Topic("default-telemetry", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var additional_telemetry = new Gcp.PubSub.Topic("additional-telemetry", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
+ *         {
+ *             EventNotificationConfigs = 
+ *             {
+ *                 new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
+ *                 {
+ *                     PubsubTopicName = additional_telemetry.Id,
+ *                     SubfolderMatches = "test/path",
+ *                 },
+ *                 new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
+ *                 {
+ *                     PubsubTopicName = default_telemetry.Id,
+ *                     SubfolderMatches = "",
+ *                 },
+ *             },
+ *             StateNotificationConfig = 
+ *             {
+ *                 { "pubsub_topic_name", default_devicestatus.Id },
+ *             },
+ *             MqttConfig = 
+ *             {
+ *                 { "mqtt_enabled_state", "MQTT_ENABLED" },
+ *             },
+ *             HttpConfig = 
+ *             {
+ *                 { "http_enabled_state", "HTTP_ENABLED" },
+ *             },
+ *             LogLevel = "INFO",
+ *             Credentials = 
+ *             {
+ *                 new Gcp.Iot.Inputs.RegistryCredentialArgs
+ *                 {
+ *                     PublicKeyCertificate = 
+ *                     {
+ *                         { "format", "X509_CERTIFICATE_PEM" },
+ *                         { "certificate", File.ReadAllText("test-fixtures/rsa_cert.pem") },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/iot"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := pubsub.NewTopic(ctx, "default-devicestatus", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pubsub.NewTopic(ctx, "default-telemetry", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pubsub.NewTopic(ctx, "additional-telemetry", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iot.NewRegistry(ctx, "test-registry", &iot.RegistryArgs{
+ * 			EventNotificationConfigs: iot.RegistryEventNotificationConfigItemArray{
+ * 				&iot.RegistryEventNotificationConfigItemArgs{
+ * 					PubsubTopicName:  additional_telemetry.ID(),
+ * 					SubfolderMatches: pulumi.String("test/path"),
+ * 				},
+ * 				&iot.RegistryEventNotificationConfigItemArgs{
+ * 					PubsubTopicName:  default_telemetry.ID(),
+ * 					SubfolderMatches: pulumi.String(""),
+ * 				},
+ * 			},
+ * 			StateNotificationConfig: pulumi.AnyMap{
+ * 				"pubsub_topic_name": default_devicestatus.ID(),
+ * 			},
+ * 			MqttConfig: pulumi.AnyMap{
+ * 				"mqtt_enabled_state": pulumi.Any("MQTT_ENABLED"),
+ * 			},
+ * 			HttpConfig: pulumi.AnyMap{
+ * 				"http_enabled_state": pulumi.Any("HTTP_ENABLED"),
+ * 			},
+ * 			LogLevel: pulumi.String("INFO"),
+ * 			Credentials: iot.RegistryCredentialArray{
+ * 				&iot.RegistryCredentialArgs{
+ * 					PublicKeyCertificate: pulumi.AnyMap{
+ * 						"format":      pulumi.Any("X509_CERTIFICATE_PEM"),
+ * 						"certificate": readFileOrPanic("test-fixtures/rsa_cert.pem"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,18 +380,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:iot/registry:Registry default {{project}}/locations/{{region}}/registries/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:iot/registry:Registry default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:iot/registry:Registry default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:iot/registry:Registry default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:iot/registry:Registry")
 public class Registry extends io.pulumi.resources.CustomResource {

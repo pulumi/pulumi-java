@@ -20,7 +20,79 @@ import javax.annotation.Nullable;
  * contains no data, requires no configuration or maintenance, and does not
  * affect billing. You cannot update the source representation instance.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Sql Source Representation Instance Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instance = new gcp.sql.SourceRepresentationInstance("instance", {
+ *     databaseVersion: "MYSQL_8_0",
+ *     host: "10.20.30.40",
+ *     port: 3306,
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance = gcp.sql.SourceRepresentationInstance("instance",
+ *     database_version="MYSQL_8_0",
+ *     host="10.20.30.40",
+ *     port=3306,
+ *     region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new Gcp.Sql.SourceRepresentationInstance("instance", new Gcp.Sql.SourceRepresentationInstanceArgs
+ *         {
+ *             DatabaseVersion = "MYSQL_8_0",
+ *             Host = "10.20.30.40",
+ *             Port = 3306,
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewSourceRepresentationInstance(ctx, "instance", &sql.SourceRepresentationInstanceArgs{
+ * 			DatabaseVersion: pulumi.String("MYSQL_8_0"),
+ * 			Host:            pulumi.String("10.20.30.40"),
+ * 			Port:            pulumi.Int(3306),
+ * 			Region:          pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +102,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default projects/{{project}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance")
 public class SourceRepresentationInstance extends io.pulumi.resources.CustomResource {

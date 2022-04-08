@@ -17,7 +17,90 @@ import javax.annotation.Nullable;
  * 
  * For more information on applying hierarchical firewall policies see the [official documentation](https://cloud.google.com/vpc/docs/firewall-policies#managing_hierarchical_firewall_policy_resources)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultFirewallPolicy = new gcp.compute.FirewallPolicy("defaultFirewallPolicy", {
+ *     parent: "organizations/12345",
+ *     shortName: "my-policy",
+ *     description: "Example Resource",
+ * });
+ * const defaultFirewallPolicyAssociation = new gcp.compute.FirewallPolicyAssociation("defaultFirewallPolicyAssociation", {
+ *     firewallPolicy: defaultFirewallPolicy.id,
+ *     attachmentTarget: google_folder.folder.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_firewall_policy = gcp.compute.FirewallPolicy("defaultFirewallPolicy",
+ *     parent="organizations/12345",
+ *     short_name="my-policy",
+ *     description="Example Resource")
+ * default_firewall_policy_association = gcp.compute.FirewallPolicyAssociation("defaultFirewallPolicyAssociation",
+ *     firewall_policy=default_firewall_policy.id,
+ *     attachment_target=google_folder["folder"]["name"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultFirewallPolicy = new Gcp.Compute.FirewallPolicy("defaultFirewallPolicy", new Gcp.Compute.FirewallPolicyArgs
+ *         {
+ *             Parent = "organizations/12345",
+ *             ShortName = "my-policy",
+ *             Description = "Example Resource",
+ *         });
+ *         var defaultFirewallPolicyAssociation = new Gcp.Compute.FirewallPolicyAssociation("defaultFirewallPolicyAssociation", new Gcp.Compute.FirewallPolicyAssociationArgs
+ *         {
+ *             FirewallPolicy = defaultFirewallPolicy.Id,
+ *             AttachmentTarget = google_folder.Folder.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultFirewallPolicy, err := compute.NewFirewallPolicy(ctx, "defaultFirewallPolicy", &compute.FirewallPolicyArgs{
+ * 			Parent:      pulumi.String("organizations/12345"),
+ * 			ShortName:   pulumi.String("my-policy"),
+ * 			Description: pulumi.String("Example Resource"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewFirewallPolicyAssociation(ctx, "defaultFirewallPolicyAssociation", &compute.FirewallPolicyAssociationArgs{
+ * 			FirewallPolicy:   defaultFirewallPolicy.ID(),
+ * 			AttachmentTarget: pulumi.Any(google_folder.Folder.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,10 +110,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/firewallPolicyAssociation:FirewallPolicyAssociation default locations/global/firewallPolicies/{{firewall_policy}}/associations/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/firewallPolicyAssociation:FirewallPolicyAssociation default {{firewall_policy}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/firewallPolicyAssociation:FirewallPolicyAssociation")
 public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResource {

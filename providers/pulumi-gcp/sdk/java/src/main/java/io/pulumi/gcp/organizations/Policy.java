@@ -17,7 +17,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Allows management of Organization Policies for a Google Cloud Organization.
+ * Allows management of Organization Policies for a Google Cloud Organization. 
  * 
  * > **Warning:** This resource has been superseded by `gcp.orgpolicy.Policy`. `gcp.orgpolicy.Policy` uses Organization Policy API V2 instead of Cloud Resource Manager API V1 and it supports additional features such as tags and conditions.
  * 
@@ -27,7 +27,323 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Introduction to the Organization Policy Service](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * To set policy with a [boolean constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-boolean-constraints):
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const serialPortPolicy = new gcp.organizations.Policy("serial_port_policy", {
+ *     booleanPolicy: {
+ *         enforced: true,
+ *     },
+ *     constraint: "compute.disableSerialPortAccess",
+ *     orgId: "123456789",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * serial_port_policy = gcp.organizations.Policy("serialPortPolicy",
+ *     boolean_policy=gcp.organizations.PolicyBooleanPolicyArgs(
+ *         enforced=True,
+ *     ),
+ *     constraint="compute.disableSerialPortAccess",
+ *     org_id="123456789")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serialPortPolicy = new Gcp.Organizations.Policy("serialPortPolicy", new Gcp.Organizations.PolicyArgs
+ *         {
+ *             BooleanPolicy = new Gcp.Organizations.Inputs.PolicyBooleanPolicyArgs
+ *             {
+ *                 Enforced = true,
+ *             },
+ *             Constraint = "compute.disableSerialPortAccess",
+ *             OrgId = "123456789",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicy(ctx, "serialPortPolicy", &organizations.PolicyArgs{
+ * 			BooleanPolicy: &organizations.PolicyBooleanPolicyArgs{
+ * 				Enforced: pulumi.Bool(true),
+ * 			},
+ * 			Constraint: pulumi.String("compute.disableSerialPortAccess"),
+ * 			OrgId:      pulumi.String("123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * 
+ * To set a policy with a [list constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-list-constraints):
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const servicesPolicy = new gcp.organizations.Policy("services_policy", {
+ *     constraint: "serviceuser.services",
+ *     listPolicy: {
+ *         allow: {
+ *             all: true,
+ *         },
+ *     },
+ *     orgId: "123456789",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * services_policy = gcp.organizations.Policy("servicesPolicy",
+ *     constraint="serviceuser.services",
+ *     list_policy=gcp.organizations.PolicyListPolicyArgs(
+ *         allow=gcp.organizations.PolicyListPolicyAllowArgs(
+ *             all=True,
+ *         ),
+ *     ),
+ *     org_id="123456789")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicesPolicy = new Gcp.Organizations.Policy("servicesPolicy", new Gcp.Organizations.PolicyArgs
+ *         {
+ *             Constraint = "serviceuser.services",
+ *             ListPolicy = new Gcp.Organizations.Inputs.PolicyListPolicyArgs
+ *             {
+ *                 Allow = new Gcp.Organizations.Inputs.PolicyListPolicyAllowArgs
+ *                 {
+ *                     All = true,
+ *                 },
+ *             },
+ *             OrgId = "123456789",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicy(ctx, "servicesPolicy", &organizations.PolicyArgs{
+ * 			Constraint: pulumi.String("serviceuser.services"),
+ * 			ListPolicy: &organizations.PolicyListPolicyArgs{
+ * 				Allow: &organizations.PolicyListPolicyAllowArgs{
+ * 					All: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			OrgId: pulumi.String("123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Or to deny some services, use the following instead:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const servicesPolicy = new gcp.organizations.Policy("services_policy", {
+ *     constraint: "serviceuser.services",
+ *     listPolicy: {
+ *         deny: {
+ *             values: ["cloudresourcemanager.googleapis.com"],
+ *         },
+ *         suggestedValue: "compute.googleapis.com",
+ *     },
+ *     orgId: "123456789",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * services_policy = gcp.organizations.Policy("servicesPolicy",
+ *     constraint="serviceuser.services",
+ *     list_policy=gcp.organizations.PolicyListPolicyArgs(
+ *         deny=gcp.organizations.PolicyListPolicyDenyArgs(
+ *             values=["cloudresourcemanager.googleapis.com"],
+ *         ),
+ *         suggested_value="compute.googleapis.com",
+ *     ),
+ *     org_id="123456789")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicesPolicy = new Gcp.Organizations.Policy("servicesPolicy", new Gcp.Organizations.PolicyArgs
+ *         {
+ *             Constraint = "serviceuser.services",
+ *             ListPolicy = new Gcp.Organizations.Inputs.PolicyListPolicyArgs
+ *             {
+ *                 Deny = new Gcp.Organizations.Inputs.PolicyListPolicyDenyArgs
+ *                 {
+ *                     Values = 
+ *                     {
+ *                         "cloudresourcemanager.googleapis.com",
+ *                     },
+ *                 },
+ *                 SuggestedValue = "compute.googleapis.com",
+ *             },
+ *             OrgId = "123456789",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicy(ctx, "servicesPolicy", &organizations.PolicyArgs{
+ * 			Constraint: pulumi.String("serviceuser.services"),
+ * 			ListPolicy: &organizations.PolicyListPolicyArgs{
+ * 				Deny: &organizations.PolicyListPolicyDenyArgs{
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("cloudresourcemanager.googleapis.com"),
+ * 					},
+ * 				},
+ * 				SuggestedValue: pulumi.String("compute.googleapis.com"),
+ * 			},
+ * 			OrgId: pulumi.String("123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * To restore the default organization policy, use the following instead:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const servicesPolicy = new gcp.organizations.Policy("services_policy", {
+ *     constraint: "serviceuser.services",
+ *     orgId: "123456789",
+ *     restorePolicy: {
+ *         default: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * services_policy = gcp.organizations.Policy("servicesPolicy",
+ *     constraint="serviceuser.services",
+ *     org_id="123456789",
+ *     restore_policy=gcp.organizations.PolicyRestorePolicyArgs(
+ *         default=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicesPolicy = new Gcp.Organizations.Policy("servicesPolicy", new Gcp.Organizations.PolicyArgs
+ *         {
+ *             Constraint = "serviceuser.services",
+ *             OrgId = "123456789",
+ *             RestorePolicy = new Gcp.Organizations.Inputs.PolicyRestorePolicyArgs
+ *             {
+ *                 Default = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicy(ctx, "servicesPolicy", &organizations.PolicyArgs{
+ * 			Constraint: pulumi.String("serviceuser.services"),
+ * 			OrgId:      pulumi.String("123456789"),
+ * 			RestorePolicy: &organizations.PolicyRestorePolicyArgs{
+ * 				Default: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,8 +353,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:organizations/policy:Policy services_policy 123456789/constraints/serviceuser.services
  * ```
  * 
- *  It is all right if the constraint contains a slash, as in the example above.
- * 
+ *  It is all right if the constraint contains a slash, as in the example above. 
  */
 @ResourceType(type="gcp:organizations/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

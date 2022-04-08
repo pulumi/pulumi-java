@@ -16,18 +16,185 @@ import javax.annotation.Nullable;
 /**
  * Workflow program to be executed by Workflows.
  * 
+ * 
  * To get more information about Workflow, see:
  * 
  * * [API documentation](https://cloud.google.com/workflows/docs/reference/rest/v1/projects.locations.workflows)
  * * How-to Guides
  *     * [Managing Workflows](https://cloud.google.com/workflows/docs/creating-updating-workflow)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Workflow Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const testAccount = new gcp.serviceaccount.Account("testAccount", {
+ *     accountId: "my-account",
+ *     displayName: "Test Service Account",
+ * });
+ * const example = new gcp.workflows.Workflow("example", {
+ *     region: "us-central1",
+ *     description: "Magic",
+ *     serviceAccount: testAccount.id,
+ *     sourceContents: `# This is a sample workflow, feel free to replace it with your source code
+ * #
+ * # This workflow does the following:
+ * # - reads current time and date information from an external API and stores
+ * #   the response in CurrentDateTime variable
+ * # - retrieves a list of Wikipedia articles related to the day of the week
+ * #   from CurrentDateTime
+ * # - returns the list of articles as an output of the workflow
+ * # FYI, In terraform you need to escape the $$ or it will cause errors.
+ * 
+ * - getCurrentTime:
+ *     call: http.get
+ *     args:
+ *         url: https://us-central1-workflowsample.cloudfunctions.net/datetime
+ *     result: CurrentDateTime
+ * - readWikipedia:
+ *     call: http.get
+ *     args:
+ *         url: https://en.wikipedia.org/w/api.php
+ *         query:
+ *             action: opensearch
+ *             search: ${CurrentDateTime.body.dayOfTheWeek}
+ *     result: WikiResult
+ * - returnOutput:
+ *     return: ${WikiResult.body[1]}
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * test_account = gcp.service_account.Account("testAccount",
+ *     account_id="my-account",
+ *     display_name="Test Service Account")
+ * example = gcp.workflows.Workflow("example",
+ *     region="us-central1",
+ *     description="Magic",
+ *     service_account=test_account.id,
+ *     source_contents=f"""# This is a sample workflow, feel free to replace it with your source code
+ * #
+ * # This workflow does the following:
+ * # - reads current time and date information from an external API and stores
+ * #   the response in CurrentDateTime variable
+ * # - retrieves a list of Wikipedia articles related to the day of the week
+ * #   from CurrentDateTime
+ * # - returns the list of articles as an output of the workflow
+ * # FYI, In terraform you need to escape the $$ or it will cause errors.
+ * 
+ * - getCurrentTime:
+ *     call: http.get
+ *     args:
+ *         url: https://us-central1-workflowsample.cloudfunctions.net/datetime
+ *     result: CurrentDateTime
+ * - readWikipedia:
+ *     call: http.get
+ *     args:
+ *         url: https://en.wikipedia.org/w/api.php
+ *         query:
+ *             action: opensearch
+ *             search: {current_date_time["body"]["dayOfTheWeek"]}
+ *     result: WikiResult
+ * - returnOutput:
+ *     return: {wiki_result["body"]}
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testAccount = new Gcp.ServiceAccount.Account("testAccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "my-account",
+ *             DisplayName = "Test Service Account",
+ *         });
+ *         var example = new Gcp.Workflows.Workflow("example", new Gcp.Workflows.WorkflowArgs
+ *         {
+ *             Region = "us-central1",
+ *             Description = "Magic",
+ *             ServiceAccount = testAccount.Id,
+ *             SourceContents = @$"# This is a sample workflow, feel free to replace it with your source code
+ * #
+ * # This workflow does the following:
+ * # - reads current time and date information from an external API and stores
+ * #   the response in CurrentDateTime variable
+ * # - retrieves a list of Wikipedia articles related to the day of the week
+ * #   from CurrentDateTime
+ * # - returns the list of articles as an output of the workflow
+ * # FYI, In terraform you need to escape the $$ or it will cause errors.
+ * 
+ * - getCurrentTime:
+ *     call: http.get
+ *     args:
+ *         url: https://us-central1-workflowsample.cloudfunctions.net/datetime
+ *     result: CurrentDateTime
+ * - readWikipedia:
+ *     call: http.get
+ *     args:
+ *         url: https://en.wikipedia.org/w/api.php
+ *         query:
+ *             action: opensearch
+ *             search: {CurrentDateTime.Body.DayOfTheWeek}
+ *     result: WikiResult
+ * - returnOutput:
+ *     return: {WikiResult.Body[1]}
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/workflows"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testAccount, err := serviceAccount.NewAccount(ctx, "testAccount", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("my-account"),
+ * 			DisplayName: pulumi.String("Test Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = workflows.NewWorkflow(ctx, "example", &workflows.WorkflowArgs{
+ * 			Region:         pulumi.String("us-central1"),
+ * 			Description:    pulumi.String("Magic"),
+ * 			ServiceAccount: testAccount.ID(),
+ * 			SourceContents: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "# This is a sample workflow, feel free to replace it with your source code\n", "#\n", "# This workflow does the following:\n", "# - reads current time and date information from an external API and stores\n", "#   the response in CurrentDateTime variable\n", "# - retrieves a list of Wikipedia articles related to the day of the week\n", "#   from CurrentDateTime\n", "# - returns the list of articles as an output of the workflow\n", "# FYI, In terraform you need to escape the ", "$", "$", " or it will cause errors.\n", "\n", "- getCurrentTime:\n", "    call: http.get\n", "    args:\n", "        url: https://us-central1-workflowsample.cloudfunctions.net/datetime\n", "    result: CurrentDateTime\n", "- readWikipedia:\n", "    call: http.get\n", "    args:\n", "        url: https://en.wikipedia.org/w/api.php\n", "        query:\n", "            action: opensearch\n", "            search: ", CurrentDateTime.Body.DayOfTheWeek, "\n", "    result: WikiResult\n", "- returnOutput:\n", "    return: ", WikiResult.Body[1], "\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:workflows/workflow:Workflow")
 public class Workflow extends io.pulumi.resources.CustomResource {

@@ -18,6 +18,7 @@ import javax.annotation.Nullable;
  * provides a mechanism to upload an SSL key and certificate to
  * the load balancer to serve secure connections from the user.
  * 
+ * 
  * To get more information about SslCertificate, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/sslCertificates)
@@ -27,7 +28,502 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `certificate` and `private_key` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Ssl Certificate Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * const _default = new gcp.compute.SSLCertificate("default", {
+ *     namePrefix: "my-certificate-",
+ *     description: "a description",
+ *     privateKey: fs.readFileSync("path/to/private.key"),
+ *     certificate: fs.readFileSync("path/to/certificate.crt"),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.SSLCertificate("default",
+ *     name_prefix="my-certificate-",
+ *     description="a description",
+ *     private_key=(lambda path: open(path).read())("path/to/private.key"),
+ *     certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.SSLCertificate("default", new Gcp.Compute.SSLCertificateArgs
+ *         {
+ *             NamePrefix = "my-certificate-",
+ *             Description = "a description",
+ *             PrivateKey = File.ReadAllText("path/to/private.key"),
+ *             Certificate = File.ReadAllText("path/to/certificate.crt"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSSLCertificate(ctx, "default", &compute.SSLCertificateArgs{
+ * 			NamePrefix:  pulumi.String("my-certificate-"),
+ * 			Description: pulumi.String("a description"),
+ * 			PrivateKey:  readFileOrPanic("path/to/private.key"),
+ * 			Certificate: readFileOrPanic("path/to/certificate.crt"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Ssl Certificate Random Provider
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as crypto from "crypto";
+ * import * as gcp from "@pulumi/gcp";
+ * import * as random from "@pulumi/random";
+ * import * from "fs";
+ * 
+ * func computeFilebase64sha256(path string) string {
+ * 	const fileData = Buffer.from(fs.readFileSync(path), 'binary')
+ * 	return crypto.createHash('sha256').update(fileData).digest('hex')
+ * }
+ * 
+ * // You may also want to control name generation explicitly:
+ * const _default = new gcp.compute.SSLCertificate("default", {
+ *     privateKey: fs.readFileSync("path/to/private.key"),
+ *     certificate: fs.readFileSync("path/to/certificate.crt"),
+ * });
+ * const certificate = new random.RandomId("certificate", {
+ *     byteLength: 4,
+ *     prefix: "my-certificate-",
+ *     keepers: {
+ *         private_key: computeFilebase64sha256("path/to/private.key"),
+ *         certificate: computeFilebase64sha256("path/to/certificate.crt"),
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import base64
+ * import hashlib
+ * import pulumi_gcp as gcp
+ * import pulumi_random as random
+ * 
+ * def computeFilebase64sha256(path):
+ * 	fileData = open(path).read().encode()
+ * 	hashedData = hashlib.sha256(fileData.encode()).digest()
+ * 	return base64.b64encode(hashedData).decode()
+ * 
+ * # You may also want to control name generation explicitly:
+ * default = gcp.compute.SSLCertificate("default",
+ *     private_key=(lambda path: open(path).read())("path/to/private.key"),
+ *     certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+ * certificate = random.RandomId("certificate",
+ *     byte_length=4,
+ *     prefix="my-certificate-",
+ *     keepers={
+ *         "private_key": computeFilebase64sha256("path/to/private.key"),
+ *         "certificate": computeFilebase64sha256("path/to/certificate.crt"),
+ *     })
+ * ```
+ * ```csharp
+ * using System;
+ * using System.IO;
+ * using System.Security.Cryptography;
+ * using System.Text;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ * 	private static string ComputeFileBase64Sha256(string path) {
+ * 		var fileData = Encoding.UTF8.GetBytes(File.ReadAllText(path));
+ * 		var hashData = SHA256.Create().ComputeHash(fileData);
+ * 		return Convert.ToBase64String(hashData);
+ * 	}
+ * 
+ *     public MyStack()
+ *     {
+ *         // You may also want to control name generation explicitly:
+ *         var @default = new Gcp.Compute.SSLCertificate("default", new Gcp.Compute.SSLCertificateArgs
+ *         {
+ *             PrivateKey = File.ReadAllText("path/to/private.key"),
+ *             Certificate = File.ReadAllText("path/to/certificate.crt"),
+ *         });
+ *         var certificate = new Random.RandomId("certificate", new Random.RandomIdArgs
+ *         {
+ *             ByteLength = 4,
+ *             Prefix = "my-certificate-",
+ *             Keepers = 
+ *             {
+ *                 { "private_key", ComputeFileBase64Sha256("path/to/private.key") },
+ *                 { "certificate", ComputeFileBase64Sha256("path/to/certificate.crt") },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"crypto/sha256"
+ * 	"fmt"
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func filebase64sha256OrPanic(path string) pulumi.StringPtrInput {
+ * 	if fileData, err := ioutil.ReadFile(path); err == nil {
+ * 		hashedData := sha256.Sum256([]byte(fileData))
+ * 		return pulumi.String(base64.StdEncoding.EncodeToString(hashedData[:]))
+ * 	} else {
+ * 		panic(err.Error())
+ * 	}
+ * }
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSSLCertificate(ctx, "default", &compute.SSLCertificateArgs{
+ * 			PrivateKey:  readFileOrPanic("path/to/private.key"),
+ * 			Certificate: readFileOrPanic("path/to/certificate.crt"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = random.NewRandomId(ctx, "certificate", &random.RandomIdArgs{
+ * 			ByteLength: pulumi.Int(4),
+ * 			Prefix:     pulumi.String("my-certificate-"),
+ * 			Keepers: pulumi.AnyMap{
+ * 				"private_key": filebase64sha256OrPanic("path/to/private.key"),
+ * 				"certificate": filebase64sha256OrPanic("path/to/certificate.crt"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Ssl Certificate Target Https Proxies
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * // Using with Target HTTPS Proxies
+ * //
+ * // SSL certificates cannot be updated after creation. In order to apply
+ * // the specified configuration, the provider will destroy the existing
+ * // resource and create a replacement. Example:
+ * const defaultSSLCertificate = new gcp.compute.SSLCertificate("defaultSSLCertificate", {
+ *     namePrefix: "my-certificate-",
+ *     privateKey: fs.readFileSync("path/to/private.key"),
+ *     certificate: fs.readFileSync("path/to/certificate.crt"),
+ * });
+ * const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+ *     requestPath: "/",
+ *     checkIntervalSec: 1,
+ *     timeoutSec: 1,
+ * });
+ * const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+ *     portName: "http",
+ *     protocol: "HTTP",
+ *     timeoutSec: 10,
+ *     healthChecks: [defaultHttpHealthCheck.id],
+ * });
+ * const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+ *     description: "a description",
+ *     defaultService: defaultBackendService.id,
+ *     hostRules: [{
+ *         hosts: ["mysite.com"],
+ *         pathMatcher: "allpaths",
+ *     }],
+ *     pathMatchers: [{
+ *         name: "allpaths",
+ *         defaultService: defaultBackendService.id,
+ *         pathRules: [{
+ *             paths: ["/*"],
+ *             service: defaultBackendService.id,
+ *         }],
+ *     }],
+ * });
+ * const defaultTargetHttpsProxy = new gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy", {
+ *     urlMap: defaultURLMap.id,
+ *     sslCertificates: [defaultSSLCertificate.id],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * # Using with Target HTTPS Proxies
+ * #
+ * # SSL certificates cannot be updated after creation. In order to apply
+ * # the specified configuration, the provider will destroy the existing
+ * # resource and create a replacement. Example:
+ * default_ssl_certificate = gcp.compute.SSLCertificate("defaultSSLCertificate",
+ *     name_prefix="my-certificate-",
+ *     private_key=(lambda path: open(path).read())("path/to/private.key"),
+ *     certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+ * default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+ *     request_path="/",
+ *     check_interval_sec=1,
+ *     timeout_sec=1)
+ * default_backend_service = gcp.compute.BackendService("defaultBackendService",
+ *     port_name="http",
+ *     protocol="HTTP",
+ *     timeout_sec=10,
+ *     health_checks=[default_http_health_check.id])
+ * default_url_map = gcp.compute.URLMap("defaultURLMap",
+ *     description="a description",
+ *     default_service=default_backend_service.id,
+ *     host_rules=[gcp.compute.URLMapHostRuleArgs(
+ *         hosts=["mysite.com"],
+ *         path_matcher="allpaths",
+ *     )],
+ *     path_matchers=[gcp.compute.URLMapPathMatcherArgs(
+ *         name="allpaths",
+ *         default_service=default_backend_service.id,
+ *         path_rules=[gcp.compute.URLMapPathMatcherPathRuleArgs(
+ *             paths=["/*"],
+ *             service=default_backend_service.id,
+ *         )],
+ *     )])
+ * default_target_https_proxy = gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy",
+ *     url_map=default_url_map.id,
+ *     ssl_certificates=[default_ssl_certificate.id])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Using with Target HTTPS Proxies
+ *         //
+ *         // SSL certificates cannot be updated after creation. In order to apply
+ *         // the specified configuration, the provider will destroy the existing
+ *         // resource and create a replacement. Example:
+ *         var defaultSSLCertificate = new Gcp.Compute.SSLCertificate("defaultSSLCertificate", new Gcp.Compute.SSLCertificateArgs
+ *         {
+ *             NamePrefix = "my-certificate-",
+ *             PrivateKey = File.ReadAllText("path/to/private.key"),
+ *             Certificate = File.ReadAllText("path/to/certificate.crt"),
+ *         });
+ *         var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+ *         {
+ *             RequestPath = "/",
+ *             CheckIntervalSec = 1,
+ *             TimeoutSec = 1,
+ *         });
+ *         var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+ *         {
+ *             PortName = "http",
+ *             Protocol = "HTTP",
+ *             TimeoutSec = 10,
+ *             HealthChecks = 
+ *             {
+ *                 defaultHttpHealthCheck.Id,
+ *             },
+ *         });
+ *         var defaultURLMap = new Gcp.Compute.URLMap("defaultURLMap", new Gcp.Compute.URLMapArgs
+ *         {
+ *             Description = "a description",
+ *             DefaultService = defaultBackendService.Id,
+ *             HostRules = 
+ *             {
+ *                 new Gcp.Compute.Inputs.URLMapHostRuleArgs
+ *                 {
+ *                     Hosts = 
+ *                     {
+ *                         "mysite.com",
+ *                     },
+ *                     PathMatcher = "allpaths",
+ *                 },
+ *             },
+ *             PathMatchers = 
+ *             {
+ *                 new Gcp.Compute.Inputs.URLMapPathMatcherArgs
+ *                 {
+ *                     Name = "allpaths",
+ *                     DefaultService = defaultBackendService.Id,
+ *                     PathRules = 
+ *                     {
+ *                         new Gcp.Compute.Inputs.URLMapPathMatcherPathRuleArgs
+ *                         {
+ *                             Paths = 
+ *                             {
+ *                                 "/*",
+ *                             },
+ *                             Service = defaultBackendService.Id,
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var defaultTargetHttpsProxy = new Gcp.Compute.TargetHttpsProxy("defaultTargetHttpsProxy", new Gcp.Compute.TargetHttpsProxyArgs
+ *         {
+ *             UrlMap = defaultURLMap.Id,
+ *             SslCertificates = 
+ *             {
+ *                 defaultSSLCertificate.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultSSLCertificate, err := compute.NewSSLCertificate(ctx, "defaultSSLCertificate", &compute.SSLCertificateArgs{
+ * 			NamePrefix:  pulumi.String("my-certificate-"),
+ * 			PrivateKey:  readFileOrPanic("path/to/private.key"),
+ * 			Certificate: readFileOrPanic("path/to/certificate.crt"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+ * 			RequestPath:      pulumi.String("/"),
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+ * 			PortName:   pulumi.String("http"),
+ * 			Protocol:   pulumi.String("HTTP"),
+ * 			TimeoutSec: pulumi.Int(10),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultHttpHealthCheck.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultURLMap, err := compute.NewURLMap(ctx, "defaultURLMap", &compute.URLMapArgs{
+ * 			Description:    pulumi.String("a description"),
+ * 			DefaultService: defaultBackendService.ID(),
+ * 			HostRules: compute.URLMapHostRuleArray{
+ * 				&compute.URLMapHostRuleArgs{
+ * 					Hosts: pulumi.StringArray{
+ * 						pulumi.String("mysite.com"),
+ * 					},
+ * 					PathMatcher: pulumi.String("allpaths"),
+ * 				},
+ * 			},
+ * 			PathMatchers: compute.URLMapPathMatcherArray{
+ * 				&compute.URLMapPathMatcherArgs{
+ * 					Name:           pulumi.String("allpaths"),
+ * 					DefaultService: defaultBackendService.ID(),
+ * 					PathRules: compute.URLMapPathMatcherPathRuleArray{
+ * 						&compute.URLMapPathMatcherPathRuleArgs{
+ * 							Paths: pulumi.StringArray{
+ * 								pulumi.String("/*"),
+ * 							},
+ * 							Service: defaultBackendService.ID(),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewTargetHttpsProxy(ctx, "defaultTargetHttpsProxy", &compute.TargetHttpsProxyArgs{
+ * 			UrlMap: defaultURLMap.ID(),
+ * 			SslCertificates: pulumi.StringArray{
+ * 				defaultSSLCertificate.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,14 +533,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default projects/{{project}}/global/sslCertificates/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/sSLCertificate:SSLCertificate")
 public class SSLCertificate extends io.pulumi.resources.CustomResource {

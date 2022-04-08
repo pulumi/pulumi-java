@@ -17,7 +17,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs extend
     public static final CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs Empty = new CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs();
 
     /**
-     * - 
+     * -
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
      */

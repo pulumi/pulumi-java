@@ -26,7 +26,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * - 
+     * -
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 
@@ -39,7 +39,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * - 
+     * -
      * Output only. Name of the subscription.
      * 
      */

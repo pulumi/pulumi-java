@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureClusterFleet {
     /**
-     * - 
+     * -
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
      * 
      */
@@ -32,7 +32,7 @@ public final class AzureClusterFleet {
     }
 
     /**
-     * - 
+     * -
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
      * 
     */

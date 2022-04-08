@@ -38,7 +38,7 @@ public final class RegionBackendServiceIapArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * - 
+     * -
      * OAuth2 Client Secret SHA-256 for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 

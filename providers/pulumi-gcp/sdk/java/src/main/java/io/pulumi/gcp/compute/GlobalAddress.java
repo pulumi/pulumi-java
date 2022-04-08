@@ -18,13 +18,66 @@ import javax.annotation.Nullable;
  * Represents a Global Address resource. Global addresses are used for
  * HTTP(S) load balancing.
  * 
+ * 
  * To get more information about GlobalAddress, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/globalAddresses)
  * * How-to Guides
  *     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Global Address Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.GlobalAddress("default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.GlobalAddress("default", new Gcp.Compute.GlobalAddressArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewGlobalAddress(ctx, "default", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +87,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/globalAddress:GlobalAddress default projects/{{project}}/global/addresses/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/globalAddress:GlobalAddress default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/globalAddress:GlobalAddress default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/globalAddress:GlobalAddress")
 public class GlobalAddress extends io.pulumi.resources.CustomResource {
@@ -67,8 +125,8 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * The type of the address to reserve.
      * * EXTERNAL indicates public/external single IP address.
      * * INTERNAL indicates internal IP ranges belonging to some network.
-     *   Default value is `EXTERNAL`.
-     *   Possible values are `EXTERNAL` and `INTERNAL`.
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL` and `INTERNAL`.
      * 
      */
     @Export(name="addressType", type=String.class, parameters={})
@@ -78,8 +136,8 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * @return The type of the address to reserve.
      * * EXTERNAL indicates public/external single IP address.
      * * INTERNAL indicates internal IP ranges belonging to some network.
-     *   Default value is `EXTERNAL`.
-     *   Possible values are `EXTERNAL` and `INTERNAL`.
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL` and `INTERNAL`.
      * 
      */
     public Output</* @Nullable */ String> getAddressType() {

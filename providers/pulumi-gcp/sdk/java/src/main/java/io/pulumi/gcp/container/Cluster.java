@@ -50,7 +50,263 @@ import javax.annotation.Nullable;
  * passwords as well as certificate outputs will be stored in the raw state as
  * plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### With A Separately Managed Node Pool (Recommended)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.serviceaccount.Account("default", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * const primary = new gcp.container.Cluster("primary", {
+ *     location: "us-central1",
+ *     removeDefaultNodePool: true,
+ *     initialNodeCount: 1,
+ * });
+ * const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNodes", {
+ *     location: "us-central1",
+ *     cluster: primary.name,
+ *     nodeCount: 1,
+ *     nodeConfig: {
+ *         preemptible: true,
+ *         machineType: "e2-medium",
+ *         serviceAccount: _default.email,
+ *         oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.service_account.Account("default",
+ *     account_id="service-account-id",
+ *     display_name="Service Account")
+ * primary = gcp.container.Cluster("primary",
+ *     location="us-central1",
+ *     remove_default_node_pool=True,
+ *     initial_node_count=1)
+ * primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
+ *     location="us-central1",
+ *     cluster=primary.name,
+ *     node_count=1,
+ *     node_config=gcp.container.NodePoolNodeConfigArgs(
+ *         preemptible=True,
+ *         machine_type="e2-medium",
+ *         service_account=default.email,
+ *         oauth_scopes=["https://www.googleapis.com/auth/cloud-platform"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "service-account-id",
+ *             DisplayName = "Service Account",
+ *         });
+ *         var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+ *         {
+ *             Location = "us-central1",
+ *             RemoveDefaultNodePool = true,
+ *             InitialNodeCount = 1,
+ *         });
+ *         var primaryPreemptibleNodes = new Gcp.Container.NodePool("primaryPreemptibleNodes", new Gcp.Container.NodePoolArgs
+ *         {
+ *             Location = "us-central1",
+ *             Cluster = primary.Name,
+ *             NodeCount = 1,
+ *             NodeConfig = new Gcp.Container.Inputs.NodePoolNodeConfigArgs
+ *             {
+ *                 Preemptible = true,
+ *                 MachineType = "e2-medium",
+ *                 ServiceAccount = @default.Email,
+ *                 OauthScopes = 
+ *                 {
+ *                     "https://www.googleapis.com/auth/cloud-platform",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := serviceAccount.NewAccount(ctx, "default", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("service-account-id"),
+ * 			DisplayName: pulumi.String("Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+ * 			Location:              pulumi.String("us-central1"),
+ * 			RemoveDefaultNodePool: pulumi.Bool(true),
+ * 			InitialNodeCount:      pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = container.NewNodePool(ctx, "primaryPreemptibleNodes", &container.NodePoolArgs{
+ * 			Location:  pulumi.String("us-central1"),
+ * 			Cluster:   primary.Name,
+ * 			NodeCount: pulumi.Int(1),
+ * 			NodeConfig: &container.NodePoolNodeConfigArgs{
+ * 				Preemptible:    pulumi.Bool(true),
+ * 				MachineType:    pulumi.String("e2-medium"),
+ * 				ServiceAccount: _default.Email,
+ * 				OauthScopes: pulumi.StringArray{
+ * 					pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * > **Note:** It is recommended that node pools be created and managed as separate resources as in the example above.
+ * This allows node pools to be added and removed without recreating the cluster.  Node pools defined directly in the
+ * `gcp.container.Cluster` resource cannot be removed without re-creating the cluster.
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With The Default Node Pool
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.serviceaccount.Account("default", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * const primary = new gcp.container.Cluster("primary", {
+ *     location: "us-central1-a",
+ *     initialNodeCount: 3,
+ *     nodeConfig: {
+ *         serviceAccount: _default.email,
+ *         oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+ *         labels: {
+ *             foo: "bar",
+ *         },
+ *         tags: [
+ *             "foo",
+ *             "bar",
+ *         ],
+ *     },
+ *     timeouts: [{
+ *         create: "30m",
+ *         update: "40m",
+ *     }],
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Autopilot
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultAccount = new gcp.serviceAccount.Account("default", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * const primary = new gcp.container.Cluster("primary", {
+ *     enableAutopilot: true,
+ *     location: "us-central1-a",
+ * }, { timeouts: {
+ *     create: "30m",
+ *     update: "40m",
+ * } });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.service_account.Account("default",
+ *     account_id="service-account-id",
+ *     display_name="Service Account")
+ * primary = gcp.container.Cluster("primary",
+ *     enable_autopilot=True,
+ *     location="us-central1-a")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "service-account-id",
+ *             DisplayName = "Service Account",
+ *         });
+ *         var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+ *         {
+ *             EnableAutopilot = true,
+ *             Location = "us-central1-a",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := serviceAccount.NewAccount(ctx, "default", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("service-account-id"),
+ * 			DisplayName: pulumi.String("Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = container.NewCluster(ctx, "primary", &container.ClusterArgs{
+ * 			EnableAutopilot: pulumi.Bool(true),
+ * 			Location:        pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -60,16 +316,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:container/cluster:Cluster mycluster projects/my-gcp-project/locations/us-east1-a/clusters/my-cluster
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:container/cluster:Cluster mycluster my-gcp-project/us-east1-a/my-cluster
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:container/cluster:Cluster mycluster us-east1-a/my-cluster
  * ```
  * 
- *  For example, the following fields will show diffs if set in config* `min_master_version` * `remove_default_node_pool`
- * 
+ *  For example, the following fields will show diffs if set in config* `min_master_version` * `remove_default_node_pool` 
  */
 @ResourceType(type="gcp:container/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

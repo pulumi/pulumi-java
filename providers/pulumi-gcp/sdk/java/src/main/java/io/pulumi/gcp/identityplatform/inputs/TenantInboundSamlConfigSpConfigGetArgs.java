@@ -28,7 +28,7 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
     }
 
     /**
-     * - 
+     * -
      * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 

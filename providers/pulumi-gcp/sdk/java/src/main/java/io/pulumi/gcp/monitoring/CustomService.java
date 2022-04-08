@@ -19,6 +19,7 @@ import javax.annotation.Nullable;
  * a Service acts as the root resource under which operational aspects of
  * the service are accessible
  * 
+ * 
  * To get more information about Service, see:
  * 
  * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
@@ -26,7 +27,82 @@ import javax.annotation.Nullable;
  *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
  *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Monitoring Service Custom
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const custom = new gcp.monitoring.CustomService("custom", {
+ *     displayName: "My Custom Service custom-srv",
+ *     serviceId: "custom-srv",
+ *     telemetry: {
+ *         resourceName: "//product.googleapis.com/foo/foo/services/test",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * custom = gcp.monitoring.CustomService("custom",
+ *     display_name="My Custom Service custom-srv",
+ *     service_id="custom-srv",
+ *     telemetry=gcp.monitoring.CustomServiceTelemetryArgs(
+ *         resource_name="//product.googleapis.com/foo/foo/services/test",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var custom = new Gcp.Monitoring.CustomService("custom", new Gcp.Monitoring.CustomServiceArgs
+ *         {
+ *             DisplayName = "My Custom Service custom-srv",
+ *             ServiceId = "custom-srv",
+ *             Telemetry = new Gcp.Monitoring.Inputs.CustomServiceTelemetryArgs
+ *             {
+ *                 ResourceName = "//product.googleapis.com/foo/foo/services/test",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewCustomService(ctx, "custom", &monitoring.CustomServiceArgs{
+ * 			DisplayName: pulumi.String("My Custom Service custom-srv"),
+ * 			ServiceId:   pulumi.String("custom-srv"),
+ * 			Telemetry: &monitoring.CustomServiceTelemetryArgs{
+ * 				ResourceName: pulumi.String("//product.googleapis.com/foo/foo/services/test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +112,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:monitoring/customService:CustomService default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:monitoring/customService:CustomService")
 public class CustomService extends io.pulumi.resources.CustomResource {

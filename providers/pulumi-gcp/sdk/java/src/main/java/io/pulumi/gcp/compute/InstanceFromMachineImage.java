@@ -37,8 +37,91 @@ import javax.annotation.Nullable;
  * `source_machine_image`. To create an instance without a machine image, use the
  * `gcp.compute.Instance` resource.
  * 
- * ## Example Usage
  * 
+ * {{% examples %}}
+ * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const tpl = new gcp.compute.InstanceFromMachineImage("tpl", {
+ *     zone: "us-central1-a",
+ *     sourceMachineImage: "projects/PROJECT-ID/global/machineImages/NAME",
+ *     canIpForward: false,
+ *     labels: {
+ *         my_key: "my_value",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * tpl = gcp.compute.InstanceFromMachineImage("tpl",
+ *     zone="us-central1-a",
+ *     source_machine_image="projects/PROJECT-ID/global/machineImages/NAME",
+ *     can_ip_forward=False,
+ *     labels={
+ *         "my_key": "my_value",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tpl = new Gcp.Compute.InstanceFromMachineImage("tpl", new Gcp.Compute.InstanceFromMachineImageArgs
+ *         {
+ *             Zone = "us-central1-a",
+ *             SourceMachineImage = "projects/PROJECT-ID/global/machineImages/NAME",
+ *             CanIpForward = false,
+ *             Labels = 
+ *             {
+ *                 { "my_key", "my_value" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewInstanceFromMachineImage(ctx, "tpl", &compute.InstanceFromMachineImageArgs{
+ * 			Zone:               pulumi.String("us-central1-a"),
+ * 			SourceMachineImage: pulumi.String("projects/PROJECT-ID/global/machineImages/NAME"),
+ * 			CanIpForward:       pulumi.Bool(false),
+ * 			Labels: pulumi.StringMap{
+ * 				"my_key": pulumi.String("my_value"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="gcp:compute/instanceFromMachineImage:InstanceFromMachineImage")
 public class InstanceFromMachineImage extends io.pulumi.resources.CustomResource {

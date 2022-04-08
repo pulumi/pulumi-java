@@ -37,12 +37,169 @@ import javax.annotation.Nullable;
  * `source_instance_template`. To create an instance without a template, use the
  * `gcp.compute.Instance` resource.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const tplInstanceTemplate = new gcp.compute.InstanceTemplate("tplInstanceTemplate", {
+ *     machineType: "e2-medium",
+ *     disks: [{
+ *         sourceImage: "debian-cloud/debian-9",
+ *         autoDelete: true,
+ *         diskSizeGb: 100,
+ *         boot: true,
+ *     }],
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ *     metadata: {
+ *         foo: "bar",
+ *     },
+ *     canIpForward: true,
+ * });
+ * const tplInstanceFromTemplate = new gcp.compute.InstanceFromTemplate("tplInstanceFromTemplate", {
+ *     zone: "us-central1-a",
+ *     sourceInstanceTemplate: tplInstanceTemplate.id,
+ *     canIpForward: false,
+ *     labels: {
+ *         my_key: "my_value",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * tpl_instance_template = gcp.compute.InstanceTemplate("tplInstanceTemplate",
+ *     machine_type="e2-medium",
+ *     disks=[gcp.compute.InstanceTemplateDiskArgs(
+ *         source_image="debian-cloud/debian-9",
+ *         auto_delete=True,
+ *         disk_size_gb=100,
+ *         boot=True,
+ *     )],
+ *     network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     metadata={
+ *         "foo": "bar",
+ *     },
+ *     can_ip_forward=True)
+ * tpl_instance_from_template = gcp.compute.InstanceFromTemplate("tplInstanceFromTemplate",
+ *     zone="us-central1-a",
+ *     source_instance_template=tpl_instance_template.id,
+ *     can_ip_forward=False,
+ *     labels={
+ *         "my_key": "my_value",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tplInstanceTemplate = new Gcp.Compute.InstanceTemplate("tplInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             Disks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     SourceImage = "debian-cloud/debian-9",
+ *                     AutoDelete = true,
+ *                     DiskSizeGb = 100,
+ *                     Boot = true,
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *             Metadata = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             CanIpForward = true,
+ *         });
+ *         var tplInstanceFromTemplate = new Gcp.Compute.InstanceFromTemplate("tplInstanceFromTemplate", new Gcp.Compute.InstanceFromTemplateArgs
+ *         {
+ *             Zone = "us-central1-a",
+ *             SourceInstanceTemplate = tplInstanceTemplate.Id,
+ *             CanIpForward = false,
+ *             Labels = 
+ *             {
+ *                 { "my_key", "my_value" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tplInstanceTemplate, err := compute.NewInstanceTemplate(ctx, "tplInstanceTemplate", &compute.InstanceTemplateArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			Disks: compute.InstanceTemplateDiskArray{
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					SourceImage: pulumi.String("debian-cloud/debian-9"),
+ * 					AutoDelete:  pulumi.Bool(true),
+ * 					DiskSizeGb:  pulumi.Int(100),
+ * 					Boot:        pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+ * 				&compute.InstanceTemplateNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 			Metadata: pulumi.AnyMap{
+ * 				"foo": pulumi.Any("bar"),
+ * 			},
+ * 			CanIpForward: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInstanceFromTemplate(ctx, "tplInstanceFromTemplate", &compute.InstanceFromTemplateArgs{
+ * 			Zone:                   pulumi.String("us-central1-a"),
+ * 			SourceInstanceTemplate: tplInstanceTemplate.ID(),
+ * 			CanIpForward:           pulumi.Bool(false),
+ * 			Labels: pulumi.StringMap{
+ * 				"my_key": pulumi.String("my_value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:compute/instanceFromTemplate:InstanceFromTemplate")
 public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {

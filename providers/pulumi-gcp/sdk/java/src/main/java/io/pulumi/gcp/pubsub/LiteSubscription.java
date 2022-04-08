@@ -17,13 +17,151 @@ import javax.annotation.Nullable;
  * A named resource representing the stream of messages from a single,
  * specific topic, to be delivered to the subscribing application.
  * 
+ * 
  * To get more information about Subscription, see:
  * 
  * * [API documentation](https://cloud.google.com/pubsub/lite/docs/reference/rest/v1/admin.projects.locations.subscriptions)
  * * How-to Guides
  *     * [Managing Subscriptions](https://cloud.google.com/pubsub/lite/docs/subscriptions)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Pubsub Lite Subscription Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = gcp.organizations.getProject({});
+ * const exampleLiteTopic = new gcp.pubsub.LiteTopic("exampleLiteTopic", {
+ *     project: project.then(project => project.number),
+ *     partitionConfig: {
+ *         count: 1,
+ *         capacity: {
+ *             publishMibPerSec: 4,
+ *             subscribeMibPerSec: 8,
+ *         },
+ *     },
+ *     retentionConfig: {
+ *         perPartitionBytes: 32212254720,
+ *     },
+ * });
+ * const exampleLiteSubscription = new gcp.pubsub.LiteSubscription("exampleLiteSubscription", {
+ *     topic: exampleLiteTopic.name,
+ *     deliveryConfig: {
+ *         deliveryRequirement: "DELIVER_AFTER_STORED",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.get_project()
+ * example_lite_topic = gcp.pubsub.LiteTopic("exampleLiteTopic",
+ *     project=project.number,
+ *     partition_config=gcp.pubsub.LiteTopicPartitionConfigArgs(
+ *         count=1,
+ *         capacity=gcp.pubsub.LiteTopicPartitionConfigCapacityArgs(
+ *             publish_mib_per_sec=4,
+ *             subscribe_mib_per_sec=8,
+ *         ),
+ *     ),
+ *     retention_config=gcp.pubsub.LiteTopicRetentionConfigArgs(
+ *         per_partition_bytes="32212254720",
+ *     ))
+ * example_lite_subscription = gcp.pubsub.LiteSubscription("exampleLiteSubscription",
+ *     topic=example_lite_topic.name,
+ *     delivery_config=gcp.pubsub.LiteSubscriptionDeliveryConfigArgs(
+ *         delivery_requirement="DELIVER_AFTER_STORED",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var exampleLiteTopic = new Gcp.PubSub.LiteTopic("exampleLiteTopic", new Gcp.PubSub.LiteTopicArgs
+ *         {
+ *             Project = project.Apply(project => project.Number),
+ *             PartitionConfig = new Gcp.PubSub.Inputs.LiteTopicPartitionConfigArgs
+ *             {
+ *                 Count = 1,
+ *                 Capacity = new Gcp.PubSub.Inputs.LiteTopicPartitionConfigCapacityArgs
+ *                 {
+ *                     PublishMibPerSec = 4,
+ *                     SubscribeMibPerSec = 8,
+ *                 },
+ *             },
+ *             RetentionConfig = new Gcp.PubSub.Inputs.LiteTopicRetentionConfigArgs
+ *             {
+ *                 PerPartitionBytes = "32212254720",
+ *             },
+ *         });
+ *         var exampleLiteSubscription = new Gcp.PubSub.LiteSubscription("exampleLiteSubscription", new Gcp.PubSub.LiteSubscriptionArgs
+ *         {
+ *             Topic = exampleLiteTopic.Name,
+ *             DeliveryConfig = new Gcp.PubSub.Inputs.LiteSubscriptionDeliveryConfigArgs
+ *             {
+ *                 DeliveryRequirement = "DELIVER_AFTER_STORED",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleLiteTopic, err := pubsub.NewLiteTopic(ctx, "exampleLiteTopic", &pubsub.LiteTopicArgs{
+ * 			Project: pulumi.String(project.Number),
+ * 			PartitionConfig: &pubsub.LiteTopicPartitionConfigArgs{
+ * 				Count: pulumi.Int(1),
+ * 				Capacity: &pubsub.LiteTopicPartitionConfigCapacityArgs{
+ * 					PublishMibPerSec:   pulumi.Int(4),
+ * 					SubscribeMibPerSec: pulumi.Int(8),
+ * 				},
+ * 			},
+ * 			RetentionConfig: &pubsub.LiteTopicRetentionConfigArgs{
+ * 				PerPartitionBytes: pulumi.String("32212254720"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pubsub.NewLiteSubscription(ctx, "exampleLiteSubscription", &pubsub.LiteSubscriptionArgs{
+ * 			Topic: exampleLiteTopic.Name,
+ * 			DeliveryConfig: &pubsub.LiteSubscriptionDeliveryConfigArgs{
+ * 				DeliveryRequirement: pulumi.String("DELIVER_AFTER_STORED"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,18 +171,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:pubsub/liteSubscription:LiteSubscription default projects/{{project}}/locations/{{zone}}/subscriptions/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:pubsub/liteSubscription:LiteSubscription default {{project}}/{{zone}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:pubsub/liteSubscription:LiteSubscription default {{zone}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:pubsub/liteSubscription:LiteSubscription default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:pubsub/liteSubscription:LiteSubscription")
 public class LiteSubscription extends io.pulumi.resources.CustomResource {

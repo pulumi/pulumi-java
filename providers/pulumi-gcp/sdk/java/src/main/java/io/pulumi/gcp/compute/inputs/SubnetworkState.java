@@ -58,7 +58,6 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * This field is not useful for users, and has been removed as an output.
-     * 
      */
     @Deprecated /* This field is not useful for users, and has been removed as an output. */
     @Import(name="fingerprint")

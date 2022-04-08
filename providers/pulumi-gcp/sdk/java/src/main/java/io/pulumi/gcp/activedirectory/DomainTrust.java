@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Adds a trust between Active Directory domains
  * 
+ * 
  * To get more information about DomainTrust, see:
  * 
  * * [API documentation](https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains/attachTrust)
@@ -26,7 +27,90 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `trust_handshake_secret` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Active Directory Domain Trust Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
+ *     domain: "test-managed-ad.com",
+ *     targetDnsIpAddresses: ["10.1.0.100"],
+ *     targetDomainName: "example-gcp.com",
+ *     trustDirection: "OUTBOUND",
+ *     trustHandshakeSecret: "Testing1!",
+ *     trustType: "FOREST",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * ad_domain_trust = gcp.activedirectory.DomainTrust("ad-domain-trust",
+ *     domain="test-managed-ad.com",
+ *     target_dns_ip_addresses=["10.1.0.100"],
+ *     target_domain_name="example-gcp.com",
+ *     trust_direction="OUTBOUND",
+ *     trust_handshake_secret="Testing1!",
+ *     trust_type="FOREST")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ad_domain_trust = new Gcp.ActiveDirectory.DomainTrust("ad-domain-trust", new Gcp.ActiveDirectory.DomainTrustArgs
+ *         {
+ *             Domain = "test-managed-ad.com",
+ *             TargetDnsIpAddresses = 
+ *             {
+ *                 "10.1.0.100",
+ *             },
+ *             TargetDomainName = "example-gcp.com",
+ *             TrustDirection = "OUTBOUND",
+ *             TrustHandshakeSecret = "Testing1!",
+ *             TrustType = "FOREST",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/activedirectory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := activedirectory.NewDomainTrust(ctx, "ad-domain-trust", &activedirectory.DomainTrustArgs{
+ * 			Domain: pulumi.String("test-managed-ad.com"),
+ * 			TargetDnsIpAddresses: pulumi.StringArray{
+ * 				pulumi.String("10.1.0.100"),
+ * 			},
+ * 			TargetDomainName:     pulumi.String("example-gcp.com"),
+ * 			TrustDirection:       pulumi.String("OUTBOUND"),
+ * 			TrustHandshakeSecret: pulumi.String("Testing1!"),
+ * 			TrustType:            pulumi.String("FOREST"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,14 +120,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default projects/{{project}}/locations/global/domains/{{domain}}/{{target_domain_name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default {{project}}/{{domain}}/{{target_domain_name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default {{domain}}/{{target_domain_name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:activedirectory/domainTrust:DomainTrust")
 public class DomainTrust extends io.pulumi.resources.CustomResource {

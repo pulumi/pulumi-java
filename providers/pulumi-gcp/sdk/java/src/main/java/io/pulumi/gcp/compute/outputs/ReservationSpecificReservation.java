@@ -18,7 +18,7 @@ public final class ReservationSpecificReservation {
      */
     private final Integer count;
     /**
-     * - 
+     * -
      * How many instances are in use.
      * 
      */
@@ -48,7 +48,7 @@ public final class ReservationSpecificReservation {
         return this.count;
     }
     /**
-     * - 
+     * -
      * How many instances are in use.
      * 
     */

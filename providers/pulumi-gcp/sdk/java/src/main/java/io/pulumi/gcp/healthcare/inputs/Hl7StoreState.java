@@ -62,14 +62,13 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * A nested object resource
      * Structure is documented below.
      * 
      * @Deprecated
      * This field has been replaced by notificationConfigs
-     * 
      */
     @Deprecated /* This field has been replaced by notificationConfigs */
     @Import(name="notificationConfig")

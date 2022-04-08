@@ -18,7 +18,75 @@ import javax.annotation.Nullable;
  * and
  * [API](https://cloud.google.com/compute/docs/reference/latest/routers).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const foobar = new gcp.compute.RouterInterface("foobar", {
+ *     ipRange: "169.254.1.1/30",
+ *     region: "us-central1",
+ *     router: "router-1",
+ *     vpnTunnel: "tunnel-1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * foobar = gcp.compute.RouterInterface("foobar",
+ *     ip_range="169.254.1.1/30",
+ *     region="us-central1",
+ *     router="router-1",
+ *     vpn_tunnel="tunnel-1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foobar = new Gcp.Compute.RouterInterface("foobar", new Gcp.Compute.RouterInterfaceArgs
+ *         {
+ *             IpRange = "169.254.1.1/30",
+ *             Region = "us-central1",
+ *             Router = "router-1",
+ *             VpnTunnel = "tunnel-1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewRouterInterface(ctx, "foobar", &compute.RouterInterfaceArgs{
+ * 			IpRange:   pulumi.String("169.254.1.1/30"),
+ * 			Region:    pulumi.String("us-central1"),
+ * 			Router:    pulumi.String("router-1"),
+ * 			VpnTunnel: pulumi.String("tunnel-1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/routerInterface:RouterInterface foobar us-central1/router-1/interface-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/routerInterface:RouterInterface")
 public class RouterInterface extends io.pulumi.resources.CustomResource {

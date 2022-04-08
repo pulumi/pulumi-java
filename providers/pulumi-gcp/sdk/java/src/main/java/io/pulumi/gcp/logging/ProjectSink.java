@@ -17,6 +17,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Project-level logging sinks can be imported using their URI, e.g.
@@ -25,6 +28,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/projectSink:ProjectSink my_sink projects/my-project/sinks/my-sink
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/projectSink:ProjectSink")
 public class ProjectSink extends io.pulumi.resources.CustomResource {
@@ -59,7 +63,36 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket . Examples:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
      * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -69,7 +102,36 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
     /**
      * @return The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket . Examples:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
      * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */

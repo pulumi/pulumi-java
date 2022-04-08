@@ -15,13 +15,135 @@ import javax.annotation.Nullable;
 /**
  * An EntryGroup resource represents a logical grouping of zero or more Data Catalog Entry resources.
  * 
+ * 
  * To get more information about EntryGroup, see:
  * 
  * * [API documentation](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Data Catalog Entry Group Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basicEntryGroup = new gcp.datacatalog.EntryGroup("basic_entry_group", {
+ *     entryGroupId: "my_group",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic_entry_group = gcp.datacatalog.EntryGroup("basicEntryGroup", entry_group_id="my_group")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicEntryGroup = new Gcp.DataCatalog.EntryGroup("basicEntryGroup", new Gcp.DataCatalog.EntryGroupArgs
+ *         {
+ *             EntryGroupId = "my_group",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datacatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datacatalog.NewEntryGroup(ctx, "basicEntryGroup", &datacatalog.EntryGroupArgs{
+ * 			EntryGroupId: pulumi.String("my_group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Data Catalog Entry Group Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basicEntryGroup = new gcp.datacatalog.EntryGroup("basic_entry_group", {
+ *     description: "example entry group",
+ *     displayName: "entry group",
+ *     entryGroupId: "my_group",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic_entry_group = gcp.datacatalog.EntryGroup("basicEntryGroup",
+ *     description="example entry group",
+ *     display_name="entry group",
+ *     entry_group_id="my_group")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicEntryGroup = new Gcp.DataCatalog.EntryGroup("basicEntryGroup", new Gcp.DataCatalog.EntryGroupArgs
+ *         {
+ *             Description = "example entry group",
+ *             DisplayName = "entry group",
+ *             EntryGroupId = "my_group",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datacatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datacatalog.NewEntryGroup(ctx, "basicEntryGroup", &datacatalog.EntryGroupArgs{
+ * 			Description:  pulumi.String("example entry group"),
+ * 			DisplayName:  pulumi.String("entry group"),
+ * 			EntryGroupId: pulumi.String("my_group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +153,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:datacatalog/entryGroup:EntryGroup default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:datacatalog/entryGroup:EntryGroup")
 public class EntryGroup extends io.pulumi.resources.CustomResource {

@@ -15,13 +15,16 @@ import javax.annotation.Nullable;
 /**
  * An `Instance attachment` in Apigee.
  * 
+ * 
  * To get more information about InstanceAttachment, see:
  * 
  * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances.attachments/create)
  * * How-to Guides
  *     * [Creating an environment](https://cloud.google.com/apigee/docs/api-platform/get-started/create-environment)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +34,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:apigee/instanceAttachment:InstanceAttachment default {{instance_id}}/attachments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:apigee/instanceAttachment:InstanceAttachment default {{instance_id}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:apigee/instanceAttachment:InstanceAttachment")
 public class InstanceAttachment extends io.pulumi.resources.CustomResource {

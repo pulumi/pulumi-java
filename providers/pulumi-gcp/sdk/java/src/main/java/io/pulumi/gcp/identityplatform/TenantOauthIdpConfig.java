@@ -20,7 +20,99 @@ import javax.annotation.Nullable;
  * [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
  * the marketplace prior to using this resource.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Identity Platform Tenant Oauth Idp Config Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+ * const tenantOauthIdpConfig = new gcp.identityplatform.TenantOauthIdpConfig("tenantOauthIdpConfig", {
+ *     tenant: tenant.name,
+ *     displayName: "Display Name",
+ *     clientId: "client-id",
+ *     issuer: "issuer",
+ *     enabled: true,
+ *     clientSecret: "secret",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+ * tenant_oauth_idp_config = gcp.identityplatform.TenantOauthIdpConfig("tenantOauthIdpConfig",
+ *     tenant=tenant.name,
+ *     display_name="Display Name",
+ *     client_id="client-id",
+ *     issuer="issuer",
+ *     enabled=True,
+ *     client_secret="secret")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tenant = new Gcp.IdentityPlatform.Tenant("tenant", new Gcp.IdentityPlatform.TenantArgs
+ *         {
+ *             DisplayName = "tenant",
+ *         });
+ *         var tenantOauthIdpConfig = new Gcp.IdentityPlatform.TenantOauthIdpConfig("tenantOauthIdpConfig", new Gcp.IdentityPlatform.TenantOauthIdpConfigArgs
+ *         {
+ *             Tenant = tenant.Name,
+ *             DisplayName = "Display Name",
+ *             ClientId = "client-id",
+ *             Issuer = "issuer",
+ *             Enabled = true,
+ *             ClientSecret = "secret",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/identityplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tenant, err := identityplatform.NewTenant(ctx, "tenant", &identityplatform.TenantArgs{
+ * 			DisplayName: pulumi.String("tenant"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = identityplatform.NewTenantOauthIdpConfig(ctx, "tenantOauthIdpConfig", &identityplatform.TenantOauthIdpConfigArgs{
+ * 			Tenant:       tenant.Name,
+ * 			DisplayName:  pulumi.String("Display Name"),
+ * 			ClientId:     pulumi.String("client-id"),
+ * 			Issuer:       pulumi.String("issuer"),
+ * 			Enabled:      pulumi.Bool(true),
+ * 			ClientSecret: pulumi.String("secret"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +122,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default projects/{{project}}/tenants/{{tenant}}/oauthIdpConfigs/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default {{project}}/{{tenant}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default {{tenant}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig")
 public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {

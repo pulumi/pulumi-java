@@ -27,7 +27,94 @@ import javax.annotation.Nullable;
  *  made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
  *  by the provider, and new roles cannot share that name.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * This snippet creates a customized IAM role.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const my_custom_role = new gcp.projects.IAMCustomRole("my-custom-role", {
+ *     description: "A description",
+ *     permissions: [
+ *         "iam.roles.list",
+ *         "iam.roles.create",
+ *         "iam.roles.delete",
+ *     ],
+ *     roleId: "myCustomRole",
+ *     title: "My Custom Role",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_custom_role = gcp.projects.IAMCustomRole("my-custom-role",
+ *     description="A description",
+ *     permissions=[
+ *         "iam.roles.list",
+ *         "iam.roles.create",
+ *         "iam.roles.delete",
+ *     ],
+ *     role_id="myCustomRole",
+ *     title="My Custom Role")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var my_custom_role = new Gcp.Projects.IAMCustomRole("my-custom-role", new Gcp.Projects.IAMCustomRoleArgs
+ *         {
+ *             Description = "A description",
+ *             Permissions = 
+ *             {
+ *                 "iam.roles.list",
+ *                 "iam.roles.create",
+ *                 "iam.roles.delete",
+ *             },
+ *             RoleId = "myCustomRole",
+ *             Title = "My Custom Role",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := projects.NewIAMCustomRole(ctx, "my-custom-role", &projects.IAMCustomRoleArgs{
+ * 			Description: pulumi.String("A description"),
+ * 			Permissions: pulumi.StringArray{
+ * 				pulumi.String("iam.roles.list"),
+ * 				pulumi.String("iam.roles.create"),
+ * 				pulumi.String("iam.roles.delete"),
+ * 			},
+ * 			RoleId: pulumi.String("myCustomRole"),
+ * 			Title:  pulumi.String("My Custom Role"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,14 +124,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:projects/iAMCustomRole:IAMCustomRole default projects/{{project}}/roles/{{role_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:projects/iAMCustomRole:IAMCustomRole default {{project}}/{{role_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:projects/iAMCustomRole:IAMCustomRole default {{role_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:projects/iAMCustomRole:IAMCustomRole")
 public class IAMCustomRole extends io.pulumi.resources.CustomResource {

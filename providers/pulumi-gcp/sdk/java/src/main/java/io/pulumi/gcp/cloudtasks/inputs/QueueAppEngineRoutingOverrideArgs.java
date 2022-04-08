@@ -15,7 +15,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
     public static final QueueAppEngineRoutingOverrideArgs Empty = new QueueAppEngineRoutingOverrideArgs();
 
     /**
-     * - 
+     * -
      * The host that the task is sent to.
      * 
      */

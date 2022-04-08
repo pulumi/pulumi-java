@@ -16,7 +16,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
     public static final EntryGcsFilesetSpecSampleGcsFileSpecArgs Empty = new EntryGcsFilesetSpecSampleGcsFileSpecArgs();
 
     /**
-     * - 
+     * -
      * The full file path
      * 
      */
@@ -28,7 +28,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
     }
 
     /**
-     * - 
+     * -
      * The size of the file, in bytes.
      * 
      */

@@ -31,7 +31,244 @@ import javax.annotation.Nullable;
  * (and run `pulumi update` to write the field to state) in order to destroy an instance.
  * It is recommended to not set this field (or set it to true) until you're ready to destroy.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultDataset = new gcp.bigquery.Dataset("defaultDataset", {
+ *     datasetId: "foo",
+ *     friendlyName: "test",
+ *     description: "This is a test description",
+ *     location: "EU",
+ *     defaultTableExpirationMs: 3600000,
+ *     labels: {
+ *         env: "default",
+ *     },
+ * });
+ * const defaultTable = new gcp.bigquery.Table("defaultTable", {
+ *     datasetId: defaultDataset.datasetId,
+ *     tableId: "bar",
+ *     timePartitioning: {
+ *         type: "DAY",
+ *     },
+ *     labels: {
+ *         env: "default",
+ *     },
+ *     schema: `[
+ *   {
+ *     "name": "permalink",
+ *     "type": "STRING",
+ *     "mode": "NULLABLE",
+ *     "description": "The Permalink"
+ *   },
+ *   {
+ *     "name": "state",
+ *     "type": "STRING",
+ *     "mode": "NULLABLE",
+ *     "description": "State where the head office is located"
+ *   }
+ * ]
+ * `,
+ * });
+ * const sheet = new gcp.bigquery.Table("sheet", {
+ *     datasetId: defaultDataset.datasetId,
+ *     tableId: "sheet",
+ *     externalDataConfiguration: {
+ *         autodetect: true,
+ *         sourceFormat: "GOOGLE_SHEETS",
+ *         googleSheetsOptions: {
+ *             skipLeadingRows: 1,
+ *         },
+ *         sourceUris: ["https://docs.google.com/spreadsheets/d/123456789012345"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_dataset = gcp.bigquery.Dataset("defaultDataset",
+ *     dataset_id="foo",
+ *     friendly_name="test",
+ *     description="This is a test description",
+ *     location="EU",
+ *     default_table_expiration_ms=3600000,
+ *     labels={
+ *         "env": "default",
+ *     })
+ * default_table = gcp.bigquery.Table("defaultTable",
+ *     dataset_id=default_dataset.dataset_id,
+ *     table_id="bar",
+ *     time_partitioning=gcp.bigquery.TableTimePartitioningArgs(
+ *         type="DAY",
+ *     ),
+ *     labels={
+ *         "env": "default",
+ *     },
+ *     schema="""[
+ *   {
+ *     "name": "permalink",
+ *     "type": "STRING",
+ *     "mode": "NULLABLE",
+ *     "description": "The Permalink"
+ *   },
+ *   {
+ *     "name": "state",
+ *     "type": "STRING",
+ *     "mode": "NULLABLE",
+ *     "description": "State where the head office is located"
+ *   }
+ * ]
+ * """)
+ * sheet = gcp.bigquery.Table("sheet",
+ *     dataset_id=default_dataset.dataset_id,
+ *     table_id="sheet",
+ *     external_data_configuration=gcp.bigquery.TableExternalDataConfigurationArgs(
+ *         autodetect=True,
+ *         source_format="GOOGLE_SHEETS",
+ *         google_sheets_options=gcp.bigquery.TableExternalDataConfigurationGoogleSheetsOptionsArgs(
+ *             skip_leading_rows=1,
+ *         ),
+ *         source_uris=["https://docs.google.com/spreadsheets/d/123456789012345"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultDataset = new Gcp.BigQuery.Dataset("defaultDataset", new Gcp.BigQuery.DatasetArgs
+ *         {
+ *             DatasetId = "foo",
+ *             FriendlyName = "test",
+ *             Description = "This is a test description",
+ *             Location = "EU",
+ *             DefaultTableExpirationMs = 3600000,
+ *             Labels = 
+ *             {
+ *                 { "env", "default" },
+ *             },
+ *         });
+ *         var defaultTable = new Gcp.BigQuery.Table("defaultTable", new Gcp.BigQuery.TableArgs
+ *         {
+ *             DatasetId = defaultDataset.DatasetId,
+ *             TableId = "bar",
+ *             TimePartitioning = new Gcp.BigQuery.Inputs.TableTimePartitioningArgs
+ *             {
+ *                 Type = "DAY",
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "env", "default" },
+ *             },
+ *             Schema = @"[
+ *   {
+ *     ""name"": ""permalink"",
+ *     ""type"": ""STRING"",
+ *     ""mode"": ""NULLABLE"",
+ *     ""description"": ""The Permalink""
+ *   },
+ *   {
+ *     ""name"": ""state"",
+ *     ""type"": ""STRING"",
+ *     ""mode"": ""NULLABLE"",
+ *     ""description"": ""State where the head office is located""
+ *   }
+ * ]
+ * ",
+ *         });
+ *         var sheet = new Gcp.BigQuery.Table("sheet", new Gcp.BigQuery.TableArgs
+ *         {
+ *             DatasetId = defaultDataset.DatasetId,
+ *             TableId = "sheet",
+ *             ExternalDataConfiguration = new Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs
+ *             {
+ *                 Autodetect = true,
+ *                 SourceFormat = "GOOGLE_SHEETS",
+ *                 GoogleSheetsOptions = new Gcp.BigQuery.Inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs
+ *                 {
+ *                     SkipLeadingRows = 1,
+ *                 },
+ *                 SourceUris = 
+ *                 {
+ *                     "https://docs.google.com/spreadsheets/d/123456789012345",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigquery"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultDataset, err := bigquery.NewDataset(ctx, "defaultDataset", &bigquery.DatasetArgs{
+ * 			DatasetId:                pulumi.String("foo"),
+ * 			FriendlyName:             pulumi.String("test"),
+ * 			Description:              pulumi.String("This is a test description"),
+ * 			Location:                 pulumi.String("EU"),
+ * 			DefaultTableExpirationMs: pulumi.Int(3600000),
+ * 			Labels: pulumi.StringMap{
+ * 				"env": pulumi.String("default"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = bigquery.NewTable(ctx, "defaultTable", &bigquery.TableArgs{
+ * 			DatasetId: defaultDataset.DatasetId,
+ * 			TableId:   pulumi.String("bar"),
+ * 			TimePartitioning: &bigquery.TableTimePartitioningArgs{
+ * 				Type: pulumi.String("DAY"),
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"env": pulumi.String("default"),
+ * 			},
+ * 			Schema: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "[\n", "  {\n", "    \"name\": \"permalink\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\",\n", "    \"description\": \"The Permalink\"\n", "  },\n", "  {\n", "    \"name\": \"state\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\",\n", "    \"description\": \"State where the head office is located\"\n", "  }\n", "]\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = bigquery.NewTable(ctx, "sheet", &bigquery.TableArgs{
+ * 			DatasetId: defaultDataset.DatasetId,
+ * 			TableId:   pulumi.String("sheet"),
+ * 			ExternalDataConfiguration: &bigquery.TableExternalDataConfigurationArgs{
+ * 				Autodetect:   pulumi.Bool(true),
+ * 				SourceFormat: pulumi.String("GOOGLE_SHEETS"),
+ * 				GoogleSheetsOptions: &bigquery.TableExternalDataConfigurationGoogleSheetsOptionsArgs{
+ * 					SkipLeadingRows: pulumi.Int(1),
+ * 				},
+ * 				SourceUris: pulumi.StringArray{
+ * 					pulumi.String("https://docs.google.com/spreadsheets/d/123456789012345"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,6 +278,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigquery/table:Table default gcp-project/foo/bar
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:bigquery/table:Table")
 public class Table extends io.pulumi.resources.CustomResource {

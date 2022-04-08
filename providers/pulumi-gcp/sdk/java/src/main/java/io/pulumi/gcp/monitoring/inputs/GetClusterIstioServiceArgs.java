@@ -15,7 +15,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
     public static final GetClusterIstioServiceArgs Empty = new GetClusterIstioServiceArgs();
 
     /**
-     * The name of the Kubernetes cluster in which this Istio service
+     * The name of the Kubernetes cluster in which this Istio service 
      * is defined. Corresponds to the clusterName resource label in k8s_cluster resources.
      * 
      */
@@ -27,7 +27,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
     }
 
     /**
-     * The location of the Kubernetes cluster in which this Istio service
+     * The location of the Kubernetes cluster in which this Istio service 
      * is defined. Corresponds to the location resource label in k8s_cluster resources.
      * 
      */

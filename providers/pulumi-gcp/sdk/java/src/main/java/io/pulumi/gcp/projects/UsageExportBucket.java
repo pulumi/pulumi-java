@@ -31,7 +31,144 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Creating and managing projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myProject = new gcp.organizations.Project("my_project", {
+ *     orgId: "1234567",
+ *     projectId: "your-project-id",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_project = gcp.organizations.Project("myProject",
+ *     org_id="1234567",
+ *     project_id="your-project-id")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             OrgId = "1234567",
+ *             ProjectId = "your-project-id",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+ * 			OrgId:     pulumi.String("1234567"),
+ * 			ProjectId: pulumi.String("your-project-id"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * To create a project under a specific folder
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const department1 = new gcp.organizations.Folder("department1", {
+ *     displayName: "Department 1",
+ *     parent: "organizations/1234567",
+ * });
+ * const myProject_in_a_folder = new gcp.organizations.Project("myProject-in-a-folder", {
+ *     projectId: "your-project-id",
+ *     folderId: department1.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * department1 = gcp.organizations.Folder("department1",
+ *     display_name="Department 1",
+ *     parent="organizations/1234567")
+ * my_project_in_a_folder = gcp.organizations.Project("myProject-in-a-folder",
+ *     project_id="your-project-id",
+ *     folder_id=department1.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var department1 = new Gcp.Organizations.Folder("department1", new Gcp.Organizations.FolderArgs
+ *         {
+ *             DisplayName = "Department 1",
+ *             Parent = "organizations/1234567",
+ *         });
+ *         var myProject_in_a_folder = new Gcp.Organizations.Project("myProject-in-a-folder", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             ProjectId = "your-project-id",
+ *             FolderId = department1.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		department1, err := organizations.NewFolder(ctx, "department1", &organizations.FolderArgs{
+ * 			DisplayName: pulumi.String("Department 1"),
+ * 			Parent:      pulumi.String("organizations/1234567"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = organizations.NewProject(ctx, "myProject-in-a-folder", &organizations.ProjectArgs{
+ * 			ProjectId: pulumi.String("your-project-id"),
+ * 			FolderId:  department1.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,6 +178,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:projects/usageExportBucket:UsageExportBucket my_project your-project-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:projects/usageExportBucket:UsageExportBucket")
 public class UsageExportBucket extends io.pulumi.resources.CustomResource {

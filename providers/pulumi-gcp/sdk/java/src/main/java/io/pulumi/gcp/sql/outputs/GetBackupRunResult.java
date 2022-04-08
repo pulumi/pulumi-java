@@ -27,7 +27,7 @@ public final class GetBackupRunResult {
     private final String location;
     private final @Nullable Boolean mostRecent;
     /**
-     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for
+     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for 
      * example 2012-11-15T16:19:00.094Z.
      * 
      */
@@ -80,7 +80,7 @@ public final class GetBackupRunResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for
+     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for 
      * example 2012-11-15T16:19:00.094Z.
      * 
     */

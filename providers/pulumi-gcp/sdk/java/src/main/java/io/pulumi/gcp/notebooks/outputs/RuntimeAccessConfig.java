@@ -19,7 +19,7 @@ public final class RuntimeAccessConfig {
      */
     private final @Nullable String accessType;
     /**
-     * - 
+     * -
      * The proxy endpoint that is used to access the runtime.
      * 
      */
@@ -51,7 +51,7 @@ public final class RuntimeAccessConfig {
         return Optional.ofNullable(this.accessType);
     }
     /**
-     * - 
+     * -
      * The proxy endpoint that is used to access the runtime.
      * 
     */

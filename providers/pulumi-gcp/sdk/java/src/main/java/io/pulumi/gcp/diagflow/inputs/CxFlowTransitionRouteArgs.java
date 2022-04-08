@@ -40,7 +40,7 @@ public final class CxFlowTransitionRouteArgs extends io.pulumi.resources.Resourc
     }
 
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */

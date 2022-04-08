@@ -21,13 +21,990 @@ import javax.annotation.Nullable;
  * Patch deployments are configurations that individual patch jobs use to complete a patch.
  * These configurations include instance filter, package repository settings, and a schedule.
  * 
+ * 
  * To get more information about PatchDeployment, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/osconfig/rest)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/compute/docs/os-patch-management)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Os Config Patch Deployment Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const patch = new gcp.osconfig.PatchDeployment("patch", {
+ *     instanceFilter: {
+ *         all: true,
+ *     },
+ *     oneTimeSchedule: {
+ *         executeTime: "2999-10-10T10:10:10.045123456Z",
+ *     },
+ *     patchDeploymentId: "patch-deploy",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * patch = gcp.osconfig.PatchDeployment("patch",
+ *     instance_filter=gcp.osconfig.PatchDeploymentInstanceFilterArgs(
+ *         all=True,
+ *     ),
+ *     one_time_schedule=gcp.osconfig.PatchDeploymentOneTimeScheduleArgs(
+ *         execute_time="2999-10-10T10:10:10.045123456Z",
+ *     ),
+ *     patch_deployment_id="patch-deploy")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var patch = new Gcp.OsConfig.PatchDeployment("patch", new Gcp.OsConfig.PatchDeploymentArgs
+ *         {
+ *             InstanceFilter = new Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterArgs
+ *             {
+ *                 All = true,
+ *             },
+ *             OneTimeSchedule = new Gcp.OsConfig.Inputs.PatchDeploymentOneTimeScheduleArgs
+ *             {
+ *                 ExecuteTime = "2999-10-10T10:10:10.045123456Z",
+ *             },
+ *             PatchDeploymentId = "patch-deploy",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/osconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := osconfig.NewPatchDeployment(ctx, "patch", &osconfig.PatchDeploymentArgs{
+ * 			InstanceFilter: &osconfig.PatchDeploymentInstanceFilterArgs{
+ * 				All: pulumi.Bool(true),
+ * 			},
+ * 			OneTimeSchedule: &osconfig.PatchDeploymentOneTimeScheduleArgs{
+ * 				ExecuteTime: pulumi.String("2999-10-10T10:10:10.045123456Z"),
+ * 			},
+ * 			PatchDeploymentId: pulumi.String("patch-deploy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Os Config Patch Deployment Daily
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const patch = new gcp.osconfig.PatchDeployment("patch", {
+ *     instanceFilter: {
+ *         all: true,
+ *     },
+ *     patchDeploymentId: "patch-deploy",
+ *     recurringSchedule: {
+ *         timeOfDay: {
+ *             hours: 0,
+ *             minutes: 30,
+ *             nanos: 20,
+ *             seconds: 30,
+ *         },
+ *         timeZone: {
+ *             id: "America/New_York",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * patch = gcp.osconfig.PatchDeployment("patch",
+ *     instance_filter=gcp.osconfig.PatchDeploymentInstanceFilterArgs(
+ *         all=True,
+ *     ),
+ *     patch_deployment_id="patch-deploy",
+ *     recurring_schedule=gcp.osconfig.PatchDeploymentRecurringScheduleArgs(
+ *         time_of_day=gcp.osconfig.PatchDeploymentRecurringScheduleTimeOfDayArgs(
+ *             hours=0,
+ *             minutes=30,
+ *             nanos=20,
+ *             seconds=30,
+ *         ),
+ *         time_zone=gcp.osconfig.PatchDeploymentRecurringScheduleTimeZoneArgs(
+ *             id="America/New_York",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var patch = new Gcp.OsConfig.PatchDeployment("patch", new Gcp.OsConfig.PatchDeploymentArgs
+ *         {
+ *             InstanceFilter = new Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterArgs
+ *             {
+ *                 All = true,
+ *             },
+ *             PatchDeploymentId = "patch-deploy",
+ *             RecurringSchedule = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleArgs
+ *             {
+ *                 TimeOfDay = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeOfDayArgs
+ *                 {
+ *                     Hours = 0,
+ *                     Minutes = 30,
+ *                     Nanos = 20,
+ *                     Seconds = 30,
+ *                 },
+ *                 TimeZone = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeZoneArgs
+ *                 {
+ *                     Id = "America/New_York",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/osconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := osconfig.NewPatchDeployment(ctx, "patch", &osconfig.PatchDeploymentArgs{
+ * 			InstanceFilter: &osconfig.PatchDeploymentInstanceFilterArgs{
+ * 				All: pulumi.Bool(true),
+ * 			},
+ * 			PatchDeploymentId: pulumi.String("patch-deploy"),
+ * 			RecurringSchedule: &osconfig.PatchDeploymentRecurringScheduleArgs{
+ * 				TimeOfDay: &osconfig.PatchDeploymentRecurringScheduleTimeOfDayArgs{
+ * 					Hours:   pulumi.Int(0),
+ * 					Minutes: pulumi.Int(30),
+ * 					Nanos:   pulumi.Int(20),
+ * 					Seconds: pulumi.Int(30),
+ * 				},
+ * 				TimeZone: &osconfig.PatchDeploymentRecurringScheduleTimeZoneArgs{
+ * 					Id: pulumi.String("America/New_York"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Os Config Patch Deployment Instance
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myImage = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * const foobar = new gcp.compute.Instance("foobar", {
+ *     machineType: "e2-medium",
+ *     zone: "us-central1-a",
+ *     canIpForward: false,
+ *     tags: [
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: myImage.then(myImage => myImage.selfLink),
+ *         },
+ *     },
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ *     metadata: {
+ *         foo: "bar",
+ *     },
+ * });
+ * const patch = new gcp.osconfig.PatchDeployment("patch", {
+ *     patchDeploymentId: "patch-deploy",
+ *     instanceFilter: {
+ *         instances: [foobar.id],
+ *     },
+ *     patchConfig: {
+ *         yum: {
+ *             security: true,
+ *             minimal: true,
+ *             excludes: ["bash"],
+ *         },
+ *     },
+ *     recurringSchedule: {
+ *         timeZone: {
+ *             id: "America/New_York",
+ *         },
+ *         timeOfDay: {
+ *             hours: 0,
+ *             minutes: 30,
+ *             seconds: 30,
+ *             nanos: 20,
+ *         },
+ *         monthly: {
+ *             monthDay: 1,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_image = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * foobar = gcp.compute.Instance("foobar",
+ *     machine_type="e2-medium",
+ *     zone="us-central1-a",
+ *     can_ip_forward=False,
+ *     tags=[
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image=my_image.self_link,
+ *         ),
+ *     ),
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     metadata={
+ *         "foo": "bar",
+ *     })
+ * patch = gcp.osconfig.PatchDeployment("patch",
+ *     patch_deployment_id="patch-deploy",
+ *     instance_filter=gcp.osconfig.PatchDeploymentInstanceFilterArgs(
+ *         instances=[foobar.id],
+ *     ),
+ *     patch_config=gcp.osconfig.PatchDeploymentPatchConfigArgs(
+ *         yum=gcp.osconfig.PatchDeploymentPatchConfigYumArgs(
+ *             security=True,
+ *             minimal=True,
+ *             excludes=["bash"],
+ *         ),
+ *     ),
+ *     recurring_schedule=gcp.osconfig.PatchDeploymentRecurringScheduleArgs(
+ *         time_zone=gcp.osconfig.PatchDeploymentRecurringScheduleTimeZoneArgs(
+ *             id="America/New_York",
+ *         ),
+ *         time_of_day=gcp.osconfig.PatchDeploymentRecurringScheduleTimeOfDayArgs(
+ *             hours=0,
+ *             minutes=30,
+ *             seconds=30,
+ *             nanos=20,
+ *         ),
+ *         monthly=gcp.osconfig.PatchDeploymentRecurringScheduleMonthlyArgs(
+ *             month_day=1,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var foobar = new Gcp.Compute.Instance("foobar", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             Zone = "us-central1-a",
+ *             CanIpForward = false,
+ *             Tags = 
+ *             {
+ *                 "foo",
+ *                 "bar",
+ *             },
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = myImage.Apply(myImage => myImage.SelfLink),
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *             Metadata = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *         });
+ *         var patch = new Gcp.OsConfig.PatchDeployment("patch", new Gcp.OsConfig.PatchDeploymentArgs
+ *         {
+ *             PatchDeploymentId = "patch-deploy",
+ *             InstanceFilter = new Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterArgs
+ *             {
+ *                 Instances = 
+ *                 {
+ *                     foobar.Id,
+ *                 },
+ *             },
+ *             PatchConfig = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigArgs
+ *             {
+ *                 Yum = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigYumArgs
+ *                 {
+ *                     Security = true,
+ *                     Minimal = true,
+ *                     Excludes = 
+ *                     {
+ *                         "bash",
+ *                     },
+ *                 },
+ *             },
+ *             RecurringSchedule = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleArgs
+ *             {
+ *                 TimeZone = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeZoneArgs
+ *                 {
+ *                     Id = "America/New_York",
+ *                 },
+ *                 TimeOfDay = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeOfDayArgs
+ *                 {
+ *                     Hours = 0,
+ *                     Minutes = 30,
+ *                     Seconds = 30,
+ *                     Nanos = 20,
+ *                 },
+ *                 Monthly = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleMonthlyArgs
+ *                 {
+ *                     MonthDay = 1,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/osconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		myImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foobar, err := compute.NewInstance(ctx, "foobar", &compute.InstanceArgs{
+ * 			MachineType:  pulumi.String("e2-medium"),
+ * 			Zone:         pulumi.String("us-central1-a"),
+ * 			CanIpForward: pulumi.Bool(false),
+ * 			Tags: pulumi.StringArray{
+ * 				pulumi.String("foo"),
+ * 				pulumi.String("bar"),
+ * 			},
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String(myImage.SelfLink),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 			Metadata: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = osconfig.NewPatchDeployment(ctx, "patch", &osconfig.PatchDeploymentArgs{
+ * 			PatchDeploymentId: pulumi.String("patch-deploy"),
+ * 			InstanceFilter: &osconfig.PatchDeploymentInstanceFilterArgs{
+ * 				Instances: pulumi.StringArray{
+ * 					foobar.ID(),
+ * 				},
+ * 			},
+ * 			PatchConfig: &osconfig.PatchDeploymentPatchConfigArgs{
+ * 				Yum: &osconfig.PatchDeploymentPatchConfigYumArgs{
+ * 					Security: pulumi.Bool(true),
+ * 					Minimal:  pulumi.Bool(true),
+ * 					Excludes: pulumi.StringArray{
+ * 						pulumi.String("bash"),
+ * 					},
+ * 				},
+ * 			},
+ * 			RecurringSchedule: &osconfig.PatchDeploymentRecurringScheduleArgs{
+ * 				TimeZone: &osconfig.PatchDeploymentRecurringScheduleTimeZoneArgs{
+ * 					Id: pulumi.String("America/New_York"),
+ * 				},
+ * 				TimeOfDay: &osconfig.PatchDeploymentRecurringScheduleTimeOfDayArgs{
+ * 					Hours:   pulumi.Int(0),
+ * 					Minutes: pulumi.Int(30),
+ * 					Seconds: pulumi.Int(30),
+ * 					Nanos:   pulumi.Int(20),
+ * 				},
+ * 				Monthly: &osconfig.PatchDeploymentRecurringScheduleMonthlyArgs{
+ * 					MonthDay: pulumi.Int(1),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Os Config Patch Deployment Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const patch = new gcp.osconfig.PatchDeployment("patch", {
+ *     duration: "10s",
+ *     instanceFilter: {
+ *         groupLabels: [{
+ *             labels: {
+ *                 app: "web",
+ *                 env: "dev",
+ *             },
+ *         }],
+ *         instanceNamePrefixes: ["test-"],
+ *         zones: [
+ *             "us-central1-a",
+ *             "us-central-1c",
+ *         ],
+ *     },
+ *     patchConfig: {
+ *         apt: {
+ *             excludes: ["python"],
+ *             type: "DIST",
+ *         },
+ *         goo: {
+ *             enabled: true,
+ *         },
+ *         postStep: {
+ *             linuxExecStepConfig: {
+ *                 gcsObject: {
+ *                     bucket: "my-patch-scripts",
+ *                     generationNumber: "1523477886880",
+ *                     object: "linux/post_patch_script",
+ *                 },
+ *             },
+ *             windowsExecStepConfig: {
+ *                 gcsObject: {
+ *                     bucket: "my-patch-scripts",
+ *                     generationNumber: "135920493447",
+ *                     object: "windows/post_patch_script.ps1",
+ *                 },
+ *                 interpreter: "POWERSHELL",
+ *             },
+ *         },
+ *         preStep: {
+ *             linuxExecStepConfig: {
+ *                 allowedSuccessCodes: [
+ *                     0,
+ *                     3,
+ *                 ],
+ *                 localPath: "/tmp/pre_patch_script.sh",
+ *             },
+ *             windowsExecStepConfig: {
+ *                 allowedSuccessCodes: [
+ *                     0,
+ *                     2,
+ *                 ],
+ *                 interpreter: "SHELL",
+ *                 localPath: "C:\\Users\\user\\pre-patch-script.cmd",
+ *             },
+ *         },
+ *         rebootConfig: "ALWAYS",
+ *         windowsUpdate: {
+ *             classifications: [
+ *                 "CRITICAL",
+ *                 "SECURITY",
+ *                 "UPDATE",
+ *             ],
+ *         },
+ *         yum: {
+ *             excludes: ["bash"],
+ *             minimal: true,
+ *             security: true,
+ *         },
+ *         zypper: {
+ *             categories: ["security"],
+ *         },
+ *     },
+ *     patchDeploymentId: "patch-deploy",
+ *     recurringSchedule: {
+ *         monthly: {
+ *             weekDayOfMonth: {
+ *                 dayOfWeek: "TUESDAY",
+ *                 weekOrdinal: -1,
+ *             },
+ *         },
+ *         timeOfDay: {
+ *             hours: 0,
+ *             minutes: 30,
+ *             nanos: 20,
+ *             seconds: 30,
+ *         },
+ *         timeZone: {
+ *             id: "America/New_York",
+ *         },
+ *     },
+ *     rollout: {
+ *         disruptionBudget: {
+ *             fixed: 1,
+ *         },
+ *         mode: "ZONE_BY_ZONE",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * patch = gcp.osconfig.PatchDeployment("patch",
+ *     duration="10s",
+ *     instance_filter=gcp.osconfig.PatchDeploymentInstanceFilterArgs(
+ *         group_labels=[gcp.osconfig.PatchDeploymentInstanceFilterGroupLabelArgs(
+ *             labels={
+ *                 "app": "web",
+ *                 "env": "dev",
+ *             },
+ *         )],
+ *         instance_name_prefixes=["test-"],
+ *         zones=[
+ *             "us-central1-a",
+ *             "us-central-1c",
+ *         ],
+ *     ),
+ *     patch_config=gcp.osconfig.PatchDeploymentPatchConfigArgs(
+ *         apt=gcp.osconfig.PatchDeploymentPatchConfigAptArgs(
+ *             excludes=["python"],
+ *             type="DIST",
+ *         ),
+ *         goo=gcp.osconfig.PatchDeploymentPatchConfigGooArgs(
+ *             enabled=True,
+ *         ),
+ *         post_step=gcp.osconfig.PatchDeploymentPatchConfigPostStepArgs(
+ *             linux_exec_step_config=gcp.osconfig.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs(
+ *                 gcs_object=gcp.osconfig.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs(
+ *                     bucket="my-patch-scripts",
+ *                     generation_number="1523477886880",
+ *                     object="linux/post_patch_script",
+ *                 ),
+ *             ),
+ *             windows_exec_step_config=gcp.osconfig.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs(
+ *                 gcs_object=gcp.osconfig.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs(
+ *                     bucket="my-patch-scripts",
+ *                     generation_number="135920493447",
+ *                     object="windows/post_patch_script.ps1",
+ *                 ),
+ *                 interpreter="POWERSHELL",
+ *             ),
+ *         ),
+ *         pre_step=gcp.osconfig.PatchDeploymentPatchConfigPreStepArgs(
+ *             linux_exec_step_config=gcp.osconfig.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs(
+ *                 allowed_success_codes=[
+ *                     0,
+ *                     3,
+ *                 ],
+ *                 local_path="/tmp/pre_patch_script.sh",
+ *             ),
+ *             windows_exec_step_config=gcp.osconfig.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs(
+ *                 allowed_success_codes=[
+ *                     0,
+ *                     2,
+ *                 ],
+ *                 interpreter="SHELL",
+ *                 local_path="C:\\Users\\user\\pre-patch-script.cmd",
+ *             ),
+ *         ),
+ *         reboot_config="ALWAYS",
+ *         windows_update=gcp.osconfig.PatchDeploymentPatchConfigWindowsUpdateArgs(
+ *             classifications=[
+ *                 "CRITICAL",
+ *                 "SECURITY",
+ *                 "UPDATE",
+ *             ],
+ *         ),
+ *         yum=gcp.osconfig.PatchDeploymentPatchConfigYumArgs(
+ *             excludes=["bash"],
+ *             minimal=True,
+ *             security=True,
+ *         ),
+ *         zypper=gcp.osconfig.PatchDeploymentPatchConfigZypperArgs(
+ *             categories=["security"],
+ *         ),
+ *     ),
+ *     patch_deployment_id="patch-deploy",
+ *     recurring_schedule=gcp.osconfig.PatchDeploymentRecurringScheduleArgs(
+ *         monthly=gcp.osconfig.PatchDeploymentRecurringScheduleMonthlyArgs(
+ *             week_day_of_month=gcp.osconfig.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(
+ *                 day_of_week="TUESDAY",
+ *                 week_ordinal=-1,
+ *             ),
+ *         ),
+ *         time_of_day=gcp.osconfig.PatchDeploymentRecurringScheduleTimeOfDayArgs(
+ *             hours=0,
+ *             minutes=30,
+ *             nanos=20,
+ *             seconds=30,
+ *         ),
+ *         time_zone=gcp.osconfig.PatchDeploymentRecurringScheduleTimeZoneArgs(
+ *             id="America/New_York",
+ *         ),
+ *     ),
+ *     rollout=gcp.osconfig.PatchDeploymentRolloutArgs(
+ *         disruption_budget=gcp.osconfig.PatchDeploymentRolloutDisruptionBudgetArgs(
+ *             fixed=1,
+ *         ),
+ *         mode="ZONE_BY_ZONE",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var patch = new Gcp.OsConfig.PatchDeployment("patch", new Gcp.OsConfig.PatchDeploymentArgs
+ *         {
+ *             Duration = "10s",
+ *             InstanceFilter = new Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterArgs
+ *             {
+ *                 GroupLabels = 
+ *                 {
+ *                     new Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterGroupLabelArgs
+ *                     {
+ *                         Labels = 
+ *                         {
+ *                             { "app", "web" },
+ *                             { "env", "dev" },
+ *                         },
+ *                     },
+ *                 },
+ *                 InstanceNamePrefixes = 
+ *                 {
+ *                     "test-",
+ *                 },
+ *                 Zones = 
+ *                 {
+ *                     "us-central1-a",
+ *                     "us-central-1c",
+ *                 },
+ *             },
+ *             PatchConfig = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigArgs
+ *             {
+ *                 Apt = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigAptArgs
+ *                 {
+ *                     Excludes = 
+ *                     {
+ *                         "python",
+ *                     },
+ *                     Type = "DIST",
+ *                 },
+ *                 Goo = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigGooArgs
+ *                 {
+ *                     Enabled = true,
+ *                 },
+ *                 PostStep = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepArgs
+ *                 {
+ *                     LinuxExecStepConfig = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs
+ *                     {
+ *                         GcsObject = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs
+ *                         {
+ *                             Bucket = "my-patch-scripts",
+ *                             GenerationNumber = "1523477886880",
+ *                             Object = "linux/post_patch_script",
+ *                         },
+ *                     },
+ *                     WindowsExecStepConfig = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs
+ *                     {
+ *                         GcsObject = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs
+ *                         {
+ *                             Bucket = "my-patch-scripts",
+ *                             GenerationNumber = "135920493447",
+ *                             Object = "windows/post_patch_script.ps1",
+ *                         },
+ *                         Interpreter = "POWERSHELL",
+ *                     },
+ *                 },
+ *                 PreStep = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepArgs
+ *                 {
+ *                     LinuxExecStepConfig = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs
+ *                     {
+ *                         AllowedSuccessCodes = 
+ *                         {
+ *                             0,
+ *                             3,
+ *                         },
+ *                         LocalPath = "/tmp/pre_patch_script.sh",
+ *                     },
+ *                     WindowsExecStepConfig = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs
+ *                     {
+ *                         AllowedSuccessCodes = 
+ *                         {
+ *                             0,
+ *                             2,
+ *                         },
+ *                         Interpreter = "SHELL",
+ *                         LocalPath = "C:\\Users\\user\\pre-patch-script.cmd",
+ *                     },
+ *                 },
+ *                 RebootConfig = "ALWAYS",
+ *                 WindowsUpdate = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigWindowsUpdateArgs
+ *                 {
+ *                     Classifications = 
+ *                     {
+ *                         "CRITICAL",
+ *                         "SECURITY",
+ *                         "UPDATE",
+ *                     },
+ *                 },
+ *                 Yum = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigYumArgs
+ *                 {
+ *                     Excludes = 
+ *                     {
+ *                         "bash",
+ *                     },
+ *                     Minimal = true,
+ *                     Security = true,
+ *                 },
+ *                 Zypper = new Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigZypperArgs
+ *                 {
+ *                     Categories = 
+ *                     {
+ *                         "security",
+ *                     },
+ *                 },
+ *             },
+ *             PatchDeploymentId = "patch-deploy",
+ *             RecurringSchedule = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleArgs
+ *             {
+ *                 Monthly = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleMonthlyArgs
+ *                 {
+ *                     WeekDayOfMonth = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs
+ *                     {
+ *                         DayOfWeek = "TUESDAY",
+ *                         WeekOrdinal = -1,
+ *                     },
+ *                 },
+ *                 TimeOfDay = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeOfDayArgs
+ *                 {
+ *                     Hours = 0,
+ *                     Minutes = 30,
+ *                     Nanos = 20,
+ *                     Seconds = 30,
+ *                 },
+ *                 TimeZone = new Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeZoneArgs
+ *                 {
+ *                     Id = "America/New_York",
+ *                 },
+ *             },
+ *             Rollout = new Gcp.OsConfig.Inputs.PatchDeploymentRolloutArgs
+ *             {
+ *                 DisruptionBudget = new Gcp.OsConfig.Inputs.PatchDeploymentRolloutDisruptionBudgetArgs
+ *                 {
+ *                     Fixed = 1,
+ *                 },
+ *                 Mode = "ZONE_BY_ZONE",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/osconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := osconfig.NewPatchDeployment(ctx, "patch", &osconfig.PatchDeploymentArgs{
+ * 			Duration: pulumi.String("10s"),
+ * 			InstanceFilter: &osconfig.PatchDeploymentInstanceFilterArgs{
+ * 				GroupLabels: osconfig.PatchDeploymentInstanceFilterGroupLabelArray{
+ * 					&osconfig.PatchDeploymentInstanceFilterGroupLabelArgs{
+ * 						Labels: pulumi.StringMap{
+ * 							"app": pulumi.String("web"),
+ * 							"env": pulumi.String("dev"),
+ * 						},
+ * 					},
+ * 				},
+ * 				InstanceNamePrefixes: pulumi.StringArray{
+ * 					pulumi.String("test-"),
+ * 				},
+ * 				Zones: pulumi.StringArray{
+ * 					pulumi.String("us-central1-a"),
+ * 					pulumi.String("us-central-1c"),
+ * 				},
+ * 			},
+ * 			PatchConfig: &osconfig.PatchDeploymentPatchConfigArgs{
+ * 				Apt: &osconfig.PatchDeploymentPatchConfigAptArgs{
+ * 					Excludes: pulumi.StringArray{
+ * 						pulumi.String("python"),
+ * 					},
+ * 					Type: pulumi.String("DIST"),
+ * 				},
+ * 				Goo: &osconfig.PatchDeploymentPatchConfigGooArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 				},
+ * 				PostStep: &osconfig.PatchDeploymentPatchConfigPostStepArgs{
+ * 					LinuxExecStepConfig: &osconfig.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs{
+ * 						GcsObject: &osconfig.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs{
+ * 							Bucket:           pulumi.String("my-patch-scripts"),
+ * 							GenerationNumber: pulumi.String("1523477886880"),
+ * 							Object:           pulumi.String("linux/post_patch_script"),
+ * 						},
+ * 					},
+ * 					WindowsExecStepConfig: &osconfig.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs{
+ * 						GcsObject: &osconfig.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs{
+ * 							Bucket:           pulumi.String("my-patch-scripts"),
+ * 							GenerationNumber: pulumi.String("135920493447"),
+ * 							Object:           pulumi.String("windows/post_patch_script.ps1"),
+ * 						},
+ * 						Interpreter: pulumi.String("POWERSHELL"),
+ * 					},
+ * 				},
+ * 				PreStep: &osconfig.PatchDeploymentPatchConfigPreStepArgs{
+ * 					LinuxExecStepConfig: &osconfig.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs{
+ * 						AllowedSuccessCodes: pulumi.IntArray{
+ * 							pulumi.Int(0),
+ * 							pulumi.Int(3),
+ * 						},
+ * 						LocalPath: pulumi.String("/tmp/pre_patch_script.sh"),
+ * 					},
+ * 					WindowsExecStepConfig: &osconfig.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs{
+ * 						AllowedSuccessCodes: pulumi.IntArray{
+ * 							pulumi.Int(0),
+ * 							pulumi.Int(2),
+ * 						},
+ * 						Interpreter: pulumi.String("SHELL"),
+ * 						LocalPath:   pulumi.String("C:\\Users\\user\\pre-patch-script.cmd"),
+ * 					},
+ * 				},
+ * 				RebootConfig: pulumi.String("ALWAYS"),
+ * 				WindowsUpdate: &osconfig.PatchDeploymentPatchConfigWindowsUpdateArgs{
+ * 					Classifications: pulumi.StringArray{
+ * 						pulumi.String("CRITICAL"),
+ * 						pulumi.String("SECURITY"),
+ * 						pulumi.String("UPDATE"),
+ * 					},
+ * 				},
+ * 				Yum: &osconfig.PatchDeploymentPatchConfigYumArgs{
+ * 					Excludes: pulumi.StringArray{
+ * 						pulumi.String("bash"),
+ * 					},
+ * 					Minimal:  pulumi.Bool(true),
+ * 					Security: pulumi.Bool(true),
+ * 				},
+ * 				Zypper: &osconfig.PatchDeploymentPatchConfigZypperArgs{
+ * 					Categories: pulumi.StringArray{
+ * 						pulumi.String("security"),
+ * 					},
+ * 				},
+ * 			},
+ * 			PatchDeploymentId: pulumi.String("patch-deploy"),
+ * 			RecurringSchedule: &osconfig.PatchDeploymentRecurringScheduleArgs{
+ * 				Monthly: &osconfig.PatchDeploymentRecurringScheduleMonthlyArgs{
+ * 					WeekDayOfMonth: &osconfig.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs{
+ * 						DayOfWeek:   pulumi.String("TUESDAY"),
+ * 						WeekOrdinal: -1,
+ * 					},
+ * 				},
+ * 				TimeOfDay: &osconfig.PatchDeploymentRecurringScheduleTimeOfDayArgs{
+ * 					Hours:   pulumi.Int(0),
+ * 					Minutes: pulumi.Int(30),
+ * 					Nanos:   pulumi.Int(20),
+ * 					Seconds: pulumi.Int(30),
+ * 				},
+ * 				TimeZone: &osconfig.PatchDeploymentRecurringScheduleTimeZoneArgs{
+ * 					Id: pulumi.String("America/New_York"),
+ * 				},
+ * 			},
+ * 			Rollout: &osconfig.PatchDeploymentRolloutArgs{
+ * 				DisruptionBudget: &osconfig.PatchDeploymentRolloutDisruptionBudgetArgs{
+ * 					Fixed: pulumi.Int(1),
+ * 				},
+ * 				Mode: pulumi.String("ZONE_BY_ZONE"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,14 +1014,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:osconfig/patchDeployment:PatchDeployment default projects/{{project}}/patchDeployments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:osconfig/patchDeployment:PatchDeployment default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:osconfig/patchDeployment:PatchDeployment default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:osconfig/patchDeployment:PatchDeployment")
 public class PatchDeployment extends io.pulumi.resources.CustomResource {
@@ -111,7 +1093,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
         return this.instanceFilter;
     }
     /**
-     * - 
+     * -
      * The time the last patch job ran successfully.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 

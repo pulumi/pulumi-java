@@ -30,12 +30,133 @@ import javax.annotation.Nullable;
  * and it is for users who are unable to use constraints. If the default service accounts change their name
  * or additional service accounts are added, this resource will need to be updated.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
+ *     action: "DELETE",
+ *     project: "my-project-id",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_project = gcp.projects.DefaultServiceAccounts("myProject",
+ *     action="DELETE",
+ *     project="my-project-id")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myProject = new Gcp.Projects.DefaultServiceAccounts("myProject", new Gcp.Projects.DefaultServiceAccountsArgs
+ *         {
+ *             Action = "DELETE",
+ *             Project = "my-project-id",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := projects.NewDefaultServiceAccounts(ctx, "myProject", &projects.DefaultServiceAccountsArgs{
+ * 			Action:  pulumi.String("DELETE"),
+ * 			Project: pulumi.String("my-project-id"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * To enable the default service accounts on the resource destroy:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
+ *     action: "DISABLE",
+ *     project: "my-project-id",
+ *     restorePolicy: "REVERT",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_project = gcp.projects.DefaultServiceAccounts("myProject",
+ *     action="DISABLE",
+ *     project="my-project-id",
+ *     restore_policy="REVERT")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myProject = new Gcp.Projects.DefaultServiceAccounts("myProject", new Gcp.Projects.DefaultServiceAccountsArgs
+ *         {
+ *             Action = "DISABLE",
+ *             Project = "my-project-id",
+ *             RestorePolicy = "REVERT",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := projects.NewDefaultServiceAccounts(ctx, "myProject", &projects.DefaultServiceAccountsArgs{
+ * 			Action:        pulumi.String("DISABLE"),
+ * 			Project:       pulumi.String("my-project-id"),
+ * 			RestorePolicy: pulumi.String("REVERT"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import
- * 
+ * This resource does not support import 
  */
 @ResourceType(type="gcp:projects/defaultServiceAccounts:DefaultServiceAccounts")
 public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {

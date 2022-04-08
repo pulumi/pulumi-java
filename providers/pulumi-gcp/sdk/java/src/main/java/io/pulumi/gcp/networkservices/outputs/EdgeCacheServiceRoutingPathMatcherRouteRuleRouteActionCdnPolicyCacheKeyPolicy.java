@@ -45,7 +45,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - Header names must be valid HTTP RFC 7230 header field values.
      * - Header field names are case insensitive
      * - To include the HTTP method, use ":method"
-     *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+     * Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
      * 
      */
     private final @Nullable List<String> includedHeaderNames;
@@ -112,7 +112,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - Header names must be valid HTTP RFC 7230 header field values.
      * - Header field names are case insensitive
      * - To include the HTTP method, use ":method"
-     *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+     * Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
      * 
     */
     public List<String> getIncludedHeaderNames() {

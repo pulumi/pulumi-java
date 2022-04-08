@@ -19,13 +19,159 @@ import javax.annotation.Nullable;
  * associated metadata. If a group's filter matches an available monitored
  * resource, then that resource is a member of that group.
  * 
+ * 
  * To get more information about Group, see:
  * 
  * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.groups)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/monitoring/groups/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Monitoring Group Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.monitoring.Group("basic", {
+ *     displayName: "tf-test MonitoringGroup",
+ *     filter: "resource.metadata.region=\"europe-west2\"",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.monitoring.Group("basic",
+ *     display_name="tf-test MonitoringGroup",
+ *     filter="resource.metadata.region=\"europe-west2\"")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.Monitoring.Group("basic", new Gcp.Monitoring.GroupArgs
+ *         {
+ *             DisplayName = "tf-test MonitoringGroup",
+ *             Filter = "resource.metadata.region=\"europe-west2\"",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewGroup(ctx, "basic", &monitoring.GroupArgs{
+ * 			DisplayName: pulumi.String("tf-test MonitoringGroup"),
+ * 			Filter:      pulumi.String("resource.metadata.region=\"europe-west2\""),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Monitoring Group Subgroup
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const parent = new gcp.monitoring.Group("parent", {
+ *     displayName: "tf-test MonitoringParentGroup",
+ *     filter: "resource.metadata.region=\"europe-west2\"",
+ * });
+ * const subgroup = new gcp.monitoring.Group("subgroup", {
+ *     displayName: "tf-test MonitoringSubGroup",
+ *     filter: "resource.metadata.region=\"europe-west2\"",
+ *     parentName: parent.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * parent = gcp.monitoring.Group("parent",
+ *     display_name="tf-test MonitoringParentGroup",
+ *     filter="resource.metadata.region=\"europe-west2\"")
+ * subgroup = gcp.monitoring.Group("subgroup",
+ *     display_name="tf-test MonitoringSubGroup",
+ *     filter="resource.metadata.region=\"europe-west2\"",
+ *     parent_name=parent.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var parent = new Gcp.Monitoring.Group("parent", new Gcp.Monitoring.GroupArgs
+ *         {
+ *             DisplayName = "tf-test MonitoringParentGroup",
+ *             Filter = "resource.metadata.region=\"europe-west2\"",
+ *         });
+ *         var subgroup = new Gcp.Monitoring.Group("subgroup", new Gcp.Monitoring.GroupArgs
+ *         {
+ *             DisplayName = "tf-test MonitoringSubGroup",
+ *             Filter = "resource.metadata.region=\"europe-west2\"",
+ *             ParentName = parent.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		parent, err := monitoring.NewGroup(ctx, "parent", &monitoring.GroupArgs{
+ * 			DisplayName: pulumi.String("tf-test MonitoringParentGroup"),
+ * 			Filter:      pulumi.String("resource.metadata.region=\"europe-west2\""),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = monitoring.NewGroup(ctx, "subgroup", &monitoring.GroupArgs{
+ * 			DisplayName: pulumi.String("tf-test MonitoringSubGroup"),
+ * 			Filter:      pulumi.String("resource.metadata.region=\"europe-west2\""),
+ * 			ParentName:  parent.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +181,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:monitoring/group:Group default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:monitoring/group:Group")
 public class Group extends io.pulumi.resources.CustomResource {

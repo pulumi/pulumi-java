@@ -20,7 +20,460 @@ import javax.annotation.Nullable;
  * * [Understanding Org Policy concepts](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
  * * [The resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy)
  * * [All valid constraints](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints)
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Enforce_policy
+ * A test of an enforce orgpolicy policy for a project
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.organizations.Project("basic", {
+ *     orgId: "123456789",
+ *     projectId: "id",
+ * });
+ * const primary = new gcp.orgpolicy.Policy("primary", {
+ *     parent: pulumi.interpolate`projects/${basic.name}`,
+ *     spec: {
+ *         rules: [{
+ *             enforce: "FALSE",
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.organizations.Project("basic",
+ *     org_id="123456789",
+ *     project_id="id")
+ * primary = gcp.orgpolicy.Policy("primary",
+ *     parent=basic.name.apply(lambda name: f"projects/{name}"),
+ *     spec=gcp.orgpolicy.PolicySpecArgs(
+ *         rules=[gcp.orgpolicy.PolicySpecRuleArgs(
+ *             enforce="FALSE",
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.Organizations.Project("basic", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             OrgId = "123456789",
+ *             ProjectId = "id",
+ *         });
+ *         var primary = new Gcp.OrgPolicy.Policy("primary", new Gcp.OrgPolicy.PolicyArgs
+ *         {
+ *             Parent = basic.Name.Apply(name => $"projects/{name}"),
+ *             Spec = new Gcp.OrgPolicy.Inputs.PolicySpecArgs
+ *             {
+ *                 Rules = 
+ *                 {
+ *                     new Gcp.OrgPolicy.Inputs.PolicySpecRuleArgs
+ *                     {
+ *                         Enforce = "FALSE",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/orgpolicy"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basic, err := organizations.NewProject(ctx, "basic", &organizations.ProjectArgs{
+ * 			OrgId:     pulumi.String("123456789"),
+ * 			ProjectId: pulumi.String("id"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = orgpolicy.NewPolicy(ctx, "primary", &orgpolicy.PolicyArgs{
+ * 			Parent: basic.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "projects/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Spec: &orgpolicy.PolicySpecArgs{
+ * 				Rules: orgpolicy.PolicySpecRuleArray{
+ * 					&orgpolicy.PolicySpecRuleArgs{
+ * 						Enforce: pulumi.String("FALSE"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Folder_policy
+ * A test of an orgpolicy policy for a folder
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.organizations.Folder("basic", {
+ *     parent: "organizations/123456789",
+ *     displayName: "folder",
+ * });
+ * const primary = new gcp.orgpolicy.Policy("primary", {
+ *     parent: basic.name,
+ *     spec: {
+ *         inheritFromParent: true,
+ *         rules: [{
+ *             denyAll: "TRUE",
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.organizations.Folder("basic",
+ *     parent="organizations/123456789",
+ *     display_name="folder")
+ * primary = gcp.orgpolicy.Policy("primary",
+ *     parent=basic.name,
+ *     spec=gcp.orgpolicy.PolicySpecArgs(
+ *         inherit_from_parent=True,
+ *         rules=[gcp.orgpolicy.PolicySpecRuleArgs(
+ *             deny_all="TRUE",
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.Organizations.Folder("basic", new Gcp.Organizations.FolderArgs
+ *         {
+ *             Parent = "organizations/123456789",
+ *             DisplayName = "folder",
+ *         });
+ *         var primary = new Gcp.OrgPolicy.Policy("primary", new Gcp.OrgPolicy.PolicyArgs
+ *         {
+ *             Parent = basic.Name,
+ *             Spec = new Gcp.OrgPolicy.Inputs.PolicySpecArgs
+ *             {
+ *                 InheritFromParent = true,
+ *                 Rules = 
+ *                 {
+ *                     new Gcp.OrgPolicy.Inputs.PolicySpecRuleArgs
+ *                     {
+ *                         DenyAll = "TRUE",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/orgpolicy"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basic, err := organizations.NewFolder(ctx, "basic", &organizations.FolderArgs{
+ * 			Parent:      pulumi.String("organizations/123456789"),
+ * 			DisplayName: pulumi.String("folder"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = orgpolicy.NewPolicy(ctx, "primary", &orgpolicy.PolicyArgs{
+ * 			Parent: basic.Name,
+ * 			Spec: &orgpolicy.PolicySpecArgs{
+ * 				InheritFromParent: pulumi.Bool(true),
+ * 				Rules: orgpolicy.PolicySpecRuleArray{
+ * 					&orgpolicy.PolicySpecRuleArgs{
+ * 						DenyAll: pulumi.String("TRUE"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Organization_policy
+ * A test of an orgpolicy policy for an organization
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.orgpolicy.Policy("primary", {
+ *     parent: "organizations/123456789",
+ *     spec: {
+ *         reset: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.orgpolicy.Policy("primary",
+ *     parent="organizations/123456789",
+ *     spec=gcp.orgpolicy.PolicySpecArgs(
+ *         reset=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.OrgPolicy.Policy("primary", new Gcp.OrgPolicy.PolicyArgs
+ *         {
+ *             Parent = "organizations/123456789",
+ *             Spec = new Gcp.OrgPolicy.Inputs.PolicySpecArgs
+ *             {
+ *                 Reset = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/orgpolicy"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := orgpolicy.NewPolicy(ctx, "primary", &orgpolicy.PolicyArgs{
+ * 			Parent: pulumi.String("organizations/123456789"),
+ * 			Spec: &orgpolicy.PolicySpecArgs{
+ * 				Reset: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Project_policy
+ * A test of an orgpolicy policy for a project
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.organizations.Project("basic", {
+ *     orgId: "123456789",
+ *     projectId: "id",
+ * });
+ * const primary = new gcp.orgpolicy.Policy("primary", {
+ *     parent: pulumi.interpolate`projects/${basic.name}`,
+ *     spec: {
+ *         rules: [
+ *             {
+ *                 condition: {
+ *                     description: "A sample condition for the policy",
+ *                     expression: "resource.matchLabels('labelKeys/123', 'labelValues/345')",
+ *                     location: "sample-location.log",
+ *                     title: "sample-condition",
+ *                 },
+ *                 values: {
+ *                     allowedValues: ["projects/allowed-project"],
+ *                     deniedValues: ["projects/denied-project"],
+ *                 },
+ *             },
+ *             {
+ *                 allowAll: "TRUE",
+ *             },
+ *         ],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.organizations.Project("basic",
+ *     org_id="123456789",
+ *     project_id="id")
+ * primary = gcp.orgpolicy.Policy("primary",
+ *     parent=basic.name.apply(lambda name: f"projects/{name}"),
+ *     spec=gcp.orgpolicy.PolicySpecArgs(
+ *         rules=[
+ *             gcp.orgpolicy.PolicySpecRuleArgs(
+ *                 condition=gcp.orgpolicy.PolicySpecRuleConditionArgs(
+ *                     description="A sample condition for the policy",
+ *                     expression="resource.matchLabels('labelKeys/123', 'labelValues/345')",
+ *                     location="sample-location.log",
+ *                     title="sample-condition",
+ *                 ),
+ *                 values=gcp.orgpolicy.PolicySpecRuleValuesArgs(
+ *                     allowed_values=["projects/allowed-project"],
+ *                     denied_values=["projects/denied-project"],
+ *                 ),
+ *             ),
+ *             gcp.orgpolicy.PolicySpecRuleArgs(
+ *                 allow_all="TRUE",
+ *             ),
+ *         ],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.Organizations.Project("basic", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             OrgId = "123456789",
+ *             ProjectId = "id",
+ *         });
+ *         var primary = new Gcp.OrgPolicy.Policy("primary", new Gcp.OrgPolicy.PolicyArgs
+ *         {
+ *             Parent = basic.Name.Apply(name => $"projects/{name}"),
+ *             Spec = new Gcp.OrgPolicy.Inputs.PolicySpecArgs
+ *             {
+ *                 Rules = 
+ *                 {
+ *                     new Gcp.OrgPolicy.Inputs.PolicySpecRuleArgs
+ *                     {
+ *                         Condition = new Gcp.OrgPolicy.Inputs.PolicySpecRuleConditionArgs
+ *                         {
+ *                             Description = "A sample condition for the policy",
+ *                             Expression = "resource.matchLabels('labelKeys/123', 'labelValues/345')",
+ *                             Location = "sample-location.log",
+ *                             Title = "sample-condition",
+ *                         },
+ *                         Values = new Gcp.OrgPolicy.Inputs.PolicySpecRuleValuesArgs
+ *                         {
+ *                             AllowedValues = 
+ *                             {
+ *                                 "projects/allowed-project",
+ *                             },
+ *                             DeniedValues = 
+ *                             {
+ *                                 "projects/denied-project",
+ *                             },
+ *                         },
+ *                     },
+ *                     new Gcp.OrgPolicy.Inputs.PolicySpecRuleArgs
+ *                     {
+ *                         AllowAll = "TRUE",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/orgpolicy"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basic, err := organizations.NewProject(ctx, "basic", &organizations.ProjectArgs{
+ * 			OrgId:     pulumi.String("123456789"),
+ * 			ProjectId: pulumi.String("id"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = orgpolicy.NewPolicy(ctx, "primary", &orgpolicy.PolicyArgs{
+ * 			Parent: basic.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "projects/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Spec: &orgpolicy.PolicySpecArgs{
+ * 				Rules: orgpolicy.PolicySpecRuleArray{
+ * 					&orgpolicy.PolicySpecRuleArgs{
+ * 						Condition: &orgpolicy.PolicySpecRuleConditionArgs{
+ * 							Description: pulumi.String("A sample condition for the policy"),
+ * 							Expression:  pulumi.String("resource.matchLabels('labelKeys/123', 'labelValues/345')"),
+ * 							Location:    pulumi.String("sample-location.log"),
+ * 							Title:       pulumi.String("sample-condition"),
+ * 						},
+ * 						Values: &orgpolicy.PolicySpecRuleValuesArgs{
+ * 							AllowedValues: pulumi.StringArray{
+ * 								pulumi.String("projects/allowed-project"),
+ * 							},
+ * 							DeniedValues: pulumi.StringArray{
+ * 								pulumi.String("projects/denied-project"),
+ * 							},
+ * 						},
+ * 					},
+ * 					&orgpolicy.PolicySpecRuleArgs{
+ * 						AllowAll: pulumi.String("TRUE"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,10 +483,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:orgpolicy/policy:Policy default {{parent}}/policies/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:orgpolicy/policy:Policy default {{parent}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:orgpolicy/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

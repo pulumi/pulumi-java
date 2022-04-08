@@ -211,9 +211,9 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * * TargetHttpProxy: 80, 8080
      * * TargetHttpsProxy: 443
      * * TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-     *   1883, 5222
+     * 1883, 5222
      * * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-     *   1883, 5222
+     * 1883, 5222
      * * TargetVpnGateway: 500, 4500
      * 
      */

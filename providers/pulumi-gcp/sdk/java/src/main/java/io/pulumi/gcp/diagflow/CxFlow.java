@@ -19,13 +19,357 @@ import javax.annotation.Nullable;
 /**
  * Flows represents the conversation flows when you build your chatbot agent.
  * 
+ * 
  * To get more information about Flow, see:
  * 
  * * [API documentation](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents.flows)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflowcx Flow Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const agent = new gcp.diagflow.CxAgent("agent", {
+ *     displayName: "dialogflowcx-agent",
+ *     location: "global",
+ *     defaultLanguageCode: "en",
+ *     supportedLanguageCodes: [
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     timeZone: "America/New_York",
+ *     description: "Example description.",
+ *     avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     enableStackdriverLogging: true,
+ *     enableSpellCorrection: true,
+ *     speechToTextSettings: {
+ *         enableSpeechAdaptation: true,
+ *     },
+ * });
+ * const basicFlow = new gcp.diagflow.CxFlow("basicFlow", {
+ *     parent: agent.id,
+ *     displayName: "MyFlow",
+ *     description: "Test Flow",
+ *     nluSettings: {
+ *         classificationThreshold: 0.3,
+ *         modelType: "MODEL_TYPE_STANDARD",
+ *     },
+ *     eventHandlers: [
+ *         {
+ *             event: "custom-event",
+ *             triggerFulfillment: {
+ *                 returnPartialResponses: false,
+ *                 messages: [{
+ *                     text: {
+ *                         texts: ["I didn't get that. Can you say it again?"],
+ *                     },
+ *                 }],
+ *             },
+ *         },
+ *         {
+ *             event: "sys.no-match-default",
+ *             triggerFulfillment: {
+ *                 returnPartialResponses: false,
+ *                 messages: [{
+ *                     text: {
+ *                         texts: ["Sorry, could you say that again?"],
+ *                     },
+ *                 }],
+ *             },
+ *         },
+ *         {
+ *             event: "sys.no-input-default",
+ *             triggerFulfillment: {
+ *                 returnPartialResponses: false,
+ *                 messages: [{
+ *                     text: {
+ *                         texts: ["One more time?"],
+ *                     },
+ *                 }],
+ *             },
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * agent = gcp.diagflow.CxAgent("agent",
+ *     display_name="dialogflowcx-agent",
+ *     location="global",
+ *     default_language_code="en",
+ *     supported_language_codes=[
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     time_zone="America/New_York",
+ *     description="Example description.",
+ *     avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     enable_stackdriver_logging=True,
+ *     enable_spell_correction=True,
+ *     speech_to_text_settings=gcp.diagflow.CxAgentSpeechToTextSettingsArgs(
+ *         enable_speech_adaptation=True,
+ *     ))
+ * basic_flow = gcp.diagflow.CxFlow("basicFlow",
+ *     parent=agent.id,
+ *     display_name="MyFlow",
+ *     description="Test Flow",
+ *     nlu_settings=gcp.diagflow.CxFlowNluSettingsArgs(
+ *         classification_threshold=0.3,
+ *         model_type="MODEL_TYPE_STANDARD",
+ *     ),
+ *     event_handlers=[
+ *         gcp.diagflow.CxFlowEventHandlerArgs(
+ *             event="custom-event",
+ *             trigger_fulfillment=gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentArgs(
+ *                 return_partial_responses=False,
+ *                 messages=[gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArgs(
+ *                     text=gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs(
+ *                         texts=["I didn't get that. Can you say it again?"],
+ *                     ),
+ *                 )],
+ *             ),
+ *         ),
+ *         gcp.diagflow.CxFlowEventHandlerArgs(
+ *             event="sys.no-match-default",
+ *             trigger_fulfillment=gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentArgs(
+ *                 return_partial_responses=False,
+ *                 messages=[gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArgs(
+ *                     text=gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs(
+ *                         texts=["Sorry, could you say that again?"],
+ *                     ),
+ *                 )],
+ *             ),
+ *         ),
+ *         gcp.diagflow.CxFlowEventHandlerArgs(
+ *             event="sys.no-input-default",
+ *             trigger_fulfillment=gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentArgs(
+ *                 return_partial_responses=False,
+ *                 messages=[gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArgs(
+ *                     text=gcp.diagflow.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs(
+ *                         texts=["One more time?"],
+ *                     ),
+ *                 )],
+ *             ),
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var agent = new Gcp.Diagflow.CxAgent("agent", new Gcp.Diagflow.CxAgentArgs
+ *         {
+ *             DisplayName = "dialogflowcx-agent",
+ *             Location = "global",
+ *             DefaultLanguageCode = "en",
+ *             SupportedLanguageCodes = 
+ *             {
+ *                 "fr",
+ *                 "de",
+ *                 "es",
+ *             },
+ *             TimeZone = "America/New_York",
+ *             Description = "Example description.",
+ *             AvatarUri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *             EnableStackdriverLogging = true,
+ *             EnableSpellCorrection = true,
+ *             SpeechToTextSettings = new Gcp.Diagflow.Inputs.CxAgentSpeechToTextSettingsArgs
+ *             {
+ *                 EnableSpeechAdaptation = true,
+ *             },
+ *         });
+ *         var basicFlow = new Gcp.Diagflow.CxFlow("basicFlow", new Gcp.Diagflow.CxFlowArgs
+ *         {
+ *             Parent = agent.Id,
+ *             DisplayName = "MyFlow",
+ *             Description = "Test Flow",
+ *             NluSettings = new Gcp.Diagflow.Inputs.CxFlowNluSettingsArgs
+ *             {
+ *                 ClassificationThreshold = 0.3,
+ *                 ModelType = "MODEL_TYPE_STANDARD",
+ *             },
+ *             EventHandlers = 
+ *             {
+ *                 new Gcp.Diagflow.Inputs.CxFlowEventHandlerArgs
+ *                 {
+ *                     Event = "custom-event",
+ *                     TriggerFulfillment = new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentArgs
+ *                     {
+ *                         ReturnPartialResponses = false,
+ *                         Messages = 
+ *                         {
+ *                             new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentMessageArgs
+ *                             {
+ *                                 Text = new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs
+ *                                 {
+ *                                     Texts = 
+ *                                     {
+ *                                         "I didn't get that. Can you say it again?",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new Gcp.Diagflow.Inputs.CxFlowEventHandlerArgs
+ *                 {
+ *                     Event = "sys.no-match-default",
+ *                     TriggerFulfillment = new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentArgs
+ *                     {
+ *                         ReturnPartialResponses = false,
+ *                         Messages = 
+ *                         {
+ *                             new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentMessageArgs
+ *                             {
+ *                                 Text = new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs
+ *                                 {
+ *                                     Texts = 
+ *                                     {
+ *                                         "Sorry, could you say that again?",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new Gcp.Diagflow.Inputs.CxFlowEventHandlerArgs
+ *                 {
+ *                     Event = "sys.no-input-default",
+ *                     TriggerFulfillment = new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentArgs
+ *                     {
+ *                         ReturnPartialResponses = false,
+ *                         Messages = 
+ *                         {
+ *                             new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentMessageArgs
+ *                             {
+ *                                 Text = new Gcp.Diagflow.Inputs.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs
+ *                                 {
+ *                                     Texts = 
+ *                                     {
+ *                                         "One more time?",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		agent, err := diagflow.NewCxAgent(ctx, "agent", &diagflow.CxAgentArgs{
+ * 			DisplayName:         pulumi.String("dialogflowcx-agent"),
+ * 			Location:            pulumi.String("global"),
+ * 			DefaultLanguageCode: pulumi.String("en"),
+ * 			SupportedLanguageCodes: pulumi.StringArray{
+ * 				pulumi.String("fr"),
+ * 				pulumi.String("de"),
+ * 				pulumi.String("es"),
+ * 			},
+ * 			TimeZone:                 pulumi.String("America/New_York"),
+ * 			Description:              pulumi.String("Example description."),
+ * 			AvatarUri:                pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
+ * 			EnableStackdriverLogging: pulumi.Bool(true),
+ * 			EnableSpellCorrection:    pulumi.Bool(true),
+ * 			SpeechToTextSettings: &diagflow.CxAgentSpeechToTextSettingsArgs{
+ * 				EnableSpeechAdaptation: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = diagflow.NewCxFlow(ctx, "basicFlow", &diagflow.CxFlowArgs{
+ * 			Parent:      agent.ID(),
+ * 			DisplayName: pulumi.String("MyFlow"),
+ * 			Description: pulumi.String("Test Flow"),
+ * 			NluSettings: &diagflow.CxFlowNluSettingsArgs{
+ * 				ClassificationThreshold: pulumi.Float64(0.3),
+ * 				ModelType:               pulumi.String("MODEL_TYPE_STANDARD"),
+ * 			},
+ * 			EventHandlers: diagflow.CxFlowEventHandlerArray{
+ * 				&diagflow.CxFlowEventHandlerArgs{
+ * 					Event: pulumi.String("custom-event"),
+ * 					TriggerFulfillment: &diagflow.CxFlowEventHandlerTriggerFulfillmentArgs{
+ * 						ReturnPartialResponses: pulumi.Bool(false),
+ * 						Messages: diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArray{
+ * 							&diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArgs{
+ * 								Text: &diagflow.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs{
+ * 									Texts: pulumi.StringArray{
+ * 										pulumi.String("I didn't get that. Can you say it again?"),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&diagflow.CxFlowEventHandlerArgs{
+ * 					Event: pulumi.String("sys.no-match-default"),
+ * 					TriggerFulfillment: &diagflow.CxFlowEventHandlerTriggerFulfillmentArgs{
+ * 						ReturnPartialResponses: pulumi.Bool(false),
+ * 						Messages: diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArray{
+ * 							&diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArgs{
+ * 								Text: &diagflow.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs{
+ * 									Texts: pulumi.StringArray{
+ * 										pulumi.String("Sorry, could you say that again?"),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&diagflow.CxFlowEventHandlerArgs{
+ * 					Event: pulumi.String("sys.no-input-default"),
+ * 					TriggerFulfillment: &diagflow.CxFlowEventHandlerTriggerFulfillmentArgs{
+ * 						ReturnPartialResponses: pulumi.Bool(false),
+ * 						Messages: diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArray{
+ * 							&diagflow.CxFlowEventHandlerTriggerFulfillmentMessageArgs{
+ * 								Text: &diagflow.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs{
+ * 									Texts: pulumi.StringArray{
+ * 										pulumi.String("One more time?"),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,10 +379,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/cxFlow:CxFlow default {{parent}}/flows/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:diagflow/cxFlow:CxFlow default {{parent}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/cxFlow:CxFlow")
 public class CxFlow extends io.pulumi.resources.CustomResource {
@@ -117,7 +464,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
         return this.languageCode;
     }
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */

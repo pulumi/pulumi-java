@@ -18,9 +18,10 @@ import javax.annotation.Nullable;
  * notification config is a Cloud SCC resource that contains the
  * configuration to send notifications for create/update events of
  * findings, assets and etc.
- * > **Note:** In order to use Cloud SCC resources, your organization must be enrolled
+ * > **Note:** In order to use Cloud SCC resources, your organization must be enrolled 
  * in [SCC Standard/Premium](https://cloud.google.com/security-command-center/docs/quickstart-security-command-center).
  * Without doing so, you may run into errors during resource creation.
+ * 
  * 
  * To get more information about NotificationConfig, see:
  * 
@@ -28,7 +29,100 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/security-command-center/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Scc Notification Config Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const sccNotification = new gcp.pubsub.Topic("sccNotification", {});
+ * const customNotificationConfig = new gcp.securitycenter.NotificationConfig("customNotificationConfig", {
+ *     configId: "my-config",
+ *     organization: "123456789",
+ *     description: "My custom Cloud Security Command Center Finding Notification Configuration",
+ *     pubsubTopic: sccNotification.id,
+ *     streamingConfig: {
+ *         filter: "category = \"OPEN_FIREWALL\" AND state = \"ACTIVE\"",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * scc_notification = gcp.pubsub.Topic("sccNotification")
+ * custom_notification_config = gcp.securitycenter.NotificationConfig("customNotificationConfig",
+ *     config_id="my-config",
+ *     organization="123456789",
+ *     description="My custom Cloud Security Command Center Finding Notification Configuration",
+ *     pubsub_topic=scc_notification.id,
+ *     streaming_config=gcp.securitycenter.NotificationConfigStreamingConfigArgs(
+ *         filter="category = \"OPEN_FIREWALL\" AND state = \"ACTIVE\"",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sccNotification = new Gcp.PubSub.Topic("sccNotification", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var customNotificationConfig = new Gcp.SecurityCenter.NotificationConfig("customNotificationConfig", new Gcp.SecurityCenter.NotificationConfigArgs
+ *         {
+ *             ConfigId = "my-config",
+ *             Organization = "123456789",
+ *             Description = "My custom Cloud Security Command Center Finding Notification Configuration",
+ *             PubsubTopic = sccNotification.Id,
+ *             StreamingConfig = new Gcp.SecurityCenter.Inputs.NotificationConfigStreamingConfigArgs
+ *             {
+ *                 Filter = "category = \"OPEN_FIREWALL\" AND state = \"ACTIVE\"",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/securitycenter"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		sccNotification, err := pubsub.NewTopic(ctx, "sccNotification", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securitycenter.NewNotificationConfig(ctx, "customNotificationConfig", &securitycenter.NotificationConfigArgs{
+ * 			ConfigId:     pulumi.String("my-config"),
+ * 			Organization: pulumi.String("123456789"),
+ * 			Description:  pulumi.String("My custom Cloud Security Command Center Finding Notification Configuration"),
+ * 			PubsubTopic:  sccNotification.ID(),
+ * 			StreamingConfig: &securitycenter.NotificationConfigStreamingConfigArgs{
+ * 				Filter: pulumi.String("category = \"OPEN_FIREWALL\" AND state = \"ACTIVE\""),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,10 +132,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:securitycenter/notificationConfig:NotificationConfig default organizations/{{organization}}/notificationConfigs/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:securitycenter/notificationConfig:NotificationConfig default {{organization}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:securitycenter/notificationConfig:NotificationConfig")
 public class NotificationConfig extends io.pulumi.resources.CustomResource {

@@ -22,7 +22,142 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Exporting Logs](https://cloud.google.com/logging/docs/export)
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const log_bucket = new gcp.storage.Bucket("log-bucket", {location: "US"});
+ * const my_folder = new gcp.organizations.Folder("my-folder", {
+ *     displayName: "My folder",
+ *     parent: "organizations/123456",
+ * });
+ * const my_sink = new gcp.logging.FolderSink("my-sink", {
+ *     description: "some explanation on what this is",
+ *     folder: my_folder.name,
+ *     destination: pulumi.interpolate`storage.googleapis.com/${log_bucket.name}`,
+ *     filter: "resource.type = gce_instance AND severity >= WARNING",
+ * });
+ * const log_writer = new gcp.projects.IAMBinding("log-writer", {
+ *     project: "your-project-id",
+ *     role: "roles/storage.objectCreator",
+ *     members: [my_sink.writerIdentity],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * log_bucket = gcp.storage.Bucket("log-bucket", location="US")
+ * my_folder = gcp.organizations.Folder("my-folder",
+ *     display_name="My folder",
+ *     parent="organizations/123456")
+ * my_sink = gcp.logging.FolderSink("my-sink",
+ *     description="some explanation on what this is",
+ *     folder=my_folder.name,
+ *     destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"),
+ *     filter="resource.type = gce_instance AND severity >= WARNING")
+ * log_writer = gcp.projects.IAMBinding("log-writer",
+ *     project="your-project-id",
+ *     role="roles/storage.objectCreator",
+ *     members=[my_sink.writer_identity])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var log_bucket = new Gcp.Storage.Bucket("log-bucket", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *         });
+ *         var my_folder = new Gcp.Organizations.Folder("my-folder", new Gcp.Organizations.FolderArgs
+ *         {
+ *             DisplayName = "My folder",
+ *             Parent = "organizations/123456",
+ *         });
+ *         var my_sink = new Gcp.Logging.FolderSink("my-sink", new Gcp.Logging.FolderSinkArgs
+ *         {
+ *             Description = "some explanation on what this is",
+ *             Folder = my_folder.Name,
+ *             Destination = log_bucket.Name.Apply(name => $"storage.googleapis.com/{name}"),
+ *             Filter = "resource.type = gce_instance AND severity >= WARNING",
+ *         });
+ *         var log_writer = new Gcp.Projects.IAMBinding("log-writer", new Gcp.Projects.IAMBindingArgs
+ *         {
+ *             Project = "your-project-id",
+ *             Role = "roles/storage.objectCreator",
+ *             Members = 
+ *             {
+ *                 my_sink.WriterIdentity,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBucket(ctx, "log-bucket", &storage.BucketArgs{
+ * 			Location: pulumi.String("US"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = organizations.NewFolder(ctx, "my-folder", &organizations.FolderArgs{
+ * 			DisplayName: pulumi.String("My folder"),
+ * 			Parent:      pulumi.String("organizations/123456"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = logging.NewFolderSink(ctx, "my-sink", &logging.FolderSinkArgs{
+ * 			Description: pulumi.String("some explanation on what this is"),
+ * 			Folder:      my_folder.Name,
+ * 			Destination: log_bucket.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "storage.googleapis.com/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Filter: pulumi.String("resource.type = gce_instance AND severity >= WARNING"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = projects.NewIAMBinding(ctx, "log-writer", &projects.IAMBindingArgs{
+ * 			Project: pulumi.String("your-project-id"),
+ * 			Role:    pulumi.String("roles/storage.objectCreator"),
+ * 			Members: pulumi.StringArray{
+ * 				my_sink.WriterIdentity,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +167,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/folderSink:FolderSink my_sink folders/{{folder_id}}/sinks/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/folderSink:FolderSink")
 public class FolderSink extends io.pulumi.resources.CustomResource {
@@ -66,7 +202,36 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
      * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -76,7 +241,36 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
     /**
      * @return The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
      * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */

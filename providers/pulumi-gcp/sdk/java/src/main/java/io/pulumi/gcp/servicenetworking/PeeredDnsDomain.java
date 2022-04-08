@@ -17,7 +17,75 @@ import javax.annotation.Nullable;
  * 
  * When using Google Cloud DNS to manage internal DNS, create peered DNS domains to make your DNS available to services like Google Cloud Build.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const name = new gcp.servicenetworking.PeeredDnsDomain("name", {
+ *     dnsSuffix: "example.com.",
+ *     network: "default",
+ *     project: "1e+07",
+ *     service: "peering-service",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * name = gcp.servicenetworking.PeeredDnsDomain("name",
+ *     dns_suffix="example.com.",
+ *     network="default",
+ *     project="10000000",
+ *     service="peering-service")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var name = new Gcp.ServiceNetworking.PeeredDnsDomain("name", new Gcp.ServiceNetworking.PeeredDnsDomainArgs
+ *         {
+ *             DnsSuffix = "example.com.",
+ *             Network = "default",
+ *             Project = "10000000",
+ *             Service = "peering-service",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicenetworking"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicenetworking.NewPeeredDnsDomain(ctx, "name", &servicenetworking.PeeredDnsDomainArgs{
+ * 			DnsSuffix: pulumi.String("example.com."),
+ * 			Network:   pulumi.String("default"),
+ * 			Project:   pulumi.String("10000000"),
+ * 			Service:   pulumi.String("peering-service"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,8 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:servicenetworking/peeredDnsDomain:PeeredDnsDomain my_domain services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}
  * ```
  * 
- *  Where- `service` is the service connection, defaults to `servicenetworking.googleapis.com`. - `project` is the producer project name. - `network` is the consumer network name. - `name` is the name of your peered DNS domain.
- * 
+ *  Where- `service` is the service connection, defaults to `servicenetworking.googleapis.com`. - `project` is the producer project name. - `network` is the consumer network name. - `name` is the name of your peered DNS domain. 
  */
 @ResourceType(type="gcp:servicenetworking/peeredDnsDomain:PeeredDnsDomain")
 public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {

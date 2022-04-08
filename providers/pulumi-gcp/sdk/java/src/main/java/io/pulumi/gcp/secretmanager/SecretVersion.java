@@ -19,7 +19,111 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `payload.secret_data` will be stored in the raw
  * state as plain-text.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Secret Version Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
+ *     secretId: "secret-version",
+ *     labels: {
+ *         label: "my-label",
+ *     },
+ *     replication: {
+ *         automatic: true,
+ *     },
+ * });
+ * const secret_version_basic = new gcp.secretmanager.SecretVersion("secret-version-basic", {
+ *     secret: secret_basic.id,
+ *     secretData: "secret-data",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * secret_basic = gcp.secretmanager.Secret("secret-basic",
+ *     secret_id="secret-version",
+ *     labels={
+ *         "label": "my-label",
+ *     },
+ *     replication=gcp.secretmanager.SecretReplicationArgs(
+ *         automatic=True,
+ *     ))
+ * secret_version_basic = gcp.secretmanager.SecretVersion("secret-version-basic",
+ *     secret=secret_basic.id,
+ *     secret_data="secret-data")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var secret_basic = new Gcp.SecretManager.Secret("secret-basic", new Gcp.SecretManager.SecretArgs
+ *         {
+ *             SecretId = "secret-version",
+ *             Labels = 
+ *             {
+ *                 { "label", "my-label" },
+ *             },
+ *             Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+ *             {
+ *                 Automatic = true,
+ *             },
+ *         });
+ *         var secret_version_basic = new Gcp.SecretManager.SecretVersion("secret-version-basic", new Gcp.SecretManager.SecretVersionArgs
+ *         {
+ *             Secret = secret_basic.Id,
+ *             SecretData = "secret-data",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/secretmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := secretmanager.NewSecret(ctx, "secret-basic", &secretmanager.SecretArgs{
+ * 			SecretId: pulumi.String("secret-version"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label": pulumi.String("my-label"),
+ * 			},
+ * 			Replication: &secretmanager.SecretReplicationArgs{
+ * 				Automatic: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = secretmanager.NewSecretVersion(ctx, "secret-version-basic", &secretmanager.SecretVersionArgs{
+ * 			Secret:     secret_basic.ID(),
+ * 			SecretData: pulumi.String("secret-data"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +133,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:secretmanager/secretVersion:SecretVersion default {{name}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:secretmanager/secretVersion:SecretVersion")
 public class SecretVersion extends io.pulumi.resources.CustomResource {

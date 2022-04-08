@@ -18,7 +18,7 @@ public final class CxPageEventHandler {
      */
     private final @Nullable String event;
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */
@@ -64,7 +64,7 @@ public final class CxPageEventHandler {
         return Optional.ofNullable(this.event);
     }
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
     */
