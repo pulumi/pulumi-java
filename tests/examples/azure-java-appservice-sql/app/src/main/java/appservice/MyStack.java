@@ -1,20 +1,35 @@
 package appservice;
 
-import java.util.List;
-
 import io.pulumi.Config;
 import io.pulumi.Stack;
-import io.pulumi.azurenative.insights.*;
+import io.pulumi.azurenative.insights.Component;
+import io.pulumi.azurenative.insights.ComponentArgs;
 import io.pulumi.azurenative.insights.enums.ApplicationType;
 import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.sql.*;
-import io.pulumi.azurenative.storage.*;
-import io.pulumi.azurenative.storage.enums.*;
+import io.pulumi.azurenative.sql.Database;
+import io.pulumi.azurenative.sql.DatabaseArgs;
+import io.pulumi.azurenative.sql.Server;
+import io.pulumi.azurenative.sql.ServerArgs;
+import io.pulumi.azurenative.storage.Blob;
+import io.pulumi.azurenative.storage.BlobArgs;
+import io.pulumi.azurenative.storage.BlobContainer;
+import io.pulumi.azurenative.storage.BlobContainerArgs;
+import io.pulumi.azurenative.storage.ListStorageAccountServiceSAS;
+import io.pulumi.azurenative.storage.StorageAccount;
+import io.pulumi.azurenative.storage.StorageAccountArgs;
+import io.pulumi.azurenative.storage.enums.HttpProtocol;
+import io.pulumi.azurenative.storage.enums.Kind;
+import io.pulumi.azurenative.storage.enums.Permissions;
+import io.pulumi.azurenative.storage.enums.PublicAccess;
+import io.pulumi.azurenative.storage.enums.SignedResource;
+import io.pulumi.azurenative.storage.enums.SkuName;
 import io.pulumi.azurenative.storage.inputs.ListStorageAccountServiceSASArgs;
 import io.pulumi.azurenative.storage.inputs.SkuArgs;
 import io.pulumi.azurenative.storage.outputs.ListStorageAccountServiceSASResult;
 import io.pulumi.azurenative.web.AppServicePlan;
-import io.pulumi.azurenative.web.*;
+import io.pulumi.azurenative.web.AppServicePlanArgs;
+import io.pulumi.azurenative.web.WebApp;
+import io.pulumi.azurenative.web.WebAppArgs;
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
 import io.pulumi.azurenative.web.inputs.ConnStringInfoArgs;
 import io.pulumi.azurenative.web.inputs.NameValuePairArgs;
@@ -125,23 +140,31 @@ public final class MyStack extends Stack {
 
     private Output<String> getSASToken(Output<String> storageAccountName, Output<String> storageContainerName,
                                        Output<String> blobName, Output<String> resourceGroupName) {
-        var blobSAS = Output.tuple(resourceGroupName, storageAccountName, storageContainerName).applyFuture(t ->
-            ListStorageAccountServiceSAS.invokeAsync(
-                ListStorageAccountServiceSASArgs.builder().resourceGroupName(t.t1)
-                        .accountName(t.t2)
-                        .protocols(HttpProtocol.Https)
-                        .sharedAccessStartTime("2022-01-01")
-                        .sharedAccessExpiryTime("2030-01-01")
-                        .resource(Either.ofRight(SignedResource.C))
-                        .permissions(Either.ofRight(Permissions.R))
-                        .canonicalizedResource(String.format("/blob/%s/%s", t.t2, t.t3))
-                        .contentType("application/json")
-                        .cacheControl("max-age=5")
-                        .contentDisposition("inline")
-                        .contentEncoding("deflate")
-                        .build(),
-                InvokeOptions.Empty));
+        var blobSAS =
+                Output.tuple(resourceGroupName, storageAccountName, storageContainerName).apply(t -> {
+                    var resourceGroup = t.t1;
+                    var storageAccount = t.t2;
+                    var storageContainer = t.t3;
+                    var canonical = String.format("/blob/%s/%s", storageAccount, storageContainer);
+                    var result = ListStorageAccountServiceSAS.invokeAsync(
+                            ListStorageAccountServiceSASArgs.builder().resourceGroupName(resourceGroup)
+                                    .accountName(storageAccount)
+                                    .protocols(HttpProtocol.Https)
+                                    .sharedAccessStartTime("2022-01-01")
+                                    .sharedAccessExpiryTime("2030-01-01")
+                                    .resource(Either.ofRight(SignedResource.C))
+                                    .permissions(Either.ofRight(Permissions.R))
+                                    .canonicalizedResource(canonical)
+                                    .contentType("application/json")
+                                    .cacheControl("max-age=5")
+                                    .contentDisposition("inline")
+                                    .contentEncoding("deflate")
+                                    .build(),
+                            InvokeOptions.Empty);
+                    return Output.of(result);
+                });
         var token = blobSAS.applyValue(ListStorageAccountServiceSASResult::getServiceSasToken);
-        return Output.format("https://%s.blob.core.windows.net/%s/%s?%s", storageAccountName, storageContainerName, blobName, token);
+        return Output.format("https://%s.blob.core.windows.net/%s/%s?%s",
+                storageAccountName, storageContainerName, blobName, token);
     }
 }
