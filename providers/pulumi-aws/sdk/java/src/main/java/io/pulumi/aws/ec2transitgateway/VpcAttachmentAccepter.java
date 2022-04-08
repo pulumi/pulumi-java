@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2transitgateway.inputs.VpcAttachmentAccepterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -228,7 +229,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcAttachmentAccepter(String name, VpcAttachmentAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, args == null ? VpcAttachmentAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, args == null ? VpcAttachmentAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcAttachmentAccepter(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

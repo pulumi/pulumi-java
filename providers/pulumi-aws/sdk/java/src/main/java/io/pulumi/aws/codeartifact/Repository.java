@@ -11,6 +11,7 @@ import io.pulumi.aws.codeartifact.outputs.RepositoryUpstream;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -195,7 +196,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Repository(String name, RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codeartifact/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codeartifact/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Repository(String name, Output<String> id, @Nullable RepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.ecs.inputs;
 import io.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider;
 
     public Output<CapacityProviderAutoScalingGroupProviderGetArgs> getAutoScalingGroupProvider() {
-        return this.autoScalingGroupProvider == null ? Output.empty() : this.autoScalingGroupProvider;
+        return this.autoScalingGroupProvider == null ? Codegen.empty() : this.autoScalingGroupProvider;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,14 +58,14 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public CapacityProviderState(
@@ -81,11 +82,11 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
     }
 
     private CapacityProviderState() {
-        this.arn = Output.empty();
-        this.autoScalingGroupProvider = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.autoScalingGroupProvider = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder autoScalingGroupProvider(@Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider) {
@@ -129,7 +130,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder autoScalingGroupProvider(@Nullable CapacityProviderAutoScalingGroupProviderGetArgs autoScalingGroupProvider) {
-            this.autoScalingGroupProvider = Output.ofNullable(autoScalingGroupProvider);
+            this.autoScalingGroupProvider = Codegen.ofNullable(autoScalingGroupProvider);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -137,7 +138,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -145,7 +146,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -153,7 +154,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public CapacityProviderState build() {
             return new CapacityProviderState(arn, autoScalingGroupProvider, name, tags, tagsAll);

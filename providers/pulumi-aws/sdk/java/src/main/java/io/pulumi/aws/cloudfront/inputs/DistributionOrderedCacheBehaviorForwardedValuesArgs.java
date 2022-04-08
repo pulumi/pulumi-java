@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
       private final @Nullable Output<List<String>> headers;
 
     public Output<List<String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
       private final @Nullable Output<List<String>> queryStringCacheKeys;
 
     public Output<List<String>> getQueryStringCacheKeys() {
-        return this.queryStringCacheKeys == null ? Output.empty() : this.queryStringCacheKeys;
+        return this.queryStringCacheKeys == null ? Codegen.empty() : this.queryStringCacheKeys;
     }
 
     public DistributionOrderedCacheBehaviorForwardedValuesArgs(
@@ -80,10 +81,10 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
     }
 
     private DistributionOrderedCacheBehaviorForwardedValuesArgs() {
-        this.cookies = Output.empty();
-        this.headers = Output.empty();
-        this.queryString = Output.empty();
-        this.queryStringCacheKeys = Output.empty();
+        this.cookies = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.queryStringCacheKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
             return this;
         }
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(String... headers) {
@@ -144,7 +145,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
             return this;
         }
         public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
-            this.queryStringCacheKeys = Output.ofNullable(queryStringCacheKeys);
+            this.queryStringCacheKeys = Codegen.ofNullable(queryStringCacheKeys);
             return this;
         }
         public Builder queryStringCacheKeys(String... queryStringCacheKeys) {

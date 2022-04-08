@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CustomerGatewayArgs() {
-        this.bgpAsn = Output.empty();
-        this.certificateArn = Output.empty();
-        this.deviceName = Output.empty();
-        this.ipAddress = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.bgpAsn = Codegen.empty();
+        this.certificateArn = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -157,7 +158,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder ipAddress(Output<String> ipAddress) {
@@ -173,7 +174,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(Output<String> type) {

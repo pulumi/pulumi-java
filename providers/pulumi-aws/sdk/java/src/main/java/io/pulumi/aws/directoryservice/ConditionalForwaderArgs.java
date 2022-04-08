@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
     }
 
     private ConditionalForwaderArgs() {
-        this.directoryId = Output.empty();
-        this.dnsIps = Output.empty();
-        this.remoteDomainName = Output.empty();
+        this.directoryId = Codegen.empty();
+        this.dnsIps = Codegen.empty();
+        this.remoteDomainName = Codegen.empty();
     }
 
     public static Builder builder() {

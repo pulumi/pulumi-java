@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> permissionsBoundary;
 
     public Output<String> getPermissionsBoundary() {
-        return this.permissionsBoundary == null ? Output.empty() : this.permissionsBoundary;
+        return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public UserArgs(
@@ -87,11 +88,11 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.forceDestroy = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.permissionsBoundary = Output.empty();
-        this.tags = Output.empty();
+        this.forceDestroy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.permissionsBoundary = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -135,7 +136,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -143,7 +144,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
@@ -151,7 +152,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
-            this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
+            this.permissionsBoundary = Codegen.ofNullable(permissionsBoundary);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -159,7 +160,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public UserArgs build() {
             return new UserArgs(forceDestroy, name, path, permissionsBoundary, tags);

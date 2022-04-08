@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     public DomainIdentityVerificationState(
@@ -44,8 +45,8 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
     }
 
     private DomainIdentityVerificationState() {
-        this.arn = Output.empty();
-        this.domain = Output.empty();
+        this.arn = Codegen.empty();
+        this.domain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -83,7 +84,7 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }        public DomainIdentityVerificationState build() {
             return new DomainIdentityVerificationState(arn, domain);

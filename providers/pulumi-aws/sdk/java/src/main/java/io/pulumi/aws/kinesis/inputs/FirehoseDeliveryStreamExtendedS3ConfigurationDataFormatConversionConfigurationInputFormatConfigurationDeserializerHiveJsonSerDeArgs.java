@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
       private final @Nullable Output<List<String>> timestampFormats;
 
     public Output<List<String>> getTimestampFormats() {
-        return this.timestampFormats == null ? Output.empty() : this.timestampFormats;
+        return this.timestampFormats == null ? Codegen.empty() : this.timestampFormats;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs(@Nullable Output<List<String>> timestampFormats) {
@@ -31,7 +32,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs() {
-        this.timestampFormats = Output.empty();
+        this.timestampFormats = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder timestampFormats(@Nullable List<String> timestampFormats) {
-            this.timestampFormats = Output.ofNullable(timestampFormats);
+            this.timestampFormats = Codegen.ofNullable(timestampFormats);
             return this;
         }
         public Builder timestampFormats(String... timestampFormats) {

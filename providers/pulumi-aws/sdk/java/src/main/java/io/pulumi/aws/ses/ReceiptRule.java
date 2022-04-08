@@ -16,6 +16,7 @@ import io.pulumi.aws.ses.outputs.ReceiptRuleWorkmailAction;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -270,7 +271,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReceiptRule(String name, ReceiptRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/receiptRule:ReceiptRule", name, args == null ? ReceiptRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/receiptRule:ReceiptRule", name, args == null ? ReceiptRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReceiptRule(String name, Output<String> id, @Nullable ReceiptRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments;
 
     public Output<List<NetworkInterfaceAttachmentArgs>> getAttachments() {
-        return this.attachments == null ? Output.empty() : this.attachments;
+        return this.attachments == null ? Codegen.empty() : this.attachments;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> interfaceType;
 
     public Output<String> getInterfaceType() {
-        return this.interfaceType == null ? Output.empty() : this.interfaceType;
+        return this.interfaceType == null ? Codegen.empty() : this.interfaceType;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> ipv4PrefixCount;
 
     public Output<Integer> getIpv4PrefixCount() {
-        return this.ipv4PrefixCount == null ? Output.empty() : this.ipv4PrefixCount;
+        return this.ipv4PrefixCount == null ? Codegen.empty() : this.ipv4PrefixCount;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> ipv4Prefixes;
 
     public Output<List<String>> getIpv4Prefixes() {
-        return this.ipv4Prefixes == null ? Output.empty() : this.ipv4Prefixes;
+        return this.ipv4Prefixes == null ? Codegen.empty() : this.ipv4Prefixes;
     }
 
     /**
@@ -82,14 +83,14 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> ipv6AddressCount;
 
     public Output<Integer> getIpv6AddressCount() {
-        return this.ipv6AddressCount == null ? Output.empty() : this.ipv6AddressCount;
+        return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
     @Import(name="ipv6AddressListEnabled")
       private final @Nullable Output<Boolean> ipv6AddressListEnabled;
 
     public Output<Boolean> getIpv6AddressListEnabled() {
-        return this.ipv6AddressListEnabled == null ? Output.empty() : this.ipv6AddressListEnabled;
+        return this.ipv6AddressListEnabled == null ? Codegen.empty() : this.ipv6AddressListEnabled;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> ipv6AddressLists;
 
     public Output<List<String>> getIpv6AddressLists() {
-        return this.ipv6AddressLists == null ? Output.empty() : this.ipv6AddressLists;
+        return this.ipv6AddressLists == null ? Codegen.empty() : this.ipv6AddressLists;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
+        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> ipv6PrefixCount;
 
     public Output<Integer> getIpv6PrefixCount() {
-        return this.ipv6PrefixCount == null ? Output.empty() : this.ipv6PrefixCount;
+        return this.ipv6PrefixCount == null ? Codegen.empty() : this.ipv6PrefixCount;
     }
 
     /**
@@ -133,21 +134,21 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> ipv6Prefixes;
 
     public Output<List<String>> getIpv6Prefixes() {
-        return this.ipv6Prefixes == null ? Output.empty() : this.ipv6Prefixes;
+        return this.ipv6Prefixes == null ? Codegen.empty() : this.ipv6Prefixes;
     }
 
     @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
-        return this.privateIp == null ? Output.empty() : this.privateIp;
+        return this.privateIp == null ? Codegen.empty() : this.privateIp;
     }
 
     @Import(name="privateIpListEnabled")
       private final @Nullable Output<Boolean> privateIpListEnabled;
 
     public Output<Boolean> getPrivateIpListEnabled() {
-        return this.privateIpListEnabled == null ? Output.empty() : this.privateIpListEnabled;
+        return this.privateIpListEnabled == null ? Codegen.empty() : this.privateIpListEnabled;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> privateIpLists;
 
     public Output<List<String>> getPrivateIpLists() {
-        return this.privateIpLists == null ? Output.empty() : this.privateIpLists;
+        return this.privateIpLists == null ? Codegen.empty() : this.privateIpLists;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> privateIps;
 
     public Output<List<String>> getPrivateIps() {
-        return this.privateIps == null ? Output.empty() : this.privateIps;
+        return this.privateIps == null ? Codegen.empty() : this.privateIps;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> privateIpsCount;
 
     public Output<Integer> getPrivateIpsCount() {
-        return this.privateIpsCount == null ? Output.empty() : this.privateIpsCount;
+        return this.privateIpsCount == null ? Codegen.empty() : this.privateIpsCount;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> sourceDestCheck;
 
     public Output<Boolean> getSourceDestCheck() {
-        return this.sourceDestCheck == null ? Output.empty() : this.sourceDestCheck;
+        return this.sourceDestCheck == null ? Codegen.empty() : this.sourceDestCheck;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkInterfaceArgs(
@@ -271,26 +272,26 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.attachments = Output.empty();
-        this.description = Output.empty();
-        this.interfaceType = Output.empty();
-        this.ipv4PrefixCount = Output.empty();
-        this.ipv4Prefixes = Output.empty();
-        this.ipv6AddressCount = Output.empty();
-        this.ipv6AddressListEnabled = Output.empty();
-        this.ipv6AddressLists = Output.empty();
-        this.ipv6Addresses = Output.empty();
-        this.ipv6PrefixCount = Output.empty();
-        this.ipv6Prefixes = Output.empty();
-        this.privateIp = Output.empty();
-        this.privateIpListEnabled = Output.empty();
-        this.privateIpLists = Output.empty();
-        this.privateIps = Output.empty();
-        this.privateIpsCount = Output.empty();
-        this.securityGroups = Output.empty();
-        this.sourceDestCheck = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
+        this.attachments = Codegen.empty();
+        this.description = Codegen.empty();
+        this.interfaceType = Codegen.empty();
+        this.ipv4PrefixCount = Codegen.empty();
+        this.ipv4Prefixes = Codegen.empty();
+        this.ipv6AddressCount = Codegen.empty();
+        this.ipv6AddressListEnabled = Codegen.empty();
+        this.ipv6AddressLists = Codegen.empty();
+        this.ipv6Addresses = Codegen.empty();
+        this.ipv6PrefixCount = Codegen.empty();
+        this.ipv6Prefixes = Codegen.empty();
+        this.privateIp = Codegen.empty();
+        this.privateIpListEnabled = Codegen.empty();
+        this.privateIpLists = Codegen.empty();
+        this.privateIps = Codegen.empty();
+        this.privateIpsCount = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.sourceDestCheck = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -356,7 +357,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder attachments(@Nullable List<NetworkInterfaceAttachmentArgs> attachments) {
-            this.attachments = Output.ofNullable(attachments);
+            this.attachments = Codegen.ofNullable(attachments);
             return this;
         }
         public Builder attachments(NetworkInterfaceAttachmentArgs... attachments) {
@@ -367,7 +368,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
@@ -375,7 +376,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder interfaceType(@Nullable String interfaceType) {
-            this.interfaceType = Output.ofNullable(interfaceType);
+            this.interfaceType = Codegen.ofNullable(interfaceType);
             return this;
         }
         public Builder ipv4PrefixCount(@Nullable Output<Integer> ipv4PrefixCount) {
@@ -383,7 +384,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv4PrefixCount(@Nullable Integer ipv4PrefixCount) {
-            this.ipv4PrefixCount = Output.ofNullable(ipv4PrefixCount);
+            this.ipv4PrefixCount = Codegen.ofNullable(ipv4PrefixCount);
             return this;
         }
         public Builder ipv4Prefixes(@Nullable Output<List<String>> ipv4Prefixes) {
@@ -391,7 +392,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv4Prefixes(@Nullable List<String> ipv4Prefixes) {
-            this.ipv4Prefixes = Output.ofNullable(ipv4Prefixes);
+            this.ipv4Prefixes = Codegen.ofNullable(ipv4Prefixes);
             return this;
         }
         public Builder ipv4Prefixes(String... ipv4Prefixes) {
@@ -402,7 +403,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
+            this.ipv6AddressCount = Codegen.ofNullable(ipv6AddressCount);
             return this;
         }
         public Builder ipv6AddressListEnabled(@Nullable Output<Boolean> ipv6AddressListEnabled) {
@@ -410,7 +411,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6AddressListEnabled(@Nullable Boolean ipv6AddressListEnabled) {
-            this.ipv6AddressListEnabled = Output.ofNullable(ipv6AddressListEnabled);
+            this.ipv6AddressListEnabled = Codegen.ofNullable(ipv6AddressListEnabled);
             return this;
         }
         public Builder ipv6AddressLists(@Nullable Output<List<String>> ipv6AddressLists) {
@@ -418,7 +419,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6AddressLists(@Nullable List<String> ipv6AddressLists) {
-            this.ipv6AddressLists = Output.ofNullable(ipv6AddressLists);
+            this.ipv6AddressLists = Codegen.ofNullable(ipv6AddressLists);
             return this;
         }
         public Builder ipv6AddressLists(String... ipv6AddressLists) {
@@ -429,7 +430,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
             return this;
         }
         public Builder ipv6Addresses(String... ipv6Addresses) {
@@ -440,7 +441,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6PrefixCount(@Nullable Integer ipv6PrefixCount) {
-            this.ipv6PrefixCount = Output.ofNullable(ipv6PrefixCount);
+            this.ipv6PrefixCount = Codegen.ofNullable(ipv6PrefixCount);
             return this;
         }
         public Builder ipv6Prefixes(@Nullable Output<List<String>> ipv6Prefixes) {
@@ -448,7 +449,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6Prefixes(@Nullable List<String> ipv6Prefixes) {
-            this.ipv6Prefixes = Output.ofNullable(ipv6Prefixes);
+            this.ipv6Prefixes = Codegen.ofNullable(ipv6Prefixes);
             return this;
         }
         public Builder ipv6Prefixes(String... ipv6Prefixes) {
@@ -459,7 +460,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Output.ofNullable(privateIp);
+            this.privateIp = Codegen.ofNullable(privateIp);
             return this;
         }
         public Builder privateIpListEnabled(@Nullable Output<Boolean> privateIpListEnabled) {
@@ -467,7 +468,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateIpListEnabled(@Nullable Boolean privateIpListEnabled) {
-            this.privateIpListEnabled = Output.ofNullable(privateIpListEnabled);
+            this.privateIpListEnabled = Codegen.ofNullable(privateIpListEnabled);
             return this;
         }
         public Builder privateIpLists(@Nullable Output<List<String>> privateIpLists) {
@@ -475,7 +476,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateIpLists(@Nullable List<String> privateIpLists) {
-            this.privateIpLists = Output.ofNullable(privateIpLists);
+            this.privateIpLists = Codegen.ofNullable(privateIpLists);
             return this;
         }
         public Builder privateIpLists(String... privateIpLists) {
@@ -486,7 +487,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateIps(@Nullable List<String> privateIps) {
-            this.privateIps = Output.ofNullable(privateIps);
+            this.privateIps = Codegen.ofNullable(privateIps);
             return this;
         }
         public Builder privateIps(String... privateIps) {
@@ -497,7 +498,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateIpsCount(@Nullable Integer privateIpsCount) {
-            this.privateIpsCount = Output.ofNullable(privateIpsCount);
+            this.privateIpsCount = Codegen.ofNullable(privateIpsCount);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -505,7 +506,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -516,7 +517,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
-            this.sourceDestCheck = Output.ofNullable(sourceDestCheck);
+            this.sourceDestCheck = Codegen.ofNullable(sourceDestCheck);
             return this;
         }
         public Builder subnetId(Output<String> subnetId) {
@@ -532,7 +533,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(attachments, description, interfaceType, ipv4PrefixCount, ipv4Prefixes, ipv6AddressCount, ipv6AddressListEnabled, ipv6AddressLists, ipv6Addresses, ipv6PrefixCount, ipv6Prefixes, privateIp, privateIpListEnabled, privateIpLists, privateIps, privateIpsCount, securityGroups, sourceDestCheck, subnetId, tags);

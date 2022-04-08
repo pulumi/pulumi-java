@@ -5,6 +5,7 @@ package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> branches;
 
     public Output<List<String>> getBranches() {
-        return this.branches == null ? Output.empty() : this.branches;
+        return this.branches == null ? Codegen.empty() : this.branches;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> customData;
 
     public Output<String> getCustomData() {
-        return this.customData == null ? Output.empty() : this.customData;
+        return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TriggerTriggerGetArgs() {
-        this.branches = Output.empty();
-        this.customData = Output.empty();
-        this.destinationArn = Output.empty();
-        this.events = Output.empty();
-        this.name = Output.empty();
+        this.branches = Codegen.empty();
+        this.customData = Codegen.empty();
+        this.destinationArn = Codegen.empty();
+        this.events = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder branches(@Nullable List<String> branches) {
-            this.branches = Output.ofNullable(branches);
+            this.branches = Codegen.ofNullable(branches);
             return this;
         }
         public Builder branches(String... branches) {
@@ -135,7 +136,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder customData(@Nullable String customData) {
-            this.customData = Output.ofNullable(customData);
+            this.customData = Codegen.ofNullable(customData);
             return this;
         }
         public Builder destinationArn(Output<String> destinationArn) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.ec2.outputs.VpcEndpointServicePrivateDnsNameConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -272,7 +273,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcEndpointService(String name, VpcEndpointServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcEndpointService:VpcEndpointService", name, args == null ? VpcEndpointServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcEndpointService:VpcEndpointService", name, args == null ? VpcEndpointServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcEndpointService(String name, Output<String> id, @Nullable VpcEndpointServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

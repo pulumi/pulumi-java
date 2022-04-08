@@ -5,6 +5,7 @@ package io.pulumi.aws.mskconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkerConfigurationArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.propertiesFileContent = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.propertiesFileContent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -99,7 +100,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder propertiesFileContent(Output<String> propertiesFileContent) {

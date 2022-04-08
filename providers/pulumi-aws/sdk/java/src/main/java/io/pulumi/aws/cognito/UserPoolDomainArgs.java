@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPoolDomainArgs() {
-        this.certificateArn = Output.empty();
-        this.domain = Output.empty();
-        this.userPoolId = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder domain(Output<String> domain) {

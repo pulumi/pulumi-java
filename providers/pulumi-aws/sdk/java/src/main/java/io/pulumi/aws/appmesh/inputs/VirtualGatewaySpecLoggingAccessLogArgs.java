@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingAccessLogFileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class VirtualGatewaySpecLoggingAccessLogArgs extends io.pulumi.reso
       private final @Nullable Output<VirtualGatewaySpecLoggingAccessLogFileArgs> file;
 
     public Output<VirtualGatewaySpecLoggingAccessLogFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     public VirtualGatewaySpecLoggingAccessLogArgs(@Nullable Output<VirtualGatewaySpecLoggingAccessLogFileArgs> file) {
@@ -30,7 +31,7 @@ public final class VirtualGatewaySpecLoggingAccessLogArgs extends io.pulumi.reso
     }
 
     private VirtualGatewaySpecLoggingAccessLogArgs() {
-        this.file = Output.empty();
+        this.file = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualGatewaySpecLoggingAccessLogArgs extends io.pulumi.reso
             return this;
         }
         public Builder file(@Nullable VirtualGatewaySpecLoggingAccessLogFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }        public VirtualGatewaySpecLoggingAccessLogArgs build() {
             return new VirtualGatewaySpecLoggingAccessLogArgs(file);

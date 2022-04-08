@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class CodeSigningConfigPoliciesGetArgs extends io.pulumi.resources.
     }
 
     private CodeSigningConfigPoliciesGetArgs() {
-        this.untrustedArtifactOnDeployment = Output.empty();
+        this.untrustedArtifactOnDeployment = Codegen.empty();
     }
 
     public static Builder builder() {

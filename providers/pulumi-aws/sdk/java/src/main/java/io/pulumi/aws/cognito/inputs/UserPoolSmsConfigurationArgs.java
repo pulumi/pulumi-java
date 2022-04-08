@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private UserPoolSmsConfigurationArgs() {
-        this.externalId = Output.empty();
-        this.snsCallerArn = Output.empty();
+        this.externalId = Codegen.empty();
+        this.snsCallerArn = Codegen.empty();
     }
 
     public static Builder builder() {

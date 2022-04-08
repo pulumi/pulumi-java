@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> amazonSideAsn;
 
     public Output<String> getAmazonSideAsn() {
-        return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
+        return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
+        return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
     public GatewayState(
@@ -57,9 +58,9 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayState() {
-        this.amazonSideAsn = Output.empty();
-        this.name = Output.empty();
-        this.ownerAccountId = Output.empty();
+        this.amazonSideAsn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
-            this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
+            this.amazonSideAsn = Codegen.ofNullable(amazonSideAsn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -99,7 +100,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
@@ -107,7 +108,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Output.ofNullable(ownerAccountId);
+            this.ownerAccountId = Codegen.ofNullable(ownerAccountId);
             return this;
         }        public GatewayState build() {
             return new GatewayState(amazonSideAsn, name, ownerAccountId);

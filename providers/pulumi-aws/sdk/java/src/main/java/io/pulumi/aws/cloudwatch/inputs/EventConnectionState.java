@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
 
     public Output<EventConnectionAuthParametersGetArgs> getAuthParameters() {
-        return this.authParameters == null ? Output.empty() : this.authParameters;
+        return this.authParameters == null ? Codegen.empty() : this.authParameters;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> authorizationType;
 
     public Output<String> getAuthorizationType() {
-        return this.authorizationType == null ? Output.empty() : this.authorizationType;
+        return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> secretArn;
 
     public Output<String> getSecretArn() {
-        return this.secretArn == null ? Output.empty() : this.secretArn;
+        return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
     public EventConnectionState(
@@ -97,12 +98,12 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     }
 
     private EventConnectionState() {
-        this.arn = Output.empty();
-        this.authParameters = Output.empty();
-        this.authorizationType = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.secretArn = Output.empty();
+        this.arn = Codegen.empty();
+        this.authParameters = Codegen.empty();
+        this.authorizationType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.secretArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authParameters(@Nullable Output<EventConnectionAuthParametersGetArgs> authParameters) {
@@ -148,7 +149,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder authParameters(@Nullable EventConnectionAuthParametersGetArgs authParameters) {
-            this.authParameters = Output.ofNullable(authParameters);
+            this.authParameters = Codegen.ofNullable(authParameters);
             return this;
         }
         public Builder authorizationType(@Nullable Output<String> authorizationType) {
@@ -156,7 +157,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder authorizationType(@Nullable String authorizationType) {
-            this.authorizationType = Output.ofNullable(authorizationType);
+            this.authorizationType = Codegen.ofNullable(authorizationType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -164,7 +165,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -172,7 +173,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder secretArn(@Nullable Output<String> secretArn) {
@@ -180,7 +181,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Output.ofNullable(secretArn);
+            this.secretArn = Codegen.ofNullable(secretArn);
             return this;
         }        public EventConnectionState build() {
             return new EventConnectionState(arn, authParameters, authorizationType, description, name, secretArn);

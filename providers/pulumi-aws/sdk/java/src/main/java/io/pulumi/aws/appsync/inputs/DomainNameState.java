@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appsyncDomainName;
 
     public Output<String> getAppsyncDomainName() {
-        return this.appsyncDomainName == null ? Output.empty() : this.appsyncDomainName;
+        return this.appsyncDomainName == null ? Codegen.empty() : this.appsyncDomainName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
+        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
     public DomainNameState(
@@ -83,11 +84,11 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainNameState() {
-        this.appsyncDomainName = Output.empty();
-        this.certificateArn = Output.empty();
-        this.description = Output.empty();
-        this.domainName = Output.empty();
-        this.hostedZoneId = Output.empty();
+        this.appsyncDomainName = Codegen.empty();
+        this.certificateArn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.hostedZoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appsyncDomainName(@Nullable String appsyncDomainName) {
-            this.appsyncDomainName = Output.ofNullable(appsyncDomainName);
+            this.appsyncDomainName = Codegen.ofNullable(appsyncDomainName);
             return this;
         }
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
@@ -131,7 +132,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -139,7 +140,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -147,7 +148,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
@@ -155,7 +156,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Output.ofNullable(hostedZoneId);
+            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
             return this;
         }        public DomainNameState build() {
             return new DomainNameState(appsyncDomainName, certificateArn, description, domainName, hostedZoneId);

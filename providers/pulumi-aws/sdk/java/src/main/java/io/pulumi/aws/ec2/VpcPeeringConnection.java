@@ -11,6 +11,7 @@ import io.pulumi.aws.ec2.outputs.VpcPeeringConnectionRequester;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -222,7 +223,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcPeeringConnection(String name, VpcPeeringConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcPeeringConnection:VpcPeeringConnection", name, args == null ? VpcPeeringConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcPeeringConnection:VpcPeeringConnection", name, args == null ? VpcPeeringConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcPeeringConnection(String name, Output<String> id, @Nullable VpcPeeringConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

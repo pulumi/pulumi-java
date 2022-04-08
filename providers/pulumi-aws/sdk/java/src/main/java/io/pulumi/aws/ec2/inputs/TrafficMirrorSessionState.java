@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> packetLength;
 
     public Output<Integer> getPacketLength() {
-        return this.packetLength == null ? Output.empty() : this.packetLength;
+        return this.packetLength == null ? Codegen.empty() : this.packetLength;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> sessionNumber;
 
     public Output<Integer> getSessionNumber() {
-        return this.sessionNumber == null ? Output.empty() : this.sessionNumber;
+        return this.sessionNumber == null ? Codegen.empty() : this.sessionNumber;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> trafficMirrorFilterId;
 
     public Output<String> getTrafficMirrorFilterId() {
-        return this.trafficMirrorFilterId == null ? Output.empty() : this.trafficMirrorFilterId;
+        return this.trafficMirrorFilterId == null ? Codegen.empty() : this.trafficMirrorFilterId;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> trafficMirrorTargetId;
 
     public Output<String> getTrafficMirrorTargetId() {
-        return this.trafficMirrorTargetId == null ? Output.empty() : this.trafficMirrorTargetId;
+        return this.trafficMirrorTargetId == null ? Codegen.empty() : this.trafficMirrorTargetId;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> virtualNetworkId;
 
     public Output<Integer> getVirtualNetworkId() {
-        return this.virtualNetworkId == null ? Output.empty() : this.virtualNetworkId;
+        return this.virtualNetworkId == null ? Codegen.empty() : this.virtualNetworkId;
     }
 
     public TrafficMirrorSessionState(
@@ -163,17 +164,17 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
     }
 
     private TrafficMirrorSessionState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.ownerId = Output.empty();
-        this.packetLength = Output.empty();
-        this.sessionNumber = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.trafficMirrorFilterId = Output.empty();
-        this.trafficMirrorTargetId = Output.empty();
-        this.virtualNetworkId = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.packetLength = Codegen.empty();
+        this.sessionNumber = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.trafficMirrorFilterId = Codegen.empty();
+        this.trafficMirrorTargetId = Codegen.empty();
+        this.virtualNetworkId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -229,7 +230,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
@@ -237,7 +238,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -245,7 +246,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder packetLength(@Nullable Output<Integer> packetLength) {
@@ -253,7 +254,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder packetLength(@Nullable Integer packetLength) {
-            this.packetLength = Output.ofNullable(packetLength);
+            this.packetLength = Codegen.ofNullable(packetLength);
             return this;
         }
         public Builder sessionNumber(@Nullable Output<Integer> sessionNumber) {
@@ -261,7 +262,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sessionNumber(@Nullable Integer sessionNumber) {
-            this.sessionNumber = Output.ofNullable(sessionNumber);
+            this.sessionNumber = Codegen.ofNullable(sessionNumber);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -269,7 +270,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -277,7 +278,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder trafficMirrorFilterId(@Nullable Output<String> trafficMirrorFilterId) {
@@ -285,7 +286,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder trafficMirrorFilterId(@Nullable String trafficMirrorFilterId) {
-            this.trafficMirrorFilterId = Output.ofNullable(trafficMirrorFilterId);
+            this.trafficMirrorFilterId = Codegen.ofNullable(trafficMirrorFilterId);
             return this;
         }
         public Builder trafficMirrorTargetId(@Nullable Output<String> trafficMirrorTargetId) {
@@ -293,7 +294,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder trafficMirrorTargetId(@Nullable String trafficMirrorTargetId) {
-            this.trafficMirrorTargetId = Output.ofNullable(trafficMirrorTargetId);
+            this.trafficMirrorTargetId = Codegen.ofNullable(trafficMirrorTargetId);
             return this;
         }
         public Builder virtualNetworkId(@Nullable Output<Integer> virtualNetworkId) {
@@ -301,7 +302,7 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder virtualNetworkId(@Nullable Integer virtualNetworkId) {
-            this.virtualNetworkId = Output.ofNullable(virtualNetworkId);
+            this.virtualNetworkId = Codegen.ofNullable(virtualNetworkId);
             return this;
         }        public TrafficMirrorSessionState build() {
             return new TrafficMirrorSessionState(arn, description, networkInterfaceId, ownerId, packetLength, sessionNumber, tags, tagsAll, trafficMirrorFilterId, trafficMirrorTargetId, virtualNetworkId);

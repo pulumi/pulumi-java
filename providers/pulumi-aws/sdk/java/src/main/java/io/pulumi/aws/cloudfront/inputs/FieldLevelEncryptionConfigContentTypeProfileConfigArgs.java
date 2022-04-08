@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extend
     }
 
     private FieldLevelEncryptionConfigContentTypeProfileConfigArgs() {
-        this.contentTypeProfiles = Output.empty();
-        this.forwardWhenContentTypeIsUnknown = Output.empty();
+        this.contentTypeProfiles = Codegen.empty();
+        this.forwardWhenContentTypeIsUnknown = Codegen.empty();
     }
 
     public static Builder builder() {

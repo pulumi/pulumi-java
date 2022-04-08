@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.KeySigningKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -248,7 +249,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeySigningKey(String name, KeySigningKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/keySigningKey:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/keySigningKey:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeySigningKey(String name, Output<String> id, @Nullable KeySigningKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

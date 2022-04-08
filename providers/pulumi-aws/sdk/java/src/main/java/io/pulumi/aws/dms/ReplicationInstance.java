@@ -9,6 +9,7 @@ import io.pulumi.aws.dms.inputs.ReplicationInstanceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -321,7 +322,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationInstance(String name, ReplicationInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/replicationInstance:ReplicationInstance", name, args == null ? ReplicationInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dms/replicationInstance:ReplicationInstance", name, args == null ? ReplicationInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationInstance(String name, Output<String> id, @Nullable ReplicationInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

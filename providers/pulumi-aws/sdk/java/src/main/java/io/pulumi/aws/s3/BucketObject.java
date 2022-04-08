@@ -10,6 +10,7 @@ import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -424,7 +425,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketObject(String name, BucketObjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/bucketObject:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3/bucketObject:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketObject(String name, Output<String> id, @Nullable BucketObjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class ActiveReceiptRuleSetArgs extends io.pulumi.resources.Resource
     }
 
     private ActiveReceiptRuleSetArgs() {
-        this.ruleSetName = Output.empty();
+        this.ruleSetName = Codegen.empty();
     }
 
     public static Builder builder() {

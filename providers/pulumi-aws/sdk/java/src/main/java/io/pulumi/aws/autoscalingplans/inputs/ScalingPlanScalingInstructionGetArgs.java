@@ -8,6 +8,7 @@ import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionPredef
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification;
 
     public Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> getCustomizedLoadMetricSpecification() {
-        return this.customizedLoadMetricSpecification == null ? Output.empty() : this.customizedLoadMetricSpecification;
+        return this.customizedLoadMetricSpecification == null ? Codegen.empty() : this.customizedLoadMetricSpecification;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<Boolean> disableDynamicScaling;
 
     public Output<Boolean> getDisableDynamicScaling() {
-        return this.disableDynamicScaling == null ? Output.empty() : this.disableDynamicScaling;
+        return this.disableDynamicScaling == null ? Codegen.empty() : this.disableDynamicScaling;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
 
     public Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> getPredefinedLoadMetricSpecification() {
-        return this.predefinedLoadMetricSpecification == null ? Output.empty() : this.predefinedLoadMetricSpecification;
+        return this.predefinedLoadMetricSpecification == null ? Codegen.empty() : this.predefinedLoadMetricSpecification;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> predictiveScalingMaxCapacityBehavior;
 
     public Output<String> getPredictiveScalingMaxCapacityBehavior() {
-        return this.predictiveScalingMaxCapacityBehavior == null ? Output.empty() : this.predictiveScalingMaxCapacityBehavior;
+        return this.predictiveScalingMaxCapacityBehavior == null ? Codegen.empty() : this.predictiveScalingMaxCapacityBehavior;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> predictiveScalingMaxCapacityBuffer;
 
     public Output<Integer> getPredictiveScalingMaxCapacityBuffer() {
-        return this.predictiveScalingMaxCapacityBuffer == null ? Output.empty() : this.predictiveScalingMaxCapacityBuffer;
+        return this.predictiveScalingMaxCapacityBuffer == null ? Codegen.empty() : this.predictiveScalingMaxCapacityBuffer;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> predictiveScalingMode;
 
     public Output<String> getPredictiveScalingMode() {
-        return this.predictiveScalingMode == null ? Output.empty() : this.predictiveScalingMode;
+        return this.predictiveScalingMode == null ? Codegen.empty() : this.predictiveScalingMode;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> scalingPolicyUpdateBehavior;
 
     public Output<String> getScalingPolicyUpdateBehavior() {
-        return this.scalingPolicyUpdateBehavior == null ? Output.empty() : this.scalingPolicyUpdateBehavior;
+        return this.scalingPolicyUpdateBehavior == null ? Codegen.empty() : this.scalingPolicyUpdateBehavior;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> scheduledActionBufferTime;
 
     public Output<Integer> getScheduledActionBufferTime() {
-        return this.scheduledActionBufferTime == null ? Output.empty() : this.scheduledActionBufferTime;
+        return this.scheduledActionBufferTime == null ? Codegen.empty() : this.scheduledActionBufferTime;
     }
 
     /**
@@ -210,20 +211,20 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
     }
 
     private ScalingPlanScalingInstructionGetArgs() {
-        this.customizedLoadMetricSpecification = Output.empty();
-        this.disableDynamicScaling = Output.empty();
-        this.maxCapacity = Output.empty();
-        this.minCapacity = Output.empty();
-        this.predefinedLoadMetricSpecification = Output.empty();
-        this.predictiveScalingMaxCapacityBehavior = Output.empty();
-        this.predictiveScalingMaxCapacityBuffer = Output.empty();
-        this.predictiveScalingMode = Output.empty();
-        this.resourceId = Output.empty();
-        this.scalableDimension = Output.empty();
-        this.scalingPolicyUpdateBehavior = Output.empty();
-        this.scheduledActionBufferTime = Output.empty();
-        this.serviceNamespace = Output.empty();
-        this.targetTrackingConfigurations = Output.empty();
+        this.customizedLoadMetricSpecification = Codegen.empty();
+        this.disableDynamicScaling = Codegen.empty();
+        this.maxCapacity = Codegen.empty();
+        this.minCapacity = Codegen.empty();
+        this.predefinedLoadMetricSpecification = Codegen.empty();
+        this.predictiveScalingMaxCapacityBehavior = Codegen.empty();
+        this.predictiveScalingMaxCapacityBuffer = Codegen.empty();
+        this.predictiveScalingMode = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.scalableDimension = Codegen.empty();
+        this.scalingPolicyUpdateBehavior = Codegen.empty();
+        this.scheduledActionBufferTime = Codegen.empty();
+        this.serviceNamespace = Codegen.empty();
+        this.targetTrackingConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -277,7 +278,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder customizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs customizedLoadMetricSpecification) {
-            this.customizedLoadMetricSpecification = Output.ofNullable(customizedLoadMetricSpecification);
+            this.customizedLoadMetricSpecification = Codegen.ofNullable(customizedLoadMetricSpecification);
             return this;
         }
         public Builder disableDynamicScaling(@Nullable Output<Boolean> disableDynamicScaling) {
@@ -285,7 +286,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder disableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
-            this.disableDynamicScaling = Output.ofNullable(disableDynamicScaling);
+            this.disableDynamicScaling = Codegen.ofNullable(disableDynamicScaling);
             return this;
         }
         public Builder maxCapacity(Output<Integer> maxCapacity) {
@@ -309,7 +310,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder predefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs predefinedLoadMetricSpecification) {
-            this.predefinedLoadMetricSpecification = Output.ofNullable(predefinedLoadMetricSpecification);
+            this.predefinedLoadMetricSpecification = Codegen.ofNullable(predefinedLoadMetricSpecification);
             return this;
         }
         public Builder predictiveScalingMaxCapacityBehavior(@Nullable Output<String> predictiveScalingMaxCapacityBehavior) {
@@ -317,7 +318,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder predictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
-            this.predictiveScalingMaxCapacityBehavior = Output.ofNullable(predictiveScalingMaxCapacityBehavior);
+            this.predictiveScalingMaxCapacityBehavior = Codegen.ofNullable(predictiveScalingMaxCapacityBehavior);
             return this;
         }
         public Builder predictiveScalingMaxCapacityBuffer(@Nullable Output<Integer> predictiveScalingMaxCapacityBuffer) {
@@ -325,7 +326,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder predictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
-            this.predictiveScalingMaxCapacityBuffer = Output.ofNullable(predictiveScalingMaxCapacityBuffer);
+            this.predictiveScalingMaxCapacityBuffer = Codegen.ofNullable(predictiveScalingMaxCapacityBuffer);
             return this;
         }
         public Builder predictiveScalingMode(@Nullable Output<String> predictiveScalingMode) {
@@ -333,7 +334,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder predictiveScalingMode(@Nullable String predictiveScalingMode) {
-            this.predictiveScalingMode = Output.ofNullable(predictiveScalingMode);
+            this.predictiveScalingMode = Codegen.ofNullable(predictiveScalingMode);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {
@@ -357,7 +358,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder scalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
-            this.scalingPolicyUpdateBehavior = Output.ofNullable(scalingPolicyUpdateBehavior);
+            this.scalingPolicyUpdateBehavior = Codegen.ofNullable(scalingPolicyUpdateBehavior);
             return this;
         }
         public Builder scheduledActionBufferTime(@Nullable Output<Integer> scheduledActionBufferTime) {
@@ -365,7 +366,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder scheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
-            this.scheduledActionBufferTime = Output.ofNullable(scheduledActionBufferTime);
+            this.scheduledActionBufferTime = Codegen.ofNullable(scheduledActionBufferTime);
             return this;
         }
         public Builder serviceNamespace(Output<String> serviceNamespace) {

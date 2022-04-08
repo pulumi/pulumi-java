@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApplicationApplicationConfigurationArgs> applicationConfiguration;
 
     public Output<ApplicationApplicationConfigurationArgs> getApplicationConfiguration() {
-        return this.applicationConfiguration == null ? Output.empty() : this.applicationConfiguration;
+        return this.applicationConfiguration == null ? Codegen.empty() : this.applicationConfiguration;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     public Output<ApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
+        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceStop;
 
     public Output<Boolean> getForceStop() {
-        return this.forceStop == null ? Output.empty() : this.forceStop;
+        return this.forceStop == null ? Codegen.empty() : this.forceStop;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> startApplication;
 
     public Output<Boolean> getStartApplication() {
-        return this.startApplication == null ? Output.empty() : this.startApplication;
+        return this.startApplication == null ? Codegen.empty() : this.startApplication;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationArgs(
@@ -139,15 +140,15 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationConfiguration = Output.empty();
-        this.cloudwatchLoggingOptions = Output.empty();
-        this.description = Output.empty();
-        this.forceStop = Output.empty();
-        this.name = Output.empty();
-        this.runtimeEnvironment = Output.empty();
-        this.serviceExecutionRole = Output.empty();
-        this.startApplication = Output.empty();
-        this.tags = Output.empty();
+        this.applicationConfiguration = Codegen.empty();
+        this.cloudwatchLoggingOptions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.forceStop = Codegen.empty();
+        this.name = Codegen.empty();
+        this.runtimeEnvironment = Codegen.empty();
+        this.serviceExecutionRole = Codegen.empty();
+        this.startApplication = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationConfiguration(@Nullable ApplicationApplicationConfigurationArgs applicationConfiguration) {
-            this.applicationConfiguration = Output.ofNullable(applicationConfiguration);
+            this.applicationConfiguration = Codegen.ofNullable(applicationConfiguration);
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
@@ -199,7 +200,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -207,7 +208,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder forceStop(@Nullable Output<Boolean> forceStop) {
@@ -215,7 +216,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceStop(@Nullable Boolean forceStop) {
-            this.forceStop = Output.ofNullable(forceStop);
+            this.forceStop = Codegen.ofNullable(forceStop);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -223,7 +224,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder runtimeEnvironment(Output<String> runtimeEnvironment) {
@@ -247,7 +248,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Output.ofNullable(startApplication);
+            this.startApplication = Codegen.ofNullable(startApplication);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -255,7 +256,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationConfiguration, cloudwatchLoggingOptions, description, forceStop, name, runtimeEnvironment, serviceExecutionRole, startApplication, tags);

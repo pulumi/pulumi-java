@@ -9,6 +9,7 @@ import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -100,7 +101,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectLambdaAccessPointPolicy(String name, ObjectLambdaAccessPointPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/objectLambdaAccessPointPolicy:ObjectLambdaAccessPointPolicy", name, args == null ? ObjectLambdaAccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/objectLambdaAccessPointPolicy:ObjectLambdaAccessPointPolicy", name, args == null ? ObjectLambdaAccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectLambdaAccessPointPolicy(String name, Output<String> id, @Nullable ObjectLambdaAccessPointPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

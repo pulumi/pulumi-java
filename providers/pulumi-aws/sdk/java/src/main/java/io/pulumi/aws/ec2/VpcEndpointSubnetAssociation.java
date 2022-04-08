@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcEndpointSubnetAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -85,7 +86,7 @@ public class VpcEndpointSubnetAssociation extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcEndpointSubnetAssociation(String name, VpcEndpointSubnetAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcEndpointSubnetAssociation:VpcEndpointSubnetAssociation", name, args == null ? VpcEndpointSubnetAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcEndpointSubnetAssociation:VpcEndpointSubnetAssociation", name, args == null ? VpcEndpointSubnetAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcEndpointSubnetAssociation(String name, Output<String> id, @Nullable VpcEndpointSubnetAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

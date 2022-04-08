@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.ActiveReceiptRuleSetState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -71,7 +72,7 @@ public class ActiveReceiptRuleSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ActiveReceiptRuleSet(String name, ActiveReceiptRuleSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/activeReceiptRuleSet:ActiveReceiptRuleSet", name, args == null ? ActiveReceiptRuleSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/activeReceiptRuleSet:ActiveReceiptRuleSet", name, args == null ? ActiveReceiptRuleSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ActiveReceiptRuleSet(String name, Output<String> id, @Nullable ActiveReceiptRuleSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

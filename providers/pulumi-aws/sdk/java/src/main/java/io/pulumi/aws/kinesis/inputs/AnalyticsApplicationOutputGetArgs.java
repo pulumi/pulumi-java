@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputLambdaGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputSchemaGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
       private final @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
 
     public Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> getKinesisFirehose() {
-        return this.kinesisFirehose == null ? Output.empty() : this.kinesisFirehose;
+        return this.kinesisFirehose == null ? Codegen.empty() : this.kinesisFirehose;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
       private final @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
 
     public Output<AnalyticsApplicationOutputKinesisStreamGetArgs> getKinesisStream() {
-        return this.kinesisStream == null ? Output.empty() : this.kinesisStream;
+        return this.kinesisStream == null ? Codegen.empty() : this.kinesisStream;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
       private final @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
 
     public Output<AnalyticsApplicationOutputLambdaGetArgs> getLambda() {
-        return this.lambda == null ? Output.empty() : this.lambda;
+        return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
     /**
@@ -102,12 +103,12 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
     }
 
     private AnalyticsApplicationOutputGetArgs() {
-        this.id = Output.empty();
-        this.kinesisFirehose = Output.empty();
-        this.kinesisStream = Output.empty();
-        this.lambda = Output.empty();
-        this.name = Output.empty();
-        this.schema = Output.empty();
+        this.id = Codegen.empty();
+        this.kinesisFirehose = Codegen.empty();
+        this.kinesisStream = Codegen.empty();
+        this.lambda = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose) {
@@ -153,7 +154,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder kinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehoseGetArgs kinesisFirehose) {
-            this.kinesisFirehose = Output.ofNullable(kinesisFirehose);
+            this.kinesisFirehose = Codegen.ofNullable(kinesisFirehose);
             return this;
         }
         public Builder kinesisStream(@Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream) {
@@ -161,7 +162,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder kinesisStream(@Nullable AnalyticsApplicationOutputKinesisStreamGetArgs kinesisStream) {
-            this.kinesisStream = Output.ofNullable(kinesisStream);
+            this.kinesisStream = Codegen.ofNullable(kinesisStream);
             return this;
         }
         public Builder lambda(@Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda) {
@@ -169,7 +170,7 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder lambda(@Nullable AnalyticsApplicationOutputLambdaGetArgs lambda) {
-            this.lambda = Output.ofNullable(lambda);
+            this.lambda = Codegen.ofNullable(lambda);
             return this;
         }
         public Builder name(Output<String> name) {

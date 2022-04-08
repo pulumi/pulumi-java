@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup;
 
     public Output<RuleGroupRuleGroupGetArgs> getRuleGroup() {
-        return this.ruleGroup == null ? Output.empty() : this.ruleGroup;
+        return this.ruleGroup == null ? Codegen.empty() : this.ruleGroup;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rules;
 
     public Output<String> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateToken;
 
     public Output<String> getUpdateToken() {
-        return this.updateToken == null ? Output.empty() : this.updateToken;
+        return this.updateToken == null ? Codegen.empty() : this.updateToken;
     }
 
     public RuleGroupState(
@@ -151,16 +152,16 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleGroupState() {
-        this.arn = Output.empty();
-        this.capacity = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.ruleGroup = Output.empty();
-        this.rules = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.type = Output.empty();
-        this.updateToken = Output.empty();
+        this.arn = Codegen.empty();
+        this.capacity = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ruleGroup = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.type = Codegen.empty();
+        this.updateToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder capacity(@Nullable Output<Integer> capacity) {
@@ -214,7 +215,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -222,7 +223,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -230,7 +231,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup) {
@@ -238,7 +239,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleGroup(@Nullable RuleGroupRuleGroupGetArgs ruleGroup) {
-            this.ruleGroup = Output.ofNullable(ruleGroup);
+            this.ruleGroup = Codegen.ofNullable(ruleGroup);
             return this;
         }
         public Builder rules(@Nullable Output<String> rules) {
@@ -246,7 +247,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable String rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -254,7 +255,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -262,7 +263,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -270,7 +271,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder updateToken(@Nullable Output<String> updateToken) {
@@ -278,7 +279,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateToken(@Nullable String updateToken) {
-            this.updateToken = Output.ofNullable(updateToken);
+            this.updateToken = Codegen.ofNullable(updateToken);
             return this;
         }        public RuleGroupState build() {
             return new RuleGroupState(arn, capacity, description, name, ruleGroup, rules, tags, tagsAll, type, updateToken);

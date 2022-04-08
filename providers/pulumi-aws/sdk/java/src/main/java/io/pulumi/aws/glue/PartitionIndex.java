@@ -10,6 +10,7 @@ import io.pulumi.aws.glue.outputs.PartitionIndexPartitionIndex;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -106,7 +107,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PartitionIndex(String name, PartitionIndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/partitionIndex:PartitionIndex", name, args == null ? PartitionIndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/partitionIndex:PartitionIndex", name, args == null ? PartitionIndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PartitionIndex(String name, Output<String> id, @Nullable PartitionIndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

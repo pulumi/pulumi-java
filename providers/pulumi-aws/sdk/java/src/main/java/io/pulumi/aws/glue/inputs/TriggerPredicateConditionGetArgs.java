@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> crawlState;
 
     public Output<String> getCrawlState() {
-        return this.crawlState == null ? Output.empty() : this.crawlState;
+        return this.crawlState == null ? Codegen.empty() : this.crawlState;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> crawlerName;
 
     public Output<String> getCrawlerName() {
-        return this.crawlerName == null ? Output.empty() : this.crawlerName;
+        return this.crawlerName == null ? Codegen.empty() : this.crawlerName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> jobName;
 
     public Output<String> getJobName() {
-        return this.jobName == null ? Output.empty() : this.jobName;
+        return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> logicalOperator;
 
     public Output<String> getLogicalOperator() {
-        return this.logicalOperator == null ? Output.empty() : this.logicalOperator;
+        return this.logicalOperator == null ? Codegen.empty() : this.logicalOperator;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public TriggerPredicateConditionGetArgs(
@@ -83,11 +84,11 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
     }
 
     private TriggerPredicateConditionGetArgs() {
-        this.crawlState = Output.empty();
-        this.crawlerName = Output.empty();
-        this.jobName = Output.empty();
-        this.logicalOperator = Output.empty();
-        this.state = Output.empty();
+        this.crawlState = Codegen.empty();
+        this.crawlerName = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.logicalOperator = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder crawlState(@Nullable String crawlState) {
-            this.crawlState = Output.ofNullable(crawlState);
+            this.crawlState = Codegen.ofNullable(crawlState);
             return this;
         }
         public Builder crawlerName(@Nullable Output<String> crawlerName) {
@@ -131,7 +132,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder crawlerName(@Nullable String crawlerName) {
-            this.crawlerName = Output.ofNullable(crawlerName);
+            this.crawlerName = Codegen.ofNullable(crawlerName);
             return this;
         }
         public Builder jobName(@Nullable Output<String> jobName) {
@@ -139,7 +140,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Output.ofNullable(jobName);
+            this.jobName = Codegen.ofNullable(jobName);
             return this;
         }
         public Builder logicalOperator(@Nullable Output<String> logicalOperator) {
@@ -147,7 +148,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder logicalOperator(@Nullable String logicalOperator) {
-            this.logicalOperator = Output.ofNullable(logicalOperator);
+            this.logicalOperator = Codegen.ofNullable(logicalOperator);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -155,7 +156,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public TriggerPredicateConditionGetArgs build() {
             return new TriggerPredicateConditionGetArgs(crawlState, crawlerName, jobName, logicalOperator, state);

@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
       private final @Nullable Output<List<String>> events;
 
     public Output<List<String>> getEvents() {
-        return this.events == null ? Output.empty() : this.events;
+        return this.events == null ? Codegen.empty() : this.events;
     }
 
     public DeploymentGroupAutoRollbackConfigurationGetArgs(
@@ -46,8 +47,8 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
     }
 
     private DeploymentGroupAutoRollbackConfigurationGetArgs() {
-        this.enabled = Output.empty();
-        this.events = Output.empty();
+        this.enabled = Codegen.empty();
+        this.events = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder events(@Nullable Output<List<String>> events) {
@@ -85,7 +86,7 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
             return this;
         }
         public Builder events(@Nullable List<String> events) {
-            this.events = Output.ofNullable(events);
+            this.events = Codegen.ofNullable(events);
             return this;
         }
         public Builder events(String... events) {

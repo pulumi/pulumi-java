@@ -8,6 +8,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3Configuratio
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs() {
-        this.enabled = Output.empty();
-        this.inputFormatConfiguration = Output.empty();
-        this.outputFormatConfiguration = Output.empty();
-        this.schemaConfiguration = Output.empty();
+        this.enabled = Codegen.empty();
+        this.inputFormatConfiguration = Codegen.empty();
+        this.outputFormatConfiguration = Codegen.empty();
+        this.schemaConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder inputFormatConfiguration(Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs> inputFormatConfiguration) {

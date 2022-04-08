@@ -13,6 +13,7 @@ import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -280,7 +281,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AnalyticsApplication(String name, @Nullable AnalyticsApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesis/analyticsApplication:AnalyticsApplication", name, args == null ? AnalyticsApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesis/analyticsApplication:AnalyticsApplication", name, args == null ? AnalyticsApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AnalyticsApplication(String name, Output<String> id, @Nullable AnalyticsApplicationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

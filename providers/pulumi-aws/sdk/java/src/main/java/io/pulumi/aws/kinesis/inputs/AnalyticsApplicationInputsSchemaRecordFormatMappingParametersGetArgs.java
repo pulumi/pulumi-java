@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormat
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
       private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv;
 
     public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> getCsv() {
-        return this.csv == null ? Output.empty() : this.csv;
+        return this.csv == null ? Codegen.empty() : this.csv;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
       private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json;
 
     public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> getJson() {
-        return this.json == null ? Output.empty() : this.json;
+        return this.json == null ? Codegen.empty() : this.json;
     }
 
     public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs(
@@ -47,8 +48,8 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     }
 
     private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs() {
-        this.csv = Output.empty();
-        this.json = Output.empty();
+        this.csv = Codegen.empty();
+        this.json = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
             return this;
         }
         public Builder csv(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs csv) {
-            this.csv = Output.ofNullable(csv);
+            this.csv = Codegen.ofNullable(csv);
             return this;
         }
         public Builder json(@Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json) {
@@ -86,7 +87,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
             return this;
         }
         public Builder json(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs json) {
-            this.json = Output.ofNullable(json);
+            this.json = Codegen.ofNullable(json);
             return this;
         }        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs build() {
             return new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs(csv, json);

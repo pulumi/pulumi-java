@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> addresses;
 
     public Output<List<String>> getAddresses() {
-        return this.addresses == null ? Output.empty() : this.addresses;
+        return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,14 +58,14 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddressVersion;
 
     public Output<String> getIpAddressVersion() {
-        return this.ipAddressVersion == null ? Output.empty() : this.ipAddressVersion;
+        return this.ipAddressVersion == null ? Codegen.empty() : this.ipAddressVersion;
     }
 
     @Import(name="lockToken")
       private final @Nullable Output<String> lockToken;
 
     public Output<String> getLockToken() {
-        return this.lockToken == null ? Output.empty() : this.lockToken;
+        return this.lockToken == null ? Codegen.empty() : this.lockToken;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public IpSetState(
@@ -133,15 +134,15 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpSetState() {
-        this.addresses = Output.empty();
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.ipAddressVersion = Output.empty();
-        this.lockToken = Output.empty();
-        this.name = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.addresses = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ipAddressVersion = Codegen.empty();
+        this.lockToken = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -185,7 +186,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addresses(@Nullable List<String> addresses) {
-            this.addresses = Output.ofNullable(addresses);
+            this.addresses = Codegen.ofNullable(addresses);
             return this;
         }
         public Builder addresses(String... addresses) {
@@ -196,7 +197,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -204,7 +205,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipAddressVersion(@Nullable Output<String> ipAddressVersion) {
@@ -212,7 +213,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddressVersion(@Nullable String ipAddressVersion) {
-            this.ipAddressVersion = Output.ofNullable(ipAddressVersion);
+            this.ipAddressVersion = Codegen.ofNullable(ipAddressVersion);
             return this;
         }
         public Builder lockToken(@Nullable Output<String> lockToken) {
@@ -220,7 +221,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lockToken(@Nullable String lockToken) {
-            this.lockToken = Output.ofNullable(lockToken);
+            this.lockToken = Codegen.ofNullable(lockToken);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -228,7 +229,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -236,7 +237,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -244,7 +245,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -252,7 +253,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public IpSetState build() {
             return new IpSetState(addresses, arn, description, ipAddressVersion, lockToken, name, scope, tags, tagsAll);

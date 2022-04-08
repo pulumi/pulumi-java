@@ -5,6 +5,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
     }
 
     private ServiceDnsConfigDnsRecordGetArgs() {
-        this.ttl = Output.empty();
-        this.type = Output.empty();
+        this.ttl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

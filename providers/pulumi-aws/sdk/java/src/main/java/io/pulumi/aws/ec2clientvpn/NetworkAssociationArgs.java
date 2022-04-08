@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2clientvpn;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NetworkAssociationArgs() {
-        this.clientVpnEndpointId = Output.empty();
-        this.securityGroups = Output.empty();
-        this.subnetId = Output.empty();
+        this.clientVpnEndpointId = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {

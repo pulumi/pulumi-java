@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
       private final @Nullable Output<String> cloudwatchLoggingOptionId;
 
     public Output<String> getCloudwatchLoggingOptionId() {
-        return this.cloudwatchLoggingOptionId == null ? Output.empty() : this.cloudwatchLoggingOptionId;
+        return this.cloudwatchLoggingOptionId == null ? Codegen.empty() : this.cloudwatchLoggingOptionId;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
     }
 
     private ApplicationCloudwatchLoggingOptionsArgs() {
-        this.cloudwatchLoggingOptionId = Output.empty();
-        this.logStreamArn = Output.empty();
+        this.cloudwatchLoggingOptionId = Codegen.empty();
+        this.logStreamArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
             return this;
         }
         public Builder cloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
-            this.cloudwatchLoggingOptionId = Output.ofNullable(cloudwatchLoggingOptionId);
+            this.cloudwatchLoggingOptionId = Codegen.ofNullable(cloudwatchLoggingOptionId);
             return this;
         }
         public Builder logStreamArn(Output<String> logStreamArn) {

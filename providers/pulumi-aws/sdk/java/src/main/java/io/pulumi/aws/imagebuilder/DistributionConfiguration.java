@@ -10,6 +10,7 @@ import io.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistribution;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -166,7 +167,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DistributionConfiguration(String name, DistributionConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:imagebuilder/distributionConfiguration:DistributionConfiguration", name, args == null ? DistributionConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:imagebuilder/distributionConfiguration:DistributionConfiguration", name, args == null ? DistributionConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DistributionConfiguration(String name, Output<String> id, @Nullable DistributionConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -86,11 +87,11 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     }
 
     private LoadBalancerHealthCheckGetArgs() {
-        this.healthyThreshold = Output.empty();
-        this.interval = Output.empty();
-        this.target = Output.empty();
-        this.timeout = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.target = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {

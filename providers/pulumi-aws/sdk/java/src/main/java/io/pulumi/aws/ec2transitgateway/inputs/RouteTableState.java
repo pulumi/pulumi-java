@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> defaultAssociationRouteTable;
 
     public Output<Boolean> getDefaultAssociationRouteTable() {
-        return this.defaultAssociationRouteTable == null ? Output.empty() : this.defaultAssociationRouteTable;
+        return this.defaultAssociationRouteTable == null ? Codegen.empty() : this.defaultAssociationRouteTable;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> defaultPropagationRouteTable;
 
     public Output<Boolean> getDefaultPropagationRouteTable() {
-        return this.defaultPropagationRouteTable == null ? Output.empty() : this.defaultPropagationRouteTable;
+        return this.defaultPropagationRouteTable == null ? Codegen.empty() : this.defaultPropagationRouteTable;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {
-        return this.transitGatewayId == null ? Output.empty() : this.transitGatewayId;
+        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
     public RouteTableState(
@@ -98,12 +99,12 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteTableState() {
-        this.arn = Output.empty();
-        this.defaultAssociationRouteTable = Output.empty();
-        this.defaultPropagationRouteTable = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.transitGatewayId = Output.empty();
+        this.arn = Codegen.empty();
+        this.defaultAssociationRouteTable = Codegen.empty();
+        this.defaultPropagationRouteTable = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder defaultAssociationRouteTable(@Nullable Output<Boolean> defaultAssociationRouteTable) {
@@ -149,7 +150,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultAssociationRouteTable(@Nullable Boolean defaultAssociationRouteTable) {
-            this.defaultAssociationRouteTable = Output.ofNullable(defaultAssociationRouteTable);
+            this.defaultAssociationRouteTable = Codegen.ofNullable(defaultAssociationRouteTable);
             return this;
         }
         public Builder defaultPropagationRouteTable(@Nullable Output<Boolean> defaultPropagationRouteTable) {
@@ -157,7 +158,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultPropagationRouteTable(@Nullable Boolean defaultPropagationRouteTable) {
-            this.defaultPropagationRouteTable = Output.ofNullable(defaultPropagationRouteTable);
+            this.defaultPropagationRouteTable = Codegen.ofNullable(defaultPropagationRouteTable);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -165,7 +166,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -173,7 +174,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
@@ -181,7 +182,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Output.ofNullable(transitGatewayId);
+            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
             return this;
         }        public RouteTableState build() {
             return new RouteTableState(arn, defaultAssociationRouteTable, defaultPropagationRouteTable, tags, tagsAll, transitGatewayId);

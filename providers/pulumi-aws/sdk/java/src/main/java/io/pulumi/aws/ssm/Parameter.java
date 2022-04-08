@@ -9,6 +9,7 @@ import io.pulumi.aws.ssm.inputs.ParameterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -238,7 +239,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Parameter(String name, ParameterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/parameter:Parameter", name, args == null ? ParameterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ssm/parameter:Parameter", name, args == null ? ParameterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Parameter(String name, Output<String> id, @Nullable ParameterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

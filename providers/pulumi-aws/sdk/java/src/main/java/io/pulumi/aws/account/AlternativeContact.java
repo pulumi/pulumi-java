@@ -9,6 +9,7 @@ import io.pulumi.aws.account.inputs.AlternativeContactState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -141,7 +142,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AlternativeContact(String name, AlternativeContactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:account/alternativeContact:AlternativeContact", name, args == null ? AlternativeContactArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:account/alternativeContact:AlternativeContact", name, args == null ? AlternativeContactArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AlternativeContact(String name, Output<String> id, @Nullable AlternativeContactState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

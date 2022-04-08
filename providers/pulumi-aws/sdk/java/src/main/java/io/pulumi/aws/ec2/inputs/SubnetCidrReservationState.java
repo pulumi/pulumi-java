@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
-        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
+        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> reservationType;
 
     public Output<String> getReservationType() {
-        return this.reservationType == null ? Output.empty() : this.reservationType;
+        return this.reservationType == null ? Codegen.empty() : this.reservationType;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public SubnetCidrReservationState(
@@ -83,11 +84,11 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
     }
 
     private SubnetCidrReservationState() {
-        this.cidrBlock = Output.empty();
-        this.description = Output.empty();
-        this.ownerId = Output.empty();
-        this.reservationType = Output.empty();
-        this.subnetId = Output.empty();
+        this.cidrBlock = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.reservationType = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Output.ofNullable(cidrBlock);
+            this.cidrBlock = Codegen.ofNullable(cidrBlock);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -131,7 +132,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -139,7 +140,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder reservationType(@Nullable Output<String> reservationType) {
@@ -147,7 +148,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder reservationType(@Nullable String reservationType) {
-            this.reservationType = Output.ofNullable(reservationType);
+            this.reservationType = Codegen.ofNullable(reservationType);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -155,7 +156,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public SubnetCidrReservationState build() {
             return new SubnetCidrReservationState(cidrBlock, description, ownerId, reservationType, subnetId);

@@ -11,6 +11,7 @@ import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpoint;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -216,7 +217,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public OntapStorageVirtualMachine(String name, OntapStorageVirtualMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine", name, args == null ? OntapStorageVirtualMachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine", name, args == null ? OntapStorageVirtualMachineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OntapStorageVirtualMachine(String name, Output<String> id, @Nullable OntapStorageVirtualMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

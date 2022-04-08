@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
       private final @Nullable Output<String> principalArn;
 
     public Output<String> getPrincipalArn() {
-        return this.principalArn == null ? Output.empty() : this.principalArn;
+        return this.principalArn == null ? Codegen.empty() : this.principalArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
       private final @Nullable Output<String> vpcEndpointServiceId;
 
     public Output<String> getVpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Output.empty() : this.vpcEndpointServiceId;
+        return this.vpcEndpointServiceId == null ? Codegen.empty() : this.vpcEndpointServiceId;
     }
 
     public VpcEndpointServiceAllowedPrincipleState(
@@ -44,8 +45,8 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
     }
 
     private VpcEndpointServiceAllowedPrincipleState() {
-        this.principalArn = Output.empty();
-        this.vpcEndpointServiceId = Output.empty();
+        this.principalArn = Codegen.empty();
+        this.vpcEndpointServiceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
             return this;
         }
         public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Output.ofNullable(principalArn);
+            this.principalArn = Codegen.ofNullable(principalArn);
             return this;
         }
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
@@ -83,7 +84,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
             return this;
         }
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
+            this.vpcEndpointServiceId = Codegen.ofNullable(vpcEndpointServiceId);
             return this;
         }        public VpcEndpointServiceAllowedPrincipleState build() {
             return new VpcEndpointServiceAllowedPrincipleState(principalArn, vpcEndpointServiceId);

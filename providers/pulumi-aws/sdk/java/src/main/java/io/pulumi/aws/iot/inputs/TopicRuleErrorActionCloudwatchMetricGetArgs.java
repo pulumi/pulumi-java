@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class TopicRuleErrorActionCloudwatchMetricGetArgs extends io.pulumi
       private final @Nullable Output<String> metricTimestamp;
 
     public Output<String> getMetricTimestamp() {
-        return this.metricTimestamp == null ? Output.empty() : this.metricTimestamp;
+        return this.metricTimestamp == null ? Codegen.empty() : this.metricTimestamp;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class TopicRuleErrorActionCloudwatchMetricGetArgs extends io.pulumi
     }
 
     private TopicRuleErrorActionCloudwatchMetricGetArgs() {
-        this.metricName = Output.empty();
-        this.metricNamespace = Output.empty();
-        this.metricTimestamp = Output.empty();
-        this.metricUnit = Output.empty();
-        this.metricValue = Output.empty();
-        this.roleArn = Output.empty();
+        this.metricName = Codegen.empty();
+        this.metricNamespace = Codegen.empty();
+        this.metricTimestamp = Codegen.empty();
+        this.metricUnit = Codegen.empty();
+        this.metricValue = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class TopicRuleErrorActionCloudwatchMetricGetArgs extends io.pulumi
             return this;
         }
         public Builder metricTimestamp(@Nullable String metricTimestamp) {
-            this.metricTimestamp = Output.ofNullable(metricTimestamp);
+            this.metricTimestamp = Codegen.ofNullable(metricTimestamp);
             return this;
         }
         public Builder metricUnit(Output<String> metricUnit) {

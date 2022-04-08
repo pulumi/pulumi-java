@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionCountArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionNoneArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<WebAclRuleOverrideActionCountArgs> count;
 
     public Output<WebAclRuleOverrideActionCountArgs> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<WebAclRuleOverrideActionNoneArgs> none;
 
     public Output<WebAclRuleOverrideActionNoneArgs> getNone() {
-        return this.none == null ? Output.empty() : this.none;
+        return this.none == null ? Codegen.empty() : this.none;
     }
 
     public WebAclRuleOverrideActionArgs(
@@ -45,8 +46,8 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
     }
 
     private WebAclRuleOverrideActionArgs() {
-        this.count = Output.empty();
-        this.none = Output.empty();
+        this.count = Codegen.empty();
+        this.none = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder count(@Nullable WebAclRuleOverrideActionCountArgs count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder none(@Nullable Output<WebAclRuleOverrideActionNoneArgs> none) {
@@ -84,7 +85,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder none(@Nullable WebAclRuleOverrideActionNoneArgs none) {
-            this.none = Output.ofNullable(none);
+            this.none = Codegen.ofNullable(none);
             return this;
         }        public WebAclRuleOverrideActionArgs build() {
             return new WebAclRuleOverrideActionArgs(count, none);

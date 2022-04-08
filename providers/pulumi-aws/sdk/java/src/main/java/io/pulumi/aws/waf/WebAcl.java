@@ -12,6 +12,7 @@ import io.pulumi.aws.waf.outputs.WebAclRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -168,7 +169,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAcl(String name, WebAclArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:waf/webAcl:WebAcl", name, args == null ? WebAclArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:waf/webAcl:WebAcl", name, args == null ? WebAclArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAcl(String name, Output<String> id, @Nullable WebAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

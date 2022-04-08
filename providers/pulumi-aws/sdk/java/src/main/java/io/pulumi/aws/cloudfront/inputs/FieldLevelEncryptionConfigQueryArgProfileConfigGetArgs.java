@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
       private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
 
     public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> getQueryArgProfiles() {
-        return this.queryArgProfiles == null ? Output.empty() : this.queryArgProfiles;
+        return this.queryArgProfiles == null ? Codegen.empty() : this.queryArgProfiles;
     }
 
     public FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs(
@@ -45,8 +46,8 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
     }
 
     private FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs() {
-        this.forwardWhenQueryArgProfileIsUnknown = Output.empty();
-        this.queryArgProfiles = Output.empty();
+        this.forwardWhenQueryArgProfileIsUnknown = Codegen.empty();
+        this.queryArgProfiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
             return this;
         }
         public Builder queryArgProfiles(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs queryArgProfiles) {
-            this.queryArgProfiles = Output.ofNullable(queryArgProfiles);
+            this.queryArgProfiles = Codegen.ofNullable(queryArgProfiles);
             return this;
         }        public FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs build() {
             return new FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs(forwardWhenQueryArgProfileIsUnknown, queryArgProfiles);

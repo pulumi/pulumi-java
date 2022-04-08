@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> restoreToTime;
 
     public Output<String> getRestoreToTime() {
-        return this.restoreToTime == null ? Output.empty() : this.restoreToTime;
+        return this.restoreToTime == null ? Codegen.empty() : this.restoreToTime;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> restoreType;
 
     public Output<String> getRestoreType() {
-        return this.restoreType == null ? Output.empty() : this.restoreType;
+        return this.restoreType == null ? Codegen.empty() : this.restoreType;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> useLatestRestorableTime;
 
     public Output<Boolean> getUseLatestRestorableTime() {
-        return this.useLatestRestorableTime == null ? Output.empty() : this.useLatestRestorableTime;
+        return this.useLatestRestorableTime == null ? Codegen.empty() : this.useLatestRestorableTime;
     }
 
     public ClusterRestoreToPointInTimeGetArgs(
@@ -72,10 +73,10 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
     }
 
     private ClusterRestoreToPointInTimeGetArgs() {
-        this.restoreToTime = Output.empty();
-        this.restoreType = Output.empty();
-        this.sourceClusterIdentifier = Output.empty();
-        this.useLatestRestorableTime = Output.empty();
+        this.restoreToTime = Codegen.empty();
+        this.restoreType = Codegen.empty();
+        this.sourceClusterIdentifier = Codegen.empty();
+        this.useLatestRestorableTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder restoreToTime(@Nullable String restoreToTime) {
-            this.restoreToTime = Output.ofNullable(restoreToTime);
+            this.restoreToTime = Codegen.ofNullable(restoreToTime);
             return this;
         }
         public Builder restoreType(@Nullable Output<String> restoreType) {
@@ -117,7 +118,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder restoreType(@Nullable String restoreType) {
-            this.restoreType = Output.ofNullable(restoreType);
+            this.restoreType = Codegen.ofNullable(restoreType);
             return this;
         }
         public Builder sourceClusterIdentifier(Output<String> sourceClusterIdentifier) {
@@ -133,7 +134,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
-            this.useLatestRestorableTime = Output.ofNullable(useLatestRestorableTime);
+            this.useLatestRestorableTime = Codegen.ofNullable(useLatestRestorableTime);
             return this;
         }        public ClusterRestoreToPointInTimeGetArgs build() {
             return new ClusterRestoreToPointInTimeGetArgs(restoreToTime, restoreType, sourceClusterIdentifier, useLatestRestorableTime);

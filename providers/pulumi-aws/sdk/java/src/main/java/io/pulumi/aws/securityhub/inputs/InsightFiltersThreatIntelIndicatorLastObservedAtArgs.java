@@ -6,6 +6,7 @@ package io.pulumi.aws.securityhub.inputs;
 import io.pulumi.aws.securityhub.inputs.InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
       private final @Nullable Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> dateRange;
 
     public Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> getDateRange() {
-        return this.dateRange == null ? Output.empty() : this.dateRange;
+        return this.dateRange == null ? Codegen.empty() : this.dateRange;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
       private final @Nullable Output<String> end;
 
     public Output<String> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
       private final @Nullable Output<String> start;
 
     public Output<String> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public InsightFiltersThreatIntelIndicatorLastObservedAtArgs(
@@ -58,9 +59,9 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
     }
 
     private InsightFiltersThreatIntelIndicatorLastObservedAtArgs() {
-        this.dateRange = Output.empty();
-        this.end = Output.empty();
-        this.start = Output.empty();
+        this.dateRange = Codegen.empty();
+        this.end = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
             return this;
         }
         public Builder dateRange(@Nullable InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs dateRange) {
-            this.dateRange = Output.ofNullable(dateRange);
+            this.dateRange = Codegen.ofNullable(dateRange);
             return this;
         }
         public Builder end(@Nullable Output<String> end) {
@@ -100,7 +101,7 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
             return this;
         }
         public Builder end(@Nullable String end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder start(@Nullable Output<String> start) {
@@ -108,7 +109,7 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
             return this;
         }
         public Builder start(@Nullable String start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public InsightFiltersThreatIntelIndicatorLastObservedAtArgs build() {
             return new InsightFiltersThreatIntelIndicatorLastObservedAtArgs(dateRange, end, start);

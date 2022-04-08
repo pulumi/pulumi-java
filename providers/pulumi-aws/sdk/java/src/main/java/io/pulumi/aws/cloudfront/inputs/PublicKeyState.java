@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> callerReference;
 
     public Output<String> getCallerReference() {
-        return this.callerReference == null ? Output.empty() : this.callerReference;
+        return this.callerReference == null ? Codegen.empty() : this.callerReference;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> encodedKey;
 
     public Output<String> getEncodedKey() {
-        return this.encodedKey == null ? Output.empty() : this.encodedKey;
+        return this.encodedKey == null ? Codegen.empty() : this.encodedKey;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     public PublicKeyState(
@@ -96,12 +97,12 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublicKeyState() {
-        this.callerReference = Output.empty();
-        this.comment = Output.empty();
-        this.encodedKey = Output.empty();
-        this.etag = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
+        this.callerReference = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.encodedKey = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Output.ofNullable(callerReference);
+            this.callerReference = Codegen.ofNullable(callerReference);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -147,7 +148,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder encodedKey(@Nullable Output<String> encodedKey) {
@@ -155,7 +156,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encodedKey(@Nullable String encodedKey) {
-            this.encodedKey = Output.ofNullable(encodedKey);
+            this.encodedKey = Codegen.ofNullable(encodedKey);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -163,7 +164,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -171,7 +172,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -179,7 +180,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }        public PublicKeyState build() {
             return new PublicKeyState(callerReference, comment, encodedKey, etag, name, namePrefix);

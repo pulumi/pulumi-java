@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> amazonSideAsn;
 
     public Output<Integer> getAmazonSideAsn() {
-        return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
+        return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> autoAcceptSharedAttachments;
 
     public Output<String> getAutoAcceptSharedAttachments() {
-        return this.autoAcceptSharedAttachments == null ? Output.empty() : this.autoAcceptSharedAttachments;
+        return this.autoAcceptSharedAttachments == null ? Codegen.empty() : this.autoAcceptSharedAttachments;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultRouteTableAssociation;
 
     public Output<String> getDefaultRouteTableAssociation() {
-        return this.defaultRouteTableAssociation == null ? Output.empty() : this.defaultRouteTableAssociation;
+        return this.defaultRouteTableAssociation == null ? Codegen.empty() : this.defaultRouteTableAssociation;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultRouteTablePropagation;
 
     public Output<String> getDefaultRouteTablePropagation() {
-        return this.defaultRouteTablePropagation == null ? Output.empty() : this.defaultRouteTablePropagation;
+        return this.defaultRouteTablePropagation == null ? Codegen.empty() : this.defaultRouteTablePropagation;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dnsSupport;
 
     public Output<String> getDnsSupport() {
-        return this.dnsSupport == null ? Output.empty() : this.dnsSupport;
+        return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpnEcmpSupport;
 
     public Output<String> getVpnEcmpSupport() {
-        return this.vpnEcmpSupport == null ? Output.empty() : this.vpnEcmpSupport;
+        return this.vpnEcmpSupport == null ? Codegen.empty() : this.vpnEcmpSupport;
     }
 
     public TransitGatewayArgs(
@@ -124,14 +125,14 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransitGatewayArgs() {
-        this.amazonSideAsn = Output.empty();
-        this.autoAcceptSharedAttachments = Output.empty();
-        this.defaultRouteTableAssociation = Output.empty();
-        this.defaultRouteTablePropagation = Output.empty();
-        this.description = Output.empty();
-        this.dnsSupport = Output.empty();
-        this.tags = Output.empty();
-        this.vpnEcmpSupport = Output.empty();
+        this.amazonSideAsn = Codegen.empty();
+        this.autoAcceptSharedAttachments = Codegen.empty();
+        this.defaultRouteTableAssociation = Codegen.empty();
+        this.defaultRouteTablePropagation = Codegen.empty();
+        this.description = Codegen.empty();
+        this.dnsSupport = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpnEcmpSupport = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder amazonSideAsn(@Nullable Integer amazonSideAsn) {
-            this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
+            this.amazonSideAsn = Codegen.ofNullable(amazonSideAsn);
             return this;
         }
         public Builder autoAcceptSharedAttachments(@Nullable Output<String> autoAcceptSharedAttachments) {
@@ -181,7 +182,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
-            this.autoAcceptSharedAttachments = Output.ofNullable(autoAcceptSharedAttachments);
+            this.autoAcceptSharedAttachments = Codegen.ofNullable(autoAcceptSharedAttachments);
             return this;
         }
         public Builder defaultRouteTableAssociation(@Nullable Output<String> defaultRouteTableAssociation) {
@@ -189,7 +190,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
-            this.defaultRouteTableAssociation = Output.ofNullable(defaultRouteTableAssociation);
+            this.defaultRouteTableAssociation = Codegen.ofNullable(defaultRouteTableAssociation);
             return this;
         }
         public Builder defaultRouteTablePropagation(@Nullable Output<String> defaultRouteTablePropagation) {
@@ -197,7 +198,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
-            this.defaultRouteTablePropagation = Output.ofNullable(defaultRouteTablePropagation);
+            this.defaultRouteTablePropagation = Codegen.ofNullable(defaultRouteTablePropagation);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -205,7 +206,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
@@ -213,7 +214,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Output.ofNullable(dnsSupport);
+            this.dnsSupport = Codegen.ofNullable(dnsSupport);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -221,7 +222,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpnEcmpSupport(@Nullable Output<String> vpnEcmpSupport) {
@@ -229,7 +230,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
-            this.vpnEcmpSupport = Output.ofNullable(vpnEcmpSupport);
+            this.vpnEcmpSupport = Codegen.ofNullable(vpnEcmpSupport);
             return this;
         }        public TransitGatewayArgs build() {
             return new TransitGatewayArgs(amazonSideAsn, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, tags, vpnEcmpSupport);

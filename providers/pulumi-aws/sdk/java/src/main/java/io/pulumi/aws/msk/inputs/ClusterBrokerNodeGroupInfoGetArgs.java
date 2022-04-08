@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> azDistribution;
 
     public Output<String> getAzDistribution() {
-        return this.azDistribution == null ? Output.empty() : this.azDistribution;
+        return this.azDistribution == null ? Codegen.empty() : this.azDistribution;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
     }
 
     private ClusterBrokerNodeGroupInfoGetArgs() {
-        this.azDistribution = Output.empty();
-        this.clientSubnets = Output.empty();
-        this.ebsVolumeSize = Output.empty();
-        this.instanceType = Output.empty();
-        this.securityGroups = Output.empty();
+        this.azDistribution = Codegen.empty();
+        this.clientSubnets = Codegen.empty();
+        this.ebsVolumeSize = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.securityGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder azDistribution(@Nullable String azDistribution) {
-            this.azDistribution = Output.ofNullable(azDistribution);
+            this.azDistribution = Codegen.ofNullable(azDistribution);
             return this;
         }
         public Builder clientSubnets(Output<List<String>> clientSubnets) {

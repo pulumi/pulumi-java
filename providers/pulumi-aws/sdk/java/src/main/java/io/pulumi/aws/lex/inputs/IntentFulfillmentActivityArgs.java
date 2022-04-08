@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.IntentFulfillmentActivityCodeHookArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class IntentFulfillmentActivityArgs extends io.pulumi.resources.Res
       private final @Nullable Output<IntentFulfillmentActivityCodeHookArgs> codeHook;
 
     public Output<IntentFulfillmentActivityCodeHookArgs> getCodeHook() {
-        return this.codeHook == null ? Output.empty() : this.codeHook;
+        return this.codeHook == null ? Codegen.empty() : this.codeHook;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class IntentFulfillmentActivityArgs extends io.pulumi.resources.Res
     }
 
     private IntentFulfillmentActivityArgs() {
-        this.codeHook = Output.empty();
-        this.type = Output.empty();
+        this.codeHook = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class IntentFulfillmentActivityArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder codeHook(@Nullable IntentFulfillmentActivityCodeHookArgs codeHook) {
-            this.codeHook = Output.ofNullable(codeHook);
+            this.codeHook = Codegen.ofNullable(codeHook);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.dax.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public SubnetGroupState(
@@ -71,10 +72,10 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetGroupState() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -116,7 +117,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -124,7 +125,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -135,7 +136,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public SubnetGroupState build() {
             return new SubnetGroupState(description, name, subnetIds, vpcId);

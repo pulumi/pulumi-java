@@ -9,6 +9,7 @@ import io.pulumi.aws.apigatewayv2.inputs.ApiMappingState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -108,7 +109,7 @@ public class ApiMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiMapping(String name, ApiMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/apiMapping:ApiMapping", name, args == null ? ApiMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/apiMapping:ApiMapping", name, args == null ? ApiMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiMapping(String name, Output<String> id, @Nullable ApiMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

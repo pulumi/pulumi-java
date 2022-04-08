@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -60,7 +61,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfServicePortal;
 
     public Output<String> getSelfServicePortal() {
-        return this.selfServicePortal == null ? Output.empty() : this.selfServicePortal;
+        return this.selfServicePortal == null ? Codegen.empty() : this.selfServicePortal;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> splitTunnel;
 
     public Output<Boolean> getSplitTunnel() {
-        return this.splitTunnel == null ? Output.empty() : this.splitTunnel;
+        return this.splitTunnel == null ? Codegen.empty() : this.splitTunnel;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> transportProtocol;
 
     public Output<String> getTransportProtocol() {
-        return this.transportProtocol == null ? Output.empty() : this.transportProtocol;
+        return this.transportProtocol == null ? Codegen.empty() : this.transportProtocol;
     }
 
     public EndpointArgs(
@@ -153,16 +154,16 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.authenticationOptions = Output.empty();
-        this.clientCidrBlock = Output.empty();
-        this.connectionLogOptions = Output.empty();
-        this.description = Output.empty();
-        this.dnsServers = Output.empty();
-        this.selfServicePortal = Output.empty();
-        this.serverCertificateArn = Output.empty();
-        this.splitTunnel = Output.empty();
-        this.tags = Output.empty();
-        this.transportProtocol = Output.empty();
+        this.authenticationOptions = Codegen.empty();
+        this.clientCidrBlock = Codegen.empty();
+        this.connectionLogOptions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.dnsServers = Codegen.empty();
+        this.selfServicePortal = Codegen.empty();
+        this.serverCertificateArn = Codegen.empty();
+        this.splitTunnel = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transportProtocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -235,7 +236,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
@@ -243,7 +244,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {
@@ -254,7 +255,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfServicePortal(@Nullable String selfServicePortal) {
-            this.selfServicePortal = Output.ofNullable(selfServicePortal);
+            this.selfServicePortal = Codegen.ofNullable(selfServicePortal);
             return this;
         }
         public Builder serverCertificateArn(Output<String> serverCertificateArn) {
@@ -270,7 +271,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder splitTunnel(@Nullable Boolean splitTunnel) {
-            this.splitTunnel = Output.ofNullable(splitTunnel);
+            this.splitTunnel = Codegen.ofNullable(splitTunnel);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -278,7 +279,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder transportProtocol(@Nullable Output<String> transportProtocol) {
@@ -286,7 +287,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transportProtocol(@Nullable String transportProtocol) {
-            this.transportProtocol = Output.ofNullable(transportProtocol);
+            this.transportProtocol = Codegen.ofNullable(transportProtocol);
             return this;
         }        public EndpointArgs build() {
             return new EndpointArgs(authenticationOptions, clientCidrBlock, connectionLogOptions, description, dnsServers, selfServicePortal, serverCertificateArn, splitTunnel, tags, transportProtocol);

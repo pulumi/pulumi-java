@@ -5,6 +5,7 @@ package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
       private final @Nullable Output<String> resourceRecordName;
 
     public Output<String> getResourceRecordName() {
-        return this.resourceRecordName == null ? Output.empty() : this.resourceRecordName;
+        return this.resourceRecordName == null ? Codegen.empty() : this.resourceRecordName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
       private final @Nullable Output<String> resourceRecordType;
 
     public Output<String> getResourceRecordType() {
-        return this.resourceRecordType == null ? Output.empty() : this.resourceRecordType;
+        return this.resourceRecordType == null ? Codegen.empty() : this.resourceRecordType;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
       private final @Nullable Output<String> resourceRecordValue;
 
     public Output<String> getResourceRecordValue() {
-        return this.resourceRecordValue == null ? Output.empty() : this.resourceRecordValue;
+        return this.resourceRecordValue == null ? Codegen.empty() : this.resourceRecordValue;
     }
 
     public CertificateDomainValidationOptionArgs(
@@ -70,10 +71,10 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
     }
 
     private CertificateDomainValidationOptionArgs() {
-        this.domainName = Output.empty();
-        this.resourceRecordName = Output.empty();
-        this.resourceRecordType = Output.empty();
-        this.resourceRecordValue = Output.empty();
+        this.domainName = Codegen.empty();
+        this.resourceRecordName = Codegen.empty();
+        this.resourceRecordType = Codegen.empty();
+        this.resourceRecordValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder resourceRecordName(@Nullable Output<String> resourceRecordName) {
@@ -115,7 +116,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
             return this;
         }
         public Builder resourceRecordName(@Nullable String resourceRecordName) {
-            this.resourceRecordName = Output.ofNullable(resourceRecordName);
+            this.resourceRecordName = Codegen.ofNullable(resourceRecordName);
             return this;
         }
         public Builder resourceRecordType(@Nullable Output<String> resourceRecordType) {
@@ -123,7 +124,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
             return this;
         }
         public Builder resourceRecordType(@Nullable String resourceRecordType) {
-            this.resourceRecordType = Output.ofNullable(resourceRecordType);
+            this.resourceRecordType = Codegen.ofNullable(resourceRecordType);
             return this;
         }
         public Builder resourceRecordValue(@Nullable Output<String> resourceRecordValue) {
@@ -131,7 +132,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
             return this;
         }
         public Builder resourceRecordValue(@Nullable String resourceRecordValue) {
-            this.resourceRecordValue = Output.ofNullable(resourceRecordValue);
+            this.resourceRecordValue = Codegen.ofNullable(resourceRecordValue);
             return this;
         }        public CertificateDomainValidationOptionArgs build() {
             return new CertificateDomainValidationOptionArgs(domainName, resourceRecordName, resourceRecordType, resourceRecordValue);

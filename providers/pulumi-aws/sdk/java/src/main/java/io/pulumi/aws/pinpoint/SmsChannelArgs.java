@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> senderId;
 
     public Output<String> getSenderId() {
-        return this.senderId == null ? Output.empty() : this.senderId;
+        return this.senderId == null ? Codegen.empty() : this.senderId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> shortCode;
 
     public Output<String> getShortCode() {
-        return this.shortCode == null ? Output.empty() : this.shortCode;
+        return this.shortCode == null ? Codegen.empty() : this.shortCode;
     }
 
     public SmsChannelArgs(
@@ -71,10 +72,10 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmsChannelArgs() {
-        this.applicationId = Output.empty();
-        this.enabled = Output.empty();
-        this.senderId = Output.empty();
-        this.shortCode = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.senderId = Codegen.empty();
+        this.shortCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder senderId(@Nullable Output<String> senderId) {
@@ -124,7 +125,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder senderId(@Nullable String senderId) {
-            this.senderId = Output.ofNullable(senderId);
+            this.senderId = Codegen.ofNullable(senderId);
             return this;
         }
         public Builder shortCode(@Nullable Output<String> shortCode) {
@@ -132,7 +133,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortCode(@Nullable String shortCode) {
-            this.shortCode = Output.ofNullable(shortCode);
+            this.shortCode = Codegen.ofNullable(shortCode);
             return this;
         }        public SmsChannelArgs build() {
             return new SmsChannelArgs(applicationId, enabled, senderId, shortCode);

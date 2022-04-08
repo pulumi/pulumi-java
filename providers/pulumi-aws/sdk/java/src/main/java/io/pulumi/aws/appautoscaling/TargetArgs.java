@@ -5,6 +5,7 @@ package io.pulumi.aws.appautoscaling;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetArgs() {
-        this.maxCapacity = Output.empty();
-        this.minCapacity = Output.empty();
-        this.resourceId = Output.empty();
-        this.roleArn = Output.empty();
-        this.scalableDimension = Output.empty();
-        this.serviceNamespace = Output.empty();
+        this.maxCapacity = Codegen.empty();
+        this.minCapacity = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.scalableDimension = Codegen.empty();
+        this.serviceNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder scalableDimension(Output<String> scalableDimension) {

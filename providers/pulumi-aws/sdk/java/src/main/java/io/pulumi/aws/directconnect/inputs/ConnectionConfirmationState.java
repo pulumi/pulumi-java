@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
-        return this.connectionId == null ? Output.empty() : this.connectionId;
+        return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
     public ConnectionConfirmationState(@Nullable Output<String> connectionId) {
@@ -30,7 +31,7 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
     }
 
     private ConnectionConfirmationState() {
-        this.connectionId = Output.empty();
+        this.connectionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Output.ofNullable(connectionId);
+            this.connectionId = Codegen.ofNullable(connectionId);
             return this;
         }        public ConnectionConfirmationState build() {
             return new ConnectionConfirmationState(connectionId);

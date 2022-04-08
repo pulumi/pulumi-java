@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class RecordFailoverRoutingPolicyArgs extends io.pulumi.resources.R
     }
 
     private RecordFailoverRoutingPolicyArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

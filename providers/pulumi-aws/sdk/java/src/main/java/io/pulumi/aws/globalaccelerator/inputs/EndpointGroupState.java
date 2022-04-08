@@ -7,6 +7,7 @@ import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupEndpointConfiguration
 import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupPortOverrideGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations;
 
     public Output<List<EndpointGroupEndpointConfigurationGetArgs>> getEndpointConfigurations() {
-        return this.endpointConfigurations == null ? Output.empty() : this.endpointConfigurations;
+        return this.endpointConfigurations == null ? Codegen.empty() : this.endpointConfigurations;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endpointGroupRegion;
 
     public Output<String> getEndpointGroupRegion() {
-        return this.endpointGroupRegion == null ? Output.empty() : this.endpointGroupRegion;
+        return this.endpointGroupRegion == null ? Codegen.empty() : this.endpointGroupRegion;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> healthCheckIntervalSeconds;
 
     public Output<Integer> getHealthCheckIntervalSeconds() {
-        return this.healthCheckIntervalSeconds == null ? Output.empty() : this.healthCheckIntervalSeconds;
+        return this.healthCheckIntervalSeconds == null ? Codegen.empty() : this.healthCheckIntervalSeconds;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> healthCheckPath;
 
     public Output<String> getHealthCheckPath() {
-        return this.healthCheckPath == null ? Output.empty() : this.healthCheckPath;
+        return this.healthCheckPath == null ? Codegen.empty() : this.healthCheckPath;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> healthCheckPort;
 
     public Output<Integer> getHealthCheckPort() {
-        return this.healthCheckPort == null ? Output.empty() : this.healthCheckPort;
+        return this.healthCheckPort == null ? Codegen.empty() : this.healthCheckPort;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> healthCheckProtocol;
 
     public Output<String> getHealthCheckProtocol() {
-        return this.healthCheckProtocol == null ? Output.empty() : this.healthCheckProtocol;
+        return this.healthCheckProtocol == null ? Codegen.empty() : this.healthCheckProtocol;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> listenerArn;
 
     public Output<String> getListenerArn() {
-        return this.listenerArn == null ? Output.empty() : this.listenerArn;
+        return this.listenerArn == null ? Codegen.empty() : this.listenerArn;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides;
 
     public Output<List<EndpointGroupPortOverrideGetArgs>> getPortOverrides() {
-        return this.portOverrides == null ? Output.empty() : this.portOverrides;
+        return this.portOverrides == null ? Codegen.empty() : this.portOverrides;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> thresholdCount;
 
     public Output<Integer> getThresholdCount() {
-        return this.thresholdCount == null ? Output.empty() : this.thresholdCount;
+        return this.thresholdCount == null ? Codegen.empty() : this.thresholdCount;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> trafficDialPercentage;
 
     public Output<Double> getTrafficDialPercentage() {
-        return this.trafficDialPercentage == null ? Output.empty() : this.trafficDialPercentage;
+        return this.trafficDialPercentage == null ? Codegen.empty() : this.trafficDialPercentage;
     }
 
     public EndpointGroupState(
@@ -167,17 +168,17 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointGroupState() {
-        this.arn = Output.empty();
-        this.endpointConfigurations = Output.empty();
-        this.endpointGroupRegion = Output.empty();
-        this.healthCheckIntervalSeconds = Output.empty();
-        this.healthCheckPath = Output.empty();
-        this.healthCheckPort = Output.empty();
-        this.healthCheckProtocol = Output.empty();
-        this.listenerArn = Output.empty();
-        this.portOverrides = Output.empty();
-        this.thresholdCount = Output.empty();
-        this.trafficDialPercentage = Output.empty();
+        this.arn = Codegen.empty();
+        this.endpointConfigurations = Codegen.empty();
+        this.endpointGroupRegion = Codegen.empty();
+        this.healthCheckIntervalSeconds = Codegen.empty();
+        this.healthCheckPath = Codegen.empty();
+        this.healthCheckPort = Codegen.empty();
+        this.healthCheckProtocol = Codegen.empty();
+        this.listenerArn = Codegen.empty();
+        this.portOverrides = Codegen.empty();
+        this.thresholdCount = Codegen.empty();
+        this.trafficDialPercentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder endpointConfigurations(@Nullable Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations) {
@@ -233,7 +234,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointConfigurations(@Nullable List<EndpointGroupEndpointConfigurationGetArgs> endpointConfigurations) {
-            this.endpointConfigurations = Output.ofNullable(endpointConfigurations);
+            this.endpointConfigurations = Codegen.ofNullable(endpointConfigurations);
             return this;
         }
         public Builder endpointConfigurations(EndpointGroupEndpointConfigurationGetArgs... endpointConfigurations) {
@@ -244,7 +245,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointGroupRegion(@Nullable String endpointGroupRegion) {
-            this.endpointGroupRegion = Output.ofNullable(endpointGroupRegion);
+            this.endpointGroupRegion = Codegen.ofNullable(endpointGroupRegion);
             return this;
         }
         public Builder healthCheckIntervalSeconds(@Nullable Output<Integer> healthCheckIntervalSeconds) {
@@ -252,7 +253,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
-            this.healthCheckIntervalSeconds = Output.ofNullable(healthCheckIntervalSeconds);
+            this.healthCheckIntervalSeconds = Codegen.ofNullable(healthCheckIntervalSeconds);
             return this;
         }
         public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
@@ -260,7 +261,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
-            this.healthCheckPath = Output.ofNullable(healthCheckPath);
+            this.healthCheckPath = Codegen.ofNullable(healthCheckPath);
             return this;
         }
         public Builder healthCheckPort(@Nullable Output<Integer> healthCheckPort) {
@@ -268,7 +269,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckPort(@Nullable Integer healthCheckPort) {
-            this.healthCheckPort = Output.ofNullable(healthCheckPort);
+            this.healthCheckPort = Codegen.ofNullable(healthCheckPort);
             return this;
         }
         public Builder healthCheckProtocol(@Nullable Output<String> healthCheckProtocol) {
@@ -276,7 +277,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckProtocol(@Nullable String healthCheckProtocol) {
-            this.healthCheckProtocol = Output.ofNullable(healthCheckProtocol);
+            this.healthCheckProtocol = Codegen.ofNullable(healthCheckProtocol);
             return this;
         }
         public Builder listenerArn(@Nullable Output<String> listenerArn) {
@@ -284,7 +285,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder listenerArn(@Nullable String listenerArn) {
-            this.listenerArn = Output.ofNullable(listenerArn);
+            this.listenerArn = Codegen.ofNullable(listenerArn);
             return this;
         }
         public Builder portOverrides(@Nullable Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides) {
@@ -292,7 +293,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portOverrides(@Nullable List<EndpointGroupPortOverrideGetArgs> portOverrides) {
-            this.portOverrides = Output.ofNullable(portOverrides);
+            this.portOverrides = Codegen.ofNullable(portOverrides);
             return this;
         }
         public Builder portOverrides(EndpointGroupPortOverrideGetArgs... portOverrides) {
@@ -303,7 +304,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thresholdCount(@Nullable Integer thresholdCount) {
-            this.thresholdCount = Output.ofNullable(thresholdCount);
+            this.thresholdCount = Codegen.ofNullable(thresholdCount);
             return this;
         }
         public Builder trafficDialPercentage(@Nullable Output<Double> trafficDialPercentage) {
@@ -311,7 +312,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficDialPercentage(@Nullable Double trafficDialPercentage) {
-            this.trafficDialPercentage = Output.ofNullable(trafficDialPercentage);
+            this.trafficDialPercentage = Codegen.ofNullable(trafficDialPercentage);
             return this;
         }        public EndpointGroupState build() {
             return new EndpointGroupState(arn, endpointConfigurations, endpointGroupRegion, healthCheckIntervalSeconds, healthCheckPath, healthCheckPort, healthCheckProtocol, listenerArn, portOverrides, thresholdCount, trafficDialPercentage);

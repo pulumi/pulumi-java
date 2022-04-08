@@ -5,6 +5,7 @@ package io.pulumi.aws.apprunner;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +36,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> maxConcurrency;
 
     public Output<Integer> getMaxConcurrency() {
-        return this.maxConcurrency == null ? Output.empty() : this.maxConcurrency;
+        return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
-        return this.maxSize == null ? Output.empty() : this.maxSize;
+        return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
-        return this.minSize == null ? Output.empty() : this.minSize;
+        return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AutoScalingConfigurationVersionArgs(
@@ -85,11 +86,11 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     }
 
     private AutoScalingConfigurationVersionArgs() {
-        this.autoScalingConfigurationName = Output.empty();
-        this.maxConcurrency = Output.empty();
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
-        this.tags = Output.empty();
+        this.autoScalingConfigurationName = Codegen.empty();
+        this.maxConcurrency = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder maxConcurrency(@Nullable Integer maxConcurrency) {
-            this.maxConcurrency = Output.ofNullable(maxConcurrency);
+            this.maxConcurrency = Codegen.ofNullable(maxConcurrency);
             return this;
         }
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
@@ -141,7 +142,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Output.ofNullable(maxSize);
+            this.maxSize = Codegen.ofNullable(maxSize);
             return this;
         }
         public Builder minSize(@Nullable Output<Integer> minSize) {
@@ -149,7 +150,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Output.ofNullable(minSize);
+            this.minSize = Codegen.ofNullable(minSize);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -157,7 +158,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AutoScalingConfigurationVersionArgs build() {
             return new AutoScalingConfigurationVersionArgs(autoScalingConfigurationName, maxConcurrency, maxSize, minSize, tags);

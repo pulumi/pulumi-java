@@ -5,6 +5,7 @@ package io.pulumi.aws.licensemanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> licenseCount;
 
     public Output<Integer> getLicenseCount() {
-        return this.licenseCount == null ? Output.empty() : this.licenseCount;
+        return this.licenseCount == null ? Codegen.empty() : this.licenseCount;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> licenseCountHardLimit;
 
     public Output<Boolean> getLicenseCountHardLimit() {
-        return this.licenseCountHardLimit == null ? Output.empty() : this.licenseCountHardLimit;
+        return this.licenseCountHardLimit == null ? Codegen.empty() : this.licenseCountHardLimit;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> licenseRules;
 
     public Output<List<String>> getLicenseRules() {
-        return this.licenseRules == null ? Output.empty() : this.licenseRules;
+        return this.licenseRules == null ? Codegen.empty() : this.licenseRules;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LicenseConfigurationArgs(
@@ -113,13 +114,13 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private LicenseConfigurationArgs() {
-        this.description = Output.empty();
-        this.licenseCount = Output.empty();
-        this.licenseCountHardLimit = Output.empty();
-        this.licenseCountingType = Output.empty();
-        this.licenseRules = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.licenseCount = Codegen.empty();
+        this.licenseCountHardLimit = Codegen.empty();
+        this.licenseCountingType = Codegen.empty();
+        this.licenseRules = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder licenseCount(@Nullable Output<Integer> licenseCount) {
@@ -167,7 +168,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder licenseCount(@Nullable Integer licenseCount) {
-            this.licenseCount = Output.ofNullable(licenseCount);
+            this.licenseCount = Codegen.ofNullable(licenseCount);
             return this;
         }
         public Builder licenseCountHardLimit(@Nullable Output<Boolean> licenseCountHardLimit) {
@@ -175,7 +176,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder licenseCountHardLimit(@Nullable Boolean licenseCountHardLimit) {
-            this.licenseCountHardLimit = Output.ofNullable(licenseCountHardLimit);
+            this.licenseCountHardLimit = Codegen.ofNullable(licenseCountHardLimit);
             return this;
         }
         public Builder licenseCountingType(Output<String> licenseCountingType) {
@@ -191,7 +192,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder licenseRules(@Nullable List<String> licenseRules) {
-            this.licenseRules = Output.ofNullable(licenseRules);
+            this.licenseRules = Codegen.ofNullable(licenseRules);
             return this;
         }
         public Builder licenseRules(String... licenseRules) {
@@ -202,7 +203,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -210,7 +211,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LicenseConfigurationArgs build() {
             return new LicenseConfigurationArgs(description, licenseCount, licenseCountHardLimit, licenseCountingType, licenseRules, name, tags);

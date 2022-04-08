@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
+        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
       private final @Nullable Output<String> targetDomainName;
 
     public Output<String> getTargetDomainName() {
-        return this.targetDomainName == null ? Output.empty() : this.targetDomainName;
+        return this.targetDomainName == null ? Codegen.empty() : this.targetDomainName;
     }
 
     public DomainNameDomainNameConfigurationGetArgs(
@@ -84,11 +85,11 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
     }
 
     private DomainNameDomainNameConfigurationGetArgs() {
-        this.certificateArn = Output.empty();
-        this.endpointType = Output.empty();
-        this.hostedZoneId = Output.empty();
-        this.securityPolicy = Output.empty();
-        this.targetDomainName = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.hostedZoneId = Codegen.empty();
+        this.securityPolicy = Codegen.empty();
+        this.targetDomainName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Output.ofNullable(hostedZoneId);
+            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
             return this;
         }
         public Builder securityPolicy(Output<String> securityPolicy) {
@@ -156,7 +157,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder targetDomainName(@Nullable String targetDomainName) {
-            this.targetDomainName = Output.ofNullable(targetDomainName);
+            this.targetDomainName = Codegen.ofNullable(targetDomainName);
             return this;
         }        public DomainNameDomainNameConfigurationGetArgs build() {
             return new DomainNameDomainNameConfigurationGetArgs(certificateArn, endpointType, hostedZoneId, securityPolicy, targetDomainName);

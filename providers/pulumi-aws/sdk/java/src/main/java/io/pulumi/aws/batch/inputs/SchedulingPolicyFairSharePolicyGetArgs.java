@@ -6,6 +6,7 @@ package io.pulumi.aws.batch.inputs;
 import io.pulumi.aws.batch.inputs.SchedulingPolicyFairSharePolicyShareDistributionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,14 +25,14 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> computeReservation;
 
     public Output<Integer> getComputeReservation() {
-        return this.computeReservation == null ? Output.empty() : this.computeReservation;
+        return this.computeReservation == null ? Codegen.empty() : this.computeReservation;
     }
 
     @Import(name="shareDecaySeconds")
       private final @Nullable Output<Integer> shareDecaySeconds;
 
     public Output<Integer> getShareDecaySeconds() {
-        return this.shareDecaySeconds == null ? Output.empty() : this.shareDecaySeconds;
+        return this.shareDecaySeconds == null ? Codegen.empty() : this.shareDecaySeconds;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
       private final @Nullable Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> shareDistributions;
 
     public Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> getShareDistributions() {
-        return this.shareDistributions == null ? Output.empty() : this.shareDistributions;
+        return this.shareDistributions == null ? Codegen.empty() : this.shareDistributions;
     }
 
     public SchedulingPolicyFairSharePolicyGetArgs(
@@ -55,9 +56,9 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
     }
 
     private SchedulingPolicyFairSharePolicyGetArgs() {
-        this.computeReservation = Output.empty();
-        this.shareDecaySeconds = Output.empty();
-        this.shareDistributions = Output.empty();
+        this.computeReservation = Codegen.empty();
+        this.shareDecaySeconds = Codegen.empty();
+        this.shareDistributions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder computeReservation(@Nullable Integer computeReservation) {
-            this.computeReservation = Output.ofNullable(computeReservation);
+            this.computeReservation = Codegen.ofNullable(computeReservation);
             return this;
         }
         public Builder shareDecaySeconds(@Nullable Output<Integer> shareDecaySeconds) {
@@ -97,7 +98,7 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder shareDecaySeconds(@Nullable Integer shareDecaySeconds) {
-            this.shareDecaySeconds = Output.ofNullable(shareDecaySeconds);
+            this.shareDecaySeconds = Codegen.ofNullable(shareDecaySeconds);
             return this;
         }
         public Builder shareDistributions(@Nullable Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> shareDistributions) {
@@ -105,7 +106,7 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder shareDistributions(@Nullable List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs> shareDistributions) {
-            this.shareDistributions = Output.ofNullable(shareDistributions);
+            this.shareDistributions = Codegen.ofNullable(shareDistributions);
             return this;
         }
         public Builder shareDistributions(SchedulingPolicyFairSharePolicyShareDistributionGetArgs... shareDistributions) {

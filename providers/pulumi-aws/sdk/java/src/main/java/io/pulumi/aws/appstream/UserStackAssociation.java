@@ -9,6 +9,7 @@ import io.pulumi.aws.appstream.inputs.UserStackAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -108,7 +109,7 @@ public class UserStackAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserStackAssociation(String name, UserStackAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appstream/userStackAssociation:UserStackAssociation", name, args == null ? UserStackAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appstream/userStackAssociation:UserStackAssociation", name, args == null ? UserStackAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserStackAssociation(String name, Output<String> id, @Nullable UserStackAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

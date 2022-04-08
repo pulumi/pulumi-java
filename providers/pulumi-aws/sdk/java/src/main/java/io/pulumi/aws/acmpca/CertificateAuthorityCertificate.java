@@ -9,6 +9,7 @@ import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -85,7 +86,7 @@ public class CertificateAuthorityCertificate extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateAuthorityCertificate(String name, CertificateAuthorityCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:acmpca/certificateAuthorityCertificate:CertificateAuthorityCertificate", name, args == null ? CertificateAuthorityCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:acmpca/certificateAuthorityCertificate:CertificateAuthorityCertificate", name, args == null ? CertificateAuthorityCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateAuthorityCertificate(String name, Output<String> id, @Nullable CertificateAuthorityCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

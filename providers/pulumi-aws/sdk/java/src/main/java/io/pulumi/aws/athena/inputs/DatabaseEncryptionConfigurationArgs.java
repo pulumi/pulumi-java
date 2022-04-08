@@ -5,6 +5,7 @@ package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     public DatabaseEncryptionConfigurationArgs(
@@ -44,8 +45,8 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
     }
 
     private DatabaseEncryptionConfigurationArgs() {
-        this.encryptionOption = Output.empty();
-        this.kmsKey = Output.empty();
+        this.encryptionOption = Codegen.empty();
+        this.kmsKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }        public DatabaseEncryptionConfigurationArgs build() {
             return new DatabaseEncryptionConfigurationArgs(encryptionOption, kmsKey);

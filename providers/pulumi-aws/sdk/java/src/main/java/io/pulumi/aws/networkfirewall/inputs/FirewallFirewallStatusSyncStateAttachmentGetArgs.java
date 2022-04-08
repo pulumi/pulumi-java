@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
       private final @Nullable Output<String> endpointId;
 
     public Output<String> getEndpointId() {
-        return this.endpointId == null ? Output.empty() : this.endpointId;
+        return this.endpointId == null ? Codegen.empty() : this.endpointId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public FirewallFirewallStatusSyncStateAttachmentGetArgs(
@@ -44,8 +45,8 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
     }
 
     private FirewallFirewallStatusSyncStateAttachmentGetArgs() {
-        this.endpointId = Output.empty();
-        this.subnetId = Output.empty();
+        this.endpointId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
             return this;
         }
         public Builder endpointId(@Nullable String endpointId) {
-            this.endpointId = Output.ofNullable(endpointId);
+            this.endpointId = Codegen.ofNullable(endpointId);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -83,7 +84,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public FirewallFirewallStatusSyncStateAttachmentGetArgs build() {
             return new FirewallFirewallStatusSyncStateAttachmentGetArgs(endpointId, subnetId);

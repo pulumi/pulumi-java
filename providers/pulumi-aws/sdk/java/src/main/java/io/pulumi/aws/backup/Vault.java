@@ -9,6 +9,7 @@ import io.pulumi.aws.backup.inputs.VaultState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -137,7 +138,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Vault(String name, @Nullable VaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/vault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/vault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Vault(String name, Output<String> id, @Nullable VaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

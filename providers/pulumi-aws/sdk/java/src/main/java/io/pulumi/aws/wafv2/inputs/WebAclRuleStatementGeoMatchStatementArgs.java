@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class WebAclRuleStatementGeoMatchStatementArgs extends io.pulumi.re
       private final @Nullable Output<WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
 
     public Output<WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs> getForwardedIpConfig() {
-        return this.forwardedIpConfig == null ? Output.empty() : this.forwardedIpConfig;
+        return this.forwardedIpConfig == null ? Codegen.empty() : this.forwardedIpConfig;
     }
 
     public WebAclRuleStatementGeoMatchStatementArgs(
@@ -46,8 +47,8 @@ public final class WebAclRuleStatementGeoMatchStatementArgs extends io.pulumi.re
     }
 
     private WebAclRuleStatementGeoMatchStatementArgs() {
-        this.countryCodes = Output.empty();
-        this.forwardedIpConfig = Output.empty();
+        this.countryCodes = Codegen.empty();
+        this.forwardedIpConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class WebAclRuleStatementGeoMatchStatementArgs extends io.pulumi.re
             return this;
         }
         public Builder forwardedIpConfig(@Nullable WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs forwardedIpConfig) {
-            this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
+            this.forwardedIpConfig = Codegen.ofNullable(forwardedIpConfig);
             return this;
         }        public WebAclRuleStatementGeoMatchStatementArgs build() {
             return new WebAclRuleStatementGeoMatchStatementArgs(countryCodes, forwardedIpConfig);

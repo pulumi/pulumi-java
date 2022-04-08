@@ -7,6 +7,7 @@ import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardStic
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardTargetGroupGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ListenerRuleActionForwardGetArgs extends io.pulumi.resources.
       private final @Nullable Output<ListenerRuleActionForwardStickinessGetArgs> stickiness;
 
     public Output<ListenerRuleActionForwardStickinessGetArgs> getStickiness() {
-        return this.stickiness == null ? Output.empty() : this.stickiness;
+        return this.stickiness == null ? Codegen.empty() : this.stickiness;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ListenerRuleActionForwardGetArgs extends io.pulumi.resources.
     }
 
     private ListenerRuleActionForwardGetArgs() {
-        this.stickiness = Output.empty();
-        this.targetGroups = Output.empty();
+        this.stickiness = Codegen.empty();
+        this.targetGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ListenerRuleActionForwardGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder stickiness(@Nullable ListenerRuleActionForwardStickinessGetArgs stickiness) {
-            this.stickiness = Output.ofNullable(stickiness);
+            this.stickiness = Codegen.ofNullable(stickiness);
             return this;
         }
         public Builder targetGroups(Output<List<ListenerRuleActionForwardTargetGroupGetArgs>> targetGroups) {

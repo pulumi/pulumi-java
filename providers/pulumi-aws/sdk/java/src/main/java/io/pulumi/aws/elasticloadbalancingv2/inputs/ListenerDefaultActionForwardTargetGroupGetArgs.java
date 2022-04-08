@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ListenerDefaultActionForwardTargetGroupGetArgs extends io.pul
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public ListenerDefaultActionForwardTargetGroupGetArgs(
@@ -45,8 +46,8 @@ public final class ListenerDefaultActionForwardTargetGroupGetArgs extends io.pul
     }
 
     private ListenerDefaultActionForwardTargetGroupGetArgs() {
-        this.arn = Output.empty();
-        this.weight = Output.empty();
+        this.arn = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ListenerDefaultActionForwardTargetGroupGetArgs extends io.pul
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public ListenerDefaultActionForwardTargetGroupGetArgs build() {
             return new ListenerDefaultActionForwardTargetGroupGetArgs(arn, weight);

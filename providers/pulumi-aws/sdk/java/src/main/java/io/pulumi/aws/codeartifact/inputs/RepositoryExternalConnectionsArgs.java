@@ -5,6 +5,7 @@ package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,14 +30,14 @@ public final class RepositoryExternalConnectionsArgs extends io.pulumi.resources
       private final @Nullable Output<String> packageFormat;
 
     public Output<String> getPackageFormat() {
-        return this.packageFormat == null ? Output.empty() : this.packageFormat;
+        return this.packageFormat == null ? Codegen.empty() : this.packageFormat;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public RepositoryExternalConnectionsArgs(
@@ -49,9 +50,9 @@ public final class RepositoryExternalConnectionsArgs extends io.pulumi.resources
     }
 
     private RepositoryExternalConnectionsArgs() {
-        this.externalConnectionName = Output.empty();
-        this.packageFormat = Output.empty();
-        this.status = Output.empty();
+        this.externalConnectionName = Codegen.empty();
+        this.packageFormat = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RepositoryExternalConnectionsArgs extends io.pulumi.resources
             return this;
         }
         public Builder packageFormat(@Nullable String packageFormat) {
-            this.packageFormat = Output.ofNullable(packageFormat);
+            this.packageFormat = Codegen.ofNullable(packageFormat);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -99,7 +100,7 @@ public final class RepositoryExternalConnectionsArgs extends io.pulumi.resources
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public RepositoryExternalConnectionsArgs build() {
             return new RepositoryExternalConnectionsArgs(externalConnectionName, packageFormat, status);

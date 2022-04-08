@@ -5,6 +5,7 @@ package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs extend
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs extend
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
-        return this.principal == null ? Output.empty() : this.principal;
+        return this.principal == null ? Codegen.empty() : this.principal;
     }
 
     public DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs(
@@ -45,8 +46,8 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs extend
     }
 
     private DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs() {
-        this.permissions = Output.empty();
-        this.principal = Output.empty();
+        this.permissions = Codegen.empty();
+        this.principal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs extend
             return this;
         }
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(String... permissions) {
@@ -87,7 +88,7 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs extend
             return this;
         }
         public Builder principal(@Nullable String principal) {
-            this.principal = Output.ofNullable(principal);
+            this.principal = Codegen.ofNullable(principal);
             return this;
         }        public DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs build() {
             return new DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs(permissions, principal);

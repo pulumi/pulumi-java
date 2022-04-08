@@ -6,6 +6,7 @@ package io.pulumi.aws.route53;
 import io.pulumi.aws.route53.inputs.ResolverEndpointIpAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -50,7 +51,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResolverEndpointArgs(
@@ -89,11 +90,11 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResolverEndpointArgs() {
-        this.direction = Output.empty();
-        this.ipAddresses = Output.empty();
-        this.name = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.tags = Output.empty();
+        this.direction = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
+        this.name = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
@@ -167,7 +168,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ResolverEndpointArgs build() {
             return new ResolverEndpointArgs(direction, ipAddresses, name, securityGroupIds, tags);

@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementAndSta
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
 
     public Output<WebAclRuleStatementAndStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
+        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
     /**
@@ -74,10 +75,10 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
     }
 
     private WebAclRuleStatementAndStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementGetArgs() {
-        this.comparisonOperator = Output.empty();
-        this.fieldToMatch = Output.empty();
-        this.size = Output.empty();
-        this.textTransformations = Output.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.size = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
             return this;
         }
         public Builder fieldToMatch(@Nullable WebAclRuleStatementAndStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Output.ofNullable(fieldToMatch);
+            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
             return this;
         }
         public Builder size(Output<Integer> size) {

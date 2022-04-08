@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends io.pulumi.res
     }
 
     private SpotInstanceRequestNetworkInterfaceArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.deviceIndex = Output.empty();
-        this.networkInterfaceId = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.deviceIndex = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends io.pulumi.res
             return this;
         }
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder deviceIndex(Output<Integer> deviceIndex) {

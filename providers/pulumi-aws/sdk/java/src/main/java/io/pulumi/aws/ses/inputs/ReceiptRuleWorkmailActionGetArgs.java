@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class ReceiptRuleWorkmailActionGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public ReceiptRuleWorkmailActionGetArgs(
@@ -58,9 +59,9 @@ public final class ReceiptRuleWorkmailActionGetArgs extends io.pulumi.resources.
     }
 
     private ReceiptRuleWorkmailActionGetArgs() {
-        this.organizationArn = Output.empty();
-        this.position = Output.empty();
-        this.topicArn = Output.empty();
+        this.organizationArn = Codegen.empty();
+        this.position = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ReceiptRuleWorkmailActionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public ReceiptRuleWorkmailActionGetArgs build() {
             return new ReceiptRuleWorkmailActionGetArgs(organizationArn, position, topicArn);

@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyType;
 
     public Output<String> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> usagePlanId;
 
     public Output<String> getUsagePlanId() {
-        return this.usagePlanId == null ? Output.empty() : this.usagePlanId;
+        return this.usagePlanId == null ? Codegen.empty() : this.usagePlanId;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public UsagePlanKeyState(
@@ -83,11 +84,11 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UsagePlanKeyState() {
-        this.keyId = Output.empty();
-        this.keyType = Output.empty();
-        this.name = Output.empty();
-        this.usagePlanId = Output.empty();
-        this.value = Output.empty();
+        this.keyId = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.usagePlanId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder keyType(@Nullable Output<String> keyType) {
@@ -131,7 +132,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -139,7 +140,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder usagePlanId(@Nullable Output<String> usagePlanId) {
@@ -147,7 +148,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usagePlanId(@Nullable String usagePlanId) {
-            this.usagePlanId = Output.ofNullable(usagePlanId);
+            this.usagePlanId = Codegen.ofNullable(usagePlanId);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -155,7 +156,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public UsagePlanKeyState build() {
             return new UsagePlanKeyState(keyId, keyType, name, usagePlanId, value);

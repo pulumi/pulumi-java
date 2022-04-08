@@ -5,6 +5,7 @@ package io.pulumi.aws.connect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class LambdaFunctionAssociationArgs extends io.pulumi.resources.Res
     }
 
     private LambdaFunctionAssociationArgs() {
-        this.functionArn = Output.empty();
-        this.instanceId = Output.empty();
+        this.functionArn = Codegen.empty();
+        this.instanceId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TaskSetScaleGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TaskSetScaleGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TaskSetScaleGetArgs(
@@ -45,8 +46,8 @@ public final class TaskSetScaleGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TaskSetScaleGetArgs() {
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TaskSetScaleGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder value(@Nullable Output<Double> value) {
@@ -84,7 +85,7 @@ public final class TaskSetScaleGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder value(@Nullable Double value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public TaskSetScaleGetArgs build() {
             return new TaskSetScaleGetArgs(unit, value);

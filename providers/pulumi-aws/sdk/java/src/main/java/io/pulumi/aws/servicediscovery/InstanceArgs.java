@@ -5,6 +5,7 @@ package io.pulumi.aws.servicediscovery;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.attributes = Output.empty();
-        this.instanceId = Output.empty();
-        this.serviceId = Output.empty();
+        this.attributes = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.serviceId = Codegen.empty();
     }
 
     public static Builder builder() {

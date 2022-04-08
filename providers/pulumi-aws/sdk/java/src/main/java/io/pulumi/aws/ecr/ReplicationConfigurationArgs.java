@@ -6,6 +6,7 @@ package io.pulumi.aws.ecr;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
     public Output<ReplicationConfigurationReplicationConfigurationArgs> getReplicationConfiguration() {
-        return this.replicationConfiguration == null ? Output.empty() : this.replicationConfiguration;
+        return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
     }
 
     public ReplicationConfigurationArgs(@Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
@@ -30,7 +31,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private ReplicationConfigurationArgs() {
-        this.replicationConfiguration = Output.empty();
+        this.replicationConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder replicationConfiguration(@Nullable ReplicationConfigurationReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
+            this.replicationConfiguration = Codegen.ofNullable(replicationConfiguration);
             return this;
         }        public ReplicationConfigurationArgs build() {
             return new ReplicationConfigurationArgs(replicationConfiguration);

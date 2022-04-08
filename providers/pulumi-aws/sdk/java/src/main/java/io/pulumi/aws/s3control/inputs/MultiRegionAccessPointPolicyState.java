@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
       private final @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details;
 
     public Output<MultiRegionAccessPointPolicyDetailsGetArgs> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
       private final @Nullable Output<String> established;
 
     public Output<String> getEstablished() {
-        return this.established == null ? Output.empty() : this.established;
+        return this.established == null ? Codegen.empty() : this.established;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
       private final @Nullable Output<String> proposed;
 
     public Output<String> getProposed() {
-        return this.proposed == null ? Output.empty() : this.proposed;
+        return this.proposed == null ? Codegen.empty() : this.proposed;
     }
 
     public MultiRegionAccessPointPolicyState(
@@ -67,10 +68,10 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
     }
 
     private MultiRegionAccessPointPolicyState() {
-        this.accountId = Output.empty();
-        this.details = Output.empty();
-        this.established = Output.empty();
-        this.proposed = Output.empty();
+        this.accountId = Codegen.empty();
+        this.details = Codegen.empty();
+        this.established = Codegen.empty();
+        this.proposed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder details(@Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details) {
@@ -112,7 +113,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
             return this;
         }
         public Builder details(@Nullable MultiRegionAccessPointPolicyDetailsGetArgs details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder established(@Nullable Output<String> established) {
@@ -120,7 +121,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
             return this;
         }
         public Builder established(@Nullable String established) {
-            this.established = Output.ofNullable(established);
+            this.established = Codegen.ofNullable(established);
             return this;
         }
         public Builder proposed(@Nullable Output<String> proposed) {
@@ -128,7 +129,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
             return this;
         }
         public Builder proposed(@Nullable String proposed) {
-            this.proposed = Output.ofNullable(proposed);
+            this.proposed = Codegen.ofNullable(proposed);
             return this;
         }        public MultiRegionAccessPointPolicyState build() {
             return new MultiRegionAccessPointPolicyState(accountId, details, established, proposed);

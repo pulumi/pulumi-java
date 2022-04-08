@@ -9,6 +9,7 @@ import io.pulumi.aws.sns.inputs.SmsPreferencesState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -128,7 +129,7 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SmsPreferences(String name, @Nullable SmsPreferencesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sns/smsPreferences:SmsPreferences", name, args == null ? SmsPreferencesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sns/smsPreferences:SmsPreferences", name, args == null ? SmsPreferencesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmsPreferences(String name, Output<String> id, @Nullable SmsPreferencesState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

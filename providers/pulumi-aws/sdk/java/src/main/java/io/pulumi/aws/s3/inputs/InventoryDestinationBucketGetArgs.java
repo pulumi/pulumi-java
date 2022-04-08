@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
       private final @Nullable Output<InventoryDestinationBucketEncryptionGetArgs> encryption;
 
     public Output<InventoryDestinationBucketEncryptionGetArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public InventoryDestinationBucketGetArgs(
@@ -84,11 +85,11 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
     }
 
     private InventoryDestinationBucketGetArgs() {
-        this.accountId = Output.empty();
-        this.bucketArn = Output.empty();
-        this.encryption = Output.empty();
-        this.format = Output.empty();
-        this.prefix = Output.empty();
+        this.accountId = Codegen.empty();
+        this.bucketArn = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.format = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder bucketArn(Output<String> bucketArn) {
@@ -140,7 +141,7 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder encryption(@Nullable InventoryDestinationBucketEncryptionGetArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder format(Output<String> format) {
@@ -156,7 +157,7 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public InventoryDestinationBucketGetArgs build() {
             return new InventoryDestinationBucketGetArgs(accountId, bucketArn, encryption, format, prefix);

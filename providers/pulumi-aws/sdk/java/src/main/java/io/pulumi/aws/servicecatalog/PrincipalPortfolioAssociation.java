@@ -9,6 +9,7 @@ import io.pulumi.aws.servicecatalog.inputs.PrincipalPortfolioAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -107,7 +108,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public PrincipalPortfolioAssociation(String name, PrincipalPortfolioAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation", name, args == null ? PrincipalPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation", name, args == null ? PrincipalPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrincipalPortfolioAssociation(String name, Output<String> id, @Nullable PrincipalPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

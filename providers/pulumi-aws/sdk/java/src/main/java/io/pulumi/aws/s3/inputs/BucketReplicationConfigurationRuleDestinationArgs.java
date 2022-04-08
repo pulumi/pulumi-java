@@ -8,6 +8,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationMetr
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs> accessControlTranslation;
 
     public Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs> getAccessControlTranslation() {
-        return this.accessControlTranslation == null ? Output.empty() : this.accessControlTranslation;
+        return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationMetricsArgs> metrics;
 
     public Output<BucketReplicationConfigurationRuleDestinationMetricsArgs> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
       private final @Nullable Output<String> replicaKmsKeyId;
 
     public Output<String> getReplicaKmsKeyId() {
-        return this.replicaKmsKeyId == null ? Output.empty() : this.replicaKmsKeyId;
+        return this.replicaKmsKeyId == null ? Codegen.empty() : this.replicaKmsKeyId;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationReplicationTimeArgs> replicationTime;
 
     public Output<BucketReplicationConfigurationRuleDestinationReplicationTimeArgs> getReplicationTime() {
-        return this.replicationTime == null ? Output.empty() : this.replicationTime;
+        return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     public BucketReplicationConfigurationRuleDestinationArgs(
@@ -113,13 +114,13 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
     }
 
     private BucketReplicationConfigurationRuleDestinationArgs() {
-        this.accessControlTranslation = Output.empty();
-        this.accountId = Output.empty();
-        this.bucket = Output.empty();
-        this.metrics = Output.empty();
-        this.replicaKmsKeyId = Output.empty();
-        this.replicationTime = Output.empty();
-        this.storageClass = Output.empty();
+        this.accessControlTranslation = Codegen.empty();
+        this.accountId = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.replicaKmsKeyId = Codegen.empty();
+        this.replicationTime = Codegen.empty();
+        this.storageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
             return this;
         }
         public Builder accessControlTranslation(@Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs accessControlTranslation) {
-            this.accessControlTranslation = Output.ofNullable(accessControlTranslation);
+            this.accessControlTranslation = Codegen.ofNullable(accessControlTranslation);
             return this;
         }
         public Builder accountId(@Nullable Output<String> accountId) {
@@ -167,7 +168,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder bucket(Output<String> bucket) {
@@ -183,7 +184,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
             return this;
         }
         public Builder metrics(@Nullable BucketReplicationConfigurationRuleDestinationMetricsArgs metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder replicaKmsKeyId(@Nullable Output<String> replicaKmsKeyId) {
@@ -191,7 +192,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
             return this;
         }
         public Builder replicaKmsKeyId(@Nullable String replicaKmsKeyId) {
-            this.replicaKmsKeyId = Output.ofNullable(replicaKmsKeyId);
+            this.replicaKmsKeyId = Codegen.ofNullable(replicaKmsKeyId);
             return this;
         }
         public Builder replicationTime(@Nullable Output<BucketReplicationConfigurationRuleDestinationReplicationTimeArgs> replicationTime) {
@@ -199,7 +200,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
             return this;
         }
         public Builder replicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTimeArgs replicationTime) {
-            this.replicationTime = Output.ofNullable(replicationTime);
+            this.replicationTime = Codegen.ofNullable(replicationTime);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -207,7 +208,7 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }        public BucketReplicationConfigurationRuleDestinationArgs build() {
             return new BucketReplicationConfigurationRuleDestinationArgs(accessControlTranslation, accountId, bucket, metrics, replicaKmsKeyId, replicationTime, storageClass);

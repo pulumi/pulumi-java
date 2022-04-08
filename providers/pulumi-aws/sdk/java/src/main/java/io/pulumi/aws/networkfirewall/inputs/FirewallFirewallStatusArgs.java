@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class FirewallFirewallStatusArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<FirewallFirewallStatusSyncStateArgs>> syncStates;
 
     public Output<List<FirewallFirewallStatusSyncStateArgs>> getSyncStates() {
-        return this.syncStates == null ? Output.empty() : this.syncStates;
+        return this.syncStates == null ? Codegen.empty() : this.syncStates;
     }
 
     public FirewallFirewallStatusArgs(@Nullable Output<List<FirewallFirewallStatusSyncStateArgs>> syncStates) {
@@ -31,7 +32,7 @@ public final class FirewallFirewallStatusArgs extends io.pulumi.resources.Resour
     }
 
     private FirewallFirewallStatusArgs() {
-        this.syncStates = Output.empty();
+        this.syncStates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class FirewallFirewallStatusArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder syncStates(@Nullable List<FirewallFirewallStatusSyncStateArgs> syncStates) {
-            this.syncStates = Output.ofNullable(syncStates);
+            this.syncStates = Codegen.ofNullable(syncStates);
             return this;
         }
         public Builder syncStates(FirewallFirewallStatusSyncStateArgs... syncStates) {

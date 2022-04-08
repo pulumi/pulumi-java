@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.ResolverDnsSecConfigState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -107,7 +108,7 @@ public class ResolverDnsSecConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverDnsSecConfig(String name, ResolverDnsSecConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverDnsSecConfig:ResolverDnsSecConfig", name, args == null ? ResolverDnsSecConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverDnsSecConfig:ResolverDnsSecConfig", name, args == null ? ResolverDnsSecConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverDnsSecConfig(String name, Output<String> id, @Nullable ResolverDnsSecConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

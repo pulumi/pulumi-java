@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class WebhookFilterGroupFilterArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> excludeMatchedPattern;
 
     public Output<Boolean> getExcludeMatchedPattern() {
-        return this.excludeMatchedPattern == null ? Output.empty() : this.excludeMatchedPattern;
+        return this.excludeMatchedPattern == null ? Codegen.empty() : this.excludeMatchedPattern;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class WebhookFilterGroupFilterArgs extends io.pulumi.resources.Reso
     }
 
     private WebhookFilterGroupFilterArgs() {
-        this.excludeMatchedPattern = Output.empty();
-        this.pattern = Output.empty();
-        this.type = Output.empty();
+        this.excludeMatchedPattern = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class WebhookFilterGroupFilterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder excludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
-            this.excludeMatchedPattern = Output.ofNullable(excludeMatchedPattern);
+            this.excludeMatchedPattern = Codegen.ofNullable(excludeMatchedPattern);
             return this;
         }
         public Builder pattern(Output<String> pattern) {

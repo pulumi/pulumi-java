@@ -9,6 +9,7 @@ import io.pulumi.aws.signer.inputs.SigningJobSignedObjectGetArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> completedAt;
 
     public Output<String> getCompletedAt() {
-        return this.completedAt == null ? Output.empty() : this.completedAt;
+        return this.completedAt == null ? Codegen.empty() : this.completedAt;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SigningJobDestinationGetArgs> destination;
 
     public Output<SigningJobDestinationGetArgs> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ignoreSigningJobFailure;
 
     public Output<Boolean> getIgnoreSigningJobFailure() {
-        return this.ignoreSigningJobFailure == null ? Output.empty() : this.ignoreSigningJobFailure;
+        return this.ignoreSigningJobFailure == null ? Codegen.empty() : this.ignoreSigningJobFailure;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
-        return this.jobId == null ? Output.empty() : this.jobId;
+        return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobInvoker;
 
     public Output<String> getJobInvoker() {
-        return this.jobInvoker == null ? Output.empty() : this.jobInvoker;
+        return this.jobInvoker == null ? Codegen.empty() : this.jobInvoker;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobOwner;
 
     public Output<String> getJobOwner() {
-        return this.jobOwner == null ? Output.empty() : this.jobOwner;
+        return this.jobOwner == null ? Codegen.empty() : this.jobOwner;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> platformDisplayName;
 
     public Output<String> getPlatformDisplayName() {
-        return this.platformDisplayName == null ? Output.empty() : this.platformDisplayName;
+        return this.platformDisplayName == null ? Codegen.empty() : this.platformDisplayName;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> platformId;
 
     public Output<String> getPlatformId() {
-        return this.platformId == null ? Output.empty() : this.platformId;
+        return this.platformId == null ? Codegen.empty() : this.platformId;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
-        return this.profileName == null ? Output.empty() : this.profileName;
+        return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> profileVersion;
 
     public Output<String> getProfileVersion() {
-        return this.profileVersion == null ? Output.empty() : this.profileVersion;
+        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestedBy;
 
     public Output<String> getRequestedBy() {
-        return this.requestedBy == null ? Output.empty() : this.requestedBy;
+        return this.requestedBy == null ? Codegen.empty() : this.requestedBy;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
 
     public Output<List<SigningJobRevocationRecordGetArgs>> getRevocationRecords() {
-        return this.revocationRecords == null ? Output.empty() : this.revocationRecords;
+        return this.revocationRecords == null ? Codegen.empty() : this.revocationRecords;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> signatureExpiresAt;
 
     public Output<String> getSignatureExpiresAt() {
-        return this.signatureExpiresAt == null ? Output.empty() : this.signatureExpiresAt;
+        return this.signatureExpiresAt == null ? Codegen.empty() : this.signatureExpiresAt;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects;
 
     public Output<List<SigningJobSignedObjectGetArgs>> getSignedObjects() {
-        return this.signedObjects == null ? Output.empty() : this.signedObjects;
+        return this.signedObjects == null ? Codegen.empty() : this.signedObjects;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SigningJobSourceGetArgs> source;
 
     public Output<SigningJobSourceGetArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> statusReason;
 
     public Output<String> getStatusReason() {
-        return this.statusReason == null ? Output.empty() : this.statusReason;
+        return this.statusReason == null ? Codegen.empty() : this.statusReason;
     }
 
     public SigningJobState(
@@ -258,24 +259,24 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SigningJobState() {
-        this.completedAt = Output.empty();
-        this.createdAt = Output.empty();
-        this.destination = Output.empty();
-        this.ignoreSigningJobFailure = Output.empty();
-        this.jobId = Output.empty();
-        this.jobInvoker = Output.empty();
-        this.jobOwner = Output.empty();
-        this.platformDisplayName = Output.empty();
-        this.platformId = Output.empty();
-        this.profileName = Output.empty();
-        this.profileVersion = Output.empty();
-        this.requestedBy = Output.empty();
-        this.revocationRecords = Output.empty();
-        this.signatureExpiresAt = Output.empty();
-        this.signedObjects = Output.empty();
-        this.source = Output.empty();
-        this.status = Output.empty();
-        this.statusReason = Output.empty();
+        this.completedAt = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.ignoreSigningJobFailure = Codegen.empty();
+        this.jobId = Codegen.empty();
+        this.jobInvoker = Codegen.empty();
+        this.jobOwner = Codegen.empty();
+        this.platformDisplayName = Codegen.empty();
+        this.platformId = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.profileVersion = Codegen.empty();
+        this.requestedBy = Codegen.empty();
+        this.revocationRecords = Codegen.empty();
+        this.signatureExpiresAt = Codegen.empty();
+        this.signedObjects = Codegen.empty();
+        this.source = Codegen.empty();
+        this.status = Codegen.empty();
+        this.statusReason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -337,7 +338,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder completedAt(@Nullable String completedAt) {
-            this.completedAt = Output.ofNullable(completedAt);
+            this.completedAt = Codegen.ofNullable(completedAt);
             return this;
         }
         public Builder createdAt(@Nullable Output<String> createdAt) {
@@ -345,7 +346,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder destination(@Nullable Output<SigningJobDestinationGetArgs> destination) {
@@ -353,7 +354,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destination(@Nullable SigningJobDestinationGetArgs destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder ignoreSigningJobFailure(@Nullable Output<Boolean> ignoreSigningJobFailure) {
@@ -361,7 +362,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
-            this.ignoreSigningJobFailure = Output.ofNullable(ignoreSigningJobFailure);
+            this.ignoreSigningJobFailure = Codegen.ofNullable(ignoreSigningJobFailure);
             return this;
         }
         public Builder jobId(@Nullable Output<String> jobId) {
@@ -369,7 +370,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Output.ofNullable(jobId);
+            this.jobId = Codegen.ofNullable(jobId);
             return this;
         }
         public Builder jobInvoker(@Nullable Output<String> jobInvoker) {
@@ -377,7 +378,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobInvoker(@Nullable String jobInvoker) {
-            this.jobInvoker = Output.ofNullable(jobInvoker);
+            this.jobInvoker = Codegen.ofNullable(jobInvoker);
             return this;
         }
         public Builder jobOwner(@Nullable Output<String> jobOwner) {
@@ -385,7 +386,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobOwner(@Nullable String jobOwner) {
-            this.jobOwner = Output.ofNullable(jobOwner);
+            this.jobOwner = Codegen.ofNullable(jobOwner);
             return this;
         }
         public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
@@ -393,7 +394,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformDisplayName(@Nullable String platformDisplayName) {
-            this.platformDisplayName = Output.ofNullable(platformDisplayName);
+            this.platformDisplayName = Codegen.ofNullable(platformDisplayName);
             return this;
         }
         public Builder platformId(@Nullable Output<String> platformId) {
@@ -401,7 +402,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformId(@Nullable String platformId) {
-            this.platformId = Output.ofNullable(platformId);
+            this.platformId = Codegen.ofNullable(platformId);
             return this;
         }
         public Builder profileName(@Nullable Output<String> profileName) {
@@ -409,7 +410,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Output.ofNullable(profileName);
+            this.profileName = Codegen.ofNullable(profileName);
             return this;
         }
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
@@ -417,7 +418,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Output.ofNullable(profileVersion);
+            this.profileVersion = Codegen.ofNullable(profileVersion);
             return this;
         }
         public Builder requestedBy(@Nullable Output<String> requestedBy) {
@@ -425,7 +426,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestedBy(@Nullable String requestedBy) {
-            this.requestedBy = Output.ofNullable(requestedBy);
+            this.requestedBy = Codegen.ofNullable(requestedBy);
             return this;
         }
         public Builder revocationRecords(@Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords) {
@@ -433,7 +434,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revocationRecords(@Nullable List<SigningJobRevocationRecordGetArgs> revocationRecords) {
-            this.revocationRecords = Output.ofNullable(revocationRecords);
+            this.revocationRecords = Codegen.ofNullable(revocationRecords);
             return this;
         }
         public Builder revocationRecords(SigningJobRevocationRecordGetArgs... revocationRecords) {
@@ -444,7 +445,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signatureExpiresAt(@Nullable String signatureExpiresAt) {
-            this.signatureExpiresAt = Output.ofNullable(signatureExpiresAt);
+            this.signatureExpiresAt = Codegen.ofNullable(signatureExpiresAt);
             return this;
         }
         public Builder signedObjects(@Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects) {
@@ -452,7 +453,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signedObjects(@Nullable List<SigningJobSignedObjectGetArgs> signedObjects) {
-            this.signedObjects = Output.ofNullable(signedObjects);
+            this.signedObjects = Codegen.ofNullable(signedObjects);
             return this;
         }
         public Builder signedObjects(SigningJobSignedObjectGetArgs... signedObjects) {
@@ -463,7 +464,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable SigningJobSourceGetArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -471,7 +472,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder statusReason(@Nullable Output<String> statusReason) {
@@ -479,7 +480,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder statusReason(@Nullable String statusReason) {
-            this.statusReason = Output.ofNullable(statusReason);
+            this.statusReason = Codegen.ofNullable(statusReason);
             return this;
         }        public SigningJobState build() {
             return new SigningJobState(completedAt, createdAt, destination, ignoreSigningJobFailure, jobId, jobInvoker, jobOwner, platformDisplayName, platformId, profileName, profileVersion, requestedBy, revocationRecords, signatureExpiresAt, signedObjects, source, status, statusReason);

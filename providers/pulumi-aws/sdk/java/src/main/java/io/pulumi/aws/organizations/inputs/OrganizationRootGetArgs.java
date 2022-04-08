@@ -6,6 +6,7 @@ package io.pulumi.aws.organizations.inputs;
 import io.pulumi.aws.organizations.inputs.OrganizationRootPolicyTypeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
 
     public Output<List<OrganizationRootPolicyTypeGetArgs>> getPolicyTypes() {
-        return this.policyTypes == null ? Output.empty() : this.policyTypes;
+        return this.policyTypes == null ? Codegen.empty() : this.policyTypes;
     }
 
     public OrganizationRootGetArgs(
@@ -72,10 +73,10 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private OrganizationRootGetArgs() {
-        this.arn = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.policyTypes = Output.empty();
+        this.arn = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policyTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -117,7 +118,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -125,7 +126,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policyTypes(@Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
@@ -133,7 +134,7 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policyTypes(@Nullable List<OrganizationRootPolicyTypeGetArgs> policyTypes) {
-            this.policyTypes = Output.ofNullable(policyTypes);
+            this.policyTypes = Codegen.ofNullable(policyTypes);
             return this;
         }
         public Builder policyTypes(OrganizationRootPolicyTypeGetArgs... policyTypes) {

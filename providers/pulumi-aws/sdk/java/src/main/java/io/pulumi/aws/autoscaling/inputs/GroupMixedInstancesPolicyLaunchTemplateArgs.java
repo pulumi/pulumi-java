@@ -7,6 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateL
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends io.pulumi
       private final @Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides;
 
     public Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> getOverrides() {
-        return this.overrides == null ? Output.empty() : this.overrides;
+        return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     public GroupMixedInstancesPolicyLaunchTemplateArgs(
@@ -46,8 +47,8 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends io.pulumi
     }
 
     private GroupMixedInstancesPolicyLaunchTemplateArgs() {
-        this.launchTemplateSpecification = Output.empty();
-        this.overrides = Output.empty();
+        this.launchTemplateSpecification = Codegen.empty();
+        this.overrides = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends io.pulumi
             return this;
         }
         public Builder overrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs> overrides) {
-            this.overrides = Output.ofNullable(overrides);
+            this.overrides = Codegen.ofNullable(overrides);
             return this;
         }
         public Builder overrides(GroupMixedInstancesPolicyLaunchTemplateOverrideArgs... overrides) {

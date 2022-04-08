@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudhsmv2.inputs.HsmState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -149,7 +150,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hsm(String name, HsmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudhsmv2/hsm:Hsm", name, args == null ? HsmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudhsmv2/hsm:Hsm", name, args == null ? HsmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Hsm(String name, Output<String> id, @Nullable HsmState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

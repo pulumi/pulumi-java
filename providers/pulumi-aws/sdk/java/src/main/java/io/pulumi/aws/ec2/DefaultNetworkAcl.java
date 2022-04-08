@@ -11,6 +11,7 @@ import io.pulumi.aws.ec2.outputs.DefaultNetworkAclIngress;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -192,7 +193,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultNetworkAcl(String name, DefaultNetworkAclArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/defaultNetworkAcl:DefaultNetworkAcl", name, args == null ? DefaultNetworkAclArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/defaultNetworkAcl:DefaultNetworkAcl", name, args == null ? DefaultNetworkAclArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DefaultNetworkAcl(String name, Output<String> id, @Nullable DefaultNetworkAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

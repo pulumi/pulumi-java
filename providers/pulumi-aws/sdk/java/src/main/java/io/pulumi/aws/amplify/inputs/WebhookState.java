@@ -5,6 +5,7 @@ package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
-        return this.branchName == null ? Output.empty() : this.branchName;
+        return this.branchName == null ? Codegen.empty() : this.branchName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public WebhookState(
@@ -83,11 +84,11 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookState() {
-        this.appId = Output.empty();
-        this.arn = Output.empty();
-        this.branchName = Output.empty();
-        this.description = Output.empty();
-        this.url = Output.empty();
+        this.appId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.branchName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -131,7 +132,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder branchName(@Nullable Output<String> branchName) {
@@ -139,7 +140,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = Output.ofNullable(branchName);
+            this.branchName = Codegen.ofNullable(branchName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -147,7 +148,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -155,7 +156,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public WebhookState build() {
             return new WebhookState(appId, arn, branchName, description, url);

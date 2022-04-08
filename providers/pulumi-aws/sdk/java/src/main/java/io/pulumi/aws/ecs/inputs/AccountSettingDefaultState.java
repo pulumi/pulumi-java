@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +23,14 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="principalArn")
       private final @Nullable Output<String> principalArn;
 
     public Output<String> getPrincipalArn() {
-        return this.principalArn == null ? Output.empty() : this.principalArn;
+        return this.principalArn == null ? Codegen.empty() : this.principalArn;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public AccountSettingDefaultState(
@@ -53,9 +54,9 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
     }
 
     private AccountSettingDefaultState() {
-        this.name = Output.empty();
-        this.principalArn = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.principalArn = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder principalArn(@Nullable Output<String> principalArn) {
@@ -95,7 +96,7 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Output.ofNullable(principalArn);
+            this.principalArn = Codegen.ofNullable(principalArn);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -103,7 +104,7 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public AccountSettingDefaultState build() {
             return new AccountSettingDefaultState(name, principalArn, value);

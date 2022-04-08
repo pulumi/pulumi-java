@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class RouteSpecHttpRouteRetryPolicyArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> httpRetryEvents;
 
     public Output<List<String>> getHttpRetryEvents() {
-        return this.httpRetryEvents == null ? Output.empty() : this.httpRetryEvents;
+        return this.httpRetryEvents == null ? Codegen.empty() : this.httpRetryEvents;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RouteSpecHttpRouteRetryPolicyArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> tcpRetryEvents;
 
     public Output<List<String>> getTcpRetryEvents() {
-        return this.tcpRetryEvents == null ? Output.empty() : this.tcpRetryEvents;
+        return this.tcpRetryEvents == null ? Codegen.empty() : this.tcpRetryEvents;
     }
 
     public RouteSpecHttpRouteRetryPolicyArgs(
@@ -75,10 +76,10 @@ public final class RouteSpecHttpRouteRetryPolicyArgs extends io.pulumi.resources
     }
 
     private RouteSpecHttpRouteRetryPolicyArgs() {
-        this.httpRetryEvents = Output.empty();
-        this.maxRetries = Output.empty();
-        this.perRetryTimeout = Output.empty();
-        this.tcpRetryEvents = Output.empty();
+        this.httpRetryEvents = Codegen.empty();
+        this.maxRetries = Codegen.empty();
+        this.perRetryTimeout = Codegen.empty();
+        this.tcpRetryEvents = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class RouteSpecHttpRouteRetryPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder httpRetryEvents(@Nullable List<String> httpRetryEvents) {
-            this.httpRetryEvents = Output.ofNullable(httpRetryEvents);
+            this.httpRetryEvents = Codegen.ofNullable(httpRetryEvents);
             return this;
         }
         public Builder httpRetryEvents(String... httpRetryEvents) {
@@ -139,7 +140,7 @@ public final class RouteSpecHttpRouteRetryPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder tcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
-            this.tcpRetryEvents = Output.ofNullable(tcpRetryEvents);
+            this.tcpRetryEvents = Codegen.ofNullable(tcpRetryEvents);
             return this;
         }
         public Builder tcpRetryEvents(String... tcpRetryEvents) {

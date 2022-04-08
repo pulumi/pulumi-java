@@ -10,6 +10,7 @@ import io.pulumi.aws.iam.outputs.RoleInlinePolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -270,7 +271,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Role(String name, RoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/role:Role", name, args == null ? RoleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/role:Role", name, args == null ? RoleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Role(String name, Output<String> id, @Nullable RoleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyNamePrefix;
 
     public Output<String> getKeyNamePrefix() {
-        return this.keyNamePrefix == null ? Output.empty() : this.keyNamePrefix;
+        return this.keyNamePrefix == null ? Codegen.empty() : this.keyNamePrefix;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public KeyPairArgs(
@@ -71,10 +72,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPairArgs() {
-        this.keyName = Output.empty();
-        this.keyNamePrefix = Output.empty();
-        this.publicKey = Output.empty();
-        this.tags = Output.empty();
+        this.keyName = Codegen.empty();
+        this.keyNamePrefix = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
@@ -116,7 +117,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
-            this.keyNamePrefix = Output.ofNullable(keyNamePrefix);
+            this.keyNamePrefix = Codegen.ofNullable(keyNamePrefix);
             return this;
         }
         public Builder publicKey(Output<String> publicKey) {
@@ -132,7 +133,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public KeyPairArgs build() {
             return new KeyPairArgs(keyName, keyNamePrefix, publicKey, tags);

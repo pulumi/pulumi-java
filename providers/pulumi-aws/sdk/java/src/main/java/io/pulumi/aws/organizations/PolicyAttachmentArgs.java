@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolicyAttachmentArgs() {
-        this.policyId = Output.empty();
-        this.targetId = Output.empty();
+        this.policyId = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {

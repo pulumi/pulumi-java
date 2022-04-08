@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
       private final @Nullable Output<Integer> cents;
 
     public Output<Integer> getCents() {
-        return this.cents == null ? Output.empty() : this.cents;
+        return this.cents == null ? Codegen.empty() : this.cents;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
       private final @Nullable Output<Integer> dollars;
 
     public Output<Integer> getDollars() {
-        return this.dollars == null ? Output.empty() : this.dollars;
+        return this.dollars == null ? Codegen.empty() : this.dollars;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
       private final @Nullable Output<Integer> tenthFractionsOfACent;
 
     public Output<Integer> getTenthFractionsOfACent() {
-        return this.tenthFractionsOfACent == null ? Output.empty() : this.tenthFractionsOfACent;
+        return this.tenthFractionsOfACent == null ? Codegen.empty() : this.tenthFractionsOfACent;
     }
 
     public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs(
@@ -57,9 +58,9 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     }
 
     private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs() {
-        this.cents = Output.empty();
-        this.dollars = Output.empty();
-        this.tenthFractionsOfACent = Output.empty();
+        this.cents = Codegen.empty();
+        this.dollars = Codegen.empty();
+        this.tenthFractionsOfACent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
             return this;
         }
         public Builder cents(@Nullable Integer cents) {
-            this.cents = Output.ofNullable(cents);
+            this.cents = Codegen.ofNullable(cents);
             return this;
         }
         public Builder dollars(@Nullable Output<Integer> dollars) {
@@ -99,7 +100,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
             return this;
         }
         public Builder dollars(@Nullable Integer dollars) {
-            this.dollars = Output.ofNullable(dollars);
+            this.dollars = Codegen.ofNullable(dollars);
             return this;
         }
         public Builder tenthFractionsOfACent(@Nullable Output<Integer> tenthFractionsOfACent) {
@@ -107,7 +108,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
             return this;
         }
         public Builder tenthFractionsOfACent(@Nullable Integer tenthFractionsOfACent) {
-            this.tenthFractionsOfACent = Output.ofNullable(tenthFractionsOfACent);
+            this.tenthFractionsOfACent = Codegen.ofNullable(tenthFractionsOfACent);
             return this;
         }        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs build() {
             return new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs(cents, dollars, tenthFractionsOfACent);

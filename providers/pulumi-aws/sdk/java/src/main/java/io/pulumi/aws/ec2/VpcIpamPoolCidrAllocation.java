@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcIpamPoolCidrAllocationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -171,7 +172,7 @@ public class VpcIpamPoolCidrAllocation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpamPoolCidrAllocation(String name, VpcIpamPoolCidrAllocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpamPoolCidrAllocation:VpcIpamPoolCidrAllocation", name, args == null ? VpcIpamPoolCidrAllocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcIpamPoolCidrAllocation:VpcIpamPoolCidrAllocation", name, args == null ? VpcIpamPoolCidrAllocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcIpamPoolCidrAllocation(String name, Output<String> id, @Nullable VpcIpamPoolCidrAllocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

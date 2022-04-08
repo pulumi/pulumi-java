@@ -11,6 +11,7 @@ import io.pulumi.aws.s3.outputs.BucketIntelligentTieringConfigurationTiering;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -124,7 +125,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketIntelligentTieringConfiguration(String name, BucketIntelligentTieringConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/bucketIntelligentTieringConfiguration:BucketIntelligentTieringConfiguration", name, args == null ? BucketIntelligentTieringConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3/bucketIntelligentTieringConfiguration:BucketIntelligentTieringConfiguration", name, args == null ? BucketIntelligentTieringConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketIntelligentTieringConfiguration(String name, Output<String> id, @Nullable BucketIntelligentTieringConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

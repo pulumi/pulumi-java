@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TrafficMirrorFilterRuleSourcePortRangeArgs extends io.pulumi.
       private final @Nullable Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
-        return this.fromPort == null ? Output.empty() : this.fromPort;
+        return this.fromPort == null ? Codegen.empty() : this.fromPort;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class TrafficMirrorFilterRuleSourcePortRangeArgs extends io.pulumi.
       private final @Nullable Output<Integer> toPort;
 
     public Output<Integer> getToPort() {
-        return this.toPort == null ? Output.empty() : this.toPort;
+        return this.toPort == null ? Codegen.empty() : this.toPort;
     }
 
     public TrafficMirrorFilterRuleSourcePortRangeArgs(
@@ -44,8 +45,8 @@ public final class TrafficMirrorFilterRuleSourcePortRangeArgs extends io.pulumi.
     }
 
     private TrafficMirrorFilterRuleSourcePortRangeArgs() {
-        this.fromPort = Output.empty();
-        this.toPort = Output.empty();
+        this.fromPort = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class TrafficMirrorFilterRuleSourcePortRangeArgs extends io.pulumi.
             return this;
         }
         public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Output.ofNullable(fromPort);
+            this.fromPort = Codegen.ofNullable(fromPort);
             return this;
         }
         public Builder toPort(@Nullable Output<Integer> toPort) {
@@ -83,7 +84,7 @@ public final class TrafficMirrorFilterRuleSourcePortRangeArgs extends io.pulumi.
             return this;
         }
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Output.ofNullable(toPort);
+            this.toPort = Codegen.ofNullable(toPort);
             return this;
         }        public TrafficMirrorFilterRuleSourcePortRangeArgs build() {
             return new TrafficMirrorFilterRuleSourcePortRangeArgs(fromPort, toPort);

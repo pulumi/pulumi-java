@@ -8,6 +8,7 @@ import io.pulumi.aws.pinpoint.inputs.AppLimitsArgs;
 import io.pulumi.aws.pinpoint.inputs.AppQuietTimeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppCampaignHookArgs> campaignHook;
 
     public Output<AppCampaignHookArgs> getCampaignHook() {
-        return this.campaignHook == null ? Output.empty() : this.campaignHook;
+        return this.campaignHook == null ? Codegen.empty() : this.campaignHook;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppLimitsArgs> limits;
 
     public Output<AppLimitsArgs> getLimits() {
-        return this.limits == null ? Output.empty() : this.limits;
+        return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppQuietTimeArgs> quietTime;
 
     public Output<AppQuietTimeArgs> getQuietTime() {
-        return this.quietTime == null ? Output.empty() : this.quietTime;
+        return this.quietTime == null ? Codegen.empty() : this.quietTime;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AppArgs(
@@ -100,12 +101,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.campaignHook = Output.empty();
-        this.limits = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.quietTime = Output.empty();
-        this.tags = Output.empty();
+        this.campaignHook = Codegen.empty();
+        this.limits = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.quietTime = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder campaignHook(@Nullable AppCampaignHookArgs campaignHook) {
-            this.campaignHook = Output.ofNullable(campaignHook);
+            this.campaignHook = Codegen.ofNullable(campaignHook);
             return this;
         }
         public Builder limits(@Nullable Output<AppLimitsArgs> limits) {
@@ -151,7 +152,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder limits(@Nullable AppLimitsArgs limits) {
-            this.limits = Output.ofNullable(limits);
+            this.limits = Codegen.ofNullable(limits);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -159,7 +160,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -167,7 +168,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder quietTime(@Nullable Output<AppQuietTimeArgs> quietTime) {
@@ -175,7 +176,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quietTime(@Nullable AppQuietTimeArgs quietTime) {
-            this.quietTime = Output.ofNullable(quietTime);
+            this.quietTime = Codegen.ofNullable(quietTime);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -183,7 +184,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AppArgs build() {
             return new AppArgs(campaignHook, limits, name, namePrefix, quietTime, tags);

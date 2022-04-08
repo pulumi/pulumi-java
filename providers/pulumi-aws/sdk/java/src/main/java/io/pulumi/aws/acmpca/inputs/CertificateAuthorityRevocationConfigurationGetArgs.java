@@ -6,6 +6,7 @@ package io.pulumi.aws.acmpca.inputs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class CertificateAuthorityRevocationConfigurationGetArgs extends io
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> crlConfiguration;
 
     public Output<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> getCrlConfiguration() {
-        return this.crlConfiguration == null ? Output.empty() : this.crlConfiguration;
+        return this.crlConfiguration == null ? Codegen.empty() : this.crlConfiguration;
     }
 
     public CertificateAuthorityRevocationConfigurationGetArgs(@Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> crlConfiguration) {
@@ -30,7 +31,7 @@ public final class CertificateAuthorityRevocationConfigurationGetArgs extends io
     }
 
     private CertificateAuthorityRevocationConfigurationGetArgs() {
-        this.crlConfiguration = Output.empty();
+        this.crlConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CertificateAuthorityRevocationConfigurationGetArgs extends io
             return this;
         }
         public Builder crlConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs crlConfiguration) {
-            this.crlConfiguration = Output.ofNullable(crlConfiguration);
+            this.crlConfiguration = Codegen.ofNullable(crlConfiguration);
             return this;
         }        public CertificateAuthorityRevocationConfigurationGetArgs build() {
             return new CertificateAuthorityRevocationConfigurationGetArgs(crlConfiguration);

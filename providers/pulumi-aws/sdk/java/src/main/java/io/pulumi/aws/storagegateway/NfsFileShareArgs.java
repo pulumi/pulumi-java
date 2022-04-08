@@ -7,6 +7,7 @@ import io.pulumi.aws.storagegateway.inputs.NfsFileShareCacheAttributesArgs;
 import io.pulumi.aws.storagegateway.inputs.NfsFileShareNfsFileShareDefaultsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> auditDestinationArn;
 
     public Output<String> getAuditDestinationArn() {
-        return this.auditDestinationArn == null ? Output.empty() : this.auditDestinationArn;
+        return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes;
 
     public Output<NfsFileShareCacheAttributesArgs> getCacheAttributes() {
-        return this.cacheAttributes == null ? Output.empty() : this.cacheAttributes;
+        return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultStorageClass;
 
     public Output<String> getDefaultStorageClass() {
-        return this.defaultStorageClass == null ? Output.empty() : this.defaultStorageClass;
+        return this.defaultStorageClass == null ? Codegen.empty() : this.defaultStorageClass;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileShareName;
 
     public Output<String> getFileShareName() {
-        return this.fileShareName == null ? Output.empty() : this.fileShareName;
+        return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> guessMimeTypeEnabled;
 
     public Output<Boolean> getGuessMimeTypeEnabled() {
-        return this.guessMimeTypeEnabled == null ? Output.empty() : this.guessMimeTypeEnabled;
+        return this.guessMimeTypeEnabled == null ? Codegen.empty() : this.guessMimeTypeEnabled;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> kmsEncrypted;
 
     public Output<Boolean> getKmsEncrypted() {
-        return this.kmsEncrypted == null ? Output.empty() : this.kmsEncrypted;
+        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
 
     public Output<NfsFileShareNfsFileShareDefaultsArgs> getNfsFileShareDefaults() {
-        return this.nfsFileShareDefaults == null ? Output.empty() : this.nfsFileShareDefaults;
+        return this.nfsFileShareDefaults == null ? Codegen.empty() : this.nfsFileShareDefaults;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notificationPolicy;
 
     public Output<String> getNotificationPolicy() {
-        return this.notificationPolicy == null ? Output.empty() : this.notificationPolicy;
+        return this.notificationPolicy == null ? Codegen.empty() : this.notificationPolicy;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> objectAcl;
 
     public Output<String> getObjectAcl() {
-        return this.objectAcl == null ? Output.empty() : this.objectAcl;
+        return this.objectAcl == null ? Codegen.empty() : this.objectAcl;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requesterPays;
 
     public Output<Boolean> getRequesterPays() {
-        return this.requesterPays == null ? Output.empty() : this.requesterPays;
+        return this.requesterPays == null ? Codegen.empty() : this.requesterPays;
     }
 
     /**
@@ -203,7 +204,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> squash;
 
     public Output<String> getSquash() {
-        return this.squash == null ? Output.empty() : this.squash;
+        return this.squash == null ? Codegen.empty() : this.squash;
     }
 
     /**
@@ -214,7 +215,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NfsFileShareArgs(
@@ -257,24 +258,24 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NfsFileShareArgs() {
-        this.auditDestinationArn = Output.empty();
-        this.cacheAttributes = Output.empty();
-        this.clientLists = Output.empty();
-        this.defaultStorageClass = Output.empty();
-        this.fileShareName = Output.empty();
-        this.gatewayArn = Output.empty();
-        this.guessMimeTypeEnabled = Output.empty();
-        this.kmsEncrypted = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.locationArn = Output.empty();
-        this.nfsFileShareDefaults = Output.empty();
-        this.notificationPolicy = Output.empty();
-        this.objectAcl = Output.empty();
-        this.readOnly = Output.empty();
-        this.requesterPays = Output.empty();
-        this.roleArn = Output.empty();
-        this.squash = Output.empty();
-        this.tags = Output.empty();
+        this.auditDestinationArn = Codegen.empty();
+        this.cacheAttributes = Codegen.empty();
+        this.clientLists = Codegen.empty();
+        this.defaultStorageClass = Codegen.empty();
+        this.fileShareName = Codegen.empty();
+        this.gatewayArn = Codegen.empty();
+        this.guessMimeTypeEnabled = Codegen.empty();
+        this.kmsEncrypted = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.locationArn = Codegen.empty();
+        this.nfsFileShareDefaults = Codegen.empty();
+        this.notificationPolicy = Codegen.empty();
+        this.objectAcl = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.requesterPays = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.squash = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -336,7 +337,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Output.ofNullable(auditDestinationArn);
+            this.auditDestinationArn = Codegen.ofNullable(auditDestinationArn);
             return this;
         }
         public Builder cacheAttributes(@Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes) {
@@ -344,7 +345,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheAttributes(@Nullable NfsFileShareCacheAttributesArgs cacheAttributes) {
-            this.cacheAttributes = Output.ofNullable(cacheAttributes);
+            this.cacheAttributes = Codegen.ofNullable(cacheAttributes);
             return this;
         }
         public Builder clientLists(Output<List<String>> clientLists) {
@@ -363,7 +364,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
-            this.defaultStorageClass = Output.ofNullable(defaultStorageClass);
+            this.defaultStorageClass = Codegen.ofNullable(defaultStorageClass);
             return this;
         }
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
@@ -371,7 +372,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Output.ofNullable(fileShareName);
+            this.fileShareName = Codegen.ofNullable(fileShareName);
             return this;
         }
         public Builder gatewayArn(Output<String> gatewayArn) {
@@ -387,7 +388,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
-            this.guessMimeTypeEnabled = Output.ofNullable(guessMimeTypeEnabled);
+            this.guessMimeTypeEnabled = Codegen.ofNullable(guessMimeTypeEnabled);
             return this;
         }
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
@@ -395,7 +396,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
+            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -403,7 +404,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder locationArn(Output<String> locationArn) {
@@ -419,7 +420,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nfsFileShareDefaults(@Nullable NfsFileShareNfsFileShareDefaultsArgs nfsFileShareDefaults) {
-            this.nfsFileShareDefaults = Output.ofNullable(nfsFileShareDefaults);
+            this.nfsFileShareDefaults = Codegen.ofNullable(nfsFileShareDefaults);
             return this;
         }
         public Builder notificationPolicy(@Nullable Output<String> notificationPolicy) {
@@ -427,7 +428,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationPolicy(@Nullable String notificationPolicy) {
-            this.notificationPolicy = Output.ofNullable(notificationPolicy);
+            this.notificationPolicy = Codegen.ofNullable(notificationPolicy);
             return this;
         }
         public Builder objectAcl(@Nullable Output<String> objectAcl) {
@@ -435,7 +436,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectAcl(@Nullable String objectAcl) {
-            this.objectAcl = Output.ofNullable(objectAcl);
+            this.objectAcl = Codegen.ofNullable(objectAcl);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -443,7 +444,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
@@ -451,7 +452,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Output.ofNullable(requesterPays);
+            this.requesterPays = Codegen.ofNullable(requesterPays);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -467,7 +468,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder squash(@Nullable String squash) {
-            this.squash = Output.ofNullable(squash);
+            this.squash = Codegen.ofNullable(squash);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -475,7 +476,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NfsFileShareArgs build() {
             return new NfsFileShareArgs(auditDestinationArn, cacheAttributes, clientLists, defaultStorageClass, fileShareName, gatewayArn, guessMimeTypeEnabled, kmsEncrypted, kmsKeyArn, locationArn, nfsFileShareDefaults, notificationPolicy, objectAcl, readOnly, requesterPays, roleArn, squash, tags);

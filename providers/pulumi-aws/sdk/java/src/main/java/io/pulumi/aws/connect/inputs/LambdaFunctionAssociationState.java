@@ -5,6 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
       private final @Nullable Output<String> functionArn;
 
     public Output<String> getFunctionArn() {
-        return this.functionArn == null ? Output.empty() : this.functionArn;
+        return this.functionArn == null ? Codegen.empty() : this.functionArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     public LambdaFunctionAssociationState(
@@ -44,8 +45,8 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
     }
 
     private LambdaFunctionAssociationState() {
-        this.functionArn = Output.empty();
-        this.instanceId = Output.empty();
+        this.functionArn = Codegen.empty();
+        this.instanceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder functionArn(@Nullable String functionArn) {
-            this.functionArn = Output.ofNullable(functionArn);
+            this.functionArn = Codegen.ofNullable(functionArn);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -83,7 +84,7 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }        public LambdaFunctionAssociationState build() {
             return new LambdaFunctionAssociationState(functionArn, instanceId);

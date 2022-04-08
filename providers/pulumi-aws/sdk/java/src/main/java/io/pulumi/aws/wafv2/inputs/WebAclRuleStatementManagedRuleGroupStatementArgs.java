@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementEx
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
       private final @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules;
 
     public Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> getExcludedRules() {
-        return this.excludedRules == null ? Output.empty() : this.excludedRules;
+        return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement;
 
     public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> getScopeDownStatement() {
-        return this.scopeDownStatement == null ? Output.empty() : this.scopeDownStatement;
+        return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
     }
 
     private WebAclRuleStatementManagedRuleGroupStatementArgs() {
-        this.excludedRules = Output.empty();
-        this.name = Output.empty();
-        this.scopeDownStatement = Output.empty();
-        this.vendorName = Output.empty();
+        this.excludedRules = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scopeDownStatement = Codegen.empty();
+        this.vendorName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
             return this;
         }
         public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs> excludedRules) {
-            this.excludedRules = Output.ofNullable(excludedRules);
+            this.excludedRules = Codegen.ofNullable(excludedRules);
             return this;
         }
         public Builder excludedRules(WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs... excludedRules) {
@@ -129,7 +130,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
             return this;
         }
         public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs scopeDownStatement) {
-            this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
+            this.scopeDownStatement = Codegen.ofNullable(scopeDownStatement);
             return this;
         }
         public Builder vendorName(Output<String> vendorName) {

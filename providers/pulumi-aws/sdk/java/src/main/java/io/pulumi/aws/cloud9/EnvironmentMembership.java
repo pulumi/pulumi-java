@@ -9,6 +9,7 @@ import io.pulumi.aws.cloud9.inputs.EnvironmentMembershipState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -107,7 +108,7 @@ public class EnvironmentMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvironmentMembership(String name, EnvironmentMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloud9/environmentMembership:EnvironmentMembership", name, args == null ? EnvironmentMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloud9/environmentMembership:EnvironmentMembership", name, args == null ? EnvironmentMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvironmentMembership(String name, Output<String> id, @Nullable EnvironmentMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

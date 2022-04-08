@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsGetArgs extends 
     }
 
     private UserProfileUserSettingsTensorBoardAppSettingsGetArgs() {
-        this.defaultResourceSpec = Output.empty();
+        this.defaultResourceSpec = Codegen.empty();
     }
 
     public static Builder builder() {

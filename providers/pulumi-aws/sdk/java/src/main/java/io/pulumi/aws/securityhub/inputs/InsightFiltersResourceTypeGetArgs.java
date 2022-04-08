@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class InsightFiltersResourceTypeGetArgs extends io.pulumi.resources
     }
 
     private InsightFiltersResourceTypeGetArgs() {
-        this.comparison = Output.empty();
-        this.value = Output.empty();
+        this.comparison = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

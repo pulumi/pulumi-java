@@ -6,6 +6,7 @@ package io.pulumi.aws.transfer.inputs;
 import io.pulumi.aws.transfer.inputs.ServerEndpointDetailsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
-        return this.directoryId == null ? Output.empty() : this.directoryId;
+        return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails;
 
     public Output<ServerEndpointDetailsGetArgs> getEndpointDetails() {
-        return this.endpointDetails == null ? Output.empty() : this.endpointDetails;
+        return this.endpointDetails == null ? Codegen.empty() : this.endpointDetails;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endpointType;
 
     public Output<String> getEndpointType() {
-        return this.endpointType == null ? Output.empty() : this.endpointType;
+        return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> function;
 
     public Output<String> getFunction() {
-        return this.function == null ? Output.empty() : this.function;
+        return this.function == null ? Codegen.empty() : this.function;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hostKey;
 
     public Output<String> getHostKey() {
-        return this.hostKey == null ? Output.empty() : this.hostKey;
+        return this.hostKey == null ? Codegen.empty() : this.hostKey;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hostKeyFingerprint;
 
     public Output<String> getHostKeyFingerprint() {
-        return this.hostKeyFingerprint == null ? Output.empty() : this.hostKeyFingerprint;
+        return this.hostKeyFingerprint == null ? Codegen.empty() : this.hostKeyFingerprint;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> identityProviderType;
 
     public Output<String> getIdentityProviderType() {
-        return this.identityProviderType == null ? Output.empty() : this.identityProviderType;
+        return this.identityProviderType == null ? Codegen.empty() : this.identityProviderType;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> invocationRole;
 
     public Output<String> getInvocationRole() {
-        return this.invocationRole == null ? Output.empty() : this.invocationRole;
+        return this.invocationRole == null ? Codegen.empty() : this.invocationRole;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> loggingRole;
 
     public Output<String> getLoggingRole() {
-        return this.loggingRole == null ? Output.empty() : this.loggingRole;
+        return this.loggingRole == null ? Codegen.empty() : this.loggingRole;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> protocols;
 
     public Output<List<String>> getProtocols() {
-        return this.protocols == null ? Output.empty() : this.protocols;
+        return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
     /**
@@ -194,7 +195,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> securityPolicyName;
 
     public Output<String> getSecurityPolicyName() {
-        return this.securityPolicyName == null ? Output.empty() : this.securityPolicyName;
+        return this.securityPolicyName == null ? Codegen.empty() : this.securityPolicyName;
     }
 
     /**
@@ -205,7 +206,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -216,7 +217,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -227,7 +228,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public ServerState(
@@ -272,25 +273,25 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerState() {
-        this.arn = Output.empty();
-        this.certificate = Output.empty();
-        this.directoryId = Output.empty();
-        this.domain = Output.empty();
-        this.endpoint = Output.empty();
-        this.endpointDetails = Output.empty();
-        this.endpointType = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.function = Output.empty();
-        this.hostKey = Output.empty();
-        this.hostKeyFingerprint = Output.empty();
-        this.identityProviderType = Output.empty();
-        this.invocationRole = Output.empty();
-        this.loggingRole = Output.empty();
-        this.protocols = Output.empty();
-        this.securityPolicyName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.url = Output.empty();
+        this.arn = Codegen.empty();
+        this.certificate = Codegen.empty();
+        this.directoryId = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.endpointDetails = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.function = Codegen.empty();
+        this.hostKey = Codegen.empty();
+        this.hostKeyFingerprint = Codegen.empty();
+        this.identityProviderType = Codegen.empty();
+        this.invocationRole = Codegen.empty();
+        this.loggingRole = Codegen.empty();
+        this.protocols = Codegen.empty();
+        this.securityPolicyName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -354,7 +355,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder certificate(@Nullable Output<String> certificate) {
@@ -362,7 +363,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder directoryId(@Nullable Output<String> directoryId) {
@@ -370,7 +371,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Output.ofNullable(directoryId);
+            this.directoryId = Codegen.ofNullable(directoryId);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -378,7 +379,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -386,7 +387,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder endpointDetails(@Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails) {
@@ -394,7 +395,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointDetails(@Nullable ServerEndpointDetailsGetArgs endpointDetails) {
-            this.endpointDetails = Output.ofNullable(endpointDetails);
+            this.endpointDetails = Codegen.ofNullable(endpointDetails);
             return this;
         }
         public Builder endpointType(@Nullable Output<String> endpointType) {
@@ -402,7 +403,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = Output.ofNullable(endpointType);
+            this.endpointType = Codegen.ofNullable(endpointType);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -410,7 +411,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder function(@Nullable Output<String> function) {
@@ -418,7 +419,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder function(@Nullable String function) {
-            this.function = Output.ofNullable(function);
+            this.function = Codegen.ofNullable(function);
             return this;
         }
         public Builder hostKey(@Nullable Output<String> hostKey) {
@@ -426,7 +427,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostKey(@Nullable String hostKey) {
-            this.hostKey = Output.ofNullable(hostKey);
+            this.hostKey = Codegen.ofNullable(hostKey);
             return this;
         }
         public Builder hostKeyFingerprint(@Nullable Output<String> hostKeyFingerprint) {
@@ -434,7 +435,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostKeyFingerprint(@Nullable String hostKeyFingerprint) {
-            this.hostKeyFingerprint = Output.ofNullable(hostKeyFingerprint);
+            this.hostKeyFingerprint = Codegen.ofNullable(hostKeyFingerprint);
             return this;
         }
         public Builder identityProviderType(@Nullable Output<String> identityProviderType) {
@@ -442,7 +443,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identityProviderType(@Nullable String identityProviderType) {
-            this.identityProviderType = Output.ofNullable(identityProviderType);
+            this.identityProviderType = Codegen.ofNullable(identityProviderType);
             return this;
         }
         public Builder invocationRole(@Nullable Output<String> invocationRole) {
@@ -450,7 +451,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invocationRole(@Nullable String invocationRole) {
-            this.invocationRole = Output.ofNullable(invocationRole);
+            this.invocationRole = Codegen.ofNullable(invocationRole);
             return this;
         }
         public Builder loggingRole(@Nullable Output<String> loggingRole) {
@@ -458,7 +459,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingRole(@Nullable String loggingRole) {
-            this.loggingRole = Output.ofNullable(loggingRole);
+            this.loggingRole = Codegen.ofNullable(loggingRole);
             return this;
         }
         public Builder protocols(@Nullable Output<List<String>> protocols) {
@@ -466,7 +467,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocols(@Nullable List<String> protocols) {
-            this.protocols = Output.ofNullable(protocols);
+            this.protocols = Codegen.ofNullable(protocols);
             return this;
         }
         public Builder protocols(String... protocols) {
@@ -477,7 +478,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityPolicyName(@Nullable String securityPolicyName) {
-            this.securityPolicyName = Output.ofNullable(securityPolicyName);
+            this.securityPolicyName = Codegen.ofNullable(securityPolicyName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -485,7 +486,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -493,7 +494,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -501,7 +502,7 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public ServerState build() {
             return new ServerState(arn, certificate, directoryId, domain, endpoint, endpointDetails, endpointType, forceDestroy, function, hostKey, hostKeyFingerprint, identityProviderType, invocationRole, loggingRole, protocols, securityPolicyName, tags, tagsAll, url);

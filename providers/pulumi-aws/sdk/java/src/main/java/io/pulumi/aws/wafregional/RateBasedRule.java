@@ -10,6 +10,7 @@ import io.pulumi.aws.wafregional.outputs.RateBasedRulePredicate;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -167,7 +168,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RateBasedRule(String name, RateBasedRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/rateBasedRule:RateBasedRule", name, args == null ? RateBasedRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafregional/rateBasedRule:RateBasedRule", name, args == null ? RateBasedRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RateBasedRule(String name, Output<String> id, @Nullable RateBasedRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

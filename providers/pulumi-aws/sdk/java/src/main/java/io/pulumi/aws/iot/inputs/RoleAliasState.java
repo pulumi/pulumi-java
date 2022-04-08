@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> credentialDuration;
 
     public Output<Integer> getCredentialDuration() {
-        return this.credentialDuration == null ? Output.empty() : this.credentialDuration;
+        return this.credentialDuration == null ? Codegen.empty() : this.credentialDuration;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public RoleAliasState(
@@ -71,10 +72,10 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleAliasState() {
-        this.alias = Output.empty();
-        this.arn = Output.empty();
-        this.credentialDuration = Output.empty();
-        this.roleArn = Output.empty();
+        this.alias = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.credentialDuration = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -116,7 +117,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder credentialDuration(@Nullable Output<Integer> credentialDuration) {
@@ -124,7 +125,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentialDuration(@Nullable Integer credentialDuration) {
-            this.credentialDuration = Output.ofNullable(credentialDuration);
+            this.credentialDuration = Codegen.ofNullable(credentialDuration);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -132,7 +133,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public RoleAliasState build() {
             return new RoleAliasState(alias, arn, credentialDuration, roleArn);

@@ -5,6 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class SelectionConditionStringNotEqualGetArgs extends io.pulumi.res
     }
 
     private SelectionConditionStringNotEqualGetArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

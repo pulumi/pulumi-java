@@ -10,6 +10,7 @@ import io.pulumi.aws.appmesh.outputs.MeshSpec;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -179,7 +180,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Mesh(String name, @Nullable MeshArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appmesh/mesh:Mesh", name, args == null ? MeshArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appmesh/mesh:Mesh", name, args == null ? MeshArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Mesh(String name, Output<String> id, @Nullable MeshState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

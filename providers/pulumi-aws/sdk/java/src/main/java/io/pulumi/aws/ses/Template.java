@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.TemplateState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -121,7 +122,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Template(String name, @Nullable TemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/template:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/template:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Template(String name, Output<String> id, @Nullable TemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

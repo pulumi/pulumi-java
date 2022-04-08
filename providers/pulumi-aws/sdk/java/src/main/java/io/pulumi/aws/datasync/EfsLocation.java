@@ -10,6 +10,7 @@ import io.pulumi.aws.datasync.outputs.EfsLocationEc2Config;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -145,7 +146,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EfsLocation(String name, EfsLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/efsLocation:EfsLocation", name, args == null ? EfsLocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:datasync/efsLocation:EfsLocation", name, args == null ? EfsLocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EfsLocation(String name, Output<String> id, @Nullable EfsLocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticache;
 import io.pulumi.aws.elasticache.inputs.ParameterGroupParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ParameterGroupParameterArgs>> parameters;
 
     public Output<List<ParameterGroupParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ParameterGroupArgs(
@@ -78,7 +79,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> name,
         @Nullable Output<List<ParameterGroupParameterArgs>> parameters,
         @Nullable Output<Map<String,String>> tags) {
-        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
         this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
         this.name = name;
         this.parameters = parameters;
@@ -86,11 +87,11 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParameterGroupArgs() {
-        this.description = Output.empty();
-        this.family = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.family = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder family(Output<String> family) {
@@ -142,7 +143,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ParameterGroupParameterArgs>> parameters) {
@@ -150,7 +151,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<ParameterGroupParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ParameterGroupParameterArgs... parameters) {
@@ -161,7 +162,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ParameterGroupArgs build() {
             return new ParameterGroupArgs(description, family, name, parameters, tags);

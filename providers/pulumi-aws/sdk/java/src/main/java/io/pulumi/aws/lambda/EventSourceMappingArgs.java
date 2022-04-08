@@ -9,6 +9,7 @@ import io.pulumi.aws.lambda.inputs.EventSourceMappingSelfManagedEventSourceArgs;
 import io.pulumi.aws.lambda.inputs.EventSourceMappingSourceAccessConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,21 +32,21 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> batchSize;
 
     public Output<Integer> getBatchSize() {
-        return this.batchSize == null ? Output.empty() : this.batchSize;
+        return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     @Import(name="bisectBatchOnFunctionError")
       private final @Nullable Output<Boolean> bisectBatchOnFunctionError;
 
     public Output<Boolean> getBisectBatchOnFunctionError() {
-        return this.bisectBatchOnFunctionError == null ? Output.empty() : this.bisectBatchOnFunctionError;
+        return this.bisectBatchOnFunctionError == null ? Codegen.empty() : this.bisectBatchOnFunctionError;
     }
 
     @Import(name="destinationConfig")
       private final @Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig;
 
     public Output<EventSourceMappingDestinationConfigArgs> getDestinationConfig() {
-        return this.destinationConfig == null ? Output.empty() : this.destinationConfig;
+        return this.destinationConfig == null ? Codegen.empty() : this.destinationConfig;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> eventSourceArn;
 
     public Output<String> getEventSourceArn() {
-        return this.eventSourceArn == null ? Output.empty() : this.eventSourceArn;
+        return this.eventSourceArn == null ? Codegen.empty() : this.eventSourceArn;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria;
 
     public Output<EventSourceMappingFilterCriteriaArgs> getFilterCriteria() {
-        return this.filterCriteria == null ? Output.empty() : this.filterCriteria;
+        return this.filterCriteria == null ? Codegen.empty() : this.filterCriteria;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> functionResponseTypes;
 
     public Output<List<String>> getFunctionResponseTypes() {
-        return this.functionResponseTypes == null ? Output.empty() : this.functionResponseTypes;
+        return this.functionResponseTypes == null ? Codegen.empty() : this.functionResponseTypes;
     }
 
     /**
@@ -114,28 +115,28 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> maximumBatchingWindowInSeconds;
 
     public Output<Integer> getMaximumBatchingWindowInSeconds() {
-        return this.maximumBatchingWindowInSeconds == null ? Output.empty() : this.maximumBatchingWindowInSeconds;
+        return this.maximumBatchingWindowInSeconds == null ? Codegen.empty() : this.maximumBatchingWindowInSeconds;
     }
 
     @Import(name="maximumRecordAgeInSeconds")
       private final @Nullable Output<Integer> maximumRecordAgeInSeconds;
 
     public Output<Integer> getMaximumRecordAgeInSeconds() {
-        return this.maximumRecordAgeInSeconds == null ? Output.empty() : this.maximumRecordAgeInSeconds;
+        return this.maximumRecordAgeInSeconds == null ? Codegen.empty() : this.maximumRecordAgeInSeconds;
     }
 
     @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
     public Output<Integer> getMaximumRetryAttempts() {
-        return this.maximumRetryAttempts == null ? Output.empty() : this.maximumRetryAttempts;
+        return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
     }
 
     @Import(name="parallelizationFactor")
       private final @Nullable Output<Integer> parallelizationFactor;
 
     public Output<Integer> getParallelizationFactor() {
-        return this.parallelizationFactor == null ? Output.empty() : this.parallelizationFactor;
+        return this.parallelizationFactor == null ? Codegen.empty() : this.parallelizationFactor;
     }
 
     /**
@@ -148,21 +149,21 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> queues;
 
     public Output<List<String>> getQueues() {
-        return this.queues == null ? Output.empty() : this.queues;
+        return this.queues == null ? Codegen.empty() : this.queues;
     }
 
     @Import(name="selfManagedEventSource")
       private final @Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
 
     public Output<EventSourceMappingSelfManagedEventSourceArgs> getSelfManagedEventSource() {
-        return this.selfManagedEventSource == null ? Output.empty() : this.selfManagedEventSource;
+        return this.selfManagedEventSource == null ? Codegen.empty() : this.selfManagedEventSource;
     }
 
     @Import(name="sourceAccessConfigurations")
       private final @Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
 
     public Output<List<EventSourceMappingSourceAccessConfigurationArgs>> getSourceAccessConfigurations() {
-        return this.sourceAccessConfigurations == null ? Output.empty() : this.sourceAccessConfigurations;
+        return this.sourceAccessConfigurations == null ? Codegen.empty() : this.sourceAccessConfigurations;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> startingPosition;
 
     public Output<String> getStartingPosition() {
-        return this.startingPosition == null ? Output.empty() : this.startingPosition;
+        return this.startingPosition == null ? Codegen.empty() : this.startingPosition;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> startingPositionTimestamp;
 
     public Output<String> getStartingPositionTimestamp() {
-        return this.startingPositionTimestamp == null ? Output.empty() : this.startingPositionTimestamp;
+        return this.startingPositionTimestamp == null ? Codegen.empty() : this.startingPositionTimestamp;
     }
 
     /**
@@ -195,7 +196,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> topics;
 
     public Output<List<String>> getTopics() {
-        return this.topics == null ? Output.empty() : this.topics;
+        return this.topics == null ? Codegen.empty() : this.topics;
     }
 
     /**
@@ -206,7 +207,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> tumblingWindowInSeconds;
 
     public Output<Integer> getTumblingWindowInSeconds() {
-        return this.tumblingWindowInSeconds == null ? Output.empty() : this.tumblingWindowInSeconds;
+        return this.tumblingWindowInSeconds == null ? Codegen.empty() : this.tumblingWindowInSeconds;
     }
 
     public EventSourceMappingArgs(
@@ -251,25 +252,25 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EventSourceMappingArgs() {
-        this.batchSize = Output.empty();
-        this.bisectBatchOnFunctionError = Output.empty();
-        this.destinationConfig = Output.empty();
-        this.enabled = Output.empty();
-        this.eventSourceArn = Output.empty();
-        this.filterCriteria = Output.empty();
-        this.functionName = Output.empty();
-        this.functionResponseTypes = Output.empty();
-        this.maximumBatchingWindowInSeconds = Output.empty();
-        this.maximumRecordAgeInSeconds = Output.empty();
-        this.maximumRetryAttempts = Output.empty();
-        this.parallelizationFactor = Output.empty();
-        this.queues = Output.empty();
-        this.selfManagedEventSource = Output.empty();
-        this.sourceAccessConfigurations = Output.empty();
-        this.startingPosition = Output.empty();
-        this.startingPositionTimestamp = Output.empty();
-        this.topics = Output.empty();
-        this.tumblingWindowInSeconds = Output.empty();
+        this.batchSize = Codegen.empty();
+        this.bisectBatchOnFunctionError = Codegen.empty();
+        this.destinationConfig = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.eventSourceArn = Codegen.empty();
+        this.filterCriteria = Codegen.empty();
+        this.functionName = Codegen.empty();
+        this.functionResponseTypes = Codegen.empty();
+        this.maximumBatchingWindowInSeconds = Codegen.empty();
+        this.maximumRecordAgeInSeconds = Codegen.empty();
+        this.maximumRetryAttempts = Codegen.empty();
+        this.parallelizationFactor = Codegen.empty();
+        this.queues = Codegen.empty();
+        this.selfManagedEventSource = Codegen.empty();
+        this.sourceAccessConfigurations = Codegen.empty();
+        this.startingPosition = Codegen.empty();
+        this.startingPositionTimestamp = Codegen.empty();
+        this.topics = Codegen.empty();
+        this.tumblingWindowInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -333,7 +334,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Output.ofNullable(batchSize);
+            this.batchSize = Codegen.ofNullable(batchSize);
             return this;
         }
         public Builder bisectBatchOnFunctionError(@Nullable Output<Boolean> bisectBatchOnFunctionError) {
@@ -341,7 +342,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder bisectBatchOnFunctionError(@Nullable Boolean bisectBatchOnFunctionError) {
-            this.bisectBatchOnFunctionError = Output.ofNullable(bisectBatchOnFunctionError);
+            this.bisectBatchOnFunctionError = Codegen.ofNullable(bisectBatchOnFunctionError);
             return this;
         }
         public Builder destinationConfig(@Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig) {
@@ -349,7 +350,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder destinationConfig(@Nullable EventSourceMappingDestinationConfigArgs destinationConfig) {
-            this.destinationConfig = Output.ofNullable(destinationConfig);
+            this.destinationConfig = Codegen.ofNullable(destinationConfig);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -357,7 +358,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder eventSourceArn(@Nullable Output<String> eventSourceArn) {
@@ -365,7 +366,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder eventSourceArn(@Nullable String eventSourceArn) {
-            this.eventSourceArn = Output.ofNullable(eventSourceArn);
+            this.eventSourceArn = Codegen.ofNullable(eventSourceArn);
             return this;
         }
         public Builder filterCriteria(@Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria) {
@@ -373,7 +374,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder filterCriteria(@Nullable EventSourceMappingFilterCriteriaArgs filterCriteria) {
-            this.filterCriteria = Output.ofNullable(filterCriteria);
+            this.filterCriteria = Codegen.ofNullable(filterCriteria);
             return this;
         }
         public Builder functionName(Output<String> functionName) {
@@ -389,7 +390,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder functionResponseTypes(@Nullable List<String> functionResponseTypes) {
-            this.functionResponseTypes = Output.ofNullable(functionResponseTypes);
+            this.functionResponseTypes = Codegen.ofNullable(functionResponseTypes);
             return this;
         }
         public Builder functionResponseTypes(String... functionResponseTypes) {
@@ -400,7 +401,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maximumBatchingWindowInSeconds(@Nullable Integer maximumBatchingWindowInSeconds) {
-            this.maximumBatchingWindowInSeconds = Output.ofNullable(maximumBatchingWindowInSeconds);
+            this.maximumBatchingWindowInSeconds = Codegen.ofNullable(maximumBatchingWindowInSeconds);
             return this;
         }
         public Builder maximumRecordAgeInSeconds(@Nullable Output<Integer> maximumRecordAgeInSeconds) {
@@ -408,7 +409,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maximumRecordAgeInSeconds(@Nullable Integer maximumRecordAgeInSeconds) {
-            this.maximumRecordAgeInSeconds = Output.ofNullable(maximumRecordAgeInSeconds);
+            this.maximumRecordAgeInSeconds = Codegen.ofNullable(maximumRecordAgeInSeconds);
             return this;
         }
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
@@ -416,7 +417,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
-            this.maximumRetryAttempts = Output.ofNullable(maximumRetryAttempts);
+            this.maximumRetryAttempts = Codegen.ofNullable(maximumRetryAttempts);
             return this;
         }
         public Builder parallelizationFactor(@Nullable Output<Integer> parallelizationFactor) {
@@ -424,7 +425,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parallelizationFactor(@Nullable Integer parallelizationFactor) {
-            this.parallelizationFactor = Output.ofNullable(parallelizationFactor);
+            this.parallelizationFactor = Codegen.ofNullable(parallelizationFactor);
             return this;
         }
         public Builder queues(@Nullable Output<List<String>> queues) {
@@ -432,7 +433,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queues(@Nullable List<String> queues) {
-            this.queues = Output.ofNullable(queues);
+            this.queues = Codegen.ofNullable(queues);
             return this;
         }
         public Builder queues(String... queues) {
@@ -443,7 +444,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder selfManagedEventSource(@Nullable EventSourceMappingSelfManagedEventSourceArgs selfManagedEventSource) {
-            this.selfManagedEventSource = Output.ofNullable(selfManagedEventSource);
+            this.selfManagedEventSource = Codegen.ofNullable(selfManagedEventSource);
             return this;
         }
         public Builder sourceAccessConfigurations(@Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations) {
@@ -451,7 +452,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sourceAccessConfigurations(@Nullable List<EventSourceMappingSourceAccessConfigurationArgs> sourceAccessConfigurations) {
-            this.sourceAccessConfigurations = Output.ofNullable(sourceAccessConfigurations);
+            this.sourceAccessConfigurations = Codegen.ofNullable(sourceAccessConfigurations);
             return this;
         }
         public Builder sourceAccessConfigurations(EventSourceMappingSourceAccessConfigurationArgs... sourceAccessConfigurations) {
@@ -462,7 +463,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder startingPosition(@Nullable String startingPosition) {
-            this.startingPosition = Output.ofNullable(startingPosition);
+            this.startingPosition = Codegen.ofNullable(startingPosition);
             return this;
         }
         public Builder startingPositionTimestamp(@Nullable Output<String> startingPositionTimestamp) {
@@ -470,7 +471,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder startingPositionTimestamp(@Nullable String startingPositionTimestamp) {
-            this.startingPositionTimestamp = Output.ofNullable(startingPositionTimestamp);
+            this.startingPositionTimestamp = Codegen.ofNullable(startingPositionTimestamp);
             return this;
         }
         public Builder topics(@Nullable Output<List<String>> topics) {
@@ -478,7 +479,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder topics(@Nullable List<String> topics) {
-            this.topics = Output.ofNullable(topics);
+            this.topics = Codegen.ofNullable(topics);
             return this;
         }
         public Builder topics(String... topics) {
@@ -489,7 +490,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tumblingWindowInSeconds(@Nullable Integer tumblingWindowInSeconds) {
-            this.tumblingWindowInSeconds = Output.ofNullable(tumblingWindowInSeconds);
+            this.tumblingWindowInSeconds = Codegen.ofNullable(tumblingWindowInSeconds);
             return this;
         }        public EventSourceMappingArgs build() {
             return new EventSourceMappingArgs(batchSize, bisectBatchOnFunctionError, destinationConfig, enabled, eventSourceArn, filterCriteria, functionName, functionResponseTypes, maximumBatchingWindowInSeconds, maximumRecordAgeInSeconds, maximumRetryAttempts, parallelizationFactor, queues, selfManagedEventSource, sourceAccessConfigurations, startingPosition, startingPositionTimestamp, topics, tumblingWindowInSeconds);

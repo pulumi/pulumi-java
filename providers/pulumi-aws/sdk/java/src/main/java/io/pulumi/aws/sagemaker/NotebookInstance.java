@@ -9,6 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.NotebookInstanceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -308,7 +309,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotebookInstance(String name, NotebookInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/notebookInstance:NotebookInstance", name, args == null ? NotebookInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/notebookInstance:NotebookInstance", name, args == null ? NotebookInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotebookInstance(String name, Output<String> id, @Nullable NotebookInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

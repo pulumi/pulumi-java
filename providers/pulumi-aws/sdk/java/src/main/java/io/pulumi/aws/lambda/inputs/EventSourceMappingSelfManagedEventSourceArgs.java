@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
     }
 
     private EventSourceMappingSelfManagedEventSourceArgs() {
-        this.endpoints = Output.empty();
+        this.endpoints = Codegen.empty();
     }
 
     public static Builder builder() {

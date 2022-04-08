@@ -8,6 +8,7 @@ import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesGetArgs
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customerUserName;
 
     public Output<String> getCustomerUserName() {
-        return this.customerUserName == null ? Output.empty() : this.customerUserName;
+        return this.customerUserName == null ? Codegen.empty() : this.customerUserName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
-        return this.directoryId == null ? Output.empty() : this.directoryId;
+        return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> directoryName;
 
     public Output<String> getDirectoryName() {
-        return this.directoryName == null ? Output.empty() : this.directoryName;
+        return this.directoryName == null ? Codegen.empty() : this.directoryName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> directoryType;
 
     public Output<String> getDirectoryType() {
-        return this.directoryType == null ? Output.empty() : this.directoryType;
+        return this.directoryType == null ? Codegen.empty() : this.directoryType;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> dnsIpAddresses;
 
     public Output<List<String>> getDnsIpAddresses() {
-        return this.dnsIpAddresses == null ? Output.empty() : this.dnsIpAddresses;
+        return this.dnsIpAddresses == null ? Codegen.empty() : this.dnsIpAddresses;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iamRoleId;
 
     public Output<String> getIamRoleId() {
-        return this.iamRoleId == null ? Output.empty() : this.iamRoleId;
+        return this.iamRoleId == null ? Codegen.empty() : this.iamRoleId;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ipGroupIds;
 
     public Output<List<String>> getIpGroupIds() {
-        return this.ipGroupIds == null ? Output.empty() : this.ipGroupIds;
+        return this.ipGroupIds == null ? Codegen.empty() : this.ipGroupIds;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> registrationCode;
 
     public Output<String> getRegistrationCode() {
-        return this.registrationCode == null ? Output.empty() : this.registrationCode;
+        return this.registrationCode == null ? Codegen.empty() : this.registrationCode;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
 
     public Output<DirectorySelfServicePermissionsGetArgs> getSelfServicePermissions() {
-        return this.selfServicePermissions == null ? Output.empty() : this.selfServicePermissions;
+        return this.selfServicePermissions == null ? Codegen.empty() : this.selfServicePermissions;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
 
     public Output<DirectoryWorkspaceAccessPropertiesGetArgs> getWorkspaceAccessProperties() {
-        return this.workspaceAccessProperties == null ? Output.empty() : this.workspaceAccessProperties;
+        return this.workspaceAccessProperties == null ? Codegen.empty() : this.workspaceAccessProperties;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
 
     public Output<DirectoryWorkspaceCreationPropertiesGetArgs> getWorkspaceCreationProperties() {
-        return this.workspaceCreationProperties == null ? Output.empty() : this.workspaceCreationProperties;
+        return this.workspaceCreationProperties == null ? Codegen.empty() : this.workspaceCreationProperties;
     }
 
     /**
@@ -192,7 +193,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workspaceSecurityGroupId;
 
     public Output<String> getWorkspaceSecurityGroupId() {
-        return this.workspaceSecurityGroupId == null ? Output.empty() : this.workspaceSecurityGroupId;
+        return this.workspaceSecurityGroupId == null ? Codegen.empty() : this.workspaceSecurityGroupId;
     }
 
     public DirectoryState(
@@ -231,22 +232,22 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectoryState() {
-        this.alias = Output.empty();
-        this.customerUserName = Output.empty();
-        this.directoryId = Output.empty();
-        this.directoryName = Output.empty();
-        this.directoryType = Output.empty();
-        this.dnsIpAddresses = Output.empty();
-        this.iamRoleId = Output.empty();
-        this.ipGroupIds = Output.empty();
-        this.registrationCode = Output.empty();
-        this.selfServicePermissions = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.workspaceAccessProperties = Output.empty();
-        this.workspaceCreationProperties = Output.empty();
-        this.workspaceSecurityGroupId = Output.empty();
+        this.alias = Codegen.empty();
+        this.customerUserName = Codegen.empty();
+        this.directoryId = Codegen.empty();
+        this.directoryName = Codegen.empty();
+        this.directoryType = Codegen.empty();
+        this.dnsIpAddresses = Codegen.empty();
+        this.iamRoleId = Codegen.empty();
+        this.ipGroupIds = Codegen.empty();
+        this.registrationCode = Codegen.empty();
+        this.selfServicePermissions = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.workspaceAccessProperties = Codegen.empty();
+        this.workspaceCreationProperties = Codegen.empty();
+        this.workspaceSecurityGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -304,7 +305,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder customerUserName(@Nullable Output<String> customerUserName) {
@@ -312,7 +313,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerUserName(@Nullable String customerUserName) {
-            this.customerUserName = Output.ofNullable(customerUserName);
+            this.customerUserName = Codegen.ofNullable(customerUserName);
             return this;
         }
         public Builder directoryId(@Nullable Output<String> directoryId) {
@@ -320,7 +321,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Output.ofNullable(directoryId);
+            this.directoryId = Codegen.ofNullable(directoryId);
             return this;
         }
         public Builder directoryName(@Nullable Output<String> directoryName) {
@@ -328,7 +329,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoryName(@Nullable String directoryName) {
-            this.directoryName = Output.ofNullable(directoryName);
+            this.directoryName = Codegen.ofNullable(directoryName);
             return this;
         }
         public Builder directoryType(@Nullable Output<String> directoryType) {
@@ -336,7 +337,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoryType(@Nullable String directoryType) {
-            this.directoryType = Output.ofNullable(directoryType);
+            this.directoryType = Codegen.ofNullable(directoryType);
             return this;
         }
         public Builder dnsIpAddresses(@Nullable Output<List<String>> dnsIpAddresses) {
@@ -344,7 +345,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
-            this.dnsIpAddresses = Output.ofNullable(dnsIpAddresses);
+            this.dnsIpAddresses = Codegen.ofNullable(dnsIpAddresses);
             return this;
         }
         public Builder dnsIpAddresses(String... dnsIpAddresses) {
@@ -355,7 +356,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamRoleId(@Nullable String iamRoleId) {
-            this.iamRoleId = Output.ofNullable(iamRoleId);
+            this.iamRoleId = Codegen.ofNullable(iamRoleId);
             return this;
         }
         public Builder ipGroupIds(@Nullable Output<List<String>> ipGroupIds) {
@@ -363,7 +364,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
-            this.ipGroupIds = Output.ofNullable(ipGroupIds);
+            this.ipGroupIds = Codegen.ofNullable(ipGroupIds);
             return this;
         }
         public Builder ipGroupIds(String... ipGroupIds) {
@@ -374,7 +375,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationCode(@Nullable String registrationCode) {
-            this.registrationCode = Output.ofNullable(registrationCode);
+            this.registrationCode = Codegen.ofNullable(registrationCode);
             return this;
         }
         public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
@@ -382,7 +383,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsGetArgs selfServicePermissions) {
-            this.selfServicePermissions = Output.ofNullable(selfServicePermissions);
+            this.selfServicePermissions = Codegen.ofNullable(selfServicePermissions);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -390,7 +391,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -401,7 +402,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -409,7 +410,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
@@ -417,7 +418,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesGetArgs workspaceAccessProperties) {
-            this.workspaceAccessProperties = Output.ofNullable(workspaceAccessProperties);
+            this.workspaceAccessProperties = Codegen.ofNullable(workspaceAccessProperties);
             return this;
         }
         public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
@@ -425,7 +426,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesGetArgs workspaceCreationProperties) {
-            this.workspaceCreationProperties = Output.ofNullable(workspaceCreationProperties);
+            this.workspaceCreationProperties = Codegen.ofNullable(workspaceCreationProperties);
             return this;
         }
         public Builder workspaceSecurityGroupId(@Nullable Output<String> workspaceSecurityGroupId) {
@@ -433,7 +434,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
-            this.workspaceSecurityGroupId = Output.ofNullable(workspaceSecurityGroupId);
+            this.workspaceSecurityGroupId = Codegen.ofNullable(workspaceSecurityGroupId);
             return this;
         }        public DirectoryState build() {
             return new DirectoryState(alias, customerUserName, directoryId, directoryName, directoryType, dnsIpAddresses, iamRoleId, ipGroupIds, registrationCode, selfServicePermissions, subnetIds, tags, tagsAll, workspaceAccessProperties, workspaceCreationProperties, workspaceSecurityGroupId);

@@ -6,6 +6,7 @@ package io.pulumi.aws.msk.inputs;
 import io.pulumi.aws.msk.inputs.ClusterEncryptionInfoEncryptionInTransitArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ClusterEncryptionInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> encryptionAtRestKmsKeyArn;
 
     public Output<String> getEncryptionAtRestKmsKeyArn() {
-        return this.encryptionAtRestKmsKeyArn == null ? Output.empty() : this.encryptionAtRestKmsKeyArn;
+        return this.encryptionAtRestKmsKeyArn == null ? Codegen.empty() : this.encryptionAtRestKmsKeyArn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ClusterEncryptionInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ClusterEncryptionInfoEncryptionInTransitArgs> encryptionInTransit;
 
     public Output<ClusterEncryptionInfoEncryptionInTransitArgs> getEncryptionInTransit() {
-        return this.encryptionInTransit == null ? Output.empty() : this.encryptionInTransit;
+        return this.encryptionInTransit == null ? Codegen.empty() : this.encryptionInTransit;
     }
 
     public ClusterEncryptionInfoArgs(
@@ -45,8 +46,8 @@ public final class ClusterEncryptionInfoArgs extends io.pulumi.resources.Resourc
     }
 
     private ClusterEncryptionInfoArgs() {
-        this.encryptionAtRestKmsKeyArn = Output.empty();
-        this.encryptionInTransit = Output.empty();
+        this.encryptionAtRestKmsKeyArn = Codegen.empty();
+        this.encryptionInTransit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ClusterEncryptionInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder encryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
-            this.encryptionAtRestKmsKeyArn = Output.ofNullable(encryptionAtRestKmsKeyArn);
+            this.encryptionAtRestKmsKeyArn = Codegen.ofNullable(encryptionAtRestKmsKeyArn);
             return this;
         }
         public Builder encryptionInTransit(@Nullable Output<ClusterEncryptionInfoEncryptionInTransitArgs> encryptionInTransit) {
@@ -84,7 +85,7 @@ public final class ClusterEncryptionInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder encryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransitArgs encryptionInTransit) {
-            this.encryptionInTransit = Output.ofNullable(encryptionInTransit);
+            this.encryptionInTransit = Codegen.ofNullable(encryptionInTransit);
             return this;
         }        public ClusterEncryptionInfoArgs build() {
             return new ClusterEncryptionInfoArgs(encryptionAtRestKmsKeyArn, encryptionInTransit);

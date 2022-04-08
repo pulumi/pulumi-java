@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -58,9 +59,9 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CrawlerDeltaTargetArgs() {
-        this.connectionName = Output.empty();
-        this.deltaTables = Output.empty();
-        this.writeManifest = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.deltaTables = Codegen.empty();
+        this.writeManifest = Codegen.empty();
     }
 
     public static Builder builder() {

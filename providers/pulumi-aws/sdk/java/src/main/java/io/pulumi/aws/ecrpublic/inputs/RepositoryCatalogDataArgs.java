@@ -5,6 +5,7 @@ package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> aboutText;
 
     public Output<String> getAboutText() {
-        return this.aboutText == null ? Output.empty() : this.aboutText;
+        return this.aboutText == null ? Codegen.empty() : this.aboutText;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> architectures;
 
     public Output<List<String>> getArchitectures() {
-        return this.architectures == null ? Output.empty() : this.architectures;
+        return this.architectures == null ? Codegen.empty() : this.architectures;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> logoImageBlob;
 
     public Output<String> getLogoImageBlob() {
-        return this.logoImageBlob == null ? Output.empty() : this.logoImageBlob;
+        return this.logoImageBlob == null ? Codegen.empty() : this.logoImageBlob;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> operatingSystems;
 
     public Output<List<String>> getOperatingSystems() {
-        return this.operatingSystems == null ? Output.empty() : this.operatingSystems;
+        return this.operatingSystems == null ? Codegen.empty() : this.operatingSystems;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> usageText;
 
     public Output<String> getUsageText() {
-        return this.usageText == null ? Output.empty() : this.usageText;
+        return this.usageText == null ? Codegen.empty() : this.usageText;
     }
 
     public RepositoryCatalogDataArgs(
@@ -97,12 +98,12 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
     }
 
     private RepositoryCatalogDataArgs() {
-        this.aboutText = Output.empty();
-        this.architectures = Output.empty();
-        this.description = Output.empty();
-        this.logoImageBlob = Output.empty();
-        this.operatingSystems = Output.empty();
-        this.usageText = Output.empty();
+        this.aboutText = Codegen.empty();
+        this.architectures = Codegen.empty();
+        this.description = Codegen.empty();
+        this.logoImageBlob = Codegen.empty();
+        this.operatingSystems = Codegen.empty();
+        this.usageText = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder aboutText(@Nullable String aboutText) {
-            this.aboutText = Output.ofNullable(aboutText);
+            this.aboutText = Codegen.ofNullable(aboutText);
             return this;
         }
         public Builder architectures(@Nullable Output<List<String>> architectures) {
@@ -148,7 +149,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder architectures(@Nullable List<String> architectures) {
-            this.architectures = Output.ofNullable(architectures);
+            this.architectures = Codegen.ofNullable(architectures);
             return this;
         }
         public Builder architectures(String... architectures) {
@@ -159,7 +160,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder logoImageBlob(@Nullable Output<String> logoImageBlob) {
@@ -167,7 +168,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder logoImageBlob(@Nullable String logoImageBlob) {
-            this.logoImageBlob = Output.ofNullable(logoImageBlob);
+            this.logoImageBlob = Codegen.ofNullable(logoImageBlob);
             return this;
         }
         public Builder operatingSystems(@Nullable Output<List<String>> operatingSystems) {
@@ -175,7 +176,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder operatingSystems(@Nullable List<String> operatingSystems) {
-            this.operatingSystems = Output.ofNullable(operatingSystems);
+            this.operatingSystems = Codegen.ofNullable(operatingSystems);
             return this;
         }
         public Builder operatingSystems(String... operatingSystems) {
@@ -186,7 +187,7 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder usageText(@Nullable String usageText) {
-            this.usageText = Output.ofNullable(usageText);
+            this.usageText = Codegen.ofNullable(usageText);
             return this;
         }        public RepositoryCatalogDataArgs build() {
             return new RepositoryCatalogDataArgs(aboutText, architectures, description, logoImageBlob, operatingSystems, usageText);

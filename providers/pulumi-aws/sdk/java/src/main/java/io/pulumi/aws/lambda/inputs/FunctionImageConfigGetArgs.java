@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> commands;
 
     public Output<List<String>> getCommands() {
-        return this.commands == null ? Output.empty() : this.commands;
+        return this.commands == null ? Codegen.empty() : this.commands;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> entryPoints;
 
     public Output<List<String>> getEntryPoints() {
-        return this.entryPoints == null ? Output.empty() : this.entryPoints;
+        return this.entryPoints == null ? Codegen.empty() : this.entryPoints;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
+        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 
     public FunctionImageConfigGetArgs(
@@ -58,9 +59,9 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private FunctionImageConfigGetArgs() {
-        this.commands = Output.empty();
-        this.entryPoints = Output.empty();
-        this.workingDirectory = Output.empty();
+        this.commands = Codegen.empty();
+        this.entryPoints = Codegen.empty();
+        this.workingDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = Output.ofNullable(commands);
+            this.commands = Codegen.ofNullable(commands);
             return this;
         }
         public Builder commands(String... commands) {
@@ -103,7 +104,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder entryPoints(@Nullable List<String> entryPoints) {
-            this.entryPoints = Output.ofNullable(entryPoints);
+            this.entryPoints = Codegen.ofNullable(entryPoints);
             return this;
         }
         public Builder entryPoints(String... entryPoints) {
@@ -114,7 +115,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Output.ofNullable(workingDirectory);
+            this.workingDirectory = Codegen.ofNullable(workingDirectory);
             return this;
         }        public FunctionImageConfigGetArgs build() {
             return new FunctionImageConfigGetArgs(commands, entryPoints, workingDirectory);

@@ -6,6 +6,7 @@ package io.pulumi.aws.macie.inputs;
 import io.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
       private final @Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType;
 
     public Output<S3BucketAssociationClassificationTypeGetArgs> getClassificationType() {
-        return this.classificationType == null ? Output.empty() : this.classificationType;
+        return this.classificationType == null ? Codegen.empty() : this.classificationType;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> memberAccountId;
 
     public Output<String> getMemberAccountId() {
-        return this.memberAccountId == null ? Output.empty() : this.memberAccountId;
+        return this.memberAccountId == null ? Codegen.empty() : this.memberAccountId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public S3BucketAssociationState(
@@ -71,10 +72,10 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
     }
 
     private S3BucketAssociationState() {
-        this.bucketName = Output.empty();
-        this.classificationType = Output.empty();
-        this.memberAccountId = Output.empty();
-        this.prefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.classificationType = Codegen.empty();
+        this.memberAccountId = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder classificationType(@Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType) {
@@ -116,7 +117,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder classificationType(@Nullable S3BucketAssociationClassificationTypeGetArgs classificationType) {
-            this.classificationType = Output.ofNullable(classificationType);
+            this.classificationType = Codegen.ofNullable(classificationType);
             return this;
         }
         public Builder memberAccountId(@Nullable Output<String> memberAccountId) {
@@ -124,7 +125,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder memberAccountId(@Nullable String memberAccountId) {
-            this.memberAccountId = Output.ofNullable(memberAccountId);
+            this.memberAccountId = Codegen.ofNullable(memberAccountId);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -132,7 +133,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public S3BucketAssociationState build() {
             return new S3BucketAssociationState(bucketName, classificationType, memberAccountId, prefix);

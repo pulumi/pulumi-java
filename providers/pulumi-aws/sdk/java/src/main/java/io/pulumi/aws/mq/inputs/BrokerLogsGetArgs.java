@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> audit;
 
     public Output<Boolean> getAudit() {
-        return this.audit == null ? Output.empty() : this.audit;
+        return this.audit == null ? Codegen.empty() : this.audit;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> general;
 
     public Output<Boolean> getGeneral() {
-        return this.general == null ? Output.empty() : this.general;
+        return this.general == null ? Codegen.empty() : this.general;
     }
 
     public BrokerLogsGetArgs(
@@ -44,8 +45,8 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BrokerLogsGetArgs() {
-        this.audit = Output.empty();
-        this.general = Output.empty();
+        this.audit = Codegen.empty();
+        this.general = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder audit(@Nullable Boolean audit) {
-            this.audit = Output.ofNullable(audit);
+            this.audit = Codegen.ofNullable(audit);
             return this;
         }
         public Builder general(@Nullable Output<Boolean> general) {
@@ -83,7 +84,7 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder general(@Nullable Boolean general) {
-            this.general = Output.ofNullable(general);
+            this.general = Codegen.ofNullable(general);
             return this;
         }        public BrokerLogsGetArgs build() {
             return new BrokerLogsGetArgs(audit, general);

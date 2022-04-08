@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
       private final @Nullable Output<String> comparator;
 
     public Output<String> getComparator() {
-        return this.comparator == null ? Output.empty() : this.comparator;
+        return this.comparator == null ? Codegen.empty() : this.comparator;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermGetArgs(
@@ -58,9 +59,9 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
     }
 
     private ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermGetArgs() {
-        this.comparator = Output.empty();
-        this.key = Output.empty();
-        this.values = Output.empty();
+        this.comparator = Codegen.empty();
+        this.key = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
             return this;
         }
         public Builder comparator(@Nullable String comparator) {
-            this.comparator = Output.ofNullable(comparator);
+            this.comparator = Codegen.ofNullable(comparator);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -100,7 +101,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -108,7 +109,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

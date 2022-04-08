@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<Boolean> autoScalingEnabled;
 
     public Output<Boolean> getAutoScalingEnabled() {
-        return this.autoScalingEnabled == null ? Output.empty() : this.autoScalingEnabled;
+        return this.autoScalingEnabled == null ? Codegen.empty() : this.autoScalingEnabled;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<Integer> parallelism;
 
     public Output<Integer> getParallelism() {
-        return this.parallelism == null ? Output.empty() : this.parallelism;
+        return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<Integer> parallelismPerKpu;
 
     public Output<Integer> getParallelismPerKpu() {
-        return this.parallelismPerKpu == null ? Output.empty() : this.parallelismPerKpu;
+        return this.parallelismPerKpu == null ? Codegen.empty() : this.parallelismPerKpu;
     }
 
     public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs(
@@ -72,10 +73,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs() {
-        this.autoScalingEnabled = Output.empty();
-        this.configurationType = Output.empty();
-        this.parallelism = Output.empty();
-        this.parallelismPerKpu = Output.empty();
+        this.autoScalingEnabled = Codegen.empty();
+        this.configurationType = Codegen.empty();
+        this.parallelism = Codegen.empty();
+        this.parallelismPerKpu = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder autoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
-            this.autoScalingEnabled = Output.ofNullable(autoScalingEnabled);
+            this.autoScalingEnabled = Codegen.ofNullable(autoScalingEnabled);
             return this;
         }
         public Builder configurationType(Output<String> configurationType) {
@@ -125,7 +126,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Output.ofNullable(parallelism);
+            this.parallelism = Codegen.ofNullable(parallelism);
             return this;
         }
         public Builder parallelismPerKpu(@Nullable Output<Integer> parallelismPerKpu) {
@@ -133,7 +134,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder parallelismPerKpu(@Nullable Integer parallelismPerKpu) {
-            this.parallelismPerKpu = Output.ofNullable(parallelismPerKpu);
+            this.parallelismPerKpu = Codegen.ofNullable(parallelismPerKpu);
             return this;
         }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs(autoScalingEnabled, configurationType, parallelism, parallelismPerKpu);

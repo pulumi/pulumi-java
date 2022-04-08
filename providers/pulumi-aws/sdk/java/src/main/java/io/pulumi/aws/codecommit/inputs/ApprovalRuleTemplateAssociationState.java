@@ -5,6 +5,7 @@ package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
       private final @Nullable Output<String> approvalRuleTemplateName;
 
     public Output<String> getApprovalRuleTemplateName() {
-        return this.approvalRuleTemplateName == null ? Output.empty() : this.approvalRuleTemplateName;
+        return this.approvalRuleTemplateName == null ? Codegen.empty() : this.approvalRuleTemplateName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     public ApprovalRuleTemplateAssociationState(
@@ -44,8 +45,8 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
     }
 
     private ApprovalRuleTemplateAssociationState() {
-        this.approvalRuleTemplateName = Output.empty();
-        this.repositoryName = Output.empty();
+        this.approvalRuleTemplateName = Codegen.empty();
+        this.repositoryName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
             return this;
         }
         public Builder approvalRuleTemplateName(@Nullable String approvalRuleTemplateName) {
-            this.approvalRuleTemplateName = Output.ofNullable(approvalRuleTemplateName);
+            this.approvalRuleTemplateName = Codegen.ofNullable(approvalRuleTemplateName);
             return this;
         }
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
@@ -83,7 +84,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }        public ApprovalRuleTemplateAssociationState build() {
             return new ApprovalRuleTemplateAssociationState(approvalRuleTemplateName, repositoryName);

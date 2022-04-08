@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> allowUnassociatedTargets;
 
     public Output<Boolean> getAllowUnassociatedTargets() {
-        return this.allowUnassociatedTargets == null ? Output.empty() : this.allowUnassociatedTargets;
+        return this.allowUnassociatedTargets == null ? Codegen.empty() : this.allowUnassociatedTargets;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
-        return this.endDate == null ? Output.empty() : this.endDate;
+        return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> scheduleOffset;
 
     public Output<Integer> getScheduleOffset() {
-        return this.scheduleOffset == null ? Output.empty() : this.scheduleOffset;
+        return this.scheduleOffset == null ? Codegen.empty() : this.scheduleOffset;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> scheduleTimezone;
 
     public Output<String> getScheduleTimezone() {
-        return this.scheduleTimezone == null ? Output.empty() : this.scheduleTimezone;
+        return this.scheduleTimezone == null ? Codegen.empty() : this.scheduleTimezone;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> startDate;
 
     public Output<String> getStartDate() {
-        return this.startDate == null ? Output.empty() : this.startDate;
+        return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MaintenanceWindowArgs(
@@ -177,18 +178,18 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenanceWindowArgs() {
-        this.allowUnassociatedTargets = Output.empty();
-        this.cutoff = Output.empty();
-        this.description = Output.empty();
-        this.duration = Output.empty();
-        this.enabled = Output.empty();
-        this.endDate = Output.empty();
-        this.name = Output.empty();
-        this.schedule = Output.empty();
-        this.scheduleOffset = Output.empty();
-        this.scheduleTimezone = Output.empty();
-        this.startDate = Output.empty();
-        this.tags = Output.empty();
+        this.allowUnassociatedTargets = Codegen.empty();
+        this.cutoff = Codegen.empty();
+        this.description = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.endDate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.scheduleOffset = Codegen.empty();
+        this.scheduleTimezone = Codegen.empty();
+        this.startDate = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -238,7 +239,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder allowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
-            this.allowUnassociatedTargets = Output.ofNullable(allowUnassociatedTargets);
+            this.allowUnassociatedTargets = Codegen.ofNullable(allowUnassociatedTargets);
             return this;
         }
         public Builder cutoff(Output<Integer> cutoff) {
@@ -254,7 +255,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder duration(Output<Integer> duration) {
@@ -270,7 +271,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder endDate(@Nullable Output<String> endDate) {
@@ -278,7 +279,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Output.ofNullable(endDate);
+            this.endDate = Codegen.ofNullable(endDate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -286,7 +287,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder schedule(Output<String> schedule) {
@@ -302,7 +303,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
-            this.scheduleOffset = Output.ofNullable(scheduleOffset);
+            this.scheduleOffset = Codegen.ofNullable(scheduleOffset);
             return this;
         }
         public Builder scheduleTimezone(@Nullable Output<String> scheduleTimezone) {
@@ -310,7 +311,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scheduleTimezone(@Nullable String scheduleTimezone) {
-            this.scheduleTimezone = Output.ofNullable(scheduleTimezone);
+            this.scheduleTimezone = Codegen.ofNullable(scheduleTimezone);
             return this;
         }
         public Builder startDate(@Nullable Output<String> startDate) {
@@ -318,7 +319,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Output.ofNullable(startDate);
+            this.startDate = Codegen.ofNullable(startDate);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -326,7 +327,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(allowUnassociatedTargets, cutoff, description, duration, enabled, endDate, name, schedule, scheduleOffset, scheduleTimezone, startDate, tags);

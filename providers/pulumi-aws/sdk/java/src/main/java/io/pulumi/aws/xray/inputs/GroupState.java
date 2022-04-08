@@ -5,6 +5,7 @@ package io.pulumi.aws.xray.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> filterExpression;
 
     public Output<String> getFilterExpression() {
-        return this.filterExpression == null ? Output.empty() : this.filterExpression;
+        return this.filterExpression == null ? Codegen.empty() : this.filterExpression;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public GroupState(
@@ -84,11 +85,11 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupState() {
-        this.arn = Output.empty();
-        this.filterExpression = Output.empty();
-        this.groupName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.filterExpression = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder filterExpression(@Nullable Output<String> filterExpression) {
@@ -132,7 +133,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterExpression(@Nullable String filterExpression) {
-            this.filterExpression = Output.ofNullable(filterExpression);
+            this.filterExpression = Codegen.ofNullable(filterExpression);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -140,7 +141,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -148,7 +149,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -156,7 +157,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public GroupState build() {
             return new GroupState(arn, filterExpression, groupName, tags, tagsAll);

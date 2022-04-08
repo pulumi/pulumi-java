@@ -5,6 +5,7 @@ package io.pulumi.aws.appconfig;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +37,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> finalBakeTimeInMinutes;
 
     public Output<Integer> getFinalBakeTimeInMinutes() {
-        return this.finalBakeTimeInMinutes == null ? Output.empty() : this.finalBakeTimeInMinutes;
+        return this.finalBakeTimeInMinutes == null ? Codegen.empty() : this.finalBakeTimeInMinutes;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> growthType;
 
     public Output<String> getGrowthType() {
-        return this.growthType == null ? Output.empty() : this.growthType;
+        return this.growthType == null ? Codegen.empty() : this.growthType;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeploymentStrategyArgs(
@@ -125,14 +126,14 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DeploymentStrategyArgs() {
-        this.deploymentDurationInMinutes = Output.empty();
-        this.description = Output.empty();
-        this.finalBakeTimeInMinutes = Output.empty();
-        this.growthFactor = Output.empty();
-        this.growthType = Output.empty();
-        this.name = Output.empty();
-        this.replicateTo = Output.empty();
-        this.tags = Output.empty();
+        this.deploymentDurationInMinutes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.finalBakeTimeInMinutes = Codegen.empty();
+        this.growthFactor = Codegen.empty();
+        this.growthType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.replicateTo = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder finalBakeTimeInMinutes(@Nullable Output<Integer> finalBakeTimeInMinutes) {
@@ -190,7 +191,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder finalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
-            this.finalBakeTimeInMinutes = Output.ofNullable(finalBakeTimeInMinutes);
+            this.finalBakeTimeInMinutes = Codegen.ofNullable(finalBakeTimeInMinutes);
             return this;
         }
         public Builder growthFactor(Output<Double> growthFactor) {
@@ -206,7 +207,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder growthType(@Nullable String growthType) {
-            this.growthType = Output.ofNullable(growthType);
+            this.growthType = Codegen.ofNullable(growthType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -214,7 +215,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder replicateTo(Output<String> replicateTo) {
@@ -230,7 +231,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DeploymentStrategyArgs build() {
             return new DeploymentStrategyArgs(deploymentDurationInMinutes, description, finalBakeTimeInMinutes, growthFactor, growthType, name, replicateTo, tags);

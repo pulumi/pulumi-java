@@ -9,6 +9,7 @@ import io.pulumi.aws.dynamodb.inputs.KinesisStreamingDestinationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -81,7 +82,7 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public KinesisStreamingDestination(String name, KinesisStreamingDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, args == null ? KinesisStreamingDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, args == null ? KinesisStreamingDestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KinesisStreamingDestination(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

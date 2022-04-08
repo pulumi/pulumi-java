@@ -6,6 +6,7 @@ package io.pulumi.aws.imagebuilder;
 import io.pulumi.aws.imagebuilder.inputs.ImageImageTestsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> distributionConfigurationArn;
 
     public Output<String> getDistributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Output.empty() : this.distributionConfigurationArn;
+        return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
     public Output<Boolean> getEnhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Output.empty() : this.enhancedImageMetadataEnabled;
+        return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ImageImageTestsConfigurationArgs> imageTestsConfiguration;
 
     public Output<ImageImageTestsConfigurationArgs> getImageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Output.empty() : this.imageTestsConfiguration;
+        return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ImageArgs(
@@ -99,12 +100,12 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.distributionConfigurationArn = Output.empty();
-        this.enhancedImageMetadataEnabled = Output.empty();
-        this.imageRecipeArn = Output.empty();
-        this.imageTestsConfiguration = Output.empty();
-        this.infrastructureConfigurationArn = Output.empty();
-        this.tags = Output.empty();
+        this.distributionConfigurationArn = Codegen.empty();
+        this.enhancedImageMetadataEnabled = Codegen.empty();
+        this.imageRecipeArn = Codegen.empty();
+        this.imageTestsConfiguration = Codegen.empty();
+        this.infrastructureConfigurationArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Output.ofNullable(distributionConfigurationArn);
+            this.distributionConfigurationArn = Codegen.ofNullable(distributionConfigurationArn);
             return this;
         }
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
@@ -150,7 +151,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Output.ofNullable(enhancedImageMetadataEnabled);
+            this.enhancedImageMetadataEnabled = Codegen.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
         public Builder imageRecipeArn(Output<String> imageRecipeArn) {
@@ -166,7 +167,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageTestsConfiguration(@Nullable ImageImageTestsConfigurationArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Output.ofNullable(imageTestsConfiguration);
+            this.imageTestsConfiguration = Codegen.ofNullable(imageTestsConfiguration);
             return this;
         }
         public Builder infrastructureConfigurationArn(Output<String> infrastructureConfigurationArn) {
@@ -182,7 +183,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ImageArgs build() {
             return new ImageArgs(distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, tags);

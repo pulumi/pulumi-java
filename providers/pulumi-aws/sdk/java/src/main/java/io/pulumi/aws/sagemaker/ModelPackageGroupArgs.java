@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> modelPackageGroupDescription;
 
     public Output<String> getModelPackageGroupDescription() {
-        return this.modelPackageGroupDescription == null ? Output.empty() : this.modelPackageGroupDescription;
+        return this.modelPackageGroupDescription == null ? Codegen.empty() : this.modelPackageGroupDescription;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ModelPackageGroupArgs(
@@ -58,9 +59,9 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ModelPackageGroupArgs() {
-        this.modelPackageGroupDescription = Output.empty();
-        this.modelPackageGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.modelPackageGroupDescription = Codegen.empty();
+        this.modelPackageGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
-            this.modelPackageGroupDescription = Output.ofNullable(modelPackageGroupDescription);
+            this.modelPackageGroupDescription = Codegen.ofNullable(modelPackageGroupDescription);
             return this;
         }
         public Builder modelPackageGroupName(Output<String> modelPackageGroupName) {
@@ -108,7 +109,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ModelPackageGroupArgs build() {
             return new ModelPackageGroupArgs(modelPackageGroupDescription, modelPackageGroupName, tags);

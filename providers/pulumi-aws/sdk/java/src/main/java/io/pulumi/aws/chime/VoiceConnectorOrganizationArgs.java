@@ -6,6 +6,7 @@ package io.pulumi.aws.chime;
 import io.pulumi.aws.chime.inputs.VoiceConnectorOrganizationRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
     }
 
     private VoiceConnectorOrganizationArgs() {
-        this.disabled = Output.empty();
-        this.routes = Output.empty();
-        this.voiceConnectorId = Output.empty();
+        this.disabled = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.voiceConnectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder routes(Output<List<VoiceConnectorOrganizationRouteArgs>> routes) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> owningAccount;
 
     public Output<String> getOwningAccount() {
-        return this.owningAccount == null ? Output.empty() : this.owningAccount;
+        return this.owningAccount == null ? Codegen.empty() : this.owningAccount;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> vpcRegion;
 
     public Output<String> getVpcRegion() {
-        return this.vpcRegion == null ? Output.empty() : this.vpcRegion;
+        return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> zoneId;
 
     public Output<String> getZoneId() {
-        return this.zoneId == null ? Output.empty() : this.zoneId;
+        return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 
     public ZoneAssociationState(
@@ -70,10 +71,10 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
     }
 
     private ZoneAssociationState() {
-        this.owningAccount = Output.empty();
-        this.vpcId = Output.empty();
-        this.vpcRegion = Output.empty();
-        this.zoneId = Output.empty();
+        this.owningAccount = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.vpcRegion = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder owningAccount(@Nullable String owningAccount) {
-            this.owningAccount = Output.ofNullable(owningAccount);
+            this.owningAccount = Codegen.ofNullable(owningAccount);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -115,7 +116,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
@@ -123,7 +124,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Output.ofNullable(vpcRegion);
+            this.vpcRegion = Codegen.ofNullable(vpcRegion);
             return this;
         }
         public Builder zoneId(@Nullable Output<String> zoneId) {
@@ -131,7 +132,7 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Output.ofNullable(zoneId);
+            this.zoneId = Codegen.ofNullable(zoneId);
             return this;
         }        public ZoneAssociationState build() {
             return new ZoneAssociationState(owningAccount, vpcId, vpcRegion, zoneId);

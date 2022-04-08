@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.MeshSpecEgressFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class MeshSpecGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MeshSpecEgressFilterGetArgs> egressFilter;
 
     public Output<MeshSpecEgressFilterGetArgs> getEgressFilter() {
-        return this.egressFilter == null ? Output.empty() : this.egressFilter;
+        return this.egressFilter == null ? Codegen.empty() : this.egressFilter;
     }
 
     public MeshSpecGetArgs(@Nullable Output<MeshSpecEgressFilterGetArgs> egressFilter) {
@@ -30,7 +31,7 @@ public final class MeshSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MeshSpecGetArgs() {
-        this.egressFilter = Output.empty();
+        this.egressFilter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class MeshSpecGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egressFilter(@Nullable MeshSpecEgressFilterGetArgs egressFilter) {
-            this.egressFilter = Output.ofNullable(egressFilter);
+            this.egressFilter = Codegen.ofNullable(egressFilter);
             return this;
         }        public MeshSpecGetArgs build() {
             return new MeshSpecGetArgs(egressFilter);

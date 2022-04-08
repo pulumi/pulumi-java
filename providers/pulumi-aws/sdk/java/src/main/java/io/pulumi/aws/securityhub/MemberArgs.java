@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {
-        return this.invite == null ? Output.empty() : this.invite;
+        return this.invite == null ? Codegen.empty() : this.invite;
     }
 
     public MemberArgs(
@@ -58,9 +59,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberArgs() {
-        this.accountId = Output.empty();
-        this.email = Output.empty();
-        this.invite = Output.empty();
+        this.accountId = Codegen.empty();
+        this.email = Codegen.empty();
+        this.invite = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Output.ofNullable(invite);
+            this.invite = Codegen.ofNullable(invite);
             return this;
         }        public MemberArgs build() {
             return new MemberArgs(accountId, email, invite);
