@@ -15,6 +15,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionRestrictionsArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionViewerCertificateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,56 +31,56 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> aliases;
 
     public Output<List<String>> getAliases() {
-        return this.aliases == null ? Output.empty() : this.aliases;
+        return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
     @Import(name="cNAMEs")
       private final @Nullable Output<List<String>> cNAMEs;
 
     public Output<List<String>> getCNAMEs() {
-        return this.cNAMEs == null ? Output.empty() : this.cNAMEs;
+        return this.cNAMEs == null ? Codegen.empty() : this.cNAMEs;
     }
 
     @Import(name="cacheBehaviors")
       private final @Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors;
 
     public Output<List<DistributionCacheBehaviorArgs>> getCacheBehaviors() {
-        return this.cacheBehaviors == null ? Output.empty() : this.cacheBehaviors;
+        return this.cacheBehaviors == null ? Codegen.empty() : this.cacheBehaviors;
     }
 
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="customErrorResponses")
       private final @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
 
     public Output<List<DistributionCustomErrorResponseArgs>> getCustomErrorResponses() {
-        return this.customErrorResponses == null ? Output.empty() : this.customErrorResponses;
+        return this.customErrorResponses == null ? Codegen.empty() : this.customErrorResponses;
     }
 
     @Import(name="customOrigin")
       private final @Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin;
 
     public Output<DistributionLegacyCustomOriginArgs> getCustomOrigin() {
-        return this.customOrigin == null ? Output.empty() : this.customOrigin;
+        return this.customOrigin == null ? Codegen.empty() : this.customOrigin;
     }
 
     @Import(name="defaultCacheBehavior")
       private final @Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
 
     public Output<DistributionDefaultCacheBehaviorArgs> getDefaultCacheBehavior() {
-        return this.defaultCacheBehavior == null ? Output.empty() : this.defaultCacheBehavior;
+        return this.defaultCacheBehavior == null ? Codegen.empty() : this.defaultCacheBehavior;
     }
 
     @Import(name="defaultRootObject")
       private final @Nullable Output<String> defaultRootObject;
 
     public Output<String> getDefaultRootObject() {
-        return this.defaultRootObject == null ? Output.empty() : this.defaultRootObject;
+        return this.defaultRootObject == null ? Codegen.empty() : this.defaultRootObject;
     }
 
     @Import(name="enabled", required=true)
@@ -93,70 +94,70 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> httpVersion;
 
     public Output<String> getHttpVersion() {
-        return this.httpVersion == null ? Output.empty() : this.httpVersion;
+        return this.httpVersion == null ? Codegen.empty() : this.httpVersion;
     }
 
     @Import(name="iPV6Enabled")
       private final @Nullable Output<Boolean> iPV6Enabled;
 
     public Output<Boolean> getIPV6Enabled() {
-        return this.iPV6Enabled == null ? Output.empty() : this.iPV6Enabled;
+        return this.iPV6Enabled == null ? Codegen.empty() : this.iPV6Enabled;
     }
 
     @Import(name="logging")
       private final @Nullable Output<DistributionLoggingArgs> logging;
 
     public Output<DistributionLoggingArgs> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     @Import(name="originGroups")
       private final @Nullable Output<DistributionOriginGroupsArgs> originGroups;
 
     public Output<DistributionOriginGroupsArgs> getOriginGroups() {
-        return this.originGroups == null ? Output.empty() : this.originGroups;
+        return this.originGroups == null ? Codegen.empty() : this.originGroups;
     }
 
     @Import(name="origins")
       private final @Nullable Output<List<DistributionOriginArgs>> origins;
 
     public Output<List<DistributionOriginArgs>> getOrigins() {
-        return this.origins == null ? Output.empty() : this.origins;
+        return this.origins == null ? Codegen.empty() : this.origins;
     }
 
     @Import(name="priceClass")
       private final @Nullable Output<String> priceClass;
 
     public Output<String> getPriceClass() {
-        return this.priceClass == null ? Output.empty() : this.priceClass;
+        return this.priceClass == null ? Codegen.empty() : this.priceClass;
     }
 
     @Import(name="restrictions")
       private final @Nullable Output<DistributionRestrictionsArgs> restrictions;
 
     public Output<DistributionRestrictionsArgs> getRestrictions() {
-        return this.restrictions == null ? Output.empty() : this.restrictions;
+        return this.restrictions == null ? Codegen.empty() : this.restrictions;
     }
 
     @Import(name="s3Origin")
       private final @Nullable Output<DistributionLegacyS3OriginArgs> s3Origin;
 
     public Output<DistributionLegacyS3OriginArgs> getS3Origin() {
-        return this.s3Origin == null ? Output.empty() : this.s3Origin;
+        return this.s3Origin == null ? Codegen.empty() : this.s3Origin;
     }
 
     @Import(name="viewerCertificate")
       private final @Nullable Output<DistributionViewerCertificateArgs> viewerCertificate;
 
     public Output<DistributionViewerCertificateArgs> getViewerCertificate() {
-        return this.viewerCertificate == null ? Output.empty() : this.viewerCertificate;
+        return this.viewerCertificate == null ? Codegen.empty() : this.viewerCertificate;
     }
 
     @Import(name="webACLId")
       private final @Nullable Output<String> webACLId;
 
     public Output<String> getWebACLId() {
-        return this.webACLId == null ? Output.empty() : this.webACLId;
+        return this.webACLId == null ? Codegen.empty() : this.webACLId;
     }
 
     public DistributionConfigArgs(
@@ -201,25 +202,25 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DistributionConfigArgs() {
-        this.aliases = Output.empty();
-        this.cNAMEs = Output.empty();
-        this.cacheBehaviors = Output.empty();
-        this.comment = Output.empty();
-        this.customErrorResponses = Output.empty();
-        this.customOrigin = Output.empty();
-        this.defaultCacheBehavior = Output.empty();
-        this.defaultRootObject = Output.empty();
-        this.enabled = Output.empty();
-        this.httpVersion = Output.empty();
-        this.iPV6Enabled = Output.empty();
-        this.logging = Output.empty();
-        this.originGroups = Output.empty();
-        this.origins = Output.empty();
-        this.priceClass = Output.empty();
-        this.restrictions = Output.empty();
-        this.s3Origin = Output.empty();
-        this.viewerCertificate = Output.empty();
-        this.webACLId = Output.empty();
+        this.aliases = Codegen.empty();
+        this.cNAMEs = Codegen.empty();
+        this.cacheBehaviors = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.customErrorResponses = Codegen.empty();
+        this.customOrigin = Codegen.empty();
+        this.defaultCacheBehavior = Codegen.empty();
+        this.defaultRootObject = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.httpVersion = Codegen.empty();
+        this.iPV6Enabled = Codegen.empty();
+        this.logging = Codegen.empty();
+        this.originGroups = Codegen.empty();
+        this.origins = Codegen.empty();
+        this.priceClass = Codegen.empty();
+        this.restrictions = Codegen.empty();
+        this.s3Origin = Codegen.empty();
+        this.viewerCertificate = Codegen.empty();
+        this.webACLId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -283,7 +284,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = Output.ofNullable(aliases);
+            this.aliases = Codegen.ofNullable(aliases);
             return this;
         }
         public Builder aliases(String... aliases) {
@@ -294,7 +295,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cNAMEs(@Nullable List<String> cNAMEs) {
-            this.cNAMEs = Output.ofNullable(cNAMEs);
+            this.cNAMEs = Codegen.ofNullable(cNAMEs);
             return this;
         }
         public Builder cNAMEs(String... cNAMEs) {
@@ -305,7 +306,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cacheBehaviors(@Nullable List<DistributionCacheBehaviorArgs> cacheBehaviors) {
-            this.cacheBehaviors = Output.ofNullable(cacheBehaviors);
+            this.cacheBehaviors = Codegen.ofNullable(cacheBehaviors);
             return this;
         }
         public Builder cacheBehaviors(DistributionCacheBehaviorArgs... cacheBehaviors) {
@@ -316,7 +317,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder customErrorResponses(@Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses) {
@@ -324,7 +325,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponseArgs> customErrorResponses) {
-            this.customErrorResponses = Output.ofNullable(customErrorResponses);
+            this.customErrorResponses = Codegen.ofNullable(customErrorResponses);
             return this;
         }
         public Builder customErrorResponses(DistributionCustomErrorResponseArgs... customErrorResponses) {
@@ -335,7 +336,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder customOrigin(@Nullable DistributionLegacyCustomOriginArgs customOrigin) {
-            this.customOrigin = Output.ofNullable(customOrigin);
+            this.customOrigin = Codegen.ofNullable(customOrigin);
             return this;
         }
         public Builder defaultCacheBehavior(@Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior) {
@@ -343,7 +344,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder defaultCacheBehavior(@Nullable DistributionDefaultCacheBehaviorArgs defaultCacheBehavior) {
-            this.defaultCacheBehavior = Output.ofNullable(defaultCacheBehavior);
+            this.defaultCacheBehavior = Codegen.ofNullable(defaultCacheBehavior);
             return this;
         }
         public Builder defaultRootObject(@Nullable Output<String> defaultRootObject) {
@@ -351,7 +352,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder defaultRootObject(@Nullable String defaultRootObject) {
-            this.defaultRootObject = Output.ofNullable(defaultRootObject);
+            this.defaultRootObject = Codegen.ofNullable(defaultRootObject);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {
@@ -367,7 +368,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder httpVersion(@Nullable String httpVersion) {
-            this.httpVersion = Output.ofNullable(httpVersion);
+            this.httpVersion = Codegen.ofNullable(httpVersion);
             return this;
         }
         public Builder iPV6Enabled(@Nullable Output<Boolean> iPV6Enabled) {
@@ -375,7 +376,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder iPV6Enabled(@Nullable Boolean iPV6Enabled) {
-            this.iPV6Enabled = Output.ofNullable(iPV6Enabled);
+            this.iPV6Enabled = Codegen.ofNullable(iPV6Enabled);
             return this;
         }
         public Builder logging(@Nullable Output<DistributionLoggingArgs> logging) {
@@ -383,7 +384,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder logging(@Nullable DistributionLoggingArgs logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }
         public Builder originGroups(@Nullable Output<DistributionOriginGroupsArgs> originGroups) {
@@ -391,7 +392,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder originGroups(@Nullable DistributionOriginGroupsArgs originGroups) {
-            this.originGroups = Output.ofNullable(originGroups);
+            this.originGroups = Codegen.ofNullable(originGroups);
             return this;
         }
         public Builder origins(@Nullable Output<List<DistributionOriginArgs>> origins) {
@@ -399,7 +400,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder origins(@Nullable List<DistributionOriginArgs> origins) {
-            this.origins = Output.ofNullable(origins);
+            this.origins = Codegen.ofNullable(origins);
             return this;
         }
         public Builder origins(DistributionOriginArgs... origins) {
@@ -410,7 +411,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder priceClass(@Nullable String priceClass) {
-            this.priceClass = Output.ofNullable(priceClass);
+            this.priceClass = Codegen.ofNullable(priceClass);
             return this;
         }
         public Builder restrictions(@Nullable Output<DistributionRestrictionsArgs> restrictions) {
@@ -418,7 +419,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder restrictions(@Nullable DistributionRestrictionsArgs restrictions) {
-            this.restrictions = Output.ofNullable(restrictions);
+            this.restrictions = Codegen.ofNullable(restrictions);
             return this;
         }
         public Builder s3Origin(@Nullable Output<DistributionLegacyS3OriginArgs> s3Origin) {
@@ -426,7 +427,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder s3Origin(@Nullable DistributionLegacyS3OriginArgs s3Origin) {
-            this.s3Origin = Output.ofNullable(s3Origin);
+            this.s3Origin = Codegen.ofNullable(s3Origin);
             return this;
         }
         public Builder viewerCertificate(@Nullable Output<DistributionViewerCertificateArgs> viewerCertificate) {
@@ -434,7 +435,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder viewerCertificate(@Nullable DistributionViewerCertificateArgs viewerCertificate) {
-            this.viewerCertificate = Output.ofNullable(viewerCertificate);
+            this.viewerCertificate = Codegen.ofNullable(viewerCertificate);
             return this;
         }
         public Builder webACLId(@Nullable Output<String> webACLId) {
@@ -442,7 +443,7 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder webACLId(@Nullable String webACLId) {
-            this.webACLId = Output.ofNullable(webACLId);
+            this.webACLId = Codegen.ofNullable(webACLId);
             return this;
         }        public DistributionConfigArgs build() {
             return new DistributionConfigArgs(aliases, cNAMEs, cacheBehaviors, comment, customErrorResponses, customOrigin, defaultCacheBehavior, defaultRootObject, enabled, httpVersion, iPV6Enabled, logging, originGroups, origins, priceClass, restrictions, s3Origin, viewerCertificate, webACLId);

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ecr.inputs.RepositoryLifecyclePolicyArgs;
 import io.pulumi.awsnative.ecr.inputs.RepositoryTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +26,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<RepositoryEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="imageScanningConfiguration")
       private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
     public Output<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
-        return this.imageScanningConfiguration == null ? Output.empty() : this.imageScanningConfiguration;
+        return this.imageScanningConfiguration == null ? Codegen.empty() : this.imageScanningConfiguration;
     }
 
     /**
@@ -43,14 +44,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
 
     public Output<RepositoryImageTagMutability> getImageTagMutability() {
-        return this.imageTagMutability == null ? Output.empty() : this.imageTagMutability;
+        return this.imageTagMutability == null ? Codegen.empty() : this.imageTagMutability;
     }
 
     @Import(name="lifecyclePolicy")
       private final @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
 
     public Output<RepositoryLifecyclePolicyArgs> getLifecyclePolicy() {
-        return this.lifecyclePolicy == null ? Output.empty() : this.lifecyclePolicy;
+        return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> repositoryPolicyText;
 
     public Output<Object> getRepositoryPolicyText() {
-        return this.repositoryPolicyText == null ? Output.empty() : this.repositoryPolicyText;
+        return this.repositoryPolicyText == null ? Codegen.empty() : this.repositoryPolicyText;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RepositoryTagArgs>> tags;
 
     public Output<List<RepositoryTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RepositoryArgs(
@@ -104,13 +105,13 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.encryptionConfiguration = Output.empty();
-        this.imageScanningConfiguration = Output.empty();
-        this.imageTagMutability = Output.empty();
-        this.lifecyclePolicy = Output.empty();
-        this.repositoryName = Output.empty();
-        this.repositoryPolicyText = Output.empty();
-        this.tags = Output.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.imageScanningConfiguration = Codegen.empty();
+        this.imageTagMutability = Codegen.empty();
+        this.lifecyclePolicy = Codegen.empty();
+        this.repositoryName = Codegen.empty();
+        this.repositoryPolicyText = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfiguration(@Nullable RepositoryEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
@@ -158,7 +159,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
-            this.imageScanningConfiguration = Output.ofNullable(imageScanningConfiguration);
+            this.imageScanningConfiguration = Codegen.ofNullable(imageScanningConfiguration);
             return this;
         }
         public Builder imageTagMutability(@Nullable Output<RepositoryImageTagMutability> imageTagMutability) {
@@ -166,7 +167,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
-            this.imageTagMutability = Output.ofNullable(imageTagMutability);
+            this.imageTagMutability = Codegen.ofNullable(imageTagMutability);
             return this;
         }
         public Builder lifecyclePolicy(@Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy) {
@@ -174,7 +175,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecyclePolicy(@Nullable RepositoryLifecyclePolicyArgs lifecyclePolicy) {
-            this.lifecyclePolicy = Output.ofNullable(lifecyclePolicy);
+            this.lifecyclePolicy = Codegen.ofNullable(lifecyclePolicy);
             return this;
         }
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
@@ -182,7 +183,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }
         public Builder repositoryPolicyText(@Nullable Output<Object> repositoryPolicyText) {
@@ -190,7 +191,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryPolicyText(@Nullable Object repositoryPolicyText) {
-            this.repositoryPolicyText = Output.ofNullable(repositoryPolicyText);
+            this.repositoryPolicyText = Codegen.ofNullable(repositoryPolicyText);
             return this;
         }
         public Builder tags(@Nullable Output<List<RepositoryTagArgs>> tags) {
@@ -198,7 +199,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RepositoryTagArgs... tags) {

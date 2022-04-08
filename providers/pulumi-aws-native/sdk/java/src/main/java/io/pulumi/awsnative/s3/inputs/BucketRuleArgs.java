@@ -11,6 +11,7 @@ import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTransitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,84 +32,84 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
     public Output<BucketAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
-        return this.abortIncompleteMultipartUpload == null ? Output.empty() : this.abortIncompleteMultipartUpload;
+        return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
     }
 
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     @Import(name="expirationInDays")
       private final @Nullable Output<Integer> expirationInDays;
 
     public Output<Integer> getExpirationInDays() {
-        return this.expirationInDays == null ? Output.empty() : this.expirationInDays;
+        return this.expirationInDays == null ? Codegen.empty() : this.expirationInDays;
     }
 
     @Import(name="expiredObjectDeleteMarker")
       private final @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
     public Output<Boolean> getExpiredObjectDeleteMarker() {
-        return this.expiredObjectDeleteMarker == null ? Output.empty() : this.expiredObjectDeleteMarker;
+        return this.expiredObjectDeleteMarker == null ? Codegen.empty() : this.expiredObjectDeleteMarker;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="noncurrentVersionExpiration")
       private final @Nullable Output<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration;
 
     public Output<BucketNoncurrentVersionExpirationArgs> getNoncurrentVersionExpiration() {
-        return this.noncurrentVersionExpiration == null ? Output.empty() : this.noncurrentVersionExpiration;
+        return this.noncurrentVersionExpiration == null ? Codegen.empty() : this.noncurrentVersionExpiration;
     }
 
     @Import(name="noncurrentVersionExpirationInDays")
       private final @Nullable Output<Integer> noncurrentVersionExpirationInDays;
 
     public Output<Integer> getNoncurrentVersionExpirationInDays() {
-        return this.noncurrentVersionExpirationInDays == null ? Output.empty() : this.noncurrentVersionExpirationInDays;
+        return this.noncurrentVersionExpirationInDays == null ? Codegen.empty() : this.noncurrentVersionExpirationInDays;
     }
 
     @Import(name="noncurrentVersionTransition")
       private final @Nullable Output<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition;
 
     public Output<BucketNoncurrentVersionTransitionArgs> getNoncurrentVersionTransition() {
-        return this.noncurrentVersionTransition == null ? Output.empty() : this.noncurrentVersionTransition;
+        return this.noncurrentVersionTransition == null ? Codegen.empty() : this.noncurrentVersionTransition;
     }
 
     @Import(name="noncurrentVersionTransitions")
       private final @Nullable Output<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions;
 
     public Output<List<BucketNoncurrentVersionTransitionArgs>> getNoncurrentVersionTransitions() {
-        return this.noncurrentVersionTransitions == null ? Output.empty() : this.noncurrentVersionTransitions;
+        return this.noncurrentVersionTransitions == null ? Codegen.empty() : this.noncurrentVersionTransitions;
     }
 
     @Import(name="objectSizeGreaterThan")
       private final @Nullable Output<String> objectSizeGreaterThan;
 
     public Output<String> getObjectSizeGreaterThan() {
-        return this.objectSizeGreaterThan == null ? Output.empty() : this.objectSizeGreaterThan;
+        return this.objectSizeGreaterThan == null ? Codegen.empty() : this.objectSizeGreaterThan;
     }
 
     @Import(name="objectSizeLessThan")
       private final @Nullable Output<String> objectSizeLessThan;
 
     public Output<String> getObjectSizeLessThan() {
-        return this.objectSizeLessThan == null ? Output.empty() : this.objectSizeLessThan;
+        return this.objectSizeLessThan == null ? Codegen.empty() : this.objectSizeLessThan;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="status", required=true)
@@ -122,21 +123,21 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
     public Output<List<BucketTagFilterArgs>> getTagFilters() {
-        return this.tagFilters == null ? Output.empty() : this.tagFilters;
+        return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 
     @Import(name="transition")
       private final @Nullable Output<BucketTransitionArgs> transition;
 
     public Output<BucketTransitionArgs> getTransition() {
-        return this.transition == null ? Output.empty() : this.transition;
+        return this.transition == null ? Codegen.empty() : this.transition;
     }
 
     @Import(name="transitions")
       private final @Nullable Output<List<BucketTransitionArgs>> transitions;
 
     public Output<List<BucketTransitionArgs>> getTransitions() {
-        return this.transitions == null ? Output.empty() : this.transitions;
+        return this.transitions == null ? Codegen.empty() : this.transitions;
     }
 
     public BucketRuleArgs(
@@ -175,22 +176,22 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketRuleArgs() {
-        this.abortIncompleteMultipartUpload = Output.empty();
-        this.expirationDate = Output.empty();
-        this.expirationInDays = Output.empty();
-        this.expiredObjectDeleteMarker = Output.empty();
-        this.id = Output.empty();
-        this.noncurrentVersionExpiration = Output.empty();
-        this.noncurrentVersionExpirationInDays = Output.empty();
-        this.noncurrentVersionTransition = Output.empty();
-        this.noncurrentVersionTransitions = Output.empty();
-        this.objectSizeGreaterThan = Output.empty();
-        this.objectSizeLessThan = Output.empty();
-        this.prefix = Output.empty();
-        this.status = Output.empty();
-        this.tagFilters = Output.empty();
-        this.transition = Output.empty();
-        this.transitions = Output.empty();
+        this.abortIncompleteMultipartUpload = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.expirationInDays = Codegen.empty();
+        this.expiredObjectDeleteMarker = Codegen.empty();
+        this.id = Codegen.empty();
+        this.noncurrentVersionExpiration = Codegen.empty();
+        this.noncurrentVersionExpirationInDays = Codegen.empty();
+        this.noncurrentVersionTransition = Codegen.empty();
+        this.noncurrentVersionTransitions = Codegen.empty();
+        this.objectSizeGreaterThan = Codegen.empty();
+        this.objectSizeLessThan = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tagFilters = Codegen.empty();
+        this.transition = Codegen.empty();
+        this.transitions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = Output.ofNullable(abortIncompleteMultipartUpload);
+            this.abortIncompleteMultipartUpload = Codegen.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -256,7 +257,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder expirationInDays(@Nullable Output<Integer> expirationInDays) {
@@ -264,7 +265,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
-            this.expirationInDays = Output.ofNullable(expirationInDays);
+            this.expirationInDays = Codegen.ofNullable(expirationInDays);
             return this;
         }
         public Builder expiredObjectDeleteMarker(@Nullable Output<Boolean> expiredObjectDeleteMarker) {
@@ -272,7 +273,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
-            this.expiredObjectDeleteMarker = Output.ofNullable(expiredObjectDeleteMarker);
+            this.expiredObjectDeleteMarker = Codegen.ofNullable(expiredObjectDeleteMarker);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -280,7 +281,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder noncurrentVersionExpiration(@Nullable Output<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration) {
@@ -288,7 +289,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpirationArgs noncurrentVersionExpiration) {
-            this.noncurrentVersionExpiration = Output.ofNullable(noncurrentVersionExpiration);
+            this.noncurrentVersionExpiration = Codegen.ofNullable(noncurrentVersionExpiration);
             return this;
         }
         public Builder noncurrentVersionExpirationInDays(@Nullable Output<Integer> noncurrentVersionExpirationInDays) {
@@ -296,7 +297,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
-            this.noncurrentVersionExpirationInDays = Output.ofNullable(noncurrentVersionExpirationInDays);
+            this.noncurrentVersionExpirationInDays = Codegen.ofNullable(noncurrentVersionExpirationInDays);
             return this;
         }
         public Builder noncurrentVersionTransition(@Nullable Output<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition) {
@@ -304,7 +305,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransitionArgs noncurrentVersionTransition) {
-            this.noncurrentVersionTransition = Output.ofNullable(noncurrentVersionTransition);
+            this.noncurrentVersionTransition = Codegen.ofNullable(noncurrentVersionTransition);
             return this;
         }
         public Builder noncurrentVersionTransitions(@Nullable Output<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions) {
@@ -312,7 +313,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransitions) {
-            this.noncurrentVersionTransitions = Output.ofNullable(noncurrentVersionTransitions);
+            this.noncurrentVersionTransitions = Codegen.ofNullable(noncurrentVersionTransitions);
             return this;
         }
         public Builder noncurrentVersionTransitions(BucketNoncurrentVersionTransitionArgs... noncurrentVersionTransitions) {
@@ -323,7 +324,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
-            this.objectSizeGreaterThan = Output.ofNullable(objectSizeGreaterThan);
+            this.objectSizeGreaterThan = Codegen.ofNullable(objectSizeGreaterThan);
             return this;
         }
         public Builder objectSizeLessThan(@Nullable Output<String> objectSizeLessThan) {
@@ -331,7 +332,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectSizeLessThan(@Nullable String objectSizeLessThan) {
-            this.objectSizeLessThan = Output.ofNullable(objectSizeLessThan);
+            this.objectSizeLessThan = Codegen.ofNullable(objectSizeLessThan);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -339,7 +340,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder status(Output<BucketRuleStatus> status) {
@@ -355,7 +356,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
-            this.tagFilters = Output.ofNullable(tagFilters);
+            this.tagFilters = Codegen.ofNullable(tagFilters);
             return this;
         }
         public Builder tagFilters(BucketTagFilterArgs... tagFilters) {
@@ -366,7 +367,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transition(@Nullable BucketTransitionArgs transition) {
-            this.transition = Output.ofNullable(transition);
+            this.transition = Codegen.ofNullable(transition);
             return this;
         }
         public Builder transitions(@Nullable Output<List<BucketTransitionArgs>> transitions) {
@@ -374,7 +375,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitions(@Nullable List<BucketTransitionArgs> transitions) {
-            this.transitions = Output.ofNullable(transitions);
+            this.transitions = Codegen.ofNullable(transitions);
             return this;
         }
         public Builder transitions(BucketTransitionArgs... transitions) {

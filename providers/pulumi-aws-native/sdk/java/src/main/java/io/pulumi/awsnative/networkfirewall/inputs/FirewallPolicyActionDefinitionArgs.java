@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyPublishMetricActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
       private final @Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
 
     public Output<FirewallPolicyPublishMetricActionArgs> getPublishMetricAction() {
-        return this.publishMetricAction == null ? Output.empty() : this.publishMetricAction;
+        return this.publishMetricAction == null ? Codegen.empty() : this.publishMetricAction;
     }
 
     public FirewallPolicyActionDefinitionArgs(@Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
@@ -26,7 +27,7 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
     }
 
     private FirewallPolicyActionDefinitionArgs() {
-        this.publishMetricAction = Output.empty();
+        this.publishMetricAction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
             return this;
         }
         public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Output.ofNullable(publishMetricAction);
+            this.publishMetricAction = Codegen.ofNullable(publishMetricAction);
             return this;
         }        public FirewallPolicyActionDefinitionArgs build() {
             return new FirewallPolicyActionDefinitionArgs(publishMetricAction);

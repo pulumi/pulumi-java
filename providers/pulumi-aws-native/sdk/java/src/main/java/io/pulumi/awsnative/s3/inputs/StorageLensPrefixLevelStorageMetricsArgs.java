@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.StorageLensSelectionCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +24,14 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     @Import(name="selectionCriteria")
       private final @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria;
 
     public Output<StorageLensSelectionCriteriaArgs> getSelectionCriteria() {
-        return this.selectionCriteria == null ? Output.empty() : this.selectionCriteria;
+        return this.selectionCriteria == null ? Codegen.empty() : this.selectionCriteria;
     }
 
     public StorageLensPrefixLevelStorageMetricsArgs(
@@ -41,8 +42,8 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
     }
 
     private StorageLensPrefixLevelStorageMetricsArgs() {
-        this.isEnabled = Output.empty();
-        this.selectionCriteria = Output.empty();
+        this.isEnabled = Codegen.empty();
+        this.selectionCriteria = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }
         public Builder selectionCriteria(@Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria) {
@@ -80,7 +81,7 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
             return this;
         }
         public Builder selectionCriteria(@Nullable StorageLensSelectionCriteriaArgs selectionCriteria) {
-            this.selectionCriteria = Output.ofNullable(selectionCriteria);
+            this.selectionCriteria = Codegen.ofNullable(selectionCriteria);
             return this;
         }        public StorageLensPrefixLevelStorageMetricsArgs build() {
             return new StorageLensPrefixLevelStorageMetricsArgs(isEnabled, selectionCriteria);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<DistributionOriginGroupArgs>> items;
 
     public Output<List<DistributionOriginGroupArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     @Import(name="quantity", required=true)
@@ -38,8 +39,8 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
     }
 
     private DistributionOriginGroupsArgs() {
-        this.items = Output.empty();
-        this.quantity = Output.empty();
+        this.items = Codegen.empty();
+        this.quantity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder items(@Nullable List<DistributionOriginGroupArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(DistributionOriginGroupArgs... items) {

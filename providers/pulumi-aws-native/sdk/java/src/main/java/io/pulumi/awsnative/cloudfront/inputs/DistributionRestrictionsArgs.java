@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionGeoRestrictionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,7 +26,7 @@ public final class DistributionRestrictionsArgs extends io.pulumi.resources.Reso
     }
 
     private DistributionRestrictionsArgs() {
-        this.geoRestriction = Output.empty();
+        this.geoRestriction = Codegen.empty();
     }
 
     public static Builder builder() {

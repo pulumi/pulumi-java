@@ -12,6 +12,7 @@ import io.pulumi.awsnative.apigateway.outputs.StageTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -243,7 +244,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stage(String name, StageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Stage(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

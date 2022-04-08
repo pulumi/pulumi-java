@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -85,7 +86,7 @@ public class NetworkInsightsAccessScope extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInsightsAccessScope(String name, @Nullable NetworkInsightsAccessScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:NetworkInsightsAccessScope", name, args == null ? NetworkInsightsAccessScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:NetworkInsightsAccessScope", name, args == null ? NetworkInsightsAccessScopeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkInsightsAccessScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

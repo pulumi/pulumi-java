@@ -7,6 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowTriggerType;
 import io.pulumi.awsnative.appflow.inputs.FlowScheduledTriggerPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
 
     public Output<FlowScheduledTriggerPropertiesArgs> getTriggerProperties() {
-        return this.triggerProperties == null ? Output.empty() : this.triggerProperties;
+        return this.triggerProperties == null ? Codegen.empty() : this.triggerProperties;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FlowTriggerConfigArgs() {
-        this.triggerProperties = Output.empty();
-        this.triggerType = Output.empty();
+        this.triggerProperties = Codegen.empty();
+        this.triggerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder triggerProperties(@Nullable FlowScheduledTriggerPropertiesArgs triggerProperties) {
-            this.triggerProperties = Output.ofNullable(triggerProperties);
+            this.triggerProperties = Codegen.ofNullable(triggerProperties);
             return this;
         }
         public Builder triggerType(Output<FlowTriggerType> triggerType) {

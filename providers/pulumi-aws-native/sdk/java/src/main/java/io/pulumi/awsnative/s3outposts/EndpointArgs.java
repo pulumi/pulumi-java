@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3outposts;
 import io.pulumi.awsnative.s3outposts.enums.EndpointAccessType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointAccessType> accessType;
 
     public Output<EndpointAccessType> getAccessType() {
-        return this.accessType == null ? Output.empty() : this.accessType;
+        return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
     public Output<String> getCustomerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool == null ? Output.empty() : this.customerOwnedIpv4Pool;
+        return this.customerOwnedIpv4Pool == null ? Codegen.empty() : this.customerOwnedIpv4Pool;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.accessType = Output.empty();
-        this.customerOwnedIpv4Pool = Output.empty();
-        this.outpostId = Output.empty();
-        this.securityGroupId = Output.empty();
-        this.subnetId = Output.empty();
+        this.accessType = Codegen.empty();
+        this.customerOwnedIpv4Pool = Codegen.empty();
+        this.outpostId = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessType(@Nullable EndpointAccessType accessType) {
-            this.accessType = Output.ofNullable(accessType);
+            this.accessType = Codegen.ofNullable(accessType);
             return this;
         }
         public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
@@ -132,7 +133,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
-            this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
+            this.customerOwnedIpv4Pool = Codegen.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
         public Builder outpostId(Output<String> outpostId) {

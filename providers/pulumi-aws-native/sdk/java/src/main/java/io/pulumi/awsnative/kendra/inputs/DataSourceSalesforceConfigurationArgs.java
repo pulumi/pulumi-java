@@ -9,6 +9,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectAttac
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,35 +25,35 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration;
 
     public Output<DataSourceSalesforceChatterFeedConfigurationArgs> getChatterFeedConfiguration() {
-        return this.chatterFeedConfiguration == null ? Output.empty() : this.chatterFeedConfiguration;
+        return this.chatterFeedConfiguration == null ? Codegen.empty() : this.chatterFeedConfiguration;
     }
 
     @Import(name="crawlAttachments")
       private final @Nullable Output<Boolean> crawlAttachments;
 
     public Output<Boolean> getCrawlAttachments() {
-        return this.crawlAttachments == null ? Output.empty() : this.crawlAttachments;
+        return this.crawlAttachments == null ? Codegen.empty() : this.crawlAttachments;
     }
 
     @Import(name="excludeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> excludeAttachmentFilePatterns;
 
     public Output<List<String>> getExcludeAttachmentFilePatterns() {
-        return this.excludeAttachmentFilePatterns == null ? Output.empty() : this.excludeAttachmentFilePatterns;
+        return this.excludeAttachmentFilePatterns == null ? Codegen.empty() : this.excludeAttachmentFilePatterns;
     }
 
     @Import(name="includeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> includeAttachmentFilePatterns;
 
     public Output<List<String>> getIncludeAttachmentFilePatterns() {
-        return this.includeAttachmentFilePatterns == null ? Output.empty() : this.includeAttachmentFilePatterns;
+        return this.includeAttachmentFilePatterns == null ? Codegen.empty() : this.includeAttachmentFilePatterns;
     }
 
     @Import(name="knowledgeArticleConfiguration")
       private final @Nullable Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
     public Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
-        return this.knowledgeArticleConfiguration == null ? Output.empty() : this.knowledgeArticleConfiguration;
+        return this.knowledgeArticleConfiguration == null ? Codegen.empty() : this.knowledgeArticleConfiguration;
     }
 
     @Import(name="secretArn", required=true)
@@ -73,14 +74,14 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration;
 
     public Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> getStandardObjectAttachmentConfiguration() {
-        return this.standardObjectAttachmentConfiguration == null ? Output.empty() : this.standardObjectAttachmentConfiguration;
+        return this.standardObjectAttachmentConfiguration == null ? Codegen.empty() : this.standardObjectAttachmentConfiguration;
     }
 
     @Import(name="standardObjectConfigurations")
       private final @Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations;
 
     public Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> getStandardObjectConfigurations() {
-        return this.standardObjectConfigurations == null ? Output.empty() : this.standardObjectConfigurations;
+        return this.standardObjectConfigurations == null ? Codegen.empty() : this.standardObjectConfigurations;
     }
 
     public DataSourceSalesforceConfigurationArgs(
@@ -105,15 +106,15 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceSalesforceConfigurationArgs() {
-        this.chatterFeedConfiguration = Output.empty();
-        this.crawlAttachments = Output.empty();
-        this.excludeAttachmentFilePatterns = Output.empty();
-        this.includeAttachmentFilePatterns = Output.empty();
-        this.knowledgeArticleConfiguration = Output.empty();
-        this.secretArn = Output.empty();
-        this.serverUrl = Output.empty();
-        this.standardObjectAttachmentConfiguration = Output.empty();
-        this.standardObjectConfigurations = Output.empty();
+        this.chatterFeedConfiguration = Codegen.empty();
+        this.crawlAttachments = Codegen.empty();
+        this.excludeAttachmentFilePatterns = Codegen.empty();
+        this.includeAttachmentFilePatterns = Codegen.empty();
+        this.knowledgeArticleConfiguration = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.serverUrl = Codegen.empty();
+        this.standardObjectAttachmentConfiguration = Codegen.empty();
+        this.standardObjectConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder chatterFeedConfiguration(@Nullable DataSourceSalesforceChatterFeedConfigurationArgs chatterFeedConfiguration) {
-            this.chatterFeedConfiguration = Output.ofNullable(chatterFeedConfiguration);
+            this.chatterFeedConfiguration = Codegen.ofNullable(chatterFeedConfiguration);
             return this;
         }
         public Builder crawlAttachments(@Nullable Output<Boolean> crawlAttachments) {
@@ -165,7 +166,7 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = Output.ofNullable(crawlAttachments);
+            this.crawlAttachments = Codegen.ofNullable(crawlAttachments);
             return this;
         }
         public Builder excludeAttachmentFilePatterns(@Nullable Output<List<String>> excludeAttachmentFilePatterns) {
@@ -173,7 +174,7 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
-            this.excludeAttachmentFilePatterns = Output.ofNullable(excludeAttachmentFilePatterns);
+            this.excludeAttachmentFilePatterns = Codegen.ofNullable(excludeAttachmentFilePatterns);
             return this;
         }
         public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
@@ -184,7 +185,7 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
-            this.includeAttachmentFilePatterns = Output.ofNullable(includeAttachmentFilePatterns);
+            this.includeAttachmentFilePatterns = Codegen.ofNullable(includeAttachmentFilePatterns);
             return this;
         }
         public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {
@@ -195,7 +196,7 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder knowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
-            this.knowledgeArticleConfiguration = Output.ofNullable(knowledgeArticleConfiguration);
+            this.knowledgeArticleConfiguration = Codegen.ofNullable(knowledgeArticleConfiguration);
             return this;
         }
         public Builder secretArn(Output<String> secretArn) {
@@ -219,7 +220,7 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder standardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfigurationArgs standardObjectAttachmentConfiguration) {
-            this.standardObjectAttachmentConfiguration = Output.ofNullable(standardObjectAttachmentConfiguration);
+            this.standardObjectAttachmentConfiguration = Codegen.ofNullable(standardObjectAttachmentConfiguration);
             return this;
         }
         public Builder standardObjectConfigurations(@Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations) {
@@ -227,7 +228,7 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder standardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfigurationArgs> standardObjectConfigurations) {
-            this.standardObjectConfigurations = Output.ofNullable(standardObjectConfigurations);
+            this.standardObjectConfigurations = Codegen.ofNullable(standardObjectConfigurations);
             return this;
         }
         public Builder standardObjectConfigurations(DataSourceSalesforceStandardObjectConfigurationArgs... standardObjectConfigurations) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.memorydb.inputs.SubnetGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
+        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SubnetGroupTagArgs>> tags;
 
     public Output<List<SubnetGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SubnetGroupArgs(
@@ -72,10 +73,10 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetGroupArgs() {
-        this.description = Output.empty();
-        this.subnetGroupName = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.subnetGroupName = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
@@ -117,7 +118,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Output.ofNullable(subnetGroupName);
+            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
             return this;
         }
         public Builder subnetIds(Output<List<String>> subnetIds) {
@@ -136,7 +137,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<SubnetGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SubnetGroupTagArgs... tags) {

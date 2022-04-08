@@ -8,6 +8,7 @@ import io.pulumi.awsnative.datasync.inputs.LocationS3S3ConfigArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationS3TagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
 
     public Output<LocationS3S3StorageClass> getS3StorageClass() {
-        return this.s3StorageClass == null ? Output.empty() : this.s3StorageClass;
+        return this.s3StorageClass == null ? Codegen.empty() : this.s3StorageClass;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LocationS3TagArgs>> tags;
 
     public Output<List<LocationS3TagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LocationS3Args(
@@ -83,11 +84,11 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationS3Args() {
-        this.s3BucketArn = Output.empty();
-        this.s3Config = Output.empty();
-        this.s3StorageClass = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
+        this.s3BucketArn = Codegen.empty();
+        this.s3Config = Codegen.empty();
+        this.s3StorageClass = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3StorageClass(@Nullable LocationS3S3StorageClass s3StorageClass) {
-            this.s3StorageClass = Output.ofNullable(s3StorageClass);
+            this.s3StorageClass = Codegen.ofNullable(s3StorageClass);
             return this;
         }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
@@ -147,7 +148,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<List<LocationS3TagArgs>> tags) {
@@ -155,7 +156,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<LocationS3TagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LocationS3TagArgs... tags) {

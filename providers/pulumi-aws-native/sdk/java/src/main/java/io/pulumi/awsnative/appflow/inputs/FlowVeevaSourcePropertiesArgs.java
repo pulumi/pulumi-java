@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,28 +20,28 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> documentType;
 
     public Output<String> getDocumentType() {
-        return this.documentType == null ? Output.empty() : this.documentType;
+        return this.documentType == null ? Codegen.empty() : this.documentType;
     }
 
     @Import(name="includeAllVersions")
       private final @Nullable Output<Boolean> includeAllVersions;
 
     public Output<Boolean> getIncludeAllVersions() {
-        return this.includeAllVersions == null ? Output.empty() : this.includeAllVersions;
+        return this.includeAllVersions == null ? Codegen.empty() : this.includeAllVersions;
     }
 
     @Import(name="includeRenditions")
       private final @Nullable Output<Boolean> includeRenditions;
 
     public Output<Boolean> getIncludeRenditions() {
-        return this.includeRenditions == null ? Output.empty() : this.includeRenditions;
+        return this.includeRenditions == null ? Codegen.empty() : this.includeRenditions;
     }
 
     @Import(name="includeSourceFiles")
       private final @Nullable Output<Boolean> includeSourceFiles;
 
     public Output<Boolean> getIncludeSourceFiles() {
-        return this.includeSourceFiles == null ? Output.empty() : this.includeSourceFiles;
+        return this.includeSourceFiles == null ? Codegen.empty() : this.includeSourceFiles;
     }
 
     @Import(name="object", required=true)
@@ -64,11 +65,11 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private FlowVeevaSourcePropertiesArgs() {
-        this.documentType = Output.empty();
-        this.includeAllVersions = Output.empty();
-        this.includeRenditions = Output.empty();
-        this.includeSourceFiles = Output.empty();
-        this.object = Output.empty();
+        this.documentType = Codegen.empty();
+        this.includeAllVersions = Codegen.empty();
+        this.includeRenditions = Codegen.empty();
+        this.includeSourceFiles = Codegen.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder documentType(@Nullable String documentType) {
-            this.documentType = Output.ofNullable(documentType);
+            this.documentType = Codegen.ofNullable(documentType);
             return this;
         }
         public Builder includeAllVersions(@Nullable Output<Boolean> includeAllVersions) {
@@ -112,7 +113,7 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeAllVersions(@Nullable Boolean includeAllVersions) {
-            this.includeAllVersions = Output.ofNullable(includeAllVersions);
+            this.includeAllVersions = Codegen.ofNullable(includeAllVersions);
             return this;
         }
         public Builder includeRenditions(@Nullable Output<Boolean> includeRenditions) {
@@ -120,7 +121,7 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeRenditions(@Nullable Boolean includeRenditions) {
-            this.includeRenditions = Output.ofNullable(includeRenditions);
+            this.includeRenditions = Codegen.ofNullable(includeRenditions);
             return this;
         }
         public Builder includeSourceFiles(@Nullable Output<Boolean> includeSourceFiles) {
@@ -128,7 +129,7 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeSourceFiles(@Nullable Boolean includeSourceFiles) {
-            this.includeSourceFiles = Output.ofNullable(includeSourceFiles);
+            this.includeSourceFiles = Codegen.ofNullable(includeSourceFiles);
             return this;
         }
         public Builder object(Output<String> object) {

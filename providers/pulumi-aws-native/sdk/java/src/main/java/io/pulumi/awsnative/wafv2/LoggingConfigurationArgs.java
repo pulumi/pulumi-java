@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.LoggingFilterPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<LoggingFilterPropertiesArgs> loggingFilter;
 
     public Output<LoggingFilterPropertiesArgs> getLoggingFilter() {
-        return this.loggingFilter == null ? Output.empty() : this.loggingFilter;
+        return this.loggingFilter == null ? Codegen.empty() : this.loggingFilter;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
 
     public Output<List<LoggingConfigurationFieldToMatchArgs>> getRedactedFields() {
-        return this.redactedFields == null ? Output.empty() : this.redactedFields;
+        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private LoggingConfigurationArgs() {
-        this.logDestinationConfigs = Output.empty();
-        this.loggingFilter = Output.empty();
-        this.redactedFields = Output.empty();
-        this.resourceArn = Output.empty();
+        this.logDestinationConfigs = Codegen.empty();
+        this.loggingFilter = Codegen.empty();
+        this.redactedFields = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder loggingFilter(@Nullable LoggingFilterPropertiesArgs loggingFilter) {
-            this.loggingFilter = Output.ofNullable(loggingFilter);
+            this.loggingFilter = Codegen.ofNullable(loggingFilter);
             return this;
         }
         public Builder redactedFields(@Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields) {
@@ -129,7 +130,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder redactedFields(@Nullable List<LoggingConfigurationFieldToMatchArgs> redactedFields) {
-            this.redactedFields = Output.ofNullable(redactedFields);
+            this.redactedFields = Codegen.ofNullable(redactedFields);
             return this;
         }
         public Builder redactedFields(LoggingConfigurationFieldToMatchArgs... redactedFields) {

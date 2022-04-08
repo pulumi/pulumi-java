@@ -5,6 +5,7 @@ package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> signKey;
 
     public Output<String> getSignKey() {
-        return this.signKey == null ? Output.empty() : this.signKey;
+        return this.signKey == null ? Codegen.empty() : this.signKey;
     }
 
     public LicenseIssuerDataArgs(
@@ -36,8 +37,8 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LicenseIssuerDataArgs() {
-        this.name = Output.empty();
-        this.signKey = Output.empty();
+        this.name = Codegen.empty();
+        this.signKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder signKey(@Nullable String signKey) {
-            this.signKey = Output.ofNullable(signKey);
+            this.signKey = Codegen.ofNullable(signKey);
             return this;
         }        public LicenseIssuerDataArgs build() {
             return new LicenseIssuerDataArgs(name, signKey);

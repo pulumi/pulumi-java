@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<String> accessRoleArn;
 
     public Output<String> getAccessRoleArn() {
-        return this.accessRoleArn == null ? Output.empty() : this.accessRoleArn;
+        return this.accessRoleArn == null ? Codegen.empty() : this.accessRoleArn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<String> connectionArn;
 
     public Output<String> getConnectionArn() {
-        return this.connectionArn == null ? Output.empty() : this.connectionArn;
+        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
     }
 
     public ServiceAuthenticationConfigurationArgs(
@@ -48,8 +49,8 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
     }
 
     private ServiceAuthenticationConfigurationArgs() {
-        this.accessRoleArn = Output.empty();
-        this.connectionArn = Output.empty();
+        this.accessRoleArn = Codegen.empty();
+        this.connectionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder accessRoleArn(@Nullable String accessRoleArn) {
-            this.accessRoleArn = Output.ofNullable(accessRoleArn);
+            this.accessRoleArn = Codegen.ofNullable(accessRoleArn);
             return this;
         }
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
@@ -87,7 +88,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Output.ofNullable(connectionArn);
+            this.connectionArn = Codegen.ofNullable(connectionArn);
             return this;
         }        public ServiceAuthenticationConfigurationArgs build() {
             return new ServiceAuthenticationConfigurationArgs(accessRoleArn, connectionArn);

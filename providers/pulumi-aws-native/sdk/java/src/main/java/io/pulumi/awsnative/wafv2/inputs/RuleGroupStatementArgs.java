@@ -18,6 +18,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupSqliMatchStatementArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupXssMatchStatementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -34,91 +35,91 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RuleGroupAndStatementArgs> andStatement;
 
     public Output<RuleGroupAndStatementArgs> getAndStatement() {
-        return this.andStatement == null ? Output.empty() : this.andStatement;
+        return this.andStatement == null ? Codegen.empty() : this.andStatement;
     }
 
     @Import(name="byteMatchStatement")
       private final @Nullable Output<RuleGroupByteMatchStatementArgs> byteMatchStatement;
 
     public Output<RuleGroupByteMatchStatementArgs> getByteMatchStatement() {
-        return this.byteMatchStatement == null ? Output.empty() : this.byteMatchStatement;
+        return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
     }
 
     @Import(name="geoMatchStatement")
       private final @Nullable Output<RuleGroupGeoMatchStatementArgs> geoMatchStatement;
 
     public Output<RuleGroupGeoMatchStatementArgs> getGeoMatchStatement() {
-        return this.geoMatchStatement == null ? Output.empty() : this.geoMatchStatement;
+        return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
     }
 
     @Import(name="iPSetReferenceStatement")
       private final @Nullable Output<RuleGroupIPSetReferenceStatementArgs> iPSetReferenceStatement;
 
     public Output<RuleGroupIPSetReferenceStatementArgs> getIPSetReferenceStatement() {
-        return this.iPSetReferenceStatement == null ? Output.empty() : this.iPSetReferenceStatement;
+        return this.iPSetReferenceStatement == null ? Codegen.empty() : this.iPSetReferenceStatement;
     }
 
     @Import(name="labelMatchStatement")
       private final @Nullable Output<RuleGroupLabelMatchStatementArgs> labelMatchStatement;
 
     public Output<RuleGroupLabelMatchStatementArgs> getLabelMatchStatement() {
-        return this.labelMatchStatement == null ? Output.empty() : this.labelMatchStatement;
+        return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
     }
 
     @Import(name="notStatement")
       private final @Nullable Output<RuleGroupNotStatementArgs> notStatement;
 
     public Output<RuleGroupNotStatementArgs> getNotStatement() {
-        return this.notStatement == null ? Output.empty() : this.notStatement;
+        return this.notStatement == null ? Codegen.empty() : this.notStatement;
     }
 
     @Import(name="orStatement")
       private final @Nullable Output<RuleGroupOrStatementArgs> orStatement;
 
     public Output<RuleGroupOrStatementArgs> getOrStatement() {
-        return this.orStatement == null ? Output.empty() : this.orStatement;
+        return this.orStatement == null ? Codegen.empty() : this.orStatement;
     }
 
     @Import(name="rateBasedStatement")
       private final @Nullable Output<RuleGroupRateBasedStatementArgs> rateBasedStatement;
 
     public Output<RuleGroupRateBasedStatementArgs> getRateBasedStatement() {
-        return this.rateBasedStatement == null ? Output.empty() : this.rateBasedStatement;
+        return this.rateBasedStatement == null ? Codegen.empty() : this.rateBasedStatement;
     }
 
     @Import(name="regexMatchStatement")
       private final @Nullable Output<RuleGroupRegexMatchStatementArgs> regexMatchStatement;
 
     public Output<RuleGroupRegexMatchStatementArgs> getRegexMatchStatement() {
-        return this.regexMatchStatement == null ? Output.empty() : this.regexMatchStatement;
+        return this.regexMatchStatement == null ? Codegen.empty() : this.regexMatchStatement;
     }
 
     @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<RuleGroupRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
     public Output<RuleGroupRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
-        return this.regexPatternSetReferenceStatement == null ? Output.empty() : this.regexPatternSetReferenceStatement;
+        return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
     }
 
     @Import(name="sizeConstraintStatement")
       private final @Nullable Output<RuleGroupSizeConstraintStatementArgs> sizeConstraintStatement;
 
     public Output<RuleGroupSizeConstraintStatementArgs> getSizeConstraintStatement() {
-        return this.sizeConstraintStatement == null ? Output.empty() : this.sizeConstraintStatement;
+        return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
     }
 
     @Import(name="sqliMatchStatement")
       private final @Nullable Output<RuleGroupSqliMatchStatementArgs> sqliMatchStatement;
 
     public Output<RuleGroupSqliMatchStatementArgs> getSqliMatchStatement() {
-        return this.sqliMatchStatement == null ? Output.empty() : this.sqliMatchStatement;
+        return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
     }
 
     @Import(name="xssMatchStatement")
       private final @Nullable Output<RuleGroupXssMatchStatementArgs> xssMatchStatement;
 
     public Output<RuleGroupXssMatchStatementArgs> getXssMatchStatement() {
-        return this.xssMatchStatement == null ? Output.empty() : this.xssMatchStatement;
+        return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
     }
 
     public RuleGroupStatementArgs(
@@ -151,19 +152,19 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RuleGroupStatementArgs() {
-        this.andStatement = Output.empty();
-        this.byteMatchStatement = Output.empty();
-        this.geoMatchStatement = Output.empty();
-        this.iPSetReferenceStatement = Output.empty();
-        this.labelMatchStatement = Output.empty();
-        this.notStatement = Output.empty();
-        this.orStatement = Output.empty();
-        this.rateBasedStatement = Output.empty();
-        this.regexMatchStatement = Output.empty();
-        this.regexPatternSetReferenceStatement = Output.empty();
-        this.sizeConstraintStatement = Output.empty();
-        this.sqliMatchStatement = Output.empty();
-        this.xssMatchStatement = Output.empty();
+        this.andStatement = Codegen.empty();
+        this.byteMatchStatement = Codegen.empty();
+        this.geoMatchStatement = Codegen.empty();
+        this.iPSetReferenceStatement = Codegen.empty();
+        this.labelMatchStatement = Codegen.empty();
+        this.notStatement = Codegen.empty();
+        this.orStatement = Codegen.empty();
+        this.rateBasedStatement = Codegen.empty();
+        this.regexMatchStatement = Codegen.empty();
+        this.regexPatternSetReferenceStatement = Codegen.empty();
+        this.sizeConstraintStatement = Codegen.empty();
+        this.sqliMatchStatement = Codegen.empty();
+        this.xssMatchStatement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder andStatement(@Nullable RuleGroupAndStatementArgs andStatement) {
-            this.andStatement = Output.ofNullable(andStatement);
+            this.andStatement = Codegen.ofNullable(andStatement);
             return this;
         }
         public Builder byteMatchStatement(@Nullable Output<RuleGroupByteMatchStatementArgs> byteMatchStatement) {
@@ -223,7 +224,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder byteMatchStatement(@Nullable RuleGroupByteMatchStatementArgs byteMatchStatement) {
-            this.byteMatchStatement = Output.ofNullable(byteMatchStatement);
+            this.byteMatchStatement = Codegen.ofNullable(byteMatchStatement);
             return this;
         }
         public Builder geoMatchStatement(@Nullable Output<RuleGroupGeoMatchStatementArgs> geoMatchStatement) {
@@ -231,7 +232,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder geoMatchStatement(@Nullable RuleGroupGeoMatchStatementArgs geoMatchStatement) {
-            this.geoMatchStatement = Output.ofNullable(geoMatchStatement);
+            this.geoMatchStatement = Codegen.ofNullable(geoMatchStatement);
             return this;
         }
         public Builder iPSetReferenceStatement(@Nullable Output<RuleGroupIPSetReferenceStatementArgs> iPSetReferenceStatement) {
@@ -239,7 +240,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder iPSetReferenceStatement(@Nullable RuleGroupIPSetReferenceStatementArgs iPSetReferenceStatement) {
-            this.iPSetReferenceStatement = Output.ofNullable(iPSetReferenceStatement);
+            this.iPSetReferenceStatement = Codegen.ofNullable(iPSetReferenceStatement);
             return this;
         }
         public Builder labelMatchStatement(@Nullable Output<RuleGroupLabelMatchStatementArgs> labelMatchStatement) {
@@ -247,7 +248,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder labelMatchStatement(@Nullable RuleGroupLabelMatchStatementArgs labelMatchStatement) {
-            this.labelMatchStatement = Output.ofNullable(labelMatchStatement);
+            this.labelMatchStatement = Codegen.ofNullable(labelMatchStatement);
             return this;
         }
         public Builder notStatement(@Nullable Output<RuleGroupNotStatementArgs> notStatement) {
@@ -255,7 +256,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder notStatement(@Nullable RuleGroupNotStatementArgs notStatement) {
-            this.notStatement = Output.ofNullable(notStatement);
+            this.notStatement = Codegen.ofNullable(notStatement);
             return this;
         }
         public Builder orStatement(@Nullable Output<RuleGroupOrStatementArgs> orStatement) {
@@ -263,7 +264,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder orStatement(@Nullable RuleGroupOrStatementArgs orStatement) {
-            this.orStatement = Output.ofNullable(orStatement);
+            this.orStatement = Codegen.ofNullable(orStatement);
             return this;
         }
         public Builder rateBasedStatement(@Nullable Output<RuleGroupRateBasedStatementArgs> rateBasedStatement) {
@@ -271,7 +272,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder rateBasedStatement(@Nullable RuleGroupRateBasedStatementArgs rateBasedStatement) {
-            this.rateBasedStatement = Output.ofNullable(rateBasedStatement);
+            this.rateBasedStatement = Codegen.ofNullable(rateBasedStatement);
             return this;
         }
         public Builder regexMatchStatement(@Nullable Output<RuleGroupRegexMatchStatementArgs> regexMatchStatement) {
@@ -279,7 +280,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder regexMatchStatement(@Nullable RuleGroupRegexMatchStatementArgs regexMatchStatement) {
-            this.regexMatchStatement = Output.ofNullable(regexMatchStatement);
+            this.regexMatchStatement = Codegen.ofNullable(regexMatchStatement);
             return this;
         }
         public Builder regexPatternSetReferenceStatement(@Nullable Output<RuleGroupRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement) {
@@ -287,7 +288,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder regexPatternSetReferenceStatement(@Nullable RuleGroupRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
-            this.regexPatternSetReferenceStatement = Output.ofNullable(regexPatternSetReferenceStatement);
+            this.regexPatternSetReferenceStatement = Codegen.ofNullable(regexPatternSetReferenceStatement);
             return this;
         }
         public Builder sizeConstraintStatement(@Nullable Output<RuleGroupSizeConstraintStatementArgs> sizeConstraintStatement) {
@@ -295,7 +296,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sizeConstraintStatement(@Nullable RuleGroupSizeConstraintStatementArgs sizeConstraintStatement) {
-            this.sizeConstraintStatement = Output.ofNullable(sizeConstraintStatement);
+            this.sizeConstraintStatement = Codegen.ofNullable(sizeConstraintStatement);
             return this;
         }
         public Builder sqliMatchStatement(@Nullable Output<RuleGroupSqliMatchStatementArgs> sqliMatchStatement) {
@@ -303,7 +304,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sqliMatchStatement(@Nullable RuleGroupSqliMatchStatementArgs sqliMatchStatement) {
-            this.sqliMatchStatement = Output.ofNullable(sqliMatchStatement);
+            this.sqliMatchStatement = Codegen.ofNullable(sqliMatchStatement);
             return this;
         }
         public Builder xssMatchStatement(@Nullable Output<RuleGroupXssMatchStatementArgs> xssMatchStatement) {
@@ -311,7 +312,7 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder xssMatchStatement(@Nullable RuleGroupXssMatchStatementArgs xssMatchStatement) {
-            this.xssMatchStatement = Output.ofNullable(xssMatchStatement);
+            this.xssMatchStatement = Codegen.ofNullable(xssMatchStatement);
             return this;
         }        public RuleGroupStatementArgs build() {
             return new RuleGroupStatementArgs(andStatement, byteMatchStatement, geoMatchStatement, iPSetReferenceStatement, labelMatchStatement, notStatement, orStatement, rateBasedStatement, regexMatchStatement, regexPatternSetReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);

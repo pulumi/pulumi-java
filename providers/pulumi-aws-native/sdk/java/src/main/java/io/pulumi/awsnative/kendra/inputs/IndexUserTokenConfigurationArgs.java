@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kendra.inputs.IndexJsonTokenTypeConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexJwtTokenTypeConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +20,14 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration;
 
     public Output<IndexJsonTokenTypeConfigurationArgs> getJsonTokenTypeConfiguration() {
-        return this.jsonTokenTypeConfiguration == null ? Output.empty() : this.jsonTokenTypeConfiguration;
+        return this.jsonTokenTypeConfiguration == null ? Codegen.empty() : this.jsonTokenTypeConfiguration;
     }
 
     @Import(name="jwtTokenTypeConfiguration")
       private final @Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration;
 
     public Output<IndexJwtTokenTypeConfigurationArgs> getJwtTokenTypeConfiguration() {
-        return this.jwtTokenTypeConfiguration == null ? Output.empty() : this.jwtTokenTypeConfiguration;
+        return this.jwtTokenTypeConfiguration == null ? Codegen.empty() : this.jwtTokenTypeConfiguration;
     }
 
     public IndexUserTokenConfigurationArgs(
@@ -37,8 +38,8 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
     }
 
     private IndexUserTokenConfigurationArgs() {
-        this.jsonTokenTypeConfiguration = Output.empty();
-        this.jwtTokenTypeConfiguration = Output.empty();
+        this.jsonTokenTypeConfiguration = Codegen.empty();
+        this.jwtTokenTypeConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder jsonTokenTypeConfiguration(@Nullable IndexJsonTokenTypeConfigurationArgs jsonTokenTypeConfiguration) {
-            this.jsonTokenTypeConfiguration = Output.ofNullable(jsonTokenTypeConfiguration);
+            this.jsonTokenTypeConfiguration = Codegen.ofNullable(jsonTokenTypeConfiguration);
             return this;
         }
         public Builder jwtTokenTypeConfiguration(@Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration) {
@@ -76,7 +77,7 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder jwtTokenTypeConfiguration(@Nullable IndexJwtTokenTypeConfigurationArgs jwtTokenTypeConfiguration) {
-            this.jwtTokenTypeConfiguration = Output.ofNullable(jwtTokenTypeConfiguration);
+            this.jwtTokenTypeConfiguration = Codegen.ofNullable(jwtTokenTypeConfiguration);
             return this;
         }        public IndexUserTokenConfigurationArgs build() {
             return new IndexUserTokenConfigurationArgs(jsonTokenTypeConfiguration, jwtTokenTypeConfiguration);

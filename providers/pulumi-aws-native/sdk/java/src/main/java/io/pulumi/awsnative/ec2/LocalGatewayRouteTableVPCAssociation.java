@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.LocalGatewayRouteTableVPCAssociationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -126,7 +127,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public LocalGatewayRouteTableVPCAssociation(String name, LocalGatewayRouteTableVPCAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:LocalGatewayRouteTableVPCAssociation", name, args == null ? LocalGatewayRouteTableVPCAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:LocalGatewayRouteTableVPCAssociation", name, args == null ? LocalGatewayRouteTableVPCAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocalGatewayRouteTableVPCAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

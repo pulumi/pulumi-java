@@ -5,6 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> formats;
 
     public Output<List<String>> getFormats() {
-        return this.formats == null ? Output.empty() : this.formats;
+        return this.formats == null ? Codegen.empty() : this.formats;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
+        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
     public ReportDeliveryChannelPropertiesArgs(
@@ -62,9 +63,9 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
     }
 
     private ReportDeliveryChannelPropertiesArgs() {
-        this.formats = Output.empty();
-        this.s3BucketName = Output.empty();
-        this.s3KeyPrefix = Output.empty();
+        this.formats = Codegen.empty();
+        this.s3BucketName = Codegen.empty();
+        this.s3KeyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder formats(@Nullable List<String> formats) {
-            this.formats = Output.ofNullable(formats);
+            this.formats = Codegen.ofNullable(formats);
             return this;
         }
         public Builder formats(String... formats) {
@@ -115,7 +116,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
             return this;
         }        public ReportDeliveryChannelPropertiesArgs build() {
             return new ReportDeliveryChannelPropertiesArgs(formats, s3BucketName, s3KeyPrefix);

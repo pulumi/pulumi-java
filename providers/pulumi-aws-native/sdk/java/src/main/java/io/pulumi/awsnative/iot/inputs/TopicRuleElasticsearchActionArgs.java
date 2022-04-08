@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,11 +63,11 @@ public final class TopicRuleElasticsearchActionArgs extends io.pulumi.resources.
     }
 
     private TopicRuleElasticsearchActionArgs() {
-        this.endpoint = Output.empty();
-        this.id = Output.empty();
-        this.index = Output.empty();
-        this.roleArn = Output.empty();
-        this.type = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.id = Codegen.empty();
+        this.index = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

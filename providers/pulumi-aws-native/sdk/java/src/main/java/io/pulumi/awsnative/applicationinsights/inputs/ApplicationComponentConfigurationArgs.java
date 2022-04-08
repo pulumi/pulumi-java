@@ -7,6 +7,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationDe
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
 
     public Output<ApplicationConfigurationDetailsArgs> getConfigurationDetails() {
-        return this.configurationDetails == null ? Output.empty() : this.configurationDetails;
+        return this.configurationDetails == null ? Codegen.empty() : this.configurationDetails;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
     public Output<List<ApplicationSubComponentTypeConfigurationArgs>> getSubComponentTypeConfigurations() {
-        return this.subComponentTypeConfigurations == null ? Output.empty() : this.subComponentTypeConfigurations;
+        return this.subComponentTypeConfigurations == null ? Codegen.empty() : this.subComponentTypeConfigurations;
     }
 
     public ApplicationComponentConfigurationArgs(
@@ -50,8 +51,8 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
     }
 
     private ApplicationComponentConfigurationArgs() {
-        this.configurationDetails = Output.empty();
-        this.subComponentTypeConfigurations = Output.empty();
+        this.configurationDetails = Codegen.empty();
+        this.subComponentTypeConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder configurationDetails(@Nullable ApplicationConfigurationDetailsArgs configurationDetails) {
-            this.configurationDetails = Output.ofNullable(configurationDetails);
+            this.configurationDetails = Codegen.ofNullable(configurationDetails);
             return this;
         }
         public Builder subComponentTypeConfigurations(@Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
@@ -89,7 +90,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfigurationArgs> subComponentTypeConfigurations) {
-            this.subComponentTypeConfigurations = Output.ofNullable(subComponentTypeConfigurations);
+            this.subComponentTypeConfigurations = Codegen.ofNullable(subComponentTypeConfigurations);
             return this;
         }
         public Builder subComponentTypeConfigurations(ApplicationSubComponentTypeConfigurationArgs... subComponentTypeConfigurations) {

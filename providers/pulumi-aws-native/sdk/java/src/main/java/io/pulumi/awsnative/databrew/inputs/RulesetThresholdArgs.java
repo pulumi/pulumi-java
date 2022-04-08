@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.enums.RulesetThresholdType;
 import io.pulumi.awsnative.databrew.enums.RulesetThresholdUnit;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +21,14 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<RulesetThresholdType> type;
 
     public Output<RulesetThresholdType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="unit")
       private final @Nullable Output<RulesetThresholdUnit> unit;
 
     public Output<RulesetThresholdUnit> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     @Import(name="value", required=true)
@@ -47,9 +48,9 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RulesetThresholdArgs() {
-        this.type = Output.empty();
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable RulesetThresholdType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder unit(@Nullable Output<RulesetThresholdUnit> unit) {
@@ -89,7 +90,7 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder unit(@Nullable RulesetThresholdUnit unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder value(Output<Double> value) {

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.athena.inputs.WorkGroupConfigurationUpdatesArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> recursiveDeleteOption;
 
     public Output<Boolean> getRecursiveDeleteOption() {
-        return this.recursiveDeleteOption == null ? Output.empty() : this.recursiveDeleteOption;
+        return this.recursiveDeleteOption == null ? Codegen.empty() : this.recursiveDeleteOption;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkGroupState> state;
 
     public Output<WorkGroupState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WorkGroupTagArgs>> tags;
 
     public Output<List<WorkGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
 
     public Output<WorkGroupConfigurationArgs> getWorkGroupConfiguration() {
-        return this.workGroupConfiguration == null ? Output.empty() : this.workGroupConfiguration;
+        return this.workGroupConfiguration == null ? Codegen.empty() : this.workGroupConfiguration;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
 
     public Output<WorkGroupConfigurationUpdatesArgs> getWorkGroupConfigurationUpdates() {
-        return this.workGroupConfigurationUpdates == null ? Output.empty() : this.workGroupConfigurationUpdates;
+        return this.workGroupConfigurationUpdates == null ? Codegen.empty() : this.workGroupConfigurationUpdates;
     }
 
     public WorkGroupArgs(
@@ -115,13 +116,13 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkGroupArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.recursiveDeleteOption = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.workGroupConfiguration = Output.empty();
-        this.workGroupConfigurationUpdates = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.recursiveDeleteOption = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workGroupConfiguration = Codegen.empty();
+        this.workGroupConfigurationUpdates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -169,7 +170,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recursiveDeleteOption(@Nullable Output<Boolean> recursiveDeleteOption) {
@@ -177,7 +178,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
-            this.recursiveDeleteOption = Output.ofNullable(recursiveDeleteOption);
+            this.recursiveDeleteOption = Codegen.ofNullable(recursiveDeleteOption);
             return this;
         }
         public Builder state(@Nullable Output<WorkGroupState> state) {
@@ -185,7 +186,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable WorkGroupState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<List<WorkGroupTagArgs>> tags) {
@@ -193,7 +194,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<WorkGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(WorkGroupTagArgs... tags) {
@@ -204,7 +205,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workGroupConfiguration(@Nullable WorkGroupConfigurationArgs workGroupConfiguration) {
-            this.workGroupConfiguration = Output.ofNullable(workGroupConfiguration);
+            this.workGroupConfiguration = Codegen.ofNullable(workGroupConfiguration);
             return this;
         }
         public Builder workGroupConfigurationUpdates(@Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates) {
@@ -212,7 +213,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdatesArgs workGroupConfigurationUpdates) {
-            this.workGroupConfigurationUpdates = Output.ofNullable(workGroupConfigurationUpdates);
+            this.workGroupConfigurationUpdates = Codegen.ofNullable(workGroupConfigurationUpdates);
             return this;
         }        public WorkGroupArgs build() {
             return new WorkGroupArgs(description, name, recursiveDeleteOption, state, tags, workGroupConfiguration, workGroupConfigurationUpdates);

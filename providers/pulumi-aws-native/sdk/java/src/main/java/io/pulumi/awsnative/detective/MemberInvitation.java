@@ -8,6 +8,7 @@ import io.pulumi.awsnative.detective.MemberInvitationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -111,7 +112,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MemberInvitation(String name, MemberInvitationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:detective:MemberInvitation", name, args == null ? MemberInvitationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:detective:MemberInvitation", name, args == null ? MemberInvitationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MemberInvitation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

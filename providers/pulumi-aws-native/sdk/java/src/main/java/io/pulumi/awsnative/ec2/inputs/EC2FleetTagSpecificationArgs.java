@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.enums.EC2FleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +21,14 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType;
 
     public Output<EC2FleetTagSpecificationResourceType> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<EC2FleetTagArgs>> tags;
 
     public Output<List<EC2FleetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EC2FleetTagSpecificationArgs(
@@ -38,8 +39,8 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
     }
 
     private EC2FleetTagSpecificationArgs() {
-        this.resourceType = Output.empty();
-        this.tags = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder tags(@Nullable Output<List<EC2FleetTagArgs>> tags) {
@@ -77,7 +78,7 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable List<EC2FleetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(EC2FleetTagArgs... tags) {

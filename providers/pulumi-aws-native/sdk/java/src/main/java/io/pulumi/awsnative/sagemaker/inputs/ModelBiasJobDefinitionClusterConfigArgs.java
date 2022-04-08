@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
       private final @Nullable Output<String> volumeKmsKeyId;
 
     public Output<String> getVolumeKmsKeyId() {
-        return this.volumeKmsKeyId == null ? Output.empty() : this.volumeKmsKeyId;
+        return this.volumeKmsKeyId == null ? Codegen.empty() : this.volumeKmsKeyId;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
     }
 
     private ModelBiasJobDefinitionClusterConfigArgs() {
-        this.instanceCount = Output.empty();
-        this.instanceType = Output.empty();
-        this.volumeKmsKeyId = Output.empty();
-        this.volumeSizeInGB = Output.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.volumeKmsKeyId = Codegen.empty();
+        this.volumeSizeInGB = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
-            this.volumeKmsKeyId = Output.ofNullable(volumeKmsKeyId);
+            this.volumeKmsKeyId = Codegen.ofNullable(volumeKmsKeyId);
             return this;
         }
         public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {

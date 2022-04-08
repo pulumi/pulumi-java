@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class CodeSigningConfigAllowedPublishersArgs extends io.pulumi.reso
     }
 
     private CodeSigningConfigAllowedPublishersArgs() {
-        this.signingProfileVersionArns = Output.empty();
+        this.signingProfileVersionArns = Codegen.empty();
     }
 
     public static Builder builder() {

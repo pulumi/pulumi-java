@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketDataExportArgs() {
-        this.destination = Output.empty();
-        this.outputSchemaVersion = Output.empty();
+        this.destination = Codegen.empty();
+        this.outputSchemaVersion = Codegen.empty();
     }
 
     public static Builder builder() {

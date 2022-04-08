@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> aliasName;
 
     public Output<String> getAliasName() {
-        return this.aliasName == null ? Output.empty() : this.aliasName;
+        return this.aliasName == null ? Codegen.empty() : this.aliasName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasArgs() {
-        this.aliasName = Output.empty();
-        this.targetKeyId = Output.empty();
+        this.aliasName = Codegen.empty();
+        this.targetKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aliasName(@Nullable String aliasName) {
-            this.aliasName = Output.ofNullable(aliasName);
+            this.aliasName = Codegen.ofNullable(aliasName);
             return this;
         }
         public Builder targetKeyId(Output<String> targetKeyId) {

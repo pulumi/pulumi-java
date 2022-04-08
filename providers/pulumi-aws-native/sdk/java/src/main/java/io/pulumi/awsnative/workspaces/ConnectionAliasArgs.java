@@ -6,6 +6,7 @@ package io.pulumi.awsnative.workspaces;
 import io.pulumi.awsnative.workspaces.inputs.ConnectionAliasTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ConnectionAliasTagArgs>> tags;
 
     public Output<List<ConnectionAliasTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ConnectionAliasArgs(
@@ -38,8 +39,8 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConnectionAliasArgs() {
-        this.connectionString = Output.empty();
-        this.tags = Output.empty();
+        this.connectionString = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable List<ConnectionAliasTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ConnectionAliasTagArgs... tags) {

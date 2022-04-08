@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.TransitGatewayMulticastDomainAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -124,7 +125,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitGatewayMulticastDomainAssociation(String name, TransitGatewayMulticastDomainAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:TransitGatewayMulticastDomainAssociation", name, args == null ? TransitGatewayMulticastDomainAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:TransitGatewayMulticastDomainAssociation", name, args == null ? TransitGatewayMulticastDomainAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitGatewayMulticastDomainAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

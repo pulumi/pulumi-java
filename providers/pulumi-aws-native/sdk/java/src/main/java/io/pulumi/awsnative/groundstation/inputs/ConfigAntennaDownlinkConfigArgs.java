@@ -6,6 +6,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
     public Output<ConfigSpectrumConfigArgs> getSpectrumConfig() {
-        return this.spectrumConfig == null ? Output.empty() : this.spectrumConfig;
+        return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
     }
 
     public ConfigAntennaDownlinkConfigArgs(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
@@ -26,7 +27,7 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
     }
 
     private ConfigAntennaDownlinkConfigArgs() {
-        this.spectrumConfig = Output.empty();
+        this.spectrumConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
-            this.spectrumConfig = Output.ofNullable(spectrumConfig);
+            this.spectrumConfig = Codegen.ofNullable(spectrumConfig);
             return this;
         }        public ConfigAntennaDownlinkConfigArgs build() {
             return new ConfigAntennaDownlinkConfigArgs(spectrumConfig);

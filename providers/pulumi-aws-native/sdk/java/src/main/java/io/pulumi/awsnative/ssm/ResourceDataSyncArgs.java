@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncS3DestinationArgs;
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncSyncSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,56 +21,56 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="bucketRegion")
       private final @Nullable Output<String> bucketRegion;
 
     public Output<String> getBucketRegion() {
-        return this.bucketRegion == null ? Output.empty() : this.bucketRegion;
+        return this.bucketRegion == null ? Codegen.empty() : this.bucketRegion;
     }
 
     @Import(name="kMSKeyArn")
       private final @Nullable Output<String> kMSKeyArn;
 
     public Output<String> getKMSKeyArn() {
-        return this.kMSKeyArn == null ? Output.empty() : this.kMSKeyArn;
+        return this.kMSKeyArn == null ? Codegen.empty() : this.kMSKeyArn;
     }
 
     @Import(name="s3Destination")
       private final @Nullable Output<ResourceDataSyncS3DestinationArgs> s3Destination;
 
     public Output<ResourceDataSyncS3DestinationArgs> getS3Destination() {
-        return this.s3Destination == null ? Output.empty() : this.s3Destination;
+        return this.s3Destination == null ? Codegen.empty() : this.s3Destination;
     }
 
     @Import(name="syncFormat")
       private final @Nullable Output<String> syncFormat;
 
     public Output<String> getSyncFormat() {
-        return this.syncFormat == null ? Output.empty() : this.syncFormat;
+        return this.syncFormat == null ? Codegen.empty() : this.syncFormat;
     }
 
     @Import(name="syncSource")
       private final @Nullable Output<ResourceDataSyncSyncSourceArgs> syncSource;
 
     public Output<ResourceDataSyncSyncSourceArgs> getSyncSource() {
-        return this.syncSource == null ? Output.empty() : this.syncSource;
+        return this.syncSource == null ? Codegen.empty() : this.syncSource;
     }
 
     @Import(name="syncType")
       private final @Nullable Output<String> syncType;
 
     public Output<String> getSyncType() {
-        return this.syncType == null ? Output.empty() : this.syncType;
+        return this.syncType == null ? Codegen.empty() : this.syncType;
     }
 
     public ResourceDataSyncArgs(
@@ -92,14 +93,14 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceDataSyncArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.bucketRegion = Output.empty();
-        this.kMSKeyArn = Output.empty();
-        this.s3Destination = Output.empty();
-        this.syncFormat = Output.empty();
-        this.syncSource = Output.empty();
-        this.syncType = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.bucketRegion = Codegen.empty();
+        this.kMSKeyArn = Codegen.empty();
+        this.s3Destination = Codegen.empty();
+        this.syncFormat = Codegen.empty();
+        this.syncSource = Codegen.empty();
+        this.syncType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
@@ -149,7 +150,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder bucketRegion(@Nullable Output<String> bucketRegion) {
@@ -157,7 +158,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bucketRegion(@Nullable String bucketRegion) {
-            this.bucketRegion = Output.ofNullable(bucketRegion);
+            this.bucketRegion = Codegen.ofNullable(bucketRegion);
             return this;
         }
         public Builder kMSKeyArn(@Nullable Output<String> kMSKeyArn) {
@@ -165,7 +166,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
-            this.kMSKeyArn = Output.ofNullable(kMSKeyArn);
+            this.kMSKeyArn = Codegen.ofNullable(kMSKeyArn);
             return this;
         }
         public Builder s3Destination(@Nullable Output<ResourceDataSyncS3DestinationArgs> s3Destination) {
@@ -173,7 +174,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder s3Destination(@Nullable ResourceDataSyncS3DestinationArgs s3Destination) {
-            this.s3Destination = Output.ofNullable(s3Destination);
+            this.s3Destination = Codegen.ofNullable(s3Destination);
             return this;
         }
         public Builder syncFormat(@Nullable Output<String> syncFormat) {
@@ -181,7 +182,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder syncFormat(@Nullable String syncFormat) {
-            this.syncFormat = Output.ofNullable(syncFormat);
+            this.syncFormat = Codegen.ofNullable(syncFormat);
             return this;
         }
         public Builder syncSource(@Nullable Output<ResourceDataSyncSyncSourceArgs> syncSource) {
@@ -189,7 +190,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder syncSource(@Nullable ResourceDataSyncSyncSourceArgs syncSource) {
-            this.syncSource = Output.ofNullable(syncSource);
+            this.syncSource = Codegen.ofNullable(syncSource);
             return this;
         }
         public Builder syncType(@Nullable Output<String> syncType) {
@@ -197,7 +198,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder syncType(@Nullable String syncType) {
-            this.syncType = Output.ofNullable(syncType);
+            this.syncType = Codegen.ofNullable(syncType);
             return this;
         }        public ResourceDataSyncArgs build() {
             return new ResourceDataSyncArgs(bucketName, bucketPrefix, bucketRegion, kMSKeyArn, s3Destination, syncFormat, syncSource, syncType);

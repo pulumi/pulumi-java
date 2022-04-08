@@ -9,6 +9,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetMetadataArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,28 +26,28 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
     public Output<DatasetDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
-        return this.dataCatalogInputDefinition == null ? Output.empty() : this.dataCatalogInputDefinition;
+        return this.dataCatalogInputDefinition == null ? Codegen.empty() : this.dataCatalogInputDefinition;
     }
 
     @Import(name="databaseInputDefinition")
       private final @Nullable Output<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition;
 
     public Output<DatasetDatabaseInputDefinitionArgs> getDatabaseInputDefinition() {
-        return this.databaseInputDefinition == null ? Output.empty() : this.databaseInputDefinition;
+        return this.databaseInputDefinition == null ? Codegen.empty() : this.databaseInputDefinition;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<DatasetMetadataArgs> metadata;
 
     public Output<DatasetMetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     @Import(name="s3InputDefinition")
       private final @Nullable Output<DatasetS3LocationArgs> s3InputDefinition;
 
     public Output<DatasetS3LocationArgs> getS3InputDefinition() {
-        return this.s3InputDefinition == null ? Output.empty() : this.s3InputDefinition;
+        return this.s3InputDefinition == null ? Codegen.empty() : this.s3InputDefinition;
     }
 
     public DatasetInputArgs(
@@ -61,10 +62,10 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetInputArgs() {
-        this.dataCatalogInputDefinition = Output.empty();
-        this.databaseInputDefinition = Output.empty();
-        this.metadata = Output.empty();
-        this.s3InputDefinition = Output.empty();
+        this.dataCatalogInputDefinition = Codegen.empty();
+        this.databaseInputDefinition = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.s3InputDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataCatalogInputDefinition(@Nullable DatasetDataCatalogInputDefinitionArgs dataCatalogInputDefinition) {
-            this.dataCatalogInputDefinition = Output.ofNullable(dataCatalogInputDefinition);
+            this.dataCatalogInputDefinition = Codegen.ofNullable(dataCatalogInputDefinition);
             return this;
         }
         public Builder databaseInputDefinition(@Nullable Output<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition) {
@@ -106,7 +107,7 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseInputDefinition(@Nullable DatasetDatabaseInputDefinitionArgs databaseInputDefinition) {
-            this.databaseInputDefinition = Output.ofNullable(databaseInputDefinition);
+            this.databaseInputDefinition = Codegen.ofNullable(databaseInputDefinition);
             return this;
         }
         public Builder metadata(@Nullable Output<DatasetMetadataArgs> metadata) {
@@ -114,7 +115,7 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable DatasetMetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder s3InputDefinition(@Nullable Output<DatasetS3LocationArgs> s3InputDefinition) {
@@ -122,7 +123,7 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3InputDefinition(@Nullable DatasetS3LocationArgs s3InputDefinition) {
-            this.s3InputDefinition = Output.ofNullable(s3InputDefinition);
+            this.s3InputDefinition = Codegen.ofNullable(s3InputDefinition);
             return this;
         }        public DatasetInputArgs build() {
             return new DatasetInputArgs(dataCatalogInputDefinition, databaseInputDefinition, metadata, s3InputDefinition);

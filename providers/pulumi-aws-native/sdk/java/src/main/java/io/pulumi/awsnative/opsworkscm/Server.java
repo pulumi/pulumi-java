@@ -10,6 +10,7 @@ import io.pulumi.awsnative.opsworkscm.outputs.ServerTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -185,7 +186,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Server(String name, ServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:opsworkscm:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:opsworkscm:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Server(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

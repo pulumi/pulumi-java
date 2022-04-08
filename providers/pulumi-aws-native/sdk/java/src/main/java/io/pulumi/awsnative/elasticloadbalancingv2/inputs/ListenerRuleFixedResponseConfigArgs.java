@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     @Import(name="messageBody")
       private final @Nullable Output<String> messageBody;
 
     public Output<String> getMessageBody() {
-        return this.messageBody == null ? Output.empty() : this.messageBody;
+        return this.messageBody == null ? Codegen.empty() : this.messageBody;
     }
 
     @Import(name="statusCode", required=true)
@@ -45,9 +46,9 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
     }
 
     private ListenerRuleFixedResponseConfigArgs() {
-        this.contentType = Output.empty();
-        this.messageBody = Output.empty();
-        this.statusCode = Output.empty();
+        this.contentType = Codegen.empty();
+        this.messageBody = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder messageBody(@Nullable Output<String> messageBody) {
@@ -87,7 +88,7 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder messageBody(@Nullable String messageBody) {
-            this.messageBody = Output.ofNullable(messageBody);
+            this.messageBody = Codegen.ofNullable(messageBody);
             return this;
         }
         public Builder statusCode(Output<String> statusCode) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kms;
 import io.pulumi.awsnative.kms.inputs.ReplicaKeyTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -27,7 +28,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> pendingWindowInDays;
 
     public Output<Integer> getPendingWindowInDays() {
-        return this.pendingWindowInDays == null ? Output.empty() : this.pendingWindowInDays;
+        return this.pendingWindowInDays == null ? Codegen.empty() : this.pendingWindowInDays;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReplicaKeyTagArgs>> tags;
 
     public Output<List<ReplicaKeyTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ReplicaKeyArgs(
@@ -101,12 +102,12 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaKeyArgs() {
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.keyPolicy = Output.empty();
-        this.pendingWindowInDays = Output.empty();
-        this.primaryKeyArn = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.keyPolicy = Codegen.empty();
+        this.pendingWindowInDays = Codegen.empty();
+        this.primaryKeyArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -152,7 +153,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder keyPolicy(Output<Object> keyPolicy) {
@@ -168,7 +169,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
-            this.pendingWindowInDays = Output.ofNullable(pendingWindowInDays);
+            this.pendingWindowInDays = Codegen.ofNullable(pendingWindowInDays);
             return this;
         }
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
@@ -184,7 +185,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ReplicaKeyTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ReplicaKeyTagArgs... tags) {

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskSetScaleArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskSetServiceRegistryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
-        return this.externalId == null ? Output.empty() : this.externalId;
+        return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     /**
@@ -50,21 +51,21 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TaskSetLaunchType> launchType;
 
     public Output<TaskSetLaunchType> getLaunchType() {
-        return this.launchType == null ? Output.empty() : this.launchType;
+        return this.launchType == null ? Codegen.empty() : this.launchType;
     }
 
     @Import(name="loadBalancers")
       private final @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
 
     public Output<List<TaskSetLoadBalancerArgs>> getLoadBalancers() {
-        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
+        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
     @Import(name="networkConfiguration")
       private final @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
 
     public Output<TaskSetNetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
+        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> platformVersion;
 
     public Output<String> getPlatformVersion() {
-        return this.platformVersion == null ? Output.empty() : this.platformVersion;
+        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TaskSetScaleArgs> scale;
 
     public Output<TaskSetScaleArgs> getScale() {
-        return this.scale == null ? Output.empty() : this.scale;
+        return this.scale == null ? Codegen.empty() : this.scale;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries;
 
     public Output<List<TaskSetServiceRegistryArgs>> getServiceRegistries() {
-        return this.serviceRegistries == null ? Output.empty() : this.serviceRegistries;
+        return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
     }
 
     /**
@@ -146,16 +147,16 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskSetArgs() {
-        this.cluster = Output.empty();
-        this.externalId = Output.empty();
-        this.launchType = Output.empty();
-        this.loadBalancers = Output.empty();
-        this.networkConfiguration = Output.empty();
-        this.platformVersion = Output.empty();
-        this.scale = Output.empty();
-        this.service = Output.empty();
-        this.serviceRegistries = Output.empty();
-        this.taskDefinition = Output.empty();
+        this.cluster = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.launchType = Codegen.empty();
+        this.loadBalancers = Codegen.empty();
+        this.networkConfiguration = Codegen.empty();
+        this.platformVersion = Codegen.empty();
+        this.scale = Codegen.empty();
+        this.service = Codegen.empty();
+        this.serviceRegistries = Codegen.empty();
+        this.taskDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Output.ofNullable(externalId);
+            this.externalId = Codegen.ofNullable(externalId);
             return this;
         }
         public Builder launchType(@Nullable Output<TaskSetLaunchType> launchType) {
@@ -217,7 +218,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchType(@Nullable TaskSetLaunchType launchType) {
-            this.launchType = Output.ofNullable(launchType);
+            this.launchType = Codegen.ofNullable(launchType);
             return this;
         }
         public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers) {
@@ -225,7 +226,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancers(@Nullable List<TaskSetLoadBalancerArgs> loadBalancers) {
-            this.loadBalancers = Output.ofNullable(loadBalancers);
+            this.loadBalancers = Codegen.ofNullable(loadBalancers);
             return this;
         }
         public Builder loadBalancers(TaskSetLoadBalancerArgs... loadBalancers) {
@@ -236,7 +237,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfiguration(@Nullable TaskSetNetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Output.ofNullable(networkConfiguration);
+            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
             return this;
         }
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
@@ -244,7 +245,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Output.ofNullable(platformVersion);
+            this.platformVersion = Codegen.ofNullable(platformVersion);
             return this;
         }
         public Builder scale(@Nullable Output<TaskSetScaleArgs> scale) {
@@ -252,7 +253,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scale(@Nullable TaskSetScaleArgs scale) {
-            this.scale = Output.ofNullable(scale);
+            this.scale = Codegen.ofNullable(scale);
             return this;
         }
         public Builder service(Output<String> service) {
@@ -268,7 +269,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceRegistries(@Nullable List<TaskSetServiceRegistryArgs> serviceRegistries) {
-            this.serviceRegistries = Output.ofNullable(serviceRegistries);
+            this.serviceRegistries = Codegen.ofNullable(serviceRegistries);
             return this;
         }
         public Builder serviceRegistries(TaskSetServiceRegistryArgs... serviceRegistries) {

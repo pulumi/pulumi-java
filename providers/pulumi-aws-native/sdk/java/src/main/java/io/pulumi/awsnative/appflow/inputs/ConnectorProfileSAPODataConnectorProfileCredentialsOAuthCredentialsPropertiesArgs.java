@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,35 +20,35 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
     public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
-        return this.connectorOAuthRequest == null ? Output.empty() : this.connectorOAuthRequest;
+        return this.connectorOAuthRequest == null ? Codegen.empty() : this.connectorOAuthRequest;
     }
 
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {
-        return this.refreshToken == null ? Output.empty() : this.refreshToken;
+        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
     public ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs(
@@ -64,11 +65,11 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     }
 
     private ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs() {
-        this.accessToken = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.connectorOAuthRequest = Output.empty();
-        this.refreshToken = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.connectorOAuthRequest = Codegen.empty();
+        this.refreshToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -112,7 +113,7 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -120,7 +121,7 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
@@ -128,7 +129,7 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
             return this;
         }
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
-            this.connectorOAuthRequest = Output.ofNullable(connectorOAuthRequest);
+            this.connectorOAuthRequest = Codegen.ofNullable(connectorOAuthRequest);
             return this;
         }
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
@@ -136,7 +137,7 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
             return this;
         }
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Output.ofNullable(refreshToken);
+            this.refreshToken = Codegen.ofNullable(refreshToken);
             return this;
         }        public ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs(accessToken, clientId, clientSecret, connectorOAuthRequest, refreshToken);

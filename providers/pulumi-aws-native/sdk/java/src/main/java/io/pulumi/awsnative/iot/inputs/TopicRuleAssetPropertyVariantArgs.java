@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +19,28 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
       private final @Nullable Output<String> booleanValue;
 
     public Output<String> getBooleanValue() {
-        return this.booleanValue == null ? Output.empty() : this.booleanValue;
+        return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<String> doubleValue;
 
     public Output<String> getDoubleValue() {
-        return this.doubleValue == null ? Output.empty() : this.doubleValue;
+        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
     public Output<String> getIntegerValue() {
-        return this.integerValue == null ? Output.empty() : this.integerValue;
+        return this.integerValue == null ? Codegen.empty() : this.integerValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     public TopicRuleAssetPropertyVariantArgs(
@@ -54,10 +55,10 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
     }
 
     private TopicRuleAssetPropertyVariantArgs() {
-        this.booleanValue = Output.empty();
-        this.doubleValue = Output.empty();
-        this.integerValue = Output.empty();
-        this.stringValue = Output.empty();
+        this.booleanValue = Codegen.empty();
+        this.doubleValue = Codegen.empty();
+        this.integerValue = Codegen.empty();
+        this.stringValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
             return this;
         }
         public Builder booleanValue(@Nullable String booleanValue) {
-            this.booleanValue = Output.ofNullable(booleanValue);
+            this.booleanValue = Codegen.ofNullable(booleanValue);
             return this;
         }
         public Builder doubleValue(@Nullable Output<String> doubleValue) {
@@ -99,7 +100,7 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
             return this;
         }
         public Builder doubleValue(@Nullable String doubleValue) {
-            this.doubleValue = Output.ofNullable(doubleValue);
+            this.doubleValue = Codegen.ofNullable(doubleValue);
             return this;
         }
         public Builder integerValue(@Nullable Output<String> integerValue) {
@@ -107,7 +108,7 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
             return this;
         }
         public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = Output.ofNullable(integerValue);
+            this.integerValue = Codegen.ofNullable(integerValue);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -115,7 +116,7 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }        public TopicRuleAssetPropertyVariantArgs build() {
             return new TopicRuleAssetPropertyVariantArgs(booleanValue, doubleValue, integerValue, stringValue);

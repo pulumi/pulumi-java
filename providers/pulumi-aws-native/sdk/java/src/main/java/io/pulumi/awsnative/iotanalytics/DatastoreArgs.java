@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastoreStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,42 +25,42 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
-        return this.datastoreName == null ? Output.empty() : this.datastoreName;
+        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     @Import(name="datastorePartitions")
       private final @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
 
     public Output<DatastorePartitionsArgs> getDatastorePartitions() {
-        return this.datastorePartitions == null ? Output.empty() : this.datastorePartitions;
+        return this.datastorePartitions == null ? Codegen.empty() : this.datastorePartitions;
     }
 
     @Import(name="datastoreStorage")
       private final @Nullable Output<DatastoreStorageArgs> datastoreStorage;
 
     public Output<DatastoreStorageArgs> getDatastoreStorage() {
-        return this.datastoreStorage == null ? Output.empty() : this.datastoreStorage;
+        return this.datastoreStorage == null ? Codegen.empty() : this.datastoreStorage;
     }
 
     @Import(name="fileFormatConfiguration")
       private final @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
 
     public Output<DatastoreFileFormatConfigurationArgs> getFileFormatConfiguration() {
-        return this.fileFormatConfiguration == null ? Output.empty() : this.fileFormatConfiguration;
+        return this.fileFormatConfiguration == null ? Codegen.empty() : this.fileFormatConfiguration;
     }
 
     @Import(name="retentionPeriod")
       private final @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
 
     public Output<DatastoreRetentionPeriodArgs> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
+        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DatastoreTagArgs>> tags;
 
     public Output<List<DatastoreTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DatastoreArgs(
@@ -78,12 +79,12 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatastoreArgs() {
-        this.datastoreName = Output.empty();
-        this.datastorePartitions = Output.empty();
-        this.datastoreStorage = Output.empty();
-        this.fileFormatConfiguration = Output.empty();
-        this.retentionPeriod = Output.empty();
-        this.tags = Output.empty();
+        this.datastoreName = Codegen.empty();
+        this.datastorePartitions = Codegen.empty();
+        this.datastoreStorage = Codegen.empty();
+        this.fileFormatConfiguration = Codegen.empty();
+        this.retentionPeriod = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Output.ofNullable(datastoreName);
+            this.datastoreName = Codegen.ofNullable(datastoreName);
             return this;
         }
         public Builder datastorePartitions(@Nullable Output<DatastorePartitionsArgs> datastorePartitions) {
@@ -129,7 +130,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastorePartitions(@Nullable DatastorePartitionsArgs datastorePartitions) {
-            this.datastorePartitions = Output.ofNullable(datastorePartitions);
+            this.datastorePartitions = Codegen.ofNullable(datastorePartitions);
             return this;
         }
         public Builder datastoreStorage(@Nullable Output<DatastoreStorageArgs> datastoreStorage) {
@@ -137,7 +138,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastoreStorage(@Nullable DatastoreStorageArgs datastoreStorage) {
-            this.datastoreStorage = Output.ofNullable(datastoreStorage);
+            this.datastoreStorage = Codegen.ofNullable(datastoreStorage);
             return this;
         }
         public Builder fileFormatConfiguration(@Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration) {
@@ -145,7 +146,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileFormatConfiguration(@Nullable DatastoreFileFormatConfigurationArgs fileFormatConfiguration) {
-            this.fileFormatConfiguration = Output.ofNullable(fileFormatConfiguration);
+            this.fileFormatConfiguration = Codegen.ofNullable(fileFormatConfiguration);
             return this;
         }
         public Builder retentionPeriod(@Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod) {
@@ -153,7 +154,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPeriod(@Nullable DatastoreRetentionPeriodArgs retentionPeriod) {
-            this.retentionPeriod = Output.ofNullable(retentionPeriod);
+            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
             return this;
         }
         public Builder tags(@Nullable Output<List<DatastoreTagArgs>> tags) {
@@ -161,7 +162,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DatastoreTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DatastoreTagArgs... tags) {

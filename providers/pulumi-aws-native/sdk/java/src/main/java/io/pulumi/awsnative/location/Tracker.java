@@ -10,6 +10,7 @@ import io.pulumi.awsnative.location.enums.TrackerPricingPlan;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -102,7 +103,7 @@ public class Tracker extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Tracker(String name, @Nullable TrackerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:location:Tracker", name, args == null ? TrackerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:location:Tracker", name, args == null ? TrackerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Tracker(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

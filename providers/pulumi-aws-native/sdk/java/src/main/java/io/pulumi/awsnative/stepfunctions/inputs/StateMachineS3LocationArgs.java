@@ -5,6 +5,7 @@ package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public StateMachineS3LocationArgs(
@@ -45,9 +46,9 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
     }
 
     private StateMachineS3LocationArgs() {
-        this.bucket = Output.empty();
-        this.key = Output.empty();
-        this.version = Output.empty();
+        this.bucket = Codegen.empty();
+        this.key = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public StateMachineS3LocationArgs build() {
             return new StateMachineS3LocationArgs(bucket, key, version);

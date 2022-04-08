@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alertDescription;
 
     public Output<String> getAlertDescription() {
-        return this.alertDescription == null ? Output.empty() : this.alertDescription;
+        return this.alertDescription == null ? Codegen.empty() : this.alertDescription;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alertName;
 
     public Output<String> getAlertName() {
-        return this.alertName == null ? Output.empty() : this.alertName;
+        return this.alertName == null ? Codegen.empty() : this.alertName;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertArgs() {
-        this.action = Output.empty();
-        this.alertDescription = Output.empty();
-        this.alertName = Output.empty();
-        this.alertSensitivityThreshold = Output.empty();
-        this.anomalyDetectorArn = Output.empty();
+        this.action = Codegen.empty();
+        this.alertDescription = Codegen.empty();
+        this.alertName = Codegen.empty();
+        this.alertSensitivityThreshold = Codegen.empty();
+        this.anomalyDetectorArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alertDescription(@Nullable String alertDescription) {
-            this.alertDescription = Output.ofNullable(alertDescription);
+            this.alertDescription = Codegen.ofNullable(alertDescription);
             return this;
         }
         public Builder alertName(@Nullable Output<String> alertName) {
@@ -141,7 +142,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alertName(@Nullable String alertName) {
-            this.alertName = Output.ofNullable(alertName);
+            this.alertName = Codegen.ofNullable(alertName);
             return this;
         }
         public Builder alertSensitivityThreshold(Output<Integer> alertSensitivityThreshold) {

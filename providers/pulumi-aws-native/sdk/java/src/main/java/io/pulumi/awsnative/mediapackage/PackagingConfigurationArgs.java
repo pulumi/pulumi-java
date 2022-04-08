@@ -10,6 +10,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssPackageA
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
     public Output<PackagingConfigurationCmafPackageArgs> getCmafPackage() {
-        return this.cmafPackage == null ? Output.empty() : this.cmafPackage;
+        return this.cmafPackage == null ? Codegen.empty() : this.cmafPackage;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
 
     public Output<PackagingConfigurationDashPackageArgs> getDashPackage() {
-        return this.dashPackage == null ? Output.empty() : this.dashPackage;
+        return this.dashPackage == null ? Codegen.empty() : this.dashPackage;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
     public Output<PackagingConfigurationHlsPackageArgs> getHlsPackage() {
-        return this.hlsPackage == null ? Output.empty() : this.hlsPackage;
+        return this.hlsPackage == null ? Codegen.empty() : this.hlsPackage;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
 
     public Output<PackagingConfigurationMssPackageArgs> getMssPackage() {
-        return this.mssPackage == null ? Output.empty() : this.mssPackage;
+        return this.mssPackage == null ? Codegen.empty() : this.mssPackage;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
 
     public Output<List<PackagingConfigurationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PackagingConfigurationArgs(
@@ -102,12 +103,12 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private PackagingConfigurationArgs() {
-        this.cmafPackage = Output.empty();
-        this.dashPackage = Output.empty();
-        this.hlsPackage = Output.empty();
-        this.mssPackage = Output.empty();
-        this.packagingGroupId = Output.empty();
-        this.tags = Output.empty();
+        this.cmafPackage = Codegen.empty();
+        this.dashPackage = Codegen.empty();
+        this.hlsPackage = Codegen.empty();
+        this.mssPackage = Codegen.empty();
+        this.packagingGroupId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder cmafPackage(@Nullable PackagingConfigurationCmafPackageArgs cmafPackage) {
-            this.cmafPackage = Output.ofNullable(cmafPackage);
+            this.cmafPackage = Codegen.ofNullable(cmafPackage);
             return this;
         }
         public Builder dashPackage(@Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage) {
@@ -153,7 +154,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dashPackage(@Nullable PackagingConfigurationDashPackageArgs dashPackage) {
-            this.dashPackage = Output.ofNullable(dashPackage);
+            this.dashPackage = Codegen.ofNullable(dashPackage);
             return this;
         }
         public Builder hlsPackage(@Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage) {
@@ -161,7 +162,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder hlsPackage(@Nullable PackagingConfigurationHlsPackageArgs hlsPackage) {
-            this.hlsPackage = Output.ofNullable(hlsPackage);
+            this.hlsPackage = Codegen.ofNullable(hlsPackage);
             return this;
         }
         public Builder mssPackage(@Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage) {
@@ -169,7 +170,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mssPackage(@Nullable PackagingConfigurationMssPackageArgs mssPackage) {
-            this.mssPackage = Output.ofNullable(mssPackage);
+            this.mssPackage = Codegen.ofNullable(mssPackage);
             return this;
         }
         public Builder packagingGroupId(Output<String> packagingGroupId) {
@@ -185,7 +186,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable List<PackagingConfigurationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PackagingConfigurationTagArgs... tags) {

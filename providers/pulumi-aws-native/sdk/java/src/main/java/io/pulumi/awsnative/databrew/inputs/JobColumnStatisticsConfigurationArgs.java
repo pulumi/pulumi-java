@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.JobColumnSelectorArgs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ public final class JobColumnStatisticsConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<List<JobColumnSelectorArgs>> selectors;
 
     public Output<List<JobColumnSelectorArgs>> getSelectors() {
-        return this.selectors == null ? Output.empty() : this.selectors;
+        return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 
     @Import(name="statistics", required=true)
@@ -38,8 +39,8 @@ public final class JobColumnStatisticsConfigurationArgs extends io.pulumi.resour
     }
 
     private JobColumnStatisticsConfigurationArgs() {
-        this.selectors = Output.empty();
-        this.statistics = Output.empty();
+        this.selectors = Codegen.empty();
+        this.statistics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class JobColumnStatisticsConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder selectors(@Nullable List<JobColumnSelectorArgs> selectors) {
-            this.selectors = Output.ofNullable(selectors);
+            this.selectors = Codegen.ofNullable(selectors);
             return this;
         }
         public Builder selectors(JobColumnSelectorArgs... selectors) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.networkfirewall.enums.RuleGroupGeneratedRulesType;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,9 +48,9 @@ public final class RuleGroupRulesSourceListArgs extends io.pulumi.resources.Reso
     }
 
     private RuleGroupRulesSourceListArgs() {
-        this.generatedRulesType = Output.empty();
-        this.targetTypes = Output.empty();
-        this.targets = Output.empty();
+        this.generatedRulesType = Codegen.empty();
+        this.targetTypes = Codegen.empty();
+        this.targets = Codegen.empty();
     }
 
     public static Builder builder() {

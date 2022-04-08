@@ -8,6 +8,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigDemodulationConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,21 +21,21 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
       private final @Nullable Output<ConfigDecodeConfigArgs> decodeConfig;
 
     public Output<ConfigDecodeConfigArgs> getDecodeConfig() {
-        return this.decodeConfig == null ? Output.empty() : this.decodeConfig;
+        return this.decodeConfig == null ? Codegen.empty() : this.decodeConfig;
     }
 
     @Import(name="demodulationConfig")
       private final @Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig;
 
     public Output<ConfigDemodulationConfigArgs> getDemodulationConfig() {
-        return this.demodulationConfig == null ? Output.empty() : this.demodulationConfig;
+        return this.demodulationConfig == null ? Codegen.empty() : this.demodulationConfig;
     }
 
     @Import(name="spectrumConfig")
       private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
     public Output<ConfigSpectrumConfigArgs> getSpectrumConfig() {
-        return this.spectrumConfig == null ? Output.empty() : this.spectrumConfig;
+        return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
     }
 
     public ConfigAntennaDownlinkDemodDecodeConfigArgs(
@@ -47,9 +48,9 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
     }
 
     private ConfigAntennaDownlinkDemodDecodeConfigArgs() {
-        this.decodeConfig = Output.empty();
-        this.demodulationConfig = Output.empty();
-        this.spectrumConfig = Output.empty();
+        this.decodeConfig = Codegen.empty();
+        this.demodulationConfig = Codegen.empty();
+        this.spectrumConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder decodeConfig(@Nullable ConfigDecodeConfigArgs decodeConfig) {
-            this.decodeConfig = Output.ofNullable(decodeConfig);
+            this.decodeConfig = Codegen.ofNullable(decodeConfig);
             return this;
         }
         public Builder demodulationConfig(@Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig) {
@@ -89,7 +90,7 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder demodulationConfig(@Nullable ConfigDemodulationConfigArgs demodulationConfig) {
-            this.demodulationConfig = Output.ofNullable(demodulationConfig);
+            this.demodulationConfig = Codegen.ofNullable(demodulationConfig);
             return this;
         }
         public Builder spectrumConfig(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
@@ -97,7 +98,7 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
-            this.spectrumConfig = Output.ofNullable(spectrumConfig);
+            this.spectrumConfig = Codegen.ofNullable(spectrumConfig);
             return this;
         }        public ConfigAntennaDownlinkDemodDecodeConfigArgs build() {
             return new ConfigAntennaDownlinkDemodDecodeConfigArgs(decodeConfig, demodulationConfig, spectrumConfig);

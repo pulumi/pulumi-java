@@ -7,6 +7,7 @@ import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionComponentPlatform
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaExecutionParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,42 +23,42 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
       private final @Nullable Output<Object> componentDependencies;
 
     public Output<Object> getComponentDependencies() {
-        return this.componentDependencies == null ? Output.empty() : this.componentDependencies;
+        return this.componentDependencies == null ? Codegen.empty() : this.componentDependencies;
     }
 
     @Import(name="componentLambdaParameters")
       private final @Nullable Output<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters;
 
     public Output<ComponentVersionLambdaExecutionParametersArgs> getComponentLambdaParameters() {
-        return this.componentLambdaParameters == null ? Output.empty() : this.componentLambdaParameters;
+        return this.componentLambdaParameters == null ? Codegen.empty() : this.componentLambdaParameters;
     }
 
     @Import(name="componentName")
       private final @Nullable Output<String> componentName;
 
     public Output<String> getComponentName() {
-        return this.componentName == null ? Output.empty() : this.componentName;
+        return this.componentName == null ? Codegen.empty() : this.componentName;
     }
 
     @Import(name="componentPlatforms")
       private final @Nullable Output<List<ComponentVersionComponentPlatformArgs>> componentPlatforms;
 
     public Output<List<ComponentVersionComponentPlatformArgs>> getComponentPlatforms() {
-        return this.componentPlatforms == null ? Output.empty() : this.componentPlatforms;
+        return this.componentPlatforms == null ? Codegen.empty() : this.componentPlatforms;
     }
 
     @Import(name="componentVersion")
       private final @Nullable Output<String> componentVersion;
 
     public Output<String> getComponentVersion() {
-        return this.componentVersion == null ? Output.empty() : this.componentVersion;
+        return this.componentVersion == null ? Codegen.empty() : this.componentVersion;
     }
 
     @Import(name="lambdaArn")
       private final @Nullable Output<String> lambdaArn;
 
     public Output<String> getLambdaArn() {
-        return this.lambdaArn == null ? Output.empty() : this.lambdaArn;
+        return this.lambdaArn == null ? Codegen.empty() : this.lambdaArn;
     }
 
     public ComponentVersionLambdaFunctionRecipeSourceArgs(
@@ -76,12 +77,12 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
     }
 
     private ComponentVersionLambdaFunctionRecipeSourceArgs() {
-        this.componentDependencies = Output.empty();
-        this.componentLambdaParameters = Output.empty();
-        this.componentName = Output.empty();
-        this.componentPlatforms = Output.empty();
-        this.componentVersion = Output.empty();
-        this.lambdaArn = Output.empty();
+        this.componentDependencies = Codegen.empty();
+        this.componentLambdaParameters = Codegen.empty();
+        this.componentName = Codegen.empty();
+        this.componentPlatforms = Codegen.empty();
+        this.componentVersion = Codegen.empty();
+        this.lambdaArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
             return this;
         }
         public Builder componentDependencies(@Nullable Object componentDependencies) {
-            this.componentDependencies = Output.ofNullable(componentDependencies);
+            this.componentDependencies = Codegen.ofNullable(componentDependencies);
             return this;
         }
         public Builder componentLambdaParameters(@Nullable Output<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters) {
@@ -127,7 +128,7 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
             return this;
         }
         public Builder componentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParametersArgs componentLambdaParameters) {
-            this.componentLambdaParameters = Output.ofNullable(componentLambdaParameters);
+            this.componentLambdaParameters = Codegen.ofNullable(componentLambdaParameters);
             return this;
         }
         public Builder componentName(@Nullable Output<String> componentName) {
@@ -135,7 +136,7 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
             return this;
         }
         public Builder componentName(@Nullable String componentName) {
-            this.componentName = Output.ofNullable(componentName);
+            this.componentName = Codegen.ofNullable(componentName);
             return this;
         }
         public Builder componentPlatforms(@Nullable Output<List<ComponentVersionComponentPlatformArgs>> componentPlatforms) {
@@ -143,7 +144,7 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
             return this;
         }
         public Builder componentPlatforms(@Nullable List<ComponentVersionComponentPlatformArgs> componentPlatforms) {
-            this.componentPlatforms = Output.ofNullable(componentPlatforms);
+            this.componentPlatforms = Codegen.ofNullable(componentPlatforms);
             return this;
         }
         public Builder componentPlatforms(ComponentVersionComponentPlatformArgs... componentPlatforms) {
@@ -154,7 +155,7 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
             return this;
         }
         public Builder componentVersion(@Nullable String componentVersion) {
-            this.componentVersion = Output.ofNullable(componentVersion);
+            this.componentVersion = Codegen.ofNullable(componentVersion);
             return this;
         }
         public Builder lambdaArn(@Nullable Output<String> lambdaArn) {
@@ -162,7 +163,7 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
             return this;
         }
         public Builder lambdaArn(@Nullable String lambdaArn) {
-            this.lambdaArn = Output.ofNullable(lambdaArn);
+            this.lambdaArn = Codegen.ofNullable(lambdaArn);
             return this;
         }        public ComponentVersionLambdaFunctionRecipeSourceArgs build() {
             return new ComponentVersionLambdaFunctionRecipeSourceArgs(componentDependencies, componentLambdaParameters, componentName, componentPlatforms, componentVersion, lambdaArn);

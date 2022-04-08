@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotAliasS3BucketLogDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
       private final @Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
 
     public Output<BotAliasS3BucketLogDestinationArgs> getS3Bucket() {
-        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
+        return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
     public BotAliasAudioLogDestinationArgs(@Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket) {
@@ -30,7 +31,7 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
     }
 
     private BotAliasAudioLogDestinationArgs() {
-        this.s3Bucket = Output.empty();
+        this.s3Bucket = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestinationArgs s3Bucket) {
-            this.s3Bucket = Output.ofNullable(s3Bucket);
+            this.s3Bucket = Codegen.ofNullable(s3Bucket);
             return this;
         }        public BotAliasAudioLogDestinationArgs build() {
             return new BotAliasAudioLogDestinationArgs(s3Bucket);

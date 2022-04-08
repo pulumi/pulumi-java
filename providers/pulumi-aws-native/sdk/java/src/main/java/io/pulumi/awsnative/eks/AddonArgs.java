@@ -7,6 +7,7 @@ import io.pulumi.awsnative.eks.enums.AddonResolveConflicts;
 import io.pulumi.awsnative.eks.inputs.AddonTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> addonName;
 
     public Output<String> getAddonName() {
-        return this.addonName == null ? Output.empty() : this.addonName;
+        return this.addonName == null ? Codegen.empty() : this.addonName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> addonVersion;
 
     public Output<String> getAddonVersion() {
-        return this.addonVersion == null ? Output.empty() : this.addonVersion;
+        return this.addonVersion == null ? Codegen.empty() : this.addonVersion;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddonResolveConflicts> resolveConflicts;
 
     public Output<AddonResolveConflicts> getResolveConflicts() {
-        return this.resolveConflicts == null ? Output.empty() : this.resolveConflicts;
+        return this.resolveConflicts == null ? Codegen.empty() : this.resolveConflicts;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccountRoleArn;
 
     public Output<String> getServiceAccountRoleArn() {
-        return this.serviceAccountRoleArn == null ? Output.empty() : this.serviceAccountRoleArn;
+        return this.serviceAccountRoleArn == null ? Codegen.empty() : this.serviceAccountRoleArn;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AddonTagArgs>> tags;
 
     public Output<List<AddonTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AddonArgs(
@@ -99,12 +100,12 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddonArgs() {
-        this.addonName = Output.empty();
-        this.addonVersion = Output.empty();
-        this.clusterName = Output.empty();
-        this.resolveConflicts = Output.empty();
-        this.serviceAccountRoleArn = Output.empty();
-        this.tags = Output.empty();
+        this.addonName = Codegen.empty();
+        this.addonVersion = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.resolveConflicts = Codegen.empty();
+        this.serviceAccountRoleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Output.ofNullable(addonName);
+            this.addonName = Codegen.ofNullable(addonName);
             return this;
         }
         public Builder addonVersion(@Nullable Output<String> addonVersion) {
@@ -150,7 +151,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addonVersion(@Nullable String addonVersion) {
-            this.addonVersion = Output.ofNullable(addonVersion);
+            this.addonVersion = Codegen.ofNullable(addonVersion);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -166,7 +167,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resolveConflicts(@Nullable AddonResolveConflicts resolveConflicts) {
-            this.resolveConflicts = Output.ofNullable(resolveConflicts);
+            this.resolveConflicts = Codegen.ofNullable(resolveConflicts);
             return this;
         }
         public Builder serviceAccountRoleArn(@Nullable Output<String> serviceAccountRoleArn) {
@@ -174,7 +175,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
-            this.serviceAccountRoleArn = Output.ofNullable(serviceAccountRoleArn);
+            this.serviceAccountRoleArn = Codegen.ofNullable(serviceAccountRoleArn);
             return this;
         }
         public Builder tags(@Nullable Output<List<AddonTagArgs>> tags) {
@@ -182,7 +183,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<AddonTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AddonTagArgs... tags) {

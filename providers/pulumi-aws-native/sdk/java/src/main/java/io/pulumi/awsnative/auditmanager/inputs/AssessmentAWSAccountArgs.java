@@ -5,6 +5,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,21 +23,21 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
-        return this.emailAddress == null ? Output.empty() : this.emailAddress;
+        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AssessmentAWSAccountArgs(
@@ -49,9 +50,9 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
     }
 
     private AssessmentAWSAccountArgs() {
-        this.emailAddress = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
+        this.emailAddress = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Output.ofNullable(emailAddress);
+            this.emailAddress = Codegen.ofNullable(emailAddress);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -91,7 +92,7 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -99,7 +100,7 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AssessmentAWSAccountArgs build() {
             return new AssessmentAWSAccountArgs(emailAddress, id, name);

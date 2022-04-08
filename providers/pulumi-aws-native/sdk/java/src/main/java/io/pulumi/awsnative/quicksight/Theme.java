@@ -13,6 +13,7 @@ import io.pulumi.awsnative.quicksight.outputs.ThemeVersion;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -204,7 +205,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Theme(String name, ThemeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:quicksight:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:quicksight:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Theme(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

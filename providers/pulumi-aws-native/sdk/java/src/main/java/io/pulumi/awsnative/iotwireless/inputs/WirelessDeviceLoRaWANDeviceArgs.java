@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV10xArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV11Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,49 +23,49 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
       private final @Nullable Output<WirelessDeviceAbpV10xArgs> abpV10x;
 
     public Output<WirelessDeviceAbpV10xArgs> getAbpV10x() {
-        return this.abpV10x == null ? Output.empty() : this.abpV10x;
+        return this.abpV10x == null ? Codegen.empty() : this.abpV10x;
     }
 
     @Import(name="abpV11")
       private final @Nullable Output<WirelessDeviceAbpV11Args> abpV11;
 
     public Output<WirelessDeviceAbpV11Args> getAbpV11() {
-        return this.abpV11 == null ? Output.empty() : this.abpV11;
+        return this.abpV11 == null ? Codegen.empty() : this.abpV11;
     }
 
     @Import(name="devEui")
       private final @Nullable Output<String> devEui;
 
     public Output<String> getDevEui() {
-        return this.devEui == null ? Output.empty() : this.devEui;
+        return this.devEui == null ? Codegen.empty() : this.devEui;
     }
 
     @Import(name="deviceProfileId")
       private final @Nullable Output<String> deviceProfileId;
 
     public Output<String> getDeviceProfileId() {
-        return this.deviceProfileId == null ? Output.empty() : this.deviceProfileId;
+        return this.deviceProfileId == null ? Codegen.empty() : this.deviceProfileId;
     }
 
     @Import(name="otaaV10x")
       private final @Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x;
 
     public Output<WirelessDeviceOtaaV10xArgs> getOtaaV10x() {
-        return this.otaaV10x == null ? Output.empty() : this.otaaV10x;
+        return this.otaaV10x == null ? Codegen.empty() : this.otaaV10x;
     }
 
     @Import(name="otaaV11")
       private final @Nullable Output<WirelessDeviceOtaaV11Args> otaaV11;
 
     public Output<WirelessDeviceOtaaV11Args> getOtaaV11() {
-        return this.otaaV11 == null ? Output.empty() : this.otaaV11;
+        return this.otaaV11 == null ? Codegen.empty() : this.otaaV11;
     }
 
     @Import(name="serviceProfileId")
       private final @Nullable Output<String> serviceProfileId;
 
     public Output<String> getServiceProfileId() {
-        return this.serviceProfileId == null ? Output.empty() : this.serviceProfileId;
+        return this.serviceProfileId == null ? Codegen.empty() : this.serviceProfileId;
     }
 
     public WirelessDeviceLoRaWANDeviceArgs(
@@ -85,13 +86,13 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
     }
 
     private WirelessDeviceLoRaWANDeviceArgs() {
-        this.abpV10x = Output.empty();
-        this.abpV11 = Output.empty();
-        this.devEui = Output.empty();
-        this.deviceProfileId = Output.empty();
-        this.otaaV10x = Output.empty();
-        this.otaaV11 = Output.empty();
-        this.serviceProfileId = Output.empty();
+        this.abpV10x = Codegen.empty();
+        this.abpV11 = Codegen.empty();
+        this.devEui = Codegen.empty();
+        this.deviceProfileId = Codegen.empty();
+        this.otaaV10x = Codegen.empty();
+        this.otaaV11 = Codegen.empty();
+        this.serviceProfileId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder abpV10x(@Nullable WirelessDeviceAbpV10xArgs abpV10x) {
-            this.abpV10x = Output.ofNullable(abpV10x);
+            this.abpV10x = Codegen.ofNullable(abpV10x);
             return this;
         }
         public Builder abpV11(@Nullable Output<WirelessDeviceAbpV11Args> abpV11) {
@@ -139,7 +140,7 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder abpV11(@Nullable WirelessDeviceAbpV11Args abpV11) {
-            this.abpV11 = Output.ofNullable(abpV11);
+            this.abpV11 = Codegen.ofNullable(abpV11);
             return this;
         }
         public Builder devEui(@Nullable Output<String> devEui) {
@@ -147,7 +148,7 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder devEui(@Nullable String devEui) {
-            this.devEui = Output.ofNullable(devEui);
+            this.devEui = Codegen.ofNullable(devEui);
             return this;
         }
         public Builder deviceProfileId(@Nullable Output<String> deviceProfileId) {
@@ -155,7 +156,7 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder deviceProfileId(@Nullable String deviceProfileId) {
-            this.deviceProfileId = Output.ofNullable(deviceProfileId);
+            this.deviceProfileId = Codegen.ofNullable(deviceProfileId);
             return this;
         }
         public Builder otaaV10x(@Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x) {
@@ -163,7 +164,7 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder otaaV10x(@Nullable WirelessDeviceOtaaV10xArgs otaaV10x) {
-            this.otaaV10x = Output.ofNullable(otaaV10x);
+            this.otaaV10x = Codegen.ofNullable(otaaV10x);
             return this;
         }
         public Builder otaaV11(@Nullable Output<WirelessDeviceOtaaV11Args> otaaV11) {
@@ -171,7 +172,7 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder otaaV11(@Nullable WirelessDeviceOtaaV11Args otaaV11) {
-            this.otaaV11 = Output.ofNullable(otaaV11);
+            this.otaaV11 = Codegen.ofNullable(otaaV11);
             return this;
         }
         public Builder serviceProfileId(@Nullable Output<String> serviceProfileId) {
@@ -179,7 +180,7 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder serviceProfileId(@Nullable String serviceProfileId) {
-            this.serviceProfileId = Output.ofNullable(serviceProfileId);
+            this.serviceProfileId = Codegen.ofNullable(serviceProfileId);
             return this;
         }        public WirelessDeviceLoRaWANDeviceArgs build() {
             return new WirelessDeviceLoRaWANDeviceArgs(abpV10x, abpV11, devEui, deviceProfileId, otaaV10x, otaaV11, serviceProfileId);

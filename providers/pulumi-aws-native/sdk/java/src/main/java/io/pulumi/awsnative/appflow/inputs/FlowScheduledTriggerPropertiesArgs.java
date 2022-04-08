@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowScheduledTriggerPropertiesDataPullMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,14 +25,14 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
     public Output<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
-        return this.dataPullMode == null ? Output.empty() : this.dataPullMode;
+        return this.dataPullMode == null ? Codegen.empty() : this.dataPullMode;
     }
 
     @Import(name="scheduleEndTime")
       private final @Nullable Output<Double> scheduleEndTime;
 
     public Output<Double> getScheduleEndTime() {
-        return this.scheduleEndTime == null ? Output.empty() : this.scheduleEndTime;
+        return this.scheduleEndTime == null ? Codegen.empty() : this.scheduleEndTime;
     }
 
     @Import(name="scheduleExpression", required=true)
@@ -45,21 +46,21 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<Double> scheduleOffset;
 
     public Output<Double> getScheduleOffset() {
-        return this.scheduleOffset == null ? Output.empty() : this.scheduleOffset;
+        return this.scheduleOffset == null ? Codegen.empty() : this.scheduleOffset;
     }
 
     @Import(name="scheduleStartTime")
       private final @Nullable Output<Double> scheduleStartTime;
 
     public Output<Double> getScheduleStartTime() {
-        return this.scheduleStartTime == null ? Output.empty() : this.scheduleStartTime;
+        return this.scheduleStartTime == null ? Codegen.empty() : this.scheduleStartTime;
     }
 
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public FlowScheduledTriggerPropertiesArgs(
@@ -78,12 +79,12 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     }
 
     private FlowScheduledTriggerPropertiesArgs() {
-        this.dataPullMode = Output.empty();
-        this.scheduleEndTime = Output.empty();
-        this.scheduleExpression = Output.empty();
-        this.scheduleOffset = Output.empty();
-        this.scheduleStartTime = Output.empty();
-        this.timeZone = Output.empty();
+        this.dataPullMode = Codegen.empty();
+        this.scheduleEndTime = Codegen.empty();
+        this.scheduleExpression = Codegen.empty();
+        this.scheduleOffset = Codegen.empty();
+        this.scheduleStartTime = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder dataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
-            this.dataPullMode = Output.ofNullable(dataPullMode);
+            this.dataPullMode = Codegen.ofNullable(dataPullMode);
             return this;
         }
         public Builder scheduleEndTime(@Nullable Output<Double> scheduleEndTime) {
@@ -129,7 +130,7 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
-            this.scheduleEndTime = Output.ofNullable(scheduleEndTime);
+            this.scheduleEndTime = Codegen.ofNullable(scheduleEndTime);
             return this;
         }
         public Builder scheduleExpression(Output<String> scheduleExpression) {
@@ -145,7 +146,7 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder scheduleOffset(@Nullable Double scheduleOffset) {
-            this.scheduleOffset = Output.ofNullable(scheduleOffset);
+            this.scheduleOffset = Codegen.ofNullable(scheduleOffset);
             return this;
         }
         public Builder scheduleStartTime(@Nullable Output<Double> scheduleStartTime) {
@@ -153,7 +154,7 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
-            this.scheduleStartTime = Output.ofNullable(scheduleStartTime);
+            this.scheduleStartTime = Codegen.ofNullable(scheduleStartTime);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -161,7 +162,7 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public FlowScheduledTriggerPropertiesArgs build() {
             return new FlowScheduledTriggerPropertiesArgs(dataPullMode, scheduleEndTime, scheduleExpression, scheduleOffset, scheduleStartTime, timeZone);

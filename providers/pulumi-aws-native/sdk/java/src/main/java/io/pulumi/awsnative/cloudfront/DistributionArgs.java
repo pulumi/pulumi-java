@@ -7,6 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DistributionTagArgs>> tags;
 
     public Output<List<DistributionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DistributionArgs(
@@ -38,8 +39,8 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DistributionArgs() {
-        this.distributionConfig = Output.empty();
-        this.tags = Output.empty();
+        this.distributionConfig = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DistributionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DistributionTagArgs... tags) {

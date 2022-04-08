@@ -6,6 +6,7 @@ package io.pulumi.awsnative.codeartifact;
 import io.pulumi.awsnative.codeartifact.inputs.DomainTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> permissionsPolicyDocument;
 
     public Output<Object> getPermissionsPolicyDocument() {
-        return this.permissionsPolicyDocument == null ? Output.empty() : this.permissionsPolicyDocument;
+        return this.permissionsPolicyDocument == null ? Codegen.empty() : this.permissionsPolicyDocument;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
     public Output<List<DomainTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DomainArgs(
@@ -60,9 +61,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.domainName = Output.empty();
-        this.permissionsPolicyDocument = Output.empty();
-        this.tags = Output.empty();
+        this.domainName = Codegen.empty();
+        this.permissionsPolicyDocument = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder permissionsPolicyDocument(@Nullable Output<Object> permissionsPolicyDocument) {
@@ -102,7 +103,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
-            this.permissionsPolicyDocument = Output.ofNullable(permissionsPolicyDocument);
+            this.permissionsPolicyDocument = Codegen.ofNullable(permissionsPolicyDocument);
             return this;
         }
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
@@ -110,7 +111,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DomainTagArgs... tags) {

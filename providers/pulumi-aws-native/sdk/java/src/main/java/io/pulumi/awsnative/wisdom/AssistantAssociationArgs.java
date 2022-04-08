@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationAssociationDataArgs
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<AssistantAssociationTagArgs>> tags;
 
     public Output<List<AssistantAssociationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AssistantAssociationArgs(
@@ -58,10 +59,10 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     }
 
     private AssistantAssociationArgs() {
-        this.assistantId = Output.empty();
-        this.association = Output.empty();
-        this.associationType = Output.empty();
-        this.tags = Output.empty();
+        this.assistantId = Codegen.empty();
+        this.association = Codegen.empty();
+        this.associationType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable List<AssistantAssociationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AssistantAssociationTagArgs... tags) {

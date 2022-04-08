@@ -5,6 +5,7 @@ package io.pulumi.awsnative.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isLatest;
 
     public Output<Boolean> getIsLatest() {
-        return this.isLatest == null ? Output.empty() : this.isLatest;
+        return this.isLatest == null ? Codegen.empty() : this.isLatest;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> versionNumber;
 
     public Output<Integer> getVersionNumber() {
-        return this.versionNumber == null ? Output.empty() : this.versionNumber;
+        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
     }
 
     public SchemaVersionArgs(
@@ -49,8 +50,8 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaVersionArgs() {
-        this.isLatest = Output.empty();
-        this.versionNumber = Output.empty();
+        this.isLatest = Codegen.empty();
+        this.versionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isLatest(@Nullable Boolean isLatest) {
-            this.isLatest = Output.ofNullable(isLatest);
+            this.isLatest = Codegen.ofNullable(isLatest);
             return this;
         }
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
@@ -88,7 +89,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Output.ofNullable(versionNumber);
+            this.versionNumber = Codegen.ofNullable(versionNumber);
             return this;
         }        public SchemaVersionArgs build() {
             return new SchemaVersionArgs(isLatest, versionNumber);

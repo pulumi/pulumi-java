@@ -6,6 +6,7 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.devicefarm.inputs.VPCEConfigurationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,14 +28,14 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<VPCEConfigurationTagArgs>> tags;
 
     public Output<List<VPCEConfigurationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpceConfigurationDescription")
       private final @Nullable Output<String> vpceConfigurationDescription;
 
     public Output<String> getVpceConfigurationDescription() {
-        return this.vpceConfigurationDescription == null ? Output.empty() : this.vpceConfigurationDescription;
+        return this.vpceConfigurationDescription == null ? Codegen.empty() : this.vpceConfigurationDescription;
     }
 
     @Import(name="vpceConfigurationName", required=true)
@@ -65,11 +66,11 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private VPCEConfigurationArgs() {
-        this.serviceDnsName = Output.empty();
-        this.tags = Output.empty();
-        this.vpceConfigurationDescription = Output.empty();
-        this.vpceConfigurationName = Output.empty();
-        this.vpceServiceName = Output.empty();
+        this.serviceDnsName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpceConfigurationDescription = Codegen.empty();
+        this.vpceConfigurationName = Codegen.empty();
+        this.vpceServiceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable List<VPCEConfigurationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(VPCEConfigurationTagArgs... tags) {
@@ -124,7 +125,7 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vpceConfigurationDescription(@Nullable String vpceConfigurationDescription) {
-            this.vpceConfigurationDescription = Output.ofNullable(vpceConfigurationDescription);
+            this.vpceConfigurationDescription = Codegen.ofNullable(vpceConfigurationDescription);
             return this;
         }
         public Builder vpceConfigurationName(Output<String> vpceConfigurationName) {

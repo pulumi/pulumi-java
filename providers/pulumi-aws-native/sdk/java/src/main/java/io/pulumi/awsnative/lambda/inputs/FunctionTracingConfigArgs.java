@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lambda.inputs;
 import io.pulumi.awsnative.lambda.enums.FunctionTracingConfigMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<FunctionTracingConfigMode> mode;
 
     public Output<FunctionTracingConfigMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public FunctionTracingConfigArgs(@Nullable Output<FunctionTracingConfigMode> mode) {
@@ -34,7 +35,7 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private FunctionTracingConfigArgs() {
-        this.mode = Output.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder mode(@Nullable FunctionTracingConfigMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public FunctionTracingConfigArgs build() {
             return new FunctionTracingConfigArgs(mode);

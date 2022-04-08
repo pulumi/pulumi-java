@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -33,7 +34,7 @@ public final class BucketVersioningConfigurationArgs extends io.pulumi.resources
     }
 
     private BucketVersioningConfigurationArgs() {
-        this.status = Output.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

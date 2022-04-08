@@ -5,6 +5,7 @@ package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     @Import(name="port")
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ClusterEndpointArgs(
@@ -36,8 +37,8 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterEndpointArgs() {
-        this.address = Output.empty();
-        this.port = Output.empty();
+        this.address = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder port(@Nullable Output<String> port) {
@@ -75,7 +76,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ClusterEndpointArgs build() {
             return new ClusterEndpointArgs(address, port);

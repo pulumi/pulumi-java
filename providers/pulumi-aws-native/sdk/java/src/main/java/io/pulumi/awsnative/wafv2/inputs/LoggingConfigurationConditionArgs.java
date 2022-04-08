@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionActionCondi
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionLabelNameConditionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
       private final @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
 
     public Output<LoggingConfigurationConditionActionConditionPropertiesArgs> getActionCondition() {
-        return this.actionCondition == null ? Output.empty() : this.actionCondition;
+        return this.actionCondition == null ? Codegen.empty() : this.actionCondition;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
       private final @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
 
     public Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> getLabelNameCondition() {
-        return this.labelNameCondition == null ? Output.empty() : this.labelNameCondition;
+        return this.labelNameCondition == null ? Codegen.empty() : this.labelNameCondition;
     }
 
     public LoggingConfigurationConditionArgs(
@@ -45,8 +46,8 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
     }
 
     private LoggingConfigurationConditionArgs() {
-        this.actionCondition = Output.empty();
-        this.labelNameCondition = Output.empty();
+        this.actionCondition = Codegen.empty();
+        this.labelNameCondition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
             return this;
         }
         public Builder actionCondition(@Nullable LoggingConfigurationConditionActionConditionPropertiesArgs actionCondition) {
-            this.actionCondition = Output.ofNullable(actionCondition);
+            this.actionCondition = Codegen.ofNullable(actionCondition);
             return this;
         }
         public Builder labelNameCondition(@Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition) {
@@ -84,7 +85,7 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
             return this;
         }
         public Builder labelNameCondition(@Nullable LoggingConfigurationConditionLabelNameConditionPropertiesArgs labelNameCondition) {
-            this.labelNameCondition = Output.ofNullable(labelNameCondition);
+            this.labelNameCondition = Codegen.ofNullable(labelNameCondition);
             return this;
         }        public LoggingConfigurationConditionArgs build() {
             return new LoggingConfigurationConditionArgs(actionCondition, labelNameCondition);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class ChannelCustomerManagedS3Args extends io.pulumi.resources.Reso
       private final @Nullable Output<String> keyPrefix;
 
     public Output<String> getKeyPrefix() {
-        return this.keyPrefix == null ? Output.empty() : this.keyPrefix;
+        return this.keyPrefix == null ? Codegen.empty() : this.keyPrefix;
     }
 
     @Import(name="roleArn", required=true)
@@ -45,9 +46,9 @@ public final class ChannelCustomerManagedS3Args extends io.pulumi.resources.Reso
     }
 
     private ChannelCustomerManagedS3Args() {
-        this.bucket = Output.empty();
-        this.keyPrefix = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucket = Codegen.empty();
+        this.keyPrefix = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ChannelCustomerManagedS3Args extends io.pulumi.resources.Reso
             return this;
         }
         public Builder keyPrefix(@Nullable String keyPrefix) {
-            this.keyPrefix = Output.ofNullable(keyPrefix);
+            this.keyPrefix = Codegen.ofNullable(keyPrefix);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

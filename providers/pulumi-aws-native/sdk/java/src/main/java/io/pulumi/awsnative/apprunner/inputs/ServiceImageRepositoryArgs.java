@@ -7,6 +7,7 @@ import io.pulumi.awsnative.apprunner.enums.ServiceImageRepositoryImageRepository
 import io.pulumi.awsnative.apprunner.inputs.ServiceImageConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ServiceImageConfigurationArgs> imageConfiguration;
 
     public Output<ServiceImageConfigurationArgs> getImageConfiguration() {
-        return this.imageConfiguration == null ? Output.empty() : this.imageConfiguration;
+        return this.imageConfiguration == null ? Codegen.empty() : this.imageConfiguration;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
     }
 
     private ServiceImageRepositoryArgs() {
-        this.imageConfiguration = Output.empty();
-        this.imageIdentifier = Output.empty();
-        this.imageRepositoryType = Output.empty();
+        this.imageConfiguration = Codegen.empty();
+        this.imageIdentifier = Codegen.empty();
+        this.imageRepositoryType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder imageConfiguration(@Nullable ServiceImageConfigurationArgs imageConfiguration) {
-            this.imageConfiguration = Output.ofNullable(imageConfiguration);
+            this.imageConfiguration = Codegen.ofNullable(imageConfiguration);
             return this;
         }
         public Builder imageIdentifier(Output<String> imageIdentifier) {

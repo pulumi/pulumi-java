@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureAttributeMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
       private final @Nullable Output<String> targetMultiMeasureName;
 
     public Output<String> getTargetMultiMeasureName() {
-        return this.targetMultiMeasureName == null ? Output.empty() : this.targetMultiMeasureName;
+        return this.targetMultiMeasureName == null ? Codegen.empty() : this.targetMultiMeasureName;
     }
 
     public ScheduledQueryMultiMeasureMappingsArgs(
@@ -42,8 +43,8 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
     }
 
     private ScheduledQueryMultiMeasureMappingsArgs() {
-        this.multiMeasureAttributeMappings = Output.empty();
-        this.targetMultiMeasureName = Output.empty();
+        this.multiMeasureAttributeMappings = Codegen.empty();
+        this.targetMultiMeasureName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
             return this;
         }
         public Builder targetMultiMeasureName(@Nullable String targetMultiMeasureName) {
-            this.targetMultiMeasureName = Output.ofNullable(targetMultiMeasureName);
+            this.targetMultiMeasureName = Codegen.ofNullable(targetMultiMeasureName);
             return this;
         }        public ScheduledQueryMultiMeasureMappingsArgs build() {
             return new ScheduledQueryMultiMeasureMappingsArgs(multiMeasureAttributeMappings, targetMultiMeasureName);

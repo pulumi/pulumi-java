@@ -10,6 +10,7 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssoc
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -126,7 +127,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverQueryLoggingConfigAssociation(String name, @Nullable ResolverQueryLoggingConfigAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, args == null ? ResolverQueryLoggingConfigAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, args == null ? ResolverQueryLoggingConfigAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverQueryLoggingConfigAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

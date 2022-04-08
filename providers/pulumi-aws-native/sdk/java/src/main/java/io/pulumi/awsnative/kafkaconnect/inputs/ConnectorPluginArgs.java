@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorCustomPluginArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class ConnectorPluginArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConnectorPluginArgs() {
-        this.customPlugin = Output.empty();
+        this.customPlugin = Codegen.empty();
     }
 
     public static Builder builder() {

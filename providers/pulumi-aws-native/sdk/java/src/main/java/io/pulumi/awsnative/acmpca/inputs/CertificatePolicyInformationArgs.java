@@ -6,6 +6,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 import io.pulumi.awsnative.acmpca.inputs.CertificatePolicyQualifierInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
       private final @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
 
     public Output<List<CertificatePolicyQualifierInfoArgs>> getPolicyQualifiers() {
-        return this.policyQualifiers == null ? Output.empty() : this.policyQualifiers;
+        return this.policyQualifiers == null ? Codegen.empty() : this.policyQualifiers;
     }
 
     public CertificatePolicyInformationArgs(
@@ -42,8 +43,8 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
     }
 
     private CertificatePolicyInformationArgs() {
-        this.certPolicyId = Output.empty();
-        this.policyQualifiers = Output.empty();
+        this.certPolicyId = Codegen.empty();
+        this.policyQualifiers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder policyQualifiers(@Nullable List<CertificatePolicyQualifierInfoArgs> policyQualifiers) {
-            this.policyQualifiers = Output.ofNullable(policyQualifiers);
+            this.policyQualifiers = Codegen.ofNullable(policyQualifiers);
             return this;
         }
         public Builder policyQualifiers(CertificatePolicyQualifierInfoArgs... policyQualifiers) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLExcludedRuleArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
       private final @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
 
     public Output<List<WebACLExcludedRuleArgs>> getExcludedRules() {
-        return this.excludedRules == null ? Output.empty() : this.excludedRules;
+        return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
     }
 
     @Import(name="name", required=true)
@@ -35,7 +36,7 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
       private final @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
     public Output<WebACLStatementArgs> getScopeDownStatement() {
-        return this.scopeDownStatement == null ? Output.empty() : this.scopeDownStatement;
+        return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
     }
 
     @Import(name="vendorName", required=true)
@@ -49,7 +50,7 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public WebACLManagedRuleGroupStatementArgs(
@@ -66,11 +67,11 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
     }
 
     private WebACLManagedRuleGroupStatementArgs() {
-        this.excludedRules = Output.empty();
-        this.name = Output.empty();
-        this.scopeDownStatement = Output.empty();
-        this.vendorName = Output.empty();
-        this.version = Output.empty();
+        this.excludedRules = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scopeDownStatement = Codegen.empty();
+        this.vendorName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
             return this;
         }
         public Builder excludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
-            this.excludedRules = Output.ofNullable(excludedRules);
+            this.excludedRules = Codegen.ofNullable(excludedRules);
             return this;
         }
         public Builder excludedRules(WebACLExcludedRuleArgs... excludedRules) {
@@ -125,7 +126,7 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
             return this;
         }
         public Builder scopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
-            this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
+            this.scopeDownStatement = Codegen.ofNullable(scopeDownStatement);
             return this;
         }
         public Builder vendorName(Output<String> vendorName) {
@@ -141,7 +142,7 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public WebACLManagedRuleGroupStatementArgs build() {
             return new WebACLManagedRuleGroupStatementArgs(excludedRules, name, scopeDownStatement, vendorName, version);

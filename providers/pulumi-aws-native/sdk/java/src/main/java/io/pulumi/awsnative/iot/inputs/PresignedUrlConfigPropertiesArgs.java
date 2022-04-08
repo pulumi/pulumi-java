@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> expiresInSec;
 
     public Output<Integer> getExpiresInSec() {
-        return this.expiresInSec == null ? Output.empty() : this.expiresInSec;
+        return this.expiresInSec == null ? Codegen.empty() : this.expiresInSec;
     }
 
     @Import(name="roleArn", required=true)
@@ -41,8 +42,8 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
     }
 
     private PresignedUrlConfigPropertiesArgs() {
-        this.expiresInSec = Output.empty();
-        this.roleArn = Output.empty();
+        this.expiresInSec = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder expiresInSec(@Nullable Integer expiresInSec) {
-            this.expiresInSec = Output.ofNullable(expiresInSec);
+            this.expiresInSec = Codegen.ofNullable(expiresInSec);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Double> lowerInclusive;
 
     public Output<Double> getLowerInclusive() {
-        return this.lowerInclusive == null ? Output.empty() : this.lowerInclusive;
+        return this.lowerInclusive == null ? Codegen.empty() : this.lowerInclusive;
     }
 
     @Import(name="upperInclusive")
       private final @Nullable Output<Double> upperInclusive;
 
     public Output<Double> getUpperInclusive() {
-        return this.upperInclusive == null ? Output.empty() : this.upperInclusive;
+        return this.upperInclusive == null ? Codegen.empty() : this.upperInclusive;
     }
 
     public FilterNumberFilterArgs(
@@ -36,8 +37,8 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FilterNumberFilterArgs() {
-        this.lowerInclusive = Output.empty();
-        this.upperInclusive = Output.empty();
+        this.lowerInclusive = Codegen.empty();
+        this.upperInclusive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lowerInclusive(@Nullable Double lowerInclusive) {
-            this.lowerInclusive = Output.ofNullable(lowerInclusive);
+            this.lowerInclusive = Codegen.ofNullable(lowerInclusive);
             return this;
         }
         public Builder upperInclusive(@Nullable Output<Double> upperInclusive) {
@@ -75,7 +76,7 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder upperInclusive(@Nullable Double upperInclusive) {
-            this.upperInclusive = Output.ofNullable(upperInclusive);
+            this.upperInclusive = Codegen.ofNullable(upperInclusive);
             return this;
         }        public FilterNumberFilterArgs build() {
             return new FilterNumberFilterArgs(lowerInclusive, upperInclusive);

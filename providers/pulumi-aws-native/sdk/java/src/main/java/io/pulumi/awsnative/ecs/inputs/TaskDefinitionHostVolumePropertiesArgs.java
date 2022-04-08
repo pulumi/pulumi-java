@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
       private final @Nullable Output<String> sourcePath;
 
     public Output<String> getSourcePath() {
-        return this.sourcePath == null ? Output.empty() : this.sourcePath;
+        return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
     }
 
     public TaskDefinitionHostVolumePropertiesArgs(@Nullable Output<String> sourcePath) {
@@ -26,7 +27,7 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     }
 
     private TaskDefinitionHostVolumePropertiesArgs() {
-        this.sourcePath = Output.empty();
+        this.sourcePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder sourcePath(@Nullable String sourcePath) {
-            this.sourcePath = Output.ofNullable(sourcePath);
+            this.sourcePath = Codegen.ofNullable(sourcePath);
             return this;
         }        public TaskDefinitionHostVolumePropertiesArgs build() {
             return new TaskDefinitionHostVolumePropertiesArgs(sourcePath);

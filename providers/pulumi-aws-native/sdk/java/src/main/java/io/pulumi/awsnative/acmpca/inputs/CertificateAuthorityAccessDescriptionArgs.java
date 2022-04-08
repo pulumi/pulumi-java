@@ -7,6 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessMethodArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityGeneralNameArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -40,8 +41,8 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
     }
 
     private CertificateAuthorityAccessDescriptionArgs() {
-        this.accessLocation = Output.empty();
-        this.accessMethod = Output.empty();
+        this.accessLocation = Codegen.empty();
+        this.accessMethod = Codegen.empty();
     }
 
     public static Builder builder() {

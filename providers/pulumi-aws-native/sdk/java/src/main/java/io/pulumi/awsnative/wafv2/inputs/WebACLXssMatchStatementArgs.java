@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -41,8 +42,8 @@ public final class WebACLXssMatchStatementArgs extends io.pulumi.resources.Resou
     }
 
     private WebACLXssMatchStatementArgs() {
-        this.fieldToMatch = Output.empty();
-        this.textTransformations = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {

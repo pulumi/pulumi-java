@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,14 +28,14 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> hTTPPort;
 
     public Output<Integer> getHTTPPort() {
-        return this.hTTPPort == null ? Output.empty() : this.hTTPPort;
+        return this.hTTPPort == null ? Codegen.empty() : this.hTTPPort;
     }
 
     @Import(name="hTTPSPort")
       private final @Nullable Output<Integer> hTTPSPort;
 
     public Output<Integer> getHTTPSPort() {
-        return this.hTTPSPort == null ? Output.empty() : this.hTTPSPort;
+        return this.hTTPSPort == null ? Codegen.empty() : this.hTTPSPort;
     }
 
     @Import(name="originProtocolPolicy", required=true)
@@ -65,11 +66,11 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
     }
 
     private DistributionLegacyCustomOriginArgs() {
-        this.dNSName = Output.empty();
-        this.hTTPPort = Output.empty();
-        this.hTTPSPort = Output.empty();
-        this.originProtocolPolicy = Output.empty();
-        this.originSSLProtocols = Output.empty();
+        this.dNSName = Codegen.empty();
+        this.hTTPPort = Codegen.empty();
+        this.hTTPSPort = Codegen.empty();
+        this.originProtocolPolicy = Codegen.empty();
+        this.originSSLProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
             return this;
         }
         public Builder hTTPPort(@Nullable Integer hTTPPort) {
-            this.hTTPPort = Output.ofNullable(hTTPPort);
+            this.hTTPPort = Codegen.ofNullable(hTTPPort);
             return this;
         }
         public Builder hTTPSPort(@Nullable Output<Integer> hTTPSPort) {
@@ -121,7 +122,7 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
             return this;
         }
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
-            this.hTTPSPort = Output.ofNullable(hTTPSPort);
+            this.hTTPSPort = Codegen.ofNullable(hTTPSPort);
             return this;
         }
         public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {

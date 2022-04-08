@@ -9,6 +9,7 @@ import io.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupChannelArgs;
 import io.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
 
     public Output<AgentPermissionsPropertiesArgs> getAgentPermissions() {
-        return this.agentPermissions == null ? Output.empty() : this.agentPermissions;
+        return this.agentPermissions == null ? Codegen.empty() : this.agentPermissions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
     public Output<List<ProfilingGroupChannelArgs>> getAnomalyDetectionNotificationConfiguration() {
-        return this.anomalyDetectionNotificationConfiguration == null ? Output.empty() : this.anomalyDetectionNotificationConfiguration;
+        return this.anomalyDetectionNotificationConfiguration == null ? Codegen.empty() : this.anomalyDetectionNotificationConfiguration;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
 
     public Output<ProfilingGroupComputePlatform> getComputePlatform() {
-        return this.computePlatform == null ? Output.empty() : this.computePlatform;
+        return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> profilingGroupName;
 
     public Output<String> getProfilingGroupName() {
-        return this.profilingGroupName == null ? Output.empty() : this.profilingGroupName;
+        return this.profilingGroupName == null ? Codegen.empty() : this.profilingGroupName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ProfilingGroupTagArgs>> tags;
 
     public Output<List<ProfilingGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ProfilingGroupArgs(
@@ -88,11 +89,11 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProfilingGroupArgs() {
-        this.agentPermissions = Output.empty();
-        this.anomalyDetectionNotificationConfiguration = Output.empty();
-        this.computePlatform = Output.empty();
-        this.profilingGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.agentPermissions = Codegen.empty();
+        this.anomalyDetectionNotificationConfiguration = Codegen.empty();
+        this.computePlatform = Codegen.empty();
+        this.profilingGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentPermissions(@Nullable AgentPermissionsPropertiesArgs agentPermissions) {
-            this.agentPermissions = Output.ofNullable(agentPermissions);
+            this.agentPermissions = Codegen.ofNullable(agentPermissions);
             return this;
         }
         public Builder anomalyDetectionNotificationConfiguration(@Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
@@ -136,7 +137,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
-            this.anomalyDetectionNotificationConfiguration = Output.ofNullable(anomalyDetectionNotificationConfiguration);
+            this.anomalyDetectionNotificationConfiguration = Codegen.ofNullable(anomalyDetectionNotificationConfiguration);
             return this;
         }
         public Builder anomalyDetectionNotificationConfiguration(ProfilingGroupChannelArgs... anomalyDetectionNotificationConfiguration) {
@@ -147,7 +148,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computePlatform(@Nullable ProfilingGroupComputePlatform computePlatform) {
-            this.computePlatform = Output.ofNullable(computePlatform);
+            this.computePlatform = Codegen.ofNullable(computePlatform);
             return this;
         }
         public Builder profilingGroupName(@Nullable Output<String> profilingGroupName) {
@@ -155,7 +156,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profilingGroupName(@Nullable String profilingGroupName) {
-            this.profilingGroupName = Output.ofNullable(profilingGroupName);
+            this.profilingGroupName = Codegen.ofNullable(profilingGroupName);
             return this;
         }
         public Builder tags(@Nullable Output<List<ProfilingGroupTagArgs>> tags) {
@@ -163,7 +164,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ProfilingGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ProfilingGroupTagArgs... tags) {

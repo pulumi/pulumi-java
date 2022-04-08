@@ -15,6 +15,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.PipelineRemoveAttributesArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineSelectAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,70 +28,70 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<PipelineAddAttributesArgs> addAttributes;
 
     public Output<PipelineAddAttributesArgs> getAddAttributes() {
-        return this.addAttributes == null ? Output.empty() : this.addAttributes;
+        return this.addAttributes == null ? Codegen.empty() : this.addAttributes;
     }
 
     @Import(name="channel")
       private final @Nullable Output<PipelineChannelArgs> channel;
 
     public Output<PipelineChannelArgs> getChannel() {
-        return this.channel == null ? Output.empty() : this.channel;
+        return this.channel == null ? Codegen.empty() : this.channel;
     }
 
     @Import(name="datastore")
       private final @Nullable Output<PipelineDatastoreArgs> datastore;
 
     public Output<PipelineDatastoreArgs> getDatastore() {
-        return this.datastore == null ? Output.empty() : this.datastore;
+        return this.datastore == null ? Codegen.empty() : this.datastore;
     }
 
     @Import(name="deviceRegistryEnrich")
       private final @Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
 
     public Output<PipelineDeviceRegistryEnrichArgs> getDeviceRegistryEnrich() {
-        return this.deviceRegistryEnrich == null ? Output.empty() : this.deviceRegistryEnrich;
+        return this.deviceRegistryEnrich == null ? Codegen.empty() : this.deviceRegistryEnrich;
     }
 
     @Import(name="deviceShadowEnrich")
       private final @Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
 
     public Output<PipelineDeviceShadowEnrichArgs> getDeviceShadowEnrich() {
-        return this.deviceShadowEnrich == null ? Output.empty() : this.deviceShadowEnrich;
+        return this.deviceShadowEnrich == null ? Codegen.empty() : this.deviceShadowEnrich;
     }
 
     @Import(name="filter")
       private final @Nullable Output<PipelineFilterArgs> filter;
 
     public Output<PipelineFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="lambda")
       private final @Nullable Output<PipelineLambdaArgs> lambda;
 
     public Output<PipelineLambdaArgs> getLambda() {
-        return this.lambda == null ? Output.empty() : this.lambda;
+        return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
     @Import(name="math")
       private final @Nullable Output<PipelineMathArgs> math;
 
     public Output<PipelineMathArgs> getMath() {
-        return this.math == null ? Output.empty() : this.math;
+        return this.math == null ? Codegen.empty() : this.math;
     }
 
     @Import(name="removeAttributes")
       private final @Nullable Output<PipelineRemoveAttributesArgs> removeAttributes;
 
     public Output<PipelineRemoveAttributesArgs> getRemoveAttributes() {
-        return this.removeAttributes == null ? Output.empty() : this.removeAttributes;
+        return this.removeAttributes == null ? Codegen.empty() : this.removeAttributes;
     }
 
     @Import(name="selectAttributes")
       private final @Nullable Output<PipelineSelectAttributesArgs> selectAttributes;
 
     public Output<PipelineSelectAttributesArgs> getSelectAttributes() {
-        return this.selectAttributes == null ? Output.empty() : this.selectAttributes;
+        return this.selectAttributes == null ? Codegen.empty() : this.selectAttributes;
     }
 
     public PipelineActivityArgs(
@@ -117,16 +118,16 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PipelineActivityArgs() {
-        this.addAttributes = Output.empty();
-        this.channel = Output.empty();
-        this.datastore = Output.empty();
-        this.deviceRegistryEnrich = Output.empty();
-        this.deviceShadowEnrich = Output.empty();
-        this.filter = Output.empty();
-        this.lambda = Output.empty();
-        this.math = Output.empty();
-        this.removeAttributes = Output.empty();
-        this.selectAttributes = Output.empty();
+        this.addAttributes = Codegen.empty();
+        this.channel = Codegen.empty();
+        this.datastore = Codegen.empty();
+        this.deviceRegistryEnrich = Codegen.empty();
+        this.deviceShadowEnrich = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.lambda = Codegen.empty();
+        this.math = Codegen.empty();
+        this.removeAttributes = Codegen.empty();
+        this.selectAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder addAttributes(@Nullable PipelineAddAttributesArgs addAttributes) {
-            this.addAttributes = Output.ofNullable(addAttributes);
+            this.addAttributes = Codegen.ofNullable(addAttributes);
             return this;
         }
         public Builder channel(@Nullable Output<PipelineChannelArgs> channel) {
@@ -180,7 +181,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder channel(@Nullable PipelineChannelArgs channel) {
-            this.channel = Output.ofNullable(channel);
+            this.channel = Codegen.ofNullable(channel);
             return this;
         }
         public Builder datastore(@Nullable Output<PipelineDatastoreArgs> datastore) {
@@ -188,7 +189,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datastore(@Nullable PipelineDatastoreArgs datastore) {
-            this.datastore = Output.ofNullable(datastore);
+            this.datastore = Codegen.ofNullable(datastore);
             return this;
         }
         public Builder deviceRegistryEnrich(@Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich) {
@@ -196,7 +197,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrichArgs deviceRegistryEnrich) {
-            this.deviceRegistryEnrich = Output.ofNullable(deviceRegistryEnrich);
+            this.deviceRegistryEnrich = Codegen.ofNullable(deviceRegistryEnrich);
             return this;
         }
         public Builder deviceShadowEnrich(@Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich) {
@@ -204,7 +205,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deviceShadowEnrich(@Nullable PipelineDeviceShadowEnrichArgs deviceShadowEnrich) {
-            this.deviceShadowEnrich = Output.ofNullable(deviceShadowEnrich);
+            this.deviceShadowEnrich = Codegen.ofNullable(deviceShadowEnrich);
             return this;
         }
         public Builder filter(@Nullable Output<PipelineFilterArgs> filter) {
@@ -212,7 +213,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder filter(@Nullable PipelineFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder lambda(@Nullable Output<PipelineLambdaArgs> lambda) {
@@ -220,7 +221,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lambda(@Nullable PipelineLambdaArgs lambda) {
-            this.lambda = Output.ofNullable(lambda);
+            this.lambda = Codegen.ofNullable(lambda);
             return this;
         }
         public Builder math(@Nullable Output<PipelineMathArgs> math) {
@@ -228,7 +229,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder math(@Nullable PipelineMathArgs math) {
-            this.math = Output.ofNullable(math);
+            this.math = Codegen.ofNullable(math);
             return this;
         }
         public Builder removeAttributes(@Nullable Output<PipelineRemoveAttributesArgs> removeAttributes) {
@@ -236,7 +237,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeAttributes(@Nullable PipelineRemoveAttributesArgs removeAttributes) {
-            this.removeAttributes = Output.ofNullable(removeAttributes);
+            this.removeAttributes = Codegen.ofNullable(removeAttributes);
             return this;
         }
         public Builder selectAttributes(@Nullable Output<PipelineSelectAttributesArgs> selectAttributes) {
@@ -244,7 +245,7 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder selectAttributes(@Nullable PipelineSelectAttributesArgs selectAttributes) {
-            this.selectAttributes = Output.ofNullable(selectAttributes);
+            this.selectAttributes = Codegen.ofNullable(selectAttributes);
             return this;
         }        public PipelineActivityArgs build() {
             return new PipelineActivityArgs(addAttributes, channel, datastore, deviceRegistryEnrich, deviceShadowEnrich, filter, lambda, math, removeAttributes, selectAttributes);

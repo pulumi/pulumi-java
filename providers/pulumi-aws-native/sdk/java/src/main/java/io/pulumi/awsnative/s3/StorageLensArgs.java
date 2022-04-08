@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.StorageLensConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StorageLensTagArgs>> tags;
 
     public Output<List<StorageLensTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StorageLensArgs(
@@ -42,8 +43,8 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageLensArgs() {
-        this.storageLensConfiguration = Output.empty();
-        this.tags = Output.empty();
+        this.storageLensConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StorageLensTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StorageLensTagArgs... tags) {

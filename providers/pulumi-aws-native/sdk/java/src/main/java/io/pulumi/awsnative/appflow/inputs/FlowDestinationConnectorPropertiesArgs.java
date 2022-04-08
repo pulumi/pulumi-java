@@ -13,6 +13,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowUpsolverDestinationPropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowZendeskDestinationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -29,56 +30,56 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
       private final @Nullable Output<FlowEventBridgeDestinationPropertiesArgs> eventBridge;
 
     public Output<FlowEventBridgeDestinationPropertiesArgs> getEventBridge() {
-        return this.eventBridge == null ? Output.empty() : this.eventBridge;
+        return this.eventBridge == null ? Codegen.empty() : this.eventBridge;
     }
 
     @Import(name="lookoutMetrics")
       private final @Nullable Output<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics;
 
     public Output<FlowLookoutMetricsDestinationPropertiesArgs> getLookoutMetrics() {
-        return this.lookoutMetrics == null ? Output.empty() : this.lookoutMetrics;
+        return this.lookoutMetrics == null ? Codegen.empty() : this.lookoutMetrics;
     }
 
     @Import(name="redshift")
       private final @Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift;
 
     public Output<FlowRedshiftDestinationPropertiesArgs> getRedshift() {
-        return this.redshift == null ? Output.empty() : this.redshift;
+        return this.redshift == null ? Codegen.empty() : this.redshift;
     }
 
     @Import(name="s3")
       private final @Nullable Output<FlowS3DestinationPropertiesArgs> s3;
 
     public Output<FlowS3DestinationPropertiesArgs> getS3() {
-        return this.s3 == null ? Output.empty() : this.s3;
+        return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce;
 
     public Output<FlowSalesforceDestinationPropertiesArgs> getSalesforce() {
-        return this.salesforce == null ? Output.empty() : this.salesforce;
+        return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="snowflake")
       private final @Nullable Output<FlowSnowflakeDestinationPropertiesArgs> snowflake;
 
     public Output<FlowSnowflakeDestinationPropertiesArgs> getSnowflake() {
-        return this.snowflake == null ? Output.empty() : this.snowflake;
+        return this.snowflake == null ? Codegen.empty() : this.snowflake;
     }
 
     @Import(name="upsolver")
       private final @Nullable Output<FlowUpsolverDestinationPropertiesArgs> upsolver;
 
     public Output<FlowUpsolverDestinationPropertiesArgs> getUpsolver() {
-        return this.upsolver == null ? Output.empty() : this.upsolver;
+        return this.upsolver == null ? Codegen.empty() : this.upsolver;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<FlowZendeskDestinationPropertiesArgs> zendesk;
 
     public Output<FlowZendeskDestinationPropertiesArgs> getZendesk() {
-        return this.zendesk == null ? Output.empty() : this.zendesk;
+        return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 
     public FlowDestinationConnectorPropertiesArgs(
@@ -101,14 +102,14 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
     }
 
     private FlowDestinationConnectorPropertiesArgs() {
-        this.eventBridge = Output.empty();
-        this.lookoutMetrics = Output.empty();
-        this.redshift = Output.empty();
-        this.s3 = Output.empty();
-        this.salesforce = Output.empty();
-        this.snowflake = Output.empty();
-        this.upsolver = Output.empty();
-        this.zendesk = Output.empty();
+        this.eventBridge = Codegen.empty();
+        this.lookoutMetrics = Codegen.empty();
+        this.redshift = Codegen.empty();
+        this.s3 = Codegen.empty();
+        this.salesforce = Codegen.empty();
+        this.snowflake = Codegen.empty();
+        this.upsolver = Codegen.empty();
+        this.zendesk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder eventBridge(@Nullable FlowEventBridgeDestinationPropertiesArgs eventBridge) {
-            this.eventBridge = Output.ofNullable(eventBridge);
+            this.eventBridge = Codegen.ofNullable(eventBridge);
             return this;
         }
         public Builder lookoutMetrics(@Nullable Output<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics) {
@@ -158,7 +159,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder lookoutMetrics(@Nullable FlowLookoutMetricsDestinationPropertiesArgs lookoutMetrics) {
-            this.lookoutMetrics = Output.ofNullable(lookoutMetrics);
+            this.lookoutMetrics = Codegen.ofNullable(lookoutMetrics);
             return this;
         }
         public Builder redshift(@Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift) {
@@ -166,7 +167,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder redshift(@Nullable FlowRedshiftDestinationPropertiesArgs redshift) {
-            this.redshift = Output.ofNullable(redshift);
+            this.redshift = Codegen.ofNullable(redshift);
             return this;
         }
         public Builder s3(@Nullable Output<FlowS3DestinationPropertiesArgs> s3) {
@@ -174,7 +175,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder s3(@Nullable FlowS3DestinationPropertiesArgs s3) {
-            this.s3 = Output.ofNullable(s3);
+            this.s3 = Codegen.ofNullable(s3);
             return this;
         }
         public Builder salesforce(@Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce) {
@@ -182,7 +183,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder salesforce(@Nullable FlowSalesforceDestinationPropertiesArgs salesforce) {
-            this.salesforce = Output.ofNullable(salesforce);
+            this.salesforce = Codegen.ofNullable(salesforce);
             return this;
         }
         public Builder snowflake(@Nullable Output<FlowSnowflakeDestinationPropertiesArgs> snowflake) {
@@ -190,7 +191,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder snowflake(@Nullable FlowSnowflakeDestinationPropertiesArgs snowflake) {
-            this.snowflake = Output.ofNullable(snowflake);
+            this.snowflake = Codegen.ofNullable(snowflake);
             return this;
         }
         public Builder upsolver(@Nullable Output<FlowUpsolverDestinationPropertiesArgs> upsolver) {
@@ -198,7 +199,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder upsolver(@Nullable FlowUpsolverDestinationPropertiesArgs upsolver) {
-            this.upsolver = Output.ofNullable(upsolver);
+            this.upsolver = Codegen.ofNullable(upsolver);
             return this;
         }
         public Builder zendesk(@Nullable Output<FlowZendeskDestinationPropertiesArgs> zendesk) {
@@ -206,7 +207,7 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder zendesk(@Nullable FlowZendeskDestinationPropertiesArgs zendesk) {
-            this.zendesk = Output.ofNullable(zendesk);
+            this.zendesk = Codegen.ofNullable(zendesk);
             return this;
         }        public FlowDestinationConnectorPropertiesArgs build() {
             return new FlowDestinationConnectorPropertiesArgs(eventBridge, lookoutMetrics, redshift, s3, salesforce, snowflake, upsolver, zendesk);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     @Import(name="thingArn")
       private final @Nullable Output<String> thingArn;
 
     public Output<String> getThingArn() {
-        return this.thingArn == null ? Output.empty() : this.thingArn;
+        return this.thingArn == null ? Codegen.empty() : this.thingArn;
     }
 
     public SuiteDefinitionDeviceUnderTestArgs(
@@ -36,8 +37,8 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
     }
 
     private SuiteDefinitionDeviceUnderTestArgs() {
-        this.certificateArn = Output.empty();
-        this.thingArn = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.thingArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder thingArn(@Nullable Output<String> thingArn) {
@@ -75,7 +76,7 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
             return this;
         }
         public Builder thingArn(@Nullable String thingArn) {
-            this.thingArn = Output.ofNullable(thingArn);
+            this.thingArn = Codegen.ofNullable(thingArn);
             return this;
         }        public SuiteDefinitionDeviceUnderTestArgs build() {
             return new SuiteDefinitionDeviceUnderTestArgs(certificateArn, thingArn);

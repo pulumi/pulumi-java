@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.IPAMPoolProvisionedCidrArgs;
 import io.pulumi.awsnative.ec2.inputs.IPAMPoolTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> allocationDefaultNetmaskLength;
 
     public Output<Integer> getAllocationDefaultNetmaskLength() {
-        return this.allocationDefaultNetmaskLength == null ? Output.empty() : this.allocationDefaultNetmaskLength;
+        return this.allocationDefaultNetmaskLength == null ? Codegen.empty() : this.allocationDefaultNetmaskLength;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> allocationMaxNetmaskLength;
 
     public Output<Integer> getAllocationMaxNetmaskLength() {
-        return this.allocationMaxNetmaskLength == null ? Output.empty() : this.allocationMaxNetmaskLength;
+        return this.allocationMaxNetmaskLength == null ? Codegen.empty() : this.allocationMaxNetmaskLength;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> allocationMinNetmaskLength;
 
     public Output<Integer> getAllocationMinNetmaskLength() {
-        return this.allocationMinNetmaskLength == null ? Output.empty() : this.allocationMinNetmaskLength;
+        return this.allocationMinNetmaskLength == null ? Codegen.empty() : this.allocationMinNetmaskLength;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags;
 
     public Output<List<IPAMPoolTagArgs>> getAllocationResourceTags() {
-        return this.allocationResourceTags == null ? Output.empty() : this.allocationResourceTags;
+        return this.allocationResourceTags == null ? Codegen.empty() : this.allocationResourceTags;
     }
 
     /**
@@ -82,14 +83,14 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoImport;
 
     public Output<Boolean> getAutoImport() {
-        return this.autoImport == null ? Output.empty() : this.autoImport;
+        return this.autoImport == null ? Codegen.empty() : this.autoImport;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> locale;
 
     public Output<String> getLocale() {
-        return this.locale == null ? Output.empty() : this.locale;
+        return this.locale == null ? Codegen.empty() : this.locale;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs;
 
     public Output<List<IPAMPoolProvisionedCidrArgs>> getProvisionedCidrs() {
-        return this.provisionedCidrs == null ? Output.empty() : this.provisionedCidrs;
+        return this.provisionedCidrs == null ? Codegen.empty() : this.provisionedCidrs;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> publiclyAdvertisable;
 
     public Output<Boolean> getPubliclyAdvertisable() {
-        return this.publiclyAdvertisable == null ? Output.empty() : this.publiclyAdvertisable;
+        return this.publiclyAdvertisable == null ? Codegen.empty() : this.publiclyAdvertisable;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceIpamPoolId;
 
     public Output<String> getSourceIpamPoolId() {
-        return this.sourceIpamPoolId == null ? Output.empty() : this.sourceIpamPoolId;
+        return this.sourceIpamPoolId == null ? Codegen.empty() : this.sourceIpamPoolId;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IPAMPoolTagArgs>> tags;
 
     public Output<List<IPAMPoolTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IPAMPoolArgs(
@@ -188,19 +189,19 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPAMPoolArgs() {
-        this.addressFamily = Output.empty();
-        this.allocationDefaultNetmaskLength = Output.empty();
-        this.allocationMaxNetmaskLength = Output.empty();
-        this.allocationMinNetmaskLength = Output.empty();
-        this.allocationResourceTags = Output.empty();
-        this.autoImport = Output.empty();
-        this.description = Output.empty();
-        this.ipamScopeId = Output.empty();
-        this.locale = Output.empty();
-        this.provisionedCidrs = Output.empty();
-        this.publiclyAdvertisable = Output.empty();
-        this.sourceIpamPoolId = Output.empty();
-        this.tags = Output.empty();
+        this.addressFamily = Codegen.empty();
+        this.allocationDefaultNetmaskLength = Codegen.empty();
+        this.allocationMaxNetmaskLength = Codegen.empty();
+        this.allocationMinNetmaskLength = Codegen.empty();
+        this.allocationResourceTags = Codegen.empty();
+        this.autoImport = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ipamScopeId = Codegen.empty();
+        this.locale = Codegen.empty();
+        this.provisionedCidrs = Codegen.empty();
+        this.publiclyAdvertisable = Codegen.empty();
+        this.sourceIpamPoolId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -260,7 +261,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
-            this.allocationDefaultNetmaskLength = Output.ofNullable(allocationDefaultNetmaskLength);
+            this.allocationDefaultNetmaskLength = Codegen.ofNullable(allocationDefaultNetmaskLength);
             return this;
         }
         public Builder allocationMaxNetmaskLength(@Nullable Output<Integer> allocationMaxNetmaskLength) {
@@ -268,7 +269,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
-            this.allocationMaxNetmaskLength = Output.ofNullable(allocationMaxNetmaskLength);
+            this.allocationMaxNetmaskLength = Codegen.ofNullable(allocationMaxNetmaskLength);
             return this;
         }
         public Builder allocationMinNetmaskLength(@Nullable Output<Integer> allocationMinNetmaskLength) {
@@ -276,7 +277,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
-            this.allocationMinNetmaskLength = Output.ofNullable(allocationMinNetmaskLength);
+            this.allocationMinNetmaskLength = Codegen.ofNullable(allocationMinNetmaskLength);
             return this;
         }
         public Builder allocationResourceTags(@Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags) {
@@ -284,7 +285,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocationResourceTags(@Nullable List<IPAMPoolTagArgs> allocationResourceTags) {
-            this.allocationResourceTags = Output.ofNullable(allocationResourceTags);
+            this.allocationResourceTags = Codegen.ofNullable(allocationResourceTags);
             return this;
         }
         public Builder allocationResourceTags(IPAMPoolTagArgs... allocationResourceTags) {
@@ -295,7 +296,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoImport(@Nullable Boolean autoImport) {
-            this.autoImport = Output.ofNullable(autoImport);
+            this.autoImport = Codegen.ofNullable(autoImport);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -303,7 +304,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipamScopeId(Output<String> ipamScopeId) {
@@ -319,7 +320,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locale(@Nullable String locale) {
-            this.locale = Output.ofNullable(locale);
+            this.locale = Codegen.ofNullable(locale);
             return this;
         }
         public Builder provisionedCidrs(@Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs) {
@@ -327,7 +328,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionedCidrs(@Nullable List<IPAMPoolProvisionedCidrArgs> provisionedCidrs) {
-            this.provisionedCidrs = Output.ofNullable(provisionedCidrs);
+            this.provisionedCidrs = Codegen.ofNullable(provisionedCidrs);
             return this;
         }
         public Builder provisionedCidrs(IPAMPoolProvisionedCidrArgs... provisionedCidrs) {
@@ -338,7 +339,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publiclyAdvertisable(@Nullable Boolean publiclyAdvertisable) {
-            this.publiclyAdvertisable = Output.ofNullable(publiclyAdvertisable);
+            this.publiclyAdvertisable = Codegen.ofNullable(publiclyAdvertisable);
             return this;
         }
         public Builder sourceIpamPoolId(@Nullable Output<String> sourceIpamPoolId) {
@@ -346,7 +347,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceIpamPoolId(@Nullable String sourceIpamPoolId) {
-            this.sourceIpamPoolId = Output.ofNullable(sourceIpamPoolId);
+            this.sourceIpamPoolId = Codegen.ofNullable(sourceIpamPoolId);
             return this;
         }
         public Builder tags(@Nullable Output<List<IPAMPoolTagArgs>> tags) {
@@ -354,7 +355,7 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<IPAMPoolTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(IPAMPoolTagArgs... tags) {

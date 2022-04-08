@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditCheckConfigu
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
 
     public Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> getAuditNotificationTargetConfigurations() {
-        return this.auditNotificationTargetConfigurations == null ? Output.empty() : this.auditNotificationTargetConfigurations;
+        return this.auditNotificationTargetConfigurations == null ? Codegen.empty() : this.auditNotificationTargetConfigurations;
     }
 
     /**
@@ -64,10 +65,10 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private AccountAuditConfigurationArgs() {
-        this.accountId = Output.empty();
-        this.auditCheckConfigurations = Output.empty();
-        this.auditNotificationTargetConfigurations = Output.empty();
-        this.roleArn = Output.empty();
+        this.accountId = Codegen.empty();
+        this.auditCheckConfigurations = Codegen.empty();
+        this.auditNotificationTargetConfigurations = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder auditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs auditNotificationTargetConfigurations) {
-            this.auditNotificationTargetConfigurations = Output.ofNullable(auditNotificationTargetConfigurations);
+            this.auditNotificationTargetConfigurations = Codegen.ofNullable(auditNotificationTargetConfigurations);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

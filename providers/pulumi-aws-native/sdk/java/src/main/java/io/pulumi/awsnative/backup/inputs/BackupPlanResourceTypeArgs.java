@@ -7,6 +7,7 @@ import io.pulumi.awsnative.backup.inputs.BackupPlanAdvancedBackupSettingResource
 import io.pulumi.awsnative.backup.inputs.BackupPlanBackupRuleResourceTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
 
     public Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> getAdvancedBackupSettings() {
-        return this.advancedBackupSettings == null ? Output.empty() : this.advancedBackupSettings;
+        return this.advancedBackupSettings == null ? Codegen.empty() : this.advancedBackupSettings;
     }
 
     @Import(name="backupPlanName", required=true)
@@ -48,9 +49,9 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
     }
 
     private BackupPlanResourceTypeArgs() {
-        this.advancedBackupSettings = Output.empty();
-        this.backupPlanName = Output.empty();
-        this.backupPlanRule = Output.empty();
+        this.advancedBackupSettings = Codegen.empty();
+        this.backupPlanName = Codegen.empty();
+        this.backupPlanRule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder advancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceTypeArgs> advancedBackupSettings) {
-            this.advancedBackupSettings = Output.ofNullable(advancedBackupSettings);
+            this.advancedBackupSettings = Codegen.ofNullable(advancedBackupSettings);
             return this;
         }
         public Builder advancedBackupSettings(BackupPlanAdvancedBackupSettingResourceTypeArgs... advancedBackupSettings) {

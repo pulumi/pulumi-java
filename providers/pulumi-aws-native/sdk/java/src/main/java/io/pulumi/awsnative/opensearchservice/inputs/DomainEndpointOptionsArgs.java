@@ -5,6 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,35 +20,35 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> customEndpoint;
 
     public Output<String> getCustomEndpoint() {
-        return this.customEndpoint == null ? Output.empty() : this.customEndpoint;
+        return this.customEndpoint == null ? Codegen.empty() : this.customEndpoint;
     }
 
     @Import(name="customEndpointCertificateArn")
       private final @Nullable Output<String> customEndpointCertificateArn;
 
     public Output<String> getCustomEndpointCertificateArn() {
-        return this.customEndpointCertificateArn == null ? Output.empty() : this.customEndpointCertificateArn;
+        return this.customEndpointCertificateArn == null ? Codegen.empty() : this.customEndpointCertificateArn;
     }
 
     @Import(name="customEndpointEnabled")
       private final @Nullable Output<Boolean> customEndpointEnabled;
 
     public Output<Boolean> getCustomEndpointEnabled() {
-        return this.customEndpointEnabled == null ? Output.empty() : this.customEndpointEnabled;
+        return this.customEndpointEnabled == null ? Codegen.empty() : this.customEndpointEnabled;
     }
 
     @Import(name="enforceHTTPS")
       private final @Nullable Output<Boolean> enforceHTTPS;
 
     public Output<Boolean> getEnforceHTTPS() {
-        return this.enforceHTTPS == null ? Output.empty() : this.enforceHTTPS;
+        return this.enforceHTTPS == null ? Codegen.empty() : this.enforceHTTPS;
     }
 
     @Import(name="tLSSecurityPolicy")
       private final @Nullable Output<String> tLSSecurityPolicy;
 
     public Output<String> getTLSSecurityPolicy() {
-        return this.tLSSecurityPolicy == null ? Output.empty() : this.tLSSecurityPolicy;
+        return this.tLSSecurityPolicy == null ? Codegen.empty() : this.tLSSecurityPolicy;
     }
 
     public DomainEndpointOptionsArgs(
@@ -64,11 +65,11 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainEndpointOptionsArgs() {
-        this.customEndpoint = Output.empty();
-        this.customEndpointCertificateArn = Output.empty();
-        this.customEndpointEnabled = Output.empty();
-        this.enforceHTTPS = Output.empty();
-        this.tLSSecurityPolicy = Output.empty();
+        this.customEndpoint = Codegen.empty();
+        this.customEndpointCertificateArn = Codegen.empty();
+        this.customEndpointEnabled = Codegen.empty();
+        this.enforceHTTPS = Codegen.empty();
+        this.tLSSecurityPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder customEndpoint(@Nullable String customEndpoint) {
-            this.customEndpoint = Output.ofNullable(customEndpoint);
+            this.customEndpoint = Codegen.ofNullable(customEndpoint);
             return this;
         }
         public Builder customEndpointCertificateArn(@Nullable Output<String> customEndpointCertificateArn) {
@@ -112,7 +113,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
-            this.customEndpointCertificateArn = Output.ofNullable(customEndpointCertificateArn);
+            this.customEndpointCertificateArn = Codegen.ofNullable(customEndpointCertificateArn);
             return this;
         }
         public Builder customEndpointEnabled(@Nullable Output<Boolean> customEndpointEnabled) {
@@ -120,7 +121,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
-            this.customEndpointEnabled = Output.ofNullable(customEndpointEnabled);
+            this.customEndpointEnabled = Codegen.ofNullable(customEndpointEnabled);
             return this;
         }
         public Builder enforceHTTPS(@Nullable Output<Boolean> enforceHTTPS) {
@@ -128,7 +129,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enforceHTTPS(@Nullable Boolean enforceHTTPS) {
-            this.enforceHTTPS = Output.ofNullable(enforceHTTPS);
+            this.enforceHTTPS = Codegen.ofNullable(enforceHTTPS);
             return this;
         }
         public Builder tLSSecurityPolicy(@Nullable Output<String> tLSSecurityPolicy) {
@@ -136,7 +137,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
-            this.tLSSecurityPolicy = Output.ofNullable(tLSSecurityPolicy);
+            this.tLSSecurityPolicy = Codegen.ofNullable(tLSSecurityPolicy);
             return this;
         }        public DomainEndpointOptionsArgs build() {
             return new DomainEndpointOptionsArgs(customEndpoint, customEndpointCertificateArn, customEndpointEnabled, enforceHTTPS, tLSSecurityPolicy);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationMut
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupAssociationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
       private final @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
 
     public Output<FirewallRuleGroupAssociationMutationProtection> getMutationProtection() {
-        return this.mutationProtection == null ? Output.empty() : this.mutationProtection;
+        return this.mutationProtection == null ? Codegen.empty() : this.mutationProtection;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
       private final @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags;
 
     public Output<List<FirewallRuleGroupAssociationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,12 +101,12 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
     }
 
     private FirewallRuleGroupAssociationArgs() {
-        this.firewallRuleGroupId = Output.empty();
-        this.mutationProtection = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.firewallRuleGroupId = Codegen.empty();
+        this.mutationProtection = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder mutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
-            this.mutationProtection = Output.ofNullable(mutationProtection);
+            this.mutationProtection = Codegen.ofNullable(mutationProtection);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -159,7 +160,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(Output<Integer> priority) {
@@ -175,7 +176,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tags(@Nullable List<FirewallRuleGroupAssociationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FirewallRuleGroupAssociationTagArgs... tags) {

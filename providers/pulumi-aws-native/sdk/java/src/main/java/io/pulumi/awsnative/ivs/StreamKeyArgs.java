@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ivs;
 import io.pulumi.awsnative.ivs.inputs.StreamKeyTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StreamKeyTagArgs>> tags;
 
     public Output<List<StreamKeyTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StreamKeyArgs(
@@ -46,8 +47,8 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamKeyArgs() {
-        this.channelArn = Output.empty();
-        this.tags = Output.empty();
+        this.channelArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StreamKeyTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StreamKeyTagArgs... tags) {

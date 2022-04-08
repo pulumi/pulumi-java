@@ -5,6 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
       private final @Nullable Output<String> launchTemplateId;
 
     public Output<String> getLaunchTemplateId() {
-        return this.launchTemplateId == null ? Output.empty() : this.launchTemplateId;
+        return this.launchTemplateId == null ? Codegen.empty() : this.launchTemplateId;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
       private final @Nullable Output<Boolean> setDefaultVersion;
 
     public Output<Boolean> getSetDefaultVersion() {
-        return this.setDefaultVersion == null ? Output.empty() : this.setDefaultVersion;
+        return this.setDefaultVersion == null ? Codegen.empty() : this.setDefaultVersion;
     }
 
     public DistributionConfigurationLaunchTemplateConfigurationArgs(
@@ -62,9 +63,9 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     }
 
     private DistributionConfigurationLaunchTemplateConfigurationArgs() {
-        this.accountId = Output.empty();
-        this.launchTemplateId = Output.empty();
-        this.setDefaultVersion = Output.empty();
+        this.accountId = Codegen.empty();
+        this.launchTemplateId = Codegen.empty();
+        this.setDefaultVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
@@ -104,7 +105,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
             return this;
         }
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Output.ofNullable(launchTemplateId);
+            this.launchTemplateId = Codegen.ofNullable(launchTemplateId);
             return this;
         }
         public Builder setDefaultVersion(@Nullable Output<Boolean> setDefaultVersion) {
@@ -112,7 +113,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
             return this;
         }
         public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
-            this.setDefaultVersion = Output.ofNullable(setDefaultVersion);
+            this.setDefaultVersion = Codegen.ofNullable(setDefaultVersion);
             return this;
         }        public DistributionConfigurationLaunchTemplateConfigurationArgs build() {
             return new DistributionConfigurationLaunchTemplateConfigurationArgs(accountId, launchTemplateId, setDefaultVersion);

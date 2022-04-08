@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.enums.BucketMetricsStatus;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +20,7 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
 
     public Output<BucketReplicationTimeValueArgs> getEventThreshold() {
-        return this.eventThreshold == null ? Output.empty() : this.eventThreshold;
+        return this.eventThreshold == null ? Codegen.empty() : this.eventThreshold;
     }
 
     @Import(name="status", required=true)
@@ -37,8 +38,8 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketMetricsArgs() {
-        this.eventThreshold = Output.empty();
-        this.status = Output.empty();
+        this.eventThreshold = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventThreshold(@Nullable BucketReplicationTimeValueArgs eventThreshold) {
-            this.eventThreshold = Output.ofNullable(eventThreshold);
+            this.eventThreshold = Codegen.ofNullable(eventThreshold);
             return this;
         }
         public Builder status(Output<BucketMetricsStatus> status) {

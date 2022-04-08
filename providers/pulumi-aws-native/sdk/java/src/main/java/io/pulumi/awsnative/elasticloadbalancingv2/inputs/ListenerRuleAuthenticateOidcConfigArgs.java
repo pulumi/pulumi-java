@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -21,7 +22,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
       private final @Nullable Output<Object> authenticationRequestExtraParams;
 
     public Output<Object> getAuthenticationRequestExtraParams() {
-        return this.authenticationRequestExtraParams == null ? Output.empty() : this.authenticationRequestExtraParams;
+        return this.authenticationRequestExtraParams == null ? Codegen.empty() : this.authenticationRequestExtraParams;
     }
 
     @Import(name="authorizationEndpoint", required=true)
@@ -56,28 +57,28 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
     public Output<String> getOnUnauthenticatedRequest() {
-        return this.onUnauthenticatedRequest == null ? Output.empty() : this.onUnauthenticatedRequest;
+        return this.onUnauthenticatedRequest == null ? Codegen.empty() : this.onUnauthenticatedRequest;
     }
 
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
     public Output<String> getSessionCookieName() {
-        return this.sessionCookieName == null ? Output.empty() : this.sessionCookieName;
+        return this.sessionCookieName == null ? Codegen.empty() : this.sessionCookieName;
     }
 
     @Import(name="sessionTimeout")
       private final @Nullable Output<Integer> sessionTimeout;
 
     public Output<Integer> getSessionTimeout() {
-        return this.sessionTimeout == null ? Output.empty() : this.sessionTimeout;
+        return this.sessionTimeout == null ? Codegen.empty() : this.sessionTimeout;
     }
 
     @Import(name="tokenEndpoint", required=true)
@@ -91,7 +92,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
       private final @Nullable Output<Boolean> useExistingClientSecret;
 
     public Output<Boolean> getUseExistingClientSecret() {
-        return this.useExistingClientSecret == null ? Output.empty() : this.useExistingClientSecret;
+        return this.useExistingClientSecret == null ? Codegen.empty() : this.useExistingClientSecret;
     }
 
     @Import(name="userInfoEndpoint", required=true)
@@ -129,18 +130,18 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
     }
 
     private ListenerRuleAuthenticateOidcConfigArgs() {
-        this.authenticationRequestExtraParams = Output.empty();
-        this.authorizationEndpoint = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.issuer = Output.empty();
-        this.onUnauthenticatedRequest = Output.empty();
-        this.scope = Output.empty();
-        this.sessionCookieName = Output.empty();
-        this.sessionTimeout = Output.empty();
-        this.tokenEndpoint = Output.empty();
-        this.useExistingClientSecret = Output.empty();
-        this.userInfoEndpoint = Output.empty();
+        this.authenticationRequestExtraParams = Codegen.empty();
+        this.authorizationEndpoint = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.issuer = Codegen.empty();
+        this.onUnauthenticatedRequest = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.sessionCookieName = Codegen.empty();
+        this.sessionTimeout = Codegen.empty();
+        this.tokenEndpoint = Codegen.empty();
+        this.useExistingClientSecret = Codegen.empty();
+        this.userInfoEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder authenticationRequestExtraParams(@Nullable Object authenticationRequestExtraParams) {
-            this.authenticationRequestExtraParams = Output.ofNullable(authenticationRequestExtraParams);
+            this.authenticationRequestExtraParams = Codegen.ofNullable(authenticationRequestExtraParams);
             return this;
         }
         public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
@@ -230,7 +231,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
-            this.onUnauthenticatedRequest = Output.ofNullable(onUnauthenticatedRequest);
+            this.onUnauthenticatedRequest = Codegen.ofNullable(onUnauthenticatedRequest);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -238,7 +239,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder sessionCookieName(@Nullable Output<String> sessionCookieName) {
@@ -246,7 +247,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder sessionCookieName(@Nullable String sessionCookieName) {
-            this.sessionCookieName = Output.ofNullable(sessionCookieName);
+            this.sessionCookieName = Codegen.ofNullable(sessionCookieName);
             return this;
         }
         public Builder sessionTimeout(@Nullable Output<Integer> sessionTimeout) {
@@ -254,7 +255,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder sessionTimeout(@Nullable Integer sessionTimeout) {
-            this.sessionTimeout = Output.ofNullable(sessionTimeout);
+            this.sessionTimeout = Codegen.ofNullable(sessionTimeout);
             return this;
         }
         public Builder tokenEndpoint(Output<String> tokenEndpoint) {
@@ -270,7 +271,7 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder useExistingClientSecret(@Nullable Boolean useExistingClientSecret) {
-            this.useExistingClientSecret = Output.ofNullable(useExistingClientSecret);
+            this.useExistingClientSecret = Codegen.ofNullable(useExistingClientSecret);
             return this;
         }
         public Builder userInfoEndpoint(Output<String> userInfoEndpoint) {

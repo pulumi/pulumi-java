@@ -7,6 +7,7 @@ import io.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +20,14 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<ConfigFrequencyArgs> centerFrequency;
 
     public Output<ConfigFrequencyArgs> getCenterFrequency() {
-        return this.centerFrequency == null ? Output.empty() : this.centerFrequency;
+        return this.centerFrequency == null ? Codegen.empty() : this.centerFrequency;
     }
 
     @Import(name="polarization")
       private final @Nullable Output<ConfigPolarization> polarization;
 
     public Output<ConfigPolarization> getPolarization() {
-        return this.polarization == null ? Output.empty() : this.polarization;
+        return this.polarization == null ? Codegen.empty() : this.polarization;
     }
 
     public ConfigUplinkSpectrumConfigArgs(
@@ -37,8 +38,8 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
     }
 
     private ConfigUplinkSpectrumConfigArgs() {
-        this.centerFrequency = Output.empty();
-        this.polarization = Output.empty();
+        this.centerFrequency = Codegen.empty();
+        this.polarization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
-            this.centerFrequency = Output.ofNullable(centerFrequency);
+            this.centerFrequency = Codegen.ofNullable(centerFrequency);
             return this;
         }
         public Builder polarization(@Nullable Output<ConfigPolarization> polarization) {
@@ -76,7 +77,7 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder polarization(@Nullable ConfigPolarization polarization) {
-            this.polarization = Output.ofNullable(polarization);
+            this.polarization = Codegen.ofNullable(polarization);
             return this;
         }        public ConfigUplinkSpectrumConfigArgs build() {
             return new ConfigUplinkSpectrumConfigArgs(centerFrequency, polarization);

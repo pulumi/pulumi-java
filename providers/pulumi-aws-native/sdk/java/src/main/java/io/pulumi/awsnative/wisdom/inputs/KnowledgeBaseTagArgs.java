@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class KnowledgeBaseTagArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private KnowledgeBaseTagArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

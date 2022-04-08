@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream;
 import io.pulumi.awsnative.timestream.inputs.DatabaseTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DatabaseTagArgs>> tags;
 
     public Output<List<DatabaseTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DatabaseArgs(
@@ -59,9 +60,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.databaseName = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.tags = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -101,7 +102,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder tags(@Nullable Output<List<DatabaseTagArgs>> tags) {
@@ -109,7 +110,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DatabaseTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DatabaseTagArgs... tags) {

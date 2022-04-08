@@ -8,6 +8,7 @@ import io.pulumi.awsnative.events.ArchiveArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -78,7 +79,7 @@ public class Archive extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Archive(String name, ArchiveArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:events:Archive", name, args == null ? ArchiveArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:events:Archive", name, args == null ? ArchiveArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Archive(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

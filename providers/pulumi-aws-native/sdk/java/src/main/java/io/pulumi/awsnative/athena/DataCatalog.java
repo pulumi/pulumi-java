@@ -10,6 +10,7 @@ import io.pulumi.awsnative.athena.outputs.DataCatalogTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -116,7 +117,7 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataCatalog(String name, DataCatalogArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:athena:DataCatalog", name, args == null ? DataCatalogArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:athena:DataCatalog", name, args == null ? DataCatalogArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataCatalog(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

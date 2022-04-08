@@ -8,6 +8,7 @@ import io.pulumi.awsnative.chatbot.SlackChannelConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -168,7 +169,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public SlackChannelConfiguration(String name, SlackChannelConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:chatbot:SlackChannelConfiguration", name, args == null ? SlackChannelConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:chatbot:SlackChannelConfiguration", name, args == null ? SlackChannelConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SlackChannelConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

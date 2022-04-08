@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iot.enums.ScheduledAuditFrequency;
 import io.pulumi.awsnative.iot.inputs.ScheduledAuditTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dayOfMonth;
 
     public Output<String> getDayOfMonth() {
-        return this.dayOfMonth == null ? Output.empty() : this.dayOfMonth;
+        return this.dayOfMonth == null ? Codegen.empty() : this.dayOfMonth;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek;
 
     public Output<ScheduledAuditDayOfWeek> getDayOfWeek() {
-        return this.dayOfWeek == null ? Output.empty() : this.dayOfWeek;
+        return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scheduledAuditName;
 
     public Output<String> getScheduledAuditName() {
-        return this.scheduledAuditName == null ? Output.empty() : this.scheduledAuditName;
+        return this.scheduledAuditName == null ? Codegen.empty() : this.scheduledAuditName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ScheduledAuditTagArgs>> tags;
 
     public Output<List<ScheduledAuditTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,12 +101,12 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduledAuditArgs() {
-        this.dayOfMonth = Output.empty();
-        this.dayOfWeek = Output.empty();
-        this.frequency = Output.empty();
-        this.scheduledAuditName = Output.empty();
-        this.tags = Output.empty();
-        this.targetCheckNames = Output.empty();
+        this.dayOfMonth = Codegen.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.scheduledAuditName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetCheckNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dayOfMonth(@Nullable String dayOfMonth) {
-            this.dayOfMonth = Output.ofNullable(dayOfMonth);
+            this.dayOfMonth = Codegen.ofNullable(dayOfMonth);
             return this;
         }
         public Builder dayOfWeek(@Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek) {
@@ -151,7 +152,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
-            this.dayOfWeek = Output.ofNullable(dayOfWeek);
+            this.dayOfWeek = Codegen.ofNullable(dayOfWeek);
             return this;
         }
         public Builder frequency(Output<ScheduledAuditFrequency> frequency) {
@@ -167,7 +168,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduledAuditName(@Nullable String scheduledAuditName) {
-            this.scheduledAuditName = Output.ofNullable(scheduledAuditName);
+            this.scheduledAuditName = Codegen.ofNullable(scheduledAuditName);
             return this;
         }
         public Builder tags(@Nullable Output<List<ScheduledAuditTagArgs>> tags) {
@@ -175,7 +176,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ScheduledAuditTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ScheduledAuditTagArgs... tags) {

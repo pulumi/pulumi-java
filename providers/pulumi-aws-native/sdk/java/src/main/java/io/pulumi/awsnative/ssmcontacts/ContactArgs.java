@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,10 +73,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.alias = Output.empty();
-        this.displayName = Output.empty();
-        this.plan = Output.empty();
-        this.type = Output.empty();
+        this.alias = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

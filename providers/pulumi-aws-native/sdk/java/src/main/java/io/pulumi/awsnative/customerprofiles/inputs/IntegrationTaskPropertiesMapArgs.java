@@ -6,6 +6,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationOperatorPropertiesKeys;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -36,8 +37,8 @@ public final class IntegrationTaskPropertiesMapArgs extends io.pulumi.resources.
     }
 
     private IntegrationTaskPropertiesMapArgs() {
-        this.operatorPropertyKey = Output.empty();
-        this.property = Output.empty();
+        this.operatorPropertyKey = Codegen.empty();
+        this.property = Codegen.empty();
     }
 
     public static Builder builder() {

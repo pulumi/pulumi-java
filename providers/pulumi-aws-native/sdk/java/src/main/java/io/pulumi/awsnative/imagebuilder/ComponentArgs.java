@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder;
 import io.pulumi.awsnative.imagebuilder.enums.ComponentPlatform;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> changeDescription;
 
     public Output<String> getChangeDescription() {
-        return this.changeDescription == null ? Output.empty() : this.changeDescription;
+        return this.changeDescription == null ? Codegen.empty() : this.changeDescription;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> supportedOsVersions;
 
     public Output<List<String>> getSupportedOsVersions() {
-        return this.supportedOsVersions == null ? Output.empty() : this.supportedOsVersions;
+        return this.supportedOsVersions == null ? Codegen.empty() : this.supportedOsVersions;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     /**
@@ -151,16 +152,16 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComponentArgs() {
-        this.changeDescription = Output.empty();
-        this.data = Output.empty();
-        this.description = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.name = Output.empty();
-        this.platform = Output.empty();
-        this.supportedOsVersions = Output.empty();
-        this.tags = Output.empty();
-        this.uri = Output.empty();
-        this.version = Output.empty();
+        this.changeDescription = Codegen.empty();
+        this.data = Codegen.empty();
+        this.description = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.supportedOsVersions = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder changeDescription(@Nullable String changeDescription) {
-            this.changeDescription = Output.ofNullable(changeDescription);
+            this.changeDescription = Codegen.ofNullable(changeDescription);
             return this;
         }
         public Builder data(@Nullable Output<String> data) {
@@ -214,7 +215,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -222,7 +223,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -230,7 +231,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -238,7 +239,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder platform(Output<ComponentPlatform> platform) {
@@ -254,7 +255,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportedOsVersions(@Nullable List<String> supportedOsVersions) {
-            this.supportedOsVersions = Output.ofNullable(supportedOsVersions);
+            this.supportedOsVersions = Codegen.ofNullable(supportedOsVersions);
             return this;
         }
         public Builder supportedOsVersions(String... supportedOsVersions) {
@@ -265,7 +266,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Object tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -273,7 +274,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }
         public Builder version(Output<String> version) {

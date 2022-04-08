@@ -5,6 +5,7 @@ package io.pulumi.awsnative.eventschemas;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     public RegistryPolicyArgs(
@@ -46,9 +47,9 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistryPolicyArgs() {
-        this.policy = Output.empty();
-        this.registryName = Output.empty();
-        this.revisionId = Output.empty();
+        this.policy = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.revisionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }        public RegistryPolicyArgs build() {
             return new RegistryPolicyArgs(policy, registryName, revisionId);

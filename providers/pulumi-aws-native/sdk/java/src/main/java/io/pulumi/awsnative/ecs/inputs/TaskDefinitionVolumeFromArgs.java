@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="sourceContainer")
       private final @Nullable Output<String> sourceContainer;
 
     public Output<String> getSourceContainer() {
-        return this.sourceContainer == null ? Output.empty() : this.sourceContainer;
+        return this.sourceContainer == null ? Codegen.empty() : this.sourceContainer;
     }
 
     public TaskDefinitionVolumeFromArgs(
@@ -37,8 +38,8 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
     }
 
     private TaskDefinitionVolumeFromArgs() {
-        this.readOnly = Output.empty();
-        this.sourceContainer = Output.empty();
+        this.readOnly = Codegen.empty();
+        this.sourceContainer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder sourceContainer(@Nullable Output<String> sourceContainer) {
@@ -76,7 +77,7 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder sourceContainer(@Nullable String sourceContainer) {
-            this.sourceContainer = Output.ofNullable(sourceContainer);
+            this.sourceContainer = Codegen.ofNullable(sourceContainer);
             return this;
         }        public TaskDefinitionVolumeFromArgs build() {
             return new TaskDefinitionVolumeFromArgs(readOnly, sourceContainer);

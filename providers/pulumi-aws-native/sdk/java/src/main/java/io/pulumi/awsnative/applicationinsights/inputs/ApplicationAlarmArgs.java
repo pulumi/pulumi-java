@@ -6,6 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationAlarmSeverity;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ApplicationAlarmSeverity> severity;
 
     public Output<ApplicationAlarmSeverity> getSeverity() {
-        return this.severity == null ? Output.empty() : this.severity;
+        return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     public ApplicationAlarmArgs(
@@ -49,8 +50,8 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ApplicationAlarmArgs() {
-        this.alarmName = Output.empty();
-        this.severity = Output.empty();
+        this.alarmName = Codegen.empty();
+        this.severity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
-            this.severity = Output.ofNullable(severity);
+            this.severity = Codegen.ofNullable(severity);
             return this;
         }        public ApplicationAlarmArgs build() {
             return new ApplicationAlarmArgs(alarmName, severity);

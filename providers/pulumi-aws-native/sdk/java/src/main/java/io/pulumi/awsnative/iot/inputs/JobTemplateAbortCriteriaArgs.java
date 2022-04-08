@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.enums.JobTemplateAction;
 import io.pulumi.awsnative.iot.enums.JobTemplateFailureType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -76,10 +77,10 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     }
 
     private JobTemplateAbortCriteriaArgs() {
-        this.action = Output.empty();
-        this.failureType = Output.empty();
-        this.minNumberOfExecutedThings = Output.empty();
-        this.thresholdPercentage = Output.empty();
+        this.action = Codegen.empty();
+        this.failureType = Codegen.empty();
+        this.minNumberOfExecutedThings = Codegen.empty();
+        this.thresholdPercentage = Codegen.empty();
     }
 
     public static Builder builder() {
