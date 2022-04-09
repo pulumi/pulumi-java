@@ -126,7 +126,7 @@ public final class MyStack extends Stack {
     private Output<String> getSASToken(Output<String> storageAccountName, Output<String> storageContainerName,
                                        Output<String> blobName, Output<String> resourceGroupName) {
         var blobSAS = Output.tuple(resourceGroupName, storageAccountName, storageContainerName).applyFuture(t ->
-            StorageFunctions.listStorageAccountServiceSAS(
+            ListStorageAccountServiceSAS.invokeAsync(
                 ListStorageAccountServiceSASArgs.builder().resourceGroupName(t.t1)
                         .accountName(t.t2)
                         .protocols(HttpProtocol.Https)
@@ -139,7 +139,8 @@ public final class MyStack extends Stack {
                         .cacheControl("max-age=5")
                         .contentDisposition("inline")
                         .contentEncoding("deflate")
-                        .build()));
+                        .build(),
+                InvokeOptions.Empty));
         var token = blobSAS.applyValue(ListStorageAccountServiceSASResult::getServiceSasToken);
         return Output.format("https://%s.blob.core.windows.net/%s/%s?%s", storageAccountName, storageContainerName, blobName, token);
     }
