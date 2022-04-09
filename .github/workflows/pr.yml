@@ -200,7 +200,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          #cache: 'gradle'
+          cache: 'gradle'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
@@ -243,7 +243,7 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        run: make test_example.${{ matrix.example }}
+        run: make providers_all test_example.${{ matrix.example }}
 
   go-lint:
     runs-on: ubuntu-latest
