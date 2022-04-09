@@ -5,7 +5,7 @@
     "settings.gradle",
     "src/main/java/io/pulumi/example/Component.java",
     "src/main/java/io/pulumi/example/ComponentArgs.java",
-    "src/main/java/io/pulumi/example/DoFoo.java",
+    "src/main/java/io/pulumi/example/Functions.java",
     "src/main/java/io/pulumi/example/Provider.java",
     "src/main/java/io/pulumi/example/ProviderArgs.java",
     "src/main/java/io/pulumi/example/Utilities.java",
