@@ -1837,7 +1837,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 		// Emit datasource inputs method
 		ctx.imports.Ref(names.InvokeOptions)
-		invokeOptionsEmpty := names.InvokeOptions.Dot("Empty")
+		invokeOptions := names.InvokeOptions
 
 		printCommentFunction(ctx, fun)
 		if hasAllOptionalInputs(fun) {
@@ -1846,7 +1846,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 				ctx.ref(names.CompletableFuture), returnType, methodName)
 			fprintf(w,
 				"        return %s(%s, %s);\n",
-				methodName, argsFQN.Dot("Empty"), invokeOptionsEmpty)
+				methodName, argsFQN.Dot("Empty"), invokeOptions.Dot("Empty"))
 			fprintf(w, "    }\n")
 
 		}
@@ -1855,7 +1855,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			ctx.ref(names.CompletableFuture), returnType, methodName, argsFQN)
 		fprintf(w,
 			"        return %s(args, %s);\n",
-			methodName, invokeOptionsEmpty)
+			methodName, invokeOptions.Dot("Empty"))
 		fprintf(w, "    }\n")
 
 		// Add full constructor
