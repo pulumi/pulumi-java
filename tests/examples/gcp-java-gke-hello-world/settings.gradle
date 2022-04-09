@@ -1,2 +1,29 @@
+// NOTE: includeBuild directives here help Gradle link against in-tree
+// projects regardless of version specifications in `build.gradle`.
+// When the example code moves to a separate repository these can be
+// removed.
+
+var root = System.getenv("PULUMI_REPO_ROOT") ?: "../../..";
+
+includeBuild(root + '/sdk/jvm') {
+  dependencySubstitution {
+    substitute module('io.pulumi:pulumi') using project(':pulumi')
+  }
+}
+
+includeBuild(root + '/providers/pulumi-gcp/sdk/java') {
+  name = ':gcp'
+  dependencySubstitution {
+    substitute module('io.pulumi:gcp') using project(':')
+  }
+}
+
+includeBuild(root + '/providers/pulumi-kubernetes/sdk/java') {
+  name = ':kubernetes'
+  dependencySubstitution {
+    substitute module('io.pulumi:kubernetes') using project(':')
+  }
+}
+
 rootProject.name = 'gcp-java-gke-hello-world'
 include('app')

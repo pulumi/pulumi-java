@@ -2728,17 +2728,25 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		}
 	}
 
-	// Finally, emit the package metadata.
-	if err := genGradleProject(
-		pkg,
-		info.BasePackageOrDefault(),
-		packageName(info.Packages, pkg.Name),
-		*info,
-		files,
-	); err != nil {
-		return nil, err
+	switch info.BuildFiles {
+	case "gradle":
+		// Finally, emit the package metadata.
+		if err := genGradleProject(
+			pkg,
+			info.BasePackageOrDefault(),
+			packageName(info.Packages, pkg.Name),
+			*info,
+			files,
+		); err != nil {
+			return nil, err
+		}
+		return files, nil
+	case "":
+		return files, nil
+	default:
+		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",
+			info.BuildFiles)
 	}
-	return files, nil
 }
 
 func isInputType(t schema.Type) bool {
