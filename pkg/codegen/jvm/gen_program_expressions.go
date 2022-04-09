@@ -3,6 +3,7 @@
 package jvm
 
 import (
+	"fmt"
 	"io"
 	"math/big"
 	"strings"
@@ -268,6 +269,42 @@ func (g *generator) genRange(w io.Writer, call *model.FunctionCallExpression, en
 	g.genNYI(w, "Range %.v %.v", call, entries)
 }
 
+// checks whether an expression is a template string making up a path
+// for example "${siteDir}/${range.value}" which can be detected as input
+// for fileAsset or archiveAsset and be converted to Paths.get(siteDir, range.value)
+func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
+	switch expr.(type) {
+	case *model.TemplateExpression:
+		allTextPartsAreSlashed := true
+		var exprParts []model.Expression
+		for _, part := range expr.(*model.TemplateExpression).Parts {
+			lit, ok := part.(*model.LiteralValueExpression)
+			if ok {
+				// literal expression, check that it is a slash
+				isTextLiteral := model.StringType.AssignableFrom(lit.Type())
+				slash := isTextLiteral && (lit.Value.AsString() == "./" || lit.Value.AsString() == "/")
+				allTextPartsAreSlashed = allTextPartsAreSlashed && slash
+			} else {
+				// any other expression
+				exprParts = append(exprParts, part)
+			}
+		}
+		return allTextPartsAreSlashed, exprParts
+	default:
+		return false, make([]model.Expression, 0)
+	}
+}
+
+// functionName computes the C# namespace and class name for the given function token.
+func (g *generator) functionName(tokenArg model.Expression) string {
+	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
+	tokenRange := tokenArg.SyntaxNode().Range()
+
+	// Compute the resource type from the Pulumi type token.
+	_, _, member, _ := pcl.DecomposeToken(token, tokenRange)
+	return toUpperCase(member)
+}
+
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
 	switch expr.Name {
 	case pcl.IntrinsicConvert:
@@ -282,7 +319,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case intrinsicAwait:
 		g.Fgenf(w, "await %.17v", expr.Args[0])
 	case intrinsicOutput:
-		g.Fgenf(w, "Output.Create(%.v)", expr.Args[0])
+		g.Fgenf(w, "Output.of(%.v)", expr.Args[0])
 	case "element":
 		g.Fgenf(w, "%.20v[%.v]", expr.Args[0], expr.Args[1])
 	case "entries":
@@ -298,35 +335,62 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		}
 		g.Fgenf(w, " => new { Key = k, Value = v })")
 	case "fileArchive":
-		g.Fgenf(w, "new FileArchive(%.v)", expr.Args[0])
+		isTemplate, templateParts := isTemplatePathString(expr.Args[0])
+		if isTemplate {
+			// emit Paths.get(part1, part2 ... partN)
+			g.Fgen(w, "new FileArchive(Paths.get(")
+			for index, part := range templateParts {
+				if index == len(templateParts)-1 {
+					// last element, no trailing comma
+					g.Fgenf(w, "%.v", part)
+				} else {
+					g.Fgenf(w, "%.v, ", part)
+				}
+			}
+			g.Fgen(w, "))")
+		} else {
+			g.Fgenf(w, "new FileArchive(%.v)", expr.Args[0])
+		}
 	case "fileAsset":
-		g.Fgenf(w, "new FileAsset(%.v)", expr.Args[0])
+		isTemplate, templateParts := isTemplatePathString(expr.Args[0])
+		if isTemplate {
+			// emit Paths.get(part1, part2 ... partN)
+			g.Fgen(w, "new FileAsset(Paths.get(")
+			for index, part := range templateParts {
+				if index == len(templateParts)-1 {
+					// last element, no trailing comma
+					g.Fgenf(w, "%.v", part)
+				} else {
+					g.Fgenf(w, "%.v, ", part)
+				}
+			}
+			g.Fgen(w, "))")
+		} else {
+			g.Fgenf(w, "new FileAsset(%.v)", expr.Args[0])
+		}
 	case "filebase64":
 		// Assuming the existence of the following helper method located earlier in the preamble
 		g.Fgenf(w, "ReadFileBase64(%v)", expr.Args[0])
 	case "filebase64sha256":
 		// Assuming the existence of the following helper method located earlier in the preamble
 		g.Fgenf(w, "ComputeFileBase64Sha256(%v)", expr.Args[0])
-	//case pcl.Invoke:
-	//	_, name := g.functionName(expr.Args[0])
-	//
-	//	isOut, outArgs, outArgsTy := pcl.RecognizeOutputVersionedInvoke(expr)
-	//	if isOut {
-	//		g.visitToMarkTypesUsedInFunctionOutputVersionInputs(outArgs)
-	//		g.Fprintf(w, "%s.Invoke(", name)
-	//		typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "InvokeArgs")
-	//		g.genObjectConsExpressionWithTypeName(w, outArgs, typeName)
-	//	} else {
-	//		g.Fprintf(w, "%s.InvokeAsync(", name)
-	//		if len(expr.Args) >= 2 {
-	//			g.Fgenf(w, "%.v", expr.Args[1])
-	//		}
-	//	}
-	//
-	//	if len(expr.Args) == 3 {
-	//		g.Fgenf(w, ", %.v", expr.Args[2])
-	//	}
-	//	g.Fprint(w, ")")
+	case pcl.Invoke:
+		name := g.functionName(expr.Args[0])
+		g.Fprintf(w, "%s.invokeAsync(", name)
+		isOutput, outArgs, outArgsTy := pcl.RecognizeOutputVersionedInvoke(expr)
+		if isOutput {
+			typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "Args")
+			g.genObjectConsExpressionWithTypeName(w, outArgs, typeName)
+		} else {
+			invokeArgumentsExpr := expr.Args[1]
+			switch invokeArgumentsExpr.(type) {
+			case *model.ObjectConsExpression:
+				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
+				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, fmt.Sprintf("%sArgs", name))
+			}
+		}
+
+		g.Fprint(w, ")")
 	case "join":
 		g.Fgenf(w, "string.Join(%v, %v)", expr.Args[0], expr.Args[1])
 	case "length":
@@ -346,6 +410,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "Output.CreateSecret(%v)", expr.Args[0])
 	case "split":
 		g.Fgenf(w, "%.20v.Split(%v)", expr.Args[1], expr.Args[0])
+	case "mimeType":
+		g.Fgenf(w, "Files.probeContentType(%v)", expr.Args[0])
 	case "toBase64":
 		g.Fgenf(w, "Convert.ToBase64String(System.Text.UTF8.GetBytes(%v))", expr.Args[0])
 	case "toJSON":
@@ -366,10 +432,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	}
 }
 
-// TODO
-
 func (g *generator) GenIndexExpression(w io.Writer, expr *model.IndexExpression) {
-	g.genNYI(w, "IndexExpression") // TODO
+	g.Fgenf(w, "%v[%v]", expr.Collection, expr.Key)
 }
 
 func (g *generator) escapeString(v string, verbatim, expressions bool) string {
@@ -493,17 +557,19 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 
 	typeName := destTypeName
 	if typeName != "" {
-		g.Fgenf(w, "new %s", typeName)
-		g.Fgenf(w, "\n%s{\n", g.Indent)
+		g.Fgenf(w, "%s.builder()", typeName)
+		g.newline(w)
 		g.Indented(func() {
 			for _, item := range expr.Items {
-				g.Fgenf(w, "%s", g.Indent)
+				g.makeIndent(w)
 				lit := item.Key.(*model.LiteralValueExpression)
-				g.Fprint(w, toLowerCase(lit.Value.AsString()))
-				g.Fgenf(w, " = %.v,\n", item.Value)
+				key := toLowerCase(lit.Value.AsString())
+				g.Fgenf(w, ".%s(%.v)", key, item.Value)
+				g.newline(w)
 			}
+			g.makeIndent(w)
+			g.Fgenf(w, ".build()")
 		})
-		g.Fgenf(w, "%s}", g.Indent)
 	} else {
 		// generate map
 		g.Fgen(w, "Map.ofEntries(\n")
@@ -548,7 +614,7 @@ func (g *generator) genRelativeTraversal(w io.Writer,
 
 		switch key.Type() {
 		case cty.String:
-			g.Fgenf(w, ".%s", toLowerCase(key.AsString()))
+			g.Fgenf(w, ".get%s()", toUpperCase(key.AsString()))
 		case cty.Number:
 			idx, _ := key.AsBigFloat().Int64()
 			g.Fgenf(w, "[%d]", idx)
