@@ -3,11 +3,11 @@ plugins {
 }
 
 repositories {
+    mavenLocal()
     maven { // The google mirror is less flaky than mavenCentral()
         url("https://maven-central.storage-download.googleapis.com/maven2/")
     }
     mavenCentral()
-    mavenLocal()
 }
 
 dependencies {
