@@ -15,8 +15,17 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 )
 
+func MakeProvider(providers []string) {
+	for _, provider := range providers {
+		exec.Command(fmt.Sprintf("make provider.%s.install", provider))
+	}
+}
+
 func TestExamples(t *testing.T) {
 	t.Run("random", func(t *testing.T) {
+		MakeProvider([]string{
+			"random",
+		})
 		test := getJvmBase(t, "random").
 			With(integration.ProgramTestOptions{
 				Quick: true,
@@ -47,6 +56,9 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-static-website", func(t *testing.T) {
+		MakeProvider([]string{
+			"azure-native",
+		})
 		test := getJvmBase(t, "azure-java-static-website").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -65,6 +77,9 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-java-webserver", func(t *testing.T) {
+		MakeProvider([]string{
+			"aws",
+		})
 		test := getJvmBase(t, "aws-java-webserver").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -83,6 +98,9 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-appservice-sql", func(t *testing.T) {
+		MakeProvider([]string{
+			"azure-native",
+		})
 		test := previewOnlyJvmBase(t, "azure-java-appservice-sql").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -94,6 +112,10 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("eks-minimal", func(t *testing.T) {
+		MakeProvider([]string{
+			"eks",
+			"aws",
+		})
 		test := previewOnlyJvmBase(t, "eks-minimal").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -104,6 +126,10 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("gcp-java-gke-hello-world", func(t *testing.T) {
+		MakeProvider([]string{
+			"gcp",
+			"kubernetes",
+		})
 		test := previewOnlyJvmBase(t, "gcp-java-gke-hello-world").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -140,6 +166,10 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
+		MakeProvider([]string{
+			"aws",
+			"aws-native",
+		})
 		test := getJvmBase(t, "aws-native-java-s3-folder").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
