@@ -689,13 +689,6 @@ func (g *generator) genRelativeTraversal(w io.Writer,
 		switch part := part.(type) {
 		case hcl.TraverseAttr:
 			key = cty.StringVal(part.Name)
-			//if objType != nil {
-			//	if p, ok := objType.Property(part.Name); ok {
-			//		if info, ok := p.Language["csharp"].(CSharpPropertyInfo); ok && info.Name != "" {
-			//			key = cty.StringVal(info.Name)
-			//		}
-			//	}
-			//}
 		case hcl.TraverseIndex:
 			key = part.Key
 		default:
@@ -726,11 +719,15 @@ func (g *generator) GenRelativeTraversalExpression(w io.Writer, expr *model.Rela
 
 func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTraversalExpression) {
 	rootName := makeValidIdentifier(expr.RootName)
-	if _, ok := expr.Parts[0].(*model.SplatVariable); ok {
-		rootName = "__item"
-	}
 
 	g.Fgen(w, rootName)
+
+	invokedFunctionSchema, isFunctionInvoke := g.functionInvokes[rootName]
+
+	if isFunctionInvoke {
+		lambdaArg := toLowerCase(typeName(invokedFunctionSchema.Outputs))
+		g.Fgenf(w, ".thenApply(%s -> %s", lambdaArg, lambdaArg)
+	}
 
 	var objType *schema.ObjectType
 	if resource, ok := expr.Parts[0].(*pcl.Resource); ok {
@@ -739,6 +736,10 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 		}
 	}
 	g.genRelativeTraversal(w, expr.Traversal.SimpleSplit().Rel, expr.Parts, objType)
+
+	if isFunctionInvoke {
+		g.Fgenf(w, ")")
+	}
 }
 
 func (g *generator) GenSplatExpression(w io.Writer, expr *model.SplatExpression) {
