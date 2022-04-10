@@ -9,10 +9,12 @@ import (
 	"strings"
 
 	"github.com/hashicorp/hcl/v2"
+	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model/format"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/syntax"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/utils"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
@@ -24,7 +26,8 @@ type generator struct {
 	// Whether awaits are needed, and therefore an async Initialize method should be declared.
 	asyncInit bool
 	// TODO
-	diagnostics hcl.Diagnostics
+	diagnostics                 hcl.Diagnostics
+	currentResourcePropertyType schema.Type
 }
 
 func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpression) {
@@ -101,7 +104,12 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	nodes := pcl.Linearize(program)
 
 	// Import Java-specific schema info.
-	// FIXME
+	// FIX ME: not sure what this is doing...
+	for _, p := range program.Packages() {
+		if err := p.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
+			return make(map[string][]byte), nil, err
+		}
+	}
 
 	g := &generator{
 		program: program,
@@ -302,11 +310,39 @@ func makeResourceName(baseName string, suffix string) string {
 	return fmt.Sprintf(`"%s-"`, baseName) + " + " + suffix
 }
 
+func (g *generator) findResourceSchema(resource *pcl.Resource) (bool, *schema.Resource) {
+	if resource.Schema == nil {
+		return false, nil
+	}
+
+	for _, pkg := range g.program.Packages() {
+		if pkg.Resources != nil {
+			for _, resourceSchame := range pkg.Resources {
+				if resourceSchame != nil && resourceSchame.Token == resource.Schema.Token {
+					return true, resourceSchame
+				}
+			}
+		}
+	}
+
+	return false, nil
+}
+
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
 	variableName := toLowerCase(makeValidIdentifier(resource.Name()))
 	instantiate := func(resName string) {
+		resourceProperties := make(map[string]schema.Type)
+		foundSchema, resourceSchema := g.findResourceSchema(resource)
+		if foundSchema && resourceSchema.Properties != nil {
+			for _, property := range resourceSchema.Properties {
+				if property != nil && property.Type != nil {
+					resourceProperties[property.Name] = codegen.UnwrapType(property.Type)
+				}
+			}
+		}
+
 		if len(resource.Inputs) == 0 {
 			g.Fgenf(w, "new %s(%s)", resourceTypeName, resName)
 		} else {
@@ -314,6 +350,9 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			g.Fgenf(w, "%s\n", g.Indent)
 			g.Indented(func() {
 				for _, attr := range resource.Inputs {
+					attributeType := resourceProperties[attr.Name]
+					g.currentResourcePropertyType = attributeType
+					//g.Fgenf(w, "%s// %s of type (%s)\n", g.Indent, makeValidIdentifier(attr.Name), attributeType)
 					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, makeValidIdentifier(attr.Name), attr.Value)
 				}
 
@@ -352,7 +391,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 					g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
 				default:
 					// assume function call returns a Range<T>
-					g.Fgenf(w, "%sfor (var range : /* %s */ %.12o)\n", g.Indent, funcCall.Name, rangeExpr)
+					g.Fgenf(w, "%sfor (var range : %.12o)\n", g.Indent, rangeExpr)
 				}
 			default:
 				// wrap into range collection
