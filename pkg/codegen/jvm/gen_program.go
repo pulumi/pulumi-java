@@ -28,6 +28,13 @@ type generator struct {
 	// TODO
 	diagnostics                 hcl.Diagnostics
 	currentResourcePropertyType schema.Type
+	// keep track of variable identifiers which are the result of an invoke
+	// for example "var resourceGroup = GetResourceGroup.invokeAsync(...)"
+	// we will keep track of "resourceGroup" -> schema(GetResourceGroup)
+	//
+	// later on when apply a traversal sush as resourceGroup.getName(),
+	// we should rewrite it as resourceGroup.thenApply(getResourceGroupResult -> getResourceGroupResult.getName())
+	functionInvokes map[string]*schema.Function
 }
 
 func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpression) {
@@ -112,8 +119,10 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	}
 
 	g := &generator{
-		program: program,
+		program:         program,
+		functionInvokes: make(map[string]*schema.Function),
 	}
+
 	g.Formatter = format.NewFormatter(g)
 
 	for _, n := range nodes {
@@ -448,9 +457,33 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 	g.newline(w)
 }
 
+func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariable) (bool, *schema.Function) {
+	value := localVariable.Definition.Value
+	switch value.(type) {
+	case *model.FunctionCallExpression:
+		call := value.(*model.FunctionCallExpression)
+		switch call.Name {
+		case pcl.Invoke:
+			args := call.Args[0]
+			name := g.functionName(args)
+			foundFunction, functionSchema := g.findFunctionSchema(w, name)
+			if foundFunction {
+				return true, functionSchema
+			}
+		}
+	}
+
+	return false, nil
+}
+
 func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariable) {
+	variableName := localVariable.Name()
+	isInvokeCall, functionSchema := g.isFunctionInvoke(w, localVariable)
+	if isInvokeCall {
+		g.functionInvokes[variableName] = functionSchema
+	}
 	g.makeIndent(w)
-	g.Fgenf(w, "final var %s = %v;", localVariable.Name(), localVariable.Definition.Value)
+	g.Fgenf(w, "final var %s = %v;", variableName, localVariable.Definition.Value)
 	g.newline(w)
 }
 
