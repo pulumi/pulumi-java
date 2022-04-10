@@ -1758,14 +1758,11 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 type addClassMethod = func(names.FQN, names.Ident, func(*classFileContext) error) error
 
 func (mod *modContext) functionsClassName() names.Ident {
-
 	return names.Ident(names.Title(mod.mod) + "Functions")
 }
 
-func printCommentFunction(ctx *classFileContext, fun *schema.Function) {
+func printCommentFunction(ctx *classFileContext, fun *schema.Function, indent string) {
 	w := ctx.writer
-	indent := "    "
-	// Emit javadoc
 	if fun.Comment != "" || fun.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
 		fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
@@ -1802,6 +1799,8 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 	fprintf(w, "public final class %s {\n", mod.functionsClassName())
 	for _, fun := range mod.functions {
 
+		const indent = "    "
+
 		// TODO[pulumi/pulumi-jvm#262]: Support proper codegen for methods
 		if fun.IsMethod {
 			continue
@@ -1817,9 +1816,14 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		resultFQN := outputsPkg.Dot(resultClass)
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
 		argsClass := names.Ident(tokenToName(fun.Token) + "Args")
-		argsFQN := inputsPkg.Dot(argsClass)
 
-		methodName := names.LowerCamelCase(tokenToFunctionName(fun.Token))
+		argsFQN := inputsPkg.Dot(argsClass)
+		if fun.Inputs == nil {
+			ctx.imports.Ref(names.InvokeArgs)
+			argsFQN = names.InvokeArgs
+		} else {
+			ctx.imports.Ref(argsFQN)
+		}
 
 		var returnType string
 		if fun.Outputs != nil {
@@ -1828,18 +1832,13 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			returnType = ctx.imports.Ref(names.Void)
 		}
 
-		if fun.Inputs == nil {
-			ctx.imports.Ref(names.InvokeArgs)
-			argsFQN = names.InvokeArgs
-		} else {
-			ctx.imports.Ref(argsFQN)
-		}
+		methodName := names.LowerCamelCase(tokenToFunctionName(fun.Token))
 
 		// Emit datasource inputs method
 		ctx.imports.Ref(names.InvokeOptions)
 		invokeOptions := names.InvokeOptions
 
-		printCommentFunction(ctx, fun)
+		printCommentFunction(ctx, fun, indent)
 		if hasAllOptionalInputs(fun) {
 			// Add no args constructor
 			fprintf(w, "    public static %s<%s> %s() {\n",
@@ -1865,8 +1864,6 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
 		fprintf(w, "    }\n")
-
-		// Emit javadoc
 
 		// Emit the args and result types, if any.
 		if fun.Inputs != nil {
