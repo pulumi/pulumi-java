@@ -54,17 +54,30 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 		g.Fgen(w, "@")
 	}
 	if expressions {
-		g.Fgen(w, "$")
+		g.Fgen(w, "String.format(\"")
+	} else {
+		g.Fgen(w, "\"")
 	}
-	g.Fgen(w, "\"")
+	var args []model.Expression
 	for _, expr := range expr.Parts {
 		if lit, ok := expr.(*model.LiteralValueExpression); ok && model.StringType.AssignableFrom(lit.Type()) {
 			g.Fgen(w, g.escapeString(lit.Value.AsString(), multiLine, expressions))
 		} else {
-			g.Fgenf(w, "{%.v}", expr)
+			args = append(args, expr)
+			g.Fgen(w, g.escapeString("%s", multiLine, expressions))
 		}
 	}
 	g.Fgen(w, "\"")
+	if expressions {
+		g.Fgen(w, ", ")
+		for index, arg := range args {
+			if index == len(args)-1 {
+				g.Fgenf(w, "%.v)", arg)
+			} else {
+				g.Fgenf(w, "%.v,", arg)
+			}
+		}
+	}
 }
 
 func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
