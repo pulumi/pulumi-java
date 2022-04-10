@@ -184,9 +184,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        regenerate-source:
-        - true
-        - false
         example:
         - aws-java-webserver
         - aws-native-java-s3-folder
@@ -239,9 +236,6 @@ jobs:
           project_id: pulumi-development
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-      - name: Remove settings.gradle
-        run: |
-          echo ${{ matrix.use-source }} | grep 'true' && echo '' > tests/examples/${{ matrix.example }}/settings.gradle; true
       - name: Run ${{ matrix.example }} example
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
