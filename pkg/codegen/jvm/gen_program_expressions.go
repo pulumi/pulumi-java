@@ -375,6 +375,19 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "ComputeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
 		name := g.functionName(expr.Args[0])
+		foundFunction, functionSchema := g.findFunctionSchema(w, name)
+		if foundFunction {
+			g.Fprintf(w, "%s.invokeAsync(", name)
+			invokeArgumentsExpr := expr.Args[1]
+			switch invokeArgumentsExpr.(type) {
+			case *model.ObjectConsExpression:
+				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
+				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
+			}
+			g.Fprint(w, ")")
+			return
+
+		}
 		g.Fprintf(w, "%s.invokeAsync(", name)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
 		if isOutput {
@@ -549,7 +562,7 @@ func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 func typeName(schemaType schema.Type) string {
 	fullyQualifiedTypeName := schemaType.String()
 	nameParts := strings.Split(fullyQualifiedTypeName, ":")
-	return nameParts[len(nameParts)-1]
+	return toUpperCase(nameParts[len(nameParts)-1])
 }
 
 func isObjectType(schemaType schema.Type) bool {
@@ -609,7 +622,7 @@ func (g *generator) pickTypeFromUnion(w io.Writer, union *schema.UnionType, expr
 		}
 	}
 
-	// we did what we can, returnthe default
+	// we did what we can, return the default
 	return union.ElementTypes[0]
 }
 
@@ -736,7 +749,71 @@ func (g *generator) GenTemplateJoinExpression(w io.Writer, expr *model.TemplateJ
 	g.genNYI(w, "TemplateJoinExpression")
 }
 
+func (g *generator) genArrayOfUnion(w io.Writer, union *schema.UnionType, exprs []*model.ObjectConsExpression) {
+	if len(exprs) > 0 {
+		if len(exprs) == 1 {
+			// simple case, just write the first element
+			objectType := g.pickTypeFromUnion(w, union, exprs[0])
+			g.genObjectConsExpression(w, exprs[0], objectType)
+			return
+		}
+
+		// Write multiple list elements
+		g.Fgenf(w, "%s\n", g.Indent)
+		g.Indented(func() {
+			for index, expr := range exprs {
+				objectType := g.pickTypeFromUnion(w, union, expr)
+				if index == 0 {
+					// first expression, no need for a new line
+					g.makeIndent(w)
+					g.genObjectConsExpression(w, expr, objectType)
+					g.Fgen(w, ",")
+				} else if index == len(exprs)-1 {
+					// last element, no trailing comma
+					g.newline(w)
+					g.makeIndent(w)
+					g.genObjectConsExpression(w, expr, objectType)
+				} else {
+					// elements in between: new line and trailing comma
+					g.newline(w)
+					g.makeIndent(w)
+					g.genObjectConsExpression(w, expr, objectType)
+					g.Fgen(w, ",")
+				}
+			}
+		})
+	}
+}
+
+func unionOfObjectTypes(union *schema.UnionType) bool {
+	for _, unionType := range union.ElementTypes {
+		if !isObjectType(unionType) {
+			return false
+		}
+	}
+	return true
+}
+
 func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExpression) {
+	// Make special case for Array<Union<ObjectType1, ObjectType2, ..., ObjectTypeN>>
+	switch g.currentResourcePropertyType.(type) {
+	case *schema.ArrayType:
+		arrayType := g.currentResourcePropertyType.(*schema.ArrayType)
+		elementType := arrayType.ElementType
+		switch elementType.(type) {
+		case *schema.UnionType:
+			union := elementType.(*schema.UnionType)
+			if unionOfObjectTypes(union) {
+				var objectExprs []*model.ObjectConsExpression
+				for _, item := range expr.Expressions {
+					objectExprs = append(objectExprs, item.(*model.ObjectConsExpression))
+				}
+				g.genArrayOfUnion(w, union, objectExprs)
+				return
+			}
+		}
+	}
+
 	if len(expr.Expressions) > 0 {
 		if len(expr.Expressions) == 1 {
 			// simple case, just write the first element

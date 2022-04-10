@@ -328,6 +328,22 @@ func (g *generator) findResourceSchema(resource *pcl.Resource) (bool, *schema.Re
 	return false, nil
 }
 
+func (g *generator) findFunctionSchema(w io.Writer, function string) (bool, *schema.Function) {
+
+	for _, pkg := range g.program.Packages() {
+		if pkg.Functions != nil {
+			for _, functionSchame := range pkg.Functions {
+				//g.Fgenf(w, "\n// %s Checking function %s against input %s", g.Indent, functionSchame.Token, function)
+				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, toLowerCase(function)) {
+					return true, functionSchame
+				}
+			}
+		}
+	}
+
+	return false, nil
+}
+
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
