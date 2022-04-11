@@ -11,6 +11,7 @@ import (
 
 type jvmExecutor struct {
 	cmd        string
+	buildArgs  []string
 	runArgs    []string
 	pluginArgs []string
 }
@@ -70,8 +71,9 @@ func resolveExecutor(exec string) (*jvmExecutor, error) {
 
 func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"run", "--console=plain"},
+		cmd:       cmd,
+		buildArgs: []string{"build", "--console=plain"},
+		runArgs:   []string{"run", "--console=plain"},
 		pluginArgs: []string{
 			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
 			"run", "--console=plain",
@@ -83,8 +85,9 @@ func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 
 func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"--no-transfer-progress", "compile", "exec:java"},
+		cmd:       cmd,
+		buildArgs: []string{"--no-transfer-progress", "compile"},
+		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
 		pluginArgs: []string{
 			"--quiet", "--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=io.pulumi.bootstrap.internal.Main",
@@ -96,6 +99,7 @@ func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
 	return &jvmExecutor{
 		cmd:        cmd,
+		buildArgs:  nil,
 		runArgs:    []string{"-jar", filepath.Clean(path)},
 		pluginArgs: []string{"-cp", filepath.Clean(path), "io.pulumi.bootstrap.internal.Main", "packages"},
 	}, nil

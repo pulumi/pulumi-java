@@ -424,7 +424,38 @@ func (host *jvmLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Emp
 
 func (host *jvmLanguageHost) InstallDependencies(
 	req *pulumirpc.InstallDependenciesRequest,
-	srv pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
+	srv pulumirpc.LanguageRuntime_InstallDependenciesServer,
+) error {
+	logging.V(5).Infof("InstallDependencies: Directory=%s", req.Directory)
+
+	ctx := srv.Context()
+
+	engineClient, err := newEngineClient(host.engineAddress)
+	if err != nil {
+		return err
+	}
+	defer engineClient.Close()
+
+	resp := &pulumirpc.InstallDependenciesResponse{}
+
+	// Executor may not support the build command (for example, jar executor).
+	if host.exec.buildArgs != nil {
+		stdout, err := host.RunJvmCommand(ctx,
+			engineClient,
+			host.exec.cmd,
+			host.exec.buildArgs,
+			false /* logToUser */)
+		if err != nil {
+			return err
+		}
+		resp.Stdout = []byte(stdout)
+	}
+
+	if err := srv.Send(resp); err != nil {
+		return err
+	}
+
+	logging.V(5).Infof("InstallDependencies: Directory=%s done", req.Directory)
 	return nil
 }
 
