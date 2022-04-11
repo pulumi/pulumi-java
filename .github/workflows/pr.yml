@@ -121,14 +121,34 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
+      - name: Publish new Pulumi Java SDK to a local Maven repo
         timeout-minutes: 2
         run: make install_sdk
-      # build original
+      # build new
+      - name: Build JVM SDK provider
+        run: make provider.${PROVIDER}.install
+        env:
+          PROVIDER: ${{ matrix.provider }}
+      - name: Get new JAR size
+        id: newJar
+        run: |
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # clean up
+      - name: Remove new JARs
+        continue-on-error: true
+        run: |
+          rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
+      - name: Publish previous Pulumi Java SDK to a local Maven repo
+        timeout-minutes: 2
+        run: make install_sdk
+      # build old
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.base.ref }}
-      - name: Build JVM SDK provider
+      - name: Build old JVM SDK provider
         continue-on-error: true
         run: make provider.${PROVIDER}.install
         env:
@@ -136,24 +156,6 @@ jobs:
       - name: Get old JAR size
         id: oldJar
         continue-on-error: true
-        run: |
-          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
-          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
-          echo ::set-output name=size::${size}
-          echo ::set-output name=sizeHuman::${sizeHuman}
-      # clean up
-      - name: Remove old JARs
-        continue-on-error: true
-        run: |
-          rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
-      # build new
-      - uses: actions/checkout@v2
-      - name: Build JVM SDK provider
-        run: make provider.${PROVIDER}.install
-        env:
-          PROVIDER: ${{ matrix.provider }}
-      - name: Get new JAR size
-        id: newJar
         run: |
           size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
           sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
